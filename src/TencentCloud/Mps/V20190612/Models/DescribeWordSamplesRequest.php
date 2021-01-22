@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordSamples request structure.
  *
+ * @method array getKeywords() Obtain Keyword filter. Array length limit: 100 words.
+ * @method void setKeywords(array $Keywords) Set Keyword filter. Array length limit: 100 words.
  * @method array getUsages() Obtain <b>Keyword use case filter. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
 Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
  * @method void setUsages(array $Usages) Set <b>Keyword use case filter. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
 Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
- * @method array getKeywords() Obtain Keyword filter. Array length limit: 100 words.
- * @method void setKeywords(array $Keywords) Set Keyword filter. Array length limit: 100 words.
  * @method array getTags() Obtain Tag filter. Array length limit: 20 words.
  * @method void setTags(array $Tags) Set Tag filter. Array length limit: 20 words.
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
@@ -50,22 +50,22 @@ Multiple elements can be selected, and the relationship between them is "or", i.
 class DescribeWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array <b>Keyword use case filter. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     */
-    public $Usages;
-
-    /**
      * @var array Keyword filter. Array length limit: 100 words.
      */
     public $Keywords;
+
+    /**
+     * @var array <b>Keyword use case filter. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition;
+2. Recognition.Asr: ASR-based content recognition;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
+<b>These values can be merged as follows:</b>
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
+Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
+     */
+    public $Usages;
 
     /**
      * @var array Tag filter. Array length limit: 20 words.
@@ -83,16 +83,16 @@ Multiple elements can be selected, and the relationship between them is "or", i.
     public $Limit;
 
     /**
+     * @param array $Keywords Keyword filter. Array length limit: 100 words.
      * @param array $Usages <b>Keyword use case filter. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition;
 2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
+3. Review.Ocr: OCR-based detection of inappropriate content;
+4. Review.Asr：ASR-based detection of inappropriate content;
 <b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
+5. Recognition: ASR- and OCR-based content recognition, equivalent to 1 and 2 combined;
+6. Review: ASR- and OCR-based detection of inappropriate content, equivalent to 3+4 above;
 Multiple elements can be selected, and the relationship between them is "or", i.e., any keyword use case that contains any element in this field set will be deemed eligible.
-     * @param array $Keywords Keyword filter. Array length limit: 100 words.
      * @param array $Tags Tag filter. Array length limit: 20 words.
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 100. Maximum value: 100.
@@ -110,12 +110,12 @@ Multiple elements can be selected, and the relationship between them is "or", i.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
-            $this->Usages = $param["Usages"];
-        }
-
         if (array_key_exists("Keywords",$param) and $param["Keywords"] !== null) {
             $this->Keywords = $param["Keywords"];
+        }
+
+        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
+            $this->Usages = $param["Usages"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {

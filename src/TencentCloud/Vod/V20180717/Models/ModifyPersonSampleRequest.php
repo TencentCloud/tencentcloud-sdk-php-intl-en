@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample request structure.
  *
- * @method string getPersonId() Obtain Figure ID.
- * @method void setPersonId(string $PersonId) Set Figure ID.
+ * @method string getPersonId() Obtain ID of a sample.
+ * @method void setPersonId(string $PersonId) Set ID of a sample.
  * @method string getName() Obtain Name. Length limit: 128 characters.
  * @method void setName(string $Name) Set Name. Length limit: 128 characters.
  * @method string getDescription() Obtain Description. Length limit: 1,024 characters.
  * @method void setDescription(string $Description) Set Description. Length limit: 1,024 characters.
- * @method array getUsages() Obtain Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
- * @method void setUsages(array $Usages) Set Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
- * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Face operation information.
- * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Face operation information.
+ * @method array getUsages() Obtain Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+ * @method void setUsages(array $Usages) Set Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+ * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Information of operations on facial features.
+ * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Information of operations on facial features.
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyPersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Figure ID.
+     * @var string ID of a sample.
      */
     public $PersonId;
 
@@ -59,15 +59,15 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
+     * @var array Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
      */
     public $Usages;
 
     /**
-     * @var AiSampleFaceOperation Face operation information.
+     * @var AiSampleFaceOperation Information of operations on facial features.
      */
     public $FaceOperationInfo;
 
@@ -82,14 +82,14 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $PersonId Figure ID.
+     * @param string $PersonId ID of a sample.
      * @param string $Name Name. Length limit: 128 characters.
      * @param string $Description Description. Length limit: 1,024 characters.
-     * @param array $Usages Figure use case. Valid values:
-1. Recognition: it is used for content recognition and equivalent to `Recognition.Face`.
-2. Review: it is used for content audit and equivalent to `Review.Face`.
-3. All: it is used for content recognition and content audit and equivalent to 1+2 above.
-     * @param AiSampleFaceOperation $FaceOperationInfo Face operation information.
+     * @param array $Usages Sample usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+     * @param AiSampleFaceOperation $FaceOperationInfo Information of operations on facial features.
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */

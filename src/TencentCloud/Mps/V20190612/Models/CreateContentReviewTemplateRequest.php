@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate request structure.
  *
- * @method string getName() Obtain Name of a content audit template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of a content audit template. Length limit: 64 characters.
- * @method string getComment() Obtain Description of a content audit template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of a content audit template. Length limit: 256 characters.
- * @method PornConfigureInfo getPornConfigure() Obtain Porn information detection control parameter.
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Porn information detection control parameter.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Terrorism information detection control parameter.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Terrorism information detection control parameter.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
+ * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
+ * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters.
+ * @method PornConfigureInfo getPornConfigure() Obtain Control parameter for offensive content
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameter for offensive content
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameter for insecure content
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Control parameter for insecure content
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Control parameter for inappropriate content
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Control parameter for inappropriate content
  * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
@@ -38,33 +38,33 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content audit control parameter.
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Control parameter for custom intelligent content recognition
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Name of a content audit template. Length limit: 64 characters.
+     * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of a content audit template. Length limit: 256 characters.
+     * @var string Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Porn information detection control parameter.
+     * @var PornConfigureInfo Control parameter for offensive content
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Terrorism information detection control parameter.
+     * @var TerrorismConfigureInfo Control parameter for insecure content
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Politically sensitive information detection control parameter.
+     * @var PoliticalConfigureInfo Control parameter for inappropriate content
      */
     public $PoliticalConfigure;
 
@@ -77,21 +77,21 @@ Note: this parameter is not supported yet.
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Custom content audit control parameter.
+     * @var UserDefineConfigureInfo Control parameter for custom intelligent content recognition
      */
     public $UserDefineConfigure;
 
     /**
-     * @param string $Name Name of a content audit template. Length limit: 64 characters.
-     * @param string $Comment Description of a content audit template. Length limit: 256 characters.
-     * @param PornConfigureInfo $PornConfigure Porn information detection control parameter.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Terrorism information detection control parameter.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
+     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @param PornConfigureInfo $PornConfigure Control parameter for offensive content
+     * @param TerrorismConfigureInfo $TerrorismConfigure Control parameter for insecure content
+     * @param PoliticalConfigureInfo $PoliticalConfigure Control parameter for inappropriate content
      * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
-     * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
+     * @param UserDefineConfigureInfo $UserDefineConfigure Control parameter for custom intelligent content recognition
      */
     function __construct()
     {

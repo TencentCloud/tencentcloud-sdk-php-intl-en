@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a video processing input object.
  *
- * @method string getType() Obtain The type of video processing input object. COS and URL objects are supported.
- * @method void setType(string $Type) Set The type of video processing input object. COS and URL objects are supported.
+ * @method string getType() Obtain The type of video processing input object, which supports COS and URL.
+ * @method void setType(string $Type) Set The type of video processing input object, which supports COS and URL.
  * @method CosInputInfo getCosInputInfo() Obtain This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
  * @method void setCosInputInfo(CosInputInfo $CosInputInfo) Set This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
  * @method UrlInputInfo getUrlInputInfo() Obtain This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
@@ -32,7 +32,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 class MediaInputInfo extends AbstractModel
 {
     /**
-     * @var string The type of video processing input object. COS and URL objects are supported.
+     * @var string The type of video processing input object, which supports COS and URL.
      */
     public $Type;
 
@@ -48,7 +48,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $UrlInputInfo;
 
     /**
-     * @param string $Type The type of video processing input object. COS and URL objects are supported.
+     * @param string $Type The type of video processing input object, which supports COS and URL.
      * @param CosInputInfo $CosInputInfo This parameter is required and valid when `Type` is `COS`, indicating the information of a COS object for video processing.
      * @param UrlInputInfo $UrlInputInfo This parameter is required and valid when `Type` is `URL`, indicating the information of a URL object for video processing.
 Note: this field may return `null`, indicating that no valid value is obtained.

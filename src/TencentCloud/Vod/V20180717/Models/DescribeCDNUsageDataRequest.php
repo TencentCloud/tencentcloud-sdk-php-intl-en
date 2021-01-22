@@ -31,17 +31,15 @@ use TencentCloud\Common\AbstractModel;
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
  * @method integer getDataInterval() Obtain Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
  * @method void setDataInterval(integer $DataInterval) Set Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
  * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
  * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
  * @method integer getSubAppId() Obtain ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -70,11 +68,10 @@ class DescribeCDNUsageDataRequest extends AbstractModel
 
     /**
      * @var integer Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
      */
     public $DataInterval;
 
@@ -96,11 +93,10 @@ When the value of this field is 1, the total usage of all subapplications (inclu
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
      * @param integer $DataInterval Time granularity of usage data in minutes. Valid values:
-<li>5: 5-minute granularity, which returns the details at the 5-minute granularity within the specified time range.</li>
-<li>60: 1-hour granularity, which returns the details at the 1-hour granularity within the specified time range.</li>
-<li>1440: 1-day granularity, which returns the details at the 1-day granularity within the specified time range.</li>
-Default value: 1440. Data at the 1-day granularity will be returned.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+<li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
+<li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
+<li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
+Default value: 1440. Data at 1-day granularity will be returned.
      * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
      * @param integer $SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.

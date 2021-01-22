@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample response structure.
  *
- * @method AiSamplePerson getPerson() Obtain Figure information.
- * @method void setPerson(AiSamplePerson $Person) Set Figure information.
- * @method array getFailFaceInfoSet() Obtain Face information failing to be processed.
- * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Face information failing to be processed.
+ * @method AiSamplePerson getPerson() Obtain Material information
+ * @method void setPerson(AiSamplePerson $Person) Set Material information
+ * @method array getFailFaceInfoSet() Obtain Positioning information of facial features processed unsuccessfully
+ * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Positioning information of facial features processed unsuccessfully
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreatePersonSampleResponse extends AbstractModel
 {
     /**
-     * @var AiSamplePerson Figure information.
+     * @var AiSamplePerson Material information
      */
     public $Person;
 
     /**
-     * @var array Face information failing to be processed.
+     * @var array Positioning information of facial features processed unsuccessfully
      */
     public $FailFaceInfoSet;
 
@@ -45,8 +45,8 @@ class CreatePersonSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AiSamplePerson $Person Figure information.
-     * @param array $FailFaceInfoSet Face information failing to be processed.
+     * @param AiSamplePerson $Person Material information
+     * @param array $FailFaceInfoSet Positioning information of facial features processed unsuccessfully
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

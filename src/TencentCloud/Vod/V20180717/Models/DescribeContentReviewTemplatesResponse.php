@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
- * @method array getContentReviewTemplateSet() Obtain List of content audit template details.
- * @method void setContentReviewTemplateSet(array $ContentReviewTemplateSet) Set List of content audit template details.
+ * @method array getContentReviewTemplateSet() Obtain List of intelligent content recognition template details.
+ * @method void setContentReviewTemplateSet(array $ContentReviewTemplateSet) Set List of intelligent content recognition template details.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeContentReviewTemplatesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array List of content audit template details.
+     * @var array List of intelligent content recognition template details.
      */
     public $ContentReviewTemplateSet;
 
@@ -46,7 +46,7 @@ class DescribeContentReviewTemplatesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of eligible entries.
-     * @param array $ContentReviewTemplateSet List of content audit template details.
+     * @param array $ContentReviewTemplateSet List of intelligent content recognition template details.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

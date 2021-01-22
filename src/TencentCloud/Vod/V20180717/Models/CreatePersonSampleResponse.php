@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample response structure.
  *
- * @method AiSamplePerson getPerson() Obtain Figure information.
- * @method void setPerson(AiSamplePerson $Person) Set Figure information.
- * @method array getFailFaceInfoSet() Obtain Face information failed to be processed.
- * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Face information failed to be processed.
+ * @method AiSamplePerson getPerson() Obtain Information of a sample.
+ * @method void setPerson(AiSamplePerson $Person) Set Information of a sample.
+ * @method array getFailFaceInfoSet() Obtain Information of samples that failed the verification by facial feature positioning.
+ * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Information of samples that failed the verification by facial feature positioning.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreatePersonSampleResponse extends AbstractModel
 {
     /**
-     * @var AiSamplePerson Figure information.
+     * @var AiSamplePerson Information of a sample.
      */
     public $Person;
 
     /**
-     * @var array Face information failed to be processed.
+     * @var array Information of samples that failed the verification by facial feature positioning.
      */
     public $FailFaceInfoSet;
 
@@ -45,8 +45,8 @@ class CreatePersonSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AiSamplePerson $Person Figure information.
-     * @param array $FailFaceInfoSet Face information failed to be processed.
+     * @param AiSamplePerson $Person Information of a sample.
+     * @param array $FailFaceInfoSet Information of samples that failed the verification by facial feature positioning.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

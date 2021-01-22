@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMixVideoUids(array $MixVideoUids) Set A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
  * @method array getPresetLayoutConfig() Obtain Valid in custom template, used to specify the video image position of a user in mixed streams.
  * @method void setPresetLayoutConfig(array $PresetLayoutConfig) Set Valid in custom template, used to specify the video image position of a user in mixed streams.
+ * @method integer getPlaceHolderMode() Obtain Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+ * @method void setPlaceHolderMode(integer $PlaceHolderMode) Set Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
  */
 class LayoutParams extends AbstractModel
 {
@@ -73,6 +75,11 @@ class LayoutParams extends AbstractModel
     public $PresetLayoutConfig;
 
     /**
+     * @var integer Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+     */
+    public $PlaceHolderMode;
+
+    /**
      * @param integer $Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      * @param string $MainVideoUserId ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
      * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
@@ -80,6 +87,7 @@ class LayoutParams extends AbstractModel
      * @param integer $MainVideoRightAlign You can set the layout parameter as 1 or 0 in the screen sharing template. 1: big image on the right and small images on the left, 0: big image on the left and small images on the right. The default value is 0. 
      * @param array $MixVideoUids A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      * @param array $PresetLayoutConfig Valid in custom template, used to specify the video image position of a user in mixed streams.
+     * @param integer $PlaceHolderMode Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
      */
     function __construct()
     {
@@ -126,6 +134,10 @@ class LayoutParams extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PresetLayoutConfig, $obj);
             }
+        }
+
+        if (array_key_exists("PlaceHolderMode",$param) and $param["PlaceHolderMode"] !== null) {
+            $this->PlaceHolderMode = $param["PlaceHolderMode"];
         }
     }
 }

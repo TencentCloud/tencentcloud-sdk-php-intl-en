@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method string getType() Obtain Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+ * @method string getType() Obtain Type of the material pulled. Valid values:
+<li>UserDefine: custom material library;</li>
+<li>Default: default material library.</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
- * @method void setType(string $Type) Set Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+Default value: UserDefine (the materials of the custom material library are pulled.)
+Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+ * @method void setType(string $Type) Set Type of the material pulled. Valid values:
+<li>UserDefine: custom material library;</li>
+<li>Default: default material library.</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
- * @method array getPersonIds() Obtain Figure ID. Array length limit: 100.
- * @method void setPersonIds(array $PersonIds) Set Figure ID. Array length limit: 100.
- * @method array getNames() Obtain Figure name. Array length limit: 20.
- * @method void setNames(array $Names) Set Figure name. Array length limit: 20.
- * @method array getTags() Obtain Figure tag. Array length limit: 20.
- * @method void setTags(array $Tags) Set Figure tag. Array length limit: 20.
+Default value: UserDefine (the materials of the custom material library are pulled.)
+Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+ * @method array getPersonIds() Obtain Material ID. Array length limit: 100.
+ * @method void setPersonIds(array $PersonIds) Set Material ID. Array length limit: 100.
+ * @method array getNames() Obtain Material name. Array length limit: 20.
+ * @method void setNames(array $Names) Set Material name. Array length limit: 20.
+ * @method array getTags() Obtain Material tag. Array length limit: 20.
+ * @method void setTags(array $Tags) Set Material tag. Array length limit: 20.
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 100. Maximum value: 100.
@@ -46,27 +46,27 @@ Note: The default figure library can be pulled only through "figure name" or "fi
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var string Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+     * @var string Type of the material pulled. Valid values:
+<li>UserDefine: custom material library;</li>
+<li>Default: default material library.</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine (the materials of the custom material library are pulled.)
+Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
      */
     public $Type;
 
     /**
-     * @var array Figure ID. Array length limit: 100.
+     * @var array Material ID. Array length limit: 100.
      */
     public $PersonIds;
 
     /**
-     * @var array Figure name. Array length limit: 20.
+     * @var array Material name. Array length limit: 20.
      */
     public $Names;
 
     /**
-     * @var array Figure tag. Array length limit: 20.
+     * @var array Material tag. Array length limit: 20.
      */
     public $Tags;
 
@@ -81,15 +81,15 @@ Note: The default figure library can be pulled only through "figure name" or "fi
     public $Limit;
 
     /**
-     * @param string $Type Pulled figure type. Valid values:
-<li>UserDefine: Custom figure library;</li>
-<li>Default: Default figure library.</li>
+     * @param string $Type Type of the material pulled. Valid values:
+<li>UserDefine: custom material library;</li>
+<li>Default: default material library.</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: The default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-     * @param array $PersonIds Figure ID. Array length limit: 100.
-     * @param array $Names Figure name. Array length limit: 20.
-     * @param array $Tags Figure tag. Array length limit: 20.
+Default value: UserDefine (the materials of the custom material library are pulled.)
+Note: you can pull the default material library only using the material name or a combination of the material name and ID, and only one face image is returned.
+     * @param array $PersonIds Material ID. Array length limit: 100.
+     * @param array $Names Material name. Array length limit: 20.
+     * @param array $Tags Material tag. Array length limit: 20.
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 100. Maximum value: 100.
      */

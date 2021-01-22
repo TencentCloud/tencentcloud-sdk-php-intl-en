@@ -20,22 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample response structure.
  *
- * @method AiSamplePerson getPerson() Obtain Figure information.
- * @method void setPerson(AiSamplePerson $Person) Set Figure information.
- * @method array getFailFaceInfoSet() Obtain Face information failed to be processed.
- * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Face information failed to be processed.
+ * @method AiSamplePerson getPerson() Obtain Information of a sample.
+ * @method void setPerson(AiSamplePerson $Person) Set Information of a sample.
+ * @method array getFailFaceInfoSet() Obtain Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyPersonSampleResponse extends AbstractModel
 {
     /**
-     * @var AiSamplePerson Figure information.
+     * @var AiSamplePerson Information of a sample.
      */
     public $Person;
 
     /**
-     * @var array Face information failed to be processed.
+     * @var array Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $FailFaceInfoSet;
 
@@ -45,8 +48,9 @@ class ModifyPersonSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AiSamplePerson $Person Figure information.
-     * @param array $FailFaceInfoSet Face information failed to be processed.
+     * @param AiSamplePerson $Person Information of a sample.
+     * @param array $FailFaceInfoSet Information of samples that failed the verification by facial feature positioning.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

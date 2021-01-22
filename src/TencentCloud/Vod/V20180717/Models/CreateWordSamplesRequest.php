@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateWordSamples request structure.
  *
- * @method array getUsages() Obtain <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
- * @method void setUsages(array $Usages) Set <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+ * @method array getUsages() Obtain <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
+ * @method void setUsages(array $Usages) Set <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
  * @method array getWords() Obtain Keyword. Array length limit: 100.
  * @method void setWords(array $Words) Set Keyword. Array length limit: 100.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -46,15 +46,15 @@ use TencentCloud\Common\AbstractModel;
 class CreateWordSamplesRequest extends AbstractModel
 {
     /**
-     * @var array <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+     * @var array <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
      */
     public $Usages;
 
@@ -69,15 +69,15 @@ class CreateWordSamplesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Usages <b>Keyword use case. Valid values:</b>
-1. Recognition.Ocr: OCR-based content recognition;
-2. Recognition.Asr: ASR-based content recognition;
-3. Review.Ocr: OCR-based content audit;
-4. Review.Asr: ASR-based content audit;
-<b>These values can be merged as follows:</b>
-5. Recognition: ASR-based and OCR-based content recognition, which is equivalent to 1+2 above;
-6. Review: ASR-based and OCR-based content audit, which is equivalent to 3+4 above;
-7. All: ASR-based and OCR-based content recognition and audit, which is equivalent to 1+2+3+4 above;
+     * @param array $Usages <b>Keyword usage. Valid values:</b>
+1. Recognition.Ocr: OCR-based content recognition
+2. Recognition.Asr: ASR-based content recognition
+3. Review.Ocr: OCR-based inappropriate information recognition
+4. Review.Asr: ASR-based inappropriate information recognition
+<b>Valid values can also be:</b>
+5. Recognition: ASR- and OCR-based content recognition; equivalent to 1+2
+6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
+7. All: ASR- and OCR-based content recognition and inappropriate information recognition; equivalent to 1+2+3+4
      * @param array $Words Keyword. Array length limit: 100.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */

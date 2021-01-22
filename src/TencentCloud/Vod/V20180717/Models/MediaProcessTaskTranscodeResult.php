@@ -22,16 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+ * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
@@ -42,6 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(MediaTranscodeItem $Output) Set Output of transcoding task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Transcoding progress. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set Transcoding progress. Value range: 0-100.
  */
 class MediaProcessTaskTranscodeResult extends AbstractModel
 {
@@ -51,11 +47,12 @@ class MediaProcessTaskTranscodeResult extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public $ErrCodeExt;
+
+    /**
+     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public $ErrCode;
 
@@ -77,17 +74,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer Transcoding progress. Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param integer $ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TranscodeTaskInput $Input Input of transcoding task.
      * @param MediaTranscodeItem $Output Output of transcoding task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Transcoding progress. Value range: 0-100.
      */
     function __construct()
     {
@@ -106,6 +106,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("ErrCodeExt",$param) and $param["ErrCodeExt"] !== null) {
+            $this->ErrCodeExt = $param["ErrCodeExt"];
+        }
+
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
         }
@@ -122,6 +126,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new MediaTranscodeItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

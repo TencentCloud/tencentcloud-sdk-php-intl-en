@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEncodeParams(EncodeParams $EncodeParams) Set On-Cloud MixTranscoding output encoding parameters.
  * @method LayoutParams getLayoutParams() Obtain On-Cloud MixTranscoding output layout parameters.
  * @method void setLayoutParams(LayoutParams $LayoutParams) Set On-Cloud MixTranscoding output layout parameters.
+ * @method PublishCdnParams getPublishCdnParams() Obtain Relayed push parameters of a non-Tencent Cloud CDN
+ * @method void setPublishCdnParams(PublishCdnParams $PublishCdnParams) Set Relayed push parameters of a non-Tencent Cloud CDN
  */
 class StartMCUMixTranscodeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class StartMCUMixTranscodeRequest extends AbstractModel
     public $LayoutParams;
 
     /**
+     * @var PublishCdnParams Relayed push parameters of a non-Tencent Cloud CDN
+     */
+    public $PublishCdnParams;
+
+    /**
      * @param integer $SdkAppId `SDKAppId` of TRTC.
      * @param integer $RoomId Room ID.
      * @param OutputParams $OutputParams On-Cloud MixTranscoding output control parameters.
      * @param EncodeParams $EncodeParams On-Cloud MixTranscoding output encoding parameters.
      * @param LayoutParams $LayoutParams On-Cloud MixTranscoding output layout parameters.
+     * @param PublishCdnParams $PublishCdnParams Relayed push parameters of a non-Tencent Cloud CDN
      */
     function __construct()
     {
@@ -99,6 +107,11 @@ class StartMCUMixTranscodeRequest extends AbstractModel
         if (array_key_exists("LayoutParams",$param) and $param["LayoutParams"] !== null) {
             $this->LayoutParams = new LayoutParams();
             $this->LayoutParams->deserialize($param["LayoutParams"]);
+        }
+
+        if (array_key_exists("PublishCdnParams",$param) and $param["PublishCdnParams"] !== null) {
+            $this->PublishCdnParams = new PublishCdnParams();
+            $this->PublishCdnParams->deserialize($param["PublishCdnParams"]);
         }
     }
 }

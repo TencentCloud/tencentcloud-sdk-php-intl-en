@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationY(integer $LocationY) Set Y offset of the output image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the mixed stream. If this parameter is not set, 0 is used by default.
  * @method integer getZOrder() Obtain Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
  * @method void setZOrder(integer $ZOrder) Set Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
- * @method integer getRenderMode() Obtain Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
- * @method void setRenderMode(integer $RenderMode) Set Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+ * @method integer getRenderMode() Obtain Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
+ * @method void setRenderMode(integer $RenderMode) Set Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
+ * @method integer getMixInputType() Obtain Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+ * @method void setMixInputType(integer $MixInputType) Set Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+ * @method integer getPlaceImageId() Obtain Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+ * @method void setPlaceImageId(integer $PlaceImageId) Set Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
  */
 class PresetLayoutConfig extends AbstractModel
 {
@@ -75,9 +79,19 @@ class PresetLayoutConfig extends AbstractModel
     public $ZOrder;
 
     /**
-     * @var integer Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+     * @var integer Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
      */
     public $RenderMode;
+
+    /**
+     * @var integer Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+     */
+    public $MixInputType;
+
+    /**
+     * @var integer Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
+     */
+    public $PlaceImageId;
 
     /**
      * @param string $UserId Used to assign users to preset positions; if not assigned, users will occupy the positions set in `PresetLayoutConfig` in room entry sequence.
@@ -87,7 +101,9 @@ class PresetLayoutConfig extends AbstractModel
      * @param integer $LocationX X offset of the output image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the mixed stream. If this parameter is not set, 0 is used by default.
      * @param integer $LocationY Y offset of the output image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the mixed stream. If this parameter is not set, 0 is used by default.
      * @param integer $ZOrder Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
-     * @param integer $RenderMode Render mode of the output image. 0: cropping; 1: scaling. If this parameter is not set, 0 is used by default.
+     * @param integer $RenderMode Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
+     * @param integer $MixInputType Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
+     * @param integer $PlaceImageId Reservation image ID. If the reservation feature is enabled, and a user for whom a image position is reserved is not generating upstream video data, the position will show the reservation image. Reservation images are uploaded and generated in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class PresetLayoutConfig extends AbstractModel
 
         if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
             $this->RenderMode = $param["RenderMode"];
+        }
+
+        if (array_key_exists("MixInputType",$param) and $param["MixInputType"] !== null) {
+            $this->MixInputType = $param["MixInputType"];
+        }
+
+        if (array_key_exists("PlaceImageId",$param) and $param["PlaceImageId"] !== null) {
+            $this->PlaceImageId = $param["PlaceImageId"];
         }
     }
 }

@@ -40,6 +40,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
+ * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+ * @method float getEndTimeOffset() Obtain End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
  * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
@@ -86,6 +102,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MosaicSet;
 
     /**
+     * @var float Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public $StartTimeOffset;
+
+    /**
+     * @var float End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     */
+    public $EndTimeOffset;
+
+    /**
      * @var TaskOutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -118,6 +150,14 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
+     * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * @param float $EndTimeOffset End time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
      * @param TaskOutputStorage $OutputStorage Target bucket of an output file. If this parameter is left empty, the `OutputStorage` value of the upper folder will be inherited.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OutputObjectPath Path to a primary output file, which can be a relative path or an absolute path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}.{format}`.
@@ -168,6 +208,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->MosaicSet, $obj);
             }
+        }
+
+        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
+            $this->StartTimeOffset = $param["StartTimeOffset"];
+        }
+
+        if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
+            $this->EndTimeOffset = $param["EndTimeOffset"];
         }
 
         if (array_key_exists("OutputStorage",$param) and $param["OutputStorage"] !== null) {

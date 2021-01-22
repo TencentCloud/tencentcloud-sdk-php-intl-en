@@ -66,12 +66,14 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
 <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
 <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
- * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+ * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
 We don’t recommend specifying this parameter unless you have special requirements.
- * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+ * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
 We don’t recommend specifying this parameter unless you have special requirements.
- * @method integer getGop() Obtain 
- * @method void setGop(integer $Gop) Set 
+ * @method integer getGop() Obtain I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+ * @method void setGop(integer $Gop) Set I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -127,13 +129,14 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     public $FillType;
 
     /**
-     * @var integer Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+     * @var integer Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
 We don’t recommend specifying this parameter unless you have special requirements.
      */
     public $Vcrf;
 
     /**
-     * @var integer 
+     * @var integer I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     public $Gop;
 
@@ -161,9 +164,10 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
 <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
 <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
-     * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51. This parameter will be disabled if you enter 0.
+     * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 0-51. This parameter will be disabled if you enter 0.
 We don’t recommend specifying this parameter unless you have special requirements.
-     * @param integer $Gop 
+     * @param integer $Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     function __construct()
     {

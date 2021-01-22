@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample request structure.
  *
- * @method string getPersonId() Obtain Figure ID.
- * @method void setPersonId(string $PersonId) Set Figure ID.
+ * @method string getPersonId() Obtain Material ID
+ * @method void setPersonId(string $PersonId) Set Material ID
  * @method string getName() Obtain Name. Length limit: 128 characters.
  * @method void setName(string $Name) Set Name. Length limit: 128 characters.
  * @method string getDescription() Obtain Description. Length limit: 1,024 characters.
  * @method void setDescription(string $Description) Set Description. Length limit: 1,024 characters.
- * @method array getUsages() Obtain Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
- * @method void setUsages(array $Usages) Set Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
- * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Face operation information.
- * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Face operation information.
+ * @method array getUsages() Obtain Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
+ * @method void setUsages(array $Usages) Set Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
+ * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Facial feature operation information
+ * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Facial feature operation information
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Figure ID.
+     * @var string Material ID
      */
     public $PersonId;
 
@@ -57,15 +57,15 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
+     * @var array Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
      */
     public $Usages;
 
     /**
-     * @var AiSampleFaceOperation Face operation information.
+     * @var AiSampleFaceOperation Facial feature operation information
      */
     public $FaceOperationInfo;
 
@@ -75,14 +75,14 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @param string $PersonId Figure ID.
+     * @param string $PersonId Material ID
      * @param string $Name Name. Length limit: 128 characters.
      * @param string $Description Description. Length limit: 1,024 characters.
-     * @param array $Usages Figure sample use case. Valid values:
-1. Recognition: It is used for content recognition, equivalent to `Recognition.Face`.
-2. Review: It is used for content audit, equivalent to `Review.Face`.
-3. All: It is used for content recognition and content audit, equivalent to 1+2 above.
-     * @param AiSampleFaceOperation $FaceOperationInfo Face operation information.
+     * @param array $Usages Material use case. Valid values:
+1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
+2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
+3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
+     * @param AiSampleFaceOperation $FaceOperationInfo Facial feature operation information
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
      */
     function __construct()

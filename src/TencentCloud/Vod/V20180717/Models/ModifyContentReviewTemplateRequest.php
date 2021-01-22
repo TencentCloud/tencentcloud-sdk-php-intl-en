@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of content audit template.
- * @method void setDefinition(integer $Definition) Set Unique ID of content audit template.
- * @method string getName() Obtain Content audit template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Content audit template name. Length limit: 64 characters.
- * @method string getComment() Obtain Description of content audit template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of content audit template. Length limit: 256 characters.
- * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameter of porn detection.
- * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameter of porn detection.
- * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameter of terrorism information detection.
- * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Control parameter of terrorism information detection.
- * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Control parameter of politically sensitive information detection.
- * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Control parameter of politically sensitive information detection.
+ * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template.
+ * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
+ * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
+ * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters.
+ * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameter for terrorism information.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Control parameter for terrorism information.
+ * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameter for porn information.
+ * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameter for porn information.
+ * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Control parameter for politically sensitive information.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Control parameter for politically sensitive information.
  * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
  * @method void setProhibitedConfigure(ProhibitedConfigureInfoForUpdate $ProhibitedConfigure) Set Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
- * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Control parameter of custom content audit.
- * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Control parameter of custom content audit.
+ * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition tasks.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Control parameter for custom intelligent content recognition tasks.
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. Minimum value: 0.5 seconds.
- * @method string getReviewWallSwitch() Obtain Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+ * @method string getReviewWallSwitch() Obtain Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of content audit template.
+     * @var integer Unique ID of an intelligent content recognition template.
      */
     public $Definition;
 
     /**
-     * @var string Content audit template name. Length limit: 64 characters.
+     * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of content audit template. Length limit: 256 characters.
+     * @var string Description of an intelligent content recognition template. Length limit: 256 characters.
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfoForUpdate Control parameter of porn detection.
-     */
-    public $PornConfigure;
-
-    /**
-     * @var TerrorismConfigureInfoForUpdate Control parameter of terrorism information detection.
+     * @var TerrorismConfigureInfoForUpdate Control parameter for terrorism information.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfoForUpdate Control parameter of politically sensitive information detection.
+     * @var PornConfigureInfoForUpdate Control parameter for porn information.
+     */
+    public $PornConfigure;
+
+    /**
+     * @var PoliticalConfigureInfoForUpdate Control parameter for politically sensitive information.
      */
     public $PoliticalConfigure;
 
@@ -91,7 +91,7 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfoForUpdate Control parameter of custom content audit.
+     * @var UserDefineConfigureInfoForUpdate Control parameter for custom intelligent content recognition tasks.
      */
     public $UserDefineConfigure;
 
@@ -101,9 +101,9 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var string Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * @var string Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
      */
     public $ReviewWallSwitch;
 
@@ -113,20 +113,20 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param integer $Definition Unique ID of content audit template.
-     * @param string $Name Content audit template name. Length limit: 64 characters.
-     * @param string $Comment Description of content audit template. Length limit: 256 characters.
-     * @param PornConfigureInfoForUpdate $PornConfigure Control parameter of porn detection.
-     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter of terrorism information detection.
-     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter of politically sensitive information detection.
+     * @param integer $Definition Unique ID of an intelligent content recognition template.
+     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter for terrorism information.
+     * @param PornConfigureInfoForUpdate $PornConfigure Control parameter for porn information.
+     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter for politically sensitive information.
      * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
-     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Control parameter of custom content audit.
+     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Control parameter for custom intelligent content recognition tasks.
      * @param float $ScreenshotInterval Frame capturing interval in seconds. Minimum value: 0.5 seconds.
-     * @param string $ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * @param string $ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
+<li>ON: yes</li>
+<li>OFF: no</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
@@ -154,14 +154,14 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
             $this->Comment = $param["Comment"];
         }
 
-        if (array_key_exists("PornConfigure",$param) and $param["PornConfigure"] !== null) {
-            $this->PornConfigure = new PornConfigureInfoForUpdate();
-            $this->PornConfigure->deserialize($param["PornConfigure"]);
-        }
-
         if (array_key_exists("TerrorismConfigure",$param) and $param["TerrorismConfigure"] !== null) {
             $this->TerrorismConfigure = new TerrorismConfigureInfoForUpdate();
             $this->TerrorismConfigure->deserialize($param["TerrorismConfigure"]);
+        }
+
+        if (array_key_exists("PornConfigure",$param) and $param["PornConfigure"] !== null) {
+            $this->PornConfigure = new PornConfigureInfoForUpdate();
+            $this->PornConfigure->deserialize($param["PornConfigure"]);
         }
 
         if (array_key_exists("PoliticalConfigure",$param) and $param["PoliticalConfigure"] !== null) {

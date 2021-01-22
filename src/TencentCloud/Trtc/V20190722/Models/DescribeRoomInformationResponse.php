@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRoomInformation response structure.
  *
- * @method integer getTotal() Obtain Total number of returned data entries.
- * @method void setTotal(integer $Total) Set Total number of returned data entries.
+ * @method integer getTotal() Obtain Total number of data entries displayed on the current page
+ * @method void setTotal(integer $Total) Set Total number of data entries displayed on the current page
  * @method array getRoomList() Obtain Room information list
  * @method void setRoomList(array $RoomList) Set Room information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRoomInformationResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of returned data entries.
+     * @var integer Total number of data entries displayed on the current page
      */
     public $Total;
 
@@ -45,7 +45,7 @@ class DescribeRoomInformationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total Total number of returned data entries.
+     * @param integer $Total Total number of data entries displayed on the current page
      * @param array $RoomList Room information list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

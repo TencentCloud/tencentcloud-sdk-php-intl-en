@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current Standard_IA storage capacity in bytes.
  * @method integer getStandardStorage() Obtain Current Standard storage capacity in bytes.
  * @method void setStandardStorage(integer $StandardStorage) Set Current Standard storage capacity in bytes.
+ * @method array getStorageStat() Obtain Storage usage by billing region.
+ * @method void setStorageStat(array $StorageStat) Set Storage usage by billing region.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +56,11 @@ class DescribeStorageDataResponse extends AbstractModel
     public $StandardStorage;
 
     /**
+     * @var array Storage usage by billing region.
+     */
+    public $StorageStat;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +70,7 @@ class DescribeStorageDataResponse extends AbstractModel
      * @param integer $TotalStorage Total current storage capacity in bytes.
      * @param integer $InfrequentStorage Current Standard_IA storage capacity in bytes.
      * @param integer $StandardStorage Current Standard storage capacity in bytes.
+     * @param array $StorageStat Storage usage by billing region.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +100,15 @@ class DescribeStorageDataResponse extends AbstractModel
 
         if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
             $this->StandardStorage = $param["StandardStorage"];
+        }
+
+        if (array_key_exists("StorageStat",$param) and $param["StorageStat"] !== null) {
+            $this->StorageStat = [];
+            foreach ($param["StorageStat"] as $key => $value){
+                $obj = new StorageStatData();
+                $obj->deserialize($value);
+                array_push($this->StorageStat, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

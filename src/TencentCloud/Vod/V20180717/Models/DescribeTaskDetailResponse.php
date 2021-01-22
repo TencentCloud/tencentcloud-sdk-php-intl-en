@@ -21,33 +21,35 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTaskDetail response structure.
  *
  * @method string getTaskType() Obtain Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
  * @method void setTaskType(string $TaskType) Set Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -78,6 +80,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setComposeMediaTask(ComposeMediaTask $ComposeMediaTask) Set Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method SplitMediaTask getSplitMediaTask() Obtain Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSplitMediaTask(SplitMediaTask $SplitMediaTask) Set Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method PullUploadTask getPullUploadTask() Obtain Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPullUploadTask(PullUploadTask $PullUploadTask) Set Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
@@ -85,10 +95,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method TranscodeTask2017 getTranscodeTask() Obtain Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTranscodeTask(TranscodeTask2017 $TranscodeTask) Set Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() Obtain Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method ConcatTask2017 getConcatTask() Obtain Video splicing task information. This field has a value only when `TaskType` is `Concat`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -102,9 +108,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateImageSpriteTask(CreateImageSpriteTask2017 $CreateImageSpriteTask) Set Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method WechatMiniProgramPublishTask getWechatMiniProgramPublishTask() Obtain Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+ * @method SnapshotByTimeOffsetTask2017 getSnapshotByTimeOffsetTask() Obtain Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setWechatMiniProgramPublishTask(WechatMiniProgramPublishTask $WechatMiniProgramPublishTask) Set Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+ * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -113,19 +119,20 @@ class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
      */
     public $TaskType;
 
@@ -177,6 +184,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ComposeMediaTask;
 
     /**
+     * @var SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SplitMediaTask;
+
+    /**
+     * @var WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $WechatMiniProgramPublishTask;
+
+    /**
      * @var PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -187,12 +206,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TranscodeTask;
-
-    /**
-     * @var SnapshotByTimeOffsetTask2017 Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $SnapshotByTimeOffsetTask;
 
     /**
      * @var ConcatTask2017 Video splicing task information. This field has a value only when `TaskType` is `Concat`.
@@ -213,10 +226,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateImageSpriteTask;
 
     /**
-     * @var WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @var SnapshotByTimeOffsetTask2017 Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public $WechatMiniProgramPublishTask;
+    public $SnapshotByTimeOffsetTask;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -225,19 +238,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $TaskType Task type. Valid values:
-<li>Procedure: video processing task;</li>
-<li>EditMedia: video editing task;</li>
-<li>WechatPublish: release on WeChat task;</li>
-<li>WechatMiniProgramPublish: release on WeChat Mini Program task;</li>
-<li>ComposeMedia: media file composing task;</li>
-<li>PullUpload: media file pulling for upload task.</li>
+<li>Procedure: video processing task</li>
+<li>EditMedia: video editing task</li>
+<li>SplitMedia: video splitting task</li>
+<li>ComposeMedia: media file producing task</li>
+<li>WechatPublish: WeChat publishing task</li>
+<li>WechatMiniProgramPublish: video publishing on WeChat Mini Program</li>
+<li>PullUpload: pulling media files for upload</li>
 
-Task types compatible with v2017:
-<li>Transcode: transcoding task;</li>
+Support v2017 task types:
+<li>Transcode: transcoding task</li>
 <li>SnapshotByTimeOffset: screencapturing task</li>
-<li>Concat: video splicing task;</li>
-<li>Clip: video clipping task;</li>
-<li>ImageSprites: image sprite generating task.</li>
+<li>Concat: video splicing task</li>
+<li>Clip: video clipping task</li>
+<li>ImageSprites: image sprite generating task</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -253,11 +267,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ComposeMediaTask $ComposeMediaTask Media file composing task information. This field has a value only when `TaskType` is `ComposeMedia`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SplitMediaTask $SplitMediaTask Video splitting task information. This field has a value only when `TaskType` is `EditMedia`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param PullUploadTask $PullUploadTask Media file pulling for upload task information. This field has a value only when `TaskType` is `PullUpload`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TranscodeTask2017 $TranscodeTask Video transcoding task information. This field has a value only when `TaskType` is `Transcode`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ConcatTask2017 $ConcatTask Video splicing task information. This field has a value only when `TaskType` is `Concat`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -265,7 +281,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param CreateImageSpriteTask2017 $CreateImageSpriteTask Image sprite creating task information. This field has a value only when `TaskType` is `ImageSprite`.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishTask Release on WeChat Mini Program task information. This field has a value only when `TaskType` is `WechatMiniProgramPublish`.
+     * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -322,6 +338,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->ComposeMediaTask->deserialize($param["ComposeMediaTask"]);
         }
 
+        if (array_key_exists("SplitMediaTask",$param) and $param["SplitMediaTask"] !== null) {
+            $this->SplitMediaTask = new SplitMediaTask();
+            $this->SplitMediaTask->deserialize($param["SplitMediaTask"]);
+        }
+
+        if (array_key_exists("WechatMiniProgramPublishTask",$param) and $param["WechatMiniProgramPublishTask"] !== null) {
+            $this->WechatMiniProgramPublishTask = new WechatMiniProgramPublishTask();
+            $this->WechatMiniProgramPublishTask->deserialize($param["WechatMiniProgramPublishTask"]);
+        }
+
         if (array_key_exists("PullUploadTask",$param) and $param["PullUploadTask"] !== null) {
             $this->PullUploadTask = new PullUploadTask();
             $this->PullUploadTask->deserialize($param["PullUploadTask"]);
@@ -330,11 +356,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("TranscodeTask",$param) and $param["TranscodeTask"] !== null) {
             $this->TranscodeTask = new TranscodeTask2017();
             $this->TranscodeTask->deserialize($param["TranscodeTask"]);
-        }
-
-        if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
-            $this->SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017();
-            $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
         }
 
         if (array_key_exists("ConcatTask",$param) and $param["ConcatTask"] !== null) {
@@ -352,9 +373,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->CreateImageSpriteTask->deserialize($param["CreateImageSpriteTask"]);
         }
 
-        if (array_key_exists("WechatMiniProgramPublishTask",$param) and $param["WechatMiniProgramPublishTask"] !== null) {
-            $this->WechatMiniProgramPublishTask = new WechatMiniProgramPublishTask();
-            $this->WechatMiniProgramPublishTask->deserialize($param["WechatMiniProgramPublishTask"]);
+        if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
+            $this->SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017();
+            $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

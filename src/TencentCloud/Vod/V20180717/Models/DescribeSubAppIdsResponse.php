@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSubAppIdInfoSet() Obtain Subapplication information set.
  * @method void setSubAppIdInfoSet(array $SubAppIdInfoSet) Set Subapplication information set.
+ * @method integer getTotalCount() Obtain Total number of subapplications.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of subapplications.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class DescribeSubAppIdsResponse extends AbstractModel
     public $SubAppIdInfoSet;
 
     /**
+     * @var integer Total number of subapplications.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $SubAppIdInfoSet Subapplication information set.
+     * @param integer $TotalCount Total number of subapplications.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeSubAppIdsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubAppIdInfoSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

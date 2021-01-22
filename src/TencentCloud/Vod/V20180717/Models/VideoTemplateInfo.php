@@ -94,8 +94,10 @@ We don’t recommend specifying this parameter unless you have special requireme
  * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
 We don’t recommend specifying this parameter unless you have special requirements.
- * @method integer getGop() Obtain 
- * @method void setGop(integer $Gop) Set 
+ * @method integer getGop() Obtain I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+ * @method void setGop(integer $Gop) Set I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -169,7 +171,8 @@ We don’t recommend specifying this parameter unless you have special requireme
     public $Vcrf;
 
     /**
-     * @var integer 
+     * @var integer I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     public $Gop;
 
@@ -211,7 +214,8 @@ Default value: black
      * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
 If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
 We don’t recommend specifying this parameter unless you have special requirements.
-     * @param integer $Gop 
+     * @param integer $Gop I-frame interval in frames. Valid values: 0 and 1-100000.
+When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
     function __construct()
     {

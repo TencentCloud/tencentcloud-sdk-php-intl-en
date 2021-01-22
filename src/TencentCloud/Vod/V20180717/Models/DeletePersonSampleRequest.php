@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeletePersonSample request structure.
  *
- * @method string getPersonId() Obtain Figure ID.
- * @method void setPersonId(string $PersonId) Set Figure ID.
+ * @method string getPersonId() Obtain ID of a sample.
+ * @method void setPersonId(string $PersonId) Set ID of a sample.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DeletePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Figure ID.
+     * @var string ID of a sample.
      */
     public $PersonId;
 
@@ -38,7 +38,7 @@ class DeletePersonSampleRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $PersonId Figure ID.
+     * @param string $PersonId ID of a sample.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

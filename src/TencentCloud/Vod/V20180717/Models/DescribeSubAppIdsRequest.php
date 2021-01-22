@@ -20,24 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubAppIds request structure.
  *
- * @method integer getLimit() Obtain 
- * @method void setLimit(integer $Limit) Set 
- * @method integer getOffset() Obtain 
- * @method void setOffset(integer $Offset) Set 
+ * @method string getName() Obtain Subapplication name.
+ * @method void setName(string $Name) Set Subapplication name.
  * @method array getTags() Obtain Tag information. You can query the list of subapplications with specified tags.
  * @method void setTags(array $Tags) Set Tag information. You can query the list of subapplications with specified tags.
+ * @method integer getOffset() Obtain Page number offset from the beginning of paginated queries. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Page number offset from the beginning of paginated queries. Default value: 0.
+ * @method integer getLimit() Obtain Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+ * @method void setLimit(integer $Limit) Set Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
  */
 class DescribeSubAppIdsRequest extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var string Subapplication name.
      */
-    public $Limit;
-
-    /**
-     * @var integer 
-     */
-    public $Offset;
+    public $Name;
 
     /**
      * @var array Tag information. You can query the list of subapplications with specified tags.
@@ -45,9 +42,20 @@ class DescribeSubAppIdsRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param integer $Limit 
-     * @param integer $Offset 
+     * @var integer Page number offset from the beginning of paginated queries. Default value: 0.
+     */
+    public $Offset;
+
+    /**
+     * @var integer Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
+     */
+    public $Limit;
+
+    /**
+     * @param string $Name Subapplication name.
      * @param array $Tags Tag information. You can query the list of subapplications with specified tags.
+     * @param integer $Offset Page number offset from the beginning of paginated queries. Default value: 0.
+     * @param integer $Limit Maximum return results of pulling paginated queries. Default: 200; maximum: 200.
      */
     function __construct()
     {
@@ -62,12 +70,8 @@ class DescribeSubAppIdsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -77,6 +81,14 @@ class DescribeSubAppIdsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
- * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
- * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+ * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain Input of adaptive bitrate streaming task.
@@ -45,10 +41,12 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public $ErrCodeExt;
+
+    /**
+     * @var integer Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      */
     public $ErrCode;
 
@@ -69,10 +67,8 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
-     * @param integer $ErrCode Error code. 0: success; other values: failure.
-<li>40000: invalid input parameter. Please check it;</li>
-<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
-<li>70000: internal service error. Please try again.</li>
+     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
      * @param AdaptiveDynamicStreamingTaskInput $Input Input of adaptive bitrate streaming task.
      * @param AdaptiveDynamicStreamingInfoItem $Output Output of adaptive bitrate streaming task.
@@ -92,6 +88,10 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrCodeExt",$param) and $param["ErrCodeExt"] !== null) {
+            $this->ErrCodeExt = $param["ErrCodeExt"];
         }
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {

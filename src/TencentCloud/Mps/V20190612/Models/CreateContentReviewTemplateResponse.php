@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate response structure.
  *
- * @method integer getDefinition() Obtain Unique ID of a content audit template.
- * @method void setDefinition(integer $Definition) Set Unique ID of a content audit template.
+ * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template
+ * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateContentReviewTemplateResponse extends AbstractModel
 {
     /**
-     * @var integer Unique ID of a content audit template.
+     * @var integer Unique ID of an intelligent content recognition template
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class CreateContentReviewTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition Unique ID of a content audit template.
+     * @param integer $Definition Unique ID of an intelligent content recognition template
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

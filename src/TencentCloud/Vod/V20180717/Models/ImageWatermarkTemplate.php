@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
+ * @method string getRepeatType() Obtain 
+ * @method void setRepeatType(string $RepeatType) Set 
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -60,6 +62,11 @@ class ImageWatermarkTemplate extends AbstractModel
     public $Height;
 
     /**
+     * @var string 
+     */
+    public $RepeatType;
+
+    /**
      * @param string $ImageUrl Watermark image address.
      * @param string $Width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
@@ -68,6 +75,7 @@ class ImageWatermarkTemplate extends AbstractModel
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
+     * @param string $RepeatType 
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class ImageWatermarkTemplate extends AbstractModel
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
+            $this->RepeatType = $param["RepeatType"];
         }
     }
 }

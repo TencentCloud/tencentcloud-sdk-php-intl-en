@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
  * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
- * @method string getRoomId() Obtain Room ID of uint type
- * @method void setRoomId(string $RoomId) Set Room ID of uint type
+ * @method string getRoomId() Obtain Room ID in string type
+ * @method void setRoomId(string $RoomId) Set Room ID in string type
  * @method string getPageNumber() Obtain Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
  * @method void setPageNumber(string $PageNumber) Set Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
  * @method string getPageSize() Obtain Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
@@ -51,7 +51,7 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Room ID of uint type
+     * @var string Room ID in string type
      */
     public $RoomId;
 
@@ -69,7 +69,7 @@ class DescribeRoomInformationRequest extends AbstractModel
      * @param string $SdkAppId User `sdkappid`
      * @param integer $StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
      * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
-     * @param string $RoomId Room ID of uint type
+     * @param string $RoomId Room ID in string type
      * @param string $PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
      * @param string $PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)
      */

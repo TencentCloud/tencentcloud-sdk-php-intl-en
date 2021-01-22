@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see the list of [Error Codes](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see the list of [Error Codes](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getErrCode() Obtain Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
+ * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiReviewPoliticalAsrTaskInput getInput() Obtain Input for an ASR-based politically sensitive information detection in text task during content audit.
@@ -48,7 +48,7 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
+     * @var integer Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      */
     public $ErrCode;
 
@@ -71,7 +71,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see the list of [Error Codes](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $ErrCode Error code. 0 suggests the task is successful; otherwise it is failed. This field is no longer recommended. Consider using the new error code ErrCodeExt.
+     * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
      * @param AiReviewPoliticalAsrTaskInput $Input Input for an ASR-based politically sensitive information detection in text task during content audit.
      * @param AiReviewPoliticalAsrTaskOutput $Output Output of an ASR-based politically sensitive information detection in text task during content audit.

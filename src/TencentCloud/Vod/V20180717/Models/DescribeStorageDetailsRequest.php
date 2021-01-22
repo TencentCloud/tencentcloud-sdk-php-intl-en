@@ -20,20 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageDetails request structure.
  *
- * @method string getStartTime() Obtain Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setStartTime(string $StartTime) Set Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getEndTime() Obtain End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setEndTime(string $EndTime) Set End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getInterval() Obtain Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
- * @method void setInterval(string $Interval) Set Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+ * @method string getStartTime() Obtain Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method void setStartTime(string $StartTime) Set Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method string getEndTime() Obtain End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method void setEndTime(string $EndTime) Set End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method string getInterval() Obtain Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
+ * @method void setInterval(string $Interval) Set Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
  * @method string getStorageType() Obtain Storage class to be queried. Valid values:
 <li>TotalStorage: total storage capacity.</li>
 <li>StandardStorage: Standard storage.</li>
@@ -48,25 +46,32 @@ Default value: TotalStorage.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+ * @method string getArea() Obtain Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+ * @method void setArea(string $Area) Set Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
  */
 class DescribeStorageDetailsRequest extends AbstractModel
 {
     /**
-     * @var string Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public $StartTime;
 
     /**
-     * @var string End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @var string End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public $EndTime;
 
     /**
-     * @var string Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+     * @var string Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
      */
     public $Interval;
 
@@ -86,13 +91,20 @@ When the value of this field is 1, the total usage of all subapplications (inclu
     public $SubAppId;
 
     /**
-     * @param string $StartTime Start time in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $EndTime End time in ISO 8601 format, which must be after the start time. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $Interval Query time interval. Valid values:
-<li>Minute: once per minute.</li>
-<li>Hour: once per hour.</li>
-<li>Day: once per day.</li>
-The default value is determined by the time span. `Minute` will be used if the time span is less than 1 hour, `Hour` if less than or equal to 7 days, and `Day` if more than 7 days.
+     * @var string Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
+     */
+    public $Area;
+
+    /**
+     * @param string $StartTime Start time in ISO 8601 format. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param string $EndTime End time in ISO 8601 format, which should be larger than the start time. For more information, please see [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param string $Interval Time granularity. Valid values:
+<li>Minute: 5-minute granularity</li>
+<li>Day: 1-day granularity</li>
+The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
      * @param string $StorageType Storage class to be queried. Valid values:
 <li>TotalStorage: total storage capacity.</li>
 <li>StandardStorage: Standard storage.</li>
@@ -100,6 +112,10 @@ The default value is determined by the time span. `Minute` will be used if the t
 Default value: TotalStorage.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
+     * @param string $Area Storage region to query. Valid values:
+<li>Chinese Mainland</li>
+<li>Outside Chinese Mainland</li>
+Default value: Chinese Mainland
      */
     function __construct()
     {
@@ -132,6 +148,10 @@ When the value of this field is 1, the total usage of all subapplications (inclu
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

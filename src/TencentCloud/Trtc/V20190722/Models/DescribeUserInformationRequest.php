@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommId() Obtain Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
  * @method void setCommId(string $CommId) Set Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
- * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+ * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+ * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
  * @method integer getEndTime() Obtain Query end time in the format of UNIX timestamp (e.g. 1588031999s).
  * @method void setEndTime(integer $EndTime) Set Query end time in the format of UNIX timestamp (e.g. 1588031999s).
  * @method string getSdkAppId() Obtain User `SDKAppID` (e.g. 1400188366).
@@ -43,7 +43,7 @@ class DescribeUserInformationRequest extends AbstractModel
     public $CommId;
 
     /**
-     * @var integer Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * @var integer Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
      */
     public $StartTime;
 
@@ -74,7 +74,7 @@ class DescribeUserInformationRequest extends AbstractModel
 
     /**
      * @param string $CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
-     * @param integer $StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * @param integer $StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
      * @param integer $EndTime Query end time in the format of UNIX timestamp (e.g. 1588031999s).
      * @param string $SdkAppId User `SDKAppID` (e.g. 1400188366).
      * @param array $UserIds The array of user IDs for query. You can enter up to 6 user IDs. If it is left empty, data of 6 users will be returned.

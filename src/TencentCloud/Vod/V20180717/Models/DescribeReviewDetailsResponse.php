@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReviewDetails response structure.
  *
- * @method integer getTotalCount() Obtain Number of initiated content audits.
- * @method void setTotalCount(integer $TotalCount) Set Number of initiated content audits.
- * @method integer getTotalDuration() Obtain Total content audit duration.
- * @method void setTotalDuration(integer $TotalDuration) Set Total content audit duration.
- * @method array getData() Obtain Data of content audit duration, which is collected once per day.
- * @method void setData(array $Data) Set Data of content audit duration, which is collected once per day.
+ * @method integer getTotalCount() Obtain Times of initiating intelligent content recognition tasks.
+ * @method void setTotalCount(integer $TotalCount) Set Times of initiating intelligent content recognition tasks.
+ * @method integer getTotalDuration() Obtain Duration of intelligent recognition content.
+ * @method void setTotalDuration(integer $TotalDuration) Set Duration of intelligent recognition content.
+ * @method array getData() Obtain Data of intelligent recognition content duration. One piece of data is collected every day.
+ * @method void setData(array $Data) Set Data of intelligent recognition content duration. One piece of data is collected every day.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeReviewDetailsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of initiated content audits.
+     * @var integer Times of initiating intelligent content recognition tasks.
      */
     public $TotalCount;
 
     /**
-     * @var integer Total content audit duration.
+     * @var integer Duration of intelligent recognition content.
      */
     public $TotalDuration;
 
     /**
-     * @var array Data of content audit duration, which is collected once per day.
+     * @var array Data of intelligent recognition content duration. One piece of data is collected every day.
      */
     public $Data;
 
@@ -52,9 +52,9 @@ class DescribeReviewDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of initiated content audits.
-     * @param integer $TotalDuration Total content audit duration.
-     * @param array $Data Data of content audit duration, which is collected once per day.
+     * @param integer $TotalCount Times of initiating intelligent content recognition tasks.
+     * @param integer $TotalDuration Duration of intelligent recognition content.
+     * @param array $Data Data of intelligent recognition content duration. One piece of data is collected every day.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

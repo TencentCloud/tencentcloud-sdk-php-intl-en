@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePersonSamples request structure.
  *
- * @method string getType() Obtain Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+ * @method string getType() Obtain Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
- * @method void setType(string $Type) Set Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+ * @method void setType(string $Type) Set Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
- * @method array getPersonIds() Obtain Figure ID. Array length limit: 100.
- * @method void setPersonIds(array $PersonIds) Set Figure ID. Array length limit: 100.
- * @method array getNames() Obtain Figure name. Array length limit: 20.
- * @method void setNames(array $Names) Set Figure name. Array length limit: 20.
- * @method array getTags() Obtain Figure tag. Array length limit: 20.
- * @method void setTags(array $Tags) Set Figure tag. Array length limit: 20.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+ * @method array getPersonIds() Obtain IDs of samples. Array length limit: 100.
+ * @method void setPersonIds(array $PersonIds) Set IDs of samples. Array length limit: 100.
+ * @method array getNames() Obtain Names of samples. Array length limit: 20.
+ * @method void setNames(array $Names) Set Names of samples. Array length limit: 20.
+ * @method array getTags() Obtain Tags of a sample. Array length limit: 20.
+ * @method void setTags(array $Tags) Set Tags of a sample. Array length limit: 20.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 100. Maximum value: 100.
@@ -48,27 +48,27 @@ Note: the default figure library can be pulled only through "figure name" or "fi
 class DescribePersonSamplesRequest extends AbstractModel
 {
     /**
-     * @var string Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+     * @var string Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
      */
     public $Type;
 
     /**
-     * @var array Figure ID. Array length limit: 100.
+     * @var array IDs of samples. Array length limit: 100.
      */
     public $PersonIds;
 
     /**
-     * @var array Figure name. Array length limit: 20.
+     * @var array Names of samples. Array length limit: 20.
      */
     public $Names;
 
     /**
-     * @var array Figure tag. Array length limit: 20.
+     * @var array Tags of a sample. Array length limit: 20.
      */
     public $Tags;
 
@@ -88,15 +88,15 @@ Note: the default figure library can be pulled only through "figure name" or "fi
     public $SubAppId;
 
     /**
-     * @param string $Type Pulled figure type. Valid values:
-<li>UserDefine: custom figure library;</li>
-<li>Default: default figure library.</li>
+     * @param string $Type Type of samples to pull. Valid values:
+<li>UserDefine: custom sample library</li>
+<li>Default: default sample library</li>
 
-Default value: UserDefine (the custom figure library will be pulled.)
-Note: the default figure library can be pulled only through "figure name" or "figure ID + figure name", and only one face image will be returned.
-     * @param array $PersonIds Figure ID. Array length limit: 100.
-     * @param array $Names Figure name. Array length limit: 20.
-     * @param array $Tags Figure tag. Array length limit: 20.
+Default value: UserDefine. Samples in the custom sample library will be pulled.
+Note: samples from the default library can only be pulled by providing the name or both the ID and name of a sample. Only one face image will be returned.
+     * @param array $PersonIds IDs of samples. Array length limit: 100.
+     * @param array $Names Names of samples. Array length limit: 20.
+     * @param array $Tags Tags of a sample. Array length limit: 20.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.

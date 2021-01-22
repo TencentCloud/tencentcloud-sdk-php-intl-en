@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeStorageDetails response structure.
  *
- * @method array getData() Obtain Storage statistics. One data entry per minute/hour/day.
- * @method void setData(array $Data) Set Storage statistics. One data entry per minute/hour/day.
+ * @method array getData() Obtain Storage statistics with one piece of data for every 5 minutes or 1 day.
+ * @method void setData(array $Data) Set Storage statistics with one piece of data for every 5 minutes or 1 day.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeStorageDetailsResponse extends AbstractModel
 {
     /**
-     * @var array Storage statistics. One data entry per minute/hour/day.
+     * @var array Storage statistics with one piece of data for every 5 minutes or 1 day.
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeStorageDetailsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Storage statistics. One data entry per minute/hour/day.
+     * @param array $Data Storage statistics with one piece of data for every 5 minutes or 1 day.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

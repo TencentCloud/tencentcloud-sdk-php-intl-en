@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of content audit template.
- * @method void setDefinition(integer $Definition) Set Unique ID of content audit template.
+ * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template.
+ * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DeleteContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of content audit template.
+     * @var integer Unique ID of an intelligent content recognition template.
      */
     public $Definition;
 
@@ -38,7 +38,7 @@ class DeleteContentReviewTemplateRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param integer $Definition Unique ID of content audit template.
+     * @param integer $Definition Unique ID of an intelligent content recognition template.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

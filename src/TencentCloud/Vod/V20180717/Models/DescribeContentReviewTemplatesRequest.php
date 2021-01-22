@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContentReviewTemplates request structure.
  *
- * @method array getDefinitions() Obtain Unique ID filter of content audit templates. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of content audit templates. Array length limit: 100.
+ * @method array getDefinitions() Obtain Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Unique ID filter of content audit templates. Array length limit: 100.
+     * @var array Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
      */
     public $Definitions;
 
@@ -52,7 +52,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param array $Definitions Unique ID filter of content audit templates. Array length limit: 100.
+     * @param array $Definitions Unique IDs for filters of an intelligent content recognition template. Array length limit: 100.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
