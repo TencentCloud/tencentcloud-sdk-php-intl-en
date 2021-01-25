@@ -66,6 +66,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
  * @method string getClusterTag() Obtain Tag for the STGW exclusive cluster.
  * @method void setClusterTag(string $ClusterTag) Set Tag for the STGW exclusive cluster.
+ * @method string getEipAddressId() Obtain Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+ * @method void setEipAddressId(string $EipAddressId) Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -173,6 +175,11 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $ClusterTag;
 
     /**
+     * @var string Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     */
+    public $EipAddressId;
+
+    /**
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
@@ -196,6 +203,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param boolean $SnatPro Whether Binding IPs of other VPCs feature switch
      * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
      * @param string $ClusterTag Tag for the STGW exclusive cluster.
+     * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
             $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {
+            $this->EipAddressId = $param["EipAddressId"];
         }
     }
 }

@@ -52,10 +52,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) Set Amount paid in cash
  * @method string getIncentivePayAmount() Obtain Amount paid in trial credit
  * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Amount paid in trial credit
- * @method string getItemCode() Obtain Component type/code (optional)
- * @method void setItemCode(string $ItemCode) Set Component type/code (optional)
- * @method string getComponentCode() Obtain Component name/code (optional)
- * @method void setComponentCode(string $ComponentCode) Set Component name/code (optional)
+ * @method string getItemCode() Obtain Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setItemCode(string $ItemCode) Set Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getComponentCode() Obtain Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setComponentCode(string $ComponentCode) Set Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getContractPrice() Obtain Contract price
  * @method void setContractPrice(string $ContractPrice) Set Contract price
  */
@@ -142,12 +146,14 @@ class BillDetailComponent extends AbstractModel
     public $IncentivePayAmount;
 
     /**
-     * @var string Component type/code (optional)
+     * @var string Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ItemCode;
 
     /**
-     * @var string Component name/code (optional)
+     * @var string Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ComponentCode;
 
@@ -173,8 +179,10 @@ class BillDetailComponent extends AbstractModel
      * @param string $VoucherPayAmount Amount paid in voucher
      * @param string $CashPayAmount Amount paid in cash
      * @param string $IncentivePayAmount Amount paid in trial credit
-     * @param string $ItemCode Component type/code (optional)
-     * @param string $ComponentCode Component name/code (optional)
+     * @param string $ItemCode Component type code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ComponentCode Component code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ContractPrice Contract price
      */
     function __construct()

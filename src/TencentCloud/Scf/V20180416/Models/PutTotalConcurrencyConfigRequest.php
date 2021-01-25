@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalConcurrencyMem() Obtain Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
  * @method void setTotalConcurrencyMem(integer $TotalConcurrencyMem) Set Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
- * @method string getNamespace() Obtain Namespace. Default value: default
- * @method void setNamespace(string $Namespace) Set Namespace. Default value: default
+ * @method string getNamespace() Obtain Namespace. Default value: `default`
+ * @method void setNamespace(string $Namespace) Set Namespace. Default value: `default`
  */
 class PutTotalConcurrencyConfigRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class PutTotalConcurrencyConfigRequest extends AbstractModel
     public $TotalConcurrencyMem;
 
     /**
-     * @var string Namespace. Default value: default
+     * @var string Namespace. Default value: `default`
      */
     public $Namespace;
 
     /**
      * @param integer $TotalConcurrencyMem Account concurrency memory quota. Note: the lower limit for the account concurrency memory quota is the user's total concurrency memory used + 12800
-     * @param string $Namespace Namespace. Default value: default
+     * @param string $Namespace Namespace. Default value: `default`
      */
     function __construct()
     {

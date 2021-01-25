@@ -110,6 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetNamespaceId(string $TargetNamespaceId) Set TSF Serverless namespace ID (in beta test).
  * @method string getUserType() Obtain User type.
  * @method void setUserType(string $UserType) Set User type.
+ * @method boolean getIsBase64Encoded() Obtain 
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set 
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -339,6 +341,11 @@ class CreateApiRequest extends AbstractModel
     public $UserType;
 
     /**
+     * @var boolean 
+     */
+    public $IsBase64Encoded;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
@@ -384,6 +391,7 @@ class CreateApiRequest extends AbstractModel
      * @param array $ResponseErrorCodes Custom error code configuration.
      * @param string $TargetNamespaceId TSF Serverless namespace ID (in beta test).
      * @param string $UserType User type.
+     * @param boolean $IsBase64Encoded 
      */
     function __construct()
     {
@@ -612,6 +620,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("UserType",$param) and $param["UserType"] !== null) {
             $this->UserType = $param["UserType"];
+        }
+
+        if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
+            $this->IsBase64Encoded = $param["IsBase64Encoded"];
         }
     }
 }

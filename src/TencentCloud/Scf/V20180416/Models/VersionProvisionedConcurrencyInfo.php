@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAllocatedProvisionedConcurrencyNum(integer $AllocatedProvisionedConcurrencyNum) Set Set provisioned concurrency amount.
  * @method integer getAvailableProvisionedConcurrencyNum() Obtain Currently available provisioned concurrency amount.
  * @method void setAvailableProvisionedConcurrencyNum(integer $AvailableProvisionedConcurrencyNum) Set Currently available provisioned concurrency amount.
- * @method string getStatus() Obtain Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
- * @method void setStatus(string $Status) Set Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+ * @method string getStatus() Obtain Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
+ * @method void setStatus(string $Status) Set Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
  * @method string getStatusReason() Obtain Status description of provisioned concurrency setting task.
  * @method void setStatusReason(string $StatusReason) Set Status description of provisioned concurrency setting task.
  * @method string getQualifier() Obtain Function version number
@@ -44,7 +44,7 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
     public $AvailableProvisionedConcurrencyNum;
 
     /**
-     * @var string Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+     * @var string Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
      */
     public $Status;
 
@@ -61,7 +61,7 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
     /**
      * @param integer $AllocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
      * @param integer $AvailableProvisionedConcurrencyNum Currently available provisioned concurrency amount.
-     * @param string $Status Provisioned concurrency setting task status. Done: completed; InProgress: in progress; Failed: partially or completely failed.
+     * @param string $Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
      * @param string $StatusReason Status description of provisioned concurrency setting task.
      * @param string $Qualifier Function version number
      */

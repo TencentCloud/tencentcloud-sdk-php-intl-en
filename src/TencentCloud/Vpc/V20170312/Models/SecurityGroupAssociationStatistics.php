@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group instance ID.
  * @method integer getCVM() Obtain Number of CVM instances.
  * @method void setCVM(integer $CVM) Set Number of CVM instances.
- * @method integer getCDB() Obtain Number of database instances.
- * @method void setCDB(integer $CDB) Set Number of database instances.
+ * @method integer getCDB() Obtain Number of TencentDB for MySQL instances
+ * @method void setCDB(integer $CDB) Set Number of TencentDB for MySQL instances
  * @method integer getENI() Obtain Number of ENI instances.
  * @method void setENI(integer $ENI) Set Number of ENI instances.
  * @method integer getSG() Obtain Number of times a security group is referenced by other security groups
@@ -50,7 +50,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     public $CVM;
 
     /**
-     * @var integer Number of database instances.
+     * @var integer Number of TencentDB for MySQL instances
      */
     public $CDB;
 
@@ -82,7 +82,7 @@ class SecurityGroupAssociationStatistics extends AbstractModel
     /**
      * @param string $SecurityGroupId Security group instance ID.
      * @param integer $CVM Number of CVM instances.
-     * @param integer $CDB Number of database instances.
+     * @param integer $CDB Number of TencentDB for MySQL instances
      * @param integer $ENI Number of ENI instances.
      * @param integer $SG Number of times a security group is referenced by other security groups
      * @param integer $CLB Number of load balancer instances.

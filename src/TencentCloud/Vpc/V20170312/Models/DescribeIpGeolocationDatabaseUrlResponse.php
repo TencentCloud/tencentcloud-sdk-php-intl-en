@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationDatabaseUrl response structure.
  *
- * @method string getDownLoadUrl() Obtain Download link of the IP location database.
- * @method void setDownLoadUrl(string $DownLoadUrl) Set Download link of the IP location database.
+ * @method string getDownLoadUrl() Obtain Download link of an IP location database
+ * @method void setDownLoadUrl(string $DownLoadUrl) Set Download link of an IP location database
  * @method string getExpiredAt() Obtain Link expiration time in UTC format following the ISO8601 standard.
  * @method void setExpiredAt(string $ExpiredAt) Set Link expiration time in UTC format following the ISO8601 standard.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel
 {
     /**
-     * @var string Download link of the IP location database.
+     * @var string Download link of an IP location database
      */
     public $DownLoadUrl;
 
@@ -45,7 +45,7 @@ class DescribeIpGeolocationDatabaseUrlResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DownLoadUrl Download link of the IP location database.
+     * @param string $DownLoadUrl Download link of an IP location database
      * @param string $ExpiredAt Link expiration time in UTC format following the ISO8601 standard.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPathMappingSet(array $PathMappingSet) Set Path mapping list after modification.
  * @method string getNetType() Obtain Network type. Valid values: INNER, OUTER.
  * @method void setNetType(string $NetType) Set Network type. Valid values: INNER, OUTER.
+ * @method boolean getIsForcedHttps() Obtain Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+ * @method void setIsForcedHttps(boolean $IsForcedHttps) Set Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
  */
 class ModifySubDomainRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifySubDomainRequest extends AbstractModel
     public $NetType;
 
     /**
+     * @var boolean Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public $IsForcedHttps;
+
+    /**
      * @param string $ServiceId Unique service ID.
      * @param string $SubDomain Custom domain name whose path mapping is to be modified.
      * @param boolean $IsDefaultMapping Whether to change to the default path mapping. true: use the default path mapping; false: use the custom path mapping.
@@ -80,6 +87,7 @@ class ModifySubDomainRequest extends AbstractModel
      * @param string $Protocol Custom domain name protocol type after modification. Valid values: http, https, http&https.
      * @param array $PathMappingSet Path mapping list after modification.
      * @param string $NetType Network type. Valid values: INNER, OUTER.
+     * @param boolean $IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class ModifySubDomainRequest extends AbstractModel
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("IsForcedHttps",$param) and $param["IsForcedHttps"] !== null) {
+            $this->IsForcedHttps = $param["IsForcedHttps"];
         }
     }
 }

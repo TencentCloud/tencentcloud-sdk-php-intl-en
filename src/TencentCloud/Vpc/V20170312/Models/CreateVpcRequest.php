@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcName() Obtain The VPC name. The maximum length is 60 bytes.
  * @method void setVpcName(string $VpcName) Set The VPC name. The maximum length is 60 bytes.
- * @method string getCidrBlock() Obtain VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
- * @method void setCidrBlock(string $CidrBlock) Set VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+ * @method string getCidrBlock() Obtain VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+ * @method void setCidrBlock(string $CidrBlock) Set VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
  * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
  * @method void setEnableMulticast(string $EnableMulticast) Set Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
- * @method array getDnsServers() Obtain The DNS address. A maximum of 4 addresses is supported.
- * @method void setDnsServers(array $DnsServers) Set The DNS address. A maximum of 4 addresses is supported.
- * @method string getDomainName() Obtain Domain name
- * @method void setDomainName(string $DomainName) Set Domain name
- * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
- * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method array getDnsServers() Obtain DNS address. A maximum of 4 addresses is supported.
+ * @method void setDnsServers(array $DnsServers) Set DNS address. A maximum of 4 addresses is supported.
+ * @method string getDomainName() Obtain Domain name of DHCP
+ * @method void setDomainName(string $DomainName) Set Domain name of DHCP
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
  */
 class CreateVpcRequest extends AbstractModel
 {
@@ -41,7 +41,7 @@ class CreateVpcRequest extends AbstractModel
     public $VpcName;
 
     /**
-     * @var string VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+     * @var string VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
      */
     public $CidrBlock;
 
@@ -51,27 +51,27 @@ class CreateVpcRequest extends AbstractModel
     public $EnableMulticast;
 
     /**
-     * @var array The DNS address. A maximum of 4 addresses is supported.
+     * @var array DNS address. A maximum of 4 addresses is supported.
      */
     public $DnsServers;
 
     /**
-     * @var string Domain name
+     * @var string Domain name of DHCP
      */
     public $DomainName;
 
     /**
-     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
 
     /**
      * @param string $VpcName The VPC name. The maximum length is 60 bytes.
-     * @param string $CidrBlock VPC CIDR, which must fall within the following private network IP ranges: 10.0.0.0/16, 172.16.0.0/16, and 192.168.0.0/16.
+     * @param string $CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
-     * @param array $DnsServers The DNS address. A maximum of 4 addresses is supported.
-     * @param string $DomainName Domain name
-     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param array $DnsServers DNS address. A maximum of 4 addresses is supported.
+     * @param string $DomainName Domain name of DHCP
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {

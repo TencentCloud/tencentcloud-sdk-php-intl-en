@@ -212,6 +212,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEnvironments(array $Environments) Set Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsBase64Encoded() Obtain 
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set 
+ * @method boolean getIsBase64Trigger() Obtain 
+ * @method void setIsBase64Trigger(boolean $IsBase64Trigger) Set 
+ * @method array getBase64EncodedTriggerRules() Obtain 
+ * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) Set 
  */
 class ApiInfo extends AbstractModel
 {
@@ -504,6 +510,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Environments;
 
     /**
+     * @var boolean 
+     */
+    public $IsBase64Encoded;
+
+    /**
+     * @var boolean 
+     */
+    public $IsBase64Trigger;
+
+    /**
+     * @var array 
+     */
+    public $Base64EncodedTriggerRules;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceName Service name of API.
@@ -600,6 +621,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Environments Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsBase64Encoded 
+     * @param boolean $IsBase64Trigger 
+     * @param array $Base64EncodedTriggerRules 
      */
     function __construct()
     {
@@ -839,6 +863,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Environments",$param) and $param["Environments"] !== null) {
             $this->Environments = $param["Environments"];
+        }
+
+        if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
+            $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("IsBase64Trigger",$param) and $param["IsBase64Trigger"] !== null) {
+            $this->IsBase64Trigger = $param["IsBase64Trigger"];
+        }
+
+        if (array_key_exists("Base64EncodedTriggerRules",$param) and $param["Base64EncodedTriggerRules"] !== null) {
+            $this->Base64EncodedTriggerRules = [];
+            foreach ($param["Base64EncodedTriggerRules"] as $key => $value){
+                $obj = new Base64EncodedTriggerRule();
+                $obj->deserialize($value);
+                array_push($this->Base64EncodedTriggerRules, $obj);
+            }
         }
     }
 }

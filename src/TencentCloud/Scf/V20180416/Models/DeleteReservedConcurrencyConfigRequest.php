@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionName() Obtain Name of the function for which to delete the provisioned concurrency
  * @method void setFunctionName(string $FunctionName) Set Name of the function for which to delete the provisioned concurrency
- * @method string getNamespace() Obtain Function namespace. Default value: default
- * @method void setNamespace(string $Namespace) Set Function namespace. Default value: default
+ * @method string getNamespace() Obtain Function namespace. Default value: `default`
+ * @method void setNamespace(string $Namespace) Set Function namespace. Default value: `default`
  */
 class DeleteReservedConcurrencyConfigRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteReservedConcurrencyConfigRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var string Function namespace. Default value: default
+     * @var string Function namespace. Default value: `default`
      */
     public $Namespace;
 
     /**
      * @param string $FunctionName Name of the function for which to delete the provisioned concurrency
-     * @param string $Namespace Function namespace. Default value: default
+     * @param string $Namespace Function namespace. Default value: `default`
      */
     function __construct()
     {

@@ -62,8 +62,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getThroughputPerformance() Obtain 
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set 
+ * @method integer getThroughputPerformance() Obtain Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DataDisk extends AbstractModel
 {
@@ -117,7 +119,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $KmsKeyId;
 
     /**
-     * @var integer 
+     * @var integer Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ThroughputPerformance;
 
@@ -143,7 +146,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
 Currently, this parameter is only used in the `RunInstances` API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ThroughputPerformance 
+     * @param integer $ThroughputPerformance Cloud disk performance, in MB/s
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

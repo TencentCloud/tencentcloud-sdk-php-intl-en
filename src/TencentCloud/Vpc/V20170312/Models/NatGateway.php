@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set Subnet ID.
  * @method array getTagSet() Obtain Tag key-value pair.
  * @method void setTagSet(array $TagSet) Set Tag key-value pair.
+ * @method array getSecurityGroupSet() Obtain The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecurityGroupSet(array $SecurityGroupSet) Set The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NatGateway extends AbstractModel
 {
@@ -128,6 +132,12 @@ class NatGateway extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SecurityGroupSet;
+
+    /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
@@ -144,6 +154,8 @@ class NatGateway extends AbstractModel
      * @param array $DirectConnectGatewayIds IDs of direct connect gateway associated.
      * @param string $SubnetId Subnet ID.
      * @param array $TagSet Tag key-value pair.
+     * @param array $SecurityGroupSet The list of the security groups bound to the NAT Gateway
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -227,6 +239,10 @@ class NatGateway extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
+            $this->SecurityGroupSet = $param["SecurityGroupSet"];
         }
     }
 }

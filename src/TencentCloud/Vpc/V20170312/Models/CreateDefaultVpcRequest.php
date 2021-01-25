@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDefaultVpc request structure.
  *
- * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
- * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+ * @method string getZone() Obtain The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
+ * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
  * @method boolean getForce() Obtain Whether to forcibly return a default VPC
  * @method void setForce(boolean $Force) Set Whether to forcibly return a default VPC
  */
 class CreateDefaultVpcRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * @var string The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
      */
     public $Zone;
 
@@ -38,7 +38,7 @@ class CreateDefaultVpcRequest extends AbstractModel
     public $Force;
 
     /**
-     * @param string $Zone The ID of the availability zone in which the subnet resides. The availability zone will be randomly selected if not specified.
+     * @param string $Zone The ID of the availability zone in which the subnet resides. This parameter can be obtained through the [`DescribeZones`](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API, such as `ap-guangzhou-1`. If it’s not specified, a random availability zone will be used.
      * @param boolean $Force Whether to forcibly return a default VPC
      */
     function __construct()

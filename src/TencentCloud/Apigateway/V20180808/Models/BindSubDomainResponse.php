@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindSubDomain response structure.
  *
+ * @method boolean getResult() Obtain Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setResult(boolean $Result) Set Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class BindSubDomainResponse extends AbstractModel
 {
     /**
+     * @var boolean Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Result;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param boolean $Result Whether binding succeeded.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,10 @@ class BindSubDomainResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

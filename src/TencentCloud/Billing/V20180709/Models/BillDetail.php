@@ -60,14 +60,20 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getBusinessCode() Obtain Product name/code (optional)
- * @method void setBusinessCode(string $BusinessCode) Set Product name/code (optional)
- * @method string getProductCode() Obtain Subproduct name/code (optional)
- * @method void setProductCode(string $ProductCode) Set Subproduct name/code (optional)
+ * @method string getBusinessCode() Obtain Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProductCode() Obtain Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getActionType() Obtain Transaction type/code (optional)
  * @method void setActionType(string $ActionType) Set Transaction type/code (optional)
  * @method string getRegionId() Obtain 
  * @method void setRegionId(string $RegionId) Set 
+ * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
+ * @method void setProjectId(integer $ProjectId) Set Project ID: ID of the project to which the resource belongs
  */
 class BillDetail extends AbstractModel
 {
@@ -168,12 +174,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var string Product name/code (optional)
+     * @var string Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $BusinessCode;
 
     /**
-     * @var string Subproduct name/code (optional)
+     * @var string Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ProductCode;
 
@@ -186,6 +194,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string 
      */
     public $RegionId;
+
+    /**
+     * @var integer Project ID: ID of the project to which the resource belongs
+     */
+    public $ProjectId;
 
     /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
@@ -208,10 +221,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OperateUin Operator's UIN
      * @param array $Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $BusinessCode Product name/code (optional)
-     * @param string $ProductCode Subproduct name/code (optional)
+     * @param string $BusinessCode Product code
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ProductCode Subproduct code
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ActionType Transaction type/code (optional)
      * @param string $RegionId 
+     * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
      */
     function __construct()
     {
@@ -326,6 +342,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

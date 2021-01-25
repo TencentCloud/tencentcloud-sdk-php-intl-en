@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQualifier(string $Qualifier) Set Function version number. Note: the `$LATEST` version does not support provisioned concurrency
  * @method integer getVersionProvisionedConcurrencyNum() Obtain Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
  * @method void setVersionProvisionedConcurrencyNum(integer $VersionProvisionedConcurrencyNum) Set Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
- * @method string getNamespace() Obtain Function namespace. Default value: default
- * @method void setNamespace(string $Namespace) Set Function namespace. Default value: default
+ * @method string getNamespace() Obtain Function namespace. Default value: `default`
+ * @method void setNamespace(string $Namespace) Set Function namespace. Default value: `default`
  */
 class PutProvisionedConcurrencyConfigRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
     public $VersionProvisionedConcurrencyNum;
 
     /**
-     * @var string Function namespace. Default value: default
+     * @var string Function namespace. Default value: `default`
      */
     public $Namespace;
 
@@ -55,7 +55,7 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
      * @param string $FunctionName Name of the function for which to set the provisioned concurrency
      * @param string $Qualifier Function version number. Note: the `$LATEST` version does not support provisioned concurrency
      * @param integer $VersionProvisionedConcurrencyNum Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
-     * @param string $Namespace Function namespace. Default value: default
+     * @param string $Namespace Function namespace. Default value: `default`
      */
     function __construct()
     {

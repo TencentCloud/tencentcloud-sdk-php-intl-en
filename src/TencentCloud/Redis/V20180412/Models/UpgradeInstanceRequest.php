@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
  * @method integer getRedisReplicasNum() Obtain Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
  * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+ * @method array getNodeSet() Obtain The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+ * @method void setNodeSet(array $NodeSet) Set The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpgradeInstanceRequest extends AbstractModel
     public $RedisReplicasNum;
 
     /**
+     * @var array The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
+     */
+    public $NodeSet;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $MemSize Shard size in MB
      * @param integer $RedisShardNum Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
      * @param integer $RedisReplicasNum Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+     * @param array $NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("RedisReplicasNum",$param) and $param["RedisReplicasNum"] !== null) {
             $this->RedisReplicasNum = $param["RedisReplicasNum"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new RedisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
         }
     }
 }

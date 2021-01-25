@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertificateId(string $CertificateId) Set Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
  * @method array getPathMappingSet() Obtain Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
  * @method void setPathMappingSet(array $PathMappingSet) Set Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
+ * @method boolean getIsForcedHttps() Obtain Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+ * @method void setIsForcedHttps(boolean $IsForcedHttps) Set Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
  */
 class BindSubDomainRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class BindSubDomainRequest extends AbstractModel
     public $PathMappingSet;
 
     /**
+     * @var boolean Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public $IsForcedHttps;
+
+    /**
      * @param string $ServiceId Unique service ID.
      * @param string $SubDomain Custom domain name to be bound.
      * @param string $Protocol Protocol supported by service. Valid values: http, https, http&https.
@@ -88,6 +95,7 @@ class BindSubDomainRequest extends AbstractModel
      * @param string $NetSubDomain Default domain name.
      * @param string $CertificateId Unique certificate ID of the custom domain name to be bound. The certificate can be uploaded if `Protocol` is `https` or `http&https`.
      * @param array $PathMappingSet Custom domain name path mapping. It can contain up to 3 `Environment` values which can be set to only `test`, `prepub`, and `release`, respectively.
+     * @param boolean $IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class BindSubDomainRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PathMappingSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsForcedHttps",$param) and $param["IsForcedHttps"] !== null) {
+            $this->IsForcedHttps = $param["IsForcedHttps"];
         }
     }
 }

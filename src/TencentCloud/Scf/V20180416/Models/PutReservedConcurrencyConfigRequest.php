@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Name of the function for which to set the provisioned concurrency
  * @method integer getReservedConcurrencyMem() Obtain Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
  * @method void setReservedConcurrencyMem(integer $ReservedConcurrencyMem) Set Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
- * @method string getNamespace() Obtain Function namespace. Default value: default
- * @method void setNamespace(string $Namespace) Set Function namespace. Default value: default
+ * @method string getNamespace() Obtain Function namespace. Default value: `default`
+ * @method void setNamespace(string $Namespace) Set Function namespace. Default value: `default`
  */
 class PutReservedConcurrencyConfigRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class PutReservedConcurrencyConfigRequest extends AbstractModel
     public $ReservedConcurrencyMem;
 
     /**
-     * @var string Function namespace. Default value: default
+     * @var string Function namespace. Default value: `default`
      */
     public $Namespace;
 
     /**
      * @param string $FunctionName Name of the function for which to set the provisioned concurrency
      * @param integer $ReservedConcurrencyMem Reserved concurrency memory of function. Note: the upper limit for the total reserved concurrency memory of the function is the user's total concurrency memory minus 12800
-     * @param string $Namespace Function namespace. Default value: default
+     * @param string $Namespace Function namespace. Default value: `default`
      */
     function __construct()
     {

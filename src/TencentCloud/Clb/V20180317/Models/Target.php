@@ -30,19 +30,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setType(string $Type) Set Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+ * @method string getInstanceId() Obtain Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+ * @method void setInstanceId(string $InstanceId) Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getWeight() Obtain Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
  * @method void setWeight(integer $Weight) Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method string getEniIp() Obtain IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+ * @method string getEniIp() Obtain It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEniIp(string $EniIp) Set IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+ * @method void setEniIp(string $EniIp) Set It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Target extends AbstractModel
@@ -61,7 +61,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Type;
 
     /**
-     * @var string Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * @var string Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -73,8 +73,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Weight;
 
     /**
-     * @var string IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * @var string It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $EniIp;
@@ -85,12 +85,12 @@ Note: this parameter is required when binding a CVM or ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Type Real server type. Value range: CVM (Cloud Virtual Machine), ENI (Elastic Network Interface). This parameter does not take effect currently as an input parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API.
+     * @param string $InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
-     * @param string $EniIp IP of an ENI, which is required when binding an ENI. To bind an ENI with a CLB, you must bind it with a CVM first.
-Note: either `InstanceId` or `EniIp` must be passed in. Binding ENI is now only available to beta users. Please submit a ticket to apply for it if necessary. 
+     * @param string $EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
+Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

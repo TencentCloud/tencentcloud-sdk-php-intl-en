@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) Set ID of the cloud disk used to create this snapshot.
  * @method integer getDiskSize() Obtain Size of the cloud disk used to create this snapshot (in GB).
  * @method void setDiskSize(integer $DiskSize) Set Size of the cloud disk used to create this snapshot (in GB).
- * @method string getSnapshotState() Obtain Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
- * @method void setSnapshotState(string $SnapshotState) Set Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+ * @method string getSnapshotState() Obtain Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
+ * @method void setSnapshotState(string $SnapshotState) Set Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
  * @method string getSnapshotName() Obtain Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
  * @method integer getPercent() Obtain The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotType(string $SnapshotType) Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
  * @method integer getShareReference() Obtain Number of snapshots currently shared
  * @method void setShareReference(integer $ShareReference) Set Number of snapshots currently shared
+ * @method string getTimeStartShare() Obtain 
+ * @method void setTimeStartShare(string $TimeStartShare) Set 
  */
 class Snapshot extends AbstractModel
 {
@@ -85,7 +87,7 @@ class Snapshot extends AbstractModel
     public $DiskSize;
 
     /**
-     * @var string Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+     * @var string Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
      */
     public $SnapshotState;
 
@@ -150,12 +152,17 @@ class Snapshot extends AbstractModel
     public $ShareReference;
 
     /**
+     * @var string 
+     */
+    public $TimeStartShare;
+
+    /**
      * @param string $SnapshotId Snapshot ID.
      * @param Placement $Placement Location of the snapshot.
      * @param string $DiskUsage The type of the cloud disk used to create the snapshot. Value range: <br><li>SYSTEM_DISK: System disk <br><li>DATA_DISK: Data disk.
      * @param string $DiskId ID of the cloud disk used to create this snapshot.
      * @param integer $DiskSize Size of the cloud disk used to create this snapshot (in GB).
-     * @param string $SnapshotState Status of the snapshot. Value range: <br><li>NORMAL: Normal <br><li>CREATING: Creating <br><li>ROLLBACKING: Rolling backing <br><li>COPYING_FROM_REMOTE: Copying snapshot across regions.
+     * @param string $SnapshotState Snapshot status. Valid values: <br><li>NORMAL: normal <br><li>CREATING: creating<br><li>ROLLBACKING: rolling back<br><li>COPYING_FROM_REMOTE: cross-region replicating<li>CHECKING_COPIED: verifying the cross-region replicated data<br><li>TORECYCLE: to be repossessed.
      * @param string $SnapshotName Snapshot name, the user-defined snapshot alias. Call [ModifySnapshotAttribute](https://intl.cloud.tencent.com/document/product/362/15650?from_cn_redirect=1) to modify this field.
      * @param integer $Percent The progress percentage for snapshot creation. This field is always 100 after the snapshot is created successfully.
      * @param string $CreateTime Creation time of the snapshot.
@@ -168,6 +175,7 @@ class Snapshot extends AbstractModel
      * @param integer $ImageCount Number of images associated with snapshot.
      * @param string $SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
      * @param integer $ShareReference Number of snapshots currently shared
+     * @param string $TimeStartShare 
      */
     function __construct()
     {
@@ -258,6 +266,10 @@ class Snapshot extends AbstractModel
 
         if (array_key_exists("ShareReference",$param) and $param["ShareReference"] !== null) {
             $this->ShareReference = $param["ShareReference"];
+        }
+
+        if (array_key_exists("TimeStartShare",$param) and $param["TimeStartShare"] !== null) {
+            $this->TimeStartShare = $param["TimeStartShare"];
         }
     }
 }
