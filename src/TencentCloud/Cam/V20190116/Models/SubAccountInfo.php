@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountryCode(string $CountryCode) Set Country/Area code
  * @method string getEmail() Obtain Email
  * @method void setEmail(string $Email) Set Email
+ * @method string getCreateTime() Obtain Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCreateTime(string $CreateTime) Set Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -80,6 +84,12 @@ class SubAccountInfo extends AbstractModel
     public $Email;
 
     /**
+     * @var string Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CreateTime;
+
+    /**
      * @param integer $Uin Sub-user user ID
      * @param string $Name Sub-user username
      * @param integer $Uid Sub-user UID
@@ -88,6 +98,8 @@ class SubAccountInfo extends AbstractModel
      * @param string $PhoneNum Mobile number
      * @param string $CountryCode Country/Area code
      * @param string $Email Email
+     * @param string $CreateTime Creation time
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ class SubAccountInfo extends AbstractModel
 
         if (array_key_exists("Email",$param) and $param["Email"] !== null) {
             $this->Email = $param["Email"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }

@@ -20,19 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindingPolicyObject request structure.
  *
- * @method integer getGroupId() Obtain Policy group ID.
- * @method void setGroupId(integer $GroupId) Set Policy group ID.
+ * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
  * @method string getModule() Obtain Required. The value is fixed to monitor.
  * @method void setModule(string $Module) Set Required. The value is fixed to monitor.
  * @method integer getInstanceGroupId() Obtain Instance group ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method array getDimensions() Obtain Dimensions of an object to be bound.
  * @method void setDimensions(array $Dimensions) Set Dimensions of an object to be bound.
+ * @method string getPolicyId() Obtain Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
     /**
-     * @var integer Policy group ID.
+     * @var integer Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public $GroupId;
 
@@ -52,10 +54,16 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
-     * @param integer $GroupId Policy group ID.
+     * @var string Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public $PolicyId;
+
+    /**
+     * @param integer $GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      * @param string $Module Required. The value is fixed to monitor.
      * @param integer $InstanceGroupId Instance group ID.
      * @param array $Dimensions Dimensions of an object to be bound.
+     * @param string $PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class BindingPolicyObjectRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

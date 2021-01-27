@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain The value is fixed to monitor.
  * @method void setModule(string $Module) Set The value is fixed to monitor.
- * @method integer getGroupId() Obtain Policy group ID.
- * @method void setGroupId(integer $GroupId) Set Policy group ID.
+ * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
  * @method array getUniqueId() Obtain List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
  * @method void setUniqueId(array $UniqueId) Set List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
  * @method integer getInstanceGroupId() Obtain Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
+ * @method string getPolicyId() Obtain Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
  */
 class UnBindingPolicyObjectRequest extends AbstractModel
 {
@@ -37,7 +39,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var integer Policy group ID.
+     * @var integer Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      */
     public $GroupId;
 
@@ -52,10 +54,16 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $InstanceGroupId;
 
     /**
+     * @var string Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     */
+    public $PolicyId;
+
+    /**
      * @param string $Module The value is fixed to monitor.
-     * @param integer $GroupId Policy group ID.
+     * @param integer $GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
      * @param array $UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      * @param integer $InstanceGroupId Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
+     * @param string $PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UnBindingPolicyObjectRequest extends AbstractModel
 
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
             $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
     }
 }
