@@ -26,8 +26,8 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
  * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
 sender &lt;email address&gt;. For example: 
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
- * @method array getDestination() Obtain Recipient address.
- * @method void setDestination(array $Destination) Set Recipient address.
+ * @method array getDestination() Obtain Recipient email addresses. You can send an email to up to 50 recipients at a time.
+ * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time.
  * @method string getSubject() Obtain Email subject.
  * @method void setSubject(string $Subject) Set Email subject.
  * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
@@ -49,7 +49,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $FromEmailAddress;
 
     /**
-     * @var array Recipient address.
+     * @var array Recipient email addresses. You can send an email to up to 50 recipients at a time.
      */
     public $Destination;
 
@@ -82,7 +82,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
      * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
 sender &lt;email address&gt;. For example: 
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-     * @param array $Destination Recipient address.
+     * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
      * @param string $Subject Email subject.
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param Template $Template Template when sending emails using a template.

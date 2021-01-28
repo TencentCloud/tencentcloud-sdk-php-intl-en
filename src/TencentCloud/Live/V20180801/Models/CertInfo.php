@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time in UTC format.
  * @method string getHttpsCrt() Obtain Certificate content.
  * @method void setHttpsCrt(string $HttpsCrt) Set Certificate content.
- * @method integer getCertType() Obtain Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
- * @method void setCertType(integer $CertType) Set Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+ * @method integer getCertType() Obtain Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
+ * @method void setCertType(integer $CertType) Set Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
  * @method string getCertExpireTime() Obtain Certificate expiration time in UTC format.
  * @method void setCertExpireTime(string $CertExpireTime) Set Certificate expiration time in UTC format.
  * @method array getDomainList() Obtain List of domain names that use this certificate.
@@ -69,9 +69,9 @@ class CertInfo extends AbstractModel
     public $HttpsCrt;
 
     /**
-     * @var integer Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+     * @var integer Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
      */
     public $CertType;
 
@@ -91,9 +91,9 @@ class CertInfo extends AbstractModel
      * @param string $Description Description.
      * @param string $CreateTime Creation time in UTC format.
      * @param string $HttpsCrt Certificate content.
-     * @param integer $CertType Certificate type:
-0: Tencent Cloud-hosted certificate.
-1: user-added certificate.
+     * @param integer $CertType Certificate type.
+0: User-added certificate.
+1: Tencent Cloud-hosted certificate.
      * @param string $CertExpireTime Certificate expiration time in UTC format.
      * @param array $DomainList List of domain names that use this certificate.
      */

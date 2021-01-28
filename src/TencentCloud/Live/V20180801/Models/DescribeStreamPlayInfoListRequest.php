@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStartTime() Obtain Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
  * @method void setStartTime(string $StartTime) Set Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
- * @method string getEndTime() Obtain End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
- * @method void setEndTime(string $EndTime) Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+ * @method string getEndTime() Obtain End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
+ * @method void setEndTime(string $EndTime) Set End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
  * @method string getPlayDomain() Obtain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
  * @method void setPlayDomain(string $PlayDomain) Set Playback domain name,
@@ -49,8 +49,8 @@ class DescribeStreamPlayInfoListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+     * @var string End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
      */
     public $EndTime;
 
@@ -75,8 +75,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
 
     /**
      * @param string $StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-     * @param string $EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
-The end time and start time must be on the same day. Data in the last 3 days can be queried.
+     * @param string $EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
+The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
      * @param string $PlayDomain Playback domain name,
 If this parameter is left empty, data of live streams of all playback domain names will be queried.
      * @param string $StreamName Stream name (exact match).

@@ -44,11 +44,11 @@ Default value: 1.
 Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
  * @method string getStreamName() Obtain Stream name, which supports fuzzy match.
  * @method void setStreamName(string $StreamName) Set Stream name, which supports fuzzy match.
@@ -89,7 +89,7 @@ Default value: 1.
     /**
      * @var integer Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
      */
     public $PageSize;
@@ -113,7 +113,7 @@ This supports querying data in the past 60 days.
 Default value: 1.
      * @param integer $PageSize Number of entries per page.
 Maximum value: 100.
-Value range: any integer between 1 and 100.
+Valid values: integers between 10 and 100.
 Default value: 10.
      * @param string $StreamName Stream name, which supports fuzzy match.
      */

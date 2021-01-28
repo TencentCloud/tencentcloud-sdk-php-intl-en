@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- * @method string getVcodec() Obtain Video codec. Valid values: h264 (default), h265, origin
+ * @method string getVcodec() Obtain Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
- * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: h264 (default), h265, origin
+origin: original codec as the output codec.
+ * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
  * @method string getAcodec() Obtain Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
  * @method void setAcodec(string $Acodec) Set Audio codec. Defaut value: aac.
@@ -107,9 +107,9 @@ class ModifyLiveTranscodeTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string Video codec. Valid values: h264 (default), h265, origin
+     * @var string Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      */
     public $Vcodec;
 
@@ -218,9 +218,9 @@ Value range: 0.0-0.5.
 
     /**
      * @param integer $TemplateId Template ID.
-     * @param string $Vcodec Video codec. Valid values: h264 (default), h265, origin
+     * @param string $Vcodec Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      * @param string $Acodec Audio codec. Defaut value: aac.
 Note: this parameter is unsupported now.
      * @param integer $AudioBitrate Audio bitrate. Default value: 0.

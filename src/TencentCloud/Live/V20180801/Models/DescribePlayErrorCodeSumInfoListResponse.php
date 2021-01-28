@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePlayErrorCodeSumInfoList response structure.
  *
- * @method array getProIspInfoList() Obtain Information of 4xx or 5xx error codes by district and ISP.
- * @method void setProIspInfoList(array $ProIspInfoList) Set Information of 4xx or 5xx error codes by district and ISP.
+ * @method array getProIspInfoList() Obtain Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
+ * @method void setProIspInfoList(array $ProIspInfoList) Set Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
  * @method integer getTotalCodeAll() Obtain Total occurrences of all status codes.
  * @method void setTotalCodeAll(integer $TotalCodeAll) Set Total occurrences of all status codes.
  * @method integer getTotalCode4xx() Obtain Occurrences of 4xx status codes.
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
 {
     /**
-     * @var array Information of 4xx or 5xx error codes by district and ISP.
+     * @var array Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
      */
     public $ProIspInfoList;
 
@@ -108,7 +108,7 @@ class DescribePlayErrorCodeSumInfoListResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ProIspInfoList Information of 4xx or 5xx error codes by district and ISP.
+     * @param array $ProIspInfoList Information of error codes starting with 2, 3, 4, or 5 by district and ISP.
      * @param integer $TotalCodeAll Total occurrences of all status codes.
      * @param integer $TotalCode4xx Occurrences of 4xx status codes.
      * @param integer $TotalCode5xx Occurrences of 5xx status codes.

@@ -33,6 +33,7 @@ Note: only an approved template can be used to send emails.
  * @method Models\DeleteEmailTemplateResponse DeleteEmailTemplate(Models\DeleteEmailTemplateRequest $req) This API is used to delete an email template.
  * @method Models\GetEmailIdentityResponse GetEmailIdentity(Models\GetEmailIdentityRequest $req) This API is used to get the configuration details of a sender domain.
  * @method Models\GetEmailTemplateResponse GetEmailTemplate(Models\GetEmailTemplateRequest $req) This API is used to get the details of a template.
+ * @method Models\GetSendEmailStatusResponse GetSendEmailStatus(Models\GetSendEmailStatusRequest $req) This API is used to get email sending status. Only data within 90 days can be queried.
  * @method Models\GetStatisticsReportResponse GetStatisticsReport(Models\GetStatisticsReportRequest $req) This API is used to get the email sending statistics over a recent period, including data on sent emails, delivery success rate, open rate, bounce rate, and so on. The maximum time span is 14 days.
  * @method Models\ListBlackEmailAddressResponse ListBlackEmailAddress(Models\ListBlackEmailAddressRequest $req) The API is used to get blocklisted addresses. In the case of a hard bounce, Tencent Cloud will blocklist the recipient address and do not allow any user to send emails to this address. If you confirm that this is a misjudgment, you can remove it from the blocklist.
  * @method Models\ListEmailAddressResponse ListEmailAddress(Models\ListEmailAddressRequest $req) This API is used to get the list of sender addresses.

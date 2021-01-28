@@ -20,14 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BankCardOCR request structure.
  *
- * @method string getImageBase64() Obtain Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
- * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+ * @method string getImageBase64() Obtain Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
+ * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
  * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
@@ -38,24 +34,22 @@ Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
- * @method boolean getRetBorderCutImage() Obtain 
- * @method void setRetBorderCutImage(boolean $RetBorderCutImage) Set 
- * @method boolean getRetCardNoImage() Obtain 
- * @method void setRetCardNoImage(boolean $RetCardNoImage) Set 
- * @method boolean getEnableCopyCheck() Obtain 
- * @method void setEnableCopyCheck(boolean $EnableCopyCheck) Set 
- * @method boolean getEnableReshootCheck() Obtain 
- * @method void setEnableReshootCheck(boolean $EnableReshootCheck) Set 
- * @method boolean getEnableBorderCheck() Obtain 
- * @method void setEnableBorderCheck(boolean $EnableBorderCheck) Set 
+ * @method boolean getRetBorderCutImage() Obtain Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
+ * @method void setRetBorderCutImage(boolean $RetBorderCutImage) Set Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
+ * @method boolean getRetCardNoImage() Obtain Whether to return the card number image data after slicing. Default value: `false`
+ * @method void setRetCardNoImage(boolean $RetCardNoImage) Set Whether to return the card number image data after slicing. Default value: `false`
+ * @method boolean getEnableCopyCheck() Obtain Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
+ * @method void setEnableCopyCheck(boolean $EnableCopyCheck) Set Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
+ * @method boolean getEnableReshootCheck() Obtain Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
+ * @method void setEnableReshootCheck(boolean $EnableReshootCheck) Set Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
+ * @method boolean getEnableBorderCheck() Obtain Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
+ * @method void setEnableBorderCheck(boolean $EnableBorderCheck) Set Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
  */
 class BankCardOCRRequest extends AbstractModel
 {
     /**
-     * @var string Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * @var string Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
      */
     public $ImageBase64;
 
@@ -69,45 +63,43 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $ImageUrl;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
      */
     public $RetBorderCutImage;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to return the card number image data after slicing. Default value: `false`
      */
     public $RetCardNoImage;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
      */
     public $EnableCopyCheck;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
      */
     public $EnableReshootCheck;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
      */
     public $EnableBorderCheck;
 
     /**
-     * @param string $ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 7 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
-Either the `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
+     * @param string $ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
+Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
      * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 7 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability.
 The download speed and stability of non-Tencent Cloud URLs may be low.
-     * @param boolean $RetBorderCutImage 
-     * @param boolean $RetCardNoImage 
-     * @param boolean $EnableCopyCheck 
-     * @param boolean $EnableReshootCheck 
-     * @param boolean $EnableBorderCheck 
+     * @param boolean $RetBorderCutImage Whether to return the bank card image data after preprocessing (precise cropping and alignment). Default value: `false`
+     * @param boolean $RetCardNoImage Whether to return the card number image data after slicing. Default value: `false`
+     * @param boolean $EnableCopyCheck Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
+     * @param boolean $EnableReshootCheck Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
+     * @param boolean $EnableBorderCheck Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
      */
     function __construct()
     {

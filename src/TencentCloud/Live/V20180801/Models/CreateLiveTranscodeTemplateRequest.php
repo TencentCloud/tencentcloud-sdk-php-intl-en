@@ -40,12 +40,12 @@ Note: this parameter is unsupported now.
 Value range: 0-500.
  * @method void setAudioBitrate(integer $AudioBitrate) Set Audio bitrate. Default value: 0.
 Value range: 0-500.
- * @method string getVcodec() Obtain Video codec. Valid values: h264 (default), h265, origin
+ * @method string getVcodec() Obtain Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
- * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: h264 (default), h265, origin
+origin: original codec as the output codec.
+ * @method void setVcodec(string $Vcodec) Set Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
  * @method integer getWidth() Obtain Width. Default value: 0.
@@ -140,9 +140,9 @@ Value range: 0-500.
     public $AudioBitrate;
 
     /**
-     * @var string Video codec. Valid values: h264 (default), h265, origin
+     * @var string Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      */
     public $Vcodec;
 
@@ -249,9 +249,9 @@ Note: the transcoding template requires that the bitrate be unique. Therefore, t
 Note: this parameter is unsupported now.
      * @param integer $AudioBitrate Audio bitrate. Default value: 0.
 Value range: 0-500.
-     * @param string $Vcodec Video codec. Valid values: h264 (default), h265, origin
+     * @param string $Vcodec Video codec. Valid values: h264, h265, origin (default).
 
-origin: original codec as the output codec
+origin: original codec as the output codec.
      * @param string $Description Template description.
      * @param integer $Width Width. Default value: 0.
 Value range: 0-3000

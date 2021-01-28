@@ -54,6 +54,12 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
  * @method void setIspNames(array $IspNames) Set List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
  * @method string getMainlandOrOversea() Obtain Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
  * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+ * @method string getIpType() Obtain IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+ * @method void setIpType(string $IpType) Set IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
  */
 class DescribeProvinceIspPlayInfoListRequest extends AbstractModel
 {
@@ -107,6 +113,13 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
     public $MainlandOrOversea;
 
     /**
+     * @var string IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
+     */
+    public $IpType;
+
+    /**
      * @param string $StartTime Start point in time (Beijing time).
 Example: 2019-02-21 10:00:00.
      * @param string $EndTime End point in time (Beijing time).
@@ -124,6 +137,9 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
      * @param array $ProvinceNames List of the districts to be queried, such as Beijing.
      * @param array $IspNames List of the ISPs to be queried, such as China Mobile. If this parameter is left empty, the data of all ISPs will be queried.
      * @param string $MainlandOrOversea Region. Valid values: Mainland (data for Mainland China), Oversea (data for regions outside Mainland China), China (data for China, including Hong Kong, Macao, and Taiwan), Foreign (data for regions outside China, excluding Hong Kong, Macao, and Taiwan), Global (default). If this parameter is left empty, data for all regions will be queried.
+     * @param string $IpType IP type:
+"Ipv6": IPv6 data
+Data of all IPs will be returned if this parameter is left empty.
      */
     function __construct()
     {
@@ -168,6 +184,10 @@ Note: `EndTime` and `StartTime` only support querying data for the last day.
 
         if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
             $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        }
+
+        if (array_key_exists("IpType",$param) and $param["IpType"] !== null) {
+            $this->IpType = $param["IpType"];
         }
     }
 }

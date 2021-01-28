@@ -24,6 +24,7 @@ use TencentCloud\Dc\V20180410\Models as Models;
 
 /**
  * @method Models\AcceptDirectConnectTunnelResponse AcceptDirectConnectTunnel(Models\AcceptDirectConnectTunnelRequest $req) This API is used to accept an application for a dedicated tunnel.
+ * @method Models\ApplyInternetAddressResponse ApplyInternetAddress(Models\ApplyInternetAddressRequest $req) This API is used to apply for an internet tunnel’s CIDR block.
  * @method Models\CreateDirectConnectResponse CreateDirectConnect(Models\CreateDirectConnectRequest $req) This API is used to apply for a connection.
 When calling this API, please note that:
 You need to complete identity verification for your account; otherwise, you cannot apply for a connection;
@@ -36,9 +37,15 @@ Only connected connections can be deleted.
 
  * @method Models\DescribeDirectConnectTunnelsResponse DescribeDirectConnectTunnels(Models\DescribeDirectConnectTunnelsRequest $req) This API is used to query the list of dedicated tunnels.
  * @method Models\DescribeDirectConnectsResponse DescribeDirectConnects(Models\DescribeDirectConnectsRequest $req) This API is used to query the list of connections.
+ * @method Models\DescribeInternetAddressResponse DescribeInternetAddress(Models\DescribeInternetAddressRequest $req) This API is used to obtain the public IP address of an internet tunnel.
+ * @method Models\DescribeInternetAddressQuotaResponse DescribeInternetAddressQuota(Models\DescribeInternetAddressQuotaRequest $req) This API is used to obtain the public IP quota of internet tunnels.
+ * @method Models\DescribeInternetAddressStatisticsResponse DescribeInternetAddressStatistics(Models\DescribeInternetAddressStatisticsRequest $req) This API is used to obtain the public IP address assignment statistics of internet tunnels.
+ * @method Models\DisableInternetAddressResponse DisableInternetAddress(Models\DisableInternetAddressRequest $req) This API is used to disable a public IP address of internet tunnels.
+ * @method Models\EnableInternetAddressResponse EnableInternetAddress(Models\EnableInternetAddressRequest $req) This API is used to enable a public IP address for internet tunnels.
  * @method Models\ModifyDirectConnectAttributeResponse ModifyDirectConnectAttribute(Models\ModifyDirectConnectAttributeRequest $req) This API is used to modify connection attributes.
  * @method Models\ModifyDirectConnectTunnelAttributeResponse ModifyDirectConnectTunnelAttribute(Models\ModifyDirectConnectTunnelAttributeRequest $req) This API is used to modify the dedicated tunnel attributes.
  * @method Models\RejectDirectConnectTunnelResponse RejectDirectConnectTunnel(Models\RejectDirectConnectTunnelRequest $req) This API is used to reject an application for a dedicated tunnel.
+ * @method Models\ReleaseInternetAddressResponse ReleaseInternetAddress(Models\ReleaseInternetAddressRequest $req) This API is used to release an IP address of internet tunnels.
  */
 
 class DcClient extends AbstractClient
