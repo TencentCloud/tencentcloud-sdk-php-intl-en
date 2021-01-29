@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSymmetricAlgorithms(array $SymmetricAlgorithms) Set Symmetric encryption algorithms supported in this region
  * @method array getAsymmetricAlgorithms() Obtain Asymmetric encryption algorithms supported in this region
  * @method void setAsymmetricAlgorithms(array $AsymmetricAlgorithms) Set Asymmetric encryption algorithms supported in this region
+ * @method array getAsymmetricSignVerifyAlgorithms() Obtain Asymmetric signature verification algorithms supported in the current region
+ * @method void setAsymmetricSignVerifyAlgorithms(array $AsymmetricSignVerifyAlgorithms) Set Asymmetric signature verification algorithms supported in the current region
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class ListAlgorithmsResponse extends AbstractModel
     public $AsymmetricAlgorithms;
 
     /**
+     * @var array Asymmetric signature verification algorithms supported in the current region
+     */
+    public $AsymmetricSignVerifyAlgorithms;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class ListAlgorithmsResponse extends AbstractModel
     /**
      * @param array $SymmetricAlgorithms Symmetric encryption algorithms supported in this region
      * @param array $AsymmetricAlgorithms Asymmetric encryption algorithms supported in this region
+     * @param array $AsymmetricSignVerifyAlgorithms Asymmetric signature verification algorithms supported in the current region
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +85,15 @@ class ListAlgorithmsResponse extends AbstractModel
                 $obj = new AlgorithmInfo();
                 $obj->deserialize($value);
                 array_push($this->AsymmetricAlgorithms, $obj);
+            }
+        }
+
+        if (array_key_exists("AsymmetricSignVerifyAlgorithms",$param) and $param["AsymmetricSignVerifyAlgorithms"] !== null) {
+            $this->AsymmetricSignVerifyAlgorithms = [];
+            foreach ($param["AsymmetricSignVerifyAlgorithms"] as $key => $value){
+                $obj = new AlgorithmInfo();
+                $obj->deserialize($value);
+                array_push($this->AsymmetricSignVerifyAlgorithms, $obj);
             }
         }
 
