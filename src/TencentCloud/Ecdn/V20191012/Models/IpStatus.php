@@ -34,6 +34,8 @@ offline: the node is offline
  * @method void setStatus(string $Status) Set Node status
 online: the node is online and scheduling normally
 offline: the node is offline
+ * @method string getCreateTime() Obtain Node IP creation time
+ * @method void setCreateTime(string $CreateTime) Set Node IP creation time
  */
 class IpStatus extends AbstractModel
 {
@@ -65,6 +67,11 @@ offline: the node is offline
     public $Status;
 
     /**
+     * @var string Node IP creation time
+     */
+    public $CreateTime;
+
+    /**
      * @param string $Ip Node IP
      * @param string $District Node region
      * @param string $Isp Node ISP
@@ -72,6 +79,7 @@ offline: the node is offline
      * @param string $Status Node status
 online: the node is online and scheduling normally
 offline: the node is offline
+     * @param string $CreateTime Node IP creation time
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ offline: the node is offline
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
         }
     }
 }
