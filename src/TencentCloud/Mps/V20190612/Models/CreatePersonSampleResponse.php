@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample response structure.
  *
- * @method AiSamplePerson getPerson() Obtain Material information
- * @method void setPerson(AiSamplePerson $Person) Set Material information
- * @method array getFailFaceInfoSet() Obtain Positioning information of facial features processed unsuccessfully
- * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Positioning information of facial features processed unsuccessfully
+ * @method AiSamplePerson getPerson() Obtain Image information
+ * @method void setPerson(AiSamplePerson $Person) Set Image information
+ * @method array getFailFaceInfoSet() Obtain Information of images that failed the verification by facial feature positioning
+ * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Information of images that failed the verification by facial feature positioning
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreatePersonSampleResponse extends AbstractModel
 {
     /**
-     * @var AiSamplePerson Material information
+     * @var AiSamplePerson Image information
      */
     public $Person;
 
     /**
-     * @var array Positioning information of facial features processed unsuccessfully
+     * @var array Information of images that failed the verification by facial feature positioning
      */
     public $FailFaceInfoSet;
 
@@ -45,8 +45,8 @@ class CreatePersonSampleResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AiSamplePerson $Person Material information
-     * @param array $FailFaceInfoSet Positioning information of facial features processed unsuccessfully
+     * @param AiSamplePerson $Person Image information
+     * @param array $FailFaceInfoSet Information of images that failed the verification by facial feature positioning
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

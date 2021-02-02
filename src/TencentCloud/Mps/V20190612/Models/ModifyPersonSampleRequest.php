@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample request structure.
  *
- * @method string getPersonId() Obtain Material ID
- * @method void setPersonId(string $PersonId) Set Material ID
+ * @method string getPersonId() Obtain Image ID
+ * @method void setPersonId(string $PersonId) Set Image ID
  * @method string getName() Obtain Name. Length limit: 128 characters.
  * @method void setName(string $Name) Set Name. Length limit: 128 characters.
  * @method string getDescription() Obtain Description. Length limit: 1,024 characters.
  * @method void setDescription(string $Description) Set Description. Length limit: 1,024 characters.
- * @method array getUsages() Obtain Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
-3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
- * @method void setUsages(array $Usages) Set Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
-3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
- * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Facial feature operation information
- * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Facial feature operation information
+ * @method array getUsages() Obtain Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+ * @method void setUsages(array $Usages) Set Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+ * @method AiSampleFaceOperation getFaceOperationInfo() Obtain Information of operations on facial features
+ * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Information of operations on facial features
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Material ID
+     * @var string Image ID
      */
     public $PersonId;
 
@@ -57,15 +57,15 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var array Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
-3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
+     * @var array Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
      */
     public $Usages;
 
     /**
-     * @var AiSampleFaceOperation Facial feature operation information
+     * @var AiSampleFaceOperation Information of operations on facial features
      */
     public $FaceOperationInfo;
 
@@ -75,14 +75,14 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @param string $PersonId Material ID
+     * @param string $PersonId Image ID
      * @param string $Name Name. Length limit: 128 characters.
      * @param string $Description Description. Length limit: 1,024 characters.
-     * @param array $Usages Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`.
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`.
-3. All: used for content recognition and detection of inappropriate content, equivalent to 1 and 2 combined.
-     * @param AiSampleFaceOperation $FaceOperationInfo Facial feature operation information
+     * @param array $Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
+     * @param AiSampleFaceOperation $FaceOperationInfo Information of operations on facial features
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
      */
     function __construct()

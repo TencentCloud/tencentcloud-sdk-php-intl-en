@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
  * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
- * @method integer getErrCode() Obtain Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
- * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+ * @method integer getErrCode() Obtain Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
+ * @method void setErrCode(integer $ErrCode) Set Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
  * @method AiReviewProhibitedAsrTaskInput getInput() Obtain Input of ASR-based prohibited information detection in speech task in content audit
@@ -46,7 +52,10 @@ class AiReviewTaskProhibitedAsrResult extends AbstractModel
     public $ErrCodeExt;
 
     /**
-     * @var integer Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+     * @var integer Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
      */
     public $ErrCode;
 
@@ -68,7 +77,10 @@ class AiReviewTaskProhibitedAsrResult extends AbstractModel
     /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
-     * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
+     * @param integer $ErrCode Error code. 0: success; other values: failure.
+<li>40000: invalid input parameter. Please check it;</li>
+<li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
+<li>70000: internal service error. Please try again.</li>
      * @param string $Message Error message.
      * @param AiReviewProhibitedAsrTaskInput $Input Input of ASR-based prohibited information detection in speech task in content audit
      * @param AiReviewProhibitedAsrTaskOutput $Output Output of ASR-based prohibited information detection in speech task in content audit

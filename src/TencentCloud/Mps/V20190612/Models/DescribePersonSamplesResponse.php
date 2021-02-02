@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotalCount() Obtain Number of eligible entries.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible entries.
- * @method array getPersonSet() Obtain Material information
- * @method void setPersonSet(array $PersonSet) Set Material information
+ * @method array getPersonSet() Obtain Image information
+ * @method void setPersonSet(array $PersonSet) Set Image information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribePersonSamplesResponse extends AbstractModel
     public $TotalCount;
 
     /**
-     * @var array Material information
+     * @var array Image information
      */
     public $PersonSet;
 
@@ -46,7 +46,7 @@ class DescribePersonSamplesResponse extends AbstractModel
 
     /**
      * @param integer $TotalCount Number of eligible entries.
-     * @param array $PersonSet Material information
+     * @param array $PersonSet Image information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

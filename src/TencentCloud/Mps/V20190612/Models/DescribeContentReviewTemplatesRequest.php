@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeContentReviewTemplates request structure.
  *
- * @method array getDefinitions() Obtain Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
- * @method void setDefinitions(array $Definitions) Set Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
+ * @method array getDefinitions() Obtain Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
+ * @method void setDefinitions(array $Definitions) Set Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
  * @method integer getOffset() Obtain Paging offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 50.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
+     * @var array Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
      */
     public $Definitions;
 
@@ -45,7 +45,7 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50.
+     * @param array $Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 50.
      */

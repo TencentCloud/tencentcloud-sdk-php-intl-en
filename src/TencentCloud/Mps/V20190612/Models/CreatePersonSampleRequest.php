@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePersonSample request structure.
  *
- * @method string getName() Obtain Name of a material. Length limit: 20 characters.
- * @method void setName(string $Name) Set Name of a material. Length limit: 20 characters.
- * @method array getUsages() Obtain Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
- * @method void setUsages(array $Usages) Set Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
- * @method string getDescription() Obtain Material description. Length limit: 1,024 characters.
- * @method void setDescription(string $Description) Set Material description. Length limit: 1,024 characters.
- * @method array getFaceContents() Obtain [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+ * @method string getName() Obtain Name of an image. Length limit: 20 characters
+ * @method void setName(string $Name) Set Name of an image. Length limit: 20 characters
+ * @method array getUsages() Obtain Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
+ * @method void setUsages(array $Usages) Set Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
+ * @method string getDescription() Obtain Image description. Length limit: 1,024 characters
+ * @method void setDescription(string $Description) Set Image description. Length limit: 1,024 characters
+ * @method array getFaceContents() Obtain [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
- * @method void setFaceContents(array $FaceContents) Set [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+ * @method void setFaceContents(array $FaceContents) Set [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
- * @method array getTags() Obtain Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
- * @method void setTags(array $Tags) Set Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+ * @method array getTags() Obtain Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
+ * @method void setTags(array $Tags) Set Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
     /**
-     * @var string Name of a material. Length limit: 20 characters.
+     * @var string Name of an image. Length limit: 20 characters
      */
     public $Name;
 
     /**
-     * @var array Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
+     * @var array Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
      */
     public $Usages;
 
     /**
-     * @var string Material description. Length limit: 1,024 characters.
+     * @var string Image description. Length limit: 1,024 characters
      */
     public $Description;
 
     /**
-     * @var array [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * @var array [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
      */
     public $FaceContents;
 
     /**
-     * @var array Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * @var array Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
      */
     public $Tags;
 
     /**
-     * @param string $Name Name of a material. Length limit: 20 characters.
-     * @param array $Usages Material use case. Valid values:
-1. Recognition: used for content recognition, equivalent to `Recognition.Face`
-2. Review: used for detection of inappropriate content, equivalent to `Review.Face`
-3. All: all of the above, equivalent to 1 and 2 combined
-     * @param string $Description Material description. Length limit: 1,024 characters.
-     * @param array $FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images.
+     * @param string $Name Name of an image. Length limit: 20 characters
+     * @param array $Usages Image usage. Valid values:
+1. Recognition: used for content recognition; equivalent to `Recognition.Face`
+2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
+3. All: equivalent to 1+2
+     * @param string $Description Image description. Length limit: 1,024 characters
+     * @param array $FaceContents [Base64](https://tools.ietf.org/html/rfc4648) string converted from an image. Only JPEG and PNG images are supported. Array length limit: 5 images
 Note: the image must be a relatively clear facial feature photo of one person with a size of at least 200 x 200 pixels.
-     * @param array $Tags Material tag
-<li>Array length limit: 20 tags;</li>
-<li>Tag length limit: 128 characters.</li>
+     * @param array $Tags Image tag
+<li>Array length limit: 20 tags</li>
+<li>Tag length limit: 128 characters</li>
      */
     function __construct()
     {

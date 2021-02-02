@@ -20,11 +20,11 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyPersonSample response structure.
  *
- * @method AiSamplePerson getPerson() Obtain Material information
- * @method void setPerson(AiSamplePerson $Person) Set Material information
- * @method array getFailFaceInfoSet() Obtain Information of facial features processed unsuccessfully
+ * @method AiSamplePerson getPerson() Obtain Image information
+ * @method void setPerson(AiSamplePerson $Person) Set Image information
+ * @method array getFailFaceInfoSet() Obtain Information of images that failed the verification by facial feature positioning.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Information of facial features processed unsuccessfully
+ * @method void setFailFaceInfoSet(array $FailFaceInfoSet) Set Information of images that failed the verification by facial feature positioning.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -32,12 +32,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class ModifyPersonSampleResponse extends AbstractModel
 {
     /**
-     * @var AiSamplePerson Material information
+     * @var AiSamplePerson Image information
      */
     public $Person;
 
     /**
-     * @var array Information of facial features processed unsuccessfully
+     * @var array Information of images that failed the verification by facial feature positioning.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $FailFaceInfoSet;
@@ -48,8 +48,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param AiSamplePerson $Person Material information
-     * @param array $FailFaceInfoSet Information of facial features processed unsuccessfully
+     * @param AiSamplePerson $Person Image information
+     * @param array $FailFaceInfoSet Information of images that failed the verification by facial feature positioning.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template
  * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template
- * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
- * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
- * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters.
- * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameter for offensive content
- * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameter for offensive content
- * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameter for insecure content
- * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Control parameter for insecure content
- * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Control parameter for inappropriate content
- * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Control parameter for inappropriate content
+ * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters
+ * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters
+ * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters
+ * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters
+ * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameter for porn information
+ * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameter for porn information
+ * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameter for terrorism information
+ * @method void setTerrorismConfigure(TerrorismConfigureInfoForUpdate $TerrorismConfigure) Set Control parameter for terrorism information
+ * @method PoliticalConfigureInfoForUpdate getPoliticalConfigure() Obtain Control parameter for politically sensitive information
+ * @method void setPoliticalConfigure(PoliticalConfigureInfoForUpdate $PoliticalConfigure) Set Control parameter for politically sensitive information
  * @method ProhibitedConfigureInfoForUpdate getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
@@ -40,8 +40,8 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
- * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition
- * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Control parameter for custom intelligent content recognition
+ * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition tasks
+ * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Control parameter for custom intelligent content recognition tasks
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -51,27 +51,27 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $Definition;
 
     /**
-     * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
+     * @var string Name of an intelligent content recognition template. Length limit: 64 characters
      */
     public $Name;
 
     /**
-     * @var string Description of an intelligent content recognition template. Length limit: 256 characters.
+     * @var string Description of an intelligent content recognition template. Length limit: 256 characters
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfoForUpdate Control parameter for offensive content
+     * @var PornConfigureInfoForUpdate Control parameter for porn information
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfoForUpdate Control parameter for insecure content
+     * @var TerrorismConfigureInfoForUpdate Control parameter for terrorism information
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfoForUpdate Control parameter for inappropriate content
+     * @var PoliticalConfigureInfoForUpdate Control parameter for politically sensitive information
      */
     public $PoliticalConfigure;
 
@@ -84,22 +84,22 @@ Note: this parameter is not supported yet.
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfoForUpdate Control parameter for custom intelligent content recognition
+     * @var UserDefineConfigureInfoForUpdate Control parameter for custom intelligent content recognition tasks
      */
     public $UserDefineConfigure;
 
     /**
      * @param integer $Definition Unique ID of an intelligent content recognition template
-     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
-     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
-     * @param PornConfigureInfoForUpdate $PornConfigure Control parameter for offensive content
-     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter for insecure content
-     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter for inappropriate content
+     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters
+     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters
+     * @param PornConfigureInfoForUpdate $PornConfigure Control parameter for porn information
+     * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter for terrorism information
+     * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter for politically sensitive information
      * @param ProhibitedConfigureInfoForUpdate $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
-     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Control parameter for custom intelligent content recognition
+     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Control parameter for custom intelligent content recognition tasks
      */
     function __construct()
     {
