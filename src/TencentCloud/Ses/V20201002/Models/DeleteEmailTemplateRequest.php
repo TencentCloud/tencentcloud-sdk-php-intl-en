@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteEmailTemplate request structure.
  *
- * @method integer getTemplateID() Obtain Email template to be deleted.
- * @method void setTemplateID(integer $TemplateID) Set Email template to be deleted.
+ * @method integer getTemplateID() Obtain Template ID
+ * @method void setTemplateID(integer $TemplateID) Set Template ID
  */
 class DeleteEmailTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Email template to be deleted.
+     * @var integer Template ID
      */
     public $TemplateID;
 
     /**
-     * @param integer $TemplateID Email template to be deleted.
+     * @param integer $TemplateID Template ID
      */
     function __construct()
     {

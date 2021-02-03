@@ -26,18 +26,18 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
  * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
 sender &lt;email address&gt;. For example: 
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
- * @method array getDestination() Obtain Recipient email addresses. You can send an email to up to 50 recipients at a time.
- * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time.
+ * @method array getDestination() Obtain Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+ * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method string getSubject() Obtain Email subject.
  * @method void setSubject(string $Subject) Set Email subject.
- * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+ * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
  * @method Template getTemplate() Obtain Template when sending emails using a template.
  * @method void setTemplate(Template $Template) Set Template when sending emails using a template.
  * @method Simple getSimple() Obtain Email content when sending emails by calling the API.
  * @method void setSimple(Simple $Simple) Set Email content when sending emails by calling the API.
- * @method array getAttachments() Obtain 
- * @method void setAttachments(array $Attachments) Set 
+ * @method array getAttachments() Obtain Email attachments
+ * @method void setAttachments(array $Attachments) Set Email attachments
  */
 class SendEmailRequest extends AbstractModel
 {
@@ -49,7 +49,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $FromEmailAddress;
 
     /**
-     * @var array Recipient email addresses. You can send an email to up to 50 recipients at a time.
+     * @var array Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      */
     public $Destination;
 
@@ -59,7 +59,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $Subject;
 
     /**
-     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
      */
     public $ReplyToAddresses;
 
@@ -74,7 +74,7 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $Simple;
 
     /**
-     * @var array 
+     * @var array Email attachments
      */
     public $Attachments;
 
@@ -82,12 +82,12 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
      * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
 sender &lt;email address&gt;. For example: 
 Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
-     * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time.
+     * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
-     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
+     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
      * @param Template $Template Template when sending emails using a template.
      * @param Simple $Simple Email content when sending emails by calling the API.
-     * @param array $Attachments 
+     * @param array $Attachments Email attachments
      */
     function __construct()
     {

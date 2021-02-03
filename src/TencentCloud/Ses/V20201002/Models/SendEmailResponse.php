@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail response structure.
  *
- * @method string getMessageId() Obtain Unique ID generated when receiving the message.
- * @method void setMessageId(string $MessageId) Set Unique ID generated when receiving the message.
+ * @method string getMessageId() Obtain Unique ID generated when receiving the message
+ * @method void setMessageId(string $MessageId) Set Unique ID generated when receiving the message
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SendEmailResponse extends AbstractModel
 {
     /**
-     * @var string Unique ID generated when receiving the message.
+     * @var string Unique ID generated when receiving the message
      */
     public $MessageId;
 
@@ -38,7 +38,7 @@ class SendEmailResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $MessageId Unique ID generated when receiving the message.
+     * @param string $MessageId Unique ID generated when receiving the message
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

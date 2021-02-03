@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateEmailAddress request structure.
  *
- * @method string getEmailAddress() Obtain Your sender address. You can create up to 10 sender addresses for each domain.
- * @method void setEmailAddress(string $EmailAddress) Set Your sender address. You can create up to 10 sender addresses for each domain.
+ * @method string getEmailAddress() Obtain Your sender address. (You can create up to 10 sender addresses for each domain.)
+ * @method void setEmailAddress(string $EmailAddress) Set Your sender address. (You can create up to 10 sender addresses for each domain.)
  * @method string getEmailSenderName() Obtain Sender name.
  * @method void setEmailSenderName(string $EmailSenderName) Set Sender name.
  */
 class CreateEmailAddressRequest extends AbstractModel
 {
     /**
-     * @var string Your sender address. You can create up to 10 sender addresses for each domain.
+     * @var string Your sender address. (You can create up to 10 sender addresses for each domain.)
      */
     public $EmailAddress;
 
@@ -38,7 +38,7 @@ class CreateEmailAddressRequest extends AbstractModel
     public $EmailSenderName;
 
     /**
-     * @param string $EmailAddress Your sender address. You can create up to 10 sender addresses for each domain.
+     * @param string $EmailAddress Your sender address. (You can create up to 10 sender addresses for each domain.)
      * @param string $EmailSenderName Sender name.
      */
     function __construct()

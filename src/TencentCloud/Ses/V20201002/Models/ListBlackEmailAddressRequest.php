@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListBlackEmailAddress request structure.
  *
- * @method string getStartDate() Obtain Start date.
- * @method void setStartDate(string $StartDate) Set Start date.
- * @method string getEndDate() Obtain End date.
- * @method void setEndDate(string $EndDate) Set End date.
+ * @method string getStartDate() Obtain Start date in the format of `YYYY-MM-DD`
+ * @method void setStartDate(string $StartDate) Set Start date in the format of `YYYY-MM-DD`
+ * @method string getEndDate() Obtain End date in the format of `YYYY-MM-DD`
+ * @method void setEndDate(string $EndDate) Set End date in the format of `YYYY-MM-DD`
  * @method integer getLimit() Obtain Common parameter. It must be used with `Offset`.
  * @method void setLimit(integer $Limit) Set Common parameter. It must be used with `Offset`.
- * @method integer getOffset() Obtain Common parameter. It must be used with `Limit`.
- * @method void setOffset(integer $Offset) Set Common parameter. It must be used with `Limit`.
+ * @method integer getOffset() Obtain Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
+ * @method void setOffset(integer $Offset) Set Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
  * @method string getEmailAddress() Obtain You can specify an email address to query.
  * @method void setEmailAddress(string $EmailAddress) Set You can specify an email address to query.
  * @method string getTaskID() Obtain You can specify a task ID to query.
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class ListBlackEmailAddressRequest extends AbstractModel
 {
     /**
-     * @var string Start date.
+     * @var string Start date in the format of `YYYY-MM-DD`
      */
     public $StartDate;
 
     /**
-     * @var string End date.
+     * @var string End date in the format of `YYYY-MM-DD`
      */
     public $EndDate;
 
@@ -51,7 +51,7 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Common parameter. It must be used with `Limit`.
+     * @var integer Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
      */
     public $Offset;
 
@@ -66,10 +66,10 @@ class ListBlackEmailAddressRequest extends AbstractModel
     public $TaskID;
 
     /**
-     * @param string $StartDate Start date.
-     * @param string $EndDate End date.
+     * @param string $StartDate Start date in the format of `YYYY-MM-DD`
+     * @param string $EndDate End date in the format of `YYYY-MM-DD`
      * @param integer $Limit Common parameter. It must be used with `Offset`.
-     * @param integer $Offset Common parameter. It must be used with `Limit`.
+     * @param integer $Offset Common parameter. It must be used with `Limit`. Maximum value of `Limit`: `100`.
      * @param string $EmailAddress You can specify an email address to query.
      * @param string $TaskID You can specify a task ID to query.
      */
