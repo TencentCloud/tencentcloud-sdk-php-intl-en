@@ -40,6 +40,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
  * @method void setAppName(string $AppName) Set Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+ * @method string getServiceName() Obtain 
+ * @method void setServiceName(string $ServiceName) Set 
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public $AppName;
 
     /**
+     * @var string 
+     */
+    public $ServiceName;
+
+    /**
      * @param string $StartTime Start time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS
      * @param string $EndTime End time (Beijing time) in the format of yyyy-mm-dd HH:MM:SS.
 The difference between the start time and end time cannot be greater than 24 hours. Data in the last 30 days can be queried.
@@ -84,6 +91,7 @@ If this parameter is left empty, full playback data will be queried.
      * @param string $AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
+     * @param string $ServiceName 
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
 
         if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
             $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

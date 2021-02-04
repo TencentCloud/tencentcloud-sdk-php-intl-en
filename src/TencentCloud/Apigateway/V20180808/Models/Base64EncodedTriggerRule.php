@@ -18,28 +18,56 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Header trigger rule for Base64 encoding.
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method array getValue() Obtain 
- * @method void setValue(array $Value) Set 
+ * @method string getName() Obtain Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+ * @method void setName(string $Name) Set Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+ * @method array getValue() Obtain Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
+
+For example, [
+    "application/x-vpeg005",
+    "application/xhtml+xml",
+    "application/vnd.ms-project",
+    "application/vnd.rn-rn_music_package"
+] are valid.
+ * @method void setValue(array $Value) Set Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
+
+For example, [
+    "application/x-vpeg005",
+    "application/xhtml+xml",
+    "application/vnd.ms-project",
+    "application/vnd.rn-rn_music_package"
+] are valid.
  */
 class Base64EncodedTriggerRule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
      */
     public $Name;
 
     /**
-     * @var array 
+     * @var array Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
+
+For example, [
+    "application/x-vpeg005",
+    "application/xhtml+xml",
+    "application/vnd.ms-project",
+    "application/vnd.rn-rn_music_package"
+] are valid.
      */
     public $Value;
 
     /**
-     * @param string $Name 
-     * @param array $Value 
+     * @param string $Name Header for triggering encoding. Valid values are `Accept` and `Content_Type`, corresponding to the `Accept` and `Content-Type` headers in the data stream request, respectively.
+     * @param array $Value Array of header values that can trigger the encoding. Each element in the array can be up to 40 characters, including digits, letters, and special characters (`.`, `+`, `*`, `-`, `/`, and `_`). 
+
+For example, [
+    "application/x-vpeg005",
+    "application/xhtml+xml",
+    "application/vnd.ms-project",
+    "application/vnd.rn-rn_music_package"
+] are valid.
      */
     function __construct()
     {

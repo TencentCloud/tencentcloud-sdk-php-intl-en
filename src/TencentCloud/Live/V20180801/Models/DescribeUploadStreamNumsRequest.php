@@ -27,13 +27,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getDomains() Obtain LVB domain names. If this parameter is left empty, data of all domain names will be queried.
  * @method void setDomains(array $Domains) Set LVB domain names. If this parameter is left empty, data of all domain names will be queried.
  * @method integer getGranularity() Obtain Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
  * @method void setGranularity(integer $Granularity) Set Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
  */
 class DescribeUploadStreamNumsRequest extends AbstractModel
 {
@@ -54,9 +54,9 @@ class DescribeUploadStreamNumsRequest extends AbstractModel
 
     /**
      * @var integer Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
      */
     public $Granularity;
 
@@ -65,9 +65,9 @@ Default value: 5.
      * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 31 days can be queried.
      * @param array $Domains LVB domain names. If this parameter is left empty, data of all domain names will be queried.
      * @param integer $Granularity Time granularity of the data. Valid values:
-5: 5-minute granularity (the query period is up to 1 day).
-1440: 1-day granularity (the query period is up to 1 month).
-Default value: 5.
+5: 5-minute granularity (the query period is up to 1 day)
+1440: 1-day granularity (the query period is up to 1 month)
+Default value: 5
      */
     function __construct()
     {

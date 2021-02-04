@@ -212,12 +212,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEnvironments(array $Environments) Set Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsBase64Encoded() Obtain 
- * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set 
- * @method boolean getIsBase64Trigger() Obtain 
- * @method void setIsBase64Trigger(boolean $IsBase64Trigger) Set 
- * @method array getBase64EncodedTriggerRules() Obtain 
- * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) Set 
+ * @method boolean getIsBase64Encoded() Obtain Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsBase64Trigger() Obtain Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsBase64Trigger(boolean $IsBase64Trigger) Set Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getBase64EncodedTriggerRules() Obtain Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) Set Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ApiInfo extends AbstractModel
 {
@@ -510,17 +516,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Environments;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $IsBase64Encoded;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $IsBase64Trigger;
 
     /**
-     * @var array 
+     * @var array Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Base64EncodedTriggerRules;
 
@@ -621,9 +630,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Environments Environment information published for API.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsBase64Encoded 
-     * @param boolean $IsBase64Trigger 
-     * @param array $Base64EncodedTriggerRules 
+     * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

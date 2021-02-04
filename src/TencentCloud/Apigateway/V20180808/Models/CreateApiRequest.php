@@ -110,8 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargetNamespaceId(string $TargetNamespaceId) Set TSF Serverless namespace ID (in beta test).
  * @method string getUserType() Obtain User type.
  * @method void setUserType(string $UserType) Set User type.
- * @method boolean getIsBase64Encoded() Obtain 
- * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set 
+ * @method boolean getIsBase64Encoded() Obtain Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -341,7 +341,7 @@ class CreateApiRequest extends AbstractModel
     public $UserType;
 
     /**
-     * @var boolean 
+     * @var boolean Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      */
     public $IsBase64Encoded;
 
@@ -391,7 +391,7 @@ class CreateApiRequest extends AbstractModel
      * @param array $ResponseErrorCodes Custom error code configuration.
      * @param string $TargetNamespaceId TSF Serverless namespace ID (in beta test).
      * @param string $UserType User type.
-     * @param boolean $IsBase64Encoded 
+     * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      */
     function __construct()
     {

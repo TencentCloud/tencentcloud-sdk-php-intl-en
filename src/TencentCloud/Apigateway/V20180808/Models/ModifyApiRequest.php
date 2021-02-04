@@ -110,6 +110,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOauthConfig(OauthConfig $OauthConfig) Set OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
  * @method array getResponseErrorCodes() Obtain Custom error code configuration.
  * @method void setResponseErrorCodes(array $ResponseErrorCodes) Set Custom error code configuration.
+ * @method boolean getIsBase64Encoded() Obtain Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+ * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+ * @method boolean getIsBase64Trigger() Obtain Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+ * @method void setIsBase64Trigger(boolean $IsBase64Trigger) Set Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+ * @method array getBase64EncodedTriggerRules() Obtain Header trigger rules. The number of rules cannot exceed 10.
+ * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) Set Header trigger rules. The number of rules cannot exceed 10.
  */
 class ModifyApiRequest extends AbstractModel
 {
@@ -339,6 +345,21 @@ class ModifyApiRequest extends AbstractModel
     public $ResponseErrorCodes;
 
     /**
+     * @var boolean Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     */
+    public $IsBase64Encoded;
+
+    /**
+     * @var boolean Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+     */
+    public $IsBase64Trigger;
+
+    /**
+     * @var array Header trigger rules. The number of rules cannot exceed 10.
+     */
+    public $Base64EncodedTriggerRules;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
      * @param RequestConfig $RequestConfig Request frontend configuration.
@@ -384,6 +405,9 @@ class ModifyApiRequest extends AbstractModel
      * @param array $ServiceParameters API backend service parameter.
      * @param OauthConfig $OauthConfig OAuth configuration, which takes effect if `AuthType` is `OAUTH`.
      * @param array $ResponseErrorCodes Custom error code configuration.
+     * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     * @param boolean $IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
+     * @param array $Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
      */
     function __construct()
     {
@@ -607,6 +631,23 @@ class ModifyApiRequest extends AbstractModel
                 $obj = new ResponseErrorCodeReq();
                 $obj->deserialize($value);
                 array_push($this->ResponseErrorCodes, $obj);
+            }
+        }
+
+        if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
+            $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("IsBase64Trigger",$param) and $param["IsBase64Trigger"] !== null) {
+            $this->IsBase64Trigger = $param["IsBase64Trigger"];
+        }
+
+        if (array_key_exists("Base64EncodedTriggerRules",$param) and $param["Base64EncodedTriggerRules"] !== null) {
+            $this->Base64EncodedTriggerRules = [];
+            foreach ($param["Base64EncodedTriggerRules"] as $key => $value){
+                $obj = new Base64EncodedTriggerRule();
+                $obj->deserialize($value);
+                array_push($this->Base64EncodedTriggerRules, $obj);
             }
         }
     }
