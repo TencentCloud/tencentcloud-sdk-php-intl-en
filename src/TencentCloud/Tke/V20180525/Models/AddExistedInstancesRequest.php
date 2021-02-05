@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
  * @method LoginSettings getLoginSettings() Obtain Node login information (currently only supports using Password or single KeyIds)
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Node login information (currently only supports using Password or single KeyIds)
- * @method array getSecurityGroupIds() Obtain Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
  * @method string getHostName() Obtain When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
  * @method void setHostName(string $HostName) Set When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+ * @method array getSecurityGroupIds() Obtain Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
  * @method NodePoolOption getNodePool() Obtain Node pool options
  * @method void setNodePool(NodePoolOption $NodePool) Set Node pool options
+ * @method array getSkipValidateOptions() Obtain Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+ * @method void setSkipValidateOptions(array $SkipValidateOptions) Set Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -65,14 +67,14 @@ class AddExistedInstancesRequest extends AbstractModel
     public $LoginSettings;
 
     /**
-     * @var array Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
-     */
-    public $SecurityGroupIds;
-
-    /**
      * @var string When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
      */
     public $HostName;
+
+    /**
+     * @var array Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
+     */
+    public $SecurityGroupIds;
 
     /**
      * @var NodePoolOption Node pool options
@@ -80,14 +82,20 @@ class AddExistedInstancesRequest extends AbstractModel
     public $NodePool;
 
     /**
+     * @var array Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public $SkipValidateOptions;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Instance list. Spot instance is not supported.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
      * @param EnhancedService $EnhancedService Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
      * @param LoginSettings $LoginSettings Node login information (currently only supports using Password or single KeyIds)
-     * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
      * @param string $HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.
+     * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
      * @param NodePoolOption $NodePool Node pool options
+     * @param array $SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
      */
     function __construct()
     {
@@ -125,17 +133,21 @@ class AddExistedInstancesRequest extends AbstractModel
             $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
 
-        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
-            $this->SecurityGroupIds = $param["SecurityGroupIds"];
-        }
-
         if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
             $this->HostName = $param["HostName"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
 
         if (array_key_exists("NodePool",$param) and $param["NodePool"] !== null) {
             $this->NodePool = new NodePoolOption();
             $this->NodePool->deserialize($param["NodePool"]);
+        }
+
+        if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
+            $this->SkipValidateOptions = $param["SkipValidateOptions"];
         }
     }
 }

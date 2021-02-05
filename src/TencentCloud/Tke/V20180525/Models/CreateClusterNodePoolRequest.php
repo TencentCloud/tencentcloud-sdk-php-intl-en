@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set Labels
  * @method array getTaints() Obtain Taints
  * @method void setTaints(array $Taints) Set Taints
+ * @method string getNodePoolOs() Obtain Operating system of the node pool
+ * @method void setNodePoolOs(string $NodePoolOs) Set Operating system of the node pool
+ * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Taints;
 
     /**
+     * @var string Operating system of the node pool
+     */
+    public $NodePoolOs;
+
+    /**
+     * @var string Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     */
+    public $OsCustomizeType;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $AutoScalingGroupPara AS group parameters
      * @param string $LaunchConfigurePara Running parameters
@@ -88,6 +102,8 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $Name Node pool name
      * @param array $Labels Labels
      * @param array $Taints Taints
+     * @param string $NodePoolOs Operating system of the node pool
+     * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      */
     function __construct()
     {
@@ -143,6 +159,14 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
             }
+        }
+
+        if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {
+            $this->NodePoolOs = $param["NodePoolOs"];
+        }
+
+        if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
+            $this->OsCustomizeType = $param["OsCustomizeType"];
         }
     }
 }

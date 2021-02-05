@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRunInstancePara(string $RunInstancePara) Set Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter to be set for the instance
+ * @method array getSkipValidateOptions() Obtain Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+ * @method void setSkipValidateOptions(array $SkipValidateOptions) Set Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
  */
 class CreateClusterInstancesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateClusterInstancesRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
+     * @var array Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     */
+    public $SkipValidateOptions;
+
+    /**
      * @param string $ClusterId Cluster ID. Enter the ClusterId field returned by the DescribeClusters API
      * @param string $RunInstancePara Pass-through parameter for CVM creation in the format of a JSON string. To ensure the idempotence of requests for adding cluster nodes, you need to add the ClientToken field in this parameter. For more information, see the documentation for [RunInstances](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
+     * @param array $SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
      */
     function __construct()
     {
@@ -73,6 +81,10 @@ class CreateClusterInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceAdvancedSettings",$param) and $param["InstanceAdvancedSettings"] !== null) {
             $this->InstanceAdvancedSettings = new InstanceAdvancedSettings();
             $this->InstanceAdvancedSettings->deserialize($param["InstanceAdvancedSettings"]);
+        }
+
+        if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
+            $this->SkipValidateOptions = $param["SkipValidateOptions"];
         }
     }
 }
