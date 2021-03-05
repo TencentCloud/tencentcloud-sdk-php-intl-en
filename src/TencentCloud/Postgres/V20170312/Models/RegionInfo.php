@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionId(integer $RegionId) Set Region number
  * @method string getRegionState() Obtain Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
  * @method void setRegionState(string $RegionState) Set Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+ * @method integer getSupportInternational() Obtain Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSupportInternational(integer $SupportInternational) Set Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RegionInfo extends AbstractModel
 {
@@ -52,10 +56,18 @@ class RegionInfo extends AbstractModel
     public $RegionState;
 
     /**
+     * @var integer Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SupportInternational;
+
+    /**
      * @param string $Region Region abbreviation
      * @param string $RegionName Region name
      * @param integer $RegionId Region number
      * @param string $RegionState Availability status. UNAVAILABLE: unavailable, AVAILABLE: available
+     * @param integer $SupportInternational Whether the resource can be purchased in this region. Valid values: `0` (no), `1` (yes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class RegionInfo extends AbstractModel
 
         if (array_key_exists("RegionState",$param) and $param["RegionState"] !== null) {
             $this->RegionState = $param["RegionState"];
+        }
+
+        if (array_key_exists("SupportInternational",$param) and $param["SupportInternational"] !== null) {
+            $this->SupportInternational = $param["SupportInternational"];
         }
     }
 }

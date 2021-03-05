@@ -34,8 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHeight(string $Height) Set Watermark height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px. Valid values: 0 or [8,4096].</li>
- * @method string getRepeatType() Obtain 
- * @method void setRepeatType(string $RepeatType) Set 
+ * @method string getRepeatType() Obtain Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+ * @method void setRepeatType(string $RepeatType) Set Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
  */
 class ImageWatermarkInputForUpdate extends AbstractModel
 {
@@ -59,7 +65,10 @@ class ImageWatermarkInputForUpdate extends AbstractModel
     public $Height;
 
     /**
-     * @var string 
+     * @var string Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
      */
     public $RepeatType;
 
@@ -71,7 +80,10 @@ class ImageWatermarkInputForUpdate extends AbstractModel
      * @param string $Height Watermark height. % and px formats are supported:
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px. Valid values: 0 or [8,4096].</li>
-     * @param string $RepeatType 
+     * @param string $RepeatType Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
      */
     function __construct()
     {

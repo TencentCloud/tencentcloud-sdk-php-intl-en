@@ -22,10 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Animated image generating template ID
  * @method void setDefinition(integer $Definition) Set Animated image generating template ID
- * @method float getStartTimeOffset() Obtain Start time of animated image in video in seconds.
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time of animated image in video in seconds.
- * @method float getEndTimeOffset() Obtain End time of animated image in video in seconds.
- * @method void setEndTimeOffset(float $EndTimeOffset) Set End time of animated image in video in seconds.
+ * @method float getStartTimeOffset() Obtain Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+ * @method float getEndTimeOffset() Obtain End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
+ * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
  */
 class AnimatedGraphicTaskInput extends AbstractModel
 {
@@ -35,19 +47,31 @@ class AnimatedGraphicTaskInput extends AbstractModel
     public $Definition;
 
     /**
-     * @var float Start time of animated image in video in seconds.
+     * @var float Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
      */
     public $StartTimeOffset;
 
     /**
-     * @var float End time of animated image in video in seconds.
+     * @var float End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
      */
     public $EndTimeOffset;
 
     /**
      * @param integer $Definition Animated image generating template ID
-     * @param float $StartTimeOffset Start time of animated image in video in seconds.
-     * @param float $EndTimeOffset End time of animated image in video in seconds.
+     * @param float $StartTimeOffset Start time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will start at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will start at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will start at the nth second before the end of the video.</li>
+     * @param float $EndTimeOffset End time offset of an animated image in the video, in seconds.
+<li>If this parameter is left empty or set to 0, the animated image will end at the same time as the video.</li>
+<li>If this parameter is set to a positive number (n for example), the animated image will end at the nth second of the video.</li>
+<li>If this parameter is set to a negative number (-n for example), the animated image will end at the nth second before the end of the video.</li>
      */
     function __construct()
     {

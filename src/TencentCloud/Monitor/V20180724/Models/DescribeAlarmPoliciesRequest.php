@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleTypes(array $RuleTypes) Set Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
  * @method array getEnable() Obtain Status. Valid values: 1 (enabled), 0 (disabled)
  * @method void setEnable(array $Enable) Set Status. Valid values: 1 (enabled), 0 (disabled)
+ * @method integer getNotBindingNoticeRule() Obtain Indicates whether the notification rule is configured. 1: not configured; 0: configured
+ * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) Set Indicates whether the notification rule is configured. 1: not configured; 0: configured
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -136,6 +138,11 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Enable;
 
     /**
+     * @var integer Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     */
+    public $NotBindingNoticeRule;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -152,6 +159,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param array $NoticeIds Alarm notification ID list
      * @param array $RuleTypes Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
      * @param array $Enable Status. Valid values: 1 (enabled), 0 (disabled)
+     * @param integer $NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 
         if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
             $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("NotBindingNoticeRule",$param) and $param["NotBindingNoticeRule"] !== null) {
+            $this->NotBindingNoticeRule = $param["NotBindingNoticeRule"];
         }
     }
 }

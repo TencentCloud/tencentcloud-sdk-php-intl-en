@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method string getInstType() Obtain This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+ * @method void setInstType(string $InstType) Set This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
  */
 class DescribeErrorLogDataRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeErrorLogDataRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+     */
+    public $InstType;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param integer $StartTime Start timestamp.
      * @param integer $EndTime End timestamp.
      * @param array $KeyWords List of keywords to match. Up to 15 keywords are supported.
      * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
      * @param integer $Offset Offset. Default value: 0.
+     * @param string $InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeErrorLogDataRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("InstType",$param) and $param["InstType"] !== null) {
+            $this->InstType = $param["InstType"];
         }
     }
 }

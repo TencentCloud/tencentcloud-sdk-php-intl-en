@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  * @method string getRegion() Obtain Region
  * @method void setRegion(string $Region) Set Region
+ * @method array getTags() Obtain Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getAutoRenewFlag() Obtain Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -194,6 +202,18 @@ class DescribeSubscribeConfResponse extends AbstractModel
     public $Region;
 
     /**
+     * @var array Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var integer Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -223,6 +243,10 @@ class DescribeSubscribeConfResponse extends AbstractModel
      * @param array $SubscribeObjects Subscription object, which is an empty array if `SubscribeObjectType` is 0
      * @param string $ModifyTime Modification time
      * @param string $Region Region
+     * @param array $Tags Tags of the subscription
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable, 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -337,6 +361,19 @@ class DescribeSubscribeConfResponse extends AbstractModel
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCertificateProject response structure.
  *
- * @method array getSuccessCertificates() Obtain List of certificates whose projects were modified successfully.
+ * @method array getSuccessCertificates() Obtain List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSuccessCertificates(array $SuccessCertificates) Set List of certificates whose projects were modified successfully.
+ * @method void setSuccessCertificates(array $SuccessCertificates) Set List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFailCertificates() Obtain List of certificates whose projects failed to be modified.
+ * @method array getFailCertificates() Obtain List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFailCertificates(array $FailCertificates) Set List of certificates whose projects failed to be modified.
+ * @method void setFailCertificates(array $FailCertificates) Set List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -34,13 +34,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ModifyCertificateProjectResponse extends AbstractModel
 {
     /**
-     * @var array List of certificates whose projects were modified successfully.
+     * @var array List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SuccessCertificates;
 
     /**
-     * @var array List of certificates whose projects failed to be modified.
+     * @var array List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FailCertificates;
@@ -51,9 +51,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $SuccessCertificates List of certificates whose projects were modified successfully.
+     * @param array $SuccessCertificates List of certificates whose projects were modified successfully
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $FailCertificates List of certificates whose projects failed to be modified.
+     * @param array $FailCertificates List of certificates whose projects failed to be modified
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

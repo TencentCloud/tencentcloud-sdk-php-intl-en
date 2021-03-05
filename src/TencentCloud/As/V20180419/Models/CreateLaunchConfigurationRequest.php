@@ -44,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
  * @method string getUserData() Obtain Base64-encoded custom data of up to 16 KB.
  * @method void setUserData(string $UserData) Set Base64-encoded custom data of up to 16 KB.
- * @method string getInstanceChargeType() Obtain Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+ * @method string getInstanceChargeType() Obtain Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
  * @method array getInstanceTypes() Obtain List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
@@ -138,9 +138,9 @@ class CreateLaunchConfigurationRequest extends AbstractModel
     public $UserData;
 
     /**
-     * @var string Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+     * @var string Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
      */
     public $InstanceChargeType;
 
@@ -203,9 +203,9 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
      * @param array $SecurityGroupIds The security group to which the instance belongs. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
      * @param EnhancedService $EnhancedService Enhanced service. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitoring and Cloud Security will be enabled by default.
      * @param string $UserData Base64-encoded custom data of up to 16 KB.
-     * @param string $InstanceChargeType Instance billing type. CVM instances are POSTPAID_BY_HOUR by default.
-<br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
-<br><li>SPOTPAID: Bidding
+     * @param string $InstanceChargeType Instance billing mode. CVM instances take `POSTPAID_BY_HOUR` by default. Valid values:
+<br><li>POSTPAID_BY_HOUR: pay-as-you-go hourly
+<br><li>SPOTPAID: spot instance
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions Market-related options of the instance, such as the parameters related to stop instances. If the billing method of instance is specified as bidding, this parameter must be passed in.
      * @param array $InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 10 instance models can be supported.
 `InstanceType` and `InstanceTypes` are mutually exclusive, and one and only one of them must be entered.

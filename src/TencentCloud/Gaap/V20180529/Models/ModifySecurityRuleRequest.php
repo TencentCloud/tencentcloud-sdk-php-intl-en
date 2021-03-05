@@ -26,6 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAliasName(string $AliasName) Set Rule name: up to 30 characters. The extra characters will be truncated.
  * @method string getPolicyId() Obtain Security policy ID
  * @method void setPolicyId(string $PolicyId) Set Security policy ID
+ * @method string getRuleAction() Obtain Security rule action
+ * @method void setRuleAction(string $RuleAction) Set Security rule action
+ * @method string getSourceCidr() Obtain A CIDR IP address associated with the rule
+ * @method void setSourceCidr(string $SourceCidr) Set A CIDR IP address associated with the rule
+ * @method string getProtocol() Obtain Protocol type
+ * @method void setProtocol(string $Protocol) Set Protocol type
+ * @method string getDestPortRange() Obtain Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+ * @method void setDestPortRange(string $DestPortRange) Set Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
  */
 class ModifySecurityRuleRequest extends AbstractModel
 {
@@ -45,9 +61,41 @@ class ModifySecurityRuleRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string Security rule action
+     */
+    public $RuleAction;
+
+    /**
+     * @var string A CIDR IP address associated with the rule
+     */
+    public $SourceCidr;
+
+    /**
+     * @var string Protocol type
+     */
+    public $Protocol;
+
+    /**
+     * @var string Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
+     */
+    public $DestPortRange;
+
+    /**
      * @param string $RuleId Rule ID
      * @param string $AliasName Rule name: up to 30 characters. The extra characters will be truncated.
      * @param string $PolicyId Security policy ID
+     * @param string $RuleAction Security rule action
+     * @param string $SourceCidr A CIDR IP address associated with the rule
+     * @param string $Protocol Protocol type
+     * @param string $DestPortRange Port range. Valid values:
+A single port: 80
+Multiple ports: 80 and 443
+Consecutive ports: 3306-20000
+All ports: ALL
      */
     function __construct()
     {
@@ -72,6 +120,22 @@ class ModifySecurityRuleRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("RuleAction",$param) and $param["RuleAction"] !== null) {
+            $this->RuleAction = $param["RuleAction"];
+        }
+
+        if (array_key_exists("SourceCidr",$param) and $param["SourceCidr"] !== null) {
+            $this->SourceCidr = $param["SourceCidr"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("DestPortRange",$param) and $param["DestPortRange"] !== null) {
+            $this->DestPortRange = $param["DestPortRange"];
         }
     }
 }

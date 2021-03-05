@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE options.
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSEC options.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSEC options.
+ * @method boolean getEnableHealthCheck() Obtain Whether the health check is supported.
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) Set Whether the health check is supported.
+ * @method string getHealthCheckLocalIp() Obtain Local IP address for the health check
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the health check
+ * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the health check
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
+ * @method string getHealthCheckStatus() Obtain Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+ * @method void setHealthCheckStatus(string $HealthCheckStatus) Set Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
  */
 class VpnConnection extends AbstractModel
 {
@@ -129,6 +137,26 @@ class VpnConnection extends AbstractModel
     public $IPSECOptionsSpecification;
 
     /**
+     * @var boolean Whether the health check is supported.
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string Local IP address for the health check
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string Peer IP address for the health check
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
+     * @var string Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+     */
+    public $HealthCheckStatus;
+
+    /**
      * @param string $VpnConnectionId Tunnel instance ID.
      * @param string $VpnConnectionName Tunnel name.
      * @param string $VpcId VPC instance ID.
@@ -144,6 +172,10 @@ class VpnConnection extends AbstractModel
      * @param array $SecurityPolicyDatabaseSet SPD.
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE options.
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSEC options.
+     * @param boolean $EnableHealthCheck Whether the health check is supported.
+     * @param string $HealthCheckLocalIp Local IP address for the health check
+     * @param string $HealthCheckRemoteIp Peer IP address for the health check
+     * @param string $HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
      */
     function __construct()
     {
@@ -223,6 +255,22 @@ class VpnConnection extends AbstractModel
         if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
             $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
+        }
+
+        if (array_key_exists("HealthCheckStatus",$param) and $param["HealthCheckStatus"] !== null) {
+            $this->HealthCheckStatus = $param["HealthCheckStatus"];
         }
     }
 }

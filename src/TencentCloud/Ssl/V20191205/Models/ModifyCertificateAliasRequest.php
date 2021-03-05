@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCertificateAlias request structure.
  *
- * @method string getCertificateId() Obtain Certificate ID.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID.
- * @method string getAlias() Obtain Alias.
- * @method void setAlias(string $Alias) Set Alias.
+ * @method string getCertificateId() Obtain Certificate ID
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
  */
 class ModifyCertificateAliasRequest extends AbstractModel
 {
     /**
-     * @var string Certificate ID.
+     * @var string Certificate ID
      */
     public $CertificateId;
 
     /**
-     * @var string Alias.
+     * @var string Alias
      */
     public $Alias;
 
     /**
-     * @param string $CertificateId Certificate ID.
-     * @param string $Alias Alias.
+     * @param string $CertificateId Certificate ID
+     * @param string $Alias Alias
      */
     function __construct()
     {

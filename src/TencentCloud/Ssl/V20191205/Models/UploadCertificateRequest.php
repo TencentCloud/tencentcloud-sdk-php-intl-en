@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadCertificate request structure.
  *
- * @method string getCertificatePublicKey() Obtain Public key of the certificate.
- * @method void setCertificatePublicKey(string $CertificatePublicKey) Set Public key of the certificate.
+ * @method string getCertificatePublicKey() Obtain Public key of the certificate
+ * @method void setCertificatePublicKey(string $CertificatePublicKey) Set Public key of the certificate
  * @method string getCertificatePrivateKey() Obtain Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
  * @method void setCertificatePrivateKey(string $CertificatePrivateKey) Set Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
- * @method string getCertificateType() Obtain Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
- * @method void setCertificateType(string $CertificateType) Set Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
- * @method string getAlias() Obtain Alias.
- * @method void setAlias(string $Alias) Set Alias.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method string getCertificateType() Obtain Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+ * @method void setCertificateType(string $CertificateType) Set Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method string getCertificateUse() Obtain 
+ * @method void setCertificateUse(string $CertificateUse) Set 
  */
 class UploadCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Public key of the certificate.
+     * @var string Public key of the certificate
      */
     public $CertificatePublicKey;
 
@@ -44,26 +46,32 @@ class UploadCertificateRequest extends AbstractModel
     public $CertificatePrivateKey;
 
     /**
-     * @var string Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
+     * @var string Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
      */
     public $CertificateType;
 
     /**
-     * @var string Alias.
+     * @var string Alias
      */
     public $Alias;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID
      */
     public $ProjectId;
 
     /**
-     * @param string $CertificatePublicKey Public key of the certificate.
+     * @var string 
+     */
+    public $CertificateUse;
+
+    /**
+     * @param string $CertificatePublicKey Public key of the certificate
      * @param string $CertificatePrivateKey Private key content. This parameter is required when the certificate type is SVR, and not required when the certificate type is CA.
-     * @param string $CertificateType Certificate type. CA: client certificate; SVR: server certificate. The default value is SVR.
-     * @param string $Alias Alias.
-     * @param integer $ProjectId Project ID.
+     * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate. The default value is SVR.
+     * @param string $Alias Alias
+     * @param integer $ProjectId Project ID
+     * @param string $CertificateUse 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UploadCertificateRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("CertificateUse",$param) and $param["CertificateUse"] !== null) {
+            $this->CertificateUse = $param["CertificateUse"];
         }
     }
 }

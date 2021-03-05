@@ -68,6 +68,10 @@ Users can only add and operate USER-type routes.
  * @method void setDestinationIpv6CidrBlock(string $DestinationIpv6CidrBlock) Set Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
  * @method string getRouteItemId() Obtain Unique routing policy ID.
  * @method void setRouteItemId(string $RouteItemId) Set Unique routing policy ID.
+ * @method boolean getPublishedToVbc() Obtain Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublishedToVbc(boolean $PublishedToVbc) Set Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Route extends AbstractModel
 {
@@ -136,6 +140,12 @@ Users can only add and operate USER-type routes.
     public $RouteItemId;
 
     /**
+     * @var boolean Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublishedToVbc;
+
+    /**
      * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      * @param string $GatewayType Type of the next hop. Currently supported types are:
 CVM: CVM of the public gateway type;
@@ -160,6 +170,8 @@ Users can only add and operate USER-type routes.
      * @param string $RouteTableId Route table instance ID, such as rtb-azd4dt1c.
      * @param string $DestinationIpv6CidrBlock Destination IPv6 IP range, which cannot be included in VPC IP range, such as 2402:4e00:1000:810b::/64.
      * @param string $RouteItemId Unique routing policy ID.
+     * @param boolean $PublishedToVbc Whether the routing policy is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ Users can only add and operate USER-type routes.
 
         if (array_key_exists("RouteItemId",$param) and $param["RouteItemId"] !== null) {
             $this->RouteItemId = $param["RouteItemId"];
+        }
+
+        if (array_key_exists("PublishedToVbc",$param) and $param["PublishedToVbc"] !== null) {
+            $this->PublishedToVbc = $param["PublishedToVbc"];
         }
     }
 }

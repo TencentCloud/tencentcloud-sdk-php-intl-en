@@ -18,28 +18,28 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Certificate operation logs.
+ * Certificate operation logs
  *
- * @method string getAction() Obtain Action performed on logs.
- * @method void setAction(string $Action) Set Action performed on logs.
- * @method string getCreatedOn() Obtain Time when the action is performed.
- * @method void setCreatedOn(string $CreatedOn) Set Time when the action is performed.
+ * @method string getAction() Obtain Action performed on logs
+ * @method void setAction(string $Action) Set Action performed on logs
+ * @method string getCreatedOn() Obtain Time when the action is performed
+ * @method void setCreatedOn(string $CreatedOn) Set Time when the action is performed
  */
 class OperationLog extends AbstractModel
 {
     /**
-     * @var string Action performed on logs.
+     * @var string Action performed on logs
      */
     public $Action;
 
     /**
-     * @var string Time when the action is performed.
+     * @var string Time when the action is performed
      */
     public $CreatedOn;
 
     /**
-     * @param string $Action Action performed on logs.
-     * @param string $CreatedOn Time when the action is performed.
+     * @param string $Action Action performed on logs
+     * @param string $CreatedOn Time when the action is performed
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set `HTTPS:443` listener ID
  * @method array getDomains() Obtain The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
  * @method void setDomains(array $Domains) Set The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+ * @method array getRewriteCodes() Obtain Redirection status code. Valid values: 301, 302, and 307.
+ * @method void setRewriteCodes(array $RewriteCodes) Set Redirection status code. Valid values: 301, 302, and 307.
+ * @method array getTakeUrls() Obtain Whether the matched URL is carried in redirection.
+ * @method void setTakeUrls(array $TakeUrls) Set Whether the matched URL is carried in redirection.
  */
 class AutoRewriteRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class AutoRewriteRequest extends AbstractModel
     public $Domains;
 
     /**
+     * @var array Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public $RewriteCodes;
+
+    /**
+     * @var array Whether the matched URL is carried in redirection.
+     */
+    public $TakeUrls;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId `HTTPS:443` listener ID
      * @param array $Domains The domain name to be redirected under the listener `HTTPS:443`. If it is left empty, all domain names under the listener `HTTPS:443` will be configured with redirects.
+     * @param array $RewriteCodes Redirection status code. Valid values: 301, 302, and 307.
+     * @param array $TakeUrls Whether the matched URL is carried in redirection.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class AutoRewriteRequest extends AbstractModel
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("RewriteCodes",$param) and $param["RewriteCodes"] !== null) {
+            $this->RewriteCodes = $param["RewriteCodes"];
+        }
+
+        if (array_key_exists("TakeUrls",$param) and $param["TakeUrls"] !== null) {
+            $this->TakeUrls = $param["TakeUrls"];
         }
     }
 }

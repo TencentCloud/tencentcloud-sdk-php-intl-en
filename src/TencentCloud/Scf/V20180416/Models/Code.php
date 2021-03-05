@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Function code
  *
- * @method string getCosBucketName() Obtain COS bucket name
- * @method void setCosBucketName(string $CosBucketName) Set COS bucket name
+ * @method string getCosBucketName() Obtain Object bucket name (enter the custom part of the bucket name without `-appid`)
+ * @method void setCosBucketName(string $CosBucketName) Set Object bucket name (enter the custom part of the bucket name without `-appid`)
  * @method string getCosObjectName() Obtain COS object path
  * @method void setCosObjectName(string $CosObjectName) Set COS object path
  * @method string getZipFile() Obtain It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 class Code extends AbstractModel
 {
     /**
-     * @var string COS bucket name
+     * @var string Object bucket name (enter the custom part of the bucket name without `-appid`)
      */
     public $CosBucketName;
 
@@ -122,7 +122,7 @@ class Code extends AbstractModel
     public $GitUserNameSecret;
 
     /**
-     * @param string $CosBucketName COS bucket name
+     * @param string $CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      * @param string $CosObjectName COS object path
      * @param string $ZipFile It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
      * @param string $CosBucketRegion COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.

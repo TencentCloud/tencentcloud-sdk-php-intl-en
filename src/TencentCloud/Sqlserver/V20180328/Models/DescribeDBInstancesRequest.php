@@ -60,6 +60,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
  * @method string getSubnetId() Obtain Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
  * @method void setSubnetId(string $SubnetId) Set Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+ * @method array getVipSet() Obtain The list of instance private IPs, such as 172.1.0.12
+ * @method void setVipSet(array $VipSet) Set The list of instance private IPs, such as 172.1.0.12
+ * @method array getInstanceNameSet() Obtain The list of instance names used for fuzzy match
+ * @method void setInstanceNameSet(array $InstanceNameSet) Set The list of instance names used for fuzzy match
+ * @method array getVersionSet() Obtain The list of instance version numbers, such as 2008R2, 2012SP3
+ * @method void setVersionSet(array $VersionSet) Set The list of instance version numbers, such as 2008R2, 2012SP3
+ * @method string getZone() Obtain Instance availability zone, such as ap-guangzhou-2
+ * @method void setZone(string $Zone) Set Instance availability zone, such as ap-guangzhou-2
+ * @method array getTagKeys() Obtain The list of instance tags
+ * @method void setTagKeys(array $TagKeys) Set The list of instance tags
+ * @method string getSearchKey() Obtain Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+ * @method void setSearchKey(string $SearchKey) Set Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -116,6 +128,36 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var array The list of instance private IPs, such as 172.1.0.12
+     */
+    public $VipSet;
+
+    /**
+     * @var array The list of instance names used for fuzzy match
+     */
+    public $InstanceNameSet;
+
+    /**
+     * @var array The list of instance version numbers, such as 2008R2, 2012SP3
+     */
+    public $VersionSet;
+
+    /**
+     * @var string Instance availability zone, such as ap-guangzhou-2
+     */
+    public $Zone;
+
+    /**
+     * @var array The list of instance tags
+     */
+    public $TagKeys;
+
+    /**
+     * @var string Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $ProjectId Project ID
      * @param integer $Status Instance status. Valid values:
 <li>1: applying</li>
@@ -136,6 +178,12 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $PayMode Retrieves billing type. 0: pay-as-you-go
      * @param string $VpcId Unique string-type ID of instance VPC in the format of `vpc-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
      * @param string $SubnetId Unique string-type ID of instance subnet in the format of `subnet-xxx`. If an empty string ("") is passed in, filtering will be made by basic network.
+     * @param array $VipSet The list of instance private IPs, such as 172.1.0.12
+     * @param array $InstanceNameSet The list of instance names used for fuzzy match
+     * @param array $VersionSet The list of instance version numbers, such as 2008R2, 2012SP3
+     * @param string $Zone Instance availability zone, such as ap-guangzhou-2
+     * @param array $TagKeys The list of instance tags
+     * @param string $SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
      */
     function __construct()
     {
@@ -180,6 +228,30 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("VipSet",$param) and $param["VipSet"] !== null) {
+            $this->VipSet = $param["VipSet"];
+        }
+
+        if (array_key_exists("InstanceNameSet",$param) and $param["InstanceNameSet"] !== null) {
+            $this->InstanceNameSet = $param["InstanceNameSet"];
+        }
+
+        if (array_key_exists("VersionSet",$param) and $param["VersionSet"] !== null) {
+            $this->VersionSet = $param["VersionSet"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
+            $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = $param["SearchKey"];
         }
     }
 }

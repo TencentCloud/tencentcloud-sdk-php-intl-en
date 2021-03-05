@@ -74,10 +74,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getKeepaliveEnable() Obtain Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getKeepaliveEnable() Obtain Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getToa() Obtain Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setToa(boolean $Toa) Set Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -169,10 +173,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionType;
 
     /**
-     * @var integer Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $KeepaliveEnable;
+
+    /**
+     * @var boolean Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Toa;
 
     /**
      * @param string $ListenerId CLB listener ID
@@ -202,8 +212,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $KeepaliveEnable Whether a persistent connection is enabled (This parameter can only be configured in HTTP/HTTPS listeners)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -288,6 +300,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
             $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("Toa",$param) and $param["Toa"] !== null) {
+            $this->Toa = $param["Toa"];
         }
     }
 }

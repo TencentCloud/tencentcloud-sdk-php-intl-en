@@ -140,6 +140,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsolation(integer $Isolation) Set 0: not isolated; 1: isolated.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSecurityGroup() Obtain List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecurityGroup(array $SecurityGroup) Set List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getLoadBalancerPassToTarget() Obtain Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) Set Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -324,6 +332,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Isolation;
 
     /**
+     * @var array List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SecurityGroup;
+
+    /**
+     * @var integer Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -384,6 +404,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Isolation 0: not isolated; 1: isolated.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SecurityGroup List of the security groups bound to the CLB instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -524,6 +548,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Isolation",$param) and $param["Isolation"] !== null) {
             $this->Isolation = $param["Isolation"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

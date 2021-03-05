@@ -36,6 +36,18 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setAvailablePortType(array $AvailablePortType) Set Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method Coordinate getCoordinate() Obtain Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCoordinate(Coordinate $Coordinate) Set Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCity() Obtain City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCity(string $City) Set City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getArea() Obtain Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setArea(string $Area) Set Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AccessPoint extends AbstractModel
 {
@@ -76,6 +88,24 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $AvailablePortType;
 
     /**
+     * @var Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Coordinate;
+
+    /**
+     * @var string City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $City;
+
+    /**
+     * @var string Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Area;
+
+    /**
      * @param string $AccessPointName Access point name.
      * @param string $AccessPointId Unique access point ID.
      * @param string $State Access point status. Valid values: available, unavailable.
@@ -84,6 +114,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RegionId ID of the region that manages the access point.
      * @param array $AvailablePortType Available port type at the access point. Valid values: 1000BASE-T: gigabit electrical port; 1000BASE-LX: 10 km gigabit single-mode optical port; 1000BASE-ZX: 80 km gigabit single-mode optical port; 10GBASE-LR: 10 km 10-gigabit single-mode optical port; 10GBASE-ZR: 80 km 10-gigabit single-mode optical port; 10GBASE-LH: 40 km 10-gigabit single-mode optical port; 100GBASE-LR4: 10 km 100-gigabit single-mode optical portfiber optic port.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param Coordinate $Coordinate Latitude and longitude of the access point
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $City City where the access point is located
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +160,19 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("AvailablePortType",$param) and $param["AvailablePortType"] !== null) {
             $this->AvailablePortType = $param["AvailablePortType"];
+        }
+
+        if (array_key_exists("Coordinate",$param) and $param["Coordinate"] !== null) {
+            $this->Coordinate = new Coordinate();
+            $this->Coordinate->deserialize($param["Coordinate"]);
+        }
+
+        if (array_key_exists("City",$param) and $param["City"] !== null) {
+            $this->City = $param["City"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

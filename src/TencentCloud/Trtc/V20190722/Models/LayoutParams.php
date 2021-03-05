@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPresetLayoutConfig(array $PresetLayoutConfig) Set Valid in custom template, used to specify the video image position of a user in mixed streams.
  * @method integer getPlaceHolderMode() Obtain Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) Set Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+ * @method integer getPureAudioHoldPlaceMode() Obtain Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+ * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) Set Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
  */
 class LayoutParams extends AbstractModel
 {
@@ -80,6 +82,11 @@ class LayoutParams extends AbstractModel
     public $PlaceHolderMode;
 
     /**
+     * @var integer Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+     */
+    public $PureAudioHoldPlaceMode;
+
+    /**
      * @param integer $Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      * @param string $MainVideoUserId ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
      * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
@@ -88,6 +95,7 @@ class LayoutParams extends AbstractModel
      * @param array $MixVideoUids A user list, which takes effect for floating, grid, or screen sharing templates. When the user list has been set, the stream mix output for users in this user list will include both audio and video; the stream mix output for users not in the list will only include audio. Up to 16 users can be set.
      * @param array $PresetLayoutConfig Valid in custom template, used to specify the video image position of a user in mixed streams.
      * @param integer $PlaceHolderMode Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
+     * @param integer $PureAudioHoldPlaceMode Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
      */
     function __construct()
     {
@@ -138,6 +146,10 @@ class LayoutParams extends AbstractModel
 
         if (array_key_exists("PlaceHolderMode",$param) and $param["PlaceHolderMode"] !== null) {
             $this->PlaceHolderMode = $param["PlaceHolderMode"];
+        }
+
+        if (array_key_exists("PureAudioHoldPlaceMode",$param) and $param["PureAudioHoldPlaceMode"] !== null) {
+            $this->PureAudioHoldPlaceMode = $param["PureAudioHoldPlaceMode"];
         }
     }
 }

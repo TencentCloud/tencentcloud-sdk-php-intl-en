@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteCertificate response structure.
  *
- * @method boolean getDeleteResult() Obtain Deletion result.
- * @method void setDeleteResult(boolean $DeleteResult) Set Deletion result.
+ * @method boolean getDeleteResult() Obtain Deletion result
+ * @method void setDeleteResult(boolean $DeleteResult) Set Deletion result
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DeleteCertificateResponse extends AbstractModel
 {
     /**
-     * @var boolean Deletion result.
+     * @var boolean Deletion result
      */
     public $DeleteResult;
 
@@ -38,7 +38,7 @@ class DeleteCertificateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $DeleteResult Deletion result.
+     * @param boolean $DeleteResult Deletion result
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

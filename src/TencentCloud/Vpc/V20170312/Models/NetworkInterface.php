@@ -64,6 +64,10 @@ Note: This field may return null, indicating no valid value.
  * @method void setTagSet(array $TagSet) Set Tag key-value pair.
  * @method integer getEniType() Obtain The ENI type. 0: ENI. 1: EVM ENI.
  * @method void setEniType(integer $EniType) Set The ENI type. 0: ENI. 1: EVM ENI.
+ * @method string getBusiness() Obtain Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBusiness(string $Business) Set Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NetworkInterface extends AbstractModel
 {
@@ -154,6 +158,12 @@ Note: This field may return null, indicating no valid value.
     public $EniType;
 
     /**
+     * @var string Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Business;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      * @param string $NetworkInterfaceName ENI Name
      * @param string $NetworkInterfaceDescription ENI description.
@@ -176,6 +186,8 @@ Note: This field may return null, indicating no valid value.
      * @param array $Ipv6AddressSet The `IPv6` address list.
      * @param array $TagSet Tag key-value pair.
      * @param integer $EniType The ENI type. 0: ENI. 1: EVM ENI.
+     * @param string $Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -268,6 +280,10 @@ Note: This field may return null, indicating no valid value.
 
         if (array_key_exists("EniType",$param) and $param["EniType"] !== null) {
             $this->EniType = $param["EniType"];
+        }
+
+        if (array_key_exists("Business",$param) and $param["Business"] !== null) {
+            $this->Business = $param["Business"];
         }
     }
 }

@@ -204,6 +204,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setZones(array $Zones) Set Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getNfvInfo() Obtain Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNfvInfo(string $NfvInfo) Set Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -492,6 +496,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Zones;
 
     /**
+     * @var string Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NfvInfo;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -583,6 +593,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $MixIpTarget If the layer-7 listener of an IPv6FullChain CLB instance is enabled, the CLB instance can be bound with an IPv4 and an IPv6 CVM instance simultaneously.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Zones Availability zone of a VPC-based private network CLB instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -809,6 +821,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
             $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("NfvInfo",$param) and $param["NfvInfo"] !== null) {
+            $this->NfvInfo = $param["NfvInfo"];
         }
     }
 }

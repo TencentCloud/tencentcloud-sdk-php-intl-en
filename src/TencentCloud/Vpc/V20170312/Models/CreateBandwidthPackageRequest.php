@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateBandwidthPackage request structure.
  *
- * @method string getNetworkType() Obtain The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
- * @method void setNetworkType(string $NetworkType) Set The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+ * @method string getNetworkType() Obtain The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
+ * @method void setNetworkType(string $NetworkType) Set The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
  * @method string getChargeType() Obtain The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
  * @method void setChargeType(string $ChargeType) Set The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
  * @method integer getBandwidthPackageCount() Obtain The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
  * @method void setBandwidthPackageCount(integer $BandwidthPackageCount) Set The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
- * @method integer getInternetMaxBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
- * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+ * @method integer getInternetMaxBandwidth() Obtain The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
+ * @method void setInternetMaxBandwidth(integer $InternetMaxBandwidth) Set The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
  * @method array getTags() Obtain The list of tags to be bound.
  * @method void setTags(array $Tags) Set The list of tags to be bound.
  * @method string getProtocol() Obtain The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateBandwidthPackageRequest extends AbstractModel
 {
     /**
-     * @var string The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * @var string The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
      */
     public $NetworkType;
 
@@ -58,7 +58,7 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $BandwidthPackageCount;
 
     /**
-     * @var integer The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @var integer The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      */
     public $InternetMaxBandwidth;
 
@@ -73,11 +73,11 @@ class CreateBandwidthPackageRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @param string $NetworkType The bandwidth package type. Valid values: 'BGP', 'SINGLEISP', and 'ANYCAST'.
+     * @param string $NetworkType The type of the bandwidth package. Valid values: `HIGH_QUALITY_BGP`, `BGP`, `SINGLEISP`, and `ANYCAST`.
      * @param string $ChargeType The bandwidth package billing mode. Valid values: 'TOP5_POSTPAID_BY_MONTH' and 'PERCENT95_POSTPAID_BY_MONTH'.
      * @param string $BandwidthPackageName The name of the bandwidth package.
      * @param integer $BandwidthPackageCount The number of bandwidth packages (It can only be “1” for bill-by-CVM accounts)
-     * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit.
+     * @param integer $InternetMaxBandwidth The limit of the bandwidth package in Mbps. The value '-1' indicates there is no limit. This feature is currently in beta.
      * @param array $Tags The list of tags to be bound.
      * @param string $Protocol The protocol type of the bandwidth package. Valid values: 'ipv4' and 'ipv6'. Default value: 'ipv4'.
      */

@@ -20,45 +20,45 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyCertificate request structure.
  *
- * @method string getDvAuthMethod() Obtain Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
- * @method void setDvAuthMethod(string $DvAuthMethod) Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
- * @method string getDomainName() Obtain Domain name.
- * @method void setDomainName(string $DomainName) Set Domain name.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method string getDvAuthMethod() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+ * @method void setDvAuthMethod(string $DvAuthMethod) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+ * @method string getDomainName() Obtain Domain name
+ * @method void setDomainName(string $DomainName) Set Domain name
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getPackageType() Obtain Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
  * @method void setPackageType(string $PackageType) Set Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
- * @method string getContactEmail() Obtain Email address.
- * @method void setContactEmail(string $ContactEmail) Set Email address.
- * @method string getContactPhone() Obtain Mobile number.
- * @method void setContactPhone(string $ContactPhone) Set Mobile number.
+ * @method string getContactEmail() Obtain Email address
+ * @method void setContactEmail(string $ContactEmail) Set Email address
+ * @method string getContactPhone() Obtain Mobile number
+ * @method void setContactPhone(string $ContactPhone) Set Mobile number
  * @method string getValidityPeriod() Obtain Validity period. The default value is 12 months, which is the only supported value currently.
  * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period. The default value is 12 months, which is the only supported value currently.
  * @method string getCsrEncryptAlgo() Obtain Encryption algorithm. Only RSA is supported.
  * @method void setCsrEncryptAlgo(string $CsrEncryptAlgo) Set Encryption algorithm. Only RSA is supported.
  * @method string getCsrKeyParameter() Obtain Key pair parameter. Only the 2048-bit key pair is supported.
  * @method void setCsrKeyParameter(string $CsrKeyParameter) Set Key pair parameter. Only the 2048-bit key pair is supported.
- * @method string getCsrKeyPassword() Obtain CSR encryption password.
- * @method void setCsrKeyPassword(string $CsrKeyPassword) Set CSR encryption password.
- * @method string getAlias() Obtain Alias.
- * @method void setAlias(string $Alias) Set Alias.
+ * @method string getCsrKeyPassword() Obtain CSR encryption password
+ * @method void setCsrKeyPassword(string $CsrKeyPassword) Set CSR encryption password
+ * @method string getAlias() Obtain Alias
+ * @method void setAlias(string $Alias) Set Alias
  * @method string getOldCertificateId() Obtain Original certificate ID, which is used to apply for a new certificate.
  * @method void setOldCertificateId(string $OldCertificateId) Set Original certificate ID, which is used to apply for a new certificate.
  */
 class ApplyCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public $DvAuthMethod;
 
     /**
-     * @var string Domain name.
+     * @var string Domain name
      */
     public $DomainName;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID
      */
     public $ProjectId;
 
@@ -68,12 +68,12 @@ class ApplyCertificateRequest extends AbstractModel
     public $PackageType;
 
     /**
-     * @var string Email address.
+     * @var string Email address
      */
     public $ContactEmail;
 
     /**
-     * @var string Mobile number.
+     * @var string Mobile number
      */
     public $ContactPhone;
 
@@ -93,12 +93,12 @@ class ApplyCertificateRequest extends AbstractModel
     public $CsrKeyParameter;
 
     /**
-     * @var string CSR encryption password.
+     * @var string CSR encryption password
      */
     public $CsrKeyPassword;
 
     /**
-     * @var string Alias.
+     * @var string Alias
      */
     public $Alias;
 
@@ -108,17 +108,17 @@ class ApplyCertificateRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
-     * @param string $DvAuthMethod Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-     * @param string $DomainName Domain name.
-     * @param integer $ProjectId Project ID.
+     * @param string $DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @param string $DomainName Domain name
+     * @param integer $ProjectId Project ID
      * @param string $PackageType Certificate type. Currently, the only supported value is 2, which indicates TrustAsia TLS RSA CA.
-     * @param string $ContactEmail Email address.
-     * @param string $ContactPhone Mobile number.
+     * @param string $ContactEmail Email address
+     * @param string $ContactPhone Mobile number
      * @param string $ValidityPeriod Validity period. The default value is 12 months, which is the only supported value currently.
      * @param string $CsrEncryptAlgo Encryption algorithm. Only RSA is supported.
      * @param string $CsrKeyParameter Key pair parameter. Only the 2048-bit key pair is supported.
-     * @param string $CsrKeyPassword CSR encryption password.
-     * @param string $Alias Alias.
+     * @param string $CsrKeyPassword CSR encryption password
+     * @param string $Alias Alias
      * @param string $OldCertificateId Original certificate ID, which is used to apply for a new certificate.
      */
     function __construct()

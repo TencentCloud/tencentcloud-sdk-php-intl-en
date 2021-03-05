@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CancelCertificateOrder response structure.
  *
- * @method string getCertificateId() Obtain ID of the certificate whose order has been successfully cancelled.
- * @method void setCertificateId(string $CertificateId) Set ID of the certificate whose order has been successfully cancelled.
+ * @method string getCertificateId() Obtain ID of the certificate whose order has been successfully cancelled
+ * @method void setCertificateId(string $CertificateId) Set ID of the certificate whose order has been successfully cancelled
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CancelCertificateOrderResponse extends AbstractModel
 {
     /**
-     * @var string ID of the certificate whose order has been successfully cancelled.
+     * @var string ID of the certificate whose order has been successfully cancelled
      */
     public $CertificateId;
 
@@ -38,7 +38,7 @@ class CancelCertificateOrderResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertificateId ID of the certificate whose order has been successfully cancelled.
+     * @param string $CertificateId ID of the certificate whose order has been successfully cancelled
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

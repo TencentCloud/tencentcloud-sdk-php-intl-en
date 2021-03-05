@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Gse\V20191112\Models as Models;
 
 /**
+ * @method Models\CopyFleetResponse CopyFleet(Models\CopyFleetRequest $req) This API is used to replicate server fleet.
  * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) This API is used to create a game server session.
  * @method Models\DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(Models\DescribeGameServerSessionDetailsRequest $req) This API is used to query the list of game server session details.
  * @method Models\DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(Models\DescribeGameServerSessionPlacementRequest $req) This API is used to query the placement of a game server session.
@@ -35,6 +36,8 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) This API is used to search in the list of game server sessions.
  * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) This API is used to start placing a game server session.
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) This API is used to stop placing a game server session.
+ * @method Models\UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(Models\UpdateBucketAccelerateOptRequest $req) This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
+ * @method Models\UpdateBucketCORSOptResponse UpdateBucketCORSOpt(Models\UpdateBucketCORSOptRequest $req) This API (UpdateBucketCORSOpt) is used to configure CORS for COS.
  * @method Models\UpdateGameServerSessionResponse UpdateGameServerSession(Models\UpdateGameServerSessionRequest $req) This API is used to update a game server session.
  */
 

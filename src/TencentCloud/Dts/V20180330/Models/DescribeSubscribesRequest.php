@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned at a time
  * @method string getOrderDirection() Obtain Sorting order. Valid values: DESC, ASC. Default value: DESC, indicating descending by creation time
  * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: DESC, ASC. Default value: DESC, indicating descending by creation time
+ * @method array getTagFilters() Obtain Tag filtering condition
+ * @method void setTagFilters(array $TagFilters) Set Tag filtering condition
+ * @method string getSubscribeVersion() Obtain Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+ * @method void setSubscribeVersion(string $SubscribeVersion) Set Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
  */
 class DescribeSubscribesRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class DescribeSubscribesRequest extends AbstractModel
     public $OrderDirection;
 
     /**
+     * @var array Tag filtering condition
+     */
+    public $TagFilters;
+
+    /**
+     * @var string Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+     */
+    public $SubscribeVersion;
+
+    /**
      * @param string $SubscribeId Data subscription instance ID
      * @param string $SubscribeName Data subscription instance name
      * @param string $InstanceId ID of bound database instance
@@ -112,6 +126,8 @@ class DescribeSubscribesRequest extends AbstractModel
      * @param integer $Offset Starting offset of returned results
      * @param integer $Limit Number of results to be returned at a time
      * @param string $OrderDirection Sorting order. Valid values: DESC, ASC. Default value: DESC, indicating descending by creation time
+     * @param array $TagFilters Tag filtering condition
+     * @param string $SubscribeVersion Subscription instance edition. `txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
      */
     function __construct()
     {
@@ -168,6 +184,19 @@ class DescribeSubscribesRequest extends AbstractModel
 
         if (array_key_exists("OrderDirection",$param) and $param["OrderDirection"] !== null) {
             $this->OrderDirection = $param["OrderDirection"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
         }
     }
 }

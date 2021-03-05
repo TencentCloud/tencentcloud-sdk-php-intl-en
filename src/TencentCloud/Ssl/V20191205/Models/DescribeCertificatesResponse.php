@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificates response structure.
  *
- * @method integer getTotalCount() Obtain Total number.
+ * @method integer getTotalCount() Obtain Total number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number.
+ * @method void setTotalCount(integer $TotalCount) Set Total number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getCertificates() Obtain List.
+ * @method array getCertificates() Obtain List
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificates(array $Certificates) Set List.
+ * @method void setCertificates(array $Certificates) Set List
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -34,13 +34,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DescribeCertificatesResponse extends AbstractModel
 {
     /**
-     * @var integer Total number.
+     * @var integer Total number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
     /**
-     * @var array List.
+     * @var array List
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Certificates;
@@ -51,9 +51,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number.
+     * @param integer $TotalCount Total number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Certificates List.
+     * @param array $Certificates List
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

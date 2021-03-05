@@ -20,218 +20,218 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SubmitCertificateInformation request structure.
  *
- * @method string getCertificateId() Obtain Certificate ID.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID.
- * @method string getCsrType() Obtain CSR generation mode. Online: generated online; parse: uploaded manually.
- * @method void setCsrType(string $CsrType) Set CSR generation mode. Online: generated online; parse: uploaded manually.
- * @method string getCsrContent() Obtain Uploaded CSR content.
- * @method void setCsrContent(string $CsrContent) Set Uploaded CSR content.
- * @method string getCertificateDomain() Obtain Domain name bound with the certificate.
- * @method void setCertificateDomain(string $CertificateDomain) Set Domain name bound with the certificate.
- * @method array getDomainList() Obtain Uploaded domain name array (can be uploaded for a multi-domain certificate).
- * @method void setDomainList(array $DomainList) Set Uploaded domain name array (can be uploaded for a multi-domain certificate).
- * @method string getKeyPassword() Obtain Password of the private key.
- * @method void setKeyPassword(string $KeyPassword) Set Password of the private key.
- * @method string getOrganizationName() Obtain Organization name.
- * @method void setOrganizationName(string $OrganizationName) Set Organization name.
- * @method string getOrganizationDivision() Obtain Division name.
- * @method void setOrganizationDivision(string $OrganizationDivision) Set Division name.
- * @method string getOrganizationAddress() Obtain Detailed address of the organization.
- * @method void setOrganizationAddress(string $OrganizationAddress) Set Detailed address of the organization.
- * @method string getOrganizationCountry() Obtain Country where the organization is located. For example, CN (China).
- * @method void setOrganizationCountry(string $OrganizationCountry) Set Country where the organization is located. For example, CN (China).
- * @method string getOrganizationCity() Obtain City where the organization is located.
- * @method void setOrganizationCity(string $OrganizationCity) Set City where the organization is located.
- * @method string getOrganizationRegion() Obtain Province where the organization is located.
- * @method void setOrganizationRegion(string $OrganizationRegion) Set Province where the organization is located.
- * @method string getPostalCode() Obtain Postal code of the organization.
- * @method void setPostalCode(string $PostalCode) Set Postal code of the organization.
- * @method string getPhoneAreaCode() Obtain Area code of the fixed-line phone number of the organization.
- * @method void setPhoneAreaCode(string $PhoneAreaCode) Set Area code of the fixed-line phone number of the organization.
- * @method string getPhoneNumber() Obtain Fixed-line phone number of the organization.
- * @method void setPhoneNumber(string $PhoneNumber) Set Fixed-line phone number of the organization.
- * @method string getVerifyType() Obtain Certificate verification method.
- * @method void setVerifyType(string $VerifyType) Set Certificate verification method.
- * @method string getAdminFirstName() Obtain Last name of the admin.
- * @method void setAdminFirstName(string $AdminFirstName) Set Last name of the admin.
- * @method string getAdminLastName() Obtain First name of the admin.
- * @method void setAdminLastName(string $AdminLastName) Set First name of the admin.
- * @method string getAdminPhoneNum() Obtain Mobile number of the admin.
- * @method void setAdminPhoneNum(string $AdminPhoneNum) Set Mobile number of the admin.
- * @method string getAdminEmail() Obtain Email of the admin.
- * @method void setAdminEmail(string $AdminEmail) Set Email of the admin.
- * @method string getAdminPosition() Obtain Position of the admin.
- * @method void setAdminPosition(string $AdminPosition) Set Position of the admin.
- * @method string getContactFirstName() Obtain Last name of the contact.
- * @method void setContactFirstName(string $ContactFirstName) Set Last name of the contact.
- * @method string getContactLastName() Obtain First name of the contact.
- * @method void setContactLastName(string $ContactLastName) Set First name of the contact.
- * @method string getContactEmail() Obtain Email of the contact.
- * @method void setContactEmail(string $ContactEmail) Set Email of the contact.
- * @method string getContactNumber() Obtain Mobile number of the contact.
- * @method void setContactNumber(string $ContactNumber) Set Mobile number of the contact.
- * @method string getContactPosition() Obtain Position of the contact.
- * @method void setContactPosition(string $ContactPosition) Set Position of the contact.
+ * @method string getCertificateId() Obtain Certificate ID
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID
+ * @method string getCsrType() Obtain CSR generation mode. `online`: generated online; `parse`: uploaded manually
+ * @method void setCsrType(string $CsrType) Set CSR generation mode. `online`: generated online; `parse`: uploaded manually
+ * @method string getCsrContent() Obtain Uploaded CSR content
+ * @method void setCsrContent(string $CsrContent) Set Uploaded CSR content
+ * @method string getCertificateDomain() Obtain Domain name bound with the certificate
+ * @method void setCertificateDomain(string $CertificateDomain) Set Domain name bound with the certificate
+ * @method array getDomainList() Obtain Uploaded domain name array (can be uploaded for a multi-domain certificate)
+ * @method void setDomainList(array $DomainList) Set Uploaded domain name array (can be uploaded for a multi-domain certificate)
+ * @method string getKeyPassword() Obtain Password of the private key
+ * @method void setKeyPassword(string $KeyPassword) Set Password of the private key
+ * @method string getOrganizationName() Obtain Organization name
+ * @method void setOrganizationName(string $OrganizationName) Set Organization name
+ * @method string getOrganizationDivision() Obtain Division name
+ * @method void setOrganizationDivision(string $OrganizationDivision) Set Division name
+ * @method string getOrganizationAddress() Obtain Detailed address of the organization
+ * @method void setOrganizationAddress(string $OrganizationAddress) Set Detailed address of the organization
+ * @method string getOrganizationCountry() Obtain Country where the organization is located, for example, CN (China)
+ * @method void setOrganizationCountry(string $OrganizationCountry) Set Country where the organization is located, for example, CN (China)
+ * @method string getOrganizationCity() Obtain City where the organization is located
+ * @method void setOrganizationCity(string $OrganizationCity) Set City where the organization is located
+ * @method string getOrganizationRegion() Obtain Province where the organization is located
+ * @method void setOrganizationRegion(string $OrganizationRegion) Set Province where the organization is located
+ * @method string getPostalCode() Obtain Postal code of the organization
+ * @method void setPostalCode(string $PostalCode) Set Postal code of the organization
+ * @method string getPhoneAreaCode() Obtain Area code of the fixed-line phone number of the organization
+ * @method void setPhoneAreaCode(string $PhoneAreaCode) Set Area code of the fixed-line phone number of the organization
+ * @method string getPhoneNumber() Obtain Fixed-line phone number of the organization
+ * @method void setPhoneNumber(string $PhoneNumber) Set Fixed-line phone number of the organization
+ * @method string getVerifyType() Obtain Certificate validation method
+ * @method void setVerifyType(string $VerifyType) Set Certificate validation method
+ * @method string getAdminFirstName() Obtain Last name of the administrator
+ * @method void setAdminFirstName(string $AdminFirstName) Set Last name of the administrator
+ * @method string getAdminLastName() Obtain First name of the administrator
+ * @method void setAdminLastName(string $AdminLastName) Set First name of the administrator
+ * @method string getAdminPhoneNum() Obtain Mobile number of the administrator
+ * @method void setAdminPhoneNum(string $AdminPhoneNum) Set Mobile number of the administrator
+ * @method string getAdminEmail() Obtain Email of the administrator
+ * @method void setAdminEmail(string $AdminEmail) Set Email of the administrator
+ * @method string getAdminPosition() Obtain Position of the administrator
+ * @method void setAdminPosition(string $AdminPosition) Set Position of the administrator
+ * @method string getContactFirstName() Obtain Last name of the contact
+ * @method void setContactFirstName(string $ContactFirstName) Set Last name of the contact
+ * @method string getContactLastName() Obtain First name of the contact
+ * @method void setContactLastName(string $ContactLastName) Set First name of the contact
+ * @method string getContactEmail() Obtain Email of the contact
+ * @method void setContactEmail(string $ContactEmail) Set Email of the contact
+ * @method string getContactNumber() Obtain Mobile number of the contact
+ * @method void setContactNumber(string $ContactNumber) Set Mobile number of the contact
+ * @method string getContactPosition() Obtain Position of the contact
+ * @method void setContactPosition(string $ContactPosition) Set Position of the contact
  */
 class SubmitCertificateInformationRequest extends AbstractModel
 {
     /**
-     * @var string Certificate ID.
+     * @var string Certificate ID
      */
     public $CertificateId;
 
     /**
-     * @var string CSR generation mode. Online: generated online; parse: uploaded manually.
+     * @var string CSR generation mode. `online`: generated online; `parse`: uploaded manually
      */
     public $CsrType;
 
     /**
-     * @var string Uploaded CSR content.
+     * @var string Uploaded CSR content
      */
     public $CsrContent;
 
     /**
-     * @var string Domain name bound with the certificate.
+     * @var string Domain name bound with the certificate
      */
     public $CertificateDomain;
 
     /**
-     * @var array Uploaded domain name array (can be uploaded for a multi-domain certificate).
+     * @var array Uploaded domain name array (can be uploaded for a multi-domain certificate)
      */
     public $DomainList;
 
     /**
-     * @var string Password of the private key.
+     * @var string Password of the private key
      */
     public $KeyPassword;
 
     /**
-     * @var string Organization name.
+     * @var string Organization name
      */
     public $OrganizationName;
 
     /**
-     * @var string Division name.
+     * @var string Division name
      */
     public $OrganizationDivision;
 
     /**
-     * @var string Detailed address of the organization.
+     * @var string Detailed address of the organization
      */
     public $OrganizationAddress;
 
     /**
-     * @var string Country where the organization is located. For example, CN (China).
+     * @var string Country where the organization is located, for example, CN (China)
      */
     public $OrganizationCountry;
 
     /**
-     * @var string City where the organization is located.
+     * @var string City where the organization is located
      */
     public $OrganizationCity;
 
     /**
-     * @var string Province where the organization is located.
+     * @var string Province where the organization is located
      */
     public $OrganizationRegion;
 
     /**
-     * @var string Postal code of the organization.
+     * @var string Postal code of the organization
      */
     public $PostalCode;
 
     /**
-     * @var string Area code of the fixed-line phone number of the organization.
+     * @var string Area code of the fixed-line phone number of the organization
      */
     public $PhoneAreaCode;
 
     /**
-     * @var string Fixed-line phone number of the organization.
+     * @var string Fixed-line phone number of the organization
      */
     public $PhoneNumber;
 
     /**
-     * @var string Certificate verification method.
+     * @var string Certificate validation method
      */
     public $VerifyType;
 
     /**
-     * @var string Last name of the admin.
+     * @var string Last name of the administrator
      */
     public $AdminFirstName;
 
     /**
-     * @var string First name of the admin.
+     * @var string First name of the administrator
      */
     public $AdminLastName;
 
     /**
-     * @var string Mobile number of the admin.
+     * @var string Mobile number of the administrator
      */
     public $AdminPhoneNum;
 
     /**
-     * @var string Email of the admin.
+     * @var string Email of the administrator
      */
     public $AdminEmail;
 
     /**
-     * @var string Position of the admin.
+     * @var string Position of the administrator
      */
     public $AdminPosition;
 
     /**
-     * @var string Last name of the contact.
+     * @var string Last name of the contact
      */
     public $ContactFirstName;
 
     /**
-     * @var string First name of the contact.
+     * @var string First name of the contact
      */
     public $ContactLastName;
 
     /**
-     * @var string Email of the contact.
+     * @var string Email of the contact
      */
     public $ContactEmail;
 
     /**
-     * @var string Mobile number of the contact.
+     * @var string Mobile number of the contact
      */
     public $ContactNumber;
 
     /**
-     * @var string Position of the contact.
+     * @var string Position of the contact
      */
     public $ContactPosition;
 
     /**
-     * @param string $CertificateId Certificate ID.
-     * @param string $CsrType CSR generation mode. Online: generated online; parse: uploaded manually.
-     * @param string $CsrContent Uploaded CSR content.
-     * @param string $CertificateDomain Domain name bound with the certificate.
-     * @param array $DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate).
-     * @param string $KeyPassword Password of the private key.
-     * @param string $OrganizationName Organization name.
-     * @param string $OrganizationDivision Division name.
-     * @param string $OrganizationAddress Detailed address of the organization.
-     * @param string $OrganizationCountry Country where the organization is located. For example, CN (China).
-     * @param string $OrganizationCity City where the organization is located.
-     * @param string $OrganizationRegion Province where the organization is located.
-     * @param string $PostalCode Postal code of the organization.
-     * @param string $PhoneAreaCode Area code of the fixed-line phone number of the organization.
-     * @param string $PhoneNumber Fixed-line phone number of the organization.
-     * @param string $VerifyType Certificate verification method.
-     * @param string $AdminFirstName Last name of the admin.
-     * @param string $AdminLastName First name of the admin.
-     * @param string $AdminPhoneNum Mobile number of the admin.
-     * @param string $AdminEmail Email of the admin.
-     * @param string $AdminPosition Position of the admin.
-     * @param string $ContactFirstName Last name of the contact.
-     * @param string $ContactLastName First name of the contact.
-     * @param string $ContactEmail Email of the contact.
-     * @param string $ContactNumber Mobile number of the contact.
-     * @param string $ContactPosition Position of the contact.
+     * @param string $CertificateId Certificate ID
+     * @param string $CsrType CSR generation mode. `online`: generated online; `parse`: uploaded manually
+     * @param string $CsrContent Uploaded CSR content
+     * @param string $CertificateDomain Domain name bound with the certificate
+     * @param array $DomainList Uploaded domain name array (can be uploaded for a multi-domain certificate)
+     * @param string $KeyPassword Password of the private key
+     * @param string $OrganizationName Organization name
+     * @param string $OrganizationDivision Division name
+     * @param string $OrganizationAddress Detailed address of the organization
+     * @param string $OrganizationCountry Country where the organization is located, for example, CN (China)
+     * @param string $OrganizationCity City where the organization is located
+     * @param string $OrganizationRegion Province where the organization is located
+     * @param string $PostalCode Postal code of the organization
+     * @param string $PhoneAreaCode Area code of the fixed-line phone number of the organization
+     * @param string $PhoneNumber Fixed-line phone number of the organization
+     * @param string $VerifyType Certificate validation method
+     * @param string $AdminFirstName Last name of the administrator
+     * @param string $AdminLastName First name of the administrator
+     * @param string $AdminPhoneNum Mobile number of the administrator
+     * @param string $AdminEmail Email of the administrator
+     * @param string $AdminPosition Position of the administrator
+     * @param string $ContactFirstName Last name of the contact
+     * @param string $ContactLastName First name of the contact
+     * @param string $ContactEmail Email of the contact
+     * @param string $ContactNumber Mobile number of the contact
+     * @param string $ContactPosition Position of the contact
      */
     function __construct()
     {

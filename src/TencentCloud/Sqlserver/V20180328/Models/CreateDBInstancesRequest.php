@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHAType(string $HAType) Set The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
  * @method boolean getMultiZones() Obtain Whether to deploy across availability zones. Default value: false.
  * @method void setMultiZones(boolean $MultiZones) Set Whether to deploy across availability zones. Default value: false.
+ * @method array getResourceTags() Obtain Tags associated with the instances to be created
+ * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateDBInstancesRequest extends AbstractModel
     public $MultiZones;
 
     /**
+     * @var array Tags associated with the instances to be created
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      * @param integer $Memory Instance memory size in GB
      * @param integer $Storage Instance storage capacity in GB
@@ -176,6 +183,7 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param integer $Span Configuration of the maintenance window, which specifies the maintenance duration in hours.
      * @param string $HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
      * @param boolean $MultiZones Whether to deploy across availability zones. Default value: false.
+     * @param array $ResourceTags Tags associated with the instances to be created
      */
     function __construct()
     {
@@ -264,6 +272,15 @@ class CreateDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
             $this->MultiZones = $param["MultiZones"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

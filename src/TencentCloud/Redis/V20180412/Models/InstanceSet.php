@@ -134,6 +134,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMonitorVersion(string $MonitorVersion) Set Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getClientLimitMin() Obtain The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClientLimitMin(integer $ClientLimitMin) Set The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getClientLimitMax() Obtain The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClientLimitMax(integer $ClientLimitMax) Set The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getNodeSet() Obtain Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNodeSet(array $NodeSet) Set Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRegion(string $Region) Set Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceSet extends AbstractModel
 {
@@ -375,6 +391,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MonitorVersion;
 
     /**
+     * @var integer The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClientLimitMin;
+
+    /**
+     * @var integer The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClientLimitMax;
+
+    /**
+     * @var array Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NodeSet;
+
+    /**
+     * @var string Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Region;
+
+    /**
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
      * @param integer $Appid User's Appid
@@ -432,6 +472,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $MonitorVersion Monitoring granularity type. Valid values: 1m (monitoring at 1-minute granularity), 5s (monitoring at 5-second granularity)
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ClientLimitMin The minimum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ClientLimitMax The maximum value of the range of maximum connections to the client
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $NodeSet Instance node details
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Region Region where the instance is deployed
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -634,6 +682,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MonitorVersion",$param) and $param["MonitorVersion"] !== null) {
             $this->MonitorVersion = $param["MonitorVersion"];
+        }
+
+        if (array_key_exists("ClientLimitMin",$param) and $param["ClientLimitMin"] !== null) {
+            $this->ClientLimitMin = $param["ClientLimitMin"];
+        }
+
+        if (array_key_exists("ClientLimitMax",$param) and $param["ClientLimitMax"] !== null) {
+            $this->ClientLimitMax = $param["ClientLimitMax"];
+        }
+
+        if (array_key_exists("NodeSet",$param) and $param["NodeSet"] !== null) {
+            $this->NodeSet = [];
+            foreach ($param["NodeSet"] as $key => $value){
+                $obj = new RedisNodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeSet, $obj);
+            }
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

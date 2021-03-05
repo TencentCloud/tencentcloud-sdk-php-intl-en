@@ -70,8 +70,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMasterInfo(MasterInfo $MasterInfo) Set Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDeviceType() Obtain Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
- * @method void setDeviceType(string $DeviceType) Set Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+ * @method string getDeviceType() Obtain Instance type
+ * @method void setDeviceType(string $DeviceType) Set Instance type
  * @method string getEngineVersion() Obtain Kernel version
  * @method void setEngineVersion(string $EngineVersion) Set Kernel version
  * @method string getInstanceName() Obtain Instance name
@@ -231,7 +231,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MasterInfo;
 
     /**
-     * @var string Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+     * @var string Instance type
      */
     public $DeviceType;
 
@@ -360,7 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $TaskStatus Instance task status. 0 - no task; 1 - upgrading; 2 - importing data; 3 - activating secondary; 4 - enabling public network access; 5 - batch operation in progress; 6 - rolling back; 7 - disabling public network access; 8 - changing password; 9 - renaming instance; 10 - restarting; 12 - migrating self-built instance; 13 - dropping table; 14 - creating and syncing disaster recovery instance; 15 - pending upgrade and switch; 16 - upgrade and switch in progress; 17 - upgrade and switch completed
      * @param MasterInfo $MasterInfo Details of a primary instance
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DeviceType Instance type. Value range: HA (High-Availability Edition), FE (Finance Edition), BASIC (Basic Edition)
+     * @param string $DeviceType Instance type
      * @param string $EngineVersion Kernel version
      * @param string $InstanceName Instance name
      * @param array $DrInfo Details of a disaster recovery instance

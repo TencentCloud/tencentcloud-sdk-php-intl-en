@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID (currently, only one voucher can be used per order)
  * @method integer getCpu() Obtain The number of CUP cores after the instance is upgraded.
  * @method void setCpu(integer $Cpu) Set The number of CUP cores after the instance is upgraded.
+ * @method string getDBVersion() Obtain Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+ * @method void setDBVersion(string $DBVersion) Set Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+ * @method string getHAType() Obtain Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+ * @method void setHAType(string $HAType) Set Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+ * @method string getMultiZones() Obtain Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+ * @method void setMultiZones(string $MultiZones) Set Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
+     * @var string Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+     */
+    public $DBVersion;
+
+    /**
+     * @var string Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+     */
+    public $HAType;
+
+    /**
+     * @var string Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+     */
+    public $MultiZones;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
      * @param integer $AutoVoucher Whether to automatically use vouchers. 0: no, 1: yes. Default value: 0
      * @param array $VoucherIds Voucher ID (currently, only one voucher can be used per order)
      * @param integer $Cpu The number of CUP cores after the instance is upgraded.
+     * @param string $DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
+     * @param string $HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
+     * @param string $MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
+            $this->DBVersion = $param["DBVersion"];
+        }
+
+        if (array_key_exists("HAType",$param) and $param["HAType"] !== null) {
+            $this->HAType = $param["HAType"];
+        }
+
+        if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
+            $this->MultiZones = $param["MultiZones"];
         }
     }
 }

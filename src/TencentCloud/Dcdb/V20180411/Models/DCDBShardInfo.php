@@ -74,6 +74,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
+ * @method string getRange() Obtain The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+ * @method void setRange(string $Range) Set The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
  */
 class DCDBShardInfo extends AbstractModel
 {
@@ -201,6 +203,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cpu;
 
     /**
+     * @var string The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
+     */
+    public $Range;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $ShardSerialId Shard SQL passthrough ID, which is used to pass through SQL statements to the specified shard for execution
      * @param string $ShardInstanceId Globally unique shard ID
@@ -228,6 +235,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $ShardSlaveZones List of secondary AZs of a shard
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Cpu Number of CPU cores
+     * @param string $Range The value range of shardkey, which includes 64 hash values, such as 0-31, 32-63.
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
             $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Range",$param) and $param["Range"] !== null) {
+            $this->Range = $param["Range"];
         }
     }
 }

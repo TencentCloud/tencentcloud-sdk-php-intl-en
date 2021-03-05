@@ -18,83 +18,83 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content of the ProjectInfo parameter. ProjectInfo is an element of Certificates array which is returned by DescribeCertificates.
+ * Content of the `ProjectInfo` parameter. `ProjectInfo` is an element of `Certificates` array which is returned by `DescribeCertificates`.
  *
- * @method string getProjectName() Obtain Project name.
+ * @method string getProjectName() Obtain Project name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectName(string $ProjectName) Set Project name.
+ * @method void setProjectName(string $ProjectName) Set Project name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProjectCreatorUin() Obtain UIN of the project creator.
+ * @method integer getProjectCreatorUin() Obtain UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectCreatorUin(integer $ProjectCreatorUin) Set UIN of the project creator.
+ * @method void setProjectCreatorUin(integer $ProjectCreatorUin) Set UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProjectCreateTime() Obtain Project creation time.
+ * @method string getProjectCreateTime() Obtain Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectCreateTime(string $ProjectCreateTime) Set Project creation time.
+ * @method void setProjectCreateTime(string $ProjectCreateTime) Set Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProjectResume() Obtain Brief project information.
+ * @method string getProjectResume() Obtain Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectResume(string $ProjectResume) Set Brief project information.
+ * @method void setProjectResume(string $ProjectResume) Set Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getOwnerUin() Obtain User UIN.
+ * @method integer getOwnerUin() Obtain User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(integer $OwnerUin) Set User UIN.
+ * @method void setOwnerUin(integer $OwnerUin) Set User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProjectId() Obtain Project ID.
+ * @method string getProjectId() Obtain Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(string $ProjectId) Set Project ID.
+ * @method void setProjectId(string $ProjectId) Set Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ProjectInfo extends AbstractModel
 {
     /**
-     * @var string Project name.
+     * @var string Project name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectName;
 
     /**
-     * @var integer UIN of the project creator.
+     * @var integer UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectCreatorUin;
 
     /**
-     * @var string Project creation time.
+     * @var string Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectCreateTime;
 
     /**
-     * @var string Brief project information.
+     * @var string Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectResume;
 
     /**
-     * @var integer User UIN.
+     * @var integer User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OwnerUin;
 
     /**
-     * @var string Project ID.
+     * @var string Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectId;
 
     /**
-     * @param string $ProjectName Project name.
+     * @param string $ProjectName Project name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProjectCreatorUin UIN of the project creator.
+     * @param integer $ProjectCreatorUin UIN of the project creator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectCreateTime Project creation time.
+     * @param string $ProjectCreateTime Project creation time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectResume Brief project information.
+     * @param string $ProjectResume Brief project information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $OwnerUin User UIN.
+     * @param integer $OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectId Project ID.
+     * @param string $ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -138,6 +138,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOriginId(string $OriginId) Set Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTagInstances() Obtain Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTagInstances(array $TagInstances) Set Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -313,6 +317,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OriginId;
 
     /**
+     * @var array Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TagInstances;
+
+    /**
      * @param string $PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Alarm policy name
@@ -372,6 +382,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OriginId Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $TagInstances Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -509,6 +521,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
             $this->OriginId = $param["OriginId"];
+        }
+
+        if (array_key_exists("TagInstances",$param) and $param["TagInstances"] !== null) {
+            $this->TagInstances = [];
+            foreach ($param["TagInstances"] as $key => $value){
+                $obj = new TagInstance();
+                $obj->deserialize($value);
+                array_push($this->TagInstances, $obj);
+            }
         }
     }
 }

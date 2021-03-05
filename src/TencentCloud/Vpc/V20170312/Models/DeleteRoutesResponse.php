@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteRoutes response structure.
  *
+ * @method array getRouteSet() Obtain Details of the routing policy that has been deleted.
+ * @method void setRouteSet(array $RouteSet) Set Details of the routing policy that has been deleted.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DeleteRoutesResponse extends AbstractModel
 {
     /**
+     * @var array Details of the routing policy that has been deleted.
+     */
+    public $RouteSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $RouteSet Details of the routing policy that has been deleted.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,15 @@ class DeleteRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("RouteSet",$param) and $param["RouteSet"] !== null) {
+            $this->RouteSet = [];
+            foreach ($param["RouteSet"] as $key => $value){
+                $obj = new Route();
+                $obj->deserialize($value);
+                array_push($this->RouteSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

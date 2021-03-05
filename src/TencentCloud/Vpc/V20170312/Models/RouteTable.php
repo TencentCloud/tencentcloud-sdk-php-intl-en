@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
  * @method array getTagSet() Obtain Tag key-value pairs.
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
+ * @method array getLocalCidrForCcn() Obtain Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLocalCidrForCcn(array $LocalCidrForCcn) Set Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RouteTable extends AbstractModel
 {
@@ -80,6 +84,12 @@ class RouteTable extends AbstractModel
     public $TagSet;
 
     /**
+     * @var array Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LocalCidrForCcn;
+
+    /**
      * @param string $VpcId VPC instance ID.
      * @param string $RouteTableId The route table instance ID, such as `rtb-azd4dt1c`.
      * @param string $RouteTableName Route table name.
@@ -88,6 +98,8 @@ class RouteTable extends AbstractModel
      * @param boolean $Main Whether it is the default route table.
      * @param string $CreatedTime Creation Time.
      * @param array $TagSet Tag key-value pairs.
+     * @param array $LocalCidrForCcn Whether the local route is published to CCN.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -146,6 +158,15 @@ class RouteTable extends AbstractModel
                 $obj = new Tag();
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("LocalCidrForCcn",$param) and $param["LocalCidrForCcn"] !== null) {
+            $this->LocalCidrForCcn = [];
+            foreach ($param["LocalCidrForCcn"] as $key => $value){
+                $obj = new CidrForCcn();
+                $obj->deserialize($value);
+                array_push($this->LocalCidrForCcn, $obj);
             }
         }
     }

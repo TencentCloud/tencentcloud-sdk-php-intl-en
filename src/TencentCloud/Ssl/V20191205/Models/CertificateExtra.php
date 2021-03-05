@@ -18,71 +18,71 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content of the CertificateExtra parameter. CertificateExtra is an element of Certificates array which is returned by DescribeCertificates.
+ * Content of the `CertificateExtra` parameter. `CertificateExtra` is an element of `Certificates` array which is returned by `DescribeCertificates`.
  *
- * @method string getDomainNumber() Obtain Number of domain names which can be associated with the certificate.
+ * @method string getDomainNumber() Obtain Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDomainNumber(string $DomainNumber) Set Number of domain names which can be associated with the certificate.
+ * @method void setDomainNumber(string $DomainNumber) Set Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOriginCertificateId() Obtain Original certificate ID.
+ * @method string getOriginCertificateId() Obtain Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOriginCertificateId(string $OriginCertificateId) Set Original certificate ID.
+ * @method void setOriginCertificateId(string $OriginCertificateId) Set Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReplacedBy() Obtain Original ID of the new certificate.
+ * @method string getReplacedBy() Obtain Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReplacedBy(string $ReplacedBy) Set Original ID of the new certificate.
+ * @method void setReplacedBy(string $ReplacedBy) Set Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReplacedFor() Obtain New ID of the new certificate.
+ * @method string getReplacedFor() Obtain New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReplacedFor(string $ReplacedFor) Set New ID of the new certificate.
+ * @method void setReplacedFor(string $ReplacedFor) Set New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRenewOrder() Obtain Certificate ID of the new order.
+ * @method string getRenewOrder() Obtain Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRenewOrder(string $RenewOrder) Set Certificate ID of the new order.
+ * @method void setRenewOrder(string $RenewOrder) Set Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class CertificateExtra extends AbstractModel
 {
     /**
-     * @var string Number of domain names which can be associated with the certificate.
+     * @var string Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DomainNumber;
 
     /**
-     * @var string Original certificate ID.
+     * @var string Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OriginCertificateId;
 
     /**
-     * @var string Original ID of the new certificate.
+     * @var string Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ReplacedBy;
 
     /**
-     * @var string New ID of the new certificate.
+     * @var string New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ReplacedFor;
 
     /**
-     * @var string Certificate ID of the new order.
+     * @var string Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RenewOrder;
 
     /**
-     * @param string $DomainNumber Number of domain names which can be associated with the certificate.
+     * @param string $DomainNumber Number of domain names which can be associated with the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginCertificateId Original certificate ID.
+     * @param string $OriginCertificateId Original certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReplacedBy Original ID of the new certificate.
+     * @param string $ReplacedBy Original ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReplacedFor New ID of the new certificate.
+     * @param string $ReplacedFor New ID of the new certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RenewOrder Certificate ID of the new order.
+     * @param string $RenewOrder Certificate ID of the new order
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -20,320 +20,330 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificate response structure.
  *
- * @method string getOwnerUin() Obtain User UIN.
+ * @method string getOwnerUin() Obtain User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOwnerUin(string $OwnerUin) Set User UIN.
+ * @method void setOwnerUin(string $OwnerUin) Set User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProjectId() Obtain Project ID.
+ * @method string getProjectId() Obtain Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProjectId(string $ProjectId) Set Project ID.
+ * @method void setProjectId(string $ProjectId) Set Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFrom() Obtain Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+ * @method string getFrom() Obtain Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFrom(string $From) Set Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+ * @method void setFrom(string $From) Set Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateType() Obtain Certificate type. CA: client certificate; SVR: server certificate.
+ * @method string getCertificateType() Obtain Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateType(string $CertificateType) Set Certificate type. CA: client certificate; SVR: server certificate.
+ * @method void setCertificateType(string $CertificateType) Set Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+ * @method string getPackageType() Obtain Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+ * @method void setPackageType(string $PackageType) Set Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProductZhName() Obtain Name of the certificate issuer.
+ * @method string getProductZhName() Obtain Name of the certificate issuer
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProductZhName(string $ProductZhName) Set Name of the certificate issuer.
+ * @method void setProductZhName(string $ProductZhName) Set Name of the certificate issuer
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDomain() Obtain Domain name.
+ * @method string getDomain() Obtain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDomain(string $Domain) Set Domain name.
+ * @method void setDomain(string $Domain) Set Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAlias() Obtain Alias.
+ * @method string getAlias() Obtain Alias
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAlias(string $Alias) Set Alias.
+ * @method void setAlias(string $Alias) Set Alias
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+ * @method integer getStatus() Obtain Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+ * @method void setStatus(integer $Status) Set Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatusMsg() Obtain Status information.
+ * @method string getStatusMsg() Obtain Status information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatusMsg(string $StatusMsg) Set Status information.
+ * @method void setStatusMsg(string $StatusMsg) Set Status information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVerifyType() Obtain Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+ * @method string getVerifyType() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVerifyType(string $VerifyType) Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+ * @method void setVerifyType(string $VerifyType) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVulnerabilityStatus() Obtain Vulnerability scanning status.
+ * @method string getVulnerabilityStatus() Obtain Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityStatus(string $VulnerabilityStatus) Set Vulnerability scanning status.
+ * @method void setVulnerabilityStatus(string $VulnerabilityStatus) Set Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertBeginTime() Obtain Time when the certificate takes effect.
+ * @method string getCertBeginTime() Obtain Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertBeginTime(string $CertBeginTime) Set Time when the certificate takes effect.
+ * @method void setCertBeginTime(string $CertBeginTime) Set Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertEndTime() Obtain Time when the certificate expires.
+ * @method string getCertEndTime() Obtain Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertEndTime(string $CertEndTime) Set Time when the certificate expires.
+ * @method void setCertEndTime(string $CertEndTime) Set Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getValidityPeriod() Obtain Validity period of the certificate (unit: month).
+ * @method string getValidityPeriod() Obtain Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period of the certificate (unit: month).
+ * @method void setValidityPeriod(string $ValidityPeriod) Set Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInsertTime() Obtain Application time.
+ * @method string getInsertTime() Obtain Application time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInsertTime(string $InsertTime) Set Application time.
+ * @method void setInsertTime(string $InsertTime) Set Application time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrderId() Obtain Order ID.
+ * @method string getOrderId() Obtain Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrderId(string $OrderId) Set Order ID.
+ * @method void setOrderId(string $OrderId) Set Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method CertificateExtra getCertificateExtra() Obtain Extended information of the certificate.
+ * @method CertificateExtra getCertificateExtra() Obtain Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateExtra(CertificateExtra $CertificateExtra) Set Extended information of the certificate.
+ * @method void setCertificateExtra(CertificateExtra $CertificateExtra) Set Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method DvAuthDetail getDvAuthDetail() Obtain DV authentication information.
+ * @method DvAuthDetail getDvAuthDetail() Obtain DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthDetail(DvAuthDetail $DvAuthDetail) Set DV authentication information.
+ * @method void setDvAuthDetail(DvAuthDetail $DvAuthDetail) Set DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVulnerabilityReport() Obtain Vulnerability scanning assessment report.
+ * @method string getVulnerabilityReport() Obtain Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVulnerabilityReport(string $VulnerabilityReport) Set Vulnerability scanning assessment report.
+ * @method void setVulnerabilityReport(string $VulnerabilityReport) Set Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateId() Obtain Certificate ID.
+ * @method string getCertificateId() Obtain Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID.
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPackageTypeName() Obtain Certificate type name.
+ * @method string getPackageTypeName() Obtain Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPackageTypeName(string $PackageTypeName) Set Certificate type name.
+ * @method void setPackageTypeName(string $PackageTypeName) Set Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStatusName() Obtain Status description.
+ * @method string getStatusName() Obtain Status description
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatusName(string $StatusName) Set Status description.
+ * @method void setStatusName(string $StatusName) Set Status description
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSubjectAltName() Obtain Domain names associated with the certificate (including the primary domain name).
+ * @method array getSubjectAltName() Obtain Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSubjectAltName(array $SubjectAltName) Set Domain names associated with the certificate (including the primary domain name).
+ * @method void setSubjectAltName(array $SubjectAltName) Set Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsVip() Obtain Whether the customer is a VIP customer.
+ * @method boolean getIsVip() Obtain Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsVip(boolean $IsVip) Set Whether the customer is a VIP customer.
+ * @method void setIsVip(boolean $IsVip) Set Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsWildcard() Obtain Whether the certificate is a wildcard certificate.
+ * @method boolean getIsWildcard() Obtain Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsWildcard(boolean $IsWildcard) Set Whether the certificate is a wildcard certificate.
+ * @method void setIsWildcard(boolean $IsWildcard) Set Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsDv() Obtain Whether the certificate is a DV certificate.
+ * @method boolean getIsDv() Obtain Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsDv(boolean $IsDv) Set Whether the certificate is a DV certificate.
+ * @method void setIsDv(boolean $IsDv) Set Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsVulnerability() Obtain Whether the vulnerability scanning feature is enabled.
+ * @method boolean getIsVulnerability() Obtain Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsVulnerability(boolean $IsVulnerability) Set Whether the vulnerability scanning feature is enabled.
+ * @method void setIsVulnerability(boolean $IsVulnerability) Set Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getRenewAble() Obtain Whether the certificate can be reissued.
+ * @method boolean getRenewAble() Obtain Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRenewAble(boolean $RenewAble) Set Whether the certificate can be reissued.
+ * @method void setRenewAble(boolean $RenewAble) Set Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method SubmittedData getSubmittedData() Obtain Submitted data.
+ * @method SubmittedData getSubmittedData() Obtain Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSubmittedData(SubmittedData $SubmittedData) Set Submitted data.
+ * @method void setSubmittedData(SubmittedData $SubmittedData) Set Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getDeployable() Obtain Whether the certificate can be deployed.
+ * @method boolean getDeployable() Obtain Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDeployable(boolean $Deployable) Set Whether the certificate can be deployed.
+ * @method void setDeployable(boolean $Deployable) Set Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCertificateResponse extends AbstractModel
 {
     /**
-     * @var string User UIN.
+     * @var string User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OwnerUin;
 
     /**
-     * @var string Project ID.
+     * @var string Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectId;
 
     /**
-     * @var string Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * @var string Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $From;
 
     /**
-     * @var string Certificate type. CA: client certificate; SVR: server certificate.
+     * @var string Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertificateType;
 
     /**
-     * @var string Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * @var string Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PackageType;
 
     /**
-     * @var string Name of the certificate issuer.
+     * @var string Name of the certificate issuer
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProductZhName;
 
     /**
-     * @var string Domain name.
+     * @var string Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Domain;
 
     /**
-     * @var string Alias.
+     * @var string Alias
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Alias;
 
     /**
-     * @var integer Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * @var integer Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string Status information.
+     * @var string Status information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StatusMsg;
 
     /**
-     * @var string Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VerifyType;
 
     /**
-     * @var string Vulnerability scanning status.
+     * @var string Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VulnerabilityStatus;
 
     /**
-     * @var string Time when the certificate takes effect.
+     * @var string Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertBeginTime;
 
     /**
-     * @var string Time when the certificate expires.
+     * @var string Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertEndTime;
 
     /**
-     * @var string Validity period of the certificate (unit: month).
+     * @var string Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ValidityPeriod;
 
     /**
-     * @var string Application time.
+     * @var string Application time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InsertTime;
 
     /**
-     * @var string Order ID.
+     * @var string Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrderId;
 
     /**
-     * @var CertificateExtra Extended information of the certificate.
+     * @var CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertificateExtra;
 
     /**
-     * @var DvAuthDetail DV authentication information.
+     * @var DvAuthDetail DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthDetail;
 
     /**
-     * @var string Vulnerability scanning assessment report.
+     * @var string Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VulnerabilityReport;
 
     /**
-     * @var string Certificate ID.
+     * @var string Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertificateId;
 
     /**
-     * @var string Certificate type name.
+     * @var string Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PackageTypeName;
 
     /**
-     * @var string Status description.
+     * @var string Status description
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $StatusName;
 
     /**
-     * @var array Domain names associated with the certificate (including the primary domain name).
+     * @var array Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SubjectAltName;
 
     /**
-     * @var boolean Whether the customer is a VIP customer.
+     * @var boolean Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsVip;
 
     /**
-     * @var boolean Whether the certificate is a wildcard certificate.
+     * @var boolean Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsWildcard;
 
     /**
-     * @var boolean Whether the certificate is a DV certificate.
+     * @var boolean Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsDv;
 
     /**
-     * @var boolean Whether the vulnerability scanning feature is enabled.
+     * @var boolean Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $IsVulnerability;
 
     /**
-     * @var boolean Whether the certificate can be reissued.
+     * @var boolean Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $RenewAble;
 
     /**
-     * @var SubmittedData Submitted data.
+     * @var SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $SubmittedData;
 
     /**
-     * @var boolean Whether the certificate can be deployed.
+     * @var boolean Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Deployable;
+
+    /**
+     * @var array List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -341,68 +351,70 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $OwnerUin User UIN.
+     * @param string $OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProjectId Project ID.
+     * @param string $ProjectId Project ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $From Certificate source. trustasia: TrustAsia; upload: certificate uploaded by users.
+     * @param string $From Certificate source. `trustasia`: TrustAsia; `upload`: certificate uploaded by users
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertificateType Certificate type. CA: client certificate; SVR: server certificate.
+     * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageType Certificate package type. 1: GeoTrust DV SSL CA - G3; 2: TrustAsia TLS RSA CA; 3: Secure Site EV Pro; 4: Secure Site EV; 5: Secure Site OV Pro; 6: Secure Site OV; 7: Secure Site OV wildcard SSL certificate; 8: GeoTrust EV; 9: GeoTrust OV; 10: GeoTrust OV wildcard SSL certificate; 11: TrustAsia DV multi-domain SSL certificate; 12: TrustAsia DV wildcard SSL certificate; 13: TrustAsia OV wildcard SSL certificate (D3); 14: TrustAsia OV SSL certificate (D3); 15: TrustAsia OV multi-domain SSL certificate (D3); 16: TrustAsia EV SSL certificate (D3); 17: TrustAsia EV multi-domain SSL certificate (D3); 18: GlobalSign OV SSL certificate; 19: GlobalSign OV wildcard SSL certificate; 20: GlobalSign EV SSL certificate; 21: TrustAsia OV multi-domain wildcard SSL certificate (D3); 22: GlobalSign OV multi-domain SSL certificate; 23: GlobalSign OV multi-domain wildcard SSL certificate; 24: GlobalSign EV multi-domain SSL certificate.
+     * @param string $PackageType Certificate plan type. `1`: GeoTrust DV SSL CA - G3; `2`: TrustAsia TLS RSA CA; `3`: SecureSite EV Pro; `4`: SecureSite EV; `5`: SecureSite OV Pro; `6`: SecureSite OV; `7`: SecureSite OV wildcard; `8`: GeoTrust EV; `9`: GeoTrust OV; `10`: GeoTrust OV wildcard; `11`: TrustAsia DV multi-domain; `12`: TrustAsia DV wildcard; `13`: TrustAsia OV wildcard D3; `14`: TrustAsia OV D3; `15`: TrustAsia OV multi-domain D3; `16`: TrustAsia EV D3; `17`: TrustAsia EV multi-domain D3; `18`: GlobalSign OV; `19`: GlobalSign OV wildcard; `20`: GlobalSign EV; `21`: TrustAsia OV wildcard multi-domain D3; `22`: GlobalSign OV multi-domain; `23`: GlobalSign OV wildcard multi-domain; `24`: GlobalSign EV multi-domain
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProductZhName Name of the certificate issuer.
+     * @param string $ProductZhName Name of the certificate issuer
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Domain Domain name.
+     * @param string $Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Alias Alias.
+     * @param string $Alias Alias
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Certificate status. 0: being reviewed; 1: approved; 2: not approved; 3: expired; 4: DNS record added; 5: OV certificate, to be submitted; 6: order being canceled; 7: cancelled; 8: information submitted, confirmation letter to be uploaded; 9: certificate being revoked; 10: revoked; 11: reissuing; 12: revocation confirmation letter to be uploaded.
+     * @param integer $Status Certificate status. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: enterprise-grade certificate, pending submission; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload; `9`: revoking certificate; `10`: revoked; `11`: reissuing; `12`: pending revocation confirmation letter upload
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusMsg Status information.
+     * @param string $StatusMsg Status information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VerifyType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file; EMAIL: verification by email.
+     * @param string $VerifyType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation; `EMAIL`: email validation
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VulnerabilityStatus Vulnerability scanning status.
+     * @param string $VulnerabilityStatus Vulnerability scanning status
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertBeginTime Time when the certificate takes effect.
+     * @param string $CertBeginTime Time when the certificate takes effect
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertEndTime Time when the certificate expires.
+     * @param string $CertEndTime Time when the certificate expires
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ValidityPeriod Validity period of the certificate (unit: month).
+     * @param string $ValidityPeriod Validity period of the certificate, in months
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InsertTime Application time.
+     * @param string $InsertTime Application time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrderId Order ID.
+     * @param string $OrderId Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param CertificateExtra $CertificateExtra Extended information of the certificate.
+     * @param CertificateExtra $CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param DvAuthDetail $DvAuthDetail DV authentication information.
+     * @param DvAuthDetail $DvAuthDetail DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VulnerabilityReport Vulnerability scanning assessment report.
+     * @param string $VulnerabilityReport Vulnerability scanning assessment report
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertificateId Certificate ID.
+     * @param string $CertificateId Certificate ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PackageTypeName Certificate type name.
+     * @param string $PackageTypeName Certificate type name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StatusName Status description.
+     * @param string $StatusName Status description
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SubjectAltName Domain names associated with the certificate (including the primary domain name).
+     * @param array $SubjectAltName Domain names associated with the certificate (including the primary domain name)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsVip Whether the customer is a VIP customer.
+     * @param boolean $IsVip Whether the customer is a VIP customer
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsWildcard Whether the certificate is a wildcard certificate.
+     * @param boolean $IsWildcard Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsDv Whether the certificate is a DV certificate.
+     * @param boolean $IsDv Whether the certificate is a DV certificate
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsVulnerability Whether the vulnerability scanning feature is enabled.
+     * @param boolean $IsVulnerability Whether the vulnerability scanning feature is enabled
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $RenewAble Whether the certificate can be reissued.
+     * @param boolean $RenewAble Whether the certificate can be reissued
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param SubmittedData $SubmittedData Submitted data.
+     * @param SubmittedData $SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $Deployable Whether the certificate can be deployed.
+     * @param boolean $Deployable Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -543,6 +555,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
             $this->Deployable = $param["Deployable"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

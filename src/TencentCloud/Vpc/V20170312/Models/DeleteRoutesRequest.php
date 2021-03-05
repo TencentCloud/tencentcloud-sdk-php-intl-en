@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() Obtain Route table instance ID.
  * @method void setRouteTableId(string $RouteTableId) Set Route table instance ID.
- * @method array getRoutes() Obtain Routing policy object.
- * @method void setRoutes(array $Routes) Set Routing policy object.
+ * @method array getRoutes() Obtain Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
+ * @method void setRoutes(array $Routes) Set Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
  */
 class DeleteRoutesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteRoutesRequest extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var array Routing policy object.
+     * @var array Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
      */
     public $Routes;
 
     /**
      * @param string $RouteTableId Route table instance ID.
-     * @param array $Routes Routing policy object.
+     * @param array $Routes Routing policy object. Only the `RouteId` field is required when deleting a routing policy.
      */
     function __construct()
     {

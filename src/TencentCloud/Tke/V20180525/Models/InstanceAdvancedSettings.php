@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes K8s cluster configuration and related information.
  *
- * @method string getMountTarget() Obtain Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+ * @method string getMountTarget() Obtain Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setMountTarget(string $MountTarget) Set Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMountTarget(string $MountTarget) Set Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getDockerGraphPath() Obtain Specified value of dockerd --graph. Default value: /var/lib/docker
 Note: This field may return null, indicating that no valid value was found.
  * @method void setDockerGraphPath(string $DockerGraphPath) Set Specified value of dockerd --graph. Default value: /var/lib/docker
@@ -40,10 +40,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setLabels(array $Labels) Set Node label array
 Note: This field may return null, indicating that no valid value was found.
- * @method array getDataDisks() Obtain Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setDataDisks(array $DataDisks) Set Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
-Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getDataDisks() Obtain Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDataDisks(array $DataDisks) Set Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method InstanceExtraArgs getExtraArgs() Obtain Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Information about node custom parameters
@@ -52,9 +52,9 @@ Note: This field may return null, indicating that no valid value was found.
 class InstanceAdvancedSettings extends AbstractModel
 {
     /**
-     * @var string Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+     * @var string Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $MountTarget;
 
@@ -82,8 +82,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $Labels;
 
     /**
-     * @var array Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var array Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DataDisks;
 
@@ -94,9 +94,9 @@ Note: This field may return null, indicating that no valid value was found.
     public $ExtraArgs;
 
     /**
-     * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
+     * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
 Note: This field may return null, indicating that no valid value was found.
      * @param string $UserScript Base64-encoded user script, which will be executed after the K8s component starts running. You need to ensure the reentrant and retry logic of the script. The script and its log files can be viewed at the node path: /data/ccs_userscript/. If you want to initialize nodes before adding them to the scheduling list, you can use this parameter together with the unschedulable parameter. After the final initialization of userScript is completed, add the kubectl uncordon nodename --kubeconfig=/root/.kube/config command to enable the node for scheduling.
@@ -104,8 +104,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
      * @param array $Labels Node label array
 Note: This field may return null, indicating that no valid value was found.
-     * @param array $DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. If the purchase of multiple data disks is also set in DataDisks under RunInstancesPara of the CreateClusterInstances API for adding nodes, you can refer to the example of adding cluster nodes (multiple data disks) for the CreateClusterInstances API.
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param InstanceExtraArgs $ExtraArgs Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
      */

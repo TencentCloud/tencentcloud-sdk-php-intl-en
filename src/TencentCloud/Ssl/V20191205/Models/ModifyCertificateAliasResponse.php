@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCertificateAlias response structure.
  *
- * @method string getCertificateId() Obtain ID of the successfully modified certificate.
- * @method void setCertificateId(string $CertificateId) Set ID of the successfully modified certificate.
+ * @method string getCertificateId() Obtain ID of the successfully modified certificate
+ * @method void setCertificateId(string $CertificateId) Set ID of the successfully modified certificate
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyCertificateAliasResponse extends AbstractModel
 {
     /**
-     * @var string ID of the successfully modified certificate.
+     * @var string ID of the successfully modified certificate
      */
     public $CertificateId;
 
@@ -38,7 +38,7 @@ class ModifyCertificateAliasResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CertificateId ID of the successfully modified certificate.
+     * @param string $CertificateId ID of the successfully modified certificate
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

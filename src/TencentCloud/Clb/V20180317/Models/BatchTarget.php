@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method integer getPort() Obtain Binding port
  * @method void setPort(integer $Port) Set Binding port
- * @method string getInstanceId() Obtain CVM instance ID
- * @method void setInstanceId(string $InstanceId) Set CVM instance ID
- * @method string getEniIp() Obtain ENI IP
- * @method void setEniIp(string $EniIp) Set ENI IP
- * @method integer getWeight() Obtain Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
- * @method void setWeight(integer $Weight) Set Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+ * @method string getInstanceId() Obtain CVM instance ID. Indicating binding the primary IP of the primary ENI.
+ * @method void setInstanceId(string $InstanceId) Set CVM instance ID. Indicating binding the primary IP of the primary ENI.
+ * @method string getEniIp() Obtain ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
+ * @method void setEniIp(string $EniIp) Set ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
+ * @method integer getWeight() Obtain CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+ * @method void setWeight(integer $Weight) Set CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
  * @method string getLocationId() Obtain Layer-7 rule ID
  * @method void setLocationId(string $LocationId) Set Layer-7 rule ID
  */
@@ -46,17 +46,17 @@ class BatchTarget extends AbstractModel
     public $Port;
 
     /**
-     * @var string CVM instance ID
+     * @var string CVM instance ID. Indicating binding the primary IP of the primary ENI.
      */
     public $InstanceId;
 
     /**
-     * @var string ENI IP
+     * @var string ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
      */
     public $EniIp;
 
     /**
-     * @var integer Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+     * @var integer CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
      */
     public $Weight;
 
@@ -68,9 +68,9 @@ class BatchTarget extends AbstractModel
     /**
      * @param string $ListenerId Listener ID
      * @param integer $Port Binding port
-     * @param string $InstanceId CVM instance ID
-     * @param string $EniIp ENI IP
-     * @param integer $Weight Weight of a CVM instance. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
+     * @param string $InstanceId CVM instance ID. Indicating binding the primary IP of the primary ENI.
+     * @param string $EniIp ENI IP or other private IP. This parameter is required for binding a dual-stack IPv6 CVM instance.
+     * @param integer $Weight CVM instance weight. Value range: [0, 100]. If it is not specified when binding the instance, 10 will be used by default.
      * @param string $LocationId Layer-7 rule ID
      */
     function __construct()

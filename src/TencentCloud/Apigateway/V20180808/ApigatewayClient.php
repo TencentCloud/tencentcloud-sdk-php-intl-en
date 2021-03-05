@@ -48,7 +48,7 @@ You can use this API if you use a custom domain name and custom mapping. Please 
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
- * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API is used to query the details of an API deployed in API Gateway.
+ * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) This API is used to display the throttling policies bound to an API.
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
 After creating an API key, you can query its details by using this API.

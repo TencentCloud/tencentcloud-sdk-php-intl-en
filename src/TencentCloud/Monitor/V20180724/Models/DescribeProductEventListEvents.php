@@ -100,6 +100,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setGroupInfo(array $GroupInfo) Set Policy information.
 Note: This field may return null, indicating that no valid value was found.
+ * @method string getViewName() Obtain Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setViewName(string $ViewName) Set Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DescribeProductEventListEvents extends AbstractModel
 {
@@ -224,6 +228,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $GroupInfo;
 
     /**
+     * @var string Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ViewName;
+
+    /**
      * @param integer $EventId Event ID.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $EventCName Event name in Chinese.
@@ -264,6 +274,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
      * @param array $GroupInfo Policy information.
 Note: This field may return null, indicating that no valid value was found.
+     * @param string $ViewName Display name
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -371,6 +383,10 @@ Note: This field may return null, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->GroupInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ViewName",$param) and $param["ViewName"] !== null) {
+            $this->ViewName = $param["ViewName"];
         }
     }
 }

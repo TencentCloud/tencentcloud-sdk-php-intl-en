@@ -36,8 +36,14 @@ use TencentCloud\Common\AbstractModel;
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
- * @method string getRepeatType() Obtain 
- * @method void setRepeatType(string $RepeatType) Set 
+ * @method string getRepeatType() Obtain Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
+ * @method void setRepeatType(string $RepeatType) Set Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
  */
 class ImageWatermarkTemplate extends AbstractModel
 {
@@ -62,7 +68,10 @@ class ImageWatermarkTemplate extends AbstractModel
     public $Height;
 
     /**
-     * @var string 
+     * @var string Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
      */
     public $RepeatType;
 
@@ -75,7 +84,10 @@ class ImageWatermarkTemplate extends AbstractModel
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px;</li>
 `0px` means that `Height` will be proportionally scaled according to the video width.
-     * @param string $RepeatType 
+     * @param string $RepeatType Repeat type of an animated watermark. Valid values:
+<li>once: no longer appears after watermark playback ends.</li>
+<li>repeat_last_frame: stays on the last frame after watermark playback ends.</li>
+<li>repeat (default): repeats the playback until the video ends.</li>
      */
     function __construct()
     {

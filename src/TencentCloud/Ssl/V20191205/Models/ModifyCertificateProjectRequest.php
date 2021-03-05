@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyCertificateProject request structure.
  *
- * @method array getCertificateIdList() Obtain ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
- * @method void setCertificateIdList(array $CertificateIdList) Set ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
+ * @method array getCertificateIdList() Obtain ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+ * @method void setCertificateIdList(array $CertificateIdList) Set ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
  */
 class ModifyCertificateProjectRequest extends AbstractModel
 {
     /**
-     * @var array ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
+     * @var array ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
      */
     public $CertificateIdList;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID
      */
     public $ProjectId;
 
     /**
-     * @param array $CertificateIdList ID list of certificates whose projects need to be modified. A maximum 100 certificate IDs are supported.
-     * @param integer $ProjectId Project ID.
+     * @param array $CertificateIdList ID list of certificates whose projects need to be modified. A maximum of 100 certificate IDs are supported.
+     * @param integer $ProjectId Project ID
      */
     function __construct()
     {

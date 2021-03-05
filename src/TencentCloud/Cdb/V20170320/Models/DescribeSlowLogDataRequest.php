@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
  * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+ * @method string getInstType() Obtain This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+ * @method void setInstType(string $InstType) Set This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
  */
 class DescribeSlowLogDataRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeSlowLogDataRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
+     */
+    public $InstType;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param integer $StartTime Start timestamp.
      * @param integer $EndTime End timestamp.
@@ -104,6 +111,7 @@ class DescribeSlowLogDataRequest extends AbstractModel
      * @param string $OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending).
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit The number of results per page in paginated queries. Default value: 100. Maximum value: 400.
+     * @param string $InstType This parameter is valid only for source or disaster recovery instances. Valid value: `slave`, which indicates pulling logs from the replica.
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeSlowLogDataRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("InstType",$param) and $param["InstType"] !== null) {
+            $this->InstType = $param["InstType"];
         }
     }
 }

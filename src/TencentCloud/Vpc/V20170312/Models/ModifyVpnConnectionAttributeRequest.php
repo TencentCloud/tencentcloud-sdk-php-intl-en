@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIKEOptionsSpecification(IKEOptionsSpecification $IKEOptionsSpecification) Set IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
  * @method IPSECOptionsSpecification getIPSECOptionsSpecification() Obtain IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
+ * @method boolean getEnableHealthCheck() Obtain Whether to enable the tunnel health check.
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) Set Whether to enable the tunnel health check.
+ * @method string getHealthCheckLocalIp() Obtain Local IP address for the tunnel health check
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the tunnel health check
+ * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the tunnel health check
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the tunnel health check
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $IPSECOptionsSpecification;
 
     /**
+     * @var boolean Whether to enable the tunnel health check.
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string Local IP address for the tunnel health check
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string Peer IP address for the tunnel health check
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
      * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      * @param string $VpnConnectionName VPN tunnel can be named freely, but the maximum length is 60 characters.
      * @param string $PreShareKey The pre-shared key.
      * @param array $SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      * @param IKEOptionsSpecification $IKEOptionsSpecification IKE (Internet Key Exchange) configuration. IKE comes with a self-protection mechanism. The network security protocol is configured by the user.
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
+     * @param boolean $EnableHealthCheck Whether to enable the tunnel health check.
+     * @param string $HealthCheckLocalIp Local IP address for the tunnel health check
+     * @param string $HealthCheckRemoteIp Peer IP address for the tunnel health check
      */
     function __construct()
     {
@@ -115,6 +139,18 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
         if (array_key_exists("IPSECOptionsSpecification",$param) and $param["IPSECOptionsSpecification"] !== null) {
             $this->IPSECOptionsSpecification = new IPSECOptionsSpecification();
             $this->IPSECOptionsSpecification->deserialize($param["IPSECOptionsSpecification"]);
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
         }
     }
 }

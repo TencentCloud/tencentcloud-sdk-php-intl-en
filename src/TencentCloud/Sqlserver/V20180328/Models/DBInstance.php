@@ -100,6 +100,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHAFlag(string $HAFlag) Set Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -288,6 +292,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HAFlag;
 
     /**
+     * @var array The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -328,6 +338,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -484,6 +496,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HAFlag",$param) and $param["HAFlag"] !== null) {
             $this->HAFlag = $param["HAFlag"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

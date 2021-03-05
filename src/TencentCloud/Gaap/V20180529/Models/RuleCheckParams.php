@@ -38,13 +38,13 @@ You cannot modify this parameter when calling ModifyRuleAttribute API.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setFailedCountInter(integer $FailedCountInter) Set Origin server failure check frequency
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getFailedThreshold() Obtain Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+ * @method integer getFailedThreshold() Obtain Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFailedThreshold(integer $FailedThreshold) Set Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+ * @method void setFailedThreshold(integer $FailedThreshold) Set Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getBlockInter() Obtain Time of a request is blocked after the origin server health check threshold is exceeded.
+ * @method integer getBlockInter() Obtain Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setBlockInter(integer $BlockInter) Set Time of a request is blocked after the origin server health check threshold is exceeded.
+ * @method void setBlockInter(integer $BlockInter) Set Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RuleCheckParams extends AbstractModel
@@ -87,13 +87,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $FailedCountInter;
 
     /**
-     * @var integer Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * @var integer Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $FailedThreshold;
 
     /**
-     * @var integer Time of a request is blocked after the origin server health check threshold is exceeded.
+     * @var integer Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $BlockInter;
@@ -108,9 +108,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 You cannot modify this parameter when calling ModifyRuleAttribute API.
      * @param integer $FailedCountInter Origin server failure check frequency
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $FailedThreshold Origin server health check threshold. The service will be blocked once the threshold is exceeded.
+     * @param integer $FailedThreshold Origin server health check threshold. All requests to the origin server will be blocked once the threshold is exceeded.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $BlockInter Time of a request is blocked after the origin server health check threshold is exceeded.
+     * @param integer $BlockInter Duration to block requests targeting the origin server after a failed health check
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

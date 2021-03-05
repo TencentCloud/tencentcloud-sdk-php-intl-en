@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCertificateOperateLogs response structure.
  *
- * @method integer getAllTotal() Obtain Total number of logs that meet query conditions.
- * @method void setAllTotal(integer $AllTotal) Set Total number of logs that meet query conditions.
- * @method integer getTotalCount() Obtain Number of logs returned for this request.
- * @method void setTotalCount(integer $TotalCount) Set Number of logs returned for this request.
- * @method array getOperateLogs() Obtain Certificate operation log list.
+ * @method integer getAllTotal() Obtain Total number of logs that meet query conditions
+ * @method void setAllTotal(integer $AllTotal) Set Total number of logs that meet query conditions
+ * @method integer getTotalCount() Obtain Number of logs returned for this request
+ * @method void setTotalCount(integer $TotalCount) Set Number of logs returned for this request
+ * @method array getOperateLogs() Obtain Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOperateLogs(array $OperateLogs) Set Certificate operation log list.
+ * @method void setOperateLogs(array $OperateLogs) Set Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -34,17 +34,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DescribeCertificateOperateLogsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of logs that meet query conditions.
+     * @var integer Total number of logs that meet query conditions
      */
     public $AllTotal;
 
     /**
-     * @var integer Number of logs returned for this request.
+     * @var integer Number of logs returned for this request
      */
     public $TotalCount;
 
     /**
-     * @var array Certificate operation log list.
+     * @var array Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OperateLogs;
@@ -55,9 +55,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $AllTotal Total number of logs that meet query conditions.
-     * @param integer $TotalCount Number of logs returned for this request.
-     * @param array $OperateLogs Certificate operation log list.
+     * @param integer $AllTotal Total number of logs that meet query conditions
+     * @param integer $TotalCount Number of logs returned for this request
+     * @param array $OperateLogs Certificate operation log list
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -20,50 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ReplaceCertificate request structure.
  *
- * @method string getCertificateId() Obtain Certificate ID.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID.
- * @method string getValidType() Obtain Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
- * @method void setValidType(string $ValidType) Set Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
- * @method string getCsrType() Obtain Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
- * @method void setCsrType(string $CsrType) Set Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
- * @method string getCsrContent() Obtain CSR content.
- * @method void setCsrContent(string $CsrContent) Set CSR content.
- * @method string getCsrkeyPassword() Obtain Password of the key.
- * @method void setCsrkeyPassword(string $CsrkeyPassword) Set Password of the key.
+ * @method string getCertificateId() Obtain Certificate ID
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID
+ * @method string getValidType() Obtain Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+ * @method void setValidType(string $ValidType) Set Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+ * @method string getCsrType() Obtain Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+ * @method void setCsrType(string $CsrType) Set Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+ * @method string getCsrContent() Obtain CSR content
+ * @method void setCsrContent(string $CsrContent) Set CSR content
+ * @method string getCsrkeyPassword() Obtain Password of the key
+ * @method void setCsrkeyPassword(string $CsrkeyPassword) Set Password of the key
+ * @method string getReason() Obtain Reissue reason
+ * @method void setReason(string $Reason) Set Reissue reason
  */
 class ReplaceCertificateRequest extends AbstractModel
 {
     /**
-     * @var string Certificate ID.
+     * @var string Certificate ID
      */
     public $CertificateId;
 
     /**
-     * @var string Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
+     * @var string Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      */
     public $ValidType;
 
     /**
-     * @var string Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
+     * @var string Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
      */
     public $CsrType;
 
     /**
-     * @var string CSR content.
+     * @var string CSR content
      */
     public $CsrContent;
 
     /**
-     * @var string Password of the key.
+     * @var string Password of the key
      */
     public $CsrkeyPassword;
 
     /**
-     * @param string $CertificateId Certificate ID.
-     * @param string $ValidType Verification type. DNS_AUTO: automatic DNS verification; DNS: manual DNS verification; FILE: verification by file.
-     * @param string $CsrType Type. Original: original certificate CSR; upload: uploaded manually; online: generated online. The default value is original.
-     * @param string $CsrContent CSR content.
-     * @param string $CsrkeyPassword Password of the key.
+     * @var string Reissue reason
+     */
+    public $Reason;
+
+    /**
+     * @param string $CertificateId Certificate ID
+     * @param string $ValidType Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
+     * @param string $CsrType Type. `original`: original certificate CSR; `upload`: uploaded manually; `online`: generated online. The default value is original.
+     * @param string $CsrContent CSR content
+     * @param string $CsrkeyPassword Password of the key
+     * @param string $Reason Reissue reason
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ReplaceCertificateRequest extends AbstractModel
 
         if (array_key_exists("CsrkeyPassword",$param) and $param["CsrkeyPassword"] !== null) {
             $this->CsrkeyPassword = $param["CsrkeyPassword"];
+        }
+
+        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
+            $this->Reason = $param["Reason"];
         }
     }
 }

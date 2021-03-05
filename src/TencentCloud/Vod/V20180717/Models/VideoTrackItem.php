@@ -21,11 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * Video segment information of video track.
  *
  * @method string getSourceMedia() Obtain Source of media material for video segment, which can be:
-<li>VOD media file ID;</li>
+<li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
  * @method void setSourceMedia(string $SourceMedia) Set Source of media material for video segment, which can be:
-<li>VOD media file ID;</li>
+<li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
  * @method float getSourceMediaStartTime() Obtain Start time of video segment in material file in seconds. Default value: 0.
@@ -91,7 +91,7 @@ class VideoTrackItem extends AbstractModel
 {
     /**
      * @var string Source of media material for video segment, which can be:
-<li>VOD media file ID;</li>
+<li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      */
@@ -164,7 +164,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $SourceMedia Source of media material for video segment, which can be:
-<li>VOD media file ID;</li>
+<li>ID of VOD media files</li>
 <li>Download URL of other media files.</li>
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.

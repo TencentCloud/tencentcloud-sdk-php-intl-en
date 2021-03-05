@@ -51,6 +51,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(Models\GetReservedConcurrencyConfigRequest $req) This API is used to get the reserved concurrency details of a function.
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) This API is used to run a function.
  * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
+ * @method Models\ListAsyncEventsResponse ListAsyncEvents(Models\ListAsyncEventsRequest $req) This API is used to pull the list of async function events.
  * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) This API is used to return relevant function information based on the input query parameters.
  * @method Models\ListLayerVersionsResponse ListLayerVersions(Models\ListLayerVersionsRequest $req) This API is used to get the information of all versions of a specified layer.
  * @method Models\ListLayersResponse ListLayers(Models\ListLayersRequest $req) This API is used to return the list of all layers, including the information of the latest version of each layer. You can filter them by the compatible runtime.
@@ -62,6 +63,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\PutProvisionedConcurrencyConfigResponse PutProvisionedConcurrencyConfig(Models\PutProvisionedConcurrencyConfigRequest $req) This API is used to set the provisioned concurrency of a non-$LATEST version of a function.
  * @method Models\PutReservedConcurrencyConfigResponse PutReservedConcurrencyConfig(Models\PutReservedConcurrencyConfigRequest $req) This API is used to set the reserved concurrency of a function.
  * @method Models\PutTotalConcurrencyConfigResponse PutTotalConcurrencyConfig(Models\PutTotalConcurrencyConfigRequest $req) This API is used to modify the account concurrency quota.
+ * @method Models\TerminateAsyncEventResponse TerminateAsyncEvent(Models\TerminateAsyncEventRequest $req) This API is used to terminate a running async function event.
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) This API is used to update the configuration of an alias.
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) This API is used to update the function code based on the input parameters.
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) This API is used to update the function configuration based on the input parameters.

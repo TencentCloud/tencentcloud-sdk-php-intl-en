@@ -18,311 +18,311 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content of the SubmittedData parameter returned by DescribeCertificates.
+ * Content of the `SubmittedData` parameter returned by `DescribeCertificates`
  *
- * @method string getCsrType() Obtain CSR type. Online: CSR generated online; parse: CSR pasted.
+ * @method string getCsrType() Obtain CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCsrType(string $CsrType) Set CSR type. Online: CSR generated online; parse: CSR pasted.
+ * @method void setCsrType(string $CsrType) Set CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCsrContent() Obtain CSR content.
+ * @method string getCsrContent() Obtain CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCsrContent(string $CsrContent) Set CSR content.
+ * @method void setCsrContent(string $CsrContent) Set CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCertificateDomain() Obtain Domain name information.
+ * @method string getCertificateDomain() Obtain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificateDomain(string $CertificateDomain) Set Domain name information.
+ * @method void setCertificateDomain(string $CertificateDomain) Set Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getDomainList() Obtain DNS information.
+ * @method array getDomainList() Obtain DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDomainList(array $DomainList) Set DNS information.
+ * @method void setDomainList(array $DomainList) Set DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getKeyPassword() Obtain Password of the private key.
+ * @method string getKeyPassword() Obtain Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setKeyPassword(string $KeyPassword) Set Password of the private key.
+ * @method void setKeyPassword(string $KeyPassword) Set Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationName() Obtain Enterprise or unit name.
+ * @method string getOrganizationName() Obtain Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationName(string $OrganizationName) Set Enterprise or unit name.
+ * @method void setOrganizationName(string $OrganizationName) Set Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationDivision() Obtain Division.
+ * @method string getOrganizationDivision() Obtain Division
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationDivision(string $OrganizationDivision) Set Division.
+ * @method void setOrganizationDivision(string $OrganizationDivision) Set Division
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationAddress() Obtain Address.
+ * @method string getOrganizationAddress() Obtain Address
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationAddress(string $OrganizationAddress) Set Address.
+ * @method void setOrganizationAddress(string $OrganizationAddress) Set Address
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationCountry() Obtain Country.
+ * @method string getOrganizationCountry() Obtain Country
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationCountry(string $OrganizationCountry) Set Country.
+ * @method void setOrganizationCountry(string $OrganizationCountry) Set Country
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationCity() Obtain City.
+ * @method string getOrganizationCity() Obtain City
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationCity(string $OrganizationCity) Set City.
+ * @method void setOrganizationCity(string $OrganizationCity) Set City
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOrganizationRegion() Obtain Province.
+ * @method string getOrganizationRegion() Obtain Province
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOrganizationRegion(string $OrganizationRegion) Set Province.
+ * @method void setOrganizationRegion(string $OrganizationRegion) Set Province
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPostalCode() Obtain Postal code.
+ * @method string getPostalCode() Obtain Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPostalCode(string $PostalCode) Set Postal code.
+ * @method void setPostalCode(string $PostalCode) Set Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPhoneAreaCode() Obtain Area code of the fixed-line phone number.
+ * @method string getPhoneAreaCode() Obtain Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhoneAreaCode(string $PhoneAreaCode) Set Area code of the fixed-line phone number.
+ * @method void setPhoneAreaCode(string $PhoneAreaCode) Set Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPhoneNumber() Obtain Fixed-line phone number.
+ * @method string getPhoneNumber() Obtain Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPhoneNumber(string $PhoneNumber) Set Fixed-line phone number.
+ * @method void setPhoneNumber(string $PhoneNumber) Set Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAdminFirstName() Obtain First name of the admin.
+ * @method string getAdminFirstName() Obtain First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdminFirstName(string $AdminFirstName) Set First name of the admin.
+ * @method void setAdminFirstName(string $AdminFirstName) Set First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAdminLastName() Obtain Last name of the admin.
+ * @method string getAdminLastName() Obtain Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdminLastName(string $AdminLastName) Set Last name of the admin.
+ * @method void setAdminLastName(string $AdminLastName) Set Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAdminPhoneNum() Obtain Phone number of the admin.
+ * @method string getAdminPhoneNum() Obtain Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdminPhoneNum(string $AdminPhoneNum) Set Phone number of the admin.
+ * @method void setAdminPhoneNum(string $AdminPhoneNum) Set Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAdminEmail() Obtain Email of the admin.
+ * @method string getAdminEmail() Obtain Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdminEmail(string $AdminEmail) Set Email of the admin.
+ * @method void setAdminEmail(string $AdminEmail) Set Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAdminPosition() Obtain Position of the admin.
+ * @method string getAdminPosition() Obtain Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdminPosition(string $AdminPosition) Set Position of the admin.
+ * @method void setAdminPosition(string $AdminPosition) Set Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContactFirstName() Obtain First name of the contact.
+ * @method string getContactFirstName() Obtain First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContactFirstName(string $ContactFirstName) Set First name of the contact.
+ * @method void setContactFirstName(string $ContactFirstName) Set First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContactLastName() Obtain Last name of the contact.
+ * @method string getContactLastName() Obtain Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContactLastName(string $ContactLastName) Set Last name of the contact.
+ * @method void setContactLastName(string $ContactLastName) Set Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContactNumber() Obtain Phone number of the contact.
+ * @method string getContactNumber() Obtain Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContactNumber(string $ContactNumber) Set Phone number of the contact.
+ * @method void setContactNumber(string $ContactNumber) Set Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContactEmail() Obtain Email of the contact.
+ * @method string getContactEmail() Obtain Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContactEmail(string $ContactEmail) Set Email of the contact.
+ * @method void setContactEmail(string $ContactEmail) Set Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContactPosition() Obtain Position of the contact.
+ * @method string getContactPosition() Obtain Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContactPosition(string $ContactPosition) Set Position of the contact.
+ * @method void setContactPosition(string $ContactPosition) Set Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getVerifyType() Obtain Verification type.
+ * @method string getVerifyType() Obtain Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setVerifyType(string $VerifyType) Set Verification type.
+ * @method void setVerifyType(string $VerifyType) Set Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SubmittedData extends AbstractModel
 {
     /**
-     * @var string CSR type. Online: CSR generated online; parse: CSR pasted.
+     * @var string CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CsrType;
 
     /**
-     * @var string CSR content.
+     * @var string CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CsrContent;
 
     /**
-     * @var string Domain name information.
+     * @var string Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $CertificateDomain;
 
     /**
-     * @var array DNS information.
+     * @var array DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DomainList;
 
     /**
-     * @var string Password of the private key.
+     * @var string Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $KeyPassword;
 
     /**
-     * @var string Enterprise or unit name.
+     * @var string Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationName;
 
     /**
-     * @var string Division.
+     * @var string Division
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationDivision;
 
     /**
-     * @var string Address.
+     * @var string Address
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationAddress;
 
     /**
-     * @var string Country.
+     * @var string Country
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationCountry;
 
     /**
-     * @var string City.
+     * @var string City
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationCity;
 
     /**
-     * @var string Province.
+     * @var string Province
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $OrganizationRegion;
 
     /**
-     * @var string Postal code.
+     * @var string Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PostalCode;
 
     /**
-     * @var string Area code of the fixed-line phone number.
+     * @var string Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PhoneAreaCode;
 
     /**
-     * @var string Fixed-line phone number.
+     * @var string Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $PhoneNumber;
 
     /**
-     * @var string First name of the admin.
+     * @var string First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdminFirstName;
 
     /**
-     * @var string Last name of the admin.
+     * @var string Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdminLastName;
 
     /**
-     * @var string Phone number of the admin.
+     * @var string Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdminPhoneNum;
 
     /**
-     * @var string Email of the admin.
+     * @var string Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdminEmail;
 
     /**
-     * @var string Position of the admin.
+     * @var string Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AdminPosition;
 
     /**
-     * @var string First name of the contact.
+     * @var string First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContactFirstName;
 
     /**
-     * @var string Last name of the contact.
+     * @var string Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContactLastName;
 
     /**
-     * @var string Phone number of the contact.
+     * @var string Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContactNumber;
 
     /**
-     * @var string Email of the contact.
+     * @var string Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContactEmail;
 
     /**
-     * @var string Position of the contact.
+     * @var string Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContactPosition;
 
     /**
-     * @var string Verification type.
+     * @var string Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VerifyType;
 
     /**
-     * @param string $CsrType CSR type. Online: CSR generated online; parse: CSR pasted.
+     * @param string $CsrType CSR type. `online`: CSR generated online; `parse`: CSR pasted
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CsrContent CSR content.
+     * @param string $CsrContent CSR content
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CertificateDomain Domain name information.
+     * @param string $CertificateDomain Domain name information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $DomainList DNS information.
+     * @param array $DomainList DNS information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $KeyPassword Password of the private key.
+     * @param string $KeyPassword Password of the private key
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationName Enterprise or unit name.
+     * @param string $OrganizationName Enterprise or unit name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationDivision Division.
+     * @param string $OrganizationDivision Division
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationAddress Address.
+     * @param string $OrganizationAddress Address
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationCountry Country.
+     * @param string $OrganizationCountry Country
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationCity City.
+     * @param string $OrganizationCity City
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OrganizationRegion Province.
+     * @param string $OrganizationRegion Province
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PostalCode Postal code.
+     * @param string $PostalCode Postal code
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PhoneAreaCode Area code of the fixed-line phone number.
+     * @param string $PhoneAreaCode Area code of the fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $PhoneNumber Fixed-line phone number.
+     * @param string $PhoneNumber Fixed-line phone number
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminFirstName First name of the admin.
+     * @param string $AdminFirstName First name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminLastName Last name of the admin.
+     * @param string $AdminLastName Last name of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminPhoneNum Phone number of the admin.
+     * @param string $AdminPhoneNum Phone number of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminEmail Email of the admin.
+     * @param string $AdminEmail Email of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AdminPosition Position of the admin.
+     * @param string $AdminPosition Position of the administrator
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContactFirstName First name of the contact.
+     * @param string $ContactFirstName First name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContactLastName Last name of the contact.
+     * @param string $ContactLastName Last name of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContactNumber Phone number of the contact.
+     * @param string $ContactNumber Phone number of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContactEmail Email of the contact.
+     * @param string $ContactEmail Email of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContactPosition Position of the contact.
+     * @param string $ContactPosition Position of the contact
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $VerifyType Verification type.
+     * @param string $VerifyType Validation type
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

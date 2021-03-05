@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupWay(integer $BackupWay) Set Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
  * @method integer getBackupId() Obtain Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
  * @method void setBackupId(integer $BackupId) Set Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
+ * @method string getDatabaseName() Obtain Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+ * @method void setDatabaseName(string $DatabaseName) Set Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeBackupsRequest extends AbstractModel
     public $BackupId;
 
     /**
+     * @var string Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+     */
+    public $DatabaseName;
+
+    /**
      * @param string $StartTime Start name (yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime End time (yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
@@ -96,6 +103,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $Strategy Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
      * @param integer $BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
      * @param integer $BackupId Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
+     * @param string $DatabaseName Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
             $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
+            $this->DatabaseName = $param["DatabaseName"];
         }
     }
 }

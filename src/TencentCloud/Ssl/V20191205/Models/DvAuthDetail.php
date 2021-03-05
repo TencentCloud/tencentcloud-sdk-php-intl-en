@@ -18,83 +18,83 @@ namespace TencentCloud\Ssl\V20191205\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content of the DvAuthDetail parameter returned by DescribeCertificates.
+ * Content of the `DvAuthDetail` parameter returned by `DescribeCertificates`
  *
- * @method string getDvAuthKey() Obtain DV authentication key.
+ * @method string getDvAuthKey() Obtain DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthKey(string $DvAuthKey) Set DV authentication key.
+ * @method void setDvAuthKey(string $DvAuthKey) Set DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthValue() Obtain DV authentication value.
+ * @method string getDvAuthValue() Obtain DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthValue(string $DvAuthValue) Set DV authentication value.
+ * @method void setDvAuthValue(string $DvAuthValue) Set DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthDomain() Obtain Domain name of the DV authentication value.
+ * @method string getDvAuthDomain() Obtain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthDomain(string $DvAuthDomain) Set Domain name of the DV authentication value.
+ * @method void setDvAuthDomain(string $DvAuthDomain) Set Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthPath() Obtain Path of the DV authentication value.
+ * @method string getDvAuthPath() Obtain Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthPath(string $DvAuthPath) Set Path of the DV authentication value.
+ * @method void setDvAuthPath(string $DvAuthPath) Set Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getDvAuthKeySubDomain() Obtain DV authentication sub-domain name.
+ * @method string getDvAuthKeySubDomain() Obtain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) Set DV authentication sub-domain name.
+ * @method void setDvAuthKeySubDomain(string $DvAuthKeySubDomain) Set DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getDvAuths() Obtain DV authentication information.
+ * @method array getDvAuths() Obtain DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDvAuths(array $DvAuths) Set DV authentication information.
+ * @method void setDvAuths(array $DvAuths) Set DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DvAuthDetail extends AbstractModel
 {
     /**
-     * @var string DV authentication key.
+     * @var string DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthKey;
 
     /**
-     * @var string DV authentication value.
+     * @var string DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthValue;
 
     /**
-     * @var string Domain name of the DV authentication value.
+     * @var string Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthDomain;
 
     /**
-     * @var string Path of the DV authentication value.
+     * @var string Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthPath;
 
     /**
-     * @var string DV authentication sub-domain name.
+     * @var string DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuthKeySubDomain;
 
     /**
-     * @var array DV authentication information.
+     * @var array DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $DvAuths;
 
     /**
-     * @param string $DvAuthKey DV authentication key.
+     * @param string $DvAuthKey DV authentication key
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthValue DV authentication value.
+     * @param string $DvAuthValue DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthDomain Domain name of the DV authentication value.
+     * @param string $DvAuthDomain Domain name of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthPath Path of the DV authentication value.
+     * @param string $DvAuthPath Path of the DV authentication value
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $DvAuthKeySubDomain DV authentication sub-domain name.
+     * @param string $DvAuthKeySubDomain DV authentication sub-domain name
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $DvAuths DV authentication information.
+     * @param array $DvAuths DV authentication information
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

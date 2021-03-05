@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationDatabaseUrl request structure.
  *
- * @method string getType() Obtain Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
- * @method void setType(string $Type) Set Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+ * @method string getType() Obtain Protocol type for an IP location database. Valid value: `ipv4`.
+ * @method void setType(string $Type) Set Protocol type for an IP location database. Valid value: `ipv4`.
  */
 class DescribeIpGeolocationDatabaseUrlRequest extends AbstractModel
 {
     /**
-     * @var string Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+     * @var string Protocol type for an IP location database. Valid value: `ipv4`.
      */
     public $Type;
 
     /**
-     * @param string $Type Protocol type of the IP location database. Valid values: `ipv4` and `ipv6`.
+     * @param string $Type Protocol type for an IP location database. Valid value: `ipv4`.
      */
     function __construct()
     {

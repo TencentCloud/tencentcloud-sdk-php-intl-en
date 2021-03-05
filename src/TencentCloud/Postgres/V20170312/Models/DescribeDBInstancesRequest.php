@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) Set Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
  * @method integer getLimit() Obtain Number of entries returned per page. Default value: 10.
  * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10.
- * @method integer getOffset() Obtain Page number, starting from 0.
- * @method void setOffset(integer $Offset) Set Page number, starting from 0.
+ * @method integer getOffset() Obtain Data offset which starts from 0
+ * @method void setOffset(integer $Offset) Set Data offset which starts from 0
  * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
  * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
  * @method string getOrderByType() Obtain In ascending or descending order
@@ -44,7 +44,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Page number, starting from 0.
+     * @var integer Data offset which starts from 0
      */
     public $Offset;
 
@@ -61,7 +61,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     /**
      * @param array $Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
      * @param integer $Limit Number of entries returned per page. Default value: 10.
-     * @param integer $Offset Page number, starting from 0.
+     * @param integer $Offset Data offset which starts from 0
      * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      * @param string $OrderByType In ascending or descending order
      */

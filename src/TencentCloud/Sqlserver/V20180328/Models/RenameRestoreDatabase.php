@@ -18,14 +18,14 @@ namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * It is used in the `RestoreInstance`, `RollbackInstance`, and `CreateMigration` APIs, and used to specify the databases to be restored and rename them after restoration.
+ * Used in the `RestoreInstance`, `RollbackInstance`, `CreateMigration`, and `CloneDB` APIs to specify and rename the database to be restored, rolled back, migrated, or cloned.
  *
  * @method string getOldName() Obtain Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
  * @method void setOldName(string $OldName) Set Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
- * @method string getNewName() Obtain New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
- * @method void setNewName(string $NewName) Set New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
+ * @method string getNewName() Obtain New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
+ * @method void setNewName(string $NewName) Set New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
  */
 class RenameRestoreDatabase extends AbstractModel
 {
@@ -36,14 +36,14 @@ It can be left empty in offline migration tasks.
     public $OldName;
 
     /**
-     * @var string New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
+     * @var string New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
      */
     public $NewName;
 
     /**
      * @param string $OldName Database name. If the `OldName` database does not exist, a failure will be returned.
 It can be left empty in offline migration tasks.
-     * @param string $NewName New database name. If this parameter is left empty, the restored database will be renamed in the default format. If this parameter is left empty in offline migration tasks, the restored database will be named `OldName`. `OldName` and `NewName` cannot be both empty.
+     * @param string $NewName New database name. In offline migration, `OldName` will be used if `NewName` is left empty (`OldName` and `NewName` cannot be both empty). In database cloning, `OldName` and `NewName` must be both specified and cannot have the same value.
      */
     function __construct()
     {

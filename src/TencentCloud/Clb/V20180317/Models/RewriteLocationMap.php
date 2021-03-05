@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceLocationId(string $SourceLocationId) Set Source forwarding rule ID
  * @method string getTargetLocationId() Obtain Forwarding rule ID of a redirect target
  * @method void setTargetLocationId(string $TargetLocationId) Set Forwarding rule ID of a redirect target
+ * @method integer getRewriteCode() Obtain Redirection status code. Valid values: 301, 302, and 307.
+ * @method void setRewriteCode(integer $RewriteCode) Set Redirection status code. Valid values: 301, 302, and 307.
+ * @method boolean getTakeUrl() Obtain Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+ * @method void setTakeUrl(boolean $TakeUrl) Set Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+ * @method string getSourceDomain() Obtain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+ * @method void setSourceDomain(string $SourceDomain) Set Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
  */
 class RewriteLocationMap extends AbstractModel
 {
@@ -38,8 +44,26 @@ class RewriteLocationMap extends AbstractModel
     public $TargetLocationId;
 
     /**
+     * @var integer Redirection status code. Valid values: 301, 302, and 307.
+     */
+    public $RewriteCode;
+
+    /**
+     * @var boolean Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+     */
+    public $TakeUrl;
+
+    /**
+     * @var string Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
+     */
+    public $SourceDomain;
+
+    /**
      * @param string $SourceLocationId Source forwarding rule ID
      * @param string $TargetLocationId Forwarding rule ID of a redirect target
+     * @param integer $RewriteCode Redirection status code. Valid values: 301, 302, and 307.
+     * @param boolean $TakeUrl Whether the matched URL is carried in redirection. It is required when configuring `RewriteCode`.
+     * @param string $SourceDomain Original domain name of redirection, which must be the corresponding domain name of `SourceLocationId`. It is required when configuring `RewriteCode`.
      */
     function __construct()
     {
@@ -60,6 +84,18 @@ class RewriteLocationMap extends AbstractModel
 
         if (array_key_exists("TargetLocationId",$param) and $param["TargetLocationId"] !== null) {
             $this->TargetLocationId = $param["TargetLocationId"];
+        }
+
+        if (array_key_exists("RewriteCode",$param) and $param["RewriteCode"] !== null) {
+            $this->RewriteCode = $param["RewriteCode"];
+        }
+
+        if (array_key_exists("TakeUrl",$param) and $param["TakeUrl"] !== null) {
+            $this->TakeUrl = $param["TakeUrl"];
+        }
+
+        if (array_key_exists("SourceDomain",$param) and $param["SourceDomain"] !== null) {
+            $this->SourceDomain = $param["SourceDomain"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) Set Quantity. Default value: 1. Maximum value: 10
  * @method integer getAutoRenew() Obtain Whether to auto-renew. Default value: 0. This flag does not take effect for hourly billed instances (this field should be hidden from global site users)
  * @method void setAutoRenew(integer $AutoRenew) Set Whether to auto-renew. Default value: 0. This flag does not take effect for hourly billed instances (this field should be hidden from global site users)
+ * @method array getTags() Obtain Instance resource tags
+ * @method void setTags(array $Tags) Set Instance resource tags
  */
 class CreateSubscribeRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateSubscribeRequest extends AbstractModel
     public $AutoRenew;
 
     /**
+     * @var array Instance resource tags
+     */
+    public $Tags;
+
+    /**
      * @param string $Product Subscribed database type. Currently, MySQL is supported
      * @param integer $PayType Instance billing mode, which is always 1 (hourly billing),
      * @param integer $Duration Purchase duration in months, which is required if `PayType` is 0. Maximum value: 120 (this field is not required of global site users and is better to be hidden)
      * @param integer $Count Quantity. Default value: 1. Maximum value: 10
      * @param integer $AutoRenew Whether to auto-renew. Default value: 0. This flag does not take effect for hourly billed instances (this field should be hidden from global site users)
+     * @param array $Tags Instance resource tags
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateSubscribeRequest extends AbstractModel
 
         if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
             $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

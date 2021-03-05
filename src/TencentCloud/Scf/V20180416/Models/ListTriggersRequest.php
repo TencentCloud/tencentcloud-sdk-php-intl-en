@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0
  * @method integer getLimit() Obtain Number of results to be returned. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20
- * @method string getOrderBy() Obtain Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
- * @method void setOrderBy(string $OrderBy) Set Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+ * @method string getOrderBy() Obtain Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
+ * @method void setOrderBy(string $OrderBy) Set Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
  * @method string getOrder() Obtain Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
  * @method void setOrder(string $Order) Set Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
  * @method array getFilters() Obtain * Qualifier:
@@ -60,7 +60,7 @@ class ListTriggersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+     * @var string Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
      */
     public $OrderBy;
 
@@ -80,7 +80,7 @@ Function version, alias
      * @param string $Namespace Namespace. Default value: default
      * @param integer $Offset Data offset. Default value: 0
      * @param integer $Limit Number of results to be returned. Default value: 20
-     * @param string $OrderBy Indicates by which field to sort the returned results. Valid values: AddTime, ModTime. Default value: ModTime
+     * @param string $OrderBy Indicates by which field to sort the returned results. Valid values: add_time, mod_time. Default value: mod_time
      * @param string $Order Indicates whether the returned results are sorted in ascending or descending order. Valid values: ASC, DESC. Default value: DESC
      * @param array $Filters * Qualifier:
 Function version, alias

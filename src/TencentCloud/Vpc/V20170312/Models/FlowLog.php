@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The flow log description.
  * @method string getCreatedTime() Obtain The creation time of the flow log.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time of the flow log.
+ * @method array getTagSet() Obtain Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method void setTagSet(array $TagSet) Set Tag list, such as [{"Key": "city", "Value": "shanghai"}]
  */
 class FlowLog extends AbstractModel
 {
@@ -94,6 +96,11 @@ class FlowLog extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     */
+    public $TagSet;
+
+    /**
      * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
@@ -104,6 +111,7 @@ class FlowLog extends AbstractModel
      * @param string $CloudLogState The storage ID status of the flow log.
      * @param string $FlowLogDescription The flow log description.
      * @param string $CreatedTime The creation time of the flow log.
+     * @param array $TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
      */
     function __construct()
     {
@@ -156,6 +164,15 @@ class FlowLog extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

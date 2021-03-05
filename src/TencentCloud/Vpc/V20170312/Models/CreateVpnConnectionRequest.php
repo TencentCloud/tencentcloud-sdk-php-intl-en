@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnConnection request structure.
  *
- * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
- * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+ * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
@@ -38,11 +38,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPSECOptionsSpecification(IPSECOptionsSpecification $IPSECOptionsSpecification) Set IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method boolean getEnableHealthCheck() Obtain Whether the tunnel health check is supported.
+ * @method void setEnableHealthCheck(boolean $EnableHealthCheck) Set Whether the tunnel health check is supported.
+ * @method string getHealthCheckLocalIp() Obtain Local IP address for the health check
+ * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the health check
+ * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the health check
+ * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @var string VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      */
     public $VpcId;
 
@@ -87,7 +93,22 @@ class CreateVpnConnectionRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @var boolean Whether the tunnel health check is supported.
+     */
+    public $EnableHealthCheck;
+
+    /**
+     * @var string Local IP address for the health check
+     */
+    public $HealthCheckLocalIp;
+
+    /**
+     * @var string Peer IP address for the health check
+     */
+    public $HealthCheckRemoteIp;
+
+    /**
+     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
      * @param string $VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
@@ -96,6 +117,9 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @param IKEOptionsSpecification $IKEOptionsSpecification Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param boolean $EnableHealthCheck Whether the tunnel health check is supported.
+     * @param string $HealthCheckLocalIp Local IP address for the health check
+     * @param string $HealthCheckRemoteIp Peer IP address for the health check
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class CreateVpnConnectionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("EnableHealthCheck",$param) and $param["EnableHealthCheck"] !== null) {
+            $this->EnableHealthCheck = $param["EnableHealthCheck"];
+        }
+
+        if (array_key_exists("HealthCheckLocalIp",$param) and $param["HealthCheckLocalIp"] !== null) {
+            $this->HealthCheckLocalIp = $param["HealthCheckLocalIp"];
+        }
+
+        if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
+            $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
         }
     }
 }

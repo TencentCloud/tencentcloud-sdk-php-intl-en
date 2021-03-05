@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setContent(string $Content) Set ZIP content encoded by using Base64. After the content is decoded by using Base64, it can be saved as a ZIP file.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContentType() Obtain MIME type. application/zip: ZIP file.
+ * @method string getContentType() Obtain MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContentType(string $ContentType) Set MIME type. application/zip: ZIP file.
+ * @method void setContentType(string $ContentType) Set MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Content;
 
     /**
-     * @var string MIME type. application/zip: ZIP file.
+     * @var string MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ContentType;
@@ -53,7 +53,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $Content ZIP content encoded by using Base64. After the content is decoded by using Base64, it can be saved as a ZIP file.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ContentType MIME type. application/zip: ZIP file.
+     * @param string $ContentType MIME type. `application/zip`: ZIP file
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

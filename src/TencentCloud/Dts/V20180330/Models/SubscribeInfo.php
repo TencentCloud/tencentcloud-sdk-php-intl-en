@@ -62,6 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Data subscription instance status. Valid values: creating, normal, isolating, isolated, offlining, offline
  * @method string getSdkConsumedTime() Obtain Timestamp of the last message confirmed by the SDK. If the SDK keeps consuming, this field can also be used as the current consumption time point of the SDK
  * @method void setSdkConsumedTime(string $SdkConsumedTime) Set Timestamp of the last message confirmed by the SDK. If the SDK keeps consuming, this field can also be used as the current consumption time point of the SDK
+ * @method array getTags() Obtain Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getAutoRenewFlag() Obtain Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSubscribeVersion() Obtain Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubscribeVersion(string $SubscribeVersion) Set Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SubscribeInfo extends AbstractModel
 {
@@ -171,6 +183,24 @@ class SubscribeInfo extends AbstractModel
     public $SdkConsumedTime;
 
     /**
+     * @var array Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var integer Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AutoRenewFlag;
+
+    /**
+     * @var string Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubscribeVersion;
+
+    /**
      * @param string $SubscribeId Data subscription instance ID
      * @param string $SubscribeName Data subscription instance name
      * @param string $ChannelId ID of channel bound to data subscription instance
@@ -192,6 +222,12 @@ class SubscribeInfo extends AbstractModel
      * @param string $UniqSubnetId Unique ID of the subnet where the data subscription instance VIP resides
      * @param string $Status Data subscription instance status. Valid values: creating, normal, isolating, isolated, offlining, offline
      * @param string $SdkConsumedTime Timestamp of the last message confirmed by the SDK. If the SDK keeps consuming, this field can also be used as the current consumption time point of the SDK
+     * @param array $Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable; 1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SubscribeVersion Subscription instance edition. ·`txdts`: legacy data subscription; `kafka`: data subscription in Kafka edition
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -288,6 +324,23 @@ class SubscribeInfo extends AbstractModel
 
         if (array_key_exists("SdkConsumedTime",$param) and $param["SdkConsumedTime"] !== null) {
             $this->SdkConsumedTime = $param["SdkConsumedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
         }
     }
 }
