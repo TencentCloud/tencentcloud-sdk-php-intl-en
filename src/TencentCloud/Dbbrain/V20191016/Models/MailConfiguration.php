@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSendMail() Obtain Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
  * @method void setSendMail(integer $SendMail) Set Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
- * @method array getRegion() Obtain Region configuration, such as "ap-guangzhou", "ap-shanghai".
- * @method void setRegion(array $Region) Set Region configuration, such as "ap-guangzhou", "ap-shanghai".
+ * @method array getRegion() Obtain Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
+ * @method void setRegion(array $Region) Set Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
  * @method array getHealthStatus() Obtain Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
  * @method void setHealthStatus(array $HealthStatus) Set Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
  * @method array getContactPerson() Obtain Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
@@ -39,7 +39,7 @@ class MailConfiguration extends AbstractModel
     public $SendMail;
 
     /**
-     * @var array Region configuration, such as "ap-guangzhou", "ap-shanghai".
+     * @var array Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
      */
     public $Region;
 
@@ -60,7 +60,7 @@ class MailConfiguration extends AbstractModel
 
     /**
      * @param integer $SendMail Whether to enable email sending. Valid values: 0 (No), 1 (Yes).
-     * @param array $Region Region configuration, such as "ap-guangzhou", "ap-shanghai".
+     * @param array $Region Region configuration, such as "ap-guangzhou", "ap-shanghai". For the inspection email sending template, configure the region where you need to send the inspection email. For the subscription email sending template, configure the region to which the current subscribed instance belongs.
      * @param array $HealthStatus Sending a report with the specified health level, such as "HEALTH", "SUB_HEALTH", "RISK", "HIGH_RISK".
      * @param array $ContactPerson Contact ID. Either `ContactGroup` or `ContactID` should be passed in.
      * @param array $ContactGroup Contact group ID. Either `ContactGroup` or `ContactID` should be passed in.

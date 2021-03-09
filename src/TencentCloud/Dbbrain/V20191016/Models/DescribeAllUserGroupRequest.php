@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllUserGroup request structure.
  *
- * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
- * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+ * @method string getProduct() Obtain Service type, which is fixed to “mysql”.
+ * @method void setProduct(string $Product) Set Service type, which is fixed to “mysql”.
  * @method array getNames() Obtain An array of contact group name. Fuzzy search is supported.
  * @method void setNames(array $Names) Set An array of contact group name. Fuzzy search is supported.
  */
 class DescribeAllUserGroupRequest extends AbstractModel
 {
     /**
-     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+     * @var string Service type, which is fixed to “mysql”.
      */
     public $Product;
 
@@ -38,7 +38,7 @@ class DescribeAllUserGroupRequest extends AbstractModel
     public $Names;
 
     /**
-     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
+     * @param string $Product Service type, which is fixed to “mysql”.
      * @param array $Names An array of contact group name. Fuzzy search is supported.
      */
     function __construct()

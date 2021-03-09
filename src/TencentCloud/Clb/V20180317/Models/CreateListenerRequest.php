@@ -46,6 +46,8 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
  * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+ * @method integer getEndPort() Obtain This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+ * @method void setEndPort(integer $EndPort) Set This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
  */
 class CreateListenerRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $KeepaliveEnable;
 
     /**
+     * @var integer This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
+     */
+    public $EndPort;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
      * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
@@ -124,6 +131,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
      * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
      * @param integer $KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @param integer $EndPort This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
      */
     function __construct()
     {
@@ -186,6 +194,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
             $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("EndPort",$param) and $param["EndPort"] !== null) {
+            $this->EndPort = $param["EndPort"];
         }
     }
 }

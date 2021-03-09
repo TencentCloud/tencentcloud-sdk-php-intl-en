@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDailyInspection() Obtain Whether to enable database inspection. Valid values: Yes/No.
  * @method void setDailyInspection(string $DailyInspection) Set Whether to enable database inspection. Valid values: Yes/No.
+ * @method string getOverviewDisplay() Obtain Whether to enable instance overview. Valid values: Yes/No.
+ * @method void setOverviewDisplay(string $OverviewDisplay) Set Whether to enable instance overview. Valid values: Yes/No.
  */
 class InstanceConfs extends AbstractModel
 {
@@ -31,7 +33,13 @@ class InstanceConfs extends AbstractModel
     public $DailyInspection;
 
     /**
+     * @var string Whether to enable instance overview. Valid values: Yes/No.
+     */
+    public $OverviewDisplay;
+
+    /**
      * @param string $DailyInspection Whether to enable database inspection. Valid values: Yes/No.
+     * @param string $OverviewDisplay Whether to enable instance overview. Valid values: Yes/No.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class InstanceConfs extends AbstractModel
         }
         if (array_key_exists("DailyInspection",$param) and $param["DailyInspection"] !== null) {
             $this->DailyInspection = $param["DailyInspection"];
+        }
+
+        if (array_key_exists("OverviewDisplay",$param) and $param["OverviewDisplay"] !== null) {
+            $this->OverviewDisplay = $param["OverviewDisplay"];
         }
     }
 }
