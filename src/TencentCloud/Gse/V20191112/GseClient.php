@@ -25,15 +25,27 @@ use TencentCloud\Gse\V20191112\Models as Models;
 /**
  * @method Models\CopyFleetResponse CopyFleet(Models\CopyFleetRequest $req) This API is used to replicate server fleet.
  * @method Models\CreateGameServerSessionResponse CreateGameServerSession(Models\CreateGameServerSessionRequest $req) This API is used to create a game server session.
+ * @method Models\DeleteTimerScalingPolicyResponse DeleteTimerScalingPolicy(Models\DeleteTimerScalingPolicyRequest $req) This API (DeleteTimerScalingPolicy) is used to delete a scheduled scaling policy of a fleet.
+
  * @method Models\DescribeGameServerSessionDetailsResponse DescribeGameServerSessionDetails(Models\DescribeGameServerSessionDetailsRequest $req) This API is used to query the list of game server session details.
  * @method Models\DescribeGameServerSessionPlacementResponse DescribeGameServerSessionPlacement(Models\DescribeGameServerSessionPlacementRequest $req) This API is used to query the placement of a game server session.
  * @method Models\DescribeGameServerSessionsResponse DescribeGameServerSessions(Models\DescribeGameServerSessionsRequest $req) This API is used to query the list of game server sessions.
  * @method Models\DescribePlayerSessionsResponse DescribePlayerSessions(Models\DescribePlayerSessionsRequest $req) This API is used to get the list of player sessions.
+ * @method Models\DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(Models\DescribeTimerScalingPoliciesRequest $req) This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
+
  * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) This API is used to get the log URL of a game server session.
  * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) This API is used to get the credentials required for instance login.
  * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) This API is used to join a game server session.
  * @method Models\JoinGameServerSessionBatchResponse JoinGameServerSessionBatch(Models\JoinGameServerSessionBatchRequest $req) This API is used to join game server sessions in batch.
+ * @method Models\PutTimerScalingPolicyResponse PutTimerScalingPolicy(Models\PutTimerScalingPolicyRequest $req) This API (PutTimerScalingPolicy) is used to create or update a scheduled scaling policy for a fleet.
+
+If the field `timerID` is filled in, the specified policy will be updated, and if `timerID` is left empty, a new policy will be created.
+
  * @method Models\SearchGameServerSessionsResponse SearchGameServerSessions(Models\SearchGameServerSessionsRequest $req) This API is used to search in the list of game server sessions.
+ * @method Models\SetServerReservedResponse SetServerReserved(Models\SetServerReservedRequest $req) This API (SetServerReserved) is used to mark the exceptional instances as retained for troubleshooting.
+
+`ReserveValue`: specifies whether to retain the instance. Valid values: `0` (do not retain), `1` (retain). Default value: `0`.
+
  * @method Models\StartGameServerSessionPlacementResponse StartGameServerSessionPlacement(Models\StartGameServerSessionPlacementRequest $req) This API is used to start placing a game server session.
  * @method Models\StopGameServerSessionPlacementResponse StopGameServerSessionPlacement(Models\StopGameServerSessionPlacementRequest $req) This API is used to stop placing a game server session.
  * @method Models\UpdateBucketAccelerateOptResponse UpdateBucketAccelerateOpt(Models\UpdateBucketAccelerateOptRequest $req) This API (UpdateBucketAccelerateOpt) is used to enable COS global acceleration.
