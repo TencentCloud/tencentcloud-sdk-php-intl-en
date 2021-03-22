@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpProtocol(string $IpProtocol) Set Network protocol. UDP and TCP are supported.
  * @method string getDir() Obtain The direction of the rule, which is INPUT for inbound rules
  * @method void setDir(string $Dir) Set The direction of the rule, which is INPUT for inbound rules
+ * @method string getDesc() Obtain Rule description
+ * @method void setDesc(string $Desc) Set Rule description
  */
 class Inbound extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Inbound extends AbstractModel
     public $Dir;
 
     /**
+     * @var string Rule description
+     */
+    public $Desc;
+
+    /**
      * @param string $Action Policy, which can be ACCEPT or DROP
      * @param string $CidrIp Source IP or IP range, such as 192.168.0.0/16
      * @param string $PortRange Port
      * @param string $IpProtocol Network protocol. UDP and TCP are supported.
      * @param string $Dir The direction of the rule, which is INPUT for inbound rules
+     * @param string $Desc Rule description
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Inbound extends AbstractModel
 
         if (array_key_exists("Dir",$param) and $param["Dir"] !== null) {
             $this->Dir = $param["Dir"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

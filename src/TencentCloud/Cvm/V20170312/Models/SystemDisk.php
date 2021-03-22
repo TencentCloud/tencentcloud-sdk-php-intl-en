@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) Set System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
  * @method integer getDiskSize() Obtain System disk size; unit: GB; default value: 50 GB.
  * @method void setDiskSize(integer $DiskSize) Set System disk size; unit: GB; default value: 50 GB.
+ * @method string getCdcId() Obtain ID of the dedicated cluster to which the instance belongs.
+ * @method void setCdcId(string $CdcId) Set ID of the dedicated cluster to which the instance belongs.
  */
 class SystemDisk extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SystemDisk extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var string ID of the dedicated cluster to which the instance belongs.
+     */
+    public $CdcId;
+
+    /**
      * @param string $DiskType System disk type. For more information on limits of system disk types, see [Storage Overview](https://intl.cloud.tencent.com/document/product/213/4952?from_cn_redirect=1). Valid values:<br><li>LOCAL_BASIC: local disk<br><li>LOCAL_SSD: local SSD disk<br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><br>The disk type currently in stock will be used by default. 
      * @param string $DiskId System disk ID. System disks whose type is `LOCAL_BASIC` or `LOCAL_SSD` do not have an ID and do not support this parameter currently.
      * @param integer $DiskSize System disk size; unit: GB; default value: 50 GB.
+     * @param string $CdcId ID of the dedicated cluster to which the instance belongs.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SystemDisk extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

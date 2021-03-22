@@ -37,19 +37,17 @@ Only supports data query at daily granularity. The date in the input parameter i
 Data generated before or at 23:59:59 on the end date will be returned
 `EndTime` must be later than or equal to `StartTime`
  * @method string getMetric() Obtain Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
  * @method void setMetric(string $Metric) Set Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
  * @method string getFilter() Obtain Metric name used for sorting:
 flux: If Metric is `host`, it indicates the access traffic; if Metric is `originHost`, it indicates the origin-pull traffic.
 bandwidth: If Metric is `host`, it indicates the access bandwidth; if Metric is `originHost`, it indicates the origin-pull bandwidth.
@@ -125,12 +123,11 @@ Data generated before or at 23:59:59 on the end date will be returned
 
     /**
      * @var string Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
      */
     public $Metric;
 
@@ -199,12 +196,11 @@ Only supports data query at daily granularity. The date in the input parameter i
 Data generated before or at 23:59:59 on the end date will be returned
 `EndTime` must be later than or equal to `StartTime`
      * @param string $Metric Object representing the sort criteria. The following objects are supported:
-url: sorts by access URL (including the query string). Supported filters are `flux` and `request`
-path: sorts by access URL (excluding the query string). Supported filters are `flux` and `request` (allowlist-based feature)
-district: sorts by district. Supported filters are `flux` and `request`
-isp: sorts by ISP. Supported filters are `flux` and `request`
-host: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, 2XX, 3XX, 4XX, 5XX, and `statusCode`
-originHost: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, `origin_2XX`, `origin_3XX`, `origin_4XX`, `origin_5XX`, and `OriginStatusCode`
+`url`: sorts by access URL (URLs carrying no parameters). Supported filters are `flux` and `request`.
+`district`: sorts by province, country, or region. Supported filters are `flux` and `request`.
+`isp`: sorts by ISP. Supported filters are `flux` and `request`.
+`host`: sorts by domain name access data. Supported filters are `flux`, `request`, `bandwidth`, `fluxHitRate`, and `statusCode` (2XX, 3XX, 4XX, 5XX).
+`originHost`: sorts by domain name origin-pull data. Supported filters are `flux`, `request`, `bandwidth`, and `OriginStatusCode` (origin_2XX, origin_3XX, origin_4XX, origin_5XX).
      * @param string $Filter Metric name used for sorting:
 flux: If Metric is `host`, it indicates the access traffic; if Metric is `originHost`, it indicates the origin-pull traffic.
 bandwidth: If Metric is `host`, it indicates the access bandwidth; if Metric is `originHost`, it indicates the origin-pull bandwidth.

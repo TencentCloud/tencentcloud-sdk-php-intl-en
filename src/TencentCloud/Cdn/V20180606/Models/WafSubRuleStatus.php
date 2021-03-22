@@ -18,24 +18,28 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableCaches request structure.
+ * WAF sub-rule status
  *
- * @method array getUrls() Obtain List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
- * @method void setUrls(array $Urls) Set List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+ * @method string getSwitch() Obtain Sub-rule status. Valid values: `on` and `off`.
+ * @method void setSwitch(string $Switch) Set Sub-rule status. Valid values: `on` and `off`.
+ * @method array getSubIds() Obtain List of rule IDs
+ * @method void setSubIds(array $SubIds) Set List of rule IDs
  */
-class DisableCachesRequest extends AbstractModel
+class WafSubRuleStatus extends AbstractModel
 {
     /**
-     * @var array List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var string Sub-rule status. Valid values: `on` and `off`.
      */
-    public $Urls;
+    public $Switch;
 
     /**
-     * @param array $Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var array List of rule IDs
+     */
+    public $SubIds;
+
+    /**
+     * @param string $Switch Sub-rule status. Valid values: `on` and `off`.
+     * @param array $SubIds List of rule IDs
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ Up to 100 entries can be submitted at a time and 3,000 entries per day.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("SubIds",$param) and $param["SubIds"] !== null) {
+            $this->SubIds = $param["SubIds"];
         }
     }
 }

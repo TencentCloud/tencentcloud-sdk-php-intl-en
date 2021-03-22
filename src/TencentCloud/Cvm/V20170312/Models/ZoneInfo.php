@@ -21,7 +21,7 @@ use TencentCloud\Common\AbstractModel;
  * Information on availability zones.
  *
  * @method string getZone() Obtain Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+Check below for the list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
@@ -57,6 +57,8 @@ The following is a list of all availability zones:
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -66,7 +68,7 @@ The following is a list of all availability zones:
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
  * @method void setZone(string $Zone) Set Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+Check below for the list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
@@ -102,6 +104,8 @@ The following is a list of all availability zones:
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -121,7 +125,7 @@ class ZoneInfo extends AbstractModel
 {
     /**
      * @var string Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+Check below for the list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
@@ -157,6 +161,8 @@ The following is a list of all availability zones:
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>
@@ -185,7 +191,7 @@ The following is a list of all availability zones:
 
     /**
      * @param string $Zone Availability zone name, such as `ap-guangzhou-3`.
-The following is a list of all availability zones:
+Check below for the list of all availability zones:
 <li> ap-chongqing-1 </li>
 <li> ap-seoul-1 </li>
 <li> ap-seoul-2 </li>
@@ -221,6 +227,8 @@ The following is a list of all availability zones:
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
 <li> ap-beijing-5 </li>
+<li> ap-beijing-6 </li>
+<li> ap-beijing-7 </li>
 <li> na-siliconvalley-1 </li>
 <li> na-siliconvalley-2 </li>
 <li> eu-frankfurt-1 </li>

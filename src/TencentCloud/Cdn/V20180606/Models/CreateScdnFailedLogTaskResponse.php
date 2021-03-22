@@ -14,33 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityGroups response structure.
+ * CreateScdnFailedLogTask response structure.
  *
- * @method array getSecurityGroupSet() Obtain Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSecurityGroupSet(array $SecurityGroupSet) Set Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
- * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method string getResult() Obtain Creation result. 
+0: Creation succeeded
+ * @method void setResult(string $Result) Set Creation result. 
+0: Creation succeeded
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSecurityGroupsResponse extends AbstractModel
+class CreateScdnFailedLogTaskResponse extends AbstractModel
 {
     /**
-     * @var array Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Creation result. 
+0: Creation succeeded
      */
-    public $SecurityGroupSet;
-
-    /**
-     * @var integer The number of instances meeting the filter condition.
-     */
-    public $TotalCount;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +41,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TotalCount The number of instances meeting the filter condition.
+     * @param string $Result Creation result. 
+0: Creation succeeded
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,17 +58,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
-            $this->SecurityGroupSet = [];
-            foreach ($param["SecurityGroupSet"] as $key => $value){
-                $obj = new SecurityGroup();
-                $obj->deserialize($value);
-                array_push($this->SecurityGroupSet, $obj);
-            }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

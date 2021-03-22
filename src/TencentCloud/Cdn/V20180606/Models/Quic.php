@@ -18,24 +18,20 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableCaches request structure.
+ * QUIC configuration item
  *
- * @method array getUrls() Obtain List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
- * @method void setUrls(array $Urls) Set List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+ * @method string getSwitch() Obtain Whether to enable QUIC
+ * @method void setSwitch(string $Switch) Set Whether to enable QUIC
  */
-class DisableCachesRequest extends AbstractModel
+class Quic extends AbstractModel
 {
     /**
-     * @var array List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var string Whether to enable QUIC
      */
-    public $Urls;
+    public $Switch;
 
     /**
-     * @param array $Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @param string $Switch Whether to enable QUIC
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Up to 100 entries can be submitted at a time and 3,000 entries per day.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

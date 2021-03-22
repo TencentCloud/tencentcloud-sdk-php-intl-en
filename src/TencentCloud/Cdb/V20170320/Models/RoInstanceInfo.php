@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(integer $SubnetId) Set VPC subnet ID of the RO instance
  * @method string getDeviceType() Obtain RO instance specification description. Value range: CUSTOM
  * @method void setDeviceType(string $DeviceType) Set RO instance specification description. Value range: CUSTOM
- * @method string getEngineVersion() Obtain Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
- * @method void setEngineVersion(string $EngineVersion) Set Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+ * @method string getEngineVersion() Obtain Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
+ * @method void setEngineVersion(string $EngineVersion) Set Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
  * @method string getDeadlineTime() Obtain RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
  * @method void setDeadlineTime(string $DeadlineTime) Set RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
  * @method integer getPayType() Obtain RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
@@ -170,7 +170,7 @@ class RoInstanceInfo extends AbstractModel
     public $DeviceType;
 
     /**
-     * @var string Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+     * @var string Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
      */
     public $EngineVersion;
 
@@ -205,7 +205,7 @@ class RoInstanceInfo extends AbstractModel
      * @param integer $VpcId VPC ID of the RO instance
      * @param integer $SubnetId VPC subnet ID of the RO instance
      * @param string $DeviceType RO instance specification description. Value range: CUSTOM
-     * @param string $EngineVersion Database engine version of the RO instance. Value range: 5.1, 5.5, 5.6, 5.7
+     * @param string $EngineVersion Database engine version of the read-only replica. Valid values: `5.1`, `5.5`, `5.6`, `5.7`, `8.0`
      * @param string $DeadlineTime RO instance expiration time in the format of yyyy-mm-dd hh:mm:ss. If it is a pay-as-you-go instance, the value of this field is 0000-00-00 00:00:00
      * @param integer $PayType RO instance billing method. Value range: 0 (monthly subscribed), 1 (pay-as-you-go), 2 (monthly postpaid)
      */

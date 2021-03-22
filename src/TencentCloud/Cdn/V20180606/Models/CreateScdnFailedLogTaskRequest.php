@@ -18,24 +18,28 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableCaches request structure.
+ * CreateScdnFailedLogTask request structure.
  *
- * @method array getUrls() Obtain List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
- * @method void setUrls(array $Urls) Set List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+ * @method string getTaskId() Obtain ID of the failed task to retry
+ * @method void setTaskId(string $TaskId) Set ID of the failed task to retry
+ * @method string getArea() Obtain Region. Valid values: `mainland` and `overseas`.
+ * @method void setArea(string $Area) Set Region. Valid values: `mainland` and `overseas`.
  */
-class DisableCachesRequest extends AbstractModel
+class CreateScdnFailedLogTaskRequest extends AbstractModel
 {
     /**
-     * @var array List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var string ID of the failed task to retry
      */
-    public $Urls;
+    public $TaskId;
 
     /**
-     * @param array $Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var string Region. Valid values: `mainland` and `overseas`.
+     */
+    public $Area;
+
+    /**
+     * @param string $TaskId ID of the failed task to retry
+     * @param string $Area Region. Valid values: `mainland` and `overseas`.
      */
     function __construct()
     {
@@ -50,8 +54,12 @@ Up to 100 entries can be submitted at a time and 3,000 entries per day.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

@@ -37,9 +37,9 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
  * @method void setFixedPrice(float $FixedPrice) Set The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
  * @method string getInstanceType() Obtain The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
  * @method void setInstanceType(string $InstanceType) Set The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
  * @method string getOfferingType() Obtain The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
  * @method void setOfferingType(string $OfferingType) Set The payment term of the Reserved Instance, such as **All Upfront**.
@@ -85,7 +85,7 @@ Unit: this field uses the currency code specified in `currencyCode`, and only su
 
     /**
      * @var string The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
      */
     public $InstanceType;
 
@@ -123,7 +123,7 @@ Unit: second
      * @param float $FixedPrice The purchase price of the Reserved Instance, such as 4000.0.
 Unit: this field uses the currency code specified in `currencyCode`, and only supports “USD” at this time.
      * @param string $InstanceType The instance model of the Reserved Instance, such as S3.MEDIUM4.
-Valid value: <a href="https://intl.cloud.tencent.com/product/cvm/instances?from_cn_redirect=1">Instance Models</a>
+Valid values: please see <a href="https://intl.cloud.tencent.com/document/product/213/11518">Reserved Instance Types</a>
      * @param string $OfferingType The payment term of the Reserved Instance, such as **All Upfront**.
 Valid value: All Upfront.
      * @param string $ReservedInstancesOfferingId The ID of the Reserved Instance offering, such as 650c138f-ae7e-4750-952a-96841d6e9fc1.

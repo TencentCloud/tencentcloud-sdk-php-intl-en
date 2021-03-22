@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) Set Maximum value of a parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
+ * @method string getUnit() Obtain Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUnit(string $Unit) Set Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -87,6 +91,12 @@ class InstanceIntegerParam extends AbstractModel
     public $Status;
 
     /**
+     * @var string Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Unit;
+
+    /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Integer
      * @param string $NeedRestart Whether restart is required after a modification is made. Value range: true, false
@@ -96,6 +106,8 @@ class InstanceIntegerParam extends AbstractModel
      * @param string $Min Minimum value of a parameter
      * @param string $Max Maximum value of a parameter
      * @param integer $Status Parameter status. 1: modifying; 2: modified
+     * @param string $Unit Parameter unit
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class InstanceIntegerParam extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
+            $this->Unit = $param["Unit"];
         }
     }
 }

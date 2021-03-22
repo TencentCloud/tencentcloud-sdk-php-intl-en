@@ -258,6 +258,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method PostSize getPostMaxSize() Obtain POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPostMaxSize(PostSize $PostMaxSize) Set POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method Quic getQuic() Obtain QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQuic(Quic $Quic) Set QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -597,6 +605,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $OriginCombine;
 
     /**
+     * @var PostSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PostMaxSize;
+
+    /**
+     * @var Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Quic;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -715,6 +735,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param OfflineCache $OfflineCache Offline cache
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param OriginCombine $OriginCombine Merging pull requests
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param PostSize $PostMaxSize POST request configuration item
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param Quic $Quic QUIC configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -992,6 +1016,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
             $this->OriginCombine = new OriginCombine();
             $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("PostMaxSize",$param) and $param["PostMaxSize"] !== null) {
+            $this->PostMaxSize = new PostSize();
+            $this->PostMaxSize->deserialize($param["PostMaxSize"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }

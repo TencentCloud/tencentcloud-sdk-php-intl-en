@@ -52,8 +52,10 @@ use TencentCloud\Common\AbstractModel;
 which is left empty by default. Specify this parameter when cloning a strong sync source instance.
  * @method void setBackupZone(string $BackupZone) Set Availability zone information of replica 2 of the cloned instance, 
 which is left empty by default. Specify this parameter when cloning a strong sync source instance.
- * @method string getDeviceType() Obtain Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
- * @method void setDeviceType(string $DeviceType) Set Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+ * @method string getDeviceType() Obtain Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+ * @method void setDeviceType(string $DeviceType) Set Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+ * @method integer getInstanceNodes() Obtain The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+ * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -134,9 +136,14 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     public $BackupZone;
 
     /**
-     * @var string Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+     * @var string Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
      */
     public $DeviceType;
+
+    /**
+     * @var integer The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     */
+    public $InstanceNodes;
 
     /**
      * @param string $InstanceId ID of the instance to be cloned from
@@ -155,7 +162,8 @@ which is left empty by default. Specify this parameter when cloning a strong syn
      * @param string $SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default
      * @param string $BackupZone Availability zone information of replica 2 of the cloned instance, 
 which is left empty by default. Specify this parameter when cloning a strong sync source instance.
-     * @param string $DeviceType Type of the cloned instance. Valid values: `HA` (High-Availability Edition), `EXCLUSIVE` (dedicated). Default value: `HA`.
+     * @param string $DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
+     * @param integer $InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
      */
     function __construct()
     {
@@ -237,6 +245,10 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 
         if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
             $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
+            $this->InstanceNodes = $param["InstanceNodes"];
         }
     }
 }

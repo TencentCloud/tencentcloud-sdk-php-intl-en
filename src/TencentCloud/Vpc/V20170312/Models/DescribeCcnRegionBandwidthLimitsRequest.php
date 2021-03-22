@@ -14,28 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdn\V20180606\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableCaches request structure.
+ * DescribeCcnRegionBandwidthLimits request structure.
  *
- * @method array getUrls() Obtain List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
- * @method void setUrls(array $Urls) Set List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+ * @method string getCcnId() Obtain The CCN instance ID in the format of `ccn-f49l6u0z`.
+ * @method void setCcnId(string $CcnId) Set The CCN instance ID in the format of `ccn-f49l6u0z`.
  */
-class DisableCachesRequest extends AbstractModel
+class DescribeCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
     /**
-     * @var array List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @var string The CCN instance ID in the format of `ccn-f49l6u0z`.
      */
-    public $Urls;
+    public $CcnId;
 
     /**
-     * @param array $Urls List of URLs to be blocked (URLs must contain `http://` or `https://`).
-Up to 100 entries can be submitted at a time and 3,000 entries per day.
+     * @param string $CcnId The CCN instance ID in the format of `ccn-f49l6u0z`.
      */
     function __construct()
     {
@@ -50,8 +46,8 @@ Up to 100 entries can be submitted at a time and 3,000 entries per day.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
-            $this->Urls = $param["Urls"];
+        if (array_key_exists("CcnId",$param) and $param["CcnId"] !== null) {
+            $this->CcnId = $param["CcnId"];
         }
     }
 }

@@ -32,6 +32,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setKubeScheduler(array $KubeScheduler) Set kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method array getEtcd() Obtain etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setEtcd(array $Etcd) Set etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class ClusterExtraArgs extends AbstractModel
 {
@@ -54,12 +58,20 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $KubeScheduler;
 
     /**
+     * @var array etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $Etcd;
+
+    /**
      * @param array $KubeAPIServer kube-apiserver custom parameter, in the format of ["k1=v1", "k1=v2"], for example: ["max-requests-inflight=500","feature-gates=PodShareProcessNamespace=true,DynamicKubeletConfig=true"].
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $KubeControllerManager kube-controller-manager custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
      * @param array $KubeScheduler kube-scheduler custom parameter
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param array $Etcd etcd custom parameter, which is only effective for self-deployed cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("KubeScheduler",$param) and $param["KubeScheduler"] !== null) {
             $this->KubeScheduler = $param["KubeScheduler"];
+        }
+
+        if (array_key_exists("Etcd",$param) and $param["Etcd"] !== null) {
+            $this->Etcd = $param["Etcd"];
         }
     }
 }

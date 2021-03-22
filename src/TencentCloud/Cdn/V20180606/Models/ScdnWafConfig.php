@@ -38,6 +38,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set Attack blocking rules
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getLevel() Obtain WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLevel(integer $Level) Set WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSubRuleSwitch() Obtain WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubRuleSwitch(array $SubRuleSwitch) Set WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnWafConfig extends AbstractModel
 {
@@ -71,6 +79,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Rules;
 
     /**
+     * @var integer WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Level;
+
+    /**
+     * @var array WAF sub-rule switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubRuleSwitch;
+
+    /**
      * @param string $Switch Whether to enable WAF. Valid values: `on` and `off`.
      * @param string $Mode WAF protection mode. Valid values: `intercept` and `observe`. Default value: `intercept`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -79,6 +99,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $WebShellSwitch Whether to enable Web shell blocking. Valid values: `on` and `off`. Default value: `off`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Rules Attack blocking rules
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Level WAF rule level. Valid values: 100, 200, and 300.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SubRuleSwitch WAF sub-rule switch
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -117,6 +141,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new ScdnWafRule();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
+            }
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
+        }
+
+        if (array_key_exists("SubRuleSwitch",$param) and $param["SubRuleSwitch"] !== null) {
+            $this->SubRuleSwitch = [];
+            foreach ($param["SubRuleSwitch"] as $key => $value){
+                $obj = new WafSubRuleStatus();
+                $obj->deserialize($value);
+                array_push($this->SubRuleSwitch, $obj);
             }
         }
     }

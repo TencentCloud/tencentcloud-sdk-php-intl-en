@@ -102,6 +102,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
  * @method OfflineCache getOfflineCache() Obtain Offline cache
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
+ * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -279,6 +281,11 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $OfflineCache;
 
     /**
+     * @var Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public $Quic;
+
+    /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
 web: static acceleration
@@ -320,6 +327,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
      * @param array $Tag Tag configuration
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
+     * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
      */
     function __construct()
     {
@@ -497,6 +505,11 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         if (array_key_exists("OfflineCache",$param) and $param["OfflineCache"] !== null) {
             $this->OfflineCache = new OfflineCache();
             $this->OfflineCache->deserialize($param["OfflineCache"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }

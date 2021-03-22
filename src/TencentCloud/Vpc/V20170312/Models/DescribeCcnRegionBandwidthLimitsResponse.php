@@ -18,29 +18,19 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSecurityGroups response structure.
+ * DescribeCcnRegionBandwidthLimits response structure.
  *
- * @method array getSecurityGroupSet() Obtain Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSecurityGroupSet(array $SecurityGroupSet) Set Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain The number of instances meeting the filter condition.
- * @method void setTotalCount(integer $TotalCount) Set The number of instances meeting the filter condition.
+ * @method array getCcnRegionBandwidthLimitSet() Obtain The outbound bandwidth caps of all regions connected with the specified CCN instance
+ * @method void setCcnRegionBandwidthLimitSet(array $CcnRegionBandwidthLimitSet) Set The outbound bandwidth caps of all regions connected with the specified CCN instance
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSecurityGroupsResponse extends AbstractModel
+class DescribeCcnRegionBandwidthLimitsResponse extends AbstractModel
 {
     /**
-     * @var array Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array The outbound bandwidth caps of all regions connected with the specified CCN instance
      */
-    public $SecurityGroupSet;
-
-    /**
-     * @var integer The number of instances meeting the filter condition.
-     */
-    public $TotalCount;
+    public $CcnRegionBandwidthLimitSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +38,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $SecurityGroupSet Security group object.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TotalCount The number of instances meeting the filter condition.
+     * @param array $CcnRegionBandwidthLimitSet The outbound bandwidth caps of all regions connected with the specified CCN instance
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,17 +54,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
-            $this->SecurityGroupSet = [];
-            foreach ($param["SecurityGroupSet"] as $key => $value){
-                $obj = new SecurityGroup();
+        if (array_key_exists("CcnRegionBandwidthLimitSet",$param) and $param["CcnRegionBandwidthLimitSet"] !== null) {
+            $this->CcnRegionBandwidthLimitSet = [];
+            foreach ($param["CcnRegionBandwidthLimitSet"] as $key => $value){
+                $obj = new CcnRegionBandwidthLimit();
                 $obj->deserialize($value);
-                array_push($this->SecurityGroupSet, $obj);
+                array_push($this->CcnRegionBandwidthLimitSet, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

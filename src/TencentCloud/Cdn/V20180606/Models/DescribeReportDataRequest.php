@@ -20,10 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeReportData request structure.
  *
- * @method string getStartTime() Obtain Query start time in the format of `yyyy-MM-dd`
- * @method void setStartTime(string $StartTime) Set Query start time in the format of `yyyy-MM-dd`
- * @method string getEndTime() Obtain Query end time in the format of `yyyy-MM-dd`
- * @method void setEndTime(string $EndTime) Set Query end time in the format of `yyyy-MM-dd`
+ * @method string getStartTime() Obtain Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+ * @method void setStartTime(string $StartTime) Set Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+ * @method string getEndTime() Obtain Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+ * @method void setEndTime(string $EndTime) Set Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
  * @method string getReportType() Obtain Report type
 daily: daily report
 weekly: weekly report (Monday to Sunday)
@@ -48,12 +60,18 @@ overseas: outside Mainland China
 class DescribeReportDataRequest extends AbstractModel
 {
     /**
-     * @var string Query start time in the format of `yyyy-MM-dd`
+     * @var string Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public $StartTime;
 
     /**
-     * @var string Query end time in the format of `yyyy-MM-dd`
+     * @var string Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      */
     public $EndTime;
 
@@ -88,8 +106,14 @@ overseas: outside Mainland China
     public $Project;
 
     /**
-     * @param string $StartTime Query start time in the format of `yyyy-MM-dd`
-     * @param string $EndTime Query end time in the format of `yyyy-MM-dd`
+     * @param string $StartTime Query the start time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
+     * @param string $EndTime Query the end time in the format of `yyyy-MM-dd`
+If the report type is `daily`, the start time and end time must be of the same day.
+If the report type is `weekly`, the start time must be Monday and the end time must be the Sunday of the same week.
+If the report type is `monthly`, the start time must be the first day of the calendar month and the end time must be the last day of the same calendar month.
      * @param string $ReportType Report type
 daily: daily report
 weekly: weekly report (Monday to Sunday)

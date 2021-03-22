@@ -60,6 +60,10 @@ The following conditions are required to use ipvs-bpf network mode:
  * @method void setVpcCniType(string $VpcCniType) Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
  * @method string getRuntimeVersion() Obtain Runtime version
  * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
+ * @method boolean getEnableCustomizedPodCIDR() Obtain Indicates whether to enable the custom mode for the node’s pod CIDR range
+ * @method void setEnableCustomizedPodCIDR(boolean $EnableCustomizedPodCIDR) Set Indicates whether to enable the custom mode for the node’s pod CIDR range
+ * @method integer getBasePodNumber() Obtain The basic number of Pods in custom mode
+ * @method void setBasePodNumber(integer $BasePodNumber) Set The basic number of Pods in custom mode
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -140,6 +144,16 @@ The following conditions are required to use ipvs-bpf network mode:
     public $RuntimeVersion;
 
     /**
+     * @var boolean Indicates whether to enable the custom mode for the node’s pod CIDR range
+     */
+    public $EnableCustomizedPodCIDR;
+
+    /**
+     * @var integer The basic number of Pods in custom mode
+     */
+    public $BasePodNumber;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -160,6 +174,8 @@ The following conditions are required to use ipvs-bpf network mode:
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
      * @param string $VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
      * @param string $RuntimeVersion Runtime version
+     * @param boolean $EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
+     * @param integer $BasePodNumber The basic number of Pods in custom mode
      */
     function __construct()
     {
@@ -229,6 +245,14 @@ The following conditions are required to use ipvs-bpf network mode:
 
         if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
             $this->RuntimeVersion = $param["RuntimeVersion"];
+        }
+
+        if (array_key_exists("EnableCustomizedPodCIDR",$param) and $param["EnableCustomizedPodCIDR"] !== null) {
+            $this->EnableCustomizedPodCIDR = $param["EnableCustomizedPodCIDR"];
+        }
+
+        if (array_key_exists("BasePodNumber",$param) and $param["BasePodNumber"] !== null) {
+            $this->BasePodNumber = $param["BasePodNumber"];
         }
     }
 }

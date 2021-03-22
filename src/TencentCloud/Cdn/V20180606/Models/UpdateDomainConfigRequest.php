@@ -112,6 +112,8 @@ global: global acceleration
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  * @method OriginCombine getOriginCombine() Obtain Merging pull requests
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
+ * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -318,6 +320,11 @@ global: global acceleration
     public $OriginCombine;
 
     /**
+     * @var Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     */
+    public $Quic;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -364,6 +371,7 @@ global: global acceleration
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
      * @param OriginCombine $OriginCombine Merging pull requests
+     * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
      */
     function __construct()
     {
@@ -566,6 +574,11 @@ global: global acceleration
         if (array_key_exists("OriginCombine",$param) and $param["OriginCombine"] !== null) {
             $this->OriginCombine = new OriginCombine();
             $this->OriginCombine->deserialize($param["OriginCombine"]);
+        }
+
+        if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
+            $this->Quic = new Quic();
+            $this->Quic->deserialize($param["Quic"]);
         }
     }
 }
