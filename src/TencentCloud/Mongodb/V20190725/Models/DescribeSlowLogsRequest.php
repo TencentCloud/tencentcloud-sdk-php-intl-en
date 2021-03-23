@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
  * @method integer getLimit() Obtain Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
+ * @method string getFormat() Obtain Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+ * @method void setFormat(string $Format) Set Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
  */
 class DescribeSlowLogsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeSlowLogsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
+     */
+    public $Format;
+
+    /**
      * @param string $InstanceId Instance ID in the format of `cmgo-p8vnipr5`, which is the same as the instance ID displayed on the TencentDB Console page
      * @param string $StartTime Start time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-01 10:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
      * @param string $EndTime End time of slow log in the format of `yyyy-mm-dd hh:mm:ss`, such as 2019-06-02 12:00:00. The query time range cannot exceed 24 hours. Only slow logs for the last 7 days can be queried.
      * @param integer $SlowMS Threshold of slow log execution time in milliseconds. Minimum value: 100. Slow logs whose execution time exceeds the threshold will be returned.
      * @param integer $Offset Offset. Minimum value: 0. Maximum value: 10000. Default value: 0.
      * @param integer $Limit Number of entries per page. Minimum value: 1. Maximum value: 100. Default value: 20.
+     * @param string $Format Slow log format, which can be JSON. If this parameter is left empty, the slow log will be returned in its native format.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeSlowLogsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

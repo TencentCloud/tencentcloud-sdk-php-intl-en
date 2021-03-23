@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
  * @method integer getClusterType() Obtain Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
  * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
- * @method array getStatus() Obtain Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
- * @method void setStatus(array $Status) Set Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+ * @method array getStatus() Obtain Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
+ * @method void setStatus(array $Status) Set Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
  * @method string getVpcId() Obtain VPC ID. This parameter can be left empty for the basic network
  * @method void setVpcId(string $VpcId) Set VPC ID. This parameter can be left empty for the basic network
  * @method string getSubnetId() Obtain Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectIds(array $ProjectIds) Set Project ID
  * @method string getSearchKey() Obtain Search keyword, which can be instance ID, instance name, or complete IP
  * @method void setSearchKey(string $SearchKey) Set Search keyword, which can be instance ID, instance name, or complete IP
+ * @method TagInfo getTags() Obtain Tag information
+ * @method void setTags(TagInfo $Tags) Set Tag information
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $ClusterType;
 
     /**
-     * @var array Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+     * @var array Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
      */
     public $Status;
 
@@ -115,10 +117,15 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SearchKey;
 
     /**
+     * @var TagInfo Tag information
+     */
+    public $Tags;
+
+    /**
      * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param integer $InstanceType Instance type. Valid values: 0 (all instances), 1 (promoted), 2 (temp), 3 (read-only), -1 (promoted + read-only + disaster recovery)
      * @param integer $ClusterType Cluster type. Valid values: 0 (replica set instance), 1 (sharding instance), -1 (all instances)
-     * @param array $Status Instance status. Valid values: 0 (to be initialized), 1 (in process), 2 (valid), -2 (expired)
+     * @param array $Status Instance status. Valid values: `0` (to be initialized), `1` (executing task), `2` (running), `-2` (isolated monthly-subscribed instance), `-3` (isolated pay-as-you-go instance)
      * @param string $VpcId VPC ID. This parameter can be left empty for the basic network
      * @param string $SubnetId Subnet ID of VPC. This parameter can be left empty for the basic network. If it is passed in as an input parameter, the corresponding VpcId must be set
      * @param integer $PayMode Billing type. Valid value: 0 (pay-as-you-go)
@@ -128,6 +135,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $OrderByType Sorting method of the return result set. Currently, "ASC" or "DESC" is supported
      * @param array $ProjectIds Project ID
      * @param string $SearchKey Search keyword, which can be instance ID, instance name, or complete IP
+     * @param TagInfo $Tags Tag information
      */
     function __construct()
     {
@@ -192,6 +200,11 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = new TagInfo();
+            $this->Tags->deserialize($param["Tags"]);
         }
     }
 }

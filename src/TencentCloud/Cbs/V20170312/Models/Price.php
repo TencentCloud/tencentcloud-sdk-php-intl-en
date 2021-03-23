@@ -20,60 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes the prepaid or postpaid price for the cloud disk.
  *
- * @method float getOriginalPrice() Obtain Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
- * @method void setOriginalPrice(float $OriginalPrice) Set Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
- * @method float getDiscountPrice() Obtain Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
- * @method void setDiscountPrice(float $DiscountPrice) Set Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
- * @method float getUnitPrice() Obtain Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
- * @method void setUnitPrice(float $UnitPrice) Set Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+ * @method float getOriginalPrice() Obtain Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginalPrice(float $OriginalPrice) Set Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method float getDiscountPrice() Obtain Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiscountPrice(float $DiscountPrice) Set Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method float getUnitPrice() Obtain Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUnitPrice(float $UnitPrice) Set Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getChargeUnit() Obtain Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setChargeUnit(string $ChargeUnit) Set Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
 Note: This field may return null, indicating that no valid value was found.
- * @method float getUnitPriceDiscount() Obtain Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getOriginalPriceHigh() Obtain Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+ * @method float getUnitPriceDiscount() Obtain Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOriginalPriceHigh(string $OriginalPriceHigh) Set Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+ * @method void setUnitPriceDiscount(float $UnitPriceDiscount) Set Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDiscountPriceHigh() Obtain Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+ * @method string getOriginalPriceHigh() Obtain Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDiscountPriceHigh(string $DiscountPriceHigh) Set Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+ * @method void setOriginalPriceHigh(string $OriginalPriceHigh) Set Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getUnitPriceHigh() Obtain Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+ * @method string getDiscountPriceHigh() Obtain Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setUnitPriceHigh(string $UnitPriceHigh) Set Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+ * @method void setDiscountPriceHigh(string $DiscountPriceHigh) Set Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getUnitPriceDiscountHigh() Obtain Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+ * @method string getUnitPriceHigh() Obtain Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setUnitPriceDiscountHigh(string $UnitPriceDiscountHigh) Set Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+ * @method void setUnitPriceHigh(string $UnitPriceHigh) Set Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getUnitPriceDiscountHigh() Obtain Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUnitPriceDiscountHigh(string $UnitPriceDiscountHigh) Set Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Price extends AbstractModel
 {
     /**
-     * @var float Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * @var float Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginalPrice;
 
     /**
-     * @var float Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * @var float Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiscountPrice;
 
     /**
-     * @var float Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * @var float Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UnitPrice;
 
@@ -84,53 +84,53 @@ Note: This field may return null, indicating that no valid value was found.
     public $ChargeUnit;
 
     /**
-     * @var float Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
+     * @var float Discount unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UnitPriceDiscount;
 
     /**
-     * @var string Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * @var string Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginalPriceHigh;
 
     /**
-     * @var string Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * @var string Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiscountPriceHigh;
 
     /**
-     * @var string Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * @var string Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UnitPriceHigh;
 
     /**
-     * @var string Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * @var string Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UnitPriceDiscountHigh;
 
     /**
-     * @param float $OriginalPrice Original price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
-     * @param float $DiscountPrice Discount price of the advanced payment for a prepaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
-     * @param float $UnitPrice Original unit price of a postpaid cloud disk (in CNY).
-Note: This field may return null, indicating that no valid value was found.
+     * @param float $OriginalPrice Original price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param float $DiscountPrice Discounted price of a monthly-subscribed cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param float $UnitPrice Original unit price of a pay-as-you-go cloud disk, in USD.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ChargeUnit Billing unit of a postpaid cloud disk. Value range: <br><li>HOUR: Billed by hour.
 Note: This field may return null, indicating that no valid value was found.
-     * @param float $UnitPriceDiscount Postpaid cloud disk discount price. Unit: CNY.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $OriginalPriceHigh Highly-precise published unit price of a monthly-subscribed cloud disk, in USD.
+     * @param float $UnitPriceDiscount Discount unit price of a pay-as-you-go cloud disk, in USD.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $DiscountPriceHigh Highly-precise discounted unit price of a monthly-subscribed cloud disk, in USD.
+     * @param string $OriginalPriceHigh Original payment of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $UnitPriceHigh Highly-precise published unit price of a pay-as-you-go cloud disk, in USD.
+     * @param string $DiscountPriceHigh Discounted payment price of a monthly-subscribed cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $UnitPriceDiscountHigh Highly-precise discounted unit price of a pay-as-you-go cloud disk, in USD.
+     * @param string $UnitPriceHigh Original unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $UnitPriceDiscountHigh Discounted unit price of a pay-as-you-go cloud disk, in USD, with six decimal places.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

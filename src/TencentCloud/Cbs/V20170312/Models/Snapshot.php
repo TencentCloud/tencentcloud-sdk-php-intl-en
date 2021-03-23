@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotType(string $SnapshotType) Set Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
  * @method integer getShareReference() Obtain Number of snapshots currently shared
  * @method void setShareReference(integer $ShareReference) Set Number of snapshots currently shared
- * @method string getTimeStartShare() Obtain 
- * @method void setTimeStartShare(string $TimeStartShare) Set 
+ * @method string getTimeStartShare() Obtain The time when the snapshot sharing starts
+ * @method void setTimeStartShare(string $TimeStartShare) Set The time when the snapshot sharing starts
  */
 class Snapshot extends AbstractModel
 {
@@ -152,7 +152,7 @@ class Snapshot extends AbstractModel
     public $ShareReference;
 
     /**
-     * @var string 
+     * @var string The time when the snapshot sharing starts
      */
     public $TimeStartShare;
 
@@ -175,7 +175,7 @@ class Snapshot extends AbstractModel
      * @param integer $ImageCount Number of images associated with snapshot.
      * @param string $SnapshotType Snapshot type. This value can currently be either PRIVATE_SNAPSHOT or SHARED_SNAPSHOT.
      * @param integer $ShareReference Number of snapshots currently shared
-     * @param string $TimeStartShare 
+     * @param string $TimeStartShare The time when the snapshot sharing starts
      */
     function __construct()
     {

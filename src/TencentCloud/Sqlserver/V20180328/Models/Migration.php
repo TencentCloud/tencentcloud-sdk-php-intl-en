@@ -38,8 +38,8 @@ Note: this field may return ‘null’, indicating that no valid values can be o
  * @method void setUploadType(string $UploadType) Set Backup user upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
  * @method array getBackupFiles() Obtain Backup file list, which is determined by UploadType. If the upload type is COS_URL, URL will be saved. If the upload type is COS_UPLOAD, the backup name will be saved.
  * @method void setBackupFiles(array $BackupFiles) Set Backup file list, which is determined by UploadType. If the upload type is COS_URL, URL will be saved. If the upload type is COS_UPLOAD, the backup name will be saved.
- * @method integer getStatus() Obtain Migration task status,
- * @method void setStatus(integer $Status) Set Migration task status,
+ * @method integer getStatus() Obtain Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
+ * @method void setStatus(integer $Status) Set Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
  * @method string getCreateTime() Obtain Migration task creation time
  * @method void setCreateTime(string $CreateTime) Set Migration task creation time
  * @method string getStartTime() Obtain Migration task start time
@@ -101,7 +101,7 @@ Note: this field may return ‘null’, indicating that no valid values can be o
     public $BackupFiles;
 
     /**
-     * @var integer Migration task status,
+     * @var integer Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
      */
     public $Status;
 
@@ -151,7 +151,7 @@ Note: this field may return ‘null’, indicating that no valid values can be o
      * @param string $RecoveryType Migration task restoration type
      * @param string $UploadType Backup user upload type. COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
      * @param array $BackupFiles Backup file list, which is determined by UploadType. If the upload type is COS_URL, URL will be saved. If the upload type is COS_UPLOAD, the backup name will be saved.
-     * @param integer $Status Migration task status,
+     * @param integer $Status Migration task status. Valid values: `2` (Creation completed), `7` (Importing full backups), `8` (Waiting for incremental backups), `9` (Import success), `10` (Import failure), `12` (Importing incremental backups).
      * @param string $CreateTime Migration task creation time
      * @param string $StartTime Migration task start time
      * @param string $EndTime Migration task end time

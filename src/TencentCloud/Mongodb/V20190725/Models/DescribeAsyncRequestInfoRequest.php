@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAsyncRequestInfo request structure.
  *
- * @method string getAsyncRequestId() Obtain Async request ID
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async request ID
+ * @method string getAsyncRequestId() Obtain Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
+ * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
  */
 class DescribeAsyncRequestInfoRequest extends AbstractModel
 {
     /**
-     * @var string Async request ID
+     * @var string Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
      */
     public $AsyncRequestId;
 
     /**
-     * @param string $AsyncRequestId Async request ID
+     * @param string $AsyncRequestId Async task ID, which is returned by APIs related to async tasks, such as `CreateBackupDBInstance`.
      */
     function __construct()
     {
