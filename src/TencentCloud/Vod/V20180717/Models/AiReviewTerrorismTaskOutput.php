@@ -34,26 +34,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>review.</li>
 <li>block.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLabel() Obtain Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLabel(string $Label) Set Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getLabel() Obtain Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+ * @method void setLabel(string $Label) Set Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected terrorism information.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected terrorism information.
@@ -77,16 +77,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Suggestion;
 
     /**
-     * @var string Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      */
     public $Label;
 
@@ -104,16 +104,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>review.</li>
 <li>block.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Label Tag of detected terrorism information in a video. Valid values:
-<li>guns: weapons and guns.</li>
-<li>crowd: crowd.</li>
-<li>police: police force.</li>
-<li>bloody: bloody scenes.</li>
-<li>banners: terrorism flags.</li>
-<li>militant: militants.</li>
-<li>explosion: explosions and fires.</li>
-<li>terrorists: terrorists.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Label Tag of the detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloody images</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      * @param array $SegmentSet List of video segments that contain the detected terrorism information.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

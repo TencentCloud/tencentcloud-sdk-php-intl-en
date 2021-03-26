@@ -20,40 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia request structure.
  *
- * @method array getTags() Obtain Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
- * @method void setTags(array $Tags) Set Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
- * @method array getClassIds() Obtain Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
- * @method void setClassIds(array $ClassIds) Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
- * @method array getStreamIds() Obtain [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method void setStreamIds(array $StreamIds) Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method array getVids() Obtain Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method void setVids(array $Vids) Set Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method array getSourceTypes() Obtain Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
- * @method void setSourceTypes(array $SourceTypes) Set Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
- * @method array getCategories() Obtain File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
- * @method void setCategories(array $Categories) Set File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
- * @method TimeRange getCreateTime() Obtain Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
- * @method void setCreateTime(TimeRange $CreateTime) Set Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
  * @method array getFileIds() Obtain File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -72,12 +38,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamePrefixes(array $NamePrefixes) Set Filename prefix, which matches the filenames of media files.
 <li>Filename prefix length limit: 20 characters.</li>
 <li>Array length limit: 10.</li>
- * @method array getDescriptions() Obtain File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
+ * @method array getDescriptions() Obtain File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+ * @method void setDescriptions(array $Descriptions) Set File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+ * @method array getClassIds() Obtain Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
- * @method void setDescriptions(array $Descriptions) Set File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
+ * @method void setClassIds(array $ClassIds) Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
+ * @method array getTags() Obtain Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+ * @method void setTags(array $Tags) Set Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+ * @method array getCategories() Obtain File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+ * @method void setCategories(array $Categories) Set File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+ * @method array getSourceTypes() Obtain Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+ * @method void setSourceTypes(array $SourceTypes) Set Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+ * @method array getStreamIds() Obtain [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+ * @method void setStreamIds(array $StreamIds) Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+ * @method array getVids() Obtain Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+ * @method void setVids(array $Vids) Set Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+ * @method TimeRange getCreateTime() Obtain Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+ * @method void setCreateTime(TimeRange $CreateTime) Set Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
  * @method SortBy getSort() Obtain Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -116,6 +116,14 @@ use TencentCloud\Common\AbstractModel;
 <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+ * @method void setText(string $Text) Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+ * @method string getSourceType() Obtain (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+ * @method void setSourceType(string $SourceType) Set (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
  * @method string getStreamId() Obtain (This is not recommended. `StreamIds` should be used instead)
 [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
  * @method void setStreamId(string $StreamId) Set (This is not recommended. `StreamIds` should be used instead)
@@ -124,10 +132,6 @@ use TencentCloud\Common\AbstractModel;
 Unique ID of LVB recording file.
  * @method void setVid(string $Vid) Set (This is not recommended. `Vids` should be used instead)
 Unique ID of LVB recording file.
- * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
- * @method void setText(string $Text) Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
  * @method string getStartTime() Obtain (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -148,58 +152,9 @@ End time in the creation time range.
 <li>Before the end time.</li>
 <li>If `CreateTime.Before` also exists, it will be used first.</li>
 <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
- * @method string getSourceType() Obtain (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
- * @method void setSourceType(string $SourceType) Set (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
  */
 class SearchMediaRequest extends AbstractModel
 {
-    /**
-     * @var array Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-     */
-    public $Tags;
-
-    /**
-     * @var array Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-     */
-    public $ClassIds;
-
-    /**
-     * @var array [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public $StreamIds;
-
-    /**
-     * @var array Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public $Vids;
-
-    /**
-     * @var array Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-     */
-    public $SourceTypes;
-
-    /**
-     * @var array File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     */
-    public $Categories;
-
-    /**
-     * @var TimeRange Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
-     */
-    public $CreateTime;
-
     /**
      * @var array File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
@@ -222,11 +177,56 @@ class SearchMediaRequest extends AbstractModel
     public $NamePrefixes;
 
     /**
-     * @var array File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
-<li>Array length limit: 10.</li>
+     * @var array File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
      */
     public $Descriptions;
+
+    /**
+     * @var array Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
+<li>Array length limit: 10.</li>
+     */
+    public $ClassIds;
+
+    /**
+     * @var array Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public $Tags;
+
+    /**
+     * @var array File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     */
+    public $Categories;
+
+    /**
+     * @var array Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+     */
+    public $SourceTypes;
+
+    /**
+     * @var array [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public $StreamIds;
+
+    /**
+     * @var array Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     */
+    public $Vids;
+
+    /**
+     * @var TimeRange Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
+     */
+    public $CreateTime;
 
     /**
      * @var SortBy Sorting order.
@@ -268,6 +268,18 @@ class SearchMediaRequest extends AbstractModel
     public $SubAppId;
 
     /**
+     * @var string (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+     */
+    public $Text;
+
+    /**
+     * @var string (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+     */
+    public $SourceType;
+
+    /**
      * @var string (This is not recommended. `StreamIds` should be used instead)
 [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
      */
@@ -278,12 +290,6 @@ class SearchMediaRequest extends AbstractModel
 Unique ID of LVB recording file.
      */
     public $Vid;
-
-    /**
-     * @var string (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
-     */
-    public $Text;
 
     /**
      * @var string (This is not recommended. `CreateTime` should be used instead)
@@ -304,29 +310,6 @@ End time in the creation time range.
     public $EndTime;
 
     /**
-     * @var string (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-     */
-    public $SourceType;
-
-    /**
-     * @param array $Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param array $ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
-<li>Array length limit: 10.</li>
-     * @param array $StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param array $Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     * @param array $SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-<li>Array length limit: 10.</li>
-     * @param array $Categories File type. Any element in the set can be matched.
-<li>Video: video file</li>
-<li>Audio: audio file</li>
-<li>Image: image file</li>
-     * @param TimeRange $CreateTime Matches files created within the time period.
-<li>Includes specified start and end points in time.</li>
      * @param array $FileIds File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -336,9 +319,26 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
      * @param array $NamePrefixes Filename prefix, which matches the filenames of media files.
 <li>Filename prefix length limit: 20 characters.</li>
 <li>Array length limit: 10.</li>
-     * @param array $Descriptions File description set. Any element in the set can be matched.
-<li>Description length limit: 100 characters.</li>
+     * @param array $Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
+<li>Length limit for a single description: 100 characters</li>
+<li>Array length limit: 10</li>
+     * @param array $ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
+     * @param array $Tags Tag set, which matches any element in the set.
+<li>Tag length limit: 8 characters.</li>
+<li>Array length limit: 10.</li>
+     * @param array $Categories File type. Any element in the set can be matched.
+<li>Video: video file</li>
+<li>Audio: audio file</li>
+<li>Image: image file</li>
+     * @param array $SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
+<li>Array length limit: 10.</li>
+     * @param array $StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     * @param array $Vids Unique ID of LVB recording file. Any element in the set can be matched.
+<li>Array length limit: 10.</li>
+     * @param TimeRange $CreateTime Matches files created within the time period.
+<li>Includes specified start and end points in time.</li>
      * @param SortBy $Sort Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -358,12 +358,14 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
 <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
 <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
+Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
+     * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
+Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
      * @param string $StreamId (This is not recommended. `StreamIds` should be used instead)
 [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
      * @param string $Vid (This is not recommended. `Vids` should be used instead)
 Unique ID of LVB recording file.
-     * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
-Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      * @param string $StartTime (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -374,8 +376,6 @@ End time in the creation time range.
 <li>Before the end time.</li>
 <li>If `CreateTime.Before` also exists, it will be used first.</li>
 <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
-     * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
-Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
      */
     function __construct()
     {
@@ -390,35 +390,6 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
-            $this->Tags = $param["Tags"];
-        }
-
-        if (array_key_exists("ClassIds",$param) and $param["ClassIds"] !== null) {
-            $this->ClassIds = $param["ClassIds"];
-        }
-
-        if (array_key_exists("StreamIds",$param) and $param["StreamIds"] !== null) {
-            $this->StreamIds = $param["StreamIds"];
-        }
-
-        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
-            $this->Vids = $param["Vids"];
-        }
-
-        if (array_key_exists("SourceTypes",$param) and $param["SourceTypes"] !== null) {
-            $this->SourceTypes = $param["SourceTypes"];
-        }
-
-        if (array_key_exists("Categories",$param) and $param["Categories"] !== null) {
-            $this->Categories = $param["Categories"];
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = new TimeRange();
-            $this->CreateTime->deserialize($param["CreateTime"]);
-        }
-
         if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
             $this->FileIds = $param["FileIds"];
         }
@@ -433,6 +404,35 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
 
         if (array_key_exists("Descriptions",$param) and $param["Descriptions"] !== null) {
             $this->Descriptions = $param["Descriptions"];
+        }
+
+        if (array_key_exists("ClassIds",$param) and $param["ClassIds"] !== null) {
+            $this->ClassIds = $param["ClassIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
+        }
+
+        if (array_key_exists("Categories",$param) and $param["Categories"] !== null) {
+            $this->Categories = $param["Categories"];
+        }
+
+        if (array_key_exists("SourceTypes",$param) and $param["SourceTypes"] !== null) {
+            $this->SourceTypes = $param["SourceTypes"];
+        }
+
+        if (array_key_exists("StreamIds",$param) and $param["StreamIds"] !== null) {
+            $this->StreamIds = $param["StreamIds"];
+        }
+
+        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
+            $this->Vids = $param["Vids"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = new TimeRange();
+            $this->CreateTime->deserialize($param["CreateTime"]);
         }
 
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
@@ -456,6 +456,14 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
             $this->SubAppId = $param["SubAppId"];
         }
 
+        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
+            $this->Text = $param["Text"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
+        }
+
         if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
             $this->StreamId = $param["StreamId"];
         }
@@ -464,20 +472,12 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
             $this->Vid = $param["Vid"];
         }
 
-        if (array_key_exists("Text",$param) and $param["Text"] !== null) {
-            $this->Text = $param["Text"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
-        }
-
-        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
-            $this->SourceType = $param["SourceType"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemovePluginList(array $RemovePluginList) Set List of names of the plugins to be uninstalled
  * @method boolean getForceRestart() Obtain Whether to force restart
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart
+ * @method boolean getForceUpdate() Obtain Whether to reinstall
+ * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall
  */
 class UpdatePluginsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class UpdatePluginsRequest extends AbstractModel
     public $ForceRestart;
 
     /**
+     * @var boolean Whether to reinstall
+     */
+    public $ForceUpdate;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param array $InstallPluginList List of names of the plugins to be installed
      * @param array $RemovePluginList List of names of the plugins to be uninstalled
      * @param boolean $ForceRestart Whether to force restart
+     * @param boolean $ForceUpdate Whether to reinstall
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class UpdatePluginsRequest extends AbstractModel
 
         if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
             $this->ForceRestart = $param["ForceRestart"];
+        }
+
+        if (array_key_exists("ForceUpdate",$param) and $param["ForceUpdate"] !== null) {
+            $this->ForceUpdate = $param["ForceUpdate"];
         }
     }
 }

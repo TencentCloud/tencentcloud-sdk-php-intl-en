@@ -26,24 +26,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of terrorism information detection in video image task. Valid values:
 <li>ON: enables terrorism information detection in video image task;</li>
 <li>OFF: disables terrorism information detection in video image task.</li>
- * @method array getLabelSet() Obtain Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
- * @method void setLabelSet(array $LabelSet) Set Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+ * @method array getLabelSet() Obtain Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+ * @method void setLabelSet(array $LabelSet) Set Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
@@ -59,15 +61,16 @@ class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var array Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+     * @var array Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      */
     public $LabelSet;
 
@@ -85,15 +88,16 @@ class TerrorismImgReviewTemplateInfoForUpdate extends AbstractModel
      * @param string $Switch Switch of terrorism information detection in video image task. Valid values:
 <li>ON: enables terrorism information detection in video image task;</li>
 <li>OFF: disables terrorism information detection in video image task.</li>
-     * @param array $LabelSet Filter tag for terrorism information detection in video image. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. Valid values:
-<li>guns: weapons and guns;</li>
-<li>crowd: crowd;</li>
-<li>bloody: bloody scenes;</li>
-<li>police: police force;</li>
-<li>banners: terrorism flags;</li>
-<li>militant: militants;</li>
-<li>explosion: explosions and fires;</li>
-<li>terrorists: terrorists.</li>
+     * @param array $LabelSet Filter tags for terrorism information detection in images. If a moderation result contains a selected tag, it will be returned. If no filter tag is specified, all moderation results will be returned. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`bloody`: bloody images</li>
+<li>`police`: police forces</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
      */

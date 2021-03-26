@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of media file generated after pull for upload is completed.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain Metadata of a source video
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
  * @method string getFileUrl() Obtain Playback address generated after pull for upload is completed.
  * @method void setFileUrl(string $FileUrl) Set Playback address generated after pull for upload is completed.
  * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
@@ -92,6 +94,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaBasicInfo;
 
     /**
+     * @var MediaMetaData Metadata of a source video
+     */
+    public $MetaData;
+
+    /**
      * @var string Playback address generated after pull for upload is completed.
      */
     public $FileUrl;
@@ -124,6 +131,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $FileId ID of video generated after pull for upload is completed.
      * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after pull for upload is completed.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData Metadata of a source video
      * @param string $FileUrl Playback address generated after pull for upload is completed.
      * @param string $ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
@@ -165,6 +173,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MediaBasicInfo",$param) and $param["MediaBasicInfo"] !== null) {
             $this->MediaBasicInfo = new MediaBasicInfo();
             $this->MediaBasicInfo->deserialize($param["MediaBasicInfo"]);
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
 
         if (array_key_exists("FileUrl",$param) and $param["FileUrl"] !== null) {

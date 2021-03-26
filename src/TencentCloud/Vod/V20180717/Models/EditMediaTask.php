@@ -64,6 +64,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain Metadata of a source video
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
  */
 class EditMediaTask extends AbstractModel
 {
@@ -126,6 +128,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
+     * @var MediaMetaData Metadata of a source video
+     */
+    public $MetaData;
+
+    /**
      * @param string $TaskId Task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
@@ -148,6 +155,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData Metadata of a source video
      */
     function __construct()
     {
@@ -198,6 +206,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
     }
 }

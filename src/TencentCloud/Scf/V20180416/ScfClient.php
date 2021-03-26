@@ -42,6 +42,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(Models\DeleteProvisionedConcurrencyConfigRequest $req) This API is used to delete the provisioned concurrency configuration of a function version.
  * @method Models\DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(Models\DeleteReservedConcurrencyConfigRequest $req) This API is used to delete the reserved concurrency configuration of a function.
  * @method Models\DeleteTriggerResponse DeleteTrigger(Models\DeleteTriggerRequest $req) This API is used to delete an existing trigger based on the input parameters.
+ * @method Models\GetAccountResponse GetAccount(Models\GetAccountRequest $req) This API is used to get the account information.
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) This API is used to get the alias details such as the name, description, version, and routing information.
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) This API is used to obtain the download address of the function code package.

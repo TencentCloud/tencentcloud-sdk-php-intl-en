@@ -50,6 +50,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSessionContext() Obtain 
+ * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getSessionId() Obtain 
+ * @method void setSessionId(string $SessionId) Set 
  */
 class ComposeMediaTask extends AbstractModel
 {
@@ -93,6 +101,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var MediaMetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MetaData;
+
+    /**
+     * @var string 
+     */
+    public $SessionContext;
+
+    /**
+     * @var string 
+     */
+    public $SessionId;
+
+    /**
      * @param string $TaskId Task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
@@ -108,6 +132,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ComposeMediaTaskOutput $Output Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData Metadata of a source video.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SessionContext 
+     * @param string $SessionId 
      */
     function __construct()
     {
@@ -146,6 +174,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new ComposeMediaTaskOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
+            $this->SessionId = $param["SessionId"];
         }
     }
 }
