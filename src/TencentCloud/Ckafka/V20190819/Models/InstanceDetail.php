@@ -70,6 +70,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCvm(integer $Cvm) Set CKafka sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setInstanceType(string $InstanceType) Set CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getDiskType() Obtain Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setDiskType(string $DiskType) Set Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getMaxTopicNumber() Obtain Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setMaxTopicNumber(integer $MaxTopicNumber) Set Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getMaxPartitionNumber() Obtain Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setMaxPartitionNumber(integer $MaxPartitionNumber) Set Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getRebalanceTime() Obtain Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setRebalanceTime(string $RebalanceTime) Set Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class InstanceDetail extends AbstractModel
 {
@@ -187,6 +207,36 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Cvm;
 
     /**
+     * @var string CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $InstanceType;
+
+    /**
+     * @var string Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $DiskType;
+
+    /**
+     * @var integer Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $MaxTopicNumber;
+
+    /**
+     * @var integer Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $MaxPartitionNumber;
+
+    /**
+     * @var string Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $RebalanceTime;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Vip Instance VIP information
@@ -212,6 +262,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Cvm CKafka sale type
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType CKafka instance type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $DiskType Disk type
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $MaxTopicNumber Maximum number of topics for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $MaxPartitionNumber Maximum number of partitions for the current instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $RebalanceTime Time of scheduled upgrade
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -322,6 +382,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Cvm",$param) and $param["Cvm"] !== null) {
             $this->Cvm = $param["Cvm"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
+            $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("MaxTopicNumber",$param) and $param["MaxTopicNumber"] !== null) {
+            $this->MaxTopicNumber = $param["MaxTopicNumber"];
+        }
+
+        if (array_key_exists("MaxPartitionNumber",$param) and $param["MaxPartitionNumber"] !== null) {
+            $this->MaxPartitionNumber = $param["MaxPartitionNumber"];
+        }
+
+        if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
+            $this->RebalanceTime = $param["RebalanceTime"];
         }
     }
 }

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceName(string $InstanceName) Set Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
  * @method ModifyInstanceAttributesConfig getConfig() Obtain Instance configuration
  * @method void setConfig(ModifyInstanceAttributesConfig $Config) Set Instance configuration
+ * @method DynamicRetentionTime getDynamicRetentionConfig() Obtain Dynamic message retention policy configuration
+ * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) Set Dynamic message retention policy configuration
+ * @method integer getRebalanceTime() Obtain Modification of the rebalancing time after upgrade
+ * @method void setRebalanceTime(integer $RebalanceTime) Set Modification of the rebalancing time after upgrade
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var DynamicRetentionTime Dynamic message retention policy configuration
+     */
+    public $DynamicRetentionConfig;
+
+    /**
+     * @var integer Modification of the rebalancing time after upgrade
+     */
+    public $RebalanceTime;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
      * @param string $InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
      * @param ModifyInstanceAttributesConfig $Config Instance configuration
+     * @param DynamicRetentionTime $DynamicRetentionConfig Dynamic message retention policy configuration
+     * @param integer $RebalanceTime Modification of the rebalancing time after upgrade
      */
     function __construct()
     {
@@ -85,6 +101,15 @@ class ModifyInstanceAttributesRequest extends AbstractModel
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = new ModifyInstanceAttributesConfig();
             $this->Config->deserialize($param["Config"]);
+        }
+
+        if (array_key_exists("DynamicRetentionConfig",$param) and $param["DynamicRetentionConfig"] !== null) {
+            $this->DynamicRetentionConfig = new DynamicRetentionTime();
+            $this->DynamicRetentionConfig->deserialize($param["DynamicRetentionConfig"]);
+        }
+
+        if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
+            $this->RebalanceTime = $param["RebalanceTime"];
         }
     }
 }

@@ -80,10 +80,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxGroupNum(integer $MaxGroupNum) Set Maximum number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCvm() Obtain Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCvm(integer $Cvm) Set Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getCvm() Obtain Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setCvm(integer $Cvm) Set Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
  * @method string getInstanceType() Obtain Type.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setInstanceType(string $InstanceType) Set Type.
@@ -92,6 +92,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFeatures(array $Features) Set Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method DynamicRetentionTime getRetentionTimeConfig() Obtain Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -226,8 +230,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MaxGroupNum;
 
     /**
-     * @var integer Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public $Cvm;
 
@@ -242,6 +246,12 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Features;
+
+    /**
+     * @var DynamicRetentionTime Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $RetentionTimeConfig;
 
     /**
      * @param string $InstanceId Instance ID
@@ -274,12 +284,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxGroupNum Maximum number of groups
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Cvm Sale type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cvm Offering type. `0`: Standard Edition; `1`: Professional Edition
+Note: this field may return `null`, indicating that no valid value was found.
      * @param string $InstanceType Type.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $Features Features supported by the instance. `FEATURE_SUBNET_ACL` indicates that the ACL policy supports setting subnets. 
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DynamicRetentionTime $RetentionTimeConfig Dynamic message retention policy
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -415,6 +427,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Features",$param) and $param["Features"] !== null) {
             $this->Features = $param["Features"];
+        }
+
+        if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
+            $this->RetentionTimeConfig = new DynamicRetentionTime();
+            $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
         }
     }
 }
