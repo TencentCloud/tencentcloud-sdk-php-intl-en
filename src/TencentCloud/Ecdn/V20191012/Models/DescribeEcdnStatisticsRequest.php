@@ -25,35 +25,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() Obtain Query end time, such as 2019-12-13 23:59:59
  * @method void setEndTime(string $EndTime) Set Query end time, such as 2019-12-13 23:59:59
  * @method array getMetrics() Obtain Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
  * @method void setMetrics(array $Metrics) Set Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
  * @method integer getInterval() Obtain Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
 2-3 days 15, 30, 60, 120, 240, 1440
@@ -74,6 +60,16 @@ Up to 30 acceleration domain names can be queried at a time.
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
  * @method void setProjects(array $Projects) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+ * @method string getArea() Obtain Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+ * @method void setArea(string $Area) Set Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
  */
 class DescribeEcdnStatisticsRequest extends AbstractModel
 {
@@ -89,20 +85,13 @@ class DescribeEcdnStatisticsRequest extends AbstractModel
 
     /**
      * @var array Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public $Metrics;
 
@@ -129,23 +118,25 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     public $Projects;
 
     /**
+     * @var string Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime Query start time, such as 2019-12-13 00:00:00
      * @param string $EndTime Query end time, such as 2019-12-13 23:59:59
      * @param array $Metrics Specifies the query metric, which can be:
-flux: traffic in bytes
-bandwidth: bandwidth in bps
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
 2xx: returns the number of 2xx status codes or details of status codes starting with 2
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      * @param integer $Interval Time granularity, which can be:
 1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
 2-3 days 15, 30, 60, 120, 240, 1440
@@ -156,6 +147,11 @@ dynamic_bandwidth: dynamic bandwidth in bps
 Up to 30 acceleration domain names can be queried at a time.
      * @param array $Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
+     * @param string $Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
      */
     function __construct()
     {
@@ -192,6 +188,10 @@ If no domain name is entered, the specified project will be queried; otherwise, 
 
         if (array_key_exists("Projects",$param) and $param["Projects"] !== null) {
             $this->Projects = $param["Projects"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

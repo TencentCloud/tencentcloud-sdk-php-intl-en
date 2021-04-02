@@ -28,26 +28,14 @@ The time span cannot exceed 90 days.
 The time span cannot exceed 90 days.
  * @method void setEndTime(string $EndTime) Set Query end time, such as 2019-12-13 23:59:59.
 The time span cannot exceed 90 days.
- * @method array getMetrics() Obtain Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+ * @method array getMetrics() Obtain Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
- * @method void setMetrics(array $Metrics) Set Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+ * @method void setMetrics(array $Metrics) Set Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
  * @method array getDomains() Obtain Specifies the list of domain names to be queried
  * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried
  * @method array getProjects() Obtain Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
@@ -58,6 +46,16 @@ If no domain name is entered, the specified project will be queried; otherwise, 
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of entries per page. Default value: 1000. Maximum value: 3,000.
  * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 1000. Maximum value: 3,000.
+ * @method string getArea() Obtain Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+ * @method void setArea(string $Area) Set Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
  */
 class DescribeEcdnDomainStatisticsRequest extends AbstractModel
 {
@@ -74,16 +72,10 @@ The time span cannot exceed 90 days.
     public $EndTime;
 
     /**
-     * @var array Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+     * @var array Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      */
     public $Metrics;
 
@@ -109,25 +101,33 @@ If no domain name is entered, the specified project will be queried; otherwise, 
     public $Limit;
 
     /**
+     * @var string Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
+     */
+    public $Area;
+
+    /**
      * @param string $StartTime Query start time, such as 2019-12-13 00:00:00.
 The time span cannot exceed 90 days.
      * @param string $EndTime Query end time, such as 2019-12-13 23:59:59.
 The time span cannot exceed 90 days.
-     * @param array $Metrics Statistical metric name. flux: traffic in bytes
-bandwidth: bandwidth in bps
+     * @param array $Metrics Statistical metric names:
+flux: traffic (in bytes)
+bandwidth: bandwidth (in bps)
 request: number of requests
-delay: response time in ms
-static_request: number of static requests
-static_flux: static traffic in bytes
-static_bandwidth: static bandwidth in bps
-dynamic_request: number of dynamic requests
-dynamic_flux: dynamic traffic in bytes
-dynamic_bandwidth: dynamic bandwidth in bps
      * @param array $Domains Specifies the list of domain names to be queried
      * @param array $Projects Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 If no domain name is entered, the specified project will be queried; otherwise, the domain name will prevail
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of entries per page. Default value: 1000. Maximum value: 3,000.
+     * @param string $Area Statistical areas:
+mainland: Chinese mainland
+oversea: outside the Chinese mainland
+global: global
+Default value: global
      */
     function __construct()
     {
@@ -168,6 +168,10 @@ If no domain name is entered, the specified project will be queried; otherwise, 
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

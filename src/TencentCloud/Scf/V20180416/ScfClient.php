@@ -46,6 +46,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) This API is used to get the alias details such as the name, description, version, and routing information.
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) This API is used to obtain the download address of the function code package.
+ * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) This API is used to return function running logs according to the specified log query criteria.
  * @method Models\GetLayerVersionResponse GetLayerVersion(Models\GetLayerVersionRequest $req) This API is used to get the layer version details, including links used to download files in the layer.
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) This API is used to get the provisioned concurrency details of a function or its specified version.
@@ -68,6 +69,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) This API is used to update the configuration of an alias.
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) This API is used to update the function code based on the input parameters.
  * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) This API is used to update the function configuration based on the input parameters.
+ * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) This API is used to update a namespace.
  */
 

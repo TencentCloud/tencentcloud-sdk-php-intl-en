@@ -20,10 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Origin server configuration.
  *
- * @method array getOrigins() Obtain Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
- * @method void setOrigins(array $Origins) Set Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+ * @method array getOrigins() Obtain Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
+ * @method void setOrigins(array $Origins) Set Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
  * @method string getOriginType() Obtain Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -35,9 +33,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setServerName(string $ServerName) Set Host header value during origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getOriginPullProtocol() Obtain Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setOriginPullProtocol(string $OriginPullProtocol) Set Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method array getBackupOrigins() Obtain Secondary origin server list.
  * @method void setBackupOrigins(array $BackupOrigins) Set Secondary origin server list.
  * @method string getBackupOriginType() Obtain Secondary origin server type, which is the same as `OriginType`.
@@ -50,8 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class Origin extends AbstractModel
 {
     /**
-     * @var array Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+     * @var array Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      */
     public $Origins;
 
@@ -70,7 +69,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $OriginPullProtocol;
 
@@ -87,15 +87,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupOriginType;
 
     /**
-     * @param array $Origins Primary origin server list. The default format is ["ip1:port1", "ip2:port2"].
-Weights can be configured in the origin server list. The weight format of IP origin servers is ["ip1:port1:weight1", "ip2:port2:weight2"].
+     * @param array $Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      * @param string $OriginType Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServerName Host header value during origin-pull.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OriginPullProtocol Origin-pull protocol type. Valid values: http (forced HTTP origin-pull), follow (protocol follow), https (HTTPS origin-pull).
-Note: this field may return null, indicating that no valid values can be obtained.
+If this parameter is left empty, HTTP origin-pull will be used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $BackupOrigins Secondary origin server list.
      * @param string $BackupOriginType Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
