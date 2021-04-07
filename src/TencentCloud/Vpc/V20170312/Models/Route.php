@@ -72,6 +72,8 @@ Users can only add and operate USER-type routes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPublishedToVbc(boolean $PublishedToVbc) Set Whether the routing policy is published to CCN.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain Creation time of the routing policy
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time of the routing policy
  */
 class Route extends AbstractModel
 {
@@ -146,6 +148,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PublishedToVbc;
 
     /**
+     * @var string Creation time of the routing policy
+     */
+    public $CreatedTime;
+
+    /**
      * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
      * @param string $GatewayType Type of the next hop. Currently supported types are:
 CVM: CVM of the public gateway type;
@@ -172,6 +179,7 @@ Users can only add and operate USER-type routes.
      * @param string $RouteItemId Unique routing policy ID.
      * @param boolean $PublishedToVbc Whether the routing policy is published to CCN.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CreatedTime Creation time of the routing policy
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PublishedToVbc",$param) and $param["PublishedToVbc"] !== null) {
             $this->PublishedToVbc = $param["PublishedToVbc"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
         }
     }
 }
