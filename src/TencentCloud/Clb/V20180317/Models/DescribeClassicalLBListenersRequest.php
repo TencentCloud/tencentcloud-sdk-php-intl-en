@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getListenerIds() Obtain List of CLB listener IDs
  * @method void setListenerIds(array $ListenerIds) Set List of CLB listener IDs
- * @method string getProtocol() Obtain CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
- * @method void setProtocol(string $Protocol) Set CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
- * @method integer getListenerPort() Obtain CLB listening port. Value range: [1-65535]
- * @method void setListenerPort(integer $ListenerPort) Set CLB listening port. Value range: [1-65535]
- * @method integer getStatus() Obtain Listener status. Value range: 0 (creating), 1 (running)
- * @method void setStatus(integer $Status) Set Listener status. Value range: 0 (creating), 1 (running)
+ * @method string getProtocol() Obtain CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+ * @method void setProtocol(string $Protocol) Set CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+ * @method integer getListenerPort() Obtain CLB listening port. Value range: 1 - 65535.
+ * @method void setListenerPort(integer $ListenerPort) Set CLB listening port. Value range: 1 - 65535.
+ * @method integer getStatus() Obtain Listener status. Valid values: 0 (creating) and 1 (running).
+ * @method void setStatus(integer $Status) Set Listener status. Valid values: 0 (creating) and 1 (running).
  */
 class DescribeClassicalLBListenersRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class DescribeClassicalLBListenersRequest extends AbstractModel
     public $ListenerIds;
 
     /**
-     * @var string CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
+     * @var string CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
      */
     public $Protocol;
 
     /**
-     * @var integer CLB listening port. Value range: [1-65535]
+     * @var integer CLB listening port. Value range: 1 - 65535.
      */
     public $ListenerPort;
 
     /**
-     * @var integer Listener status. Value range: 0 (creating), 1 (running)
+     * @var integer Listener status. Valid values: 0 (creating) and 1 (running).
      */
     public $Status;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ListenerIds List of CLB listener IDs
-     * @param string $Protocol CLB listening protocol. Value range: TCP, UDP, HTTP, HTTPS
-     * @param integer $ListenerPort CLB listening port. Value range: [1-65535]
-     * @param integer $Status Listener status. Value range: 0 (creating), 1 (running)
+     * @param string $Protocol CLB listening protocol. Valid values: TCP, UDP, HTTP, and HTTPS.
+     * @param integer $ListenerPort CLB listening port. Value range: 1 - 65535.
+     * @param integer $Status Listener status. Valid values: 0 (creating) and 1 (running).
      */
     function __construct()
     {

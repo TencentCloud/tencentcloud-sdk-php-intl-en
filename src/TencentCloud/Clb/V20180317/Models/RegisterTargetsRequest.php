@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method array getTargets() Obtain List of real servers to be bound. Array length limit: 20
- * @method void setTargets(array $Targets) Set List of real servers to be bound. Array length limit: 20
- * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method string getDomain() Obtain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
- * @method void setDomain(string $Domain) Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
- * @method string getUrl() Obtain Target forwarding rule URL. This parameter does not take effect if LocationId is specified
- * @method void setUrl(string $Url) Set Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+ * @method array getTargets() Obtain List of real servers to be bound. Array length limit: 20.
+ * @method void setTargets(array $Targets) Set List of real servers to be bound. Array length limit: 20.
+ * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+ * @method string getDomain() Obtain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
+ * @method void setDomain(string $Domain) Set Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
+ * @method string getUrl() Obtain Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
+ * @method void setUrl(string $Url) Set Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
  */
 class RegisterTargetsRequest extends AbstractModel
 {
@@ -46,32 +46,32 @@ class RegisterTargetsRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var array List of real servers to be bound. Array length limit: 20
+     * @var array List of real servers to be bound. Array length limit: 20.
      */
     public $Targets;
 
     /**
-     * @var string Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * @var string Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public $LocationId;
 
     /**
-     * @var string Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
+     * @var string Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public $Domain;
 
     /**
-     * @var string Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+     * @var string Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
      */
     public $Url;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
-     * @param array $Targets List of real servers to be bound. Array length limit: 20
-     * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-     * @param string $Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified
-     * @param string $Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified
+     * @param array $Targets List of real servers to be bound. Array length limit: 20.
+     * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+     * @param string $Domain Target forwarding rule domain name. This parameter does not take effect if LocationId is specified.
+     * @param string $Url Target forwarding rule URL. This parameter does not take effect if LocationId is specified.
      */
     function __construct()
     {

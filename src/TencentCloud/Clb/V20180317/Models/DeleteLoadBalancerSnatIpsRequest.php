@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteLoadBalancerSnatIps request structure.
  *
- * @method string getLoadBalancerId() Obtain Unique CLB instance ID, such as lb-12345678
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique CLB instance ID, such as lb-12345678
+ * @method string getLoadBalancerId() Obtain Unique ID of a CLB instance, e.g., lb-12345678.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique ID of a CLB instance, e.g., lb-12345678.
  * @method array getIps() Obtain Array of the SNAT IP addresses to be deleted
  * @method void setIps(array $Ips) Set Array of the SNAT IP addresses to be deleted
  */
 class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string Unique CLB instance ID, such as lb-12345678
+     * @var string Unique ID of a CLB instance, e.g., lb-12345678.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class DeleteLoadBalancerSnatIpsRequest extends AbstractModel
     public $Ips;
 
     /**
-     * @param string $LoadBalancerId Unique CLB instance ID, such as lb-12345678
+     * @param string $LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      * @param array $Ips Array of the SNAT IP addresses to be deleted
      */
     function __construct()

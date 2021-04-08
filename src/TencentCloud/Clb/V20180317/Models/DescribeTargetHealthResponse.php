@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargetHealth response structure.
  *
- * @method array getLoadBalancers() Obtain List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setLoadBalancers(array $LoadBalancers) Set List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getLoadBalancers() Obtain CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLoadBalancers(array $LoadBalancers) Set CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTargetHealthResponse extends AbstractModel
 {
     /**
-     * @var array List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $LoadBalancers;
 
@@ -41,8 +41,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $LoadBalancers List of CLB instances
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $LoadBalancers CLB instance list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -28,6 +28,10 @@ such as 2018120101-test.vod2.mqcloud.com.
 such as 2018120101-test.vod2.mqcloud.com.
  * @method string getUrl() Obtain Log download link, which is valid for 24 hours.
  * @method void setUrl(string $Url) Set Log download link, which is valid for 24 hours.
+ * @method string getStartTime() Obtain Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+ * @method void setStartTime(string $StartTime) Set Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+ * @method string getEndTime() Obtain Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+ * @method void setEndTime(string $EndTime) Set Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
  */
 class CdnLogInfo extends AbstractModel
 {
@@ -48,10 +52,22 @@ such as 2018120101-test.vod2.mqcloud.com.
     public $Url;
 
     /**
+     * @var string Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public $StartTime;
+
+    /**
+     * @var string Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     */
+    public $EndTime;
+
+    /**
      * @param string $Date Log date in the format of `yyyy-MM-dd`, such as 2018-03-01.
      * @param string $Name Log name in the format of date and time-domain name,
 such as 2018120101-test.vod2.mqcloud.com.
      * @param string $Url Log download link, which is valid for 24 hours.
+     * @param string $StartTime Log start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
+     * @param string $EndTime Log end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=)
      */
     function __construct()
     {
@@ -76,6 +92,14 @@ such as 2018120101-test.vod2.mqcloud.com.
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

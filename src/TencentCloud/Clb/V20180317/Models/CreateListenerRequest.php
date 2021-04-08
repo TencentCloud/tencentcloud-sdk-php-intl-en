@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getPorts() Obtain Specifies for which ports to create listeners. Each port corresponds to a new listener
- * @method void setPorts(array $Ports) Set Specifies for which ports to create listeners. Each port corresponds to a new listener
- * @method string getProtocol() Obtain Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
- * @method void setProtocol(string $Protocol) Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+ * @method array getPorts() Obtain Specifies for which ports to create listeners. Each port corresponds to a new listener.
+ * @method void setPorts(array $Ports) Set Specifies for which ports to create listeners. Each port corresponds to a new listener.
+ * @method string getProtocol() Obtain Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
+ * @method void setProtocol(string $Protocol) Set Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
  * @method array getListenerNames() Obtain List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
  * @method void setListenerNames(array $ListenerNames) Set List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
- * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
- * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+ * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
  * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
  * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
@@ -44,8 +44,8 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setTargetType(string $TargetType) Set Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
  * @method string getSessionType() Obtain Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
  * @method void setSessionType(string $SessionType) Set Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
- * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
- * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+ * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
  * @method integer getEndPort() Obtain This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
  * @method void setEndPort(integer $EndPort) Set This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
  */
@@ -57,12 +57,12 @@ class CreateListenerRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array Specifies for which ports to create listeners. Each port corresponds to a new listener
+     * @var array Specifies for which ports to create listeners. Each port corresponds to a new listener.
      */
     public $Ports;
 
     /**
-     * @var string Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+     * @var string Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
      */
     public $Protocol;
 
@@ -72,7 +72,7 @@ class CreateListenerRequest extends AbstractModel
     public $ListenerNames;
 
     /**
-     * @var HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+     * @var HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      */
     public $HealthCheck;
 
@@ -108,7 +108,7 @@ They represent weighted round robin and least connections, respectively. Default
     public $SessionType;
 
     /**
-     * @var integer Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @var integer Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
      */
     public $KeepaliveEnable;
 
@@ -119,10 +119,10 @@ They represent weighted round robin and least connections, respectively. Default
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener
-     * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application)
+     * @param array $Ports Specifies for which ports to create listeners. Each port corresponds to a new listener.
+     * @param string $Protocol Listener protocol: TCP, UDP, HTTP, HTTPS, or TCP_SSL (which is currently in beta test. If you want to use it, please submit a ticket for application).
      * @param array $ListenerNames List of names of the listeners to be created. The array of names and array of ports are in one-to-one correspondence. If you do not want to name them now, you do not need to provide this parameter.
-     * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners
+     * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to TCP_SSL listeners and HTTPS listeners with the SNI feature not enabled.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
@@ -130,7 +130,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners
      * @param string $TargetType Target real server type. `NODE`: binding a general node; `TARGETGROUP`: binding a target group.
      * @param string $SessionType Session persistence type. Valid values: Normal: the default session persistence type; QUIC_CID: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners. If this field is not specified, the default session persistence type will be used.
-     * @param integer $KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @param integer $KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners. Valid values: 0 (disable; default value) and 1 (enable).
      * @param integer $EndPort This parameter is used to specify the end port and is required when creating a port range listener. Only one member can be passed in when inputting the `Ports` parameter, which is used to specify the start port. If you want to try the port range feature, please [submit a ticket](https://console.cloud.tencent.com/workorder/category).
      */
     function __construct()

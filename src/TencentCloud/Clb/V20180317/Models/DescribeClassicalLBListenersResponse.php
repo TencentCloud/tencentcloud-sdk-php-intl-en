@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBListeners response structure.
  *
- * @method array getListeners() Obtain List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setListeners(array $Listeners) Set List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getListeners() Obtain Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setListeners(array $Listeners) Set Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeClassicalLBListenersResponse extends AbstractModel
 {
     /**
-     * @var array List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Listeners;
 
@@ -41,8 +41,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Listeners List of listeners
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Listeners Listener list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

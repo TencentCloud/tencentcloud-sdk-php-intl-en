@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method string getLocationId() Obtain ID of the forwarding rule to be modified.
  * @method void setLocationId(string $LocationId) Set ID of the forwarding rule to be modified.
- * @method string getUrl() Obtain New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
- * @method void setUrl(string $Url) Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+ * @method string getUrl() Obtain New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
+ * @method void setUrl(string $Url) Set New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
  * @method HealthCheck getHealthCheck() Obtain Health check information
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information
  * @method string getScheduler() Obtain Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
@@ -36,12 +36,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method integer getSessionExpireTime() Obtain Session persistence time
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time
- * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
- * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
- * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is `TRPC`.
- * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is `TRPC`.
- * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is `TRPC`.
- * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+ * @method string getForwardType() Obtain Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+ * @method void setForwardType(string $ForwardType) Set Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+ * @method string getTrpcCallee() Obtain TRPC callee server route, which is required when `ForwardType` is "TRPC".
+ * @method void setTrpcCallee(string $TrpcCallee) Set TRPC callee server route, which is required when `ForwardType` is "TRPC".
+ * @method string getTrpcFunc() Obtain TRPC calling service API, which is required when `ForwardType` is "TRPC".
+ * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is "TRPC".
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class ModifyRuleRequest extends AbstractModel
     public $LocationId;
 
     /**
-     * @var string New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+     * @var string New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      */
     public $Url;
 
@@ -82,17 +82,17 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $SessionExpireTime;
 
     /**
-     * @var string Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
+     * @var string Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
      */
     public $ForwardType;
 
     /**
-     * @var string TRPC callee server route, which is required when `ForwardType` is `TRPC`.
+     * @var string TRPC callee server route, which is required when `ForwardType` is "TRPC".
      */
     public $TrpcCallee;
 
     /**
-     * @var string TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @var string TRPC calling service API, which is required when `ForwardType` is "TRPC".
      */
     public $TrpcFunc;
 
@@ -100,14 +100,14 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $LocationId ID of the forwarding rule to be modified.
-     * @param string $Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified
+     * @param string $Url New forwarding path of the forwarding rule. This parameter is not required if the URL does not need to be modified.
      * @param HealthCheck $HealthCheck Health check information
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
      * @param integer $SessionExpireTime Session persistence time
-     * @param string $ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, TRPC.
-     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
-     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
+     * @param string $ForwardType Forwarding protocol between CLB instance and real server. Default value: HTTP. Valid values: HTTP, HTTPS, and TRPC.
+     * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is "TRPC".
+     * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is "TRPC".
      */
     function __construct()
     {

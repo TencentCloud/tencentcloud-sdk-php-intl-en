@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRewrite response structure.
  *
- * @method array getRewriteSet() Obtain Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
- * @method void setRewriteSet(array $RewriteSet) Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+ * @method array getRewriteSet() Obtain Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
+ * @method void setRewriteSet(array $RewriteSet) Set Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeRewriteResponse extends AbstractModel
 {
     /**
-     * @var array Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+     * @var array Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
      */
     public $RewriteSet;
 
@@ -38,7 +38,7 @@ class DescribeRewriteResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned
+     * @param array $RewriteSet Array of redirection forwarding rules. If there are no redirection rules, an empty array will be returned.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

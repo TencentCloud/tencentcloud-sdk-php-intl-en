@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTargetGroupIds() Obtain Target group ID, which is exclusive of `Filters`.
  * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID, which is exclusive of `Filters`.
- * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20
- * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20
+ * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20.
  * @method integer getOffset() Obtain Starting display offset
  * @method void setOffset(integer $Offset) Set Starting display offset
- * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
- * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+ * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
+ * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
  */
 class DescribeTargetGroupsRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class DescribeTargetGroupsRequest extends AbstractModel
     public $TargetGroupIds;
 
     /**
-     * @var integer Limit of the number of displayed results. Default value: 20
+     * @var integer Limit of the number of displayed results. Default value: 20.
      */
     public $Limit;
 
@@ -47,15 +47,15 @@ class DescribeTargetGroupsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
      */
     public $Filters;
 
     /**
      * @param array $TargetGroupIds Target group ID, which is exclusive of `Filters`.
-     * @param integer $Limit Limit of the number of displayed results. Default value: 20
+     * @param integer $Limit Limit of the number of displayed results. Default value: 20.
      * @param integer $Offset Starting display offset
-     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName
+     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`.
      */
     function __construct()
     {

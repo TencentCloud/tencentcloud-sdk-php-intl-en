@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
  * @method array getLocationIds() Obtain Array of IDs of the forwarding rules to be deleted
  * @method void setLocationIds(array $LocationIds) Set Array of IDs of the forwarding rules to be deleted
- * @method string getDomain() Obtain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method void setDomain(string $Domain) Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method string getUrl() Obtain Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
- * @method void setUrl(string $Url) Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+ * @method string getDomain() Obtain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+ * @method void setDomain(string $Domain) Set Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+ * @method string getUrl() Obtain Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+ * @method void setUrl(string $Url) Set Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
  * @method string getNewDefaultServerDomain() Obtain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
  * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
  */
@@ -51,12 +51,12 @@ class DeleteRuleRequest extends AbstractModel
     public $LocationIds;
 
     /**
-     * @var string Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * @var string Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public $Domain;
 
     /**
-     * @var string Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * @var string Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      */
     public $Url;
 
@@ -69,8 +69,8 @@ class DeleteRuleRequest extends AbstractModel
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param array $LocationIds Array of IDs of the forwarding rules to be deleted
-     * @param string $Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
-     * @param string $Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified
+     * @param string $Domain Domain name of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
+     * @param string $Url Forwarding path of the forwarding rule to be deleted. This parameter does not take effect if LocationIds is specified.
      * @param string $NewDefaultServerDomain A listener must be configured with a default domain name. If you need to delete the default domain name, you can specify another one as the new default domain name.
      */
     function __construct()

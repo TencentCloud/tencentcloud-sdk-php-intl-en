@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTargets response structure.
  *
  * @method array getListeners() Obtain Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setListeners(array $Listeners) Set Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -31,7 +31,7 @@ class DescribeTargetsResponse extends AbstractModel
 {
     /**
      * @var array Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Listeners;
 
@@ -42,7 +42,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $Listeners Information of real servers bound to the listener
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

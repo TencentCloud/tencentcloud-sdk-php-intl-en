@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamId(string $StreamId) Set Custom live stream ID, which must be different from the ID of relayed stream.
  * @method integer getPureAudioStream() Obtain Value range: [0, 1]. If it is 0, live streams are audio and video; if it is 1, live streams are only audio. Default value: 0.
  * @method void setPureAudioStream(integer $PureAudioStream) Set Value range: [0, 1]. If it is 0, live streams are audio and video; if it is 1, live streams are only audio. Default value: 0.
- * @method string getRecordId() Obtain Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
- * @method void setRecordId(string $RecordId) Set Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+ * @method string getRecordId() Obtain Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+ * @method void setRecordId(string $RecordId) Set Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
  * @method integer getRecordAudioOnly() Obtain Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
  * @method void setRecordAudioOnly(integer $RecordAudioOnly) Set Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
  */
@@ -42,7 +42,7 @@ class OutputParams extends AbstractModel
     public $PureAudioStream;
 
     /**
-     * @var string Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+     * @var string Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
      */
     public $RecordId;
 
@@ -54,7 +54,7 @@ class OutputParams extends AbstractModel
     /**
      * @param string $StreamId Custom live stream ID, which must be different from the ID of relayed stream.
      * @param integer $PureAudioStream Value range: [0, 1]. If it is 0, live streams are audio and video; if it is 1, live streams are only audio. Default value: 0.
-     * @param string $RecordId Custom recording file name. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
+     * @param string $RecordId Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
      * @param integer $RecordAudioOnly Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
      */
     function __construct()

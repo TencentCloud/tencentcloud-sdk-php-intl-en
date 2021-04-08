@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateLoadBalancerSnatIps request structure.
  *
- * @method string getLoadBalancerId() Obtain Unique CLB instance ID, such as lb-12345678
- * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique CLB instance ID, such as lb-12345678
+ * @method string getLoadBalancerId() Obtain Unique ID of a CLB instance, e.g., lb-12345678.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique ID of a CLB instance, e.g., lb-12345678.
  * @method array getSnatIps() Obtain Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
  * @method void setSnatIps(array $SnatIps) Set Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
     /**
-     * @var string Unique CLB instance ID, such as lb-12345678
+     * @var string Unique ID of a CLB instance, e.g., lb-12345678.
      */
     public $LoadBalancerId;
 
@@ -38,7 +38,7 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $SnatIps;
 
     /**
-     * @param string $LoadBalancerId Unique CLB instance ID, such as lb-12345678
+     * @param string $LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      * @param array $SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
      */
     function __construct()

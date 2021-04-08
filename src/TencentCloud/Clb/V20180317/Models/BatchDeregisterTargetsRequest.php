@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getTargets() Obtain Unbound targets
- * @method void setTargets(array $Targets) Set Unbound targets
+ * @method array getTargets() Obtain Unbinding targets
+ * @method void setTargets(array $Targets) Set Unbinding targets
  */
 class BatchDeregisterTargetsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class BatchDeregisterTargetsRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array Unbound targets
+     * @var array Unbinding targets
      */
     public $Targets;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param array $Targets Unbound targets
+     * @param array $Targets Unbinding targets
      */
     function __construct()
     {

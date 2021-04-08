@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getListenerIds() Obtain List of listener IDs
- * @method void setListenerIds(array $ListenerIds) Set List of listener IDs
+ * @method array getListenerIds() Obtain Listener ID list
+ * @method void setListenerIds(array $ListenerIds) Set Listener ID list
  * @method string getProtocol() Obtain Listener protocol type
  * @method void setProtocol(string $Protocol) Set Listener protocol type
  * @method integer getPort() Obtain Listener port
@@ -37,7 +37,7 @@ class DescribeTargetsRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array List of listener IDs
+     * @var array Listener ID list
      */
     public $ListenerIds;
 
@@ -53,7 +53,7 @@ class DescribeTargetsRequest extends AbstractModel
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param array $ListenerIds List of listener IDs
+     * @param array $ListenerIds Listener ID list
      * @param string $Protocol Listener protocol type
      * @param integer $Port Listener port
      */

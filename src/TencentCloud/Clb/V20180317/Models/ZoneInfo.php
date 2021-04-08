@@ -32,6 +32,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneName(string $ZoneName) Set AZ name, such as Guangzhou Zone 1
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getZoneRegion() Obtain AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZoneRegion(string $ZoneRegion) Set AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getLocalZone() Obtain Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLocalZone(boolean $LocalZone) Set Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ZoneInfo extends AbstractModel
 {
@@ -54,12 +62,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneName;
 
     /**
+     * @var string AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ZoneRegion;
+
+    /**
+     * @var boolean Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LocalZone;
+
+    /**
      * @param integer $ZoneId Unique AZ ID in a numeric form, such as 100001
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Zone Unique AZ ID in a string form, such as ap-guangzhou-1
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ZoneName AZ name, such as Guangzhou Zone 1
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ZoneRegion AZ region, e.g., ap-guangzhou.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $LocalZone Whether the AZ is the `LocalZone`, e.g., false.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +108,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
             $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("ZoneRegion",$param) and $param["ZoneRegion"] !== null) {
+            $this->ZoneRegion = $param["ZoneRegion"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
         }
     }
 }

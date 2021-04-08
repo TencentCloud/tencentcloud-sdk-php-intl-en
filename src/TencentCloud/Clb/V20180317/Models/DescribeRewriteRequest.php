@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getSourceListenerIds() Obtain Array of CLB listener IDs
  * @method void setSourceListenerIds(array $SourceListenerIds) Set Array of CLB listener IDs
- * @method array getSourceLocationIds() Obtain Array of CLB forwarding rules
- * @method void setSourceLocationIds(array $SourceLocationIds) Set Array of CLB forwarding rules
+ * @method array getSourceLocationIds() Obtain Array of CLB forwarding rule IDs
+ * @method void setSourceLocationIds(array $SourceLocationIds) Set Array of CLB forwarding rule IDs
  */
 class DescribeRewriteRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeRewriteRequest extends AbstractModel
     public $SourceListenerIds;
 
     /**
-     * @var array Array of CLB forwarding rules
+     * @var array Array of CLB forwarding rule IDs
      */
     public $SourceLocationIds;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $SourceListenerIds Array of CLB listener IDs
-     * @param array $SourceLocationIds Array of CLB forwarding rules
+     * @param array $SourceLocationIds Array of CLB forwarding rule IDs
      */
     function __construct()
     {

@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set New listener name
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
- * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
- * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
- * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+ * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+ * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
  * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
- * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
- * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+ * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+ * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -64,12 +64,12 @@ class ModifyListenerRequest extends AbstractModel
     public $SessionExpireTime;
 
     /**
-     * @var HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
+     * @var HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
      */
     public $HealthCheck;
 
     /**
-     * @var CertificateInput Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * @var CertificateInput Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
      */
     public $Certificate;
 
@@ -85,7 +85,7 @@ They represent weighted round robin and least connections, respectively. Default
     public $SniSwitch;
 
     /**
-     * @var integer Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @var integer Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      */
     public $KeepaliveEnable;
 
@@ -94,12 +94,12 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $ListenerId CLB listener ID
      * @param string $ListenerName New listener name
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
-     * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP/UDP/TCP_SSL listeners.
-     * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to HTTPS/TCP_SSL listeners.
+     * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
+     * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
-     * @param integer $KeepaliveEnable Whether to enable a persistent connection (This parameter can only be configured in HTTP/HTTPS listeners). Valid values: 0: no; 1: yes. Default value: 0
+     * @param integer $KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      */
     function __construct()
     {

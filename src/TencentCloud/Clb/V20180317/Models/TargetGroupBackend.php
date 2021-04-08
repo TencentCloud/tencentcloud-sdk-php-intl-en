@@ -50,6 +50,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEniId(string $EniId) Set Unique ENI ID
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getZoneId() Obtain AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TargetGroupBackend extends AbstractModel
 {
@@ -109,6 +113,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $EniId;
 
     /**
+     * @var integer AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ZoneId;
+
+    /**
      * @param string $TargetGroupId Target group ID
      * @param string $Type Real server type. Valid values: CVM, ENI (coming soon)
      * @param string $InstanceId Unique real server ID
@@ -124,6 +134,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $EniId Unique ENI ID
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ZoneId AZ ID of the real server
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -176,6 +188,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EniId",$param) and $param["EniId"] !== null) {
             $this->EniId = $param["EniId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

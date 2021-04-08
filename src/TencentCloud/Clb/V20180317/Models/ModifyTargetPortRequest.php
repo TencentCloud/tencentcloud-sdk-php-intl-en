@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTargets(array $Targets) Set List of real servers for which to modify the ports
  * @method integer getNewPort() Obtain New port of the real server bound to a listener or forwarding rule
  * @method void setNewPort(integer $NewPort) Set New port of the real server bound to a listener or forwarding rule
- * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
- * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified
- * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified
- * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
+ * @method string getLocationId() Obtain Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+ * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified.
+ * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified.
+ * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified.
+ * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified.
  */
 class ModifyTargetPortRequest extends AbstractModel
 {
@@ -58,17 +58,17 @@ class ModifyTargetPortRequest extends AbstractModel
     public $NewPort;
 
     /**
-     * @var string Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
+     * @var string Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
      */
     public $LocationId;
 
     /**
-     * @var string Target rule domain name. This parameter does not take effect if LocationId is specified
+     * @var string Target rule domain name. This parameter does not take effect if LocationId is specified.
      */
     public $Domain;
 
     /**
-     * @var string Target rule URL. This parameter does not take effect if LocationId is specified
+     * @var string Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     public $Url;
 
@@ -77,9 +77,9 @@ class ModifyTargetPortRequest extends AbstractModel
      * @param string $ListenerId CLB listener ID
      * @param array $Targets List of real servers for which to modify the ports
      * @param integer $NewPort New port of the real server bound to a listener or forwarding rule
-     * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url
-     * @param string $Domain Target rule domain name. This parameter does not take effect if LocationId is specified
-     * @param string $Url Target rule URL. This parameter does not take effect if LocationId is specified
+     * @param string $LocationId Forwarding rule ID. When binding a real server to a layer-7 forwarding rule, you must provide either this parameter or Domain+Url.
+     * @param string $Domain Target rule domain name. This parameter does not take effect if LocationId is specified.
+     * @param string $Url Target rule URL. This parameter does not take effect if LocationId is specified.
      */
     function __construct()
     {

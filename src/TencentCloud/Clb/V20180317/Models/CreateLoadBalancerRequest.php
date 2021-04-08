@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
 OPEN: public network; INTERNAL: private network.
  * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
 OPEN: public network; INTERNAL: private network.
- * @method integer getForward() Obtain CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
- * @method void setForward(integer $Forward) Set CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+ * @method integer getForward() Obtain CLB instance type. Valid value: 1 (generic CLB instance).
+ * @method void setForward(integer $Forward) Set CLB instance type. Valid value: 1 (generic CLB instance).
  * @method string getLoadBalancerName() Obtain CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
@@ -44,8 +44,8 @@ Note: if the name of the new CLB instance already exists, a default name will be
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
  * @method void setMasterZoneId(string $MasterZoneId) Set Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
- * @method string getZoneId() Obtain Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
- * @method void setZoneId(string $ZoneId) Set Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+ * @method string getZoneId() Obtain Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+ * @method void setZoneId(string $ZoneId) Set Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
  * @method InternetAccessible getInternetAccessible() Obtain CLB network billing mode. This parameter is applicable only to public network CLB instances.
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set CLB network billing mode. This parameter is applicable only to public network CLB instances.
  * @method string getVipIsp() Obtain This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
@@ -56,8 +56,8 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setVip(string $Vip) Set Applies for CLB instances for a specified VIP
  * @method string getBandwidthPackageId() Obtain Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
- * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster information.
- * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster information.
+ * @method ExclusiveCluster getExclusiveCluster() Obtain Dedicated cluster information
+ * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Dedicated cluster information
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  * @method boolean getSnatPro() Obtain Whether Binding IPs of other VPCs feature switch
@@ -66,6 +66,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
  * @method string getClusterTag() Obtain Tag for the STGW exclusive cluster.
  * @method void setClusterTag(string $ClusterTag) Set Tag for the STGW exclusive cluster.
+ * @method string getSlaveZoneId() Obtain Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+ * @method void setSlaveZoneId(string $SlaveZoneId) Set Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
  * @method string getEipAddressId() Obtain Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
  * @method void setEipAddressId(string $EipAddressId) Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
  */
@@ -78,7 +82,7 @@ OPEN: public network; INTERNAL: private network.
     public $LoadBalancerType;
 
     /**
-     * @var integer CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+     * @var integer CLB instance type. Valid value: 1 (generic CLB instance).
      */
     public $Forward;
 
@@ -120,7 +124,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $MasterZoneId;
 
     /**
-     * @var string Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+     * @var string Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
      */
     public $ZoneId;
 
@@ -150,7 +154,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $BandwidthPackageId;
 
     /**
-     * @var ExclusiveCluster Exclusive cluster information.
+     * @var ExclusiveCluster Dedicated cluster information
      */
     public $ExclusiveCluster;
 
@@ -175,6 +179,12 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $ClusterTag;
 
     /**
+     * @var string Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
+     */
+    public $SlaveZoneId;
+
+    /**
      * @var string Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
      */
     public $EipAddressId;
@@ -182,7 +192,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     /**
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
-     * @param integer $Forward CLB instance type. 1: generic CLB instance. Currently, only 1 can be passed in
+     * @param integer $Forward CLB instance type. Valid value: 1 (generic CLB instance).
      * @param string $LoadBalancerName CLB instance name, which takes effect only when only one instance is to be created in the request. It can consist 1 to 60 letters, digits, hyphens (-), or underscores (_).
 Note: if the name of the new CLB instance already exists, a default name will be generated automatically.
      * @param string $VpcId Network ID of the backend target server of CLB, which can be obtained through the DescribeVpcEx API. If this parameter is not passed in, it will default to a basic network ("0").
@@ -192,17 +202,19 @@ Note: if the name of the new CLB instance already exists, a default name will be
      * @param integer $Number Number of CLBs to be created. Default value: 1.
      * @param string $MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as 100001 or ap-guangzhou-1, which is applicable only to public network CLB.
 Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic by default and will be used only if the primary AZ becomes unavailable. The platform will automatically select the optimal secondary AZ. The list of primary AZs in a specific region can be queried through the DescribeMasterZones API.
-     * @param string $ZoneId Specifies an AZ ID for creating a CLB instance, such as ap-guangzhou-1, which is applicable only to public network CLB.
+     * @param string $ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
      * @param InternetAccessible $InternetAccessible CLB network billing mode. This parameter is applicable only to public network CLB instances.
      * @param string $VipIsp This parameter is applicable only to public network CLB instances. Valid values: CMCC (China Mobile), CTCC (China Telecom), CUCC (China Unicom). If this parameter is not specified, BGP will be used by default. ISPs supported in a region can be queried with the `DescribeSingleIsp` API. If an ISP is specified, only bill-by-bandwidth-package (BANDWIDTH_PACKAGE) can be used as the network billing mode.
      * @param array $Tags Tags a CLB instance when purchasing it
      * @param string $Vip Applies for CLB instances for a specified VIP
      * @param string $BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
-     * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster information.
+     * @param ExclusiveCluster $ExclusiveCluster Dedicated cluster information
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      * @param boolean $SnatPro Whether Binding IPs of other VPCs feature switch
      * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
      * @param string $ClusterTag Tag for the STGW exclusive cluster.
+     * @param string $SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
+Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
      * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
      */
     function __construct()
@@ -308,6 +320,10 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 
         if (array_key_exists("ClusterTag",$param) and $param["ClusterTag"] !== null) {
             $this->ClusterTag = $param["ClusterTag"];
+        }
+
+        if (array_key_exists("SlaveZoneId",$param) and $param["SlaveZoneId"] !== null) {
+            $this->SlaveZoneId = $param["SlaveZoneId"];
         }
 
         if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {

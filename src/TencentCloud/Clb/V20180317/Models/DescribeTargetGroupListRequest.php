@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getTargetGroupIds() Obtain Target group ID array
  * @method void setTargetGroupIds(array $TargetGroupIds) Set Target group ID array
- * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
- * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+ * @method array getFilters() Obtain Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
+ * @method void setFilters(array $Filters) Set Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
  * @method integer getOffset() Obtain Starting display offset
  * @method void setOffset(integer $Offset) Set Starting display offset
- * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20
- * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20
+ * @method integer getLimit() Obtain Limit of the number of displayed results. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Limit of the number of displayed results. Default value: 20.
  */
 class DescribeTargetGroupListRequest extends AbstractModel
 {
@@ -37,7 +37,7 @@ class DescribeTargetGroupListRequest extends AbstractModel
     public $TargetGroupIds;
 
     /**
-     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+     * @var array Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
      */
     public $Filters;
 
@@ -47,15 +47,15 @@ class DescribeTargetGroupListRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Limit of the number of displayed results. Default value: 20
+     * @var integer Limit of the number of displayed results. Default value: 20.
      */
     public $Limit;
 
     /**
      * @param array $TargetGroupIds Target group ID array
-     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: TargetGroupVpcId, TargetGroupName. Target group ID will be used first.
+     * @param array $Filters Filter array, which is exclusive of `TargetGroupIds`. Valid values: `TargetGroupVpcId` and `TargetGroupName`. Target group ID will be used first.
      * @param integer $Offset Starting display offset
-     * @param integer $Limit Limit of the number of displayed results. Default value: 20
+     * @param integer $Limit Limit of the number of displayed results. Default value: 20.
      */
     function __construct()
     {

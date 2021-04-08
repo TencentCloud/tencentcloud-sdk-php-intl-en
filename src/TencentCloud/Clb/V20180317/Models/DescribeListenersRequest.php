@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method array getListenerIds() Obtain Array of IDs of the CLB listeners to be queried
  * @method void setListenerIds(array $ListenerIds) Set Array of IDs of the CLB listeners to be queried
- * @method string getProtocol() Obtain Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
- * @method void setProtocol(string $Protocol) Set Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
- * @method integer getPort() Obtain Port of the listener to be queried
- * @method void setPort(integer $Port) Set Port of the listener to be queried
+ * @method string getProtocol() Obtain Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+ * @method void setProtocol(string $Protocol) Set Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+ * @method integer getPort() Obtain Port of the listeners to be queried
+ * @method void setPort(integer $Port) Set Port of the listeners to be queried
  */
 class DescribeListenersRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class DescribeListenersRequest extends AbstractModel
     public $ListenerIds;
 
     /**
-     * @var string Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
+     * @var string Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
      */
     public $Protocol;
 
     /**
-     * @var integer Port of the listener to be queried
+     * @var integer Port of the listeners to be queried
      */
     public $Port;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param array $ListenerIds Array of IDs of the CLB listeners to be queried
-     * @param string $Protocol Type of the listener protocol to be queried. Value range: TCP, UDP, HTTP, HTTPS, TCP_SSL
-     * @param integer $Port Port of the listener to be queried
+     * @param string $Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
+     * @param integer $Port Port of the listeners to be queried
      */
     function __construct()
     {

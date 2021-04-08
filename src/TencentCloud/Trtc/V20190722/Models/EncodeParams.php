@@ -20,36 +20,52 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output stream encoding parameters for MCU On-Cloud MixTranscoding
  *
- * @method integer getAudioSampleRate() Obtain Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
- * @method void setAudioSampleRate(integer $AudioSampleRate) Set Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
- * @method integer getAudioBitrate() Obtain Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
- * @method void setAudioBitrate(integer $AudioBitrate) Set Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+ * @method integer getAudioSampleRate() Obtain Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
+ * @method void setAudioSampleRate(integer $AudioSampleRate) Set Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
+ * @method integer getAudioBitrate() Obtain Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
+ * @method void setAudioBitrate(integer $AudioBitrate) Set Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
  * @method integer getAudioChannels() Obtain Number of sound channels of output stream for On-Cloud MixTranscoding. Valid values: 1, 2. 1 represents mono-channel, and 2 represents dual-channel.
  * @method void setAudioChannels(integer $AudioChannels) Set Number of sound channels of output stream for On-Cloud MixTranscoding. Valid values: 1, 2. 1 represents mono-channel, and 2 represents dual-channel.
  * @method integer getVideoWidth() Obtain Output stream width in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1920].
  * @method void setVideoWidth(integer $VideoWidth) Set Output stream width in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1920].
  * @method integer getVideoHeight() Obtain Output stream height in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1080].
  * @method void setVideoHeight(integer $VideoHeight) Set Output stream height in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1080].
- * @method integer getVideoBitrate() Obtain Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
- * @method void setVideoBitrate(integer $VideoBitrate) Set Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+ * @method integer getVideoBitrate() Obtain Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
+ * @method void setVideoBitrate(integer $VideoBitrate) Set Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
  * @method integer getVideoFramerate() Obtain Output stream frame rate for On-Cloud MixTranscoding in FPS. This parameter is required for audio/video outputs. Value range: [1, 60].
  * @method void setVideoFramerate(integer $VideoFramerate) Set Output stream frame rate for On-Cloud MixTranscoding in FPS. This parameter is required for audio/video outputs. Value range: [1, 60].
  * @method integer getVideoGop() Obtain Output stream GOP in seconds for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 5].
  * @method void setVideoGop(integer $VideoGop) Set Output stream GOP in seconds for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 5].
- * @method integer getBackgroundColor() Obtain Output stream background color for On-Cloud MixTranscoding.
- * @method void setBackgroundColor(integer $BackgroundColor) Set Output stream background color for On-Cloud MixTranscoding.
+ * @method integer getBackgroundColor() Obtain Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
+ * @method void setBackgroundColor(integer $BackgroundColor) Set Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
  * @method integer getBackgroundImageId() Obtain Output stream background image for stream mix. Its value is the ID of image uploaded through the TRTC Console.
  * @method void setBackgroundImageId(integer $BackgroundImageId) Set Output stream background image for stream mix. Its value is the ID of image uploaded through the TRTC Console.
+ * @method integer getAudioCodec() Obtain Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+ * @method void setAudioCodec(integer $AudioCodec) Set Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
  */
 class EncodeParams extends AbstractModel
 {
     /**
-     * @var integer Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
+     * @var integer Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
      */
     public $AudioSampleRate;
 
     /**
-     * @var integer Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+     * @var integer Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
      */
     public $AudioBitrate;
 
@@ -69,7 +85,7 @@ class EncodeParams extends AbstractModel
     public $VideoHeight;
 
     /**
-     * @var integer Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+     * @var integer Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
      */
     public $VideoBitrate;
 
@@ -84,7 +100,14 @@ class EncodeParams extends AbstractModel
     public $VideoGop;
 
     /**
-     * @var integer Output stream background color for On-Cloud MixTranscoding.
+     * @var integer Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
      */
     public $BackgroundColor;
 
@@ -94,16 +117,29 @@ class EncodeParams extends AbstractModel
     public $BackgroundImageId;
 
     /**
-     * @param integer $AudioSampleRate Output stream audio sample rate for On-Cloud MixTranscoding in Hz. Valid values: 48000, 44100, 32000, 24000, 16000, 12000, 8000.
-     * @param integer $AudioBitrate Output stream audio bitrate in Kbps for On-Cloud MixTranscoding. Value range: [8, 500].
+     * @var integer Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+     */
+    public $AudioCodec;
+
+    /**
+     * @param integer $AudioSampleRate Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
+     * @param integer $AudioBitrate Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
      * @param integer $AudioChannels Number of sound channels of output stream for On-Cloud MixTranscoding. Valid values: 1, 2. 1 represents mono-channel, and 2 represents dual-channel.
      * @param integer $VideoWidth Output stream width in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1920].
      * @param integer $VideoHeight Output stream height in pixels for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [0, 1080].
-     * @param integer $VideoBitrate Output stream bitrate in Kbps for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 10000].
+     * @param integer $VideoBitrate Output bitrate (Kbps) for On-Cloud MixTranscoding, which is required for audio-video output. Value range: 1-10000
      * @param integer $VideoFramerate Output stream frame rate for On-Cloud MixTranscoding in FPS. This parameter is required for audio/video outputs. Value range: [1, 60].
      * @param integer $VideoGop Output stream GOP in seconds for On-Cloud MixTranscoding, which is required for audio/video output. Value range: [1, 5].
-     * @param integer $BackgroundColor Output stream background color for On-Cloud MixTranscoding.
+     * @param integer $BackgroundColor Output background color for On-Cloud MixTranscoding. Valid values: decimal integers. Commonly used colors include:
+Red: 0xff0000, whose decimal number is 16724736
+Yellow: 0xffff00, whose decimal number is 16776960
+Green: 0x33cc00, whose decimal number is 3394560
+Blue: 0x0066ff, whose decimal number is 26367
+Black: 0x000000, whose decimal number is 0
+White: 0xFFFFFF, whose decimal number is 16777215
+Grey: 0x999999, whose decimal number is 10066329
      * @param integer $BackgroundImageId Output stream background image for stream mix. Its value is the ID of image uploaded through the TRTC Console.
+     * @param integer $AudioCodec Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
      */
     function __construct()
     {
@@ -156,6 +192,10 @@ class EncodeParams extends AbstractModel
 
         if (array_key_exists("BackgroundImageId",$param) and $param["BackgroundImageId"] !== null) {
             $this->BackgroundImageId = $param["BackgroundImageId"];
+        }
+
+        if (array_key_exists("AudioCodec",$param) and $param["AudioCodec"] !== null) {
+            $this->AudioCodec = $param["AudioCodec"];
         }
     }
 }

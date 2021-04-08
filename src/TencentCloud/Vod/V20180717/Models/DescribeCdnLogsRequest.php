@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
  * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
+ * @method integer getLimit() Obtain Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+ * @method void setLimit(integer $Limit) Set Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+ * @method integer getOffset() Obtain Page number offset from the beginning of paginated queries. Default value: 0
+ * @method void setOffset(integer $Offset) Set Page number offset from the beginning of paginated queries. Default value: 0
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -47,6 +51,16 @@ class DescribeCdnLogsRequest extends AbstractModel
     public $EndTime;
 
     /**
+     * @var integer Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     */
+    public $Limit;
+
+    /**
+     * @var integer Page number offset from the beginning of paginated queries. Default value: 0
+     */
+    public $Offset;
+
+    /**
      * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
@@ -55,6 +69,8 @@ class DescribeCdnLogsRequest extends AbstractModel
      * @param string $DomainName Domain name.
      * @param string $StartTime Start time for log acquisition in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F), which must be after the start time.
+     * @param integer $Limit Maximum return results of pulling paginated queries. Default value: 100; maximum value: 1000
+     * @param integer $Offset Page number offset from the beginning of paginated queries. Default value: 0
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
@@ -80,6 +96,14 @@ class DescribeCdnLogsRequest extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

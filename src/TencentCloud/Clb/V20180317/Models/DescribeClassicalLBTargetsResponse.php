@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClassicalLBTargets response structure.
  *
- * @method array getTargets() Obtain List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTargets(array $Targets) Set List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTargets() Obtain Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargets(array $Targets) Set Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeClassicalLBTargetsResponse extends AbstractModel
 {
     /**
-     * @var array List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Targets;
 
@@ -41,8 +41,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Targets List of real servers
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Targets Real server list
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
