@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
  * @method integer getHealthCheck() Obtain Whether to enable health check. 1: enable; 0: disable.
  * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable health check. 1: enable; 0: disable.
+ * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+ * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
  */
 class ModifyTCPListenerAttributeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     public $HealthCheck;
 
     /**
+     * @var integer Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     */
+    public $FailoverSwitch;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
      * @param string $ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -88,6 +95,7 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
      * @param integer $HealthCheck Whether to enable health check. 1: enable; 0: disable.
+     * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
 
         if (array_key_exists("HealthCheck",$param) and $param["HealthCheck"] !== null) {
             $this->HealthCheck = $param["HealthCheck"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
         }
     }
 }

@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() Obtain Security group details
  * @method void setGroups(array $Groups) Set Security group details
+ * @method string getVIP() Obtain Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVIP(string $VIP) Set Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getVPort() Obtain Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVPort(integer $VPort) Set Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +41,28 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
+     * @var string Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VIP;
+
+    /**
+     * @var integer Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VPort;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $Groups Security group details
+     * @param string $VIP Instance VIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $VPort Instance port
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +85,14 @@ class DescribeDBSecurityGroupsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Groups, $obj);
             }
+        }
+
+        if (array_key_exists("VIP",$param) and $param["VIP"] !== null) {
+            $this->VIP = $param["VIP"];
+        }
+
+        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
+            $this->VPort = $param["VPort"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,7 +18,7 @@ namespace TencentCloud\Gaap\V20180529\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RealServerBindSetReq
+ * Information of the bound origin server
  *
  * @method string getRealServerId() Obtain Origin server ID
  * @method void setRealServerId(string $RealServerId) Set Origin server ID
@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP
  * @method integer getRealServerWeight() Obtain Origin server weight
  * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
+ * @method string getRealServerFailoverRole() Obtain Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+ * @method void setRealServerFailoverRole(string $RealServerFailoverRole) Set Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
  */
 class RealServerBindSetReq extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RealServerBindSetReq extends AbstractModel
     public $RealServerWeight;
 
     /**
+     * @var string Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     */
+    public $RealServerFailoverRole;
+
+    /**
      * @param string $RealServerId Origin server ID
      * @param integer $RealServerPort Origin server port
      * @param string $RealServerIP Origin server IP
      * @param integer $RealServerWeight Origin server weight
+     * @param string $RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RealServerBindSetReq extends AbstractModel
 
         if (array_key_exists("RealServerWeight",$param) and $param["RealServerWeight"] !== null) {
             $this->RealServerWeight = $param["RealServerWeight"];
+        }
+
+        if (array_key_exists("RealServerFailoverRole",$param) and $param["RealServerFailoverRole"] !== null) {
+            $this->RealServerFailoverRole = $param["RealServerFailoverRole"];
         }
     }
 }

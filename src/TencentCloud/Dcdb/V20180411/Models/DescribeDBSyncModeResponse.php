@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSyncMode(integer $SyncMode) Set Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
  * @method integer getIsModifying() Obtain Whether a modification is in progress. 1: yes; 0: no.
  * @method void setIsModifying(integer $IsModifying) Set Whether a modification is in progress. 1: yes; 0: no.
+ * @method integer getCurrentSyncMode() Obtain Current sync mode. Valid values: `0` (async), `1` (sync).
+ * @method void setCurrentSyncMode(integer $CurrentSyncMode) Set Current sync mode. Valid values: `0` (async), `1` (sync).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class DescribeDBSyncModeResponse extends AbstractModel
     public $IsModifying;
 
     /**
+     * @var integer Current sync mode. Valid values: `0` (async), `1` (sync).
+     */
+    public $CurrentSyncMode;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeDBSyncModeResponse extends AbstractModel
     /**
      * @param integer $SyncMode Sync mode. 0: async; 1: strong sync; 2: downgradable strong sync
      * @param integer $IsModifying Whether a modification is in progress. 1: yes; 0: no.
+     * @param integer $CurrentSyncMode Current sync mode. Valid values: `0` (async), `1` (sync).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +76,10 @@ class DescribeDBSyncModeResponse extends AbstractModel
 
         if (array_key_exists("IsModifying",$param) and $param["IsModifying"] !== null) {
             $this->IsModifying = $param["IsModifying"];
+        }
+
+        if (array_key_exists("CurrentSyncMode",$param) and $param["CurrentSyncMode"] !== null) {
+            $this->CurrentSyncMode = $param["CurrentSyncMode"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

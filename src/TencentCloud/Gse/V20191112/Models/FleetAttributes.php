@@ -90,6 +90,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSystemDiskInfo(DiskInfo $SystemDiskInfo) Set System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getRelatedCcnInfos() Obtain CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setRelatedCcnInfos(array $RelatedCcnInfos) Set CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class FleetAttributes extends AbstractModel
 {
@@ -205,6 +209,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $SystemDiskInfo;
 
     /**
+     * @var array CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $RelatedCcnInfos;
+
+    /**
      * @param string $AssetId Asset package ID
      * @param string $CreationTime Server fleet creation time
      * @param string $Description Description
@@ -240,6 +250,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param DiskInfo $SystemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $RelatedCcnInfos CCN information
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -340,6 +352,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
         if (array_key_exists("SystemDiskInfo",$param) and $param["SystemDiskInfo"] !== null) {
             $this->SystemDiskInfo = new DiskInfo();
             $this->SystemDiskInfo->deserialize($param["SystemDiskInfo"]);
+        }
+
+        if (array_key_exists("RelatedCcnInfos",$param) and $param["RelatedCcnInfos"] !== null) {
+            $this->RelatedCcnInfos = [];
+            foreach ($param["RelatedCcnInfos"] as $key => $value){
+                $obj = new RelatedCcnInfo();
+                $obj->deserialize($value);
+                array_push($this->RelatedCcnInfos, $obj);
+            }
         }
     }
 }

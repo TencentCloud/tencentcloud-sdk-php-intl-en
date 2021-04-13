@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerPorts(array $RealServerPorts) Set List of origin server ports, which only supports the listeners of version 1.0 and connection group.
  * @method integer getClientIPMethod() Obtain Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
  * @method void setClientIPMethod(integer $ClientIPMethod) Set Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+ * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+ * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class CreateTCPListenersRequest extends AbstractModel
     public $ClientIPMethod;
 
     /**
+     * @var integer Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     */
+    public $FailoverSwitch;
+
+    /**
      * @param string $ListenerName Listener name.
      * @param array $Ports List of listener ports.
      * @param string $Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
@@ -112,6 +119,7 @@ class CreateTCPListenersRequest extends AbstractModel
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
      * @param array $RealServerPorts List of origin server ports, which only supports the listeners of version 1.0 and connection group.
      * @param integer $ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
+     * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
      */
     function __construct()
     {
@@ -168,6 +176,10 @@ class CreateTCPListenersRequest extends AbstractModel
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
         }
     }
 }

@@ -22,24 +22,24 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getOwnerUin() Obtain The `uin` of the resource owner (root account)
- * @method void setOwnerUin(integer $OwnerUin) Set The `uin` of the resource owner (root account)
+ * @method integer getOwnerUin() Obtain The UIN of the resource owner (root account)
+ * @method void setOwnerUin(integer $OwnerUin) Set The UIN of the resource owner (root account)
  * @method integer getAppId() Obtain Application ID
  * @method void setAppId(integer $AppId) Set Application ID
  * @method string getName() Obtain Project name
  * @method void setName(string $Name) Set Project name
- * @method integer getCreatorUin() Obtain Creator `uin`
- * @method void setCreatorUin(integer $CreatorUin) Set Creator `uin`
+ * @method integer getCreatorUin() Obtain Creator UIN
+ * @method void setCreatorUin(integer $CreatorUin) Set Creator UIN
  * @method string getSrcPlat() Obtain Source platform
  * @method void setSrcPlat(string $SrcPlat) Set Source platform
- * @method integer getSrcAppId() Obtain Source `AppId`
- * @method void setSrcAppId(integer $SrcAppId) Set Source `AppId`
- * @method integer getStatus() Obtain Project status. 0: normal; -1: disabled; 3: default project.
- * @method void setStatus(integer $Status) Set Project status. 0: normal; -1: disabled; 3: default project.
+ * @method integer getSrcAppId() Obtain Source APPID
+ * @method void setSrcAppId(integer $SrcAppId) Set Source APPID
+ * @method integer getStatus() Obtain Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
+ * @method void setStatus(integer $Status) Set Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method integer getIsDefault() Obtain Whether it is the default project. 1: yes; 0: no.
- * @method void setIsDefault(integer $IsDefault) Set Whether it is the default project. 1: yes; 0: no.
+ * @method integer getIsDefault() Obtain Whether it is the default project. Valid values: `1` (yes), `0` (no).
+ * @method void setIsDefault(integer $IsDefault) Set Whether it is the default project. Valid values: `1` (yes), `0` (no).
  * @method string getInfo() Obtain Description
  * @method void setInfo(string $Info) Set Description
  */
@@ -51,7 +51,7 @@ class Project extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer The `uin` of the resource owner (root account)
+     * @var integer The UIN of the resource owner (root account)
      */
     public $OwnerUin;
 
@@ -66,7 +66,7 @@ class Project extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Creator `uin`
+     * @var integer Creator UIN
      */
     public $CreatorUin;
 
@@ -76,12 +76,12 @@ class Project extends AbstractModel
     public $SrcPlat;
 
     /**
-     * @var integer Source `AppId`
+     * @var integer Source APPID
      */
     public $SrcAppId;
 
     /**
-     * @var integer Project status. 0: normal; -1: disabled; 3: default project.
+     * @var integer Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
      */
     public $Status;
 
@@ -91,7 +91,7 @@ class Project extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer Whether it is the default project. 1: yes; 0: no.
+     * @var integer Whether it is the default project. Valid values: `1` (yes), `0` (no).
      */
     public $IsDefault;
 
@@ -102,15 +102,15 @@ class Project extends AbstractModel
 
     /**
      * @param integer $ProjectId Project ID
-     * @param integer $OwnerUin The `uin` of the resource owner (root account)
+     * @param integer $OwnerUin The UIN of the resource owner (root account)
      * @param integer $AppId Application ID
      * @param string $Name Project name
-     * @param integer $CreatorUin Creator `uin`
+     * @param integer $CreatorUin Creator UIN
      * @param string $SrcPlat Source platform
-     * @param integer $SrcAppId Source `AppId`
-     * @param integer $Status Project status. 0: normal; -1: disabled; 3: default project.
+     * @param integer $SrcAppId Source APPID
+     * @param integer $Status Project status. Valid values: `0` (normal), `-1` (disabled), `3` (default project).
      * @param string $CreateTime Creation time
-     * @param integer $IsDefault Whether it is the default project. 1: yes; 0: no.
+     * @param integer $IsDefault Whether it is the default project. Valid values: `1` (yes), `0` (no).
      * @param string $Info Description
      */
     function __construct()
