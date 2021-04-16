@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Purchasable configuration details
  *
- * @method string getDevice() Obtain Device type
- * @method void setDevice(string $Device) Set Device type
- * @method string getType() Obtain Purchasable specification description
- * @method void setType(string $Type) Set Purchasable specification description
- * @method string getCdbType() Obtain Instance type
- * @method void setCdbType(string $CdbType) Set Instance type
+ * @method string getDevice() Obtain (Disused) Device type
+ * @method void setDevice(string $Device) Set (Disused) Device type
+ * @method string getType() Obtain (Disused) Purchasable specification description 
+ * @method void setType(string $Type) Set (Disused) Purchasable specification description 
+ * @method string getCdbType() Obtain (Disused) Instance type 
+ * @method void setCdbType(string $CdbType) Set (Disused) Instance type 
  * @method integer getMemory() Obtain Memory size in MB
  * @method void setMemory(integer $Memory) Set Memory size in MB
  * @method integer getCpu() Obtain CPU core count
@@ -44,25 +44,33 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIops(integer $Iops) Set IOs per second
  * @method string getInfo() Obtain Application scenario description
  * @method void setInfo(string $Info) Set Application scenario description
- * @method integer getStatus() Obtain Status value
- * @method void setStatus(integer $Status) Set Status value
- * @method integer getTag() Obtain Tag value
- * @method void setTag(integer $Tag) Set Tag value
+ * @method integer getStatus() Obtain Status. Value `0` indicates that this specification is purchasable.
+ * @method void setStatus(integer $Status) Set Status. Value `0` indicates that this specification is purchasable.
+ * @method integer getTag() Obtain (Disused) Tag value
+ * @method void setTag(integer $Tag) Set (Disused) Tag value
+ * @method string getDeviceType() Obtain Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setDeviceType(string $DeviceType) Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getDeviceTypeName() Obtain Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setDeviceTypeName(string $DeviceTypeName) Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class SellConfig extends AbstractModel
 {
     /**
-     * @var string Device type
+     * @var string (Disused) Device type
      */
     public $Device;
 
     /**
-     * @var string Purchasable specification description
+     * @var string (Disused) Purchasable specification description 
      */
     public $Type;
 
     /**
-     * @var string Instance type
+     * @var string (Disused) Instance type 
      */
     public $CdbType;
 
@@ -112,19 +120,31 @@ class SellConfig extends AbstractModel
     public $Info;
 
     /**
-     * @var integer Status value
+     * @var integer Status. Value `0` indicates that this specification is purchasable.
      */
     public $Status;
 
     /**
-     * @var integer Tag value
+     * @var integer (Disused) Tag value
      */
     public $Tag;
 
     /**
-     * @param string $Device Device type
-     * @param string $Type Purchasable specification description
-     * @param string $CdbType Instance type
+     * @var string Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $DeviceType;
+
+    /**
+     * @var string Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $DeviceTypeName;
+
+    /**
+     * @param string $Device (Disused) Device type
+     * @param string $Type (Disused) Purchasable specification description 
+     * @param string $CdbType (Disused) Instance type 
      * @param integer $Memory Memory size in MB
      * @param integer $Cpu CPU core count
      * @param integer $VolumeMin Minimum disk size in GB
@@ -134,8 +154,12 @@ class SellConfig extends AbstractModel
      * @param integer $Qps Queries per second
      * @param integer $Iops IOs per second
      * @param string $Info Application scenario description
-     * @param integer $Status Status value
-     * @param integer $Tag Tag value
+     * @param integer $Status Status. Value `0` indicates that this specification is purchasable.
+     * @param integer $Tag (Disused) Tag value
+     * @param string $DeviceType Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -204,6 +228,14 @@ class SellConfig extends AbstractModel
 
         if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
             $this->Tag = $param["Tag"];
+        }
+
+        if (array_key_exists("DeviceType",$param) and $param["DeviceType"] !== null) {
+            $this->DeviceType = $param["DeviceType"];
+        }
+
+        if (array_key_exists("DeviceTypeName",$param) and $param["DeviceTypeName"] !== null) {
+            $this->DeviceTypeName = $param["DeviceTypeName"];
         }
     }
 }

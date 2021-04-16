@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
  * @method void setInstanceId(string $InstanceId) Set ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
- * @method integer getOffset() Obtain Paginated query offset
- * @method void setOffset(integer $Offset) Set Paginated query offset
- * @method integer getLimit() Obtain The number of results per page in paginated queries
- * @method void setLimit(integer $Limit) Set The number of results per page in paginated queries
+ * @method integer getOffset() Obtain Paginated query offset. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: `0`.
+ * @method integer getLimit() Obtain Number of results per page. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set Number of results per page. Default value: `20`.
  */
 class DescribeCloneListRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeCloneListRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Paginated query offset
+     * @var integer Paginated query offset. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer The number of results per page in paginated queries
+     * @var integer Number of results per page. Default value: `20`.
      */
     public $Limit;
 
     /**
      * @param string $InstanceId ID of the original instance. This parameter is used to query the clone task list of a specific original instance.
-     * @param integer $Offset Paginated query offset
-     * @param integer $Limit The number of results per page in paginated queries
+     * @param integer $Offset Paginated query offset. Default value: `0`.
+     * @param integer $Limit Number of results per page. Default value: `20`.
      */
     function __construct()
     {

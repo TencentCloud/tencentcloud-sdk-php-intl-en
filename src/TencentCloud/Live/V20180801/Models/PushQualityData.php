@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaAudioRate(integer $MetaAudioRate) Set Audio bitrate in `metadata` in Kbps.
  * @method integer getMateFps() Obtain Frame rate in `metadata`.
  * @method void setMateFps(integer $MateFps) Set Frame rate in `metadata`.
+ * @method string getStreamParam() Obtain Push parameter
+ * @method void setStreamParam(string $StreamParam) Set Push parameter
  */
 class PushQualityData extends AbstractModel
 {
@@ -157,6 +159,11 @@ class PushQualityData extends AbstractModel
     public $MateFps;
 
     /**
+     * @var string Push parameter
+     */
+    public $StreamParam;
+
+    /**
      * @param string $Time Data time in the format of `%Y-%m-%d %H:%M:%S.%ms` and accurate down to the millisecond level.
      * @param string $PushDomain Push domain name.
      * @param string $AppName Push path.
@@ -176,6 +183,7 @@ class PushQualityData extends AbstractModel
      * @param integer $MetaVideoRate Video bitrate in `metadata` in Kbps.
      * @param integer $MetaAudioRate Audio bitrate in `metadata` in Kbps.
      * @param integer $MateFps Frame rate in `metadata`.
+     * @param string $StreamParam Push parameter
      */
     function __construct()
     {
@@ -264,6 +272,10 @@ class PushQualityData extends AbstractModel
 
         if (array_key_exists("MateFps",$param) and $param["MateFps"] !== null) {
             $this->MateFps = $param["MateFps"];
+        }
+
+        if (array_key_exists("StreamParam",$param) and $param["StreamParam"] !== null) {
+            $this->StreamParam = $param["StreamParam"];
         }
     }
 }

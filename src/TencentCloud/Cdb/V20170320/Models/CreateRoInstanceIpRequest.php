@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
  * @method string getUniqSubnetId() Obtain Subnet descriptor, such as "subnet-1typ0s7d".
  * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet descriptor, such as "subnet-1typ0s7d".
- * @method string getUniqVpcId() Obtain VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
- * @method void setUniqVpcId(string $UniqVpcId) Set VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+ * @method string getUniqVpcId() Obtain VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
  */
 class CreateRoInstanceIpRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateRoInstanceIpRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var string VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+     * @var string VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
      */
     public $UniqVpcId;
 
     /**
      * @param string $InstanceId Read-only instance ID in the format of "cdbro-3i70uj0k". Its value is the same as the read-only instance ID in the TencentDB Console.
      * @param string $UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d".
-     * @param string $UniqVpcId VPC descriptor, such as "vpc-xxx". If this field is passed in, `UniqSubnetId` will be required.
+     * @param string $UniqVpcId VPC descriptor, such as "vpc-a23yt67j". If this field is passed in, `UniqSubnetId` will be required.
      */
     function __construct()
     {

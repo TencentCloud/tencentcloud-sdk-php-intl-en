@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
  * @method array getResourceTags() Obtain Information of the cloned instance tag
  * @method void setResourceTags(array $ResourceTags) Set Information of the cloned instance tag
- * @method integer getCpu() Obtain CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
- * @method void setCpu(integer $Cpu) Set CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+ * @method integer getCpu() Obtain The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
+ * @method void setCpu(integer $Cpu) Set The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
  * @method integer getProtectMode() Obtain Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
  * @method void setProtectMode(integer $ProtectMode) Set Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
  * @method integer getDeployMode() Obtain Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
@@ -110,7 +110,7 @@ class CreateCloneInstanceRequest extends AbstractModel
     public $ResourceTags;
 
     /**
-     * @var integer CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+     * @var integer The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
      */
     public $Cpu;
 
@@ -156,7 +156,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
      * @param string $InstanceName Name of the cloned instance
      * @param array $SecurityGroup Security group parameter, which can be obtained by the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API
      * @param array $ResourceTags Information of the cloned instance tag
-     * @param integer $Cpu CPU core quantity of the cloned instance, which is equal to or larger than that of the original instance
+     * @param integer $Cpu The number of CPU cores of the cloned instance. It should be equal to (by default) or larger than that of the original instance.
      * @param integer $ProtectMode Data replication mode. Valid values: 0 (async), 1 (semi-sync), 2 (strong sync). Default value: 0.
      * @param integer $DeployMode Multi-AZ or single-AZ. Valid values: 0 (single-AZ), 1 (multi-AZ). Default value: 0.
      * @param string $SlaveZone Availability zone information of replica 1 of the cloned instance, which is the same as the value of `Zone` of the original instance by default

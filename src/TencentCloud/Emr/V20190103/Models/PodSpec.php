@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpuType(string $CpuType) Set EKS cluster - CPU type. Valid values: "intel", "amd"
  * @method array getPodVolumes() Obtain Pod node data directory mounting information.
  * @method void setPodVolumes(array $PodVolumes) Set Pod node data directory mounting information.
+ * @method integer getIsDynamicSpec() Obtain Whether floating specification is used. `1`: yes; `0`: no
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set Whether floating specification is used. `1`: yes; `0`: no
+ * @method DynamicPodSpec getDynamicPodSpec() Obtain Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class PodSpec extends AbstractModel
 {
@@ -80,6 +86,17 @@ class PodSpec extends AbstractModel
     public $PodVolumes;
 
     /**
+     * @var integer Whether floating specification is used. `1`: yes; `0`: no
+     */
+    public $IsDynamicSpec;
+
+    /**
+     * @var DynamicPodSpec Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DynamicPodSpec;
+
+    /**
      * @param string $ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
      * @param string $ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
      * @param string $NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
@@ -88,6 +105,9 @@ class PodSpec extends AbstractModel
      * @param array $DataVolumes Mount point of resources for the host. The specified mount point corresponds to the host path and is used as the data storage directory in the pod. (This parameter has been disused)
      * @param string $CpuType EKS cluster - CPU type. Valid values: "intel", "amd"
      * @param array $PodVolumes Pod node data directory mounting information.
+     * @param integer $IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+     * @param DynamicPodSpec $DynamicPodSpec Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -137,6 +157,15 @@ class PodSpec extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PodVolumes, $obj);
             }
+        }
+
+        if (array_key_exists("IsDynamicSpec",$param) and $param["IsDynamicSpec"] !== null) {
+            $this->IsDynamicSpec = $param["IsDynamicSpec"];
+        }
+
+        if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
+            $this->DynamicPodSpec = new DynamicPodSpec();
+            $this->DynamicPodSpec->deserialize($param["DynamicPodSpec"]);
         }
     }
 }

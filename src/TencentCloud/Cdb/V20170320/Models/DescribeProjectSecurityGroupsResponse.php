@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() Obtain Security group details.
  * @method void setGroups(array $Groups) Set Security group details.
+ * @method integer getTotalCount() Obtain Number of security group rules
+ * @method void setTotalCount(integer $TotalCount) Set Number of security group rules
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
+     * @var integer Number of security group rules
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $Groups Security group details.
+     * @param integer $TotalCount Number of security group rules
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +69,10 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Groups, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

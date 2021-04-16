@@ -168,6 +168,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsDynamicSpec() Obtain Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsDynamicSpec(integer $IsDynamicSpec) Set Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDynamicPodSpec() Obtain Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDynamicPodSpec(string $DynamicPodSpec) Set Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -394,6 +402,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HardwareResourceType;
 
     /**
+     * @var integer Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsDynamicSpec;
+
+    /**
+     * @var string Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DynamicPodSpec;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -468,6 +488,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $AutoFlag Wether the node is auto-scaling. 0 means common node. 1 means auto-scaling node.
      * @param string $HardwareResourceType Resource type. Valid values: host, pod
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -639,6 +663,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HardwareResourceType",$param) and $param["HardwareResourceType"] !== null) {
             $this->HardwareResourceType = $param["HardwareResourceType"];
+        }
+
+        if (array_key_exists("IsDynamicSpec",$param) and $param["IsDynamicSpec"] !== null) {
+            $this->IsDynamicSpec = $param["IsDynamicSpec"];
+        }
+
+        if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
+            $this->DynamicPodSpec = $param["DynamicPodSpec"];
         }
     }
 }

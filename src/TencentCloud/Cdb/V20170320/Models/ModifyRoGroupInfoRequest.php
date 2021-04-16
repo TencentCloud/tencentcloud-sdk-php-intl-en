@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoGroupInfo(RoGroupAttr $RoGroupInfo) Set RO group details.
  * @method array getRoWeightValues() Obtain Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
  * @method void setRoWeightValues(array $RoWeightValues) Set Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
- * @method integer getIsBalanceRoLoad() Obtain Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
- * @method void setIsBalanceRoLoad(integer $IsBalanceRoLoad) Set Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+ * @method integer getIsBalanceRoLoad() Obtain Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+ * @method void setIsBalanceRoLoad(integer $IsBalanceRoLoad) Set Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
  */
 class ModifyRoGroupInfoRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
     public $RoWeightValues;
 
     /**
-     * @var integer Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+     * @var integer Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
      */
     public $IsBalanceRoLoad;
 
@@ -55,7 +55,7 @@ class ModifyRoGroupInfoRequest extends AbstractModel
      * @param string $RoGroupId RO group ID.
      * @param RoGroupAttr $RoGroupInfo RO group details.
      * @param array $RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
-     * @param integer $IsBalanceRoLoad Whether to rebalance the loads of RO instances in the RO group. Supported values include `1` (yes) and `0` (no). The default value is `0`. Please note that if this value is set to `1`, connections to the RO instances in the RO group will be interrupted transiently; therefore, you should ensure that your application can reconnect to the databases.
+     * @param integer $IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
      */
     function __construct()
     {

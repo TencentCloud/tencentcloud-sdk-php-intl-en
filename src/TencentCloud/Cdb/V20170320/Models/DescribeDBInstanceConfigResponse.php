@@ -26,10 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployMode(integer $DeployMode) Set Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
  * @method string getZone() Obtain Instance AZ information in the format of "ap-shanghai-1".
  * @method void setZone(string $Zone) Set Instance AZ information in the format of "ap-shanghai-1".
- * @method SlaveConfig getSlaveConfig() Obtain Configuration information of the secondary database.
- * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configuration information of the secondary database.
- * @method BackupConfig getBackupConfig() Obtain Configuration information of secondary database 2 of a strong sync instance.
- * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configuration information of secondary database 2 of a strong sync instance.
+ * @method SlaveConfig getSlaveConfig() Obtain Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setSlaveConfig(SlaveConfig $SlaveConfig) Set Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method BackupConfig getBackupConfig() Obtain Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setBackupConfig(BackupConfig $BackupConfig) Set Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method boolean getSwitched() Obtain This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+ * @method void setSwitched(boolean $Switched) Set This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -51,14 +57,21 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
     public $Zone;
 
     /**
-     * @var SlaveConfig Configuration information of the secondary database.
+     * @var SlaveConfig Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $SlaveConfig;
 
     /**
-     * @var BackupConfig Configuration information of secondary database 2 of a strong sync instance.
+     * @var BackupConfig Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $BackupConfig;
+
+    /**
+     * @var boolean This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
+     */
+    public $Switched;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -69,8 +82,11 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
      * @param integer $ProtectMode Data protection mode of the primary instance. Value range: 0 (async replication), 1 (semi-sync replication), 2 (strong sync replication).
      * @param integer $DeployMode Master instance deployment mode. Value range: 0 (single-AZ), 1 (multi-AZ)
      * @param string $Zone Instance AZ information in the format of "ap-shanghai-1".
-     * @param SlaveConfig $SlaveConfig Configuration information of the secondary database.
-     * @param BackupConfig $BackupConfig Configuration information of secondary database 2 of a strong sync instance.
+     * @param SlaveConfig $SlaveConfig Configurations of the replica node
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param BackupConfig $BackupConfig Configurations of the second replica node of a strong-sync instance
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param boolean $Switched This parameter is only available for multi-AZ instances. It indicates whether the source AZ is the same as the one specified upon purchase. `true`: not the same, `false`: the same.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -106,6 +122,10 @@ class DescribeDBInstanceConfigResponse extends AbstractModel
         if (array_key_exists("BackupConfig",$param) and $param["BackupConfig"] !== null) {
             $this->BackupConfig = new BackupConfig();
             $this->BackupConfig->deserialize($param["BackupConfig"]);
+        }
+
+        if (array_key_exists("Switched",$param) and $param["Switched"] !== null) {
+            $this->Switched = $param["Switched"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

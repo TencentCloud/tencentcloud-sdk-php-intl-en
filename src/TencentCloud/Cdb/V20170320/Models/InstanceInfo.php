@@ -118,10 +118,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setZoneId(integer $ZoneId) Set AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getInstanceNodes() Obtain The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getInstanceNodes() Obtain Number of nodes
+ * @method void setInstanceNodes(integer $InstanceNodes) Set Number of nodes
  */
 class InstanceInfo extends AbstractModel
 {
@@ -339,8 +337,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ZoneId;
 
     /**
-     * @var integer The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of nodes
      */
     public $InstanceNodes;
 
@@ -394,8 +391,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ZoneId AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $InstanceNodes The number of nodes
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $InstanceNodes Number of nodes
      */
     function __construct()
     {

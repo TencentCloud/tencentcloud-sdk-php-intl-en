@@ -24,12 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Parameter template ID.
  * @method string getName() Obtain Parameter template name.
  * @method void setName(string $Name) Set Parameter template name.
- * @method string getEngineVersion() Obtain Parameter template description
- * @method void setEngineVersion(string $EngineVersion) Set Parameter template description
+ * @method string getEngineVersion() Obtain Database engine version specified in the parameter template
+ * @method void setEngineVersion(string $EngineVersion) Set Database engine version specified in the parameter template
  * @method integer getTotalCount() Obtain Number of parameters in the parameter template
  * @method void setTotalCount(integer $TotalCount) Set Number of parameters in the parameter template
  * @method array getItems() Obtain Parameter details
  * @method void setItems(array $Items) Set Parameter details
+ * @method string getDescription() Obtain Parameter template description
+ * @method void setDescription(string $Description) Set Parameter template description
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -46,7 +48,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Name;
 
     /**
-     * @var string Parameter template description
+     * @var string Database engine version specified in the parameter template
      */
     public $EngineVersion;
 
@@ -61,6 +63,11 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var string Parameter template description
+     */
+    public $Description;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -68,9 +75,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     /**
      * @param integer $TemplateId Parameter template ID.
      * @param string $Name Parameter template name.
-     * @param string $EngineVersion Parameter template description
+     * @param string $EngineVersion Database engine version specified in the parameter template
      * @param integer $TotalCount Number of parameters in the parameter template
      * @param array $Items Parameter details
+     * @param string $Description Parameter template description
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -109,6 +117,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

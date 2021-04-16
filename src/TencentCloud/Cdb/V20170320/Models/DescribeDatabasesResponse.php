@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method array getItems() Obtain Information of an instance.
  * @method void setItems(array $Items) Set Information of an instance.
+ * @method array getDatabaseList() Obtain Database name and character set
+ * @method void setDatabaseList(array $DatabaseList) Set Database name and character set
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class DescribeDatabasesResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var array Database name and character set
+     */
+    public $DatabaseList;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeDatabasesResponse extends AbstractModel
     /**
      * @param integer $TotalCount Number of eligible instances.
      * @param array $Items Information of an instance.
+     * @param array $DatabaseList Database name and character set
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeDatabasesResponse extends AbstractModel
 
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = $param["Items"];
+        }
+
+        if (array_key_exists("DatabaseList",$param) and $param["DatabaseList"] !== null) {
+            $this->DatabaseList = [];
+            foreach ($param["DatabaseList"] as $key => $value){
+                $obj = new DatabasesWithCharacterLists();
+                $obj->deserialize($value);
+                array_push($this->DatabaseList, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
