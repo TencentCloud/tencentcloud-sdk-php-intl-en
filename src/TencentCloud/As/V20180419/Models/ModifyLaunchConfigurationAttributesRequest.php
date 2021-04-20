@@ -72,10 +72,10 @@ To modify it or even its subfield, you should specify all the subfields again.
  * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
- * @method SystemDisk getSystemDisk() Obtain 
- * @method void setSystemDisk(SystemDisk $SystemDisk) Set 
- * @method array getDataDisks() Obtain 
- * @method void setDataDisks(array $DataDisks) Set 
+ * @method SystemDisk getSystemDisk() Obtain Instance system disk configurations
+ * @method void setSystemDisk(SystemDisk $SystemDisk) Set Instance system disk configurations
+ * @method array getDataDisks() Obtain Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
+ * @method void setDataDisks(array $DataDisks) Set Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -154,12 +154,12 @@ To modify it or even its subfield, you should specify all the subfields again.
     public $DiskTypePolicy;
 
     /**
-     * @var SystemDisk 
+     * @var SystemDisk Instance system disk configurations
      */
     public $SystemDisk;
 
     /**
-     * @var array 
+     * @var array Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
      */
     public $DataDisks;
 
@@ -190,8 +190,8 @@ To modify it or even its subfield, you should specify all the subfields again.
      * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
-     * @param SystemDisk $SystemDisk 
-     * @param array $DataDisks 
+     * @param SystemDisk $SystemDisk Instance system disk configurations
+     * @param array $DataDisks Instance data disk configurations. Up to 11 data disks can be specified and will be collectively modified. Please provide all the new values for the modification.
      */
     function __construct()
     {

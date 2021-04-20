@@ -26,20 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) Set Policy name, which can contain up to 20 characters
  * @method string getMonitorType() Obtain Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
  * @method void setMonitorType(string $MonitorType) Set Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
- * @method string getNamespace() Obtain Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
- * @method void setNamespace(string $Namespace) Set Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+ * @method string getNamespace() Obtain Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
+ * @method void setNamespace(string $Namespace) Set Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
  * @method string getRemark() Obtain Remarks with up to 100 letters, digits, underscores, and hyphens
  * @method void setRemark(string $Remark) Set Remarks with up to 100 letters, digits, underscores, and hyphens
  * @method integer getEnable() Obtain Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
  * @method void setEnable(integer $Enable) Set Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
- * @method integer getProjectId() Obtain Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
- * @method void setProjectId(integer $ProjectId) Set Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
- * @method AlarmPolicyCondition getCondition() Obtain Metric trigger condition
- * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition
- * @method AlarmPolicyEventCondition getEventCondition() Obtain Event trigger condition
- * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) Set Event trigger condition
- * @method array getNoticeIds() Obtain List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
- * @method void setNoticeIds(array $NoticeIds) Set List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+ * @method integer getProjectId() Obtain Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+ * @method integer getConditionTemplateId() Obtain ID of trigger condition template. This parameter can be left empty.
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) Set ID of trigger condition template. This parameter can be left empty.
+ * @method AlarmPolicyCondition getCondition() Obtain Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+ * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+ * @method AlarmPolicyEventCondition getEventCondition() Obtain Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+ * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) Set Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+ * @method array getNoticeIds() Obtain List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+ * @method void setNoticeIds(array $NoticeIds) Set List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
  * @method array getTriggerTasks() Obtain Triggered task list
  * @method void setTriggerTasks(array $TriggerTasks) Set Triggered task list
  */
@@ -61,7 +63,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $MonitorType;
 
     /**
-     * @var string Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+     * @var string Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
      */
     public $Namespace;
 
@@ -76,22 +78,27 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $Enable;
 
     /**
-     * @var integer Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
+     * @var integer Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
      */
     public $ProjectId;
 
     /**
-     * @var AlarmPolicyCondition Metric trigger condition
+     * @var integer ID of trigger condition template. This parameter can be left empty.
+     */
+    public $ConditionTemplateId;
+
+    /**
+     * @var AlarmPolicyCondition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
      */
     public $Condition;
 
     /**
-     * @var AlarmPolicyEventCondition Event trigger condition
+     * @var AlarmPolicyEventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
      */
     public $EventCondition;
 
     /**
-     * @var array List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+     * @var array List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public $NoticeIds;
 
@@ -104,13 +111,14 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param string $Module Value fixed at "monitor"
      * @param string $PolicyName Policy name, which can contain up to 20 characters
      * @param string $MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
-     * @param string $Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+     * @param string $Namespace Type of alarm policy, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). An example value is `cvm_device`.
      * @param string $Remark Remarks with up to 100 letters, digits, underscores, and hyphens
      * @param integer $Enable Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
-     * @param integer $ProjectId Project ID. Valid values: -1 (no project), 0 (default project). Default value: -1. This parameter can be left empty
-     * @param AlarmPolicyCondition $Condition Metric trigger condition
-     * @param AlarmPolicyEventCondition $EventCondition Event trigger condition
-     * @param array $NoticeIds List of notification rule IDs, which is obtained through the `DescribeAlarmNotices` API
+     * @param integer $ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
+     * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     * @param AlarmPolicyCondition $Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+     * @param AlarmPolicyEventCondition $EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+     * @param array $NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      * @param array $TriggerTasks Triggered task list
      */
     function __construct()
@@ -152,6 +160,10 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("ConditionTemplateId",$param) and $param["ConditionTemplateId"] !== null) {
+            $this->ConditionTemplateId = $param["ConditionTemplateId"];
         }
 
         if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {

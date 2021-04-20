@@ -30,30 +30,56 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyName(string $PolicyName) Set Fuzzy search by policy name
  * @method array getMonitorTypes() Obtain Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
  * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
- * @method array getNamespaces() Obtain Filter by namespace
- * @method void setNamespaces(array $Namespaces) Set Filter by namespace
- * @method string getDimensions() Obtain Alarm object list
- * @method void setDimensions(string $Dimensions) Set Alarm object list
- * @method array getReceiverUids() Obtain Search by recipient
- * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient
- * @method array getReceiverGroups() Obtain Search by recipient group
- * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group
+ * @method array getNamespaces() Obtain Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+ * @method void setNamespaces(array $Namespaces) Set Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+ * @method string getDimensions() Obtain Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+ * @method void setDimensions(string $Dimensions) Set Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+ * @method array getReceiverUids() Obtain Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+ * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+ * @method array getReceiverGroups() Obtain Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+ * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
  * @method array getPolicyType() Obtain Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
  * @method void setPolicyType(array $PolicyType) Set Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
- * @method string getField() Obtain Sort by field
- * @method void setField(string $Field) Set Sort by field
+ * @method string getField() Obtain Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
+ * @method void setField(string $Field) Set Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
  * @method string getOrder() Obtain Sort order. Valid values: ASC (ascending), DESC (descending)
  * @method void setOrder(string $Order) Set Sort order. Valid values: ASC (ascending), DESC (descending)
- * @method array getProjectIds() Obtain Project ID array
- * @method void setProjectIds(array $ProjectIds) Set Project ID array
- * @method array getNoticeIds() Obtain Alarm notification ID list
- * @method void setNoticeIds(array $NoticeIds) Set Alarm notification ID list
+ * @method array getProjectIds() Obtain ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
+ * @method void setProjectIds(array $ProjectIds) Set ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
+ * @method array getNoticeIds() Obtain ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+ * @method void setNoticeIds(array $NoticeIds) Set ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
  * @method array getRuleTypes() Obtain Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
  * @method void setRuleTypes(array $RuleTypes) Set Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
- * @method array getEnable() Obtain Status. Valid values: 1 (enabled), 0 (disabled)
- * @method void setEnable(array $Enable) Set Status. Valid values: 1 (enabled), 0 (disabled)
- * @method integer getNotBindingNoticeRule() Obtain Indicates whether the notification rule is configured. 1: not configured; 0: configured
- * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) Set Indicates whether the notification rule is configured. 1: not configured; 0: configured
+ * @method array getEnable() Obtain Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
+ * @method void setEnable(array $Enable) Set Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
+ * @method integer getNotBindingNoticeRule() Obtain If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
+ * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) Set If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -83,22 +109,33 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $MonitorTypes;
 
     /**
-     * @var array Filter by namespace
+     * @var array Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public $Namespaces;
 
     /**
-     * @var string Alarm object list
+     * @var string Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public $Dimensions;
 
     /**
-     * @var array Search by recipient
+     * @var array Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
      */
     public $ReceiverUids;
 
     /**
-     * @var array Search by recipient group
+     * @var array Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
      */
     public $ReceiverGroups;
 
@@ -108,7 +145,7 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $PolicyType;
 
     /**
-     * @var string Sort by field
+     * @var string Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
      */
     public $Field;
 
@@ -118,12 +155,14 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var array Project ID array
+     * @var array ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
      */
     public $ProjectIds;
 
     /**
-     * @var array Alarm notification ID list
+     * @var array ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      */
     public $NoticeIds;
 
@@ -133,12 +172,12 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $RuleTypes;
 
     /**
-     * @var array Status. Valid values: 1 (enabled), 0 (disabled)
+     * @var array Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      */
     public $Enable;
 
     /**
-     * @var integer Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     * @var integer If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      */
     public $NotBindingNoticeRule;
 
@@ -148,18 +187,31 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
      * @param string $PolicyName Fuzzy search by policy name
      * @param array $MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
-     * @param array $Namespaces Filter by namespace
-     * @param string $Dimensions Alarm object list
-     * @param array $ReceiverUids Search by recipient
-     * @param array $ReceiverGroups Search by recipient group
+     * @param array $Namespaces Filter by namespace. For the values of different policy types, please see:
+[Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+     * @param string $Dimensions Alarm object list. The outer array corresponds to multiple instances.
+Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
+[
+	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+	...
+]
+For the samples for different Tencent Cloud services, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+     * @param array $ReceiverUids Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+     * @param array $ReceiverGroups Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
+[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
      * @param array $PolicyType Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
-     * @param string $Field Sort by field
+     * @param string $Field Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
      * @param string $Order Sort order. Valid values: ASC (ascending), DESC (descending)
-     * @param array $ProjectIds Project ID array
-     * @param array $NoticeIds Alarm notification ID list
+     * @param array $ProjectIds ID array of the policy project, which can be viewed on the following page:
+[Project Management](https://console.cloud.tencent.com/project)
+     * @param array $NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
+[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      * @param array $RuleTypes Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
-     * @param array $Enable Status. Valid values: 1 (enabled), 0 (disabled)
-     * @param integer $NotBindingNoticeRule Indicates whether the notification rule is configured. 1: not configured; 0: configured
+     * @param array $Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
+     * @param integer $NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Trigger condition of alarm policy
  *
- * @method string getMetricName() Obtain Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMetricName(string $MetricName) Set Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPeriod() Obtain Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPeriod(integer $Period) Set Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMetricName() Obtain Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setMetricName(string $MetricName) Set Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getPeriod() Obtain Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setPeriod(integer $Period) Set Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getOperator() Obtain Operator
 intelligent = intelligent detection without threshold
 eq = equal to
@@ -36,17 +36,18 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setOperator(string $Operator) Set Operator
 intelligent = intelligent detection without threshold
 eq = equal to
@@ -55,25 +56,26 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getContinuePeriod() Obtain Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContinuePeriod(integer $ContinuePeriod) Set Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getValue() Obtain Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setValue(string $Value) Set Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getContinuePeriod() Obtain Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setContinuePeriod(integer $ContinuePeriod) Set Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method integer getNoticeFrequency() Obtain Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNoticeFrequency(integer $NoticeFrequency) Set Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
@@ -94,22 +96,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUnit(string $Unit) Set Unit, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRuleType() Obtain Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRuleType(string $RuleType) Set Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleType() Obtain Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setRuleType(string $RuleType) Set Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class AlarmPolicyRule extends AbstractModel
 {
     /**
-     * @var string Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $MetricName;
 
     /**
-     * @var integer Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Period;
 
@@ -122,29 +124,30 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Operator;
 
     /**
-     * @var string Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $Value;
 
     /**
-     * @var integer Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $ContinuePeriod;
 
@@ -179,16 +182,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Unit;
 
     /**
-     * @var string Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $RuleType;
 
     /**
-     * @param string $MetricName Metric name
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Period Statistical period in seconds
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $Operator Operator
 intelligent = intelligent detection without threshold
 eq = equal to
@@ -197,21 +200,22 @@ gt = greater than
 le = less than or equal to
 lt = less than
 ne = not equal to
-day_increase = daily increase
-day_decrease = daily decrease
-day_wave = daily fluctuation
-week_increase = weekly increase
-week_decrease = weekly decrease
-week_wave = weekly fluctuation
-cycle_increase = periodical increase
-cycle_decrease = periodical decrease
-cycle_wave = periodical fluctuation
+day_increase = day-on-day increase
+day_decrease = day-on-day decrease
+day_wave = day-on-day fluctuation
+week_increase = week-on-week increase
+week_decrease = week-on-week decrease
+week_wave = week-on-week fluctuation
+cycle_increase = cyclical increase
+cycle_decrease = cyclical decrease
+cycle_wave = cyclical fluctuation
 re = regex match
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Value Threshold
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ContinuePeriod Number of cycles for continuous notification. Valid values: 1 (1 cycle), 2 (2 cycles), and so on.
-Note: this field may return null, indicating that no valid values can be obtained.
+The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $Value Threshold. The valid value range can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $ContinuePeriod Number of periods. `1`: continue for one period; `2`: continue for two periods; and so on. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $NoticeFrequency Alarm interval in seconds. Valid values: 0 (do not repeat), 300 (alarm once every 5 minutes), 600 (alarm once every 10 minutes), 900 (alarm once every 15 minutes), 1800 (alarm once every 30 minutes), 3600 (alarm once every hour), 7200 (alarm once every 2 hours), 10800 (alarm once every 3 hours), 21600 (alarm once every 6 hours),  43200 (alarm once every 12 hours), 86400 (alarm once every day)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IsPowerNotice Whether the alarm frequency increases exponentially. Valid values: 0 (no), 1 (yes)
@@ -222,8 +226,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Unit Unit, which is used in the output parameter
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RuleType Trigger condition type. Valid values: STATIC (static threshold), DYNAMIC (dynamic threshold)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {

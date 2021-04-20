@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProductName(array $ProductName) Set Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
  * @method array getEventName() Obtain Filter by product name. For example, "guest_reboot" indicates server restart.
  * @method void setEventName(array $EventName) Set Filter by product name. For example, "guest_reboot" indicates server restart.
- * @method array getInstanceId() Obtain Affected object, such as ins-19708ino.
- * @method void setInstanceId(array $InstanceId) Set Affected object, such as ins-19708ino.
+ * @method array getInstanceId() Obtain Affected object, such as "ins-19708ino"
+ * @method void setInstanceId(array $InstanceId) Set Affected object, such as "ins-19708ino"
  * @method array getDimensions() Obtain Filter by dimension, such as by public IP: 10.0.0.1.
  * @method void setDimensions(array $Dimensions) Set Filter by dimension, such as by public IP: 10.0.0.1.
- * @method array getRegionList() Obtain Filter by region, such as by gz.
- * @method void setRegionList(array $RegionList) Set Filter by region, such as by gz.
+ * @method array getRegionList() Obtain Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
+ * @method void setRegionList(array $RegionList) Set Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
  * @method array getType() Obtain Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
  * @method void setType(array $Type) Set Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
  * @method array getStatus() Obtain Filter by event status. Valid values: ["recover","alarm","-"], which indicate that an event has been recovered, has not been recovered, and has no status respectively.
@@ -69,7 +69,7 @@ class DescribeProductEventListRequest extends AbstractModel
     public $EventName;
 
     /**
-     * @var array Affected object, such as ins-19708ino.
+     * @var array Affected object, such as "ins-19708ino"
      */
     public $InstanceId;
 
@@ -79,7 +79,7 @@ class DescribeProductEventListRequest extends AbstractModel
     public $Dimensions;
 
     /**
-     * @var array Filter by region, such as by gz.
+     * @var array Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
      */
     public $RegionList;
 
@@ -132,9 +132,9 @@ class DescribeProductEventListRequest extends AbstractModel
      * @param string $Module API component name. It is fixed to monitor.
      * @param array $ProductName Filter by product type. For example, 'cvm' indicates Cloud Virtual Machine.
      * @param array $EventName Filter by product name. For example, "guest_reboot" indicates server restart.
-     * @param array $InstanceId Affected object, such as ins-19708ino.
+     * @param array $InstanceId Affected object, such as "ins-19708ino"
      * @param array $Dimensions Filter by dimension, such as by public IP: 10.0.0.1.
-     * @param array $RegionList Filter by region, such as by gz.
+     * @param array $RegionList Region filter parameter for service events, such as `gz`. For region abbreviations, please see [Region List](https://intl.cloud.tencent.com/document/product/248/50863?from_cn_redirect=1)
      * @param array $Type Filter by event type. Valid values: ["status_change","abnormal"], which indicate events whose statuses have changed and events with exceptions respectively.
      * @param array $Status Filter by event status. Valid values: ["recover","alarm","-"], which indicate that an event has been recovered, has not been recovered, and has no status respectively.
      * @param array $Project Filter by project ID.

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: 1–100. Default value: 20
  * @method string getOrder() Obtain Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
  * @method void setOrder(string $Order) Set Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
- * @method integer getStartTime() Obtain Start time, which is the timestamp exactly one day ago
- * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp exactly one day ago
- * @method integer getEndTime() Obtain End time, which is the current timestamp by default
- * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp by default
+ * @method integer getStartTime() Obtain Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+ * @method void setStartTime(integer $StartTime) Set Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+ * @method integer getEndTime() Obtain End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+ * @method void setEndTime(integer $EndTime) Set End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
  * @method array getMonitorTypes() Obtain Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
  * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
  * @method string getAlarmObject() Obtain Filter by alarm object. Fuzzy search with string is supported
@@ -80,12 +80,12 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var integer Start time, which is the timestamp exactly one day ago
+     * @var integer Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
      */
     public $StartTime;
 
     /**
-     * @var integer End time, which is the current timestamp by default
+     * @var integer End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
      */
     public $EndTime;
 
@@ -154,8 +154,8 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
      * @param string $Order Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
-     * @param integer $StartTime Start time, which is the timestamp exactly one day ago
-     * @param integer $EndTime End time, which is the current timestamp by default
+     * @param integer $StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+     * @param integer $EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
      * @param array $MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
      * @param string $AlarmObject Filter by alarm object. Fuzzy search with string is supported
      * @param array $AlarmStatus Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default

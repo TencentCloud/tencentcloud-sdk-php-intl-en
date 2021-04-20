@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindingPolicyObject request structure.
  *
- * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
- * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+ * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
  * @method string getModule() Obtain Required. The value is fixed to monitor.
  * @method void setModule(string $Module) Set Required. The value is fixed to monitor.
  * @method integer getInstanceGroupId() Obtain Instance group ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method array getDimensions() Obtain Dimensions of an object to be bound.
  * @method void setDimensions(array $Dimensions) Set Dimensions of an object to be bound.
- * @method string getPolicyId() Obtain Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
- * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+ * @method string getPolicyId() Obtain Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
     /**
-     * @var integer Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @var integer Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
      */
     public $GroupId;
 
@@ -54,16 +54,16 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
-     * @var string Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @var string Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     public $PolicyId;
 
     /**
-     * @param integer $GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @param integer $GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
      * @param string $Module Required. The value is fixed to monitor.
      * @param integer $InstanceGroupId Instance group ID.
      * @param array $Dimensions Dimensions of an object to be bound.
-     * @param string $PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @param string $PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     function __construct()
     {

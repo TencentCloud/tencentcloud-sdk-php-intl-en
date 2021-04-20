@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) Set Module name, which is fixed at "monitor"
  * @method string getPolicyId() Obtain Alarm policy ID
  * @method void setPolicyId(string $PolicyId) Set Alarm policy ID
+ * @method integer getConditionTemplateId() Obtain ID of trigger condition template. This parameter can be left empty.
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) Set ID of trigger condition template. This parameter can be left empty.
  * @method AlarmPolicyCondition getCondition() Obtain Metric trigger condition
  * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition
  * @method AlarmPolicyEventCondition getEventCondition() Obtain Event trigger condition
@@ -42,6 +44,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var integer ID of trigger condition template. This parameter can be left empty.
+     */
+    public $ConditionTemplateId;
+
+    /**
      * @var AlarmPolicyCondition Metric trigger condition
      */
     public $Condition;
@@ -54,6 +61,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     /**
      * @param string $Module Module name, which is fixed at "monitor"
      * @param string $PolicyId Alarm policy ID
+     * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
      * @param AlarmPolicyCondition $Condition Metric trigger condition
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition
      */
@@ -76,6 +84,10 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("ConditionTemplateId",$param) and $param["ConditionTemplateId"] !== null) {
+            $this->ConditionTemplateId = $param["ConditionTemplateId"];
         }
 
         if (array_key_exists("Condition",$param) and $param["Condition"] !== null) {

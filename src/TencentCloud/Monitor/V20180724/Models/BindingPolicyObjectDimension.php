@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region name.
  * @method integer getRegionId() Obtain Region ID.
  * @method void setRegionId(integer $RegionId) Set Region ID.
- * @method string getDimensions() Obtain Dimensions.
- * @method void setDimensions(string $Dimensions) Set Dimensions.
+ * @method string getDimensions() Obtain Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+ * @method void setDimensions(string $Dimensions) Set Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
  * @method string getEventDimensions() Obtain Event dimensions.
  * @method void setEventDimensions(string $EventDimensions) Set Event dimensions.
  */
@@ -42,7 +46,9 @@ class BindingPolicyObjectDimension extends AbstractModel
     public $RegionId;
 
     /**
-     * @var string Dimensions.
+     * @var string Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      */
     public $Dimensions;
 
@@ -54,7 +60,9 @@ class BindingPolicyObjectDimension extends AbstractModel
     /**
      * @param string $Region Region name.
      * @param integer $RegionId Region ID.
-     * @param string $Dimensions Dimensions.
+     * @param string $Dimensions Instance dimension information in the following format:
+{"unInstanceId":"ins-00jvv9mo"}. The dimension information varies by Tencent Cloud services. For more information, please see:
+[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
      * @param string $EventDimensions Event dimensions.
      */
     function __construct()

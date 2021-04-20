@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain The value is fixed to monitor.
  * @method void setModule(string $Module) Set The value is fixed to monitor.
- * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
- * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+ * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
  * @method array getUniqueId() Obtain List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
  * @method void setUniqueId(array $UniqueId) Set List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
- * @method integer getInstanceGroupId() Obtain Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
- * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
- * @method string getPolicyId() Obtain Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
- * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+ * @method integer getInstanceGroupId() Obtain Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
+ * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
+ * @method string getPolicyId() Obtain Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
  */
 class UnBindingPolicyObjectRequest extends AbstractModel
 {
@@ -39,7 +39,7 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var integer Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @var integer Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      */
     public $GroupId;
 
@@ -49,21 +49,21 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $UniqueId;
 
     /**
-     * @var integer Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
+     * @var integer Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
      */
     public $InstanceGroupId;
 
     /**
-     * @var string Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @var string Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     public $PolicyId;
 
     /**
      * @param string $Module The value is fixed to monitor.
-     * @param integer $GroupId Policy group ID. If `PolicyId` is specified, you can pass any value to this field.
+     * @param integer $GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      * @param array $UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
-     * @param integer $InstanceGroupId Instance group ID. The UniqueId parameter is invalid if object instances are deleted by instance group.
-     * @param string $PolicyId Alarm policy ID. If this field is used, you can pass any value to `GroupId`.
+     * @param integer $InstanceGroupId Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
+     * @param string $PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     function __construct()
     {

@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroups(array $ReceiverGroups) Set Recipient group list
  * @method array getNoticeWays() Obtain Alarm channel list. Valid values: SMS (SMS), EMAIL (email), CALL (phone), WECHAT (WeChat)
  * @method void setNoticeWays(array $NoticeWays) Set Alarm channel list. Valid values: SMS (SMS), EMAIL (email), CALL (phone), WECHAT (WeChat)
- * @method string getOriginId() Obtain Compatible Alarm 1.0 policy group ID
- * @method void setOriginId(string $OriginId) Set Compatible Alarm 1.0 policy group ID
+ * @method string getOriginId() Obtain Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
+ * @method void setOriginId(string $OriginId) Set Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
  * @method string getAlarmType() Obtain Alarm type
  * @method void setAlarmType(string $AlarmType) Set Alarm type
  * @method integer getEventId() Obtain Event ID
@@ -64,6 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegion(string $Region) Set Region
  * @method integer getPolicyExists() Obtain Whether the policy exists. Valid values: 0 (no), 1 (yes)
  * @method void setPolicyExists(integer $PolicyExists) Set Whether the policy exists. Valid values: 0 (no), 1 (yes)
+ * @method array getMetricsInfo() Obtain Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMetricsInfo(array $MetricsInfo) Set Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmHistory extends AbstractModel
 {
@@ -153,7 +157,7 @@ class AlarmHistory extends AbstractModel
     public $NoticeWays;
 
     /**
-     * @var string Compatible Alarm 1.0 policy group ID
+     * @var string Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
      */
     public $OriginId;
 
@@ -178,6 +182,12 @@ class AlarmHistory extends AbstractModel
     public $PolicyExists;
 
     /**
+     * @var array Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MetricsInfo;
+
+    /**
      * @param string $AlarmId Alarm record ID
      * @param string $MonitorType Monitor type
      * @param string $Namespace Policy type
@@ -195,11 +205,13 @@ class AlarmHistory extends AbstractModel
      * @param array $ReceiverUids Recipient list
      * @param array $ReceiverGroups Recipient group list
      * @param array $NoticeWays Alarm channel list. Valid values: SMS (SMS), EMAIL (email), CALL (phone), WECHAT (WeChat)
-     * @param string $OriginId Compatible Alarm 1.0 policy group ID
+     * @param string $OriginId Alarm policy ID, which can be used when you call APIs ([BindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40421?from_cn_redirect=1), [UnBindingAllPolicyObject](https://intl.cloud.tencent.com/document/product/248/40568?from_cn_redirect=1), [UnBindingPolicyObject](https://intl.cloud.tencent.com/document/product/248/40567?from_cn_redirect=1)) to bind/unbind instances or instance groups to/from an alarm policy
      * @param string $AlarmType Alarm type
      * @param integer $EventId Event ID
      * @param string $Region Region
      * @param integer $PolicyExists Whether the policy exists. Valid values: 0 (no), 1 (yes)
+     * @param array $MetricsInfo Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -305,6 +317,15 @@ class AlarmHistory extends AbstractModel
 
         if (array_key_exists("PolicyExists",$param) and $param["PolicyExists"] !== null) {
             $this->PolicyExists = $param["PolicyExists"];
+        }
+
+        if (array_key_exists("MetricsInfo",$param) and $param["MetricsInfo"] !== null) {
+            $this->MetricsInfo = [];
+            foreach ($param["MetricsInfo"] as $key => $value){
+                $obj = new AlarmHistoryMetric();
+                $obj->deserialize($value);
+                array_push($this->MetricsInfo, $obj);
+            }
         }
     }
 }
