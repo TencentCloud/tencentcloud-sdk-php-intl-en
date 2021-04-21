@@ -52,6 +52,7 @@ use TencentCloud\Dayu\V20180709\Models as Models;
  * @method Models\DescribeBaradDataResponse DescribeBaradData(Models\DescribeBaradDataRequest $req) This API is used to provide business forwarding metric data of Anti-DDoS services.
  * @method Models\DescribeBasicCCThresholdResponse DescribeBasicCCThreshold(Models\DescribeBasicCCThresholdRequest $req) This API is used to get the CC protection threshold of Anti-DDoS Basic.
  * @method Models\DescribeBasicDeviceThresholdResponse DescribeBasicDeviceThreshold(Models\DescribeBasicDeviceThresholdRequest $req) This API is used to get the blackhole threshold of Anti-DDoS Basic.
+ * @method Models\DescribeBizHttpStatusResponse DescribeBizHttpStatus(Models\DescribeBizHttpStatusRequest $req) This API is used to get the statistics on the status codes of business traffic.
  * @method Models\DescribeCCAlarmThresholdResponse DescribeCCAlarmThreshold(Models\DescribeCCAlarmThresholdRequest $req) This API is used to get the alarm notification threshold set for CC attacks in Anti-DDoS Pro, Anti-DDoS Advanced, Anti-DDoS Ultimate, and Chess Shield.
  * @method Models\DescribeCCEvListResponse DescribeCCEvList(Models\DescribeCCEvListRequest $req) This API is used to get the CC attack event list.
  * @method Models\DescribeCCFrequencyRulesResponse DescribeCCFrequencyRules(Models\DescribeCCFrequencyRulesRequest $req) This API is used to get an access frequency control rule for CC protection.

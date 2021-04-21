@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IP object bound to Anti-DDoS Pro
  *
- * @method string getIp() Obtain IP
- * @method void setIp(string $Ip) Set IP
- * @method string getBizType() Obtain Bound product type. Valid values: [public (CVM), bm (BM), eni (ENI), vpngw (VPN Gateway), natgw (NAT Gateway), waf (WAF), fpc (finance product), gaap (GAAP), other (hosted IP)]
- * @method void setBizType(string $BizType) Set Bound product type. Valid values: [public (CVM), bm (BM), eni (ENI), vpngw (VPN Gateway), natgw (NAT Gateway), waf (WAF), fpc (finance product), gaap (GAAP), other (hosted IP)]
+ * @method string getIp() Obtain IP address
+ * @method void setIp(string $Ip) Set IP address
+ * @method string getBizType() Obtain Category of product that can be bound. Valid values: public (CVM and CLB), bm (BM), eni (ENI), vpngw (VPN gateway), natgw (NAT gateway), waf (WAF), fpc (financial products), gaap (GAAP), and other (Hosted IP).
+ * @method void setBizType(string $BizType) Set Category of product that can be bound. Valid values: public (CVM and CLB), bm (BM), eni (ENI), vpngw (VPN gateway), natgw (NAT gateway), waf (WAF), fpc (financial products), gaap (GAAP), and other (Hosted IP).
  * @method string getDeviceType() Obtain Subtype under product type. Valid values: [cvm (CVM), lb (CLB), eni (ENI), vpngw (VPN), natgw (NAT), waf (WAF), fpc (finance), gaap (GAAP), other (hosted IP), eip (BM EIP)]
  * @method void setDeviceType(string $DeviceType) Set Subtype under product type. Valid values: [cvm (CVM), lb (CLB), eni (ENI), vpngw (VPN), natgw (NAT), waf (WAF), fpc (finance), gaap (GAAP), other (hosted IP), eip (BM EIP)]
  * @method string getInstanceId() Obtain Resource instance ID of IP. This field is required when binding a new IP. For example, if it is an ENI IP, enter `ID(eni-*)` of the ENI for `InstanceId`; if it is a hosted IP without corresponding resource instance ID, enter "none";
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class BoundIpInfo extends AbstractModel
 {
     /**
-     * @var string IP
+     * @var string IP address
      */
     public $Ip;
 
     /**
-     * @var string Bound product type. Valid values: [public (CVM), bm (BM), eni (ENI), vpngw (VPN Gateway), natgw (NAT Gateway), waf (WAF), fpc (finance product), gaap (GAAP), other (hosted IP)]
+     * @var string Category of product that can be bound. Valid values: public (CVM and CLB), bm (BM), eni (ENI), vpngw (VPN gateway), natgw (NAT gateway), waf (WAF), fpc (financial products), gaap (GAAP), and other (Hosted IP).
      */
     public $BizType;
 
@@ -52,8 +52,8 @@ class BoundIpInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $Ip IP
-     * @param string $BizType Bound product type. Valid values: [public (CVM), bm (BM), eni (ENI), vpngw (VPN Gateway), natgw (NAT Gateway), waf (WAF), fpc (finance product), gaap (GAAP), other (hosted IP)]
+     * @param string $Ip IP address
+     * @param string $BizType Category of product that can be bound. Valid values: public (CVM and CLB), bm (BM), eni (ENI), vpngw (VPN gateway), natgw (NAT gateway), waf (WAF), fpc (financial products), gaap (GAAP), and other (Hosted IP).
      * @param string $DeviceType Subtype under product type. Valid values: [cvm (CVM), lb (CLB), eni (ENI), vpngw (VPN), natgw (NAT), waf (WAF), fpc (finance), gaap (GAAP), other (hosted IP), eip (BM EIP)]
      * @param string $InstanceId Resource instance ID of IP. This field is required when binding a new IP. For example, if it is an ENI IP, enter `ID(eni-*)` of the ENI for `InstanceId`; if it is a hosted IP without corresponding resource instance ID, enter "none";
      */

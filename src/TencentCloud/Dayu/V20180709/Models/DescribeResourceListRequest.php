@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdList(array $IdList) Set Resource ID search, which is optional. If this field is not an empty array, it means to get the resource list of a specified resource;
  * @method string getName() Obtain Resource name search, which is optional. If this field is not an empty string, it means to search for resources by name;
  * @method void setName(string $Name) Set Resource name search, which is optional. If this field is not an empty string, it means to search for resources by name;
- * @method array getIpList() Obtain IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
- * @method void setIpList(array $IpList) Set IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+ * @method array getIpList() Obtain IP query list, which is optional. Resources will be queried by IP if the list is not empty.
+ * @method void setIpList(array $IpList) Set IP query list, which is optional. Resources will be queried by IP if the list is not empty.
  * @method array getStatus() Obtain Resource status search list, which is optional. Valid values: [0 (running), 1 (cleansing), 2 (blocking)]. No status search will be performed if an empty array is entered;
  * @method void setStatus(array $Status) Set Resource status search list, which is optional. Valid values: [0 (running), 1 (cleansing), 2 (blocking)]. No status search will be performed if an empty array is entered;
  * @method integer getExpire() Obtain Expiring resource search, which is optional. Valid values: [0 (no search), 1 (search for expiring resources)]
@@ -75,7 +75,7 @@ class DescribeResourceListRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+     * @var array IP query list, which is optional. Resources will be queried by IP if the list is not empty.
      */
     public $IpList;
 
@@ -120,7 +120,7 @@ class DescribeResourceListRequest extends AbstractModel
      * @param array $Line Line search. This field can be optionally entered only when getting the list of Anti-DDoS Advanced resources. Valid values: [1 (BGP line), 2 (Nanjing Telecom), 3 (Nanjing Unicom), 99 (third-party partner line)]. Please enter an empty array when getting other products;
      * @param array $IdList Resource ID search, which is optional. If this field is not an empty array, it means to get the resource list of a specified resource;
      * @param string $Name Resource name search, which is optional. If this field is not an empty string, it means to search for resources by name;
-     * @param array $IpList IP search list, which is optional. If this field is not empty, it means to search for resources by IP;
+     * @param array $IpList IP query list, which is optional. Resources will be queried by IP if the list is not empty.
      * @param array $Status Resource status search list, which is optional. Valid values: [0 (running), 1 (cleansing), 2 (blocking)]. No status search will be performed if an empty array is entered;
      * @param integer $Expire Expiring resource search, which is optional. Valid values: [0 (no search), 1 (search for expiring resources)]
      * @param array $OderBy Sort by field, which is optional
