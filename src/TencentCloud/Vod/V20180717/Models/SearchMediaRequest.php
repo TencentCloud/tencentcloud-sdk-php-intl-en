@@ -114,6 +114,12 @@ use TencentCloud\Common\AbstractModel;
 <li>keyFrameDescInfo (timestamp information).</li>
 <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
 <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+ * @method array getStorageRegions() Obtain Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+ * @method void setStorageRegions(array $StorageRegions) Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -263,6 +269,13 @@ class SearchMediaRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var array Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
+     */
+    public $StorageRegions;
+
+    /**
      * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
@@ -357,6 +370,9 @@ End time in the creation time range.
 <li>keyFrameDescInfo (timestamp information).</li>
 <li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
 <li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
+     * @param array $StorageRegions Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
+<li>Length limit for a single region: 20 characters</li>
+<li>Array length limit: 20</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
@@ -450,6 +466,10 @@ End time in the creation time range.
 
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = $param["Filters"];
+        }
+
+        if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
+            $this->StorageRegions = $param["StorageRegions"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

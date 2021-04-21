@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxReplayLatency(integer $MaxReplayLatency) Set Delayed log size threshold in MB
  * @method integer getMinDelayEliminateReserve() Obtain The minimum number of read-only replicas that must be retained in an RO group
  * @method void setMinDelayEliminateReserve(integer $MinDelayEliminateReserve) Set The minimum number of read-only replicas that must be retained in an RO group
+ * @method array getSecurityGroupIds() Obtain Security group ID
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
  */
 class CreateReadOnlyGroupRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateReadOnlyGroupRequest extends AbstractModel
     public $MinDelayEliminateReserve;
 
     /**
+     * @var array Security group ID
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $MasterDBInstanceId Primary instance ID
      * @param string $Name RO group name
      * @param integer $ProjectId Project ID
@@ -104,6 +111,7 @@ class CreateReadOnlyGroupRequest extends AbstractModel
      * @param integer $MaxReplayLag Delay threshold in ms
      * @param integer $MaxReplayLatency Delayed log size threshold in MB
      * @param integer $MinDelayEliminateReserve The minimum number of read-only replicas that must be retained in an RO group
+     * @param array $SecurityGroupIds Security group ID
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class CreateReadOnlyGroupRequest extends AbstractModel
 
         if (array_key_exists("MinDelayEliminateReserve",$param) and $param["MinDelayEliminateReserve"] !== null) {
             $this->MinDelayEliminateReserve = $param["MinDelayEliminateReserve"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

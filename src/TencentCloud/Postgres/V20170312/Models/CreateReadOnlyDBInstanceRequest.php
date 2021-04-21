@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID
  * @method Tag getTagList() Obtain The information of tags to be associated with instances. This parameter is left empty by default.
  * @method void setTagList(Tag $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
+ * @method array getSecurityGroupIds() Obtain Security group ID
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
  */
 class CreateReadOnlyDBInstanceRequest extends AbstractModel
 {
@@ -157,6 +159,11 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $TagList;
 
     /**
+     * @var array Security group ID
+     */
+    public $SecurityGroupIds;
+
+    /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      * @param string $DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
      * @param integer $Storage Instance storage capacity in GB
@@ -176,6 +183,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
      * @param string $ReadOnlyGroupId RO group ID
      * @param Tag $TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     * @param array $SecurityGroupIds Security group ID
      */
     function __construct()
     {
@@ -265,6 +273,10 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
         if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
             $this->TagList = new Tag();
             $this->TagList->deserialize($param["TagList"]);
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

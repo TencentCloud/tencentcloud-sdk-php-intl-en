@@ -90,6 +90,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStatusInReadonlyGroup(string $StatusInReadonlyGroup) Set The status of a instance in a read-only group
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOfflineTime() Obtain Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setOfflineTime(string $OfflineTime) Set Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -253,6 +257,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $StatusInReadonlyGroup;
 
     /**
+     * @var string Elimination time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $OfflineTime;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
@@ -287,6 +297,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ReadOnlyInstanceNum Number of read-only instances
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StatusInReadonlyGroup The status of a instance in a read-only group
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $OfflineTime Elimination time
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -434,6 +446,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("StatusInReadonlyGroup",$param) and $param["StatusInReadonlyGroup"] !== null) {
             $this->StatusInReadonlyGroup = $param["StatusInReadonlyGroup"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

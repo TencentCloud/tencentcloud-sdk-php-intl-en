@@ -48,6 +48,14 @@ In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be prese
 In the same request, `ClearTags` and `AddTags` cannot be present at the same time.
  * @method void setClearTags(integer $ClearTags) Set The value `1` indicates to delete all tags of the media file. Other values are meaningless.
 In the same request, `ClearTags` and `AddTags` cannot be present at the same time.
+ * @method array getAddSubtitles() Obtain Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+ * @method void setAddSubtitles(array $AddSubtitles) Set Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+ * @method array getDeleteSubtitleIds() Obtain Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+ * @method void setDeleteSubtitleIds(array $DeleteSubtitleIds) Set Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+ * @method integer getClearSubtitles() Obtain The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+ * @method void setClearSubtitles(integer $ClearSubtitles) Set The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -116,6 +124,22 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     public $ClearTags;
 
     /**
+     * @var array Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public $AddSubtitles;
+
+    /**
+     * @var array Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     */
+    public $DeleteSubtitleIds;
+
+    /**
+     * @var integer The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
+     */
+    public $ClearSubtitles;
+
+    /**
      * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
@@ -135,6 +159,10 @@ In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be prese
      * @param array $DeleteTags Set of tags to be deleted. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
      * @param integer $ClearTags The value `1` indicates to delete all tags of the media file. Other values are meaningless.
 In the same request, `ClearTags` and `AddTags` cannot be present at the same time.
+     * @param array $AddSubtitles Information of multiple subtitles to be added. A single media file can have up to 16 subtitles. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     * @param array $DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
+     * @param integer $ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
+`ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
@@ -201,6 +229,23 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
 
         if (array_key_exists("ClearTags",$param) and $param["ClearTags"] !== null) {
             $this->ClearTags = $param["ClearTags"];
+        }
+
+        if (array_key_exists("AddSubtitles",$param) and $param["AddSubtitles"] !== null) {
+            $this->AddSubtitles = [];
+            foreach ($param["AddSubtitles"] as $key => $value){
+                $obj = new MediaSubtitleInput();
+                $obj->deserialize($value);
+                array_push($this->AddSubtitles, $obj);
+            }
+        }
+
+        if (array_key_exists("DeleteSubtitleIds",$param) and $param["DeleteSubtitleIds"] !== null) {
+            $this->DeleteSubtitleIds = $param["DeleteSubtitleIds"];
+        }
+
+        if (array_key_exists("ClearSubtitles",$param) and $param["ClearSubtitles"] !== null) {
+            $this->ClearSubtitles = $param["ClearSubtitles"];
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
