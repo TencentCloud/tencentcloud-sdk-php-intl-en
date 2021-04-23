@@ -64,6 +64,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setImageId(string $ImageId) Set Image ID
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getDesiredPodNum() Obtain This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setDesiredPodNum(integer $DesiredPodNum) Set This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getUserScript() Obtain Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setUserScript(string $UserScript) Set Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class NodePool extends AbstractModel
 {
@@ -154,6 +162,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $ImageId;
 
     /**
+     * @var integer This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $DesiredPodNum;
+
+    /**
+     * @var string Custom script
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $UserScript;
+
+    /**
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
@@ -175,6 +195,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $ImageId Image ID
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $DesiredPodNum This parameter is required when the custom PodCIDR mode is enabled for the cluster.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $UserScript Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
@@ -263,6 +287,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("DesiredPodNum",$param) and $param["DesiredPodNum"] !== null) {
+            $this->DesiredPodNum = $param["DesiredPodNum"];
+        }
+
+        if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
+            $this->UserScript = $param["UserScript"];
         }
     }
 }

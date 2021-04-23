@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLogsetId() Obtain Logset ID
  * @method void setLogsetId(string $LogsetId) Set Logset ID
+ * @method string getHealthLogsetId() Obtain Health check logset ID
+ * @method void setHealthLogsetId(string $HealthLogsetId) Set Health check logset ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class DescribeClsLogSetResponse extends AbstractModel
     public $LogsetId;
 
     /**
+     * @var string Health check logset ID
+     */
+    public $HealthLogsetId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $LogsetId Logset ID
+     * @param string $HealthLogsetId Health check logset ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +64,10 @@ class DescribeClsLogSetResponse extends AbstractModel
         }
         if (array_key_exists("LogsetId",$param) and $param["LogsetId"] !== null) {
             $this->LogsetId = $param["LogsetId"];
+        }
+
+        if (array_key_exists("HealthLogsetId",$param) and $param["HealthLogsetId"] !== null) {
+            $this->HealthLogsetId = $param["HealthLogsetId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

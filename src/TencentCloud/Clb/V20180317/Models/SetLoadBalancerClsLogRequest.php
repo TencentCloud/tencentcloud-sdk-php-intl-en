@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogSetId(string $LogSetId) Set CLS logset ID
  * @method string getLogTopicId() Obtain CLS log topic ID
  * @method void setLogTopicId(string $LogTopicId) Set CLS log topic ID
+ * @method string getLogType() Obtain Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+ * @method void setLogType(string $LogType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  */
 class SetLoadBalancerClsLogRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
     public $LogTopicId;
 
     /**
+     * @var string Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public $LogType;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $LogSetId CLS logset ID
      * @param string $LogTopicId CLS log topic ID
+     * @param string $LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
 
         if (array_key_exists("LogTopicId",$param) and $param["LogTopicId"] !== null) {
             $this->LogTopicId = $param["LogTopicId"];
+        }
+
+        if (array_key_exists("LogType",$param) and $param["LogType"] !== null) {
+            $this->LogType = $param["LogType"];
         }
     }
 }

@@ -208,6 +208,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setNfvInfo(string $NfvInfo) Set Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHealthLogSetId() Obtain Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHealthLogSetId(string $HealthLogSetId) Set Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHealthLogTopicId() Obtain Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHealthLogTopicId(string $HealthLogTopicId) Set Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -502,6 +510,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NfvInfo;
 
     /**
+     * @var string Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $HealthLogSetId;
+
+    /**
+     * @var string Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $HealthLogTopicId;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -595,6 +615,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $Zones Availability zone of a VPC-based private network CLB instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $NfvInfo Whether it is an NFV CLB instance. No returned information: no; l7nfv: yes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $HealthLogSetId Health check logset ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $HealthLogTopicId Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -825,6 +849,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("NfvInfo",$param) and $param["NfvInfo"] !== null) {
             $this->NfvInfo = $param["NfvInfo"];
+        }
+
+        if (array_key_exists("HealthLogSetId",$param) and $param["HealthLogSetId"] !== null) {
+            $this->HealthLogSetId = $param["HealthLogSetId"];
+        }
+
+        if (array_key_exists("HealthLogTopicId",$param) and $param["HealthLogTopicId"] !== null) {
+            $this->HealthLogTopicId = $param["HealthLogTopicId"];
         }
     }
 }

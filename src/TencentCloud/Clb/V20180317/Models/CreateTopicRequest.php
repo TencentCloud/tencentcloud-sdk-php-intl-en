@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicName(string $TopicName) Set Log topic name
  * @method integer getPartitionCount() Obtain The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
  * @method void setPartitionCount(integer $PartitionCount) Set The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
+ * @method string getTopicType() Obtain Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+ * @method void setTopicType(string $TopicType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateTopicRequest extends AbstractModel
     public $PartitionCount;
 
     /**
+     * @var string Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public $TopicType;
+
+    /**
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
+     * @param string $TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("PartitionCount",$param) and $param["PartitionCount"] !== null) {
             $this->PartitionCount = $param["PartitionCount"];
+        }
+
+        if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
+            $this->TopicType = $param["TopicType"];
         }
     }
 }

@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaultReportContactNumber(string $FaultReportContactNumber) Set Fault reporting contact number.
  * @method boolean getSignLaw() Obtain Whether the connection applicant has signed the service agreement.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection applicant has signed the service agreement.
+ * @method integer getBandwidth() Obtain Connection’s bandwidth
+ * @method void setBandwidth(integer $Bandwidth) Set Connection’s bandwidth
  */
 class ModifyDirectConnectAttributeRequest extends AbstractModel
 {
@@ -108,6 +110,11 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
     public $SignLaw;
 
     /**
+     * @var integer Connection’s bandwidth
+     */
+    public $Bandwidth;
+
+    /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
      * @param string $CircuitCode Circuit code of a connection, which is provided by the ISP or connection provider.
@@ -120,6 +127,7 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
      * @param string $FaultReportContactPerson Fault reporting contact person.
      * @param string $FaultReportContactNumber Fault reporting contact number.
      * @param boolean $SignLaw Whether the connection applicant has signed the service agreement.
+     * @param integer $Bandwidth Connection’s bandwidth
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class ModifyDirectConnectAttributeRequest extends AbstractModel
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("Bandwidth",$param) and $param["Bandwidth"] !== null) {
+            $this->Bandwidth = $param["Bandwidth"];
         }
     }
 }

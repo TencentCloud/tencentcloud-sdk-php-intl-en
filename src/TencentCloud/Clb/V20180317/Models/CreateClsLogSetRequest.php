@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriod(integer $Period) Set Logset retention period in days; max value: 90
  * @method string getLogsetName() Obtain Logset name, which must be unique among all CLS logsets; default value: clb_logset
  * @method void setLogsetName(string $LogsetName) Set Logset name, which must be unique among all CLS logsets; default value: clb_logset
+ * @method string getLogsetType() Obtain Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+ * @method void setLogsetType(string $LogsetType) Set Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  */
 class CreateClsLogSetRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateClsLogSetRequest extends AbstractModel
     public $LogsetName;
 
     /**
+     * @var string Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     */
+    public $LogsetType;
+
+    /**
      * @param integer $Period Logset retention period in days; max value: 90
      * @param string $LogsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
+     * @param string $LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CreateClsLogSetRequest extends AbstractModel
 
         if (array_key_exists("LogsetName",$param) and $param["LogsetName"] !== null) {
             $this->LogsetName = $param["LogsetName"];
+        }
+
+        if (array_key_exists("LogsetType",$param) and $param["LogsetType"] !== null) {
+            $this->LogsetType = $param["LogsetType"];
         }
     }
 }

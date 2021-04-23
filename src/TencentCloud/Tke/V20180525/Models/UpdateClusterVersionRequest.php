@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getDstVersion() Obtain The version that needs to upgrade to
  * @method void setDstVersion(string $DstVersion) Set The version that needs to upgrade to
+ * @method ClusterExtraArgs getExtraArgs() Obtain Cluster custom parameter
+ * @method void setExtraArgs(ClusterExtraArgs $ExtraArgs) Set Cluster custom parameter
  * @method float getMaxNotReadyPercent() Obtain The maximum tolerable number of unavailable pods
  * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) Set The maximum tolerable number of unavailable pods
  * @method boolean getSkipPreCheck() Obtain Whether to skip the precheck
@@ -42,6 +44,11 @@ class UpdateClusterVersionRequest extends AbstractModel
     public $DstVersion;
 
     /**
+     * @var ClusterExtraArgs Cluster custom parameter
+     */
+    public $ExtraArgs;
+
+    /**
      * @var float The maximum tolerable number of unavailable pods
      */
     public $MaxNotReadyPercent;
@@ -54,6 +61,7 @@ class UpdateClusterVersionRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param string $DstVersion The version that needs to upgrade to
+     * @param ClusterExtraArgs $ExtraArgs Cluster custom parameter
      * @param float $MaxNotReadyPercent The maximum tolerable number of unavailable pods
      * @param boolean $SkipPreCheck Whether to skip the precheck
      */
@@ -76,6 +84,11 @@ class UpdateClusterVersionRequest extends AbstractModel
 
         if (array_key_exists("DstVersion",$param) and $param["DstVersion"] !== null) {
             $this->DstVersion = $param["DstVersion"];
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new ClusterExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
         }
 
         if (array_key_exists("MaxNotReadyPercent",$param) and $param["MaxNotReadyPercent"] !== null) {
