@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeMachine request structure.
  *
- * @method integer getIpv6Enable() Obtain Whether to filter the resources supporting IPv6 access
- * @method void setIpv6Enable(integer $Ipv6Enable) Set Whether to filter the resources supporting IPv6 access
+ * @method integer getIpv6Enable() Obtain If this parameter is not `0`, machines supporting IPv6 will be queried.
+ * @method void setIpv6Enable(integer $Ipv6Enable) Set If this parameter is not `0`, machines supporting IPv6 will be queried.
  */
 class DescribeMachineRequest extends AbstractModel
 {
     /**
-     * @var integer Whether to filter the resources supporting IPv6 access
+     * @var integer If this parameter is not `0`, machines supporting IPv6 will be queried.
      */
     public $Ipv6Enable;
 
     /**
-     * @param integer $Ipv6Enable Whether to filter the resources supporting IPv6 access
+     * @param integer $Ipv6Enable If this parameter is not `0`, machines supporting IPv6 will be queried.
      */
     function __construct()
     {
