@@ -68,6 +68,10 @@ Note: This field may return null, indicating no valid value.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBusiness(string $Business) Set Type of the resource bound with an ENI. Valid values: cvm, eks.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCdcId() Obtain ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCdcId(string $CdcId) Set ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NetworkInterface extends AbstractModel
 {
@@ -164,6 +168,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Business;
 
     /**
+     * @var string ID of the CDC instance associated with the ENI
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CdcId;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      * @param string $NetworkInterfaceName ENI Name
      * @param string $NetworkInterfaceDescription ENI description.
@@ -187,6 +197,8 @@ Note: This field may return null, indicating no valid value.
      * @param array $TagSet Tag key-value pair.
      * @param integer $EniType The ENI type. 0: ENI. 1: EVM ENI.
      * @param string $Business Type of the resource bound with an ENI. Valid values: cvm, eks.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CdcId ID of the CDC instance associated with the ENI
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -284,6 +296,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Business",$param) and $param["Business"] !== null) {
             $this->Business = $param["Business"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

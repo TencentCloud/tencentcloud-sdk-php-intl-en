@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+ * @method string getDescription() Obtain Description
+ * @method void setDescription(string $Description) Set Description
  */
 class CcnInstance extends AbstractModel
 {
@@ -54,12 +56,18 @@ class CcnInstance extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var string Description
+     */
+    public $Description;
+
+    /**
      * @param string $InstanceId The ID of the associated instance.
      * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      * @param string $InstanceType The type of the associated instance. Available values are:
 <li>`VPC`: VPC</li>
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
+     * @param string $Description Description
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CcnInstance extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

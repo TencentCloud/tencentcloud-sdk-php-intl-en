@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnets(array $Subnets) Set The subnet object list.
  * @method array getTags() Obtain Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+ * @method string getCdcId() Obtain ID of the CDC instance to which the subnets will be created
+ * @method void setCdcId(string $CdcId) Set ID of the CDC instance to which the subnets will be created
  */
 class CreateSubnetsRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateSubnetsRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string ID of the CDC instance to which the subnets will be created
+     */
+    public $CdcId;
+
+    /**
      * @param string $VpcId The `ID` of the `VPC` instance, such as `vpc-6v2ht8q5`.
      * @param array $Subnets The subnet object list.
      * @param array $Tags Bound tags. Note that the collection of tags here is shared by all subnet objects in the list. You cannot specify tags for each subnet. Example: [{"Key": "city", "Value": "shanghai"}].
+     * @param string $CdcId ID of the CDC instance to which the subnets will be created
      */
     function __construct()
     {
@@ -82,6 +90,10 @@ class CreateSubnetsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

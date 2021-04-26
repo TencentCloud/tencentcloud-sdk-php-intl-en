@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalIpAddressCount(integer $TotalIpAddressCount) Set The total number of IPv4 addresses in the subnet.
  * @method array getTagSet() Obtain Tag key-value pairs
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs
+ * @method string getCdcId() Obtain CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCdcId(string $CdcId) Set CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsCdcSubnet() Obtain Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsCdcSubnet(integer $IsCdcSubnet) Set Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Subnet extends AbstractModel
 {
@@ -129,6 +137,18 @@ class Subnet extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CdcId;
+
+    /**
+     * @var integer Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsCdcSubnet;
+
+    /**
      * @param string $VpcId The `ID` of the `VPC` instance.
      * @param string $SubnetId Subnet instance `ID`, such as `subnet-bthucmmy`.
      * @param string $SubnetName Subnet name.
@@ -144,6 +164,10 @@ class Subnet extends AbstractModel
      * @param boolean $IsRemoteVpcSnat Whether it is a `SNAT` address pool subnet.
      * @param integer $TotalIpAddressCount The total number of IPv4 addresses in the subnet.
      * @param array $TagSet Tag key-value pairs
+     * @param string $CdcId CDC instance ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsCdcSubnet Whether it is a CDC subnet. Valid values: 0: no; 1: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -221,6 +245,14 @@ class Subnet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("IsCdcSubnet",$param) and $param["IsCdcSubnet"] !== null) {
+            $this->IsCdcSubnet = $param["IsCdcSubnet"];
         }
     }
 }

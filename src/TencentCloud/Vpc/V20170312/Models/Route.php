@@ -22,26 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDestinationCidrBlock() Obtain Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
- * @method string getGatewayType() Obtain Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+ * @method string getGatewayType() Obtain Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
- * @method void setGatewayType(string $GatewayType) Set Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
+ * @method void setGatewayType(string $GatewayType) Set Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
  * @method string getGatewayId() Obtain Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
  * @method void setGatewayId(string $GatewayId) Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
@@ -83,16 +85,17 @@ class Route extends AbstractModel
     public $DestinationCidrBlock;
 
     /**
-     * @var string Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+     * @var string Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
      */
     public $GatewayType;
 
@@ -154,16 +157,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param string $DestinationCidrBlock Destination IP range, such as 112.20.51.0/24. Values cannot be in the VPC IP range.
-     * @param string $GatewayType Type of the next hop. Currently supported types are:
-CVM: CVM of the public gateway type;
+     * @param string $GatewayType Type of the next hop. Valid values:
+CVM: public gateway CVM;
 VPN: VPN gateway;
 DIRECTCONNECT: direct connect gateway;
 PEERCONNECTION: peering connection;
-SSLVPN: sslvpn gateway;
-NAT: NAT gateway; 
+SSLVPN: SSL VPN gateway;
+NAT: NAT Gateway; 
 NORMAL_CVM: normal CVM;
 EIP: public IP address of the CVM;
-CCN: Cloud Connect Network.
+CCN: Cloud Connect Network;
+LOCAL_GATEWAY: local gateway.
      * @param string $GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      * @param integer $RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.

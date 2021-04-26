@@ -18,35 +18,19 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ReplaceRoutes response structure.
+ * ModifyCcnAttachedInstancesAttribute response structure.
  *
- * @method array getOldRouteSet() Obtain Old routing policy
- * @method void setOldRouteSet(array $OldRouteSet) Set Old routing policy
- * @method array getNewRouteSet() Obtain New routing policy
- * @method void setNewRouteSet(array $NewRouteSet) Set New routing policy
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ReplaceRoutesResponse extends AbstractModel
+class ModifyCcnAttachedInstancesAttributeResponse extends AbstractModel
 {
-    /**
-     * @var array Old routing policy
-     */
-    public $OldRouteSet;
-
-    /**
-     * @var array New routing policy
-     */
-    public $NewRouteSet;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $OldRouteSet Old routing policy
-     * @param array $NewRouteSet New routing policy
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,24 +46,6 @@ class ReplaceRoutesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OldRouteSet",$param) and $param["OldRouteSet"] !== null) {
-            $this->OldRouteSet = [];
-            foreach ($param["OldRouteSet"] as $key => $value){
-                $obj = new Route();
-                $obj->deserialize($value);
-                array_push($this->OldRouteSet, $obj);
-            }
-        }
-
-        if (array_key_exists("NewRouteSet",$param) and $param["NewRouteSet"] !== null) {
-            $this->NewRouteSet = [];
-            foreach ($param["NewRouteSet"] as $key => $value){
-                $obj = new Route();
-                $obj->deserialize($value);
-                array_push($this->NewRouteSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

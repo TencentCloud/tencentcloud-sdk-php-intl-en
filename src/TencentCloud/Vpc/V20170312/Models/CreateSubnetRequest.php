@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method string getCdcId() Obtain CDC instance ID
+ * @method void setCdcId(string $CdcId) Set CDC instance ID
  */
 class CreateSubnetRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateSubnetRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string CDC instance ID
+     */
+    public $CdcId;
+
+    /**
      * @param string $VpcId The ID of the VPC instance to be operated on. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $SubnetName The subnet name. The maximum length is 60 bytes.
      * @param string $CidrBlock The subnet IP address range. It must be within the VPC IP address range. Subnet IP address ranges cannot overlap with each other within the same VPC.
      * @param string $Zone The ID of the availability zone in which the subnet resides. You can set up disaster recovery across availability zones by choosing different availability zones for different subnets.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param string $CdcId CDC instance ID
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateSubnetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }
