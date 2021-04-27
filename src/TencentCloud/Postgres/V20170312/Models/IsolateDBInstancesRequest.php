@@ -18,20 +18,20 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DestroyDBInstance request structure.
+ * IsolateDBInstances request structure.
  *
- * @method string getDBInstanceId() Obtain The ID of the instance to be eliminated
- * @method void setDBInstanceId(string $DBInstanceId) Set The ID of the instance to be eliminated
+ * @method array getDBInstanceIdSet() Obtain Instance ID set
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID set
  */
-class DestroyDBInstanceRequest extends AbstractModel
+class IsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var string The ID of the instance to be eliminated
+     * @var array Instance ID set
      */
-    public $DBInstanceId;
+    public $DBInstanceIdSet;
 
     /**
-     * @param string $DBInstanceId The ID of the instance to be eliminated
+     * @param array $DBInstanceIdSet Instance ID set
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestroyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists("DBInstanceIdSet",$param) and $param["DBInstanceIdSet"] !== null) {
+            $this->DBInstanceIdSet = $param["DBInstanceIdSet"];
         }
     }
 }

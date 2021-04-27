@@ -18,20 +18,20 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DestroyDBInstance request structure.
+ * IsolateDBInstances response structure.
  *
- * @method string getDBInstanceId() Obtain The ID of the instance to be eliminated
- * @method void setDBInstanceId(string $DBInstanceId) Set The ID of the instance to be eliminated
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DestroyDBInstanceRequest extends AbstractModel
+class IsolateDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var string The ID of the instance to be eliminated
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $DBInstanceId;
+    public $RequestId;
 
     /**
-     * @param string $DBInstanceId The ID of the instance to be eliminated
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DestroyDBInstanceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
-            $this->DBInstanceId = $param["DBInstanceId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }
