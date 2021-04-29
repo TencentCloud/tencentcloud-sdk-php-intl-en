@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Node pool name
  * @method string getClusterInstanceId() Obtain Cluster instance ID
  * @method void setClusterInstanceId(string $ClusterInstanceId) Set Cluster instance ID
- * @method string getLifeState() Obtain Status
- * @method void setLifeState(string $LifeState) Set Status
+ * @method string getLifeState() Obtain The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
+ * @method void setLifeState(string $LifeState) Set The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
  * @method string getLaunchConfigurationId() Obtain Launch configuration ID
  * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
  * @method string getAutoscalingGroupId() Obtain Auto-scaling group ID
@@ -91,7 +91,7 @@ class NodePool extends AbstractModel
     public $ClusterInstanceId;
 
     /**
-     * @var string Status
+     * @var string The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
      */
     public $LifeState;
 
@@ -177,7 +177,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
-     * @param string $LifeState Status
+     * @param string $LifeState The lifecycle state of the current node pool. Valid values: `creating`, `normal`, `updating`, `deleting`, and `deleted`.
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $AutoscalingGroupId Auto-scaling group ID
      * @param array $Labels Labels

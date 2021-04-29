@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPureAudioStream(integer $PureAudioStream) Set Value range: [0, 1]. If it is 0, live streams are audio and video; if it is 1, live streams are only audio. Default value: 0.
  * @method string getRecordId() Obtain Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
  * @method void setRecordId(string $RecordId) Set Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
- * @method integer getRecordAudioOnly() Obtain Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
- * @method void setRecordAudioOnly(integer $RecordAudioOnly) Set Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+ * @method integer getRecordAudioOnly() Obtain Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
+ * @method void setRecordAudioOnly(integer $RecordAudioOnly) Set Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
  */
 class OutputParams extends AbstractModel
 {
@@ -47,7 +47,7 @@ class OutputParams extends AbstractModel
     public $RecordId;
 
     /**
-     * @var integer Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+     * @var integer Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
      */
     public $RecordAudioOnly;
 
@@ -55,7 +55,7 @@ class OutputParams extends AbstractModel
      * @param string $StreamId Custom live stream ID, which must be different from the ID of relayed stream.
      * @param integer $PureAudioStream Value range: [0, 1]. If it is 0, live streams are audio and video; if it is 1, live streams are only audio. Default value: 0.
      * @param string $RecordId Prefix of custom recording file names. Please enable the recording feature in the TRTC console first. https://intl.cloud.tencent.com/document/product/647/50768?from_cn_redirect=1
-     * @param integer $RecordAudioOnly Value range: [0, 1]. If it is 0, the recording template configured in the console will be used; if it is 1, streams are recorded as .mp3 files.
+     * @param integer $RecordAudioOnly Whether to record audio only. Valid values: 0, 1. `0`: no meaning; `1`: records into MP3 files. This parameter is not recommended. Instead, you are advised to create an audio-only recording template in the TRTC console.
      */
     function __construct()
     {
