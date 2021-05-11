@@ -28,6 +28,8 @@ Default value: 10.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
+ * @method string getStreamName() Obtain The stream name to search for
+ * @method void setStreamName(string $StreamName) Set The stream name to search for
  */
 class DescribeLiveForbidStreamListRequest extends AbstractModel
 {
@@ -44,10 +46,16 @@ Default value: 10.
     public $PageSize;
 
     /**
+     * @var string The stream name to search for
+     */
+    public $StreamName;
+
+    /**
      * @param integer $PageNum Page number to get. Default value: 1.
      * @param integer $PageSize Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
+     * @param string $StreamName The stream name to search for
      */
     function __construct()
     {
@@ -68,6 +76,10 @@ Default value: 10.
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("StreamName",$param) and $param["StreamName"] !== null) {
+            $this->StreamName = $param["StreamName"];
         }
     }
 }

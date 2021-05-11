@@ -31,6 +31,8 @@ Currently, a usage plan can be bound to an API; however, under the same service,
 You can bind a key to a usage plan and bind the usage plan to an environment where a service is published, so that callers can use the key to call APIs in the service. You can use this API to bind a key to a usage plan.
  * @method Models\BindSubDomainResponse BindSubDomain(Models\BindSubDomainRequest $req) This API is used to bind a custom domain name to a service.
 Each service in API Gateway provides a default domain name for users to call. If you want to use your own domain name, you can bind a custom domain name to the target service. After getting the ICP filing and configuring the CNAME record between the custom and default domain names, you can directly call the custom domain name.
+ * @method Models\BuildAPIDocResponse BuildAPIDoc(Models\BuildAPIDocRequest $req) This API is used to build an API document.
+ * @method Models\CreateAPIDocResponse CreateAPIDoc(Models\CreateAPIDocRequest $req) This API is used to create an API document.
  * @method Models\CreateApiResponse CreateApi(Models\CreateApiRequest $req) This API is used to create an API. Before creating an API, you need to create a service, as each API belongs to a certain service.
  * @method Models\CreateApiKeyResponse CreateApiKey(Models\CreateApiKeyRequest $req) This API is used to create an API key pair.
  * @method Models\CreateIPStrategyResponse CreateIPStrategy(Models\CreateIPStrategyRequest $req) This API is used to create a service IP policy.
@@ -38,6 +40,7 @@ Each service in API Gateway provides a default domain name for users to call. If
 The maximum unit in API Gateway is service. Multiple APIs can be created in one service, and each service has a default domain name for users to call. You can also bind your own custom domain name to a service.
  * @method Models\CreateUsagePlanResponse CreateUsagePlan(Models\CreateUsagePlanRequest $req) This API is used to create a usage plan.
 To use API Gateway, you need to create a usage plan and bind it to a service environment.
+ * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) This API is used to delete an API document.
  * @method Models\DeleteApiResponse DeleteApi(Models\DeleteApiRequest $req) This API is used to delete a created API.
  * @method Models\DeleteApiKeyResponse DeleteApiKey(Models\DeleteApiKeyRequest $req) This API is used to delete an API key pair.
  * @method Models\DeleteIPStrategyResponse DeleteIPStrategy(Models\DeleteIPStrategyRequest $req) This API is used to delete a service IP policy.
@@ -48,6 +51,8 @@ You can use this API if you use a custom domain name and custom mapping. Please 
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
 This operation will also be denied if the current environment has not been published.
+ * @method Models\DescribeAPIDocDetailResponse DescribeAPIDocDetail(Models\DescribeAPIDocDetailRequest $req) This API is used to query the details of an API document.
+ * @method Models\DescribeAPIDocsResponse DescribeAPIDocs(Models\DescribeAPIDocsRequest $req) This API is used to query the list of API documents.
  * @method Models\DescribeApiResponse DescribeApi(Models\DescribeApiRequest $req) This API (`DescribeApi`) is used to query the details of the APIs users manage via Tencent Cloud API Gateway.
  * @method Models\DescribeApiEnvironmentStrategyResponse DescribeApiEnvironmentStrategy(Models\DescribeApiEnvironmentStrategyRequest $req) This API is used to display the throttling policies bound to an API.
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
@@ -84,6 +89,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key.
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key.
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
+ * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) This API is used to modify an API document.
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
  * @method Models\ModifyApiEnvironmentStrategyResponse ModifyApiEnvironmentStrategy(Models\ModifyApiEnvironmentStrategyRequest $req) This API is used to modify an API throttling policy.
  * @method Models\ModifyApiIncrementResponse ModifyApiIncrement(Models\ModifyApiIncrementRequest $req) This API is used to incrementally update an API and mainly called by programs (different from `ModifyApi`, which requires that full API parameters be passed in and is suitable for use in the console).
@@ -94,6 +100,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
  * @method Models\ModifyUsagePlanResponse ModifyUsagePlan(Models\ModifyUsagePlanRequest $req) This API is used to modify the name, description, and QPS of a usage plan.
  * @method Models\ReleaseServiceResponse ReleaseService(Models\ReleaseServiceRequest $req) This API is used to publish a service.
 An API Gateway service can only be called when it is published to an environment and takes effect after creation. This API is used to publish a service to an environment such as the `release` environment.
+ * @method Models\ResetAPIDocPasswordResponse ResetAPIDocPassword(Models\ResetAPIDocPasswordRequest $req) This API is used to reset the password of an API document.
  * @method Models\UnBindEnvironmentResponse UnBindEnvironment(Models\UnBindEnvironmentRequest $req) This API is used to unbind a usage plan from a specified environment.
  * @method Models\UnBindIPStrategyResponse UnBindIPStrategy(Models\UnBindIPStrategyRequest $req) This API is used to unbind an IP policy from a service.
  * @method Models\UnBindSecretIdsResponse UnBindSecretIds(Models\UnBindSecretIdsRequest $req) This API is used to unbind a key from a usage plan.

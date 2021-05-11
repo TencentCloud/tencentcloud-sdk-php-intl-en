@@ -124,6 +124,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSignLaw(boolean $SignLaw) Set Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method boolean getLocalZone() Obtain Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setLocalZone(boolean $LocalZone) Set Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getVlanZeroDirectConnectTunnelCount() Obtain Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) Set Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getOtherVlanDirectConnectTunnelCount() Obtain Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) Set Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMinBandwidth() Obtain Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMinBandwidth(integer $MinBandwidth) Set Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DirectConnect extends AbstractModel
 {
@@ -292,6 +308,30 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $SignLaw;
 
     /**
+     * @var boolean Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $LocalZone;
+
+    /**
+     * @var integer Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VlanZeroDirectConnectTunnelCount;
+
+    /**
+     * @var integer Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OtherVlanDirectConnectTunnelCount;
+
+    /**
+     * @var integer Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MinBandwidth;
+
+    /**
      * @param string $DirectConnectId Connection ID.
      * @param string $DirectConnectName Connection name.
      * @param string $AccessPointId Access point ID of a connection.
@@ -344,6 +384,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $SignLaw Whether the connection has the service agreement signed.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param boolean $LocalZone Whether the connection is an edge zone.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MinBandwidth Minimum bandwidth of the connection
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -473,6 +521,22 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("SignLaw",$param) and $param["SignLaw"] !== null) {
             $this->SignLaw = $param["SignLaw"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("VlanZeroDirectConnectTunnelCount",$param) and $param["VlanZeroDirectConnectTunnelCount"] !== null) {
+            $this->VlanZeroDirectConnectTunnelCount = $param["VlanZeroDirectConnectTunnelCount"];
+        }
+
+        if (array_key_exists("OtherVlanDirectConnectTunnelCount",$param) and $param["OtherVlanDirectConnectTunnelCount"] !== null) {
+            $this->OtherVlanDirectConnectTunnelCount = $param["OtherVlanDirectConnectTunnelCount"];
+        }
+
+        if (array_key_exists("MinBandwidth",$param) and $param["MinBandwidth"] !== null) {
+            $this->MinBandwidth = $param["MinBandwidth"];
         }
     }
 }

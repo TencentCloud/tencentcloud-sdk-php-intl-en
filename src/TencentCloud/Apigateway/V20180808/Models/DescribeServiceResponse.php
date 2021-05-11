@@ -76,6 +76,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values found.
  * @method void setTags(array $Tags) Set Tags bound to a service.
 Note: this field may return null, indicating that no valid values found.
+ * @method string getInstanceId() Obtain Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceName() Obtain Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceName(string $InstanceName) Set Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSetType() Obtain Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSetType(string $SetType) Set Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -194,6 +206,24 @@ Note: this field may return null, indicating that no valid values found.
     public $Tags;
 
     /**
+     * @var string Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceName;
+
+    /**
+     * @var string Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SetType;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -227,6 +257,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags bound to a service.
 Note: this field may return null, indicating that no valid values found.
+     * @param string $InstanceId Dedicated instance ID
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceName Dedicated instance name
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -339,6 +375,18 @@ Note: this field may return null, indicating that no valid values found.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
+            $this->SetType = $param["SetType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

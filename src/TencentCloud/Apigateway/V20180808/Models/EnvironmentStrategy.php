@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentName(string $EnvironmentName) Set Environment name
  * @method integer getQuota() Obtain Throttling value
  * @method void setQuota(integer $Quota) Set Throttling value
+ * @method integer getMaxQuota() Obtain Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxQuota(integer $MaxQuota) Set Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class EnvironmentStrategy extends AbstractModel
 {
@@ -38,8 +42,16 @@ class EnvironmentStrategy extends AbstractModel
     public $Quota;
 
     /**
+     * @var integer Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxQuota;
+
+    /**
      * @param string $EnvironmentName Environment name
      * @param integer $Quota Throttling value
+     * @param integer $MaxQuota Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -60,6 +72,10 @@ class EnvironmentStrategy extends AbstractModel
 
         if (array_key_exists("Quota",$param) and $param["Quota"] !== null) {
             $this->Quota = $param["Quota"];
+        }
+
+        if (array_key_exists("MaxQuota",$param) and $param["MaxQuota"] !== null) {
+            $this->MaxQuota = $param["MaxQuota"];
         }
     }
 }

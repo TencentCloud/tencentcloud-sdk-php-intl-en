@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 10)
+ * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 10)
  */
 class AdaptiveDynamicStreamingTaskInput extends AbstractModel
 {
@@ -41,9 +43,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WatermarkSet;
 
     /**
+     * @var array List of subtitle IDs (maximum: 10)
+     */
+    public $SubtitleSet;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SubtitleSet List of subtitle IDs (maximum: 10)
      */
     function __construct()
     {
@@ -69,6 +77,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
+            $this->SubtitleSet = $param["SubtitleSet"];
         }
     }
 }

@@ -28,6 +28,10 @@ If 1 is entered, when the layer resolution in the parameter is different from th
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
  * @method void setAllowCopy(integer $AllowCopy) Set Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+ * @method integer getPassInputSei() Obtain Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+ * @method void setPassInputSei(integer $PassInputSei) Set Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
  */
 class CommonMixControlParams extends AbstractModel
 {
@@ -44,10 +48,18 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
     public $AllowCopy;
 
     /**
+     * @var integer Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
+     */
+    public $PassInputSei;
+
+    /**
      * @param integer $UseMixCropCenter Value range: [0,1]. 
 If 1 is entered, when the layer resolution in the parameter is different from the actual video resolution, the video will be automatically cropped according to the resolution set by the layer.
      * @param integer $AllowCopy Value range: [0,1].
 If this parameter is set to 1, when both `InputStreamList` and `OutputParams.OutputStreamType` are set to 1, you can copy a stream instead of canceling it.
+     * @param integer $PassInputSei Valid values: 0, 1
+If you set this parameter to 1, SEI (Supplemental Enhanced Information) of the input streams will be passed through.
      */
     function __construct()
     {
@@ -68,6 +80,10 @@ If this parameter is set to 1, when both `InputStreamList` and `OutputParams.Out
 
         if (array_key_exists("AllowCopy",$param) and $param["AllowCopy"] !== null) {
             $this->AllowCopy = $param["AllowCopy"];
+        }
+
+        if (array_key_exists("PassInputSei",$param) and $param["PassInputSei"] !== null) {
+            $this->PassInputSei = $param["PassInputSei"];
         }
     }
 }

@@ -68,10 +68,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSourceInfo(MediaSourceData $SourceInfo) Set Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStorageRegion() Obtain Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStorageRegion(string $StorageRegion) Set Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStorageRegion() Obtain Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
+ * @method void setStorageRegion(string $StorageRegion) Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
  * @method array getTagSet() Obtain Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTagSet(array $TagSet) Set Tag information of media file.
@@ -92,6 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(string $Status) Set File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.
+ * @method string getStorageClass() Obtain 
+ * @method void setStorageClass(string $StorageClass) Set 
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -168,8 +168,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SourceInfo;
 
     /**
-     * @var string Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
      */
     public $StorageRegion;
 
@@ -200,6 +199,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var string 
+     */
+    public $StorageClass;
+
+    /**
      * @param string $Name Media filename.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Description Media file description.
@@ -224,8 +228,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param MediaSourceData $SourceInfo Source information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StorageRegion Storage region of media file, such as ap-guangzhou. For more information, please see [Region List](https://intl.cloud.tencent.com/document/api/213/15692?from_cn_redirect=1#.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $StorageRegion Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Region](https://intl.cloud.tencent.com/document/product/266/9760).
      * @param array $TagSet Tag information of media file.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vid Unique ID of an LVB recording file.
@@ -236,6 +239,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Status File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.
+     * @param string $StorageClass 
      */
     function __construct()
     {
@@ -317,6 +321,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("StorageClass",$param) and $param["StorageClass"] !== null) {
+            $this->StorageClass = $param["StorageClass"];
         }
     }
 }

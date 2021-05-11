@@ -18,52 +18,72 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Subtitle information
  *
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getLanguage() Obtain 
- * @method void setLanguage(string $Language) Set 
- * @method string getFormat() Obtain 
- * @method void setFormat(string $Format) Set 
- * @method string getUrl() Obtain 
- * @method void setUrl(string $Url) Set 
+ * @method string getId() Obtain Unique subtitle ID
+ * @method void setId(string $Id) Set Unique subtitle ID
+ * @method string getName() Obtain Subtitle name
+ * @method void setName(string $Name) Set Subtitle name
+ * @method string getLanguage() Obtain Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+ * @method void setLanguage(string $Language) Set Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+ * @method string getFormat() Obtain Subtitle format. Valid value:
+<li>vtt</li>
+ * @method void setFormat(string $Format) Set Subtitle format. Valid value:
+<li>vtt</li>
+ * @method string getUrl() Obtain Subtitle URL
+ * @method void setUrl(string $Url) Set Subtitle URL
  */
 class MediaSubtitleItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Unique subtitle ID
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string Subtitle name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      */
     public $Language;
 
     /**
-     * @var string 
+     * @var string Subtitle format. Valid value:
+<li>vtt</li>
      */
     public $Format;
 
     /**
-     * @var string 
+     * @var string Subtitle URL
      */
     public $Url;
 
     /**
-     * @param string $Id 
-     * @param string $Name 
-     * @param string $Language 
-     * @param string $Format 
-     * @param string $Url 
+     * @param string $Id Unique subtitle ID
+     * @param string $Name Subtitle name
+     * @param string $Language Subtitle language. Common values:
+<li>`cn`: Chinese</li>
+<li>`ja`: Japanese</li>
+<li>`en-US`: English</li>
+For other values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
+     * @param string $Format Subtitle format. Valid value:
+<li>vtt</li>
+     * @param string $Url Subtitle URL
      */
     function __construct()
     {

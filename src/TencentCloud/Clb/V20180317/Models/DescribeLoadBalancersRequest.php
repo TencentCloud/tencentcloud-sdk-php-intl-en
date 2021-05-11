@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancers request structure.
  *
- * @method array getLoadBalancerIds() Obtain CLB instance ID.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID.
+ * @method array getLoadBalancerIds() Obtain CLB instance ID
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID
  * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
  * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
@@ -56,10 +56,10 @@ OPEN: public network; INTERNAL: private network.
 Basic network does not support queries by VpcId.
  * @method void setVpcId(string $VpcId) Set VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
- * @method string getSecurityGroup() Obtain Security group ID, such as sg-m1cc9123
- * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, such as sg-m1cc9123
- * @method string getMasterZone() Obtain Master AZ, such as "100001" (Guangzhou Zone 1)
- * @method void setMasterZone(string $MasterZone) Set Master AZ, such as "100001" (Guangzhou Zone 1)
+ * @method string getSecurityGroup() Obtain Security group ID, e.g., `sg-m1cc****`.
+ * @method void setSecurityGroup(string $SecurityGroup) Set Security group ID, e.g., `sg-m1cc****`.
+ * @method string getMasterZone() Obtain Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
+ * @method void setMasterZone(string $MasterZone) Set Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
  * @method array getFilters() Obtain Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
  * @method void setFilters(array $Filters) Set Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
@@ -68,7 +68,7 @@ Basic network does not support queries by VpcId.
 class DescribeLoadBalancersRequest extends AbstractModel
 {
     /**
-     * @var array CLB instance ID.
+     * @var array CLB instance ID
      */
     public $LoadBalancerIds;
 
@@ -150,12 +150,12 @@ Basic network does not support queries by VpcId.
     public $VpcId;
 
     /**
-     * @var string Security group ID, such as sg-m1cc9123
+     * @var string Security group ID, e.g., `sg-m1cc****`.
      */
     public $SecurityGroup;
 
     /**
-     * @var string Master AZ, such as "100001" (Guangzhou Zone 1)
+     * @var string Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
      */
     public $MasterZone;
 
@@ -166,7 +166,7 @@ Basic network does not support queries by VpcId.
     public $Filters;
 
     /**
-     * @param array $LoadBalancerIds CLB instance ID.
+     * @param array $LoadBalancerIds CLB instance ID
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance
@@ -184,8 +184,8 @@ OPEN: public network; INTERNAL: private network.
      * @param integer $WithRs Whether a CLB instance is bound to a real server. 0: no; 1: yes; -1: query all.
      * @param string $VpcId VPC where a CLB instance resides, such as vpc-bhqkbhdx.
 Basic network does not support queries by VpcId.
-     * @param string $SecurityGroup Security group ID, such as sg-m1cc9123
-     * @param string $MasterZone Master AZ, such as "100001" (Guangzhou Zone 1)
+     * @param string $SecurityGroup Security group ID, e.g., `sg-m1cc****`.
+     * @param string $MasterZone Primary AZ ID, e.g., `100001` (Guangzhou Zone 1).
      * @param array $Filters Each request can have up to 10 `Filters` and 100 `Filter.Values`. Detailed filter conditions:
 <li> internet-charge-type - Type: String - Required: No - Filter by CLB network billing mode, including `TRAFFIC_POSTPAID_BY_HOUR`</li>
      */

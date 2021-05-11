@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetachDisks request structure.
  *
- * @method array getDiskIds() Obtain ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
- * @method void setDiskIds(array $DiskIds) Set ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
- * @method string getInstanceId() Obtain For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
- * @method void setInstanceId(string $InstanceId) Set For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+ * @method array getDiskIds() Obtain IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+ * @method void setDiskIds(array $DiskIds) Set IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+ * @method string getInstanceId() Obtain Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
+ * @method void setInstanceId(string $InstanceId) Set Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
  */
 class DetachDisksRequest extends AbstractModel
 {
     /**
-     * @var array ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
+     * @var array IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
      */
     public $DiskIds;
 
     /**
-     * @var string For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+     * @var string Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
      */
     public $InstanceId;
 
     /**
-     * @param array $DiskIds ID of the cloud disk to be unmounted, which can be queried through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1). A maximum of 10 elastic cloud disks can be unmounted in a single request.
-     * @param string $InstanceId For a cloud disk that is not shared, this parameter is ignored. For a shared cloud disk, this parameter indicates which CVM instance the cloud disk is to be unmounted from.
+     * @param array $DiskIds IDs of the cloud disks to be unmounted, which can be queried via the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API. Up to 10 elastic cloud disks can be unmounted in a single request.
+     * @param string $InstanceId Indicates the CVM from which you want to unmount the disks. This parameter is only available for shared cloud disks.
      */
     function __construct()
     {

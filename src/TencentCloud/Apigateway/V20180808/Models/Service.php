@@ -84,6 +84,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values found.
  * @method void setTags(array $Tags) Set Tags bound to a service.
 Note: this field may return null, indicating that no valid values found.
+ * @method string getInstanceId() Obtain Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSetType() Obtain Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSetType(string $SetType) Set Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Service extends AbstractModel
 {
@@ -184,6 +192,18 @@ Note: this field may return null, indicating that no valid values found.
     public $Tags;
 
     /**
+     * @var string Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceId;
+
+    /**
+     * @var string Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SetType;
+
+    /**
      * @param integer $InnerHttpsPort Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceDesc Custom service description.
@@ -216,6 +236,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tags bound to a service.
 Note: this field may return null, indicating that no valid values found.
+     * @param string $InstanceId Dedicated instance
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SetType Cluster type
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -297,6 +321,14 @@ Note: this field may return null, indicating that no valid values found.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
+            $this->SetType = $param["SetType"];
         }
     }
 }

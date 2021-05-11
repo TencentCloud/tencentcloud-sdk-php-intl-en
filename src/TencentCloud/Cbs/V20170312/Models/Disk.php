@@ -106,8 +106,8 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setSnapshotCount(integer $SnapshotCount) Set The total number of snapshots of the cloud disk.
  * @method integer getSnapshotSize() Obtain The total capacity of the snapshots of the cloud disk. Unit: MB.
  * @method void setSnapshotSize(integer $SnapshotSize) Set The total capacity of the snapshots of the cloud disk. Unit: MB.
- * @method boolean getBackupDisk() Obtain Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
- * @method void setBackupDisk(boolean $BackupDisk) Set Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+ * @method boolean getBackupDisk() Obtain Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
+ * @method void setBackupDisk(boolean $BackupDisk) Set Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
  * @method integer getThroughputPerformance() Obtain Extra performance for a cloud disk, in MB/sec.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Extra performance for a cloud disk, in MB/sec.
@@ -287,7 +287,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $SnapshotSize;
 
     /**
-     * @var boolean Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     * @var boolean Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
      */
     public $BackupDisk;
 
@@ -341,7 +341,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param array $InstanceIdList For non-shareable cloud disks, this parameter is null. For shareable cloud disks, this parameters indicates this cloud disk's Instance IDs currently mounted to the CVM.
      * @param integer $SnapshotCount The total number of snapshots of the cloud disk.
      * @param integer $SnapshotSize The total capacity of the snapshots of the cloud disk. Unit: MB.
-     * @param boolean $BackupDisk Indicates whether a snapshot should be created for backup when the cloud disk is terminated due to arrears or expiration. `True`: create a snapshot to backup the disk upon termination. `False`: terminate the disk without backup
+     * @param boolean $BackupDisk Specifies whether to create a snapshot when the cloud disk is terminated due to overdue payment or expiration. `true`: create snapshot; `false`: do not create snapshot.
      * @param integer $ThroughputPerformance Extra performance for a cloud disk, in MB/sec.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

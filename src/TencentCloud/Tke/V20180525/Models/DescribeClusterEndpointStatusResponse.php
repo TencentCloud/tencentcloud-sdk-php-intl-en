@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStatus() Obtain Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
  * @method void setStatus(string $Status) Set Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+ * @method string getErrorMsg() Obtain Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setErrorMsg(string $ErrorMsg) Set Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +37,20 @@ class DescribeClusterEndpointStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var string Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $ErrorMsg;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $Status Queries cluster access port status (Created = successfully enabled; Creating = in the process of being enabled; NotFound = not enabled).
+     * @param string $ErrorMsg Details of the error occurred while opening the access port
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +68,10 @@ class DescribeClusterEndpointStatusResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

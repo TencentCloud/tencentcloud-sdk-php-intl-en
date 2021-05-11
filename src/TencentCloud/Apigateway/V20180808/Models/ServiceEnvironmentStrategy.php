@@ -32,6 +32,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getStrategy() Obtain Throttling value.
  * @method void setStrategy(integer $Strategy) Set Throttling value.
+ * @method integer getMaxStrategy() Obtain Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxStrategy(integer $MaxStrategy) Set Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class ServiceEnvironmentStrategy extends AbstractModel
 {
@@ -62,12 +66,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Strategy;
 
     /**
+     * @var integer Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxStrategy;
+
+    /**
      * @param string $EnvironmentName Environment name.
      * @param string $Url Access service environment URL.
      * @param integer $Status Release status.
      * @param string $VersionName Published version number.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Strategy Throttling value.
+     * @param integer $MaxStrategy Maximum quota value
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Strategy",$param) and $param["Strategy"] !== null) {
             $this->Strategy = $param["Strategy"];
+        }
+
+        if (array_key_exists("MaxStrategy",$param) and $param["MaxStrategy"] !== null) {
+            $this->MaxStrategy = $param["MaxStrategy"];
         }
     }
 }

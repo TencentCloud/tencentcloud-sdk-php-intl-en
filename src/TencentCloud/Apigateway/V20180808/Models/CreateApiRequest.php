@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDesc(string $ApiDesc) Set Custom API description.
  * @method string getApiType() Obtain API type. Valid values: NORMAL (general API), TSF (microservice API). Default value: NORMAL.
  * @method void setApiType(string $ApiType) Set API type. Valid values: NORMAL (general API), TSF (microservice API). Default value: NORMAL.
- * @method string getAuthType() Obtain API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
- * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+ * @method string getAuthType() Obtain API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
+ * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
  * @method boolean getEnableCORS() Obtain Whether to enable CORS.
  * @method void setEnableCORS(boolean $EnableCORS) Set Whether to enable CORS.
  * @method array getConstantParameters() Obtain Constant parameter.
@@ -156,7 +156,7 @@ class CreateApiRequest extends AbstractModel
     public $ApiType;
 
     /**
-     * @var string API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+     * @var string API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
      */
     public $AuthType;
 
@@ -354,7 +354,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $ApiName Custom API name.
      * @param string $ApiDesc Custom API description.
      * @param string $ApiType API type. Valid values: NORMAL (general API), TSF (microservice API). Default value: NORMAL.
-     * @param string $AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH. Default value: NONE.
+     * @param string $AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH, APP (application authentication). Default value: NONE.
      * @param boolean $EnableCORS Whether to enable CORS.
      * @param array $ConstantParameters Constant parameter.
      * @param array $RequestParameters Frontend request parameter.

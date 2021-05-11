@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDesc(string $ApiDesc) Set Custom API description.
  * @method string getApiType() Obtain API type. Valid values: NORMAL, TSF. Default value: NORMAL.
  * @method void setApiType(string $ApiType) Set API type. Valid values: NORMAL, TSF. Default value: NORMAL.
- * @method string getAuthType() Obtain API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
- * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+ * @method string getAuthType() Obtain API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
+ * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
  * @method boolean getAuthRequired() Obtain Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
  * @method void setAuthRequired(boolean $AuthRequired) Set Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
  * @method integer getServiceTimeout() Obtain API backend service timeout period in seconds.
@@ -155,7 +155,7 @@ class ModifyApiRequest extends AbstractModel
     public $ApiType;
 
     /**
-     * @var string API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * @var string API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
      */
     public $AuthType;
 
@@ -367,7 +367,7 @@ class ModifyApiRequest extends AbstractModel
      * @param string $ApiName Custom API name.
      * @param string $ApiDesc Custom API description.
      * @param string $ApiType API type. Valid values: NORMAL, TSF. Default value: NORMAL.
-     * @param string $AuthType API authentication type. Valid values: SECRET, NONE, OAUTH. Default value: NONE.
+     * @param string $AuthType API authentication type. Valid values: SECRET, NONE, OAUTH, APP. Default value: NONE.
      * @param boolean $AuthRequired Whether signature authentication is required. True: yes; False: no. This parameter is to be disused.
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
      * @param string $Protocol API frontend request type, such as HTTP, HTTPS, or HTTP and HTTPS.

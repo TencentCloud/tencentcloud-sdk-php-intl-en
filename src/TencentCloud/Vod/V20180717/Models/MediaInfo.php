@@ -60,6 +60,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMiniProgramReviewInfo(MediaMiniProgramReviewInfo $MiniProgramReviewInfo) Set WeChat Mini Program audit information.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method MediaSubtitleInfo getSubtitleInfo() Obtain Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setSubtitleInfo(MediaSubtitleInfo $SubtitleInfo) Set Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getFileId() Obtain Unique ID of media file.
  * @method void setFileId(string $FileId) Set Unique ID of media file.
  */
@@ -126,6 +130,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MiniProgramReviewInfo;
 
     /**
+     * @var MediaSubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $SubtitleInfo;
+
+    /**
      * @var string Unique ID of media file.
      */
     public $FileId;
@@ -151,6 +161,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param MediaMiniProgramReviewInfo $MiniProgramReviewInfo WeChat Mini Program audit information.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaSubtitleInfo $SubtitleInfo Subtitle information
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $FileId Unique ID of media file.
      */
     function __construct()
@@ -214,6 +226,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MiniProgramReviewInfo",$param) and $param["MiniProgramReviewInfo"] !== null) {
             $this->MiniProgramReviewInfo = new MediaMiniProgramReviewInfo();
             $this->MiniProgramReviewInfo->deserialize($param["MiniProgramReviewInfo"]);
+        }
+
+        if (array_key_exists("SubtitleInfo",$param) and $param["SubtitleInfo"] !== null) {
+            $this->SubtitleInfo = new MediaSubtitleInfo();
+            $this->SubtitleInfo->deserialize($param["SubtitleInfo"]);
         }
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {

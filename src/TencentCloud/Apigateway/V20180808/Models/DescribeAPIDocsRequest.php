@@ -18,16 +18,14 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeServicesStatus request structure.
+ * DescribeAPIDocs request structure.
  *
  * @method integer getLimit() Obtain Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method array getFilters() Obtain Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
- * @method void setFilters(array $Filters) Set Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
  */
-class DescribeServicesStatusRequest extends AbstractModel
+class DescribeAPIDocsRequest extends AbstractModel
 {
     /**
      * @var integer Number of results to be returned. Default value: 20. Maximum value: 100.
@@ -40,14 +38,8 @@ class DescribeServicesStatusRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
-     */
-    public $Filters;
-
-    /**
      * @param integer $Limit Number of results to be returned. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
-     * @param array $Filters Filter. Valid values: ServiceId, ServiceName, NotUsagePlanId, Environment, IpVersion, InstanceId
      */
     function __construct()
     {
@@ -68,15 +60,6 @@ class DescribeServicesStatusRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
-        }
-
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = [];
-            foreach ($param["Filters"] as $key => $value){
-                $obj = new Filter();
-                $obj->deserialize($value);
-                array_push($this->Filters, $obj);
-            }
         }
     }
 }

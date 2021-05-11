@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppIdType(string $AppIdType) Set User type, which is reserved and can be used by `serverless` users.
  * @method array getTags() Obtain Tag information.
  * @method void setTags(array $Tags) Set Tag information.
+ * @method string getInstanceId() Obtain Dedicated instance ID
+ * @method void setInstanceId(string $InstanceId) Set Dedicated instance ID
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateServiceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Dedicated instance ID
+     */
+    public $InstanceId;
+
+    /**
      * @param string $ServiceName Custom service name.
      * @param string $Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
      * @param string $ServiceDesc Custom service description.
@@ -96,6 +103,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $SetServerName Cluster name, which is reserved and used by the `tsf serverless` type.
      * @param string $AppIdType User type, which is reserved and can be used by `serverless` users.
      * @param array $Tags Tag information.
+     * @param string $InstanceId Dedicated instance ID
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class CreateServiceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }
