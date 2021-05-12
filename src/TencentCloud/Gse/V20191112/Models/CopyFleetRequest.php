@@ -46,8 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGameServerSessionProtectionTimeLimit(integer $GameServerSessionProtectionTimeLimit) Set Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes. This parameter is valid only when NewGameSessionProtectionPolicy is set as TimeLimitProtection.
  * @method string getSelectedScalingType() Obtain Whether to select scaling. Valid values: SCALING_SELECTED, SCALING_UNSELECTED. Default value: SCALING_UNSELECTED.
  * @method void setSelectedScalingType(string $SelectedScalingType) Set Whether to select scaling. Valid values: SCALING_SELECTED, SCALING_UNSELECTED. Default value: SCALING_UNSELECTED.
- * @method string getSelectedCcnType() Obtain Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
- * @method void setSelectedCcnType(string $SelectedCcnType) Set Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+ * @method string getSelectedCcnType() Obtain Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
+ * @method void setSelectedCcnType(string $SelectedCcnType) Set Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
  * @method array getTags() Obtain Tag list. Up to 50 tags.
  * @method void setTags(array $Tags) Set Tag list. Up to 50 tags.
  * @method DiskInfo getSystemDiskInfo() Obtain System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
@@ -56,8 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataDiskInfo(array $DataDiskInfo) Set Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
  * @method string getSelectedTimerType() Obtain Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
  * @method void setSelectedTimerType(string $SelectedTimerType) Set Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
- * @method array getCcnInfos() Obtain CCN information, including the corresponding CCN account and ID.
- * @method void setCcnInfos(array $CcnInfos) Set CCN information, including the corresponding CCN account and ID.
+ * @method array getCcnInfos() Obtain Information of the CCN instance, including the owner account and the instance ID.
+ * @method void setCcnInfos(array $CcnInfos) Set Information of the CCN instance, including the owner account and the instance ID.
+ * @method integer getInternetMaxBandwidthOut() Obtain 
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set 
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -127,7 +129,7 @@ class CopyFleetRequest extends AbstractModel
     public $SelectedScalingType;
 
     /**
-     * @var string Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+     * @var string Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
      */
     public $SelectedCcnType;
 
@@ -152,9 +154,14 @@ class CopyFleetRequest extends AbstractModel
     public $SelectedTimerType;
 
     /**
-     * @var array CCN information, including the corresponding CCN account and ID.
+     * @var array Information of the CCN instance, including the owner account and the instance ID.
      */
     public $CcnInfos;
+
+    /**
+     * @var integer 
+     */
+    public $InternetMaxBandwidthOut;
 
     /**
      * @param string $FleetId Server fleet ID
@@ -170,12 +177,13 @@ class CopyFleetRequest extends AbstractModel
      * @param RuntimeConfiguration $RuntimeConfiguration Progress configuration
      * @param integer $GameServerSessionProtectionTimeLimit Timeout period of time-limited protection. Value range: 5-1440 minutes. Default value: 60 minutes. This parameter is valid only when NewGameSessionProtectionPolicy is set as TimeLimitProtection.
      * @param string $SelectedScalingType Whether to select scaling. Valid values: SCALING_SELECTED, SCALING_UNSELECTED. Default value: SCALING_UNSELECTED.
-     * @param string $SelectedCcnType Whether to select CCN: CCN_SELECTED_BEFORE_CREATE (associated before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (not associated); CCN_UNSELECTED by default
+     * @param string $SelectedCcnType Whether to associate the fleet with a CCN instance: CCN_SELECTED_BEFORE_CREATE (associate before creation), CCN_SELECTED_AFTER_CREATE (associated after creation), or CCN_UNSELECTED (do not associate); CCN_UNSELECTED by default
      * @param array $Tags Tag list. Up to 50 tags.
      * @param DiskInfo $SystemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
      * @param array $DataDiskInfo Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
      * @param string $SelectedTimerType Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
-     * @param array $CcnInfos CCN information, including the corresponding CCN account and ID.
+     * @param array $CcnInfos Information of the CCN instance, including the owner account and the instance ID.
+     * @param integer $InternetMaxBandwidthOut 
      */
     function __construct()
     {
@@ -287,6 +295,10 @@ class CopyFleetRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CcnInfos, $obj);
             }
+        }
+
+        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
+            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
         }
     }
 }

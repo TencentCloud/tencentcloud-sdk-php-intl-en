@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CCN information
  *
- * @method string getAccountId() Obtain CCN account
- * @method void setAccountId(string $AccountId) Set CCN account
+ * @method string getAccountId() Obtain Account of the CCN instance owner
+ * @method void setAccountId(string $AccountId) Set Account of the CCN instance owner
  * @method string getCcnId() Obtain CCN ID
  * @method void setCcnId(string $CcnId) Set CCN ID
  */
 class CcnInfo extends AbstractModel
 {
     /**
-     * @var string CCN account
+     * @var string Account of the CCN instance owner
      */
     public $AccountId;
 
@@ -38,7 +38,7 @@ class CcnInfo extends AbstractModel
     public $CcnId;
 
     /**
-     * @param string $AccountId CCN account
+     * @param string $AccountId Account of the CCN instance owner
      * @param string $CcnId CCN ID
      */
     function __construct()

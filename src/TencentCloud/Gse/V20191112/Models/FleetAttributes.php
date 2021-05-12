@@ -90,10 +90,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setSystemDiskInfo(DiskInfo $SystemDiskInfo) Set System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method array getRelatedCcnInfos() Obtain CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRelatedCcnInfos(array $RelatedCcnInfos) Set CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method array getRelatedCcnInfos() Obtain CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setRelatedCcnInfos(array $RelatedCcnInfos) Set CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getInternetMaxBandwidthOut() Obtain 
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set 
  */
 class FleetAttributes extends AbstractModel
 {
@@ -209,10 +211,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $SystemDiskInfo;
 
     /**
-     * @var array CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $RelatedCcnInfos;
+
+    /**
+     * @var integer 
+     */
+    public $InternetMaxBandwidthOut;
 
     /**
      * @param string $AssetId Asset package ID
@@ -250,8 +257,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param DiskInfo $SystemDiskInfo System disk. It can be a SSD (CLOUD_SSD) with 100-500 GB capacity or a Premium Cloud Storage disk (CLOUD_PREMIUM) with 50-500 GB capacity. The increment is 1.
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param array $RelatedCcnInfos CCN information
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param array $RelatedCcnInfos CCN instance information
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $InternetMaxBandwidthOut 
      */
     function __construct()
     {
@@ -361,6 +369,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 $obj->deserialize($value);
                 array_push($this->RelatedCcnInfos, $obj);
             }
+        }
+
+        if (array_key_exists("InternetMaxBandwidthOut",$param) and $param["InternetMaxBandwidthOut"] !== null) {
+            $this->InternetMaxBandwidthOut = $param["InternetMaxBandwidthOut"];
         }
     }
 }

@@ -18,36 +18,36 @@ namespace TencentCloud\Gse\V20191112\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CCN information description
+ * Information of the associated CCN instance
  *
- * @method string getAccountId() Obtain CCN account
- * @method void setAccountId(string $AccountId) Set CCN account
- * @method string getCcnId() Obtain CCN ID
- * @method void setCcnId(string $CcnId) Set CCN ID
- * @method string getAttachType() Obtain Status of associated CCN
- * @method void setAttachType(string $AttachType) Set Status of associated CCN
+ * @method string getAccountId() Obtain Account of the CCN instance owner
+ * @method void setAccountId(string $AccountId) Set Account of the CCN instance owner
+ * @method string getCcnId() Obtain CCN instance ID
+ * @method void setCcnId(string $CcnId) Set CCN instance ID
+ * @method string getAttachType() Obtain Status of associated CCN instance
+ * @method void setAttachType(string $AttachType) Set Status of associated CCN instance
  */
 class RelatedCcnInfo extends AbstractModel
 {
     /**
-     * @var string CCN account
+     * @var string Account of the CCN instance owner
      */
     public $AccountId;
 
     /**
-     * @var string CCN ID
+     * @var string CCN instance ID
      */
     public $CcnId;
 
     /**
-     * @var string Status of associated CCN
+     * @var string Status of associated CCN instance
      */
     public $AttachType;
 
     /**
-     * @param string $AccountId CCN account
-     * @param string $CcnId CCN ID
-     * @param string $AttachType Status of associated CCN
+     * @param string $AccountId Account of the CCN instance owner
+     * @param string $CcnId CCN instance ID
+     * @param string $AttachType Status of associated CCN instance
      */
     function __construct()
     {
