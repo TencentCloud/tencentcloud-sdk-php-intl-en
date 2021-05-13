@@ -56,10 +56,12 @@ use TencentCloud\Common\AbstractModel;
 <li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
  * @method AddressChargePrepaid getAddressChargePrepaid() Obtain A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
  * @method void setAddressChargePrepaid(AddressChargePrepaid $AddressChargePrepaid) Set A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
- * @method string getAddressType() Obtain The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
- * @method void setAddressType(string $AddressType) Set The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+ * @method string getAddressType() Obtain The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
+ * @method void setAddressType(string $AddressType) Set The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
  * @method string getAnycastZone() Obtain Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
  * @method void setAnycastZone(string $AnycastZone) Set Anycast publishing region
@@ -76,6 +78,8 @@ Whether the Anycast EIP can be bound to CLB instances.
  * @method void setTags(array $Tags) Set List of tags to be bound.
  * @method string getBandwidthPackageId() Obtain The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+ * @method string getAddressName() Obtain EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+ * @method void setAddressName(string $AddressName) Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -118,8 +122,9 @@ class AllocateAddressesRequest extends AbstractModel
     public $AddressChargePrepaid;
 
     /**
-     * @var string The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+     * @var string The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
      */
     public $AddressType;
 
@@ -148,6 +153,11 @@ Whether the Anycast EIP can be bound to CLB instances.
     public $BandwidthPackageId;
 
     /**
+     * @var string EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     */
+    public $AddressName;
+
+    /**
      * @param integer $AddressCount The number of EIPs. Default: 1.
      * @param string $InternetServiceProvider The EIP line type. Default: BGP.
 <ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
@@ -166,8 +176,9 @@ Whether the Anycast EIP can be bound to CLB instances.
 <li>TRAFFIC_POSTPAID_BY_HOUR: 1 Mbps to 100 Mbps</li></ul>Default value: 1 Mbps</li>
 <li>If you are not a bill-by-IP account beta user, the EIP outbound bandwidth cap is subject to that of the instance bound to the EIP. Therefore, you do not need to pass in this parameter.</li></ul>
      * @param AddressChargePrepaid $AddressChargePrepaid A required billing parameter for an EIP billed by monthly bandwidth subscription. For EIPs using other billing modes, it can be ignored.
-     * @param string $AddressType The EIP type. Default: EIP.
-<ul style="margin:0"><li>For a user who has activated the AIA allowlist, possible values are:<ul><li>AnycastEIP: an Anycast EIP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Only certain regions support Anycast EIPs.</li></ul>
+     * @param string $AddressType The EIP type. Default: `EIP`.
+<ul style="margin:0"><li>For AIA beta users, the value should be:<ul><li>`AnycastEIP`: an AIA IP address. For more information, see [Anycast Internet Acceleration](https://intl.cloud.tencent.com/document/product/644?from_cn_redirect=1).</li></ul>Note: Anycast EIPs are only supported in some of the regions.</li></ul>
+<ul style="margin:0"><li>For high-quality IP beta users, the value should be: <ul><li>`HighQualityEIP`: high-quality IP</li></ul>Note: High-quality IPs are only supported in some of the regions.</li></ul>
      * @param string $AnycastZone Anycast publishing region
 <ul style="margin:0"><li>Valid for users who have activated AIA. Values:<ul><li>ANYCAST_ZONE_GLOBAL: global publishing region </li><li>ANYCAST_ZONE_OVERSEAS: overseas publishing region</li><li><b>**[Disused]**</b> ANYCAST_ZONE_A: publishing region A (updated to ANYCAST_ZONE_GLOBAL)</li><li><b>**[Disused]**</b> ANYCAST_ZONE_B: publishing region B (updated to ANYCAST_ZONE_GLOBAL)</li></ul>Default: ANYCAST_ZONE_OVERSEAS.</li></ul>
      * @param boolean $ApplicableForCLB <b>**[Disused]**</b>
@@ -176,6 +187,7 @@ Whether the Anycast EIP can be bound to CLB instances.
 <li>FALSE: the Anycast EIP can be bound to CVMs, NAT gateways, and HAVIPs.</li></ul>Default: FALSE.</li></ul>
      * @param array $Tags List of tags to be bound.
      * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
+     * @param string $AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
      */
     function __construct()
     {
@@ -234,6 +246,10 @@ Whether the Anycast EIP can be bound to CLB instances.
 
         if (array_key_exists("BandwidthPackageId",$param) and $param["BandwidthPackageId"] !== null) {
             $this->BandwidthPackageId = $param["BandwidthPackageId"];
+        }
+
+        if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
+            $this->AddressName = $param["AddressName"];
         }
     }
 }

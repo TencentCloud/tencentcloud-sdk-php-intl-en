@@ -48,22 +48,22 @@ origin: original codec as the output codec
 origin: original codec as the output codec
  * @method string getDescription() Obtain Template description.
  * @method void setDescription(string $Description) Set Template description.
+ * @method integer getNeedVideo() Obtain Whether to keep the video. 0: no; 1: yes. Default value: 1.
+ * @method void setNeedVideo(integer $NeedVideo) Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method integer getWidth() Obtain Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
  * @method void setWidth(integer $Width) Set Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
- * @method integer getNeedVideo() Obtain Whether to keep the video. 0: no; 1: yes. Default value: 1.
- * @method void setNeedVideo(integer $NeedVideo) Set Whether to keep the video. 0: no; 1: yes. Default value: 1.
  * @method integer getNeedAudio() Obtain Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method integer getHeight() Obtain Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
  * @method void setHeight(integer $Height) Set Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
  * @method integer getFps() Obtain Frame rate. Default value: 0.
 Value range: 0-60
  * @method void setFps(integer $Fps) Set Frame rate. Default value: 0.
@@ -152,16 +152,16 @@ origin: original codec as the output codec
     public $Description;
 
     /**
+     * @var integer Whether to keep the video. 0: no; 1: yes. Default value: 1.
+     */
+    public $NeedVideo;
+
+    /**
      * @var integer Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
      */
     public $Width;
-
-    /**
-     * @var integer Whether to keep the video. 0: no; 1: yes. Default value: 1.
-     */
-    public $NeedVideo;
 
     /**
      * @var integer Whether to keep the audio. 0: no; 1: yes. Default value: 1.
@@ -170,8 +170,8 @@ It must be a multiple of 2. The original width is 0.
 
     /**
      * @var integer Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
      */
     public $Height;
 
@@ -253,14 +253,14 @@ Value range: 0-500.
 
 origin: original codec as the output codec
      * @param string $Description Template description.
+     * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
      * @param integer $Width Width. Default value: 0.
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
-     * @param integer $NeedVideo Whether to keep the video. 0: no; 1: yes. Default value: 1.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
      * @param integer $Height Height. Default value: 0.
-Value range: 0-3000
-It must be a multiple of 2. The original height is 0.
+Value range: [0,3000]
+The value must be a multiple of 2, and 0 is the original height.
      * @param integer $Fps Frame rate. Default value: 0.
 Value range: 0-60
      * @param integer $Gop Keyframe interval in seconds. Default value: original interval
@@ -322,12 +322,12 @@ Value range: 0.0-0.5.
             $this->Description = $param["Description"];
         }
 
-        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
-            $this->Width = $param["Width"];
-        }
-
         if (array_key_exists("NeedVideo",$param) and $param["NeedVideo"] !== null) {
             $this->NeedVideo = $param["NeedVideo"];
+        }
+
+        if (array_key_exists("Width",$param) and $param["Width"] !== null) {
+            $this->Width = $param["Width"];
         }
 
         if (array_key_exists("NeedAudio",$param) and $param["NeedAudio"] !== null) {

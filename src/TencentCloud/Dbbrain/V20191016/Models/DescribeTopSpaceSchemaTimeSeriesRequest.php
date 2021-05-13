@@ -18,14 +18,14 @@ namespace TencentCloud\Dbbrain\V20191016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTopSpaceTableTimeSeries request structure.
+ * DescribeTopSpaceSchemaTimeSeries request structure.
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method integer getLimit() Obtain Number of returned top tables. Maximum value: 100. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of returned top tables. Maximum value: 100. Default value: 20.
- * @method string getSortBy() Obtain Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
- * @method void setSortBy(string $SortBy) Set Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+ * @method integer getLimit() Obtain Number of returned top databases. Maximum value: 100. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Number of returned top databases. Maximum value: 100. Default value: 20.
+ * @method string getSortBy() Obtain Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
+ * @method void setSortBy(string $SortBy) Set Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
  * @method string getStartDate() Obtain Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
  * @method void setStartDate(string $StartDate) Set Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
  * @method string getEndDate() Obtain End date. It can be as early as 29 days before the current date, and defaults to the current date.
@@ -33,7 +33,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.
  */
-class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
+class DescribeTopSpaceSchemaTimeSeriesRequest extends AbstractModel
 {
     /**
      * @var string Instance ID.
@@ -41,12 +41,12 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Number of returned top tables. Maximum value: 100. Default value: 20.
+     * @var integer Number of returned top databases. Maximum value: 100. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var string Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * @var string Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      */
     public $SortBy;
 
@@ -67,8 +67,8 @@ class DescribeTopSpaceTableTimeSeriesRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param integer $Limit Number of returned top tables. Maximum value: 100. Default value: 20.
-     * @param string $SortBy Field used to sort top tables. Valid values: DataLength, IndexLength, TotalLength, DataFree, FragRatio, TableRows, PhysicalFileSize. Default value: PhysicalFileSize.
+     * @param integer $Limit Number of returned top databases. Maximum value: 100. Default value: 20.
+     * @param string $SortBy Field used to sort top tables. Valid values: `DataLength`, `IndexLength`, `TotalLength`, `DataFree`, `FragRatio`, `TableRows`, and `PhysicalFileSize` (supported only by TencentDB for MySQL instances). For TencentDB for MySQL instances, the default value is `PhysicalFileSize`; for other database instances, the default value is `TotalLength`.
      * @param string $StartDate Start date. It can be as early as 29 days before the current date, and defaults to 6 days before the end date.
      * @param string $EndDate End date. It can be as early as 29 days before the current date, and defaults to the current date.
      * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)). Default value: `mysql`.

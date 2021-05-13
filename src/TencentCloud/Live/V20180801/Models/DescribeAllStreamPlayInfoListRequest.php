@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getQueryTime() Obtain Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
  * @method void setQueryTime(string $QueryTime) Set Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+ * @method array getPlayDomains() Obtain Playback domain name list. If this parameter is left empty, full data will be queried.
+ * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list. If this parameter is left empty, full data will be queried.
  */
 class DescribeAllStreamPlayInfoListRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
     public $QueryTime;
 
     /**
+     * @var array Playback domain name list. If this parameter is left empty, full data will be queried.
+     */
+    public $PlayDomains;
+
+    /**
      * @param string $QueryTime Query time point accurate to the minute. You can query data within the last month. As there is a 5-minute delay in the data, you're advised to pass in a time point 5 minutes earlier than needed. Format: yyyy-mm-dd HH:MM:00. As the accuracy is to the minute, please set the value of second to `00`.
+     * @param array $PlayDomains Playback domain name list. If this parameter is left empty, full data will be queried.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAllStreamPlayInfoListRequest extends AbstractModel
         }
         if (array_key_exists("QueryTime",$param) and $param["QueryTime"] !== null) {
             $this->QueryTime = $param["QueryTime"];
+        }
+
+        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
+            $this->PlayDomains = $param["PlayDomains"];
         }
     }
 }

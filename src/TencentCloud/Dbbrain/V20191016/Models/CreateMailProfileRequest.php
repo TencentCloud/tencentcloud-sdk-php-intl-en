@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProfileType(string $ProfileType) Set Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
  * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
  * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
- * @method array getBindInstanceIds() Obtain Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
- * @method void setBindInstanceIds(array $BindInstanceIds) Set Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+ * @method array getBindInstanceIds() Obtain Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
+ * @method void setBindInstanceIds(array $BindInstanceIds) Set Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
  */
 class CreateMailProfileRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class CreateMailProfileRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var array Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+     * @var array Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
      */
     public $BindInstanceIds;
 
@@ -71,7 +71,7 @@ class CreateMailProfileRequest extends AbstractModel
      * @param string $ProfileName Configuration name, which needs to be unique. For database inspection reports, this name can be customize as needed. For scheduled task reports, the name should be in the format of "scheduler_" + {instanceId}, such as "schduler_cdb-test".
      * @param string $ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
      * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TencentDB for CynosDB (compatible with MySQL)).
-     * @param array $BindInstanceIds Instance ID bound to the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time.
+     * @param array $BindInstanceIds Instance ID bound with the configuration, which is set when the configuration level is "Instance". Only one instance can be bound at a time. When the configuration level is “User”, leave this parameter empty.
      */
     function __construct()
     {

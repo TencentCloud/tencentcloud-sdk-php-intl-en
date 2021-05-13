@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApiDocName(string $ApiDocName) Set API document name
  * @method string getApiDocStatus() Obtain API document build status
  * @method void setApiDocStatus(string $ApiDocStatus) Set API document build status
- * @method integer getApiCount() Obtain Number of API documents
- * @method void setApiCount(integer $ApiCount) Set Number of API documents
+ * @method integer getApiCount() Obtain Number of APIs with API documents
+ * @method void setApiCount(integer $ApiCount) Set Number of APIs with API documents
  * @method integer getViewCount() Obtain Number of views of API document
  * @method void setViewCount(integer $ViewCount) Set Number of views of API document
  * @method integer getReleaseCount() Obtain Number of releases of API document
@@ -67,7 +67,7 @@ class APIDocInfo extends AbstractModel
     public $ApiDocStatus;
 
     /**
-     * @var integer Number of API documents
+     * @var integer Number of APIs with API documents
      */
     public $ApiCount;
 
@@ -125,7 +125,7 @@ class APIDocInfo extends AbstractModel
      * @param string $ApiDocId API document ID
      * @param string $ApiDocName API document name
      * @param string $ApiDocStatus API document build status
-     * @param integer $ApiCount Number of API documents
+     * @param integer $ApiCount Number of APIs with API documents
      * @param integer $ViewCount Number of views of API document
      * @param integer $ReleaseCount Number of releases of API document
      * @param string $ApiDocUri API document access URI

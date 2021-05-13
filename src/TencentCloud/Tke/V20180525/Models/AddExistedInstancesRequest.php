@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getInstanceIds() Obtain Instance list. Spot instance is not supported.
  * @method void setInstanceIds(array $InstanceIds) Set Instance list. Spot instance is not supported.
- * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Additional parameter to be set for the instance
- * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Additional parameter to be set for the instance
+ * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Detailed information of the instance
+ * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Detailed information of the instance
  * @method EnhancedService getEnhancedService() Obtain Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
  * @method LoginSettings getLoginSettings() Obtain Node login information (currently only supports using Password or single KeyIds)
@@ -52,7 +52,7 @@ class AddExistedInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var InstanceAdvancedSettings Additional parameter to be set for the instance
+     * @var InstanceAdvancedSettings Detailed information of the instance
      */
     public $InstanceAdvancedSettings;
 
@@ -89,7 +89,7 @@ class AddExistedInstancesRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Instance list. Spot instance is not supported.
-     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Additional parameter to be set for the instance
+     * @param InstanceAdvancedSettings $InstanceAdvancedSettings Detailed information of the instance
      * @param EnhancedService $EnhancedService Enhanced services. This parameter is used to specify whether to enable Cloud Security, Cloud Monitoring and other services. If this parameter is not specified, Cloud Monitor and Cloud Security are enabled by default.
      * @param LoginSettings $LoginSettings Node login information (currently only supports using Password or single KeyIds)
      * @param string $HostName When reinstalling the system, you can specify the HostName of the modified instance (when the cluster is in HostName mode, this parameter is required, and the rule name is the same as the [Create CVM Instance](https://intl.cloud.tencent.com/document/product/213/15730?from_cn_redirect=1) API HostName except for uppercase letters not being supported.

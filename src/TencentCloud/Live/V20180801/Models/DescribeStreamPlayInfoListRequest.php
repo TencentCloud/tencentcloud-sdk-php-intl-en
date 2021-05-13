@@ -40,8 +40,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
  * @method void setAppName(string $AppName) Set Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
- * @method string getServiceName() Obtain 
- * @method void setServiceName(string $ServiceName) Set 
+ * @method string getServiceName() Obtain Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+ * @method void setServiceName(string $ServiceName) Set Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
  */
 class DescribeStreamPlayInfoListRequest extends AbstractModel
 {
@@ -76,7 +76,7 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
     public $AppName;
 
     /**
-     * @var string 
+     * @var string Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
      */
     public $ServiceName;
 
@@ -91,7 +91,7 @@ If this parameter is left empty, full playback data will be queried.
      * @param string $AppName Push address. Its value is the same as the `AppName` in playback address. It supports exact match, and takes effect only when `StreamName` is passed at the same time.
 If it is left empty, the full playback data will be queried.
 Note: to query by `AppName`, you need to submit a ticket first. After your application succeeds, it will take about 5 business days (subject to the time in the reply) for the configuration to take effect.
-     * @param string $ServiceName 
+     * @param string $ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
      */
     function __construct()
     {

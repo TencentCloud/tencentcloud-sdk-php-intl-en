@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+ * @method array getIpAddresses() Obtain Filter by multiple instance IPs
+ * @method void setIpAddresses(array $IpAddresses) Set Filter by multiple instance IPs
  */
 class DescribeExistedInstancesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeExistedInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Filter by multiple instance IPs
+     */
+    public $IpAddresses;
+
+    /**
      * @param string $ClusterId Cluster ID. Enter the `ClusterId` field returned when you call the DescribeClusters API (Only VPC ID obtained through `ClusterId` need filtering conditions. When comparing statuses, the nodes on all clusters in this region will be used for comparison. You cannot specify `InstanceIds` and `ClusterId` at the same time.)
      * @param array $InstanceIds Query by one or more instance ID(s). Instance ID format: ins-xxxxxxxx. (Refer to section ID.N of the API overview for this parameter's specific format.) Up to 100 instances are allowed for each request. You cannot specify InstanceIds and Filters at the same time.
      * @param array $Filters Filter condition. For fields and other information, see [the DescribeInstances API](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1). If a ClusterId has been set, then the cluster's VPC ID will be attached as a query field. In this situation, if a "vpc-id" is specified in Filter, then the specified VPC ID must be consistent with the cluster's VPC ID.
@@ -80,6 +87,7 @@ class DescribeExistedInstancesRequest extends AbstractModel
      * @param string $VagueInstanceName Filter by instance name
      * @param integer $Offset Offset. Default value: 0. For more information on Offset, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on Limit, see the relevant section in the API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
+     * @param array $IpAddresses Filter by multiple instance IPs
      */
     function __construct()
     {
@@ -125,6 +133,10 @@ class DescribeExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("IpAddresses",$param) and $param["IpAddresses"] !== null) {
+            $this->IpAddresses = $param["IpAddresses"];
         }
     }
 }

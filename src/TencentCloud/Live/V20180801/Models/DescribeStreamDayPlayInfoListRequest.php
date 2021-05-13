@@ -30,6 +30,16 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
  * @method void setPageNum(integer $PageNum) Set Page number. Value range: [1,1000]. Default value: 1.
  * @method integer getPageSize() Obtain Number of entries per page. Value range: [100,1000]. Default value: 1,000.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: [100,1000]. Default value: 1,000.
+ * @method string getMainlandOrOversea() Obtain Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+ * @method string getServiceName() Obtain Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+ * @method void setServiceName(string $ServiceName) Set Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
  */
 class DescribeStreamDayPlayInfoListRequest extends AbstractModel
 {
@@ -55,11 +65,29 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
     public $PageSize;
 
     /**
+     * @var string Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+     */
+    public $MainlandOrOversea;
+
+    /**
+     * @var string Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
+     */
+    public $ServiceName;
+
+    /**
      * @param string $DayTime Date in the format of YYYY-mm-dd
 Data is available at 3am Beijing Time the next day. You are recommended to query the latest data after this time point. Data in the last 3 months can be queried.
      * @param string $PlayDomain Playback domain name.
      * @param integer $PageNum Page number. Value range: [1,1000]. Default value: 1.
      * @param integer $PageSize Number of entries per page. Value range: [100,1000]. Default value: 1,000.
+     * @param string $MainlandOrOversea Valid values:
+Mainland: query data for Mainland China,
+Oversea: query data for regions outside Mainland China,
+Default: query data for all regions.
+     * @param string $ServiceName Service name. Valid values: LVB, LEB. If this parameter is left empty, all data of LVB and LEB will be queried.
      */
     function __construct()
     {
@@ -88,6 +116,14 @@ Data is available at 3am Beijing Time the next day. You are recommended to query
 
         if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
             $this->PageSize = $param["PageSize"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
+        }
+
+        if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
+            $this->ServiceName = $param["ServiceName"];
         }
     }
 }

@@ -60,6 +60,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowsExaminedRatio(float $RowsExaminedRatio) Set Ratio of total number of scanned rows
  * @method float getRowsSentRatio() Obtain Ratio of total number of returned rows
  * @method void setRowsSentRatio(float $RowsSentRatio) Set Ratio of total number of returned rows
+ * @method float getQueryTimeAvg() Obtain Average execution time
+ * @method void setQueryTimeAvg(float $QueryTimeAvg) Set Average execution time
+ * @method float getRowsSentAvg() Obtain Average number of rows returned
+ * @method void setRowsSentAvg(float $RowsSentAvg) Set Average number of rows returned
+ * @method float getLockTimeAvg() Obtain Average lock wait time
+ * @method void setLockTimeAvg(float $LockTimeAvg) Set Average lock wait time
+ * @method float getRowsExaminedAvg() Obtain Average number of rows scanned
+ * @method void setRowsExaminedAvg(float $RowsExaminedAvg) Set Average number of rows scanned
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -164,6 +172,26 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsSentRatio;
 
     /**
+     * @var float Average execution time
+     */
+    public $QueryTimeAvg;
+
+    /**
+     * @var float Average number of rows returned
+     */
+    public $RowsSentAvg;
+
+    /**
+     * @var float Average lock wait time
+     */
+    public $LockTimeAvg;
+
+    /**
+     * @var float Average number of rows scanned
+     */
+    public $RowsExaminedAvg;
+
+    /**
      * @param float $LockTime Total SQL lock wait time
      * @param float $LockTimeMax Maximum lock wait time
      * @param float $LockTimeMin Minimum lock wait time
@@ -184,6 +212,10 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $LockTimeRatio Ratio of total SQL lock wait time
      * @param float $RowsExaminedRatio Ratio of total number of scanned rows
      * @param float $RowsSentRatio Ratio of total number of returned rows
+     * @param float $QueryTimeAvg Average execution time
+     * @param float $RowsSentAvg Average number of rows returned
+     * @param float $LockTimeAvg Average lock wait time
+     * @param float $RowsExaminedAvg Average number of rows scanned
      */
     function __construct()
     {
@@ -276,6 +308,22 @@ class SlowLogTopSqlItem extends AbstractModel
 
         if (array_key_exists("RowsSentRatio",$param) and $param["RowsSentRatio"] !== null) {
             $this->RowsSentRatio = $param["RowsSentRatio"];
+        }
+
+        if (array_key_exists("QueryTimeAvg",$param) and $param["QueryTimeAvg"] !== null) {
+            $this->QueryTimeAvg = $param["QueryTimeAvg"];
+        }
+
+        if (array_key_exists("RowsSentAvg",$param) and $param["RowsSentAvg"] !== null) {
+            $this->RowsSentAvg = $param["RowsSentAvg"];
+        }
+
+        if (array_key_exists("LockTimeAvg",$param) and $param["LockTimeAvg"] !== null) {
+            $this->LockTimeAvg = $param["LockTimeAvg"];
+        }
+
+        if (array_key_exists("RowsExaminedAvg",$param) and $param["RowsExaminedAvg"] !== null) {
+            $this->RowsExaminedAvg = $param["RowsExaminedAvg"];
         }
     }
 }
