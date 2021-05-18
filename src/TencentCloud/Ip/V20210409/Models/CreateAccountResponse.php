@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccount response structure.
  *
- * @method string getUin() Obtain The uin of the account
- * @method void setUin(string $Uin) Set The uin of the account
+ * @method string getUin() Obtain Account UIN
+ * @method void setUin(string $Uin) Set Account UIN
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateAccountResponse extends AbstractModel
 {
     /**
-     * @var string The uin of the account
+     * @var string Account UIN
      */
     public $Uin;
 
@@ -38,7 +38,7 @@ class CreateAccountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Uin The uin of the account
+     * @param string $Uin Account UIN
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

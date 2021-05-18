@@ -18,28 +18,28 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Get an element type of the country code interface
+ * Country/region code list
  *
- * @method string getEnName() Obtain Country English Name
- * @method void setEnName(string $EnName) Set Country English Name
- * @method string getName() Obtain Country Chinese Name
- * @method void setName(string $Name) Set Country Chinese Name
+ * @method string getEnName() Obtain Country/region name in English
+ * @method void setEnName(string $EnName) Set Country/region name in English
+ * @method string getName() Obtain Country/region name in Chinese
+ * @method void setName(string $Name) Set Country/region name in Chinese
  * @method string getIOS2() Obtain IOS2 standard country/region code
  * @method void setIOS2(string $IOS2) Set IOS2 standard country/region code
  * @method string getIOS3() Obtain IOS3 standard country/region code
  * @method void setIOS3(string $IOS3) Set IOS3 standard country/region code
- * @method string getCode() Obtain Phone Code
- * @method void setCode(string $Code) Set Phone Code
+ * @method string getCode() Obtain Phone code
+ * @method void setCode(string $Code) Set Phone code
  */
 class CountryCodeItem extends AbstractModel
 {
     /**
-     * @var string Country English Name
+     * @var string Country/region name in English
      */
     public $EnName;
 
     /**
-     * @var string Country Chinese Name
+     * @var string Country/region name in Chinese
      */
     public $Name;
 
@@ -54,16 +54,16 @@ class CountryCodeItem extends AbstractModel
     public $IOS3;
 
     /**
-     * @var string Phone Code
+     * @var string Phone code
      */
     public $Code;
 
     /**
-     * @param string $EnName Country English Name
-     * @param string $Name Country Chinese Name
+     * @param string $EnName Country/region name in English
+     * @param string $Name Country/region name in Chinese
      * @param string $IOS2 IOS2 standard country/region code
      * @param string $IOS3 IOS3 standard country/region code
-     * @param string $Code Phone Code
+     * @param string $Code Phone code
      */
     function __construct()
     {

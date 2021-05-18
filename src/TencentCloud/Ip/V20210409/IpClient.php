@@ -23,12 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ip\V20210409\Models as Models;
 
 /**
- * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) On the partner platform, create a Tencent Cloud account. After the sub-customer is registered, it will be automatically bound to the partner account.
+ * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create a Tencent Cloud account in the International Partner platform for a customer. After registration, the customer will be automatically bound to the partner account.
 
-Notes: <br>
-1. Create a Tencent Cloud account and enter the email address , Mobile phone number, the partner needs to verify the validity.<br>
-2, the customer needs to add personal information for the first login
- * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) Get country and region code
+Notes:<br>
+1. To create the Tencent Cloud account, the partner should enter and verify the customer’s email address and mobile number.<br>
+2. The customer needs to complete personal information after the first login.
+ * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country and region codes.
  */
 
 class IpClient extends AbstractClient

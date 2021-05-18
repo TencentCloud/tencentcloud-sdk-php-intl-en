@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetCountryCodes response structure.
  *
- * @method array getData() Obtain List of Country Codes
- * @method void setData(array $Data) Set List of Country Codes
+ * @method array getData() Obtain List of country/region codes
+ * @method void setData(array $Data) Set List of country/region codes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetCountryCodesResponse extends AbstractModel
 {
     /**
-     * @var array List of Country Codes
+     * @var array List of country/region codes
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class GetCountryCodesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data List of Country Codes
+     * @param array $Data List of country/region codes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
