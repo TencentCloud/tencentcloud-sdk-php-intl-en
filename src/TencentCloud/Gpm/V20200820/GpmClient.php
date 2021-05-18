@@ -40,6 +40,7 @@ use TencentCloud\Gpm\V20200820\Models as Models;
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API is used to modify a rule (including description and tag).
  * @method Models\ModifyTokenResponse ModifyToken(Models\ModifyTokenRequest $req) This API is used to modify the token of a Matchcode.
  * @method Models\StartMatchingResponse StartMatching(Models\StartMatchingRequest $req) This API is used to pass in one player or multiple players to initiate match. Players within the same request will be assigned to the same game session.
+ * @method Models\StartMatchingBackfillResponse StartMatchingBackfill(Models\StartMatchingBackfillRequest $req) This API is used to send a match backfill request, for which a MatchTicket will be searched to start a new match.
  */
 
 class GpmClient extends AbstractClient

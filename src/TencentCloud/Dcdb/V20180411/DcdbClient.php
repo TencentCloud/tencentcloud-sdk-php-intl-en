@@ -37,6 +37,7 @@ Note: accounts with the same username but different hosts are different accounts
  * @method Models\DescribeDBParametersResponse DescribeDBParameters(Models\DescribeDBParametersRequest $req) This API is used to get the current parameter settings of a database.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query the security group details of an instance.
  * @method Models\DescribeDBSyncModeResponse DescribeDBSyncMode(Models\DescribeDBSyncModeRequest $req) This API is used to query the sync mode of a TencentDB instance.
+ * @method Models\DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(Models\DescribeDCDBInstanceNodeInfoRequest $req) This API is used to query the information of instance nodes.
  * @method Models\DescribeDCDBInstancesResponse DescribeDCDBInstances(Models\DescribeDCDBInstancesRequest $req) This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
 If no filter is specified, 10 instances will be returned by default. Up to 100 instances can be returned for a single request.
  * @method Models\DescribeDCDBShardsResponse DescribeDCDBShards(Models\DescribeDCDBShardsRequest $req) This API is used to query the information of shards of a TencentDB instance.
