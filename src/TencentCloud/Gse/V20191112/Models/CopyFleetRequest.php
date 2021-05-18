@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSelectedTimerType(string $SelectedTimerType) Set Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
  * @method array getCcnInfos() Obtain Information of the CCN instance, including the owner account and the instance ID.
  * @method void setCcnInfos(array $CcnInfos) Set Information of the CCN instance, including the owner account and the instance ID.
- * @method integer getInternetMaxBandwidthOut() Obtain 
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set 
+ * @method integer getInternetMaxBandwidthOut() Obtain Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
  */
 class CopyFleetRequest extends AbstractModel
 {
@@ -159,7 +159,7 @@ class CopyFleetRequest extends AbstractModel
     public $CcnInfos;
 
     /**
-     * @var integer 
+     * @var integer Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
      */
     public $InternetMaxBandwidthOut;
 
@@ -183,7 +183,7 @@ class CopyFleetRequest extends AbstractModel
      * @param array $DataDiskInfo Data disk. It can be SSD disks (CLOUD_SSD) with 100-32000 GB capacity or Premium Cloud Storage disks (CLOUD_PREMIUM) with 10-32000 GB capacity. The increment is 10. 
      * @param string $SelectedTimerType Whether to select to replicate the timer policy: TIMER_SELECTED or TIMER_UNSELECTED. The default value is TIMER_UNSELECTED.
      * @param array $CcnInfos Information of the CCN instance, including the owner account and the instance ID.
-     * @param integer $InternetMaxBandwidthOut 
+     * @param integer $InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
      */
     function __construct()
     {

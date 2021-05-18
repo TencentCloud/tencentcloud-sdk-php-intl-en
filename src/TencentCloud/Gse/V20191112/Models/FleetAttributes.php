@@ -94,8 +94,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRelatedCcnInfos(array $RelatedCcnInfos) Set CCN instance information
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method integer getInternetMaxBandwidthOut() Obtain 
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set 
+ * @method integer getInternetMaxBandwidthOut() Obtain Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class FleetAttributes extends AbstractModel
 {
@@ -217,7 +219,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RelatedCcnInfos;
 
     /**
-     * @var integer 
+     * @var integer Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $InternetMaxBandwidthOut;
 
@@ -259,7 +262,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $RelatedCcnInfos CCN instance information
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param integer $InternetMaxBandwidthOut 
+     * @param integer $InternetMaxBandwidthOut Maximum outbound public network bandwidth of the server fleet. Value range: 1 - 200 Mbps. Default value: 100 Mbps.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
