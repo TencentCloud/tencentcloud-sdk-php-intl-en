@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLimit() Obtain The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
- * @method void setLimit(integer $Limit) Set The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+ * @method integer getLimit() Obtain The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
+ * @method void setLimit(integer $Limit) Set The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
  * @method integer getOffset() Obtain Offset of the returned results. Default value: `0`.
  * @method void setOffset(integer $Offset) Set Offset of the returned results. Default value: `0`.
  */
@@ -35,7 +35,7 @@ class DescribeDCDBInstanceNodeInfoRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+     * @var integer The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeDCDBInstanceNodeInfoRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param integer $Limit The maximum number of results returned at a time. Value range: `(0-100]`. Default value: `100`.
+     * @param integer $Limit The maximum number of results returned at a time. Value range: (0-100]. Default value: `100`.
      * @param integer $Offset Offset of the returned results. Default value: `0`.
      */
     function __construct()

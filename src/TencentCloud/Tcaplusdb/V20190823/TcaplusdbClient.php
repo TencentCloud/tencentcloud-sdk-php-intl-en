@@ -27,7 +27,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\CompareIdlFilesResponse CompareIdlFiles(Models\CompareIdlFilesRequest $req) This API is used to select a target table, upload and verify the table modification file, and return the result of whether the table structure is allowed to be modified.
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API is used to create a backup task.
  * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) This API is used to create a TcaplusDB cluster.
- * @method Models\CreateSnapshotsResponse CreateSnapshots(Models\CreateSnapshotsRequest $req) This API is used to create one or more table snapshots at specific points in time in the past.
+ * @method Models\CreateSnapshotsResponse CreateSnapshots(Models\CreateSnapshotsRequest $req) This API is used to create one or more table snapshots at a specified past time point.
  * @method Models\CreateTableGroupResponse CreateTableGroup(Models\CreateTableGroupRequest $req) This API is used to create a table group in a TcaplusDB cluster.
  * @method Models\CreateTablesResponse CreateTables(Models\CreateTablesRequest $req) This API is used to create tables in batches based on the selected IDL file list.
  * @method Models\DeleteClusterResponse DeleteCluster(Models\DeleteClusterRequest $req) This API is used to delete a TcaplusDB cluster, which will succeed only after all resources (including table groups and tables) in the cluster are released.

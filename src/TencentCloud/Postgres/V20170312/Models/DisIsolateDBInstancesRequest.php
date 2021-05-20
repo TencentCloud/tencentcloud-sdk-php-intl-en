@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDBInstanceIdSet() Obtain Resource ID list
  * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Resource ID list
- * @method integer getPeriod() Obtain Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
- * @method void setPeriod(integer $Period) Set Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+ * @method integer getPeriod() Obtain The valid period (in months) of the monthly-subscribed instance when removing it from isolation
+ * @method void setPeriod(integer $Period) Set The valid period (in months) of the monthly-subscribed instance when removing it from isolation
  * @method boolean getAutoVoucher() Obtain Whether to use vouchers
  * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use vouchers
  * @method array getVoucherIds() Obtain Voucher ID list
@@ -37,7 +37,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     public $DBInstanceIdSet;
 
     /**
-     * @var integer Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * @var integer The valid period (in months) of the monthly-subscribed instance when removing it from isolation
      */
     public $Period;
 
@@ -53,7 +53,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
 
     /**
      * @param array $DBInstanceIdSet Resource ID list
-     * @param integer $Period Specify the valid period (in months) of the monthly-subscribed instance when removing it from isolation
+     * @param integer $Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
      * @param boolean $AutoVoucher Whether to use vouchers
      * @param array $VoucherIds Voucher ID list
      */

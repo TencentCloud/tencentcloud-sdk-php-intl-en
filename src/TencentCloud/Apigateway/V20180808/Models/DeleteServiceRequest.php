@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceId() Obtain Unique ID of the service to be deleted.
  * @method void setServiceId(string $ServiceId) Set Unique ID of the service to be deleted.
+ * @method integer getSkipVerification() Obtain A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+ * @method void setSkipVerification(integer $SkipVerification) Set A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
  */
 class DeleteServiceRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteServiceRequest extends AbstractModel
     public $ServiceId;
 
     /**
+     * @var integer A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
+     */
+    public $SkipVerification;
+
+    /**
      * @param string $ServiceId Unique ID of the service to be deleted.
+     * @param integer $SkipVerification A parameter which is specified to skip the deletion precondition verification (only supported for services on dedicated instances).
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteServiceRequest extends AbstractModel
         }
         if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
             $this->ServiceId = $param["ServiceId"];
+        }
+
+        if (array_key_exists("SkipVerification",$param) and $param["SkipVerification"] !== null) {
+            $this->SkipVerification = $param["SkipVerification"];
         }
     }
 }
