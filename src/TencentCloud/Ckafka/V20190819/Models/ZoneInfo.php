@@ -1,0 +1,137 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Ckafka\V20190819\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Zone information entity
+ *
+ * @method string getZoneId() Obtain Zone ID
+ * @method void setZoneId(string $ZoneId) Set Zone ID
+ * @method integer getIsInternalApp() Obtain Whether it is an internal App.
+ * @method void setIsInternalApp(integer $IsInternalApp) Set Whether it is an internal App.
+ * @method integer getAppId() Obtain app id
+ * @method void setAppId(integer $AppId) Set app id
+ * @method boolean getFlag() Obtain Identifier
+ * @method void setFlag(boolean $Flag) Set Identifier
+ * @method string getZoneName() Obtain Zone name
+ * @method void setZoneName(string $ZoneName) Set Zone name
+ * @method integer getZoneStatus() Obtain Zone status
+ * @method void setZoneStatus(integer $ZoneStatus) Set Zone status
+ * @method string getExflag() Obtain Extra identifier
+ * @method void setExflag(string $Exflag) Set Extra identifier
+ * @method string getSoldOut() Obtain JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+ * @method void setSoldOut(string $SoldOut) Set JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+ */
+class ZoneInfo extends AbstractModel
+{
+    /**
+     * @var string Zone ID
+     */
+    public $ZoneId;
+
+    /**
+     * @var integer Whether it is an internal App.
+     */
+    public $IsInternalApp;
+
+    /**
+     * @var integer app id
+     */
+    public $AppId;
+
+    /**
+     * @var boolean Identifier
+     */
+    public $Flag;
+
+    /**
+     * @var string Zone name
+     */
+    public $ZoneName;
+
+    /**
+     * @var integer Zone status
+     */
+    public $ZoneStatus;
+
+    /**
+     * @var string Extra identifier
+     */
+    public $Exflag;
+
+    /**
+     * @var string JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     */
+    public $SoldOut;
+
+    /**
+     * @param string $ZoneId Zone ID
+     * @param integer $IsInternalApp Whether it is an internal App.
+     * @param integer $AppId app id
+     * @param boolean $Flag Identifier
+     * @param string $ZoneName Zone name
+     * @param integer $ZoneStatus Zone status
+     * @param string $Exflag Extra identifier
+     * @param string $SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("IsInternalApp",$param) and $param["IsInternalApp"] !== null) {
+            $this->IsInternalApp = $param["IsInternalApp"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Flag",$param) and $param["Flag"] !== null) {
+            $this->Flag = $param["Flag"];
+        }
+
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
+        }
+
+        if (array_key_exists("ZoneStatus",$param) and $param["ZoneStatus"] !== null) {
+            $this->ZoneStatus = $param["ZoneStatus"];
+        }
+
+        if (array_key_exists("Exflag",$param) and $param["Exflag"] !== null) {
+            $this->Exflag = $param["Exflag"];
+        }
+
+        if (array_key_exists("SoldOut",$param) and $param["SoldOut"] !== null) {
+            $this->SoldOut = $param["SoldOut"];
+        }
+    }
+}
