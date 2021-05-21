@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CVM HostName settings
  *
- * @method string getHostName() Obtain Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setHostName(string $HostName) Set Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setHostName(string $HostName) Set Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getHostNameStyle() Obtain Type of CVM host name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL"
 <br><li> ORIGINAL. Auto Scaling transfers the HostName set in input parameters to the CVM directly. CVM may adds serial numbers for the HostName. The HostName of instances within the auto scaling group may conflict.
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.
@@ -42,11 +42,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class HostNameSettings extends AbstractModel
 {
     /**
-     * @var string Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $HostName;
 
@@ -59,11 +59,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HostNameStyle;
 
     /**
-     * @param string $HostName Host name of a CVM.
-<br><li> A period (.) and hyphen (-) cannot be used as the first and the last characters of HostName, and multiple consecutive hyphens (-) or periods (.) are not allowed.
-<br><li> No support for Windows instances.
-<br><li> Other types of instances (such as Linux): the name should be a combination of 2 to 40 characters, supports multiple periods (.). The string between two periods can be composed of letters (case insensitive), numbers, and hyphens (-).
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostName Hostname of a CVM
+<br><li>The `HostName` cannot start or end with a period (.) or hyphen (-), and cannot contain consecutive periods and hyphens.
+<br><li>This field is unavailable to CVM instances.
+<br><li>Other types of instances (such as Linux): the name contains 2 to 40 characters, and supports multiple periods (.). The string between two periods can consist of letters (case insensitive), numbers, and hyphens (-), and cannot be all numbers.
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $HostNameStyle Type of CVM host name. Valid values: "ORIGINAL" and "UNIQUE". Default value: "ORIGINAL"
 <br><li> ORIGINAL. Auto Scaling transfers the HostName set in input parameters to the CVM directly. CVM may adds serial numbers for the HostName. The HostName of instances within the auto scaling group may conflict.
 <br><li> UNIQUE. The HostName set in input parameters is the prefix of a host name. Auto Scaling and CVM expand it. The HostName of an instance in the auto scaling group is unique.

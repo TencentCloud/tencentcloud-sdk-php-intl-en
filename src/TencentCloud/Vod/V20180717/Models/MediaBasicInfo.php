@@ -90,8 +90,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setStatus(string $Status) Set File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.
- * @method string getStorageClass() Obtain 
- * @method void setStorageClass(string $StorageClass) Set 
+ * @method string getStorageClass() Obtain Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+ * @method void setStorageClass(string $StorageClass) Set Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -199,7 +203,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
-     * @var string 
+     * @var string Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
      */
     public $StorageClass;
 
@@ -239,7 +245,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Status File status. Valid values: Normal, Forbidden.
 
 *Note: this field is not supported yet.
-     * @param string $StorageClass 
+     * @param string $StorageClass Storage class of a media file:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
      */
     function __construct()
     {

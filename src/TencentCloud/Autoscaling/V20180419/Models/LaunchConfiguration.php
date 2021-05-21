@@ -80,6 +80,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+ * @method string getDiskTypePolicy() Obtain Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+ * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -218,6 +224,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $InstanceChargePrepaid;
 
     /**
+     * @var string Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
+     */
+    public $DiskTypePolicy;
+
+    /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID.
      * @param string $LaunchConfigurationName Launch configuration name.
@@ -248,6 +261,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param HostNameSettings $HostNameSettings CVM HostName settings.
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
+     * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
+<br><li>ORIGINAL: uses the configured cloud disk type
+<br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
      */
     function __construct()
     {
@@ -387,6 +403,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
+            $this->DiskTypePolicy = $param["DiskTypePolicy"];
         }
     }
 }

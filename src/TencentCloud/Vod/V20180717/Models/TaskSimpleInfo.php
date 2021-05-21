@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain Task ID.
  * @method void setTaskId(string $TaskId) Set Task ID.
+ * @method string getStatus() Obtain Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+ * @method void setStatus(string $Status) Set Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+ * @method string getFileId() Obtain Video ID
+ * @method void setFileId(string $FileId) Set Video ID
  * @method string getTaskType() Obtain Task type. Valid values:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task</li>
@@ -59,6 +63,16 @@ class TaskSimpleInfo extends AbstractModel
      * @var string Task ID.
      */
     public $TaskId;
+
+    /**
+     * @var string Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     */
+    public $Status;
+
+    /**
+     * @var string Video ID
+     */
+    public $FileId;
 
     /**
      * @var string Task type. Valid values:
@@ -101,6 +115,8 @@ Task types compatible with v2017:
 
     /**
      * @param string $TaskId Task ID.
+     * @param string $Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
+     * @param string $FileId Video ID
      * @param string $TaskType Task type. Valid values:
 <li>Procedure: video processing task;</li>
 <li>EditMedia: video editing task</li>
@@ -132,6 +148,14 @@ Task types compatible with v2017:
         }
         if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
             $this->TaskId = $param["TaskId"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
+            $this->FileId = $param["FileId"];
         }
 
         if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {

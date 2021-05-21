@@ -74,8 +74,10 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
  * @method void setCamRoleName(string $CamRoleName) Set CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
  * @method HostNameSettings getHostNameSettings() Obtain CVM HostName settings.
  * @method void setHostNameSettings(HostNameSettings $HostNameSettings) Set CVM HostName settings.
- * @method InstanceNameSettings getInstanceNameSettings() Obtain Settings of CVM instance names.
- * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names.
+ * @method InstanceNameSettings getInstanceNameSettings() Obtain Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
+ * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method string getDiskTypePolicy() Obtain Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
@@ -187,7 +189,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     public $HostNameSettings;
 
     /**
-     * @var InstanceNameSettings Settings of CVM instance names.
+     * @var InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
      */
     public $InstanceNameSettings;
 
@@ -231,7 +234,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
      * @param array $InstanceTags List of tags. This parameter is used to bind up to 10 tags to newly added instances.
      * @param string $CamRoleName CAM role name, which can be obtained from the roleName field in the return value of the DescribeRoleList API.
      * @param HostNameSettings $HostNameSettings CVM HostName settings.
-     * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names.
+     * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names
+If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Sets prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type

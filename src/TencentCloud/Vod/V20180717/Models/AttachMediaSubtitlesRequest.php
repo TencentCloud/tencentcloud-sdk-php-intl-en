@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
  * @method array getSubtitleIds() Obtain Unique IDs of the subtitles
  * @method void setSubtitleIds(array $SubtitleIds) Set Unique IDs of the subtitles
+ * @method integer getSubAppId() Obtain VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+ * @method void setSubAppId(integer $SubAppId) Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  */
 class AttachMediaSubtitlesRequest extends AbstractModel
 {
@@ -58,12 +60,18 @@ class AttachMediaSubtitlesRequest extends AbstractModel
     public $SubtitleIds;
 
     /**
+     * @var integer VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+     */
+    public $SubAppId;
+
+    /**
      * @param string $FileId Unique ID of the media file
      * @param string $Operation Operation. Valid values:
 <li>`Attach`: associates subtitles.</li>
 <li>`Detach`: disassociates subtitles.</li>
      * @param integer $AdaptiveDynamicStreamingDefinition [Adaptive bitrate streaming template ID](https://intl.cloud.tencent.com/document/product/266/34071?from_cn_redirect=1#zsy)
      * @param array $SubtitleIds Unique IDs of the subtitles
+     * @param integer $SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access the resources in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -92,6 +100,10 @@ class AttachMediaSubtitlesRequest extends AbstractModel
 
         if (array_key_exists("SubtitleIds",$param) and $param["SubtitleIds"] !== null) {
             $this->SubtitleIds = $param["SubtitleIds"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
     }
 }
