@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
  * @method string getModeType() Obtain CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
  * @method void setModeType(string $ModeType) Set CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+ * @method string getZone() Obtain Availability zone where the direct connect gateway resides.
+ * @method void setZone(string $Zone) Set Availability zone where the direct connect gateway resides.
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
@@ -74,6 +76,11 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     public $ModeType;
 
     /**
+     * @var string Availability zone where the direct connect gateway resides.
+     */
+    public $Zone;
+
+    /**
      * @param string $DirectConnectGatewayName The name of the direct connect gateway.
      * @param string $NetworkType The type of the associated network. Valid values:
 <li>VPC</li>
@@ -84,6 +91,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 <li>NORMAL - (Default) Standard type. Note: CCN only supports the standard type</li>
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      * @param string $ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
+     * @param string $Zone Availability zone where the direct connect gateway resides.
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 
         if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
             $this->ModeType = $param["ModeType"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

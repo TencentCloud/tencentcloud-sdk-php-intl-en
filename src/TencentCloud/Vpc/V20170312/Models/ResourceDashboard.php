@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VPC resource dashboard (all resource counts)
  *
- * @method string getVpcId() Obtain Vpc instance ID, e.g. vpc-f1xjkw1b.
- * @method void setVpcId(string $VpcId) Set Vpc instance ID, e.g. vpc-f1xjkw1b.
+ * @method string getVpcId() Obtain VPC instance ID, such as `vpc-bq4bzxpj`.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, such as `vpc-bq4bzxpj`.
  * @method string getSubnetId() Obtain Subnet instance ID, such as subnet-bthucmmy.
  * @method void setSubnetId(string $SubnetId) Set Subnet instance ID, such as subnet-bthucmmy.
  * @method integer getClassiclink() Obtain Classiclink.
@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcg(integer $Dcg) Set Direct Connect gateway.
  * @method integer getPcx() Obtain Peering connection.
  * @method void setPcx(integer $Pcx) Set Peering connection.
- * @method integer getIp() Obtain The total number of used IP addresses.
- * @method void setIp(integer $Ip) Set The total number of used IP addresses.
+ * @method integer getIp() Obtain Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
+ * @method void setIp(integer $Ip) Set Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
  * @method integer getNat() Obtain NAT gateway.
  * @method void setNat(integer $Nat) Set NAT gateway.
  * @method integer getVpngw() Obtain VPN gateway.
@@ -108,7 +108,7 @@ use TencentCloud\Common\AbstractModel;
 class ResourceDashboard extends AbstractModel
 {
     /**
-     * @var string Vpc instance ID, e.g. vpc-f1xjkw1b.
+     * @var string VPC instance ID, such as `vpc-bq4bzxpj`.
      */
     public $VpcId;
 
@@ -133,7 +133,7 @@ class ResourceDashboard extends AbstractModel
     public $Pcx;
 
     /**
-     * @var integer The total number of used IP addresses.
+     * @var integer Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
      */
     public $Ip;
 
@@ -318,12 +318,12 @@ class ResourceDashboard extends AbstractModel
     public $RouteTable;
 
     /**
-     * @param string $VpcId Vpc instance ID, e.g. vpc-f1xjkw1b.
+     * @param string $VpcId VPC instance ID, such as `vpc-bq4bzxpj`.
      * @param string $SubnetId Subnet instance ID, such as subnet-bthucmmy.
      * @param integer $Classiclink Classiclink.
      * @param integer $Dcg Direct Connect gateway.
      * @param integer $Pcx Peering connection.
-     * @param integer $Ip The total number of used IP addresses.
+     * @param integer $Ip Total number of used IPs except for CVM IP, EIP and network probe IP. The three IP types will be independently counted.
      * @param integer $Nat NAT gateway.
      * @param integer $Vpngw VPN gateway.
      * @param integer $FlowLog Flow log.

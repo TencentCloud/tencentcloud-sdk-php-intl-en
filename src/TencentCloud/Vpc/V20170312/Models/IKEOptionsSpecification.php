@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
  *
- * @method string getPropoEncryAlgorithm() Obtain Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
- * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
- * @method string getPropoAuthenAlgorithm() Obtain Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
- * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) Set Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+ * @method string getPropoEncryAlgorithm() Obtain Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+ * @method void setPropoEncryAlgorithm(string $PropoEncryAlgorithm) Set Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+ * @method string getPropoAuthenAlgorithm() Obtain Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
+ * @method void setPropoAuthenAlgorithm(string $PropoAuthenAlgorithm) Set Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
  * @method string getExchangeMode() Obtain Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
  * @method void setExchangeMode(string $ExchangeMode) Set Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
  * @method string getLocalIdentity() Obtain Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
@@ -48,12 +48,12 @@ use TencentCloud\Common\AbstractModel;
 class IKEOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
+     * @var string Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
      */
     public $PropoEncryAlgorithm;
 
     /**
-     * @var string Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+     * @var string Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
      */
     public $PropoAuthenAlgorithm;
 
@@ -108,8 +108,8 @@ class IKEOptionsSpecification extends AbstractModel
     public $IKEVersion;
 
     /**
-     * @param string $PropoEncryAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBS-192', 'AES-CBC-256', and 'DES-CBC'. Default is 3DES-CBC.
-     * @param string $PropoAuthenAlgorithm Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is MD5.
+     * @param string $PropoEncryAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBS-192`, `AES-CBC-256`, `DES-CBC`, and `SM4`; default value: `3DES-CBC`.
+     * @param string $PropoAuthenAlgorithm Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `MD5`.
      * @param string $ExchangeMode Negotiation mode. Available values: 'AGGRESSIVE' and 'MAIN'. Default is MAIN.
      * @param string $LocalIdentity Type of local identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.
      * @param string $RemoteIdentity Type of remote identity. Available values: 'ADDRESS' and 'FQDN'. Default is ADDRESS.

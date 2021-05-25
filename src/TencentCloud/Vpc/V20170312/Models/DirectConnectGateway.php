@@ -74,6 +74,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setModeType(string $ModeType) Set CCN route publishing mode. Valid values: `standard` and `exquisite`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getLocalZone() Obtain Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLocalZone(boolean $LocalZone) Set Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getZone() Obtain Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZone(string $Zone) Set Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -165,6 +173,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ModeType;
 
     /**
+     * @var boolean Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LocalZone;
+
+    /**
+     * @var string Availability zone where the direct connect gateway resides.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Zone;
+
+    /**
      * @param string $DirectConnectGatewayId Direct Connect `ID`.
      * @param string $DirectConnectGatewayName Direct Connect gateway name.
      * @param string $VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
@@ -191,6 +211,10 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @param array $VXLANSupport Whether the direct connect gateway supports the VXLAN architecture.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ModeType CCN route publishing mode. Valid values: `standard` and `exquisite`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $LocalZone Whether the direct connect gateway is for an edge zone.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Zone Availability zone where the direct connect gateway resides.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -264,6 +288,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ModeType",$param) and $param["ModeType"] !== null) {
             $this->ModeType = $param["ModeType"];
+        }
+
+        if (array_key_exists("LocalZone",$param) and $param["LocalZone"] !== null) {
+            $this->LocalZone = $param["LocalZone"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }
