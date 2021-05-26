@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getInvocationType() Obtain The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
  * @method void setInvocationType(string $InvocationType) Set The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
- * @method string getQualifier() Obtain Version number of the triggered function
- * @method void setQualifier(string $Qualifier) Set Version number of the triggered function
+ * @method string getQualifier() Obtain Version number or name of the triggered function
+ * @method void setQualifier(string $Qualifier) Set Version number or name of the triggered function
  * @method string getClientContext() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
  * @method void setClientContext(string $ClientContext) Set Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
- * @method string getLogType() Obtain If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
- * @method void setLogType(string $LogType) Set If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+ * @method string getLogType() Obtain If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+ * @method void setLogType(string $LogType) Set If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
  * @method string getRoutingKey() Obtain Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
@@ -48,7 +48,7 @@ class InvokeRequest extends AbstractModel
     public $InvocationType;
 
     /**
-     * @var string Version number of the triggered function
+     * @var string Version number or name of the triggered function
      */
     public $Qualifier;
 
@@ -58,7 +58,7 @@ class InvokeRequest extends AbstractModel
     public $ClientContext;
 
     /**
-     * @var string If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+     * @var string If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
      */
     public $LogType;
 
@@ -75,9 +75,9 @@ class InvokeRequest extends AbstractModel
     /**
      * @param string $FunctionName Function name
      * @param string $InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
-     * @param string $Qualifier Version number of the triggered function
+     * @param string $Qualifier Version number or name of the triggered function
      * @param string $ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-     * @param string $LogType If this field is specified for a synchronous invocation, the return value will contain a 4-KB log. The value is `None` (default) or `Tail`. If the value is `Tail`, `logMsg` in the return parameter will contain the corresponding function execution log.
+     * @param string $LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
      * @param string $Namespace Namespace
      * @param string $RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
      */

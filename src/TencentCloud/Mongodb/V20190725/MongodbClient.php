@@ -26,14 +26,21 @@ use TencentCloud\Mongodb\V20190725\Models as Models;
  * @method Models\AssignProjectResponse AssignProject(Models\AssignProjectRequest $req) This API is used to specify the project to which a TencentDB instance belongs.
 
  * @method Models\CreateBackupDBInstanceResponse CreateBackupDBInstance(Models\CreateBackupDBInstanceRequest $req) This API is used to create instance backups.
+ * @method Models\CreateBackupDownloadTaskResponse CreateBackupDownloadTask(Models\CreateBackupDownloadTaskRequest $req) This API is used to create a backup download task.
  * @method Models\CreateDBInstanceResponse CreateDBInstance(Models\CreateDBInstanceRequest $req) This API is used to create a monthly subscription TencentDB for MongoDB instance. The purchasable specifications supported by this API can be obtained through the `DescribeSpecInfo` API.
  * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) This API is used to create a pay-as-you-go TencentDB for MongoDB instance.
  * @method Models\DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfo(Models\DescribeAsyncRequestInfoRequest $req) This API is used to query async task status.
- * @method Models\DescribeBackupAccessResponse DescribeBackupAccess(Models\DescribeBackupAccessRequest $req) This API is used to get the permission to download a backup file. The specific backup file information can be obtained through the DescribeDBBackups API.
+ * @method Models\DescribeBackupAccessResponse DescribeBackupAccess(Models\DescribeBackupAccessRequest $req) 备份下载功能已调整，此接口即将下线
+
+TencentDB will soon stop supporting this API, as the backup download feature has been modified.
+
+This API is used to get the permission to download a backup file. The detailed backup file information can be obtained through the `DescribeDBBackups` API.
+ * @method Models\DescribeBackupDownloadTaskResponse DescribeBackupDownloadTask(Models\DescribeBackupDownloadTaskRequest $req) This API is used to query backup download task information.
  * @method Models\DescribeClientConnectionsResponse DescribeClientConnections(Models\DescribeClientConnectionsRequest $req) This API is used to query the client connection information of an instance, including the IP and number of connections. Currently, only instances of MongoDB 3.2 are supported.
  * @method Models\DescribeDBBackupsResponse DescribeDBBackups(Models\DescribeDBBackupsRequest $req) This API is used to query the list of instance backups. Currently, only backups created in the last seven days can be queried.
  * @method Models\DescribeDBInstanceDealResponse DescribeDBInstanceDeal(Models\DescribeDBInstanceDealRequest $req) This API is used to get details of purchase, renewal, and specification adjustment orders of a MongoDB instance.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the list of TencentDB instances (which can be primary, disaster recovery, or read-only instances). It supports filtering instances by project ID, instance ID, and instance status.
+ * @method Models\DescribeSecurityGroupResponse DescribeSecurityGroup(Models\DescribeSecurityGroupRequest $req) This API is used to query the security groups associated with an instance.
  * @method Models\DescribeSlowLogPatternsResponse DescribeSlowLogPatterns(Models\DescribeSlowLogPatternsRequest $req) This API is used to get the slow log statistics of a database instance.
  * @method Models\DescribeSlowLogsResponse DescribeSlowLogs(Models\DescribeSlowLogsRequest $req) This API is used to get the slow log information of a TencentDB instance. Only slow logs for the last 7 days can be queried.
  * @method Models\DescribeSpecInfoResponse DescribeSpecInfo(Models\DescribeSpecInfoRequest $req) This API is used to query the purchasable instance specifications.

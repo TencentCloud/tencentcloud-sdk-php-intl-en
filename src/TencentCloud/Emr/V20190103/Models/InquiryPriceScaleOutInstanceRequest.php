@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrency(string $Currency) Set Currency.
  * @method integer getRouterCount() Obtain Number of router nodes added.
  * @method void setRouterCount(integer $RouterCount) Set Number of router nodes added.
+ * @method integer getMasterCount() Obtain Number of master nodes to add
+ * @method void setMasterCount(integer $MasterCount) Set Number of master nodes to add
  */
 class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 {
@@ -96,6 +98,11 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
     public $RouterCount;
 
     /**
+     * @var integer Number of master nodes to add
+     */
+    public $MasterCount;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Duration of scale-out, which needs to be used together with `TimeUnit`.
@@ -108,6 +115,7 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
      * @param integer $TaskCount Number of task nodes added.
      * @param string $Currency Currency.
      * @param integer $RouterCount Number of router nodes added.
+     * @param integer $MasterCount Number of master nodes to add
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class InquiryPriceScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("RouterCount",$param) and $param["RouterCount"] !== null) {
             $this->RouterCount = $param["RouterCount"];
+        }
+
+        if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
+            $this->MasterCount = $param["MasterCount"];
         }
     }
 }

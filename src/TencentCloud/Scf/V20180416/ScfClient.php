@@ -38,7 +38,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) This API is used to delete an alias of a function version.
  * @method Models\DeleteFunctionResponse DeleteFunction(Models\DeleteFunctionRequest $req) This API is used to delete a function based on the input parameters.
  * @method Models\DeleteLayerVersionResponse DeleteLayerVersion(Models\DeleteLayerVersionRequest $req) This API is used to delete a specified version of a specified layer. The deleted version cannot be associated with a function, but the deletion does not affect functions that are referencing this layer.
- * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) This API is used to create a namespace based on the input parameters.
+ * @method Models\DeleteNamespaceResponse DeleteNamespace(Models\DeleteNamespaceRequest $req) This API is used to delete the specific namespace according to the parameters passed in.
  * @method Models\DeleteProvisionedConcurrencyConfigResponse DeleteProvisionedConcurrencyConfig(Models\DeleteProvisionedConcurrencyConfigRequest $req) This API is used to delete the provisioned concurrency configuration of a function version.
  * @method Models\DeleteReservedConcurrencyConfigResponse DeleteReservedConcurrencyConfig(Models\DeleteReservedConcurrencyConfigRequest $req) This API is used to delete the reserved concurrency configuration of a function.
  * @method Models\DeleteTriggerResponse DeleteTrigger(Models\DeleteTriggerRequest $req) This API is used to delete an existing trigger based on the input parameters.

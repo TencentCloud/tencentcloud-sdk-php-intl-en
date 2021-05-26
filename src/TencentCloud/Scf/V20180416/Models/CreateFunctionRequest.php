@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
  * @method array getTags() Obtain Tag parameter of the function. It is an array of key-value pairs.
  * @method void setTags(array $Tags) Set Tag parameter of the function. It is an array of key-value pairs.
+ * @method string getAsyncRunEnable() Obtain Whether to enable the async attribute. TRUE: yes; FALSE: no
+ * @method void setAsyncRunEnable(string $AsyncRunEnable) Set Whether to enable the async attribute. TRUE: yes; FALSE: no
+ * @method string getTraceEnable() Obtain Whether to enable event tracking. TRUE: yes; FALSE: no
+ * @method void setTraceEnable(string $TraceEnable) Set Whether to enable event tracking. TRUE: yes; FALSE: no
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -171,6 +175,16 @@ class CreateFunctionRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Whether to enable the async attribute. TRUE: yes; FALSE: no
+     */
+    public $AsyncRunEnable;
+
+    /**
+     * @var string Whether to enable event tracking. TRUE: yes; FALSE: no
+     */
+    public $TraceEnable;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
      * @param string $Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
@@ -192,6 +206,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
      * @param integer $InitTimeout Timeout period for function initialization
      * @param array $Tags Tag parameter of the function. It is an array of key-value pairs.
+     * @param string $AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
+     * @param string $TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
      */
     function __construct()
     {
@@ -304,6 +320,14 @@ class CreateFunctionRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AsyncRunEnable",$param) and $param["AsyncRunEnable"] !== null) {
+            $this->AsyncRunEnable = $param["AsyncRunEnable"];
+        }
+
+        if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
+            $this->TraceEnable = $param["TraceEnable"];
         }
     }
 }

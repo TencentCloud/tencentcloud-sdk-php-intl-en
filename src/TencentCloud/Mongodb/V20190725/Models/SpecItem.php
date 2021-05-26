@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSpecCode(string $SpecCode) Set Specification information identifier
  * @method integer getStatus() Obtain Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
  * @method void setStatus(integer $Status) Set Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
- * @method integer getCpu() Obtain Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
- * @method void setCpu(integer $Cpu) Set Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+ * @method integer getCpu() Obtain Computing resource specification in terms of CPU core
+ * @method void setCpu(integer $Cpu) Set Computing resource specification in terms of CPU core
  * @method integer getMemory() Obtain Memory size in MB
  * @method void setMemory(integer $Memory) Set Memory size in MB
  * @method integer getDefaultStorage() Obtain Default disk size in MB
@@ -76,7 +76,7 @@ class SpecItem extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * @var integer Computing resource specification in terms of CPU core
      */
     public $Cpu;
 
@@ -173,7 +173,7 @@ class SpecItem extends AbstractModel
     /**
      * @param string $SpecCode Specification information identifier
      * @param integer $Status Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
-     * @param integer $Cpu Specification purchasable flag. Valid values: 0 (not purchasable), 1 (purchasable)
+     * @param integer $Cpu Computing resource specification in terms of CPU core
      * @param integer $Memory Memory size in MB
      * @param integer $DefaultStorage Default disk size in MB
      * @param integer $MaxStorage Maximum disk size in MB

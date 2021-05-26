@@ -56,20 +56,22 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
- * @method string getType() Obtain Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
- * @method void setType(string $Type) Set Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+ * @method string getType() Obtain Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
+ * @method void setType(string $Type) Set Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
  * @method string getBirthday() Obtain Date of birth (currently, this field is only supported for IKAD).
  * @method void setBirthday(string $Birthday) Set Date of birth (currently, this field is only supported for IKAD).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -124,13 +126,14 @@ class MLIDCardOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
-     * @var string Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+     * @var string Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
      */
     public $Type;
 
@@ -163,13 +166,14 @@ IKAD: Malaysia Temporary Employment Visit Pass
         Confidence:0.9996
     }
 }
-     * @param string $Type Certificate types
-MyKad: Malaysian Identity Card
-MyPR: Malaysia Permanent Resident Identity Card
-MyTentera: Malaysian Armed Forces Identity Card
-MyKAS: Malaysian Temporary Resident Identity Card
-POLIS: Royal Malaysia Police Identity Card
-IKAD: Malaysia Temporary Employment Visit Pass
+     * @param string $Type Certificate type
+MyKad  ID card
+MyPR    Permanent resident card
+MyTentera   Military identity card
+MyKAS    Temporary ID card
+POLIS  Police card
+IKAD   Work permit
+MyKid   Kid card
      * @param string $Birthday Date of birth (currently, this field is only supported for IKAD).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

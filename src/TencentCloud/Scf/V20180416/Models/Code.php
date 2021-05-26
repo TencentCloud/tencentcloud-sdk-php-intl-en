@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosBucketName(string $CosBucketName) Set Object bucket name (enter the custom part of the bucket name without `-appid`)
  * @method string getCosObjectName() Obtain COS object path
  * @method void setCosObjectName(string $CosObjectName) Set COS object path
- * @method string getZipFile() Obtain It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
- * @method void setZipFile(string $ZipFile) Set It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+ * @method string getZipFile() Obtain This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
+ * @method void setZipFile(string $ZipFile) Set This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
  * @method string getCosBucketRegion() Obtain COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
  * @method void setCosBucketRegion(string $CosBucketRegion) Set COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
  * @method string getDemoId() Obtain `DemoId` is required if Demo is used for the creation.
@@ -62,7 +62,7 @@ class Code extends AbstractModel
     public $CosObjectName;
 
     /**
-     * @var string It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+     * @var string This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
      */
     public $ZipFile;
 
@@ -124,7 +124,7 @@ class Code extends AbstractModel
     /**
      * @param string $CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      * @param string $CosObjectName COS object path
-     * @param string $ZipFile It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
+     * @param string $ZipFile This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
      * @param string $CosBucketRegion COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
      * @param string $DemoId `DemoId` is required if Demo is used for the creation.
      * @param string $TempCosObjectName `TempCosObjectName` is required if TempCos is used for the creation.

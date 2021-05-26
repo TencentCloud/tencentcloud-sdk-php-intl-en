@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID. If this parameter is not set, the basic network will be selected by default
  * @method string getSubnetId() Obtain VPC subnet ID. If VpcId is set, then SubnetId will be required
  * @method void setSubnetId(string $SubnetId) Set VPC subnet ID. If VpcId is set, then SubnetId will be required
- * @method string getPassword() Obtain Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
- * @method void setPassword(string $Password) Set Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+ * @method string getPassword() Obtain Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
+ * @method void setPassword(string $Password) Set Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
  * @method integer getProjectId() Obtain Project ID. If this parameter is not set, the default project will be used
  * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is not set, the default project will be used
  * @method array getTags() Obtain Instance tag information
@@ -113,7 +113,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * @var string Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
      */
     public $Password;
 
@@ -154,7 +154,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param string $ClusterType Instance type. REPLSET: replica set; SHARD: sharding cluster
      * @param string $VpcId VPC ID. If this parameter is not set, the basic network will be selected by default
      * @param string $SubnetId VPC subnet ID. If VpcId is set, then SubnetId will be required
-     * @param string $Password Instance password. If this parameter is not set, you need to set an instance password through the password setting API after creating an instance. The password can only contain 8-16 characters and must contain at least two of the following types of characters: letters, digits, and special characters `!@#%^*()` |
+     * @param string $Password Instance password, which must contain 8 to 16 characters and comprise at least two of the following types: letters, digits, and symbols (!@#%^*()). If it is left empty, the password is in the format of "instance ID+@+root account UIN". For example, if the instance ID is "cmgo-higv73ed" and the root account UIN "100000001", the instance password will be "cmgo-higv73ed@100000001".
      * @param integer $ProjectId Project ID. If this parameter is not set, the default project will be used
      * @param array $Tags Instance tag information
      * @param integer $Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).

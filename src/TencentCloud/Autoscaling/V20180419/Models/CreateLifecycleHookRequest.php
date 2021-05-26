@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleTransition(string $LifecycleTransition) Set Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
  * @method string getDefaultResult() Obtain Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
  * @method void setDefaultResult(string $DefaultResult) Set Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
- * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
- * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+ * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
+ * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
  * @method string getNotificationMetadata() Obtain Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
  * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
  * @method NotificationTarget getNotificationTarget() Obtain Notification target
@@ -60,7 +60,7 @@ class CreateLifecycleHookRequest extends AbstractModel
     public $DefaultResult;
 
     /**
-     * @var integer The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+     * @var integer The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
      */
     public $HeartbeatTimeout;
 
@@ -84,7 +84,7 @@ class CreateLifecycleHookRequest extends AbstractModel
      * @param string $LifecycleHookName Lifecycle hook name, which can contain Chinese characters, letters, numbers, underscores (_), hyphens (-), and periods (.) with a maximum length of 128 bytes.
      * @param string $LifecycleTransition Scenario for the lifecycle hook. Valid values: "INSTANCE_LAUNCHING" and "INSTANCE_TERMINATING"
      * @param string $DefaultResult Defined actions when lifecycle hook times out. Valid values: "CONTINUE" and "ABANDON". Default value: "CONTINUE"
-     * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7,200. Default value: 300
+     * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
      * @param string $NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default. Up to 1024 characters are allowed.
      * @param NotificationTarget $NotificationTarget Notification target
      * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 

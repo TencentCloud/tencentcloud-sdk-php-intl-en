@@ -1,0 +1,89 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Mongodb\V20190725\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Security group rule
+ *
+ * @method string getAction() Obtain Policy. Valid values: `ACCEPT`, `DROP`
+ * @method void setAction(string $Action) Set Policy. Valid values: `ACCEPT`, `DROP`
+ * @method string getCidrIp() Obtain IP range
+ * @method void setCidrIp(string $CidrIp) Set IP range
+ * @method string getPortRange() Obtain Port range
+ * @method void setPortRange(string $PortRange) Set Port range
+ * @method string getIpProtocol() Obtain Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+ * @method void setIpProtocol(string $IpProtocol) Set Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+ */
+class SecurityGroupBound extends AbstractModel
+{
+    /**
+     * @var string Policy. Valid values: `ACCEPT`, `DROP`
+     */
+    public $Action;
+
+    /**
+     * @var string IP range
+     */
+    public $CidrIp;
+
+    /**
+     * @var string Port range
+     */
+    public $PortRange;
+
+    /**
+     * @var string Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+     */
+    public $IpProtocol;
+
+    /**
+     * @param string $Action Policy. Valid values: `ACCEPT`, `DROP`
+     * @param string $CidrIp IP range
+     * @param string $PortRange Port range
+     * @param string $IpProtocol Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Action",$param) and $param["Action"] !== null) {
+            $this->Action = $param["Action"];
+        }
+
+        if (array_key_exists("CidrIp",$param) and $param["CidrIp"] !== null) {
+            $this->CidrIp = $param["CidrIp"];
+        }
+
+        if (array_key_exists("PortRange",$param) and $param["PortRange"] !== null) {
+            $this->PortRange = $param["PortRange"];
+        }
+
+        if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
+            $this->IpProtocol = $param["IpProtocol"];
+        }
+    }
+}

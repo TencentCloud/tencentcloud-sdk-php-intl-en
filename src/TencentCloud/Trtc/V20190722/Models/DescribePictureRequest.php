@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSdkAppId() Obtain Application ID
  * @method void setSdkAppId(integer $SdkAppId) Set Application ID
- * @method integer getPictureId() Obtain Image ID. If it is not passed in, the IDs of all images under the application are returned.
- * @method void setPictureId(integer $PictureId) Set Image ID. If it is not passed in, the IDs of all images under the application are returned.
- * @method integer getPageSize() Obtain Number of records per page
- * @method void setPageSize(integer $PageSize) Set Number of records per page
- * @method integer getPageNo() Obtain Page number
- * @method void setPageNo(integer $PageNo) Set Page number
+ * @method integer getPictureId() Obtain Image ID. If it is left empty, the IDs of all images under the application are returned.
+ * @method void setPictureId(integer $PictureId) Set Image ID. If it is left empty, the IDs of all images under the application are returned.
+ * @method integer getPageSize() Obtain Number of records per page. `10` is used if it is left empty.
+ * @method void setPageSize(integer $PageSize) Set Number of records per page. `10` is used if it is left empty.
+ * @method integer getPageNo() Obtain Page number. `1` is used if it is left empty.
+ * @method void setPageNo(integer $PageNo) Set Page number. `1` is used if it is left empty.
  */
 class DescribePictureRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribePictureRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer Image ID. If it is not passed in, the IDs of all images under the application are returned.
+     * @var integer Image ID. If it is left empty, the IDs of all images under the application are returned.
      */
     public $PictureId;
 
     /**
-     * @var integer Number of records per page
+     * @var integer Number of records per page. `10` is used if it is left empty.
      */
     public $PageSize;
 
     /**
-     * @var integer Page number
+     * @var integer Page number. `1` is used if it is left empty.
      */
     public $PageNo;
 
     /**
      * @param integer $SdkAppId Application ID
-     * @param integer $PictureId Image ID. If it is not passed in, the IDs of all images under the application are returned.
-     * @param integer $PageSize Number of records per page
-     * @param integer $PageNo Page number
+     * @param integer $PictureId Image ID. If it is left empty, the IDs of all images under the application are returned.
+     * @param integer $PageSize Number of records per page. `10` is used if it is left empty.
+     * @param integer $PageNo Page number. `1` is used if it is left empty.
      */
     function __construct()
     {

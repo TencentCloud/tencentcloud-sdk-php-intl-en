@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationX(integer $LocationX) Set X offset of the output image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the mixed stream. If this parameter is not set, 0 is used by default.
  * @method integer getLocationY() Obtain Y offset of the output image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the mixed stream. If this parameter is not set, 0 is used by default.
  * @method void setLocationY(integer $LocationY) Set Y offset of the output image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the mixed stream. If this parameter is not set, 0 is used by default.
- * @method integer getZOrder() Obtain Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
- * @method void setZOrder(integer $ZOrder) Set Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+ * @method integer getZOrder() Obtain Output order of the image. `0` is used if it is left empty.
+ * @method void setZOrder(integer $ZOrder) Set Output order of the image. `0` is used if it is left empty.
  * @method integer getRenderMode() Obtain Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
  * @method void setRenderMode(integer $RenderMode) Set Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
  * @method integer getMixInputType() Obtain Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
@@ -74,7 +74,7 @@ class PresetLayoutConfig extends AbstractModel
     public $LocationY;
 
     /**
-     * @var integer Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+     * @var integer Output order of the image. `0` is used if it is left empty.
      */
     public $ZOrder;
 
@@ -100,7 +100,7 @@ class PresetLayoutConfig extends AbstractModel
      * @param integer $ImageHeight Height of the output image in pixels. If this parameter is not set, 0 is used by default.
      * @param integer $LocationX X offset of the output image in pixels. The sum of `LocationX` and `ImageWidth` cannot exceed the total width of the mixed stream. If this parameter is not set, 0 is used by default.
      * @param integer $LocationY Y offset of the output image in pixels. The sum of `LocationY` and `ImageHeight` cannot exceed the total height of the mixed stream. If this parameter is not set, 0 is used by default.
-     * @param integer $ZOrder Z-order of the image in pixels. If this parameter is not set, 0 is used by default.
+     * @param integer $ZOrder Output order of the image. `0` is used if it is left empty.
      * @param integer $RenderMode Render mode of the output image. 0: cropping; 1: scaling; 2: scaling on a black background. If this parameter is not set, 0 is used by default.
      * @param integer $MixInputType Media type of the mixed stream of the user occupying the current position. 0 (default): audio and video; 1: audio; 2: video. You are advised to specify a user ID when using this parameter.
      * @param integer $PlaceImageId ID of the placeholder image. If the placeholding feature is enabled, and a user for whom an image position is reserved is not sending video data, the position will show the placeholder image. The ID is generated after the placeholder image is uploaded in the TRTC console. https://intl.cloud.tencent.com/document/product/647/50769?from_cn_redirect=1
