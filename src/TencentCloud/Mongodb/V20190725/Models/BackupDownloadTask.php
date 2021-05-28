@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupSize(integer $BackupSize) Set Backup size in bytes
  * @method integer getStatus() Obtain Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
  * @method void setStatus(integer $Status) Set Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
- * @method integer getPercent() Obtain Task progress in terms of percentage
- * @method void setPercent(integer $Percent) Set Task progress in terms of percentage
+ * @method integer getPercent() Obtain Task progress in percentage
+ * @method void setPercent(integer $Percent) Set Task progress in percentage
  * @method integer getTimeSpend() Obtain Task duration in seconds
  * @method void setTimeSpend(integer $TimeSpend) Set Task duration in seconds
  * @method string getUrl() Obtain Backup download address
@@ -65,7 +65,7 @@ class BackupDownloadTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Task progress in terms of percentage
+     * @var integer Task progress in percentage
      */
     public $Percent;
 
@@ -85,7 +85,7 @@ class BackupDownloadTask extends AbstractModel
      * @param string $ReplicaSetId Shard name
      * @param integer $BackupSize Backup size in bytes
      * @param integer $Status Task status. Valid values: `0` (waiting for execution), `1` (downloading), `2` (downloaded), `3` (download failed), `4` (waiting for retry)
-     * @param integer $Percent Task progress in terms of percentage
+     * @param integer $Percent Task progress in percentage
      * @param integer $TimeSpend Task duration in seconds
      * @param string $Url Backup download address
      */

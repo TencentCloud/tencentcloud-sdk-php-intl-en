@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCkafkaZone response structure.
  *
- * @method ZoneResponse getResult() Obtain The entity of query result complex objects
- * @method void setResult(ZoneResponse $Result) Set The entity of query result complex objects
+ * @method ZoneResponse getResult() Obtain Returned results for the query
+ * @method void setResult(ZoneResponse $Result) Set Returned results for the query
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCkafkaZoneResponse extends AbstractModel
 {
     /**
-     * @var ZoneResponse The entity of query result complex objects
+     * @var ZoneResponse Returned results for the query
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class DescribeCkafkaZoneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ZoneResponse $Result The entity of query result complex objects
+     * @param ZoneResponse $Result Returned results for the query
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

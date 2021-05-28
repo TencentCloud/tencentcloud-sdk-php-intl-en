@@ -34,7 +34,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a user.
  * @method Models\DescribeACLResponse DescribeACL(Models\DescribeACLRequest $req) This API is used to enumerate ACLs.
  * @method Models\DescribeAppInfoResponse DescribeAppInfo(Models\DescribeAppInfoRequest $req) This API is used to query the user list.
- * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) This API is used to view the availability zone (AZ) list of Ckafka.
+ * @method Models\DescribeCkafkaZoneResponse DescribeCkafkaZone(Models\DescribeCkafkaZoneRequest $req) This API is used to view the AZ list of Ckafka.
  * @method Models\DescribeConsumerGroupResponse DescribeConsumerGroup(Models\DescribeConsumerGroupRequest $req) This API is used to query consumer group information.
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) This API is used to enumerate consumer groups (simplified).
  * @method Models\DescribeGroupInfoResponse DescribeGroupInfo(Models\DescribeGroupInfoRequest $req) This API is used to get consumer group information.
@@ -42,7 +42,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) This API is used to get instance attributes.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to get the list of CKafka instances under a user account.
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) This API is used to get instance list details under a user account.
- * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) This API is used to enumerate regions, only including Guangzhou.
+ * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) This API is used to enumerate regions, and can be called only in Guangzhou.
  * @method Models\DescribeRouteResponse DescribeRoute(Models\DescribeRouteRequest $req) This API is used to view route information.
  * @method Models\DescribeTopicResponse DescribeTopic(Models\DescribeTopicRequest $req) API domain name: https://ckafka.tencentcloudapi.com
 This API is used to get the list of topics in a CKafka instance of a user.

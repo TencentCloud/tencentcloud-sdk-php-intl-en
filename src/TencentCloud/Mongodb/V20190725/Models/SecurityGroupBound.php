@@ -20,19 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Security group rule
  *
- * @method string getAction() Obtain Policy. Valid values: `ACCEPT`, `DROP`
- * @method void setAction(string $Action) Set Policy. Valid values: `ACCEPT`, `DROP`
+ * @method string getAction() Obtain Execution rule. Valid values: `ACCEPT`, `DROP`
+ * @method void setAction(string $Action) Set Execution rule. Valid values: `ACCEPT`, `DROP`
  * @method string getCidrIp() Obtain IP range
  * @method void setCidrIp(string $CidrIp) Set IP range
  * @method string getPortRange() Obtain Port range
  * @method void setPortRange(string $PortRange) Set Port range
  * @method string getIpProtocol() Obtain Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
  * @method void setIpProtocol(string $IpProtocol) Set Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+ * @method string getId() Obtain 
+ * @method void setId(string $Id) Set 
+ * @method string getAddressModule() Obtain 
+ * @method void setAddressModule(string $AddressModule) Set 
+ * @method string getServiceModule() Obtain 
+ * @method void setServiceModule(string $ServiceModule) Set 
+ * @method string getDesc() Obtain 
+ * @method void setDesc(string $Desc) Set 
  */
 class SecurityGroupBound extends AbstractModel
 {
     /**
-     * @var string Policy. Valid values: `ACCEPT`, `DROP`
+     * @var string Execution rule. Valid values: `ACCEPT`, `DROP`
      */
     public $Action;
 
@@ -52,10 +60,34 @@ class SecurityGroupBound extends AbstractModel
     public $IpProtocol;
 
     /**
-     * @param string $Action Policy. Valid values: `ACCEPT`, `DROP`
+     * @var string 
+     */
+    public $Id;
+
+    /**
+     * @var string 
+     */
+    public $AddressModule;
+
+    /**
+     * @var string 
+     */
+    public $ServiceModule;
+
+    /**
+     * @var string 
+     */
+    public $Desc;
+
+    /**
+     * @param string $Action Execution rule. Valid values: `ACCEPT`, `DROP`
      * @param string $CidrIp IP range
      * @param string $PortRange Port range
      * @param string $IpProtocol Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
+     * @param string $Id 
+     * @param string $AddressModule 
+     * @param string $ServiceModule 
+     * @param string $Desc 
      */
     function __construct()
     {
@@ -84,6 +116,22 @@ class SecurityGroupBound extends AbstractModel
 
         if (array_key_exists("IpProtocol",$param) and $param["IpProtocol"] !== null) {
             $this->IpProtocol = $param["IpProtocol"];
+        }
+
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("AddressModule",$param) and $param["AddressModule"] !== null) {
+            $this->AddressModule = $param["AddressModule"];
+        }
+
+        if (array_key_exists("ServiceModule",$param) and $param["ServiceModule"] !== null) {
+            $this->ServiceModule = $param["ServiceModule"];
+        }
+
+        if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
+            $this->Desc = $param["Desc"];
         }
     }
 }

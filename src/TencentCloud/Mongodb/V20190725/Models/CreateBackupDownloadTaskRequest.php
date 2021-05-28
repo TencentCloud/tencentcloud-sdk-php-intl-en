@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
  * @method string getBackupName() Obtain The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
  * @method void setBackupName(string $BackupName) Set The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
- * @method array getBackupSets() Obtain The list of shards whose backups will be downloaded
- * @method void setBackupSets(array $BackupSets) Set The list of shards whose backups will be downloaded
+ * @method array getBackupSets() Obtain The list of shards with backups to be downloaded
+ * @method void setBackupSets(array $BackupSets) Set The list of shards with backups to be downloaded
  */
 class CreateBackupDownloadTaskRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CreateBackupDownloadTaskRequest extends AbstractModel
     public $BackupName;
 
     /**
-     * @var array The list of shards whose backups will be downloaded
+     * @var array The list of shards with backups to be downloaded
      */
     public $BackupSets;
 
     /**
      * @param string $InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
      * @param string $BackupName The name of the backup file to be downloaded, which can be obtained by the `DescribeDBBackups` API
-     * @param array $BackupSets The list of shards whose backups will be downloaded
+     * @param array $BackupSets The list of shards with backups to be downloaded
      */
     function __construct()
     {

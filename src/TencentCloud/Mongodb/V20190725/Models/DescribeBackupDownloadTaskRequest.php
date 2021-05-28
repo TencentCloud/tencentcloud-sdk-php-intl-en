@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
- * @method string getBackupName() Obtain The name of a backup file whose download tasks will be queried
- * @method void setBackupName(string $BackupName) Set The name of a backup file whose download tasks will be queried
+ * @method string getBackupName() Obtain The name of a backup file with download tasks to be queried
+ * @method void setBackupName(string $BackupName) Set The name of a backup file with download tasks to be queried
  * @method string getStartTime() Obtain The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
  * @method void setStartTime(string $StartTime) Set The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
  * @method string getEndTime() Obtain The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
@@ -47,7 +47,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string The name of a backup file whose download tasks will be queried
+     * @var string The name of a backup file with download tasks to be queried
      */
     public $BackupName;
 
@@ -88,7 +88,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
-     * @param string $BackupName The name of a backup file whose download tasks will be queried
+     * @param string $BackupName The name of a backup file with download tasks to be queried
      * @param string $StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
      * @param string $EndTime The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.

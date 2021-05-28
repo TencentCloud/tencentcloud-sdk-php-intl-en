@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Zone ID
  * @method void setZoneId(string $ZoneId) Set Zone ID
- * @method integer getIsInternalApp() Obtain Whether it is an internal App.
- * @method void setIsInternalApp(integer $IsInternalApp) Set Whether it is an internal App.
- * @method integer getAppId() Obtain app id
- * @method void setAppId(integer $AppId) Set app id
- * @method boolean getFlag() Obtain Identifier
- * @method void setFlag(boolean $Flag) Set Identifier
+ * @method integer getIsInternalApp() Obtain Whether it is an internal application.
+ * @method void setIsInternalApp(integer $IsInternalApp) Set Whether it is an internal application.
+ * @method integer getAppId() Obtain Application ID
+ * @method void setAppId(integer $AppId) Set Application ID
+ * @method boolean getFlag() Obtain Flag
+ * @method void setFlag(boolean $Flag) Set Flag
  * @method string getZoneName() Obtain Zone name
  * @method void setZoneName(string $ZoneName) Set Zone name
  * @method integer getZoneStatus() Obtain Zone status
  * @method void setZoneStatus(integer $ZoneStatus) Set Zone status
- * @method string getExflag() Obtain Extra identifier
- * @method void setExflag(string $Exflag) Set Extra identifier
+ * @method string getExflag() Obtain Extra flag
+ * @method void setExflag(string $Exflag) Set Extra flag
  * @method string getSoldOut() Obtain JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
  * @method void setSoldOut(string $SoldOut) Set JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
  */
@@ -45,17 +45,17 @@ class ZoneInfo extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Whether it is an internal App.
+     * @var integer Whether it is an internal application.
      */
     public $IsInternalApp;
 
     /**
-     * @var integer app id
+     * @var integer Application ID
      */
     public $AppId;
 
     /**
-     * @var boolean Identifier
+     * @var boolean Flag
      */
     public $Flag;
 
@@ -70,7 +70,7 @@ class ZoneInfo extends AbstractModel
     public $ZoneStatus;
 
     /**
-     * @var string Extra identifier
+     * @var string Extra flag
      */
     public $Exflag;
 
@@ -81,12 +81,12 @@ class ZoneInfo extends AbstractModel
 
     /**
      * @param string $ZoneId Zone ID
-     * @param integer $IsInternalApp Whether it is an internal App.
-     * @param integer $AppId app id
-     * @param boolean $Flag Identifier
+     * @param integer $IsInternalApp Whether it is an internal application.
+     * @param integer $AppId Application ID
+     * @param boolean $Flag Flag
      * @param string $ZoneName Zone name
      * @param integer $ZoneStatus Zone status
-     * @param string $Exflag Extra identifier
+     * @param string $Exflag Extra flag
      * @param string $SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
      */
     function __construct()

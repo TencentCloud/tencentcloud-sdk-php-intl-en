@@ -30,21 +30,21 @@ use TencentCloud\Common\AbstractModel;
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setRegionCode(string $RegionCode) Set Region code
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method string getRegionCodeV3() Obtain Region code (V3)
+ * @method string getRegionCodeV3() Obtain Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setRegionCodeV3(string $RegionCodeV3) Set Region code (V3)
+ * @method void setRegionCodeV3(string $RegionCodeV3) Set Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method string getSupport() Obtain NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setSupport(string $Support) Set NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getIpv6() Obtain Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+ * @method integer getIpv6() Obtain Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setIpv6(integer $Ipv6) Set Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+ * @method void setIpv6(integer $Ipv6) Set Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getMultiZone() Obtain Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+ * @method integer getMultiZone() Obtain Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setMultiZone(integer $MultiZone) Set Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+ * @method void setMultiZone(integer $MultiZone) Set Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class Region extends AbstractModel
@@ -71,7 +71,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RegionCode;
 
     /**
-     * @var string Region code (V3)
+     * @var string Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $RegionCodeV3;
@@ -83,13 +83,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $Support;
 
     /**
-     * @var integer Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * @var integer Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $Ipv6;
 
     /**
-     * @var integer Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * @var integer Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $MultiZone;
@@ -100,13 +100,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * @param string $AreaName Area name
      * @param string $RegionCode Region code
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param string $RegionCodeV3 Region code (V3)
+     * @param string $RegionCodeV3 Region code (v3)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $Support NONE: no special models are supported by default.\nCVM: the CVM type is supported.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $Ipv6 Whether ipv6 is supported. `0` indicates no, and `1` indicates yes.
+     * @param integer $Ipv6 Whether IPv6 is supported. `0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $MultiZone Whether multi-zone clusters are supported.`0` indicates no, and `1` indicates yes.
+     * @param integer $MultiZone Whether cross-AZ clusters are supported.`0` indicates no, and `1` indicates yes.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()

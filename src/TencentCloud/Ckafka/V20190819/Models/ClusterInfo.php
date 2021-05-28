@@ -40,13 +40,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setAvailableBandWidth(integer $AvailableBandWidth) Set The cluster’s available bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getZoneId() Obtain The AZ which the cluster belongs to
+ * @method integer getZoneId() Obtain The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setZoneId(integer $ZoneId) Set The AZ which the cluster belongs to
+ * @method void setZoneId(integer $ZoneId) Set The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method array getZoneIds() Obtain The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+ * @method array getZoneIds() Obtain The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setZoneIds(array $ZoneIds) Set The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+ * @method void setZoneIds(array $ZoneIds) Set The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
@@ -86,13 +86,13 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $AvailableBandWidth;
 
     /**
-     * @var integer The AZ which the cluster belongs to
+     * @var integer The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $ZoneId;
 
     /**
-     * @var array The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * @var array The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     public $ZoneIds;
@@ -108,9 +108,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param integer $AvailableBandWidth The cluster’s available bandwidth in MB/s
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $ZoneId The AZ which the cluster belongs to
+     * @param integer $ZoneId The AZ where the cluster resides
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param array $ZoneIds The AZ which the cluster nodes belong to. If the cluster is a multi-AZ cluster, this field means multiple AZs which the cluster nodes belong to.
+     * @param array $ZoneIds The AZ where the cluster nodes reside. If the cluster is a multi-AZ cluster, this field means multiple AZs where the cluster nodes reside.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
