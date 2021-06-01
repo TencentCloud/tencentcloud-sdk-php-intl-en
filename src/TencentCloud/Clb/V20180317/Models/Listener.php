@@ -82,6 +82,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setToa(boolean $Toa) Set Only the NAT64 CLB TCP listeners are supported.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getDeregisterTargetRst() Obtain Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -185,6 +189,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Toa;
 
     /**
+     * @var boolean Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DeregisterTargetRst;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -215,6 +225,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $KeepaliveEnable Whether a persistent connection is enabled (1: enabled; 0: disabled). This parameter can only be configured in HTTP/HTTPS listeners.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $Toa Only the NAT64 CLB TCP listeners are supported.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -304,6 +316,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Toa",$param) and $param["Toa"] !== null) {
             $this->Toa = $param["Toa"];
+        }
+
+        if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
+            $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
         }
     }
 }

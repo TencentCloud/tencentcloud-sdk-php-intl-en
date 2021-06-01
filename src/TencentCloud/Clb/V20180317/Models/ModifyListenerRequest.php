@@ -40,6 +40,8 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
  * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+ * @method boolean getDeregisterTargetRst() Obtain Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+ * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $KeepaliveEnable;
 
     /**
+     * @var boolean Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
+     */
+    public $DeregisterTargetRst;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $ListenerName New listener name
@@ -100,6 +107,7 @@ They represent weighted round robin and least connections, respectively. Default
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
      * @param integer $KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
+     * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {
             $this->KeepaliveEnable = $param["KeepaliveEnable"];
+        }
+
+        if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
+            $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
         }
     }
 }
