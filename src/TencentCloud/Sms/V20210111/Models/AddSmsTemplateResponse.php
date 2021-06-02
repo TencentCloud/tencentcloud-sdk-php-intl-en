@@ -18,19 +18,19 @@ namespace TencentCloud\Sms\V20210111\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SmsPackagesStatistics response structure.
+ * AddSmsTemplate response structure.
  *
- * @method array getSmsPackagesStatisticsSet() Obtain Delivery statistics response packet body.
- * @method void setSmsPackagesStatisticsSet(array $SmsPackagesStatisticsSet) Set Delivery statistics response packet body.
+ * @method AddTemplateStatus getAddTemplateStatus() Obtain SMS template addition response body
+ * @method void setAddTemplateStatus(AddTemplateStatus $AddTemplateStatus) Set SMS template addition response body
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class SmsPackagesStatisticsResponse extends AbstractModel
+class AddSmsTemplateResponse extends AbstractModel
 {
     /**
-     * @var array Delivery statistics response packet body.
+     * @var AddTemplateStatus SMS template addition response body
      */
-    public $SmsPackagesStatisticsSet;
+    public $AddTemplateStatus;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class SmsPackagesStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SmsPackagesStatisticsSet Delivery statistics response packet body.
+     * @param AddTemplateStatus $AddTemplateStatus SMS template addition response body
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,13 +54,9 @@ class SmsPackagesStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("SmsPackagesStatisticsSet",$param) and $param["SmsPackagesStatisticsSet"] !== null) {
-            $this->SmsPackagesStatisticsSet = [];
-            foreach ($param["SmsPackagesStatisticsSet"] as $key => $value){
-                $obj = new SmsPackagesStatistics();
-                $obj->deserialize($value);
-                array_push($this->SmsPackagesStatisticsSet, $obj);
-            }
+        if (array_key_exists("AddTemplateStatus",$param) and $param["AddTemplateStatus"] !== null) {
+            $this->AddTemplateStatus = new AddTemplateStatus();
+            $this->AddTemplateStatus->deserialize($param["AddTemplateStatus"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

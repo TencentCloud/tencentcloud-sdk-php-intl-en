@@ -1,0 +1,65 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Sms\V20210111\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Template deletion response
+ *
+ * @method string getDeleteStatus() Obtain Deletion status information.
+ * @method void setDeleteStatus(string $DeleteStatus) Set Deletion status information.
+ * @method integer getDeleteTime() Obtain Deleted time in seconds in the format of UNIX timestamp.
+ * @method void setDeleteTime(integer $DeleteTime) Set Deleted time in seconds in the format of UNIX timestamp.
+ */
+class DeleteTemplateStatus extends AbstractModel
+{
+    /**
+     * @var string Deletion status information.
+     */
+    public $DeleteStatus;
+
+    /**
+     * @var integer Deleted time in seconds in the format of UNIX timestamp.
+     */
+    public $DeleteTime;
+
+    /**
+     * @param string $DeleteStatus Deletion status information.
+     * @param integer $DeleteTime Deleted time in seconds in the format of UNIX timestamp.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("DeleteStatus",$param) and $param["DeleteStatus"] !== null) {
+            $this->DeleteStatus = $param["DeleteStatus"];
+        }
+
+        if (array_key_exists("DeleteTime",$param) and $param["DeleteTime"] !== null) {
+            $this->DeleteTime = $param["DeleteTime"];
+        }
+    }
+}
