@@ -34,32 +34,20 @@ use TencentCloud\Common\AbstractModel;
 [Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
  * @method void setNamespaces(array $Namespaces) Set Filter by namespace. For the values of different policy types, please see:
 [Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
- * @method string getDimensions() Obtain Alarm object list. The outer array corresponds to multiple instances.
-Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-For the samples for different Tencent Cloud services, please see:
-[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
- * @method void setDimensions(string $Dimensions) Set Alarm object list. The outer array corresponds to multiple instances.
-Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-For the samples for different Tencent Cloud services, please see:
-[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
- * @method array getReceiverUids() Obtain Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
- * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
- * @method array getReceiverGroups() Obtain Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
- * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+ * @method string getDimensions() Obtain The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+You can also refer to the “Example 2” below.
+
+For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+ * @method void setDimensions(string $Dimensions) Set The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+You can also refer to the “Example 2” below.
+
+For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+ * @method array getReceiverUids() Obtain Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+ * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+ * @method array getReceiverGroups() Obtain Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+ * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
  * @method array getPolicyType() Obtain Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
  * @method void setPolicyType(array $PolicyType) Set Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
  * @method string getField() Obtain Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
@@ -71,9 +59,9 @@ For the samples for different Tencent Cloud services, please see:
  * @method void setProjectIds(array $ProjectIds) Set ID array of the policy project, which can be viewed on the following page:
 [Project Management](https://console.cloud.tencent.com/project)
  * @method array getNoticeIds() Obtain ID list of the notification template, which can be obtained by querying the notification template list.
-[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
  * @method void setNoticeIds(array $NoticeIds) Set ID list of the notification template, which can be obtained by querying the notification template list.
-[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
  * @method array getRuleTypes() Obtain Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
  * @method void setRuleTypes(array $RuleTypes) Set Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
  * @method array getEnable() Obtain Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
@@ -115,27 +103,21 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var string Alarm object list. The outer array corresponds to multiple instances.
-Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-For the samples for different Tencent Cloud services, please see:
-[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
+     * @var string The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+You can also refer to the “Example 2” below.
+
+For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
      */
     public $Dimensions;
 
     /**
-     * @var array Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
+     * @var array Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
      */
     public $ReceiverUids;
 
     /**
-     * @var array Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+     * @var array Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      */
     public $ReceiverGroups;
 
@@ -162,7 +144,7 @@ For the samples for different Tencent Cloud services, please see:
 
     /**
      * @var array ID list of the notification template, which can be obtained by querying the notification template list.
-[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      */
     public $NoticeIds;
 
@@ -189,26 +171,20 @@ For the samples for different Tencent Cloud services, please see:
      * @param array $MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
      * @param array $Namespaces Filter by namespace. For the values of different policy types, please see:
 [Policy Type List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
-     * @param string $Dimensions Alarm object list. The outer array corresponds to multiple instances.
-Each inner array corresponds to one instance, where `object` corresponds to the dimension information of the instance. The format is as follows:
-[
-	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-	...
-]
-For the samples for different Tencent Cloud services, please see:
-[Dimension List](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1)
-     * @param array $ReceiverUids Search by recipient `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1)
-     * @param array $ReceiverGroups Search by recipient group `uid`, which should be queried by calling the CAM API. For more information, please see:
-[ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1)
+     * @param string $Dimensions The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
+`[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+You can also refer to the “Example 2” below.
+
+For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+     * @param array $ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * @param array $ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      * @param array $PolicyType Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
      * @param string $Field Sort by field. For example, to sort by the last modification time, use Field: "UpdateTime".
      * @param string $Order Sort order. Valid values: ASC (ascending), DESC (descending)
      * @param array $ProjectIds ID array of the policy project, which can be viewed on the following page:
 [Project Management](https://console.cloud.tencent.com/project)
      * @param array $NoticeIds ID list of the notification template, which can be obtained by querying the notification template list.
-[DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
+It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1).
      * @param array $RuleTypes Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
      * @param array $Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      * @param integer $NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.

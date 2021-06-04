@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password of the new account
  * @method string getDescription() Obtain Remarks
  * @method void setDescription(string $Description) Set Remarks
+ * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by the new account
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by the new account
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateAccountsRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var integer The maximum number of instance connections supported by the new account
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts TencentDB account.
      * @param string $Password Password of the new account
      * @param string $Description Remarks
+     * @param integer $MaxUserConnections The maximum number of instance connections supported by the new account
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class CreateAccountsRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

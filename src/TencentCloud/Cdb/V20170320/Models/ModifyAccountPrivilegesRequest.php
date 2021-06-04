@@ -40,6 +40,8 @@ Note: if this parameter is not passed in, it means to clear the permission.
 Note: if this parameter is not passed in, it means to clear the permission.
  * @method void setColumnPrivileges(array $ColumnPrivileges) Set Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
+ * @method string getModifyAction() Obtain If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+ * @method void setModifyAction(string $ModifyAction) Set If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
  */
 class ModifyAccountPrivilegesRequest extends AbstractModel
 {
@@ -78,6 +80,11 @@ Note: if this parameter is not passed in, it means to clear the permission.
     public $ColumnPrivileges;
 
     /**
+     * @var string If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
+     */
+    public $ModifyAction;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Accounts Database account, including username and domain name.
      * @param array $GlobalPrivileges Global permission. Valid values: "SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "PROCESS", "DROP", "REFERENCES", "INDEX", "ALTER", "SHOW DATABASES", "CREATE TEMPORARY TABLES", "LOCK TABLES", "EXECUTE", "CREATE VIEW", "SHOW VIEW", "CREATE ROUTINE", "ALTER ROUTINE", "EVENT", "TRIGGER".
@@ -88,6 +95,7 @@ Note: if this parameter is not passed in, it means to clear the permission.
 Note: if this parameter is not passed in, it means to clear the permission.
      * @param array $ColumnPrivileges Column permission in table. Valid values: "SELECT", "INSERT", "UPDATE", "REFERENCES".
 Note: if this parameter is not passed in, it means to clear the permission.
+     * @param string $ModifyAction If this parameter is specified, permissions are modified in batches. Valid values: `grant`, `revoke`.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ Note: if this parameter is not passed in, it means to clear the permission.
                 $obj->deserialize($value);
                 array_push($this->ColumnPrivileges, $obj);
             }
+        }
+
+        if (array_key_exists("ModifyAction",$param) and $param["ModifyAction"] !== null) {
+            $this->ModifyAction = $param["ModifyAction"];
         }
     }
 }

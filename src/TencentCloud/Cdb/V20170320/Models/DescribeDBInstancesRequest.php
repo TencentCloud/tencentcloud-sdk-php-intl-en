@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWithMaster(integer $WithMaster) Set Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
  * @method array getDeployGroupIds() Obtain Placement group ID list.
  * @method void setDeployGroupIds(array $DeployGroupIds) Set Placement group ID list.
+ * @method array getTagKeysForSearch() Obtain Whether to use the tag key as a filter condition
+ * @method void setTagKeysForSearch(array $TagKeysForSearch) Set Whether to use the tag key as a filter condition
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -206,6 +208,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $DeployGroupIds;
 
     /**
+     * @var array Whether to use the tag key as a filter condition
+     */
+    public $TagKeysForSearch;
+
+    /**
      * @param integer $ProjectId Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -232,6 +239,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $WithRo Whether read-only instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
      * @param integer $WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
      * @param array $DeployGroupIds Placement group ID list.
+     * @param array $TagKeysForSearch Whether to use the tag key as a filter condition
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("DeployGroupIds",$param) and $param["DeployGroupIds"] !== null) {
             $this->DeployGroupIds = $param["DeployGroupIds"];
+        }
+
+        if (array_key_exists("TagKeysForSearch",$param) and $param["TagKeysForSearch"] !== null) {
+            $this->TagKeysForSearch = $param["TagKeysForSearch"];
         }
     }
 }

@@ -30,8 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Account information modification time
  * @method string getModifyPasswordTime() Obtain Password modification time
  * @method void setModifyPasswordTime(string $ModifyPasswordTime) Set Password modification time
- * @method string getCreateTime() Obtain Account creation time
- * @method void setCreateTime(string $CreateTime) Set Account creation time
+ * @method string getCreateTime() Obtain This parameter is no longer supported.
+ * @method void setCreateTime(string $CreateTime) Set This parameter is no longer supported.
+ * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by an account
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by an account
  */
 class AccountInfo extends AbstractModel
 {
@@ -61,9 +63,14 @@ class AccountInfo extends AbstractModel
     public $ModifyPasswordTime;
 
     /**
-     * @var string Account creation time
+     * @var string This parameter is no longer supported.
      */
     public $CreateTime;
+
+    /**
+     * @var integer The maximum number of instance connections supported by an account
+     */
+    public $MaxUserConnections;
 
     /**
      * @param string $Notes Account remarks
@@ -71,7 +78,8 @@ class AccountInfo extends AbstractModel
      * @param string $User Account name
      * @param string $ModifyTime Account information modification time
      * @param string $ModifyPasswordTime Password modification time
-     * @param string $CreateTime Account creation time
+     * @param string $CreateTime This parameter is no longer supported.
+     * @param integer $MaxUserConnections The maximum number of instance connections supported by an account
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class AccountInfo extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

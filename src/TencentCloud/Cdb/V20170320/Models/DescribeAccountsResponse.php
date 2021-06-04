@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible accounts.
  * @method array getItems() Obtain Details of eligible accounts.
  * @method void setItems(array $Items) Set Details of eligible accounts.
+ * @method integer getMaxUserConnections() Obtain The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections (set by the MySQL parameter `max_connections`)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class DescribeAccountsResponse extends AbstractModel
     public $Items;
 
     /**
+     * @var integer The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     */
+    public $MaxUserConnections;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeAccountsResponse extends AbstractModel
     /**
      * @param integer $TotalCount Number of eligible accounts.
      * @param array $Items Details of eligible accounts.
+     * @param integer $MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeAccountsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

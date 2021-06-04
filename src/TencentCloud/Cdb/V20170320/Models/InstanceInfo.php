@@ -120,6 +120,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getInstanceNodes() Obtain Number of nodes
  * @method void setInstanceNodes(integer $InstanceNodes) Set Number of nodes
+ * @method array getTagList() Obtain List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTagList(array $TagList) Set List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -342,6 +346,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InstanceNodes;
 
     /**
+     * @var array List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TagList;
+
+    /**
      * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      * @param string $Zone AZ information
      * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
@@ -392,6 +402,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ZoneId AZ ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceNodes Number of nodes
+     * @param array $TagList List of tags
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -585,6 +597,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
             $this->InstanceNodes = $param["InstanceNodes"];
+        }
+
+        if (array_key_exists("TagList",$param) and $param["TagList"] !== null) {
+            $this->TagList = [];
+            foreach ($param["TagList"] as $key => $value){
+                $obj = new TagInfoItem();
+                $obj->deserialize($value);
+                array_push($this->TagList, $obj);
+            }
         }
     }
 }

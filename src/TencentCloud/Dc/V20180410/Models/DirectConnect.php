@@ -129,9 +129,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setLocalZone(boolean $LocalZone) Set Whether the connection is an edge zone.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method integer getVlanZeroDirectConnectTunnelCount() Obtain Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
  * @method void setVlanZeroDirectConnectTunnelCount(integer $VlanZeroDirectConnectTunnelCount) Set Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
  * @method integer getOtherVlanDirectConnectTunnelCount() Obtain Number of dedicated tunnels with enabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setOtherVlanDirectConnectTunnelCount(integer $OtherVlanDirectConnectTunnelCount) Set Number of dedicated tunnels with enabled VLAN in the connection
@@ -315,7 +315,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
     /**
      * @var integer Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
      */
     public $VlanZeroDirectConnectTunnelCount;
 
@@ -387,7 +387,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param boolean $LocalZone Whether the connection is an edge zone.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $VlanZeroDirectConnectTunnelCount Number of dedicated tunnels with disabled VLAN in the connection
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid value can be found.
      * @param integer $OtherVlanDirectConnectTunnelCount Number of dedicated tunnels with enabled VLAN in the connection
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $MinBandwidth Minimum bandwidth of the connection

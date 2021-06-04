@@ -28,32 +28,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Value range: 1–100. Default value: 20
  * @method string getOrder() Obtain Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
  * @method void setOrder(string $Order) Set Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
- * @method integer getStartTime() Obtain Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
- * @method void setStartTime(integer $StartTime) Set Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
- * @method integer getEndTime() Obtain End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
- * @method void setEndTime(integer $EndTime) Set End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
- * @method array getMonitorTypes() Obtain Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
- * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+ * @method integer getStartTime() Obtain Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
+ * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
+ * @method integer getEndTime() Obtain End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
+ * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
+ * @method array getMonitorTypes() Obtain Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+ * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
  * @method string getAlarmObject() Obtain Filter by alarm object. Fuzzy search with string is supported
  * @method void setAlarmObject(string $AlarmObject) Set Filter by alarm object. Fuzzy search with string is supported
  * @method array getAlarmStatus() Obtain Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
  * @method void setAlarmStatus(array $AlarmStatus) Set Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
- * @method array getProjectIds() Obtain Filter by project ID. Valid values: -1 (no project), 0 (default project)
- * @method void setProjectIds(array $ProjectIds) Set Filter by project ID. Valid values: -1 (no project), 0 (default project)
+ * @method array getProjectIds() Obtain Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
+ * @method void setProjectIds(array $ProjectIds) Set Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
  * @method array getInstanceGroupIds() Obtain Filter by instance group ID
  * @method void setInstanceGroupIds(array $InstanceGroupIds) Set Filter by instance group ID
- * @method array getNamespaces() Obtain Filter by policy type
- * @method void setNamespaces(array $Namespaces) Set Filter by policy type
+ * @method array getNamespaces() Obtain Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
+ * @method void setNamespaces(array $Namespaces) Set Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
  * @method array getMetricNames() Obtain Filter by metric name
  * @method void setMetricNames(array $MetricNames) Set Filter by metric name
  * @method string getPolicyName() Obtain Fuzzy search by policy name
  * @method void setPolicyName(string $PolicyName) Set Fuzzy search by policy name
  * @method string getContent() Obtain Fuzzy search by alarm content
  * @method void setContent(string $Content) Set Fuzzy search by alarm content
- * @method array getReceiverUids() Obtain Search by recipient
- * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient
- * @method array getReceiverGroups() Obtain Search by recipient group
- * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group
+ * @method array getReceiverUids() Obtain Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+ * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+ * @method array getReceiverGroups() Obtain Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+ * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
  * @method array getPolicyIds() Obtain Search by alarm policy ID list
  * @method void setPolicyIds(array $PolicyIds) Set Search by alarm policy ID list
  */
@@ -80,17 +84,17 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $Order;
 
     /**
-     * @var integer Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
+     * @var integer Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
      */
     public $StartTime;
 
     /**
-     * @var integer End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
+     * @var integer End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
      */
     public $EndTime;
 
     /**
-     * @var array Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+     * @var array Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
      */
     public $MonitorTypes;
 
@@ -105,7 +109,8 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $AlarmStatus;
 
     /**
-     * @var array Filter by project ID. Valid values: -1 (no project), 0 (default project)
+     * @var array Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public $ProjectIds;
 
@@ -115,7 +120,8 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $InstanceGroupIds;
 
     /**
-     * @var array Filter by policy type
+     * @var array Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public $Namespaces;
 
@@ -135,12 +141,12 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $Content;
 
     /**
-     * @var array Search by recipient
+     * @var array Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
      */
     public $ReceiverUids;
 
     /**
-     * @var array Search by recipient group
+     * @var array Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      */
     public $ReceiverGroups;
 
@@ -154,19 +160,21 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
      * @param string $Order Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
-     * @param integer $StartTime Start time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the timestamp of a day earlier.
-     * @param integer $EndTime End time, which corresponds to `FirstOccurTime` (time when an alarm first occurred). The default value is the current timestamp.
-     * @param array $MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
+     * @param integer $StartTime Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
+     * @param integer $EndTime End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
+     * @param array $MonitorTypes Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
      * @param string $AlarmObject Filter by alarm object. Fuzzy search with string is supported
      * @param array $AlarmStatus Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
-     * @param array $ProjectIds Filter by project ID. Valid values: -1 (no project), 0 (default project)
+     * @param array $ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
+You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      * @param array $InstanceGroupIds Filter by instance group ID
-     * @param array $Namespaces Filter by policy type
+     * @param array $Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      * @param array $MetricNames Filter by metric name
      * @param string $PolicyName Fuzzy search by policy name
      * @param string $Content Fuzzy search by alarm content
-     * @param array $ReceiverUids Search by recipient
-     * @param array $ReceiverGroups Search by recipient group
+     * @param array $ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * @param array $ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      * @param array $PolicyIds Search by alarm policy ID list
      */
     function __construct()
