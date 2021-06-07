@@ -18,32 +18,26 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackup response structure.
+ * DescribeApplications response structure.
  *
- * @method array getTaskIds() Obtain List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setTaskIds(array $TaskIds) Set List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method array getApplicationIds() Obtain List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setApplicationIds(array $ApplicationIds) Set List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method array getApplications() Obtain Application list
+ * @method void setApplications(array $Applications) Set Application list
+ * @method integer getTotalCount() Obtain Total number of applications
+ * @method void setTotalCount(integer $TotalCount) Set Total number of applications
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBackupResponse extends AbstractModel
+class DescribeApplicationsResponse extends AbstractModel
 {
     /**
-     * @var array List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var array Application list
      */
-    public $TaskIds;
+    public $Applications;
 
     /**
-     * @var array List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var integer Total number of applications
      */
-    public $ApplicationIds;
+    public $TotalCount;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +45,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RequestId;
 
     /**
-     * @param array $TaskIds List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param array $ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param array $Applications Application list
+     * @param integer $TotalCount Total number of applications
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,12 +62,17 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
-            $this->TaskIds = $param["TaskIds"];
+        if (array_key_exists("Applications",$param) and $param["Applications"] !== null) {
+            $this->Applications = [];
+            foreach ($param["Applications"] as $key => $value){
+                $obj = new Application();
+                $obj->deserialize($value);
+                array_push($this->Applications, $obj);
+            }
         }
 
-        if (array_key_exists("ApplicationIds",$param) and $param["ApplicationIds"] !== null) {
-            $this->ApplicationIds = $param["ApplicationIds"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

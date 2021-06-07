@@ -82,6 +82,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setProxyList(array $ProxyList) Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getCensorship() Obtain Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+ * @method void setCensorship(integer $Censorship) Set Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+ * @method array getDbaUins() Obtain Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setDbaUins(array $DbaUins) Set Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -205,6 +211,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ProxyList;
 
     /**
+     * @var integer Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+     */
+    public $Censorship;
+
+    /**
+     * @var array Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $DbaUins;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -236,6 +253,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
+     * @param array $DbaUins Approver UIN list
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -346,6 +366,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->ProxyList, $obj);
             }
+        }
+
+        if (array_key_exists("Censorship",$param) and $param["Censorship"] !== null) {
+            $this->Censorship = $param["Censorship"];
+        }
+
+        if (array_key_exists("DbaUins",$param) and $param["DbaUins"] !== null) {
+            $this->DbaUins = $param["DbaUins"];
         }
     }
 }

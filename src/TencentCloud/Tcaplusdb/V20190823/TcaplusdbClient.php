@@ -36,6 +36,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DeleteTableGroupResponse DeleteTableGroup(Models\DeleteTableGroupRequest $req) This API is used to delete a table group.
  * @method Models\DeleteTableIndexResponse DeleteTableIndex(Models\DeleteTableIndexRequest $req) This API is used to delete the global index from a table.
  * @method Models\DeleteTablesResponse DeleteTables(Models\DeleteTablesRequest $req) This API is used to drop a specified table. Calling this API for the first time means to move the table to the recycle bin, while calling it again means to drop the table completely from the recycle bin.
+ * @method Models\DescribeApplicationsResponse DescribeApplications(Models\DescribeApplicationsRequest $req) This API is used to query the list of cluster operation applications.
  * @method Models\DescribeClusterTagsResponse DescribeClusterTags(Models\DescribeClusterTagsRequest $req) This API is used to get the associated tag list of a cluster.
  * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to query the TcaplusDB cluster list, including cluster details.
  * @method Models\DescribeIdlFileInfosResponse DescribeIdlFileInfos(Models\DescribeIdlFileInfosRequest $req) This API is used to query table description file details.
@@ -52,6 +53,8 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\DisableRestProxyResponse DisableRestProxy(Models\DisableRestProxyRequest $req) This API is used to disable the RESTful API.
  * @method Models\EnableRestProxyResponse EnableRestProxy(Models\EnableRestProxyRequest $req) This API is used to enable the RESTful API.
  * @method Models\ImportSnapshotsResponse ImportSnapshots(Models\ImportSnapshotsRequest $req) This API is used to import a snapshot into a new table or the original table from which the snapshot was created.
+ * @method Models\MergeTablesDataResponse MergeTablesData(Models\MergeTablesDataRequest $req) This API is used to merge tables.
+ * @method Models\ModifyCensorshipResponse ModifyCensorship(Models\ModifyCensorshipRequest $req) This API is used to enable or disable the cluster operation approval feature.
  * @method Models\ModifyClusterMachineResponse ModifyClusterMachine(Models\ModifyClusterMachineRequest $req) This API is used to modify the machines of a dedicated cluster.
  * @method Models\ModifyClusterNameResponse ModifyClusterName(Models\ModifyClusterNameRequest $req) This API is used to rename a specified cluster.
  * @method Models\ModifyClusterPasswordResponse ModifyClusterPassword(Models\ModifyClusterPasswordRequest $req) This API is used to change the password of a specified cluster. The backend will allow the TcaplusDB SDK to access databases with both old and new passwords before the old password expires. You cannot submit a new password change request before the old password expires or submit a request to modify the expiration time of the old password after the old password expires.
@@ -66,6 +69,7 @@ use TencentCloud\Tcaplusdb\V20190823\Models as Models;
  * @method Models\RecoverRecycleTablesResponse RecoverRecycleTables(Models\RecoverRecycleTablesRequest $req) This API is used to recover a dropped table from the recycle bin. It will not work for tables to be released due to arrears.
  * @method Models\RollbackTablesResponse RollbackTables(Models\RollbackTablesRequest $req) This API is used to roll back table data.
  * @method Models\SetTableIndexResponse SetTableIndex(Models\SetTableIndexRequest $req) This API is used to create a global index for a table.
+ * @method Models\UpdateApplyResponse UpdateApply(Models\UpdateApplyRequest $req) This API is used to update the application status.
  * @method Models\VerifyIdlFilesResponse VerifyIdlFiles(Models\VerifyIdlFilesRequest $req) This API is used to upload and verify a table creation file and return the definition of tables that are verified to be valid.
  */
 

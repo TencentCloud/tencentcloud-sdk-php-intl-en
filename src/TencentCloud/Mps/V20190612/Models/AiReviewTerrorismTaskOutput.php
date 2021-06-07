@@ -30,24 +30,26 @@ use TencentCloud\Common\AbstractModel;
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
- * @method string getLabel() Obtain Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
- * @method void setLabel(string $Label) Set Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+ * @method string getLabel() Obtain Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
+ * @method void setLabel(string $Label) Set Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
  * @method array getSegmentSet() Obtain List of video segments that contain the detected terrorism information.
  * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected terrorism information.
  */
@@ -67,15 +69,16 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * @var string Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      */
     public $Label;
 
@@ -90,15 +93,16 @@ class AiReviewTerrorismTaskOutput extends AbstractModel
 <li>pass.</li>
 <li>review.</li>
 <li>block.</li>
-     * @param string $Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * @param string $Label Tags for detected terrorism information in a video. Valid values:
+<li>`guns`: weapons and guns</li>
+<li>`crowd`: crowds</li>
+<li>`police`: police forces</li>
+<li>`bloody`: bloodiness</li>
+<li>`banners`: terrorism flags</li>
+<li>`militant`: militants</li>
+<li>`explosion`: explosions and fires</li>
+<li>`terrorists`: terrorists</li>
+<li>`scenario`: terrorism images</li>
      * @param array $SegmentSet List of video segments that contain the detected terrorism information.
      */
     function __construct()

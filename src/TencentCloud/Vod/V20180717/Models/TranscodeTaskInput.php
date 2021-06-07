@@ -28,6 +28,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
  * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
+ * @method array getHeadTailSet() Obtain List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+ * @method void setHeadTailSet(array $HeadTailSet) Set List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
  * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
@@ -64,6 +66,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MosaicSet;
 
     /**
+     * @var array List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     */
+    public $HeadTailSet;
+
+    /**
      * @var float Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
@@ -84,6 +91,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
+     * @param array $HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
      * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
@@ -125,6 +133,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new MosaicInput();
                 $obj->deserialize($value);
                 array_push($this->MosaicSet, $obj);
+            }
+        }
+
+        if (array_key_exists("HeadTailSet",$param) and $param["HeadTailSet"] !== null) {
+            $this->HeadTailSet = [];
+            foreach ($param["HeadTailSet"] as $key => $value){
+                $obj = new HeadTailTaskInput();
+                $obj->deserialize($value);
+                array_push($this->HeadTailSet, $obj);
             }
         }
 

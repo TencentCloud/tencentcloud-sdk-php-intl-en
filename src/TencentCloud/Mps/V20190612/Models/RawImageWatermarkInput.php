@@ -38,6 +38,14 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px.</li>
 Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+ * @method string getRepeatType() Obtain Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+ * @method void setRepeatType(string $RepeatType) Set Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
  */
 class RawImageWatermarkInput extends AbstractModel
 {
@@ -63,6 +71,14 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
     public $Height;
 
     /**
+     * @var string Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
+     */
+    public $RepeatType;
+
+    /**
      * @param MediaInputInfo $ImageContent Input content of watermark image. JPEG and PNG images are supported.
      * @param string $Width Watermark width. % and px formats are supported:
 <li>If the string ends in %, the `Width` of the watermark will be the specified percentage of the video width; for example, `10%` means that `Width` is 10% of the video width;</li>
@@ -72,6 +88,10 @@ Default value: 10%.
 <li>If the string ends in %, the `Height` of the watermark will be the specified percentage of the video height; for example, `10%` means that `Height` is 10% of the video height;</li>
 <li>If the string ends in px, the `Height` of the watermark will be in px; for example, `100px` means that `Height` is 100 px.</li>
 Default value: 0 px, which means that `Height` will be proportionally scaled according to the aspect ratio of the original watermark image.
+     * @param string $RepeatType Repeat type of an animated watermark. Valid values:
+<li>`once`: no longer appears after watermark playback ends.</li>
+<li>`repeat_last_frame`: stays on the last frame after watermark playback ends.</li>
+<li>`repeat` (default): repeats the playback until the video ends.</li>
      */
     function __construct()
     {
@@ -97,6 +117,10 @@ Default value: 0 px, which means that `Height` will be proportionally scaled acc
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("RepeatType",$param) and $param["RepeatType"] !== null) {
+            $this->RepeatType = $param["RepeatType"];
         }
     }
 }

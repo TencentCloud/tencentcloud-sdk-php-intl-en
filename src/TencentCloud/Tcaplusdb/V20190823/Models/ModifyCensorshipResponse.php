@@ -18,32 +18,36 @@ namespace TencentCloud\Tcaplusdb\V20190823\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateBackup response structure.
+ * ModifyCensorship response structure.
  *
- * @method array getTaskIds() Obtain List of backup creation task IDs
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method array getUins() Obtain Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setTaskIds(array $TaskIds) Set List of backup creation task IDs
+ * @method void setUins(array $Uins) Set Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method array getApplicationIds() Obtain List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method void setApplicationIds(array $ApplicationIds) Set List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getCensorship() Obtain Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
+ * @method void setCensorship(integer $Censorship) Set Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateBackupResponse extends AbstractModel
+class ModifyCensorshipResponse extends AbstractModel
 {
     /**
-     * @var array List of backup creation task IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @var string Cluster ID
      */
-    public $TaskIds;
+    public $ClusterId;
 
     /**
-     * @var array List of backup creation application IDs
+     * @var array Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
-    public $ApplicationIds;
+    public $Uins;
+
+    /**
+     * @var integer Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
+     */
+    public $Censorship;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +55,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RequestId;
 
     /**
-     * @param array $TaskIds List of backup creation task IDs
+     * @param string $ClusterId Cluster ID
+     * @param array $Uins Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param array $ApplicationIds List of backup creation application IDs
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $Censorship Whether the operation approval feature is enabled for this cluster. Valid values: `0` (disabled), `1` (enabled)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,12 +74,16 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
-            $this->TaskIds = $param["TaskIds"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("ApplicationIds",$param) and $param["ApplicationIds"] !== null) {
-            $this->ApplicationIds = $param["ApplicationIds"];
+        if (array_key_exists("Uins",$param) and $param["Uins"] !== null) {
+            $this->Uins = $param["Uins"];
+        }
+
+        if (array_key_exists("Censorship",$param) and $param["Censorship"] !== null) {
+            $this->Censorship = $param["Censorship"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -28,12 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(TimeRange $CreateTime) Set Filter: task creation time.
  * @method TimeRange getFinishTime() Obtain Filter: task end time.
  * @method void setFinishTime(TimeRange $FinishTime) Set Filter: task end time.
- * @method SortBy getSort() Obtain Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
- * @method void setSort(SortBy $Sort) Set Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+ * @method SortBy getSort() Obtain (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
+ * @method void setSort(SortBy $Sort) Set (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 10. Maximum value: 100.
  * @method string getScrollToken() Obtain Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
@@ -64,9 +66,10 @@ class DescribeTasksRequest extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var SortBy Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+     * @var SortBy (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
      */
     public $Sort;
 
@@ -90,9 +93,10 @@ class DescribeTasksRequest extends AbstractModel
      * @param string $FileId Filter: file ID.
      * @param TimeRange $CreateTime Filter: task creation time.
      * @param TimeRange $FinishTime Filter: task end time.
-     * @param SortBy $Sort Sort field. Valid values:
-<li> CreateTime: task creation time</li>
-<li>FinishTime: task end time</li>
+     * @param SortBy $Sort (Not supported now)
+Sort field. Valid values:
+<li>`CreateTime`: task creation time</li>
+<li>`FinishTime`: task end time</li>
      * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      * @param string $ScrollToken Scrolling identifier which is used for pulling in batches. If a single request cannot pull all the data entries, the API will return `ScrollToken`, and if the next request carries it, the next pull will start from the next entry.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.

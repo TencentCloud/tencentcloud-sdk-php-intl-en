@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Filter field name
  * @method string getValue() Obtain Filter field value
  * @method void setValue(string $Value) Set Filter field value
+ * @method array getValues() Obtain Filter field value
+ * @method void setValues(array $Values) Set Filter field value
  */
 class Filter extends AbstractModel
 {
@@ -38,8 +40,14 @@ class Filter extends AbstractModel
     public $Value;
 
     /**
+     * @var array Filter field value
+     */
+    public $Values;
+
+    /**
      * @param string $Name Filter field name
      * @param string $Value Filter field value
+     * @param array $Values Filter field value
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class Filter extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Values",$param) and $param["Values"] !== null) {
+            $this->Values = $param["Values"];
         }
     }
 }

@@ -52,6 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTaskIds(array $TaskIds) Set Task ID list, which is valid for the API that creates multiple tasks
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationId() Obtain Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setApplicationId(string $ApplicationId) Set Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class TableResultNew extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TaskIds;
 
     /**
+     * @var string Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $TableInstanceId Table instance ID in the format of `tcaplus-3be64cbb`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TaskId Task ID, which is valid for the API that creates one task
@@ -120,6 +130,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TaskIds Task ID list, which is valid for the API that creates multiple tasks
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationId Cluster operation application ID
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -165,6 +177,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TaskIds",$param) and $param["TaskIds"] !== null) {
             $this->TaskIds = $param["TaskIds"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }
