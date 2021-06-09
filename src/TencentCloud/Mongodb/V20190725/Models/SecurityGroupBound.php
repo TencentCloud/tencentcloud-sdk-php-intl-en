@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPortRange(string $PortRange) Set Port range
  * @method string getIpProtocol() Obtain Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
  * @method void setIpProtocol(string $IpProtocol) Set Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
- * @method string getId() Obtain 
- * @method void setId(string $Id) Set 
- * @method string getAddressModule() Obtain 
- * @method void setAddressModule(string $AddressModule) Set 
- * @method string getServiceModule() Obtain 
- * @method void setServiceModule(string $ServiceModule) Set 
- * @method string getDesc() Obtain 
- * @method void setDesc(string $Desc) Set 
+ * @method string getId() Obtain All the addresses that the security group ID represents
+ * @method void setId(string $Id) Set All the addresses that the security group ID represents
+ * @method string getAddressModule() Obtain All the addresses that the address group ID represents
+ * @method void setAddressModule(string $AddressModule) Set All the addresses that the address group ID represents
+ * @method string getServiceModule() Obtain All the protocols and ports that the service group ID represents
+ * @method void setServiceModule(string $ServiceModule) Set All the protocols and ports that the service group ID represents
+ * @method string getDesc() Obtain Description
+ * @method void setDesc(string $Desc) Set Description
  */
 class SecurityGroupBound extends AbstractModel
 {
@@ -60,22 +60,22 @@ class SecurityGroupBound extends AbstractModel
     public $IpProtocol;
 
     /**
-     * @var string 
+     * @var string All the addresses that the security group ID represents
      */
     public $Id;
 
     /**
-     * @var string 
+     * @var string All the addresses that the address group ID represents
      */
     public $AddressModule;
 
     /**
-     * @var string 
+     * @var string All the protocols and ports that the service group ID represents
      */
     public $ServiceModule;
 
     /**
-     * @var string 
+     * @var string Description
      */
     public $Desc;
 
@@ -84,10 +84,10 @@ class SecurityGroupBound extends AbstractModel
      * @param string $CidrIp IP range
      * @param string $PortRange Port range
      * @param string $IpProtocol Transport layer protocol. Valid values: `tcp`, `udp`, `ALL`
-     * @param string $Id 
-     * @param string $AddressModule 
-     * @param string $ServiceModule 
-     * @param string $Desc 
+     * @param string $Id All the addresses that the security group ID represents
+     * @param string $AddressModule All the addresses that the address group ID represents
+     * @param string $ServiceModule All the protocols and ports that the service group ID represents
+     * @param string $Desc Description
      */
     function __construct()
     {

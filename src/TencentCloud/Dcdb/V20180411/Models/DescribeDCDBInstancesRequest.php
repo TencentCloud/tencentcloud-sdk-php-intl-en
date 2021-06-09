@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) Set Tag key used in queries
  * @method string getFilterInstanceType() Obtain Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
  * @method void setFilterInstanceType(string $FilterInstanceType) Set Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+ * @method array getStatus() Obtain Use this filter to include instances in specific statuses
+ * @method void setStatus(array $Status) Set Use this filter to include instances in specific statuses
+ * @method array getExcludeStatus() Obtain Use this filter to exclude instances in specific statuses
+ * @method void setExcludeStatus(array $ExcludeStatus) Set Use this filter to exclude instances in specific statuses
  */
 class DescribeDCDBInstancesRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class DescribeDCDBInstancesRequest extends AbstractModel
     public $FilterInstanceType;
 
     /**
+     * @var array Use this filter to include instances in specific statuses
+     */
+    public $Status;
+
+    /**
+     * @var array Use this filter to exclude instances in specific statuses
+     */
+    public $ExcludeStatus;
+
+    /**
      * @param array $InstanceIds Query by instance ID or IDs. Instance ID is in the format of dcdbt-2t4cf98d
      * @param string $SearchName Search field name. Valid values: instancename (search by instance name); vip (search by private IP); all (search by instance ID, instance name, and private IP).
      * @param string $SearchKey Search keyword. Fuzzy search is supported. Multiple keywords should be separated by line breaks (`\n`).
@@ -152,6 +166,8 @@ class DescribeDCDBInstancesRequest extends AbstractModel
      * @param array $ExclusterIds Dedicated cluster ID
      * @param array $TagKeys Tag key used in queries
      * @param string $FilterInstanceType Instance types used in filtering. Valid values: 1 (dedicated instance), 2 (primary instance), 3 (disaster recovery instance). Multiple values should be separated by commas.
+     * @param array $Status Use this filter to include instances in specific statuses
+     * @param array $ExcludeStatus Use this filter to exclude instances in specific statuses
      */
     function __construct()
     {
@@ -228,6 +244,14 @@ class DescribeDCDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterInstanceType",$param) and $param["FilterInstanceType"] !== null) {
             $this->FilterInstanceType = $param["FilterInstanceType"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ExcludeStatus",$param) and $param["ExcludeStatus"] !== null) {
+            $this->ExcludeStatus = $param["ExcludeStatus"];
         }
     }
 }

@@ -60,6 +60,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setInternetChargeType(string $InternetChargeType) Set Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getTagSet() Obtain List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTagSet(array $TagSet) Set List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Address extends AbstractModel
 {
@@ -156,6 +160,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $InternetChargeType;
 
     /**
+     * @var array List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TagSet;
+
+    /**
      * @param string $AddressId `EIP` `ID`, the unique ID of the `EIP`.
      * @param string $AddressName The `EIP` name.
      * @param string $AddressStatus Possible `EIP` states are 'CREATING', 'BINDING', 'BIND', 'UNBINDING', 'UNBIND', 'OFFLINING', and 'BIND_ENI'.
@@ -176,6 +186,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param string $InternetChargeType Network billing mode of EIP. The EIP for the bill-by-CVM account will return `null`.
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $TagSet List of tags associated with the EIP
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -261,6 +273,15 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("InternetChargeType",$param) and $param["InternetChargeType"] !== null) {
             $this->InternetChargeType = $param["InternetChargeType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
         }
     }
 }

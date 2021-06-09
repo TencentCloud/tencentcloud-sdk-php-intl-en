@@ -20,24 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNetworkInterfaceLimit response structure.
  *
- * @method integer getEniQuantity() Obtain ENI quota
- * @method void setEniQuantity(integer $EniQuantity) Set ENI quota
- * @method integer getEniPrivateIpAddressQuantity() Obtain Quota of IP addresses that can be allocated to each ENI.
- * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) Set Quota of IP addresses that can be allocated to each ENI.
+ * @method integer getEniQuantity() Obtain Quota of ENIs mounted to a CVM instance in a standard way
+ * @method void setEniQuantity(integer $EniQuantity) Set Quota of ENIs mounted to a CVM instance in a standard way
+ * @method integer getEniPrivateIpAddressQuantity() Obtain Quota of IP addresses that can be allocated to each standard-mounted ENI
+ * @method void setEniPrivateIpAddressQuantity(integer $EniPrivateIpAddressQuantity) Set Quota of IP addresses that can be allocated to each standard-mounted ENI
+ * @method integer getExtendEniQuantity() Obtain Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExtendEniQuantity(integer $ExtendEniQuantity) Set Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getExtendEniPrivateIpAddressQuantity() Obtain Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExtendEniPrivateIpAddressQuantity(integer $ExtendEniPrivateIpAddressQuantity) Set Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 {
     /**
-     * @var integer ENI quota
+     * @var integer Quota of ENIs mounted to a CVM instance in a standard way
      */
     public $EniQuantity;
 
     /**
-     * @var integer Quota of IP addresses that can be allocated to each ENI.
+     * @var integer Quota of IP addresses that can be allocated to each standard-mounted ENI
      */
     public $EniPrivateIpAddressQuantity;
+
+    /**
+     * @var integer Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExtendEniQuantity;
+
+    /**
+     * @var integer Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExtendEniPrivateIpAddressQuantity;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +65,12 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $EniQuantity ENI quota
-     * @param integer $EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each ENI.
+     * @param integer $EniQuantity Quota of ENIs mounted to a CVM instance in a standard way
+     * @param integer $EniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each standard-mounted ENI
+     * @param integer $ExtendEniQuantity Quota of ENIs mounted to a CVM instance as an extension
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ExtendEniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each extension-mounted ENI.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +92,14 @@ class DescribeNetworkInterfaceLimitResponse extends AbstractModel
 
         if (array_key_exists("EniPrivateIpAddressQuantity",$param) and $param["EniPrivateIpAddressQuantity"] !== null) {
             $this->EniPrivateIpAddressQuantity = $param["EniPrivateIpAddressQuantity"];
+        }
+
+        if (array_key_exists("ExtendEniQuantity",$param) and $param["ExtendEniQuantity"] !== null) {
+            $this->ExtendEniQuantity = $param["ExtendEniQuantity"];
+        }
+
+        if (array_key_exists("ExtendEniPrivateIpAddressQuantity",$param) and $param["ExtendEniPrivateIpAddressQuantity"] !== null) {
+            $this->ExtendEniPrivateIpAddressQuantity = $param["ExtendEniPrivateIpAddressQuantity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

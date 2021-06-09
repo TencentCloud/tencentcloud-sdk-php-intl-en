@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method string getInstanceId() Obtain The ID of the CVM instance, such as `ins-r8hr2upy`.
  * @method void setInstanceId(string $InstanceId) Set The ID of the CVM instance, such as `ins-r8hr2upy`.
+ * @method integer getAttachType() Obtain ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+ * @method void setAttachType(integer $AttachType) Set ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
  */
 class AttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class AttachNetworkInterfaceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var integer ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public $AttachType;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param string $InstanceId The ID of the CVM instance, such as `ins-r8hr2upy`.
+     * @param integer $AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class AttachNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceInstanceId(string $SourceInstanceId) Set The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
  * @method string getDestinationInstanceId() Obtain ID of the destination CVM instance to be migrated.
  * @method void setDestinationInstanceId(string $DestinationInstanceId) Set ID of the destination CVM instance to be migrated.
+ * @method integer getAttachType() Obtain ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+ * @method void setAttachType(integer $AttachType) Set ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
  */
 class MigrateNetworkInterfaceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
     public $DestinationInstanceId;
 
     /**
+     * @var integer ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
+     */
+    public $AttachType;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param string $SourceInstanceId The ID of the CVM bound to the ENI, such as `ins-r8hr2upy`.
      * @param string $DestinationInstanceId ID of the destination CVM instance to be migrated.
+     * @param integer $AttachType ENI mount method. Valid values: 0: standard; 1: extension; default value: 0
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class MigrateNetworkInterfaceRequest extends AbstractModel
 
         if (array_key_exists("DestinationInstanceId",$param) and $param["DestinationInstanceId"] !== null) {
             $this->DestinationInstanceId = $param["DestinationInstanceId"];
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }

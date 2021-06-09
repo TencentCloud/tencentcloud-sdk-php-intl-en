@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set The ENI description. You can enter any information within 60 characters.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method integer getAttachType() Obtain ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+ * @method void setAttachType(integer $AttachType) Set ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
  */
 class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
+     */
+    public $AttachType;
+
+    /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the `VpcId` field in the returned result of the `DescribeVpcs` API.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 bytes.
      * @param string $SubnetId The subnet instance ID of the ENI, such as 'subnet-0ap8nwca'.
@@ -96,6 +103,7 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
      * @param array $SecurityGroupIds The security group to be bound with, such as ['sg-1dd51d'].
      * @param string $NetworkInterfaceDescription The ENI description. You can enter any information within 60 characters.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param integer $AttachType ENI mounting type. Valid values: `0` (standard); `1` (extension); default value: `0`
      */
     function __construct()
     {
@@ -154,6 +162,10 @@ class CreateAndAttachNetworkInterfaceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
+            $this->AttachType = $param["AttachType"];
         }
     }
 }
