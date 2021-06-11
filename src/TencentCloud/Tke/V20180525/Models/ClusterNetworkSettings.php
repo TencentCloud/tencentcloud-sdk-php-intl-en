@@ -34,6 +34,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Cluster VPC ID, which is required when you create an empty cluster; otherwise, it is automatically set to be consistent with that of the nodes in the cluster
  * @method boolean getCni() Obtain Whether CNI is enabled for network plugin(s). Default value: enabled
  * @method void setCni(boolean $Cni) Set Whether CNI is enabled for network plugin(s). Default value: enabled
+ * @method string getKubeProxyMode() Obtain The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setKubeProxyMode(string $KubeProxyMode) Set The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getServiceCIDR() Obtain The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setServiceCIDR(string $ServiceCIDR) Set The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSubnets() Obtain The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSubnets(array $Subnets) Set The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -73,6 +85,24 @@ class ClusterNetworkSettings extends AbstractModel
     public $Cni;
 
     /**
+     * @var string The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $KubeProxyMode;
+
+    /**
+     * @var string The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ServiceCIDR;
+
+    /**
+     * @var array The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Subnets;
+
+    /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors. It defaults to not ignore.
      * @param integer $MaxNodePodNum Maximum number of pods on each node in the cluster. Default value: 256
@@ -80,6 +110,12 @@ class ClusterNetworkSettings extends AbstractModel
      * @param boolean $Ipvs Whether IPVS is enabled. Default value: disabled
      * @param string $VpcId Cluster VPC ID, which is required when you create an empty cluster; otherwise, it is automatically set to be consistent with that of the nodes in the cluster
      * @param boolean $Cni Whether CNI is enabled for network plugin(s). Default value: enabled
+     * @param string $KubeProxyMode The network mode of service. This parameter is only applicable to ipvs+bpf mode.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ServiceCIDR The IP range for service assignment. It cannot conflict with the VPC’s CIDR block nor the CIDR blocks of other clusters in the same VPC.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Subnets The container subnet associated with the cluster
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -120,6 +156,18 @@ class ClusterNetworkSettings extends AbstractModel
 
         if (array_key_exists("Cni",$param) and $param["Cni"] !== null) {
             $this->Cni = $param["Cni"];
+        }
+
+        if (array_key_exists("KubeProxyMode",$param) and $param["KubeProxyMode"] !== null) {
+            $this->KubeProxyMode = $param["KubeProxyMode"];
+        }
+
+        if (array_key_exists("ServiceCIDR",$param) and $param["ServiceCIDR"] !== null) {
+            $this->ServiceCIDR = $param["ServiceCIDR"];
+        }
+
+        if (array_key_exists("Subnets",$param) and $param["Subnets"] !== null) {
+            $this->Subnets = $param["Subnets"];
         }
     }
 }
