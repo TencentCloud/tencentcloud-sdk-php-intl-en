@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Instance status
  * @method string getStatusDesc() Obtain Instance status description
  * @method void setStatusDesc(string $StatusDesc) Set Instance status description
- * @method integer getDcnFlag() Obtain DCN flag. Valid values: `1` (primary), `2` (replica)
- * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: `1` (primary), `2` (replica)
- * @method integer getDcnStatus() Obtain DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
- * @method void setDcnStatus(integer $DcnStatus) Set DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+ * @method integer getDcnFlag() Obtain DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
+ * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
+ * @method integer getDcnStatus() Obtain DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
+ * @method void setDcnStatus(integer $DcnStatus) Set DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -91,12 +91,12 @@ class DcnDetailItem extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @var integer DCN flag. Valid values: `1` (primary), `2` (replica)
+     * @var integer DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
      */
     public $DcnFlag;
 
     /**
-     * @var integer DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+     * @var integer DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
      */
     public $DcnStatus;
 
@@ -110,8 +110,8 @@ class DcnDetailItem extends AbstractModel
      * @param integer $Vport Instance port
      * @param integer $Status Instance status
      * @param string $StatusDesc Instance status description
-     * @param integer $DcnFlag DCN flag. Valid values: `1` (primary), `2` (replica)
-     * @param integer $DcnStatus DCN status. Valid values: `0` (null), `1` (creating), `2` (syncing), `3` (disconnected)
+     * @param integer $DcnFlag DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
+     * @param integer $DcnStatus DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
      */
     function __construct()
     {
