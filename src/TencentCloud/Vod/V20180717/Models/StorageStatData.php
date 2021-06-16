@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current STANDARD_IA storage capacity in bytes.
  * @method integer getStandardStorage() Obtain Current STANDARD storage capacity in bytes.
  * @method void setStandardStorage(integer $StandardStorage) Set Current STANDARD storage capacity in bytes.
+ * @method integer getArchiveStorage() Obtain Current ARCHIVE storage usage in bytes
+ * @method void setArchiveStorage(integer $ArchiveStorage) Set Current ARCHIVE storage usage in bytes
+ * @method integer getDeepArchiveStorage() Obtain Current DEEP ARCHIVE storage usage in bytes
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set Current DEEP ARCHIVE storage usage in bytes
  */
 class StorageStatData extends AbstractModel
 {
@@ -58,12 +62,24 @@ class StorageStatData extends AbstractModel
     public $StandardStorage;
 
     /**
+     * @var integer Current ARCHIVE storage usage in bytes
+     */
+    public $ArchiveStorage;
+
+    /**
+     * @var integer Current DEEP ARCHIVE storage usage in bytes
+     */
+    public $DeepArchiveStorage;
+
+    /**
      * @param string $Area VOD storage billing region. Valid values:
 <li>Chinese Mainland</li>
 <li>Outside Chinese Mainland</li>
      * @param integer $TotalStorage Current total storage capacity in bytes.
      * @param integer $InfrequentStorage Current STANDARD_IA storage capacity in bytes.
      * @param integer $StandardStorage Current STANDARD storage capacity in bytes.
+     * @param integer $ArchiveStorage Current ARCHIVE storage usage in bytes
+     * @param integer $DeepArchiveStorage Current DEEP ARCHIVE storage usage in bytes
      */
     function __construct()
     {
@@ -92,6 +108,14 @@ class StorageStatData extends AbstractModel
 
         if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
             $this->StandardStorage = $param["StandardStorage"];
+        }
+
+        if (array_key_exists("ArchiveStorage",$param) and $param["ArchiveStorage"] !== null) {
+            $this->ArchiveStorage = $param["ArchiveStorage"];
+        }
+
+        if (array_key_exists("DeepArchiveStorage",$param) and $param["DeepArchiveStorage"] !== null) {
+            $this->DeepArchiveStorage = $param["DeepArchiveStorage"];
         }
     }
 }

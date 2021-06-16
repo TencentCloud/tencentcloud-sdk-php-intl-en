@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Status
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getPodIp() Obtain Pod IP
- * @method void setPodIp(string $PodIp) Set Pod IP
+ * @method string getPodIp() Obtain Pod IP.
+ * @method void setPodIp(string $PodIp) Set Pod IP.
+ * @method string getZone() Obtain Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setZone(string $Zone) Set Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getDeployVersion() Obtain Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDeployVersion(string $DeployVersion) Set Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class RunVersionPod extends AbstractModel
 {
@@ -54,16 +62,32 @@ class RunVersionPod extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Pod IP
+     * @var string Pod IP.
      */
     public $PodIp;
+
+    /**
+     * @var string Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Zone;
+
+    /**
+     * @var string Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $DeployVersion;
 
     /**
      * @param string $Webshell Shell address
      * @param string $PodId Pod ID
      * @param string $Status Status
      * @param string $CreateTime Creation time
-     * @param string $PodIp Pod IP
+     * @param string $PodIp Pod IP.
+     * @param string $Zone Availability zone.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $DeployVersion Deployed version.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class RunVersionPod extends AbstractModel
 
         if (array_key_exists("PodIp",$param) and $param["PodIp"] !== null) {
             $this->PodIp = $param["PodIp"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
         }
     }
 }

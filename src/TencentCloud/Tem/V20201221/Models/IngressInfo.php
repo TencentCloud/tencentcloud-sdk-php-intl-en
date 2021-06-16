@@ -48,6 +48,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVip(string $Vip) Set clb ip
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCreateTime() Obtain Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getMixed() Obtain Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+ * @method void setMixed(boolean $Mixed) Set Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
  */
 class IngressInfo extends AbstractModel
 {
@@ -102,6 +108,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Vip;
 
     /**
+     * @var string Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $CreateTime;
+
+    /**
+     * @var boolean Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
+     */
+    public $Mixed;
+
+    /**
      * @param string $NamespaceId tem namespaceId
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $EksNamespace eks namespace
@@ -116,6 +133,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Vip clb ip
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CreateTime Creation time.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $Mixed Whether to listen on both the HTTP Port 80 and HTTPS Port 443. The default value is `false`. The optional value `true` means listening on both the HTTP Port 80 and HTTPS Port 443.
      */
     function __construct()
     {
@@ -174,6 +194,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
             $this->Vip = $param["Vip"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Mixed",$param) and $param["Mixed"] !== null) {
+            $this->Mixed = $param["Mixed"];
         }
     }
 }

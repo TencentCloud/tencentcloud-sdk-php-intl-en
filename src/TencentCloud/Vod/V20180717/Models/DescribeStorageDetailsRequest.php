@@ -32,16 +32,34 @@ The value is set according to query period length by default. 5-minute granulari
 <li>Minute: 5-minute granularity</li>
 <li>Day: 1-day granularity</li>
 The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
- * @method string getStorageType() Obtain Storage class to be queried. Valid values:
-<li>TotalStorage: total storage capacity.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Standard_IA storage.</li>
-Default value: TotalStorage.
- * @method void setStorageType(string $StorageType) Set Storage class to be queried. Valid values:
-<li>TotalStorage: total storage capacity.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Standard_IA storage.</li>
-Default value: TotalStorage.
+ * @method string getStorageType() Obtain Storage class to query. Valid values:
+<li>`TotalStorage`: total storage usage in classes of STANDARD, STANDARD_IA, ARCHIVE, and DEEP ARCHIVE, excluding the storage usage for data deleted in advance.</li>
+<li>`StandardStorage`: STANDARD</li>
+<li>`InfrequentStorage`: STANDARD_IA</li>
+<li>`ArchiveStorage`: ARCHIVE</li>
+<li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
+<li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
+<li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
+<li>`ArchiveExpeditedRetrieval`: ARCHIVE data retrieved using expedited retrievals</li>
+<li>`ArchiveBulkRetrieval`: ARCHIVE data retrieved using bulk retrievals</li>
+<li>`DeepArchiveStandardRetrieval`: DEEP ARCHIVE data retrieved using standard retrievals</li>
+<li>`DeepArchiveBulkRetrieval`: DEEP ARCHIVE data retrieved using bulk retrievals</li>
+Default value: `TotalStorage`
+ * @method void setStorageType(string $StorageType) Set Storage class to query. Valid values:
+<li>`TotalStorage`: total storage usage in classes of STANDARD, STANDARD_IA, ARCHIVE, and DEEP ARCHIVE, excluding the storage usage for data deleted in advance.</li>
+<li>`StandardStorage`: STANDARD</li>
+<li>`InfrequentStorage`: STANDARD_IA</li>
+<li>`ArchiveStorage`: ARCHIVE</li>
+<li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
+<li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
+<li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
+<li>`ArchiveExpeditedRetrieval`: ARCHIVE data retrieved using expedited retrievals</li>
+<li>`ArchiveBulkRetrieval`: ARCHIVE data retrieved using bulk retrievals</li>
+<li>`DeepArchiveStandardRetrieval`: DEEP ARCHIVE data retrieved using standard retrievals</li>
+<li>`DeepArchiveBulkRetrieval`: DEEP ARCHIVE data retrieved using bulk retrievals</li>
+Default value: `TotalStorage`
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
@@ -76,11 +94,20 @@ The value is set according to query period length by default. 5-minute granulari
     public $Interval;
 
     /**
-     * @var string Storage class to be queried. Valid values:
-<li>TotalStorage: total storage capacity.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Standard_IA storage.</li>
-Default value: TotalStorage.
+     * @var string Storage class to query. Valid values:
+<li>`TotalStorage`: total storage usage in classes of STANDARD, STANDARD_IA, ARCHIVE, and DEEP ARCHIVE, excluding the storage usage for data deleted in advance.</li>
+<li>`StandardStorage`: STANDARD</li>
+<li>`InfrequentStorage`: STANDARD_IA</li>
+<li>`ArchiveStorage`: ARCHIVE</li>
+<li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
+<li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
+<li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
+<li>`ArchiveExpeditedRetrieval`: ARCHIVE data retrieved using expedited retrievals</li>
+<li>`ArchiveBulkRetrieval`: ARCHIVE data retrieved using bulk retrievals</li>
+<li>`DeepArchiveStandardRetrieval`: DEEP ARCHIVE data retrieved using standard retrievals</li>
+<li>`DeepArchiveBulkRetrieval`: DEEP ARCHIVE data retrieved using bulk retrievals</li>
+Default value: `TotalStorage`
      */
     public $StorageType;
 
@@ -105,11 +132,20 @@ Default value: Chinese Mainland
 <li>Minute: 5-minute granularity</li>
 <li>Day: 1-day granularity</li>
 The value is set according to query period length by default. 5-minute granularity is set for periods no longer than 1 day, and 1-day granularity is set for periods longer than 1 day.
-     * @param string $StorageType Storage class to be queried. Valid values:
-<li>TotalStorage: total storage capacity.</li>
-<li>StandardStorage: Standard storage.</li>
-<li>InfrequentStorage: Standard_IA storage.</li>
-Default value: TotalStorage.
+     * @param string $StorageType Storage class to query. Valid values:
+<li>`TotalStorage`: total storage usage in classes of STANDARD, STANDARD_IA, ARCHIVE, and DEEP ARCHIVE, excluding the storage usage for data deleted in advance.</li>
+<li>`StandardStorage`: STANDARD</li>
+<li>`InfrequentStorage`: STANDARD_IA</li>
+<li>`ArchiveStorage`: ARCHIVE</li>
+<li>`DeepArchiveStorage`: DEEP ARCHIVE</li>
+<li>`DeletedArchiveStorage`: ARCHIVE data deleted in advance</li>
+<li>`DeletedDeepArchiveStorage`: DEEP ARCHIVE data deleted in advance</li>
+<li>`ArchiveStandardRetrieval`: ARCHIVE data retrieved using standard retrievals</li>
+<li>`ArchiveExpeditedRetrieval`: ARCHIVE data retrieved using expedited retrievals</li>
+<li>`ArchiveBulkRetrieval`: ARCHIVE data retrieved using bulk retrievals</li>
+<li>`DeepArchiveStandardRetrieval`: DEEP ARCHIVE data retrieved using standard retrievals</li>
+<li>`DeepArchiveBulkRetrieval`: DEEP ARCHIVE data retrieved using bulk retrievals</li>
+Default value: `TotalStorage`
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
 When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin.
      * @param string $Area Storage region to query. Valid values:

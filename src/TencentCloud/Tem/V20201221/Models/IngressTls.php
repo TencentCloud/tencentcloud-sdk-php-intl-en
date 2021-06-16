@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Ingress TLS configuration
  *
- * @method array getHosts() Obtain Host array
- * @method void setHosts(array $Hosts) Set Host array
- * @method string getSecretName() Obtain secret name
- * @method void setSecretName(string $SecretName) Set secret name
+ * @method array getHosts() Obtain Host array. An empty array indicates the default certificate for all domain names.
+ * @method void setHosts(array $Hosts) Set Host array. An empty array indicates the default certificate for all domain names.
+ * @method string getSecretName() Obtain Secret name. If a certificate is used, this field is left empty.
+ * @method void setSecretName(string $SecretName) Set Secret name. If a certificate is used, this field is left empty.
+ * @method string getCertificateId() Obtain SSL Certificate Id
+ * @method void setCertificateId(string $CertificateId) Set SSL Certificate Id
  */
 class IngressTls extends AbstractModel
 {
     /**
-     * @var array Host array
+     * @var array Host array. An empty array indicates the default certificate for all domain names.
      */
     public $Hosts;
 
     /**
-     * @var string secret name
+     * @var string Secret name. If a certificate is used, this field is left empty.
      */
     public $SecretName;
 
     /**
-     * @param array $Hosts Host array
-     * @param string $SecretName secret name
+     * @var string SSL Certificate Id
+     */
+    public $CertificateId;
+
+    /**
+     * @param array $Hosts Host array. An empty array indicates the default certificate for all domain names.
+     * @param string $SecretName Secret name. If a certificate is used, this field is left empty.
+     * @param string $CertificateId SSL Certificate Id
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class IngressTls extends AbstractModel
 
         if (array_key_exists("SecretName",$param) and $param["SecretName"] !== null) {
             $this->SecretName = $param["SecretName"];
+        }
+
+        if (array_key_exists("CertificateId",$param) and $param["CertificateId"] !== null) {
+            $this->CertificateId = $param["CertificateId"];
         }
     }
 }

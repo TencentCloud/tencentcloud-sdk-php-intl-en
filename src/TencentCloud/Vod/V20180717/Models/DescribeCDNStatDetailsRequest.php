@@ -21,11 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCDNStatDetails request structure.
  *
  * @method string getMetric() Obtain Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
  * @method void setMetric(string $Metric) Set Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
  * @method string getStartTime() Obtain Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
@@ -157,8 +159,9 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
 {
     /**
      * @var string Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
      */
     public $Metric;
 
@@ -259,8 +262,9 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 
     /**
      * @param string $Metric Metrics to query. Valid values:
-<li>Traffic: traffic in bytes.</li>
-<li>Bandwidth: bandwidth in bps.</li>
+<li>`Traffic`: traffic in bytes</li>
+<li>`Bandwidth`: bandwidth in bps</li>
+<li>`Requests`: the number of requests</li>
      * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.

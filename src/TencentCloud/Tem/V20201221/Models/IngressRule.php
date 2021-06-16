@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHost(string $Host) Set Host address
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+ * @method void setProtocol(string $Protocol) Set Protocol. Options include HTTP and HTTPS. The default option is HTTP.
  */
 class IngressRule extends AbstractModel
 {
@@ -41,9 +43,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Host;
 
     /**
+     * @var string Protocol. Options include HTTP and HTTPS. The default option is HTTP.
+     */
+    public $Protocol;
+
+    /**
      * @param IngressRuleValue $Http ingress rule value
      * @param string $Host Host address
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Protocol Protocol. Options include HTTP and HTTPS. The default option is HTTP.
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
             $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

@@ -28,12 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(TimeRange $CreateTime) Set Filter: task creation time.
  * @method TimeRange getFinishTime() Obtain Filter: task end time.
  * @method void setFinishTime(TimeRange $FinishTime) Set Filter: task end time.
- * @method SortBy getSort() Obtain (Not supported now)
-Sort field. Valid values:
+ * @method SortBy getSort() Obtain Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
- * @method void setSort(SortBy $Sort) Set (Not supported now)
-Sort field. Valid values:
+ * @method void setSort(SortBy $Sort) Set Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 10. Maximum value: 100.
@@ -66,8 +64,7 @@ class DescribeTasksRequest extends AbstractModel
     public $FinishTime;
 
     /**
-     * @var SortBy (Not supported now)
-Sort field. Valid values:
+     * @var SortBy Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
      */
@@ -93,8 +90,7 @@ Sort field. Valid values:
      * @param string $FileId Filter: file ID.
      * @param TimeRange $CreateTime Filter: task creation time.
      * @param TimeRange $FinishTime Filter: task end time.
-     * @param SortBy $Sort (Not supported now)
-Sort field. Valid values:
+     * @param SortBy $Sort Sort field. Valid values:
 <li>`CreateTime`: task creation time</li>
 <li>`FinishTime`: task end time</li>
      * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.

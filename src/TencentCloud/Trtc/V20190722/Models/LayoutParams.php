@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) Set Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
  * @method integer getPureAudioHoldPlaceMode() Obtain Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
  * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) Set Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+ * @method WaterMarkParams getWaterMarkParams() Obtain Watermark parameters
+ * @method void setWaterMarkParams(WaterMarkParams $WaterMarkParams) Set Watermark parameters
  */
 class LayoutParams extends AbstractModel
 {
@@ -87,6 +89,11 @@ class LayoutParams extends AbstractModel
     public $PureAudioHoldPlaceMode;
 
     /**
+     * @var WaterMarkParams Watermark parameters
+     */
+    public $WaterMarkParams;
+
+    /**
      * @param integer $Template On-cloud stream mix layout template ID. 0: floating template (default value); 1: grid template; 2: screen sharing template; 3: picture-in-picture template; 4: custom template.
      * @param string $MainVideoUserId ID of the user in the big image, which takes effect in a screen sharing, floating, or picture-in-picture template.
      * @param integer $MainVideoStreamType Stream type of the big image, which takes effect in a screen sharing, floating, or picture-in-picture template. 0: camera; 1: screen sharing. If a web user's stream is displayed in the big image on the left, enter 0 for this parameter.
@@ -96,6 +103,7 @@ class LayoutParams extends AbstractModel
      * @param array $PresetLayoutConfig Valid in custom template, used to specify the video image position of a user in mixed streams.
      * @param integer $PlaceHolderMode Valid in custom templates. 1: the placeholding feature is enabled; 0 (default): the feature is disabled. When the feature is enabled, but a user for whom a position is reserved is not sending video data, the position will show the corresponding placeholder image.
      * @param integer $PureAudioHoldPlaceMode Whether an audio-only stream occupies an image spot, which takes effect in a floating, grid, or screen sharing template. Valid values: 0 (default): when a floating or grid template is used, users sending audio only occupy image spots; when a screen sharing template is used, users (except the user whose screen is shared) sending audio only do not occupy image spots; 1: users sending audio only occupy image spots; 2: users sending audio only do not occupy image spots.
+     * @param WaterMarkParams $WaterMarkParams Watermark parameters
      */
     function __construct()
     {
@@ -150,6 +158,11 @@ class LayoutParams extends AbstractModel
 
         if (array_key_exists("PureAudioHoldPlaceMode",$param) and $param["PureAudioHoldPlaceMode"] !== null) {
             $this->PureAudioHoldPlaceMode = $param["PureAudioHoldPlaceMode"];
+        }
+
+        if (array_key_exists("WaterMarkParams",$param) and $param["WaterMarkParams"] !== null) {
+            $this->WaterMarkParams = new WaterMarkParams();
+            $this->WaterMarkParams->deserialize($param["WaterMarkParams"]);
         }
     }
 }

@@ -80,6 +80,14 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setImageCommand(string $ImageCommand) Set Image command
  * @method array getImageArgs() Obtain Image command parameters
  * @method void setImageArgs(array $ImageArgs) Set Image command parameters
+ * @method array getPortMappings() Obtain Service port mapping.
+ * @method void setPortMappings(array $PortMappings) Set Service port mapping.
+ * @method boolean getUseRegistryDefaultConfig() Obtain Whether to add the registry’s default configurations.
+ * @method void setUseRegistryDefaultConfig(boolean $UseRegistryDefaultConfig) Set Whether to add the registry’s default configurations.
+ * @method array getSettingConfs() Obtain 
+ * @method void setSettingConfs(array $SettingConfs) Set 
+ * @method EksService getEksService() Obtain 
+ * @method void setEksService(EksService $EksService) Set 
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -210,6 +218,26 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $ImageArgs;
 
     /**
+     * @var array Service port mapping.
+     */
+    public $PortMappings;
+
+    /**
+     * @var boolean Whether to add the registry’s default configurations.
+     */
+    public $UseRegistryDefaultConfig;
+
+    /**
+     * @var array 
+     */
+    public $SettingConfs;
+
+    /**
+     * @var EksService 
+     */
+    public $EksService;
+
+    /**
      * @param string $ServiceId Service ID
      * @param integer $ContainerPort Container port
      * @param integer $InitPodNum Number of initialized pods
@@ -240,6 +268,10 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param string $Description Version description
      * @param string $ImageCommand Image command
      * @param array $ImageArgs Image command parameters
+     * @param array $PortMappings Service port mapping.
+     * @param boolean $UseRegistryDefaultConfig Whether to add the registry’s default configurations.
+     * @param array $SettingConfs 
+     * @param EksService $EksService 
      */
     function __construct()
     {
@@ -365,6 +397,33 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
 
         if (array_key_exists("ImageArgs",$param) and $param["ImageArgs"] !== null) {
             $this->ImageArgs = $param["ImageArgs"];
+        }
+
+        if (array_key_exists("PortMappings",$param) and $param["PortMappings"] !== null) {
+            $this->PortMappings = [];
+            foreach ($param["PortMappings"] as $key => $value){
+                $obj = new PortMapping();
+                $obj->deserialize($value);
+                array_push($this->PortMappings, $obj);
+            }
+        }
+
+        if (array_key_exists("UseRegistryDefaultConfig",$param) and $param["UseRegistryDefaultConfig"] !== null) {
+            $this->UseRegistryDefaultConfig = $param["UseRegistryDefaultConfig"];
+        }
+
+        if (array_key_exists("SettingConfs",$param) and $param["SettingConfs"] !== null) {
+            $this->SettingConfs = [];
+            foreach ($param["SettingConfs"] as $key => $value){
+                $obj = new MountedSettingConf();
+                $obj->deserialize($value);
+                array_push($this->SettingConfs, $obj);
+            }
+        }
+
+        if (array_key_exists("EksService",$param) and $param["EksService"] !== null) {
+            $this->EksService = new EksService();
+            $this->EksService->deserialize($param["EksService"]);
         }
     }
 }

@@ -18,44 +18,44 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeIngresses request structure.
+ * DescribeRelatedIngresses request structure.
  *
- * @method string getNamespaceId() Obtain namespace id
- * @method void setNamespaceId(string $NamespaceId) Set namespace id
- * @method string getEksNamespace() Obtain namespace
- * @method void setEksNamespace(string $EksNamespace) Set namespace
- * @method integer getSourceChannel() Obtain Source channel
- * @method void setSourceChannel(integer $SourceChannel) Set Source channel
- * @method array getNames() Obtain Ingress rule name list.
- * @method void setNames(array $Names) Set Ingress rule name list.
+ * @method string getNamespaceId() Obtain Environment ID.
+ * @method void setNamespaceId(string $NamespaceId) Set Environment ID.
+ * @method string getEksNamespace() Obtain EKS namespace.
+ * @method void setEksNamespace(string $EksNamespace) Set EKS namespace.
+ * @method integer getSourceChannel() Obtain Source channel.
+ * @method void setSourceChannel(integer $SourceChannel) Set Source channel.
+ * @method string getServiceId() Obtain Service ID.
+ * @method void setServiceId(string $ServiceId) Set Service ID.
  */
-class DescribeIngressesRequest extends AbstractModel
+class DescribeRelatedIngressesRequest extends AbstractModel
 {
     /**
-     * @var string namespace id
+     * @var string Environment ID.
      */
     public $NamespaceId;
 
     /**
-     * @var string namespace
+     * @var string EKS namespace.
      */
     public $EksNamespace;
 
     /**
-     * @var integer Source channel
+     * @var integer Source channel.
      */
     public $SourceChannel;
 
     /**
-     * @var array Ingress rule name list.
+     * @var string Service ID.
      */
-    public $Names;
+    public $ServiceId;
 
     /**
-     * @param string $NamespaceId namespace id
-     * @param string $EksNamespace namespace
-     * @param integer $SourceChannel Source channel
-     * @param array $Names Ingress rule name list.
+     * @param string $NamespaceId Environment ID.
+     * @param string $EksNamespace EKS namespace.
+     * @param integer $SourceChannel Source channel.
+     * @param string $ServiceId Service ID.
      */
     function __construct()
     {
@@ -82,8 +82,8 @@ class DescribeIngressesRequest extends AbstractModel
             $this->SourceChannel = $param["SourceChannel"];
         }
 
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
+        if (array_key_exists("ServiceId",$param) and $param["ServiceId"] !== null) {
+            $this->ServiceId = $param["ServiceId"];
         }
     }
 }
