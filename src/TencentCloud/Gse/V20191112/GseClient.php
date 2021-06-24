@@ -34,6 +34,7 @@ use TencentCloud\Gse\V20191112\Models as Models;
  * @method Models\DescribePlayerSessionsResponse DescribePlayerSessions(Models\DescribePlayerSessionsRequest $req) This API is used to get the list of player sessions.
  * @method Models\DescribeTimerScalingPoliciesResponse DescribeTimerScalingPolicies(Models\DescribeTimerScalingPoliciesRequest $req) This API (DescribeTimerScalingPolicies) is used to query the scheduled scaling policies of a fleet. You can query the policies by `fleetID` or the fleet name. The returned results are paged. 
 
+ * @method Models\EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcess(Models\EndGameServerSessionAndProcessRequest $req) This API is used to terminate the game server session and the corresponding process, which is applicable to time-limited protection and no protection.
  * @method Models\GetGameServerSessionLogUrlResponse GetGameServerSessionLogUrl(Models\GetGameServerSessionLogUrlRequest $req) This API is used to get the log URL of a game server session.
  * @method Models\GetInstanceAccessResponse GetInstanceAccess(Models\GetInstanceAccessRequest $req) This API is used to get the credentials required for instance login.
  * @method Models\JoinGameServerSessionResponse JoinGameServerSession(Models\JoinGameServerSessionRequest $req) This API is used to join a game server session.
