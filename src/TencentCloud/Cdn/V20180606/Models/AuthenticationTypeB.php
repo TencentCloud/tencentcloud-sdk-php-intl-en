@@ -27,9 +27,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getExpireTime() Obtain Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
  * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
  * @method array getFileExtensions() Obtain File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
  * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed
@@ -50,7 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public $ExpireTime;
 
@@ -71,7 +71,7 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      * @param array $FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
      * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated

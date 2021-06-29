@@ -38,6 +38,8 @@ global: global nodes
 mainland: domestic nodes
 overseas: overseas nodes
 global: global nodes
+ * @method boolean getSegment() Obtain Whether to return a value as an IP range
+ * @method void setSegment(boolean $Segment) Set Whether to return a value as an IP range
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -63,6 +65,11 @@ global: global nodes
     public $Area;
 
     /**
+     * @var boolean Whether to return a value as an IP range
+     */
+    public $Segment;
+
+    /**
      * @param string $Domain Acceleration domain name
      * @param string $Layer Node type.
 edge: edge server
@@ -72,6 +79,7 @@ If this parameter is left empty, edge server information will be returned by def
 mainland: domestic nodes
 overseas: overseas nodes
 global: global nodes
+     * @param boolean $Segment Whether to return a value as an IP range
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ global: global nodes
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Segment",$param) and $param["Segment"] !== null) {
+            $this->Segment = $param["Segment"];
         }
     }
 }

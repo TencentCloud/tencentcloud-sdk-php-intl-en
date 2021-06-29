@@ -21,12 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * HTTP header setting rules. Up to 100 entries can be set.
  *
  * @method string getHeaderMode() Obtain HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setHeaderMode(string $HeaderMode) Set HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getHeaderName() Obtain HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -69,8 +71,9 @@ class HttpHeaderPathRule extends AbstractModel
 {
     /**
      * @var string HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $HeaderMode;
@@ -111,8 +114,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $HeaderMode HTTP header setting methods
-`add`: add header. If a header already exists, then there will be a duplicated header.
-`del`: delete header.
+`set`: sets a value for an existing header parameter, a new header parameter, or multiple header parameters. Multiple header parameters will be merged into one.
+`del`: deletes a header parameter.
+`add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
 Note: this field may return null, indicating that no valid values can be obtained.

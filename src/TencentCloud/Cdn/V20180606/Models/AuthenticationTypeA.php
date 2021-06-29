@@ -37,9 +37,9 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
  * @method void setSignParam(string $SignParam) Set Signature parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
  * @method integer getExpireTime() Obtain Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
  * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
  * @method array getFileExtensions() Obtain File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
  * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed
@@ -66,7 +66,7 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
 
     /**
      * @var integer Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      */
     public $ExpireTime;
 
@@ -89,7 +89,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $SignParam Signature parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      * @param integer $ExpireTime Signature expiration time
-Unit: second. The maximum value is 31536000.
+Unit: second. The maximum value is 630720000.
      * @param array $FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
      * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated

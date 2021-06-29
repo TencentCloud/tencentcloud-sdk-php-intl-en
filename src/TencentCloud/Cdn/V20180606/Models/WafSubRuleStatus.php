@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * WAF sub-rule status
+ * WAF sub-rule switch status
  *
  * @method string getSwitch() Obtain Sub-rule status. Valid values: `on` and `off`.
  * @method void setSwitch(string $Switch) Set Sub-rule status. Valid values: `on` and `off`.

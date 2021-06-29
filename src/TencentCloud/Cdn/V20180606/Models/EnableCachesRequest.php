@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getUrls() Obtain List of unblocked URLs
  * @method void setUrls(array $Urls) Set List of unblocked URLs
+ * @method string getDate() Obtain URL blocking date
+ * @method void setDate(string $Date) Set URL blocking date
  */
 class EnableCachesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EnableCachesRequest extends AbstractModel
     public $Urls;
 
     /**
+     * @var string URL blocking date
+     */
+    public $Date;
+
+    /**
      * @param array $Urls List of unblocked URLs
+     * @param string $Date URL blocking date
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EnableCachesRequest extends AbstractModel
         }
         if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
             $this->Urls = $param["Urls"];
+        }
+
+        if (array_key_exists("Date",$param) and $param["Date"] !== null) {
+            $this->Date = $param["Date"];
         }
     }
 }

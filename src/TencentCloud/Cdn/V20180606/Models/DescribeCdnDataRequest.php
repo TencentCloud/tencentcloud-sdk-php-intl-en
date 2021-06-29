@@ -33,26 +33,32 @@ The gap between the start time and end time should be less than or equal to 90 d
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
  * @method string getMetric() Obtain Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+`flux`: traffic (in bytes)
+`bandwidth`: bandwidth (in bps)
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
  * @method void setMetric(string $Metric) Set Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+`flux`: traffic (in bytes)
+`bandwidth`: bandwidth (in bps)
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
  * @method array getDomains() Obtain Specifies the list of domain names to be queried
 Up to 30 domain names can be queried at a time
@@ -143,15 +149,18 @@ The gap between the start time and end time should be less than or equal to 90 d
 
     /**
      * @var string Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+`flux`: traffic (in bytes)
+`bandwidth`: bandwidth (in bps)
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
      */
     public $Metric;
@@ -243,15 +252,18 @@ The gap between the start time and end time should be less than or equal to 90 d
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
      * @param string $Metric Specifies the query metric, which can be:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+`flux`: traffic (in bytes)
+`bandwidth`: bandwidth (in bps)
+`request`: number of requests
+`hitRequest`: number of hit requests
+`requestHitRate`: request hit rate (in % with two decimal digits)
+`hitFlux`: hit traffic (in bytes)
+`fluxHitRate`: traffic hit rate (in % with two decimal digits)
+`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
+`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
+`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
+`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
+`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
      * @param array $Domains Specifies the list of domain names to be queried
 Up to 30 domain names can be queried at a time

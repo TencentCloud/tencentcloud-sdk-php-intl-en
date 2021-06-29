@@ -54,16 +54,16 @@ on: enable
 off: disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid value is obtained.
- * @method string getIgnoreSetCookie() Obtain Ignore the Set-Cookie header of an origin server.
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Ignore the Set-Cookie header of an origin server.
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getIgnoreSetCookie() Obtain Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheConfigCache extends AbstractModel
 {
@@ -101,11 +101,11 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $IgnoreCacheControl;
 
     /**
-     * @var string Ignore the Set-Cookie header of an origin server.
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var string Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreSetCookie;
 
@@ -127,11 +127,11 @@ on: enable
 off: disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $IgnoreSetCookie Ignore the Set-Cookie header of an origin server.
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
