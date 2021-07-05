@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getJobId() Obtain Data migration task ID
  * @method void setJobId(string $JobId) Set Data migration task ID
+ * @method string getCompleteMode() Obtain The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+ * @method void setCompleteMode(string $CompleteMode) Set The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
  */
 class CompleteMigrateJobRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class CompleteMigrateJobRequest extends AbstractModel
     public $JobId;
 
     /**
+     * @var string The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
+     */
+    public $CompleteMode;
+
+    /**
      * @param string $JobId Data migration task ID
+     * @param string $CompleteMode The way to complete the task, which is supported only for legacy MySQL migration task. waitForSync: wait for the source-replica lag to become 0 before stopping; immediately: complete immediately without waiting for source-replica sync. Default value: waitForSync
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class CompleteMigrateJobRequest extends AbstractModel
         }
         if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
             $this->JobId = $param["JobId"];
+        }
+
+        if (array_key_exists("CompleteMode",$param) and $param["CompleteMode"] !== null) {
+            $this->CompleteMode = $param["CompleteMode"];
         }
     }
 }

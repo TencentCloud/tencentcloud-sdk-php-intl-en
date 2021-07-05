@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition
  * @method AlarmPolicyEventCondition getEventCondition() Obtain Event trigger condition
  * @method void setEventCondition(AlarmPolicyEventCondition $EventCondition) Set Event trigger condition
+ * @method AlarmPolicyFilter getFilter() Obtain Global filter.
+ * @method void setFilter(AlarmPolicyFilter $Filter) Set Global filter.
+ * @method array getGroupBy() Obtain Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+ * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $EventCondition;
 
     /**
+     * @var AlarmPolicyFilter Global filter.
+     */
+    public $Filter;
+
+    /**
+     * @var array Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     */
+    public $GroupBy;
+
+    /**
      * @param string $Module Module name, which is fixed at "monitor"
      * @param string $PolicyId Alarm policy ID
      * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
      * @param AlarmPolicyCondition $Condition Metric trigger condition
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition
+     * @param AlarmPolicyFilter $Filter Global filter.
+     * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
      */
     function __construct()
     {
@@ -98,6 +114,15 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
         if (array_key_exists("EventCondition",$param) and $param["EventCondition"] !== null) {
             $this->EventCondition = new AlarmPolicyEventCondition();
             $this->EventCondition->deserialize($param["EventCondition"]);
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmPolicyFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
     }
 }

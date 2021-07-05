@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeId(string $NodeId) Set Node ID
  * @method string getStatus() Obtain Node status
  * @method void setStatus(string $Status) Set Node status
+ * @method string getRole() Obtain Node role
+ * @method void setRole(string $Role) Set Node role
  */
 class RedisNode extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RedisNode extends AbstractModel
     public $Status;
 
     /**
+     * @var string Node role
+     */
+    public $Role;
+
+    /**
      * @param integer $Keys The number of keys on a node
      * @param string $Slot Distribution of node slots
      * @param string $NodeId Node ID
      * @param string $Status Node status
+     * @param string $Role Node role
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RedisNode extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

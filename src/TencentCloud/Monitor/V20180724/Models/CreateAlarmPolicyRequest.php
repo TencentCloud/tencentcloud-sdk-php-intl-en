@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNoticeIds(array $NoticeIds) Set List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
  * @method array getTriggerTasks() Obtain Triggered task list
  * @method void setTriggerTasks(array $TriggerTasks) Set Triggered task list
+ * @method AlarmPolicyFilter getFilter() Obtain Global filter.
+ * @method void setFilter(AlarmPolicyFilter $Filter) Set Global filter.
+ * @method array getGroupBy() Obtain Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+ * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $TriggerTasks;
 
     /**
+     * @var AlarmPolicyFilter Global filter.
+     */
+    public $Filter;
+
+    /**
+     * @var array Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     */
+    public $GroupBy;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param string $PolicyName Policy name, which can contain up to 20 characters
      * @param string $MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
@@ -120,6 +134,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
      * @param array $NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
      * @param array $TriggerTasks Triggered task list
+     * @param AlarmPolicyFilter $Filter Global filter.
+     * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
      */
     function __construct()
     {
@@ -187,6 +203,15 @@ class CreateAlarmPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TriggerTasks, $obj);
             }
+        }
+
+        if (array_key_exists("Filter",$param) and $param["Filter"] !== null) {
+            $this->Filter = new AlarmPolicyFilter();
+            $this->Filter->deserialize($param["Filter"]);
+        }
+
+        if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
+            $this->GroupBy = $param["GroupBy"];
         }
     }
 }

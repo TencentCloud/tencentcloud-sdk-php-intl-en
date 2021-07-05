@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) Set Module name, which is fixed at "monitor"
  * @method string getNamespace() Obtain Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
  * @method void setNamespace(string $Namespace) Set Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+ * @method string getMonitorType() Obtain Monitoring type, such as `MT_QCE`, which is set to default.
+ * @method void setMonitorType(string $MonitorType) Set Monitoring type, such as `MT_QCE`, which is set to default.
  */
 class DescribeAlarmEventsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeAlarmEventsRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var string Monitoring type, such as `MT_QCE`, which is set to default.
+     */
+    public $MonitorType;
+
+    /**
      * @param string $Module Module name, which is fixed at "monitor"
      * @param string $Namespace Alarm policy type such as cvm_device, which is obtained through the `DescribeAllNamespaces` API
+     * @param string $MonitorType Monitoring type, such as `MT_QCE`, which is set to default.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeAlarmEventsRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("MonitorType",$param) and $param["MonitorType"] !== null) {
+            $this->MonitorType = $param["MonitorType"];
         }
     }
 }
