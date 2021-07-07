@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceEndDate(string $ServiceEndDate) Set (Exact match) Service end date, such as `2020-07-28`.
  * @method string getState() Obtain (Exact match) Status. Valid values: `PENDING`, `APPROVED`, and `DENY`.
  * @method void setState(string $State) Set (Exact match) Status. Valid values: `PENDING`, `APPROVED`, and `DENY`.
+ * @method integer getOffset() Obtain The offset value
+ * @method void setOffset(integer $Offset) Set The offset value
+ * @method integer getLimit() Obtain Quantity of returned items
+ * @method void setLimit(integer $Limit) Set Quantity of returned items
  */
 class DescribeCrossBorderComplianceRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
     public $State;
 
     /**
+     * @var integer The offset value
+     */
+    public $Offset;
+
+    /**
+     * @var integer Quantity of returned items
+     */
+    public $Limit;
+
+    /**
      * @param string $ServiceProvider (Exact match) Service provider. Valid values: `UNICOM`.
      * @param integer $ComplianceId (Exact match) ID of compliance review request.
      * @param string $Company (Fuzzy match) Company name.
@@ -152,6 +166,8 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
      * @param string $ServiceStartDate (Exact match) Service start date, such as `2020-07-28`.
      * @param string $ServiceEndDate (Exact match) Service end date, such as `2020-07-28`.
      * @param string $State (Exact match) Status. Valid values: `PENDING`, `APPROVED`, and `DENY`.
+     * @param integer $Offset The offset value
+     * @param integer $Limit Quantity of returned items
      */
     function __construct()
     {
@@ -228,6 +244,14 @@ class DescribeCrossBorderComplianceRequest extends AbstractModel
 
         if (array_key_exists("State",$param) and $param["State"] !== null) {
             $this->State = $param["State"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

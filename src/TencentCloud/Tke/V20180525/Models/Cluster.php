@@ -66,6 +66,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method boolean getEnableExternalNode() Obtain Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setEnableExternalNode(boolean $EnableExternalNode) Set Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -165,6 +169,12 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $DeletionProtection;
 
     /**
+     * @var boolean Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $EnableExternalNode;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -188,6 +198,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param boolean $DeletionProtection Whether Deletion Protection is enabled
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param boolean $EnableExternalNode Specifies whether the cluster supports external nodes.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -278,6 +290,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("EnableExternalNode",$param) and $param["EnableExternalNode"] !== null) {
+            $this->EnableExternalNode = $param["EnableExternalNode"];
         }
     }
 }

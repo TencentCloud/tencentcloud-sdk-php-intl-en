@@ -64,6 +64,8 @@ The following conditions are required to use ipvs-bpf network mode:
  * @method void setEnableCustomizedPodCIDR(boolean $EnableCustomizedPodCIDR) Set Indicates whether to enable the custom mode for the node’s pod CIDR range
  * @method integer getBasePodNumber() Obtain The basic number of Pods in custom mode
  * @method void setBasePodNumber(integer $BasePodNumber) Set The basic number of Pods in custom mode
+ * @method string getCiliumMode() Obtain Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+ * @method void setCiliumMode(string $CiliumMode) Set Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -154,6 +156,11 @@ The following conditions are required to use ipvs-bpf network mode:
     public $BasePodNumber;
 
     /**
+     * @var string Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+     */
+    public $CiliumMode;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -176,6 +183,7 @@ The following conditions are required to use ipvs-bpf network mode:
      * @param string $RuntimeVersion Runtime version
      * @param boolean $EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
      * @param integer $BasePodNumber The basic number of Pods in custom mode
+     * @param string $CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ The following conditions are required to use ipvs-bpf network mode:
 
         if (array_key_exists("BasePodNumber",$param) and $param["BasePodNumber"] !== null) {
             $this->BasePodNumber = $param["BasePodNumber"];
+        }
+
+        if (array_key_exists("CiliumMode",$param) and $param["CiliumMode"] !== null) {
+            $this->CiliumMode = $param["CiliumMode"];
         }
     }
 }

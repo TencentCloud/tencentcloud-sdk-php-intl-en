@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method array getCcnRegionBandwidthLimits() Obtain The outbound bandwidth cap of each CCN region.
  * @method void setCcnRegionBandwidthLimits(array $CcnRegionBandwidthLimits) Set The outbound bandwidth cap of each CCN region.
- * @method boolean getSetDefaultLimitFlag() Obtain Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
- * @method void setSetDefaultLimitFlag(boolean $SetDefaultLimitFlag) Set Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+ * @method boolean getSetDefaultLimitFlag() Obtain Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+ * @method void setSetDefaultLimitFlag(boolean $SetDefaultLimitFlag) Set Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
  */
 class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SetCcnRegionBandwidthLimitsRequest extends AbstractModel
     public $CcnRegionBandwidthLimits;
 
     /**
-     * @var boolean Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+     * @var boolean Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
      */
     public $SetDefaultLimitFlag;
 
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
      * @param array $CcnRegionBandwidthLimits The outbound bandwidth cap of each CCN region.
-     * @param boolean $SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
+     * @param boolean $SetDefaultLimitFlag Whether to restore the region outbound bandwidth limit or inter-region bandwidth limit to default 1 Gbps. Valid values: `false` (no); `true` (yes). Default value: `false`. When the parameter is set to `true`, the CCN instance created will not be displayed in the console.
      */
     function __construct()
     {

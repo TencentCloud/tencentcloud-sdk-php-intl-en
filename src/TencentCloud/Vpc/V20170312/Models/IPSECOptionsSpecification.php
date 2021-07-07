@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
  *
- * @method string getEncryptAlgorithm() Obtain Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
- * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
- * @method string getIntegrityAlgorith() Obtain Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
- * @method void setIntegrityAlgorith(string $IntegrityAlgorith) Set Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+ * @method string getEncryptAlgorithm() Obtain Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+ * @method string getIntegrityAlgorith() Obtain Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
+ * @method void setIntegrityAlgorith(string $IntegrityAlgorith) Set Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
  * @method integer getIPSECSaLifetimeSeconds() Obtain IPsec SA lifetime (in sec). Value range: 180-604800
  * @method void setIPSECSaLifetimeSeconds(integer $IPSECSaLifetimeSeconds) Set IPsec SA lifetime (in sec). Value range: 180-604800
  * @method string getPfsDhGroup() Obtain PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class IPSECOptionsSpecification extends AbstractModel
 {
     /**
-     * @var string Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
+     * @var string Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
      */
     public $EncryptAlgorithm;
 
     /**
-     * @var string Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+     * @var string Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
      */
     public $IntegrityAlgorith;
 
@@ -59,8 +59,8 @@ class IPSECOptionsSpecification extends AbstractModel
     public $IPSECSaLifetimeTraffic;
 
     /**
-     * @param string $EncryptAlgorithm Encryption algorithm. Available values: '3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', and 'NULL'. Default is AES-CBC-128.
-     * @param string $IntegrityAlgorith Verification algorithm. Available value: 'MD5' and 'SHA1'. Default is:
+     * @param string $EncryptAlgorithm Encryption algorithm. Valid values: `3DES-CBC`, `AES-CBC-128`, `AES-CBC-192`, `AES-CBC-256`, `DES-CBC`, `SM4`, and `NULL`; default value: `AES-CBC-128`.
+     * @param string $IntegrityAlgorith Authentication algorithm. Valid values: `MD5`, `SHA1` and `SHA-256`; default value: `SHA1`.
      * @param integer $IPSECSaLifetimeSeconds IPsec SA lifetime (in sec). Value range: 180-604800
      * @param string $PfsDhGroup PFS. Available value: 'NULL', 'DH-GROUP1', 'DH-GROUP2', 'DH-GROUP5', 'DH-GROUP14', and 'DH-GROUP24'. Default is NULL.
      * @param integer $IPSECSaLifetimeTraffic IPsec SA lifetime (in KB). Value range: 2560-604800
