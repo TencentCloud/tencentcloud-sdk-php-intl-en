@@ -32,6 +32,8 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
  * @method void setImageUrl(string $ImageUrl) Set URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+ * @method boolean getIsWords() Obtain Whether to return the character information. Default value: `false`
+ * @method void setIsWords(boolean $IsWords) Set Whether to return the character information. Default value: `false`
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
@@ -50,12 +52,18 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public $ImageUrl;
 
     /**
+     * @var boolean Whether to return the character information. Default value: `false`
+     */
+    public $IsWords;
+
+    /**
      * @param string $ImageBase64 Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
      * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
+     * @param boolean $IsWords Whether to return the character information. Default value: `false`
      */
     function __construct()
     {
@@ -76,6 +84,10 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
 
         if (array_key_exists("ImageUrl",$param) and $param["ImageUrl"] !== null) {
             $this->ImageUrl = $param["ImageUrl"];
+        }
+
+        if (array_key_exists("IsWords",$param) and $param["IsWords"] !== null) {
+            $this->IsWords = $param["IsWords"];
         }
     }
 }

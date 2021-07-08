@@ -34,6 +34,10 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
  * @method ItemCoord getItemPolygon() Obtain Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
  * @method void setItemPolygon(ItemCoord $ItemPolygon) Set Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+ * @method array getWords() Obtain Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+ * @method void setWords(array $Words) Set Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+ * @method array getWordCoordPoint() Obtain Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+ * @method void setWordCoordPoint(array $WordCoordPoint) Set Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
  */
 class TextDetection extends AbstractModel
 {
@@ -65,6 +69,16 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
     public $ItemPolygon;
 
     /**
+     * @var array Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public $Words;
+
+    /**
+     * @var array Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     */
+    public $WordCoordPoint;
+
+    /**
      * @param string $DetectedText Recognized text line content.
      * @param integer $Confidence Confidence. Value range: 0–100.
      * @param array $Polygon Text line coordinates, which are represented as 4 vertex coordinates.
@@ -72,6 +86,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $AdvancedInfo Extended field.
 The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains `ParagNo`.
      * @param ItemCoord $ItemPolygon Pixel coordinates of the text line in the image after rotation correction, which is in the format of `(X-coordinate of top-left point, Y-coordinate of top-left point, width, height)`.
+     * @param array $Words Information about a character, including the character itself and its confidence. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
+     * @param array $WordCoordPoint Coordinates of a word’s four corners on the input image. Supported APIs: `GeneralBasicOCR`, `GeneralAccurateOCR`
      */
     function __construct()
     {
@@ -110,6 +126,24 @@ The paragraph information `Parag` returned by the `GeneralBasicOcr` API contains
         if (array_key_exists("ItemPolygon",$param) and $param["ItemPolygon"] !== null) {
             $this->ItemPolygon = new ItemCoord();
             $this->ItemPolygon->deserialize($param["ItemPolygon"]);
+        }
+
+        if (array_key_exists("Words",$param) and $param["Words"] !== null) {
+            $this->Words = [];
+            foreach ($param["Words"] as $key => $value){
+                $obj = new DetectedWords();
+                $obj->deserialize($value);
+                array_push($this->Words, $obj);
+            }
+        }
+
+        if (array_key_exists("WordCoordPoint",$param) and $param["WordCoordPoint"] !== null) {
+            $this->WordCoordPoint = [];
+            foreach ($param["WordCoordPoint"] as $key => $value){
+                $obj = new DetectedWordCoordPoint();
+                $obj->deserialize($value);
+                array_push($this->WordCoordPoint, $obj);
+            }
         }
     }
 }

@@ -54,6 +54,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 -9114: the bank card image is a photograph.
 Multiple warning codes may be returned at a time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getQualityValue() Obtain Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setQualityValue(integer $QualityValue) Set Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -109,6 +113,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $WarningCode;
 
     /**
+     * @var integer Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $QualityValue;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -131,6 +141,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 -9114: the bank card image is a photograph.
 Multiple warning codes may be returned at a time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $QualityValue Image quality value, which is returned when `EnableQualityValue` is set to `true`. The smaller the value, the less clear the image is. Value range: 0−100 (a threshold greater than or equal to 50 is recommended.)
+Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -176,6 +188,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("WarningCode",$param) and $param["WarningCode"] !== null) {
             $this->WarningCode = $param["WarningCode"];
+        }
+
+        if (array_key_exists("QualityValue",$param) and $param["QualityValue"] !== null) {
+            $this->QualityValue = $param["QualityValue"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

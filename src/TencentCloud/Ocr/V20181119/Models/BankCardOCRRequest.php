@@ -44,6 +44,8 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
  * @method void setEnableReshootCheck(boolean $EnableReshootCheck) Set Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
  * @method boolean getEnableBorderCheck() Obtain Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
  * @method void setEnableBorderCheck(boolean $EnableBorderCheck) Set Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
+ * @method boolean getEnableQualityValue() Obtain Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+ * @method void setEnableQualityValue(boolean $EnableQualityValue) Set Whether to return the image quality value, which measures how clear an image is. Default value: `false`
  */
 class BankCardOCRRequest extends AbstractModel
 {
@@ -88,6 +90,11 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     public $EnableBorderCheck;
 
     /**
+     * @var boolean Whether to return the image quality value, which measures how clear an image is. Default value: `false`
+     */
+    public $EnableQualityValue;
+
+    /**
      * @param string $ImageBase64 Base64-encoded value of the image. The image cannot exceed 7 MB after being Base64-encoded. A resolution above 500 x 800 is recommended. PNG, JPG, JPEG, and BMP formats are supported. It is recommended that the card part occupy more than 2/3 area of the image.
 Either the `ImageUrl` or `ImageBase64` of the image must be provided. If both are provided, only `ImageUrl` will be used.
      * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
@@ -100,6 +107,7 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param boolean $EnableCopyCheck Whether to enable photocopy check. If the input image is a bank card photocopy, an alarm will be returned. Default value: `false`
      * @param boolean $EnableReshootCheck Whether to enable photograph check. If the input image is a bank card photograph, an alarm will be returned. Default value: `false`
      * @param boolean $EnableBorderCheck Whether to enable obscured border check. If the input image is a bank card with obscured border, an alarm will be returned. Default value: `false`
+     * @param boolean $EnableQualityValue Whether to return the image quality value, which measures how clear an image is. Default value: `false`
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
 
         if (array_key_exists("EnableBorderCheck",$param) and $param["EnableBorderCheck"] !== null) {
             $this->EnableBorderCheck = $param["EnableBorderCheck"];
+        }
+
+        if (array_key_exists("EnableQualityValue",$param) and $param["EnableQualityValue"] !== null) {
+            $this->EnableQualityValue = $param["EnableQualityValue"];
         }
     }
 }

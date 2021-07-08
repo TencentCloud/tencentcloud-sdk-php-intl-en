@@ -66,6 +66,8 @@ Arabic.
  * @method void setIsPdf(boolean $IsPdf) Set Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
  * @method integer getPdfPageNumber() Obtain Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
  * @method void setPdfPageNumber(integer $PdfPageNumber) Set Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+ * @method boolean getIsWords() Obtain Whether to return the character information. Default value: `false`
+ * @method void setIsWords(boolean $IsWords) Set Whether to return the character information. Default value: `false`
  */
 class GeneralBasicOCRRequest extends AbstractModel
 {
@@ -117,6 +119,11 @@ Arabic.
     public $PdfPageNumber;
 
     /**
+     * @var boolean Whether to return the character information. Default value: `false`
+     */
+    public $IsWords;
+
+    /**
      * @param string $ImageBase64 Base64-encoded value of image/PDF.
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
      * @param string $ImageUrl URL address of image/PDF. (This field is not supported outside Chinese mainland)
@@ -140,6 +147,7 @@ Norwegian, Hungarian, Thai, Latin,
 Arabic.
      * @param boolean $IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
      * @param integer $PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
+     * @param boolean $IsWords Whether to return the character information. Default value: `false`
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ Arabic.
 
         if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
             $this->PdfPageNumber = $param["PdfPageNumber"];
+        }
+
+        if (array_key_exists("IsWords",$param) and $param["IsWords"] !== null) {
+            $this->IsWords = $param["IsWords"];
         }
     }
 }
