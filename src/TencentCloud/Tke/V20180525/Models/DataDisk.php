@@ -40,6 +40,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setMountTarget(string $MountTarget) Set Mounting directory
 Note: This field may return null, indicating that no valid value was found.
+ * @method string getDiskPartition() Obtain The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setDiskPartition(string $DiskPartition) Set The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class DataDisk extends AbstractModel
 {
@@ -74,6 +78,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $MountTarget;
 
     /**
+     * @var string The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $DiskPartition;
+
+    /**
      * @param string $DiskType Disk type
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $FileSystem File system (ext3/ext4/xfs)
@@ -84,6 +94,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $MountTarget Mounting directory
 Note: This field may return null, indicating that no valid value was found.
+     * @param string $DiskPartition The name of the device or partition to mount
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("MountTarget",$param) and $param["MountTarget"] !== null) {
             $this->MountTarget = $param["MountTarget"];
+        }
+
+        if (array_key_exists("DiskPartition",$param) and $param["DiskPartition"] !== null) {
+            $this->DiskPartition = $param["DiskPartition"];
         }
     }
 }

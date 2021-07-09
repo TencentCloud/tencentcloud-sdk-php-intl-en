@@ -40,14 +40,16 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setLabels(array $Labels) Set Node label array
 Note: This field may return null, indicating that no valid value was found.
- * @method array getDataDisks() Obtain Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+ * @method array getDataDisks() Obtain Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDataDisks(array $DataDisks) Set Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+ * @method void setDataDisks(array $DataDisks) Set Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method InstanceExtraArgs getExtraArgs() Obtain Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
+ * @method integer getDesiredPodNumber() Obtain 
+ * @method void setDesiredPodNumber(integer $DesiredPodNumber) Set 
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -82,7 +84,7 @@ Note: This field may return null, indicating that no valid value was found.
     public $Labels;
 
     /**
-     * @var array Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * @var array Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DataDisks;
@@ -92,6 +94,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid value was found.
      */
     public $ExtraArgs;
+
+    /**
+     * @var integer 
+     */
+    public $DesiredPodNumber;
 
     /**
      * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
@@ -104,10 +111,11 @@ Note: This field may return null, indicating that no valid value was found.
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run kubectl uncordon nodename to enable this node for scheduling.
      * @param array $Labels Node label array
 Note: This field may return null, indicating that no valid value was found.
-     * @param array $DataDisks Mounting information of multiple data disks. Ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks, for example `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API. You can refer to the example of adding a cluster node with multiple data disks in the CreateClusterInstances API. This parameter does not take effect when the AddExistedInstances API is called.
+     * @param array $DataDisks Mounting information of multiple data disks. When you create a node, ensure that the CVM purchase parameter specifies the information required for the purchase of multiple data disks. For example, the `DataDisks` under `RunInstancesPara` of the `CreateClusterInstances` API should be configured accordingly (Referto document of CreateClusterInstances API). When you add an existing node, ensure that the specified partition exists in the node.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param InstanceExtraArgs $ExtraArgs Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
+     * @param integer $DesiredPodNumber 
      */
     function __construct()
     {
@@ -159,6 +167,10 @@ Note: This field may return null, indicating that no valid value was found.
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("DesiredPodNumber",$param) and $param["DesiredPodNumber"] !== null) {
+            $this->DesiredPodNumber = $param["DesiredPodNumber"];
         }
     }
 }
