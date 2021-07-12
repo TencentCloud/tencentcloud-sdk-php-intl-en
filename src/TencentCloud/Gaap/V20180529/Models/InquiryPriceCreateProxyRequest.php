@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrent(integer $Concurrent) Set Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
  * @method integer getBillingType() Obtain Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
  * @method void setBillingType(integer $BillingType) Set Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $BillingType;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $AccessRegion Acceleration region name.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param string $DestRegion Origin server region name. It's an old parameter, please switch to RealServerRegion.
@@ -80,6 +87,7 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param string $RealServerRegion Origin server region name; It's a new parameter.
      * @param integer $Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
      * @param integer $BillingType Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
         if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
             $this->BillingType = $param["BillingType"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

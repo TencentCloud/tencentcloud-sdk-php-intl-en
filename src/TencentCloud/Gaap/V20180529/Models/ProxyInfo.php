@@ -120,6 +120,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -282,6 +286,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ClientIPMethod;
 
     /**
+     * @var string IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -332,6 +342,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -459,6 +471,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

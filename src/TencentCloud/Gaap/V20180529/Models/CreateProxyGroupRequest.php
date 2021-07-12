@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSet(array $TagSet) Set Tag list
  * @method array getAccessRegionSet() Obtain List of acceleration regions, including their names, bandwidth, and concurrence configuration.
  * @method void setAccessRegionSet(array $AccessRegionSet) Set List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateProxyGroupRequest extends AbstractModel
     public $AccessRegionSet;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param integer $ProjectId Project ID of connection group
      * @param string $GroupName Alias of connection group
      * @param string $RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
      * @param array $TagSet Tag list
      * @param array $AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -106,6 +114,10 @@ class CreateProxyGroupRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccessRegionSet, $obj);
             }
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

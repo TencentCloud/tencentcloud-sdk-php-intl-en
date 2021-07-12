@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable health check. 1: enable; 0: disable.
  * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
  * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+ * @method integer getHealthyThreshold() Obtain Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+ * @method void setHealthyThreshold(integer $HealthyThreshold) Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+ * @method integer getUnhealthyThreshold() Obtain Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
  */
 class ModifyTCPListenerAttributeRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
     public $FailoverSwitch;
 
     /**
+     * @var integer Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
+     */
+    public $UnhealthyThreshold;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
      * @param string $ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -96,6 +110,8 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds). Value range: [2, 60]. The timeout value shall be less than the time interval for health check DelayLoop.
      * @param integer $HealthCheck Whether to enable health check. 1: enable; 0: disable.
      * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     * @param integer $HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     * @param integer $UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 -10.
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ModifyTCPListenerAttributeRequest extends AbstractModel
 
         if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
             $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
         }
     }
 }

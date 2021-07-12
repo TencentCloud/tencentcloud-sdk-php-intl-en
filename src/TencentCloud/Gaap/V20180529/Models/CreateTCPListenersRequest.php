@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClientIPMethod(integer $ClientIPMethod) Set Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
  * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
  * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+ * @method integer getHealthyThreshold() Obtain Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+ * @method void setHealthyThreshold(integer $HealthyThreshold) Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+ * @method integer getUnhealthyThreshold() Obtain Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
  */
 class CreateTCPListenersRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTCPListenersRequest extends AbstractModel
     public $FailoverSwitch;
 
     /**
+     * @var integer Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+     */
+    public $UnhealthyThreshold;
+
+    /**
      * @param string $ListenerName Listener name.
      * @param array $Ports List of listener ports.
      * @param string $Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
@@ -120,6 +134,8 @@ class CreateTCPListenersRequest extends AbstractModel
      * @param array $RealServerPorts List of origin server ports, which only supports the listeners of version 1.0 and connection group.
      * @param integer $ClientIPMethod Listener methods of getting client IPs. 0: TOA; 1: Proxy Protocol.
      * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode. Valid values: 1 (enable) and 0 (disable). It cannot be enabled for domain name origin servers.
+     * @param integer $HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+     * @param integer $UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CreateTCPListenersRequest extends AbstractModel
 
         if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
             $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
         }
     }
 }

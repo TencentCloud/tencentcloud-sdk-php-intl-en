@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRegionAndPrice request structure.
  *
-
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class DescribeRegionAndPriceRequest extends AbstractModel
 {
-
+    /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
 
     /**
-
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeRegionAndPriceRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
     }
 }

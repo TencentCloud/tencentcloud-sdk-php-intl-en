@@ -80,6 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setClientIPMethod(integer $ClientIPMethod) Set Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getHealthyThreshold() Obtain Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHealthyThreshold(integer $HealthyThreshold) Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getUnhealthyThreshold() Obtain Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class TCPListener extends AbstractModel
 {
@@ -174,6 +182,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ClientIPMethod;
 
     /**
+     * @var integer Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $HealthyThreshold;
+
+    /**
+     * @var integer Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $UnhealthyThreshold;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -204,6 +224,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
      * @param integer $ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -281,6 +305,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("HealthyThreshold",$param) and $param["HealthyThreshold"] !== null) {
+            $this->HealthyThreshold = $param["HealthyThreshold"];
+        }
+
+        if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
+            $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
         }
     }
 }

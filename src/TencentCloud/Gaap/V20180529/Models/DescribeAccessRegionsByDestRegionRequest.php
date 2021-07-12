@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDestRegion() Obtain Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
  * @method void setDestRegion(string $DestRegion) Set Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     public $DestRegion;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $DestRegion Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
         }
         if (array_key_exists("DestRegion",$param) and $param["DestRegion"] !== null) {
             $this->DestRegion = $param["DestRegion"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

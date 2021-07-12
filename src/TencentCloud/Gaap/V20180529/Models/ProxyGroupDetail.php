@@ -70,6 +70,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -163,6 +167,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ClientIPMethod;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param integer $CreateTime Creation time
      * @param integer $ProjectId Project ID
      * @param integer $ProxyNum Number of connections in connection group
@@ -188,6 +198,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -270,6 +282,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ClientIPMethod",$param) and $param["ClientIPMethod"] !== null) {
             $this->ClientIPMethod = $param["ClientIPMethod"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

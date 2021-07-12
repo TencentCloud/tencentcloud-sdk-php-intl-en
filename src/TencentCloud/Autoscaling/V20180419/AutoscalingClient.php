@@ -60,7 +60,6 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
 }
 ```
  * @method Models\CreateNotificationConfigurationResponse CreateNotificationConfiguration(Models\CreateNotificationConfigurationRequest $req) This API (CreateNotificationConfiguration) is used to create a notification.
- * @method Models\CreatePaiInstanceResponse CreatePaiInstance(Models\CreatePaiInstanceRequest $req) This API (CreatePaiInstance) is used to create a PAI instance.
  * @method Models\CreateScalingPolicyResponse CreateScalingPolicy(Models\CreateScalingPolicyRequest $req) This API (CreateScalingPolicy) is used to create an alarm trigger policy.
  * @method Models\CreateScheduledActionResponse CreateScheduledAction(Models\CreateScheduledActionRequest $req) This API (CreateScheduledAction) is used to create a scheduled task.
  * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) This API (DeleteAutoScalingGroup) is used to delete the specified auto scaling group that has no instances and remains inactive.
@@ -95,10 +94,6 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
 
 You can query the details of notifications based on information such as notification ID and auto scaling group ID. For more information on filters, see `Filter`.
 If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of notifications of the current user will be returned.
- * @method Models\DescribePaiInstancesResponse DescribePaiInstances(Models\DescribePaiInstancesRequest $req) This API (DescribePaiInstances) is used to query the information of PAI instances.
-
-* You can query the detailed information of PAI instances based on information such as instance ID and instance domain name. For more information on filters, see `Filter`.
-* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of PAI instances of the current user will be returned.
  * @method Models\DescribeScalingPoliciesResponse DescribeScalingPolicies(Models\DescribeScalingPoliciesRequest $req) This API (DescribeScalingPolicies) is used to query alarm trigger policies.
  * @method Models\DescribeScheduledActionsResponse DescribeScheduledActions(Models\DescribeScheduledActionsRequest $req) This API (DescribeScheduledActions) is used to query the details of one or more scheduled tasks.
 
@@ -128,8 +123,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
  * @method Models\ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(Models\ModifyNotificationConfigurationRequest $req) This API (ModifyNotificationConfiguration) is used to modify a notification.
  * @method Models\ModifyScalingPolicyResponse ModifyScalingPolicy(Models\ModifyScalingPolicyRequest $req) This API (ModifyScalingPolicy) is used to modify an alarm trigger policy.
  * @method Models\ModifyScheduledActionResponse ModifyScheduledAction(Models\ModifyScheduledActionRequest $req) This API (ModifyScheduledAction) is used to modify a scheduled task.
- * @method Models\PreviewPaiDomainNameResponse PreviewPaiDomainName(Models\PreviewPaiDomainNameRequest $req) This API (PreviewPaiDomainName) is used to preview a PAI domain name.
-
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.

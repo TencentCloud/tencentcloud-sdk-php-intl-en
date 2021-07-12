@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrent(integer $Concurrent) Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
  * @method string getGroupId() Obtain Connection group ID that needs to be entered when a connection is created in a connection group
  * @method void setGroupId(string $GroupId) Set Connection group ID that needs to be entered when a connection is created in a connection group
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CheckProxyCreateRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param string $AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      * @param string $RealServerRegion Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param integer $Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      * @param string $GroupId Connection group ID that needs to be entered when a connection is created in a connection group
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

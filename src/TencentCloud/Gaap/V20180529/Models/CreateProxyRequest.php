@@ -46,6 +46,8 @@ The connection is to be replicated if this parameter is set.
 The connection is to be replicated if this parameter is set.
  * @method integer getBillingType() Obtain Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
  * @method void setBillingType(integer $BillingType) Set Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+ * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -107,6 +109,11 @@ The connection is to be replicated if this parameter is set.
     public $BillingType;
 
     /**
+     * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
+     */
+    public $IPAddressVersion;
+
+    /**
      * @param integer $ProjectId Project ID of connection.
      * @param string $ProxyName Connection name.
      * @param string $AccessRegion Access region.
@@ -120,6 +127,7 @@ For more information, please see How to Ensure Idempotence.
      * @param string $ClonedProxyId ID of the replicated connection. Only a running connection can be replicated.
 The connection is to be replicated if this parameter is set.
      * @param integer $BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
+     * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      */
     function __construct()
     {
@@ -181,6 +189,10 @@ The connection is to be replicated if this parameter is set.
 
         if (array_key_exists("BillingType",$param) and $param["BillingType"] !== null) {
             $this->BillingType = $param["BillingType"];
+        }
+
+        if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
+            $this->IPAddressVersion = $param["IPAddressVersion"];
         }
     }
 }

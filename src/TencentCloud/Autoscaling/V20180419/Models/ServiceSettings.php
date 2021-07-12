@@ -30,6 +30,8 @@ Default value: CLASSIC_SCALING
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
+ * @method boolean getReplaceLoadBalancerUnhealthy() Obtain Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+ * @method void setReplaceLoadBalancerUnhealthy(boolean $ReplaceLoadBalancerUnhealthy) Set Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
  */
 class ServiceSettings extends AbstractModel
 {
@@ -47,11 +49,17 @@ Default value: CLASSIC_SCALING
     public $ScalingMode;
 
     /**
+     * @var boolean Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
+     */
+    public $ReplaceLoadBalancerUnhealthy;
+
+    /**
      * @param boolean $ReplaceMonitorUnhealthy Enables unhealthy instance replacement. If this feature is enabled, AS will replace instances that are flagged as unhealthy by Cloud Monitor. If this parameter is not specified, the value will be False by default.
      * @param string $ScalingMode Valid values: 
 CLASSIC_SCALING: this is the typical scaling method, which creates and terminates instances to perform scaling operations. 
 WAKE_UP_STOPPED_SCALING: this scaling method first tries to start stopped instances. If the number of instances woken up is insufficient, the system creates new instances for scale-out. For scale-in, instances are terminated as in the typical method. You can use the StopAutoScalingInstances API to stop instances in the scaling group. Scale-out operations triggered by alarms will still create new instances.
 Default value: CLASSIC_SCALING
+     * @param boolean $ReplaceLoadBalancerUnhealthy Enable unhealthy instance replacement. If this feature is enabled, AS will replace instances that are found unhealthy in the CLB health check. If this parameter is not specified, the default value `False` will be used.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ Default value: CLASSIC_SCALING
 
         if (array_key_exists("ScalingMode",$param) and $param["ScalingMode"] !== null) {
             $this->ScalingMode = $param["ScalingMode"];
+        }
+
+        if (array_key_exists("ReplaceLoadBalancerUnhealthy",$param) and $param["ReplaceLoadBalancerUnhealthy"] !== null) {
+            $this->ReplaceLoadBalancerUnhealthy = $param["ReplaceLoadBalancerUnhealthy"];
         }
     }
 }
