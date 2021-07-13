@@ -24,14 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNum(integer $NodeNum) Set Number of nodes
  * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
  * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
- * @method string getType() Obtain Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
- * @method void setType(string $Type) Set Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+ * @method string getType() Obtain Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
+ * @method void setType(string $Type) Set Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
  * @method string getDiskType() Obtain Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method integer getDiskSize() Obtain Node disk size in GB
@@ -58,10 +60,11 @@ class NodeInfo extends AbstractModel
     public $NodeType;
 
     /**
-     * @var string Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+     * @var string Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
      */
     public $Type;
 
@@ -94,10 +97,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-     * @param string $Type Node type <li>hotData: hot data node</li>
-<li>warmData: warm data node</li>
-<li>dedicatedMaster: dedicated primary node</li>
-Default value: hotData
+     * @param string $Type Node type<li>`hotData`: hot data node</li>
+<li>`warmData`: warm data node</li>
+<li>`dedicatedMaster`: dedicated master node</li>
+<li>`kibana`: Kibana node</li>
+Default value: `hotData`
      * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
      * @param integer $DiskSize Node disk size in GB
      * @param LocalDiskInfo $LocalDiskInfo Local disk information

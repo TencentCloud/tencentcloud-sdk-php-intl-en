@@ -84,6 +84,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCbsEncrypt(integer $CbsEncrypt) Set Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getApplicationRole() Obtain Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setApplicationRole(string $ApplicationRole) Set Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSecurityGroups() Obtain Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSecurityGroups(array $SecurityGroups) Set Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -184,6 +192,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CbsEncrypt;
 
     /**
+     * @var string Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ApplicationRole;
+
+    /**
+     * @var array Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SecurityGroups;
+
+    /**
      * @param array $SoftInfo Software information
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MasterNodeSize Number of master nodes
@@ -216,6 +236,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $CbsEncrypt Whether to enable CBS encryption
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplicationRole Custom application role
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SecurityGroups Security groups
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -296,6 +320,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CbsEncrypt",$param) and $param["CbsEncrypt"] !== null) {
             $this->CbsEncrypt = $param["CbsEncrypt"];
+        }
+
+        if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
+            $this->ApplicationRole = $param["ApplicationRole"];
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

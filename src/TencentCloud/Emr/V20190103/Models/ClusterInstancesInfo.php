@@ -190,6 +190,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProductId(integer $ProductId) Set Cluster version ID
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getZone() Obtain Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setZone(string $Zone) Set Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -395,6 +399,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProductId;
 
     /**
+     * @var string Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Zone;
+
+    /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId Cluster ID
@@ -480,6 +490,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ProductId Cluster version ID
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Zone Availability zone
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -614,6 +626,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

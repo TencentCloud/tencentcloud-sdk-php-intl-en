@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain Availability Zone
  * @method void setZone(string $Zone) Set Availability Zone
- * @method string getEsVersion() Obtain Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
- * @method void setEsVersion(string $EsVersion) Set Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+ * @method string getEsVersion() Obtain Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
+ * @method void setEsVersion(string $EsVersion) Set Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
  * @method string getVpcId() Obtain VPC ID
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getSubnetId() Obtain Subnet ID
@@ -92,6 +92,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method integer getSceneType() Obtain Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
  * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -101,7 +103,7 @@ class CreateInstanceRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+     * @var string Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      */
     public $EsVersion;
 
@@ -244,8 +246,13 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     public $SceneType;
 
     /**
+     * @var WebNodeTypeInfo Visual node configuration
+     */
+    public $WebNodeTypeInfo;
+
+    /**
      * @param string $Zone Availability Zone
-     * @param string $EsVersion Instance version ("5.6.4", "6.4.3", "6.8.2", or "7.5.1")
+     * @param string $EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
      * @param string $Password Access password, which must contain 8 to 16 characters, and include at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
@@ -280,6 +287,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
      * @param array $TagList Node tag information list
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      * @param integer $SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
+     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
      */
     function __construct()
     {
@@ -419,6 +427,11 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
 
         if (array_key_exists("SceneType",$param) and $param["SceneType"] !== null) {
             $this->SceneType = $param["SceneType"];
+        }
+
+        if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
+            $this->WebNodeTypeInfo = new WebNodeTypeInfo();
+            $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
         }
     }
 }

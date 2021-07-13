@@ -164,6 +164,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method KibanaNodeInfo getKibanaNodeInfo() Obtain Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) Set Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -456,6 +460,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $KibanaConfig;
 
     /**
+     * @var KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $KibanaNodeInfo;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -528,6 +538,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $KibanaConfig Kibana configuration item.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KibanaNodeInfo $KibanaNodeInfo Kibana node information
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -776,6 +788,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
             $this->KibanaConfig = $param["KibanaConfig"];
+        }
+
+        if (array_key_exists("KibanaNodeInfo",$param) and $param["KibanaNodeInfo"] !== null) {
+            $this->KibanaNodeInfo = new KibanaNodeInfo();
+            $this->KibanaNodeInfo->deserialize($param["KibanaNodeInfo"]);
         }
     }
 }

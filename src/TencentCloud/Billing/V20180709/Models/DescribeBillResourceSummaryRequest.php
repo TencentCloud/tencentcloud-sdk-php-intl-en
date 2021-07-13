@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 1 = yes, 0 = no
  * @method string getActionType() Obtain 
  * @method void setActionType(string $ActionType) Set 
+ * @method string getResourceId() Obtain ID of the instance to be queried
+ * @method void setResourceId(string $ResourceId) Set ID of the instance to be queried
+ * @method string getPayMode() Obtain Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+ * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -69,6 +73,16 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $ActionType;
 
     /**
+     * @var string ID of the instance to be queried
+     */
+    public $ResourceId;
+
+    /**
+     * @var string Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     */
+    public $PayMode;
+
+    /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 1000
      * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
@@ -76,6 +90,8 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
      * @param integer $NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
      * @param string $ActionType 
+     * @param string $ResourceId ID of the instance to be queried
+     * @param string $PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
 
         if (array_key_exists("ActionType",$param) and $param["ActionType"] !== null) {
             $this->ActionType = $param["ActionType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
         }
     }
 }
