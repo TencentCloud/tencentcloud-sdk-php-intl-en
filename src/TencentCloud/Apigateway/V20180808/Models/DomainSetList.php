@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtocol(string $Protocol) Set Custom domain name protocol type.
  * @method string getNetType() Obtain Network type. Valid values: INNER, OUTER.
  * @method void setNetType(string $NetType) Set Network type. Valid values: INNER, OUTER.
+ * @method boolean getIsForcedHttps() Obtain Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+ * @method void setIsForcedHttps(boolean $IsForcedHttps) Set Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+ * @method boolean getRegistrationStatus() Obtain ICP filing status
+ * @method void setRegistrationStatus(boolean $RegistrationStatus) Set ICP filing status
  */
 class DomainSetList extends AbstractModel
 {
@@ -66,12 +70,24 @@ class DomainSetList extends AbstractModel
     public $NetType;
 
     /**
+     * @var boolean Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     */
+    public $IsForcedHttps;
+
+    /**
+     * @var boolean ICP filing status
+     */
+    public $RegistrationStatus;
+
+    /**
      * @param string $DomainName Domain name.
      * @param integer $Status Domain name resolution status. True: success; False: failure.
      * @param string $CertificateId Certificate ID.
      * @param boolean $IsDefaultMapping Whether the default path mapping is used.
      * @param string $Protocol Custom domain name protocol type.
      * @param string $NetType Network type. Valid values: INNER, OUTER.
+     * @param boolean $IsForcedHttps Whether to force HTTP requests to redirect to HTTPS. Default value: `false`. When this parameter is `true`, API Gateway will redirect all requests using the custom domain name over the HTTP protocol to the HTTPS protocol for forwarding.
+     * @param boolean $RegistrationStatus ICP filing status
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class DomainSetList extends AbstractModel
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("IsForcedHttps",$param) and $param["IsForcedHttps"] !== null) {
+            $this->IsForcedHttps = $param["IsForcedHttps"];
+        }
+
+        if (array_key_exists("RegistrationStatus",$param) and $param["RegistrationStatus"] !== null) {
+            $this->RegistrationStatus = $param["RegistrationStatus"];
         }
     }
 }

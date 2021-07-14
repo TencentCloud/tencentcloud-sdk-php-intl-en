@@ -18,20 +18,18 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateCosTokenV2 request structure.
+ * GenerateDownloadUrl request structure.
  *
  * @method string getServiceId() Obtain Service ID
  * @method void setServiceId(string $ServiceId) Set Service ID
- * @method string getPkgName() Obtain Package name
- * @method void setPkgName(string $PkgName) Set Package name
- * @method integer getOptType() Obtain optType. 1: upload; 2: query
- * @method void setOptType(integer $OptType) Set optType. 1: upload; 2: query
+ * @method string getPkgName() Obtain Package Name
+ * @method void setPkgName(string $PkgName) Set Package Name
+ * @method string getDeployVersion() Obtain Version of the package to download
+ * @method void setDeployVersion(string $DeployVersion) Set Version of the package to download
  * @method integer getSourceChannel() Obtain Source channel
  * @method void setSourceChannel(integer $SourceChannel) Set Source channel
- * @method string getTimeVersion() Obtain Input parameter of `deployVersion`
- * @method void setTimeVersion(string $TimeVersion) Set Input parameter of `deployVersion`
  */
-class CreateCosTokenV2Request extends AbstractModel
+class GenerateDownloadUrlRequest extends AbstractModel
 {
     /**
      * @var string Service ID
@@ -39,14 +37,14 @@ class CreateCosTokenV2Request extends AbstractModel
     public $ServiceId;
 
     /**
-     * @var string Package name
+     * @var string Package Name
      */
     public $PkgName;
 
     /**
-     * @var integer optType. 1: upload; 2: query
+     * @var string Version of the package to download
      */
-    public $OptType;
+    public $DeployVersion;
 
     /**
      * @var integer Source channel
@@ -54,16 +52,10 @@ class CreateCosTokenV2Request extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var string Input parameter of `deployVersion`
-     */
-    public $TimeVersion;
-
-    /**
      * @param string $ServiceId Service ID
-     * @param string $PkgName Package name
-     * @param integer $OptType optType. 1: upload; 2: query
+     * @param string $PkgName Package Name
+     * @param string $DeployVersion Version of the package to download
      * @param integer $SourceChannel Source channel
-     * @param string $TimeVersion Input parameter of `deployVersion`
      */
     function __construct()
     {
@@ -86,16 +78,12 @@ class CreateCosTokenV2Request extends AbstractModel
             $this->PkgName = $param["PkgName"];
         }
 
-        if (array_key_exists("OptType",$param) and $param["OptType"] !== null) {
-            $this->OptType = $param["OptType"];
+        if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
+            $this->DeployVersion = $param["DeployVersion"];
         }
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
-        }
-
-        if (array_key_exists("TimeVersion",$param) and $param["TimeVersion"] !== null) {
-            $this->TimeVersion = $param["TimeVersion"];
         }
     }
 }

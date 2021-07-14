@@ -34,6 +34,7 @@ use TencentCloud\Tem\V20201221\Models as Models;
  * @method Models\DescribeNamespacesResponse DescribeNamespaces(Models\DescribeNamespacesRequest $req) This API is used to get the list of tenant environments.
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) This API is used to query the list of ingress rules associated with the service.
  * @method Models\DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2(Models\DescribeServiceRunPodListV2Request $req) This API is used to get the list of running pods under a service.
+ * @method Models\GenerateDownloadUrlResponse GenerateDownloadUrl(Models\GenerateDownloadUrlRequest $req) Generate the pre-signed download URL for the specified package
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) This API is used to create or update an ingress rule.
  * @method Models\ModifyNamespaceResponse ModifyNamespace(Models\ModifyNamespaceRequest $req) This API is used to edit an environment.
  * @method Models\ModifyServiceInfoResponse ModifyServiceInfo(Models\ModifyServiceInfoRequest $req) This API is used to modify a service’s basic information.

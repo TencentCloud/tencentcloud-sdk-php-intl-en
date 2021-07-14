@@ -18,36 +18,36 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Mounting configuration information 
  *
- * @method string getConfigDataName() Obtain 
- * @method void setConfigDataName(string $ConfigDataName) Set 
- * @method string getMountedPath() Obtain 
- * @method void setMountedPath(string $MountedPath) Set 
- * @method array getData() Obtain 
- * @method void setData(array $Data) Set 
+ * @method string getConfigDataName() Obtain Configuration Name
+ * @method void setConfigDataName(string $ConfigDataName) Set Configuration Name
+ * @method string getMountedPath() Obtain Mount point path
+ * @method void setMountedPath(string $MountedPath) Set Mount point path
+ * @method array getData() Obtain Configuration Content
+ * @method void setData(array $Data) Set Configuration Content
  */
 class MountedSettingConf extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Configuration Name
      */
     public $ConfigDataName;
 
     /**
-     * @var string 
+     * @var string Mount point path
      */
     public $MountedPath;
 
     /**
-     * @var array 
+     * @var array Configuration Content
      */
     public $Data;
 
     /**
-     * @param string $ConfigDataName 
-     * @param string $MountedPath 
-     * @param array $Data 
+     * @param string $ConfigDataName Configuration Name
+     * @param string $MountedPath Mount point path
+     * @param array $Data Configuration Content
      */
     function __construct()
     {

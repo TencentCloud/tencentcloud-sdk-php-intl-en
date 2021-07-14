@@ -84,10 +84,12 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setPortMappings(array $PortMappings) Set Service port mapping.
  * @method boolean getUseRegistryDefaultConfig() Obtain Whether to add the registry’s default configurations.
  * @method void setUseRegistryDefaultConfig(boolean $UseRegistryDefaultConfig) Set Whether to add the registry’s default configurations.
- * @method array getSettingConfs() Obtain 
- * @method void setSettingConfs(array $SettingConfs) Set 
- * @method EksService getEksService() Obtain 
- * @method void setEksService(EksService $EksService) Set 
+ * @method array getSettingConfs() Obtain Mounting configurations
+ * @method void setSettingConfs(array $SettingConfs) Set Mounting configurations
+ * @method EksService getEksService() Obtain EKS access configuration
+ * @method void setEksService(EksService $EksService) Set EKS access configuration
+ * @method string getVersionId() Obtain ID of the version that you want to roll back to
+ * @method void setVersionId(string $VersionId) Set ID of the version that you want to roll back to
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -228,14 +230,19 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $UseRegistryDefaultConfig;
 
     /**
-     * @var array 
+     * @var array Mounting configurations
      */
     public $SettingConfs;
 
     /**
-     * @var EksService 
+     * @var EksService EKS access configuration
      */
     public $EksService;
+
+    /**
+     * @var string ID of the version that you want to roll back to
+     */
+    public $VersionId;
 
     /**
      * @param string $ServiceId Service ID
@@ -270,8 +277,9 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param array $ImageArgs Image command parameters
      * @param array $PortMappings Service port mapping.
      * @param boolean $UseRegistryDefaultConfig Whether to add the registry’s default configurations.
-     * @param array $SettingConfs 
-     * @param EksService $EksService 
+     * @param array $SettingConfs Mounting configurations
+     * @param EksService $EksService EKS access configuration
+     * @param string $VersionId ID of the version that you want to roll back to
      */
     function __construct()
     {
@@ -424,6 +432,10 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (array_key_exists("EksService",$param) and $param["EksService"] !== null) {
             $this->EksService = new EksService();
             $this->EksService->deserialize($param["EksService"]);
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
         }
     }
 }

@@ -18,100 +18,144 @@ namespace TencentCloud\Tem\V20201221\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * eks service info
+ * EKS service information
  *
- * @method string getName() Obtain service name
- * @method void setName(string $Name) Set service name
- * @method array getPorts() Obtain 
- * @method void setPorts(array $Ports) Set 
- * @method string getYaml() Obtain 
- * @method void setYaml(string $Yaml) Set 
- * @method string getServiceName() Obtain 
- * @method void setServiceName(string $ServiceName) Set 
- * @method string getVersionName() Obtain 
- * @method void setVersionName(string $VersionName) Set 
- * @method array getClusterIp() Obtain 
- * @method void setClusterIp(array $ClusterIp) Set 
- * @method string getExternalIp() Obtain 
- * @method void setExternalIp(string $ExternalIp) Set 
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getSubnetId() Obtain 
- * @method void setSubnetId(string $SubnetId) Set 
- * @method string getLoadBalanceId() Obtain 
- * @method void setLoadBalanceId(string $LoadBalanceId) Set 
- * @method array getPortMappings() Obtain 
- * @method void setPortMappings(array $PortMappings) Set 
+ * @method string getName() Obtain Service name
+ * @method void setName(string $Name) Set Service name
+ * @method array getPorts() Obtain Available ports
+ * @method void setPorts(array $Ports) Set Available ports
+ * @method string getYaml() Obtain Yaml contents
+ * @method void setYaml(string $Yaml) Set Yaml contents
+ * @method string getServiceName() Obtain Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setServiceName(string $ServiceName) Set Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getVersionName() Obtain Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setVersionName(string $VersionName) Set Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method array getClusterIp() Obtain Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setClusterIp(array $ClusterIp) Set Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getExternalIp() Obtain Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setExternalIp(string $ExternalIp) Set Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getType() Obtain The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setType(string $Type) Set The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSubnetId() Obtain Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getLoadBalanceId() Obtain Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setLoadBalanceId(string $LoadBalanceId) Set Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getPortMappings() Obtain Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPortMappings(array $PortMappings) Set Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class EksService extends AbstractModel
 {
     /**
-     * @var string service name
+     * @var string Service name
      */
     public $Name;
 
     /**
-     * @var array 
+     * @var array Available ports
      */
     public $Ports;
 
     /**
-     * @var string 
+     * @var string Yaml contents
      */
     public $Yaml;
 
     /**
-     * @var string 
+     * @var string Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $ServiceName;
 
     /**
-     * @var string 
+     * @var string Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $VersionName;
 
     /**
-     * @var array 
+     * @var array Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $ClusterIp;
 
     /**
-     * @var string 
+     * @var string Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $ExternalIp;
 
     /**
-     * @var string 
+     * @var string The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $SubnetId;
 
     /**
-     * @var string 
+     * @var string Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     public $LoadBalanceId;
 
     /**
-     * @var array 
+     * @var array Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $PortMappings;
 
     /**
-     * @param string $Name service name
-     * @param array $Ports 
-     * @param string $Yaml 
-     * @param string $ServiceName 
-     * @param string $VersionName 
-     * @param array $ClusterIp 
-     * @param string $ExternalIp 
-     * @param string $Type 
-     * @param string $SubnetId 
-     * @param string $LoadBalanceId 
-     * @param array $PortMappings 
+     * @param string $Name Service name
+     * @param array $Ports Available ports
+     * @param string $Yaml Yaml contents
+     * @param string $ServiceName Service name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $VersionName Version name
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param array $ClusterIp Private IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ExternalIp Public IP
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Type The access type. Valid values:
+- EXTERNAL (internet access)
+- VPC（Intra-VPC access)
+- CLUSTER (Intra-cluster access)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SubnetId Subnet ID. It is filled when the access type is `VPC`.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $LoadBalanceId Load balancer ID. It is filled when the access type is `EXTERNAL` or `CLUSTER`. It’s created automatically by default.
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $PortMappings Port Mapping
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
