@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method string getDayTime() Obtain Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
- * @method void setDayTime(string $DayTime) Set Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+ * @method string getDayTime() Obtain Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
+ * @method void setDayTime(string $DayTime) Set Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
  * @method integer getPageNum() Obtain Number of pages. Default value: 1.
 Up to 100 pages.
  * @method void setPageNum(integer $PageNum) Set Number of pages. Default value: 1.
@@ -44,12 +44,12 @@ Note: details for the last month can be queried.
  * @method void setStartDayTime(string $StartDayTime) Set Start day time (Beijing time),
 In the format of `yyyymmdd`.
 Note: details for the last month can be queried.
- * @method string getEndDayTime() Obtain End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
- * @method void setEndDayTime(string $EndDayTime) Set End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+ * @method string getEndDayTime() Obtain End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
+ * @method void setEndDayTime(string $EndDayTime) Set End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
  */
 class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
 {
@@ -64,9 +64,9 @@ class DescribeLiveTranscodeDetailInfoRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+     * @var string Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
      */
     public $DayTime;
 
@@ -90,18 +90,18 @@ Note: details for the last month can be queried.
     public $StartDayTime;
 
     /**
-     * @var string End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+     * @var string End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     public $EndDayTime;
 
     /**
      * @param string $PushDomain Push domain name.
      * @param string $StreamName Stream name.
-     * @param string $DayTime Start time (Beijing time).
-In the format of `yyyymmdd`.
-Note: details for a specified day in the last month can be queried.
+     * @param string $DayTime Query date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a day in the past month, with yesterday as the latest date allowed.
      * @param integer $PageNum Number of pages. Default value: 1.
 Up to 100 pages.
      * @param integer $PageSize Number of entries per page. Default value: 20,
@@ -109,9 +109,9 @@ Value range: [10,1000].
      * @param string $StartDayTime Start day time (Beijing time),
 In the format of `yyyymmdd`.
 Note: details for the last month can be queried.
-     * @param string $EndDayTime End day time (Beijing time),
-In the format of `yyyymmdd`.
-Note: detailed data for the last month can be queried. Either `DayTime` or `(StartDayTime,EndDayTime)` must be passed in. If both are passed in, `DayTime` shall prevail.
+     * @param string $EndDayTime End date (UTC+8)
+Format: yyyymmdd
+Note: you can query the statistics for a period in the past month, with yesterday as the latest date allowed. You must specify either `DayTime`, or `StartDayTime` and `EndDayTime`. If you specify all three parameters, only `DayTime` will be applied.
      */
     function __construct()
     {

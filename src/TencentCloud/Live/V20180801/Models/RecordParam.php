@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Recording template parameter.
  *
- * @method integer getRecordInterval() Obtain Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
- * @method void setRecordInterval(integer $RecordInterval) Set Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
- * @method integer getStorageTime() Obtain Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
- * @method void setStorageTime(integer $StorageTime) Set Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+ * @method integer getRecordInterval() Obtain Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+ * @method void setRecordInterval(integer $RecordInterval) Set Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+ * @method integer getStorageTime() Obtain Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
+ * @method void setStorageTime(integer $StorageTime) Set Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
  * @method integer getEnable() Obtain Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
  * @method void setEnable(integer $Enable) Set Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
  * @method integer getVodSubAppId() Obtain VOD subapplication ID.
@@ -76,21 +76,37 @@ Supported special placeholders include:
 {EndMillisecond}: end time - millisecond
 
 If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
+ * @method string getProcedure() Obtain Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setProcedure(string $Procedure) Set Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getStorageMode() Obtain Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setStorageMode(string $StorageMode) Set Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getClassId() Obtain VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method void setClassId(integer $ClassId) Set VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
  */
 class RecordParam extends AbstractModel
 {
     /**
-     * @var integer Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
+     * @var integer Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public $RecordInterval;
 
     /**
-     * @var integer Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+     * @var integer Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
      */
     public $StorageTime;
 
@@ -128,13 +144,33 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
     public $VodFileName;
 
     /**
-     * @param integer $RecordInterval Recording interval.
-In seconds. Default value: 1800.
-Value range: 300-7200.
-This parameter is not valid for HLS, and a file will be generated from push start to interruption during HLS recording.
-     * @param integer $StorageTime Recording storage period.
-In seconds. Value range: 0-93312000.
-0: permanent storage.
+     * @var string Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $Procedure;
+
+    /**
+     * @var string Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $StorageMode;
+
+    /**
+     * @var integer VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
+     */
+    public $ClassId;
+
+    /**
+     * @param integer $RecordInterval Max recording time per file
+Default value: `1800` (seconds)
+Value range: 60-7200
+This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
+     * @param integer $StorageTime Storage duration of the recording file
+Value range: 0-129600000 seconds (0-1500 days)
+`0`: permanent
      * @param integer $Enable Whether to enable recording in the current format. Default value: 0. 0: no, 1: yes.
      * @param integer $VodSubAppId VOD subapplication ID.
      * @param string $VodFileName Recording filename.
@@ -156,6 +192,14 @@ Supported special placeholders include:
 {EndMillisecond}: end time - millisecond
 
 If this parameter is not set, the recording filename will be `{StreamID}_{StartYear}-{StartMonth}-{StartDay}-{StartHour}-{StartMinute}-{StartSecond}_{EndYear}-{EndMonth}-{EndDay}-{EndHour}-{EndMinute}-{EndSecond}` by default
+     * @param string $Procedure Task flow
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $StorageMode Video storage class. Valid values:
+`normal`: STANDARD
+`cold`: STANDARD_IA
+Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $ClassId VOD subapplication category
+Note: this field may return `null`, indicating that no valid value is obtained.
      */
     function __construct()
     {
@@ -188,6 +232,18 @@ If this parameter is not set, the recording filename will be `{StreamID}_{StartY
 
         if (array_key_exists("VodFileName",$param) and $param["VodFileName"] !== null) {
             $this->VodFileName = $param["VodFileName"];
+        }
+
+        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
+            $this->Procedure = $param["Procedure"];
+        }
+
+        if (array_key_exists("StorageMode",$param) and $param["StorageMode"] !== null) {
+            $this->StorageMode = $param["StorageMode"];
+        }
+
+        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
+            $this->ClassId = $param["ClassId"];
         }
     }
 }
