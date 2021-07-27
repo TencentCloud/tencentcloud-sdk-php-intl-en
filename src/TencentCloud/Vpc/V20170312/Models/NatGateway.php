@@ -56,6 +56,18 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSecurityGroupSet(array $SecurityGroupSet) Set The list of the security groups bound to the NAT Gateway
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSourceIpTranslationNatRuleSet() Obtain SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) Set SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getIsExclusive() Obtain Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIsExclusive(boolean $IsExclusive) Set Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getExclusiveGatewayBandwidth() Obtain Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) Set Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class NatGateway extends AbstractModel
 {
@@ -138,6 +150,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $SecurityGroupSet;
 
     /**
+     * @var array SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SourceIpTranslationNatRuleSet;
+
+    /**
+     * @var boolean Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $IsExclusive;
+
+    /**
+     * @var integer Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ExclusiveGatewayBandwidth;
+
+    /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
@@ -156,6 +186,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $TagSet Tag key-value pair.
      * @param array $SecurityGroupSet The list of the security groups bound to the NAT Gateway
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $IsExclusive Whether the NAT Gateway is dedicated.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -243,6 +279,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SecurityGroupSet",$param) and $param["SecurityGroupSet"] !== null) {
             $this->SecurityGroupSet = $param["SecurityGroupSet"];
+        }
+
+        if (array_key_exists("SourceIpTranslationNatRuleSet",$param) and $param["SourceIpTranslationNatRuleSet"] !== null) {
+            $this->SourceIpTranslationNatRuleSet = [];
+            foreach ($param["SourceIpTranslationNatRuleSet"] as $key => $value){
+                $obj = new SourceIpTranslationNatRule();
+                $obj->deserialize($value);
+                array_push($this->SourceIpTranslationNatRuleSet, $obj);
+            }
+        }
+
+        if (array_key_exists("IsExclusive",$param) and $param["IsExclusive"] !== null) {
+            $this->IsExclusive = $param["IsExclusive"];
+        }
+
+        if (array_key_exists("ExclusiveGatewayBandwidth",$param) and $param["ExclusiveGatewayBandwidth"] !== null) {
+            $this->ExclusiveGatewayBandwidth = $param["ExclusiveGatewayBandwidth"];
         }
     }
 }

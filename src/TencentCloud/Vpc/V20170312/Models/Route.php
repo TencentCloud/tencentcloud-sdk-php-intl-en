@@ -47,7 +47,9 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
  * @method void setGatewayId(string $GatewayId) Set Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
  * @method integer getRouteId() Obtain Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
  * @method void setRouteId(integer $RouteId) Set Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
  * @method string getRouteDescription() Obtain The description of the routing policy.
  * @method void setRouteDescription(string $RouteDescription) Set The description of the routing policy.
  * @method boolean getEnabled() Obtain Whether it is enabled
@@ -104,6 +106,7 @@ Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
 
     /**
      * @var integer Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
      */
     public $RouteId;
 
@@ -167,6 +170,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $GatewayId Next hop address. You simply need to specify the gateway ID of a different next hop type, and the system will automatically match the next hop address.
 Important note: When the GatewayType is EIP, the GatewayId has a fixed value `0`
      * @param integer $RouteId Routing policy ID. The IPv4 routing policy will have a meaningful value, while the IPv6 routing policy is always 0. We recommend using the unique ID `RouteItemId` for the routing policy.
+This field is required when you want to delete a routing policy.
      * @param string $RouteDescription The description of the routing policy.
      * @param boolean $Enabled Whether it is enabled
      * @param string $RouteType The route type. Currently, the following types are supported:

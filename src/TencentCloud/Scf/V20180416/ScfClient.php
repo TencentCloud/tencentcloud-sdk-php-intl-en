@@ -52,6 +52,7 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) This API is used to get the provisioned concurrency details of a function or its specified version.
  * @method Models\GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(Models\GetReservedConcurrencyConfigRequest $req) This API is used to get the reserved concurrency details of a function.
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) This API is used to run a function.
+ * @method Models\InvokeFunctionResponse InvokeFunction(Models\InvokeFunctionRequest $req)  This API is used to invoke functions synchronously.
  * @method Models\ListAliasesResponse ListAliases(Models\ListAliasesRequest $req) This API is used to return the list of all aliases under a function. You can filter them by the specific function version.
  * @method Models\ListAsyncEventsResponse ListAsyncEvents(Models\ListAsyncEventsRequest $req) This API is used to pull the list of async function events.
  * @method Models\ListFunctionsResponse ListFunctions(Models\ListFunctionsRequest $req) This API is used to return relevant function information based on the input query parameters.

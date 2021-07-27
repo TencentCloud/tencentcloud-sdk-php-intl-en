@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
  * @method void setClearDataDisks(boolean $ClearDataDisks) Set Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+ * @method boolean getClearHostNameSettings() Obtain Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+ * @method void setClearHostNameSettings(boolean $ClearHostNameSettings) Set Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+ * @method boolean getClearInstanceNameSettings() Obtain Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+ * @method void setClearInstanceNameSettings(boolean $ClearInstanceNameSettings) Set Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
  */
 class ClearLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -41,9 +49,25 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
     public $ClearDataDisks;
 
     /**
+     * @var boolean Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     */
+    public $ClearHostNameSettings;
+
+    /**
+     * @var boolean Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
+     */
+    public $ClearInstanceNameSettings;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param boolean $ClearDataDisks Whether to clear data disk information. This parameter is optional and the default value is `false`.
 Setting it to `true` will clear data disks, which means that CVM newly created on this launch configuration will have no data disk.
+     * @param boolean $ClearHostNameSettings Whether to clear the CVM hostname settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the hostname settings, which means that CVM newly created on this launch configuration will have no hostname.
+     * @param boolean $ClearInstanceNameSettings Whether to clear the CVM instance name settings. This parameter is optional and the default value is `false`.
+Setting it to `true` will clear the instance name settings, which means that CVM newly created on this launch configuration will be named in the “as-{{AutoScalingGroupName}} format.
      */
     function __construct()
     {
@@ -64,6 +88,14 @@ Setting it to `true` will clear data disks, which means that CVM newly created o
 
         if (array_key_exists("ClearDataDisks",$param) and $param["ClearDataDisks"] !== null) {
             $this->ClearDataDisks = $param["ClearDataDisks"];
+        }
+
+        if (array_key_exists("ClearHostNameSettings",$param) and $param["ClearHostNameSettings"] !== null) {
+            $this->ClearHostNameSettings = $param["ClearHostNameSettings"];
+        }
+
+        if (array_key_exists("ClearInstanceNameSettings",$param) and $param["ClearInstanceNameSettings"] !== null) {
+            $this->ClearInstanceNameSettings = $param["ClearInstanceNameSettings"];
         }
     }
 }

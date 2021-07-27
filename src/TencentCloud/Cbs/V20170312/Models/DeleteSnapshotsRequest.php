@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getSnapshotIds() Obtain List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
  * @method void setSnapshotIds(array $SnapshotIds) Set List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+ * @method boolean getDeleteBindImages() Obtain Whether to forcibly delete the image associated with the snapshot
+ * @method void setDeleteBindImages(boolean $DeleteBindImages) Set Whether to forcibly delete the image associated with the snapshot
  */
 class DeleteSnapshotsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteSnapshotsRequest extends AbstractModel
     public $SnapshotIds;
 
     /**
+     * @var boolean Whether to forcibly delete the image associated with the snapshot
+     */
+    public $DeleteBindImages;
+
+    /**
      * @param array $SnapshotIds List of IDs of snapshots to be deleted, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
+     * @param boolean $DeleteBindImages Whether to forcibly delete the image associated with the snapshot
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteSnapshotsRequest extends AbstractModel
         }
         if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
             $this->SnapshotIds = $param["SnapshotIds"];
+        }
+
+        if (array_key_exists("DeleteBindImages",$param) and $param["DeleteBindImages"] !== null) {
+            $this->DeleteBindImages = $param["DeleteBindImages"];
         }
     }
 }

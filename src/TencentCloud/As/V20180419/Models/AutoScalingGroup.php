@@ -76,6 +76,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZoneSubnetPolicy(string $MultiZoneSubnetPolicy) Set The policy applied when there are multiple availability zones/subnets
 <br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
 <br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+ * @method string getHealthCheckType() Obtain Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+ * @method void setHealthCheckType(string $HealthCheckType) Set Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+ * @method integer getLoadBalancerHealthCheckGracePeriod() Obtain Grace period of the CLB health check
+ * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) Set Grace period of the CLB health check
+ * @method string getInstanceAllocationPolicy() Obtain 
+ * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) Set 
+ * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() Obtain 
+ * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) Set 
+ * @method boolean getCapacityRebalance() Obtain 
+ * @method void setCapacityRebalance(boolean $CapacityRebalance) Set 
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -212,6 +222,31 @@ class AutoScalingGroup extends AbstractModel
     public $MultiZoneSubnetPolicy;
 
     /**
+     * @var string Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     */
+    public $HealthCheckType;
+
+    /**
+     * @var integer Grace period of the CLB health check
+     */
+    public $LoadBalancerHealthCheckGracePeriod;
+
+    /**
+     * @var string 
+     */
+    public $InstanceAllocationPolicy;
+
+    /**
+     * @var SpotMixedAllocationPolicy 
+     */
+    public $SpotMixedAllocationPolicy;
+
+    /**
+     * @var boolean 
+     */
+    public $CapacityRebalance;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name
      * @param string $AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
@@ -240,6 +275,11 @@ class AutoScalingGroup extends AbstractModel
      * @param string $MultiZoneSubnetPolicy The policy applied when there are multiple availability zones/subnets
 <br><li> PRIORITY: when creating instances, choose the availability zone/subnet based on the order in the list from top to bottom. If the first instance is successfully created in the availability zone/subnet of the highest priority, all instances will be created in this availability zone/subnet.
 <br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
+     * @param string $HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
+     * @param integer $LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     * @param string $InstanceAllocationPolicy 
+     * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy 
+     * @param boolean $CapacityRebalance 
      */
     function __construct()
     {
@@ -367,6 +407,27 @@ class AutoScalingGroup extends AbstractModel
 
         if (array_key_exists("MultiZoneSubnetPolicy",$param) and $param["MultiZoneSubnetPolicy"] !== null) {
             $this->MultiZoneSubnetPolicy = $param["MultiZoneSubnetPolicy"];
+        }
+
+        if (array_key_exists("HealthCheckType",$param) and $param["HealthCheckType"] !== null) {
+            $this->HealthCheckType = $param["HealthCheckType"];
+        }
+
+        if (array_key_exists("LoadBalancerHealthCheckGracePeriod",$param) and $param["LoadBalancerHealthCheckGracePeriod"] !== null) {
+            $this->LoadBalancerHealthCheckGracePeriod = $param["LoadBalancerHealthCheckGracePeriod"];
+        }
+
+        if (array_key_exists("InstanceAllocationPolicy",$param) and $param["InstanceAllocationPolicy"] !== null) {
+            $this->InstanceAllocationPolicy = $param["InstanceAllocationPolicy"];
+        }
+
+        if (array_key_exists("SpotMixedAllocationPolicy",$param) and $param["SpotMixedAllocationPolicy"] !== null) {
+            $this->SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy();
+            $this->SpotMixedAllocationPolicy->deserialize($param["SpotMixedAllocationPolicy"]);
+        }
+
+        if (array_key_exists("CapacityRebalance",$param) and $param["CapacityRebalance"] !== null) {
+            $this->CapacityRebalance = $param["CapacityRebalance"];
         }
     }
 }
