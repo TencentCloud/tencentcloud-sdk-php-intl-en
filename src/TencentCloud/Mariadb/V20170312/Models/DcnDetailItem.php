@@ -42,6 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDcnFlag(integer $DcnFlag) Set DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
  * @method integer getDcnStatus() Obtain DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
  * @method void setDcnStatus(integer $DcnStatus) Set DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
+ * @method integer getCpu() Obtain Number of CPU cores of the instance
+ * @method void setCpu(integer $Cpu) Set Number of CPU cores of the instance
+ * @method integer getMemory() Obtain Instance memory capacity in GB
+ * @method void setMemory(integer $Memory) Set Instance memory capacity in GB
+ * @method integer getStorage() Obtain Instance storage capacity in GB
+ * @method void setStorage(integer $Storage) Set Instance storage capacity in GB
+ * @method integer getPayMode() Obtain Billing mode
+ * @method void setPayMode(integer $PayMode) Set Billing mode
+ * @method string getCreateTime() Obtain Creation time of the instance in the format of 2006-01-02 15:04:05
+ * @method void setCreateTime(string $CreateTime) Set Creation time of the instance in the format of 2006-01-02 15:04:05
+ * @method string getPeriodEndTime() Obtain Expiration time of the instance in the format of 2006-01-02 15:04:05
+ * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time of the instance in the format of 2006-01-02 15:04:05
+ * @method integer getInstanceType() Obtain Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), `4` (dedicated disaster recovery instance)
+ * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), `4` (dedicated disaster recovery instance)
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -101,6 +115,41 @@ class DcnDetailItem extends AbstractModel
     public $DcnStatus;
 
     /**
+     * @var integer Number of CPU cores of the instance
+     */
+    public $Cpu;
+
+    /**
+     * @var integer Instance memory capacity in GB
+     */
+    public $Memory;
+
+    /**
+     * @var integer Instance storage capacity in GB
+     */
+    public $Storage;
+
+    /**
+     * @var integer Billing mode
+     */
+    public $PayMode;
+
+    /**
+     * @var string Creation time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public $CreateTime;
+
+    /**
+     * @var string Expiration time of the instance in the format of 2006-01-02 15:04:05
+     */
+    public $PeriodEndTime;
+
+    /**
+     * @var integer Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), `4` (dedicated disaster recovery instance)
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region where the instance resides
@@ -112,6 +161,13 @@ class DcnDetailItem extends AbstractModel
      * @param string $StatusDesc Instance status description
      * @param integer $DcnFlag DCN flag. Valid values: `1` (primary), `2` (disaster recovery)
      * @param integer $DcnStatus DCN status. Valid values: `0` (none), `1` (creating), `2` (syncing), `3` (disconnected)
+     * @param integer $Cpu Number of CPU cores of the instance
+     * @param integer $Memory Instance memory capacity in GB
+     * @param integer $Storage Instance storage capacity in GB
+     * @param integer $PayMode Billing mode
+     * @param string $CreateTime Creation time of the instance in the format of 2006-01-02 15:04:05
+     * @param string $PeriodEndTime Expiration time of the instance in the format of 2006-01-02 15:04:05
+     * @param integer $InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), `4` (dedicated disaster recovery instance)
      */
     function __construct()
     {
@@ -168,6 +224,34 @@ class DcnDetailItem extends AbstractModel
 
         if (array_key_exists("DcnStatus",$param) and $param["DcnStatus"] !== null) {
             $this->DcnStatus = $param["DcnStatus"];
+        }
+
+        if (array_key_exists("Cpu",$param) and $param["Cpu"] !== null) {
+            $this->Cpu = $param["Cpu"];
+        }
+
+        if (array_key_exists("Memory",$param) and $param["Memory"] !== null) {
+            $this->Memory = $param["Memory"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
+            $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
+            $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("PeriodEndTime",$param) and $param["PeriodEndTime"] !== null) {
+            $this->PeriodEndTime = $param["PeriodEndTime"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderByType(string $OrderByType) Set Sort order
  * @method array getVips() Obtain List of instance VIPs
  * @method void setVips(array $Vips) Set List of instance VIPs
- * @method array getUniqVpcIds() Obtain List of unique VPC IDs
- * @method void setUniqVpcIds(array $UniqVpcIds) Set List of unique VPC IDs
+ * @method array getUniqVpcIds() Obtain List of VPC IDs
+ * @method void setUniqVpcIds(array $UniqVpcIds) Set List of VPC IDs
  * @method array getUniqSubnetIds() Obtain List of unique subnet IDs
  * @method void setUniqSubnetIds(array $UniqSubnetIds) Set List of unique subnet IDs
  * @method integer getLimit() Obtain Quantity limit. The default value `100` is recommended.
@@ -95,7 +95,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $Vips;
 
     /**
-     * @var array List of unique VPC IDs
+     * @var array List of VPC IDs
      */
     public $UniqVpcIds;
 
@@ -124,7 +124,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
      * @param string $OrderBy Sort field
      * @param string $OrderByType Sort order
      * @param array $Vips List of instance VIPs
-     * @param array $UniqVpcIds List of unique VPC IDs
+     * @param array $UniqVpcIds List of VPC IDs
      * @param array $UniqSubnetIds List of unique subnet IDs
      * @param integer $Limit Quantity limit. The default value `100` is recommended.
      * @param integer $Offset Offset. Default value: 0

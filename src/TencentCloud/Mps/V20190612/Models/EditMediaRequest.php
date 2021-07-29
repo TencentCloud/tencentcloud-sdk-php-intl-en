@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage of video processing output file.
  * @method string getOutputObjectPath() Obtain Target path of video processing output file.
  * @method void setOutputObjectPath(string $OutputObjectPath) Set Target path of video processing output file.
+ * @method EditMediaOutputConfig getOutputConfig() Obtain Configuration for output files of video editing
+ * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set Configuration for output files of video editing
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
  * @method void setTaskNotifyConfig(TaskNotifyConfig $TaskNotifyConfig) Set Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
  * @method integer getTasksPriority() Obtain Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
@@ -53,6 +55,11 @@ class EditMediaRequest extends AbstractModel
     public $OutputObjectPath;
 
     /**
+     * @var EditMediaOutputConfig Configuration for output files of video editing
+     */
+    public $OutputConfig;
+
+    /**
      * @var TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
      */
     public $TaskNotifyConfig;
@@ -76,6 +83,7 @@ class EditMediaRequest extends AbstractModel
      * @param array $FileInfos Information of input video file.
      * @param TaskOutputStorage $OutputStorage Target storage of video processing output file.
      * @param string $OutputObjectPath Target path of video processing output file.
+     * @param EditMediaOutputConfig $OutputConfig Configuration for output files of video editing
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
      * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
@@ -110,6 +118,11 @@ class EditMediaRequest extends AbstractModel
 
         if (array_key_exists("OutputObjectPath",$param) and $param["OutputObjectPath"] !== null) {
             $this->OutputObjectPath = $param["OutputObjectPath"];
+        }
+
+        if (array_key_exists("OutputConfig",$param) and $param["OutputConfig"] !== null) {
+            $this->OutputConfig = new EditMediaOutputConfig();
+            $this->OutputConfig->deserialize($param["OutputConfig"]);
         }
 
         if (array_key_exists("TaskNotifyConfig",$param) and $param["TaskNotifyConfig"] !== null) {

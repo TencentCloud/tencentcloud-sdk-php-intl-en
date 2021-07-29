@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(integer $SubnetId) Set Subnet Digital ID
  * @method string getStatusDesc() Obtain Status description
  * @method void setStatusDesc(string $StatusDesc) Set Status description
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+ * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
  * @method string getVip() Obtain Private IP
  * @method void setVip(string $Vip) Set Private IP
  * @method integer getVport() Obtain Private network port
@@ -185,7 +185,7 @@ class DCDBInstanceInfo extends AbstractModel
     public $StatusDesc;
 
     /**
-     * @var integer Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+     * @var integer Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
      */
     public $Status;
 
@@ -399,7 +399,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $VpcId Numeric ID of a VPC
      * @param integer $SubnetId Subnet Digital ID
      * @param string $StatusDesc Status description
-     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
      * @param string $Vip Private IP
      * @param integer $Vport Private network port
      * @param string $CreateTime Creation time

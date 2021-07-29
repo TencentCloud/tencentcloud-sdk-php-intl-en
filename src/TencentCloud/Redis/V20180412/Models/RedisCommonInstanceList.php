@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Instance network ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running)
- * @method void setStatus(string $Status) Set Instance status. Valid values: `0` (creating), `1` (running)
+ * @method string getStatus() Obtain Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+ * @method void setStatus(string $Status) Set Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
  * @method array getVips() Obtain Instance network IP
  * @method void setVips(array $Vips) Set Instance network IP
  * @method integer getVport() Obtain Instance network port
@@ -92,7 +92,7 @@ class RedisCommonInstanceList extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Instance status. Valid values: `0` (creating), `1` (running)
+     * @var string Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
      */
     public $Status;
 
@@ -130,7 +130,7 @@ class RedisCommonInstanceList extends AbstractModel
      * @param string $Zone Instance availability zone
      * @param string $VpcId Instance network ID
      * @param string $SubnetId Subnet ID
-     * @param string $Status Instance status. Valid values: `0` (creating), `1` (running)
+     * @param string $Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
      * @param array $Vips Instance network IP
      * @param integer $Vport Instance network port
      * @param string $Createtime Instance creation time

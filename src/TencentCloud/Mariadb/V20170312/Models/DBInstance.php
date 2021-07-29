@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) Set VPC ID, which is 0 if the basic network is used
  * @method integer getSubnetId() Obtain Subnet ID, which is 0 if the basic network is used
  * @method void setSubnetId(integer $SubnetId) Set Subnet ID, which is 0 if the basic network is used
- * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
- * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+ * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
  * @method string getVip() Obtain Private IP address
  * @method void setVip(string $Vip) Set Private IP address
  * @method integer getVport() Obtain Private network port
@@ -192,7 +192,7 @@ class DBInstance extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+     * @var integer Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
      */
     public $Status;
 
@@ -424,7 +424,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Zone Instance AZ name, such as ap-guangzhou-1
      * @param integer $VpcId VPC ID, which is 0 if the basic network is used
      * @param integer $SubnetId Subnet ID, which is 0 if the basic network is used
-     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `-2` (eliminated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
+     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running task), `2` (running), `3` (uninitialized), `-1` (isolated), `4` (initializing), `5` (eliminating), `6` (restarting), `7` (migrating data)
      * @param string $Vip Private IP address
      * @param integer $Vport Private network port
      * @param string $WanDomain Domain name for public network access, which can be resolved by the public network
