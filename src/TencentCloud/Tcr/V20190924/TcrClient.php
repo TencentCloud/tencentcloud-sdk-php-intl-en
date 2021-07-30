@@ -23,8 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tcr\V20190924\Models as Models;
 
 /**
+ * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) This API is used to verify the information of the Enterprise Edition instance.
+ * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) This API is used to create the tag immutability rule.
  * @method Models\CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicy(Models\CreateMultipleSecurityPolicyRequest $req) This API is used to create multiple public network access allowlist policies of the TCR instance.
+ * @method Models\DeleteImmutableTagRulesResponse DeleteImmutableTagRules(Models\DeleteImmutableTagRulesRequest $req)  This API is used to delete the tag immutability rule.
  * @method Models\DeleteMultipleSecurityPolicyResponse DeleteMultipleSecurityPolicy(Models\DeleteMultipleSecurityPolicyRequest $req) This API is used to delete multiple public network access allowlist policies of the instance.
+ * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) This API is used to list the tag immutability rule.
+ * @method Models\ModifyImmutableTagRulesResponse ModifyImmutableTagRules(Models\ModifyImmutableTagRulesRequest $req) This API is used to update the tag immutability rule.
  */
 
 class TcrClient extends AbstractClient
