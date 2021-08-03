@@ -28,12 +28,32 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKmsKeyId(string $KmsKeyId) Set ID of the KMS CMK used for encryption.
  * @method integer getCreateUin() Obtain Creator UIN.
  * @method void setCreateUin(integer $CreateUin) Set Creator UIN.
- * @method string getStatus() Obtain Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
- * @method void setStatus(string $Status) Set Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+ * @method string getStatus() Obtain Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+ * @method void setStatus(string $Status) Set Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
  * @method integer getDeleteTime() Obtain Deletion time, formatted as a Unix timestamp. For a Secret that is not in `PendingDelete` status, this value is 0.
  * @method void setDeleteTime(integer $DeleteTime) Set Deletion time, formatted as a Unix timestamp. For a Secret that is not in `PendingDelete` status, this value is 0.
  * @method integer getCreateTime() Obtain Creation time.
  * @method void setCreateTime(integer $CreateTime) Set Creation time.
+ * @method integer getSecretType() Obtain 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSecretType(integer $SecretType) Set 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProductName() Obtain Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProductName(string $ProductName) Set Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceID() Obtain Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceID(string $ResourceID) Set Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getRotationStatus() Obtain Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRotationStatus(boolean $RotationStatus) Set Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRotationFrequency() Obtain Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRotationFrequency(integer $RotationFrequency) Set Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -60,7 +80,7 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateUin;
 
     /**
-     * @var string Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * @var string Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public $Status;
 
@@ -75,6 +95,36 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var integer 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SecretType;
+
+    /**
+     * @var string Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProductName;
+
+    /**
+     * @var string Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceID;
+
+    /**
+     * @var boolean Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RotationStatus;
+
+    /**
+     * @var integer Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RotationFrequency;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -84,9 +134,19 @@ class DescribeSecretResponse extends AbstractModel
      * @param string $Description Description of the Secret.
      * @param string $KmsKeyId ID of the KMS CMK used for encryption.
      * @param integer $CreateUin Creator UIN.
-     * @param string $Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * @param string $Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      * @param integer $DeleteTime Deletion time, formatted as a Unix timestamp. For a Secret that is not in `PendingDelete` status, this value is 0.
      * @param integer $CreateTime Creation time.
+     * @param integer $SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ProductName Tencent Cloud service name.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceID Tencent Cloud service instance ID.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $RotationStatus Whether to enable rotation. True: yes; False: no.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RotationFrequency Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -128,6 +188,26 @@ class DescribeSecretResponse extends AbstractModel
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
+            $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ResourceID",$param) and $param["ResourceID"] !== null) {
+            $this->ResourceID = $param["ResourceID"];
+        }
+
+        if (array_key_exists("RotationStatus",$param) and $param["RotationStatus"] !== null) {
+            $this->RotationStatus = $param["RotationStatus"];
+        }
+
+        if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
+            $this->RotationFrequency = $param["RotationFrequency"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

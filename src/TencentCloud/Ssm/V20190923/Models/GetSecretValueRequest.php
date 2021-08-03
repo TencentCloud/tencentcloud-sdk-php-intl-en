@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecretName() Obtain Name of a Secret.
  * @method void setSecretName(string $SecretName) Set Name of a Secret.
- * @method string getVersionId() Obtain ID of the Secret version.
- * @method void setVersionId(string $VersionId) Set ID of the Secret version.
+ * @method string getVersionId() Obtain Specifies the version number of the corresponding credential.
+For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
+ * @method void setVersionId(string $VersionId) Set Specifies the version number of the corresponding credential.
+For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
  */
 class GetSecretValueRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class GetSecretValueRequest extends AbstractModel
     public $SecretName;
 
     /**
-     * @var string ID of the Secret version.
+     * @var string Specifies the version number of the corresponding credential.
+For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
      */
     public $VersionId;
 
     /**
      * @param string $SecretName Name of a Secret.
-     * @param string $VersionId ID of the Secret version.
+     * @param string $VersionId Specifies the version number of the corresponding credential.
+For Tencent Cloud service credentials such as MySQL credentials, this API is used to get the plaintext information of a previously rotated credential by specifying the credential name and historical version number. If you want to get the plaintext of the credential version currently in use, you need to specify the version number as `SSM_Current`.
      */
     function __construct()
     {

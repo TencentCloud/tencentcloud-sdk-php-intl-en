@@ -24,7 +24,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
 
 /**
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) This API is used to associate security groups with Tencent Cloud resources in batches.
- * @method Models\CancelDcnJobResponse CancelDcnJob(Models\CancelDcnJobRequest $req) This API is used to cancel CDN synchronization.
+ * @method Models\CancelDcnJobResponse CancelDcnJob(Models\CancelDcnJobRequest $req) This API is used to cancel DCN synchronization.
  * @method Models\CloneAccountResponse CloneAccount(Models\CloneAccountRequest $req) This API is used to clone an instance account.
  * @method Models\CloseDBExtranetAccessResponse CloseDBExtranetAccess(Models\CloseDBExtranetAccessRequest $req) This API is used to disable public network access for a TencentDB instance, which will make the public IP address inaccessible. The `DescribeDCDBInstances` API will not return the public domain name and port information of the corresponding instance.
  * @method Models\CopyAccountPrivilegesResponse CopyAccountPrivileges(Models\CopyAccountPrivilegesRequest $req) This API is used to copy the permissions of a TencentDB account.

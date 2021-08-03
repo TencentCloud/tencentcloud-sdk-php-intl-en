@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) Set Name of a Secret where the version is added to.
  * @method string getVersionId() Obtain ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
  * @method void setVersionId(string $VersionId) Set ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
- * @method string getSecretBinary() Obtain Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
- * @method void setSecretBinary(string $SecretBinary) Set Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+ * @method string getSecretBinary() Obtain Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
+ * @method void setSecretBinary(string $SecretBinary) Set Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
  * @method string getSecretString() Obtain Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
  * @method void setSecretString(string $SecretString) Set Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
  */
@@ -42,7 +44,8 @@ class PutSecretValueRequest extends AbstractModel
     public $VersionId;
 
     /**
-     * @var string Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+     * @var string Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
      */
     public $SecretBinary;
 
@@ -54,7 +57,8 @@ class PutSecretValueRequest extends AbstractModel
     /**
      * @param string $SecretName Name of a Secret where the version is added to.
      * @param string $VersionId ID of the new Secret version. It can be up to 64 bytes, contain letters, digits, hyphens (-), and underscores (_), and must begin with a letter or digit.
-     * @param string $SecretBinary Binary Secret information that is base64-encoded. Either `SecretBinary` or `SecretString` must be set.
+     * @param string $SecretBinary Base64-encoded binary credential information.
+Either `SecretBinary` or `SecretString` must be set.
      * @param string $SecretString Secret information plaintext in text format, base64 encoding is not needed. Either `SecretBinary` or `SecretString` must be set.
      */
     function __construct()

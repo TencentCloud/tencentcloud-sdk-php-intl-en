@@ -20,74 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Basic information of the Secret.
  *
- * @method string getSecretName() Obtain Name of the Secret.
- * @method void setSecretName(string $SecretName) Set Name of the Secret.
- * @method string getDescription() Obtain Description of the Secret.
- * @method void setDescription(string $Description) Set Description of the Secret.
- * @method string getKmsKeyId() Obtain KMS Key ID used for Secret encryption.
- * @method void setKmsKeyId(string $KmsKeyId) Set KMS Key ID used for Secret encryption.
- * @method integer getCreateUin() Obtain Creator UIN.
- * @method void setCreateUin(integer $CreateUin) Set Creator UIN.
- * @method string getStatus() Obtain Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
- * @method void setStatus(string $Status) Set Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
- * @method integer getDeleteTime() Obtain Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
- * @method void setDeleteTime(integer $DeleteTime) Set Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
- * @method integer getCreateTime() Obtain Secret creation time, formatted as a Unix timestamp.
- * @method void setCreateTime(integer $CreateTime) Set Secret creation time, formatted as a Unix timestamp.
- * @method string getKmsKeyType() Obtain Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
- * @method void setKmsKeyType(string $KmsKeyType) Set Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+ * @method string getSecretName() Obtain Credential name
+ * @method void setSecretName(string $SecretName) Set Credential name
+ * @method string getDescription() Obtain Credential description
+ * @method void setDescription(string $Description) Set Credential description
+ * @method string getKmsKeyId() Obtain KMS `KeyId` used to encrypt the credential
+ * @method void setKmsKeyId(string $KmsKeyId) Set KMS `KeyId` used to encrypt the credential
+ * @method integer getCreateUin() Obtain Creator UIN
+ * @method void setCreateUin(integer $CreateUin) Set Creator UIN
+ * @method string getStatus() Obtain Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+ * @method void setStatus(string $Status) Set Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+ * @method integer getDeleteTime() Obtain Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
+ * @method void setDeleteTime(integer $DeleteTime) Set Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
+ * @method integer getCreateTime() Obtain Credential creation time in UNIX timestamp format
+ * @method void setCreateTime(integer $CreateTime) Set Credential creation time in UNIX timestamp format
+ * @method string getKmsKeyType() Obtain Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
+ * @method void setKmsKeyType(string $KmsKeyType) Set Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
+ * @method integer getRotationStatus() Obtain 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setRotationStatus(integer $RotationStatus) Set 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getNextRotationTime() Obtain Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setNextRotationTime(integer $NextRotationTime) Set Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSecretType() Obtain 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSecretType(integer $SecretType) Set 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProductName() Obtain Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProductName(string $ProductName) Set Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class SecretMetadata extends AbstractModel
 {
     /**
-     * @var string Name of the Secret.
+     * @var string Credential name
      */
     public $SecretName;
 
     /**
-     * @var string Description of the Secret.
+     * @var string Credential description
      */
     public $Description;
 
     /**
-     * @var string KMS Key ID used for Secret encryption.
+     * @var string KMS `KeyId` used to encrypt the credential
      */
     public $KmsKeyId;
 
     /**
-     * @var integer Creator UIN.
+     * @var integer Creator UIN
      */
     public $CreateUin;
 
     /**
-     * @var string Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
+     * @var string Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      */
     public $Status;
 
     /**
-     * @var integer Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
+     * @var integer Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
      */
     public $DeleteTime;
 
     /**
-     * @var integer Secret creation time, formatted as a Unix timestamp.
+     * @var integer Credential creation time in UNIX timestamp format
      */
     public $CreateTime;
 
     /**
-     * @var string Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+     * @var string Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
      */
     public $KmsKeyType;
 
     /**
-     * @param string $SecretName Name of the Secret.
-     * @param string $Description Description of the Secret.
-     * @param string $KmsKeyId KMS Key ID used for Secret encryption.
-     * @param integer $CreateUin Creator UIN.
-     * @param string $Status Secret status, which can be `Enabled`, `Disabled`, or `PendingDelete`.
-     * @param integer $DeleteTime Secret deletion time, formatted as a Unix timestamp. This parameter is only applicable for Secrets in `PendingDelete` status.
-     * @param integer $CreateTime Secret creation time, formatted as a Unix timestamp.
-     * @param string $KmsKeyType Type of KMS CMK used for Secret encryption. `DEFAULT`: default key created by SecretsManager; `CUSTOMER`: user-specified key.
+     * @var integer 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $RotationStatus;
+
+    /**
+     * @var integer Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $NextRotationTime;
+
+    /**
+     * @var integer 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $SecretType;
+
+    /**
+     * @var string Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProductName;
+
+    /**
+     * @param string $SecretName Credential name
+     * @param string $Description Credential description
+     * @param string $KmsKeyId KMS `KeyId` used to encrypt the credential
+     * @param integer $CreateUin Creator UIN
+     * @param string $Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
+     * @param integer $DeleteTime Credential deletion date, which takes effect for credentials in `PendingDelete` status and is in UNIX timestamp format
+     * @param integer $CreateTime Credential creation time in UNIX timestamp format
+     * @param string $KmsKeyType Type of the KMS CMK used to encrypt the credential. `DEFAULT` represents the default key created by Secrets Manager, and `CUSTOMER` represents the user-specified key
+     * @param integer $RotationStatus 1: enable rotation; 0: disable rotation
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $NextRotationTime Start time of the next rotation in UNIX timestamp format
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +180,22 @@ class SecretMetadata extends AbstractModel
 
         if (array_key_exists("KmsKeyType",$param) and $param["KmsKeyType"] !== null) {
             $this->KmsKeyType = $param["KmsKeyType"];
+        }
+
+        if (array_key_exists("RotationStatus",$param) and $param["RotationStatus"] !== null) {
+            $this->RotationStatus = $param["RotationStatus"];
+        }
+
+        if (array_key_exists("NextRotationTime",$param) and $param["NextRotationTime"] !== null) {
+            $this->NextRotationTime = $param["NextRotationTime"];
+        }
+
+        if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
+            $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

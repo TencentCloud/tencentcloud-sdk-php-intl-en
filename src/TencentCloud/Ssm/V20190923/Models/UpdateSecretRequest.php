@@ -24,10 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecretName(string $SecretName) Set Name of a Secret whose content is to be updated.
  * @method string getVersionId() Obtain ID of the Secret version whose content is to be updated.
  * @method void setVersionId(string $VersionId) Set ID of the Secret version whose content is to be updated.
- * @method string getSecretBinary() Obtain Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
- * @method void setSecretBinary(string $SecretBinary) Set Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
- * @method string getSecretString() Obtain Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
- * @method void setSecretString(string $SecretString) Set Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+ * @method string getSecretBinary() Obtain This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
+ * @method void setSecretBinary(string $SecretBinary) Set This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
+ * @method string getSecretString() Obtain This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
+ * @method void setSecretString(string $SecretString) Set This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
  */
 class UpdateSecretRequest extends AbstractModel
 {
@@ -42,20 +44,22 @@ class UpdateSecretRequest extends AbstractModel
     public $VersionId;
 
     /**
-     * @var string Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
+     * @var string This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public $SecretBinary;
 
     /**
-     * @var string Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+     * @var string This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
      */
     public $SecretString;
 
     /**
      * @param string $SecretName Name of a Secret whose content is to be updated.
      * @param string $VersionId ID of the Secret version whose content is to be updated.
-     * @param string $SecretBinary Use this field if the new Secret content is in binary format, and base64-encoded. Either `SecretBinary` or `SecretString` is set.
-     * @param string $SecretString Use this field if the new Secret content is in text format, and base64-encoding is not required. Either `SecretBinary` or `SecretString` is set.
+     * @param string $SecretBinary This field should be used and Base64-encoded if the content of the new credential is binary.
+Either `SecretBinary` or `SecretString` cannot be empty.
+     * @param string $SecretString This field should be used without being Base64-encoded if the content of the new credential is text. Either `SecretBinary` or `SecretString` cannot be empty.
      */
     function __construct()
     {
