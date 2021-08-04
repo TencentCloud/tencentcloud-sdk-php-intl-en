@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateInstance response structure.
+ * DescribeClusterCommonNames response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getCommonNames() Obtain The CommonName in the certificate of the client corresponding to the sub-account UIN
+ * @method void setCommonNames(array $CommonNames) Set The CommonName in the certificate of the client corresponding to the sub-account UIN
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateInstanceResponse extends AbstractModel
+class DescribeClusterCommonNamesResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array The CommonName in the certificate of the client corresponding to the sub-account UIN
      */
-    public $InstanceId;
+    public $CommonNames;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param string $InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $CommonNames The CommonName in the certificate of the client corresponding to the sub-account UIN
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +54,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("CommonNames",$param) and $param["CommonNames"] !== null) {
+            $this->CommonNames = [];
+            foreach ($param["CommonNames"] as $key => $value){
+                $obj = new CommonName();
+                $obj->deserialize($value);
+                array_push($this->CommonNames, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

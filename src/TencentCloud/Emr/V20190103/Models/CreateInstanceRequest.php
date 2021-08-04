@@ -21,27 +21,53 @@ use TencentCloud\Common\AbstractModel;
  * CreateInstance request structure.
  *
  * @method integer getProductId() Obtain Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
  * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
  * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
  * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method array getSoftware() Obtain List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
- * @method void setSoftware(array $Software) Set List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+ * @method array getSoftware() Obtain List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
+ * @method void setSoftware(array $Software) Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
  * @method NewResourceSpec getResourceSpec() Obtain Node resource specification.
  * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node resource specification.
  * @method integer getSupportHA() Obtain Whether to enable high node availability. Valid values:
@@ -84,8 +110,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCOSSettings(COSSettings $COSSettings) Set Parameter required for enabling COS access.
  * @method string getSgId() Obtain Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
  * @method void setSgId(string $SgId) Set Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
- * @method array getPreExecutedFileSettings() Obtain Bootstrap script settings.
- * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set Bootstrap script settings.
+ * @method array getPreExecutedFileSettings() Obtain [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
+ * @method void setPreExecutedFileSettings(array $PreExecutedFileSettings) Set [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
  * @method integer getAutoRenew() Obtain Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
@@ -109,7 +135,9 @@ use TencentCloud\Common\AbstractModel;
  * @method array getTags() Obtain Tag description list. This parameter is used to bind a tag to a resource instance.
  * @method void setTags(array $Tags) Set Tag description list. This parameter is used to bind a tag to a resource instance.
  * @method array getDisasterRecoverGroupIds() Obtain List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
  * @method integer getCbsEncrypt() Obtain CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
  * @method void setCbsEncrypt(integer $CbsEncrypt) Set CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
  * @method string getMetaType() Obtain Hive-shared metadatabase type. Valid values:
@@ -131,10 +159,26 @@ class CreateInstanceRequest extends AbstractModel
 {
     /**
      * @var integer Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
      */
     public $ProductId;
 
@@ -144,11 +188,8 @@ class CreateInstanceRequest extends AbstractModel
     public $VPCSettings;
 
     /**
-     * @var array List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+     * @var array List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
      */
     public $Software;
 
@@ -214,7 +255,7 @@ class CreateInstanceRequest extends AbstractModel
     public $SgId;
 
     /**
-     * @var array Bootstrap script settings.
+     * @var array [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
      */
     public $PreExecutedFileSettings;
 
@@ -259,6 +300,7 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @var array List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
      */
     public $DisasterRecoverGroupIds;
 
@@ -292,16 +334,29 @@ class CreateInstanceRequest extends AbstractModel
 
     /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1.</li>
-<li>2: EMR v2.0.1.</li>
-<li>4: EMR v2.1.0.</li>
-<li>7: EMR v3.0.0.</li>
+<li>1: EMR v1.3.1</li>
+<li>2: EMR v2.0.1</li>
+<li>4: EMR v2.1.0</li>
+<li>7: EMR v3.0.0</li>
+<li>9: EMR v2.2.0</li>
+<li>11: ClickHouse v1.0.0</li>
+<li>13: Druid v1.0.0</li>
+<li>15: EMR v2.2.1</li>
+<li>16: EMR v2.3.0</li>
+<li>17: ClickHouse v1.1.0</li>
+<li>19: EMR v2.4.0</li>
+<li>20: EMR v2.5.0</li>
+<li>22: ClickHouse v1.2.0</li>
+<li>24: EMR TianQiong v1.0.0</li>
+<li>25: EMR v3.1.0</li>
+<li>26: Doris v1.0.0</li>
+<li>27: Kafka v1.0.0</li>
+<li>28: EMR v3.2.0</li>
+<li>29: EMR v2.5.1</li>
+<li>30: EMR v2.6.0</li>
      * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     * @param array $Software List of deployed components. Different required components need to be selected for different EMR product IDs (i.e., `ProductId`; for specific meanings, please see the `ProductId` field in the input parameter):
-<li>When `ProductId` is 1, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
-<li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+     * @param array $Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
+Enter an instance value: `hive` or `flink`.
      * @param NewResourceSpec $ResourceSpec Node resource specification.
      * @param integer $SupportHA Whether to enable high node availability. Valid values:
 <li>0: does not enable high availability of node.</li>
@@ -323,7 +378,7 @@ class CreateInstanceRequest extends AbstractModel
 <li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
      * @param COSSettings $COSSettings Parameter required for enabling COS access.
      * @param string $SgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
-     * @param array $PreExecutedFileSettings Bootstrap script settings.
+     * @param array $PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
      * @param integer $AutoRenew Whether auto-renewal is enabled. Valid values:
 <li>0: auto-renewal not enabled.</li>
 <li>1: auto-renewal enabled.</li>
@@ -336,6 +391,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $ExtendFsField Accesses to external file system.
      * @param array $Tags Tag description list. This parameter is used to bind a tag to a resource instance.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
+This parameter can be obtained in the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1) API.
      * @param integer $CbsEncrypt CBS disk encryption at the cluster level. 0: not encrypted, 1: encrypted
      * @param string $MetaType Hive-shared metadatabase type. Valid values:
 <li>EMR_DEFAULT_META: the cluster creates one by default.</li>

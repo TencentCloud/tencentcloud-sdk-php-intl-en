@@ -18,32 +18,29 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterEndpointStatus response structure.
+ * DescribeEnableVpcCniProgress response structure.
  *
- * @method string getStatus() Obtain The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setStatus(string $Status) Set The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method string getErrorMsg() Obtain Details of the error occurred while opening the access port
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setErrorMsg(string $ErrorMsg) Set Details of the error occurred while opening the access port
-Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getStatus() Obtain Task status, which can be `Running`, `Succeed`, or `Failed`.
+ * @method void setStatus(string $Status) Set Task status, which can be `Running`, `Succeed`, or `Failed`.
+ * @method string getErrorMessage() Obtain The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setErrorMessage(string $ErrorMessage) Set The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeClusterEndpointStatusResponse extends AbstractModel
+class DescribeEnableVpcCniProgressResponse extends AbstractModel
 {
     /**
-     * @var string The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Task status, which can be `Running`, `Succeed`, or `Failed`.
      */
     public $Status;
 
     /**
-     * @var string Details of the error occurred while opening the access port
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public $ErrorMsg;
+    public $ErrorMessage;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +48,9 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RequestId;
 
     /**
-     * @param string $Status The status of cluster access port. It can be `Created` (enabled); `Creating` (enabling) and `NotFound` (not enabled)
-Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param string $ErrorMsg Details of the error occurred while opening the access port
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $Status Task status, which can be `Running`, `Succeed`, or `Failed`.
+     * @param string $ErrorMessage The description for the task status when the task status is “Failed”, for example, failed to install the IPAMD component.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -74,8 +70,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
             $this->Status = $param["Status"];
         }
 
-        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
-            $this->ErrorMsg = $param["ErrorMsg"];
+        if (array_key_exists("ErrorMessage",$param) and $param["ErrorMessage"] !== null) {
+            $this->ErrorMessage = $param["ErrorMessage"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

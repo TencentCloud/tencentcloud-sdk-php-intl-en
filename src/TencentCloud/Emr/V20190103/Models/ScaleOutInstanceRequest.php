@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set List of spread placement group IDs. Only one can be specified currently.
  * @method array getTags() Obtain List of tags bound to added nodes.
  * @method void setTags(array $Tags) Set List of tags bound to added nodes.
- * @method string getHardwareResourceType() Obtain Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
- * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+ * @method string getHardwareResourceType() Obtain Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
+ * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
  * @method PodSpec getPodSpec() Obtain Specified information such as pod specification and source for expansion with pod resources
  * @method void setPodSpec(PodSpec $PodSpec) Set Specified information such as pod specification and source for expansion with pod resources
  * @method string getClickHouseClusterName() Obtain Machine group name selected for ClickHouse cluster scaling-out
@@ -71,7 +71,15 @@ use TencentCloud\Common\AbstractModel;
  * @method PodParameter getPodParameter() Obtain Custom pod permission and parameter
  * @method void setPodParameter(PodParameter $PodParameter) Set Custom pod permission and parameter
  * @method integer getMasterCount() Obtain Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
  * @method void setMasterCount(integer $MasterCount) Set Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+ * @method string getStartServiceAfterScaleOut() Obtain Whether to start the service after scaling. `true`: yes; `false`: no
+ * @method void setStartServiceAfterScaleOut(string $StartServiceAfterScaleOut) Set Whether to start the service after scaling. `true`: yes; `false`: no
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -151,7 +159,7 @@ class ScaleOutInstanceRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var string Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * @var string Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
      */
     public $HardwareResourceType;
 
@@ -182,8 +190,16 @@ class ScaleOutInstanceRequest extends AbstractModel
 
     /**
      * @var integer Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
      */
     public $MasterCount;
+
+    /**
+     * @var string Whether to start the service after scaling. `true`: yes; `false`: no
+     */
+    public $StartServiceAfterScaleOut;
 
     /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
@@ -205,13 +221,17 @@ class ScaleOutInstanceRequest extends AbstractModel
      * @param array $ServiceNodeInfo Started process.
      * @param array $DisasterRecoverGroupIds List of spread placement group IDs. Only one can be specified currently.
      * @param array $Tags List of tags bound to added nodes.
-     * @param string $HardwareResourceType Resource type selected for expansion. Valid values: host (general CVM resource), pod (resource provided by TKE cluster)
+     * @param string $HardwareResourceType Resource type selected for scaling. Valid values: `host` (general CVM resource), `pod` (resource provided by TKE or EKS cluster)
      * @param PodSpec $PodSpec Specified information such as pod specification and source for expansion with pod resources
      * @param string $ClickHouseClusterName Machine group name selected for ClickHouse cluster scaling-out
      * @param string $ClickHouseClusterType Machine group type selected for ClickHouse cluster scaling-out. new: creates a group; old: selects an existing group
      * @param string $YarnNodeLabel YARN node label specified for rule-based scaling-out
      * @param PodParameter $PodParameter Custom pod permission and parameter
      * @param integer $MasterCount Number of master nodes to be added
+When a ClickHouse cluster is scaled, this parameter does not take effect.
+When a Kafka cluster is scaled, this parameter does not take effect.
+When `HardwareResourceType` is `pod`, this parameter does not take effect.
+     * @param string $StartServiceAfterScaleOut Whether to start the service after scaling. `true`: yes; `false`: no
      */
     function __construct()
     {
@@ -320,6 +340,10 @@ class ScaleOutInstanceRequest extends AbstractModel
 
         if (array_key_exists("MasterCount",$param) and $param["MasterCount"] !== null) {
             $this->MasterCount = $param["MasterCount"];
+        }
+
+        if (array_key_exists("StartServiceAfterScaleOut",$param) and $param["StartServiceAfterScaleOut"] !== null) {
+            $this->StartServiceAfterScaleOut = $param["StartServiceAfterScaleOut"];
         }
     }
 }

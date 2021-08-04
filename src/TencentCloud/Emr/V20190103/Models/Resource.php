@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Resource details
  *
- * @method string getSpec() Obtain Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSpec(string $Spec) Set Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStorageType() Obtain Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStorageType(integer $StorageType) Set Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSpec() Obtain Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSpec(string $Spec) Set Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getStorageType() Obtain Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStorageType(integer $StorageType) Set Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getDiskType() Obtain Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDiskType(string $DiskType) Set Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getMemSize() Obtain Memory capacity in MB
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMemSize(integer $MemSize) Set Memory capacity in MB
@@ -56,36 +76,46 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set List of tags to be bound
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceType() Obtain Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceType(string $InstanceType) Set Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getLocalDiskNum() Obtain Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLocalDiskNum(integer $LocalDiskNum) Set Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDiskNum() Obtain Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDiskNum(integer $DiskNum) Set Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceType() Obtain Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInstanceType(string $InstanceType) Set Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getLocalDiskNum() Obtain Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLocalDiskNum(integer $LocalDiskNum) Set Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDiskNum() Obtain Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiskNum(integer $DiskNum) Set Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Resource extends AbstractModel
 {
     /**
-     * @var string Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Spec;
 
     /**
-     * @var integer Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $StorageType;
 
     /**
      * @var string Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiskType;
 
@@ -126,30 +156,40 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
-     * @var string Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $InstanceType;
 
     /**
-     * @var integer Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $LocalDiskNum;
 
     /**
-     * @var integer Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiskNum;
 
     /**
-     * @param string $Spec Node specification description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $StorageType Storage class
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Spec Node specification description, such as CVM.SA2
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $StorageType Storage type
+Valid values:
+<li>4: SSD</li>
+<li>5: Premium Cloud Storage</li>
+<li>6: Enhanced SSD</li>
+<li>11: High-Throughput cloud disk</li>
+<li>12: Tremendous SSD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DiskType Disk type
-Note: this field may return null, indicating that no valid values can be obtained.
+Valid values:
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_BASIC`: HDD</li>
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $MemSize Memory capacity in MB
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Cpu Number of CPU cores
@@ -162,12 +202,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags List of tags to be bound
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceType Specification type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $LocalDiskNum Number of local disks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $DiskNum Number of disks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceType Specification type, such as S2.MEDIUM8
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $LocalDiskNum Number of local disks. This field has been disused.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DiskNum Number of local disks, such as 2
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

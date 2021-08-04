@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDynamicPodSpec(DynamicPodSpec $DynamicPodSpec) Set Floating specification
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain Unique VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVpcId(string $VpcId) Set Unique VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSubnetId() Obtain Unique VPC subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubnetId(string $SubnetId) Set Unique VPC subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class PodSpec extends AbstractModel
 {
@@ -97,6 +105,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DynamicPodSpec;
 
     /**
+     * @var string Unique VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VpcId;
+
+    /**
+     * @var string Unique VPC subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubnetId;
+
+    /**
      * @param string $ResourceProviderIdentifier Identifier of external resource provider, such as "cls-a1cd23fa".
      * @param string $ResourceProviderType Type of external resource provider, such as "tke". Currently, only "tke" is supported.
      * @param string $NodeType Purpose of the resource, i.e., node type, which currently can only be "TASK".
@@ -107,6 +127,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $PodVolumes Pod node data directory mounting information.
      * @param integer $IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
      * @param DynamicPodSpec $DynamicPodSpec Floating specification
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $VpcId Unique VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SubnetId Unique VPC subnet ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -166,6 +190,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
             $this->DynamicPodSpec = new DynamicPodSpec();
             $this->DynamicPodSpec->deserialize($param["DynamicPodSpec"]);
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

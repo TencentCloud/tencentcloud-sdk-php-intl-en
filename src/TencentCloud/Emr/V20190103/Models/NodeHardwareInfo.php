@@ -176,6 +176,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDynamicPodSpec(string $DynamicPodSpec) Set Floating specification in JSON string
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSupportModifyPayMode() Obtain Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) Set Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -414,6 +418,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DynamicPodSpec;
 
     /**
+     * @var integer Whether to support billing mode change. `0`: no; `1`: yes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SupportModifyPayMode;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -491,6 +501,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $IsDynamicSpec Whether floating specification is used. `1`: yes; `0`: no
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DynamicPodSpec Floating specification in JSON string
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -671,6 +683,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DynamicPodSpec",$param) and $param["DynamicPodSpec"] !== null) {
             $this->DynamicPodSpec = $param["DynamicPodSpec"];
+        }
+
+        if (array_key_exists("SupportModifyPayMode",$param) and $param["SupportModifyPayMode"] !== null) {
+            $this->SupportModifyPayMode = $param["SupportModifyPayMode"];
         }
     }
 }

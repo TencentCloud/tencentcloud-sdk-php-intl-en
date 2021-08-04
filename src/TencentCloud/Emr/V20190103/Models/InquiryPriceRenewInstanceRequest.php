@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeUnit(string $TimeUnit) Set Unit of time for instance renewal.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
+ * @method integer getModifyPayMode() Obtain Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+ * @method void setModifyPayMode(integer $ModifyPayMode) Set Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
  */
 class InquiryPriceRenewInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
     public $Currency;
 
     /**
+     * @var integer Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
+     */
+    public $ModifyPayMode;
+
+    /**
      * @param integer $TimeSpan How long the instance will be renewed for, which needs to be used together with `TimeUnit`.
      * @param array $ResourceIds List of resource IDs of the node to be renewed. The resource ID is in the format of `emr-vm-xxxxxxxx`. A valid resource ID can be queried in the [console](https://console.cloud.tencent.com/emr/static/hardware).
      * @param Placement $Placement Location of the instance. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $PayMode Instance billing mode.
      * @param string $TimeUnit Unit of time for instance renewal.
      * @param string $Currency Currency.
+     * @param integer $ModifyPayMode Whether to change from pay-as-you-go billing to monthly subscription billing. `0`: no; `1`: yes
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class InquiryPriceRenewInstanceRequest extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("ModifyPayMode",$param) and $param["ModifyPayMode"] !== null) {
+            $this->ModifyPayMode = $param["ModifyPayMode"];
         }
     }
 }

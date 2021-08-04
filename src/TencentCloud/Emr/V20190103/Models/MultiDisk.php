@@ -20,8 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Multi-cloud disk parameters
  *
- * @method string getDiskType() Obtain Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
- * @method void setDiskType(string $DiskType) Set Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+ * @method string getDiskType() Obtain Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
+ * @method void setDiskType(string $DiskType) Set Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
  * @method integer getVolume() Obtain Cloud disk size
  * @method void setVolume(integer $Volume) Set Cloud disk size
  * @method integer getCount() Obtain Number of cloud disks of this type
@@ -30,7 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class MultiDisk extends AbstractModel
 {
     /**
-     * @var string Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+     * @var string Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
      */
     public $DiskType;
 
@@ -45,7 +54,10 @@ class MultiDisk extends AbstractModel
     public $Count;
 
     /**
-     * @param string $DiskType Cloud disk type. Valid values: CLOUD_PREMIUM, CLOUD_SSD, CLOUD_BASIC
+     * @param string $DiskType Cloud disk type
+<li>`CLOUD_SSD`: SSD</li>
+<li>`CLOUD_PREMIUM`: Premium Cloud Storage</li>
+<li>`CLOUD_HSSD`: Enhanced SSD</li>
      * @param integer $Volume Cloud disk size
      * @param integer $Count Number of cloud disks of this type
      */

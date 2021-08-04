@@ -14,35 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateInstance response structure.
+ * EnableVpcCniNetworkType response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setInstanceId(string $InstanceId) Set Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateInstanceResponse extends AbstractModel
+class EnableVpcCniNetworkTypeResponse extends AbstractModel
 {
-    /**
-     * @var string Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public $InstanceId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $InstanceId Instance ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,10 +46,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetNodePoolNodeProtection response structure.
  *
+ * @method array getSucceedInstanceIds() Obtain ID of the node that has successfully set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSucceedInstanceIds(array $SucceedInstanceIds) Set ID of the node that has successfully set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getFailedInstanceIds() Obtain ID of the node that fails to set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) Set ID of the node that fails to set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SetNodePoolNodeProtectionResponse extends AbstractModel
 {
     /**
+     * @var array ID of the node that has successfully set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SucceedInstanceIds;
+
+    /**
+     * @var array ID of the node that fails to set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FailedInstanceIds;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $SucceedInstanceIds ID of the node that has successfully set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $FailedInstanceIds ID of the node that fails to set the removal protection
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +70,14 @@ class SetNodePoolNodeProtectionResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SucceedInstanceIds",$param) and $param["SucceedInstanceIds"] !== null) {
+            $this->SucceedInstanceIds = $param["SucceedInstanceIds"];
+        }
+
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

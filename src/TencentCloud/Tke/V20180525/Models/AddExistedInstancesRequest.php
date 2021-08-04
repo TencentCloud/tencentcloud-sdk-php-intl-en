@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePool(NodePoolOption $NodePool) Set Node pool options
  * @method array getSkipValidateOptions() Obtain Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
  * @method void setSkipValidateOptions(array $SkipValidateOptions) Set Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+ * @method array getInstanceAdvancedSettingsOverrides() Obtain This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+ * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) Set This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -87,6 +93,13 @@ class AddExistedInstancesRequest extends AbstractModel
     public $SkipValidateOptions;
 
     /**
+     * @var array This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+     */
+    public $InstanceAdvancedSettingsOverrides;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Instance list. Spot instance is not supported.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Detailed information of the instance
@@ -96,6 +109,9 @@ class AddExistedInstancesRequest extends AbstractModel
      * @param array $SecurityGroupIds Security group to which the instance belongs. This parameter can be obtained from the `sgId` field returned by DescribeSecurityGroups. If this parameter is not specified, the default security group is bound. (Currently, you can only set a single sgId)
      * @param NodePoolOption $NodePool Node pool options
      * @param array $SkipValidateOptions Skips the specified verification. Valid values: GlobalRouteCIDRCheck, VpcCniCIDRCheck
+     * @param array $InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
+
+The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
      */
     function __construct()
     {
@@ -148,6 +164,15 @@ class AddExistedInstancesRequest extends AbstractModel
 
         if (array_key_exists("SkipValidateOptions",$param) and $param["SkipValidateOptions"] !== null) {
             $this->SkipValidateOptions = $param["SkipValidateOptions"];
+        }
+
+        if (array_key_exists("InstanceAdvancedSettingsOverrides",$param) and $param["InstanceAdvancedSettingsOverrides"] !== null) {
+            $this->InstanceAdvancedSettingsOverrides = [];
+            foreach ($param["InstanceAdvancedSettingsOverrides"] as $key => $value){
+                $obj = new InstanceAdvancedSettings();
+                $obj->deserialize($value);
+                array_push($this->InstanceAdvancedSettingsOverrides, $obj);
+            }
         }
     }
 }

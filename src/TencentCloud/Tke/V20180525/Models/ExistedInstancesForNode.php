@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExistedInstancesPara(ExistedInstancesPara $ExistedInstancesPara) Set Reinstallation parameter of existing instances
  * @method InstanceAdvancedSettings getInstanceAdvancedSettingsOverride() Obtain Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
  * @method void setInstanceAdvancedSettingsOverride(InstanceAdvancedSettings $InstanceAdvancedSettingsOverride) Set Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+ * @method array getDesiredPodNumbers() Obtain When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+ * @method void setDesiredPodNumbers(array $DesiredPodNumbers) Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
  */
 class ExistedInstancesForNode extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ExistedInstancesForNode extends AbstractModel
     public $InstanceAdvancedSettingsOverride;
 
     /**
+     * @var array When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+     */
+    public $DesiredPodNumbers;
+
+    /**
      * @param string $NodeRole Node role. Values: MASTER_ETCD, WORKER. You only need to specify MASTER_ETCD when creating a self-deployed cluster (INDEPENDENT_CLUSTER).
      * @param ExistedInstancesPara $ExistedInstancesPara Reinstallation parameter of existing instances
      * @param InstanceAdvancedSettings $InstanceAdvancedSettingsOverride Advanced node setting, which overrides the InstanceAdvancedSettings item set at the cluster level (currently valid for the ExtraArgs node custom parameter only)
+     * @param array $DesiredPodNumbers When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
      */
     function __construct()
     {
@@ -74,6 +82,10 @@ class ExistedInstancesForNode extends AbstractModel
         if (array_key_exists("InstanceAdvancedSettingsOverride",$param) and $param["InstanceAdvancedSettingsOverride"] !== null) {
             $this->InstanceAdvancedSettingsOverride = new InstanceAdvancedSettings();
             $this->InstanceAdvancedSettingsOverride->deserialize($param["InstanceAdvancedSettingsOverride"]);
+        }
+
+        if (array_key_exists("DesiredPodNumbers",$param) and $param["DesiredPodNumbers"] !== null) {
+            $this->DesiredPodNumbers = $param["DesiredPodNumbers"];
         }
     }
 }

@@ -20,14 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetNodePoolNodeProtection request structure.
  *
-
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getNodePoolId() Obtain Node pool ID
+ * @method void setNodePoolId(string $NodePoolId) Set Node pool ID
+ * @method array getInstanceIds() Obtain Node ID
+ * @method void setInstanceIds(array $InstanceIds) Set Node ID
+ * @method boolean getProtectedFromScaleIn() Obtain Whether the node needs removal protection
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether the node needs removal protection
  */
 class SetNodePoolNodeProtectionRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
 
     /**
+     * @var string Node pool ID
+     */
+    public $NodePoolId;
 
+    /**
+     * @var array Node ID
+     */
+    public $InstanceIds;
+
+    /**
+     * @var boolean Whether the node needs removal protection
+     */
+    public $ProtectedFromScaleIn;
+
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param string $NodePoolId Node pool ID
+     * @param array $InstanceIds Node ID
+     * @param boolean $ProtectedFromScaleIn Whether the node needs removal protection
      */
     function __construct()
     {
@@ -42,6 +70,20 @@ class SetNodePoolNodeProtectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
 
+        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
+            $this->NodePoolId = $param["NodePoolId"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("ProtectedFromScaleIn",$param) and $param["ProtectedFromScaleIn"] !== null) {
+            $this->ProtectedFromScaleIn = $param["ProtectedFromScaleIn"];
+        }
     }
 }

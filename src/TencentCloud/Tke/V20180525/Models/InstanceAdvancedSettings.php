@@ -48,8 +48,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid value was found.
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
- * @method integer getDesiredPodNumber() Obtain 
- * @method void setDesiredPodNumber(integer $DesiredPodNumber) Set 
+ * @method integer getDesiredPodNumber() Obtain When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDesiredPodNumber(integer $DesiredPodNumber) Set When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -96,7 +98,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $ExtraArgs;
 
     /**
-     * @var integer 
+     * @var integer When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DesiredPodNumber;
 
@@ -115,7 +118,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param InstanceExtraArgs $ExtraArgs Information about node custom parameters
 Note: This field may return null, indicating that no valid value was found.
-     * @param integer $DesiredPodNumber 
+     * @param integer $DesiredPodNumber When the custom PodCIDR mode is enabled for the cluster, you can specify the maximum number of pods per node.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
