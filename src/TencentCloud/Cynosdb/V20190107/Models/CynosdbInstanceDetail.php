@@ -82,6 +82,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCynosVersion(string $CynosVersion) Set TDSQL-C kernel version
  * @method integer getRenewFlag() Obtain Renewal flag
  * @method void setRenewFlag(integer $RenewFlag) Set Renewal flag
+ * @method float getMinCpu() Obtain The minimum number of CPU cores for a serverless instance
+ * @method void setMinCpu(float $MinCpu) Set The minimum number of CPU cores for a serverless instance
+ * @method float getMaxCpu() Obtain The maximum number of CPU cores for a serverless instance
+ * @method void setMaxCpu(float $MaxCpu) Set The maximum number of CPU cores for a serverless instance
+ * @method string getServerlessStatus() Obtain Serverless instance status. Valid values:
+resume
+pause
+ * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
+resume
+pause
  */
 class CynosdbInstanceDetail extends AbstractModel
 {
@@ -241,6 +251,23 @@ class CynosdbInstanceDetail extends AbstractModel
     public $RenewFlag;
 
     /**
+     * @var float The minimum number of CPU cores for a serverless instance
+     */
+    public $MinCpu;
+
+    /**
+     * @var float The maximum number of CPU cores for a serverless instance
+     */
+    public $MaxCpu;
+
+    /**
+     * @var string Serverless instance status. Valid values:
+resume
+pause
+     */
+    public $ServerlessStatus;
+
+    /**
      * @param string $Uin User `Uin`
      * @param integer $AppId User `AppId`
      * @param string $ClusterId Cluster ID
@@ -272,6 +299,11 @@ class CynosdbInstanceDetail extends AbstractModel
      * @param string $Charset Character set
      * @param string $CynosVersion TDSQL-C kernel version
      * @param integer $RenewFlag Renewal flag
+     * @param float $MinCpu The minimum number of CPU cores for a serverless instance
+     * @param float $MaxCpu The maximum number of CPU cores for a serverless instance
+     * @param string $ServerlessStatus Serverless instance status. Valid values:
+resume
+pause
      */
     function __construct()
     {
@@ -408,6 +440,18 @@ class CynosdbInstanceDetail extends AbstractModel
 
         if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
             $this->RenewFlag = $param["RenewFlag"];
+        }
+
+        if (array_key_exists("MinCpu",$param) and $param["MinCpu"] !== null) {
+            $this->MinCpu = $param["MinCpu"];
+        }
+
+        if (array_key_exists("MaxCpu",$param) and $param["MaxCpu"] !== null) {
+            $this->MaxCpu = $param["MaxCpu"];
+        }
+
+        if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
+            $this->ServerlessStatus = $param["ServerlessStatus"];
         }
     }
 }

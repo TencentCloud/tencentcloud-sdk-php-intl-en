@@ -94,6 +94,16 @@ Notes about this policy:
  * @method void setHealthCheckType(string $HealthCheckType) Set Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
  * @method integer getLoadBalancerHealthCheckGracePeriod() Obtain Grace period of the CLB health check
  * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) Set Grace period of the CLB health check
+ * @method string getInstanceAllocationPolicy() Obtain Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+ * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) Set Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+ * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() Obtain Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+ * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) Set Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
  */
 class ModifyAutoScalingGroupRequest extends AbstractModel
 {
@@ -211,6 +221,19 @@ Notes about this policy:
     public $LoadBalancerHealthCheckGracePeriod;
 
     /**
+     * @var string Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     */
+    public $InstanceAllocationPolicy;
+
+    /**
+     * @var SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+     */
+    public $SpotMixedAllocationPolicy;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name, which can only contain letters, numbers, underscores, hyphens ("-"), and decimal points with a maximum length of 55 bytes and must be unique under your account.
      * @param integer $DefaultCooldown Default cooldown period in seconds. Default value: 300
@@ -248,6 +271,11 @@ Notes about this policy:
 <br><li> No matter what policy is used, a single scaling event always uses a specific configuration at priority (model * availability zone/subnet).
      * @param string $HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
      * @param integer $LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
+     * @param string $InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+This parameter is valid only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
      */
     function __construct()
     {
@@ -337,6 +365,15 @@ Notes about this policy:
 
         if (array_key_exists("LoadBalancerHealthCheckGracePeriod",$param) and $param["LoadBalancerHealthCheckGracePeriod"] !== null) {
             $this->LoadBalancerHealthCheckGracePeriod = $param["LoadBalancerHealthCheckGracePeriod"];
+        }
+
+        if (array_key_exists("InstanceAllocationPolicy",$param) and $param["InstanceAllocationPolicy"] !== null) {
+            $this->InstanceAllocationPolicy = $param["InstanceAllocationPolicy"];
+        }
+
+        if (array_key_exists("SpotMixedAllocationPolicy",$param) and $param["SpotMixedAllocationPolicy"] !== null) {
+            $this->SpotMixedAllocationPolicy = new SpotMixedAllocationPolicy();
+            $this->SpotMixedAllocationPolicy->deserialize($param["SpotMixedAllocationPolicy"]);
         }
     }
 }

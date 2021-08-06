@@ -46,6 +46,14 @@ Note: This field may return null, indicating no valid value.
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
  * @method boolean getRoutePriorityFlag() Obtain Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
  * @method void setRoutePriorityFlag(boolean $RoutePriorityFlag) Set Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+ * @method integer getRouteTableCount() Obtain Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteTableCount(integer $RouteTableCount) Set Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getRouteTableFlag() Obtain Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteTableFlag(boolean $RouteTableFlag) Set Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class CCN extends AbstractModel
 {
@@ -107,6 +115,18 @@ Note: This field may return null, indicating no valid value.
     public $RoutePriorityFlag;
 
     /**
+     * @var integer Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteTableCount;
+
+    /**
+     * @var boolean Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteTableFlag;
+
+    /**
      * @param string $CcnId The unique ID of the CCN
      * @param string $CcnName The name of the CCN
      * @param string $CcnDescription The detailed information of the CCN
@@ -120,6 +140,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating no valid value.
      * @param array $TagSet Tag key-value pairs.
      * @param boolean $RoutePriorityFlag Whether the CCN route priority feature is supported. Valid values: False: do not support; True: support.
+     * @param integer $RouteTableCount Number of route tables associated with the instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $RouteTableFlag Whether the multiple route tables feature is enabled for the CCN instance. Valid values: `False`: no; `True`: yes. Default value: `False`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -181,6 +205,14 @@ Note: This field may return null, indicating no valid value.
 
         if (array_key_exists("RoutePriorityFlag",$param) and $param["RoutePriorityFlag"] !== null) {
             $this->RoutePriorityFlag = $param["RoutePriorityFlag"];
+        }
+
+        if (array_key_exists("RouteTableCount",$param) and $param["RouteTableCount"] !== null) {
+            $this->RouteTableCount = $param["RouteTableCount"];
+        }
+
+        if (array_key_exists("RouteTableFlag",$param) and $param["RouteTableFlag"] !== null) {
+            $this->RouteTableFlag = $param["RouteTableFlag"];
         }
     }
 }

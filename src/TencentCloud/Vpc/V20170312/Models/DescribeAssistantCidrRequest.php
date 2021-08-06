@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVpcIds() Obtain The ID of a VPC instance set, such as `vpc-6v2ht8q5`.
  * @method void setVpcIds(array $VpcIds) Set The ID of a VPC instance set, such as `vpc-6v2ht8q5`.
- * @method array getFilters() Obtain Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+ * @method array getFilters() Obtain Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
- * @method void setFilters(array $Filters) Set Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
@@ -39,7 +39,7 @@ class DescribeAssistantCidrRequest extends AbstractModel
     public $VpcIds;
 
     /**
-     * @var array Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * @var array Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
      */
     public $Filters;
@@ -56,7 +56,7 @@ class DescribeAssistantCidrRequest extends AbstractModel
 
     /**
      * @param array $VpcIds The ID of a VPC instance set, such as `vpc-6v2ht8q5`.
-     * @param array $Filters Filter condition. `NetworkInterfaceIds` and `Filters` cannot be specified at the same time.
+     * @param array $Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
 <li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.

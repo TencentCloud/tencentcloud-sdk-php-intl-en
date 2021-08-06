@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 <li>`BMVPC`: BM VPC</li>
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
+ * @method string getRouteTableId() Obtain The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteTableId(string $RouteTableId) Set The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class CcnInstance extends AbstractModel
 {
@@ -61,6 +65,12 @@ class CcnInstance extends AbstractModel
     public $Description;
 
     /**
+     * @var string The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteTableId;
+
+    /**
      * @param string $InstanceId The ID of the associated instance.
      * @param string $InstanceRegion The region to which the associated instance ID belongs, such as `ap-guangzhou`.
      * @param string $InstanceType The type of the associated instance. Available values are:
@@ -68,6 +78,8 @@ class CcnInstance extends AbstractModel
 <li>`DIRECTCONNECT`: Direct Connect</li>
 <li>`BMVPC`: BM VPC</li>
      * @param string $Description Description
+     * @param string $RouteTableId The ID of the route table associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class CcnInstance extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
         }
     }
 }

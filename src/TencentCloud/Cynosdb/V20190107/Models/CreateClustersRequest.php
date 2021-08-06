@@ -38,14 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method integer getCpu() Obtain Number of CPU cores of normal instance
  * @method void setCpu(integer $Cpu) Set Number of CPU cores of normal instance
- * @method integer getMemory() Obtain Memory of normal instance
- * @method void setMemory(integer $Memory) Set Memory of normal instance
- * @method integer getStorage() Obtain Storage
- * @method void setStorage(integer $Storage) Set Storage
+ * @method integer getMemory() Obtain Memory of a non-serverless instance in GB
+ * @method void setMemory(integer $Memory) Set Memory of a non-serverless instance in GB
+ * @method integer getStorage() Obtain Storage capacity in GB
+ * @method void setStorage(integer $Storage) Set Storage capacity in GB
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
- * @method string getAdminPassword() Obtain Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
- * @method void setAdminPassword(string $AdminPassword) Set Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+ * @method string getAdminPassword() Obtain Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
+ * @method void setAdminPassword(string $AdminPassword) Set Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
  * @method integer getPort() Obtain Port. Default value: 5432
  * @method void setPort(integer $Port) Set Port. Default value: 5432
  * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
@@ -68,8 +68,10 @@ timeRollback: rollback by time point
  * @method void setExpectTime(string $ExpectTime) Set Specified time for time point rollback or snapshot time for snapshot rollback
  * @method integer getExpectTimeThresh() Obtain Specified allowed time range for time point rollback
  * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set Specified allowed time range for time point rollback
- * @method integer getStorageLimit() Obtain Storage upper limit of normal instance in GB
- * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit of normal instance in GB
+ * @method integer getStorageLimit() Obtain The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
+ * @method void setStorageLimit(integer $StorageLimit) Set The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
  * @method integer getInstanceCount() Obtain Number of instances
  * @method void setInstanceCount(integer $InstanceCount) Set Number of instances
  * @method integer getTimeSpan() Obtain Purchase duration of monthly subscription plan
@@ -114,6 +116,12 @@ Default value: yes
 Default value: 600
  * @method void setAutoPauseDelay(integer $AutoPauseDelay) Set This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
 Default value: 600
+ * @method integer getStoragePayMode() Obtain The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -155,12 +163,12 @@ class CreateClustersRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Memory of normal instance
+     * @var integer Memory of a non-serverless instance in GB
      */
     public $Memory;
 
     /**
-     * @var integer Storage
+     * @var integer Storage capacity in GB
      */
     public $Storage;
 
@@ -170,7 +178,7 @@ class CreateClustersRequest extends AbstractModel
     public $ClusterName;
 
     /**
-     * @var string Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+     * @var string Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
      */
     public $AdminPassword;
 
@@ -218,7 +226,8 @@ timeRollback: rollback by time point
     public $ExpectTimeThresh;
 
     /**
-     * @var integer Storage upper limit of normal instance in GB
+     * @var integer The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
      */
     public $StorageLimit;
 
@@ -297,6 +306,13 @@ Default value: 600
     public $AutoPauseDelay;
 
     /**
+     * @var integer The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     */
+    public $StoragePayMode;
+
+    /**
      * @param string $Zone AZ
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
@@ -306,10 +322,10 @@ Default value: 600
 <li> Valid values for `MYSQL`: 5.7 </li>
      * @param integer $ProjectId Project ID
      * @param integer $Cpu Number of CPU cores of normal instance
-     * @param integer $Memory Memory of normal instance
-     * @param integer $Storage Storage
+     * @param integer $Memory Memory of a non-serverless instance in GB
+     * @param integer $Storage Storage capacity in GB
      * @param string $ClusterName Cluster name
-     * @param string $AdminPassword Account password, which can contain 8–64 characters and must contain at least two of the following types of characters: letters, digits, and special symbols (_+-&=!@#$%^*()~)
+     * @param string $AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
      * @param integer $Port Port. Default value: 5432
      * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription. Default value: 0
      * @param integer $Count Number of purchased items. Currently, only 1 can be passed in. If this parameter is left empty, 1 will be used by default.
@@ -321,7 +337,8 @@ timeRollback: rollback by time point
      * @param string $OriginalClusterId Pass in the source cluster ID during rollback to find the source `poolId`
      * @param string $ExpectTime Specified time for time point rollback or snapshot time for snapshot rollback
      * @param integer $ExpectTimeThresh Specified allowed time range for time point rollback
-     * @param integer $StorageLimit Storage upper limit of normal instance in GB
+     * @param integer $StorageLimit The maximum storage of a non-serverless instance in GB
+If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
      * @param integer $InstanceCount Number of instances
      * @param integer $TimeSpan Purchase duration of monthly subscription plan
      * @param string $TimeUnit Purchase duration unit of monthly subscription plan
@@ -344,6 +361,9 @@ Maximum number of CPU cores. For the value range, please see the returned result
 Default value: yes
      * @param integer $AutoPauseDelay This parameter specifies the delay for automatic cluster pause in seconds if `DbMode` is `SERVERLESS`. Value range: [600,691200]
 Default value: 600
+     * @param integer $StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
+If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
+Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
      */
     function __construct()
     {
@@ -493,6 +513,10 @@ Default value: 600
 
         if (array_key_exists("AutoPauseDelay",$param) and $param["AutoPauseDelay"] !== null) {
             $this->AutoPauseDelay = $param["AutoPauseDelay"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
         }
     }
 }

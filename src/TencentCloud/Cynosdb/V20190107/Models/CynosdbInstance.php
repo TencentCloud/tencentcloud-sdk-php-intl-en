@@ -104,6 +104,14 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
 resume
 pause
+ * @method integer getStoragePayMode() Obtain Storage billing mode
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getStorageId() Obtain Prepaid storage ID
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setStorageId(string $StorageId) Set Prepaid storage ID
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -310,6 +318,18 @@ pause
     public $ServerlessStatus;
 
     /**
+     * @var integer Storage billing mode
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var string Prepaid storage ID
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $StorageId;
+
+    /**
      * @param string $Uin User `Uin`
      * @param integer $AppId User `AppId`
      * @param string $ClusterId Cluster ID
@@ -352,6 +372,10 @@ pause
      * @param string $ServerlessStatus Serverless instance status. Valid values:
 resume
 pause
+     * @param integer $StoragePayMode Storage billing mode
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $StorageId Prepaid storage ID
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -524,6 +548,14 @@ pause
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
         }
     }
 }

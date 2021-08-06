@@ -80,6 +80,16 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless cluster status when the database type is `SERVERLESS`. Valid values:
 resume
 pause
+ * @method integer getStorage() Obtain Prepaid cluster storage
+ * @method void setStorage(integer $Storage) Set Prepaid cluster storage
+ * @method string getStorageId() Obtain Cluster storage ID used in prepaid storage modification
+ * @method void setStorageId(string $StorageId) Set Cluster storage ID used in prepaid storage modification
+ * @method integer getStoragePayMode() Obtain Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+ * @method integer getMinStorageSize() Obtain The minimum storage corresponding to the compute specifications of the cluster
+ * @method void setMinStorageSize(integer $MinStorageSize) Set The minimum storage corresponding to the compute specifications of the cluster
+ * @method integer getMaxStorageSize() Obtain The maximum storage corresponding to the compute specifications of the cluster
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set The maximum storage corresponding to the compute specifications of the cluster
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -226,6 +236,31 @@ pause
     public $ServerlessStatus;
 
     /**
+     * @var integer Prepaid cluster storage
+     */
+    public $Storage;
+
+    /**
+     * @var string Cluster storage ID used in prepaid storage modification
+     */
+    public $StorageId;
+
+    /**
+     * @var integer Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var integer The minimum storage corresponding to the compute specifications of the cluster
+     */
+    public $MinStorageSize;
+
+    /**
+     * @var integer The maximum storage corresponding to the compute specifications of the cluster
+     */
+    public $MaxStorageSize;
+
+    /**
      * @param string $Status Cluster status
      * @param string $UpdateTime Update time
      * @param string $Zone AZ
@@ -256,6 +291,11 @@ pause
      * @param string $ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
 resume
 pause
+     * @param integer $Storage Prepaid cluster storage
+     * @param string $StorageId Cluster storage ID used in prepaid storage modification
+     * @param integer $StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     * @param integer $MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
+     * @param integer $MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
      */
     function __construct()
     {
@@ -390,6 +430,26 @@ pause
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
+            $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
+            $this->MaxStorageSize = $param["MaxStorageSize"];
         }
     }
 }

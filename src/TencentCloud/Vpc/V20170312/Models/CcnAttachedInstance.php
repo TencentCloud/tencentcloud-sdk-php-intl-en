@@ -68,6 +68,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceArea(string $InstanceArea) Set General location of the associated instance, such as CHINA_MAINLAND.
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
+ * @method string getRouteTableId() Obtain Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteTableId(string $RouteTableId) Set Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRouteTableName() Obtain Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRouteTableName(string $RouteTableName) Set Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class CcnAttachedInstance extends AbstractModel
 {
@@ -144,6 +152,18 @@ class CcnAttachedInstance extends AbstractModel
     public $Description;
 
     /**
+     * @var string Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteTableId;
+
+    /**
+     * @var string Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RouteTableName;
+
+    /**
      * @param string $CcnId The ID of a CCN instance.
      * @param string $InstanceType The type of associated instances:
 <li>`VPC`: VPC</li>
@@ -168,6 +188,10 @@ class CcnAttachedInstance extends AbstractModel
      * @param string $CcnUin The UIN (root account) to which the CCN belongs.
      * @param string $InstanceArea General location of the associated instance, such as CHINA_MAINLAND.
      * @param string $Description Description
+     * @param string $RouteTableId Route table ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RouteTableName Route table name
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -228,6 +252,14 @@ class CcnAttachedInstance extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("RouteTableId",$param) and $param["RouteTableId"] !== null) {
+            $this->RouteTableId = $param["RouteTableId"];
+        }
+
+        if (array_key_exists("RouteTableName",$param) and $param["RouteTableName"] !== null) {
+            $this->RouteTableName = $param["RouteTableName"];
         }
     }
 }

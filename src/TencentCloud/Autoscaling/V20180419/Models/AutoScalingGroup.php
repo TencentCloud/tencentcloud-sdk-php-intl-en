@@ -80,12 +80,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckType(string $HealthCheckType) Set Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
  * @method integer getLoadBalancerHealthCheckGracePeriod() Obtain Grace period of the CLB health check
  * @method void setLoadBalancerHealthCheckGracePeriod(integer $LoadBalancerHealthCheckGracePeriod) Set Grace period of the CLB health check
- * @method string getInstanceAllocationPolicy() Obtain 
- * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) Set 
- * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() Obtain 
- * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) Set 
- * @method boolean getCapacityRebalance() Obtain 
- * @method void setCapacityRebalance(boolean $CapacityRebalance) Set 
+ * @method string getInstanceAllocationPolicy() Obtain Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+ * @method void setInstanceAllocationPolicy(string $InstanceAllocationPolicy) Set Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+ * @method SpotMixedAllocationPolicy getSpotMixedAllocationPolicy() Obtain Specifies how to assign pay-as-you-go instances and spot instances.
+A valid value will be returned only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+ * @method void setSpotMixedAllocationPolicy(SpotMixedAllocationPolicy $SpotMixedAllocationPolicy) Set Specifies how to assign pay-as-you-go instances and spot instances.
+A valid value will be returned only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+ * @method boolean getCapacityRebalance() Obtain Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
+ * @method void setCapacityRebalance(boolean $CapacityRebalance) Set Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
  */
 class AutoScalingGroup extends AbstractModel
 {
@@ -232,17 +242,22 @@ class AutoScalingGroup extends AbstractModel
     public $LoadBalancerHealthCheckGracePeriod;
 
     /**
-     * @var string 
+     * @var string Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
      */
     public $InstanceAllocationPolicy;
 
     /**
-     * @var SpotMixedAllocationPolicy 
+     * @var SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+A valid value will be returned only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
      */
     public $SpotMixedAllocationPolicy;
 
     /**
-     * @var boolean 
+     * @var boolean Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
      */
     public $CapacityRebalance;
 
@@ -277,9 +292,14 @@ class AutoScalingGroup extends AbstractModel
 <br><li> EQUALITY: chooses the availability zone/subnet with the least instances for scale-out. This gives each availability zone/subnet an opportunity for scale-out and disperses the instances created during multiple scale-out operations across different availability zones/subnets.
      * @param string $HealthCheckType Health check type of instances in a scaling group.<br><li>CVM: confirm whether an instance is healthy based on the network status. If the pinged instance is unreachable, the instance will be considered unhealthy. For more information, see [Instance Health Check](https://intl.cloud.tencent.com/document/product/377/8553?from_cn_redirect=1)<br><li>CLB: confirm whether an instance is healthy based on the CLB health check status. For more information, see [Health Check Overview](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1).
      * @param integer $LoadBalancerHealthCheckGracePeriod Grace period of the CLB health check
-     * @param string $InstanceAllocationPolicy 
-     * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy 
-     * @param boolean $CapacityRebalance 
+     * @param string $InstanceAllocationPolicy Specifies how to assign instances. Valid values: `LAUNCH_CONFIGURATION` and `SPOT_MIXED`.
+<br><li>`LAUNCH_CONFIGURATION`: the launch configuration mode.
+<br><li>`SPOT_MIXED`: a mixed instance mode. Currently, this mode is supported only when the launch configuration takes the pay-as-you-go billing mode. With this mode, the scaling group can provision a combination of pay-as-you-go instances and spot instances to meet the configured capacity. Note that the billing mode of the associated launch configuration cannot be modified when this mode is used.
+     * @param SpotMixedAllocationPolicy $SpotMixedAllocationPolicy Specifies how to assign pay-as-you-go instances and spot instances.
+A valid value will be returned only when `InstanceAllocationPolicy` is set to `SPOT_MIXED`.
+     * @param boolean $CapacityRebalance Indicates whether the capacity rebalancing feature is enabled. This parameter is only valid for spot instances in the scaling group. Valid values:
+<br><li>`TRUE`: yes. Before the spot instances in the scaling group are about to be automatically repossessed, AS will terminate them. The scale-in hook (if configured) will take effect before the termination. After the termination process starts, AS will asynchronously initiate a scaling activity to meet the desired capacity.
+<br><li>`FALSE`: no. AS will add instances to meet the desired capacity only after the spot instances are terminated.
      */
     function __construct()
     {

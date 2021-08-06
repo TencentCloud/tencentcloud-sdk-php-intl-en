@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeResourcesByDealName request structure.
  *
- * @method string getDealName() Obtain Billing order ID
- * @method void setDealName(string $DealName) Set Billing order ID
+ * @method string getDealName() Obtain Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
+ * @method void setDealName(string $DealName) Set Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
  */
 class DescribeResourcesByDealNameRequest extends AbstractModel
 {
     /**
-     * @var string Billing order ID
+     * @var string Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
      */
     public $DealName;
 
     /**
-     * @param string $DealName Billing order ID
+     * @param string $DealName Order ID. (If the cluster is not delivered yet, the `DescribeResourcesByDealName` API may return the `InvalidParameterValue.DealNameNotFound` error. Please call the API again until it succeeds.)
      */
     function __construct()
     {
