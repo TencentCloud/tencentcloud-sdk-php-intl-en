@@ -32,6 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list (only one voucher can be specified currently)
  * @method integer getActivityId() Obtain Activity ID
  * @method void setActivityId(integer $ActivityId) Set Activity ID
+ * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+ * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+ * @method string getSwitchStartTime() Obtain The earliest time to start a switch
+ * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch
+ * @method string getSwitchEndTime() Obtain The latest time to start a switch
+ * @method void setSwitchEndTime(string $SwitchEndTime) Set The latest time to start a switch
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -66,12 +72,30 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $ActivityId;
 
     /**
+     * @var integer Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     */
+    public $SwitchTag;
+
+    /**
+     * @var string The earliest time to start a switch
+     */
+    public $SwitchStartTime;
+
+    /**
+     * @var string The latest time to start a switch
+     */
+    public $SwitchEndTime;
+
+    /**
      * @param integer $Memory Instance memory size in GB after upgrade
      * @param integer $Storage Instance disk size in GB after upgrade
      * @param string $DBInstanceId Instance ID in the format of postgres-lnp6j617
      * @param integer $AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no
      * @param array $VoucherIds Voucher ID list (only one voucher can be specified currently)
      * @param integer $ActivityId Activity ID
+     * @param integer $SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * @param string $SwitchStartTime The earliest time to start a switch
+     * @param string $SwitchEndTime The latest time to start a switch
      */
     function __construct()
     {
@@ -108,6 +132,18 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
             $this->ActivityId = $param["ActivityId"];
+        }
+
+        if (array_key_exists("SwitchTag",$param) and $param["SwitchTag"] !== null) {
+            $this->SwitchTag = $param["SwitchTag"];
+        }
+
+        if (array_key_exists("SwitchStartTime",$param) and $param["SwitchStartTime"] !== null) {
+            $this->SwitchStartTime = $param["SwitchStartTime"];
+        }
+
+        if (array_key_exists("SwitchEndTime",$param) and $param["SwitchEndTime"] !== null) {
+            $this->SwitchEndTime = $param["SwitchEndTime"];
         }
     }
 }

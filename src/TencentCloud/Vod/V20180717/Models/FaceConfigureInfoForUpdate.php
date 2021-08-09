@@ -36,10 +36,10 @@ use TencentCloud\Common\AbstractModel;
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports celebrity;</li>
 <li>politician: politically sensitive figure.</li>
- * @method array getUserDefineLibraryLabelSet() Obtain Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+ * @method array getUserDefineLibraryLabelSet() Obtain Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
+ * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
  * @method string getFaceLibrary() Obtain Figure library. Valid values:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>
@@ -72,8 +72,8 @@ class FaceConfigureInfoForUpdate extends AbstractModel
     public $DefaultLibraryLabelSet;
 
     /**
-     * @var array Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @var array Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
      */
     public $UserDefineLibraryLabelSet;
 
@@ -94,8 +94,8 @@ There can be up to 10 tags, each with a length limit of 16 characters.
 <li>entertainment: entertainment celebrity;</li>
 <li>sport: sports celebrity;</li>
 <li>politician: politically sensitive figure.</li>
-     * @param array $UserDefineLibraryLabelSet Custom figure filter tag, which specifies the custom figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the custom figures will be returned. Valid values:
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @param array $UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
+You can specify up to 100 labels, with each containing up to 16 characters.
      * @param string $FaceLibrary Figure library. Valid values:
 <li>Default: default figure library;</li>
 <li>UserDefine: custom figure library.</li>

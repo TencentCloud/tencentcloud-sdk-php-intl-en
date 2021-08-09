@@ -68,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMetricsInfo(array $MetricsInfo) Set Metric information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDimensions() Obtain Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDimensions(string $Dimensions) Set Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmHistory extends AbstractModel
 {
@@ -188,6 +192,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $MetricsInfo;
 
     /**
+     * @var string Dimension information of an instance that triggered alarms.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Dimensions;
+
+    /**
      * @param string $AlarmId Alarm record ID
      * @param string $MonitorType Monitor type
      * @param string $Namespace Policy type
@@ -211,6 +221,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Region Region
      * @param integer $PolicyExists Whether the policy exists. Valid values: 0 (no), 1 (yes)
      * @param array $MetricsInfo Metric information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Dimensions Dimension information of an instance that triggered alarms.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -326,6 +338,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->MetricsInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = $param["Dimensions"];
         }
     }
 }

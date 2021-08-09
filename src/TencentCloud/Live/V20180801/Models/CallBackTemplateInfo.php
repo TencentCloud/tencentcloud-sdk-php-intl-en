@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Description.
  * @method string getStreamBeginNotifyUrl() Obtain Stream starting callback URL.
  * @method void setStreamBeginNotifyUrl(string $StreamBeginNotifyUrl) Set Stream starting callback URL.
+ * @method string getStreamMixNotifyUrl() Obtain Stream mixing callback URL (disused)
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Stream mixing callback URL (disused)
  * @method string getStreamEndNotifyUrl() Obtain Interruption callback URL.
  * @method void setStreamEndNotifyUrl(string $StreamEndNotifyUrl) Set Interruption callback URL.
- * @method string getStreamMixNotifyUrl() Obtain Stream mixing callback URL.
- * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Stream mixing callback URL.
  * @method string getRecordNotifyUrl() Obtain Recording callback URL.
  * @method void setRecordNotifyUrl(string $RecordNotifyUrl) Set Recording callback URL.
  * @method string getSnapshotNotifyUrl() Obtain Screencapturing callback URL.
@@ -64,14 +64,14 @@ class CallBackTemplateInfo extends AbstractModel
     public $StreamBeginNotifyUrl;
 
     /**
+     * @var string Stream mixing callback URL (disused)
+     */
+    public $StreamMixNotifyUrl;
+
+    /**
      * @var string Interruption callback URL.
      */
     public $StreamEndNotifyUrl;
-
-    /**
-     * @var string Stream mixing callback URL.
-     */
-    public $StreamMixNotifyUrl;
 
     /**
      * @var string Recording callback URL.
@@ -98,8 +98,8 @@ class CallBackTemplateInfo extends AbstractModel
      * @param string $TemplateName Template name.
      * @param string $Description Description.
      * @param string $StreamBeginNotifyUrl Stream starting callback URL.
+     * @param string $StreamMixNotifyUrl Stream mixing callback URL (disused)
      * @param string $StreamEndNotifyUrl Interruption callback URL.
-     * @param string $StreamMixNotifyUrl Stream mixing callback URL.
      * @param string $RecordNotifyUrl Recording callback URL.
      * @param string $SnapshotNotifyUrl Screencapturing callback URL.
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL.
@@ -134,12 +134,12 @@ class CallBackTemplateInfo extends AbstractModel
             $this->StreamBeginNotifyUrl = $param["StreamBeginNotifyUrl"];
         }
 
-        if (array_key_exists("StreamEndNotifyUrl",$param) and $param["StreamEndNotifyUrl"] !== null) {
-            $this->StreamEndNotifyUrl = $param["StreamEndNotifyUrl"];
-        }
-
         if (array_key_exists("StreamMixNotifyUrl",$param) and $param["StreamMixNotifyUrl"] !== null) {
             $this->StreamMixNotifyUrl = $param["StreamMixNotifyUrl"];
+        }
+
+        if (array_key_exists("StreamEndNotifyUrl",$param) and $param["StreamEndNotifyUrl"] !== null) {
+            $this->StreamEndNotifyUrl = $param["StreamEndNotifyUrl"];
         }
 
         if (array_key_exists("RecordNotifyUrl",$param) and $param["RecordNotifyUrl"] !== null) {

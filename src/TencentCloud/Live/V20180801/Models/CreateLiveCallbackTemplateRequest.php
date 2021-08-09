@@ -56,10 +56,8 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
- * @method string getStreamMixNotifyUrl() Obtain Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
- * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+ * @method string getStreamMixNotifyUrl() Obtain Disused
+ * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Disused
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -114,8 +112,7 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
     public $CallbackKey;
 
     /**
-     * @var string Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * @var string Disused
      */
     public $StreamMixNotifyUrl;
 
@@ -138,8 +135,7 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32741?from_cn_redirect=1).
      * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
-     * @param string $StreamMixNotifyUrl Stream mixing callback URL,
-Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * @param string $StreamMixNotifyUrl Disused
      */
     function __construct()
     {

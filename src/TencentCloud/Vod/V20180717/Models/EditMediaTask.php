@@ -40,6 +40,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
 <li>70000: internal service error. Please try again.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getErrCodeExt() Obtain Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
  * @method string getMessage() Obtain Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
@@ -90,6 +92,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ErrCode;
+
+    /**
+     * @var string Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
+     */
+    public $ErrCodeExt;
 
     /**
      * @var string Error message.
@@ -143,6 +150,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
 <li>70000: internal service error. Please try again.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param EditMediaTaskInput $Input Input of video editing task.
@@ -180,6 +188,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("ErrCodeExt",$param) and $param["ErrCodeExt"] !== null) {
+            $this->ErrCodeExt = $param["ErrCodeExt"];
         }
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {

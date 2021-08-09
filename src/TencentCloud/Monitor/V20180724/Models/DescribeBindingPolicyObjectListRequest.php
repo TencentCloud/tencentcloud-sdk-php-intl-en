@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getModule() Obtain The value is fixed to monitor.
  * @method void setModule(string $Module) Set The value is fixed to monitor.
- * @method integer getGroupId() Obtain Policy group ID.
- * @method void setGroupId(integer $GroupId) Set Policy group ID.
- * @method integer getLimit() Obtain Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
- * @method integer getOffset() Obtain Parameter offset on each page. The value starts from 0 and the default value is 0.
- * @method void setOffset(integer $Offset) Set Parameter offset on each page. The value starts from 0 and the default value is 0.
+ * @method integer getGroupId() Obtain Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+ * @method string getPolicyId() Obtain Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+ * @method integer getLimit() Obtain The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+ * @method void setLimit(integer $Limit) Set The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+ * @method integer getOffset() Obtain Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
+ * @method void setOffset(integer $Offset) Set Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
  * @method array getDimensions() Obtain Dimensions of filtering objects.
  * @method void setDimensions(array $Dimensions) Set Dimensions of filtering objects.
  */
@@ -39,17 +41,22 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
     public $Module;
 
     /**
-     * @var integer Policy group ID.
+     * @var integer Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
      */
     public $GroupId;
 
     /**
-     * @var integer Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
+     * @var string Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+     */
+    public $PolicyId;
+
+    /**
+     * @var integer The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var integer Parameter offset on each page. The value starts from 0 and the default value is 0.
+     * @var integer Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
      */
     public $Offset;
 
@@ -60,9 +67,10 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
 
     /**
      * @param string $Module The value is fixed to monitor.
-     * @param integer $GroupId Policy group ID.
-     * @param integer $Limit Number of parameters that can be returned on each page. Value range: 1 - 100. Default value: 20.
-     * @param integer $Offset Parameter offset on each page. The value starts from 0 and the default value is 0.
+     * @param integer $GroupId Policy group ID. If the ID is in the format of “policy-xxxx”, please enter it in the `PolicyId` field. Enter 0 in this field.
+     * @param string $PolicyId Alarm policy ID in the format of “policy-xxxx”. If a value has been entered in this field, you can enter 0 in the `GroupId` field.
+     * @param integer $Limit The number of alarm objects returned each time. Value range: 1-100. Default value: 20.
+     * @param integer $Offset Offset, which starts from 0 and is set to 0 by default. For example, the parameter `Offset=0&Limit=20` returns the zeroth to 19th alarm objects, and `Offset=20&Limit=20` returns the 20th to 39th alarm objects, and so on.
      * @param array $Dimensions Dimensions of filtering objects.
      */
     function __construct()
@@ -84,6 +92,10 @@ class DescribeBindingPolicyObjectListRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {

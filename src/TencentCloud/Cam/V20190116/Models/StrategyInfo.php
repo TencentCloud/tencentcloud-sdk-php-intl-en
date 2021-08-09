@@ -56,6 +56,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsServiceLinkedPolicy(integer $IsServiceLinkedPolicy) Set The deletion task identifier used to check the deletion status of the service-linked role
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getAttachEntityCount() Obtain The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAttachEntityCount(integer $AttachEntityCount) Set The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getAttachEntityBoundaryCount() Obtain The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAttachEntityBoundaryCount(integer $AttachEntityBoundaryCount) Set The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class StrategyInfo extends AbstractModel
 {
@@ -126,6 +138,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsServiceLinkedPolicy;
 
     /**
+     * @var integer The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AttachEntityCount;
+
+    /**
+     * @var integer The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AttachEntityBoundaryCount;
+
+    /**
+     * @var string The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UpdateTime;
+
+    /**
      * @param integer $PolicyId Policy ID
      * @param string $PolicyName Policy name
      * @param string $AddTime Time policy created
@@ -144,6 +174,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IsServiceLinkedPolicy The deletion task identifier used to check the deletion status of the service-linked role
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $AttachEntityCount The number of entities associated with the policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $AttachEntityBoundaryCount The number of entities associated with the permission boundary.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $UpdateTime The last editted time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -204,6 +240,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsServiceLinkedPolicy",$param) and $param["IsServiceLinkedPolicy"] !== null) {
             $this->IsServiceLinkedPolicy = $param["IsServiceLinkedPolicy"];
+        }
+
+        if (array_key_exists("AttachEntityCount",$param) and $param["AttachEntityCount"] !== null) {
+            $this->AttachEntityCount = $param["AttachEntityCount"];
+        }
+
+        if (array_key_exists("AttachEntityBoundaryCount",$param) and $param["AttachEntityBoundaryCount"] !== null) {
+            $this->AttachEntityBoundaryCount = $param["AttachEntityBoundaryCount"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

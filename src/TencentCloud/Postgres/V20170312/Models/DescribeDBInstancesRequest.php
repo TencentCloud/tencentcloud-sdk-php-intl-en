@@ -20,33 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBInstances request structure.
  *
- * @method array getFilters() Obtain Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
- * @method void setFilters(array $Filters) Set Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
- * @method integer getLimit() Obtain Number of entries returned per page. Default value: 10.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10.
- * @method integer getOffset() Obtain Data offset which starts from 0
- * @method void setOffset(integer $Offset) Set Data offset which starts from 0
+ * @method array getFilters() Obtain Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
+ * @method void setFilters(array $Filters) Set Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
+ * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
+ * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
  * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
- * @method string getOrderByType() Obtain In ascending or descending order
- * @method void setOrderByType(string $OrderByType) Set In ascending or descending order
+ * @method integer getOffset() Obtain Pagination offset, starting from 0
+ * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0
+ * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending)
+ * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
+     * @var array Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
      */
     public $Filters;
 
     /**
-     * @var integer Number of entries returned per page. Default value: 10.
+     * @var integer The maximum number of results returned per page. Value range: 1-100. Default: `10`
      */
     public $Limit;
-
-    /**
-     * @var integer Data offset which starts from 0
-     */
-    public $Offset;
 
     /**
      * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
@@ -54,16 +64,26 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $OrderBy;
 
     /**
-     * @var string In ascending or descending order
+     * @var integer Pagination offset, starting from 0
+     */
+    public $Offset;
+
+    /**
+     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     public $OrderByType;
 
     /**
-     * @param array $Filters Filter condition. Valid values: db-instance-id, db-instance-name, db-project-id, db-pay-mode, db-tag-key.
-     * @param integer $Limit Number of entries returned per page. Default value: 10.
-     * @param integer $Offset Data offset which starts from 0
+     * @param array $Filters Filter instances using one or more criteria. Valid filter names:
+db-instance-id: filter by instance ID (the filter value is a string)
+db-instance-name: filter by instance name (the filter value is a string)
+db-project-id: filter by project ID (the filter value is an integer)
+db-pay-mode: filter by billing mode (the filter value is a string)
+db-tag-key: filter by tag key (the filter value is a string)
+     * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
      * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-     * @param string $OrderByType In ascending or descending order
+     * @param integer $Offset Pagination offset, starting from 0
+     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     function __construct()
     {
@@ -91,12 +111,12 @@ class DescribeDBInstancesRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
-        }
-
         if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
             $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {

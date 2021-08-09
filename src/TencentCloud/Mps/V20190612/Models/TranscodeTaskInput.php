@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setObjectNumberFormat(NumberFormat $ObjectNumberFormat) Set Rule of the `{number}` variable in the output path after transcoding.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method HeadTailParameter getHeadTailParameter() Obtain Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setHeadTailParameter(HeadTailParameter $HeadTailParameter) Set Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -140,6 +144,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ObjectNumberFormat;
 
     /**
+     * @var HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $HeadTailParameter;
+
+    /**
      * @param integer $Definition ID of a video transcoding template.
      * @param RawTranscodeParameter $RawParameter Custom video transcoding parameter, which is valid if `Definition` is 0.
 This parameter is used in highly customized scenarios. We recommend you use `Definition` to specify the transcoding parameter preferably.
@@ -164,6 +174,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SegmentObjectName Path to an output file part (the path to ts during transcoding to HLS), which can only be a relative path. If this parameter is left empty, the following relative path will be used by default: `{inputName}_transcode_{definition}_{number}.{format}`.
      * @param NumberFormat $ObjectNumberFormat Rule of the `{number}` variable in the output path after transcoding.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param HeadTailParameter $HeadTailParameter Opening and closing credits parameters
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -234,6 +246,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ObjectNumberFormat",$param) and $param["ObjectNumberFormat"] !== null) {
             $this->ObjectNumberFormat = new NumberFormat();
             $this->ObjectNumberFormat->deserialize($param["ObjectNumberFormat"]);
+        }
+
+        if (array_key_exists("HeadTailParameter",$param) and $param["HeadTailParameter"] !== null) {
+            $this->HeadTailParameter = new HeadTailParameter();
+            $this->HeadTailParameter->deserialize($param["HeadTailParameter"]);
         }
     }
 }

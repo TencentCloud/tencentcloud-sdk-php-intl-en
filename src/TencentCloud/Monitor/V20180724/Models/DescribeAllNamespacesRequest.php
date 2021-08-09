@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAllNamespaces request structure.
  *
- * @method string getSceneType() Obtain Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
- * @method void setSceneType(string $SceneType) Set Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+ * @method string getSceneType() Obtain Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
+ * @method void setSceneType(string $SceneType) Set Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
  * @method string getModule() Obtain Value fixed at "monitor"
  * @method void setModule(string $Module) Set Value fixed at "monitor"
  * @method array getMonitorTypes() Obtain Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAllNamespacesRequest extends AbstractModel
 {
     /**
-     * @var string Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+     * @var string Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
      */
     public $SceneType;
 
@@ -52,7 +52,7 @@ class DescribeAllNamespacesRequest extends AbstractModel
     public $Ids;
 
     /**
-     * @param string $SceneType Filter by use case. Valid values: ST_DASHBOARD (Dashboard type), ST_ALARM (alarm type)
+     * @param string $SceneType Filter by use case. Currently, the only valid value is `ST_ALARM` (alarm type).
      * @param string $Module Value fixed at "monitor"
      * @param array $MonitorTypes Filter by monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring). If this parameter is left empty, all will be queried by default
      * @param array $Ids Filter by namespace ID. If this parameter is left empty, all will be queried

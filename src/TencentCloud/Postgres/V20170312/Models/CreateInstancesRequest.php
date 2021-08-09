@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) Set Campaign ID
  * @method string getName() Obtain Instance name
  * @method void setName(string $Name) Set Instance name
- * @method integer getNeedSupportIpv6() Obtain Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
- * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+ * @method integer getNeedSupportIpv6() Obtain Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
+ * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
  * @method array getTagList() Obtain The information of tags to be associated with instances. This parameter is left empty by default.
  * @method void setTagList(array $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
  * @method array getSecurityGroupIds() Obtain Security group IDs
@@ -156,7 +156,7 @@ class CreateInstancesRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+     * @var integer Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      */
     public $NeedSupportIpv6;
 
@@ -189,7 +189,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
      * @param integer $ActivityId Campaign ID
      * @param string $Name Instance name
-     * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
+     * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.
      * @param array $SecurityGroupIds Security group IDs
      */

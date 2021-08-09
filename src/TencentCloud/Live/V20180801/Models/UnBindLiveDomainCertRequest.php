@@ -22,6 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomainName() Obtain Playback domain name.
  * @method void setDomainName(string $DomainName) Set Playback domain name.
+ * @method string getType() Obtain Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+ * @method void setType(string $Type) Set Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
  */
 class UnBindLiveDomainCertRequest extends AbstractModel
 {
@@ -31,7 +41,21 @@ class UnBindLiveDomainCertRequest extends AbstractModel
     public $DomainName;
 
     /**
+     * @var string Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
+     */
+    public $Type;
+
+    /**
      * @param string $DomainName Playback domain name.
+     * @param string $Type Valid values:
+`gray`: unbind the canary certificate
+`formal` (default): unbind the formal certificate
+
+`formal` will be used if no value is passed in
      */
     function __construct()
     {
@@ -48,6 +72,10 @@ class UnBindLiveDomainCertRequest extends AbstractModel
         }
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }
