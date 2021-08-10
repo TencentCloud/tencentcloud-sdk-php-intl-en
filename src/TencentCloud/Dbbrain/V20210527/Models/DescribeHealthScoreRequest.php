@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID for which to get the health score.
  * @method void setInstanceId(string $InstanceId) Set Instance ID for which to get the health score.
- * @method string getTime() Obtain Time to get the health score.
- * @method void setTime(string $Time) Set Time to get the health score.
+ * @method string getTime() Obtain Time to get the health score in the format of `2019-09-10 12:13:14`.
+ * @method void setTime(string $Time) Set Time to get the health score in the format of `2019-09-10 12:13:14`.
  * @method string getProduct() Obtain Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
  * @method void setProduct(string $Product) Set Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
  */
@@ -35,7 +35,7 @@ class DescribeHealthScoreRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Time to get the health score.
+     * @var string Time to get the health score in the format of `2019-09-10 12:13:14`.
      */
     public $Time;
 
@@ -46,7 +46,7 @@ class DescribeHealthScoreRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID for which to get the health score.
-     * @param string $Time Time to get the health score.
+     * @param string $Time Time to get the health score in the format of `2019-09-10 12:13:14`.
      * @param string $Product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
      */
     function __construct()

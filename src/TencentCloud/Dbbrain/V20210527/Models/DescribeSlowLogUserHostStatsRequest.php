@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
  * @method string getProduct() Obtain Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
  * @method void setProduct(string $Product) Set Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
+ * @method string getMd5() Obtain MD5 value of SOL template
+ * @method void setMd5(string $Md5) Set MD5 value of SOL template
  */
 class DescribeSlowLogUserHostStatsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSlowLogUserHostStatsRequest extends AbstractModel
     public $Product;
 
     /**
+     * @var string MD5 value of SOL template
+     */
+    public $Md5;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $StartTime Start time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
      * @param string $EndTime End time of the time range in the format of yyyy-MM-dd HH:mm:ss, such as 2019-09-10 12:13:14.
      * @param string $Product Service type. Valid values: mysql (TencentDB for MySQL), cynosdb (TDSQL-C for MySQL). Default value: mysql.
+     * @param string $Md5 MD5 value of SOL template
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSlowLogUserHostStatsRequest extends AbstractModel
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

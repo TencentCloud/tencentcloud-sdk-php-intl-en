@@ -26,18 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiagType(string $DiagType) Set Diagnosis type.
  * @method integer getEventId() Obtain Event ID.
  * @method void setEventId(integer $EventId) Set Event ID.
- * @method string getExplanation() Obtain Event details.
- * @method void setExplanation(string $Explanation) Set Event details.
- * @method string getOutline() Obtain Summary.
- * @method void setOutline(string $Outline) Set Summary.
+ * @method string getExplanation() Obtain Diagnosis event details. If there is no additional explanation information, the output will be empty.
+ * @method void setExplanation(string $Explanation) Set Diagnosis event details. If there is no additional explanation information, the output will be empty.
+ * @method string getOutline() Obtain Diagnosis summary.
+ * @method void setOutline(string $Outline) Set Diagnosis summary.
  * @method string getProblem() Obtain Found problem.
  * @method void setProblem(string $Problem) Set Found problem.
  * @method integer getSeverity() Obtain Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
  * @method void setSeverity(integer $Severity) Set Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
  * @method string getStartTime() Obtain Start time
  * @method void setStartTime(string $StartTime) Set Start time
- * @method string getSuggestions() Obtain Suggestion.
- * @method void setSuggestions(string $Suggestions) Set Suggestion.
+ * @method string getSuggestions() Obtain Suggestions. If there are no suggestions, the output will be empty.
+ * @method void setSuggestions(string $Suggestions) Set Suggestions. If there are no suggestions, the output will be empty.
  * @method string getMetric() Obtain Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMetric(string $Metric) Set Reserved field.
@@ -65,12 +65,12 @@ class DescribeDBDiagEventResponse extends AbstractModel
     public $EventId;
 
     /**
-     * @var string Event details.
+     * @var string Diagnosis event details. If there is no additional explanation information, the output will be empty.
      */
     public $Explanation;
 
     /**
-     * @var string Summary.
+     * @var string Diagnosis summary.
      */
     public $Outline;
 
@@ -90,7 +90,7 @@ class DescribeDBDiagEventResponse extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Suggestion.
+     * @var string Suggestions. If there are no suggestions, the output will be empty.
      */
     public $Suggestions;
 
@@ -114,12 +114,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DiagItem Diagnosis item.
      * @param string $DiagType Diagnosis type.
      * @param integer $EventId Event ID.
-     * @param string $Explanation Event details.
-     * @param string $Outline Summary.
+     * @param string $Explanation Diagnosis event details. If there is no additional explanation information, the output will be empty.
+     * @param string $Outline Diagnosis summary.
      * @param string $Problem Found problem.
      * @param integer $Severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
      * @param string $StartTime Start time
-     * @param string $Suggestions Suggestion.
+     * @param string $Suggestions Suggestions. If there are no suggestions, the output will be empty.
      * @param string $Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $EndTime End time.

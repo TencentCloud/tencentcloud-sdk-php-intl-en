@@ -20,32 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUserSqlAdvice response structure.
  *
- * @method string getAdvices() Obtain SQL statement optimization suggestions, which can be parsed into JSON arrays.
- * @method void setAdvices(string $Advices) Set SQL statement optimization suggestions, which can be parsed into JSON arrays.
- * @method string getComments() Obtain Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
- * @method void setComments(string $Comments) Set Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+ * @method string getAdvices() Obtain SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+ * @method void setAdvices(string $Advices) Set SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+ * @method string getComments() Obtain Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
+ * @method void setComments(string $Comments) Set Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
  * @method string getSqlText() Obtain SQL statement.
  * @method void setSqlText(string $SqlText) Set SQL statement.
  * @method string getSchema() Obtain Database name.
  * @method void setSchema(string $Schema) Set Database name.
  * @method string getTables() Obtain DDL information of related tables, which can be parsed into JSON arrays.
  * @method void setTables(string $Tables) Set DDL information of related tables, which can be parsed into JSON arrays.
- * @method string getSqlPlan() Obtain SQL execution plan, which can be parsed into JSON.
- * @method void setSqlPlan(string $SqlPlan) Set SQL execution plan, which can be parsed into JSON.
- * @method string getCost() Obtain Cost saving details after SQL statement optimization, which can be parsed into JSON.
- * @method void setCost(string $Cost) Set Cost saving details after SQL statement optimization, which can be parsed into JSON.
+ * @method string getSqlPlan() Obtain SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+ * @method void setSqlPlan(string $SqlPlan) Set SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+ * @method string getCost() Obtain Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+ * @method void setCost(string $Cost) Set Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeUserSqlAdviceResponse extends AbstractModel
 {
     /**
-     * @var string SQL statement optimization suggestions, which can be parsed into JSON arrays.
+     * @var string SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public $Advices;
 
     /**
-     * @var string Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+     * @var string Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
      */
     public $Comments;
 
@@ -65,12 +65,12 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
     public $Tables;
 
     /**
-     * @var string SQL execution plan, which can be parsed into JSON.
+     * @var string SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public $SqlPlan;
 
     /**
-     * @var string Cost saving details after SQL statement optimization, which can be parsed into JSON.
+     * @var string Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      */
     public $Cost;
 
@@ -80,13 +80,13 @@ class DescribeUserSqlAdviceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Advices SQL statement optimization suggestions, which can be parsed into JSON arrays.
-     * @param string $Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays.
+     * @param string $Advices SQL statement optimization suggestions, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+     * @param string $Comments Notes of SQL statement optimization suggestions, which can be parsed into String arrays. If there is no need for optimization, the output will be empty.
      * @param string $SqlText SQL statement.
      * @param string $Schema Database name.
      * @param string $Tables DDL information of related tables, which can be parsed into JSON arrays.
-     * @param string $SqlPlan SQL execution plan, which can be parsed into JSON.
-     * @param string $Cost Cost saving details after SQL statement optimization, which can be parsed into JSON.
+     * @param string $SqlPlan SQL execution plan, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
+     * @param string $Cost Cost saving details after SQL statement optimization, which can be parsed into JSON arrays. If there is no need for optimization, the output will be empty.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -90,6 +90,16 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setEksService(EksService $EksService) Set EKS access configuration
  * @method string getVersionId() Obtain ID of the version that you want to roll back to
  * @method void setVersionId(string $VersionId) Set ID of the version that you want to roll back to
+ * @method string getPostStart() Obtain The script to run after startup
+ * @method void setPostStart(string $PostStart) Set The script to run after startup
+ * @method string getPreStop() Obtain The script to run before stop
+ * @method void setPreStop(string $PreStop) Set The script to run before stop
+ * @method DeployStrategyConf getDeployStrategyConf() Obtain Configuration of 
+ * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) Set Configuration of 
+ * @method HealthCheckConfig getLiveness() Obtain Configuration of aliveness probe
+ * @method void setLiveness(HealthCheckConfig $Liveness) Set Configuration of aliveness probe
+ * @method HealthCheckConfig getReadiness() Obtain Configuration of readiness probe
+ * @method void setReadiness(HealthCheckConfig $Readiness) Set Configuration of readiness probe
  */
 class DeployServiceV2Request extends AbstractModel
 {
@@ -245,6 +255,31 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $VersionId;
 
     /**
+     * @var string The script to run after startup
+     */
+    public $PostStart;
+
+    /**
+     * @var string The script to run before stop
+     */
+    public $PreStop;
+
+    /**
+     * @var DeployStrategyConf Configuration of 
+     */
+    public $DeployStrategyConf;
+
+    /**
+     * @var HealthCheckConfig Configuration of aliveness probe
+     */
+    public $Liveness;
+
+    /**
+     * @var HealthCheckConfig Configuration of readiness probe
+     */
+    public $Readiness;
+
+    /**
      * @param string $ServiceId Service ID
      * @param integer $ContainerPort Container port
      * @param integer $InitPodNum Number of initialized pods
@@ -280,6 +315,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param array $SettingConfs Mounting configurations
      * @param EksService $EksService EKS access configuration
      * @param string $VersionId ID of the version that you want to roll back to
+     * @param string $PostStart The script to run after startup
+     * @param string $PreStop The script to run before stop
+     * @param DeployStrategyConf $DeployStrategyConf Configuration of 
+     * @param HealthCheckConfig $Liveness Configuration of aliveness probe
+     * @param HealthCheckConfig $Readiness Configuration of readiness probe
      */
     function __construct()
     {
@@ -436,6 +476,29 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
 
         if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
             $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("PostStart",$param) and $param["PostStart"] !== null) {
+            $this->PostStart = $param["PostStart"];
+        }
+
+        if (array_key_exists("PreStop",$param) and $param["PreStop"] !== null) {
+            $this->PreStop = $param["PreStop"];
+        }
+
+        if (array_key_exists("DeployStrategyConf",$param) and $param["DeployStrategyConf"] !== null) {
+            $this->DeployStrategyConf = new DeployStrategyConf();
+            $this->DeployStrategyConf->deserialize($param["DeployStrategyConf"]);
+        }
+
+        if (array_key_exists("Liveness",$param) and $param["Liveness"] !== null) {
+            $this->Liveness = new HealthCheckConfig();
+            $this->Liveness->deserialize($param["Liveness"]);
+        }
+
+        if (array_key_exists("Readiness",$param) and $param["Readiness"] !== null) {
+            $this->Readiness = new HealthCheckConfig();
+            $this->Readiness->deserialize($param["Readiness"]);
         }
     }
 }

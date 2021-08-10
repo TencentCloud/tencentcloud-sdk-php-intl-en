@@ -68,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLockTimeAvg(float $LockTimeAvg) Set Average lock wait time in seconds
  * @method float getRowsExaminedAvg() Obtain Average number of scanned rows
  * @method void setRowsExaminedAvg(float $RowsExaminedAvg) Set Average number of scanned rows
+ * @method string getMd5() Obtain MD5 value of SOL template
+ * @method void setMd5(string $Md5) Set MD5 value of SOL template
  */
 class SlowLogTopSqlItem extends AbstractModel
 {
@@ -192,6 +194,11 @@ class SlowLogTopSqlItem extends AbstractModel
     public $RowsExaminedAvg;
 
     /**
+     * @var string MD5 value of SOL template
+     */
+    public $Md5;
+
+    /**
      * @param float $LockTime Total SQL lock wait time in seconds.
      * @param float $LockTimeMax Maximum lock wait time in seconds
      * @param float $LockTimeMin Minimum lock wait time in seconds
@@ -216,6 +223,7 @@ class SlowLogTopSqlItem extends AbstractModel
      * @param float $RowsSentAvg Average number of returned rows
      * @param float $LockTimeAvg Average lock wait time in seconds
      * @param float $RowsExaminedAvg Average number of scanned rows
+     * @param string $Md5 MD5 value of SOL template
      */
     function __construct()
     {
@@ -324,6 +332,10 @@ class SlowLogTopSqlItem extends AbstractModel
 
         if (array_key_exists("RowsExaminedAvg",$param) and $param["RowsExaminedAvg"] !== null) {
             $this->RowsExaminedAvg = $param["RowsExaminedAvg"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

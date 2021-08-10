@@ -38,6 +38,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setDeployVersion(string $DeployVersion) Set Deployed version.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getRestartCount() Obtain Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRestartCount(integer $RestartCount) Set Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
  */
 class RunVersionPod extends AbstractModel
 {
@@ -79,6 +83,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $DeployVersion;
 
     /**
+     * @var integer Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RestartCount;
+
+    /**
      * @param string $Webshell Shell address
      * @param string $PodId Pod ID
      * @param string $Status Status
@@ -88,6 +98,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $DeployVersion Deployed version.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $RestartCount Number of Restarts
+Note: This is field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -128,6 +140,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("DeployVersion",$param) and $param["DeployVersion"] !== null) {
             $this->DeployVersion = $param["DeployVersion"];
+        }
+
+        if (array_key_exists("RestartCount",$param) and $param["RestartCount"] !== null) {
+            $this->RestartCount = $param["RestartCount"];
         }
     }
 }

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUserContact request structure.
  *
- * @method string getName() Obtain Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
- * @method void setName(string $Name) Set Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
- * @method string getContactInfo() Obtain Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
- * @method void setContactInfo(string $ContactInfo) Set Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+ * @method string getName() Obtain Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
+ * @method void setName(string $Name) Set Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
+ * @method string getContactInfo() Obtain Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
+ * @method void setContactInfo(string $ContactInfo) Set Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
  * @method string getProduct() Obtain Service type, which is fixed to `mysql`.
  * @method void setProduct(string $Product) Set Service type, which is fixed to `mysql`.
  */
 class AddUserContactRequest extends AbstractModel
 {
     /**
-     * @var string Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
+     * @var string Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
      */
     public $Name;
 
     /**
-     * @var string Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+     * @var string Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
      */
     public $ContactInfo;
 
@@ -45,8 +45,8 @@ class AddUserContactRequest extends AbstractModel
     public $Product;
 
     /**
-     * @param string $Name Contact name, which must be unique, can contain 2–60 letters, digits, and underscores, and cannot start with an underscore.
-     * @param string $ContactInfo Email address, which can contain letters, digits, and underscores and cannot start with an underscore.
+     * @param string $Name Recipient name, which can contain up to 20 letters, digits, spaces, and special symbols `!@#$%^&*()_+-=()` and cannot begin with an underscore.
+     * @param string $ContactInfo Email address, which can contain letters, digits, underscores, and the @ symbol, cannot begin with an underscore, and must be unique.
      * @param string $Product Service type, which is fixed to `mysql`.
      */
     function __construct()

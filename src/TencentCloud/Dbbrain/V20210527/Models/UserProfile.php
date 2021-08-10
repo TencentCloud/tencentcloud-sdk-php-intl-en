@@ -24,13 +24,13 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProfileId(string $ProfileId) Set Configured ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProfileType() Obtain Configuration type.
+ * @method string getProfileType() Obtain Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProfileType(string $ProfileType) Set Configuration type.
+ * @method void setProfileType(string $ProfileType) Set Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProfileLevel() Obtain Configuration level. Valid values: User, Instance.
+ * @method string getProfileLevel() Obtain Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProfileLevel(string $ProfileLevel) Set Configuration level. Valid values: User, Instance.
+ * @method void setProfileLevel(string $ProfileLevel) Set Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getProfileName() Obtain Configuration name.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -48,13 +48,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProfileId;
 
     /**
-     * @var string Configuration type.
+     * @var string Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProfileType;
 
     /**
-     * @var string Configuration level. Valid values: User, Instance.
+     * @var string Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProfileLevel;
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $ProfileId Configured ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProfileType Configuration type.
+     * @param string $ProfileType Configuration type. Valid values: "dbScan_mail_configuration" (email configuration of database inspection report), "scheduler_mail_configuration" (email configuration of scheduled task report).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProfileLevel Configuration level. Valid values: User, Instance.
+     * @param string $ProfileLevel Configuration level. Valid values: User (user-level), Instance (instance-level). For database inspection emails, it should be `User`. For scheduled task emails, it should be `Instance`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProfileName Configuration name.
 Note: this field may return null, indicating that no valid values can be obtained.

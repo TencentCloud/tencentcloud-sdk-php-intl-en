@@ -26,26 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time.
  * @method string getStartTime() Obtain Start time.
  * @method void setStartTime(string $StartTime) Set Start time.
- * @method integer getEventId() Obtain Event ID.
- * @method void setEventId(integer $EventId) Set Event ID.
+ * @method integer getEventId() Obtain Unique event ID.
+ * @method void setEventId(integer $EventId) Set Unique event ID.
  * @method integer getSeverity() Obtain Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
  * @method void setSeverity(integer $Severity) Set Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
- * @method string getOutline() Obtain Summary.
- * @method void setOutline(string $Outline) Set Summary.
- * @method string getDiagItem() Obtain Diagnosis item.
- * @method void setDiagItem(string $DiagItem) Set Diagnosis item.
+ * @method string getOutline() Obtain Diagnosis summary.
+ * @method void setOutline(string $Outline) Set Diagnosis summary.
+ * @method string getDiagItem() Obtain Diagnosis item description.
+ * @method void setDiagItem(string $DiagItem) Set Diagnosis item description.
  * @method string getInstanceId() Obtain Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getMetric() Obtain Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMetric() Obtain Reserved field
+ * @method void setMetric(string $Metric) Set Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMetric(string $Metric) Set Reserved field
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getRegion() Obtain Region
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRegion(string $Region) Set Region
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRegion() Obtain Region.
+ * @method void setRegion(string $Region) Set Region.
  */
 class DiagHistoryEventItem extends AbstractModel
 {
@@ -65,7 +61,7 @@ class DiagHistoryEventItem extends AbstractModel
     public $StartTime;
 
     /**
-     * @var integer Event ID.
+     * @var integer Unique event ID.
      */
     public $EventId;
 
@@ -75,30 +71,28 @@ class DiagHistoryEventItem extends AbstractModel
     public $Severity;
 
     /**
-     * @var string Summary.
+     * @var string Diagnosis summary.
      */
     public $Outline;
 
     /**
-     * @var string Diagnosis item.
+     * @var string Diagnosis item description.
      */
     public $DiagItem;
 
     /**
      * @var string Instance ID.
-Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
     /**
-     * @var string Reserved field
+     * @var string Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Metric;
 
     /**
-     * @var string Region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Region.
      */
     public $Region;
 
@@ -106,16 +100,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DiagType Diagnosis type.
      * @param string $EndTime End time.
      * @param string $StartTime Start time.
-     * @param integer $EventId Event ID.
+     * @param integer $EventId Unique event ID.
      * @param integer $Severity Severity, which can be divided into 5 levels: 1: fatal, 2: severe, 3: warning, 4: notice, 5: healthy.
-     * @param string $Outline Summary.
-     * @param string $DiagItem Diagnosis item.
+     * @param string $Outline Diagnosis summary.
+     * @param string $DiagItem Diagnosis item description.
      * @param string $InstanceId Instance ID.
+     * @param string $Metric Reserved field.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Metric Reserved field
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Region Region
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Region Region.
      */
     function __construct()
     {
