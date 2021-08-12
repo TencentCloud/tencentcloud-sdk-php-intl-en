@@ -28,16 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupFileName(string $BackupFileName) Set Backup file name
  * @method array getStatusSet() Obtain Status set of import tasks
  * @method void setStatusSet(array $StatusSet) Set Status set of import tasks
- * @method integer getLimit() Obtain Paging. Page size
- * @method void setLimit(integer $Limit) Set Paging. Page size
- * @method integer getOffset() Obtain Paging. Number of pages
- * @method void setOffset(integer $Offset) Set Paging. Number of pages
- * @method string getOrderBy() Obtain Field for order: name,createTime,startTime,endTime
- * @method void setOrderBy(string $OrderBy) Set Field for order: name,createTime,startTime,endTime
- * @method string getOrderByType() Obtain Type of order: desc,asc
- * @method void setOrderByType(string $OrderByType) Set Type of order: desc,asc
- * @method string getIncrementalMigrationId() Obtain ID of an incremental backup import task
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set ID of an incremental backup import task
+ * @method integer getLimit() Obtain The maximum number of results returned per page. Default value: `100`.
+ * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Default value: `100`.
+ * @method integer getOffset() Obtain Page number. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Page number. Default value: `0`.
+ * @method string getOrderBy() Obtain Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+ * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+ * @method string getOrderByType() Obtain Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+ * @method string getIncrementalMigrationId() Obtain Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
  */
 class DescribeIncrementalMigrationRequest extends AbstractModel
 {
@@ -62,27 +62,27 @@ class DescribeIncrementalMigrationRequest extends AbstractModel
     public $StatusSet;
 
     /**
-     * @var integer Paging. Page size
+     * @var integer The maximum number of results returned per page. Default value: `100`.
      */
     public $Limit;
 
     /**
-     * @var integer Paging. Number of pages
+     * @var integer Page number. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var string Field for order: name,createTime,startTime,endTime
+     * @var string Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
      */
     public $OrderBy;
 
     /**
-     * @var string Type of order: desc,asc
+     * @var string Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
      */
     public $OrderByType;
 
     /**
-     * @var string ID of an incremental backup import task
+     * @var string Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
      */
     public $IncrementalMigrationId;
 
@@ -91,11 +91,11 @@ class DescribeIncrementalMigrationRequest extends AbstractModel
      * @param string $InstanceId ID of imported target instance
      * @param string $BackupFileName Backup file name
      * @param array $StatusSet Status set of import tasks
-     * @param integer $Limit Paging. Page size
-     * @param integer $Offset Paging. Number of pages
-     * @param string $OrderBy Field for order: name,createTime,startTime,endTime
-     * @param string $OrderByType Type of order: desc,asc
-     * @param string $IncrementalMigrationId ID of an incremental backup import task
+     * @param integer $Limit The maximum number of results returned per page. Default value: `100`.
+     * @param integer $Offset Page number. Default value: `0`.
+     * @param string $OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+     * @param string $OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+     * @param string $IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
      */
     function __construct()
     {

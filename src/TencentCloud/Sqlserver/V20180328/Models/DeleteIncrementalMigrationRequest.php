@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Target instance ID.
  * @method void setInstanceId(string $InstanceId) Set Target instance ID.
- * @method string getBackupMigrationId() Obtain Backup import task ID
- * @method void setBackupMigrationId(string $BackupMigrationId) Set Backup import task ID
- * @method string getIncrementalMigrationId() Obtain ID of an incremental backup import task
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set ID of an incremental backup import task
+ * @method string getBackupMigrationId() Obtain Backup import task ID, which is returned through the `CreateBackupMigration` API
+ * @method void setBackupMigrationId(string $BackupMigrationId) Set Backup import task ID, which is returned through the `CreateBackupMigration` API
+ * @method string getIncrementalMigrationId() Obtain Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
  */
 class DeleteIncrementalMigrationRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DeleteIncrementalMigrationRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup import task ID
+     * @var string Backup import task ID, which is returned through the `CreateBackupMigration` API
      */
     public $BackupMigrationId;
 
     /**
-     * @var string ID of an incremental backup import task
+     * @var string Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
      */
     public $IncrementalMigrationId;
 
     /**
      * @param string $InstanceId Target instance ID.
-     * @param string $BackupMigrationId Backup import task ID
-     * @param string $IncrementalMigrationId ID of an incremental backup import task
+     * @param string $BackupMigrationId Backup import task ID, which is returned through the `CreateBackupMigration` API
+     * @param string $IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API
      */
     function __construct()
     {

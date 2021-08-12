@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVoucherIds(array $VoucherIds) Set Voucher ID list (only one voucher can be specified currently)
  * @method integer getActivityId() Obtain Activity ID
  * @method void setActivityId(integer $ActivityId) Set Activity ID
- * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+ * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
+ * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
  * @method string getSwitchStartTime() Obtain The earliest time to start a switch
  * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch
  * @method string getSwitchEndTime() Obtain The latest time to start a switch
@@ -72,7 +72,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $ActivityId;
 
     /**
-     * @var integer Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * @var integer Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
      */
     public $SwitchTag;
 
@@ -93,7 +93,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $AutoVoucher Whether to automatically use vouchers. 1: yes, 0: no. Default value: no
      * @param array $VoucherIds Voucher ID list (only one voucher can be specified currently)
      * @param integer $ActivityId Activity ID
-     * @param integer $SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (specify a time to switch). Default value: `0`
+     * @param integer $SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at specified time). Default value: `0`
      * @param string $SwitchStartTime The earliest time to start a switch
      * @param string $SwitchEndTime The latest time to start a switch
      */

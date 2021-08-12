@@ -34,14 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoveryType(string $RecoveryType) Set Import task restoration type: FULL,FULL_LOG,FULL_DIFF
  * @method string getUploadType() Obtain COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
  * @method void setUploadType(string $UploadType) Set COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
- * @method integer getLimit() Obtain Paging. Page size
- * @method void setLimit(integer $Limit) Set Paging. Page size
- * @method integer getOffset() Obtain Paging. Number of pages
- * @method void setOffset(integer $Offset) Set Paging. Number of pages
- * @method string getOrderBy() Obtain Field for order: name,createTime,startTime,endTime
- * @method void setOrderBy(string $OrderBy) Set Field for order: name,createTime,startTime,endTime
- * @method string getOrderByType() Obtain Type of order: desc,asc
- * @method void setOrderByType(string $OrderByType) Set Type of order: desc,asc
+ * @method integer getLimit() Obtain The maximum number of results returned per page. Default value: `100`.
+ * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Default value: `100`.
+ * @method integer getOffset() Obtain Page number. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Page number. Default value: `0`.
+ * @method string getOrderBy() Obtain Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+ * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+ * @method string getOrderByType() Obtain Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
  */
 class DescribeBackupMigrationRequest extends AbstractModel
 {
@@ -81,22 +81,22 @@ class DescribeBackupMigrationRequest extends AbstractModel
     public $UploadType;
 
     /**
-     * @var integer Paging. Page size
+     * @var integer The maximum number of results returned per page. Default value: `100`.
      */
     public $Limit;
 
     /**
-     * @var integer Paging. Number of pages
+     * @var integer Page number. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var string Field for order: name,createTime,startTime,endTime
+     * @var string Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
      */
     public $OrderBy;
 
     /**
-     * @var string Type of order: desc,asc
+     * @var string Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
      */
     public $OrderByType;
 
@@ -108,10 +108,10 @@ class DescribeBackupMigrationRequest extends AbstractModel
      * @param array $StatusSet Status set of import tasks
      * @param string $RecoveryType Import task restoration type: FULL,FULL_LOG,FULL_DIFF
      * @param string $UploadType COS_URL: the backup is stored in user’s Cloud Object Storage, with URL provided. COS_UPLOAD: the backup is stored in the application’s Cloud Object Storage and needs to be uploaded by the user.
-     * @param integer $Limit Paging. Page size
-     * @param integer $Offset Paging. Number of pages
-     * @param string $OrderBy Field for order: name,createTime,startTime,endTime
-     * @param string $OrderByType Type of order: desc,asc
+     * @param integer $Limit The maximum number of results returned per page. Default value: `100`.
+     * @param integer $Offset Page number. Default value: `0`.
+     * @param string $OrderBy Sort by field. Valid values: `name`, `createTime`, `startTime`, `endTime`. By default, the results returned are sorted by `createTime` in the ascending order.
+     * @param string $OrderByType Sorting order which is valid only when `OrderBy` is specified. Valid values: `asc` (ascending), `desc` (descending). Default value: `asc`.
      */
     function __construct()
     {

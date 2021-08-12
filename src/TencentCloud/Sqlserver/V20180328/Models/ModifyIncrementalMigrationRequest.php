@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set ID of imported target instance
  * @method string getBackupMigrationId() Obtain Backup import task ID, which is returned through the API CreateBackupMigration
  * @method void setBackupMigrationId(string $BackupMigrationId) Set Backup import task ID, which is returned through the API CreateBackupMigration
- * @method string getIncrementalMigrationId() Obtain Incremental import task ID
- * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set Incremental import task ID
- * @method string getIsRecovery() Obtain Whether restoration is required. No: not required. Yes: required.
- * @method void setIsRecovery(string $IsRecovery) Set Whether restoration is required. No: not required. Yes: required.
+ * @method string getIncrementalMigrationId() Obtain Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+ * @method void setIncrementalMigrationId(string $IncrementalMigrationId) Set Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+ * @method string getIsRecovery() Obtain Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
+ * @method void setIsRecovery(string $IsRecovery) Set Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
  * @method array getBackupFiles() Obtain If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
  * @method void setBackupFiles(array $BackupFiles) Set If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
  */
@@ -44,12 +44,12 @@ class ModifyIncrementalMigrationRequest extends AbstractModel
     public $BackupMigrationId;
 
     /**
-     * @var string Incremental import task ID
+     * @var string Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
      */
     public $IncrementalMigrationId;
 
     /**
-     * @var string Whether restoration is required. No: not required. Yes: required.
+     * @var string Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
      */
     public $IsRecovery;
 
@@ -61,8 +61,8 @@ class ModifyIncrementalMigrationRequest extends AbstractModel
     /**
      * @param string $InstanceId ID of imported target instance
      * @param string $BackupMigrationId Backup import task ID, which is returned through the API CreateBackupMigration
-     * @param string $IncrementalMigrationId Incremental import task ID
-     * @param string $IsRecovery Whether restoration is required. No: not required. Yes: required.
+     * @param string $IncrementalMigrationId Incremental backup import task ID, which is returned through the `CreateIncrementalMigration` API.
+     * @param string $IsRecovery Whether to restore backups. Valid values: `NO`, `YES`. If this parameter is not specified, whether to restore incremental backups will not change.
      * @param array $BackupFiles If the UploadType is COS_URL, fill in URL here. If the UploadType is COS_UPLOAD, fill in the name of the backup file here. Only 1 backup file is supported, but a backup file can involve multiple databases.
      */
     function __construct()
