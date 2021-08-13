@@ -64,9 +64,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAttachEntityBoundaryCount(integer $AttachEntityBoundaryCount) Set The number of entities associated with the permission boundary.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain The last editted time.
+ * @method string getUpdateTime() Obtain The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set The last editted time.
+ * @method void setUpdateTime(string $UpdateTime) Set The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class StrategyInfo extends AbstractModel
@@ -150,7 +150,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AttachEntityBoundaryCount;
 
     /**
-     * @var string The last editted time.
+     * @var string The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
@@ -178,7 +178,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $AttachEntityBoundaryCount The number of entities associated with the permission boundary.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $UpdateTime The last editted time.
+     * @param string $UpdateTime The last edited time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
