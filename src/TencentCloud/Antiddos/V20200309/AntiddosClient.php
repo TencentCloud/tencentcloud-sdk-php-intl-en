@@ -66,6 +66,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(Models\ModifyDDoSSpeedLimitConfigRequest $req) This API is used to modify Anti-DDoS access rate limit configurations.
  * @method Models\ModifyDomainUsrNameResponse ModifyDomainUsrName(Models\ModifyDomainUsrNameRequest $req) This API is used to modify intelligent scheduling domain names.
  * @method Models\ModifyPacketFilterConfigResponse ModifyPacketFilterConfig(Models\ModifyPacketFilterConfigRequest $req) This API is used to modify Anti-DDoS feature filtering rules.
+ * @method Models\SwitchWaterPrintConfigResponse SwitchWaterPrintConfig(Models\SwitchWaterPrintConfigRequest $req) This API is used to enable or disable Anti-DDoS watermark configurations.
  */
 
 class AntiddosClient extends AbstractClient

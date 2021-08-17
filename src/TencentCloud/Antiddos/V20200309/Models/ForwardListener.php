@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Forwarding listener
  *
- * @method integer getFrontendPort() Obtain Forwarding listening port. Value range: 1–65535.
- * @method void setFrontendPort(integer $FrontendPort) Set Forwarding listening port. Value range: 1–65535.
+ * @method integer getFrontendPort() Obtain The starting port for listener forwarding. Value range: 1 to 65535.
+ * @method void setFrontendPort(integer $FrontendPort) Set The starting port for listener forwarding. Value range: 1 to 65535.
  * @method string getForwardProtocol() Obtain Forwarding protocol. Valid values:
 `TCP`
 `UDP`
@@ -30,13 +30,13 @@ use TencentCloud\Common\AbstractModel;
 `TCP`
 `UDP`
 ]
- * @method integer getFrontendPortEnd() Obtain 
- * @method void setFrontendPortEnd(integer $FrontendPortEnd) Set 
+ * @method integer getFrontendPortEnd() Obtain The ending port for listener forwarding. Value range: 1 to 65535.
+ * @method void setFrontendPortEnd(integer $FrontendPortEnd) Set The ending port for listener forwarding. Value range: 1 to 65535.
  */
 class ForwardListener extends AbstractModel
 {
     /**
-     * @var integer Forwarding listening port. Value range: 1–65535.
+     * @var integer The starting port for listener forwarding. Value range: 1 to 65535.
      */
     public $FrontendPort;
 
@@ -49,17 +49,17 @@ class ForwardListener extends AbstractModel
     public $ForwardProtocol;
 
     /**
-     * @var integer 
+     * @var integer The ending port for listener forwarding. Value range: 1 to 65535.
      */
     public $FrontendPortEnd;
 
     /**
-     * @param integer $FrontendPort Forwarding listening port. Value range: 1–65535.
+     * @param integer $FrontendPort The starting port for listener forwarding. Value range: 1 to 65535.
      * @param string $ForwardProtocol Forwarding protocol. Valid values:
 `TCP`
 `UDP`
 ]
-     * @param integer $FrontendPortEnd 
+     * @param integer $FrontendPortEnd The ending port for listener forwarding. Value range: 1 to 65535.
      */
     function __construct()
     {

@@ -70,13 +70,13 @@ use TencentCloud\Common\AbstractModel;
 `sunday`: keyword
 `pcre`: regular expression
 ]
- * @method string getStr() Obtain Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+ * @method string getStr() Obtain Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
- * @method void setStr(string $Str) Set Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+ * @method void setStr(string $Str) Set Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
  * @method integer getDepth() Obtain Detection depth starting from the detection position. Value range: [0, 1500].
  * @method void setDepth(integer $Depth) Set Detection depth starting from the detection position. Value range: [0, 1500].
@@ -115,12 +115,12 @@ For `pcre`, enter a regular expression.
 `pcre`: regular expression
 ]
  * @method string getStr2() Obtain The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
  * @method void setStr2(string $Str2) Set The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
  * @method integer getDepth2() Obtain Detection depth starting from the second detection position. Value range: [0, 1500].
  * @method void setDepth2(integer $Depth2) Set Detection depth starting from the second detection position. Value range: [0, 1500].
@@ -205,9 +205,9 @@ class PacketFilterConfig extends AbstractModel
     public $MatchType;
 
     /**
-     * @var string Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * @var string Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public $Str;
@@ -256,8 +256,8 @@ For `pcre`, enter a regular expression.
 
     /**
      * @var string The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      */
     public $Str2;
@@ -311,9 +311,9 @@ For `pcre`, enter a regular expression.
 `sunday`: keyword
 `pcre`: regular expression
 ]
-     * @param string $Str Detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+     * @param string $Str Detection value. Should be in key string or regular expression. 
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      * @param integer $Depth Detection depth starting from the detection position. Value range: [0, 1500].
      * @param integer $Offset Offset starting from the detection position. Value range: [0, Depth].
@@ -334,8 +334,8 @@ For `pcre`, enter a regular expression.
 `pcre`: regular expression
 ]
      * @param string $Str2 The second detection value. Should be in key string or regular expression.
-For `sunday`, enter a string or a string in hexadecimal byte code representation starting with `\x`. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
-For `pcre`, enter a regular expression.
+When the `MatchType` is `sunday`, enter a string or a string in hexadecimal byte code representation. For example, a string "123" corresponds to the hexadecimal byte code "\x313233".
+When the `MatchType` is `pcre`, enter a regular expression.
 ]
      * @param integer $Depth2 Detection depth starting from the second detection position. Value range: [0, 1500].
      * @param integer $Offset2 Offset starting from the second detection position. Value range: [0, Depth2].

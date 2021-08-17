@@ -32,9 +32,13 @@ The gap between the start time and end time should be less than or equal to 90 d
  * @method void setEndTime(string $EndTime) Set Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
- * @method string getMetric() Obtain Specifies the query metric, which can be:
+ * @method string getMetric() Obtain Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -45,10 +49,14 @@ The gap between the start time and end time should be less than or equal to 90 d
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
- * @method void setMetric(string $Metric) Set Specifies the query metric, which can be:
+Specifies the status code to query. The return will be empty if the status code has never been generated.
+ * @method void setMetric(string $Metric) Set Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -59,7 +67,7 @@ It is supported to specify a status code for query. The return will be empty if 
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
  * @method array getDomains() Obtain Specifies the list of domain names to be queried
 Up to 30 domain names can be queried at a time
  * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried
@@ -130,6 +138,8 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
  * @method void setAreaType(string $AreaType) Set Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
 `server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
 `client`: specifies to query data on the client region where the request devices are located.
+ * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
  */
 class DescribeCdnDataRequest extends AbstractModel
 {
@@ -148,9 +158,13 @@ The gap between the start time and end time should be less than or equal to 90 d
     public $EndTime;
 
     /**
-     * @var string Specifies the query metric, which can be:
+     * @var string Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -161,7 +175,7 @@ The gap between the start time and end time should be less than or equal to 90 d
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public $Metric;
 
@@ -245,15 +259,24 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
     public $AreaType;
 
     /**
+     * @var string Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $StartTime Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
      * @param string $EndTime Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
 According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
 The gap between the start time and end time should be less than or equal to 90 days.
-     * @param string $Metric Specifies the query metric, which can be:
+     * @param string $Metric Specifies the metric to query, which can be:
 `flux`: traffic (in bytes)
+`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
 `bandwidth`: bandwidth (in bps)
+`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
 `request`: number of requests
 `hitRequest`: number of hit requests
 `requestHitRate`: request hit rate (in % with two decimal digits)
@@ -264,7 +287,7 @@ The gap between the start time and end time should be less than or equal to 90 d
 `3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
-It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
+Specifies the status code to query. The return will be empty if the status code has never been generated.
      * @param array $Domains Specifies the list of domain names to be queried
 Up to 30 domain names can be queried at a time
      * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
@@ -300,6 +323,7 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
      * @param string $AreaType Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
 `server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
 `client`: specifies to query data on the client region where the request devices are located.
+     * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
      */
     function __construct()
     {
@@ -368,6 +392,10 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
 
         if (array_key_exists("AreaType",$param) and $param["AreaType"] !== null) {
             $this->AreaType = $param["AreaType"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

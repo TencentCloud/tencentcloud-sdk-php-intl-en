@@ -60,10 +60,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsDebugAfterCharge(boolean $IsDebugAfterCharge) Set Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getAuthType() Obtain API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAuthType() Obtain API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAuthType(string $AuthType) Set API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getApiBusinessType() Obtain OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setApiBusinessType(string $ApiBusinessType) Set OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
@@ -160,8 +160,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $IsDebugAfterCharge;
 
     /**
-     * @var string API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $AuthType;
 
@@ -228,8 +228,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsDebugAfterCharge Whether to enable debugging after purchase (reserved field for the marketplace)
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $AuthType API authentication type. Valid values: SECRET (key pair authentication), NONE (no authentication), OAUTH.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AuthType API authentication type. Valid values: `SECRET` (key pair authentication), `NONE` (no authentication), `OAUTH`, and `EIAM`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ApiBusinessType OAuth API type, which is valid if `AuthType` is `OAUTH`. Valid values: NORMAL (business API), OAUTH (authorization API).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AuthRelationApiId Unique ID of associated authorization API, which takes effect only if `AuthType` is `OAUTH` and `ApiBusinessType` is `NORMAL`. It is the unique ID of the OAuth 2.0 authorization API bound to the business API.

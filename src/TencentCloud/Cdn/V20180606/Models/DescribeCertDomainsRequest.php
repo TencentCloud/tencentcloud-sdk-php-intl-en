@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCert() Obtain Base64-encoded string of certificate in PEM format
  * @method void setCert(string $Cert) Set Base64-encoded string of certificate in PEM format
+ * @method string getCertId() Obtain Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+ * @method void setCertId(string $CertId) Set Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+ * @method string getProduct() Obtain Product of the domain name, either `cdn` (default) or `ecdn`.
+ * @method void setProduct(string $Product) Set Product of the domain name, either `cdn` (default) or `ecdn`.
  */
 class DescribeCertDomainsRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DescribeCertDomainsRequest extends AbstractModel
     public $Cert;
 
     /**
+     * @var string Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     */
+    public $CertId;
+
+    /**
+     * @var string Product of the domain name, either `cdn` (default) or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $Cert Base64-encoded string of certificate in PEM format
+     * @param string $CertId Managed certificate ID. `Cert` and `CertId` cannot be both empty. If they’re both filled in, `CerID` prevails.
+     * @param string $Product Product of the domain name, either `cdn` (default) or `ecdn`.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DescribeCertDomainsRequest extends AbstractModel
         }
         if (array_key_exists("Cert",$param) and $param["Cert"] !== null) {
             $this->Cert = $param["Cert"];
+        }
+
+        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
+            $this->CertId = $param["CertId"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

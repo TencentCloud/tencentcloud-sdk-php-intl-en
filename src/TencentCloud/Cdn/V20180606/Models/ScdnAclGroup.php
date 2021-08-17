@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleName(string $RuleName) Set Rule name
  * @method array getConfigure() Obtain Specific configurations
  * @method void setConfigure(array $Configure) Set Specific configurations
- * @method string getResult() Obtain Rule action, which is generally `refuse`.
- * @method void setResult(string $Result) Set Rule action, which is generally `refuse`.
+ * @method string getResult() Obtain Rule action, which can be `refuse` or `redirect`.
+ * @method void setResult(string $Result) Set Rule action, which can be `refuse` or `redirect`.
  * @method string getStatus() Obtain Whether the rule is effective. Valid values: `active` and `inactive`.
  * @method void setStatus(string $Status) Set Whether the rule is effective. Valid values: `active` and `inactive`.
+ * @method ScdnErrorPage getErrorPage() Obtain Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnAclGroup extends AbstractModel
 {
@@ -42,7 +46,7 @@ class ScdnAclGroup extends AbstractModel
     public $Configure;
 
     /**
-     * @var string Rule action, which is generally `refuse`.
+     * @var string Rule action, which can be `refuse` or `redirect`.
      */
     public $Result;
 
@@ -52,10 +56,18 @@ class ScdnAclGroup extends AbstractModel
     public $Status;
 
     /**
+     * @var ScdnErrorPage Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ErrorPage;
+
+    /**
      * @param string $RuleName Rule name
      * @param array $Configure Specific configurations
-     * @param string $Result Rule action, which is generally `refuse`.
+     * @param string $Result Rule action, which can be `refuse` or `redirect`.
      * @param string $Status Whether the rule is effective. Valid values: `active` and `inactive`.
+     * @param ScdnErrorPage $ErrorPage Error page configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -89,6 +101,11 @@ class ScdnAclGroup extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrorPage",$param) and $param["ErrorPage"] !== null) {
+            $this->ErrorPage = new ScdnErrorPage();
+            $this->ErrorPage->deserialize($param["ErrorPage"]);
         }
     }
 }

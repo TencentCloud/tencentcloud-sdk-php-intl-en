@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getChannel() Obtain Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setChannel(string $Channel) Set Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -55,11 +59,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
+     * @var string Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Channel;
+
+    /**
      * @param string $TopicId Topic ID
      * @param string $TopicName Topic name
      * @param integer $Enabled Whether to enable publishing
      * @param string $CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -88,6 +100,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
+            $this->Channel = $param["Channel"];
         }
     }
 }

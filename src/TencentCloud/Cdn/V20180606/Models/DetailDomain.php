@@ -266,6 +266,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setQuic(Quic $Quic) Set QUIC configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -617,6 +625,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Quic;
 
     /**
+     * @var OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OssPrivateAccess;
+
+    /**
+     * @var WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $WebSocket;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -739,6 +759,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param PostSize $PostMaxSize POST request configuration item
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Quic $Quic QUIC configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param WebSocket $WebSocket WebSocket configuration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -1026,6 +1050,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }

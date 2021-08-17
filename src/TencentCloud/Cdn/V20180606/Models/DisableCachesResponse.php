@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCacheOptResult(CacheOptResult $CacheOptResult) Set Submission result
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTaskId(string $TaskId) Set Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -36,6 +40,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CacheOptResult;
 
     /**
+     * @var string Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TaskId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -43,6 +53,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param CacheOptResult $CacheOptResult Submission result
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TaskId Task ID.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +73,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("CacheOptResult",$param) and $param["CacheOptResult"] !== null) {
             $this->CacheOptResult = new CacheOptResult();
             $this->CacheOptResult->deserialize($param["CacheOptResult"]);
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

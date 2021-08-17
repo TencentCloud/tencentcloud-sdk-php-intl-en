@@ -74,6 +74,8 @@ Default value: `bandwidth`
 flux: bill-by-traffic
 bandwidth: bill-by-bandwidth
 Default value: `bandwidth`
+ * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
@@ -137,6 +139,11 @@ Default value: `bandwidth`
     public $Metric;
 
     /**
+     * @var string Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
 The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
 The range between the start time and end time should be less than or equal to 90 days
@@ -164,6 +171,7 @@ If this parameter is left empty, all countries/regions will be queried
 flux: bill-by-traffic
 bandwidth: bill-by-bandwidth
 Default value: `bandwidth`
+     * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ Default value: `bandwidth`
 
         if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
             $this->Metric = $param["Metric"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

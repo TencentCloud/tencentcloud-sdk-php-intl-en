@@ -90,6 +90,8 @@ normal: not locked
 mainland: locked in Mainland China
 overseas: locked outside Mainland China
 global: locked globally
+ * @method string getProduct() Obtain Product of the domain name, either `cdn` or `ecdn`.
+ * @method void setProduct(string $Product) Set Product of the domain name, either `cdn` or `ecdn`.
  */
 class BriefDomain extends AbstractModel
 {
@@ -181,6 +183,11 @@ global: locked globally
     public $Readonly;
 
     /**
+     * @var string Product of the domain name, either `cdn` or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -216,6 +223,7 @@ normal: not locked
 mainland: locked in Mainland China
 overseas: locked outside Mainland China
 global: locked globally
+     * @param string $Product Product of the domain name, either `cdn` or `ecdn`.
      */
     function __construct()
     {
@@ -281,6 +289,10 @@ global: locked globally
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

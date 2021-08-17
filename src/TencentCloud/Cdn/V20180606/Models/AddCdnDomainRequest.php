@@ -104,6 +104,10 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
  * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Access authentication for S3 origin
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Access authentication for S3 origin
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
  */
 class AddCdnDomainRequest extends AbstractModel
 {
@@ -286,6 +290,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $Quic;
 
     /**
+     * @var AwsPrivateAccess Access authentication for S3 origin
+     */
+    public $AwsPrivateAccess;
+
+    /**
+     * @var OssPrivateAccess Access authentication for OSS origin
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
 web: static acceleration
@@ -328,6 +342,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
      * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param AwsPrivateAccess $AwsPrivateAccess Access authentication for S3 origin
+     * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
      */
     function __construct()
     {
@@ -510,6 +526,16 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

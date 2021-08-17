@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetDisableRecords request structure.
  *
+ * @method string getUrl() Obtain Specifies the URL to be queried
+ * @method void setUrl(string $Url) Set Specifies the URL to be queried
  * @method string getStartTime() Obtain Starting time, such as `2018-12-12 10:24:00`
  * @method void setStartTime(string $StartTime) Set Starting time, such as `2018-12-12 10:24:00`
  * @method string getEndTime() Obtain End time, such as 2018-12-14 10:24:00
  * @method void setEndTime(string $EndTime) Set End time, such as 2018-12-14 10:24:00
- * @method string getUrl() Obtain Specifies the URL to be queried
- * @method void setUrl(string $Url) Set Specifies the URL to be queried
  * @method string getStatus() Obtain Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
@@ -36,9 +36,16 @@ enable: The URL is enabled (unblocked) and can be normally accessed
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
  * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
  * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
+ * @method string getTaskId() Obtain Task ID. The task ID and start time cannot be both left empty.
+ * @method void setTaskId(string $TaskId) Set Task ID. The task ID and start time cannot be both left empty.
  */
 class GetDisableRecordsRequest extends AbstractModel
 {
+    /**
+     * @var string Specifies the URL to be queried
+     */
+    public $Url;
+
     /**
      * @var string Starting time, such as `2018-12-12 10:24:00`
      */
@@ -48,11 +55,6 @@ class GetDisableRecordsRequest extends AbstractModel
      * @var string End time, such as 2018-12-14 10:24:00
      */
     public $EndTime;
-
-    /**
-     * @var string Specifies the URL to be queried
-     */
-    public $Url;
 
     /**
      * @var string Current URL status
@@ -72,14 +74,20 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     public $Limit;
 
     /**
+     * @var string Task ID. The task ID and start time cannot be both left empty.
+     */
+    public $TaskId;
+
+    /**
+     * @param string $Url Specifies the URL to be queried
      * @param string $StartTime Starting time, such as `2018-12-12 10:24:00`
      * @param string $EndTime End time, such as 2018-12-14 10:24:00
-     * @param string $Url Specifies the URL to be queried
      * @param string $Status Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
      * @param integer $Offset Offset for paginated queries. Default value: 0
      * @param integer $Limit Limit on paged queries. Default value: 20
+     * @param string $TaskId Task ID. The task ID and start time cannot be both left empty.
      */
     function __construct()
     {
@@ -94,16 +102,16 @@ enable: The URL is enabled (unblocked) and can be normally accessed
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
-        }
-
-        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
-            $this->Url = $param["Url"];
         }
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
@@ -116,6 +124,10 @@ enable: The URL is enabled (unblocked) and can be normally accessed
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
     }
 }

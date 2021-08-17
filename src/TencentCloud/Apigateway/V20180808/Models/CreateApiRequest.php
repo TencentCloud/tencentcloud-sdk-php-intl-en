@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserType(string $UserType) Set User type.
  * @method boolean getIsBase64Encoded() Obtain Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
  * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+ * @method string getServiceScfFunctionType() Obtain SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+ * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) Set SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -346,6 +348,11 @@ class CreateApiRequest extends AbstractModel
     public $IsBase64Encoded;
 
     /**
+     * @var string SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public $ServiceScfFunctionType;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
@@ -392,6 +399,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $TargetNamespaceId TSF Serverless namespace ID (in beta test).
      * @param string $UserType User type.
      * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     * @param string $ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
      */
     function __construct()
     {
@@ -624,6 +632,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
             $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {
+            $this->ServiceScfFunctionType = $param["ServiceScfFunctionType"];
         }
     }
 }

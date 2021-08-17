@@ -28,6 +28,8 @@ Default value: `mainland`.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
+ * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
  */
 class DescribePayTypeRequest extends AbstractModel
 {
@@ -40,10 +42,16 @@ Default value: `mainland`.
     public $Area;
 
     /**
+     * @var string Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $Area Specifies a service region.
 `mainland`: queries billing methods within Mainland China;
 `overseas`: queries billing methods outside Mainland China.
 Default value: `mainland`.
+     * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ Default value: `mainland`.
         }
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

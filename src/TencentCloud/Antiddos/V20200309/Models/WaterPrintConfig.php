@@ -34,8 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListeners(array $Listeners) Set List of forwarding listeners configured
  * @method array getKeys() Obtain A list of watermark keys is generated after a watermark is added successfully. Each watermark can have up to 2 keys. When there is only one valid key, it cannot be deleted.
  * @method void setKeys(array $Keys) Set A list of watermark keys is generated after a watermark is added successfully. Each watermark can have up to 2 keys. When there is only one valid key, it cannot be deleted.
- * @method string getVerify() Obtain 
- * @method void setVerify(string $Verify) Set 
+ * @method string getVerify() Obtain Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
+ * @method void setVerify(string $Verify) Set Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
  */
 class WaterPrintConfig extends AbstractModel
 {
@@ -63,7 +69,10 @@ class WaterPrintConfig extends AbstractModel
     public $Keys;
 
     /**
-     * @var string 
+     * @var string Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
      */
     public $Verify;
 
@@ -75,7 +84,10 @@ class WaterPrintConfig extends AbstractModel
 ]
      * @param array $Listeners List of forwarding listeners configured
      * @param array $Keys A list of watermark keys is generated after a watermark is added successfully. Each watermark can have up to 2 keys. When there is only one valid key, it cannot be deleted.
-     * @param string $Verify 
+     * @param string $Verify Watermark checking mode, which can be:
+`checkall`: normal mode
+`shortfpcheckall`: compact mode
+]
      */
     function __construct()
     {

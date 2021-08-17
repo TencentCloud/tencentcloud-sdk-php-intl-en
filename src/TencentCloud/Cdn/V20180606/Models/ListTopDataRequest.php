@@ -102,6 +102,8 @@ client: specifies to query data of the client region (where a user request devic
  * @method void setAreaType(string $AreaType) Set The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
 server: specifies to query data of service region (where a CDN node is located)
 client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+ * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
  */
 class ListTopDataRequest extends AbstractModel
 {
@@ -187,6 +189,11 @@ client: specifies to query data of the client region (where a user request devic
     public $AreaType;
 
     /**
+     * @var string Specifies the product to query, either `cdn` (default) or `ecdn`.
+     */
+    public $Product;
+
+    /**
      * @param string $StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
 Data generated after or at 00:00:00 on the start date will be returned
@@ -228,6 +235,7 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
      * @param string $AreaType The region type can be specified only when you query CDN data outside Mainland China and `Metric` is `district` or `host`; if you leave it empty, data of the service region will be queried (only applicable when `Area` is `overseas` and `Metric` is `district` or `host`)
 server: specifies to query data of service region (where a CDN node is located)
 client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
+     * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
      */
     function __construct()
     {
@@ -280,6 +288,10 @@ client: specifies to query data of the client region (where a user request devic
 
         if (array_key_exists("AreaType",$param) and $param["AreaType"] !== null) {
             $this->AreaType = $param["AreaType"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

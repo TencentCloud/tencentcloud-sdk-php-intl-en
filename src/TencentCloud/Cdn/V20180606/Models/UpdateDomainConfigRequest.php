@@ -114,6 +114,10 @@ global: global acceleration
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
  * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
  * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration.
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -325,6 +329,16 @@ global: global acceleration
     public $Quic;
 
     /**
+     * @var OssPrivateAccess Access authentication for OSS origin
+     */
+    public $OssPrivateAccess;
+
+    /**
+     * @var WebSocket WebSocket configuration.
+     */
+    public $WebSocket;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -372,6 +386,8 @@ global: global acceleration
      * @param OfflineCache $OfflineCache Offline cache
      * @param OriginCombine $OriginCombine Merging pull requests
      * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
+     * @param WebSocket $WebSocket WebSocket configuration.
      */
     function __construct()
     {
@@ -579,6 +595,16 @@ global: global acceleration
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
+        }
+
+        if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
+            $this->WebSocket = new WebSocket();
+            $this->WebSocket->deserialize($param["WebSocket"]);
         }
     }
 }
