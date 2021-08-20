@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassword(string $Password) Set Password of the new account
  * @method string getDescription() Obtain Remarks
  * @method void setDescription(string $Description) Set Remarks
- * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by the new account
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by the new account
+ * @method integer getMaxUserConnections() Obtain Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
  */
 class CreateAccountsRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateAccountsRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer The maximum number of instance connections supported by the new account
+     * @var integer Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
      */
     public $MaxUserConnections;
 
@@ -63,7 +63,7 @@ class CreateAccountsRequest extends AbstractModel
      * @param array $Accounts TencentDB account.
      * @param string $Password Password of the new account
      * @param string $Description Remarks
-     * @param integer $MaxUserConnections The maximum number of instance connections supported by the new account
+     * @param integer $MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.
      */
     function __construct()
     {

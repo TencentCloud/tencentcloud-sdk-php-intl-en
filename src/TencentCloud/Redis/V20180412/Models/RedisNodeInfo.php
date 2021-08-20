@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getNodeType() Obtain Node type. Valid values: `0` (master node), `1` (replica node)
  * @method void setNodeType(integer $NodeType) Set Node type. Valid values: `0` (master node), `1` (replica node)
- * @method integer getZoneId() Obtain ID of the availability zone of the master or replica node
- * @method void setZoneId(integer $ZoneId) Set ID of the availability zone of the master or replica node
  * @method integer getNodeId() Obtain ID of the master or replica node, which is not required upon creation of the instance
  * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required upon creation of the instance
+ * @method integer getZoneId() Obtain ID of the availability zone of the master or replica node
+ * @method void setZoneId(integer $ZoneId) Set ID of the availability zone of the master or replica node
+ * @method string getZoneName() Obtain ID of the availability zone of the master or replica node
+ * @method void setZoneName(string $ZoneName) Set ID of the availability zone of the master or replica node
  */
 class RedisNodeInfo extends AbstractModel
 {
@@ -35,19 +37,25 @@ class RedisNodeInfo extends AbstractModel
     public $NodeType;
 
     /**
-     * @var integer ID of the availability zone of the master or replica node
-     */
-    public $ZoneId;
-
-    /**
      * @var integer ID of the master or replica node, which is not required upon creation of the instance
      */
     public $NodeId;
 
     /**
+     * @var integer ID of the availability zone of the master or replica node
+     */
+    public $ZoneId;
+
+    /**
+     * @var string ID of the availability zone of the master or replica node
+     */
+    public $ZoneName;
+
+    /**
      * @param integer $NodeType Node type. Valid values: `0` (master node), `1` (replica node)
-     * @param integer $ZoneId ID of the availability zone of the master or replica node
      * @param integer $NodeId ID of the master or replica node, which is not required upon creation of the instance
+     * @param integer $ZoneId ID of the availability zone of the master or replica node
+     * @param string $ZoneName ID of the availability zone of the master or replica node
      */
     function __construct()
     {
@@ -66,12 +74,16 @@ class RedisNodeInfo extends AbstractModel
             $this->NodeType = $param["NodeType"];
         }
 
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
         if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
             $this->ZoneId = $param["ZoneId"];
         }
 
-        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
-            $this->NodeId = $param["NodeId"];
+        if (array_key_exists("ZoneName",$param) and $param["ZoneName"] !== null) {
+            $this->ZoneName = $param["ZoneName"];
         }
     }
 }

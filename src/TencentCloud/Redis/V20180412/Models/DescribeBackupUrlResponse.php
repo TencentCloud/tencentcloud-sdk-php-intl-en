@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDownloadUrl(array $DownloadUrl) Set Download address on the public network (valid for 6 hours)
  * @method array getInnerDownloadUrl() Obtain Download address on the private network (valid for 6 hours)
  * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Download address on the private network (valid for 6 hours)
+ * @method array getFilenames() Obtain File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFilenames(array $Filenames) Set File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getBackupInfos() Obtain List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupInfos(array $BackupInfos) Set List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +48,18 @@ class DescribeBackupUrlResponse extends AbstractModel
     public $InnerDownloadUrl;
 
     /**
+     * @var array File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Filenames;
+
+    /**
+     * @var array List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BackupInfos;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +67,10 @@ class DescribeBackupUrlResponse extends AbstractModel
     /**
      * @param array $DownloadUrl Download address on the public network (valid for 6 hours)
      * @param array $InnerDownloadUrl Download address on the private network (valid for 6 hours)
+     * @param array $Filenames File name (only valid for TencentDB for Tendis instances)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $BackupInfos List of backup file information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +92,19 @@ class DescribeBackupUrlResponse extends AbstractModel
 
         if (array_key_exists("InnerDownloadUrl",$param) and $param["InnerDownloadUrl"] !== null) {
             $this->InnerDownloadUrl = $param["InnerDownloadUrl"];
+        }
+
+        if (array_key_exists("Filenames",$param) and $param["Filenames"] !== null) {
+            $this->Filenames = $param["Filenames"];
+        }
+
+        if (array_key_exists("BackupInfos",$param) and $param["BackupInfos"] !== null) {
+            $this->BackupInfos = [];
+            foreach ($param["BackupInfos"] as $key => $value){
+                $obj = new BackupDownloadInfo();
+                $obj->deserialize($value);
+                array_push($this->BackupInfos, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

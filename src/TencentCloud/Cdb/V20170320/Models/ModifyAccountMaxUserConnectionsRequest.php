@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccounts(array $Accounts) Set List of TencentDB accounts
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by an account
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by an account
+ * @method integer getMaxUserConnections() Obtain Maximum connections of the account. Maximum value: `10240`.
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum connections of the account. Maximum value: `10240`.
  */
 class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ModifyAccountMaxUserConnectionsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer The maximum number of instance connections supported by an account
+     * @var integer Maximum connections of the account. Maximum value: `10240`.
      */
     public $MaxUserConnections;
 
     /**
      * @param array $Accounts List of TencentDB accounts
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-     * @param integer $MaxUserConnections The maximum number of instance connections supported by an account
+     * @param integer $MaxUserConnections Maximum connections of the account. Maximum value: `10240`.
      */
     function __construct()
     {
