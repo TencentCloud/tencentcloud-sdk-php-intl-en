@@ -18,12 +18,12 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteMediaConnectOutput response structure.
+ * StopStreamLinkFlow response structure.
  *
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteMediaConnectOutputResponse extends AbstractModel
+class StopStreamLinkFlowResponse extends AbstractModel
 {
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.

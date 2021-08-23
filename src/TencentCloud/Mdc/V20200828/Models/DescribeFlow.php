@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowId(string $FlowId) Set Flow ID.
  * @method string getFlowName() Obtain Flow name.
  * @method void setFlowName(string $FlowName) Set Flow name.
- * @method string getState() Obtain Flow status.
- * @method void setState(string $State) Set Flow status.
+ * @method string getState() Obtain Flow status. Valid values: `IDLE`, `RUNNING`
+ * @method void setState(string $State) Set Flow status. Valid values: `IDLE`, `RUNNING`
  * @method integer getMaxBandwidth() Obtain Maximum bandwidth value.
  * @method void setMaxBandwidth(integer $MaxBandwidth) Set Maximum bandwidth value.
  * @method array getInputGroup() Obtain Input group.
@@ -48,7 +48,7 @@ class DescribeFlow extends AbstractModel
     public $FlowName;
 
     /**
-     * @var string Flow status.
+     * @var string Flow status. Valid values: `IDLE`, `RUNNING`
      */
     public $State;
 
@@ -71,7 +71,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $FlowId Flow ID.
      * @param string $FlowName Flow name.
-     * @param string $State Flow status.
+     * @param string $State Flow status. Valid values: `IDLE`, `RUNNING`
      * @param integer $MaxBandwidth Maximum bandwidth value.
      * @param array $InputGroup Input group.
      * @param array $OutputGroup Output group.

@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyMediaConnectInput request structure.
+ * DeleteStreamLinkOutput request structure.
  *
- * @method string getFlowId() Obtain Flow ID.
- * @method void setFlowId(string $FlowId) Set Flow ID.
- * @method ModifyInput getInput() Obtain Information of the input to be modified.
- * @method void setInput(ModifyInput $Input) Set Information of the input to be modified.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
+ * @method string getOutputId() Obtain Output ID
+ * @method void setOutputId(string $OutputId) Set Output ID
  */
-class ModifyMediaConnectInputRequest extends AbstractModel
+class DeleteStreamLinkOutputRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID.
+     * @var string Flow ID
      */
     public $FlowId;
 
     /**
-     * @var ModifyInput Information of the input to be modified.
+     * @var string Output ID
      */
-    public $Input;
+    public $OutputId;
 
     /**
-     * @param string $FlowId Flow ID.
-     * @param ModifyInput $Input Information of the input to be modified.
+     * @param string $FlowId Flow ID
+     * @param string $OutputId Output ID
      */
     function __construct()
     {
@@ -58,9 +58,8 @@ class ModifyMediaConnectInputRequest extends AbstractModel
             $this->FlowId = $param["FlowId"];
         }
 
-        if (array_key_exists("Input",$param) and $param["Input"] !== null) {
-            $this->Input = new ModifyInput();
-            $this->Input->deserialize($param["Input"]);
+        if (array_key_exists("OutputId",$param) and $param["OutputId"] !== null) {
+            $this->OutputId = $param["OutputId"];
         }
     }
 }

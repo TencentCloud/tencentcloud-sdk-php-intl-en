@@ -18,28 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMediaConnectFlows request structure.
+ * DescribeStreamLinkFlows request structure.
  *
- * @method integer getPageNum() Obtain Number of current pages. Default value: 1.
- * @method void setPageNum(integer $PageNum) Set Number of current pages. Default value: 1.
- * @method integer getPageSize() Obtain Number of entries per page. Default value: 10.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page. Default value: 10.
+ * @method integer getPageNum() Obtain Number of the current page. Default value: `1`
+ * @method void setPageNum(integer $PageNum) Set Number of the current page. Default value: `1`
+ * @method integer getPageSize() Obtain Number of entries per page. Default value: `10`
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page. Default value: `10`
  */
-class DescribeMediaConnectFlowsRequest extends AbstractModel
+class DescribeStreamLinkFlowsRequest extends AbstractModel
 {
     /**
-     * @var integer Number of current pages. Default value: 1.
+     * @var integer Number of the current page. Default value: `1`
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page. Default value: 10.
+     * @var integer Number of entries per page. Default value: `10`
      */
     public $PageSize;
 
     /**
-     * @param integer $PageNum Number of current pages. Default value: 1.
-     * @param integer $PageSize Number of entries per page. Default value: 10.
+     * @param integer $PageNum Number of the current page. Default value: `1`
+     * @param integer $PageSize Number of entries per page. Default value: `10`
      */
     function __construct()
     {

@@ -18,45 +18,45 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMediaConnectFlows response structure.
+ * DescribeStreamLinkFlows response structure.
  *
- * @method array getInfos() Obtain Configuration information list of a flow.
- * @method void setInfos(array $Infos) Set Configuration information list of a flow.
- * @method integer getPageNum() Obtain Number of current pages.
- * @method void setPageNum(integer $PageNum) Set Number of current pages.
- * @method integer getPageSize() Obtain Number of entries per page.
- * @method void setPageSize(integer $PageSize) Set Number of entries per page.
- * @method integer getTotalNum() Obtain Total number.
- * @method void setTotalNum(integer $TotalNum) Set Total number.
- * @method integer getTotalPage() Obtain Total number of pages.
- * @method void setTotalPage(integer $TotalPage) Set Total number of pages.
+ * @method array getInfos() Obtain List of the configuration information of the flows
+ * @method void setInfos(array $Infos) Set List of the configuration information of the flows
+ * @method integer getPageNum() Obtain Number of the current page
+ * @method void setPageNum(integer $PageNum) Set Number of the current page
+ * @method integer getPageSize() Obtain Number of entries per page
+ * @method void setPageSize(integer $PageSize) Set Number of entries per page
+ * @method integer getTotalNum() Obtain Total number of entries
+ * @method void setTotalNum(integer $TotalNum) Set Total number of entries
+ * @method integer getTotalPage() Obtain Total number of pages
+ * @method void setTotalPage(integer $TotalPage) Set Total number of pages
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeMediaConnectFlowsResponse extends AbstractModel
+class DescribeStreamLinkFlowsResponse extends AbstractModel
 {
     /**
-     * @var array Configuration information list of a flow.
+     * @var array List of the configuration information of the flows
      */
     public $Infos;
 
     /**
-     * @var integer Number of current pages.
+     * @var integer Number of the current page
      */
     public $PageNum;
 
     /**
-     * @var integer Number of entries per page.
+     * @var integer Number of entries per page
      */
     public $PageSize;
 
     /**
-     * @var integer Total number.
+     * @var integer Total number of entries
      */
     public $TotalNum;
 
     /**
-     * @var integer Total number of pages.
+     * @var integer Total number of pages
      */
     public $TotalPage;
 
@@ -66,11 +66,11 @@ class DescribeMediaConnectFlowsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Infos Configuration information list of a flow.
-     * @param integer $PageNum Number of current pages.
-     * @param integer $PageSize Number of entries per page.
-     * @param integer $TotalNum Total number.
-     * @param integer $TotalPage Total number of pages.
+     * @param array $Infos List of the configuration information of the flows
+     * @param integer $PageNum Number of the current page
+     * @param integer $PageSize Number of entries per page
+     * @param integer $TotalNum Total number of entries
+     * @param integer $TotalPage Total number of pages
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

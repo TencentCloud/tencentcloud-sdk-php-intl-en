@@ -18,28 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateMediaConnectOutput request structure.
+ * DeleteStreamLinkFlow request structure.
  *
- * @method string getFlowId() Obtain Flow ID.
- * @method void setFlowId(string $FlowId) Set Flow ID.
- * @method CreateOutput getOutput() Obtain Output configuration of a flow.
- * @method void setOutput(CreateOutput $Output) Set Output configuration of a flow.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
  */
-class CreateMediaConnectOutputRequest extends AbstractModel
+class DeleteStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID.
+     * @var string Flow ID
      */
     public $FlowId;
 
     /**
-     * @var CreateOutput Output configuration of a flow.
-     */
-    public $Output;
-
-    /**
-     * @param string $FlowId Flow ID.
-     * @param CreateOutput $Output Output configuration of a flow.
+     * @param string $FlowId Flow ID
      */
     function __construct()
     {
@@ -56,11 +48,6 @@ class CreateMediaConnectOutputRequest extends AbstractModel
         }
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
-        }
-
-        if (array_key_exists("Output",$param) and $param["Output"] !== null) {
-            $this->Output = new CreateOutput();
-            $this->Output->deserialize($param["Output"]);
         }
     }
 }

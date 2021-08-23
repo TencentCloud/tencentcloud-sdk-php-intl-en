@@ -23,17 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mdc\V20200828\Models as Models;
 
 /**
- * @method Models\CreateMediaConnectFlowResponse CreateMediaConnectFlow(Models\CreateMediaConnectFlowRequest $req) This API is used to create the configuration of a MediaConnect flow.
- * @method Models\CreateMediaConnectOutputResponse CreateMediaConnectOutput(Models\CreateMediaConnectOutputRequest $req) This API is used to create the output information of a MediaConnect flow.
- * @method Models\DeleteMediaConnectFlowResponse DeleteMediaConnectFlow(Models\DeleteMediaConnectFlowRequest $req) This API is used to delete the configuration of a MediaConnect flow.
- * @method Models\DeleteMediaConnectOutputResponse DeleteMediaConnectOutput(Models\DeleteMediaConnectOutputRequest $req) This API is used to delete the output configuration of a MediaConnect flow.
- * @method Models\DescribeMediaConnectFlowResponse DescribeMediaConnectFlow(Models\DescribeMediaConnectFlowRequest $req) This API is used to query the configuration information of a MediaConnect flow.
- * @method Models\DescribeMediaConnectFlowsResponse DescribeMediaConnectFlows(Models\DescribeMediaConnectFlowsRequest $req) This API is used to query the configuration information of multiple MediaConnect flows in batches.
- * @method Models\ModifyMediaConnectFlowResponse ModifyMediaConnectFlow(Models\ModifyMediaConnectFlowRequest $req) This API is used to modify the configuration information of a MediaConnect flow.
- * @method Models\ModifyMediaConnectInputResponse ModifyMediaConnectInput(Models\ModifyMediaConnectInputRequest $req) This API is used to modify the input information of a MediaConnect flow.
- * @method Models\ModifyMediaConnectOutputResponse ModifyMediaConnectOutput(Models\ModifyMediaConnectOutputRequest $req) This API is used to modify the output configuration of a MediaConnect flow.
- * @method Models\StartMediaConnectFlowResponse StartMediaConnectFlow(Models\StartMediaConnectFlowRequest $req) This API is used to start a MediaConnect flow.
- * @method Models\StopMediaConnectFlowResponse StopMediaConnectFlow(Models\StopMediaConnectFlowRequest $req) This API is used to stop a MediaConnect flow.
+ * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) This API is used to create a StreamLink flow.
+ * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) This API is used to delete a StreamLink flow.
+ * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) This API is used to delete an output of a StreamLink flow.
+ * @method Models\DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(Models\DescribeStreamLinkFlowRequest $req) This API is used to query the configuration information of a StreamLink flow.
+ * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) This API is used to query the configuration information of multiple StreamLink flows in batches.
+ * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) This API is used to modify the configuration information of a StreamLink flow.
+ * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) This API is used to start a StreamLink flow.
+ * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) This API is used to stop a StreamLink flow.
  */
 
 class MdcClient extends AbstractClient

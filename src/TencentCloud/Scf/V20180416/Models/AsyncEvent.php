@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeType(string $InvokeType) Set Invocation type
  * @method string getQualifier() Obtain Function version
  * @method void setQualifier(string $Qualifier) Set Function version
- * @method string getStatus() Obtain Event status
- * @method void setStatus(string $Status) Set Event status
+ * @method string getStatus() Obtain Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
+ * @method void setStatus(string $Status) Set Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
  * @method string getStartTime() Obtain Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
  * @method void setStartTime(string $StartTime) Set Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
  * @method string getEndTime() Obtain Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
@@ -51,7 +51,7 @@ class AsyncEvent extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string Event status
+     * @var string Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
      */
     public $Status;
 
@@ -69,7 +69,7 @@ class AsyncEvent extends AbstractModel
      * @param string $InvokeRequestId Invocation request ID
      * @param string $InvokeType Invocation type
      * @param string $Qualifier Function version
-     * @param string $Status Event status
+     * @param string $Status Event status. Values: `RUNNING`; `FINISHED` (invoked successfully); `ABORTED` (invocation ended); `FAILED` (invocation failed)
      * @param string $StartTime Invocation start time in the format of "%Y-%m-%d %H:%M:%S.%f"
      * @param string $EndTime Invocation end time in the format of "%Y-%m-%d %H:%M:%S.%f"
      */

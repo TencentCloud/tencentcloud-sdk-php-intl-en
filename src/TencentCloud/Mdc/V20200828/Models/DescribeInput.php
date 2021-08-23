@@ -44,6 +44,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getInputRegion() Obtain Input region.
  * @method void setInputRegion(string $InputRegion) Set Input region.
+ * @method DescribeInputRTMPSettings getRTMPSettings() Obtain RTMP configuration information of an input
+ * @method void setRTMPSettings(DescribeInputRTMPSettings $RTMPSettings) Set RTMP configuration information of an input
+ * @method string getFailOver() Obtain Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setFailOver(string $FailOver) Set Input failover
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class DescribeInput extends AbstractModel
 {
@@ -96,6 +102,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InputRegion;
 
     /**
+     * @var DescribeInputRTMPSettings RTMP configuration information of an input
+     */
+    public $RTMPSettings;
+
+    /**
+     * @var string Input failover
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $FailOver;
+
+    /**
      * @param string $InputId Input ID.
      * @param string $InputName Input name.
      * @param string $Description Input description.
@@ -108,6 +125,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param DescribeInputRTPSettings $RTPSettings RTP configuration information of input.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $InputRegion Input region.
+     * @param DescribeInputRTMPSettings $RTMPSettings RTMP configuration information of an input
+     * @param string $FailOver Input failover
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -163,6 +183,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InputRegion",$param) and $param["InputRegion"] !== null) {
             $this->InputRegion = $param["InputRegion"];
+        }
+
+        if (array_key_exists("RTMPSettings",$param) and $param["RTMPSettings"] !== null) {
+            $this->RTMPSettings = new DescribeInputRTMPSettings();
+            $this->RTMPSettings->deserialize($param["RTMPSettings"]);
+        }
+
+        if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
+            $this->FailOver = $param["FailOver"];
         }
     }
 }

@@ -18,28 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * RTP destination address of the created MediaConnect flow output.
+ * StartStreamLinkFlow request structure.
  *
- * @method string getIp() Obtain Push destination IP.
- * @method void setIp(string $Ip) Set Push destination IP.
- * @method integer getPort() Obtain Push destination port.
- * @method void setPort(integer $Port) Set Push destination port.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
  */
-class CreateOutputRTPSettingsDestinations extends AbstractModel
+class StartStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Push destination IP.
+     * @var string Flow ID
      */
-    public $Ip;
+    public $FlowId;
 
     /**
-     * @var integer Push destination port.
-     */
-    public $Port;
-
-    /**
-     * @param string $Ip Push destination IP.
-     * @param integer $Port Push destination port.
+     * @param string $FlowId Flow ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class CreateOutputRTPSettingsDestinations extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Ip",$param) and $param["Ip"] !== null) {
-            $this->Ip = $param["Ip"];
-        }
-
-        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
-            $this->Port = $param["Port"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

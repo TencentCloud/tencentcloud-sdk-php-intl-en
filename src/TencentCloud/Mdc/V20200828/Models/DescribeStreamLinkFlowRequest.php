@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopMediaConnectFlow response structure.
+ * DescribeStreamLinkFlow request structure.
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
  */
-class StopMediaConnectFlowResponse extends AbstractModel
+class DescribeStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Flow ID
      */
-    public $RequestId;
+    public $FlowId;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $FlowId Flow ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class StopMediaConnectFlowResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
     }
 }

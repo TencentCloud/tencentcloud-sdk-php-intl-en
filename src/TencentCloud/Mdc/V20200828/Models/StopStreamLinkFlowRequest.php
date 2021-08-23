@@ -18,20 +18,20 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartMediaConnectFlow request structure.
+ * StopStreamLinkFlow request structure.
  *
- * @method string getFlowId() Obtain Flow ID.
- * @method void setFlowId(string $FlowId) Set Flow ID.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
  */
-class StartMediaConnectFlowRequest extends AbstractModel
+class StopStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID.
+     * @var string Flow ID
      */
     public $FlowId;
 
     /**
-     * @param string $FlowId Flow ID.
+     * @param string $FlowId Flow ID
      */
     function __construct()
     {

@@ -18,20 +18,28 @@ namespace TencentCloud\Mdc\V20200828\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMediaConnectFlow request structure.
+ * ModifyStreamLinkFlow request structure.
  *
- * @method string getFlowId() Obtain Flow ID.
- * @method void setFlowId(string $FlowId) Set Flow ID.
+ * @method string getFlowId() Obtain Flow ID
+ * @method void setFlowId(string $FlowId) Set Flow ID
+ * @method string getFlowName() Obtain Name of the flow to modify
+ * @method void setFlowName(string $FlowName) Set Name of the flow to modify
  */
-class DescribeMediaConnectFlowRequest extends AbstractModel
+class ModifyStreamLinkFlowRequest extends AbstractModel
 {
     /**
-     * @var string Flow ID.
+     * @var string Flow ID
      */
     public $FlowId;
 
     /**
-     * @param string $FlowId Flow ID.
+     * @var string Name of the flow to modify
+     */
+    public $FlowName;
+
+    /**
+     * @param string $FlowId Flow ID
+     * @param string $FlowName Name of the flow to modify
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeMediaConnectFlowRequest extends AbstractModel
         }
         if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
             $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("FlowName",$param) and $param["FlowName"] !== null) {
+            $this->FlowName = $param["FlowName"];
         }
     }
 }

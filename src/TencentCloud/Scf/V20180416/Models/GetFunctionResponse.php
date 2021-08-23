@@ -112,6 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStatusReasons(array $StatusReasons) Set Cause of function failure
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAsyncRunEnable() Obtain Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAsyncRunEnable(string $AsyncRunEnable) Set Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getTraceEnable() Obtain Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTraceEnable(string $TraceEnable) Set Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -324,6 +332,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $StatusReasons;
 
     /**
+     * @var string Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AsyncRunEnable;
+
+    /**
+     * @var string Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TraceEnable;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -375,6 +395,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $InitTimeout Timeout period for function initialization
      * @param array $StatusReasons Cause of function failure
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AsyncRunEnable Specifies whether to enable asynchronization 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $TraceEnable Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -575,6 +599,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->StatusReasons, $obj);
             }
+        }
+
+        if (array_key_exists("AsyncRunEnable",$param) and $param["AsyncRunEnable"] !== null) {
+            $this->AsyncRunEnable = $param["AsyncRunEnable"];
+        }
+
+        if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
+            $this->TraceEnable = $param["TraceEnable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

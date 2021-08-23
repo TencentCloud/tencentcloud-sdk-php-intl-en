@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInputName() Obtain Input name, which can contain 1 to 32 letters, digits, and underscores.
  * @method void setInputName(string $InputName) Set Input name, which can contain 1 to 32 letters, digits, and underscores.
- * @method string getProtocol() Obtain Input protocol. Valid values: SRT, RTP.
- * @method void setProtocol(string $Protocol) Set Input protocol. Valid values: SRT, RTP.
+ * @method string getProtocol() Obtain Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
+ * @method void setProtocol(string $Protocol) Set Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
  * @method string getDescription() Obtain Input description. Length: [0, 255].
  * @method void setDescription(string $Description) Set Input description. Length: [0, 255].
  * @method array getAllowIpList() Obtain Allowlist of input IPs in CIDR format.
@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSRTSettings(CreateInputSRTSettings $SRTSettings) Set SRT configuration information of input.
  * @method CreateInputRTPSettings getRTPSettings() Obtain RTP configuration information of input.
  * @method void setRTPSettings(CreateInputRTPSettings $RTPSettings) Set RTP configuration information of input.
+ * @method string getFailOver() Obtain Input failover. Valid values: `OPEN`, `CLOSE` (default)
+ * @method void setFailOver(string $FailOver) Set Input failover. Valid values: `OPEN`, `CLOSE` (default)
  */
 class CreateInput extends AbstractModel
 {
@@ -41,7 +43,7 @@ class CreateInput extends AbstractModel
     public $InputName;
 
     /**
-     * @var string Input protocol. Valid values: SRT, RTP.
+     * @var string Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
      */
     public $Protocol;
 
@@ -66,12 +68,18 @@ class CreateInput extends AbstractModel
     public $RTPSettings;
 
     /**
+     * @var string Input failover. Valid values: `OPEN`, `CLOSE` (default)
+     */
+    public $FailOver;
+
+    /**
      * @param string $InputName Input name, which can contain 1 to 32 letters, digits, and underscores.
-     * @param string $Protocol Input protocol. Valid values: SRT, RTP.
+     * @param string $Protocol Input protocol. Valid values: `SRT`, `RTP`, `RTMP`
      * @param string $Description Input description. Length: [0, 255].
      * @param array $AllowIpList Allowlist of input IPs in CIDR format.
      * @param CreateInputSRTSettings $SRTSettings SRT configuration information of input.
      * @param CreateInputRTPSettings $RTPSettings RTP configuration information of input.
+     * @param string $FailOver Input failover. Valid values: `OPEN`, `CLOSE` (default)
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class CreateInput extends AbstractModel
         if (array_key_exists("RTPSettings",$param) and $param["RTPSettings"] !== null) {
             $this->RTPSettings = new CreateInputRTPSettings();
             $this->RTPSettings->deserialize($param["RTPSettings"]);
+        }
+
+        if (array_key_exists("FailOver",$param) and $param["FailOver"] !== null) {
+            $this->FailOver = $param["FailOver"];
         }
     }
 }
