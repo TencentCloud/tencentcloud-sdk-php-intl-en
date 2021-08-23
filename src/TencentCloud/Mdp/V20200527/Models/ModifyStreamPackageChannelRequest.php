@@ -18,56 +18,44 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Channel information.
+ * ModifyStreamPackageChannel request structure.
  *
- * @method string getId() Obtain Channel ID.
- * @method void setId(string $Id) Set Channel ID.
- * @method string getName() Obtain Channel name.
- * @method void setName(string $Name) Set Channel name.
- * @method string getProtocol() Obtain Channel protocol.
- * @method void setProtocol(string $Protocol) Set Channel protocol.
- * @method PointInfo getPoints() Obtain Channel input and output.
- * @method void setPoints(PointInfo $Points) Set Channel input and output.
+ * @method string getId() Obtain Channel ID
+ * @method void setId(string $Id) Set Channel ID
+ * @method string getName() Obtain New channel name
+ * @method void setName(string $Name) Set New channel name
+ * @method string getProtocol() Obtain New channel protocol. Valid values: HLS, DASH
+ * @method void setProtocol(string $Protocol) Set New channel protocol. Valid values: HLS, DASH
  * @method CacheInfo getCacheInfo() Obtain Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
  * @method void setCacheInfo(CacheInfo $CacheInfo) Set Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
  */
-class ChannelInfo extends AbstractModel
+class ModifyStreamPackageChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel ID.
+     * @var string Channel ID
      */
     public $Id;
 
     /**
-     * @var string Channel name.
+     * @var string New channel name
      */
     public $Name;
 
     /**
-     * @var string Channel protocol.
+     * @var string New channel protocol. Valid values: HLS, DASH
      */
     public $Protocol;
 
     /**
-     * @var PointInfo Channel input and output.
-     */
-    public $Points;
-
-    /**
      * @var CacheInfo Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
      */
     public $CacheInfo;
 
     /**
-     * @param string $Id Channel ID.
-     * @param string $Name Channel name.
-     * @param string $Protocol Channel protocol.
-     * @param PointInfo $Points Channel input and output.
+     * @param string $Id Channel ID
+     * @param string $Name New channel name
+     * @param string $Protocol New channel protocol. Valid values: HLS, DASH
      * @param CacheInfo $CacheInfo Cache configuration
-Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -92,11 +80,6 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
-        }
-
-        if (array_key_exists("Points",$param) and $param["Points"] !== null) {
-            $this->Points = new PointInfo();
-            $this->Points->deserialize($param["Points"]);
         }
 
         if (array_key_exists("CacheInfo",$param) and $param["CacheInfo"] !== null) {

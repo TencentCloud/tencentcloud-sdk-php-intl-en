@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopSpeed(string $TopSpeed) Set Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getBitrateCompressionRatio() Obtain Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
  * @method void setBitrateCompressionRatio(integer $BitrateCompressionRatio) Set Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
+ * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+ * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -80,6 +82,11 @@ class VideoTemplateInfo extends AbstractModel
     public $BitrateCompressionRatio;
 
     /**
+     * @var string Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     */
+    public $RateControlMode;
+
+    /**
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
@@ -88,6 +95,7 @@ class VideoTemplateInfo extends AbstractModel
      * @param integer $Fps Video frame rate. Value range: [1,240]. If this parameter is left empty, the original value will be used.
      * @param string $TopSpeed Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $BitrateCompressionRatio Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
+     * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("BitrateCompressionRatio",$param) and $param["BitrateCompressionRatio"] !== null) {
             $this->BitrateCompressionRatio = $param["BitrateCompressionRatio"];
+        }
+
+        if (array_key_exists("RateControlMode",$param) and $param["RateControlMode"] !== null) {
+            $this->RateControlMode = $param["RateControlMode"];
         }
     }
 }

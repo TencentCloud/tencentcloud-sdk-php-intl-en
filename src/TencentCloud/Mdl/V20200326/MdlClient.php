@@ -23,27 +23,29 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mdl\V20200326\Models as Models;
 
 /**
- * @method Models\CreateMediaLiveChannelResponse CreateMediaLiveChannel(Models\CreateMediaLiveChannelRequest $req) This API is used to create a media channel.
- * @method Models\CreateMediaLiveInputResponse CreateMediaLiveInput(Models\CreateMediaLiveInputRequest $req) This API is used to create a media input.
- * @method Models\CreateMediaLiveInputSecurityGroupResponse CreateMediaLiveInputSecurityGroup(Models\CreateMediaLiveInputSecurityGroupRequest $req) This API is used to create an input security group. Up to 5 ones can be created.
- * @method Models\DeleteMediaLiveChannelResponse DeleteMediaLiveChannel(Models\DeleteMediaLiveChannelRequest $req) This API is used to delete a MediaLive channel.
- * @method Models\DeleteMediaLiveInputResponse DeleteMediaLiveInput(Models\DeleteMediaLiveInputRequest $req) This API is used to delete a media input.
- * @method Models\DeleteMediaLiveInputSecurityGroupResponse DeleteMediaLiveInputSecurityGroup(Models\DeleteMediaLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
- * @method Models\DescribeMediaLiveChannelResponse DescribeMediaLiveChannel(Models\DescribeMediaLiveChannelRequest $req) This API is used to query the information of a MediaLive channel.
- * @method Models\DescribeMediaLiveChannelAlertsResponse DescribeMediaLiveChannelAlerts(Models\DescribeMediaLiveChannelAlertsRequest $req) This API is used to query the channel alarm information.
- * @method Models\DescribeMediaLiveChannelInputStatisticsResponse DescribeMediaLiveChannelInputStatistics(Models\DescribeMediaLiveChannelInputStatisticsRequest $req) This API is used to query the input statistics.
- * @method Models\DescribeMediaLiveChannelLogsResponse DescribeMediaLiveChannelLogs(Models\DescribeMediaLiveChannelLogsRequest $req) This API is used to query MediaLive channel logs, such as push event logs.
- * @method Models\DescribeMediaLiveChannelOutputStatisticsResponse DescribeMediaLiveChannelOutputStatistics(Models\DescribeMediaLiveChannelOutputStatisticsRequest $req) This API is used to query the output statistics of a channel.
- * @method Models\DescribeMediaLiveChannelsResponse DescribeMediaLiveChannels(Models\DescribeMediaLiveChannelsRequest $req) This API is used to query the information of MediaLive channels in batches.
- * @method Models\DescribeMediaLiveInputResponse DescribeMediaLiveInput(Models\DescribeMediaLiveInputRequest $req) This API is used to query a media input.
- * @method Models\DescribeMediaLiveInputSecurityGroupResponse DescribeMediaLiveInputSecurityGroup(Models\DescribeMediaLiveInputSecurityGroupRequest $req) This API is used to query an input security group.
- * @method Models\DescribeMediaLiveInputSecurityGroupsResponse DescribeMediaLiveInputSecurityGroups(Models\DescribeMediaLiveInputSecurityGroupsRequest $req) This API is used to query the information of input security groups in batches.
- * @method Models\DescribeMediaLiveInputsResponse DescribeMediaLiveInputs(Models\DescribeMediaLiveInputsRequest $req) This API is used to query the information of media inputs in batches.
- * @method Models\ModifyMediaLiveChannelResponse ModifyMediaLiveChannel(Models\ModifyMediaLiveChannelRequest $req) This API is used to modify the information of a MediaLive channel.
- * @method Models\ModifyMediaLiveInputResponse ModifyMediaLiveInput(Models\ModifyMediaLiveInputRequest $req) This API is used to update a media input.
- * @method Models\ModifyMediaLiveInputSecurityGroupResponse ModifyMediaLiveInputSecurityGroup(Models\ModifyMediaLiveInputSecurityGroupRequest $req) This API is used to update an input security group.
- * @method Models\StartMediaLiveChannelResponse StartMediaLiveChannel(Models\StartMediaLiveChannelRequest $req) This API is used to start a MediaLive channel.
- * @method Models\StopMediaLiveChannelResponse StopMediaLiveChannel(Models\StopMediaLiveChannelRequest $req) This API is used to stop a MediaLive channel.
+ * @method Models\CreateStreamLiveChannelResponse CreateStreamLiveChannel(Models\CreateStreamLiveChannelRequest $req) This API is used to create a StreamLive channel.
+ * @method Models\CreateStreamLiveInputResponse CreateStreamLiveInput(Models\CreateStreamLiveInputRequest $req) This API is used to create a StreamLive input.
+ * @method Models\CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroup(Models\CreateStreamLiveInputSecurityGroupRequest $req) This API is used to create an input security group. Up to 5 security groups are allowed.
+ * @method Models\CreateStreamLivePlanResponse CreateStreamLivePlan(Models\CreateStreamLivePlanRequest $req) This API is used to create an event in the plan.
+ * @method Models\DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(Models\DeleteStreamLiveChannelRequest $req) This API is used to delete a StreamLive channel.
+ * @method Models\DeleteStreamLiveInputResponse DeleteStreamLiveInput(Models\DeleteStreamLiveInputRequest $req) This API is used to delete a StreamLive input.
+ * @method Models\DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(Models\DeleteStreamLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
+ * @method Models\DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(Models\DescribeStreamLiveChannelRequest $req) This API is used to query a StreamLive channel.
+ * @method Models\DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(Models\DescribeStreamLiveChannelAlertsRequest $req) This API is used to query the alarm information of a StreamLive channel.
+ * @method Models\DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(Models\DescribeStreamLiveChannelInputStatisticsRequest $req) This API is used to query input statistics.
+ * @method Models\DescribeStreamLiveChannelLogsResponse DescribeStreamLiveChannelLogs(Models\DescribeStreamLiveChannelLogsRequest $req) This API is used to query StreamLive channel logs, such as push event logs.
+ * @method Models\DescribeStreamLiveChannelOutputStatisticsResponse DescribeStreamLiveChannelOutputStatistics(Models\DescribeStreamLiveChannelOutputStatisticsRequest $req) This API is used to query the output statistics of a StreamLive channel.
+ * @method Models\DescribeStreamLiveChannelsResponse DescribeStreamLiveChannels(Models\DescribeStreamLiveChannelsRequest $req) This API is used to query StreamLive channels in batches.
+ * @method Models\DescribeStreamLiveInputResponse DescribeStreamLiveInput(Models\DescribeStreamLiveInputRequest $req) This API is used to query a StreamLive input.
+ * @method Models\DescribeStreamLiveInputSecurityGroupResponse DescribeStreamLiveInputSecurityGroup(Models\DescribeStreamLiveInputSecurityGroupRequest $req) This API is used to query an input security group.
+ * @method Models\DescribeStreamLiveInputSecurityGroupsResponse DescribeStreamLiveInputSecurityGroups(Models\DescribeStreamLiveInputSecurityGroupsRequest $req) This API is used to query input security groups in batches.
+ * @method Models\DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(Models\DescribeStreamLiveInputsRequest $req) This API is used to query StreamLive inputs in batches.
+ * @method Models\DescribeStreamLivePlansResponse DescribeStreamLivePlans(Models\DescribeStreamLivePlansRequest $req) This API is used to query the events in the plan in batches.
+ * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.
+ * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.
+ * @method Models\ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(Models\ModifyStreamLiveInputSecurityGroupRequest $req) This API is used to modify an input security group.
+ * @method Models\StartStreamLiveChannelResponse StartStreamLiveChannel(Models\StartStreamLiveChannelRequest $req) This API is used to start a StreamLive channel.
+ * @method Models\StopStreamLiveChannelResponse StopStreamLiveChannel(Models\StopStreamLiveChannelRequest $req) This API is used to stop a StreamLive channel.
  */
 
 class MdlClient extends AbstractClient

@@ -23,15 +23,15 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mdp\V20200527\Models as Models;
 
 /**
- * @method Models\CreateMediaPackageChannelResponse CreateMediaPackageChannel(Models\CreateMediaPackageChannelRequest $req) This API is used to create a media package channel.
- * @method Models\CreateMediaPackageChannelEndpointResponse CreateMediaPackageChannelEndpoint(Models\CreateMediaPackageChannelEndpointRequest $req) This API is used to create an endpoint of a media package channel.
- * @method Models\DeleteMediaPackageChannelEndpointsResponse DeleteMediaPackageChannelEndpoints(Models\DeleteMediaPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a media package channel in batches.
- * @method Models\DeleteMediaPackageChannelsResponse DeleteMediaPackageChannels(Models\DeleteMediaPackageChannelsRequest $req) This API is used to delete media package channels in batches.
- * @method Models\DescribeMediaPackageChannelResponse DescribeMediaPackageChannel(Models\DescribeMediaPackageChannelRequest $req) This API is used to query the information of a media package channel.
- * @method Models\DescribeMediaPackageChannelsResponse DescribeMediaPackageChannels(Models\DescribeMediaPackageChannelsRequest $req) This API is used to query the information list of media package channels.
- * @method Models\ModifyMediaPackageChannelResponse ModifyMediaPackageChannel(Models\ModifyMediaPackageChannelRequest $req) This API is used to modify the information of a media package channel.
- * @method Models\ModifyMediaPackageChannelEndpointResponse ModifyMediaPackageChannelEndpoint(Models\ModifyMediaPackageChannelEndpointRequest $req) This API is used to modify an endpoint of a media package channel.
- * @method Models\ModifyMediaPackageChannelInputAuthInfoResponse ModifyMediaPackageChannelInputAuthInfo(Models\ModifyMediaPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a media package channel.
+ * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
+ * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
+ * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
+ * @method Models\DeleteStreamPackageChannelsResponse DeleteStreamPackageChannels(Models\DeleteStreamPackageChannelsRequest $req) This API is used to delete StreamPackage channels in batches.
+ * @method Models\DescribeStreamPackageChannelResponse DescribeStreamPackageChannel(Models\DescribeStreamPackageChannelRequest $req) This API is used to query the information of a StreamPackage channel.
+ * @method Models\DescribeStreamPackageChannelsResponse DescribeStreamPackageChannels(Models\DescribeStreamPackageChannelsRequest $req) This API is used to query the information of multiple StreamPackage channels.
+ * @method Models\ModifyStreamPackageChannelResponse ModifyStreamPackageChannel(Models\ModifyStreamPackageChannelRequest $req) This API is used to modify a StreamPackage channel.
+ * @method Models\ModifyStreamPackageChannelEndpointResponse ModifyStreamPackageChannelEndpoint(Models\ModifyStreamPackageChannelEndpointRequest $req) This API is used to modify an endpoint of a StreamPackage channel.
+ * @method Models\ModifyStreamPackageChannelInputAuthInfoResponse ModifyStreamPackageChannelInputAuthInfo(Models\ModifyStreamPackageChannelInputAuthInfoRequest $req) This API is used to modify the input authentication information of a StreamPackage channel.
  */
 
 class MdpClient extends AbstractClient

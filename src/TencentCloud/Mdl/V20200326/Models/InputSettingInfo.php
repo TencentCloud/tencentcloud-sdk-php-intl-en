@@ -36,6 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInputAddress(string $InputAddress) Set RTP/UDP input address, which does not need to be entered for the input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSourceType() Obtain Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setSourceType(string $SourceType) Set Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class InputSettingInfo extends AbstractModel
 {
@@ -64,6 +68,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InputAddress;
 
     /**
+     * @var string Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $SourceType;
+
+    /**
      * @param string $AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
@@ -72,6 +82,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $InputAddress RTP/UDP input address, which does not need to be entered for the input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InputAddress",$param) and $param["InputAddress"] !== null) {
             $this->InputAddress = $param["InputAddress"];
+        }
+
+        if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
+            $this->SourceType = $param["SourceType"];
         }
     }
 }

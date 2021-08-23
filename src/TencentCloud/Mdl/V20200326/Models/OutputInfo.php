@@ -34,6 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method Scte35SettingsInfo getScte35Settings() Obtain SCTE-35 information configuration.
  * @method void setScte35Settings(Scte35SettingsInfo $Scte35Settings) Set SCTE-35 information configuration.
+ * @method array getAVTemplateNames() Obtain Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setAVTemplateNames(array $AVTemplateNames) Set Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class OutputInfo extends AbstractModel
 {
@@ -61,6 +65,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Scte35Settings;
 
     /**
+     * @var array Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $AVTemplateNames;
+
+    /**
      * @param string $Name Output name.
      * @param array $AudioTemplateNames Audio transcoding template name array.
 Quantity limit: [0,1] for RTMP; [0,20] for others.
@@ -68,6 +78,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $VideoTemplateNames Video transcoding template name array. Quantity limit: [0,1].
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Scte35SettingsInfo $Scte35Settings SCTE-35 information configuration.
+     * @param array $AVTemplateNames Audio/Video transcoding template name. If `HlsRemuxSettings.Scheme` is `MERGE`, there is 1 audio/video transcoding template. Otherwise, this parameter is empty.
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -97,6 +109,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Scte35Settings",$param) and $param["Scte35Settings"] !== null) {
             $this->Scte35Settings = new Scte35SettingsInfo();
             $this->Scte35Settings->deserialize($param["Scte35Settings"]);
+        }
+
+        if (array_key_exists("AVTemplateNames",$param) and $param["AVTemplateNames"] !== null) {
+            $this->AVTemplateNames = $param["AVTemplateNames"];
         }
     }
 }

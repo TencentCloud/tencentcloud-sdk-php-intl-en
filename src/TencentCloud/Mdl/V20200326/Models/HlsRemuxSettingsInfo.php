@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPdtInsertion(string $PdtInsertion) Set Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
  * @method integer getPdtDuration() Obtain PDT duration in seconds. Value range: (0,3000]. Default value: 600.
  * @method void setPdtDuration(integer $PdtDuration) Set PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+ * @method string getScheme() Obtain Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+ * @method void setScheme(string $Scheme) Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
@@ -52,10 +54,16 @@ class HlsRemuxSettingsInfo extends AbstractModel
     public $PdtDuration;
 
     /**
+     * @var string Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     */
+    public $Scheme;
+
+    /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      * @param integer $SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
      * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
+     * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class HlsRemuxSettingsInfo extends AbstractModel
 
         if (array_key_exists("PdtDuration",$param) and $param["PdtDuration"] !== null) {
             $this->PdtDuration = $param["PdtDuration"];
+        }
+
+        if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
+            $this->Scheme = $param["Scheme"];
         }
     }
 }
