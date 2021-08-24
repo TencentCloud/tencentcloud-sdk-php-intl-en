@@ -38,6 +38,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getProgress() Obtain Transcoding progress. Value range: 0-100.
  * @method void setProgress(integer $Progress) Set Transcoding progress. Value range: 0-100.
+ * @method string getBeginProcessTime() Obtain Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method void setBeginProcessTime(string $BeginProcessTime) Set Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method string getFinishTime() Obtain Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method void setFinishTime(string $FinishTime) Set Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
  */
 class MediaProcessTaskTranscodeResult extends AbstractModel
 {
@@ -79,6 +83,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Progress;
 
     /**
+     * @var string Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public $BeginProcessTime;
+
+    /**
+     * @var string Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public $FinishTime;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -88,6 +102,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param MediaTranscodeItem $Output Output of transcoding task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Progress Transcoding progress. Value range: 0-100.
+     * @param string $BeginProcessTime Transcoding task start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @param string $FinishTime Transcoding task end time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
      */
     function __construct()
     {
@@ -130,6 +146,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
             $this->Progress = $param["Progress"];
+        }
+
+        if (array_key_exists("BeginProcessTime",$param) and $param["BeginProcessTime"] !== null) {
+            $this->BeginProcessTime = $param["BeginProcessTime"];
+        }
+
+        if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
+            $this->FinishTime = $param["FinishTime"];
         }
     }
 }

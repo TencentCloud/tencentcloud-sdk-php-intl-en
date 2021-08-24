@@ -78,6 +78,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Includes specified start and end points in time.</li>
  * @method void setCreateTime(TimeRange $CreateTime) Set Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
+ * @method TimeRange getExpireTime() Obtain Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+ * @method void setExpireTime(TimeRange $ExpireTime) Set Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
  * @method SortBy getSort() Obtain Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -122,6 +126,16 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 20</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method array getStorageClasses() Obtain An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+ * @method void setStorageClasses(array $StorageClasses) Set An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
  * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
  * @method void setText(string $Text) Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -235,6 +249,12 @@ class SearchMediaRequest extends AbstractModel
     public $CreateTime;
 
     /**
+     * @var TimeRange Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
+     */
+    public $ExpireTime;
+
+    /**
      * @var SortBy Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -279,6 +299,15 @@ class SearchMediaRequest extends AbstractModel
      * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     public $SubAppId;
+
+    /**
+     * @var array An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
+     */
+    public $StorageClasses;
 
     /**
      * @var string (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -352,6 +381,8 @@ End time in the creation time range.
 <li>Array length limit: 10.</li>
      * @param TimeRange $CreateTime Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
+     * @param TimeRange $ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
+<li>The files whose expiration time points are on the start or end time of the specified range will also be returned.</li>
      * @param SortBy $Sort Sorting order.
 <li>Valid value of `Sort.Field`: CreateTime.</li>
 <li>If `Text`, `Names`, or `Descriptions` is not empty, the `Sort.Field` field will not take effect, and the search results will be sorted by match rate.</li>
@@ -374,6 +405,11 @@ End time in the creation time range.
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param array $StorageClasses An array of storage classes. Valid values:
+<li>STANDARD</li>
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
      * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
@@ -451,6 +487,11 @@ End time in the creation time range.
             $this->CreateTime->deserialize($param["CreateTime"]);
         }
 
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = new TimeRange();
+            $this->ExpireTime->deserialize($param["ExpireTime"]);
+        }
+
         if (array_key_exists("Sort",$param) and $param["Sort"] !== null) {
             $this->Sort = new SortBy();
             $this->Sort->deserialize($param["Sort"]);
@@ -474,6 +515,10 @@ End time in the creation time range.
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
+            $this->StorageClasses = $param["StorageClasses"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

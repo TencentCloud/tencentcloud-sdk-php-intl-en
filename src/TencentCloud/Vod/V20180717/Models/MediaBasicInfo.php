@@ -93,9 +93,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method string getStorageClass() Obtain Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
  * @method void setStorageClass(string $StorageClass) Set Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
  */
 class MediaBasicInfo extends AbstractModel
 {
@@ -206,6 +210,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
      */
     public $StorageClass;
 
@@ -248,6 +254,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $StorageClass Storage class of a media file:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP_ARCHIVE</li>
      */
     function __construct()
     {

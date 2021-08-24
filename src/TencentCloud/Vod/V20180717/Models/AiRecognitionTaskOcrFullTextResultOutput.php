@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output of full text recognition.
  *
- * @method array getSegmentSet() Obtain Full text recognition result set.
- * @method void setSegmentSet(array $SegmentSet) Set Full text recognition result set.
+ * @method array getSegmentSet() Obtain Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+ * @method void setSegmentSet(array $SegmentSet) Set Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+ * @method string getSegmentSetFileUrl() Obtain URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
  */
 class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
 {
     /**
-     * @var array Full text recognition result set.
+     * @var array Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
      */
     public $SegmentSet;
 
     /**
-     * @param array $SegmentSet Full text recognition result set.
+     * @var string URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     */
+    public $SegmentSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public $SegmentSetFileUrlExpireTime;
+
+    /**
+     * @param array $SegmentSet Full-text recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @param string $SegmentSetFileUrl URL to the file of the full-text recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the full-text recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiRecognitionTaskOcrFullTextResultOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("SegmentSetFileUrl",$param) and $param["SegmentSetFileUrl"] !== null) {
+            $this->SegmentSetFileUrl = $param["SegmentSetFileUrl"];
+        }
+
+        if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
+            $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
         }
     }
 }

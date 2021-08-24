@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output of intelligent object recognition.
  *
- * @method array getResultSet() Obtain Result set of intelligent object recognition.
- * @method void setResultSet(array $ResultSet) Set Result set of intelligent object recognition.
+ * @method array getResultSet() Obtain Intelligent object recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+ * @method void setResultSet(array $ResultSet) Set Intelligent object recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+ * @method string getResultSetFileUrl() Obtain URL to the file of the object recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+ * @method void setResultSetFileUrl(string $ResultSetFileUrl) Set URL to the file of the object recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+ * @method string getResultSetFileUrlExpireTime() Obtain Expiration time of the URL to the object recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+ * @method void setResultSetFileUrlExpireTime(string $ResultSetFileUrlExpireTime) Set Expiration time of the URL to the object recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
  */
 class AiRecognitionTaskObjectResultOutput extends AbstractModel
 {
     /**
-     * @var array Result set of intelligent object recognition.
+     * @var array Intelligent object recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
      */
     public $ResultSet;
 
     /**
-     * @param array $ResultSet Result set of intelligent object recognition.
+     * @var string URL to the file of the object recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     */
+    public $ResultSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the object recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     */
+    public $ResultSetFileUrlExpireTime;
+
+    /**
+     * @param array $ResultSet Intelligent object recognition result set
+<font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
+     * @param string $ResultSetFileUrl URL to the file of the object recognition result set. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
+     * @param string $ResultSetFileUrlExpireTime Expiration time of the URL to the object recognition result set, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiRecognitionTaskObjectResultOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResultSet, $obj);
             }
+        }
+
+        if (array_key_exists("ResultSetFileUrl",$param) and $param["ResultSetFileUrl"] !== null) {
+            $this->ResultSetFileUrl = $param["ResultSetFileUrl"];
+        }
+
+        if (array_key_exists("ResultSetFileUrlExpireTime",$param) and $param["ResultSetFileUrlExpireTime"] !== null) {
+            $this->ResultSetFileUrlExpireTime = $param["ResultSetFileUrlExpireTime"];
         }
     }
 }
