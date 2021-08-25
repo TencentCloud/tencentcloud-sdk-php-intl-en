@@ -40,6 +40,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFps(integer $Fps) Set Frame rate in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getColorPrimaries() Obtain Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setColorPrimaries(string $ColorPrimaries) Set Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getColorSpace() Obtain Color space
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setColorSpace(string $ColorSpace) Set Color space
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getColorTransfer() Obtain Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setColorTransfer(string $ColorTransfer) Set Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -74,6 +86,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Fps;
 
     /**
+     * @var string Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $ColorPrimaries;
+
+    /**
+     * @var string Color space
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $ColorSpace;
+
+    /**
+     * @var string Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $ColorTransfer;
+
+    /**
      * @param integer $Bitrate Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Height of a video stream in px.
@@ -84,6 +114,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Fps Frame rate in Hz.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ColorPrimaries Color primaries
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $ColorSpace Color space
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $ColorTransfer Color transfer
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -116,6 +152,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("ColorPrimaries",$param) and $param["ColorPrimaries"] !== null) {
+            $this->ColorPrimaries = $param["ColorPrimaries"];
+        }
+
+        if (array_key_exists("ColorSpace",$param) and $param["ColorSpace"] !== null) {
+            $this->ColorSpace = $param["ColorSpace"];
+        }
+
+        if (array_key_exists("ColorTransfer",$param) and $param["ColorTransfer"] !== null) {
+            $this->ColorTransfer = $param["ColorTransfer"];
         }
     }
 }
