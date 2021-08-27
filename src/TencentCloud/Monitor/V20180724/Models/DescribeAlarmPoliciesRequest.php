@@ -68,6 +68,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setEnable(array $Enable) Set Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
  * @method integer getNotBindingNoticeRule() Obtain If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
  * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) Set If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
+ * @method integer getInstanceGroupId() Obtain Instance group ID.
+ * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -164,6 +166,11 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $NotBindingNoticeRule;
 
     /**
+     * @var integer Instance group ID.
+     */
+    public $InstanceGroupId;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -188,6 +195,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param array $RuleTypes Filter by trigger condition. Valid values: STATIC (display policies with static threshold), DYNAMIC (display policies with dynamic threshold). If this parameter is left empty, all policies will be displayed
      * @param array $Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      * @param integer $NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
+     * @param integer $InstanceGroupId Instance group ID.
      */
     function __construct()
     {
@@ -268,6 +276,10 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 
         if (array_key_exists("NotBindingNoticeRule",$param) and $param["NotBindingNoticeRule"] !== null) {
             $this->NotBindingNoticeRule = $param["NotBindingNoticeRule"];
+        }
+
+        if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
+            $this->InstanceGroupId = $param["InstanceGroupId"];
         }
     }
 }
