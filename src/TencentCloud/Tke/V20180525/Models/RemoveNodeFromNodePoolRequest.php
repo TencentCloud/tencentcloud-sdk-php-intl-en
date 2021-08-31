@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getNodePoolId() Obtain Node pool ID
  * @method void setNodePoolId(string $NodePoolId) Set Node pool ID
- * @method array getInstanceIds() Obtain Node ID list
- * @method void setInstanceIds(array $InstanceIds) Set Node ID list
+ * @method array getInstanceIds() Obtain The node ID list. Up to 100 nodes can be removed at a time.
+ * @method void setInstanceIds(array $InstanceIds) Set The node ID list. Up to 100 nodes can be removed at a time.
  */
 class RemoveNodeFromNodePoolRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class RemoveNodeFromNodePoolRequest extends AbstractModel
     public $NodePoolId;
 
     /**
-     * @var array Node ID list
+     * @var array The node ID list. Up to 100 nodes can be removed at a time.
      */
     public $InstanceIds;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
-     * @param array $InstanceIds Node ID list
+     * @param array $InstanceIds The node ID list. Up to 100 nodes can be removed at a time.
      */
     function __construct()
     {
