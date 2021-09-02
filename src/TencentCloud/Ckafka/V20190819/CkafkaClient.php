@@ -49,6 +49,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\DescribeTopicAttributesResponse DescribeTopicAttributes(Models\DescribeTopicAttributesRequest $req) This API is used to get topic attributes.
 
  * @method Models\DescribeTopicDetailResponse DescribeTopicDetail(Models\DescribeTopicDetailRequest $req) This API is used to get topic list details (only for call in the console).
+ * @method Models\DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroup(Models\DescribeTopicSubscribeGroupRequest $req) This API is used to search and subscribe the message group information of a topic.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query user information.
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) This API is used to query messages based on a specified offset position.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
