@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoleName(string $RoleName) Set Role name, used to specify a role. Input either `RoleId` or `RoleName`
  * @method string getPolicyType() Obtain Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
  * @method void setPolicyType(string $PolicyType) Set Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+ * @method string getKeyword() Obtain Search by keyword
+ * @method void setKeyword(string $Keyword) Set Search by keyword
  */
 class ListAttachedRolePoliciesRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
     public $PolicyType;
 
     /**
+     * @var string Search by keyword
+     */
+    public $Keyword;
+
+    /**
      * @param integer $Page Page number, beginning from 1
      * @param integer $Rp Number of lines per page, no more than 200
      * @param string $RoleId Role ID, used to specify a role. Input either `RoleId` or `RoleName`
      * @param string $RoleName Role name, used to specify a role. Input either `RoleId` or `RoleName`
      * @param string $PolicyType Filter according to policy type. `User` indicates querying custom policies only. `QCS` indicates querying preset policies only
+     * @param string $Keyword Search by keyword
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ListAttachedRolePoliciesRequest extends AbstractModel
 
         if (array_key_exists("PolicyType",$param) and $param["PolicyType"] !== null) {
             $this->PolicyType = $param["PolicyType"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

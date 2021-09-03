@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) Set Page number, which starts from 1. Default is 1
  * @method integer getRp() Obtain Number of entries per page; 20 by default
  * @method void setRp(integer $Rp) Set Number of entries per page; 20 by default
+ * @method string getKeyword() Obtain Search by keyword
+ * @method void setKeyword(string $Keyword) Set Search by keyword
  */
 class ListAttachedGroupPoliciesRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
     public $Rp;
 
     /**
+     * @var string Search by keyword
+     */
+    public $Keyword;
+
+    /**
      * @param integer $TargetGroupId User group ID
      * @param integer $Page Page number, which starts from 1. Default is 1
      * @param integer $Rp Number of entries per page; 20 by default
+     * @param string $Keyword Search by keyword
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ListAttachedGroupPoliciesRequest extends AbstractModel
 
         if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
             $this->Rp = $param["Rp"];
+        }
+
+        if (array_key_exists("Keyword",$param) and $param["Keyword"] !== null) {
+            $this->Keyword = $param["Keyword"];
         }
     }
 }

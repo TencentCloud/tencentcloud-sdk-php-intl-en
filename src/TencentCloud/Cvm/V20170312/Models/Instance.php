@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
  * @method SystemDisk getSystemDisk() Obtain Information on the system disk of the instance
  * @method void setSystemDisk(SystemDisk $SystemDisk) Set Information on the system disk of the instance
- * @method array getDataDisks() Obtain Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
- * @method void setDataDisks(array $DataDisks) Set Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+ * @method array getDataDisks() Obtain Information of the instance data disks.
+ * @method void setDataDisks(array $DataDisks) Set Information of the instance data disks.
  * @method array getPrivateIpAddresses() Obtain List of private IPs of the instance's primary ENI.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set List of private IPs of the instance's primary ENI.
  * @method array getPublicIpAddresses() Obtain List of public IPs of the instance's primary ENI.
@@ -102,6 +102,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setRdmaIpAddresses(array $RdmaIpAddresses) Set IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
+ * @method string getIsolatedSource() Obtain The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setIsolatedSource(string $IsolatedSource) Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
  */
 class Instance extends AbstractModel
 {
@@ -151,7 +155,7 @@ class Instance extends AbstractModel
     public $SystemDisk;
 
     /**
-     * @var array Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+     * @var array Information of the instance data disks.
      */
     public $DataDisks;
 
@@ -279,6 +283,12 @@ Note: this field may return null, indicating that no valid value was found.
     public $RdmaIpAddresses;
 
     /**
+     * @var string The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $IsolatedSource;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -288,7 +298,7 @@ Note: this field may return null, indicating that no valid value was found.
      * @param string $InstanceName Instance name
      * @param string $InstanceChargeType Instance billing plan. Valid values:<br><li>`POSTPAID_BY_HOUR`: pay after use. You are billed by the hour, by traffic.<br><li>`CDHPAID`: `CDH` billing plan. Applicable to `CDH` only, not the instances on the host.<br>
      * @param SystemDisk $SystemDisk Information on the system disk of the instance
-     * @param array $DataDisks Information on the data disks of the instance, which only covers the data disks purchased together with the instance. 
+     * @param array $DataDisks Information of the instance data disks.
      * @param array $PrivateIpAddresses List of private IPs of the instance's primary ENI.
      * @param array $PublicIpAddresses List of public IPs of the instance's primary ENI.
 Note: This field may return null, indicating that no valid value is found.
@@ -319,6 +329,8 @@ Note: this field may return null, indicating that no valid value is obtained.
      * @param string $HpcClusterId HPC cluster ID.
 Note: this field may return null, indicating that no valid value was found.
      * @param array $RdmaIpAddresses IP list of HPC cluster.
+Note: this field may return null, indicating that no valid value was found.
+     * @param string $IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
@@ -479,6 +491,10 @@ Note: this field may return null, indicating that no valid value was found.
 
         if (array_key_exists("RdmaIpAddresses",$param) and $param["RdmaIpAddresses"] !== null) {
             $this->RdmaIpAddresses = $param["RdmaIpAddresses"];
+        }
+
+        if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {
+            $this->IsolatedSource = $param["IsolatedSource"];
         }
     }
 }

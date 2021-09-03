@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActionTimer(ActionTimer $ActionTimer) Set Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
  * @method array getDisasterRecoverGroupIds() Obtain Placement group ID. You can only specify one.
  * @method void setDisasterRecoverGroupIds(array $DisasterRecoverGroupIds) Set Placement group ID. You can only specify one.
- * @method array getTagSpecification() Obtain The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
- * @method void setTagSpecification(array $TagSpecification) Set The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
+ * @method array getTagSpecification() Obtain Binds the tag with the specified resources (CVM and CLB) as well
+ * @method void setTagSpecification(array $TagSpecification) Set Binds the tag with the specified resources (CVM and CLB) as well
  * @method InstanceMarketOptionsRequest getInstanceMarketOptions() Obtain The market options of the instance.
  * @method void setInstanceMarketOptions(InstanceMarketOptionsRequest $InstanceMarketOptions) Set The market options of the instance.
  * @method string getUserData() Obtain User data provided to the instance, which needs to be encoded in base64 format with the maximum size of 16KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
@@ -173,7 +173,7 @@ class RunInstancesRequest extends AbstractModel
     public $DisasterRecoverGroupIds;
 
     /**
-     * @var array The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
+     * @var array Binds the tag with the specified resources (CVM and CLB) as well
      */
     public $TagSpecification;
 
@@ -226,7 +226,7 @@ false (default value): send a normal request and create instance(s) if all the r
      * @param string $HostName Host name of the CVM. <br><li>Periods (.) or hyphens (-) cannot be the start or end of a host name or appear consecutively in a host name.<br><li>For Windows instances, the host name must be 2-15 characters long and can contain uppercase and lowercase letters, numbers, and hyphens (-). It cannot contain periods (.) or contain only numbers. <br><li>For other instances, such as Linux instances, the host name must be 2-60 characters long. It supports multiple periods (.) and allows uppercase and lowercase letters, numbers, and hyphens (-) between any two periods (.).
      * @param ActionTimer $ActionTimer Scheduled tasks. You can use this parameter to specify scheduled tasks for the instance. Only scheduled termination is supported.
      * @param array $DisasterRecoverGroupIds Placement group ID. You can only specify one.
-     * @param array $TagSpecification The tag description list. This parameter is used to bind a tag to a resource instance. A tag can only be bound to CVM instances.
+     * @param array $TagSpecification Binds the tag with the specified resources (CVM and CLB) as well
      * @param InstanceMarketOptionsRequest $InstanceMarketOptions The market options of the instance.
      * @param string $UserData User data provided to the instance, which needs to be encoded in base64 format with the maximum size of 16KB. For more information on how to get the value of this parameter, see the commands you need to execute on startup for [Windows](https://intl.cloud.tencent.com/document/product/213/17526) or [Linux](https://intl.cloud.tencent.com/document/product/213/17525).
      * @param boolean $DryRun Whether the request is a dry run only.

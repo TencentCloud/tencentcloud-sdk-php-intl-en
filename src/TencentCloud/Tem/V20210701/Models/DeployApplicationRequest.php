@@ -100,8 +100,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) Set Auto scaling policy
  * @method array getCronHorizontalAutoscaler() Obtain Scheduled auto scaling policy
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) Set Scheduled auto scaling policy
- * @method integer getLogEnable() Obtain 
- * @method void setLogEnable(integer $LogEnable) Set 
+ * @method integer getLogEnable() Obtain Specifies whether to enable logging. `1`: enable; `0`: do not enable
+ * @method void setLogEnable(integer $LogEnable) Set Specifies whether to enable logging. `1`: enable; `0`: do not enable
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -282,7 +282,7 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $CronHorizontalAutoscaler;
 
     /**
-     * @var integer 
+     * @var integer Specifies whether to enable logging. `1`: enable; `0`: do not enable
      */
     public $LogEnable;
 
@@ -327,7 +327,7 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param DeployStrategyConf $DeployStrategyConf Configuration of batch release policies
      * @param array $HorizontalAutoscaler Auto scaling policy
      * @param array $CronHorizontalAutoscaler Scheduled auto scaling policy
-     * @param integer $LogEnable 
+     * @param integer $LogEnable Specifies whether to enable logging. `1`: enable; `0`: do not enable
      */
     function __construct()
     {
