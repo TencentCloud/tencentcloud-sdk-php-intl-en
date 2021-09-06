@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVolume(integer $Volume) Set Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
  * @method integer getOplogSize() Obtain Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
  * @method void setOplogSize(integer $OplogSize) Set Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+ * @method integer getNodeNum() Obtain Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+ * @method void setNodeNum(integer $NodeNum) Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+ * @method integer getReplicateSetNum() Obtain Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+ * @method integer getInMaintenance() Obtain Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+ * @method void setInMaintenance(integer $InMaintenance) Set Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $OplogSize;
 
     /**
+     * @var integer Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+     */
+    public $NodeNum;
+
+    /**
+     * @var integer Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+     */
+    public $ReplicateSetNum;
+
+    /**
+     * @var integer Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
+     */
+    public $InMaintenance;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
      * @param integer $Memory Memory size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously
      * @param integer $Volume Disk size after instance configuration change in GB. Memory and disk must be upgraded or degraded simultaneously. For degradation, the new disk capacity must be greater than 1.2 times the used disk capacity
      * @param integer $OplogSize Oplog size after instance configuration change in GB, which ranges from 10% to 90% of the disk capacity and is 10% of the disk capacity by default
+     * @param integer $NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity won't change.
+     * @param integer $ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity won't change.
+     * @param integer $InMaintenance Switch time. Valid values: `0` (upon modification completion), `1` (during maintenance time). Default value: `0`. If the node quantity or the shard quantity is modified, `1` is invalid.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("OplogSize",$param) and $param["OplogSize"] !== null) {
             $this->OplogSize = $param["OplogSize"];
+        }
+
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
+            $this->ReplicateSetNum = $param["ReplicateSetNum"];
+        }
+
+        if (array_key_exists("InMaintenance",$param) and $param["InMaintenance"] !== null) {
+            $this->InMaintenance = $param["InMaintenance"];
         }
     }
 }

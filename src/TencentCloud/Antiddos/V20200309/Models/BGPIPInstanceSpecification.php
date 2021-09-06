@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Anti-DDoS Advanced instance specifications
  *
- * @method integer getProtectBandwidth() Obtain Base protection bandwidth (in Gbps)
- * @method void setProtectBandwidth(integer $ProtectBandwidth) Set Base protection bandwidth (in Gbps)
+ * @method integer getProtectBandwidth() Obtain Base protection bandwidth (in Mbps)
+ * @method void setProtectBandwidth(integer $ProtectBandwidth) Set Base protection bandwidth (in Mbps)
  * @method integer getProtectCCQPS() Obtain CC protection bandwidth (in QPS)
  * @method void setProtectCCQPS(integer $ProtectCCQPS) Set CC protection bandwidth (in QPS)
  * @method integer getNormalBandwidth() Obtain Normal application bandwidth (in Mbps)
@@ -50,13 +50,13 @@ use TencentCloud\Common\AbstractModel;
 `4`: China Mobile
 `99`: third-party line
 ]
- * @method integer getElasticBandwidth() Obtain Elastic protection bandwidth (in Gbps)
- * @method void setElasticBandwidth(integer $ElasticBandwidth) Set Elastic protection bandwidth (in Gbps)
+ * @method integer getElasticBandwidth() Obtain Elastic protection bandwidth (in Mbps)
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) Set Elastic protection bandwidth (in Mbps)
  */
 class BGPIPInstanceSpecification extends AbstractModel
 {
     /**
-     * @var integer Base protection bandwidth (in Gbps)
+     * @var integer Base protection bandwidth (in Mbps)
      */
     public $ProtectBandwidth;
 
@@ -95,12 +95,12 @@ class BGPIPInstanceSpecification extends AbstractModel
     public $Line;
 
     /**
-     * @var integer Elastic protection bandwidth (in Gbps)
+     * @var integer Elastic protection bandwidth (in Mbps)
      */
     public $ElasticBandwidth;
 
     /**
-     * @param integer $ProtectBandwidth Base protection bandwidth (in Gbps)
+     * @param integer $ProtectBandwidth Base protection bandwidth (in Mbps)
      * @param integer $ProtectCCQPS CC protection bandwidth (in QPS)
      * @param integer $NormalBandwidth Normal application bandwidth (in Mbps)
      * @param integer $ForwardRulesLimit Number of forwarding rules
@@ -115,7 +115,7 @@ class BGPIPInstanceSpecification extends AbstractModel
 `4`: China Mobile
 `99`: third-party line
 ]
-     * @param integer $ElasticBandwidth Elastic protection bandwidth (in Gbps)
+     * @param integer $ElasticBandwidth Elastic protection bandwidth (in Mbps)
      */
     function __construct()
     {

@@ -24,6 +24,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
 
 /**
  * @method Models\AssociateDDoSEipAddressResponse AssociateDDoSEipAddress(Models\AssociateDDoSEipAddressRequest $req) This API is used to bind an EIP to an Anti-DDoS Advanced instance or a specified private IP of an ENI.
+ * @method Models\AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(Models\AssociateDDoSEipLoadBalancerRequest $req) This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
  * @method Models\CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(Models\CreateBlackWhiteIpListRequest $req) This API is used to add an Anti-DDoS IP blocklist/allowlist.
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) This API is used to bind an IP to an Anti-DDoS Pro instance Both single IP instances and multi-IP instances are available. Note that you should wait until the current binding or unbinding completes before using this async API for new operations.
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) This API is used to set Anti-DDoS AI protection switches.
@@ -43,6 +44,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeletePacketFilterConfigResponse DeletePacketFilterConfig(Models\DeletePacketFilterConfigRequest $req) This API is used to delete Anti-DDoS feature filtering rules.
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) This API is used to delete Anti-DDoS watermark configurations.
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) This API is used to delete Anti-DDoS watermark keys.
+ * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) This API is used to querying the status of Anti-DDoS IP.
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) This API is used to get the default alarm threshold of an IP.
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) This API is used to query layer-7 rules matched with certificate IDs.

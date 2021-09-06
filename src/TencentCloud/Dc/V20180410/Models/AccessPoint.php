@@ -48,6 +48,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setArea(string $Area) Set Access point region
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getAccessPointType() Obtain Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAccessPointType(string $AccessPointType) Set Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AccessPoint extends AbstractModel
 {
@@ -106,6 +110,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Area;
 
     /**
+     * @var string Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AccessPointType;
+
+    /**
      * @param string $AccessPointName Access point name.
      * @param string $AccessPointId Unique access point ID.
      * @param string $State Access point status. Valid values: available, unavailable.
@@ -119,6 +129,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $City City where the access point is located
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Area Access point region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $AccessPointType Access point type. Valid values: `VXLAN`, `QCPL`, and `QCAR`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -173,6 +185,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("AccessPointType",$param) and $param["AccessPointType"] !== null) {
+            $this->AccessPointType = $param["AccessPointType"];
         }
     }
 }

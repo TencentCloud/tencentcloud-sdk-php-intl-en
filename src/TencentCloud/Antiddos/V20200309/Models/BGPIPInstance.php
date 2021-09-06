@@ -60,10 +60,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setStaticPackRelation(StaticPackRelation $StaticPackRelation) Set Non-BGP package details of the Anti-DDoS instance.
 Note: This field is `null` for an Anti-DDoS instance without using a non-BGP package.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getZoneId() Obtain Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setZoneId(integer $ZoneId) Set Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getZoneId() Obtain Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getTgw() Obtain Used to differentiate clusters
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTgw(integer $Tgw) Set Used to differentiate clusters
@@ -88,6 +88,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setEipAddressInfo(EipAddressRelation $EipAddressInfo) Set Details of the Anti-DDoS Advanced instance bound to the EIP.
 Note: This field is `null` if the EIP is not bound to an Anti-DDoS Advanced instance.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getDomain() Obtain Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDomain(string $Domain) Set Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -152,8 +156,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $StaticPackRelation;
 
     /**
-     * @var integer Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var integer Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ZoneId;
 
@@ -190,6 +194,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $EipAddressInfo;
 
     /**
+     * @var string Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Domain;
+
+    /**
      * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
      * @param BGPIPInstanceSpecification $SpecificationLimit Anti-DDoS instance specifications
      * @param BGPIPInstanceUsages $Usage Anti-DDoS instance usage statistics
@@ -210,8 +220,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param StaticPackRelation $StaticPackRelation Non-BGP package details of the Anti-DDoS instance.
 Note: This field is `null` for an Anti-DDoS instance without using a non-BGP package.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $ZoneId Used to differentiate Anti-DDoS Advanced lines outside the Chinese mainland
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ZoneId Specifies the ISP. `0`: Chinese mainland ISPs (default); `1`：Radware；`2`: Tencent; `3`: NSFOCUS. Note that `1`, `2` and `3` are used for services outside the Chinese mainland.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Tgw Used to differentiate clusters
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $EipAddressStatus EIP states: `CREATING`, `BINDING`, `BIND`, `UNBINDING`, `UNBIND`, `OFFLINING`, and `BIND_ENI`. The EIP must be bound to an Anti-DDoS Advanced instance.
@@ -224,6 +234,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param EipAddressRelation $EipAddressInfo Details of the Anti-DDoS Advanced instance bound to the EIP.
 Note: This field is `null` if the EIP is not bound to an Anti-DDoS Advanced instance.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Domain Recommended domain name for clients to access.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -308,6 +320,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("EipAddressInfo",$param) and $param["EipAddressInfo"] !== null) {
             $this->EipAddressInfo = new EipAddressRelation();
             $this->EipAddressInfo->deserialize($param["EipAddressInfo"]);
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
     }
 }
