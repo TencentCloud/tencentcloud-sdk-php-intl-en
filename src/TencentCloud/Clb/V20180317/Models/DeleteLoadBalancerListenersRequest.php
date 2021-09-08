@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getListenerIds() Obtain Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
- * @method void setListenerIds(array $ListenerIds) Set Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+ * @method array getListenerIds() Obtain Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
+ * @method void setListenerIds(array $ListenerIds) Set Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
  */
 class DeleteLoadBalancerListenersRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteLoadBalancerListenersRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * @var array Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     public $ListenerIds;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
-     * @param array $ListenerIds Array of IDs of the listeners to be deleted. If this parameter is left empty, all listeners of the CLB instance will be deleted.
+     * @param array $ListenerIds Array of listener IDs to delete (20 IDs at most). If this parameter is left empty, all listeners of the CLB instance will be deleted.
      */
     function __construct()
     {

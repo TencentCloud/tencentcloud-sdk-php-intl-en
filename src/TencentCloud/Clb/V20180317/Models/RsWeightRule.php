@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Modifies the data type of a node weight
  *
- * @method string getListenerId() Obtain CLB listener ID
- * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method array getTargets() Obtain List of real servers for which to modify the weight
- * @method void setTargets(array $Targets) Set List of real servers for which to modify the weight
- * @method string getLocationId() Obtain Forwarding rule ID
- * @method void setLocationId(string $LocationId) Set Forwarding rule ID
+ * @method string getListenerId() Obtain CLB listener ID.
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID.
+ * @method array getTargets() Obtain List of real servers whose weights to modify.
+ * @method void setTargets(array $Targets) Set List of real servers whose weights to modify.
+ * @method string getLocationId() Obtain Forwarding rule ID, which is required only for layer-7 rules.
+ * @method void setLocationId(string $LocationId) Set Forwarding rule ID, which is required only for layer-7 rules.
  * @method string getDomain() Obtain Target rule domain name. This parameter does not take effect if LocationId is specified
  * @method void setDomain(string $Domain) Set Target rule domain name. This parameter does not take effect if LocationId is specified
  * @method string getUrl() Obtain Target rule URL. This parameter does not take effect if LocationId is specified
  * @method void setUrl(string $Url) Set Target rule URL. This parameter does not take effect if LocationId is specified
- * @method integer getWeight() Obtain New forwarding weight of a real server. Value range: 0-100.
- * @method void setWeight(integer $Weight) Set New forwarding weight of a real server. Value range: 0-100.
+ * @method integer getWeight() Obtain The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
+ * @method void setWeight(integer $Weight) Set The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
  */
 class RsWeightRule extends AbstractModel
 {
     /**
-     * @var string CLB listener ID
+     * @var string CLB listener ID.
      */
     public $ListenerId;
 
     /**
-     * @var array List of real servers for which to modify the weight
+     * @var array List of real servers whose weights to modify.
      */
     public $Targets;
 
     /**
-     * @var string Forwarding rule ID
+     * @var string Forwarding rule ID, which is required only for layer-7 rules.
      */
     public $LocationId;
 
@@ -61,17 +61,17 @@ class RsWeightRule extends AbstractModel
     public $Url;
 
     /**
-     * @var integer New forwarding weight of a real server. Value range: 0-100.
+     * @var integer The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
      */
     public $Weight;
 
     /**
-     * @param string $ListenerId CLB listener ID
-     * @param array $Targets List of real servers for which to modify the weight
-     * @param string $LocationId Forwarding rule ID
+     * @param string $ListenerId CLB listener ID.
+     * @param array $Targets List of real servers whose weights to modify.
+     * @param string $LocationId Forwarding rule ID, which is required only for layer-7 rules.
      * @param string $Domain Target rule domain name. This parameter does not take effect if LocationId is specified
      * @param string $Url Target rule URL. This parameter does not take effect if LocationId is specified
-     * @param integer $Weight New forwarding weight of a real server. Value range: 0-100.
+     * @param integer $Weight The new forwarding weight of the real server. Value range: [0, 100]. This parameter takes lower precedence than `Weight` in [`Targets`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#Target), which means that this parameter only takes effect when the `Weight` in `RsWeightRule` is left empty.
      */
     function __construct()
     {

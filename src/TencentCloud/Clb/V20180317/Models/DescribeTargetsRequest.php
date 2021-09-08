@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTargets request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getListenerIds() Obtain Listener ID list
- * @method void setListenerIds(array $ListenerIds) Set Listener ID list
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method array getListenerIds() Obtain List of listener IDs (20 IDs at most).
+ * @method void setListenerIds(array $ListenerIds) Set List of listener IDs (20 IDs at most).
  * @method string getProtocol() Obtain Listener protocol type
  * @method void setProtocol(string $Protocol) Set Listener protocol type
  * @method integer getPort() Obtain Listener port
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeTargetsRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string CLB instance ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var array Listener ID list
+     * @var array List of listener IDs (20 IDs at most).
      */
     public $ListenerIds;
 
@@ -52,8 +52,8 @@ class DescribeTargetsRequest extends AbstractModel
     public $Port;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param array $ListenerIds Listener ID list
+     * @param string $LoadBalancerId CLB instance ID.
+     * @param array $ListenerIds List of listener IDs (20 IDs at most).
      * @param string $Protocol Listener protocol type
      * @param integer $Port Listener port
      */

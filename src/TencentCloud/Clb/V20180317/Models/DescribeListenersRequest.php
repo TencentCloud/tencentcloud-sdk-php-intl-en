@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListeners request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method array getListenerIds() Obtain Array of IDs of the CLB listeners to be queried
- * @method void setListenerIds(array $ListenerIds) Set Array of IDs of the CLB listeners to be queried
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method array getListenerIds() Obtain Array of CLB listener IDs to query (100 IDs at most).
+ * @method void setListenerIds(array $ListenerIds) Set Array of CLB listener IDs to query (100 IDs at most).
  * @method string getProtocol() Obtain Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
  * @method void setProtocol(string $Protocol) Set Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
  * @method integer getPort() Obtain Port of the listeners to be queried
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeListenersRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string CLB instance ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var array Array of IDs of the CLB listeners to be queried
+     * @var array Array of CLB listener IDs to query (100 IDs at most).
      */
     public $ListenerIds;
 
@@ -52,8 +52,8 @@ class DescribeListenersRequest extends AbstractModel
     public $Port;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param array $ListenerIds Array of IDs of the CLB listeners to be queried
+     * @param string $LoadBalancerId CLB instance ID.
+     * @param array $ListenerIds Array of CLB listener IDs to query (100 IDs at most).
      * @param string $Protocol Type of the listener protocols to be queried. Valid values: TCP, UDP, HTTP, HTTPS, and TCP_SSL.
      * @param integer $Port Port of the listeners to be queried
      */

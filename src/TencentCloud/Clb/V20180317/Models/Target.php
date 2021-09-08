@@ -36,8 +36,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setInstanceId(string $InstanceId) Set Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getWeight() Obtain Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
- * @method void setWeight(integer $Weight) Set Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+ * @method integer getWeight() Obtain The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
+ * @method void setWeight(integer $Weight) Set The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
  * @method string getEniIp() Obtain It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
 Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -68,7 +68,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $InstanceId;
 
     /**
-     * @var integer Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+     * @var integer The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
      */
     public $Weight;
 
@@ -88,7 +88,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $InstanceId Unique ID of a CVM instance, which is required when binding a CVM instance. It can be obtained from the `InstanceId` field in the response of the `DescribeInstances` API. It indicates binding the primary IP of the primary ENI.
 Note: either `InstanceId` or `EniIp` must be passed in.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Weight Forwarding weight of a real server. Value range: [0, 100]. Default value: 10.
+     * @param integer $Weight The new forwarding weight of the real server. Value range: [0, 100]. Default: 10. This parameter takes priority over `Weight` in [`RsWeightRule`](https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#RsWeightRule). If it’s left empty, the value of `Weight` in `RsWeightRule` will be used.
      * @param string $EniIp It is required when binding an IP. ENI IPs and other private IPs are supported. To bind an ENI IP, the ENI should be bound to a CVM instance before being bound to a CLB instance.
 Note: either `InstanceId` or `EniIp` must be passed in. It is required when binding a dual-stack IPv6 CVM instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.

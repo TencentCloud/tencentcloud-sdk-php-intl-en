@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
  * @method integer getRouteId() Obtain Route ID
  * @method void setRouteId(integer $RouteId) Set Route ID
- * @method integer getVipType() Obtain VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
- * @method void setVipType(integer $VipType) Set VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+ * @method integer getVipType() Obtain VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+ * @method void setVipType(integer $VipType) Set VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
  * @method array getVipList() Obtain Virtual IP list
  * @method void setVipList(array $VipList) Set Virtual IP list
  * @method string getDomain() Obtain Domain name
@@ -43,6 +43,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method integer getDomainPort() Obtain Domain name port
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDomainPort(integer $DomainPort) Set Domain name port
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeleteTimestamp() Obtain Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeleteTimestamp(string $DeleteTimestamp) Set Timestamp
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class Route extends AbstractModel
@@ -62,7 +66,7 @@ class Route extends AbstractModel
     public $RouteId;
 
     /**
-     * @var integer VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+     * @var integer VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
      */
     public $VipType;
 
@@ -84,17 +88,25 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DomainPort;
 
     /**
+     * @var string Timestamp
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeleteTimestamp;
+
+    /**
      * @param integer $AccessType Instance connection method
 0: PLAINTEXT (plaintext method, which does not carry user information and is supported for legacy versions and Community Edition)
 1: SASL_PLAINTEXT (plaintext method, which authenticates the login through SASL before data start and is supported only for Community Edition)
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
      * @param integer $RouteId Route ID
-     * @param integer $VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: Tencent Cloud-supported environment (generally used for internal instances); 5: SSL public network access; 6: BM VPC)
+     * @param integer $VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
      * @param array $VipList Virtual IP list
      * @param string $Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DomainPort Domain name port
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeleteTimestamp Timestamp
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -137,6 +149,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DomainPort",$param) and $param["DomainPort"] !== null) {
             $this->DomainPort = $param["DomainPort"];
+        }
+
+        if (array_key_exists("DeleteTimestamp",$param) and $param["DeleteTimestamp"] !== null) {
+            $this->DeleteTimestamp = $param["DeleteTimestamp"];
         }
     }
 }

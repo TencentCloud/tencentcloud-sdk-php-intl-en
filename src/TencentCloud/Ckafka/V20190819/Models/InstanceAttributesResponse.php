@@ -96,6 +96,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setRetentionTimeConfig(DynamicRetentionTime $RetentionTimeConfig) Set Dynamic message retention policy
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getMaxConnection() Obtain Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPublicNetwork() Obtain Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeleteRouteTimestamp() Obtain Time
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Time
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -254,6 +266,24 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RetentionTimeConfig;
 
     /**
+     * @var integer Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxConnection;
+
+    /**
+     * @var integer Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $PublicNetwork;
+
+    /**
+     * @var string Time
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeleteRouteTimestamp;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param array $VipList VIP list information of access point
@@ -292,6 +322,12 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param DynamicRetentionTime $RetentionTimeConfig Dynamic message retention policy
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $MaxConnection Maximum number of connections
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $PublicNetwork Public network bandwidth
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeleteRouteTimestamp Time
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -432,6 +468,18 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
             $this->RetentionTimeConfig = new DynamicRetentionTime();
             $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("DeleteRouteTimestamp",$param) and $param["DeleteRouteTimestamp"] !== null) {
+            $this->DeleteRouteTimestamp = $param["DeleteRouteTimestamp"];
         }
     }
 }

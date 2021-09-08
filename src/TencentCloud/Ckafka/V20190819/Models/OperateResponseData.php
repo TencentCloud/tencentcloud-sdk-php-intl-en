@@ -20,21 +20,21 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Data structure returned by operation
  *
- * @method integer getFlowId() Obtain FlowId
+ * @method integer getFlowId() Obtain FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFlowId(integer $FlowId) Set FlowId
+ * @method void setFlowId(integer $FlowId) Set FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class OperateResponseData extends AbstractModel
 {
     /**
-     * @var integer FlowId
+     * @var integer FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $FlowId;
 
     /**
-     * @param integer $FlowId FlowId
+     * @param integer $FlowId FlowId11
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -148,6 +148,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLoadBalancerPassToTarget(integer $LoadBalancerPassToTarget) Set Whether the CLB instance is billed by IP.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getTargetHealth() Obtain Health status of the target real server.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargetHealth(string $TargetHealth) Set Health status of the target real server.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -344,6 +348,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var string Health status of the target real server.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TargetHealth;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -407,6 +417,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $SecurityGroup List of the security groups bound to the CLB instance.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $LoadBalancerPassToTarget Whether the CLB instance is billed by IP.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $TargetHealth Health status of the target real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -556,6 +568,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("TargetHealth",$param) and $param["TargetHealth"] !== null) {
+            $this->TargetHealth = $param["TargetHealth"];
         }
     }
 }
