@@ -168,6 +168,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setKibanaNodeInfo(KibanaNodeInfo $KibanaNodeInfo) Set Kibana node information
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getJdk() Obtain JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setJdk(string $Jdk) Set JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -466,6 +474,18 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $KibanaNodeInfo;
 
     /**
+     * @var WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $WebNodeTypeInfo;
+
+    /**
+     * @var string JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Jdk;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -540,6 +560,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param KibanaNodeInfo $KibanaNodeInfo Kibana node information
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -793,6 +817,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("KibanaNodeInfo",$param) and $param["KibanaNodeInfo"] !== null) {
             $this->KibanaNodeInfo = new KibanaNodeInfo();
             $this->KibanaNodeInfo->deserialize($param["KibanaNodeInfo"]);
+        }
+
+        if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
+            $this->WebNodeTypeInfo = new WebNodeTypeInfo();
+            $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("Jdk",$param) and $param["Jdk"] !== null) {
+            $this->Jdk = $param["Jdk"];
         }
     }
 }

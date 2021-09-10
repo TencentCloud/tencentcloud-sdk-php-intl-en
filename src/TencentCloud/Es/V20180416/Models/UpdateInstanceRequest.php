@@ -80,6 +80,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setSceneType(integer $SceneType) Set Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
  * @method string getKibanaConfig() Obtain Kibana configuration item (JSON string)
  * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item (JSON string)
+ * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
+ * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -210,6 +212,11 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $KibanaConfig;
 
     /**
+     * @var WebNodeTypeInfo Visual node configuration
+     */
+    public $WebNodeTypeInfo;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
@@ -240,6 +247,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param array $MultiZoneInfo Multi-AZ deployment
      * @param integer $SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
      * @param string $KibanaConfig Kibana configuration item (JSON string)
+     * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
      */
     function __construct()
     {
@@ -361,6 +369,11 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
         if (array_key_exists("KibanaConfig",$param) and $param["KibanaConfig"] !== null) {
             $this->KibanaConfig = $param["KibanaConfig"];
+        }
+
+        if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
+            $this->WebNodeTypeInfo = new WebNodeTypeInfo();
+            $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
         }
     }
 }

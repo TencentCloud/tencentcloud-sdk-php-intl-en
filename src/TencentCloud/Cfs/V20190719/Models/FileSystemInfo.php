@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAppId(integer $AppId) Set Application ID
  * @method float getBandwidthLimit() Obtain The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
  * @method void setBandwidthLimit(float $BandwidthLimit) Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+ * @method integer getCapacity() Obtain Total capacity of the file system
+ * @method void setCapacity(integer $Capacity) Set Total capacity of the file system
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -150,6 +152,11 @@ class FileSystemInfo extends AbstractModel
     public $BandwidthLimit;
 
     /**
+     * @var integer Total capacity of the file system
+     */
+    public $Capacity;
+
+    /**
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
      * @param string $FileSystemId File system ID
@@ -168,6 +175,7 @@ class FileSystemInfo extends AbstractModel
      * @param string $KmsKeyId Key used for encryption, which can be the key ID or ARN
      * @param integer $AppId Application ID
      * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
+     * @param integer $Capacity Total capacity of the file system
      */
     function __construct()
     {
@@ -253,6 +261,10 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("BandwidthLimit",$param) and $param["BandwidthLimit"] !== null) {
             $this->BandwidthLimit = $param["BandwidthLimit"];
+        }
+
+        if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
+            $this->Capacity = $param["Capacity"];
         }
     }
 }

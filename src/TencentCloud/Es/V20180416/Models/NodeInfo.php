@@ -27,12 +27,10 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() Obtain Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
  * @method void setType(string $Type) Set Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
  * @method string getDiskType() Obtain Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
  * @method void setDiskType(string $DiskType) Set Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
@@ -63,7 +61,6 @@ class NodeInfo extends AbstractModel
      * @var string Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
      */
     public $Type;
@@ -100,7 +97,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Type Node type<li>`hotData`: hot data node</li>
 <li>`warmData`: warm data node</li>
 <li>`dedicatedMaster`: dedicated master node</li>
-<li>`kibana`: Kibana node</li>
 Default value: `hotData`
      * @param string $DiskType Node disk type <li>CLOUD_SSD: SSD cloud storage </li><li>CLOUD_PREMIUM: Premium cloud disk </li>Default value: CLOUD_SSD
      * @param integer $DiskSize Node disk size in GB

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method boolean getForceRestart() Obtain Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+ * @method integer getRestartMode() Obtain Restart mode. `0`: rolling restart; `1`: full restart
+ * @method void setRestartMode(integer $RestartMode) Set Restart mode. `0`: rolling restart; `1`: full restart
  */
 class RestartInstanceRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class RestartInstanceRequest extends AbstractModel
     public $ForceRestart;
 
     /**
+     * @var integer Restart mode. `0`: rolling restart; `1`: full restart
+     */
+    public $RestartMode;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param boolean $ForceRestart Whether to force restart <li>true: Yes </li><li>false: No </li>Default value: false
+     * @param integer $RestartMode Restart mode. `0`: rolling restart; `1`: full restart
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RestartInstanceRequest extends AbstractModel
 
         if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
             $this->ForceRestart = $param["ForceRestart"];
+        }
+
+        if (array_key_exists("RestartMode",$param) and $param["RestartMode"] !== null) {
+            $this->RestartMode = $param["RestartMode"];
         }
     }
 }

@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method string getSubnetName() Obtain Subnet name
  * @method void setSubnetName(string $SubnetName) Set Subnet name
+ * @method string getCcnID() Obtain CCN instance ID used by CFS Turbo
+ * @method void setCcnID(string $CcnID) Set CCN instance ID used by CFS Turbo
+ * @method string getCidrBlock() Obtain CCN IP range used by CFS Turbo
+ * @method void setCidrBlock(string $CidrBlock) Set CCN IP range used by CFS Turbo
  */
 class MountInfo extends AbstractModel
 {
@@ -94,6 +98,16 @@ class MountInfo extends AbstractModel
     public $SubnetName;
 
     /**
+     * @var string CCN instance ID used by CFS Turbo
+     */
+    public $CcnID;
+
+    /**
+     * @var string CCN IP range used by CFS Turbo
+     */
+    public $CidrBlock;
+
+    /**
      * @param string $FileSystemId File system ID
      * @param string $MountTargetId Mount target ID
      * @param string $IpAddress Mount target IP
@@ -104,6 +118,8 @@ class MountInfo extends AbstractModel
      * @param string $VpcName VPC name
      * @param string $SubnetId Subnet ID
      * @param string $SubnetName Subnet name
+     * @param string $CcnID CCN instance ID used by CFS Turbo
+     * @param string $CidrBlock CCN IP range used by CFS Turbo
      */
     function __construct()
     {
@@ -156,6 +172,14 @@ class MountInfo extends AbstractModel
 
         if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
             $this->SubnetName = $param["SubnetName"];
+        }
+
+        if (array_key_exists("CcnID",$param) and $param["CcnID"] !== null) {
+            $this->CcnID = $param["CcnID"];
+        }
+
+        if (array_key_exists("CidrBlock",$param) and $param["CidrBlock"] !== null) {
+            $this->CidrBlock = $param["CidrBlock"];
         }
     }
 }

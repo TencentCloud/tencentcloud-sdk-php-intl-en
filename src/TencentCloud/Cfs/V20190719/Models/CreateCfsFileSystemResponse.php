@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreationToken(string $CreationToken) Set Custom file system name
  * @method string getFileSystemId() Obtain File system ID
  * @method void setFileSystemId(string $FileSystemId) Set File system ID
- * @method string getLifeCycleState() Obtain File system status
- * @method void setLifeCycleState(string $LifeCycleState) Set File system status
- * @method integer getSizeByte() Obtain Used file system capacity
- * @method void setSizeByte(integer $SizeByte) Set Used file system capacity
+ * @method string getLifeCycleState() Obtain File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+ * @method void setLifeCycleState(string $LifeCycleState) Set File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+ * @method integer getSizeByte() Obtain Storage used by the file system, in bytes
+ * @method void setSizeByte(integer $SizeByte) Set Storage used by the file system, in bytes
  * @method integer getZoneId() Obtain AZ ID
  * @method void setZoneId(integer $ZoneId) Set AZ ID
  * @method string getFsName() Obtain Custom file system name
@@ -57,12 +57,12 @@ class CreateCfsFileSystemResponse extends AbstractModel
     public $FileSystemId;
 
     /**
-     * @var string File system status
+     * @var string File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
      */
     public $LifeCycleState;
 
     /**
-     * @var integer Used file system capacity
+     * @var integer Storage used by the file system, in bytes
      */
     public $SizeByte;
 
@@ -90,8 +90,8 @@ class CreateCfsFileSystemResponse extends AbstractModel
      * @param string $CreationTime File system creation time
      * @param string $CreationToken Custom file system name
      * @param string $FileSystemId File system ID
-     * @param string $LifeCycleState File system status
-     * @param integer $SizeByte Used file system capacity
+     * @param string $LifeCycleState File system status. Valid values: `creating`, `create_failed`, `available`, `unserviced`, `upgrading`, `deleting`
+     * @param integer $SizeByte Storage used by the file system, in bytes
      * @param integer $ZoneId AZ ID
      * @param string $FsName Custom file system name
      * @param boolean $Encrypted Whether a file system is encrypted

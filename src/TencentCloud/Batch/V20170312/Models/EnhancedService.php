@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) Set Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
  * @method RunMonitorServiceEnabled getMonitorService() Obtain Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) Set Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+ * @method RunAutomationServiceEnabled getAutomationService() Obtain Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+ * @method void setAutomationService(RunAutomationServiceEnabled $AutomationService) Set Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
  */
 class EnhancedService extends AbstractModel
 {
@@ -38,8 +40,14 @@ class EnhancedService extends AbstractModel
     public $MonitorService;
 
     /**
+     * @var RunAutomationServiceEnabled Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     */
+    public $AutomationService;
+
+    /**
      * @param RunSecurityServiceEnabled $SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
      * @param RunMonitorServiceEnabled $MonitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
+     * @param RunAutomationServiceEnabled $AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
      */
     function __construct()
     {
@@ -62,6 +70,11 @@ class EnhancedService extends AbstractModel
         if (array_key_exists("MonitorService",$param) and $param["MonitorService"] !== null) {
             $this->MonitorService = new RunMonitorServiceEnabled();
             $this->MonitorService->deserialize($param["MonitorService"]);
+        }
+
+        if (array_key_exists("AutomationService",$param) and $param["AutomationService"] !== null) {
+            $this->AutomationService = new RunAutomationServiceEnabled();
+            $this->AutomationService->deserialize($param["AutomationService"]);
         }
     }
 }
