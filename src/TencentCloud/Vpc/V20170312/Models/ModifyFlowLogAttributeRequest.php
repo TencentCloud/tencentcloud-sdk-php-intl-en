@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyFlowLogAttribute request structure.
  *
- * @method string getVpcId() Obtain ID of the VPC instance
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance
  * @method string getFlowLogId() Obtain The unique ID of the flow log.
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+ * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
  * @method string getFlowLogName() Obtain The name of the flow log.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log.
  * @method string getFlowLogDescription() Obtain The description of the flow log.
@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 class ModifyFlowLogAttributeRequest extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance
-     */
-    public $VpcId;
-
-    /**
      * @var string The unique ID of the flow log.
      */
     public $FlowLogId;
+
+    /**
+     * @var string The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
+     */
+    public $VpcId;
 
     /**
      * @var string The name of the flow log.
@@ -52,8 +52,8 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
-     * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogId The unique ID of the flow log.
+     * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the attributes of a CCN flow log is modified.
      * @param string $FlowLogName The name of the flow log.
      * @param string $FlowLogDescription The description of the flow log.
      */
@@ -70,12 +70,12 @@ class ModifyFlowLogAttributeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
             $this->FlowLogId = $param["FlowLogId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {

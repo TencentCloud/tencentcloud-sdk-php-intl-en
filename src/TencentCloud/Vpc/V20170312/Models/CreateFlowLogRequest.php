@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateFlowLog request structure.
  *
- * @method string getVpcId() Obtain ID of the VPC instance
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance
  * @method string getFlowLogName() Obtain The name of the flow log instance.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
- * @method string getResourceType() Obtain The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
- * @method void setResourceType(string $ResourceType) Set The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+ * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+ * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
  * @method string getResourceId() Obtain The unique ID of the resource.
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
  * @method string getTrafficType() Obtain Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method void setTrafficType(string $TrafficType) Set Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method string getCloudLogId() Obtain The storage ID of the flow log.
  * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
+ * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+ * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
  * @method string getFlowLogDescription() Obtain The description of the flow log instance
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log instance
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
@@ -40,17 +40,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateFlowLogRequest extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance
-     */
-    public $VpcId;
-
-    /**
      * @var string The name of the flow log instance.
      */
     public $FlowLogName;
 
     /**
-     * @var string The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+     * @var string The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      */
     public $ResourceType;
 
@@ -70,6 +65,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $CloudLogId;
 
     /**
+     * @var string The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
+     */
+    public $VpcId;
+
+    /**
      * @var string The description of the flow log instance
      */
     public $FlowLogDescription;
@@ -80,12 +80,12 @@ class CreateFlowLogRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogName The name of the flow log instance.
-     * @param string $ResourceType The type of resources to which the flow log belongs. Valid values: 'VPC', 'SUBNET' and 'NETWORKINTERFACE'.
+     * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      * @param string $ResourceId The unique ID of the resource.
      * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $CloudLogId The storage ID of the flow log.
+     * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
      * @param string $FlowLogDescription The description of the flow log instance
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
@@ -102,10 +102,6 @@ class CreateFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("FlowLogName",$param) and $param["FlowLogName"] !== null) {
             $this->FlowLogName = $param["FlowLogName"];
         }
@@ -124,6 +120,10 @@ class CreateFlowLogRequest extends AbstractModel
 
         if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
             $this->CloudLogId = $param["CloudLogId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {

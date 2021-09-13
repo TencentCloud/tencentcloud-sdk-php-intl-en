@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteFlowLog request structure.
  *
- * @method string getVpcId() Obtain ID of the VPC instance
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance
  * @method string getFlowLogId() Obtain The unique ID of the flow log.
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
+ * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+ * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
  */
 class DeleteFlowLogRequest extends AbstractModel
 {
-    /**
-     * @var string ID of the VPC instance
-     */
-    public $VpcId;
-
     /**
      * @var string The unique ID of the flow log.
      */
     public $FlowLogId;
 
     /**
-     * @param string $VpcId ID of the VPC instance
+     * @var string The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
+     */
+    public $VpcId;
+
+    /**
      * @param string $FlowLogId The unique ID of the flow log.
+     * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless a CCN flow log is deleted.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DeleteFlowLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("FlowLogId",$param) and $param["FlowLogId"] !== null) {
             $this->FlowLogId = $param["FlowLogId"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

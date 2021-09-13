@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
- * @method string getQualifier() Obtain Version number or alias of the triggered function
- * @method void setQualifier(string $Qualifier) Set Version number or alias of the triggered function
- * @method string getEvent() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
- * @method void setEvent(string $Event) Set Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
- * @method string getLogType() Obtain If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
- * @method void setLogType(string $LogType) Set If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
- * @method string getNamespace() Obtain Namespace
- * @method void setNamespace(string $Namespace) Set Namespace
+ * @method string getQualifier() Obtain Version or alias of the function. It defaults to `$DEFAULT`.
+ * @method void setQualifier(string $Qualifier) Set Version or alias of the function. It defaults to `$DEFAULT`.
+ * @method string getEvent() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+ * @method void setEvent(string $Event) Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+ * @method string getLogType() Obtain Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
+ * @method void setLogType(string $LogType) Set Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
+ * @method string getNamespace() Obtain Namespace. `default` is used if it’s left empty.
+ * @method void setNamespace(string $Namespace) Set Namespace. `default` is used if it’s left empty.
  * @method string getRoutingKey() Obtain Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
  * @method void setRoutingKey(string $RoutingKey) Set Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
  */
@@ -41,22 +41,22 @@ class InvokeFunctionRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var string Version number or alias of the triggered function
+     * @var string Version or alias of the function. It defaults to `$DEFAULT`.
      */
     public $Qualifier;
 
     /**
-     * @var string Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * @var string Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
      */
     public $Event;
 
     /**
-     * @var string If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
+     * @var string Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
      */
     public $LogType;
 
     /**
-     * @var string Namespace
+     * @var string Namespace. `default` is used if it’s left empty.
      */
     public $Namespace;
 
@@ -67,10 +67,10 @@ class InvokeFunctionRequest extends AbstractModel
 
     /**
      * @param string $FunctionName Function name
-     * @param string $Qualifier Version number or alias of the triggered function
-     * @param string $Event Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-     * @param string $LogType If this field is specified for a synchronous invocation, the return value will contain a 4 KB log. Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the return parameter will contain the corresponding function execution log.
-     * @param string $Namespace Namespace
+     * @param string $Qualifier Version or alias of the function. It defaults to `$DEFAULT`.
+     * @param string $Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * @param string $LogType Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
+     * @param string $Namespace Namespace. `default` is used if it’s left empty.
      * @param string $RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
      */
     function __construct()

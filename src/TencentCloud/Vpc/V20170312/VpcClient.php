@@ -86,7 +86,7 @@ This API is completed asynchronously. If you need to query the execution result 
 * You can bind an existing security group when creating an ENI.
 * You can bind a tag when creating an ENI. The tag list in the response indicates the tags that have been successfully added.
  * @method Models\CreateAssistantCidrResponse CreateAssistantCidr(Models\CreateAssistantCidrRequest $req) This API (CreateAssistantCidr) is used to batch create secondary CIDR blocks. (To use this API that is in Beta, please submit a ticket.)
- * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) This API is used to create [device bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#.E8.AE.BE.E5.A4.87.E5.B8.A6.E5.AE.BD.E5.8C.85) and [IP bandwidth packages](https://intl.cloud.tencent.com/document/product/684/15246?from_cn_redirect=1#ip-.E5.B8.A6.E5.AE.BD.E5.8C.85)
+ * @method Models\CreateBandwidthPackageResponse CreateBandwidthPackage(Models\CreateBandwidthPackageRequest $req) This API is used to create a [device bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype) or an [IP bandwidth package](https://intl.cloud.tencent.com/document/product/684/15245?from_cn_redirect=1#bwptype).
  * @method Models\CreateCcnResponse CreateCcn(Models\CreateCcnRequest $req) This API is used to create a Cloud Connect Network (CCN).<br />
 * You can bind a tag when creating a CCN instance. The tag list in the response indicates the tags that have been successfully added.
 Each account can only create a limited number of CCN instances. For more information, see product documentation. To create more instances, contact the online customer service.

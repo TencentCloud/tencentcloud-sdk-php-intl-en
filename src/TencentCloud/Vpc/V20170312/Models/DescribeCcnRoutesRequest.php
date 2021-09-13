@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRouteIds(array $RouteIds) Set The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
  * @method array getFilters() Obtain Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
  * @method void setFilters(array $Filters) Set Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain The returned quantity
@@ -56,10 +58,11 @@ class DescribeCcnRoutesRequest extends AbstractModel
     /**
      * @var array Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
      */
     public $Filters;
 
@@ -78,10 +81,11 @@ class DescribeCcnRoutesRequest extends AbstractModel
      * @param array $RouteIds The unique ID of the CCN routing policy, such as `ccnr-f49l6u0z`.
      * @param array $Filters Filter condition. `RouteIds` and `Filters` cannot be specified at the same time.
 <li>route-id - String - (Filter condition) Routing policy ID.</li>
-<li>cidr-block - String - (Filter condition) Destination port.</li>
+<li>cidr-block - String - (Filter condition) Destination.</li>
 <li>instance-type - String - (Filter condition) The next hop type.</li>
 <li>instance-region - String - (Filter condition) The next hop region.</li>
-<li>instance-type - String - (Filter condition) The instance ID of the next hop.</li>
+<li>instance-id - String - (Filter condition) The instance ID of the next hop.</li>
+<li>route-table-id - String - (Filter condition) The list of route table IDs in the format of `ccntr-1234edfr`. Filters by the route table ID.</li>
      * @param integer $Offset Offset
      * @param integer $Limit The returned quantity
      */

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderby(string $Orderby) Set It specifies the sorting order of the results according to a specified field, such as `Name` and `Updatetime`.
  * @method string getOrder() Obtain It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
  * @method void setOrder(string $Order) Set It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+ * @method array getSearchKey() Obtain Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+ * @method void setSearchKey(array $SearchKey) Set Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
  */
 class ListNamespacesRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ListNamespacesRequest extends AbstractModel
     public $Order;
 
     /**
+     * @var array Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $Limit Return data length. The default value is `20`.
      * @param integer $Offset Data offset. The default value is `0`.
      * @param string $Orderby It specifies the sorting order of the results according to a specified field, such as `Name` and `Updatetime`.
      * @param string $Order It specifies whether to return the results in ascending or descending order. The value is `ASC` or `DESC`.
+     * @param array $SearchKey Specifies the range and keyword for search. The value of `Key` can be `Namespace` or `Description`. Multiple AND conditions can be specified.
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ListNamespacesRequest extends AbstractModel
 
         if (array_key_exists("Order",$param) and $param["Order"] !== null) {
             $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = [];
+            foreach ($param["SearchKey"] as $key => $value){
+                $obj = new SearchKey();
+                $obj->deserialize($value);
+                array_push($this->SearchKey, $obj);
+            }
         }
     }
 }
