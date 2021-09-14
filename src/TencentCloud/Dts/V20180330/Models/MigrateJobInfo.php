@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetail(MigrateDetailInfo $Detail) Set Task details
  * @method array getErrorInfo() Obtain Prompt message for task error, which is not null or empty when an error occurs with the task
  * @method void setErrorInfo(array $ErrorInfo) Set Prompt message for task error, which is not null or empty when an error occurs with the task
+ * @method array getTags() Obtain Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -136,6 +140,12 @@ class MigrateJobInfo extends AbstractModel
     public $ErrorInfo;
 
     /**
+     * @var array Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
@@ -152,6 +162,8 @@ class MigrateJobInfo extends AbstractModel
      * @param integer $Status Task status. Value range: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
      * @param MigrateDetailInfo $Detail Task details
      * @param array $ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
+     * @param array $Tags Tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -236,6 +248,15 @@ class MigrateJobInfo extends AbstractModel
                 $obj = new ErrorInfo();
                 $obj->deserialize($value);
                 array_push($this->ErrorInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRotationDetail response structure.
  *
- * @method boolean getEnableRotation() Obtain Specifies whether to allow rotation. True: yes; False: no.
- * @method void setEnableRotation(boolean $EnableRotation) Set Specifies whether to allow rotation. True: yes; False: no.
+ * @method boolean getEnableRotation() Obtain Whether to enable rotation. `true`: enabled; `false`: disabled.
+ * @method void setEnableRotation(boolean $EnableRotation) Set Whether to enable rotation. `true`: enabled; `false`: disabled.
  * @method integer getFrequency() Obtain Rotation frequency in days. Default value: 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFrequency(integer $Frequency) Set Rotation frequency in days. Default value: 1 day.
@@ -40,7 +40,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class DescribeRotationDetailResponse extends AbstractModel
 {
     /**
-     * @var boolean Specifies whether to allow rotation. True: yes; False: no.
+     * @var boolean Whether to enable rotation. `true`: enabled; `false`: disabled.
      */
     public $EnableRotation;
 
@@ -68,7 +68,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param boolean $EnableRotation Specifies whether to allow rotation. True: yes; False: no.
+     * @param boolean $EnableRotation Whether to enable rotation. `true`: enabled; `false`: disabled.
      * @param integer $Frequency Rotation frequency in days. Default value: 1 day.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $LatestRotateTime Last rotation time, which is an explicitly visible time string in the format of 2006-01-02 15:04:05.

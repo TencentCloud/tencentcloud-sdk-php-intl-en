@@ -46,12 +46,14 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
  * @method void setSearchSecretName(string $SearchSecretName) Set Filter according to Secret names. If left empty, this filter is not applied.
  * @method array getTagFilters() Obtain Tag filter.
  * @method void setTagFilters(array $TagFilters) Set Tag filter.
- * @method integer getSecretType() Obtain 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
- * @method void setSecretType(integer $SecretType) Set 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+ * @method integer getSecretType() Obtain `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+ * @method void setSecretType(integer $SecretType) Set `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+ * @method string getProductName() Obtain 
+ * @method void setProductName(string $ProductName) Set 
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -93,11 +95,16 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     public $TagFilters;
 
     /**
-     * @var integer 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+     * @var integer `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
      */
     public $SecretType;
+
+    /**
+     * @var string 
+     */
+    public $ProductName;
 
     /**
      * @param integer $Offset Starting position of the list, starting at 0. If not specified, 0 is used by default.
@@ -113,9 +120,10 @@ The default value is 0, indicating to query all.
 The `PendingCreate` and `CreateFailed` status only take effect when `SecretType` is Tencent Cloud service credential
      * @param string $SearchSecretName Filter according to Secret names. If left empty, this filter is not applied.
      * @param array $TagFilters Tag filter.
-     * @param integer $SecretType 0: user-defined credential (default value).
-1: Tencent Cloud service credential.
-Either 1 or 0 can be selected for this parameter.
+     * @param integer $SecretType `0` (default): user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+     * @param string $ProductName 
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ Either 1 or 0 can be selected for this parameter.
 
         if (array_key_exists("SecretType",$param) and $param["SecretType"] !== null) {
             $this->SecretType = $param["SecretType"];
+        }
+
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
     }
 }

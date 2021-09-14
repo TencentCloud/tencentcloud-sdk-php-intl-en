@@ -23,17 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSecretName() Obtain Tencent Cloud service credential name.
  * @method void setSecretName(string $SecretName) Set Tencent Cloud service credential name.
  * @method boolean getEnableRotation() Obtain Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
  * @method void setEnableRotation(boolean $EnableRotation) Set Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
  * @method integer getFrequency() Obtain Rotation frequency in days. Value range: 30–365.
  * @method void setFrequency(integer $Frequency) Set Rotation frequency in days. Value range: 30–365.
- * @method string getRotationBeginTime() Obtain User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
- * @method void setRotationBeginTime(string $RotationBeginTime) Set User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+ * @method string getRotationBeginTime() Obtain User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
+ * @method void setRotationBeginTime(string $RotationBeginTime) Set User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
  */
 class UpdateRotationStatusRequest extends AbstractModel
 {
@@ -44,8 +44,8 @@ class UpdateRotationStatusRequest extends AbstractModel
 
     /**
      * @var boolean Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
      */
     public $EnableRotation;
 
@@ -55,19 +55,19 @@ False: disable rotation.
     public $Frequency;
 
     /**
-     * @var string User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+     * @var string User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
      */
     public $RotationBeginTime;
 
     /**
      * @param string $SecretName Tencent Cloud service credential name.
      * @param boolean $EnableRotation Specifies whether to enable rotation.
-True: enable rotation.
-False: disable rotation.
+`true`: enables rotation.
+`false`: disables rotation.
      * @param integer $Frequency Rotation frequency in days. Value range: 30–365.
-     * @param string $RotationBeginTime User-Defined rotation start time in the format of 2006-01-02 15:04:05.
-When `EnableRotation` is `True`, if `RotationBeginTime` is left empty, the current time will be entered by default.
+     * @param string $RotationBeginTime User-defined rotation start time in the format of 2006-01-02 15:04:05.
+When `EnableRotation` is `true` and `RotationBeginTime` is left empty, the current time will be entered by default.
      */
     function __construct()
     {

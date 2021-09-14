@@ -52,6 +52,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceName() Obtain Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceName(string $ResourceName) Set Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getProjectID() Obtain Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProjectID(integer $ProjectID) Set Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAssociatedInstanceIDs() Obtain ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) Set ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SecretMetadata extends AbstractModel
 {
@@ -120,6 +132,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProductName;
 
     /**
+     * @var string Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ResourceName;
+
+    /**
+     * @var integer Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProjectID;
+
+    /**
+     * @var array ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AssociatedInstanceIDs;
+
+    /**
      * @param string $SecretName Credential name
      * @param string $Description Credential description
      * @param string $KmsKeyId KMS `KeyId` used to encrypt the credential
@@ -136,6 +166,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -196,6 +232,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
             $this->ProductName = $param["ProductName"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
+            $this->ProjectID = $param["ProjectID"];
+        }
+
+        if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
+            $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
         }
     }
 }

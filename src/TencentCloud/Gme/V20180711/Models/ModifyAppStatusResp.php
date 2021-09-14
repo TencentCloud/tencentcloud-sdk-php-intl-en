@@ -18,28 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration information of voice chat
+ * Output parameters of `ModifyAppStatus`
  *
- * @method string getStatus() Obtain Voice chat status. Valid values: open, close
- * @method void setStatus(string $Status) Set Voice chat status. Valid values: open, close
- * @method string getQuality() Obtain Voice chat sound quality. Valid value: `high`
- * @method void setQuality(string $Quality) Set Voice chat sound quality. Valid value: `high`
+ * @method integer getBizId() Obtain GME app ID
+ * @method void setBizId(integer $BizId) Set GME app ID
+ * @method string getStatus() Obtain App status. Valid values: `open`, `close`
+ * @method void setStatus(string $Status) Set App status. Valid values: `open`, `close`
  */
-class RealtimeSpeechConf extends AbstractModel
+class ModifyAppStatusResp extends AbstractModel
 {
     /**
-     * @var string Voice chat status. Valid values: open, close
+     * @var integer GME app ID
+     */
+    public $BizId;
+
+    /**
+     * @var string App status. Valid values: `open`, `close`
      */
     public $Status;
 
     /**
-     * @var string Voice chat sound quality. Valid value: `high`
-     */
-    public $Quality;
-
-    /**
-     * @param string $Status Voice chat status. Valid values: open, close
-     * @param string $Quality Voice chat sound quality. Valid value: `high`
+     * @param integer $BizId GME app ID
+     * @param string $Status App status. Valid values: `open`, `close`
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class RealtimeSpeechConf extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
         }
 
-        if (array_key_exists("Quality",$param) and $param["Quality"] !== null) {
-            $this->Quality = $param["Quality"];
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

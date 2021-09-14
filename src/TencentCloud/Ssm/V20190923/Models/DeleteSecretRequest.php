@@ -22,8 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecretName() Obtain Name of the Secret to be deleted.
  * @method void setSecretName(string $SecretName) Set Name of the Secret to be deleted.
- * @method integer getRecoveryWindowInDays() Obtain Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
- * @method void setRecoveryWindowInDays(integer $RecoveryWindowInDays) Set Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+ * @method integer getRecoveryWindowInDays() Obtain Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
+ * @method void setRecoveryWindowInDays(integer $RecoveryWindowInDays) Set Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
+ * @method boolean getCleanSSHKey() Obtain Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+ * @method void setCleanSSHKey(boolean $CleanSSHKey) Set Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
  */
 class DeleteSecretRequest extends AbstractModel
 {
@@ -33,13 +41,25 @@ class DeleteSecretRequest extends AbstractModel
     public $SecretName;
 
     /**
-     * @var integer Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+     * @var integer Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
      */
     public $RecoveryWindowInDays;
 
     /**
+     * @var boolean Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
+     */
+    public $CleanSSHKey;
+
+    /**
      * @param string $SecretName Name of the Secret to be deleted.
-     * @param integer $RecoveryWindowInDays Scheduled deletion time, in days. If set to 0, the Secret is deleted immediately. A number in the range of 1 to 30 indicates the number of retention days. The Secret will be deleted after the set value.
+     * @param integer $RecoveryWindowInDays Scheduled deletion time (in days), indicating the number of retention days for the secret. Value range: 0-30. If it is `0`, the secret is deleted immediately.
+For an SSH key secret, this field can only be `0`.
+     * @param boolean $CleanSSHKey Specifies whether to delete the SSH key from both the secret and the SSH key list in the CVM console. This field is only valid for SSH key secrets. Valid values:
+`True`: deletes SSH key from both the secret and SSH key list in the CVM console. Note that the deletion will fail if the SSH key is already bound to a CVM instance.
+`False`: only deletes the SSH key information in the secret.
      */
     function __construct()
     {
@@ -60,6 +80,10 @@ class DeleteSecretRequest extends AbstractModel
 
         if (array_key_exists("RecoveryWindowInDays",$param) and $param["RecoveryWindowInDays"] !== null) {
             $this->RecoveryWindowInDays = $param["RecoveryWindowInDays"];
+        }
+
+        if (array_key_exists("CleanSSHKey",$param) and $param["CleanSSHKey"] !== null) {
+            $this->CleanSSHKey = $param["CleanSSHKey"];
         }
     }
 }

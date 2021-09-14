@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Number of the returned instances. Value range: [1, 100]. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of the returned instances. Value range: [1, 100]. Default value: 20
+ * @method array getTagFilters() Obtain Tag filter.
+ * @method void setTagFilters(array $TagFilters) Set Tag filter.
  */
 class DescribeMigrateJobsRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeMigrateJobsRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var array Tag filter.
+     */
+    public $TagFilters;
+
+    /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
      * @param string $Order Sort by field. Value range: JobId, Status, JobName, MigrateType, RunMode, CreateTime
      * @param string $OrderSeq Sorting order. Value range: ASC (ascending), DESC (descending)
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Number of the returned instances. Value range: [1, 100]. Default value: 20
+     * @param array $TagFilters Tag filter.
      */
     function __construct()
     {
@@ -108,6 +116,15 @@ class DescribeMigrateJobsRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TagFilters",$param) and $param["TagFilters"] !== null) {
+            $this->TagFilters = [];
+            foreach ($param["TagFilters"] as $key => $value){
+                $obj = new TagFilter();
+                $obj->deserialize($value);
+                array_push($this->TagFilters, $obj);
+            }
         }
     }
 }

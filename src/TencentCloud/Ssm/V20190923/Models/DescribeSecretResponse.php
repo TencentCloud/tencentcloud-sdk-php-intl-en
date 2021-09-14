@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeleteTime(integer $DeleteTime) Set Deletion time, formatted as a Unix timestamp. For a Secret that is not in `PendingDelete` status, this value is 0.
  * @method integer getCreateTime() Obtain Creation time.
  * @method void setCreateTime(integer $CreateTime) Set Creation time.
- * @method integer getSecretType() Obtain 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSecretType(integer $SecretType) Set 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSecretType() Obtain `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecretType(integer $SecretType) Set `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getProductName() Obtain Tencent Cloud service name.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Tencent Cloud service name.
@@ -53,6 +53,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method integer getRotationFrequency() Obtain Rotation frequency in days by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRotationFrequency(integer $RotationFrequency) Set Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getResourceName() Obtain Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceName(string $ResourceName) Set Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProjectID() Obtain Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setProjectID(integer $ProjectID) Set Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAssociatedInstanceIDs() Obtain ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) Set ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -95,8 +107,8 @@ class DescribeSecretResponse extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SecretType;
 
@@ -125,6 +137,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RotationFrequency;
 
     /**
+     * @var string Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceName;
+
+    /**
+     * @var integer Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProjectID;
+
+    /**
+     * @var array ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AssociatedInstanceIDs;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -137,8 +167,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Status Credential status: Enabled, Disabled, PendingDelete, Creating, Failed.
      * @param integer $DeleteTime Deletion time, formatted as a Unix timestamp. For a Secret that is not in `PendingDelete` status, this value is 0.
      * @param integer $CreateTime Creation time.
-     * @param integer $SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $SecretType `0`: user-defined secret; `1`: database credential; `2`: SSH key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ProductName Tencent Cloud service name.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceID Tencent Cloud service instance ID.
@@ -146,6 +176,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $RotationStatus Whether to enable rotation. True: yes; False: no.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RotationFrequency Rotation frequency in days by default.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -208,6 +244,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RotationFrequency",$param) and $param["RotationFrequency"] !== null) {
             $this->RotationFrequency = $param["RotationFrequency"];
+        }
+
+        if (array_key_exists("ResourceName",$param) and $param["ResourceName"] !== null) {
+            $this->ResourceName = $param["ResourceName"];
+        }
+
+        if (array_key_exists("ProjectID",$param) and $param["ProjectID"] !== null) {
+            $this->ProjectID = $param["ProjectID"];
+        }
+
+        if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
+            $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
  * @method string getPrincipal() Obtain The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
  * @method void setPrincipal(string $Principal) Set The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
+ * @method string getResourceNameList() Obtain The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+ * @method void setResourceNameList(string $ResourceNameList) Set The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
  */
 class CreateAclRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAclRequest extends AbstractModel
     public $Principal;
 
     /**
+     * @var string The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     */
+    public $ResourceNameList;
+
+    /**
      * @param string $InstanceId Instance ID information
      * @param integer $ResourceType ACL resource type. 0: UNKNOWN, 1: ANY, 2: TOPIC, 3: GROUP, 4: CLUSTER, 5: TRANSACTIONAL_ID. Currently, only `TOPIC` is available, and other fields will be used for future ACLs compatible with open-source Kafka
      * @param integer $Operation ACL operation mode. 0: UNKNOWN, 1: ANY, 2: ALL, 3: READ, 4: WRITE, 5: CREATE, 6: DELETE, 7: ALTER, 8: DESCRIBE, 9: CLUSTER_ACTION, 10: DESCRIBE_CONFIGS, 11: ALTER_CONFIGS
@@ -80,6 +87,7 @@ class CreateAclRequest extends AbstractModel
      * @param string $ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
      * @param string $Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
      * @param string $Principal The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
+     * @param string $ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class CreateAclRequest extends AbstractModel
 
         if (array_key_exists("Principal",$param) and $param["Principal"] !== null) {
             $this->Principal = $param["Principal"];
+        }
+
+        if (array_key_exists("ResourceNameList",$param) and $param["ResourceNameList"] !== null) {
+            $this->ResourceNameList = $param["ResourceNameList"];
         }
     }
 }

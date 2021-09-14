@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyAppStatus response structure.
+ * ModifyNodePoolInstanceTypes response structure.
  *
- * @method ModifyAppStatusResp getData() Obtain Returned data
- * @method void setData(ModifyAppStatusResp $Data) Set Returned data
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyAppStatusResponse extends AbstractModel
+class ModifyNodePoolInstanceTypesResponse extends AbstractModel
 {
-    /**
-     * @var ModifyAppStatusResp Returned data
-     */
-    public $Data;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param ModifyAppStatusResp $Data Returned data
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,11 +46,6 @@ class ModifyAppStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = new ModifyAppStatusResp();
-            $this->Data->deserialize($param["Data"]);
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

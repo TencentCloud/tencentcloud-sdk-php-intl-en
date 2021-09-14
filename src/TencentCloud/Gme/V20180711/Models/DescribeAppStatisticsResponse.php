@@ -18,20 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Gets application usage statistics output parameters
+ * DescribeAppStatistics response structure.
  *
- * @method array getAppStatistics() Obtain Application usage statistics
- * @method void setAppStatistics(array $AppStatistics) Set Application usage statistics
+ * @method DescribeAppStatisticsResp getData() Obtain App usage statistics
+ * @method void setData(DescribeAppStatisticsResp $Data) Set App usage statistics
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAppStatisticsResponse extends AbstractModel
 {
     /**
-     * @var array Application usage statistics
+     * @var DescribeAppStatisticsResp App usage statistics
      */
-    public $AppStatistics;
+    public $Data;
 
     /**
-     * @param array $AppStatistics Application usage statistics
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public $RequestId;
+
+    /**
+     * @param DescribeAppStatisticsResp $Data App usage statistics
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,13 +54,13 @@ class DescribeAppStatisticsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AppStatistics",$param) and $param["AppStatistics"] !== null) {
-            $this->AppStatistics = [];
-            foreach ($param["AppStatistics"] as $key => $value){
-                $obj = new AppStatisticsItem();
-                $obj->deserialize($value);
-                array_push($this->AppStatistics, $obj);
-            }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = new DescribeAppStatisticsResp();
+            $this->Data->deserialize($param["Data"]);
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }
