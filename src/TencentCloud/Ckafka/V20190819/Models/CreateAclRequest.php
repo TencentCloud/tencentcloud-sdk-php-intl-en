@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
  * @method string getPrincipal() Obtain The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
  * @method void setPrincipal(string $Principal) Set The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
- * @method string getResourceNameList() Obtain The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
- * @method void setResourceNameList(string $ResourceNameList) Set The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+ * @method string getResourceNameList() Obtain The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
+ * @method void setResourceNameList(string $ResourceNameList) Set The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
  */
 class CreateAclRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateAclRequest extends AbstractModel
     public $Principal;
 
     /**
-     * @var string The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     * @var string The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
      */
     public $ResourceNameList;
 
@@ -87,7 +87,7 @@ class CreateAclRequest extends AbstractModel
      * @param string $ResourceName Resource name, which is related to `resourceType`. For example, if `resourceType` is `TOPIC`, this field indicates the topic name; if `resourceType` is `GROUP`, this field indicates the group name
      * @param string $Host The default value is `*`, which means that any host can access. Currently, CKafka does not support the host as `*`, but the future product based on the open-source Kafka will directly support this
      * @param string $Principal The list of users allowed to access the topic. Default: User:*, meaning all users. The current user must be in the user list. Add `User:` before the user name (`User:A` for example).
-     * @param string $ResourceNameList The resource name list, which is in JSON string format. Only one of `ResourceName` and `resourceNameList` can be specified.
+     * @param string $ResourceNameList The resource name list, which is in JSON string format. Either `ResourceName` or `resourceNameList` can be specified.
      */
     function __construct()
     {

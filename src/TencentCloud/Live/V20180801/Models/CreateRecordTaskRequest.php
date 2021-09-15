@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Push domain name.
  * @method string getAppName() Obtain Push path.
  * @method void setAppName(string $AppName) Set Push path.
- * @method integer getEndTime() Obtain Recording end time in UNIX timestamp format. “EndTime” should be later than “StartTime”, and the duration between “EndTime” and “StartTime” is up to 24 hours.
- * @method void setEndTime(integer $EndTime) Set Recording end time in UNIX timestamp format. “EndTime” should be later than “StartTime”, and the duration between “EndTime” and “StartTime” is up to 24 hours.
- * @method integer getStartTime() Obtain Recording start time in UNIX timestamp format. If “StartTime” is not entered, recording will start immediately after the API is successfully called. “StartTime” should be within 6 days from the current time.
- * @method void setStartTime(integer $StartTime) Set Recording start time in UNIX timestamp format. If “StartTime” is not entered, recording will start immediately after the API is successfully called. “StartTime” should be within 6 days from the current time.
+ * @method integer getEndTime() Obtain Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+ * @method void setEndTime(integer $EndTime) Set Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+ * @method integer getStartTime() Obtain Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
+ * @method void setStartTime(integer $StartTime) Set Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
  * @method integer getStreamType() Obtain Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.
@@ -59,12 +59,12 @@ class CreateRecordTaskRequest extends AbstractModel
     public $AppName;
 
     /**
-     * @var integer Recording end time in UNIX timestamp format. “EndTime” should be later than “StartTime”, and the duration between “EndTime” and “StartTime” is up to 24 hours.
+     * @var integer Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
      */
     public $EndTime;
 
     /**
-     * @var integer Recording start time in UNIX timestamp format. If “StartTime” is not entered, recording will start immediately after the API is successfully called. “StartTime” should be within 6 days from the current time.
+     * @var integer Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
      */
     public $StartTime;
 
@@ -89,8 +89,8 @@ class CreateRecordTaskRequest extends AbstractModel
      * @param string $StreamName Stream name.
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path.
-     * @param integer $EndTime Recording end time in UNIX timestamp format. “EndTime” should be later than “StartTime”, and the duration between “EndTime” and “StartTime” is up to 24 hours.
-     * @param integer $StartTime Recording start time in UNIX timestamp format. If “StartTime” is not entered, recording will start immediately after the API is successfully called. “StartTime” should be within 6 days from the current time.
+     * @param integer $EndTime Recording end time in UNIX timestamp format. `EndTime` should be later than `StartTime` and the current time, and the duration between `EndTime` and `StartTime` is up to 24 hours.
+     * @param integer $StartTime Recording start time in UNIX timestamp format. Leaving this parameter empty means starting recording now. `StartTime` cannot be later than the current time plus 6 days.
      * @param integer $StreamType Push type. Default value: 0. Valid values:
 0: LVB push.
 1: mixed stream, i.e., A + B = C mixed stream.

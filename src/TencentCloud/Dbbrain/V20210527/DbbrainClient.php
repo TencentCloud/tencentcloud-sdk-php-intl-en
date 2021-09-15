@@ -50,6 +50,7 @@ use TencentCloud\Dbbrain\V20210527\Models as Models;
  * @method Models\DescribeTopSpaceTableTimeSeriesResponse DescribeTopSpaceTableTimeSeries(Models\DescribeTopSpaceTableTimeSeriesRequest $req) This API is used to get the daily space data of top tables consuming the most instance space. The data is daily collected by DBbrain during a specified time period. The returned results are sorted by size by default.
  * @method Models\DescribeTopSpaceTablesResponse DescribeTopSpaceTables(Models\DescribeTopSpaceTablesRequest $req) This API is used to get the real-time space statistics of top tables of an instance. The returned results are sorted by size by default.
  * @method Models\DescribeUserSqlAdviceResponse DescribeUserSqlAdvice(Models\DescribeUserSqlAdviceRequest $req) This API is used to get SQL statement optimization suggestions.
+ * @method Models\KillMySqlThreadsResponse KillMySqlThreads(Models\KillMySqlThreadsRequest $req) This API is used to interrupt the current session according to the session ID. It needs to be called twice to commit the session interruption task in two stages. In the pre-commit stage, the stage value is `Prepare`, and the returned value is `SqlExecId’. In the commit stage, the stage value is `Commit`, and `SqlExecId` will be passed in as a parameter. Then the session process will be terminated.
  * @method Models\ModifyDiagDBInstanceConfResponse ModifyDiagDBInstanceConf(Models\ModifyDiagDBInstanceConfRequest $req) This API is used to enable/disable instance inspection.
  */
 

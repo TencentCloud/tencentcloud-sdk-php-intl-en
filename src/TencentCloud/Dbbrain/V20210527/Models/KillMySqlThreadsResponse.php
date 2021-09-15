@@ -14,40 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveDomains response structure.
+ * KillMySqlThreads response structure.
  *
- * @method integer getAllCount() Obtain Total number of results.
- * @method void setAllCount(integer $AllCount) Set Total number of results.
- * @method array getDomainList() Obtain List of domain name details.
- * @method void setDomainList(array $DomainList) Set List of domain name details.
- * @method integer getCreateLimitCount() Obtain The number of domain names that can be added
+ * @method array getThreads() Obtain The ID list of MySQL sessions that have been killed.
+ * @method void setThreads(array $Threads) Set The ID list of MySQL sessions that have been killed.
+ * @method string getSqlExecId() Obtain Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCreateLimitCount(integer $CreateLimitCount) Set The number of domain names that can be added
+ * @method void setSqlExecId(string $SqlExecId) Set Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeLiveDomainsResponse extends AbstractModel
+class KillMySqlThreadsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of results.
+     * @var array The ID list of MySQL sessions that have been killed.
      */
-    public $AllCount;
+    public $Threads;
 
     /**
-     * @var array List of domain name details.
-     */
-    public $DomainList;
-
-    /**
-     * @var integer The number of domain names that can be added
+     * @var string Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public $CreateLimitCount;
+    public $SqlExecId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -55,9 +48,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param integer $AllCount Total number of results.
-     * @param array $DomainList List of domain name details.
-     * @param integer $CreateLimitCount The number of domain names that can be added
+     * @param array $Threads The ID list of MySQL sessions that have been killed.
+     * @param string $SqlExecId Execution ID, which is output in the “Prepare” stage and used to specify the ID of the session to be killed in the “Commit” stage.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -74,21 +66,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AllCount",$param) and $param["AllCount"] !== null) {
-            $this->AllCount = $param["AllCount"];
+        if (array_key_exists("Threads",$param) and $param["Threads"] !== null) {
+            $this->Threads = $param["Threads"];
         }
 
-        if (array_key_exists("DomainList",$param) and $param["DomainList"] !== null) {
-            $this->DomainList = [];
-            foreach ($param["DomainList"] as $key => $value){
-                $obj = new DomainInfo();
-                $obj->deserialize($value);
-                array_push($this->DomainList, $obj);
-            }
-        }
-
-        if (array_key_exists("CreateLimitCount",$param) and $param["CreateLimitCount"] !== null) {
-            $this->CreateLimitCount = $param["CreateLimitCount"];
+        if (array_key_exists("SqlExecId",$param) and $param["SqlExecId"] !== null) {
+            $this->SqlExecId = $param["SqlExecId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

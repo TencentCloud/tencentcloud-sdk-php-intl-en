@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * General stream mix input parameter.
  *
- * @method string getInputStreamName() Obtain Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
- * @method void setInputStreamName(string $InputStreamName) Set Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+ * @method string getInputStreamName() Obtain Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
+ * @method void setInputStreamName(string $InputStreamName) Set Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
  * @method CommonMixLayoutParams getLayoutParams() Obtain Input stream layout parameter.
  * @method void setLayoutParams(CommonMixLayoutParams $LayoutParams) Set Input stream layout parameter.
  * @method CommonMixCropParams getCropParams() Obtain Input stream crop parameter.
@@ -30,7 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class CommonMixInputParam extends AbstractModel
 {
     /**
-     * @var string Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+     * @var string Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
      */
     public $InputStreamName;
 
@@ -45,7 +51,9 @@ class CommonMixInputParam extends AbstractModel
     public $CropParams;
 
     /**
-     * @param string $InputStreamName Input stream name of up to 80 bytes, which is a string containing letters, digits, and underscores.
+     * @param string $InputStreamName Input stream name, which can contain up to 80 bytes of letters, digits, and underscores.
+The value should be the name of an input stream for stream mix when `LayoutParams.InputType` is set to `0` (audio and video), `4` (pure audio), or `5` (pure video).
+The value can be a random name for identification, such as `Canvas1` or `Picture1`, when `LayoutParams.InputType` is set to `2` (image) or `3` (canvas).
      * @param CommonMixLayoutParams $LayoutParams Input stream layout parameter.
      * @param CommonMixCropParams $CropParams Input stream crop parameter.
      */

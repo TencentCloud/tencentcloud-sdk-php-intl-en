@@ -22,11 +22,11 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getRecordInterval() Obtain Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
  * @method void setRecordInterval(integer $RecordInterval) Set Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
  * @method integer getStorageTime() Obtain Storage duration of the recording file
 Value range: 0-129600000 seconds (0-1500 days)
@@ -98,7 +98,7 @@ class RecordParam extends AbstractModel
     /**
      * @var integer Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      */
     public $RecordInterval;
@@ -166,7 +166,7 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     /**
      * @param integer $RecordInterval Max recording time per file
 Default value: `1800` (seconds)
-Value range: 60-7200
+Value range: 30-7200
 This parameter is invalid for HLS. Only one HLS file will be generated from push start to push end.
      * @param integer $StorageTime Storage duration of the recording file
 Value range: 0-129600000 seconds (0-1500 days)

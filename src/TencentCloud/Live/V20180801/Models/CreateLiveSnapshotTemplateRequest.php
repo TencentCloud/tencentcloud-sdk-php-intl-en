@@ -44,10 +44,14 @@ Only letters, digits, underscores, and hyphens can be contained.
 Value range: 5-300s.
  * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Default value: 10s.
 Value range: 5-300s.
- * @method integer getWidth() Obtain Screenshot width. Default value: 0 (original width).
- * @method void setWidth(integer $Width) Set Screenshot width. Default value: 0 (original width).
- * @method integer getHeight() Obtain Screenshot height. Default value: 0 (original height).
- * @method void setHeight(integer $Height) Set Screenshot height. Default value: 0 (original height).
+ * @method integer getWidth() Obtain Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+ * @method void setWidth(integer $Width) Set Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+ * @method integer getHeight() Obtain Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
+ * @method void setHeight(integer $Height) Set Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
  * @method integer getPornFlag() Obtain Whether to enable porn detection. 0: no, 1: yes. Default value: 0
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. 0: no, 1: yes. Default value: 0
  * @method string getCosPrefix() Obtain COS Bucket folder prefix.
@@ -106,12 +110,14 @@ Value range: 5-300s.
     public $SnapshotInterval;
 
     /**
-     * @var integer Screenshot width. Default value: 0 (original width).
+     * @var integer Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
      */
     public $Width;
 
     /**
-     * @var integer Screenshot height. Default value: 0 (original height).
+     * @var integer Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
      */
     public $Height;
 
@@ -149,8 +155,10 @@ Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
      * @param integer $SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
 Value range: 5-300s.
-     * @param integer $Width Screenshot width. Default value: 0 (original width).
-     * @param integer $Height Screenshot height. Default value: 0 (original height).
+     * @param integer $Width Screenshot width. Default value: `0` (original width)
+Value range: 0-3000
+     * @param integer $Height Screenshot height. Default value: `0` (original height)
+Value range: 0-2000
      * @param integer $PornFlag Whether to enable porn detection. 0: no, 1: yes. Default value: 0
      * @param string $CosPrefix COS Bucket folder prefix.
 If no value is entered, the default value
