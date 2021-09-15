@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
  * @method boolean getSnatPro() Obtain Whether to enable SnatPro
  * @method void setSnatPro(boolean $SnatPro) Set Whether to enable SnatPro
+ * @method boolean getDeleteProtect() Obtain Specifies whether to enable deletion protection.
+ * @method void setDeleteProtect(boolean $DeleteProtect) Set Specifies whether to enable deletion protection.
  */
 class ModifyLoadBalancerAttributesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
     public $SnatPro;
 
     /**
+     * @var boolean Specifies whether to enable deletion protection.
+     */
+    public $DeleteProtect;
+
+    /**
      * @param string $LoadBalancerId Unique CLB ID
      * @param string $LoadBalancerName CLB instance name
      * @param TargetRegionInfo $TargetRegionInfo Region information of the real server bound to a CLB.
      * @param InternetAccessible $InternetChargeInfo Network billing parameter
      * @param boolean $LoadBalancerPassToTarget Whether the target opens traffic from CLB to the internet. If yes (true), only security groups on CLB will be verified; if no (false), security groups on both CLB and backend instance need to be verified.
      * @param boolean $SnatPro Whether to enable SnatPro
+     * @param boolean $DeleteProtect Specifies whether to enable deletion protection.
      */
     function __construct()
     {
@@ -110,6 +118,10 @@ class ModifyLoadBalancerAttributesRequest extends AbstractModel
 
         if (array_key_exists("SnatPro",$param) and $param["SnatPro"] !== null) {
             $this->SnatPro = $param["SnatPro"];
+        }
+
+        if (array_key_exists("DeleteProtect",$param) and $param["DeleteProtect"] !== null) {
+            $this->DeleteProtect = $param["DeleteProtect"];
         }
     }
 }
