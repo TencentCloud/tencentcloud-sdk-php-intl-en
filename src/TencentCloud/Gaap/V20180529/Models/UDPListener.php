@@ -54,6 +54,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
  * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
  * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
+ * @method integer getSessionPersist() Obtain Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSessionPersist(integer $SessionPersist) Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class UDPListener extends AbstractModel
 {
@@ -119,6 +123,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
+     * @var integer Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SessionPersist;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -136,6 +146,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
      * @param array $RealServerSet Information of the origin server bound to listeners
      * @param integer $CreateTime Listener creation time; using UNIX timestamp.
+     * @param integer $SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -197,6 +209,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
+            $this->SessionPersist = $param["SessionPersist"];
         }
     }
 }

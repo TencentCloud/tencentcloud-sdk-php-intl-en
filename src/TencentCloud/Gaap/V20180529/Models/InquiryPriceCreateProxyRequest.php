@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingType(integer $BillingType) Set Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
+ * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
  */
 class InquiryPriceCreateProxyRequest extends AbstractModel
 {
@@ -80,6 +84,16 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string Network type. Valid values: `normal` (default), `cn2`
+     */
+    public $NetworkType;
+
+    /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public $PackageType;
+
+    /**
      * @param string $AccessRegion Acceleration region name.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param string $DestRegion Origin server region name. It's an old parameter, please switch to RealServerRegion.
@@ -88,6 +102,8 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
      * @param integer $Concurrent Upper limit of connection concurrence, which indicates a number of simultaneous online connections. Unit: 10,000 connections. It's a new parameter.
      * @param integer $BillingType Billing mode. Valid values: 0: bill-by-bandwidth (default value); 1: bill-by-traffic.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
      */
     function __construct()
     {
@@ -132,6 +148,14 @@ class InquiryPriceCreateProxyRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

@@ -14,32 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBasicDeviceStatus response structure.
+ * BatchCreateAcl response structure.
  *
- * @method array getData() Obtain Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
- * @method void setData(array $Data) Set Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+ * @method integer getResult() Obtain Status code.
+ * @method void setResult(integer $Result) Set Status code.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeBasicDeviceStatusResponse extends AbstractModel
+class BatchCreateAclResponse extends AbstractModel
 {
     /**
-     * @var array Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * @var integer Status code.
      */
-    public $Data;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -47,10 +38,7 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * @param integer $Result Status code.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,13 +54,8 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new KeyValue();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = $param["Result"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

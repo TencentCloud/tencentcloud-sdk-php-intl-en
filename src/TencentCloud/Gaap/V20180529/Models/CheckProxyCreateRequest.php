@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(string $GroupId) Set Connection group ID that needs to be entered when a connection is created in a connection group
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
+ * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class CheckProxyCreateRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string Network type. Valid values: `normal` (default), `cn2`
+     */
+    public $NetworkType;
+
+    /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public $PackageType;
+
+    /**
      * @param string $AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
      * @param string $RealServerRegion Origin server region of the connection. The value can be obtained via the DescribeDestRegions API.
      * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
      * @param integer $Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      * @param string $GroupId Connection group ID that needs to be entered when a connection is created in a connection group
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

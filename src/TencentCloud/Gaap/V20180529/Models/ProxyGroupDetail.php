@@ -74,6 +74,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -173,6 +177,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IPAddressVersion;
 
     /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PackageType;
+
+    /**
      * @param integer $CreateTime Creation time
      * @param integer $ProjectId Project ID
      * @param integer $ProxyNum Number of connections in connection group
@@ -199,6 +209,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -286,6 +298,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

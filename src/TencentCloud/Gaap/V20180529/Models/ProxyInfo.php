@@ -112,10 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setModifyConfigTime(integer $ModifyConfigTime) Set Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProxyType() Obtain Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setProxyType(integer $ProxyType) Set Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getProxyType() Obtain Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setProxyType(integer $ProxyType) Set Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
@@ -124,6 +124,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getNetworkType() Obtain Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -274,8 +282,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModifyConfigTime;
 
     /**
-     * @var integer Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $ProxyType;
 
@@ -290,6 +298,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $IPAddressVersion;
+
+    /**
+     * @var string Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $NetworkType;
+
+    /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $PackageType;
 
     /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -338,12 +358,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ModifyConfigTime Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProxyType Connection type. 104: SILVER connection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ProxyType Connection type
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $NetworkType Network type. Valid values: `normal`, `cn2`
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -475,6 +499,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

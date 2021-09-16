@@ -38,6 +38,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDiscountFlowUnitPrice(float $DiscountFlowUnitPrice) Set Discounted connection traffic price in USD/GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getCn2BandwidthPrice() Obtain Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCn2BandwidthPrice(float $Cn2BandwidthPrice) Set Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method float getCn2BandwidthPriceWithDiscount() Obtain Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCn2BandwidthPriceWithDiscount(float $Cn2BandwidthPriceWithDiscount) Set Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -77,6 +85,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DiscountFlowUnitPrice;
 
     /**
+     * @var float Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Cn2BandwidthPrice;
+
+    /**
+     * @var float Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Cn2BandwidthPriceWithDiscount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -91,6 +111,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $DiscountFlowUnitPrice Discounted connection traffic price in USD/GB.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $Cn2BandwidthPrice Dedicated BGP bandwidth price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param float $Cn2BandwidthPriceWithDiscount Dedicated BGP bandwidth discount price. Unit: USD/Mbps/day
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -133,6 +157,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiscountFlowUnitPrice",$param) and $param["DiscountFlowUnitPrice"] !== null) {
             $this->DiscountFlowUnitPrice = $param["DiscountFlowUnitPrice"];
+        }
+
+        if (array_key_exists("Cn2BandwidthPrice",$param) and $param["Cn2BandwidthPrice"] !== null) {
+            $this->Cn2BandwidthPrice = $param["Cn2BandwidthPrice"];
+        }
+
+        if (array_key_exists("Cn2BandwidthPriceWithDiscount",$param) and $param["Cn2BandwidthPriceWithDiscount"] !== null) {
+            $this->Cn2BandwidthPriceWithDiscount = $param["Cn2BandwidthPriceWithDiscount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

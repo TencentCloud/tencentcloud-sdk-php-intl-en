@@ -18,28 +18,26 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBasicDeviceStatus response structure.
+ * DescribeBizTrend response structure.
  *
- * @method array getData() Obtain Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
- * @method void setData(array $Data) Set Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+ * @method array getDataList() Obtain Value at a time point on the curve
+ * @method void setDataList(array $DataList) Set Value at a time point on the curve
+ * @method string getMetricName() Obtain Statistical dimension
+ * @method void setMetricName(string $MetricName) Set Statistical dimension
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeBasicDeviceStatusResponse extends AbstractModel
+class DescribeBizTrendResponse extends AbstractModel
 {
     /**
-     * @var array Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * @var array Value at a time point on the curve
      */
-    public $Data;
+    public $DataList;
+
+    /**
+     * @var string Statistical dimension
+     */
+    public $MetricName;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -47,10 +45,8 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Status of the specified Anti-DDoS resource. Valid values:
-`1`: The IP is blocked.
-`2`: The P is normal.
-`3`: The IP is being attacked.
+     * @param array $DataList Value at a time point on the curve
+     * @param string $MetricName Statistical dimension
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,13 +62,12 @@ class DescribeBasicDeviceStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new KeyValue();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("DataList",$param) and $param["DataList"] !== null) {
+            $this->DataList = $param["DataList"];
+        }
+
+        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
+            $this->MetricName = $param["MetricName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

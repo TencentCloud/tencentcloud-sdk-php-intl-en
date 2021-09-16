@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ckafka\V20190819\Models as Models;
 
 /**
+ * @method Models\BatchCreateAclResponse BatchCreateAcl(Models\BatchCreateAclRequest $req) This API is used to create ACL policies in batches.
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) This API is used to add an ACL policy.
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) This API is used to add a partition in a topic.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a CKafka topic.

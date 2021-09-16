@@ -88,6 +88,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSessionPersist() Obtain Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSessionPersist(integer $SessionPersist) Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class TCPListener extends AbstractModel
 {
@@ -194,6 +202,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $UnhealthyThreshold;
 
     /**
+     * @var integer Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FailoverSwitch;
+
+    /**
+     * @var integer Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SessionPersist;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -227,6 +247,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -313,6 +337,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("UnhealthyThreshold",$param) and $param["UnhealthyThreshold"] !== null) {
             $this->UnhealthyThreshold = $param["UnhealthyThreshold"];
+        }
+
+        if (array_key_exists("FailoverSwitch",$param) and $param["FailoverSwitch"] !== null) {
+            $this->FailoverSwitch = $param["FailoverSwitch"];
+        }
+
+        if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
+            $this->SessionPersist = $param["SessionPersist"];
         }
     }
 }

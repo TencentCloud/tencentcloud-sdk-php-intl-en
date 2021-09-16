@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth upper limit in Mbps.
  * @method integer getConcurrent() Obtain Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
  * @method void setConcurrent(integer $Concurrent) Set Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+ * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
+ * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
  */
 class AccessConfiguration extends AbstractModel
 {
@@ -45,9 +47,15 @@ class AccessConfiguration extends AbstractModel
     public $Concurrent;
 
     /**
+     * @var string Network type. Valid values: `normal` (default), `cn2`
+     */
+    public $NetworkType;
+
+    /**
      * @param string $AccessRegion Acceleration region.
      * @param integer $Bandwidth Connection bandwidth upper limit in Mbps.
      * @param integer $Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+     * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class AccessConfiguration extends AbstractModel
 
         if (array_key_exists("Concurrent",$param) and $param["Concurrent"] !== null) {
             $this->Concurrent = $param["Concurrent"];
+        }
+
+        if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
+            $this->NetworkType = $param["NetworkType"];
         }
     }
 }

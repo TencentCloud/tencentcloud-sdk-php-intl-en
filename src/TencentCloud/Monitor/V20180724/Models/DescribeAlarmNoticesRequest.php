@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserIds(array $UserIds) Set Recipient object list
  * @method array getGroupIds() Obtain Recipient group list
  * @method void setGroupIds(array $GroupIds) Set Recipient group list
+ * @method array getNoticeIds() Obtain Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+ * @method void setNoticeIds(array $NoticeIds) Set Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
  */
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeAlarmNoticesRequest extends AbstractModel
     public $GroupIds;
 
     /**
+     * @var array Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
+     */
+    public $NoticeIds;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param integer $PageNumber Page number. Minimum value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–200
@@ -96,6 +103,7 @@ class DescribeAlarmNoticesRequest extends AbstractModel
      * @param string $ReceiverType Filter by recipient. The type of notified users should be selected for the alarm notification template. Valid values: USER (user), GROUP (user group). If this parameter is left empty, no filter by recipient will be performed
      * @param array $UserIds Recipient object list
      * @param array $GroupIds Recipient group list
+     * @param array $NoticeIds Filter by notification template ID. If an empty array is passed in or if this parameter is left empty, the filter operation will not be performed.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeAlarmNoticesRequest extends AbstractModel
 
         if (array_key_exists("GroupIds",$param) and $param["GroupIds"] !== null) {
             $this->GroupIds = $param["GroupIds"];
+        }
+
+        if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
+            $this->NoticeIds = $param["NoticeIds"];
         }
     }
 }

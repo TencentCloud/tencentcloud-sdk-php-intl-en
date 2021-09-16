@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestRegion(string $DestRegion) Set Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     */
+    public $PackageType;
+
+    /**
      * @param string $DestRegion Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 
         if (array_key_exists("IPAddressVersion",$param) and $param["IPAddressVersion"] !== null) {
             $this->IPAddressVersion = $param["IPAddressVersion"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }
