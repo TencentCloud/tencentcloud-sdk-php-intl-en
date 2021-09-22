@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusMessageSimplified(string $StatusMessageSimplified) Set Brief description of the scaling activity status.
  * @method array getLifecycleActionResultSet() Obtain Result of the lifecycle hook action in the scaling activity
  * @method void setLifecycleActionResultSet(array $LifecycleActionResultSet) Set Result of the lifecycle hook action in the scaling activity
+ * @method array getDetailedStatusMessageSet() Obtain Detailed description of scaling activity status
+ * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) Set Detailed description of scaling activity status
  */
 class Activity extends AbstractModel
 {
@@ -142,6 +144,11 @@ class Activity extends AbstractModel
     public $LifecycleActionResultSet;
 
     /**
+     * @var array Detailed description of scaling activity status
+     */
+    public $DetailedStatusMessageSet;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
      * @param string $ActivityType Type of the scaling activity. Valid values:<br>
@@ -164,6 +171,7 @@ class Activity extends AbstractModel
      * @param array $ActivityRelatedInstanceSet Information set of the instances related to the scaling activity.
      * @param string $StatusMessageSimplified Brief description of the scaling activity status.
      * @param array $LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
+     * @param array $DetailedStatusMessageSet Detailed description of scaling activity status
      */
     function __construct()
     {
@@ -237,6 +245,15 @@ class Activity extends AbstractModel
                 $obj = new LifecycleActionResultInfo();
                 $obj->deserialize($value);
                 array_push($this->LifecycleActionResultSet, $obj);
+            }
+        }
+
+        if (array_key_exists("DetailedStatusMessageSet",$param) and $param["DetailedStatusMessageSet"] !== null) {
+            $this->DetailedStatusMessageSet = [];
+            foreach ($param["DetailedStatusMessageSet"] as $key => $value){
+                $obj = new DetailedStatusMessage();
+                $obj->deserialize($value);
+                array_push($this->DetailedStatusMessageSet, $obj);
             }
         }
     }

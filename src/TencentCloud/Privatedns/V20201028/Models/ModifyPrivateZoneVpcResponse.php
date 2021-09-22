@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Private domain ID, such as zone-xxxxxx
  * @method array getVpcSet() Obtain List of VPCs associated with domain
  * @method void setVpcSet(array $VpcSet) Set List of VPCs associated with domain
+ * @method array getAccountVpcSet() Obtain List of authorized accounts' VPCs associated with the private domain
+ * @method void setAccountVpcSet(array $AccountVpcSet) Set List of authorized accounts' VPCs associated with the private domain
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
     public $VpcSet;
 
     /**
+     * @var array List of authorized accounts' VPCs associated with the private domain
+     */
+    public $AccountVpcSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
     /**
      * @param string $ZoneId Private domain ID, such as zone-xxxxxx
      * @param array $VpcSet List of VPCs associated with domain
+     * @param array $AccountVpcSet List of authorized accounts' VPCs associated with the private domain
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -72,6 +80,15 @@ class ModifyPrivateZoneVpcResponse extends AbstractModel
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->VpcSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
+            $this->AccountVpcSet = [];
+            foreach ($param["AccountVpcSet"] as $key => $value){
+                $obj = new AccountVpcInfoOutput();
+                $obj->deserialize($value);
+                array_push($this->AccountVpcSet, $obj);
             }
         }
 

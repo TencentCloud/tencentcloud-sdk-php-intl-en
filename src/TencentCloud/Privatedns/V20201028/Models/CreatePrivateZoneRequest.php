@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDnsForwardStatus(string $DnsForwardStatus) Set Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
  * @method array getVpcs() Obtain Associates the private domain to a VPC when it is created
  * @method void setVpcs(array $Vpcs) Set Associates the private domain to a VPC when it is created
+ * @method array getAccountVpcSet() Obtain List of authorized accounts' VPCs to associate with the private domain
+ * @method void setAccountVpcSet(array $AccountVpcSet) Set List of authorized accounts' VPCs to associate with the private domain
  */
 class CreatePrivateZoneRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreatePrivateZoneRequest extends AbstractModel
     public $Vpcs;
 
     /**
+     * @var array List of authorized accounts' VPCs to associate with the private domain
+     */
+    public $AccountVpcSet;
+
+    /**
      * @param string $Domain Domain name, which must be in the format of standard TLD
      * @param array $TagSet Tags the private domain when it is created
      * @param array $VpcSet Associates the private domain to a VPC when it is created
      * @param string $Remark Remarks
      * @param string $DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED. Default value: DISABLED
      * @param array $Vpcs Associates the private domain to a VPC when it is created
+     * @param array $AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
      */
     function __construct()
     {
@@ -122,6 +130,15 @@ class CreatePrivateZoneRequest extends AbstractModel
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->Vpcs, $obj);
+            }
+        }
+
+        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
+            $this->AccountVpcSet = [];
+            foreach ($param["AccountVpcSet"] as $key => $value){
+                $obj = new AccountVpcInfo();
+                $obj->deserialize($value);
+                array_push($this->AccountVpcSet, $obj);
             }
         }
     }

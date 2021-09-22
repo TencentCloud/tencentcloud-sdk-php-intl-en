@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperation(string $Operation) Set ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
  * @method string getPermissionType() Obtain Permission types: `Deny`, `Allow`.
  * @method void setPermissionType(string $PermissionType) Set Permission types: `Deny`, `Allow`.
- * @method string getHost() Obtain The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
- * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+ * @method string getHost() Obtain The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
+ * @method void setHost(string $Host) Set The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
  * @method string getPrincipal() Obtain The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
  * @method void setPrincipal(string $Principal) Set The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
  */
@@ -42,7 +42,7 @@ class AclRuleInfo extends AbstractModel
     public $PermissionType;
 
     /**
-     * @var string The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+     * @var string The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
      */
     public $Host;
 
@@ -54,7 +54,7 @@ class AclRuleInfo extends AbstractModel
     /**
      * @param string $Operation ACL operation types. Enumerated values: `All` (all operations), `Read` (read), `Write` (write).
      * @param string $PermissionType Permission types: `Deny`, `Allow`.
-     * @param string $Host The default value is `*`, which means that any host can access the topic. Currently, CKafka does not support the host value being specified as * or IP range.
+     * @param string $Host The default value is `*`, which means that any host can access the topic. CKafka currently does not support specifying a host value of * or an IP range.
      * @param string $Principal The list of users allowed to access the topic. Default value: `User:*`, which means all users. The current user must be in the user list. Add the prefix `User:` before the user name (`User:A`, for example).
      */
     function __construct()

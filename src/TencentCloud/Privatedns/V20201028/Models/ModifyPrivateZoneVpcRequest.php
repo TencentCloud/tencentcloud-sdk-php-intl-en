@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Private domain ID
  * @method array getVpcSet() Obtain List of all VPCs associated with private domain
  * @method void setVpcSet(array $VpcSet) Set List of all VPCs associated with private domain
+ * @method array getAccountVpcSet() Obtain List of authorized accounts' VPCs to associate with the private domain
+ * @method void setAccountVpcSet(array $AccountVpcSet) Set List of authorized accounts' VPCs to associate with the private domain
  */
 class ModifyPrivateZoneVpcRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyPrivateZoneVpcRequest extends AbstractModel
     public $VpcSet;
 
     /**
+     * @var array List of authorized accounts' VPCs to associate with the private domain
+     */
+    public $AccountVpcSet;
+
+    /**
      * @param string $ZoneId Private domain ID
      * @param array $VpcSet List of all VPCs associated with private domain
+     * @param array $AccountVpcSet List of authorized accounts' VPCs to associate with the private domain
      */
     function __construct()
     {
@@ -64,6 +72,15 @@ class ModifyPrivateZoneVpcRequest extends AbstractModel
                 $obj = new VpcInfo();
                 $obj->deserialize($value);
                 array_push($this->VpcSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
+            $this->AccountVpcSet = [];
+            foreach ($param["AccountVpcSet"] as $key => $value){
+                $obj = new AccountVpcInfo();
+                $obj->deserialize($value);
+                array_push($this->AccountVpcSet, $obj);
             }
         }
     }

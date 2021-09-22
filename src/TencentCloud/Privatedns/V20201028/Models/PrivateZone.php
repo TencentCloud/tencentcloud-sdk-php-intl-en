@@ -44,6 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDnsForwardStatus(string $DnsForwardStatus) Set Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
  * @method array getTags() Obtain Set of tag key-value pairs
  * @method void setTags(array $Tags) Set Set of tag key-value pairs
+ * @method array getAccountVpcSet() Obtain List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAccountVpcSet(array $AccountVpcSet) Set List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class PrivateZone extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var array List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AccountVpcSet;
+
+    /**
      * @param string $ZoneId Private domain ID: zone-xxxxxxxx
      * @param integer $OwnerUin Domain name owner UIN
      * @param string $Domain Private domain
@@ -116,6 +126,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Status Private domain status. Valid values: ENABLED (DNS enabled); SUSPEND (DNS paused); FROZEN (locked)
      * @param string $DnsForwardStatus Subdomain recursive DNS status. Valid values: ENABLED, DISABLED
      * @param array $Tags Set of tag key-value pairs
+     * @param array $AccountVpcSet List of authorized accounts' VPCs associated with the private domain
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -181,6 +193,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new TagInfo();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("AccountVpcSet",$param) and $param["AccountVpcSet"] !== null) {
+            $this->AccountVpcSet = [];
+            foreach ($param["AccountVpcSet"] as $key => $value){
+                $obj = new AccountVpcInfoOutput();
+                $obj->deserialize($value);
+                array_push($this->AccountVpcSet, $obj);
             }
         }
     }
