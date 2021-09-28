@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSmsTemplateList request structure.
  *
  * @method array getTemplateIdSet() Obtain Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
  * @method void setTemplateIdSet(array $TemplateIdSet) Set Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
  * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
@@ -35,7 +35,7 @@ class DescribeSmsTemplateListRequest extends AbstractModel
 {
     /**
      * @var array Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      */
     public $TemplateIdSet;
 
@@ -48,7 +48,7 @@ Note: the maximum length of the array is 100 by default.
 
     /**
      * @param array $TemplateIdSet Template ID array.
-Note: the maximum length of the array is 100 by default.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.

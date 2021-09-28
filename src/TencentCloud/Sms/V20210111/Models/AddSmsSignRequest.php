@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * AddSmsSign request structure.
  *
  * @method string getSignName() Obtain Signature name.
+Note: you cannot apply for an approved or pending signature again.
  * @method void setSignName(string $SignName) Set Signature name.
+Note: you cannot apply for an approved or pending signature again.
  * @method integer getSignType() Obtain Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
 0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.
@@ -85,6 +87,7 @@ class AddSmsSignRequest extends AbstractModel
 {
     /**
      * @var string Signature name.
+Note: you cannot apply for an approved or pending signature again.
      */
     public $SignName;
 
@@ -147,6 +150,7 @@ Note: this field will take effect only when `SignPurpose` is 1 (for user by othe
 
     /**
      * @param string $SignName Signature name.
+Note: you cannot apply for an approved or pending signature again.
      * @param integer $SignType Signature type. Each of these types is followed by their `DocumentType` (identity certificate type) option:
 0: company. Valid values of `DocumentType` include 0, 1, 2, and 3.
 1: app. Valid values of `DocumentType` include 0, 1, 2, 3, and 4.

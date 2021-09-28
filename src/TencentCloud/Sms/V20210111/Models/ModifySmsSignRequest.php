@@ -60,12 +60,14 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
 Note: the corresponding `DocumentType` must be selected according to `SignType`.
- * @method integer getInternational() Obtain Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
- * @method void setInternational(integer $International) Set Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+ * @method integer getInternational() Obtain A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
+ * @method void setInternational(integer $International) Set A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
  * @method integer getSignPurpose() Obtain Signature purpose:
 0: for personal use.
 1: for others.
@@ -122,9 +124,10 @@ Note: the corresponding `DocumentType` must be selected according to `SignType`.
     public $DocumentType;
 
     /**
-     * @var integer Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+     * @var integer A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
      */
     public $International;
 
@@ -173,9 +176,10 @@ Note: the identity certificate type must be selected according to the correspond
 6: screenshot of WeChat Mini Program settings page (for personal WeChat Mini Program).
 7: trademark registration certificate.
 Note: the corresponding `DocumentType` must be selected according to `SignType`.
-     * @param integer $International Whether it is Global SMS:
-0: Mainland China SMS.
-1: Global SMS.
+     * @param integer $International A parameter used to specify whether it is Global SMS:
+`0`: Chinese mainland SMS.
+`1`: Global SMS.
+Note: the value of this parameter must be consistent with the `International` value of the signature to be modified. This parameter cannot be used to directly change a Chinese mainland signature to an international signature.
      * @param integer $SignPurpose Signature purpose:
 0: for personal use.
 1: for others.
