@@ -18,19 +18,19 @@ namespace TencentCloud\Mdp\V20200527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateStreamPackageChannel response structure.
+ * BindNewLVBDomainWithChannel response structure.
  *
- * @method ChannelInfo getInfo() Obtain Channel information
- * @method void setInfo(ChannelInfo $Info) Set Channel information
+ * @method string getLVBDomain() Obtain The LVB domain name bound successfully
+ * @method void setLVBDomain(string $LVBDomain) Set The LVB domain name bound successfully
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateStreamPackageChannelResponse extends AbstractModel
+class BindNewLVBDomainWithChannelResponse extends AbstractModel
 {
     /**
-     * @var ChannelInfo Channel information
+     * @var string The LVB domain name bound successfully
      */
-    public $Info;
+    public $LVBDomain;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateStreamPackageChannelResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ChannelInfo $Info Channel information
+     * @param string $LVBDomain The LVB domain name bound successfully
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,9 +54,8 @@ class CreateStreamPackageChannelResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Info",$param) and $param["Info"] !== null) {
-            $this->Info = new ChannelInfo();
-            $this->Info->deserialize($param["Info"]);
+        if (array_key_exists("LVBDomain",$param) and $param["LVBDomain"] !== null) {
+            $this->LVBDomain = $param["LVBDomain"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

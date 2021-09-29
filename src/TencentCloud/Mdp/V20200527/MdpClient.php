@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mdp\V20200527\Models as Models;
 
 /**
+ * @method Models\BindNewLVBDomainWithChannelResponse BindNewLVBDomainWithChannel(Models\BindNewLVBDomainWithChannelRequest $req) This API is used to bind an LVB domain name to a channel.
  * @method Models\CreateStreamPackageChannelResponse CreateStreamPackageChannel(Models\CreateStreamPackageChannelRequest $req) This API is used to create a StreamPackage channel.
  * @method Models\CreateStreamPackageChannelEndpointResponse CreateStreamPackageChannelEndpoint(Models\CreateStreamPackageChannelEndpointRequest $req) This API is used to create an endpoint on a StreamPackage channel.
  * @method Models\DeleteStreamPackageChannelEndpointsResponse DeleteStreamPackageChannelEndpoints(Models\DeleteStreamPackageChannelEndpointsRequest $req) This API is used to delete endpoints from a StreamPackage channel in batches.
