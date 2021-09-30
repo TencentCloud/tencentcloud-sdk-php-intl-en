@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set VPC ID
  * @method string getEndPointServiceName() Obtain Endpoint service name
  * @method void setEndPointServiceName(string $EndPointServiceName) Set Endpoint service name
- * @method boolean getAutoAcceptFlag() Obtain Whether to automatically accept
- * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) Set Whether to automatically accept
+ * @method boolean getAutoAcceptFlag() Obtain Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
+ * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) Set Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
  * @method string getServiceInstanceId() Obtain Real server ID in the format of `lb-xxx`.
  * @method void setServiceInstanceId(string $ServiceInstanceId) Set Real server ID in the format of `lb-xxx`.
  */
@@ -49,7 +49,7 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
     public $EndPointServiceName;
 
     /**
-     * @var boolean Whether to automatically accept
+     * @var boolean Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
      */
     public $AutoAcceptFlag;
 
@@ -62,7 +62,7 @@ class ModifyVpcEndPointServiceAttributeRequest extends AbstractModel
      * @param string $EndPointServiceId Endpoint service ID
      * @param string $VpcId VPC ID
      * @param string $EndPointServiceName Endpoint service name
-     * @param boolean $AutoAcceptFlag Whether to automatically accept
+     * @param boolean $AutoAcceptFlag Whether to automatically accept VPC endpoint connection requests. Valid values: <ui><li>`true`: yes<li>`false`: no</ul>
      * @param string $ServiceInstanceId Real server ID in the format of `lb-xxx`.
      */
     function __construct()

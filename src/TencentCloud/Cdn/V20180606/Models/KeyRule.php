@@ -44,14 +44,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 `path`: effective for specified absolute paths
 `index`: home page
 Note: this field may return null, indicating that no valid value is obtained.
- * @method string getFullUrlCache() Obtain Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+ * @method string getFullUrlCache() Obtain Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFullUrlCache(string $FullUrlCache) Set Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreCase() Obtain Whether caches are case insensitive
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setIgnoreCase(string $IgnoreCase) Set Whether caches are case insensitive
@@ -88,10 +88,10 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $RuleType;
 
     /**
-     * @var string Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var string Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $FullUrlCache;
 
@@ -126,10 +126,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 `path`: effective for specified absolute paths
 `index`: home page
 Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
-Note: this field may return null, indicating that no valid value is obtained.
+     * @param string $FullUrlCache Whether full-path cache is enaled
+`on`: enables full-path cache (i.e., disables ignore query string)
+`off`: disables full-path cache (i.e., enables ignore query string)
+Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreCase Whether caches are case insensitive
 Note: this field may return null, indicating that no valid value is obtained.
      * @param RuleQueryString $QueryString Request parameter contained in `CacheKey`

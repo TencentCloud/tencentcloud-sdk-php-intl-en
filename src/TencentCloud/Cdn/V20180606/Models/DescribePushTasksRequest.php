@@ -42,14 +42,16 @@ You must specify either a task ID or a starting time.
 `mainland`: within Mainland China
 `overseas`: outside Mainland China
 `global`: global
- * @method string getStatus() Obtain Specifies a task state for your query:
+ * @method string getStatus() Obtain Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
- * @method void setStatus(string $Status) Set Specifies a task state for your query:
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+ * @method void setStatus(string $Status) Set Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
  */
 class DescribePushTasksRequest extends AbstractModel
 {
@@ -93,10 +95,11 @@ You must specify either a task ID or a starting time.
     public $Area;
 
     /**
-     * @var string Specifies a task state for your query:
+     * @var string Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public $Status;
 
@@ -112,10 +115,11 @@ You must specify either a task ID or a starting time.
 `mainland`: within Mainland China
 `overseas`: outside Mainland China
 `global`: global
-     * @param string $Status Specifies a task state for your query:
+     * @param string $Status Queries the status of a specified task
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     function __construct()
     {

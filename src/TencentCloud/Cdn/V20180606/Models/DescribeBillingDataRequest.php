@@ -33,19 +33,19 @@ The range between the start time and end time should be less than or equal to 90
 The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
 The range between the start time and end time should be less than or equal to 90 days
  * @method string getInterval() Obtain Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
  * @method void setInterval(string $Interval) Set Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
  * @method string getDomain() Obtain Domain name whose billing data is to be queried
  * @method void setDomain(string $Domain) Set Domain name whose billing data is to be queried
  * @method integer getProject() Obtain Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
@@ -95,12 +95,12 @@ The range between the start time and end time should be less than or equal to 90
 
     /**
      * @var string Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
      */
     public $Interval;
 
@@ -151,12 +151,12 @@ The range between the start time and end time should be less than or equal to 90
 The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
 The range between the start time and end time should be less than or equal to 90 days
      * @param string $Interval Time granularity, which can be:
-min: 1-minute. The query range should be less than or equal to 24 hours
-5min: 5-minute. The query range should be less than or equal to 31 days
-hour: 1-hour. The query range should be less than or equal to 31 days
-day: 1-day. The query period should be greater than 31 days
+`min`: 1-minute granularity. The query period cannot exceed 24 hours.
+`5min`: 5-minute granularity. The query range cannot exceed 31 days.
+`hour`: 1-hour granularity. The query period cannot exceed 31 days.
+`day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Currently, data query at 1-minute granularity is not supported if the `Area` field is `overseas`
+Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
      * @param string $Domain Domain name whose billing data is to be queried
      * @param integer $Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
 If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned

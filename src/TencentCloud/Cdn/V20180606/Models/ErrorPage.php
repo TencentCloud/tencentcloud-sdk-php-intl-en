@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Status code redirect configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+ * Status code redirect configuration, which is disabled by default.
  *
  * @method string getSwitch() Obtain Status code redirect configuration switch
 on: enabled

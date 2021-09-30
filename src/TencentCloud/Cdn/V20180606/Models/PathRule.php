@@ -58,6 +58,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRequestHeaders(array $RequestHeaders) Set Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method boolean getFullMatch() Obtain When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFullMatch(boolean $FullMatch) Set When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class PathRule extends AbstractModel
 {
@@ -109,6 +117,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RequestHeaders;
 
     /**
+     * @var boolean When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $FullMatch;
+
+    /**
      * @param boolean $Regex Whether to enable wildcard match (`*`).
 false: disable
 true: enable
@@ -128,6 +144,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $RequestHeaders Origin-pull header setting when the path matches.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param boolean $FullMatch When `Regex` is `false`, this parameter should be `true`.
+`false`: disabled
+`true`: enabled
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -173,6 +193,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 $obj->deserialize($value);
                 array_push($this->RequestHeaders, $obj);
             }
+        }
+
+        if (array_key_exists("FullMatch",$param) and $param["FullMatch"] !== null) {
+            $this->FullMatch = $param["FullMatch"];
         }
     }
 }

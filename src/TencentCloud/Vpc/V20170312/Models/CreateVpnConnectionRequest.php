@@ -20,8 +20,6 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateVpnConnection request structure.
  *
- * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
- * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
  * @method string getVpnGatewayId() Obtain The ID of the VPN gateway instance.
  * @method void setVpnGatewayId(string $VpnGatewayId) Set The ID of the VPN gateway instance.
  * @method string getCustomerGatewayId() Obtain The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
@@ -30,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpnConnectionName(string $VpnConnectionName) Set Gateway can be named freely, but the maximum length is 60 characters.
  * @method string getPreShareKey() Obtain The pre-shared key.
  * @method void setPreShareKey(string $PreShareKey) Set The pre-shared key.
+ * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
  * @method array getSecurityPolicyDatabases() Obtain The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
  * @method void setSecurityPolicyDatabases(array $SecurityPolicyDatabases) Set The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
  * @method IKEOptionsSpecification getIKEOptionsSpecification() Obtain Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
@@ -44,14 +46,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the health check
  * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the health check
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
+ * @method string getRouteType() Obtain Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+ * @method void setRouteType(string $RouteType) Set Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
-    /**
-     * @var string VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
-     */
-    public $VpcId;
-
     /**
      * @var string The ID of the VPN gateway instance.
      */
@@ -71,6 +70,12 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @var string The pre-shared key.
      */
     public $PreShareKey;
+
+    /**
+     * @var string VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
+     */
+    public $VpcId;
 
     /**
      * @var array The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
@@ -108,11 +113,17 @@ class CreateVpnConnectionRequest extends AbstractModel
     public $HealthCheckRemoteIp;
 
     /**
-     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+     * @var string Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+     */
+    public $RouteType;
+
+    /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
      * @param string $VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
      * @param string $PreShareKey The pre-shared key.
+     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
+This parameter is optional for a CCN-based VPN tunnel.
      * @param array $SecurityPolicyDatabases The SPD policy group, for example: {"10.0.0.5/24":["172.123.10.5/16"]}. 10.0.0.5/24 is the VPC internal IP range, and 172.123.10.5/16 is the IDC IP range. The user specifies the IP range in the VPC that can communicate with the IP range in the IDC.
      * @param IKEOptionsSpecification $IKEOptionsSpecification Internet Key Exchange (IKE) configuration. IKE has a self-protection mechanism. The network security protocol is configured by the user.
      * @param IPSECOptionsSpecification $IPSECOptionsSpecification IPSec configuration. The IPSec secure session configuration is provided by Tencent Cloud.
@@ -120,6 +131,7 @@ class CreateVpnConnectionRequest extends AbstractModel
      * @param boolean $EnableHealthCheck Whether the tunnel health check is supported.
      * @param string $HealthCheckLocalIp Local IP address for the health check
      * @param string $HealthCheckRemoteIp Peer IP address for the health check
+     * @param string $RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
      */
     function __construct()
     {
@@ -134,10 +146,6 @@ class CreateVpnConnectionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
-            $this->VpcId = $param["VpcId"];
-        }
-
         if (array_key_exists("VpnGatewayId",$param) and $param["VpnGatewayId"] !== null) {
             $this->VpnGatewayId = $param["VpnGatewayId"];
         }
@@ -152,6 +160,10 @@ class CreateVpnConnectionRequest extends AbstractModel
 
         if (array_key_exists("PreShareKey",$param) and $param["PreShareKey"] !== null) {
             $this->PreShareKey = $param["PreShareKey"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("SecurityPolicyDatabases",$param) and $param["SecurityPolicyDatabases"] !== null) {
@@ -192,6 +204,10 @@ class CreateVpnConnectionRequest extends AbstractModel
 
         if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
             $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
+        }
+
+        if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
+            $this->RouteType = $param["RouteType"];
         }
     }
 }

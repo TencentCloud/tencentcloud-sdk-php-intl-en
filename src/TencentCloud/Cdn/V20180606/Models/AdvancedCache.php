@@ -18,8 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this version does not support setting homepage cache rules.
+ * (Disused) Advanced cache validity configuration. You can use `RuleCache` instead.
  *
  * @method array getCacheRules() Obtain Cache expiration rule
 Note: this field may return null, indicating that no valid values can be obtained.

@@ -18,40 +18,40 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * URL redirect configuration
+ * Configuration of URL rewriting
  *
- * @method string getSwitch() Obtain URL redirect configuration switch
-on: enabled
-off: disabled
- * @method void setSwitch(string $Switch) Set URL redirect configuration switch
-on: enabled
-off: disabled
- * @method array getPathRules() Obtain URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPathRules(array $PathRules) Set URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
+ * @method void setSwitch(string $Switch) Set Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
+ * @method array getPathRules() Obtain Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPathRules(array $PathRules) Set Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class UrlRedirect extends AbstractModel
 {
     /**
-     * @var string URL redirect configuration switch
-on: enabled
-off: disabled
+     * @var string Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
      */
     public $Switch;
 
     /**
-     * @var array URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $PathRules;
 
     /**
-     * @param string $Switch URL redirect configuration switch
-on: enabled
-off: disabled
-     * @param array $PathRules URL redirect rule, which is required if `Switch` is `on`. There can be up to 10 rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Whether URL rewriting is enabled
+`on`: enabled
+`off`: disabled
+     * @param array $PathRules Rule of URL rewriting rule, which is required if `Switch` is `on`. There can be up to 10 rules.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

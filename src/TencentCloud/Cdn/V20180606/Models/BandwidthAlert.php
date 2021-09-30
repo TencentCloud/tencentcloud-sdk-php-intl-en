@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Bandwidth cap configuration. This is disabled by default.
  *
- * @method string getSwitch() Obtain Bandwidth cap configuration switch
-on: enabled
-off: disabled
- * @method void setSwitch(string $Switch) Set Bandwidth cap configuration switch
-on: enabled
-off: disabled
- * @method integer getBpsThreshold() Obtain Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBpsThreshold(integer $BpsThreshold) Set Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+ * @method void setSwitch(string $Switch) Set Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+ * @method integer getBpsThreshold() Obtain The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBpsThreshold(integer $BpsThreshold) Set The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCounterMeasure() Obtain Action taken when threshold is reached
 RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 RETURN_404: a 404 error will be returned for all requests.
@@ -38,23 +38,47 @@ Note: this field may return null, indicating that no valid values can be obtaine
 RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLastTriggerTime() Obtain The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLastTriggerTime(string $LastTriggerTime) Set The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getLastTriggerTime() Obtain The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLastTriggerTime(string $LastTriggerTime) Set The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getAlertSwitch() Obtain Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAlertSwitch(string $AlertSwitch) Set Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getAlertPercentage() Obtain Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAlertPercentage(integer $AlertPercentage) Set Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLastTriggerTimeOverseas() Obtain The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLastTriggerTimeOverseas(string $LastTriggerTimeOverseas) Set The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getMetric() Obtain Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMetric(string $Metric) Set Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class BandwidthAlert extends AbstractModel
 {
     /**
-     * @var string Bandwidth cap configuration switch
-on: enabled
-off: disabled
+     * @var string Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
      */
     public $Switch;
 
     /**
-     * @var integer Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $BpsThreshold;
 
@@ -67,23 +91,63 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CounterMeasure;
 
     /**
-     * @var string The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $LastTriggerTime;
 
     /**
-     * @param string $Switch Bandwidth cap configuration switch
-on: enabled
-off: disabled
-     * @param integer $BpsThreshold Bandwidth cap threshold (in bps)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AlertSwitch;
+
+    /**
+     * @var integer Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AlertPercentage;
+
+    /**
+     * @var string The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LastTriggerTimeOverseas;
+
+    /**
+     * @var string Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Metric;
+
+    /**
+     * @param string $Switch Specifies whether to enable the bandwidth cap
+`on`: enable
+`off`: disable
+     * @param integer $BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CounterMeasure Action taken when threshold is reached
 RESOLVE_DNS_TO_ORIGIN: requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 RETURN_404: a 404 error will be returned for all requests.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $LastTriggerTime The last time the bandwidth cap threshold was triggered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $AlertSwitch Indicates whether to trigger alerts when the upper limit is reached
+`on`: enable
+`off`: disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $AlertPercentage Triggers alarms when the ratio of bandwidth or traffic usage to the usage upper limit reaches the specified value
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $LastTriggerTimeOverseas The last time when the usage outside the Chinese mainland reached the upper limit
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Metric Dimension of the usage limit
+`bandwidth`: bandwidth
+`flux`: traffic
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -112,6 +176,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LastTriggerTime",$param) and $param["LastTriggerTime"] !== null) {
             $this->LastTriggerTime = $param["LastTriggerTime"];
+        }
+
+        if (array_key_exists("AlertSwitch",$param) and $param["AlertSwitch"] !== null) {
+            $this->AlertSwitch = $param["AlertSwitch"];
+        }
+
+        if (array_key_exists("AlertPercentage",$param) and $param["AlertPercentage"] !== null) {
+            $this->AlertPercentage = $param["AlertPercentage"];
+        }
+
+        if (array_key_exists("LastTriggerTimeOverseas",$param) and $param["LastTriggerTimeOverseas"] !== null) {
+            $this->LastTriggerTimeOverseas = $param["LastTriggerTimeOverseas"];
+        }
+
+        if (array_key_exists("Metric",$param) and $param["Metric"] !== null) {
+            $this->Metric = $param["Metric"];
         }
     }
 }

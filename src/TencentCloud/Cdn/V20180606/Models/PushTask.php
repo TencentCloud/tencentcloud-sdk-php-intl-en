@@ -28,10 +28,12 @@ use TencentCloud\Common\AbstractModel;
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
  * @method void setStatus(string $Status) Set Prefetch task status
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
  * @method integer getPercent() Obtain Prefetch progress in percentage
  * @method void setPercent(integer $Percent) Set Prefetch progress in percentage
  * @method string getCreateTime() Obtain Prefetch task submission time
@@ -66,6 +68,7 @@ class PushTask extends AbstractModel
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public $Status;
 
@@ -100,6 +103,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 `fail`: prefetch failed
 `done`: prefetch succeeded
 `process`: prefetch in progress
+`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
      * @param integer $Percent Prefetch progress in percentage
      * @param string $CreateTime Prefetch task submission time
      * @param string $Area Prefetch region

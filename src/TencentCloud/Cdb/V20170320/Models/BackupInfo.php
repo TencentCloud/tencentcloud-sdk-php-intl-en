@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) Set Backup file size in bytes
  * @method string getDate() Obtain Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
  * @method void setDate(string $Date) Set Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
- * @method string getIntranetUrl() Obtain Download address on the private network
- * @method void setIntranetUrl(string $IntranetUrl) Set Download address on the private network
- * @method string getInternetUrl() Obtain Download address on the public network
- * @method void setInternetUrl(string $InternetUrl) Set Download address on the public network
+ * @method string getIntranetUrl() Obtain Download address
+ * @method void setIntranetUrl(string $IntranetUrl) Set Download address
+ * @method string getInternetUrl() Obtain Download address
+ * @method void setInternetUrl(string $InternetUrl) Set Download address
  * @method string getType() Obtain Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
  * @method void setType(string $Type) Set Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
  * @method integer getBackupId() Obtain Backup subtask ID, which is used when backup files are deleted
@@ -65,12 +65,12 @@ class BackupInfo extends AbstractModel
     public $Date;
 
     /**
-     * @var string Download address on the private network
+     * @var string Download address
      */
     public $IntranetUrl;
 
     /**
-     * @var string Download address on the public network
+     * @var string Download address
      */
     public $InternetUrl;
 
@@ -118,8 +118,8 @@ class BackupInfo extends AbstractModel
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
-     * @param string $IntranetUrl Download address on the private network
-     * @param string $InternetUrl Download address on the public network
+     * @param string $IntranetUrl Download address
+     * @param string $InternetUrl Download address
      * @param string $Type Log type. Valid values: `logical` (logical cold backup), `physical` (physical cold backup).
      * @param integer $BackupId Backup subtask ID, which is used when backup files are deleted
      * @param string $Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).

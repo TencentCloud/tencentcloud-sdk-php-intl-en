@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) Set Backup file size in bytes
  * @method string getDate() Obtain File stored time in the format of 2016-03-17 02:10:37
  * @method void setDate(string $Date) Set File stored time in the format of 2016-03-17 02:10:37
- * @method string getIntranetUrl() Obtain Download address on the private network
- * @method void setIntranetUrl(string $IntranetUrl) Set Download address on the private network
- * @method string getInternetUrl() Obtain Download address on the public network
- * @method void setInternetUrl(string $InternetUrl) Set Download address on the public network
+ * @method string getIntranetUrl() Obtain Download address
+ * @method void setIntranetUrl(string $IntranetUrl) Set Download address
+ * @method string getInternetUrl() Obtain Download address
+ * @method void setInternetUrl(string $InternetUrl) Set Download address
  * @method string getType() Obtain Log type. Value range: binlog
  * @method void setType(string $Type) Set Log type. Value range: binlog
  * @method string getBinlogStartTime() Obtain Binlog file start file
@@ -55,12 +55,12 @@ class BinlogInfo extends AbstractModel
     public $Date;
 
     /**
-     * @var string Download address on the private network
+     * @var string Download address
      */
     public $IntranetUrl;
 
     /**
-     * @var string Download address on the public network
+     * @var string Download address
      */
     public $InternetUrl;
 
@@ -83,8 +83,8 @@ class BinlogInfo extends AbstractModel
      * @param string $Name Binlog backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date File stored time in the format of 2016-03-17 02:10:37
-     * @param string $IntranetUrl Download address on the private network
-     * @param string $InternetUrl Download address on the public network
+     * @param string $IntranetUrl Download address
+     * @param string $InternetUrl Download address
      * @param string $Type Log type. Value range: binlog
      * @param string $BinlogStartTime Binlog file start file
      * @param string $BinlogFinishTime Binlog file end time

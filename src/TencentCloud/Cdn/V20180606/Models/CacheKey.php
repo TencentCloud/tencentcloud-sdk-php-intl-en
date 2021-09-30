@@ -18,14 +18,14 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cache key configuration (filter parameter configuration)
+ * Cache key configuration (Ignore Query String configuration)
  *
  * @method string getFullUrlCache() Obtain Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
  * @method string getIgnoreCase() Obtain Whether caches are case insensitive
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIgnoreCase(string $IgnoreCase) Set Whether caches are case insensitive
@@ -59,8 +59,8 @@ class CacheKey extends AbstractModel
 {
     /**
      * @var string Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
      */
     public $FullUrlCache;
 
@@ -108,8 +108,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 
     /**
      * @param string $FullUrlCache Whether to enable full-path cache
-on: enable full-path cache (i.e., disable parameter filter)
-off: disable full-path cache (i.e., enable parameter filter)
+`on`: enables full-path cache (i.e., disables Ignore Query String)
+`off`: disables full-path cache (i.e., enables Ignore Query String)
      * @param string $IgnoreCase Whether caches are case insensitive
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param QueryStringKey $QueryString Request parameter contained in `CacheKey`

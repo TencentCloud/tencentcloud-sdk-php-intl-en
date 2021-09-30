@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSimpleCache(SimpleCache $SimpleCache) Set Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AdvancedCache getAdvancedCache() Obtain Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AdvancedCache getAdvancedCache() Obtain (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getRuleCache() Obtain Advanced path cache configuration
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setRuleCache(array $RuleCache) Set Advanced path cache configuration
@@ -44,8 +44,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SimpleCache;
 
     /**
-     * @var AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $AdvancedCache;
 
@@ -58,8 +58,8 @@ Note: this field may return null, indicating that no valid value is obtained.
     /**
      * @param SimpleCache $SimpleCache Basic cache expiration time configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedCache $AdvancedCache Advanced cache expiration configuration (This feature is in beta and not generally available yet.)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AdvancedCache $AdvancedCache (Disused) Advanced cache validity configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $RuleCache Advanced path cache configuration
 Note: this field may return null, indicating that no valid value is obtained.
      */

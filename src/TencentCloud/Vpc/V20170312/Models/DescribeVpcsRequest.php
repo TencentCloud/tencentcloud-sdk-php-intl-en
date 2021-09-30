@@ -23,19 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method array getVpcIds() Obtain The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
  * @method void setVpcIds(array $VpcIds) Set The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
  * @method array getFilters() Obtain Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
-<li>vpc-name - String - (Filter condition) VPC instance name.</li>
-<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+Valid filters include:
+<li>`vpc-name`: VPC instance name</li>
+<li>`is-default`: indicates whether it is the default VPC</li>
+<li>`vpc-id`: VPC instance ID, such as `vpc-f49l6u0z`</li>
+<li>`cidr-block`: VPC CIDR block</li>
+<li>`tag-key`: (optional) tag key</li>
+<li>`tag:tag-key`: (optional) tag key-value pair. Replace the `tag-key` with a specified tag value. For its usage, refer to the Example 2.</li>
+  **Note:** if one filter has multiple values, the logical relationship between these values is `OR`. The logical relationship between filters is `AND`.
  * @method void setFilters(array $Filters) Set Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
-<li>vpc-name - String - (Filter condition) VPC instance name.</li>
-<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+Valid filters include:
+<li>`vpc-name`: VPC instance name</li>
+<li>`is-default`: indicates whether it is the default VPC</li>
+<li>`vpc-id`: VPC instance ID, such as `vpc-f49l6u0z`</li>
+<li>`cidr-block`: VPC CIDR block</li>
+<li>`tag-key`: (optional) tag key</li>
+<li>`tag:tag-key`: (optional) tag key-value pair. Replace the `tag-key` with a specified tag value. For its usage, refer to the Example 2.</li>
+  **Note:** if one filter has multiple values, the logical relationship between these values is `OR`. The logical relationship between filters is `AND`.
  * @method string getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(string $Offset) Set Offset. Default value: 0.
  * @method string getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
@@ -50,12 +54,14 @@ class DescribeVpcsRequest extends AbstractModel
 
     /**
      * @var array Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
-<li>vpc-name - String - (Filter condition) VPC instance name.</li>
-<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+Valid filters include:
+<li>`vpc-name`: VPC instance name</li>
+<li>`is-default`: indicates whether it is the default VPC</li>
+<li>`vpc-id`: VPC instance ID, such as `vpc-f49l6u0z`</li>
+<li>`cidr-block`: VPC CIDR block</li>
+<li>`tag-key`: (optional) tag key</li>
+<li>`tag:tag-key`: (optional) tag key-value pair. Replace the `tag-key` with a specified tag value. For its usage, refer to the Example 2.</li>
+  **Note:** if one filter has multiple values, the logical relationship between these values is `OR`. The logical relationship between filters is `AND`.
      */
     public $Filters;
 
@@ -72,12 +78,14 @@ class DescribeVpcsRequest extends AbstractModel
     /**
      * @param array $VpcIds The VPC instance ID, such as `vpc-f49l6u0z`. Each request supports a maximum of 100 instances. `VpcIds` and `Filters` cannot be specified at the same time.
      * @param array $Filters Filter condition. `VpcIds` and `Filters` cannot be specified at the same time.
-<li>vpc-name - String - (Filter condition) VPC instance name.</li>
-<li>is-default - String - (Filter condition) Indicates whether it is the default VPC.</li>
-<li>vpc-id - String - (Filter condition) VPC instance ID, such as `vpc-f49l6u0z`.</li>
-<li>cidr-block - String - (Filter condition) VPC CIDR.</li>
-<li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
-<li>tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key is replaced with the specific tag key. For usage, refer to case 2.</li>
+Valid filters include:
+<li>`vpc-name`: VPC instance name</li>
+<li>`is-default`: indicates whether it is the default VPC</li>
+<li>`vpc-id`: VPC instance ID, such as `vpc-f49l6u0z`</li>
+<li>`cidr-block`: VPC CIDR block</li>
+<li>`tag-key`: (optional) tag key</li>
+<li>`tag:tag-key`: (optional) tag key-value pair. Replace the `tag-key` with a specified tag value. For its usage, refer to the Example 2.</li>
+  **Note:** if one filter has multiple values, the logical relationship between these values is `OR`. The logical relationship between filters is `AND`.
      * @param string $Offset Offset. Default value: 0.
      * @param string $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */

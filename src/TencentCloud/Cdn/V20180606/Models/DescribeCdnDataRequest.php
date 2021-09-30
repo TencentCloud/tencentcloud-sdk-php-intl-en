@@ -68,10 +68,14 @@ Specifies the status code to query. The return will be empty if the status code 
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
- * @method array getDomains() Obtain Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
- * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+ * @method array getDomains() Obtain Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
+ * @method void setDomains(array $Domains) Set Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
  * @method integer getProject() Obtain Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
  * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
@@ -180,8 +184,10 @@ Specifies the status code to query. The return will be empty if the status code 
     public $Metric;
 
     /**
-     * @var array Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+     * @var array Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
      */
     public $Domains;
 
@@ -288,8 +294,10 @@ The gap between the start time and end time should be less than or equal to 90 d
 `4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
 `5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
-     * @param array $Domains Specifies the list of domain names to be queried
-Up to 30 domain names can be queried at a time
+     * @param array $Domains Queries the information of specified domain names
+Specifies a domain name to query
+Specifies multiple domain names to query (30 at most at a time)
+Queries all Specifies an account to query all domain names
      * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
      * @param string $Interval Time granularity; valid values:

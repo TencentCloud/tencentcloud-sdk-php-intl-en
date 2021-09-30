@@ -36,8 +36,10 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
 `overseas`: prefetches resources to nodes outside Mainland China
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
- * @method string getLayer() Obtain If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
- * @method void setLayer(string $Layer) Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+ * @method string getLayer() Obtain If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
+ * @method void setLayer(string $Layer) Set If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
  * @method boolean getParseM3U8() Obtain Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
 Notes:
 1. This feature requires that the M3U8 index file can be directly requested and obtained.
@@ -72,7 +74,8 @@ Default value: `mainland`. You can prefetch a URL to nodes in a region provided 
     public $Area;
 
     /**
-     * @var string If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     * @var string If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
      */
     public $Layer;
 
@@ -94,7 +97,8 @@ Default value: `TencentCdn`
 `overseas`: prefetches resources to nodes outside Mainland China
 `global`: prefetches resources to global nodes
 Default value: `mainland`. You can prefetch a URL to nodes in a region provided that CDN service has been enabled for the domain name in the URL in the region.
-     * @param string $Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node
+     * @param string $Layer If this parameter is `middle` or left empty, prefetch will be performed onto the intermediate node.
+Note: resources prefetched outside the Chinese mainland will be cached to CDN nodes outside the Chinese mainland and the traffic generated will incur costs.
      * @param boolean $ParseM3U8 Whether to recursively resolve the M3U8 index file and prefetch the TS shards in it.
 Notes:
 1. This feature requires that the M3U8 index file can be directly requested and obtained.

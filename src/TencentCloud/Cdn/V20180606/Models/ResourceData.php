@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * This API is used to query an object and its access details
  *
- * @method string getResource() Obtain Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
- * @method void setResource(string $Resource) Set Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+ * @method string getResource() Obtain Resource name, which is classified as follows based on different query filters:
+A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
+Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: account-level data, which is aggregated details of all domain names of an account.
+ * @method void setResource(string $Resource) Set Resource name, which is classified as follows based on different query filters:
+A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
+Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: account-level data, which is aggregated details of all domain names of an account.
  * @method array getCdnData() Obtain Data details of a resource
  * @method void setCdnData(array $CdnData) Set Data details of a resource
  */
 class ResourceData extends AbstractModel
 {
     /**
-     * @var string Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+     * @var string Resource name, which is classified as follows based on different query filters:
+A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
+Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: account-level data, which is aggregated details of all domain names of an account.
      */
     public $Resource;
 
@@ -50,11 +50,11 @@ all: This indicates the details at the account level
     public $CdnData;
 
     /**
-     * @param string $Resource Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+     * @param string $Resource Resource name, which is classified as follows based on different query filters:
+A single domain name: queries domain name details by a domain name. The details of the domain name will be displayed when the passed parameter `detail` is `true` (the `detail` parameter defaults to `false`).
+Multiple domain names: queries domain name details by multiple domain names. The aggregated details of the domain names will be displayed.
+Project ID: queries domain name details by a project ID. The aggregated details of the domain names of the project will be displayed.
+`all`: account-level data, which is aggregated details of all domain names of an account.
      * @param array $CdnData Data details of a resource
      */
     function __construct()

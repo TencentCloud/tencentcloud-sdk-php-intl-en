@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Browser cache rule configuration. This is used to set the MaxAge default value and is disabled by default. (This feature is in beta and not generally available yet.)
+ * Browser cache rule configuration, which is used to set the default value of `MaxAge` and is disabled by default.
  *
  * @method string getSwitch() Obtain Browser cache configuration switch
 on: enabled
