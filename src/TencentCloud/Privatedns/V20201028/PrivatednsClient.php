@@ -29,6 +29,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\DeletePrivateZoneRecordResponse DeletePrivateZoneRecord(Models\DeletePrivateZoneRecordRequest $req) This API is used to delete a DNS record for a private domain.
  * @method Models\DescribeAuditLogResponse DescribeAuditLog(Models\DescribeAuditLogRequest $req) This API is used to get the list of operation logs.
  * @method Models\DescribeDashboardResponse DescribeDashboard(Models\DescribeDashboardRequest $req) This API is used to get the overview of private DNS records.
+ * @method Models\DescribePrivateDNSAccountListResponse DescribePrivateDNSAccountList(Models\DescribePrivateDNSAccountListRequest $req) This API is used to get the list of Private DNS accounts.
  * @method Models\DescribePrivateZoneResponse DescribePrivateZone(Models\DescribePrivateZoneRequest $req) This API is used to get the private domain information.
  * @method Models\DescribePrivateZoneListResponse DescribePrivateZoneList(Models\DescribePrivateZoneListRequest $req) This API is used to get the list of private domains.
  * @method Models\DescribePrivateZoneRecordListResponse DescribePrivateZoneRecordList(Models\DescribePrivateZoneRecordListRequest $req) This API is used to get the list of records for a private domain.
