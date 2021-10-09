@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms, which is optional. The current minimum value is 60,000 ms
  * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 3,600,000 ms
  * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+ * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+ * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+ * @method string getAclRuleName() Obtain Name of the preset ACL rule.
+ * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTopicRequest extends AbstractModel
     public $SegmentMs;
 
     /**
+     * @var integer Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var string Name of the preset ACL rule.
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
      * @param integer $PartitionNum Number of partitions, which should be greater than 0
@@ -120,6 +134,8 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
      * @param integer $RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
      * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+     * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * @param string $AclRuleName Name of the preset ACL rule.
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
             $this->SegmentMs = $param["SegmentMs"];
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

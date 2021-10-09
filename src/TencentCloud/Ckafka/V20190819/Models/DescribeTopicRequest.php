@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
  * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
  * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+ * @method string getAclRuleName() Obtain Name of the preset ACL rule.
+ * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
  */
 class DescribeTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTopicRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string Name of the preset ACL rule.
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $SearchWord Filter by `topicName`. Fuzzy search is supported
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
      * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * @param string $AclRuleName Name of the preset ACL rule.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTopicRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

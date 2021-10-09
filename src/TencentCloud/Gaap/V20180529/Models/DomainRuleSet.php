@@ -110,6 +110,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 1: changing;
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getBanStatus() Obtain Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBanStatus(string $BanStatus) Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -235,6 +239,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DomainStatus;
 
     /**
+     * @var string Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BanStatus;
+
+    /**
      * @param string $Domain Forwarding rule domain name.
      * @param array $RuleSet Forwarding rule list of the domain name.
      * @param string $CertificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
@@ -280,6 +290,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 1: changing;
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -383,6 +395,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DomainStatus",$param) and $param["DomainStatus"] !== null) {
             $this->DomainStatus = $param["DomainStatus"];
+        }
+
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
         }
     }
 }

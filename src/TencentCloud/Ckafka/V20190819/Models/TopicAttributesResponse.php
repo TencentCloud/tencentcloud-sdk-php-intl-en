@@ -38,6 +38,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setConfig(Config $Config) Set Topic configuration array
  * @method array getPartitions() Obtain Partition details
  * @method void setPartitions(array $Partitions) Set Partition details
+ * @method integer getEnableAclRule() Obtain Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setEnableAclRule(integer $EnableAclRule) Set Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method array getAclRuleList() Obtain Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setAclRuleList(array $AclRuleList) Set Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -83,6 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Partitions;
 
     /**
+     * @var integer Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var array Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $AclRuleList;
+
+    /**
      * @param string $TopicId Topic ID
      * @param integer $CreateTime Creation time
      * @param string $Note Topic remarks
@@ -92,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $IpWhiteList IP allowlist list
      * @param Config $Config Topic configuration array
      * @param array $Partitions Partition details
+     * @param integer $EnableAclRule Switch of the preset ACL rule. `1`: enable, `0`: disable.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param array $AclRuleList Preset ACL rule list.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -141,6 +165,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new TopicPartitionDO();
                 $obj->deserialize($value);
                 array_push($this->Partitions, $obj);
+            }
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleList",$param) and $param["AclRuleList"] !== null) {
+            $this->AclRuleList = [];
+            foreach ($param["AclRuleList"] as $key => $value){
+                $obj = new AclRule();
+                $obj->deserialize($value);
+                array_push($this->AclRuleList, $obj);
             }
         }
     }

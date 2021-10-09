@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSecretName() Obtain Secret name. This field is only valid for SSH key secrets.
  * @method void setSecretName(string $SecretName) Set Secret name. This field is only valid for SSH key secrets.
- * @method string getSSHKeyId() Obtain 
- * @method void setSSHKeyId(string $SSHKeyId) Set 
+ * @method string getSSHKeyId() Obtain ID of the key pair, which is the unique identifier of the key pair in the CVM.
+ * @method void setSSHKeyId(string $SSHKeyId) Set ID of the key pair, which is the unique identifier of the key pair in the CVM.
  */
 class GetSSHKeyPairValueRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class GetSSHKeyPairValueRequest extends AbstractModel
     public $SecretName;
 
     /**
-     * @var string 
+     * @var string ID of the key pair, which is the unique identifier of the key pair in the CVM.
      */
     public $SSHKeyId;
 
     /**
      * @param string $SecretName Secret name. This field is only valid for SSH key secrets.
-     * @param string $SSHKeyId 
+     * @param string $SSHKeyId ID of the key pair, which is the unique identifier of the key pair in the CVM.
      */
     function __construct()
     {

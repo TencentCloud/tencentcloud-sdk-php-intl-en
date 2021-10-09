@@ -54,6 +54,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setRetentionTimeConfig(TopicRetentionTimeConfigRsp $RetentionTimeConfig) Set Message retention time configuration (for recording the latest retention time)
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  */
 class TopicDetail extends AbstractModel
 {
@@ -127,6 +131,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RetentionTimeConfig;
 
     /**
+     * @var integer `0`: normal, `1`: deleted, `2`: deleting
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $TopicName Topic name
      * @param string $TopicId Topic ID
      * @param integer $PartitionNum Number of partitions
@@ -143,6 +153,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param Config $Config Advanced configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param TopicRetentionTimeConfigRsp $RetentionTimeConfig Message retention time configuration (for recording the latest retention time)
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $Status `0`: normal, `1`: deleted, `2`: deleting
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -210,6 +222,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
         if (array_key_exists("RetentionTimeConfig",$param) and $param["RetentionTimeConfig"] !== null) {
             $this->RetentionTimeConfig = new TopicRetentionTimeConfigRsp();
             $this->RetentionTimeConfig->deserialize($param["RetentionTimeConfig"]);
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

@@ -112,9 +112,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setModifyConfigTime(integer $ModifyConfigTime) Set Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getProxyType() Obtain Connection type
+ * @method integer getProxyType() Obtain Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setProxyType(integer $ProxyType) Set Connection type
+ * @method void setProxyType(integer $ProxyType) Set Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -131,6 +131,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
  * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getBanStatus() Obtain Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setBanStatus(string $BanStatus) Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
  */
 class ProxyInfo extends AbstractModel
@@ -282,7 +286,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ModifyConfigTime;
 
     /**
-     * @var integer Connection type
+     * @var integer Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $ProxyType;
@@ -310,6 +314,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $PackageType;
+
+    /**
+     * @var string Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $BanStatus;
 
     /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -358,7 +368,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ModifyConfigTime Configuration change time
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ProxyType Connection type
+     * @param integer $ProxyType Connection type. `100`: THUNDER connection; `103`: Microsoft connection.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -367,6 +377,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $NetworkType Network type. Valid values: `normal`, `cn2`
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -507,6 +519,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
+            $this->BanStatus = $param["BanStatus"];
         }
     }
 }

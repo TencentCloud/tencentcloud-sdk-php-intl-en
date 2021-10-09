@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
  * @method string getCleanUpPolicy() Obtain Message deletion policy. Valid values: delete, compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Message deletion policy. Valid values: delete, compact
+ * @method array getIpWhiteList() Obtain IP allowlist, which is required if the value of `enableWhileList` is 1.
+ * @method void setIpWhiteList(array $IpWhiteList) Set IP allowlist, which is required if the value of `enableWhileList` is 1.
+ * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+ * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+ * @method string getAclRuleName() Obtain Name of the preset ACL rule.
+ * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -94,6 +100,21 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $CleanUpPolicy;
 
     /**
+     * @var array IP allowlist, which is required if the value of `enableWhileList` is 1.
+     */
+    public $IpWhiteList;
+
+    /**
+     * @var integer Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     */
+    public $EnableAclRule;
+
+    /**
+     * @var string Name of the preset ACL rule.
+     */
+    public $AclRuleName;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -104,6 +125,9 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
      * @param integer $MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
      * @param string $CleanUpPolicy Message deletion policy. Valid values: delete, compact
+     * @param array $IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
+     * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
+     * @param string $AclRuleName Name of the preset ACL rule.
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("CleanUpPolicy",$param) and $param["CleanUpPolicy"] !== null) {
             $this->CleanUpPolicy = $param["CleanUpPolicy"];
+        }
+
+        if (array_key_exists("IpWhiteList",$param) and $param["IpWhiteList"] !== null) {
+            $this->IpWhiteList = $param["IpWhiteList"];
+        }
+
+        if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {
+            $this->EnableAclRule = $param["EnableAclRule"];
+        }
+
+        if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
+            $this->AclRuleName = $param["AclRuleName"];
         }
     }
 }

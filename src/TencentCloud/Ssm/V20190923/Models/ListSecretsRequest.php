@@ -52,8 +52,16 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
  * @method void setSecretType(integer $SecretType) Set `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
- * @method string getProductName() Obtain 
- * @method void setProductName(string $ProductName) Set 
+ * @method string getProductName() Obtain This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
+ * @method void setProductName(string $ProductName) Set This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
  */
 class ListSecretsRequest extends AbstractModel
 {
@@ -102,7 +110,11 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
     public $SecretType;
 
     /**
-     * @var string 
+     * @var string This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
      */
     public $ProductName;
 
@@ -123,7 +135,11 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
      * @param integer $SecretType `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
-     * @param string $ProductName 
+     * @param string $ProductName This parameter is valid only when SecretType is `1`.
+ 
+An empty value indicates querying all types of Tencent Cloud service secrets.
+`Mysql`: queries MySQL database credentials.
+`Tdsql-mysql`: queries TDSQL MySQL database credentials.
      */
     function __construct()
     {
