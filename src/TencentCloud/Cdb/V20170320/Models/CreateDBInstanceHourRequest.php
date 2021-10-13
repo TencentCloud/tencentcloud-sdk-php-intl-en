@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCpu(integer $Cpu) Set The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
  * @method integer getAutoSyncFlag() Obtain Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
  * @method void setAutoSyncFlag(integer $AutoSyncFlag) Set Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+ * @method string getCageId() Obtain Financial cage ID.
+ * @method void setCageId(string $CageId) Set Financial cage ID.
  */
 class CreateDBInstanceHourRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AutoSyncFlag;
 
     /**
+     * @var string Financial cage ID.
+     */
+    public $CageId;
+
+    /**
      * @param integer $GoodsNum Number of instances. Value range: 1-100. Default value: 1.
      * @param integer $Memory Instance memory size in MB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported memory specifications.
      * @param integer $Volume Instance disk size in GB. Please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported disk specifications.
@@ -272,6 +279,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param integer $InstanceNodes The number of nodes of the instance. To purchase a read-only replica or a basic instance, set this parameter to `1` or leave it empty. To purchase a three-node instance, set this parameter to `3` or specify the `BackupZone` parameter. If the instance to be purchased is a source instance and both `BackupZone` and this parameter are left empty, the value `2` will be used, which indicates the source instance will have two nodes.
      * @param integer $Cpu The number of CPU cores of the instance. If this parameter is left empty, the number of CPU cores depends on the `Memory` value.
      * @param integer $AutoSyncFlag Whether to automatically start disaster recovery synchronization. This parameter takes effect only for disaster recovery instances. Valid values: `0` (no), `1` (yes).
+     * @param string $CageId Financial cage ID.
      */
     function __construct()
     {
@@ -419,6 +427,10 @@ class CreateDBInstanceHourRequest extends AbstractModel
 
         if (array_key_exists("AutoSyncFlag",$param) and $param["AutoSyncFlag"] !== null) {
             $this->AutoSyncFlag = $param["AutoSyncFlag"];
+        }
+
+        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
+            $this->CageId = $param["CageId"];
         }
     }
 }

@@ -54,6 +54,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Start: task started</li>
 <li>Success: task ended successfully</li>
 <li>Error: exceptional</li>
+ * @method integer getBizId() Obtain ID of the application submitted for detection
+ * @method void setBizId(integer $BizId) Set ID of the application submitted for detection
  */
 class DescribeScanResult extends AbstractModel
 {
@@ -123,6 +125,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Status;
 
     /**
+     * @var integer ID of the application submitted for detection
+     */
+    public $BizId;
+
+    /**
      * @param integer $Code Business return code
      * @param string $DataId Unique data ID
      * @param integer $ScanFinishTime Detection completion timestamp
@@ -140,6 +147,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Start: task started</li>
 <li>Success: task ended successfully</li>
 <li>Error: exceptional</li>
+     * @param integer $BizId ID of the application submitted for detection
      */
     function __construct()
     {
@@ -205,6 +213,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BizId",$param) and $param["BizId"] !== null) {
+            $this->BizId = $param["BizId"];
         }
     }
 }

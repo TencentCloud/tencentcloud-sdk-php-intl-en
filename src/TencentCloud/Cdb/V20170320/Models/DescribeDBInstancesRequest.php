@@ -74,6 +74,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployGroupIds(array $DeployGroupIds) Set Placement group ID list.
  * @method array getTagKeysForSearch() Obtain Whether to use the tag key as a filter condition
  * @method void setTagKeysForSearch(array $TagKeysForSearch) Set Whether to use the tag key as a filter condition
+ * @method array getCageIds() Obtain Financial cage IDs.
+ * @method void setCageIds(array $CageIds) Set Financial cage IDs.
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -213,6 +215,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $TagKeysForSearch;
 
     /**
+     * @var array Financial cage IDs.
+     */
+    public $CageIds;
+
+    /**
      * @param integer $ProjectId Project ID. You can use the [project list querying API](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) to query the project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -240,6 +247,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $WithMaster Whether primary instances are included. Valid values: 0 (not included), 1 (included). Default value: 1.
      * @param array $DeployGroupIds Placement group ID list.
      * @param array $TagKeysForSearch Whether to use the tag key as a filter condition
+     * @param array $CageIds Financial cage IDs.
      */
     function __construct()
     {
@@ -360,6 +368,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeysForSearch",$param) and $param["TagKeysForSearch"] !== null) {
             $this->TagKeysForSearch = $param["TagKeysForSearch"];
+        }
+
+        if (array_key_exists("CageIds",$param) and $param["CageIds"] !== null) {
+            $this->CageIds = $param["CageIds"];
         }
     }
 }

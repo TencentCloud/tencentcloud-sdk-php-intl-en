@@ -27,19 +27,23 @@ use TencentCloud\Common\AbstractModel;
 <li>Enabled</li>
 <li>Disabled</li>
  * @method string getAuthType() Obtain Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
  * @method void setAuthType(string $AuthType) Set Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
- * @method array getReferers() Obtain List for referer authentication
- * @method void setReferers(array $Referers) Set List for referer authentication
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
+ * @method array getReferers() Obtain The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
+ * @method void setReferers(array $Referers) Set The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
  * @method string getBlankRefererAllowed() Obtain Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
  * @method void setBlankRefererAllowed(string $BlankRefererAllowed) Set Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
  */
 class RefererAuthPolicy extends AbstractModel
 {
@@ -52,20 +56,22 @@ class RefererAuthPolicy extends AbstractModel
 
     /**
      * @var string Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
      */
     public $AuthType;
 
     /**
-     * @var array List for referer authentication
+     * @var array The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
      */
     public $Referers;
 
     /**
      * @var string Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
      */
     public $BlankRefererAllowed;
 
@@ -74,12 +80,14 @@ class RefererAuthPolicy extends AbstractModel
 <li>Enabled</li>
 <li>Disabled</li>
      * @param string $AuthType Referer authentication method. Valid values:
-<li>`Black`: blocklist</li>
-<li>`White`: allowlist</li>
-     * @param array $Referers List for referer authentication
+<li>`Black`: blocklist. Any HTTP request carrying a referer in the `Referers` list will be rejected. </li>
+<li>`White`: allowlist. Only HTTP requests carrying referers in the `Referers` list will be accepted.</li>
+When `Status` is set to `Enabled`, `AuthType` must be specified.
+     * @param array $Referers The list of referers (up to 20). When `Status` is set to `Enabled`, `Referers` cannot be empty. Enter domain names as referers.
      * @param string $BlankRefererAllowed Whether to allow requests with empty referer to access this domain name. Valid values:
-<li>Yes</li>
-<li>No</li>
+<li>`Yes`</li>
+<li>`No`</li>
+When `Status` is set to `Enabled`, `BlankRefererAllowed` must be specified.
      */
     function __construct()
     {
