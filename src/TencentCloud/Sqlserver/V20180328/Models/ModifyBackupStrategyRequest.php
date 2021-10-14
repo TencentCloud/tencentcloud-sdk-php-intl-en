@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupTime(integer $BackupTime) Set Backup time. Value range: an integer from 0 to 23.
  * @method integer getBackupDay() Obtain Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
  * @method void setBackupDay(integer $BackupDay) Set Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
+ * @method string getBackupModel() Obtain Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+ * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
  */
 class ModifyBackupStrategyRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $BackupDay;
 
     /**
+     * @var string Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+     */
+    public $BackupModel;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $BackupType Backup mode, which supports daily backup only. Valid value: daily.
      * @param integer $BackupTime Backup time. Value range: an integer from 0 to 23.
      * @param integer $BackupDay Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
+     * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyBackupStrategyRequest extends AbstractModel
 
         if (array_key_exists("BackupDay",$param) and $param["BackupDay"] !== null) {
             $this->BackupDay = $param["BackupDay"];
+        }
+
+        if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
+            $this->BackupModel = $param["BackupModel"];
         }
     }
 }

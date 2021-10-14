@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(integer $VpcId) Set Instance VPC ID, which will be 0 if the basic network is used
  * @method integer getSubnetId() Obtain Instance VPC subnet ID, which will be 0 if the basic network is used
  * @method void setSubnetId(integer $SubnetId) Set Instance VPC subnet ID, which will be 0 if the basic network is used
- * @method integer getStatus() Obtain Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
- * @method void setStatus(integer $Status) Set Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+ * @method integer getStatus() Obtain Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
  * @method string getVip() Obtain Instance access IP
  * @method void setVip(string $Vip) Set Instance access IP
  * @method integer getVport() Obtain Instance access port
@@ -104,6 +104,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set The list of tags associated with the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getBackupModel() Obtain Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -143,7 +147,7 @@ class DBInstance extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var integer Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * @var integer Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
      */
     public $Status;
 
@@ -298,6 +302,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ResourceTags;
 
     /**
+     * @var string Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BackupModel;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -305,7 +315,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $ZoneId Instance AZ ID
      * @param integer $VpcId Instance VPC ID, which will be 0 if the basic network is used
      * @param integer $SubnetId Instance VPC subnet ID, which will be 0 if the basic network is used
-     * @param integer $Status Instance status. Valid values: <li>1: applying </li> <li>2: running </li> <li>3: restrictedly running (primary/secondary switching) </li> <li>4: isolated </li> <li>5: repossessing </li> <li>6: repossessed </li> <li>7: task running (e.g., backing up or rolling back the instance) </li> <li>8: decommissioned </li> <li>9: scaling </li> <li>10: migrating </li> <li>11: read-only </li> <li>12: restarting </li>
+     * @param integer $Status Instance status. Valid values: <li>1: creating</li> <li>2: running</li> <li>3: instance operations restricted (due to the ongoing primary-replica switch)</li> <li>4: isolated</li> <li>5: repossessing</li> <li>6: repossessed</li> <li>7: running tasks (such as backup and rollback tasks)</li> <li>8: eliminated</li> <li>9: expanding capacity</li> <li>10: migrating</li> <li>11: read-only</li> <li>12: restarting</li>  <li>13: modifying configuration and waiting for switch</li> <li>14: implementing pub/sub</li> <li>15: modifying pub/sub configuration</li> <li>16: modifying configuration and switching</li> <li>17: creating read-only instances</li>
      * @param string $Vip Instance access IP
      * @param integer $Vport Instance access port
      * @param string $CreateTime Instance creation time
@@ -339,6 +349,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $HAFlag Disaster recovery type. Valid values: MIRROR (image), ALWAYSON (AlwaysOn), SINGLE (singleton).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $ResourceTags The list of tags associated with the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -505,6 +517,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
+            $this->BackupModel = $param["BackupModel"];
         }
     }
 }

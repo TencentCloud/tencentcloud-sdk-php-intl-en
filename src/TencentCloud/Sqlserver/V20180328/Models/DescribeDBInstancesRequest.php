@@ -72,6 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) Set The list of instance tags
  * @method string getSearchKey() Obtain Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
  * @method void setSearchKey(string $SearchKey) Set Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+ * @method array getUidSet() Obtain Unique Uid of an instance
+ * @method void setUidSet(array $UidSet) Set Unique Uid of an instance
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -158,6 +160,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SearchKey;
 
     /**
+     * @var array Unique Uid of an instance
+     */
+    public $UidSet;
+
+    /**
      * @param integer $ProjectId Project ID
      * @param integer $Status Instance status. Valid values:
 <li>1: applying</li>
@@ -184,6 +191,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param string $Zone Instance availability zone, such as ap-guangzhou-2
      * @param array $TagKeys The list of instance tags
      * @param string $SearchKey Keyword used for fuzzy match, including instance ID, instance name, and instance private IP
+     * @param array $UidSet Unique Uid of an instance
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
             $this->SearchKey = $param["SearchKey"];
+        }
+
+        if (array_key_exists("UidSet",$param) and $param["UidSet"] !== null) {
+            $this->UidSet = $param["UidSet"];
         }
     }
 }

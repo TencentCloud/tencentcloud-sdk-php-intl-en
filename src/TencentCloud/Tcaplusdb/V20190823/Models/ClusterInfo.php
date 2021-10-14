@@ -88,6 +88,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setDbaUins(array $DbaUins) Set Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getDataFlowStatus() Obtain Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDataFlowStatus(integer $DataFlowStatus) Set Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method KafkaInfo getKafkaInfo() Obtain CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setKafkaInfo(KafkaInfo $KafkaInfo) Set CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -222,6 +230,18 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $DbaUins;
 
     /**
+     * @var integer Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DataFlowStatus;
+
+    /**
+     * @var KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $KafkaInfo;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -256,6 +276,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $Censorship Whether the cluster operation approval feature is enabled. Valid values: `0` (disabled), `1` (enabled)
      * @param array $DbaUins Approver UIN list
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $DataFlowStatus Whether data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param KafkaInfo $KafkaInfo CKafka information when data subscription is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -374,6 +398,15 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("DbaUins",$param) and $param["DbaUins"] !== null) {
             $this->DbaUins = $param["DbaUins"];
+        }
+
+        if (array_key_exists("DataFlowStatus",$param) and $param["DataFlowStatus"] !== null) {
+            $this->DataFlowStatus = $param["DataFlowStatus"];
+        }
+
+        if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
+            $this->KafkaInfo = new KafkaInfo();
+            $this->KafkaInfo->deserialize($param["KafkaInfo"]);
         }
     }
 }

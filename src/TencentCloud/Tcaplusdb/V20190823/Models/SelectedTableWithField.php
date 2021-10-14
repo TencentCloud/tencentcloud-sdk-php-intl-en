@@ -30,10 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableIdlType(string $TableIdlType) Set Table description language. Valid values: `PROTO`, `TDR`
  * @method string getTableType() Obtain Table data structure. Valid values: `GENERIC`, `LIST`
  * @method void setTableType(string $TableType) Set Table data structure. Valid values: `GENERIC`, `LIST`
- * @method array getSelectedFields() Obtain The list of fields on which indexes need to be created
- * @method void setSelectedFields(array $SelectedFields) Set The list of fields on which indexes need to be created
+ * @method array getSelectedFields() Obtain The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
+ * @method void setSelectedFields(array $SelectedFields) Set The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
  * @method integer getShardNum() Obtain The number of index shards
  * @method void setShardNum(integer $ShardNum) Set The number of index shards
+ * @method KafkaInfo getKafkaInfo() Obtain CKafka instance information
+ * @method void setKafkaInfo(KafkaInfo $KafkaInfo) Set CKafka instance information
  */
 class SelectedTableWithField extends AbstractModel
 {
@@ -63,7 +65,7 @@ class SelectedTableWithField extends AbstractModel
     public $TableType;
 
     /**
-     * @var array The list of fields on which indexes need to be created
+     * @var array The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
      */
     public $SelectedFields;
 
@@ -73,13 +75,19 @@ class SelectedTableWithField extends AbstractModel
     public $ShardNum;
 
     /**
+     * @var KafkaInfo CKafka instance information
+     */
+    public $KafkaInfo;
+
+    /**
      * @param string $TableGroupId ID of the table group where the table resides
      * @param string $TableName Table name
      * @param string $TableInstanceId Table ID
      * @param string $TableIdlType Table description language. Valid values: `PROTO`, `TDR`
      * @param string $TableType Table data structure. Valid values: `GENERIC`, `LIST`
-     * @param array $SelectedFields The list of fields on which indexes need to be created
+     * @param array $SelectedFields The list of fields on which indexes will be created, table caching enabled, or data subscription enabled
      * @param integer $ShardNum The number of index shards
+     * @param KafkaInfo $KafkaInfo CKafka instance information
      */
     function __construct()
     {
@@ -125,6 +133,11 @@ class SelectedTableWithField extends AbstractModel
 
         if (array_key_exists("ShardNum",$param) and $param["ShardNum"] !== null) {
             $this->ShardNum = $param["ShardNum"];
+        }
+
+        if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
+            $this->KafkaInfo = new KafkaInfo();
+            $this->KafkaInfo->deserialize($param["KafkaInfo"]);
         }
     }
 }

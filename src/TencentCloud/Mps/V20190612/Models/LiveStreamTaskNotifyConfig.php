@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQueueName(string $QueueName) Set This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
  * @method string getTopicName() Obtain This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
  * @method void setTopicName(string $TopicName) Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+ * @method string getNotifyType() Obtain Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+ * @method void setNotifyType(string $NotifyType) Set Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+ * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
+ * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
  */
 class LiveStreamTaskNotifyConfig extends AbstractModel
 {
@@ -52,10 +56,22 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
     public $TopicName;
 
     /**
+     * @var string Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     */
+    public $NotifyType;
+
+    /**
+     * @var string HTTP callback URL, required if `NotifyType` is set to `URL`
+     */
+    public $NotifyUrl;
+
+    /**
      * @param string $CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
      * @param string $CmqRegion CMQ region, such as `sh` and `bj`.
      * @param string $QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
      * @param string $TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * @param string $NotifyType Notification type, `CMQ` by default. If this parameter is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class LiveStreamTaskNotifyConfig extends AbstractModel
 
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("NotifyType",$param) and $param["NotifyType"] !== null) {
+            $this->NotifyType = $param["NotifyType"];
+        }
+
+        if (array_key_exists("NotifyUrl",$param) and $param["NotifyUrl"] !== null) {
+            $this->NotifyUrl = $param["NotifyUrl"];
         }
     }
 }

@@ -32,36 +32,58 @@ The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
  * @method string getScene() Obtain Reserved field.
  * @method void setScene(string $Scene) Set Reserved field.
- * @method string getLanguageType() Obtain Language to be recognized.
+ * @method string getLanguageType() Obtain Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
- * @method void setLanguageType(string $LanguageType) Set Language to be recognized.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
+ * @method void setLanguageType(string $LanguageType) Set Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
  * @method boolean getIsPdf() Obtain Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
  * @method void setIsPdf(boolean $IsPdf) Set Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
  * @method integer getPdfPageNumber() Obtain Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
@@ -90,21 +112,32 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public $Scene;
 
     /**
-     * @var string Language to be recognized.
+     * @var string Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
      */
     public $LanguageType;
 
@@ -130,21 +163,32 @@ The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 
 The image/PDF cannot exceed 7 MB after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, BMP, and PDF formats are supported.
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param string $Scene Reserved field.
-     * @param string $LanguageType Language to be recognized.
+     * @param string $LanguageType Language to recognize
 The language can be automatically recognized or manually specified. Chinese-English mix (`zh`) is selected by default. Mixed characters in English and each supported language can be recognized together.
 Valid values:
-zh\auto\jap\kor\
-spa\fre\ger\por\
-vie\may\rus\ita\
-hol\swe\fin\dan\
-nor\hun\tha\lat\ara
-Value meanings:
-Chinese-English mix, automatic recognition, Japanese, Korean,
-Spanish, French, German, Portuguese,
-Vietnamese, Malay, Russian, Italian,
-Dutch, Swedish, Finnish, Danish,
-Norwegian, Hungarian, Thai, Latin,
-Arabic.
+`zh`: Chinese-English mix
+`zh_rare`: supports letters, digits, rare Chinese characters, Traditional Chinese characters, special characters, etc.
+`auto`
+`mix`: language mix
+`jap`: Japanese
+`kor`: Korean
+`spa`: Spanish
+`fre`: French
+`ger`: German
+`por`: Portuguese
+`vie`: Vietnamese
+`may`: Malay
+`rus`: Russian
+`ita`: Italian
+`hol`: Dutch
+`swe`: Swedish
+`fin`: Finnish
+`dan`: Danish
+`nor`: Norwegian
+`hun`: Hungarian
+`tha`: Thai
+`hi`: Hindi
+`ara`: Arabic
      * @param boolean $IsPdf Whether to enable PDF recognition. Default value: false. After this feature is enabled, both images and PDF files can be recognized at the same time.
      * @param integer $PdfPageNumber Page number of the PDF page that needs to be recognized. Only one single PDF page can be recognized. This parameter is valid if the uploaded file is a PDF and the value of the `IsPdf` parameter is `true`. Default value: 1.
      * @param boolean $IsWords Whether to return the character information. Default value: `false`

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyList(array $ProxyList) Set Information of the machine at the access layer (tcaproxy) in a dedicated cluster
  * @method integer getClusterType() Obtain Cluster type. Valid values: `1` (standard), `2` (dedicated)
  * @method void setClusterType(integer $ClusterType) Set Cluster type. Valid values: `1` (standard), `2` (dedicated)
+ * @method integer getAuthType() Obtain Authentication type. Valid values: `0` (static password), `1` (signature)
+ * @method void setAuthType(integer $AuthType) Set Authentication type. Valid values: `0` (static password), `1` (signature)
  */
 class CreateClusterRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateClusterRequest extends AbstractModel
     public $ClusterType;
 
     /**
+     * @var integer Authentication type. Valid values: `0` (static password), `1` (signature)
+     */
+    public $AuthType;
+
+    /**
      * @param string $IdlType Cluster data description language type, such as `PROTO`, `TDR`, or `MIX`
      * @param string $ClusterName Cluster name, which can contain up to 32 letters and digits
      * @param string $VpcId ID of the VPC instance bound to a cluster in the format of `vpc-f49l6u0z`
@@ -104,6 +111,7 @@ class CreateClusterRequest extends AbstractModel
      * @param array $ServerList Information of the machine at the storage layer (tcapsvr) in a dedicated cluster
      * @param array $ProxyList Information of the machine at the access layer (tcaproxy) in a dedicated cluster
      * @param integer $ClusterType Cluster type. Valid values: `1` (standard), `2` (dedicated)
+     * @param integer $AuthType Authentication type. Valid values: `0` (static password), `1` (signature)
      */
     function __construct()
     {
@@ -171,6 +179,10 @@ class CreateClusterRequest extends AbstractModel
 
         if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
             $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("AuthType",$param) and $param["AuthType"] !== null) {
+            $this->AuthType = $param["AuthType"];
         }
     }
 }

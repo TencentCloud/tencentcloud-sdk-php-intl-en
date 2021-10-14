@@ -20,20 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup file details
  *
- * @method string getFileName() Obtain Filename
- * @method void setFileName(string $FileName) Set Filename
- * @method integer getSize() Obtain File size in KB
- * @method void setSize(integer $Size) Set File size in KB
+ * @method string getFileName() Obtain File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method void setFileName(string $FileName) Set File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method integer getSize() Obtain File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method void setSize(integer $Size) Set File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
  * @method string getStartTime() Obtain Backup start time
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getEndTime() Obtain Backup end time
  * @method void setEndTime(string $EndTime) Set Backup end time
- * @method string getInternalAddr() Obtain Download address for private network
- * @method void setInternalAddr(string $InternalAddr) Set Download address for private network
- * @method string getExternalAddr() Obtain Download address for public network
- * @method void setExternalAddr(string $ExternalAddr) Set Download address for public network
- * @method integer getId() Obtain Unique ID of backup file, which will be used by the `RestoreInstance` API
- * @method void setId(integer $Id) Set Unique ID of backup file, which will be used by the `RestoreInstance` API
+ * @method string getInternalAddr() Obtain Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method void setInternalAddr(string $InternalAddr) Set Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method string getExternalAddr() Obtain Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method void setExternalAddr(string $ExternalAddr) Set Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method integer getId() Obtain Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+ * @method void setId(integer $Id) Set Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
  * @method integer getStatus() Obtain Backup file status (0: creating, 1: succeeded, 2: failed)
  * @method void setStatus(integer $Status) Set Backup file status (0: creating, 1: succeeded, 2: failed)
  * @method array getDBs() Obtain List of databases for multi-database backup
@@ -42,18 +42,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
  * @method integer getBackupWay() Obtain Backup mode. 0: scheduled, 1: manual
  * @method void setBackupWay(integer $BackupWay) Set Backup mode. 0: scheduled, 1: manual
- * @method string getBackupName() Obtain Backup name, which can be customized.
- * @method void setBackupName(string $BackupName) Set Backup name, which can be customized.
+ * @method string getBackupName() Obtain Backup task name (customizable)
+ * @method void setBackupName(string $BackupName) Set Backup task name (customizable)
+ * @method string getGroupId() Obtain Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+ * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
  */
 class Backup extends AbstractModel
 {
     /**
-     * @var string Filename
+     * @var string File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public $FileName;
 
     /**
-     * @var integer File size in KB
+     * @var integer File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public $Size;
 
@@ -68,17 +70,17 @@ class Backup extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Download address for private network
+     * @var string Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public $InternalAddr;
 
     /**
-     * @var string Download address for public network
+     * @var string Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public $ExternalAddr;
 
     /**
-     * @var integer Unique ID of backup file, which will be used by the `RestoreInstance` API
+     * @var integer Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      */
     public $Id;
 
@@ -103,23 +105,29 @@ class Backup extends AbstractModel
     public $BackupWay;
 
     /**
-     * @var string Backup name, which can be customized.
+     * @var string Backup task name (customizable)
      */
     public $BackupName;
 
     /**
-     * @param string $FileName Filename
-     * @param integer $Size File size in KB
+     * @var string Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+     */
+    public $GroupId;
+
+    /**
+     * @param string $FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param integer $Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      * @param string $StartTime Backup start time
      * @param string $EndTime Backup end time
-     * @param string $InternalAddr Download address for private network
-     * @param string $ExternalAddr Download address for public network
-     * @param integer $Id Unique ID of backup file, which will be used by the `RestoreInstance` API
+     * @param string $InternalAddr Private network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param string $ExternalAddr Public network download address. The download address of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
+     * @param integer $Id Unique ID of a backup file, which is used by the `RestoreInstance` API. The unique ID of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      * @param integer $Status Backup file status (0: creating, 1: succeeded, 2: failed)
      * @param array $DBs List of databases for multi-database backup
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
      * @param integer $BackupWay Backup mode. 0: scheduled, 1: manual
-     * @param string $BackupName Backup name, which can be customized.
+     * @param string $BackupName Backup task name (customizable)
+     * @param string $GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
             $this->BackupName = $param["BackupName"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

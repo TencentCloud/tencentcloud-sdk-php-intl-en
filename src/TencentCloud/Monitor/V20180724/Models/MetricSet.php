@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMeaning(MetricObjectMeaning $Meaning) Set Meaning of the statistical metric
  * @method array getDimensions() Obtain Dimension description
  * @method void setDimensions(array $Dimensions) Set Dimension description
+ * @method string getMetricCName() Obtain Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMetricCName(string $MetricCName) Set Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getMetricEName() Obtain Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMetricEName(string $MetricEName) Set Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class MetricSet extends AbstractModel
 {
@@ -80,6 +88,18 @@ class MetricSet extends AbstractModel
     public $Dimensions;
 
     /**
+     * @var string Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MetricCName;
+
+    /**
+     * @var string Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MetricEName;
+
+    /**
      * @param string $Namespace Namespace. Each Tencent Cloud product has a namespace
      * @param string $MetricName Metric Name
      * @param string $Unit Unit used by the metric
@@ -88,6 +108,10 @@ class MetricSet extends AbstractModel
      * @param array $Periods Metric method during the statistical period
      * @param MetricObjectMeaning $Meaning Meaning of the statistical metric
      * @param array $Dimensions Dimension description
+     * @param string $MetricCName Metric name (in Chinese).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $MetricEName Metric name (in English).
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -143,6 +167,14 @@ class MetricSet extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("MetricCName",$param) and $param["MetricCName"] !== null) {
+            $this->MetricCName = $param["MetricCName"];
+        }
+
+        if (array_key_exists("MetricEName",$param) and $param["MetricEName"] !== null) {
+            $this->MetricEName = $param["MetricEName"];
         }
     }
 }

@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupId(integer $BackupId) Set Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
  * @method string getDatabaseName() Obtain Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
  * @method void setDatabaseName(string $DatabaseName) Set Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+ * @method integer getGroup() Obtain Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+ * @method void setGroup(integer $Group) Set Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
  */
 class DescribeBackupsRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class DescribeBackupsRequest extends AbstractModel
     public $DatabaseName;
 
     /**
+     * @var integer Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
+     */
+    public $Group;
+
+    /**
      * @param string $StartTime Start name (yyyy-MM-dd HH:mm:ss)
      * @param string $EndTime End time (yyyy-MM-dd HH:mm:ss)
      * @param string $InstanceId Instance ID in the format of mssql-njj2mtpl
@@ -104,6 +111,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
      * @param integer $BackupId Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
      * @param string $DatabaseName Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
+     * @param integer $Group Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class DescribeBackupsRequest extends AbstractModel
 
         if (array_key_exists("DatabaseName",$param) and $param["DatabaseName"] !== null) {
             $this->DatabaseName = $param["DatabaseName"];
+        }
+
+        if (array_key_exists("Group",$param) and $param["Group"] !== null) {
+            $this->Group = $param["Group"];
         }
     }
 }
