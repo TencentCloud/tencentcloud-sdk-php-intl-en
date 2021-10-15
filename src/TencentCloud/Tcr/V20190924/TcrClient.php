@@ -26,9 +26,14 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) This API is used to verify the information of the Enterprise Edition instance.
  * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) This API is used to create the tag immutability rule.
  * @method Models\CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicy(Models\CreateMultipleSecurityPolicyRequest $req) This API is used to create multiple public network access allowlist policies of the TCR instance.
+ * @method Models\CreateReplicationInstanceResponse CreateReplicationInstance(Models\CreateReplicationInstanceRequest $req) This API is used to create a replication instance.
  * @method Models\DeleteImmutableTagRulesResponse DeleteImmutableTagRules(Models\DeleteImmutableTagRulesRequest $req)  This API is used to delete the tag immutability rule.
  * @method Models\DeleteMultipleSecurityPolicyResponse DeleteMultipleSecurityPolicy(Models\DeleteMultipleSecurityPolicyRequest $req) This API is used to delete multiple public network access allowlist policies of the instance.
  * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) This API is used to list the tag immutability rule.
+ * @method Models\DescribeReplicationInstanceCreateTasksResponse DescribeReplicationInstanceCreateTasks(Models\DescribeReplicationInstanceCreateTasksRequest $req) This API is used to query the task status of creating a replication instance.
+ * @method Models\DescribeReplicationInstanceSyncStatusResponse DescribeReplicationInstanceSyncStatus(Models\DescribeReplicationInstanceSyncStatusRequest $req) This API is used to query the synchronization status of a replication instance.
+ * @method Models\DescribeReplicationInstancesResponse DescribeReplicationInstances(Models\DescribeReplicationInstancesRequest $req) This API is used to query the list of replication instances.
+ * @method Models\ManageReplicationResponse ManageReplication(Models\ManageReplicationRequest $req) This API is used to manage the instance synchronization rule.
  * @method Models\ModifyImmutableTagRulesResponse ModifyImmutableTagRules(Models\ModifyImmutableTagRulesRequest $req) This API is used to update the tag immutability rule.
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to update instance information.
  */
