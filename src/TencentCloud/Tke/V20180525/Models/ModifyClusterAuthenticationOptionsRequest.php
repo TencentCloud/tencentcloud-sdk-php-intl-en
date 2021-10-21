@@ -18,14 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterKubeconfig request structure.
+ * ModifyClusterAuthenticationOptions request structure.
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method boolean getIsExtranet() Obtain Defaults to `false`, which means to obtain the kubeconfig of private network
- * @method void setIsExtranet(boolean $IsExtranet) Set Defaults to `false`, which means to obtain the kubeconfig of private network
+ * @method ServiceAccountAuthenticationOptions getServiceAccounts() Obtain ServiceAccount authentication configuration
+ * @method void setServiceAccounts(ServiceAccountAuthenticationOptions $ServiceAccounts) Set ServiceAccount authentication configuration
  */
-class DescribeClusterKubeconfigRequest extends AbstractModel
+class ModifyClusterAuthenticationOptionsRequest extends AbstractModel
 {
     /**
      * @var string Cluster ID
@@ -33,13 +33,13 @@ class DescribeClusterKubeconfigRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var boolean Defaults to `false`, which means to obtain the kubeconfig of private network
+     * @var ServiceAccountAuthenticationOptions ServiceAccount authentication configuration
      */
-    public $IsExtranet;
+    public $ServiceAccounts;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param boolean $IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
+     * @param ServiceAccountAuthenticationOptions $ServiceAccounts ServiceAccount authentication configuration
      */
     function __construct()
     {
@@ -58,8 +58,9 @@ class DescribeClusterKubeconfigRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
-            $this->IsExtranet = $param["IsExtranet"];
+        if (array_key_exists("ServiceAccounts",$param) and $param["ServiceAccounts"] !== null) {
+            $this->ServiceAccounts = new ServiceAccountAuthenticationOptions();
+            $this->ServiceAccounts->deserialize($param["ServiceAccounts"]);
         }
     }
 }

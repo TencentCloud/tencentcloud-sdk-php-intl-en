@@ -18,14 +18,12 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterKubeconfig request structure.
+ * DescribeClusterAuthenticationOptions request structure.
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method boolean getIsExtranet() Obtain Defaults to `false`, which means to obtain the kubeconfig of private network
- * @method void setIsExtranet(boolean $IsExtranet) Set Defaults to `false`, which means to obtain the kubeconfig of private network
  */
-class DescribeClusterKubeconfigRequest extends AbstractModel
+class DescribeClusterAuthenticationOptionsRequest extends AbstractModel
 {
     /**
      * @var string Cluster ID
@@ -33,13 +31,7 @@ class DescribeClusterKubeconfigRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var boolean Defaults to `false`, which means to obtain the kubeconfig of private network
-     */
-    public $IsExtranet;
-
-    /**
      * @param string $ClusterId Cluster ID
-     * @param boolean $IsExtranet Defaults to `false`, which means to obtain the kubeconfig of private network
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class DescribeClusterKubeconfigRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
-        }
-
-        if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
-            $this->IsExtranet = $param["IsExtranet"];
         }
     }
 }

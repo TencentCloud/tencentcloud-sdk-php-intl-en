@@ -104,14 +104,12 @@ pause
  * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless instance status. Valid values:
 resume
 pause
- * @method integer getStoragePayMode() Obtain Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getStorageId() Obtain Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setStorageId(string $StorageId) Set Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getStoragePayMode() Obtain Storage billing mode
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -318,16 +316,15 @@ pause
     public $ServerlessStatus;
 
     /**
-     * @var integer Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     */
-    public $StoragePayMode;
-
-    /**
      * @var string Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $StorageId;
+
+    /**
+     * @var integer Storage billing mode
+     */
+    public $StoragePayMode;
 
     /**
      * @param string $Uin User `Uin`
@@ -372,10 +369,9 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      * @param string $ServerlessStatus Serverless instance status. Valid values:
 resume
 pause
-     * @param integer $StoragePayMode Storage billing mode
-Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $StorageId Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $StoragePayMode Storage billing mode
      */
     function __construct()
     {
@@ -550,12 +546,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
             $this->ServerlessStatus = $param["ServerlessStatus"];
         }
 
-        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
-            $this->StoragePayMode = $param["StoragePayMode"];
-        }
-
         if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
             $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
         }
     }
 }

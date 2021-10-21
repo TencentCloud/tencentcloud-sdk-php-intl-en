@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
+ * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -76,6 +78,11 @@ class UpgradeInstanceRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public $DealMode;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $Cpu Database CPU
      * @param integer $Memory Database memory
@@ -84,6 +91,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
+     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
         }
     }
 }

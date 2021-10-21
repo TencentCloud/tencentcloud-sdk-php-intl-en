@@ -122,6 +122,16 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
  * @method void setStoragePayMode(integer $StoragePayMode) Set The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
 Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+ * @method array getSecurityGroupIds() Obtain Array of security group IDs
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs
+ * @method array getAlarmPolicyIds() Obtain Array of alarm policy IDs
+ * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set Array of alarm policy IDs
+ * @method array getClusterParams() Obtain Array of parameters
+ * @method void setClusterParams(array $ClusterParams) Set Array of parameters
+ * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method integer getParamTemplateId() Obtain Parameter template ID
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -313,6 +323,31 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
     public $StoragePayMode;
 
     /**
+     * @var array Array of security group IDs
+     */
+    public $SecurityGroupIds;
+
+    /**
+     * @var array Array of alarm policy IDs
+     */
+    public $AlarmPolicyIds;
+
+    /**
+     * @var array Array of parameters
+     */
+    public $ClusterParams;
+
+    /**
+     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public $DealMode;
+
+    /**
+     * @var integer Parameter template ID
+     */
+    public $ParamTemplateId;
+
+    /**
      * @param string $Zone AZ
      * @param string $VpcId VPC ID
      * @param string $SubnetId Subnet ID
@@ -364,6 +399,11 @@ Default value: 600
      * @param integer $StoragePayMode The billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid). Default value: `0`.
 If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go (or the `DbMode` is `SERVERLESS`), the billing mode of cluster storage must be postpaid.
 Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
+     * @param array $SecurityGroupIds Array of security group IDs
+     * @param array $AlarmPolicyIds Array of alarm policy IDs
+     * @param array $ClusterParams Array of parameters
+     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param integer $ParamTemplateId Parameter template ID
      */
     function __construct()
     {
@@ -517,6 +557,31 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("AlarmPolicyIds",$param) and $param["AlarmPolicyIds"] !== null) {
+            $this->AlarmPolicyIds = $param["AlarmPolicyIds"];
+        }
+
+        if (array_key_exists("ClusterParams",$param) and $param["ClusterParams"] !== null) {
+            $this->ClusterParams = [];
+            foreach ($param["ClusterParams"] as $key => $value){
+                $obj = new ParamItem();
+                $obj->deserialize($value);
+                array_push($this->ClusterParams, $obj);
+            }
+        }
+
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
         }
     }
 }

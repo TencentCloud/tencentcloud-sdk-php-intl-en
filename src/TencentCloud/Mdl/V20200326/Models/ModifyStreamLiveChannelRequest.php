@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(string $Id) Set Channel ID
  * @method string getName() Obtain Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
  * @method void setName(string $Name) Set Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
- * @method array getAttachedInputs() Obtain Inputs to attach. You can attach 1-5 inputs.
- * @method void setAttachedInputs(array $AttachedInputs) Set Inputs to attach. You can attach 1-5 inputs.
+ * @method array getAttachedInputs() Obtain Inputs to attach. You can attach 1 to 5 inputs.
+ * @method void setAttachedInputs(array $AttachedInputs) Set Inputs to attach. You can attach 1 to 5 inputs.
  * @method array getOutputGroups() Obtain Configuration information of the channel’s output groups. Quantity: [1, 10]
  * @method void setOutputGroups(array $OutputGroups) Set Configuration information of the channel’s output groups. Quantity: [1, 10]
  * @method array getAudioTemplates() Obtain Audio transcoding templates. Quantity: [1, 20]
@@ -48,7 +48,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var array Inputs to attach. You can attach 1-5 inputs.
+     * @var array Inputs to attach. You can attach 1 to 5 inputs.
      */
     public $AttachedInputs;
 
@@ -75,7 +75,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
-     * @param array $AttachedInputs Inputs to attach. You can attach 1-5 inputs.
+     * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
      * @param array $OutputGroups Configuration information of the channel’s output groups. Quantity: [1, 10]
      * @param array $AudioTemplates Audio transcoding templates. Quantity: [1, 20]
      * @param array $VideoTemplates Video transcoding templates. Quantity: [1, 10]

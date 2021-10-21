@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPodName(string $PodName) Set Name
  * @method integer getLimit() Obtain Number of items per page
  * @method void setLimit(integer $Limit) Set Number of items per page
- * @method integer getOffset() Obtain Page number
- * @method void setOffset(integer $Offset) Set Page number
+ * @method integer getOffset() Obtain Page offset
+ * @method void setOffset(integer $Offset) Set Page offset
  * @method string getStatus() Obtain Pod status
  * @method void setStatus(string $Status) Set Pod status
  * @method integer getSourceChannel() Obtain Source channel
@@ -58,7 +58,7 @@ class RestartApplicationPodRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Page number
+     * @var integer Page offset
      */
     public $Offset;
 
@@ -77,7 +77,7 @@ class RestartApplicationPodRequest extends AbstractModel
      * @param string $ApplicationId Application ID
      * @param string $PodName Name
      * @param integer $Limit Number of items per page
-     * @param integer $Offset Page number
+     * @param integer $Offset Page offset
      * @param string $Status Pod status
      * @param integer $SourceChannel Source channel
      */

@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
 <li> MYSQL </li>
  * @method string getOrderSource() Obtain Order source
  * @method void setOrderSource(string $OrderSource) Set Order source
+ * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ class AddInstancesRequest extends AbstractModel
     public $OrderSource;
 
     /**
+     * @var integer Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     */
+    public $DealMode;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
      * @param integer $Memory Memory
@@ -124,6 +131,7 @@ class AddInstancesRequest extends AbstractModel
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
      * @param string $OrderSource Order source
+     * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("OrderSource",$param) and $param["OrderSource"] !== null) {
             $this->OrderSource = $param["OrderSource"];
+        }
+
+        if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
+            $this->DealMode = $param["DealMode"];
         }
     }
 }

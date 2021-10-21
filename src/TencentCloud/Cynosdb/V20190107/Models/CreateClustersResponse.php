@@ -28,14 +28,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDealNames(array $DealNames) Set Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getResourceIds() Obtain List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setResourceIds(array $ResourceIds) Set List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getClusterIds() Obtain List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClusterIds(array $ClusterIds) Set List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceIds() Obtain List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceIds(array $ResourceIds) Set List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getClusterIds() Obtain List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterIds(array $ClusterIds) Set List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getBigDealIds() Obtain Big order ID.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBigDealIds(array $BigDealIds) Set Big order ID.
@@ -58,14 +58,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DealNames;
 
     /**
-     * @var array List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ResourceIds;
 
     /**
-     * @var array List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ClusterIds;
 
@@ -85,10 +85,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $DealNames Order ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ResourceIds List of resource IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered resources)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ClusterIds List of cluster IDs (this parameter may not be returned in case of asynchronous delivery. We strongly recommend you call the `DescribeResourcesByDealName` API with the `dealNames` field to get the IDs of asynchronously delivered clusters)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceIds List of resource IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get resource IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ClusterIds List of cluster IDs (This field has been deprecated. Please use `dealNames` in the `DescribeResourcesByDealName` API to get cluster IDs.)
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $BigDealIds Big order ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

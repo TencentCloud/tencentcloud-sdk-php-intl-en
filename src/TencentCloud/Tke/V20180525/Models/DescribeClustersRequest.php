@@ -28,8 +28,66 @@ all clusters under the account will be obtained)
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of output entries. Default value: 20
  * @method void setLimit(integer $Limit) Set Maximum number of output entries. Default value: 20
- * @method array getFilters() Obtain Filter condition. Currently, only filtering by a single ClusterName is supported
- * @method void setFilters(array $Filters) Set Filter condition. Currently, only filtering by a single ClusterName is supported
+ * @method array getFilters() Obtain ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+ * @method void setFilters(array $Filters) Set ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+ * @method string getClusterType() Obtain Cluster type, such as `MANAGED_CLUSTER`
+ * @method void setClusterType(string $ClusterType) Set Cluster type, such as `MANAGED_CLUSTER`
  */
 class DescribeClustersRequest extends AbstractModel
 {
@@ -50,16 +108,78 @@ all clusters under the account will be obtained)
     public $Limit;
 
     /**
-     * @var array Filter condition. Currently, only filtering by a single ClusterName is supported
+     * @var array ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
      */
     public $Filters;
+
+    /**
+     * @var string Cluster type, such as `MANAGED_CLUSTER`
+     */
+    public $ClusterType;
 
     /**
      * @param array $ClusterIds Cluster ID list (When it is empty,
 all clusters under the account will be obtained)
      * @param integer $Offset Offset. Default value: 0
      * @param integer $Limit Maximum number of output entries. Default value: 20
-     * @param array $Filters Filter condition. Currently, only filtering by a single ClusterName is supported
+     * @param array $Filters ·  ClusterName
+    Filters by the cluster name
+    Type: String
+    Required: no
+
+·  Tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+
+·  vpc-id
+    Filters by the VPC ID
+    Type: String
+    Required: no
+
+·  tag-key
+    Filters by the tag key
+    Type: String
+    Required: no
+
+·  tag-value
+    Filters by the tag value
+    Type: String
+    Required: no
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: no
+     * @param string $ClusterType Cluster type, such as `MANAGED_CLUSTER`
      */
     function __construct()
     {
@@ -93,6 +213,10 @@ all clusters under the account will be obtained)
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
         }
     }
 }

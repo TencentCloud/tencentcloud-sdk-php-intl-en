@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Version pod list
  *
- * @method integer getOffset() Obtain Page number
- * @method void setOffset(integer $Offset) Set Page number
+ * @method integer getOffset() Obtain Page offset
+ * @method void setOffset(integer $Offset) Set Page offset
  * @method integer getLimit() Obtain Number of records per page
  * @method void setLimit(integer $Limit) Set Number of records per page
  * @method integer getTotalCount() Obtain Total number of returned records
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRunPodPage extends AbstractModel
 {
     /**
-     * @var integer Page number
+     * @var integer Page offset
      */
     public $Offset;
 
@@ -59,7 +59,7 @@ class DescribeRunPodPage extends AbstractModel
     public $PodList;
 
     /**
-     * @param integer $Offset Page number
+     * @param integer $Offset Page offset
      * @param integer $Limit Number of records per page
      * @param integer $TotalCount Total number of returned records
      * @param string $RequestId Request ID

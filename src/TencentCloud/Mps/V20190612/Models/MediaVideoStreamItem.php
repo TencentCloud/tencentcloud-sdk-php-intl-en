@@ -52,6 +52,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setColorTransfer(string $ColorTransfer) Set Color transfer
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method string getHdrType() Obtain HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setHdrType(string $HdrType) Set HDR type
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $ColorTransfer;
 
     /**
+     * @var string HDR type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $HdrType;
+
+    /**
      * @param integer $Bitrate Bitrate of a video stream in bps.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Height of a video stream in px.
@@ -120,6 +130,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param string $ColorTransfer Color transfer
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param string $HdrType HDR type
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -164,6 +176,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("ColorTransfer",$param) and $param["ColorTransfer"] !== null) {
             $this->ColorTransfer = $param["ColorTransfer"];
+        }
+
+        if (array_key_exists("HdrType",$param) and $param["HdrType"] !== null) {
+            $this->HdrType = $param["HdrType"];
         }
     }
 }

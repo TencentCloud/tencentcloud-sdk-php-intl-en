@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getLimit() Obtain Pagination limit
  * @method void setLimit(integer $Limit) Set Pagination limit
- * @method integer getOffset() Obtain Page number
- * @method void setOffset(integer $Offset) Set Page number
+ * @method integer getOffset() Obtain Page offset
+ * @method void setOffset(integer $Offset) Set Page offset
  * @method integer getSourceChannel() Obtain Source
  * @method void setSourceChannel(integer $SourceChannel) Set Source
  */
@@ -35,7 +35,7 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Page number
+     * @var integer Page offset
      */
     public $Offset;
 
@@ -46,7 +46,7 @@ class DescribeEnvironmentsRequest extends AbstractModel
 
     /**
      * @param integer $Limit Pagination limit
-     * @param integer $Offset Page number
+     * @param integer $Offset Page offset
      * @param integer $SourceChannel Source
      */
     function __construct()

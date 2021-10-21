@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsName(string $OsName) Set Operating system name
  * @method string getOsCustomizeType() Obtain Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method InstanceExtraArgs getExtraArgs() Obtain Node custom parameter
+ * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Node custom parameter
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var InstanceExtraArgs Node custom parameter
+     */
+    public $ExtraArgs;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -104,6 +111,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param boolean $EnableAutoscale Indicates whether auto scaling is enabled.
      * @param string $OsName Operating system name
      * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param InstanceExtraArgs $ExtraArgs Node custom parameter
      */
     function __construct()
     {
@@ -166,6 +174,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
             $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
+            $this->ExtraArgs = new InstanceExtraArgs();
+            $this->ExtraArgs->deserialize($param["ExtraArgs"]);
         }
     }
 }
