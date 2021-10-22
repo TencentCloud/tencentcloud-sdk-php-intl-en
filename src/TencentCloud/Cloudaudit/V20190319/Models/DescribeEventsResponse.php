@@ -18,29 +18,36 @@ namespace TencentCloud\Cloudaudit\V20190319\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListDiscoveredResources response structure.
+ * DescribeEvents response structure.
  *
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
- * @method array getResources() Obtain Resource list
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResources(array $Resources) Set Resource list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getListOver() Obtain Whether the logset ends.
+ * @method void setListOver(boolean $ListOver) Set Whether the logset ends.
+ * @method integer getNextToken() Obtain Credential for viewing more logs.
+ * @method void setNextToken(integer $NextToken) Set Credential for viewing more logs.
+ * @method array getEvents() Obtain Logset.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method void setEvents(array $Events) Set Logset.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ListDiscoveredResourcesResponse extends AbstractModel
+class DescribeEventsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number
+     * @var boolean Whether the logset ends.
      */
-    public $TotalCount;
+    public $ListOver;
 
     /**
-     * @var array Resource list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Credential for viewing more logs.
      */
-    public $Resources;
+    public $NextToken;
+
+    /**
+     * @var array Logset.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     */
+    public $Events;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +55,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number
-     * @param array $Resources Resource list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $ListOver Whether the logset ends.
+     * @param integer $NextToken Credential for viewing more logs.
+     * @param array $Events Logset.
+Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,16 +74,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("ListOver",$param) and $param["ListOver"] !== null) {
+            $this->ListOver = $param["ListOver"];
         }
 
-        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
-            $this->Resources = [];
-            foreach ($param["Resources"] as $key => $value){
-                $obj = new Resources();
+        if (array_key_exists("NextToken",$param) and $param["NextToken"] !== null) {
+            $this->NextToken = $param["NextToken"];
+        }
+
+        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
+            $this->Events = [];
+            foreach ($param["Events"] as $key => $value){
+                $obj = new Event();
                 $obj->deserialize($value);
-                array_push($this->Resources, $obj);
+                array_push($this->Events, $obj);
             }
         }
 
