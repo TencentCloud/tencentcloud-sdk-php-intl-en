@@ -86,8 +86,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setFirmwareUpdateTime(integer $FirmwareUpdateTime) Set Firmware update time of the device
 Note: this field may return `null`, indicating that no valid value is obtained.
- * @method integer getCreateUserId() Obtain 
- * @method void setCreateUserId(integer $CreateUserId) Set 
+ * @method integer getCreateUserId() Obtain Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCreateUserId(integer $CreateUserId) Set Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -223,7 +225,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $FirmwareUpdateTime;
 
     /**
-     * @var integer 
+     * @var integer Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreateUserId;
 
@@ -266,7 +269,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $FirmwareUpdateTime Firmware update time of the device
 Note: this field may return `null`, indicating that no valid value is obtained.
-     * @param integer $CreateUserId 
+     * @param integer $CreateUserId Account ID of the creator
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

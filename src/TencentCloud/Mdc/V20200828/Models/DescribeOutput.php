@@ -50,6 +50,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRTMPSettings(DescribeOutputRTMPSettings $RTMPSettings) Set RTMP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method DescribeOutputRTMPPullSettings getRTMPPullSettings() Obtain RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setRTMPPullSettings(DescribeOutputRTMPPullSettings $RTMPPullSettings) Set RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getAllowIpList() Obtain CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setAllowIpList(array $AllowIpList) Set CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class DescribeOutput extends AbstractModel
 {
@@ -109,6 +119,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RTMPSettings;
 
     /**
+     * @var DescribeOutputRTMPPullSettings RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $RTMPPullSettings;
+
+    /**
+     * @var array CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $AllowIpList;
+
+    /**
      * @param string $OutputId Output ID.
      * @param string $OutputName Output name.
      * @param string $OutputType Output type.
@@ -124,6 +147,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param DescribeOutputRTMPSettings $RTMPSettings RTMP configuration information of output.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param DescribeOutputRTMPPullSettings $RTMPPullSettings RTMP pull configuration of the output
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $AllowIpList CIDR allowlist
+This parameter is valid if `Protocol` is set to `RTMP_PULL`. If this parameter is left empty, there is no restriction on clients’ IP addresses.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -184,6 +212,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RTMPSettings",$param) and $param["RTMPSettings"] !== null) {
             $this->RTMPSettings = new DescribeOutputRTMPSettings();
             $this->RTMPSettings->deserialize($param["RTMPSettings"]);
+        }
+
+        if (array_key_exists("RTMPPullSettings",$param) and $param["RTMPPullSettings"] !== null) {
+            $this->RTMPPullSettings = new DescribeOutputRTMPPullSettings();
+            $this->RTMPPullSettings->deserialize($param["RTMPPullSettings"]);
+        }
+
+        if (array_key_exists("AllowIpList",$param) and $param["AllowIpList"] !== null) {
+            $this->AllowIpList = $param["AllowIpList"];
         }
     }
 }

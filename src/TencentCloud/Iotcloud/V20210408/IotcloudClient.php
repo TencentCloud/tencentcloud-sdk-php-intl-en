@@ -35,6 +35,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribePrivateCAsResponse DescribePrivateCAs(Models\DescribePrivateCAsRequest $req) This API is used to get the list of private CA certificates.
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) This API is used to query product details.
  * @method Models\DescribeProductCAResponse DescribeProductCA(Models\DescribeProductCARequest $req) This API is used to query the CA certificates bound to a product.
+ * @method Models\SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(Models\SetProductsForbiddenStatusRequest $req) This API is used to enable or disable multiple products at a time.
  * @method Models\UpdateDeviceLogLevelResponse UpdateDeviceLogLevel(Models\UpdateDeviceLogLevelRequest $req) This API is used to set the device log level.  
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) This API is used to enable or disable multiple devices. 
  * @method Models\UpdatePrivateCAResponse UpdatePrivateCA(Models\UpdatePrivateCARequest $req) This API is used to update a private CA certificate.

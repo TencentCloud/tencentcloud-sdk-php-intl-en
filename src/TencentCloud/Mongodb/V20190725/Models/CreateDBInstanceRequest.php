@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDBInstance request structure.
  *
- * @method integer getNodeNum() Obtain Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
- * @method void setNodeNum(integer $NodeNum) Set Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+ * @method integer getNodeNum() Obtain The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
+ * @method void setNodeNum(integer $NodeNum) Set The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
  * @method integer getMemory() Obtain Instance memory size in GB.
  * @method void setMemory(integer $Memory) Set Instance memory size in GB.
  * @method integer getVolume() Obtain Instance disk size in GB.
  * @method void setVolume(integer $Volume) Set Instance disk size in GB.
- * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
- * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+ * @method string getMongoVersion() Obtain Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
+ * @method void setMongoVersion(string $MongoVersion) Set Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
  * @method integer getGoodsNum() Obtain Number of instances. Minimum value: 1. Maximum value: 10.
  * @method void setGoodsNum(integer $GoodsNum) Set Number of instances. Minimum value: 1. Maximum value: 10.
- * @method string getZone() Obtain Instance region name in the format of ap-guangzhou-2.
- * @method void setZone(string $Zone) Set Instance region name in the format of ap-guangzhou-2.
+ * @method string getZone() Obtain AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
+ * @method void setZone(string $Zone) Set AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
  * @method integer getPeriod() Obtain Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
  * @method void setPeriod(integer $Period) Set Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
  * @method string getMachineCode() Obtain Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
@@ -54,17 +54,29 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
  * @method integer getAutoVoucher() Obtain Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
- * @method integer getClone() Obtain Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
- * @method void setClone(integer $Clone) Set Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
- * @method string getFather() Obtain Primary instance ID. It is required for read-only and disaster recovery instances.
- * @method void setFather(string $Father) Set Primary instance ID. It is required for read-only and disaster recovery instances.
+ * @method integer getClone() Obtain Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+ * @method void setClone(integer $Clone) Set Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+ * @method string getFather() Obtain Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
+ * @method void setFather(string $Father) Set Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
  * @method array getSecurityGroup() Obtain Security group.
  * @method void setSecurityGroup(array $SecurityGroup) Set Security group.
+ * @method string getRestoreTime() Obtain The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+ * @method void setRestoreTime(string $RestoreTime) Set The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+ * @method string getInstanceName() Obtain Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+ * @method void setInstanceName(string $InstanceName) Set Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+ * @method array getAvailabilityZoneList() Obtain AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+ * @method void setAvailabilityZoneList(array $AvailabilityZoneList) Set AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+ * @method integer getMongosCpu() Obtain The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+ * @method void setMongosCpu(integer $MongosCpu) Set The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+ * @method integer getMongosMemory() Obtain The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+ * @method void setMongosMemory(integer $MongosMemory) Set The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+ * @method integer getMongosNodeNum() Obtain The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+ * @method void setMongosNodeNum(integer $MongosNodeNum) Set The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
  */
 class CreateDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+     * @var integer The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
      */
     public $NodeNum;
 
@@ -79,7 +91,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $Volume;
 
     /**
-     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * @var string Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
      */
     public $MongoVersion;
 
@@ -89,7 +101,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $GoodsNum;
 
     /**
-     * @var string Instance region name in the format of ap-guangzhou-2.
+     * @var string AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
      */
     public $Zone;
 
@@ -149,12 +161,12 @@ class CreateDBInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var integer Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
+     * @var integer Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
      */
     public $Clone;
 
     /**
-     * @var string Primary instance ID. It is required for read-only and disaster recovery instances.
+     * @var string Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
      */
     public $Father;
 
@@ -164,12 +176,42 @@ class CreateDBInstanceRequest extends AbstractModel
     public $SecurityGroup;
 
     /**
-     * @param integer $NodeNum Number of nodes in each replica set. Currently, the number of nodes per replica set is fixed at 3, while the number of secondary nodes per shard is customizable. For more information, please see the parameter returned by the `DescribeSpecInfo` API.
+     * @var string The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     */
+    public $RestoreTime;
+
+    /**
+     * @var string Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     */
+    public $InstanceName;
+
+    /**
+     * @var array AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     */
+    public $AvailabilityZoneList;
+
+    /**
+     * @var integer The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public $MongosCpu;
+
+    /**
+     * @var integer The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     */
+    public $MongosMemory;
+
+    /**
+     * @var integer The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
+     */
+    public $MongosNodeNum;
+
+    /**
+     * @param integer $NodeNum The number of nodes in each replica set. The value range is subject to the response parameter of the `DescribeSpecInfo` API.
      * @param integer $Memory Instance memory size in GB.
      * @param integer $Volume Instance disk size in GB.
-     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition.
+     * @param string $MongoVersion Version number. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. The correspondences between parameters and versions are as follows: MONGO_3_WT: MongoDB 3.2 WiredTiger Edition; MONGO_3_ROCKS: MongoDB 3.2 RocksDB Edition; MONGO_36_WT: MongoDB 3.6 WiredTiger Edition; MONGO_40_WT: MongoDB 4.0 WiredTiger Edition; MONGO_42_WT: MongoDB 4.2 WiredTiger Edition.
      * @param integer $GoodsNum Number of instances. Minimum value: 1. Maximum value: 10.
-     * @param string $Zone Instance region name in the format of ap-guangzhou-2.
+     * @param string $Zone AZ in the format of ap-guangzhou-2. If multi-AZ deployment is enabled, this parameter refers to the primary AZ and must be one of the values of `AvailabilityZoneList`.
      * @param integer $Period Instance validity period in months. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36.
      * @param string $MachineCode Server type. Valid values: HIO (high IO), HIO10G (10-gigabit high IO), STDS5 (standard).
      * @param string $ClusterType Instance type. Valid values: REPLSET (replica set), SHARD (sharded cluster), STANDALONE (single-node).
@@ -181,9 +223,15 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param array $Tags Instance tag information.
      * @param integer $AutoRenewFlag Auto-renewal flag. Valid values: 0 (auto-renewal not enabled), 1 (auto-renewal enabled). Default value: 0.
      * @param integer $AutoVoucher Whether to automatically use a voucher. Valid values: 1 (yes), 0 (no). Default value: 0.
-     * @param integer $Clone Valid values: 1 (regular instance), 2 (temp instance), 3 (read-only instance), 4 (disaster recovery instance).
-     * @param string $Father Primary instance ID. It is required for read-only and disaster recovery instances.
+     * @param integer $Clone Instance type. Valid values: `1` (primary instance), `2` (temp instance), `3` (read-only instance), `4` (disaster recovery instance), `5` (cloned instance).
+     * @param string $Father Primary instance ID. It is required for read-only, disaster recovery, and cloned instances.
      * @param array $SecurityGroup Security group.
+     * @param string $RestoreTime The point in time to which the cloned instance will be rolled back. This parameter is required for a cloned instance. The point in time in the format of 2021-08-13 16:30:00 must be within the last seven days.
+     * @param string $InstanceName Instance name, which can contain up to 60 letters, digits, or symbols (_-).
+     * @param array $AvailabilityZoneList AZ list when multi-AZ deployment is enabled. For the specific purchasable versions which support multi-AZ deployment, please see the return result of the `DescribeSpecInfo` API. Notes: 1. Nodes of a multi-AZ instance must be deployed across three AZs. 2. To ensure a successful cross-AZ switch, you should not deploy most of the nodes to the same AZ. (For example, a three-node sharded cluster instance does not support deploying two or more nodes in the same AZ.) 3. MongoDB 4.2 and later versions do not support multi-AZ deployment. 4. Read-Only and disaster recovery instances do not support multi-AZ deployment. 5. Instances in the classic network do not support multi-AZ deployment.
+     * @param integer $MongosCpu The number of mongos CPUs, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @param integer $MongosMemory The size of mongos memory, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API.
+     * @param integer $MongosNodeNum The number of mongos routers, which is required for a sharded cluster instance of MongoDB 4.2 WiredTiger. For the specific purchasable versions supported, please see the return result of the `DescribeSpecInfo` API. Note: please purchase 3-32 mongos routers for high availability.
      */
     function __construct()
     {
@@ -281,6 +329,30 @@ class CreateDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
             $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("RestoreTime",$param) and $param["RestoreTime"] !== null) {
+            $this->RestoreTime = $param["RestoreTime"];
+        }
+
+        if (array_key_exists("InstanceName",$param) and $param["InstanceName"] !== null) {
+            $this->InstanceName = $param["InstanceName"];
+        }
+
+        if (array_key_exists("AvailabilityZoneList",$param) and $param["AvailabilityZoneList"] !== null) {
+            $this->AvailabilityZoneList = $param["AvailabilityZoneList"];
+        }
+
+        if (array_key_exists("MongosCpu",$param) and $param["MongosCpu"] !== null) {
+            $this->MongosCpu = $param["MongosCpu"];
+        }
+
+        if (array_key_exists("MongosMemory",$param) and $param["MongosMemory"] !== null) {
+            $this->MongosMemory = $param["MongosMemory"];
+        }
+
+        if (array_key_exists("MongosNodeNum",$param) and $param["MongosNodeNum"] !== null) {
+            $this->MongosNodeNum = $param["MongosNodeNum"];
         }
     }
 }
