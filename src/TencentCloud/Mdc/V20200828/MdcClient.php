@@ -28,6 +28,7 @@ use TencentCloud\Mdc\V20200828\Models as Models;
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) This API is used to delete an output of a StreamLink flow.
  * @method Models\DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(Models\DescribeStreamLinkFlowRequest $req) This API is used to query the configuration information of a StreamLink flow.
  * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) This API is used to query the configuration information of multiple StreamLink flows in batches.
+ * @method Models\DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(Models\DescribeStreamLinkRegionsRequest $req) This API is used to query all StreamLink regions.
  * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) This API is used to modify the configuration information of a StreamLink flow.
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) This API is used to start a StreamLink flow.
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) This API is used to stop a StreamLink flow.

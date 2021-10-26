@@ -41,6 +41,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeStreamLiveInputSecurityGroupsResponse DescribeStreamLiveInputSecurityGroups(Models\DescribeStreamLiveInputSecurityGroupsRequest $req) This API is used to query input security groups in batches.
  * @method Models\DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(Models\DescribeStreamLiveInputsRequest $req) This API is used to query StreamLive inputs in batches.
  * @method Models\DescribeStreamLivePlansResponse DescribeStreamLivePlans(Models\DescribeStreamLivePlansRequest $req) This API is used to query the events in the plan in batches.
+ * @method Models\DescribeStreamLiveRegionsResponse DescribeStreamLiveRegions(Models\DescribeStreamLiveRegionsRequest $req) This API is used to query all StreamLive regions.
  * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.
  * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.
  * @method Models\ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(Models\ModifyStreamLiveInputSecurityGroupRequest $req) This API is used to modify an input security group.
