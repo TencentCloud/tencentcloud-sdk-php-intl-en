@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReservedConcurrencyConfig response structure.
  *
- * @method integer getReservedMem() Obtain Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReservedMem(integer $ReservedMem) Set Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getReservedMem() Obtain The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setReservedMem(integer $ReservedMem) Set The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetReservedConcurrencyConfigResponse extends AbstractModel
 {
     /**
-     * @var integer Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ReservedMem;
 
@@ -41,8 +41,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $ReservedMem Reserved concurrency memory of function.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ReservedMem The reserved quota of the function
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

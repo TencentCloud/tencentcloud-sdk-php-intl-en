@@ -52,6 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setReservedConcurrencyMem(integer $ReservedConcurrencyMem) Set Reserved memory for function concurrence
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAsyncRunEnable() Obtain Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+ * @method void setAsyncRunEnable(string $AsyncRunEnable) Set Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+ * @method string getTraceEnable() Obtain Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+ * @method void setTraceEnable(string $TraceEnable) Set Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
  */
 class FunctionInfo extends AbstractModel
 {
@@ -128,6 +132,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ReservedConcurrencyMem;
 
     /**
+     * @var string Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+     */
+    public $AsyncRunEnable;
+
+    /**
+     * @var string Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
+     */
+    public $TraceEnable;
+
+    /**
      * @param string $ModTime Modification time
      * @param string $AddTime Creation time
      * @param string $Runtime Running
@@ -144,6 +158,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ReservedConcurrencyMem Reserved memory for function concurrence
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AsyncRunEnable Asynchronization attribute of the function. Values: `TRUE` and `FALSE`.
+     * @param string $TraceEnable Whether to enable call tracing for ansynchronized functions. Values: `TRUE` and `FALSE`.
      */
     function __construct()
     {
@@ -222,6 +238,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ReservedConcurrencyMem",$param) and $param["ReservedConcurrencyMem"] !== null) {
             $this->ReservedConcurrencyMem = $param["ReservedConcurrencyMem"];
+        }
+
+        if (array_key_exists("AsyncRunEnable",$param) and $param["AsyncRunEnable"] !== null) {
+            $this->AsyncRunEnable = $param["AsyncRunEnable"];
+        }
+
+        if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
+            $this->TraceEnable = $param["TraceEnable"];
         }
     }
 }

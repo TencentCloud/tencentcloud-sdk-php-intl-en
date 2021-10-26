@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGitCommitId(string $GitCommitId) Set Version to be pulled
  * @method string getGitUserNameSecret() Obtain Git user name after encryption. In general, this value is not required.
  * @method void setGitUserNameSecret(string $GitUserNameSecret) Set Git user name after encryption. In general, this value is not required.
+ * @method ImageConfig getImageConfig() Obtain TCR image configurations
+ * @method void setImageConfig(ImageConfig $ImageConfig) Set TCR image configurations
  */
 class Code extends AbstractModel
 {
@@ -122,6 +124,11 @@ class Code extends AbstractModel
     public $GitUserNameSecret;
 
     /**
+     * @var ImageConfig TCR image configurations
+     */
+    public $ImageConfig;
+
+    /**
      * @param string $CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
      * @param string $CosObjectName COS object path
      * @param string $ZipFile This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
@@ -136,6 +143,7 @@ class Code extends AbstractModel
      * @param string $GitDirectory Code path in Git repository
      * @param string $GitCommitId Version to be pulled
      * @param string $GitUserNameSecret Git user name after encryption. In general, this value is not required.
+     * @param ImageConfig $ImageConfig TCR image configurations
      */
     function __construct()
     {
@@ -204,6 +212,11 @@ class Code extends AbstractModel
 
         if (array_key_exists("GitUserNameSecret",$param) and $param["GitUserNameSecret"] !== null) {
             $this->GitUserNameSecret = $param["GitUserNameSecret"];
+        }
+
+        if (array_key_exists("ImageConfig",$param) and $param["ImageConfig"] !== null) {
+            $this->ImageConfig = new ImageConfig();
+            $this->ImageConfig->deserialize($param["ImageConfig"]);
         }
     }
 }

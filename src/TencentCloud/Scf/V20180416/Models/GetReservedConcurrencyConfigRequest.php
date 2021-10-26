@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetReservedConcurrencyConfig request structure.
  *
- * @method string getFunctionName() Obtain Name of the function for which to get the provisioned concurrency details.
- * @method void setFunctionName(string $FunctionName) Set Name of the function for which to get the provisioned concurrency details.
+ * @method string getFunctionName() Obtain Specifies the function of which you want to obtain the reserved quota
+ * @method void setFunctionName(string $FunctionName) Set Specifies the function of which you want to obtain the reserved quota
  * @method string getNamespace() Obtain Function namespace. Default value: default.
  * @method void setNamespace(string $Namespace) Set Function namespace. Default value: default.
  */
 class GetReservedConcurrencyConfigRequest extends AbstractModel
 {
     /**
-     * @var string Name of the function for which to get the provisioned concurrency details.
+     * @var string Specifies the function of which you want to obtain the reserved quota
      */
     public $FunctionName;
 
@@ -38,7 +38,7 @@ class GetReservedConcurrencyConfigRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @param string $FunctionName Name of the function for which to get the provisioned concurrency details.
+     * @param string $FunctionName Specifies the function of which you want to obtain the reserved quota
      * @param string $Namespace Function namespace. Default value: default.
      */
     function __construct()

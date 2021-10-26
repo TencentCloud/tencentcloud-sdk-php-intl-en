@@ -58,8 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  * @method CfsConfig getCfsConfig() Obtain File system configuration parameter, which is used for the function to mount the file system
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration parameter, which is used for the function to mount the file system
- * @method integer getInitTimeout() Obtain Timeout period for function initialization
- * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization
+ * @method integer getInitTimeout() Obtain The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
+ * @method void setInitTimeout(integer $InitTimeout) Set The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
  * @method array getTags() Obtain Tag parameter of the function. It is an array of key-value pairs.
  * @method void setTags(array $Tags) Set Tag parameter of the function. It is an array of key-value pairs.
  * @method string getAsyncRunEnable() Obtain Whether to enable the async attribute. TRUE: yes; FALSE: no
@@ -165,7 +165,7 @@ class CreateFunctionRequest extends AbstractModel
     public $CfsConfig;
 
     /**
-     * @var integer Timeout period for function initialization
+     * @var integer The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
      */
     public $InitTimeout;
 
@@ -204,7 +204,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig Dead letter queue parameter
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration parameter, which is used for the function to mount the file system
-     * @param integer $InitTimeout Timeout period for function initialization
+     * @param integer $InitTimeout The function initialization timeout period. It defaults to 65s for general cases and 90s for image deployment functions.
      * @param array $Tags Tag parameter of the function. It is an array of key-value pairs.
      * @param string $AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
      * @param string $TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no

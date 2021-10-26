@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getQualifier() Obtain Version or alias of the function. It defaults to `$DEFAULT`.
  * @method void setQualifier(string $Qualifier) Set Version or alias of the function. It defaults to `$DEFAULT`.
- * @method string getEvent() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
- * @method void setEvent(string $Event) Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+ * @method string getEvent() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+ * @method void setEvent(string $Event) Set Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
  * @method string getLogType() Obtain Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
  * @method void setLogType(string $LogType) Set Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
  * @method string getNamespace() Obtain Namespace. `default` is used if it’s left empty.
@@ -46,7 +46,7 @@ class InvokeFunctionRequest extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * @var string Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public $Event;
 
@@ -68,7 +68,7 @@ class InvokeFunctionRequest extends AbstractModel
     /**
      * @param string $FunctionName Function name
      * @param string $Qualifier Version or alias of the function. It defaults to `$DEFAULT`.
-     * @param string $Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB.
+     * @param string $Event Function running parameter, which is in the JSON format. Maximum parameter size is 6 MB. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      * @param string $LogType Valid value: `None` (default) or `Tail`. If the value is `Tail`, `log` in the response will contain the corresponding function execution log (up to 4KB).
      * @param string $Namespace Namespace. `default` is used if it’s left empty.
      * @param string $RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.

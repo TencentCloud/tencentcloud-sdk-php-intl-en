@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFunctionName() Obtain Function name
  * @method void setFunctionName(string $FunctionName) Set Function name
- * @method string getInvocationType() Obtain The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
- * @method void setInvocationType(string $InvocationType) Set The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+ * @method string getInvocationType() Obtain Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
+ * @method void setInvocationType(string $InvocationType) Set Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
  * @method string getQualifier() Obtain Version number or name of the triggered function
  * @method void setQualifier(string $Qualifier) Set Version number or name of the triggered function
- * @method string getClientContext() Obtain Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
- * @method void setClientContext(string $ClientContext) Set Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
- * @method string getLogType() Obtain If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
- * @method void setLogType(string $LogType) Set If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+ * @method string getClientContext() Obtain Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+ * @method void setClientContext(string $ClientContext) Set Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+ * @method string getLogType() Obtain Null for async invocations
+ * @method void setLogType(string $LogType) Set Null for async invocations
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
  * @method string getRoutingKey() Obtain Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
@@ -43,7 +43,7 @@ class InvokeRequest extends AbstractModel
     public $FunctionName;
 
     /**
-     * @var string The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+     * @var string Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
      */
     public $InvocationType;
 
@@ -53,12 +53,12 @@ class InvokeRequest extends AbstractModel
     public $Qualifier;
 
     /**
-     * @var string Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
+     * @var string Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      */
     public $ClientContext;
 
     /**
-     * @var string If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+     * @var string Null for async invocations
      */
     public $LogType;
 
@@ -74,10 +74,10 @@ class InvokeRequest extends AbstractModel
 
     /**
      * @param string $FunctionName Function name
-     * @param string $InvocationType The value is `RequestResponse` (synchronous) or `Event` (asynchronous). The default value is synchronous.
+     * @param string $InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
      * @param string $Qualifier Version number or name of the triggered function
-     * @param string $ClientContext Function running parameter, which is in the JSON format. Maximum parameter size is 1 MB.
-     * @param string $LogType If this field is specified during sync invocation, the returned value will contain 4 KB of logs. Valid values: None, Tail. Default value: None. If the value is `Tail`, the `Log` field in the returned parameter will contain the corresponding function execution log
+     * @param string $ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
+     * @param string $LogType Null for async invocations
      * @param string $Namespace Namespace
      * @param string $RoutingKey Traffic routing config in json format, e.g., {"k":"v"}. Please note that both "k" and "v" must be strings. Up to 1024 bytes allowed.
      */

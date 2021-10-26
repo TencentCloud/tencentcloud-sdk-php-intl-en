@@ -54,8 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetConfig(PublicNetConfigIn $PublicNetConfig) Set Public network access configuration
  * @method CfsConfig getCfsConfig() Obtain File system configuration input parameter, which is used for the function to bind the CFS file system
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the CFS file system
- * @method integer getInitTimeout() Obtain Timeout period for function initialization. Default value: 15 seconds
- * @method void setInitTimeout(integer $InitTimeout) Set Timeout period for function initialization. Default value: 15 seconds
+ * @method integer getInitTimeout() Obtain The function initialization timeout period
+ * @method void setInitTimeout(integer $InitTimeout) Set The function initialization timeout period
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -145,7 +145,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $CfsConfig;
 
     /**
-     * @var integer Timeout period for function initialization. Default value: 15 seconds
+     * @var integer The function initialization timeout period
      */
     public $InitTimeout;
 
@@ -167,7 +167,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param DeadLetterConfig $DeadLetterConfig Information of a dead letter queue associated with a function
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
-     * @param integer $InitTimeout Timeout period for function initialization. Default value: 15 seconds
+     * @param integer $InitTimeout The function initialization timeout period
      */
     function __construct()
     {
