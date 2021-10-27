@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * Video stream configuration parameter
  *
  * @method string getCodec() Obtain Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
  * @method void setCodec(string $Codec) Set Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
  * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
  * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
- * @method integer getBitrate() Obtain Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
- * @method void setBitrate(integer $Bitrate) Set Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+ * @method integer getBitrate() Obtain Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
+ * @method void setBitrate(integer $Bitrate) Set Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
  * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
 <li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
@@ -95,9 +95,9 @@ class VideoTemplateInfo extends AbstractModel
 {
     /**
      * @var string Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
      */
     public $Codec;
 
@@ -108,8 +108,8 @@ If the value is 0, the frame rate will be the same as that of the source video.
     public $Fps;
 
     /**
-     * @var integer Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * @var integer Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
      */
     public $Bitrate;
 
@@ -166,13 +166,13 @@ It is not recommended to specify this parameter if there are no special requirem
 
     /**
      * @param string $Codec Video stream codec. Valid values:
-<li>libx264: H.264</li>
-<li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>`libx264`: H.264</li>
+<li>`libx265`: H.265</li>
+<li>`av1`: AOMedia Video 1</li>
      * @param integer $Fps Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
-     * @param integer $Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
-If the value is 0, the bitrate of the video will be the same as that of the source video.
+     * @param integer $Bitrate Video stream bitrate (Kbps). Valid values: `0`; [75, 35000]
+If the value is `0`, the original video bitrate will be used.
      * @param string $ResolutionAdaptive Resolution adaption. Valid values:
 <li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
