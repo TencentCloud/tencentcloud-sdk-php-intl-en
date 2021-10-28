@@ -56,6 +56,8 @@ which is left empty by default. Specify this parameter when cloning a strong syn
  * @method void setDeviceType(string $DeviceType) Set Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
  * @method integer getInstanceNodes() Obtain The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
  * @method void setInstanceNodes(integer $InstanceNodes) Set The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+ * @method string getDeployGroupId() Obtain Placement group ID.
+ * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -146,6 +148,11 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     public $InstanceNodes;
 
     /**
+     * @var string Placement group ID.
+     */
+    public $DeployGroupId;
+
+    /**
      * @param string $InstanceId ID of the instance to be cloned from
      * @param string $SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
      * @param integer $SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
@@ -164,6 +171,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 which is left empty by default. Specify this parameter when cloning a strong sync source instance.
      * @param string $DeviceType Resource isolation type of the clone. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance). Default value: `UNIVERSAL`.
      * @param integer $InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
+     * @param string $DeployGroupId Placement group ID.
      */
     function __construct()
     {
@@ -249,6 +257,10 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 
         if (array_key_exists("InstanceNodes",$param) and $param["InstanceNodes"] !== null) {
             $this->InstanceNodes = $param["InstanceNodes"];
+        }
+
+        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
+            $this->DeployGroupId = $param["DeployGroupId"];
         }
     }
 }
