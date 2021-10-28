@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDetailEvent response structure.
  *
- * @method array getData() Obtain List of returned events
- * @method void setData(array $Data) Set List of returned events
+ * @method array getData() Obtain List of returned events. An empty array will be returned if no data can be found.
+ * @method void setData(array $Data) Set List of returned events. An empty array will be returned if no data can be found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeDetailEventResponse extends AbstractModel
 {
     /**
-     * @var array List of returned events
+     * @var array List of returned events. An empty array will be returned if no data can be found.
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeDetailEventResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data List of returned events
+     * @param array $Data List of returned events. An empty array will be returned if no data can be found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

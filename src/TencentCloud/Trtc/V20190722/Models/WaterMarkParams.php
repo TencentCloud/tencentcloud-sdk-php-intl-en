@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLocationX(integer $LocationX) Set Horizontal offset (px) of the watermark
  * @method integer getLocationY() Obtain Vertical offset (px) of the watermark
  * @method void setLocationY(integer $LocationY) Set Vertical offset (px) of the watermark
+ * @method string getWaterMarkUrl() Obtain URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+ * @method void setWaterMarkUrl(string $WaterMarkUrl) Set URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
  */
 class WaterMarkParams extends AbstractModel
 {
@@ -59,11 +61,17 @@ class WaterMarkParams extends AbstractModel
     public $LocationY;
 
     /**
+     * @var string URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
+     */
+    public $WaterMarkUrl;
+
+    /**
      * @param integer $WaterMarkId Image ID of the watermark, which is generated after the image is uploaded to the TRTC console
      * @param integer $WaterMarkWidth Width (px) of the watermark for On-Cloud MixTranscoding
      * @param integer $WaterMarkHeight Height (px) of the watermark for On-Cloud MixTranscoding
      * @param integer $LocationX Horizontal offset (px) of the watermark
      * @param integer $LocationY Vertical offset (px) of the watermark
+     * @param string $WaterMarkUrl URL of the watermark image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `WaterMarkUrl` and `WaterMarkId` are specified, the former will be used. The watermark image cannot exceed 10 MB.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class WaterMarkParams extends AbstractModel
 
         if (array_key_exists("LocationY",$param) and $param["LocationY"] !== null) {
             $this->LocationY = $param["LocationY"];
+        }
+
+        if (array_key_exists("WaterMarkUrl",$param) and $param["WaterMarkUrl"] !== null) {
+            $this->WaterMarkUrl = $param["WaterMarkUrl"];
         }
     }
 }

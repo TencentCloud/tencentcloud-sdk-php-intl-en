@@ -56,6 +56,8 @@ Grey: 0x999999, whose decimal number is 10066329
  * @method void setBackgroundImageId(integer $BackgroundImageId) Set Output stream background image for stream mix. Its value is the ID of image uploaded through the TRTC Console.
  * @method integer getAudioCodec() Obtain Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
  * @method void setAudioCodec(integer $AudioCodec) Set Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+ * @method string getBackgroundImageUrl() Obtain URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+ * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
  */
 class EncodeParams extends AbstractModel
 {
@@ -122,6 +124,11 @@ Grey: 0x999999, whose decimal number is 10066329
     public $AudioCodec;
 
     /**
+     * @var string URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
+     */
+    public $BackgroundImageUrl;
+
+    /**
      * @param integer $AudioSampleRate Output audio sample rate (Hz) for On-Cloud MixTranscoding. Valid values: 48000, 44100, 32000, 24000, 16000, 8000
      * @param integer $AudioBitrate Output audio bitrate (Kbps) for On-Cloud MixTranscoding. Value range: 8-500
      * @param integer $AudioChannels Number of sound channels of output stream for On-Cloud MixTranscoding. Valid values: 1, 2. 1 represents mono-channel, and 2 represents dual-channel.
@@ -140,6 +147,7 @@ White: 0xFFFFFF, whose decimal number is 16777215
 Grey: 0x999999, whose decimal number is 10066329
      * @param integer $BackgroundImageId Output stream background image for stream mix. Its value is the ID of image uploaded through the TRTC Console.
      * @param integer $AudioCodec Output audio codec for On-Cloud MixTranscoding. Valid values: 0, 1, 2. 0 (default): LC-AAC; 1: HE-AAC; 2: HE-AACv2. If this parameter is set to 2 (HE-AACv2), On-Cloud MixTranscoding can produce only dual-channel streams. If it is set to 1 (HE-AAC) or 2 (HE-AACv2), the valid values for the audio sample rate of output streams are 48000, 44100, 32000, 24000, and 16000.
+     * @param string $BackgroundImageUrl URL of the background image for the mixed stream, which can be in PNG, JPG, JPEG, or BMP format and does not support the alpha channel. The URL must not exceed 512 bytes. When both `BackgroundImageUrl` and `BackgroundImageId` are specified, the former will be used. The background image must not exceed 10 MB.
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ Grey: 0x999999, whose decimal number is 10066329
 
         if (array_key_exists("AudioCodec",$param) and $param["AudioCodec"] !== null) {
             $this->AudioCodec = $param["AudioCodec"];
+        }
+
+        if (array_key_exists("BackgroundImageUrl",$param) and $param["BackgroundImageUrl"] !== null) {
+            $this->BackgroundImageUrl = $param["BackgroundImageUrl"];
         }
     }
 }

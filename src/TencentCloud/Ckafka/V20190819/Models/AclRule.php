@@ -69,9 +69,9 @@ Note: `null` may be returned for this field, indicating that no valid values can
  * @method void setTopicCount(integer $TopicCount) Set The number of topics that apply this ACL rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method string getPatternTypeTitle() Obtain Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPatternTypeTitle(string $PatternTypeTitle) Set Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AclRule extends AbstractModel
 {
@@ -149,7 +149,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
     /**
      * @var string Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $PatternTypeTitle;
 
@@ -179,7 +179,7 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * @param integer $TopicCount The number of topics that apply this ACL rule.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $PatternTypeTitle Name of rule type.
-Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

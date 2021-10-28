@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSdkAppId() Obtain User `sdkappid`
  * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`
- * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
- * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
- * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
+ * @method integer getStartTime() Obtain Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+ * @method void setStartTime(integer $StartTime) Set Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+ * @method integer getEndTime() Obtain Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+ * @method void setEndTime(integer $EndTime) Set Query end time (s) in the format of Unix timestamp, e.g., 1588034999
  * @method string getRoomId() Obtain Room ID in string type
  * @method void setRoomId(string $RoomId) Set Room ID in string type
  * @method string getPageNumber() Obtain Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
@@ -41,12 +41,12 @@ class DescribeRoomInformationRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
+     * @var integer Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
      */
     public $StartTime;
 
     /**
-     * @var integer Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * @var integer Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public $EndTime;
 
@@ -67,8 +67,8 @@ class DescribeRoomInformationRequest extends AbstractModel
 
     /**
      * @param string $SdkAppId User `sdkappid`
-     * @param integer $StartTime Query start time in the format of UNIX timestamp, such as 1588031999s, which is a point in time in the last 14 days.
-     * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * @param integer $StartTime Query start time (s) in the format of Unix timestamp (e.g., 1588031999), which must be a time point in the last 14 days
+     * @param integer $EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      * @param string $RoomId Room ID in string type
      * @param string $PageNumber Page index starting from 0 (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default)
      * @param string $PageSize Number of entries per page (if either `PageNumber` or `PageSize` is left empty, 10 data entries will be returned by default. Maximum value: 100)

@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCommId() Obtain Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
  * @method void setCommId(string $CommId) Set Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
- * @method integer getStartTime() Obtain Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
- * @method integer getEndTime() Obtain Query end time in the format of UNIX timestamp (e.g. 1588031999s).
- * @method void setEndTime(integer $EndTime) Set Query end time in the format of UNIX timestamp (e.g. 1588031999s).
- * @method string getSdkAppId() Obtain User `SDKAppID` (e.g. 1400188366).
- * @method void setSdkAppId(string $SdkAppId) Set User `SDKAppID` (e.g. 1400188366).
+ * @method integer getStartTime() Obtain Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
+ * @method void setStartTime(integer $StartTime) Set Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
+ * @method integer getEndTime() Obtain Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
+ * @method void setEndTime(integer $EndTime) Set Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
+ * @method string getSdkAppId() Obtain `SDKAppID` of the users to query, e.g., 1400353843
+ * @method void setSdkAppId(string $SdkAppId) Set `SDKAppID` of the users to query, e.g., 1400353843
  * @method array getUserIds() Obtain The array of user IDs for query. You can enter up to 6 user IDs. If it is left empty, data of 6 users will be returned.
  * @method void setUserIds(array $UserIds) Set The array of user IDs for query. You can enter up to 6 user IDs. If it is left empty, data of 6 users will be returned.
  * @method string getPageNumber() Obtain Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned.
@@ -43,17 +43,17 @@ class DescribeUserInformationRequest extends AbstractModel
     public $CommId;
 
     /**
-     * @var integer Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
+     * @var integer Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
      */
     public $StartTime;
 
     /**
-     * @var integer Query end time in the format of UNIX timestamp (e.g. 1588031999s).
+     * @var integer Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
      */
     public $EndTime;
 
     /**
-     * @var string User `SDKAppID` (e.g. 1400188366).
+     * @var string `SDKAppID` of the users to query, e.g., 1400353843
      */
     public $SdkAppId;
 
@@ -74,9 +74,9 @@ class DescribeUserInformationRequest extends AbstractModel
 
     /**
      * @param string $CommId Unique ID of a call: sdkappid_roomgString_createTime. The `roomgString` refers to the room ID, and `createTime` refers to the creation time of a room in the format of UNIX timestamp in seconds, such as 1400353843_218695_1590065777. Its value can be obtained from the `DescribeRoomInformation` API (related document: https://intl.cloud.tencent.com/document/product/647/44050?from_cn_redirect=1).
-     * @param integer $StartTime Query start time in the format of UNIX timestamp (e.g. 1588031999s) in the last 5 days.
-     * @param integer $EndTime Query end time in the format of UNIX timestamp (e.g. 1588031999s).
-     * @param string $SdkAppId User `SDKAppID` (e.g. 1400188366).
+     * @param integer $StartTime Query start time (s) in the format of Unix timestamp (e.g., 1590065777), which must be a time point in the last 14 days
+     * @param integer $EndTime Query end time (s) in the format of Unix timestamp (e.g., 1590065877)
+     * @param string $SdkAppId `SDKAppID` of the users to query, e.g., 1400353843
      * @param array $UserIds The array of user IDs for query. You can enter up to 6 user IDs. If it is left empty, data of 6 users will be returned.
      * @param string $PageNumber Page index starting from 0. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned.
      * @param string $PageSize Number of entries per page. If either `PageNumber` or `PageSize` is left empty, 6 data entries will be returned. `PageSize` is up to 100.

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSdkAppId() Obtain User `SDKAppID`, which can be used to query 20 exceptional experience events (in one or more rooms)
  * @method void setSdkAppId(string $SdkAppId) Set User `SDKAppID`, which can be used to query 20 exceptional experience events (in one or more rooms)
- * @method integer getStartTime() Obtain Query start time
- * @method void setStartTime(integer $StartTime) Set Query start time
- * @method integer getEndTime() Obtain Query end time
- * @method void setEndTime(integer $EndTime) Set Query end time
+ * @method integer getStartTime() Obtain Query start time (s) in the format of Unix timestamp, e.g., 1592448600
+ * @method void setStartTime(integer $StartTime) Set Query start time (s) in the format of Unix timestamp, e.g., 1592448600
+ * @method integer getEndTime() Obtain Query end time (s) in the format of Unix timestamp, e.g., 1592449080
+ * @method void setEndTime(integer $EndTime) Set Query end time (s) in the format of Unix timestamp, e.g., 1592449080
  * @method string getRoomId() Obtain Room ID, which can be used to query up to 20 exceptional experience events in a specific room
  * @method void setRoomId(string $RoomId) Set Room ID, which can be used to query up to 20 exceptional experience events in a specific room
  */
@@ -37,12 +37,12 @@ class DescribeAbnormalEventRequest extends AbstractModel
     public $SdkAppId;
 
     /**
-     * @var integer Query start time
+     * @var integer Query start time (s) in the format of Unix timestamp, e.g., 1592448600
      */
     public $StartTime;
 
     /**
-     * @var integer Query end time
+     * @var integer Query end time (s) in the format of Unix timestamp, e.g., 1592449080
      */
     public $EndTime;
 
@@ -53,8 +53,8 @@ class DescribeAbnormalEventRequest extends AbstractModel
 
     /**
      * @param string $SdkAppId User `SDKAppID`, which can be used to query 20 exceptional experience events (in one or more rooms)
-     * @param integer $StartTime Query start time
-     * @param integer $EndTime Query end time
+     * @param integer $StartTime Query start time (s) in the format of Unix timestamp, e.g., 1592448600
+     * @param integer $EndTime Query end time (s) in the format of Unix timestamp, e.g., 1592449080
      * @param string $RoomId Room ID, which can be used to query up to 20 exceptional experience events in a specific room
      */
     function __construct()

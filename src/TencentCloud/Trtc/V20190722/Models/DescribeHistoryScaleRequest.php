@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeHistoryScale request structure.
  *
- * @method string getSdkAppId() Obtain User `sdkappid`
- * @method void setSdkAppId(string $SdkAppId) Set User `sdkappid`
- * @method integer getStartTime() Obtain Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
- * @method void setStartTime(integer $StartTime) Set Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
- * @method integer getEndTime() Obtain Query end time in the format of local UNIX timestamp, such as 1588031999s.
- * @method void setEndTime(integer $EndTime) Set Query end time in the format of local UNIX timestamp, such as 1588031999s.
+ * @method string getSdkAppId() Obtain `SDKAppID` of the users to query, e.g., 1400188366
+ * @method void setSdkAppId(string $SdkAppId) Set `SDKAppID` of the users to query, e.g., 1400188366
+ * @method integer getStartTime() Obtain Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+ * @method void setStartTime(integer $StartTime) Set Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+ * @method integer getEndTime() Obtain Query end time (s) in the format of Unix timestamp, e.g., 1588034999
+ * @method void setEndTime(integer $EndTime) Set Query end time (s) in the format of Unix timestamp, e.g., 1588034999
  */
 class DescribeHistoryScaleRequest extends AbstractModel
 {
     /**
-     * @var string User `sdkappid`
+     * @var string `SDKAppID` of the users to query, e.g., 1400188366
      */
     public $SdkAppId;
 
     /**
-     * @var integer Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
+     * @var integer Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
      */
     public $StartTime;
 
     /**
-     * @var integer Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * @var integer Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     public $EndTime;
 
     /**
-     * @param string $SdkAppId User `sdkappid`
-     * @param integer $StartTime Query start time in the format of local UNIX timestamp, such as 1588031999s, which is a point in time in the last 5 days.
-     * @param integer $EndTime Query end time in the format of local UNIX timestamp, such as 1588031999s.
+     * @param string $SdkAppId `SDKAppID` of the users to query, e.g., 1400188366
+     * @param integer $StartTime Query start time (s) in the format of Unix timestamp (e.g., 1587571000), which must be a time point in the last 5 days
+     * @param integer $EndTime Query end time (s) in the format of Unix timestamp, e.g., 1588034999
      */
     function __construct()
     {

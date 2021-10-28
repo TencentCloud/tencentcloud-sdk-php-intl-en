@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExflag(string $Exflag) Set Extra flag
  * @method string getSoldOut() Obtain JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
  * @method void setSoldOut(string $SoldOut) Set JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+ * @method array getSalesInfo() Obtain Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSalesInfo(array $SalesInfo) Set Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ZoneInfo extends AbstractModel
 {
@@ -80,6 +84,12 @@ class ZoneInfo extends AbstractModel
     public $SoldOut;
 
     /**
+     * @var array Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SalesInfo;
+
+    /**
      * @param string $ZoneId Zone ID
      * @param integer $IsInternalApp Whether it is an internal application.
      * @param integer $AppId Application ID
@@ -88,6 +98,8 @@ class ZoneInfo extends AbstractModel
      * @param integer $ZoneStatus Zone status
      * @param string $Exflag Extra flag
      * @param string $SoldOut JSON object. The key is the model. The value `true` means “sold out”, and `false` means “not sold out”.
+     * @param array $SalesInfo Information on whether Standard Edition has been sold out.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,15 @@ class ZoneInfo extends AbstractModel
 
         if (array_key_exists("SoldOut",$param) and $param["SoldOut"] !== null) {
             $this->SoldOut = $param["SoldOut"];
+        }
+
+        if (array_key_exists("SalesInfo",$param) and $param["SalesInfo"] !== null) {
+            $this->SalesInfo = [];
+            foreach ($param["SalesInfo"] as $key => $value){
+                $obj = new SaleInfo();
+                $obj->deserialize($value);
+                array_push($this->SalesInfo, $obj);
+            }
         }
     }
 }
