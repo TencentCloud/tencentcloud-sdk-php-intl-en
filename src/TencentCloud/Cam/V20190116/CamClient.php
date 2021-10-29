@@ -35,6 +35,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) This API (CreateRole) is used to create a role.
  * @method Models\CreateSAMLProviderResponse CreateSAMLProvider(Models\CreateSAMLProviderRequest $req) This API is used to create a SAML identity provider.
  * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) This API is used to create a service-linked role.
+ * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) This API is used to create user SAML configurations.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) This API is used to delete a user group.
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) This API (DeletePolicy) is used to delete a policy.
  * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) This API is used to delete a policy version of a policy.
@@ -49,6 +50,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) This API is used to query security settings.
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) This API is used to query security settings.
  * @method Models\DescribeSubAccountsResponse DescribeSubAccounts(Models\DescribeSubAccountsRequest $req) This API is used to query sub-users through the sub-user UIN list.
+ * @method Models\DescribeUserSAMLConfigResponse DescribeUserSAMLConfig(Models\DescribeUserSAMLConfigRequest $req) This API is used to query user SAML configurations.
  * @method Models\DetachGroupPolicyResponse DetachGroupPolicy(Models\DetachGroupPolicyRequest $req) This API (DetachGroupPolicy) is used to unassociate a policy and a user group.
  * @method Models\DetachRolePolicyResponse DetachRolePolicy(Models\DetachRolePolicyRequest $req) This API (DetachRolePolicy) is used to unassociate a policy and a role.
  * @method Models\DetachUserPolicyResponse DetachUserPolicy(Models\DetachUserPolicyRequest $req) This API (DetachUserPolicy) is used to unassociate a policy and a user.
@@ -88,6 +90,7 @@ This API will update the default version of an existing policy instead of creati
  * @method Models\UpdateRoleDescriptionResponse UpdateRoleDescription(Models\UpdateRoleDescriptionRequest $req) This API (UpdateRoleDescription) is used to modify the description of a role.
  * @method Models\UpdateSAMLProviderResponse UpdateSAMLProvider(Models\UpdateSAMLProviderRequest $req) This API is used to update SAML identity provider information.
  * @method Models\UpdateUserResponse UpdateUser(Models\UpdateUserRequest $req) This API is used to update a sub-user.
+ * @method Models\UpdateUserSAMLConfigResponse UpdateUserSAMLConfig(Models\UpdateUserSAMLConfigRequest $req) This API is used to modify user SAML configurations.
  */
 
 class CamClient extends AbstractClient
