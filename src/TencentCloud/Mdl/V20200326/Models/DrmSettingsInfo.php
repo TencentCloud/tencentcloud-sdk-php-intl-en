@@ -24,16 +24,24 @@ use TencentCloud\Common\AbstractModel;
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
  * @method void setState(string $State) Set Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
- * @method string getScheme() Obtain This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
- * @method void setScheme(string $Scheme) Set This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
- * @method string getContentId() Obtain If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
- * @method void setContentId(string $ContentId) Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+ * @method string getScheme() Obtain Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
+ * @method void setScheme(string $Scheme) Set Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
+ * @method string getContentId() Obtain If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
+ * @method void setContentId(string $ContentId) Set If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
  * @method array getKeys() Obtain The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeys(array $Keys) Set The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method SDMCSettingsInfo getSDMCSettings() Obtain SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSDMCSettings(SDMCSettingsInfo $SDMCSettings) Set SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class DrmSettingsInfo extends AbstractModel
 {
@@ -44,13 +52,15 @@ DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_M
     public $State;
 
     /**
-     * @var string This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
+     * @var string Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
      */
     public $Scheme;
 
     /**
-     * @var string If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     * @var string If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
      */
     public $ContentId;
 
@@ -61,13 +71,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Keys;
 
     /**
+     * @var SDMCSettingsInfo SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SDMCSettings;
+
+    /**
      * @param string $State Whether to enable DRM encryption. Valid values: `CLOSE` (disable), `OPEN` (enable). Default value: `CLOSE`
 DRM encryption is supported only for HLS, DASH, HLS_ARCHIVE, DASH_ARCHIVE, HLS_MEDIAPACKAGE, and DASH_MEDIAPACKAGE outputs.
-     * @param string $Scheme This parameter can be set to `CustomDRMKeys` or left empty.
-CustomDRMKeys means encryption keys customized by users.
-     * @param string $ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required and should be specified by the user.
+     * @param string $Scheme Valid values: `CustomDRMKeys` (default value), `SDMCDRM`
+`CustomDRMKeys` means encryption keys customized by users.
+`SDMCDRM` means the DRM key management system of SDMC.
+     * @param string $ContentId If `Scheme` is set to `CustomDRMKeys`, this parameter is required.
+If `Scheme` is set to `SDMCDRM`, this parameter is optional. It supports digits, letters, hyphens, and underscores and must contain 1 to 36 characters. If it is not specified, the value of `ChannelId` will be used.
      * @param array $Keys The key customized by the content user, which is required when `Scheme` is set to CustomDRMKeys.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param SDMCSettingsInfo $SDMCSettings SDMC key configuration. This parameter is used when `Scheme` is set to `SDMCDRM`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -101,6 +121,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Keys, $obj);
             }
+        }
+
+        if (array_key_exists("SDMCSettings",$param) and $param["SDMCSettings"] !== null) {
+            $this->SDMCSettings = new SDMCSettingsInfo();
+            $this->SDMCSettings->deserialize($param["SDMCSettings"]);
         }
     }
 }

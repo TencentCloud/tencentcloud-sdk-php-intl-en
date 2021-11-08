@@ -14,23 +14,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoType response structure.
+ * QueryClientList response structure.
  *
+ * @method array getData() Obtain Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setData(array $Data) Set Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotal() Obtain Number of customers
+ * @method void setTotal(integer $Total) Set Number of customers
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyRoTypeResponse extends AbstractModel
+class QueryClientListResponse extends AbstractModel
 {
+    /**
+     * @var array Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $Data;
+
+    /**
+     * @var integer Number of customers
+     */
+    public $Total;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $Data Queries the list of customers
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Total Number of customers
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +66,19 @@ class ModifyRoTypeResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new QueryClientListItem();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

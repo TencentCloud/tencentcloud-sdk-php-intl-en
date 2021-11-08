@@ -48,6 +48,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setStreamPackageSettings(StreamPackageSettingsInfo $StreamPackageSettings) Set StreamPackage configuration information, which is required if the output type is StreamPackage
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method TimeShiftSettingsInfo getTimeShiftSettings() Obtain Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTimeShiftSettings(TimeShiftSettingsInfo $TimeShiftSettings) Set Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class StreamLiveOutputGroupsInfo extends AbstractModel
 {
@@ -98,6 +102,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $StreamPackageSettings;
 
     /**
+     * @var TimeShiftSettingsInfo Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $TimeShiftSettings;
+
+    /**
      * @param string $Name Output group name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the channel level
      * @param string $Type Output protocol
 Valid values: `HLS`, `DASH`, `HLS_ARCHIVE`, `HLS_STREAM_PACKAGE`, `DASH_STREAM_PACKAGE`
@@ -112,6 +122,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param StreamPackageSettingsInfo $StreamPackageSettings StreamPackage configuration information, which is required if the output type is StreamPackage
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param TimeShiftSettingsInfo $TimeShiftSettings Time-shift configuration information
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -170,6 +182,11 @@ Note: this field may return `null`, indicating that no valid value was found.
         if (array_key_exists("StreamPackageSettings",$param) and $param["StreamPackageSettings"] !== null) {
             $this->StreamPackageSettings = new StreamPackageSettingsInfo();
             $this->StreamPackageSettings->deserialize($param["StreamPackageSettings"]);
+        }
+
+        if (array_key_exists("TimeShiftSettings",$param) and $param["TimeShiftSettings"] !== null) {
+            $this->TimeShiftSettings = new TimeShiftSettingsInfo();
+            $this->TimeShiftSettings->deserialize($param["TimeShiftSettings"]);
         }
     }
 }

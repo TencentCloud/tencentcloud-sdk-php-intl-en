@@ -116,7 +116,6 @@ Note that when modifying account permissions, you need to pass in the full permi
  * @method Models\ModifyParamTemplateResponse ModifyParamTemplate(Models\ModifyParamTemplateRequest $req) This API is used to modify a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\ModifyRoGroupInfoResponse ModifyRoGroupInfo(Models\ModifyRoGroupInfoRequest $req) This API is used to update the information of a TencentDB RO group, such as configuring an instance removal policy in case of excessive delay and setting read weights of RO instances.
  * @method Models\ModifyRoReplicationDelayResponse ModifyRoReplicationDelay(Models\ModifyRoReplicationDelayRequest $req) This API is used to modify the replication delay of a delayed RO replica.
- * @method Models\ModifyRoTypeResponse ModifyRoType(Models\ModifyRoTypeRequest $req) This API is used to change a general RO replica to delayed RO replica.
  * @method Models\ModifyTimeWindowResponse ModifyTimeWindow(Models\ModifyTimeWindowRequest $req) This API (ModifyTimeWindow) is used to update the maintenance time window of a TencentDB instance.
  * @method Models\OfflineIsolatedInstancesResponse OfflineIsolatedInstances(Models\OfflineIsolatedInstancesRequest $req) This API (OfflineIsolatedInstances) is used to deactivate isolated TencentDB instances immediately. The instances must be in isolated status, i.e., their `Status` value is 5 in the return of the [instance list querying API](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1).
 

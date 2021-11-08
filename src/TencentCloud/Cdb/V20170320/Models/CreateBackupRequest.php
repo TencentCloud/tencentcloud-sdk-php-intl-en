@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
  * @method void setBackupDBTableList(array $BackupDBTableList) Set Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
 For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+ * @method string getManualBackupName() Obtain Manual backup alias
+ * @method void setManualBackupName(string $ManualBackupName) Set Manual backup alias
  */
 class CreateBackupRequest extends AbstractModel
 {
@@ -48,10 +50,16 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
     public $BackupDBTableList;
 
     /**
+     * @var string Manual backup alias
+     */
+    public $ManualBackupName;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param string $BackupMethod Backup method of target instance. Value range: logical (logical cold backup), physical (physical cold backup).
      * @param array $BackupDBTableList Information of the table to be backed up. If this parameter is not set, the entire instance will be backed up by default. It can be set only in logical backup (i.e., BackupMethod = logical). The specified table must exist; otherwise, backup may fail.
 For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you should set the parameter as [{"Db": "db1", "Table": "tb1"}, {"Db": "db1", "Table": "tb2"}, {"Db": "db2"} ].
+     * @param string $ManualBackupName Manual backup alias
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ For example, if you want to backup tb1 and tb2 in db1 and the entire db2, you sh
                 $obj->deserialize($value);
                 array_push($this->BackupDBTableList, $obj);
             }
+        }
+
+        if (array_key_exists("ManualBackupName",$param) and $param["ManualBackupName"] !== null) {
+            $this->ManualBackupName = $param["ManualBackupName"];
         }
     }
 }

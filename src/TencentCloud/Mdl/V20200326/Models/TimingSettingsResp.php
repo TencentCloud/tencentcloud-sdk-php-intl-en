@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
 UTC time, such as `2020-01-01T12:00:00Z`
  * @method void setTime(string $Time) Set Not empty if `StartType` is `FIXED_TIME`
 UTC time, such as `2020-01-01T12:00:00Z`
+ * @method string getStartTime() Obtain This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+ * @method void setStartTime(string $StartTime) Set This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+ * @method string getEndTime() Obtain This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
+ * @method void setEndTime(string $EndTime) Set This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
  */
 class TimingSettingsResp extends AbstractModel
 {
@@ -41,9 +49,25 @@ UTC time, such as `2020-01-01T12:00:00Z`
     public $Time;
 
     /**
+     * @var string This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     */
+    public $StartTime;
+
+    /**
+     * @var string This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
+     */
+    public $EndTime;
+
+    /**
      * @param string $StartType Event trigger type
      * @param string $Time Not empty if `StartType` is `FIXED_TIME`
 UTC time, such as `2020-01-01T12:00:00Z`
+     * @param string $StartTime This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the start time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     * @param string $EndTime This parameter cannot be empty if `EventType` is `TIMED_RECORD`.
+It indicates the end time for recording in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the start time for recording.
      */
     function __construct()
     {
@@ -64,6 +88,14 @@ UTC time, such as `2020-01-01T12:00:00Z`
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

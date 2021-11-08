@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMethod(string $Method) Set Backup method. Valid values: `full` (full backup), `partial` (partial backup).
  * @method string getWay() Obtain Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
  * @method void setWay(string $Way) Set Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
+ * @method string getManualBackupName() Obtain Manual backup alias
+ * @method void setManualBackupName(string $ManualBackupName) Set Manual backup alias
  */
 class BackupInfo extends AbstractModel
 {
@@ -115,6 +117,11 @@ class BackupInfo extends AbstractModel
     public $Way;
 
     /**
+     * @var string Manual backup alias
+     */
+    public $ManualBackupName;
+
+    /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
@@ -128,6 +135,7 @@ class BackupInfo extends AbstractModel
      * @param string $StartTime Backup task start time
      * @param string $Method Backup method. Valid values: `full` (full backup), `partial` (partial backup).
      * @param string $Way Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
+     * @param string $ManualBackupName Manual backup alias
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("Way",$param) and $param["Way"] !== null) {
             $this->Way = $param["Way"];
+        }
+
+        if (array_key_exists("ManualBackupName",$param) and $param["ManualBackupName"] !== null) {
+            $this->ManualBackupName = $param["ManualBackupName"];
         }
     }
 }

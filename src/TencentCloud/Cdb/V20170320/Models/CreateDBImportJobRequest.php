@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method string getFileName() Obtain Filename. The file should have already been uploaded to Tencent Cloud.
- * @method void setFileName(string $FileName) Set Filename. The file should have already been uploaded to Tencent Cloud.
+ * @method string getFileName() Obtain Filename. The file must be a .sql file uploaded to Tencent Cloud.
+ * @method void setFileName(string $FileName) Set Filename. The file must be a .sql file uploaded to Tencent Cloud.
  * @method string getUser() Obtain TencentDB username
  * @method void setUser(string $User) Set TencentDB username
  * @method string getPassword() Obtain Password of a TencentDB instance user account
@@ -39,7 +39,7 @@ class CreateDBImportJobRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Filename. The file should have already been uploaded to Tencent Cloud.
+     * @var string Filename. The file must be a .sql file uploaded to Tencent Cloud.
      */
     public $FileName;
 
@@ -60,7 +60,7 @@ class CreateDBImportJobRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param string $FileName Filename. The file should have already been uploaded to Tencent Cloud.
+     * @param string $FileName Filename. The file must be a .sql file uploaded to Tencent Cloud.
      * @param string $User TencentDB username
      * @param string $Password Password of a TencentDB instance user account
      * @param string $DbName Name of the target database. If this parameter is not passed in, no database is specified.
