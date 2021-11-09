@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
+ * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $AclRuleName;
 
     /**
+     * @var integer Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     */
+    public $RetentionBytes;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -128,6 +135,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param array $IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
      * @param string $AclRuleName Name of the preset ACL rule.
+     * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
             $this->AclRuleName = $param["AclRuleName"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

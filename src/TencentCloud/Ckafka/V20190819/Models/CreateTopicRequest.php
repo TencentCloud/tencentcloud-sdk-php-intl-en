@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTopicName() Obtain Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
- * @method void setTopicName(string $TopicName) Set Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+ * @method string getTopicName() Obtain Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
+ * @method void setTopicName(string $TopicName) Set Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
  * @method integer getPartitionNum() Obtain Number of partitions, which should be greater than 0
  * @method void setPartitionNum(integer $PartitionNum) Set Number of partitions, which should be greater than 0
  * @method integer getReplicaNum() Obtain Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
+ * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -57,7 +59,7 @@ class CreateTopicRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * @var string Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      */
     public $TopicName;
 
@@ -122,8 +124,13 @@ class CreateTopicRequest extends AbstractModel
     public $AclRuleName;
 
     /**
+     * @var integer Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     */
+    public $RetentionBytes;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param string $TopicName Topic name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
+     * @param string $TopicName Topic name, which is a string of up to 128 characters. It can contain letters, digits, and hyphens (-) and must start with a letter.
      * @param integer $PartitionNum Number of partitions, which should be greater than 0
      * @param integer $ReplicaNum Number of replicas, which cannot be higher than the number of brokers. Maximum value: 3
      * @param integer $EnableWhiteList IP allowlist switch. 1: enabled, 0: disabled. Default value: 0
@@ -136,6 +143,7 @@ class CreateTopicRequest extends AbstractModel
      * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
      * @param string $AclRuleName Name of the preset ACL rule.
+     * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("AclRuleName",$param) and $param["AclRuleName"] !== null) {
             $this->AclRuleName = $param["AclRuleName"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

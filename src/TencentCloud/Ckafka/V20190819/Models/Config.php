@@ -50,6 +50,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionBytes() Obtain Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Config extends AbstractModel
 {
@@ -97,6 +101,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MaxMessageBytes;
 
     /**
+     * @var integer Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RetentionBytes;
+
+    /**
      * @param integer $Retention Message retention period
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MinInsyncReplicas Minimum number of sync replications
@@ -112,6 +122,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MaxMessageBytes Maximum number of message bytes
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionBytes Message retention file size.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -152,6 +164,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
             $this->MaxMessageBytes = $param["MaxMessageBytes"];
+        }
+
+        if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
+            $this->RetentionBytes = $param["RetentionBytes"];
         }
     }
 }

@@ -90,6 +90,8 @@ pause
  * @method void setMinStorageSize(integer $MinStorageSize) Set The minimum storage corresponding to the compute specifications of the cluster
  * @method integer getMaxStorageSize() Obtain The maximum storage corresponding to the compute specifications of the cluster
  * @method void setMaxStorageSize(integer $MaxStorageSize) Set The maximum storage corresponding to the compute specifications of the cluster
+ * @method array getNetAddrs() Obtain Network information of the cluster
+ * @method void setNetAddrs(array $NetAddrs) Set Network information of the cluster
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -261,6 +263,11 @@ pause
     public $MaxStorageSize;
 
     /**
+     * @var array Network information of the cluster
+     */
+    public $NetAddrs;
+
+    /**
      * @param string $Status Cluster status
      * @param string $UpdateTime Update time
      * @param string $Zone AZ
@@ -296,6 +303,7 @@ pause
      * @param integer $StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
      * @param integer $MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
      * @param integer $MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+     * @param array $NetAddrs Network information of the cluster
      */
     function __construct()
     {
@@ -450,6 +458,15 @@ pause
 
         if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
             $this->MaxStorageSize = $param["MaxStorageSize"];
+        }
+
+        if (array_key_exists("NetAddrs",$param) and $param["NetAddrs"] !== null) {
+            $this->NetAddrs = [];
+            foreach ($param["NetAddrs"] as $key => $value){
+                $obj = new NetAddr();
+                $obj->deserialize($value);
+                array_push($this->NetAddrs, $obj);
+            }
         }
     }
 }
