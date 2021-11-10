@@ -18,19 +18,19 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRealtimeNetwork response structure.
+ * DescribeTrtcMcuTranscodeTime response structure.
  *
- * @method array getData() Obtain Data returned by query
- * @method void setData(array $Data) Set Data returned by query
+ * @method array getUsages() Obtain Duration statistics of the queried application(s)
+ * @method void setUsages(array $Usages) Set Duration statistics of the queried application(s)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeRealtimeNetworkResponse extends AbstractModel
+class DescribeTrtcMcuTranscodeTimeResponse extends AbstractModel
 {
     /**
-     * @var array Data returned by query
+     * @var array Duration statistics of the queried application(s)
      */
-    public $Data;
+    public $Usages;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class DescribeRealtimeNetworkResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Data returned by query
+     * @param array $Usages Duration statistics of the queried application(s)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeRealtimeNetworkResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new RealtimeData();
+        if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
+            $this->Usages = [];
+            foreach ($param["Usages"] as $key => $value){
+                $obj = new OneSdkAppIdTranscodeTimeUsagesInfo();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->Usages, $obj);
             }
         }
 

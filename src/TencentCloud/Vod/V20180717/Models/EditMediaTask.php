@@ -46,6 +46,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Progress of a video editing task. Value range: [0, 100]
+ * @method void setProgress(integer $Progress) Set Progress of a video editing task. Value range: [0, 100]
  * @method EditMediaTaskInput getInput() Obtain Input of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInput(EditMediaTaskInput $Input) Set Input of video editing task.
@@ -54,20 +56,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(EditMediaTaskOutput $Output) Set Output of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain Metadata of a source video
+ * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
  * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProcedureTaskId(string $ProcedureTaskId) Set If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain Metadata of a source video
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
+ * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class EditMediaTask extends AbstractModel
 {
@@ -105,6 +107,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
+     * @var integer Progress of a video editing task. Value range: [0, 100]
+     */
+    public $Progress;
+
+    /**
      * @var EditMediaTaskInput Input of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -117,16 +124,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var MediaMetaData Metadata of a source video
+     */
+    public $MetaData;
+
+    /**
      * @var string If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $ProcedureTaskId;
-
-    /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $SessionContext;
 
     /**
      * @var string The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
@@ -135,9 +141,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
-     * @var MediaMetaData Metadata of a source video
+     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public $MetaData;
+    public $SessionContext;
 
     /**
      * @param string $TaskId Task ID.
@@ -153,17 +160,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Progress of a video editing task. Value range: [0, 100]
      * @param EditMediaTaskInput $Input Input of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param EditMediaTaskOutput $Output Output of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData Metadata of a source video
      * @param string $ProcedureTaskId If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData Metadata of a source video
+     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -198,6 +206,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Message = $param["Message"];
         }
 
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
+        }
+
         if (array_key_exists("Input",$param) and $param["Input"] !== null) {
             $this->Input = new EditMediaTaskInput();
             $this->Input->deserialize($param["Input"]);
@@ -208,21 +220,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Output->deserialize($param["Output"]);
         }
 
-        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
-            $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
+            $this->MetaData = new MediaMetaData();
+            $this->MetaData->deserialize($param["MetaData"]);
         }
 
-        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
-            $this->SessionContext = $param["SessionContext"];
+        if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
+            $this->ProcedureTaskId = $param["ProcedureTaskId"];
         }
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
         }
 
-        if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {
-            $this->MetaData = new MediaMetaData();
-            $this->MetaData->deserialize($param["MetaData"]);
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

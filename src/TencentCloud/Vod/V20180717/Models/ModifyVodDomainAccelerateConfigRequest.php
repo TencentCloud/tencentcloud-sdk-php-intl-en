@@ -33,11 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getStatus() Obtain Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
  * @method void setStatus(string $Status) Set Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
  * @method integer getSubAppId() Obtain VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  */
@@ -60,7 +58,6 @@ class ModifyVodDomainAccelerateConfigRequest extends AbstractModel
      * @var string Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
      */
     public $Status;
 
@@ -78,7 +75,6 @@ To enable acceleration in Chinese mainland for a domain name, please finish [ICP
      * @param string $Status Whether to enable or disable domain name acceleration for the selected region. Valid values:
 <li>`Enabled`: enable</li>
 <li>`Disabled`: disable</li>
-To enable acceleration in Chinese mainland for a domain name, please finish [ICP filing](https://intl.cloud.tencent.com/document/product/243/18905?from_cn_redirect=1) for it first.
      * @param integer $SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      */
     function __construct()

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getId() Obtain Channel ID
  * @method void setId(string $Id) Set Channel ID
- * @method string getName() Obtain Channel name
- * @method void setName(string $Name) Set Channel name
+ * @method string getName() Obtain Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
+ * @method void setName(string $Name) Set Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
  * @method EndpointAuthInfo getAuthInfo() Obtain Authentication information
  * @method void setAuthInfo(EndpointAuthInfo $AuthInfo) Set Authentication information
  */
@@ -35,7 +35,7 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
     public $Id;
 
     /**
-     * @var string Channel name
+     * @var string Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      */
     public $Name;
 
@@ -46,7 +46,7 @@ class CreateStreamPackageChannelEndpointRequest extends AbstractModel
 
     /**
      * @param string $Id Channel ID
-     * @param string $Name Channel name
+     * @param string $Name Endpoint name, which must contain 1 to 32 characters and supports digits, letters, and underscores
      * @param EndpointAuthInfo $AuthInfo Authentication information
      */
     function __construct()

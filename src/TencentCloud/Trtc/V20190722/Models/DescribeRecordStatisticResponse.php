@@ -18,19 +18,19 @@ namespace TencentCloud\Trtc\V20190722\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRealtimeQuality response structure.
+ * DescribeRecordStatistic response structure.
  *
- * @method array getData() Obtain Type of returned data
- * @method void setData(array $Data) Set Type of returned data
+ * @method array getSdkAppIdUsages() Obtain Duration statistics of the queried application(s)
+ * @method void setSdkAppIdUsages(array $SdkAppIdUsages) Set Duration statistics of the queried application(s)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeRealtimeQualityResponse extends AbstractModel
+class DescribeRecordStatisticResponse extends AbstractModel
 {
     /**
-     * @var array Type of returned data
+     * @var array Duration statistics of the queried application(s)
      */
-    public $Data;
+    public $SdkAppIdUsages;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class DescribeRealtimeQualityResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Type of returned data
+     * @param array $SdkAppIdUsages Duration statistics of the queried application(s)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeRealtimeQualityResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new RealtimeData();
+        if (array_key_exists("SdkAppIdUsages",$param) and $param["SdkAppIdUsages"] !== null) {
+            $this->SdkAppIdUsages = [];
+            foreach ($param["SdkAppIdUsages"] as $key => $value){
+                $obj = new SdkAppIdRecordUsage();
                 $obj->deserialize($value);
-                array_push($this->Data, $obj);
+                array_push($this->SdkAppIdUsages, $obj);
             }
         }
 
