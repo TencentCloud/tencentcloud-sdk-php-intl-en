@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateCommonMixStream request structure.
  *
- * @method string getMixStreamSessionId() Obtain ID of stream mix session (from applying for stream mix to canceling stream mix).
- * @method void setMixStreamSessionId(string $MixStreamSessionId) Set ID of stream mix session (from applying for stream mix to canceling stream mix).
+ * @method string getMixStreamSessionId() Obtain ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
+ * @method void setMixStreamSessionId(string $MixStreamSessionId) Set ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
  * @method array getInputStreamList() Obtain Input stream list for stream mix.
  * @method void setInputStreamList(array $InputStreamList) Set Input stream list for stream mix.
  * @method CommonMixOutputParams getOutputParams() Obtain Output stream parameter for stream mix.
@@ -46,7 +46,7 @@ For six input sources, 610 is supported.
 class CreateCommonMixStreamRequest extends AbstractModel
 {
     /**
-     * @var string ID of stream mix session (from applying for stream mix to canceling stream mix).
+     * @var string ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
      */
     public $MixStreamSessionId;
 
@@ -77,7 +77,7 @@ For six input sources, 610 is supported.
     public $ControlParams;
 
     /**
-     * @param string $MixStreamSessionId ID of stream mix session (from applying for stream mix to canceling stream mix).
+     * @param string $MixStreamSessionId ID of a stream mix session (from applying for the stream mix to cancelling it). This parameter can contain up to 80 bytes of letters, digits, and underscores.
      * @param array $InputStreamList Input stream list for stream mix.
      * @param CommonMixOutputParams $OutputParams Output stream parameter for stream mix.
      * @param integer $MixStreamTemplateId Input template ID. If this parameter is set, the output will be generated according to the default template layout, and there is no need to enter the custom position parameters.

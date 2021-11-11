@@ -54,8 +54,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtendField2(string $ExtendField2) Set Extension field 2
  * @method string getTotalCost() Obtain Cost, in USD
  * @method void setTotalCost(string $TotalCost) Set Cost, in USD
- * @method string getDiscount() Obtain Discount rate
- * @method void setDiscount(string $Discount) Set Discount rate
+ * @method string getDiscount() Obtain Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
+ * @method void setDiscount(string $Discount) Set Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
  * @method string getReduceType() Obtain Offer type
  * @method void setReduceType(string $ReduceType) Set Offer type
  * @method string getRealTotalCost() Obtain Total cost after discount, in USD
@@ -177,7 +179,8 @@ class BillResourceSummary extends AbstractModel
     public $TotalCost;
 
     /**
-     * @var string Discount rate
+     * @var string Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
      */
     public $Discount;
 
@@ -275,7 +278,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ExtendField1 Extension field 1
      * @param string $ExtendField2 Extension field 2
      * @param string $TotalCost Cost, in USD
-     * @param string $Discount Discount rate
+     * @param string $Discount Discount
+If different discounts or contract prices are applied, `-` will be returned for this parameter.
      * @param string $ReduceType Offer type
      * @param string $RealTotalCost Total cost after discount, in USD
      * @param string $VoucherPayAmount Amount paid in voucher, in USD

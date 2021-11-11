@@ -18,52 +18,36 @@ namespace TencentCloud\Billing\V20180709\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Summarize total cost by product
+ * Total cost
  *
  * @method string getRealTotalCost() Obtain Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRealTotalCost(string $RealTotalCost) Set Total cost
- * @method string getVoucherPayAmount() Obtain Voucher amount
- * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
- * @method string getIncentivePayAmount() Obtain Trial credit amount
- * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Trial credit amount
- * @method string getCashPayAmount() Obtain Cash amount
- * @method void setCashPayAmount(string $CashPayAmount) Set Cash amount
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
-class BusinessSummaryTotal extends AbstractModel
+class SummaryTotal extends AbstractModel
 {
     /**
      * @var string Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $RealTotalCost;
 
     /**
-     * @var string Voucher amount
-     */
-    public $VoucherPayAmount;
-
-    /**
-     * @var string Trial credit amount
-     */
-    public $IncentivePayAmount;
-
-    /**
-     * @var string Cash amount
-     */
-    public $CashPayAmount;
-
-    /**
      * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $TotalCost;
 
     /**
      * @param string $RealTotalCost Total cost
-     * @param string $VoucherPayAmount Voucher amount
-     * @param string $IncentivePayAmount Trial credit amount
-     * @param string $CashPayAmount Cash amount
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -80,18 +64,6 @@ class BusinessSummaryTotal extends AbstractModel
         }
         if (array_key_exists("RealTotalCost",$param) and $param["RealTotalCost"] !== null) {
             $this->RealTotalCost = $param["RealTotalCost"];
-        }
-
-        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
-            $this->VoucherPayAmount = $param["VoucherPayAmount"];
-        }
-
-        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
-            $this->IncentivePayAmount = $param["IncentivePayAmount"];
-        }
-
-        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
-            $this->CashPayAmount = $param["CashPayAmount"];
         }
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {

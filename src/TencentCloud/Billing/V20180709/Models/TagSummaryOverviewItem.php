@@ -32,6 +32,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealTotalCostRatio(string $RealTotalCostRatio) Set Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -54,12 +58,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealTotalCostRatio;
 
     /**
+     * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TotalCost;
+
+    /**
      * @param string $TagValue Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCost Actual cost
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCostRatio Cost percentage rounded to two decimal places
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RealTotalCostRatio",$param) and $param["RealTotalCostRatio"] !== null) {
             $this->RealTotalCostRatio = $param["RealTotalCostRatio"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

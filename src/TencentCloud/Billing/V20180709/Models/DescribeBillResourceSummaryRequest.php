@@ -24,16 +24,74 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Quantity, maximum is 1000
  * @method void setLimit(integer $Limit) Set Quantity, maximum is 1000
- * @method string getPeriodType() Obtain The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
- * @method void setPeriodType(string $PeriodType) Set The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
  * @method string getMonth() Obtain Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
  * @method void setMonth(string $Month) Set Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+ * @method string getPeriodType() Obtain The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+ * @method void setPeriodType(string $PeriodType) Set The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
  * @method integer getNeedRecordNum() Obtain Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
  * @method void setNeedRecordNum(integer $NeedRecordNum) Set Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
- * @method string getActionType() Obtain 
- * @method void setActionType(string $ActionType) Set 
+ * @method string getActionType() Obtain Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ * @method void setActionType(string $ActionType) Set Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  * @method string getResourceId() Obtain ID of the instance to be queried
  * @method void setResourceId(string $ResourceId) Set ID of the instance to be queried
  * @method string getPayMode() Obtain Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
@@ -52,14 +110,14 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
-     */
-    public $PeriodType;
-
-    /**
      * @var string Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
      */
     public $Month;
+
+    /**
+     * @var string The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
+     */
+    public $PeriodType;
 
     /**
      * @var integer Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
@@ -68,7 +126,36 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     public $NeedRecordNum;
 
     /**
-     * @var string 
+     * @var string Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
      */
     public $ActionType;
 
@@ -85,11 +172,40 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
     /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 1000
-     * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
      * @param string $Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
+     * @param string $PeriodType The period type. byUsedTime: By usage period; byPayTime: by payment period. Must be the same as the period of the current monthly bill of the Billing Center. You can check your bill statistics period type at the top of the [Bill Overview](https://console.cloud.tencent.com/expense/bill/overview) page.
      * @param integer $NeedRecordNum Indicates whether or not the total number of records of accessing the list is required, used for frontend pages.
 1 = yes, 0 = no
-     * @param string $ActionType 
+     * @param string $ActionType Action type to query. Valid values:
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
      * @param string $ResourceId ID of the instance to be queried
      * @param string $PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
      */
@@ -114,12 +230,12 @@ class DescribeBillResourceSummaryRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("PeriodType",$param) and $param["PeriodType"] !== null) {
-            $this->PeriodType = $param["PeriodType"];
-        }
-
         if (array_key_exists("Month",$param) and $param["Month"] !== null) {
             $this->Month = $param["Month"];
+        }
+
+        if (array_key_exists("PeriodType",$param) and $param["PeriodType"] !== null) {
+            $this->PeriodType = $param["PeriodType"];
         }
 
         if (array_key_exists("NeedRecordNum",$param) and $param["NeedRecordNum"] !== null) {

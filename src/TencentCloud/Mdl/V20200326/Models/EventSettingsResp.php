@@ -24,6 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEventType(string $EventType) Set Only `INPUT_SWITCH` is supported currently.
  * @method string getInputAttachment() Obtain ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
  * @method void setInputAttachment(string $InputAttachment) Set ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+ * @method string getOutputGroupName() Obtain Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+ * @method void setOutputGroupName(string $OutputGroupName) Set Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+ * @method string getManifestName() Obtain Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+ * @method void setManifestName(string $ManifestName) Set Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+ * @method array getDestinations() Obtain URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+ * @method void setDestinations(array $Destinations) Set URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
  */
 class EventSettingsResp extends AbstractModel
 {
@@ -38,8 +44,26 @@ class EventSettingsResp extends AbstractModel
     public $InputAttachment;
 
     /**
+     * @var string Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public $OutputGroupName;
+
+    /**
+     * @var string Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     */
+    public $ManifestName;
+
+    /**
+     * @var array URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
+     */
+    public $Destinations;
+
+    /**
      * @param string $EventType Only `INPUT_SWITCH` is supported currently.
      * @param string $InputAttachment ID of the input attached, which is not empty if `EventType` is `INPUT_SWITCH`
+     * @param string $OutputGroupName Name of the output group attached. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     * @param string $ManifestName Name of the manifest file for timed recording, which ends with `.m3u8` for HLS and `.mpd` for DASH. This parameter is not empty if `EventType` is `TIMED_RECORD`.
+     * @param array $Destinations URL of the COS bucket where recording files are saved. This parameter is not empty if `EventType` is `TIMED_RECORD`. It may contain 1 or 2 URLs. The first URL corresponds to pipeline 0 and the second pipeline 1.
      */
     function __construct()
     {
@@ -60,6 +84,23 @@ class EventSettingsResp extends AbstractModel
 
         if (array_key_exists("InputAttachment",$param) and $param["InputAttachment"] !== null) {
             $this->InputAttachment = $param["InputAttachment"];
+        }
+
+        if (array_key_exists("OutputGroupName",$param) and $param["OutputGroupName"] !== null) {
+            $this->OutputGroupName = $param["OutputGroupName"];
+        }
+
+        if (array_key_exists("ManifestName",$param) and $param["ManifestName"] !== null) {
+            $this->ManifestName = $param["ManifestName"];
+        }
+
+        if (array_key_exists("Destinations",$param) and $param["Destinations"] !== null) {
+            $this->Destinations = [];
+            foreach ($param["Destinations"] as $key => $value){
+                $obj = new EventSettingsDestinationResp();
+                $obj->deserialize($value);
+                array_push($this->Destinations, $obj);
+            }
         }
     }
 }

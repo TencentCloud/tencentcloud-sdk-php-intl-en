@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Cost allocation tag key
  * @method string getPayerUin() Obtain Payer UIN
  * @method void setPayerUin(string $PayerUin) Set Payer UIN
+ * @method string getTagValue() Obtain Resource tag value
+ * @method void setTagValue(string $TagValue) Set Resource tag value
  */
 class DescribeBillSummaryByTagRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
     public $PayerUin;
 
     /**
+     * @var string Resource tag value
+     */
+    public $TagValue;
+
+    /**
      * @param string $BeginTime The value must be of the same month as `EndTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      * @param string $EndTime The value must be of the same month as `BeginTime`. Query period must start and end on the same month and the query result returned will be of the entire month. For example, if both `BeginTime` and `EndTime` are `2018-09`, the data returned will be for the entire month of September 2018.
      * @param string $TagKey Cost allocation tag key
      * @param string $PayerUin Payer UIN
+     * @param string $TagValue Resource tag value
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeBillSummaryByTagRequest extends AbstractModel
 
         if (array_key_exists("PayerUin",$param) and $param["PayerUin"] !== null) {
             $this->PayerUin = $param["PayerUin"];
+        }
+
+        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
+            $this->TagValue = $param["TagValue"];
         }
     }
 }

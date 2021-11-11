@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSummaryOverview(array $SummaryOverview) Set Details about cost distribution over different tags
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method SummaryTotal getSummaryTotal() Obtain Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSummaryTotal(SummaryTotal $SummaryTotal) Set Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -43,6 +47,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SummaryOverview;
 
     /**
+     * @var SummaryTotal Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SummaryTotal;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -51,6 +61,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Ready Indicates whether or not the data is ready. `0`: not ready; `1`: ready.
      * @param array $SummaryOverview Details about cost distribution over different tags
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param SummaryTotal $SummaryTotal Total cost
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +89,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->SummaryOverview, $obj);
             }
+        }
+
+        if (array_key_exists("SummaryTotal",$param) and $param["SummaryTotal"] !== null) {
+            $this->SummaryTotal = new SummaryTotal();
+            $this->SummaryTotal->deserialize($param["SummaryTotal"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

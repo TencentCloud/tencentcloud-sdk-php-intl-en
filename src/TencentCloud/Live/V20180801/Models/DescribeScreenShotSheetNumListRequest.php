@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
  * @method array getPushDomains() Obtain Push domain name (data at the domain name level after November 1, 2019 can be queried).
  * @method void setPushDomains(array $PushDomains) Set Push domain name (data at the domain name level after November 1, 2019 can be queried).
- * @method string getGranularity() Obtain Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
- * @method void setGranularity(string $Granularity) Set Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
+ * @method string getGranularity() Obtain Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
+ * @method void setGranularity(string $Granularity) Set Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
  */
 class DescribeScreenShotSheetNumListRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
     public $PushDomains;
 
     /**
-     * @var string Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
+     * @var string Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
      */
     public $Granularity;
 
@@ -63,7 +63,7 @@ class DescribeScreenShotSheetNumListRequest extends AbstractModel
      * @param string $EndTime End time in UTC time in the format of `yyyy-mm-ddTHH:MM:SSZ`. Data for the last year can be queried.
      * @param string $Zone Region information. Valid values: Mainland, Oversea. The former is to query data within Mainland China, while the latter outside Mainland China. If this parameter is left empty, data of all regions will be queried.
      * @param array $PushDomains Push domain name (data at the domain name level after November 1, 2019 can be queried).
-     * @param string $Granularity Data dimension. The data has a delay of one and a half hours. Valid values: 1. Minute (5-minute granularity, which supports a maximum query time range of 31 days); 2. Day (1-day granularity, which is the default value and supports a maximum query time range of 186 days).
+     * @param string $Granularity Data granularity. There is a 1.5-hour delay in data reporting. Valid values: `Minute` (5-minute granularity; query period of up to 31 days); `Day` (1-day granularity based on UTC+8:00; query period of up to 186 days)
      */
     function __construct()
     {

@@ -20,30 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event trigger time settings
  *
- * @method string getStartType() Obtain Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
- * @method void setStartType(string $StartType) Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
- * @method string getTime() Obtain Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
- * @method void setTime(string $Time) Set Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+ * @method string getStartType() Obtain Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+ * @method void setStartType(string $StartType) Set Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+ * @method string getTime() Obtain This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+ * @method void setTime(string $Time) Set This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+ * @method string getStartTime() Obtain This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+ * @method void setStartTime(string $StartTime) Set This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+ * @method string getEndTime() Obtain This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+ * @method void setEndTime(string $EndTime) Set This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
  */
 class TimingSettingsReq extends AbstractModel
 {
     /**
-     * @var string Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
+     * @var string Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
      */
     public $StartType;
 
     /**
-     * @var string Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+     * @var string This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
      */
     public $Time;
 
     /**
-     * @param string $StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`
-     * @param string $Time Required if `StartType` is `FIXED_TIME`
-UTC time, such as `2020-01-01T12:00:00Z`
+     * @var string This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     */
+    public $StartTime;
+
+    /**
+     * @var string This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
+     */
+    public $EndTime;
+
+    /**
+     * @param string $StartType Event trigger type. Valid values: `FIXED_TIME`, `IMMEDIATE`. This parameter is required if `EventType` is `INPUT_SWITCH`.
+     * @param string $Time This parameter is required if `EventType` is `INPUT_SWITCH` and `StartType` is `FIXED_TIME`.
+It must be in UTC format, e.g., `2020-01-01T12:00:00Z`.
+     * @param string $StartTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording start time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the current time.
+     * @param string $EndTime This parameter is required if `EventType` is `TIMED_RECORD`.
+It specifies the recording end time in UTC format (e.g., `2020-01-01T12:00:00Z`) and must be at least 1 minute later than the recording start time.
      */
     function __construct()
     {
@@ -64,6 +88,14 @@ UTC time, such as `2020-01-01T12:00:00Z`
 
         if (array_key_exists("Time",$param) and $param["Time"] !== null) {
             $this->Time = $param["Time"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }

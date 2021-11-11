@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStreamName(string $StreamName) Set Stream name.
  * @method string getStartTime() Obtain Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
  * @method void setStartTime(string $StartTime) Set Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
- * @method string getEndTime() Obtain End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
- * @method void setEndTime(string $EndTime) Set End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+ * @method string getEndTime() Obtain End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
+ * @method void setEndTime(string $EndTime) Set End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getAppName() Obtain Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
@@ -44,7 +44,7 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+     * @var string End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
      */
     public $EndTime;
 
@@ -61,7 +61,7 @@ class DescribeStreamPushInfoListRequest extends AbstractModel
     /**
      * @param string $StreamName Stream name.
      * @param string $StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
-     * @param string $EndTime End time point in the format of `yyyy-mm-dd HH:MM:SS`. The maximum time span is 6 hours. Data for the last 6 days can be queried.
+     * @param string $EndTime End time in the format of yyyy-mm-dd HH:MM:SS. You can query data in the past 7 days. You’re advised to set the query period to up to 3 hours.
      * @param string $PushDomain Push domain name.
      * @param string $AppName Push path, which is the same as the `AppName` in push and playback addresses and is `live` by default.
      */

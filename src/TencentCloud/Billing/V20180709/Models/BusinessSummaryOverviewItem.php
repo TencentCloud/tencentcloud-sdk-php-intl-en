@@ -38,6 +38,8 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Voucher amount
  * @method string getBillMonth() Obtain Billing month, e.g. `2019-08`
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
+ * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+ * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  */
 class BusinessSummaryOverviewItem extends AbstractModel
 {
@@ -83,6 +85,11 @@ Note: This field may return null, indicating that no valid value was found.
     public $BillMonth;
 
     /**
+     * @var string The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     */
+    public $TotalCost;
+
+    /**
      * @param string $BusinessCode Product code
 Note: This field may return null, indicating that no valid value was found.
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
@@ -92,6 +99,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $IncentivePayAmount Trial credit amount
      * @param string $VoucherPayAmount Voucher amount
      * @param string $BillMonth Billing month, e.g. `2019-08`
+     * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
      */
     function __construct()
     {
@@ -136,6 +144,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("BillMonth",$param) and $param["BillMonth"] !== null) {
             $this->BillMonth = $param["BillMonth"];
+        }
+
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
     }
 }

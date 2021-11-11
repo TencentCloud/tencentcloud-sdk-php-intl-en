@@ -28,8 +28,8 @@ Default value: 10.
  * @method void setPageSize(integer $PageSize) Set Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
- * @method string getStreamName() Obtain The stream name to search for
- * @method void setStreamName(string $StreamName) Set The stream name to search for
+ * @method string getStreamName() Obtain Stream name for query
+ * @method void setStreamName(string $StreamName) Set Stream name for query
  */
 class DescribeLiveForbidStreamListRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ Default value: 10.
     public $PageSize;
 
     /**
-     * @var string The stream name to search for
+     * @var string Stream name for query
      */
     public $StreamName;
 
@@ -55,7 +55,7 @@ Default value: 10.
      * @param integer $PageSize Number of entries per page. Maximum value: 100. 
 Value: any integer between 1 and 100.
 Default value: 10.
-     * @param string $StreamName The stream name to search for
+     * @param string $StreamName Stream name for query
      */
     function __construct()
     {

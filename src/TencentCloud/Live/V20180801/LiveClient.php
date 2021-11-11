@@ -23,11 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Live\V20180801\Models as Models;
 
 /**
- * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) This API is used to set the delay time for a stream.
-Note: if you want to set delayed playback before pushing, you need to do so 5 minutes in advance.
-Currently, this API only supports stream granularity, and the feature supporting domain name and application granularities will be available in the future.
-Use case: for important live streams, you can set delayed playback in advance to avoid contingency issues.
+ * @method Models\AddDelayLiveStreamResponse AddDelayLiveStream(Models\AddDelayLiveStreamRequest $req) This API is used to set a delay in playing the images of large live streaming events, in case of emergencies.
 
+Note: if you are to set the delay before stream push, set it at least 5 minutes before the push. This API supports configuration only by stream.
  * @method Models\AddLiveDomainResponse AddLiveDomain(Models\AddLiveDomainRequest $req) This API is used to add a domain name. Only one domain name can be submitted at a time, and it must have an ICP filing.
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](https://intl.cloud.tencent.com/document/product/267/32629?from_cn_redirect=1) API to bind the watermark ID to a stream.
 After the number of watermarks exceeds the upper limit of 100, to add a new watermark, you must delete an old one first.
@@ -118,7 +116,9 @@ Note: data can be queried one hour after it is generated. For example, data betw
  * @method Models\DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(Models\DescribeLiveDomainRefererRequest $req) This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
 Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) This API is used to query domain names by domain name status and type.
- * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) This API is used to get the forbidden stream list.
+ * @method Models\DescribeLiveForbidStreamListResponse DescribeLiveForbidStreamList(Models\DescribeLiveForbidStreamListRequest $req) This API is used to get the list of disabled streams.
+
+Note: this API is used for query only and should not be relied too much upon in important business scenarios.
  * @method Models\DescribeLivePlayAuthKeyResponse DescribeLivePlayAuthKey(Models\DescribeLivePlayAuthKeyRequest $req) This API is used to query the playback authentication key.
  * @method Models\DescribeLivePushAuthKeyResponse DescribeLivePushAuthKey(Models\DescribeLivePushAuthKeyRequest $req) This API is used to query the LVB push authentication key.
  * @method Models\DescribeLiveRecordRulesResponse DescribeLiveRecordRules(Models\DescribeLiveRecordRulesRequest $req) This API is used to get the list of recording rules.
@@ -127,15 +127,29 @@ Referer information is included in HTTP requests. After you enable referer confi
  * @method Models\DescribeLiveSnapshotRulesResponse DescribeLiveSnapshotRules(Models\DescribeLiveSnapshotRulesRequest $req) This API is used to get the screencapturing rule list.
  * @method Models\DescribeLiveSnapshotTemplateResponse DescribeLiveSnapshotTemplate(Models\DescribeLiveSnapshotTemplateRequest $req) This API is used to get a single screencapturing template.
  * @method Models\DescribeLiveSnapshotTemplatesResponse DescribeLiveSnapshotTemplates(Models\DescribeLiveSnapshotTemplatesRequest $req) This API is used to get the screencapturing template list.
- * @method Models\DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(Models\DescribeLiveStreamEventListRequest $req) This API is used to query streaming events.<br>
+ * @method Models\DescribeLiveStreamEventListResponse DescribeLiveStreamEventList(Models\DescribeLiveStreamEventListRequest $req) This API is used to query stream push/interruption events.<br>
 
-Note: This API can filter by IsFilter and return the push history.
- * @method Models\DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(Models\DescribeLiveStreamOnlineListRequest $req) This API is used to return a list of live streams. It queries the information of live streams after they are pushed successfully.
-Note: this API can query up to 20,000 streams. If you want to query more than 20,000 streams, please contact after-sales service.
+Notes:
+1. This API is used to query stream push/interruption records, and should not be relied too much upon in important business scenarios.
+2. You can use the `IsFilter` parameter of this API to filter and get required push records.
+ * @method Models\DescribeLiveStreamOnlineListResponse DescribeLiveStreamOnlineList(Models\DescribeLiveStreamOnlineListRequest $req) This API is used to get the list of ongoing live streams. It queries the information of live streams after they are pushed successfully. 
+
+Notes:
+1. This API is used to query the list of active live streams only, and should not be relied too much upon in important business scenarios.
+2. This API can query up to 20,000 streams. To query more streams, please contact our after-sales service team.
+
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) This API is used to return the list of pushed streams. <br>
 Note: Up to 10,000 entries can be queried per page. More data can be obtained by adjusting the query time range.
  * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) This API is used to query the push information of all real-time streams, including client IP, server IP, frame rate, bitrate, domain name, and push start time.
- * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) This API is used to return the stream status such as active, inactive, or forbidden.
+ * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) This API is used to get the stream status, such as active, inactive, or disabled.
+Note: this API is used to query the stream status, and should not be relied too much upon in important business scenarios.
+
+Notes:
+1. You should not rely on the results returned by this API to initiate/interrupt live streams.
+2. The application can get and store the status of live rooms via [Stream Push and Interruption Event Notification](https://intl.cloud.tencent.com/document/product/267/47025?from_cn_redirect=1).
+3. You can use the [DescribeLiveStreamOnlineList](https://intl.cloud.tencent.com/document/product/267/20472?from_cn_redirect=1) API to regularly (with the interval larger than 1 minute) check the status of live rooms monitored by the application.
+4. If you find that a stream is inactive using the stream status query API, you can use other above-mentioned methods to check its status.
+5. If access or resolution errors occur when you use the API to query, you can regard the stream as active, and do not perform operations on the application.
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) This API is used to query the details of transcoding on a specified day or in a specified period of time.
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) This API is used to get the list of transcoding rules.
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) This API is used to get a single transcoding template.
@@ -172,7 +186,7 @@ Referer information is included in HTTP requests. After you enable referer confi
  * @method Models\ModifyLiveRecordTemplateResponse ModifyLiveRecordTemplate(Models\ModifyLiveRecordTemplateRequest $req) This API is used to modify the recording template configuration.
  * @method Models\ModifyLiveSnapshotTemplateResponse ModifyLiveSnapshotTemplate(Models\ModifyLiveSnapshotTemplateRequest $req) This API is used to modify the screencapturing template configuration.
  * @method Models\ModifyLiveTranscodeTemplateResponse ModifyLiveTranscodeTemplate(Models\ModifyLiveTranscodeTemplateRequest $req) This API is used to modify the transcoding template configuration.
- * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) This API is used to resume a delayed playback.
+ * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) This API is used to resume the push of a specific stream.
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
  * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) This API is used to end a recording prematurely and terminate an ongoing recording task. After the task is successfully terminated, it will not restart.
