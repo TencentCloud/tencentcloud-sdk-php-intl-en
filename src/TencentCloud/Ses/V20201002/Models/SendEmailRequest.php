@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail request structure.
  *
- * @method string getFromEmailAddress() Obtain Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
- * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+ * @method string getFromEmailAddress() Obtain Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
+ * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
  * @method array getDestination() Obtain Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method string getSubject() Obtain Email subject.
@@ -42,9 +42,9 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * @var string Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
      */
     public $FromEmailAddress;
 
@@ -79,9 +79,9 @@ Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
     public $Attachments;
 
     /**
-     * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:  
-sender &lt;email address&gt;. For example: 
-Tencent Cloud team &lt;noreply@mail.qcloud.com&gt;
+     * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
+Sender <email address>, for example:
+Tencent Cloud team <noreply@mail.qcloud.com>
      * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.

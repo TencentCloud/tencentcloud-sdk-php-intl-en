@@ -18,7 +18,7 @@ namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Attachment structure, including attachment name and content after base64 encoding.
+ * Attachment structure, including attachment name and Base64-encoded attachment content
  *
  * @method string getFileName() Obtain Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
  * @method void setFileName(string $FileName) Set Attachment name, which cannot exceed 255 characters. Some attachment types are not supported. For details, see [Attachment Types](https://intl.cloud.tencent.com/document/product/1288/51951?from_cn_redirect=1).
