@@ -18,19 +18,19 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * AssignClientCredit request structure.
+ * AllocateCustomerCredit request structure.
  *
- * @method float getQuotaNum() Obtain Specific value of the credit allocated to the customer
- * @method void setQuotaNum(float $QuotaNum) Set Specific value of the credit allocated to the customer
+ * @method float getAddedCredit() Obtain Specific value of the credit allocated to the customer
+ * @method void setAddedCredit(float $AddedCredit) Set Specific value of the credit allocated to the customer
  * @method integer getClientUin() Obtain Customer UIN
  * @method void setClientUin(integer $ClientUin) Set Customer UIN
  */
-class AssignClientCreditRequest extends AbstractModel
+class AllocateCustomerCreditRequest extends AbstractModel
 {
     /**
      * @var float Specific value of the credit allocated to the customer
      */
-    public $QuotaNum;
+    public $AddedCredit;
 
     /**
      * @var integer Customer UIN
@@ -38,7 +38,7 @@ class AssignClientCreditRequest extends AbstractModel
     public $ClientUin;
 
     /**
-     * @param float $QuotaNum Specific value of the credit allocated to the customer
+     * @param float $AddedCredit Specific value of the credit allocated to the customer
      * @param integer $ClientUin Customer UIN
      */
     function __construct()
@@ -54,8 +54,8 @@ class AssignClientCreditRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("QuotaNum",$param) and $param["QuotaNum"] !== null) {
-            $this->QuotaNum = $param["QuotaNum"];
+        if (array_key_exists("AddedCredit",$param) and $param["AddedCredit"] !== null) {
+            $this->AddedCredit = $param["AddedCredit"];
         }
 
         if (array_key_exists("ClientUin",$param) and $param["ClientUin"] !== null) {

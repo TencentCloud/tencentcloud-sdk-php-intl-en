@@ -14,47 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ip\V20210409\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryAgentCredit response structure.
+ * DeleteStreamLivePlan response structure.
  *
- * @method float getAssignedCreditAmount() Obtain Allocated credit
- * @method void setAssignedCreditAmount(float $AssignedCreditAmount) Set Allocated credit
- * @method float getCustomerCreditAmount() Obtain Total credit
- * @method void setCustomerCreditAmount(float $CustomerCreditAmount) Set Total credit
- * @method float getRemainingCreditAmount() Obtain Remaining credit
- * @method void setRemainingCreditAmount(float $RemainingCreditAmount) Set Remaining credit
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class QueryAgentCreditResponse extends AbstractModel
+class DeleteStreamLivePlanResponse extends AbstractModel
 {
-    /**
-     * @var float Allocated credit
-     */
-    public $AssignedCreditAmount;
-
-    /**
-     * @var float Total credit
-     */
-    public $CustomerCreditAmount;
-
-    /**
-     * @var float Remaining credit
-     */
-    public $RemainingCreditAmount;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param float $AssignedCreditAmount Allocated credit
-     * @param float $CustomerCreditAmount Total credit
-     * @param float $RemainingCreditAmount Remaining credit
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,18 +46,6 @@ class QueryAgentCreditResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AssignedCreditAmount",$param) and $param["AssignedCreditAmount"] !== null) {
-            $this->AssignedCreditAmount = $param["AssignedCreditAmount"];
-        }
-
-        if (array_key_exists("CustomerCreditAmount",$param) and $param["CustomerCreditAmount"] !== null) {
-            $this->CustomerCreditAmount = $param["CustomerCreditAmount"];
-        }
-
-        if (array_key_exists("RemainingCreditAmount",$param) and $param["RemainingCreditAmount"] !== null) {
-            $this->RemainingCreditAmount = $param["RemainingCreditAmount"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Ip\V20210409\Models as Models;
 
 /**
- * @method Models\AssignClientCreditResponse AssignClientCredit(Models\AssignClientCreditRequest $req) This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
+ * @method Models\AllocateCustomerCreditResponse AllocateCustomerCredit(Models\AllocateCustomerCreditRequest $req) This API is used for a partner to set credit for a customer, such as increasing or lowering the credit and setting it to 0.
 1. The credit is valid permanently and will not be zeroed regularly.
 2. The customer's service will be suspended when its available credit sets to 0, so caution should be exercised with this operation.
 3. To prevent the customer from making new purchases without affecting their use of previously purchased products, the partner can set their available credit to 0 after obtaining the non-stop feature privilege from the channel manager.
@@ -34,9 +34,9 @@ Notes:<br>
 1. To create the Tencent Cloud account, the partner should enter and verify the customer’s email address and mobile number.<br>
 2. The customer needs to complete personal information after the first login.
  * @method Models\GetCountryCodesResponse GetCountryCodes(Models\GetCountryCodesRequest $req) This API is used to obtain country and region codes.
- * @method Models\QueryAgentCreditResponse QueryAgentCredit(Models\QueryAgentCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
- * @method Models\QueryClientListResponse QueryClientList(Models\QueryClientListRequest $req) This API is used for a partner to query a customer's credit and basic information.
- * @method Models\QueryCreditHistoryResponse QueryCreditHistory(Models\QueryCreditHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
+ * @method Models\QueryCreditAllocationHistoryResponse QueryCreditAllocationHistory(Models\QueryCreditAllocationHistoryRequest $req) This API is used to query all the credit allocation records of a single customer.
+ * @method Models\QueryCustomersCreditResponse QueryCustomersCredit(Models\QueryCustomersCreditRequest $req) This API is used for a partner to query a customer's credit and basic information.
+ * @method Models\QueryPartnerCreditResponse QueryPartnerCredit(Models\QueryPartnerCreditRequest $req) This API is used for a partner to query its own total credit, available credit, and used credit in USD.
  */
 
 class IpClient extends AbstractClient

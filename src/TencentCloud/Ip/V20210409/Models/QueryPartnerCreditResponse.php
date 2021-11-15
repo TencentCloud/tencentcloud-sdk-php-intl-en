@@ -18,32 +18,33 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryCreditHistory response structure.
+ * QueryPartnerCredit response structure.
  *
- * @method integer getTotal() Obtain Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotal(integer $Total) Set Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getHistory() Obtain List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setHistory(array $History) Set List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getAllocatedCredit() Obtain Allocated credit
+ * @method void setAllocatedCredit(float $AllocatedCredit) Set Allocated credit
+ * @method float getTotalCredit() Obtain Total credit
+ * @method void setTotalCredit(float $TotalCredit) Set Total credit
+ * @method float getRemainingCredit() Obtain Remaining credit
+ * @method void setRemainingCredit(float $RemainingCredit) Set Remaining credit
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class QueryCreditHistoryResponse extends AbstractModel
+class QueryPartnerCreditResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float Allocated credit
      */
-    public $Total;
+    public $AllocatedCredit;
 
     /**
-     * @var array List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float Total credit
      */
-    public $History;
+    public $TotalCredit;
+
+    /**
+     * @var float Remaining credit
+     */
+    public $RemainingCredit;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +52,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $Total Total number of records
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $History List of record details
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $AllocatedCredit Allocated credit
+     * @param float $TotalCredit Total credit
+     * @param float $RemainingCredit Remaining credit
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,17 +70,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("AllocatedCredit",$param) and $param["AllocatedCredit"] !== null) {
+            $this->AllocatedCredit = $param["AllocatedCredit"];
         }
 
-        if (array_key_exists("History",$param) and $param["History"] !== null) {
-            $this->History = [];
-            foreach ($param["History"] as $key => $value){
-                $obj = new QueryUinCreditHistoryData();
-                $obj->deserialize($value);
-                array_push($this->History, $obj);
-            }
+        if (array_key_exists("TotalCredit",$param) and $param["TotalCredit"] !== null) {
+            $this->TotalCredit = $param["TotalCredit"];
+        }
+
+        if (array_key_exists("RemainingCredit",$param) and $param["RemainingCredit"] !== null) {
+            $this->RemainingCredit = $param["RemainingCredit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

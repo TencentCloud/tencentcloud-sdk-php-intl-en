@@ -18,16 +18,16 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryCreditHistory request structure.
+ * QueryCreditAllocationHistory request structure.
  *
  * @method integer getClientUin() Obtain Customer UIN
  * @method void setClientUin(integer $ClientUin) Set Customer UIN
  * @method integer getPage() Obtain Page number
  * @method void setPage(integer $Page) Set Page number
- * @method integer getPageRow() Obtain Number of data entries per page
- * @method void setPageRow(integer $PageRow) Set Number of data entries per page
+ * @method integer getPageSize() Obtain Number of data entries per page
+ * @method void setPageSize(integer $PageSize) Set Number of data entries per page
  */
-class QueryCreditHistoryRequest extends AbstractModel
+class QueryCreditAllocationHistoryRequest extends AbstractModel
 {
     /**
      * @var integer Customer UIN
@@ -42,12 +42,12 @@ class QueryCreditHistoryRequest extends AbstractModel
     /**
      * @var integer Number of data entries per page
      */
-    public $PageRow;
+    public $PageSize;
 
     /**
      * @param integer $ClientUin Customer UIN
      * @param integer $Page Page number
-     * @param integer $PageRow Number of data entries per page
+     * @param integer $PageSize Number of data entries per page
      */
     function __construct()
     {
@@ -70,8 +70,8 @@ class QueryCreditHistoryRequest extends AbstractModel
             $this->Page = $param["Page"];
         }
 
-        if (array_key_exists("PageRow",$param) and $param["PageRow"] !== null) {
-            $this->PageRow = $param["PageRow"];
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
         }
     }
 }

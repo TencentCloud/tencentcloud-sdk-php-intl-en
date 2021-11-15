@@ -18,7 +18,7 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryClientList response structure.
+ * QueryCustomersCredit response structure.
  *
  * @method array getData() Obtain Queries the list of customers
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -29,7 +29,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class QueryClientListResponse extends AbstractModel
+class QueryCustomersCreditResponse extends AbstractModel
 {
     /**
      * @var array Queries the list of customers
@@ -69,7 +69,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = [];
             foreach ($param["Data"] as $key => $value){
-                $obj = new QueryClientListItem();
+                $obj = new QueryCustomersCreditData();
                 $obj->deserialize($value);
                 array_push($this->Data, $obj);
             }

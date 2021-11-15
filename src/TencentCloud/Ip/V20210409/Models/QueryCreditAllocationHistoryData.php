@@ -18,28 +18,21 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Queries reseller's credit allocation records and returns individual records
+ * Returned information for querying the credit allocation records of reseller’s customer
  *
- * @method integer getCreditAssignUin() Obtain Credit allocatee UIN
- * @method void setCreditAssignUin(integer $CreditAssignUin) Set Credit allocatee UIN
- * @method string getAssginTime() Obtain Allocation time
- * @method void setAssginTime(string $AssginTime) Set Allocation time
+ * @method string getAllocatedTime() Obtain Allocation time
+ * @method void setAllocatedTime(string $AllocatedTime) Set Allocation time
  * @method string getOperator() Obtain Operator
  * @method void setOperator(string $Operator) Set Operator
- * @method float getCreditAmount() Obtain Allocated credit value
- * @method void setCreditAmount(float $CreditAmount) Set Allocated credit value
+ * @method float getCredit() Obtain Allocated credit value
+ * @method void setCredit(float $Credit) Set Allocated credit value
  */
-class QueryUinCreditHistoryData extends AbstractModel
+class QueryCreditAllocationHistoryData extends AbstractModel
 {
-    /**
-     * @var integer Credit allocatee UIN
-     */
-    public $CreditAssignUin;
-
     /**
      * @var string Allocation time
      */
-    public $AssginTime;
+    public $AllocatedTime;
 
     /**
      * @var string Operator
@@ -49,13 +42,12 @@ class QueryUinCreditHistoryData extends AbstractModel
     /**
      * @var float Allocated credit value
      */
-    public $CreditAmount;
+    public $Credit;
 
     /**
-     * @param integer $CreditAssignUin Credit allocatee UIN
-     * @param string $AssginTime Allocation time
+     * @param string $AllocatedTime Allocation time
      * @param string $Operator Operator
-     * @param float $CreditAmount Allocated credit value
+     * @param float $Credit Allocated credit value
      */
     function __construct()
     {
@@ -70,20 +62,16 @@ class QueryUinCreditHistoryData extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CreditAssignUin",$param) and $param["CreditAssignUin"] !== null) {
-            $this->CreditAssignUin = $param["CreditAssignUin"];
-        }
-
-        if (array_key_exists("AssginTime",$param) and $param["AssginTime"] !== null) {
-            $this->AssginTime = $param["AssginTime"];
+        if (array_key_exists("AllocatedTime",$param) and $param["AllocatedTime"] !== null) {
+            $this->AllocatedTime = $param["AllocatedTime"];
         }
 
         if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
             $this->Operator = $param["Operator"];
         }
 
-        if (array_key_exists("CreditAmount",$param) and $param["CreditAmount"] !== null) {
-            $this->CreditAmount = $param["CreditAmount"];
+        if (array_key_exists("Credit",$param) and $param["Credit"] !== null) {
+            $this->Credit = $param["Credit"];
         }
     }
 }

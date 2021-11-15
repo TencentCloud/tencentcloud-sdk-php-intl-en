@@ -30,6 +30,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(Models\DeleteStreamLiveChannelRequest $req) This API is used to delete a StreamLive channel.
  * @method Models\DeleteStreamLiveInputResponse DeleteStreamLiveInput(Models\DeleteStreamLiveInputRequest $req) This API is used to delete a StreamLive input.
  * @method Models\DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(Models\DeleteStreamLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
+ * @method Models\DeleteStreamLivePlanResponse DeleteStreamLivePlan(Models\DeleteStreamLivePlanRequest $req) This API is used to delete a StreamLive event.
  * @method Models\DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(Models\DescribeStreamLiveChannelRequest $req) This API is used to query a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(Models\DescribeStreamLiveChannelAlertsRequest $req) This API is used to query the alarm information of a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(Models\DescribeStreamLiveChannelInputStatisticsRequest $req) This API is used to query input statistics.

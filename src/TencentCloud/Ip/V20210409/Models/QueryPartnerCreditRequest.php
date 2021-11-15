@@ -18,11 +18,11 @@ namespace TencentCloud\Ip\V20210409\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryAgentCredit request structure.
+ * QueryPartnerCredit request structure.
  *
 
  */
-class QueryAgentCreditRequest extends AbstractModel
+class QueryPartnerCreditRequest extends AbstractModel
 {
 
 
