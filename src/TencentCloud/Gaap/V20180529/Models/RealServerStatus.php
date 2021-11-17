@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindStatus(integer $BindStatus) Set 0: not bound, 1: bound to rule or listener.
  * @method string getProxyId() Obtain ID of the connection bound to this origin server. This string is empty if they are not bound.
  * @method void setProxyId(string $ProxyId) Set ID of the connection bound to this origin server. This string is empty if they are not bound.
+ * @method string getGroupId() Obtain ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setGroupId(string $GroupId) Set ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RealServerStatus extends AbstractModel
 {
@@ -45,9 +49,17 @@ class RealServerStatus extends AbstractModel
     public $ProxyId;
 
     /**
+     * @var string ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $GroupId;
+
+    /**
      * @param string $RealServerId Origin server ID.
      * @param integer $BindStatus 0: not bound, 1: bound to rule or listener.
      * @param string $ProxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
+     * @param string $GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class RealServerStatus extends AbstractModel
 
         if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
             $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

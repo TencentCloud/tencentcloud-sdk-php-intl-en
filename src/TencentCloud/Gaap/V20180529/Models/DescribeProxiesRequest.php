@@ -52,6 +52,26 @@ When this field does not exist, all connections are pulled, including both not-g
  * @method void setIndependent(integer $Independent) Set When this field is 1, only not-grouped connections are pulled.
 When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
+ * @method string getOrder() Obtain Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+ * @method void setOrder(string $Order) Set Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+ * @method string getOrderField() Obtain Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+ * @method void setOrderField(string $OrderField) Set Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
  */
 class DescribeProxiesRequest extends AbstractModel
 {
@@ -100,6 +120,24 @@ When this field does not exist, all connections are pulled, including both not-g
     public $Independent;
 
     /**
+     * @var string Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+     */
+    public $Order;
+
+    /**
+     * @var string Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
+     */
+    public $OrderField;
+
+    /**
      * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
      * @param integer $Offset Offset. The default value is 0.
      * @param integer $Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
@@ -116,6 +154,16 @@ It supports up to 5 tags. If there are two or more tags, the connections tagged 
      * @param integer $Independent When this field is 1, only not-grouped connections are pulled.
 When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
+     * @param string $Order Specifies how connections are listed. Valid values:
+`asc`: ascending order
+`desc`: descending order
+Default: `desc`
+     * @param string $OrderField Sorting field. Valid values:
+`create_time`: sort by the creation time
+`proxy_id`: sort by the connection ID
+`bandwidth`:sort by the bandwidth limit
+`concurrent_connections`: sort by the number of concurrent connections
+Default: `create_time`
      */
     function __construct()
     {
@@ -166,6 +214,14 @@ When this field does not exist, all connections are pulled, including both not-g
 
         if (array_key_exists("Independent",$param) and $param["Independent"] !== null) {
             $this->Independent = $param["Independent"];
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
         }
     }
 }

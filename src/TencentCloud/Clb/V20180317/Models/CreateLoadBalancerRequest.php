@@ -64,8 +64,12 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
  * @method ExclusiveCluster getExclusiveCluster() Obtain Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
  * @method void setExclusiveCluster(ExclusiveCluster $ExclusiveCluster) Set Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
- * @method string getSlaType() Obtain 
- * @method void setSlaType(string $SlaType) Set 
+ * @method string getSlaType() Obtain Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
+ * @method void setSlaType(string $SlaType) Set Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
  * @method string getClientToken() Obtain A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  * @method void setClientToken(string $ClientToken) Set A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
  * @method boolean getSnatPro() Obtain Whether Binding IPs of other VPCs feature switch
@@ -80,6 +84,8 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
 Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
  * @method string getEipAddressId() Obtain Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
  * @method void setEipAddressId(string $EipAddressId) Set Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+ * @method boolean getLoadBalancerPassToTarget() Obtain Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+ * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -170,7 +176,9 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
     public $ExclusiveCluster;
 
     /**
-     * @var string 
+     * @var string Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
      */
     public $SlaType;
 
@@ -206,6 +214,11 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
     public $EipAddressId;
 
     /**
+     * @var boolean Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
+     */
+    public $LoadBalancerPassToTarget;
+
+    /**
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. Valid value: 1 (generic CLB instance).
@@ -228,7 +241,9 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
 </li></ul>
      * @param string $BandwidthPackageId Bandwidth package ID. If this parameter is specified, the network billing mode (`InternetAccessible.InternetChargeType`) will only support bill-by-bandwidth package (`BANDWIDTH_PACKAGE`).
      * @param ExclusiveCluster $ExclusiveCluster Exclusive cluster information. This parameter is required for creating exclusive clusters of CLB instances.
-     * @param string $SlaType 
+     * @param string $SlaType Creates an LCU-supported CLB instance
+<ul><li>To create an LCU-supported CLB, this field is required and the value is `SLA`. LCU-supports CLBs adopt the pay-as-you-go model and their performance is guaranteed.</li>
+<li>It’s not required for a shared CLB instance.</li></ul>
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.
      * @param boolean $SnatPro Whether Binding IPs of other VPCs feature switch
      * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
@@ -236,6 +251,7 @@ Note: A primary AZ carries traffic, while a secondary AZ does not carry traffic 
      * @param string $SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
 Note: A secondary AZ will load traffic if the primary AZ has failures. The API `DescribeMasterZones` is used to query the primary and secondary AZ list of a region.
      * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance. E.g., `eip-11112222`.
+     * @param boolean $LoadBalancerPassToTarget Whether to allow CLB traffic to the target group. `true`: allows CLB traffic to the target group and verifies security groups only on CLB; `false`: denies CLB traffic to the target group and verifies security groups on both CLB and backend instances.
      */
     function __construct()
     {
@@ -352,6 +368,10 @@ Note: A secondary AZ will load traffic if the primary AZ has failures. The API `
 
         if (array_key_exists("EipAddressId",$param) and $param["EipAddressId"] !== null) {
             $this->EipAddressId = $param["EipAddressId"];
+        }
+
+        if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
+            $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
         }
     }
 }

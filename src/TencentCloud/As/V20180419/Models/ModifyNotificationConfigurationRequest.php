@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
  * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+ * @method string getQueueName() Obtain CMQ queue name.
+ * @method void setQueueName(string $QueueName) Set CMQ queue name.
+ * @method string getTopicName() Obtain CMQ topic name.
+ * @method void setTopicName(string $TopicName) Set CMQ topic name.
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +67,16 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
+     * @var string CMQ queue name.
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ topic name.
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingNotificationId ID of the notification to be modified.
      * @param array $NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
@@ -72,6 +86,8 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
      * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * @param string $QueueName CMQ queue name.
+     * @param string $TopicName CMQ topic name.
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 
         if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
             $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

@@ -56,8 +56,8 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
  * @method void setInternetAccessible(InternetAccessible $InternetAccessible) Set Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
  * @method LoginSettings getLoginSettings() Obtain Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
- * @method integer getProjectId() Obtain Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
- * @method void setProjectId(integer $ProjectId) Set Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+ * @method integer getProjectId() Obtain Project ID of the instance. Leave it blank as the default.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance. Leave it blank as the default.
  * @method array getSecurityGroupIds() Obtain The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
  * @method SystemDisk getSystemDisk() Obtain System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
@@ -146,7 +146,7 @@ If a model in InstanceTypes does not exist or has been deactivated, a verificati
     public $LoginSettings;
 
     /**
-     * @var integer Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * @var integer Project ID of the instance. Leave it blank as the default.
      */
     public $ProjectId;
 
@@ -216,7 +216,7 @@ Common reasons why an instance type is unavailable include stock-out of the inst
 If a model in InstanceTypes does not exist or has been deactivated, a verification error will be reported regardless of the value of InstanceTypesCheckPolicy.
      * @param InternetAccessible $InternetAccessible Configuration information of public network bandwidth. If this parameter is not specified, the default public network bandwidth is 0 Mbps.
      * @param LoginSettings $LoginSettings Login settings of the instance. This parameter is used to set the login password and key for the instance, or to keep the original login settings for the image. By default, a random password is generated and sent to the user via the internal message.
-     * @param integer $ProjectId Project ID of the instance. This parameter can be obtained from the `projectId` field in the returned values of [DescribeProject](https://intl.cloud.tencent.com/document/api/378/4400?from_cn_redirect=1). If this is left empty, default project is used.
+     * @param integer $ProjectId Project ID of the instance. Leave it blank as the default.
      * @param array $SecurityGroupIds The security group of instance. This parameter can be obtained by calling the `SecurityGroupId` field in the returned value of [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808?from_cn_redirect=1). If this parameter is not specified, no security group will be bound by default.
      * @param SystemDisk $SystemDisk System disk configuration of the instance. If this parameter is not specified, the default value will be assigned to it.
      * @param string $UserData Base64-encoded custom data of up to 16 KB.

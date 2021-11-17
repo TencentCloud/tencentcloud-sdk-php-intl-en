@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique ID of a CLB instance, e.g., lb-12345678.
  * @method array getSnatIps() Obtain Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
  * @method void setSnatIps(array $SnatIps) Set Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+ * @method integer getNumber() Obtain Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+ * @method void setNumber(integer $Number) Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $SnatIps;
 
     /**
+     * @var integer Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     */
+    public $Number;
+
+    /**
      * @param string $LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
      * @param array $SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+     * @param integer $Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SnatIps, $obj);
             }
+        }
+
+        if (array_key_exists("Number",$param) and $param["Number"] !== null) {
+            $this->Number = $param["Number"];
         }
     }
 }

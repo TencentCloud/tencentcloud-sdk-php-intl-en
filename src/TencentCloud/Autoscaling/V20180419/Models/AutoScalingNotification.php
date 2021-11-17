@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTypes(array $NotificationTypes) Set List of notification events.
  * @method string getAutoScalingNotificationId() Obtain Event notification ID.
  * @method void setAutoScalingNotificationId(string $AutoScalingNotificationId) Set Event notification ID.
+ * @method string getTargetType() Obtain Notification receiver type.
+ * @method void setTargetType(string $TargetType) Set Notification receiver type.
+ * @method string getQueueName() Obtain CMQ queue name.
+ * @method void setQueueName(string $QueueName) Set CMQ queue name.
+ * @method string getTopicName() Obtain CMQ topic name.
+ * @method void setTopicName(string $TopicName) Set CMQ topic name.
  */
 class AutoScalingNotification extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AutoScalingNotification extends AbstractModel
     public $AutoScalingNotificationId;
 
     /**
+     * @var string Notification receiver type.
+     */
+    public $TargetType;
+
+    /**
+     * @var string CMQ queue name.
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ topic name.
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param array $NotificationUserGroupIds List of user group IDs.
      * @param array $NotificationTypes List of notification events.
      * @param string $AutoScalingNotificationId Event notification ID.
+     * @param string $TargetType Notification receiver type.
+     * @param string $QueueName CMQ queue name.
+     * @param string $TopicName CMQ topic name.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class AutoScalingNotification extends AbstractModel
 
         if (array_key_exists("AutoScalingNotificationId",$param) and $param["AutoScalingNotificationId"] !== null) {
             $this->AutoScalingNotificationId = $param["AutoScalingNotificationId"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

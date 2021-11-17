@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID.
  * @method array getInstanceIds() Obtain Instance ID.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID.
- * @method boolean getProtectedFromScaleIn() Obtain Whether the instance needs to be protected from scale-in.
- * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether the instance needs to be protected from scale-in.
+ * @method boolean getProtectedFromScaleIn() Obtain Whether to enable scale-in protection for this instance
+ * @method void setProtectedFromScaleIn(boolean $ProtectedFromScaleIn) Set Whether to enable scale-in protection for this instance
  */
 class SetInstancesProtectionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class SetInstancesProtectionRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var boolean Whether the instance needs to be protected from scale-in.
+     * @var boolean Whether to enable scale-in protection for this instance
      */
     public $ProtectedFromScaleIn;
 
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param array $InstanceIds Instance ID.
-     * @param boolean $ProtectedFromScaleIn Whether the instance needs to be protected from scale-in.
+     * @param boolean $ProtectedFromScaleIn Whether to enable scale-in protection for this instance
      */
     function __construct()
     {

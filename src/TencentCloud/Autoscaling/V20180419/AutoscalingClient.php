@@ -59,7 +59,34 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
 	"NotificationMetadata": ""
 }
 ```
- * @method Models\CreateNotificationConfigurationResponse CreateNotificationConfiguration(Models\CreateNotificationConfigurationRequest $req) This API (CreateNotificationConfiguration) is used to create a notification.
+ * @method Models\CreateNotificationConfigurationResponse CreateNotificationConfiguration(Models\CreateNotificationConfigurationRequest $req) This API is used to create a notification policy.
+When the notification is sent to a CMQ topic or queue, the following contents are included:
+```
+{
+    "Service": "Tencent Cloud Auto Scaling",
+    "CreatedTime": "2021-10-11T10:15:11Z", // Activity creation time
+    "AppId": "100000000",
+    "ActivityId": "asa-fznnvrja", // Scaling activity ID
+    "AutoScalingGroupId": "asg-pc2oqu2z", // Scaling group ID
+    "ActivityType": "SCALE_OUT",  // Scaling activity type
+    "StatusCode": "SUCCESSFUL",   // Scaling activity result
+    "Description": "Activity was launched in response to a difference between desired capacity and actual capacity,
+    scale out 1 instance(s).", // Scaling activity description
+    "StartTime": "2021-10-11T10:15:11Z",  // Activity starting time
+    "EndTime": "2021-10-11T10:15:32Z",    // Activity ending time
+    "DetailedStatusMessageSet": [ // A collection of failed attempts during the scaling process (Failed attempts are allowed in a successful scaling activity)
+        {
+            "Code": "InvalidInstanceType",
+            "Zone": "ap-guangzhou-2",
+            "InstanceId": "",
+            "InstanceChargeType": "POSTPAID_BY_HOUR",
+            "SubnetId": "subnet-4t5mgeuu",
+            "Message": "The specified instance type `S5.LARGE8` is invalid in `subnet-4t5mgeuu`, `ap-guangzhou-2`.",
+            "InstanceType": "S5.LARGE8",
+        }
+    ]
+}
+```
  * @method Models\CreateScalingPolicyResponse CreateScalingPolicy(Models\CreateScalingPolicyRequest $req) This API (CreateScalingPolicy) is used to create an alarm trigger policy.
  * @method Models\CreateScheduledActionResponse CreateScheduledAction(Models\CreateScheduledActionRequest $req) This API (CreateScheduledAction) is used to create a scheduled task.
  * @method Models\DeleteAutoScalingGroupResponse DeleteAutoScalingGroup(Models\DeleteAutoScalingGroupRequest $req) This API (DeleteAutoScalingGroup) is used to delete the specified auto scaling group that has no instances and remains inactive.
@@ -115,12 +142,13 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 
 * The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
 * This API supports modifying certain simple types of attributes.
- * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) This API (ModifyLoadBalancers) is used to modify the load balancers of an auto scaling group.
+ * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) This API is used to modify the cloud load balancers of a scaling group.
 
-* This API can specify a new load balancer configuration for the auto scaling group. The new configuration overwrites the original load balancer configuration.
-* If you want to clear the load balancer for the auto scaling group, specify only the auto scaling group ID but not the specific load balancer when calling this API.
-* This API modifies the load balancer of the auto scaling group and generate a scaling activity to asynchronously modify the load balancers of existing instances.
- * @method Models\ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(Models\ModifyNotificationConfigurationRequest $req) This API (ModifyNotificationConfiguration) is used to modify a notification.
+* This API can specify a new cloud load balancer configuration for the scaling group. The new configuration overwrites the original load balancer configuration.
+* To clear the cloud load balancer of the scaling group, specify only the scaling group ID but not the specific cloud load balancer.
+* This API modifies the cloud load balancer of the scaling group and generate a scaling activity to asynchronously modify the cloud load balancers of existing instances.
+ * @method Models\ModifyNotificationConfigurationResponse ModifyNotificationConfiguration(Models\ModifyNotificationConfigurationRequest $req) This API is used to modify a notification policy.
+* The receiver type of the notification policy cannot be modified.
  * @method Models\ModifyScalingPolicyResponse ModifyScalingPolicy(Models\ModifyScalingPolicyRequest $req) This API (ModifyScalingPolicy) is used to modify an alarm trigger policy.
  * @method Models\ModifyScheduledActionResponse ModifyScheduledAction(Models\ModifyScheduledActionRequest $req) This API (ModifyScheduledAction) is used to modify a scheduled task.
  * @method Models\RemoveInstancesResponse RemoveInstances(Models\RemoveInstancesRequest $req) This API is used to delete CVM instances from a scaling group. Instances that are automatically created through AS will be terminated, while those manually added to the scaling group will be removed and retained.
@@ -137,8 +165,8 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * The scaling group is not active.
 * The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
 * If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
- * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) This API (SetInstancesProtection) is used to enable scale-in protection for an instance.
-When an instance has scale-in protection enabled, it will not be removed when scaling is triggered by replacement of unhealthy instances, alarm trigger policy, threshold change, etc.
+ * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) This API is used to enable scale-in protection for an instance.
+When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) This API is used to start up CVM instances in a scaling group.
 * After startup, the instance will be in the `IN_SERVICE` status, which will increase the desired capacity. Please note that the desired capacity cannot exceed the maximum value.
 * This API supports batch operation. Up to 100 instances can be started up in each request.

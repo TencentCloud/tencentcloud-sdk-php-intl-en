@@ -100,6 +100,8 @@ This field requires passing in the `InstanceName` field. Other fields that are n
  * @method void setInstanceNameSettings(InstanceNameSettings $InstanceNameSettings) Set Settings of CVM instance names. 
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+ * @method EnhancedService getEnhancedService() Obtain Specifies whether to enable additional services, such as security services and monitoring service.
+ * @method void setEnhancedService(EnhancedService $EnhancedService) Set Specifies whether to enable additional services, such as security services and monitoring service.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -208,6 +210,11 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     public $InstanceNameSettings;
 
     /**
+     * @var EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
+     */
+    public $EnhancedService;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $ImageId Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
      * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
@@ -248,6 +255,7 @@ This field requires passing the `HostName` field. Other fields that are not pass
      * @param InstanceNameSettings $InstanceNameSettings Settings of CVM instance names. 
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
+     * @param EnhancedService $EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
      */
     function __construct()
     {
@@ -335,6 +343,11 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         if (array_key_exists("InstanceNameSettings",$param) and $param["InstanceNameSettings"] !== null) {
             $this->InstanceNameSettings = new InstanceNameSettings();
             $this->InstanceNameSettings->deserialize($param["InstanceNameSettings"]);
+        }
+
+        if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
+            $this->EnhancedService = new EnhancedService();
+            $this->EnhancedService->deserialize($param["EnhancedService"]);
         }
     }
 }

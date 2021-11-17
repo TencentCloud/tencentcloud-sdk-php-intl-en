@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConcurrentList(array $ConcurrentList) Set Value array of the available concurrence
  * @method array getBandwidthList() Obtain Value array of the available bandwidth
  * @method void setBandwidthList(array $BandwidthList) Set Value array of the available bandwidth
+ * @method string getRegionArea() Obtain Region where the data center locates
+ * @method void setRegionArea(string $RegionArea) Set Region where the data center locates
+ * @method string getRegionAreaName() Obtain Name of the region where the data center locates
+ * @method void setRegionAreaName(string $RegionAreaName) Set Name of the region where the data center locates
+ * @method string getIDCType() Obtain Data center type. `dc`: data center; `ec`: edge server.
+ * @method void setIDCType(string $IDCType) Set Data center type. `dc`: data center; `ec`: edge server.
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -52,10 +58,28 @@ class AccessRegionDetial extends AbstractModel
     public $BandwidthList;
 
     /**
+     * @var string Region where the data center locates
+     */
+    public $RegionArea;
+
+    /**
+     * @var string Name of the region where the data center locates
+     */
+    public $RegionAreaName;
+
+    /**
+     * @var string Data center type. `dc`: data center; `ec`: edge server.
+     */
+    public $IDCType;
+
+    /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
      * @param array $ConcurrentList Value array of the available concurrence
      * @param array $BandwidthList Value array of the available bandwidth
+     * @param string $RegionArea Region where the data center locates
+     * @param string $RegionAreaName Name of the region where the data center locates
+     * @param string $IDCType Data center type. `dc`: data center; `ec`: edge server.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class AccessRegionDetial extends AbstractModel
 
         if (array_key_exists("BandwidthList",$param) and $param["BandwidthList"] !== null) {
             $this->BandwidthList = $param["BandwidthList"];
+        }
+
+        if (array_key_exists("RegionArea",$param) and $param["RegionArea"] !== null) {
+            $this->RegionArea = $param["RegionArea"];
+        }
+
+        if (array_key_exists("RegionAreaName",$param) and $param["RegionAreaName"] !== null) {
+            $this->RegionAreaName = $param["RegionAreaName"];
+        }
+
+        if (array_key_exists("IDCType",$param) and $param["IDCType"] !== null) {
+            $this->IDCType = $param["IDCType"];
         }
     }
 }

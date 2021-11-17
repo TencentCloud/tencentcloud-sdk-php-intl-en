@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
  * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+ * @method string getTargetType() Obtain Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+ * @method void setTargetType(string $TargetType) Set Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+ * @method string getQueueName() Obtain CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+ * @method void setQueueName(string $QueueName) Set CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+ * @method string getTopicName() Obtain CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+ * @method void setTopicName(string $TopicName) Set CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
  */
 class CreateNotificationConfigurationRequest extends AbstractModel
 {
@@ -63,6 +69,21 @@ class CreateNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
+     * @var string Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     */
+    public $TargetType;
+
+    /**
+     * @var string CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     */
+    public $QueueName;
+
+    /**
+     * @var string CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
+     */
+    public $TopicName;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param array $NotificationTypes Notification type, i.e., the set of types of notifications to be subscribed to. Value range:
 <li>SCALE_OUT_SUCCESSFUL: scale-out succeeded</li>
@@ -72,6 +93,9 @@ class CreateNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
      * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
+     * @param string $TargetType Notification receiver type. Values: `USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`. Default: `USER_GROUP`.
+     * @param string $QueueName CMQ queue name. This field is required when `TargetType` is `CMQ_QUEUE`.
+     * @param string $TopicName CMQ topic name. This field is required when `TargetType` is `CMQ_TOPIC`.
      */
     function __construct()
     {
@@ -96,6 +120,18 @@ class CreateNotificationConfigurationRequest extends AbstractModel
 
         if (array_key_exists("NotificationUserGroupIds",$param) and $param["NotificationUserGroupIds"] !== null) {
             $this->NotificationUserGroupIds = $param["NotificationUserGroupIds"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
+        }
+
+        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
+            $this->TopicName = $param["TopicName"];
         }
     }
 }

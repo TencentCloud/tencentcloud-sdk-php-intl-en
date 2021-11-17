@@ -38,28 +38,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth. Unit: Mbps.
  * @method integer getConcurrent() Obtain Concurrence. Unit: requests/second.
  * @method void setConcurrent(integer $Concurrent) Set Concurrence. Unit: requests/second.
- * @method string getStatus() Obtain Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
- * @method void setStatus(string $Status) Set Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+ * @method string getStatus() Obtain Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
+ * @method void setStatus(string $Status) Set Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
  * @method string getDomain() Obtain Accessed domain name.
  * @method void setDomain(string $Domain) Set Accessed domain name.
  * @method string getIP() Obtain Accessed IP.
@@ -124,9 +124,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getNetworkType() Obtain Network type. Valid values: `normal`, `cn2`
+ * @method string getNetworkType() Obtain Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal`, `cn2`
+ * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
 Note: this field may return `null`, indicating that no valid value can be obtained.
@@ -136,6 +136,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setBanStatus(string $BanStatus) Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method array getIPList() Obtain 
+ * @method void setIPList(array $IPList) Set 
  */
 class ProxyInfo extends AbstractModel
 {
@@ -181,17 +183,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Concurrent;
 
     /**
-     * @var string Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+     * @var string Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
      */
     public $Status;
 
@@ -304,7 +306,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IPAddressVersion;
 
     /**
-     * @var string Network type. Valid values: `normal`, `cn2`
+     * @var string Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $NetworkType;
@@ -322,6 +324,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $BanStatus;
 
     /**
+     * @var array 
+     */
+    public $IPList;
+
+    /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -331,17 +338,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RealServerRegion Origin server region.
      * @param integer $Bandwidth Bandwidth. Unit: Mbps.
      * @param integer $Concurrent Concurrence. Unit: requests/second.
-     * @param string $Status Connection status:
-RUNNING: running;
-CREATING: creating;
-DESTROYING: terminating;
-OPENING: enabling;
-CLOSING: disabling;
-CLOSED: disabled;
-ADJUSTING: adjusting configuration
-ISOLATING: isolating (it's triggered when the account is in arrears);
-ISOLATED: isolated (it's triggered when the account is in arrears);
-UNKNOWN: unknown status.
+     * @param string $Status Connection status. Valid values:
+`RUNNING`: running
+`CREATING`: creating
+`DESTROYING`: terminating
+`OPENING`: enabling
+`CLOSING`: disabling
+`CLOSED`: disabled
+`ADJUSTING`: adjusting configuration
+`ISOLATING`: isolating
+`ISOLATED`: isolated
+`CLONING`: copying
      * @param string $Domain Accessed domain name.
      * @param string $IP Accessed IP.
      * @param string $Version Connection versions: 1.0, 2.0, 3.0.
@@ -374,12 +381,13 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $NetworkType Network type. Valid values: `normal`, `cn2`
+     * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param array $IPList 
      */
     function __construct()
     {
@@ -523,6 +531,15 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
             $this->BanStatus = $param["BanStatus"];
+        }
+
+        if (array_key_exists("IPList",$param) and $param["IPList"] !== null) {
+            $this->IPList = [];
+            foreach ($param["IPList"] as $key => $value){
+                $obj = new IPDetail();
+                $obj->deserialize($value);
+                array_push($this->IPList, $obj);
+            }
         }
     }
 }
