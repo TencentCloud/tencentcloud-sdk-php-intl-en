@@ -20,17 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableReplicaReadonly response structure.
  *
- * @method string getStatus() Obtain ERROR: failure; OK: success
- * @method void setStatus(string $Status) Set ERROR: failure; OK: success
+ * @method integer getTaskId() Obtain Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTaskId(integer $TaskId) Set Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DisableReplicaReadonlyResponse extends AbstractModel
 {
     /**
-     * @var string ERROR: failure; OK: success
+     * @var integer Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
-    public $Status;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +41,8 @@ class DisableReplicaReadonlyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status ERROR: failure; OK: success
+     * @param integer $TaskId Task ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +58,8 @@ class DisableReplicaReadonlyResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

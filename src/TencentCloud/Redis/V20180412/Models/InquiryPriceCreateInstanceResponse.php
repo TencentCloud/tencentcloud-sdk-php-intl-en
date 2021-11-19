@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateInstance response structure.
  *
- * @method float getPrice() Obtain Price. Unit: USD
+ * @method float getPrice() Obtain Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPrice(float $Price) Set Price. Unit: USD
+ * @method void setPrice(float $Price) Set Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class InquiryPriceCreateInstanceResponse extends AbstractModel
 {
     /**
-     * @var float Price. Unit: USD
+     * @var float Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Price;
@@ -41,7 +41,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param float $Price Price. Unit: USD
+     * @param float $Price Price in USD
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

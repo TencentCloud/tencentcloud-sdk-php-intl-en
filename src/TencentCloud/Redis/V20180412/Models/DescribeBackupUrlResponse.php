@@ -20,13 +20,13 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupUrl response structure.
  *
- * @method array getDownloadUrl() Obtain Download address on the public network (valid for 6 hours)
- * @method void setDownloadUrl(array $DownloadUrl) Set Download address on the public network (valid for 6 hours)
- * @method array getInnerDownloadUrl() Obtain Download address on the private network (valid for 6 hours)
- * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Download address on the private network (valid for 6 hours)
- * @method array getFilenames() Obtain File name (only valid for TencentDB for Tendis instances)
+ * @method array getDownloadUrl() Obtain Public network download address (valid for six hours). This field will be deprecated soon.
+ * @method void setDownloadUrl(array $DownloadUrl) Set Public network download address (valid for six hours). This field will be deprecated soon.
+ * @method array getInnerDownloadUrl() Obtain Private network download address (valid for six hours). This field will be deprecated soon.
+ * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Private network download address (valid for six hours). This field will be deprecated soon.
+ * @method array getFilenames() Obtain Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFilenames(array $Filenames) Set File name (only valid for TencentDB for Tendis instances)
+ * @method void setFilenames(array $Filenames) Set Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getBackupInfos() Obtain List of backup file information
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -38,17 +38,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class DescribeBackupUrlResponse extends AbstractModel
 {
     /**
-     * @var array Download address on the public network (valid for 6 hours)
+     * @var array Public network download address (valid for six hours). This field will be deprecated soon.
      */
     public $DownloadUrl;
 
     /**
-     * @var array Download address on the private network (valid for 6 hours)
+     * @var array Private network download address (valid for six hours). This field will be deprecated soon.
      */
     public $InnerDownloadUrl;
 
     /**
-     * @var array File name (only valid for TencentDB for Tendis instances)
+     * @var array Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Filenames;
@@ -65,9 +65,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $DownloadUrl Download address on the public network (valid for 6 hours)
-     * @param array $InnerDownloadUrl Download address on the private network (valid for 6 hours)
-     * @param array $Filenames File name (only valid for TencentDB for Tendis instances)
+     * @param array $DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
+     * @param array $InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
+     * @param array $Filenames Filename. This field will be deprecated soon.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $BackupInfos List of backup file information
 Note: this field may return `null`, indicating that no valid values can be obtained.

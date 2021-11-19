@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getMemSize() Obtain Shard size in MB
- * @method void setMemSize(integer $MemSize) Set Shard size in MB
- * @method integer getRedisShardNum() Obtain Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
- * @method void setRedisShardNum(integer $RedisShardNum) Set Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
- * @method integer getRedisReplicasNum() Obtain Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
- * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+ * @method integer getMemSize() Obtain Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
+ * @method void setMemSize(integer $MemSize) Set Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
+ * @method integer getRedisShardNum() Obtain Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
+ * @method void setRedisShardNum(integer $RedisShardNum) Set Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
+ * @method integer getRedisReplicasNum() Obtain Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
+ * @method void setRedisReplicasNum(integer $RedisReplicasNum) Set Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
  * @method array getNodeSet() Obtain The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
  * @method void setNodeSet(array $NodeSet) Set The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
  */
@@ -39,17 +39,17 @@ class UpgradeInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Shard size in MB
+     * @var integer Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
      */
     public $MemSize;
 
     /**
-     * @var integer Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+     * @var integer Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
      */
     public $RedisShardNum;
 
     /**
-     * @var integer Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+     * @var integer Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
      */
     public $RedisReplicasNum;
 
@@ -60,9 +60,9 @@ class UpgradeInstanceRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param integer $MemSize Shard size in MB
-     * @param integer $RedisShardNum Number of shards. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
-     * @param integer $RedisReplicasNum Number of replicas. This parameter can be left blank for Redis 2.8 primary-secondary edition, CKV primary-secondary edition, and Redis 2.8 standalone edition
+     * @param integer $MemSize Shard size in MB. This parameter cannot be passed in at the same time as `RedisShardNum`/`RedisReplicasNum`.
+     * @param integer $RedisShardNum Shard quantity. This parameter is not required by standard architecture instances and cannot be passed in at the same time as `RedisReplicasNum`/`MemSize`.
+     * @param integer $RedisReplicasNum Replica quantity. This parameter cannot be passed in at the same time as `RedisShardNum`/`MemSize`. To modify the number of replicas in a multi-AZ instance, `NodeSet` must be passed in.
      * @param array $NodeSet The information of the replica to be added to a multi-AZ instance, such as replica availability zone and replica type (`NodeType` should be `1`). This parameter is required only when multi-AZ instances add replicas.
      */
     function __construct()

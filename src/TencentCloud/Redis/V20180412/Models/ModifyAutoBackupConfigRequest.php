@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getWeekDays() Obtain Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
- * @method void setWeekDays(array $WeekDays) Set Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+ * @method array getWeekDays() Obtain Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
+ * @method void setWeekDays(array $WeekDays) Set Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
  * @method string getTimePeriod() Obtain Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method void setTimePeriod(string $TimePeriod) Set Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
  * @method integer getAutoBackupType() Obtain Auto backup type: 1 "scheduled rollback"
@@ -37,7 +37,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+     * @var array Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
      */
     public $WeekDays;
 
@@ -53,7 +53,7 @@ class ModifyAutoBackupConfigRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID
-     * @param array $WeekDays Date. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
+     * @param array $WeekDays Date. Valid values: `Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`. However, this parameter is now invalid.
      * @param string $TimePeriod Time period. Value range: 00:00-01:00, 01:00-02:00...... 23:00-00:00
      * @param integer $AutoBackupType Auto backup type: 1 "scheduled rollback"
      */

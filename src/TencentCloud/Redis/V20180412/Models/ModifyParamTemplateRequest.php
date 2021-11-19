@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTemplateId() Obtain ID of the parameter template to be modified.
  * @method void setTemplateId(string $TemplateId) Set ID of the parameter template to be modified.
- * @method string getName() Obtain New name of the parameter template.
- * @method void setName(string $Name) Set New name of the parameter template.
- * @method string getDescription() Obtain New description of the parameter template.
- * @method void setDescription(string $Description) Set New description of the parameter template.
- * @method array getParamList() Obtain List of new parameters.
- * @method void setParamList(array $ParamList) Set List of new parameters.
+ * @method string getName() Obtain New name after the parameter template is modified.
+ * @method void setName(string $Name) Set New name after the parameter template is modified.
+ * @method string getDescription() Obtain New description after the parameter template is modified.
+ * @method void setDescription(string $Description) Set New description after the parameter template is modified.
+ * @method array getParamList() Obtain New parameter list after the parameter template is modified.
+ * @method void setParamList(array $ParamList) Set New parameter list after the parameter template is modified.
  */
 class ModifyParamTemplateRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string New name of the parameter template.
+     * @var string New name after the parameter template is modified.
      */
     public $Name;
 
     /**
-     * @var string New description of the parameter template.
+     * @var string New description after the parameter template is modified.
      */
     public $Description;
 
     /**
-     * @var array List of new parameters.
+     * @var array New parameter list after the parameter template is modified.
      */
     public $ParamList;
 
     /**
      * @param string $TemplateId ID of the parameter template to be modified.
-     * @param string $Name New name of the parameter template.
-     * @param string $Description New description of the parameter template.
-     * @param array $ParamList List of new parameters.
+     * @param string $Name New name after the parameter template is modified.
+     * @param string $Description New description after the parameter template is modified.
+     * @param array $ParamList New parameter list after the parameter template is modified.
      */
     function __construct()
     {
