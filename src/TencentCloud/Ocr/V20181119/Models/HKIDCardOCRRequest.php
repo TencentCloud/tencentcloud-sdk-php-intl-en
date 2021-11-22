@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDetectFake(boolean $DetectFake) Set Whether to check for authenticity.
  * @method boolean getReturnHeadImage() Obtain Whether to return identity photo.
  * @method void setReturnHeadImage(boolean $ReturnHeadImage) Set Whether to return identity photo.
- * @method string getImageBase64() Obtain Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
- * @method void setImageBase64(string $ImageBase64) Set Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+ * @method string getImageBase64() Obtain Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
+ * @method void setImageBase64(string $ImageBase64) Set Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
  * @method string getImageUrl() Obtain URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
@@ -54,9 +54,9 @@ class HKIDCardOCRRequest extends AbstractModel
     public $ReturnHeadImage;
 
     /**
-     * @var string Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+     * @var string Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
      */
     public $ImageBase64;
 
@@ -72,9 +72,9 @@ The download speed and stability of non-Tencent Cloud URLs may be low.
     /**
      * @param boolean $DetectFake Whether to check for authenticity.
      * @param boolean $ReturnHeadImage Whether to return identity photo.
-     * @param string $ImageBase64 Base64-encoded value of image.
-Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
-Supported image size: the downloaded image cannot exceed 3 MB in size after being Base64-encoded. The download time of the image cannot exceed 3 seconds.
+     * @param string $ImageBase64 Base64 string of the image
+Supported image formats: PNG, JPG, JPEG. GIF is not supported yet.
+Supported image size: The downloaded image cannot exceed 7 MB after being Base64-encoded, and it cannot take longer than 3 seconds to download the image.
      * @param string $ImageUrl URL address of image. (This field is not supported outside Chinese mainland)
 Supported image formats: PNG, JPG, JPEG. GIF is currently not supported.
 Supported image size: the downloaded image cannot exceed 3 MB after being Base64-encoded. The download time of the image cannot exceed 3 seconds.

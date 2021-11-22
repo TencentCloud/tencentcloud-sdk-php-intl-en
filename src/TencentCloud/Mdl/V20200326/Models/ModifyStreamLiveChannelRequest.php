@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoTemplates(array $VideoTemplates) Set Video transcoding templates. Quantity: [1, 10]
  * @method array getAVTemplates() Obtain Audio/Video transcoding templates. Quantity: [1, 10]
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates. Quantity: [1, 10]
+ * @method PlanSettings getPlanSettings() Obtain Event settings
+ * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
  */
 class ModifyStreamLiveChannelRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
     public $AVTemplates;
 
     /**
+     * @var PlanSettings Event settings
+     */
+    public $PlanSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $Name Channel name, which can contain 1-32 case-sensitive letters, digits, and underscores and must be unique at the region level
      * @param array $AttachedInputs Inputs to attach. You can attach 1 to 5 inputs.
@@ -80,6 +87,7 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
      * @param array $AudioTemplates Audio transcoding templates. Quantity: [1, 20]
      * @param array $VideoTemplates Video transcoding templates. Quantity: [1, 10]
      * @param array $AVTemplates Audio/Video transcoding templates. Quantity: [1, 10]
+     * @param PlanSettings $PlanSettings Event settings
      */
     function __construct()
     {
@@ -145,6 +153,11 @@ class ModifyStreamLiveChannelRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AVTemplates, $obj);
             }
+        }
+
+        if (array_key_exists("PlanSettings",$param) and $param["PlanSettings"] !== null) {
+            $this->PlanSettings = new PlanSettings();
+            $this->PlanSettings->deserialize($param["PlanSettings"]);
         }
     }
 }

@@ -36,6 +36,10 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
  * @method void setIsWords(boolean $IsWords) Set Whether to return the character information. Default value: `false`
  * @method boolean getEnableDetectSplit() Obtain Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
  * @method void setEnableDetectSplit(boolean $EnableDetectSplit) Set Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+ * @method boolean getIsPdf() Obtain Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+ * @method void setIsPdf(boolean $IsPdf) Set Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+ * @method integer getPdfPageNumber() Obtain Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+ * @method void setPdfPageNumber(integer $PdfPageNumber) Set Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
  */
 class GeneralAccurateOCRRequest extends AbstractModel
 {
@@ -64,6 +68,16 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
     public $EnableDetectSplit;
 
     /**
+     * @var boolean Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+     */
+    public $IsPdf;
+
+    /**
+     * @var integer Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
+     */
+    public $PdfPageNumber;
+
+    /**
      * @param string $ImageBase64 Base64-encoded value of image.
 The image cannot exceed 7 MB in size after being Base64-encoded. A resolution above 600x800 is recommended. PNG, JPG, JPEG, and BMP formats are supported.
 Either `ImageUrl` or `ImageBase64` of the image must be provided; if both are provided, only `ImageUrl` will be used.
@@ -72,6 +86,8 @@ The image cannot exceed 7 MB after being Base64-encoded. A resolution above 600x
 We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. The download speed and stability of non-Tencent Cloud URLs may be low.
      * @param boolean $IsWords Whether to return the character information. Default value: `false`
      * @param boolean $EnableDetectSplit Whether to slice the input image to enhance the recognition effects for scenarios where the whole image is big, but the size of a single character is small (e.g., test papers). This feature is disabled by default.
+     * @param boolean $IsPdf Whether to enable PDF recognition. Default value: `false`. If you enable this feature, both images and PDF files can be recognized.
+     * @param integer $PdfPageNumber Number of a PDF page that needs to be recognized. Currently, only one single page can be recognized. This parameter takes effect only if a PDF file is uploaded and `IsPdf` is set to `true`. Default value: `1`
      */
     function __construct()
     {
@@ -100,6 +116,14 @@ We recommend you store the image in Tencent Cloud, as a Tencent Cloud URL can gu
 
         if (array_key_exists("EnableDetectSplit",$param) and $param["EnableDetectSplit"] !== null) {
             $this->EnableDetectSplit = $param["EnableDetectSplit"];
+        }
+
+        if (array_key_exists("IsPdf",$param) and $param["IsPdf"] !== null) {
+            $this->IsPdf = $param["IsPdf"];
+        }
+
+        if (array_key_exists("PdfPageNumber",$param) and $param["PdfPageNumber"] !== null) {
+            $this->PdfPageNumber = $param["PdfPageNumber"];
         }
     }
 }

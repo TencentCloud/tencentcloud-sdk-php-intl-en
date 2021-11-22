@@ -42,6 +42,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setAVTemplates(array $AVTemplates) Set Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method PlanSettings getPlanSettings() Obtain Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -89,6 +93,12 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $AVTemplates;
 
     /**
+     * @var PlanSettings Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $PlanSettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -100,6 +110,8 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value was found.
      * @param array $AVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param PlanSettings $PlanSettings Event settings
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -169,6 +181,11 @@ Note: this field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->AVTemplates, $obj);
             }
+        }
+
+        if (array_key_exists("PlanSettings",$param) and $param["PlanSettings"] !== null) {
+            $this->PlanSettings = new PlanSettings();
+            $this->PlanSettings->deserialize($param["PlanSettings"]);
         }
     }
 }
