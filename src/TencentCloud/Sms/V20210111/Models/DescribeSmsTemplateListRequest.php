@@ -20,25 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSmsTemplateList request structure.
  *
- * @method array getTemplateIdSet() Obtain Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
- * @method void setTemplateIdSet(array $TemplateIdSet) Set Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
  * @method integer getInternational() Obtain Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
  * @method void setInternational(integer $International) Set Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+ * @method array getTemplateIdSet() Obtain Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+ * @method void setTemplateIdSet(array $TemplateIdSet) Set Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+ * @method integer getLimit() Obtain Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+ * @method void setLimit(integer $Limit) Set Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+ * @method integer getOffset() Obtain Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+ * @method void setOffset(integer $Offset) Set Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
  */
 class DescribeSmsTemplateListRequest extends AbstractModel
 {
-    /**
-     * @var array Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
-     */
-    public $TemplateIdSet;
-
     /**
      * @var integer Whether it is Global SMS:
 0: Mainland China SMS.
@@ -47,11 +49,33 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     public $International;
 
     /**
-     * @param array $TemplateIdSet Template ID array.
-<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+     * @var array Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     */
+    public $TemplateIdSet;
+
+    /**
+     * @var integer Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public $Limit;
+
+    /**
+     * @var integer Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     */
+    public $Offset;
+
+    /**
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
+     * @param array $TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     * @param integer $Limit Upper limit. Maximum value: 100.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
+     * @param integer $Offset Offset.
+Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
      */
     function __construct()
     {
@@ -66,12 +90,20 @@ class DescribeSmsTemplateListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("International",$param) and $param["International"] !== null) {
+            $this->International = $param["International"];
+        }
+
         if (array_key_exists("TemplateIdSet",$param) and $param["TemplateIdSet"] !== null) {
             $this->TemplateIdSet = $param["TemplateIdSet"];
         }
 
-        if (array_key_exists("International",$param) and $param["International"] !== null) {
-            $this->International = $param["International"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSerialNo(string $SerialNo) Set Delivery serial number.
  * @method string getPhoneNumber() Obtain Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
  * @method void setPhoneNumber(string $PhoneNumber) Set Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
- * @method integer getFee() Obtain Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
- * @method void setFee(integer $Fee) Set Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+ * @method integer getFee() Obtain Number of billable SMS messages. For billing rules, see Billing Policy.
+ * @method void setFee(integer $Fee) Set Number of billable SMS messages. For billing rules, see Billing Policy.
  * @method string getSessionContext() Obtain User session content.
  * @method void setSessionContext(string $SessionContext) Set User session content.
- * @method string getCode() Obtain SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
- * @method void setCode(string $Code) Set SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+ * @method string getCode() Obtain SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
+ * @method void setCode(string $Code) Set SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
  * @method string getMessage() Obtain SMS request error message.
  * @method void setMessage(string $Message) Set SMS request error message.
  * @method string getIsoCode() Obtain Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
@@ -48,7 +48,7 @@ class SendStatus extends AbstractModel
     public $PhoneNumber;
 
     /**
-     * @var integer Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+     * @var integer Number of billable SMS messages. For billing rules, see Billing Policy.
      */
     public $Fee;
 
@@ -58,7 +58,7 @@ class SendStatus extends AbstractModel
     public $SessionContext;
 
     /**
-     * @var string SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+     * @var string SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
      */
     public $Code;
 
@@ -75,9 +75,9 @@ class SendStatus extends AbstractModel
     /**
      * @param string $SerialNo Delivery serial number.
      * @param string $PhoneNumber Mobile number in the E.164 standard (+[country/region code][mobile number]), such as +8613711112222, which has a + sign followed by 86 (country/region code) and then by 13711112222 (mobile number).
-     * @param integer $Fee Number of billable SMS messages. For billing rules, please see [Billing Policy](https://intl.cloud.tencent.com/document/product/382/36135?from_cn_redirect=1).
+     * @param integer $Fee Number of billable SMS messages. For billing rules, see Billing Policy.
      * @param string $SessionContext User session content.
-     * @param string $Code SMS request error code. For details, see [Error Codes](https://intl.cloud.tencent.com/document/api/382/55981?from_cn_redirect=1#6.-.E9.94.99.E8.AF.AF.E7.A0.81). `Ok` will be returned if the request is successful.
+     * @param string $Code SMS request error code. For specific meanings, see [Error Codes](https://intl.cloud.tencent.com/zh/document/product/382/40536#6.-error-code). `Ok` will be returned for successful delivery.
      * @param string $Message SMS request error message.
      * @param string $IsoCode Country/Region code, such as CN and US. For unrecognized country/region codes, `DEF` is returned by default. For the specific list of supported values, please see [Global SMS Price Overview](https://intl.cloud.tencent.com/document/product/382/18051?from_cn_redirect=1).
      */

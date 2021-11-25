@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setEvents(array $Events) Set Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -50,6 +54,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $Events;
 
     /**
+     * @var integer Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -59,6 +69,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
      * @param integer $NextToken Credential for viewing more logs.
      * @param array $Events Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total number of events.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -89,6 +101,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 $obj->deserialize($value);
                 array_push($this->Events, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
