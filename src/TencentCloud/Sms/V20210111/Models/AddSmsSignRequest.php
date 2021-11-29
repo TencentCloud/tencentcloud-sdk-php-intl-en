@@ -43,7 +43,7 @@ Note: the identity certificate type must be selected according to the correspond
 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
  * @method integer getDocumentType() Obtain Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -53,7 +53,7 @@ Note: the identity certificate type must be selected according to the correspond
 7: trademark registration certificate.
 8: screenshot of WeChat Official Account settings page (for personal WeChat Official Account).
  * @method void setDocumentType(integer $DocumentType) Set Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -108,7 +108,7 @@ Note: the identity certificate type must be selected according to the correspond
 
     /**
      * @var integer Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.
@@ -164,7 +164,7 @@ Note: you cannot apply for an approved or pending signature again.
 6: WeChat Mini Program. Valid values of `DocumentType` include 0, 1, 2, 3, and 6.
 Note: the identity certificate type must be selected according to the correspondence; otherwise, the review will fail.
      * @param integer $DocumentType Identity certificate type:
-0: three-in-one.
+0: three-in-one licence.
 1: business license.
 2: organization code certificate.
 3: social credit code certificate.

@@ -39,25 +39,21 @@ use TencentCloud\Common\AbstractModel;
  * @method array getAlarmStatus() Obtain Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
  * @method void setAlarmStatus(array $AlarmStatus) Set Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
  * @method array getProjectIds() Obtain Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
  * @method void setProjectIds(array $ProjectIds) Set Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
  * @method array getInstanceGroupIds() Obtain Filter by instance group ID
  * @method void setInstanceGroupIds(array $InstanceGroupIds) Set Filter by instance group ID
  * @method array getNamespaces() Obtain Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
  * @method void setNamespaces(array $Namespaces) Set Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
  * @method array getMetricNames() Obtain Filter by metric name
  * @method void setMetricNames(array $MetricNames) Set Filter by metric name
  * @method string getPolicyName() Obtain Fuzzy search by policy name
  * @method void setPolicyName(string $PolicyName) Set Fuzzy search by policy name
  * @method string getContent() Obtain Fuzzy search by alarm content
  * @method void setContent(string $Content) Set Fuzzy search by alarm content
- * @method array getReceiverUids() Obtain Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
- * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
- * @method array getReceiverGroups() Obtain Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
- * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+ * @method array getReceiverUids() Obtain Search by recipient
+ * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient
+ * @method array getReceiverGroups() Obtain Search by recipient group
+ * @method void setReceiverGroups(array $ReceiverGroups) Set Search by recipient group
  * @method array getPolicyIds() Obtain Search by alarm policy ID list
  * @method void setPolicyIds(array $PolicyIds) Set Search by alarm policy ID list
  */
@@ -110,7 +106,6 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
 
     /**
      * @var array Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      */
     public $ProjectIds;
 
@@ -121,7 +116,6 @@ You can query [Project Management](https://console.cloud.tencent.com/project) on
 
     /**
      * @var array Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      */
     public $Namespaces;
 
@@ -141,12 +135,12 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
     public $Content;
 
     /**
-     * @var array Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
+     * @var array Search by recipient
      */
     public $ReceiverUids;
 
     /**
-     * @var array Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+     * @var array Search by recipient group
      */
     public $ReceiverGroups;
 
@@ -166,15 +160,13 @@ This parameter can be queried with the API [DescribeAllNamespaces](https://intl.
      * @param string $AlarmObject Filter by alarm object. Fuzzy search with string is supported
      * @param array $AlarmStatus Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
      * @param array $ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)
-You can query [Project Management](https://console.cloud.tencent.com/project) on this page.
      * @param array $InstanceGroupIds Filter by instance group ID
      * @param array $Namespaces Filter by policy type. Monitoring type and policy type are first-level and second-level filters respectively and both need to be passed in. For example, `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
-This parameter can be queried with the API [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1).
      * @param array $MetricNames Filter by metric name
      * @param string $PolicyName Fuzzy search by policy name
      * @param string $Content Fuzzy search by alarm content
-     * @param array $ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
-     * @param array $ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
+     * @param array $ReceiverUids Search by recipient
+     * @param array $ReceiverGroups Search by recipient group
      * @param array $PolicyIds Search by alarm policy ID list
      */
     function __construct()
