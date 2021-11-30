@@ -176,6 +176,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setJdk(string $Jdk) Set JDK type. Valid values: `oracle`, `kona`
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProtocol(string $Protocol) Set Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSecurityGroups() Obtain Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecurityGroups(array $SecurityGroups) Set Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -486,6 +494,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Jdk;
 
     /**
+     * @var string Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Protocol;
+
+    /**
+     * @var array Security group ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SecurityGroups;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -563,6 +583,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Jdk JDK type. Valid values: `oracle`, `kona`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Protocol Cluster network communication protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SecurityGroups Security group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -826,6 +850,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Jdk",$param) and $param["Jdk"] !== null) {
             $this->Jdk = $param["Jdk"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
+            $this->SecurityGroups = $param["SecurityGroups"];
         }
     }
 }

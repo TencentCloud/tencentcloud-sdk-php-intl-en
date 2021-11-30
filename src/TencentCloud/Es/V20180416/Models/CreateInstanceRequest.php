@@ -94,6 +94,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
  * @method void setSceneType(integer $SceneType) Set Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
  * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
  * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
+ * @method string getProtocol() Obtain Valid values: `https`, `http` (default)
+ * @method void setProtocol(string $Protocol) Set Valid values: `https`, `http` (default)
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -251,6 +253,11 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     public $WebNodeTypeInfo;
 
     /**
+     * @var string Valid values: `https`, `http` (default)
+     */
+    public $Protocol;
+
+    /**
      * @param string $Zone Availability Zone
      * @param string $EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      * @param string $VpcId VPC ID
@@ -288,6 +295,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      * @param integer $SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
      * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
+     * @param string $Protocol Valid values: `https`, `http` (default)
      */
     function __construct()
     {
@@ -432,6 +440,10 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
         if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
             $this->WebNodeTypeInfo = new WebNodeTypeInfo();
             $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
         }
     }
 }

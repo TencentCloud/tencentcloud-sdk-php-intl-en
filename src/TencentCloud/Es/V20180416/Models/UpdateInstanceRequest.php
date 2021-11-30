@@ -82,6 +82,14 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setKibanaConfig(string $KibanaConfig) Set Kibana configuration item (JSON string)
  * @method WebNodeTypeInfo getWebNodeTypeInfo() Obtain Visual node configuration
  * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
+ * @method string getSwitchPrivateLink() Obtain Whether to switch to the new network architecture
+ * @method void setSwitchPrivateLink(string $SwitchPrivateLink) Set Whether to switch to the new network architecture
+ * @method boolean getEnableCerebro() Obtain Whether to enable Cerebro
+ * @method void setEnableCerebro(boolean $EnableCerebro) Set Whether to enable Cerebro
+ * @method string getCerebroPublicAccess() Obtain Cerebro public network access status
+ * @method void setCerebroPublicAccess(string $CerebroPublicAccess) Set Cerebro public network access status
+ * @method string getCerebroPrivateAccess() Obtain Cerebro private network access status
+ * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) Set Cerebro private network access status
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -217,6 +225,26 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $WebNodeTypeInfo;
 
     /**
+     * @var string Whether to switch to the new network architecture
+     */
+    public $SwitchPrivateLink;
+
+    /**
+     * @var boolean Whether to enable Cerebro
+     */
+    public $EnableCerebro;
+
+    /**
+     * @var string Cerebro public network access status
+     */
+    public $CerebroPublicAccess;
+
+    /**
+     * @var string Cerebro private network access status
+     */
+    public $CerebroPrivateAccess;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
@@ -248,6 +276,10 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param integer $SceneType Scenario template type. -1: not enabled; 1: general; 2: log; 3: search
      * @param string $KibanaConfig Kibana configuration item (JSON string)
      * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
+     * @param string $SwitchPrivateLink Whether to switch to the new network architecture
+     * @param boolean $EnableCerebro Whether to enable Cerebro
+     * @param string $CerebroPublicAccess Cerebro public network access status
+     * @param string $CerebroPrivateAccess Cerebro private network access status
      */
     function __construct()
     {
@@ -374,6 +406,22 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (array_key_exists("WebNodeTypeInfo",$param) and $param["WebNodeTypeInfo"] !== null) {
             $this->WebNodeTypeInfo = new WebNodeTypeInfo();
             $this->WebNodeTypeInfo->deserialize($param["WebNodeTypeInfo"]);
+        }
+
+        if (array_key_exists("SwitchPrivateLink",$param) and $param["SwitchPrivateLink"] !== null) {
+            $this->SwitchPrivateLink = $param["SwitchPrivateLink"];
+        }
+
+        if (array_key_exists("EnableCerebro",$param) and $param["EnableCerebro"] !== null) {
+            $this->EnableCerebro = $param["EnableCerebro"];
+        }
+
+        if (array_key_exists("CerebroPublicAccess",$param) and $param["CerebroPublicAccess"] !== null) {
+            $this->CerebroPublicAccess = $param["CerebroPublicAccess"];
+        }
+
+        if (array_key_exists("CerebroPrivateAccess",$param) and $param["CerebroPrivateAccess"] !== null) {
+            $this->CerebroPrivateAccess = $param["CerebroPrivateAccess"];
         }
     }
 }
