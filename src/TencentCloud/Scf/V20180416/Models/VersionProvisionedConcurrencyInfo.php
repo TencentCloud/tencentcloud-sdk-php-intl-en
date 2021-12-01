@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatusReason(string $StatusReason) Set Status description of provisioned concurrency setting task.
  * @method string getQualifier() Obtain Function version number
  * @method void setQualifier(string $Qualifier) Set Function version number
+ * @method array getTriggerActions() Obtain List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTriggerActions(array $TriggerActions) Set List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class VersionProvisionedConcurrencyInfo extends AbstractModel
 {
@@ -59,11 +63,19 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
     public $Qualifier;
 
     /**
+     * @var array List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TriggerActions;
+
+    /**
      * @param integer $AllocatedProvisionedConcurrencyNum Set provisioned concurrency amount.
      * @param integer $AvailableProvisionedConcurrencyNum Currently available provisioned concurrency amount.
      * @param string $Status Provisioned concurrency setting task status. `Done`: completed; `InProgress`: in progress; `Failed`: partially or completely failed.
      * @param string $StatusReason Status description of provisioned concurrency setting task.
      * @param string $Qualifier Function version number
+     * @param array $TriggerActions List of scheduled provisioned concurrency scaling actions
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,15 @@ class VersionProvisionedConcurrencyInfo extends AbstractModel
 
         if (array_key_exists("Qualifier",$param) and $param["Qualifier"] !== null) {
             $this->Qualifier = $param["Qualifier"];
+        }
+
+        if (array_key_exists("TriggerActions",$param) and $param["TriggerActions"] !== null) {
+            $this->TriggerActions = [];
+            foreach ($param["TriggerActions"] as $key => $value){
+                $obj = new TriggerAction();
+                $obj->deserialize($value);
+                array_push($this->TriggerActions, $obj);
+            }
         }
     }
 }

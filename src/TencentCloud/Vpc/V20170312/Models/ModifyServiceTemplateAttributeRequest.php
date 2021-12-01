@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceTemplateName(string $ServiceTemplateName) Set Protocol port template name.
  * @method array getServices() Obtain It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
  * @method void setServices(array $Services) Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+ * @method array getServicesExtra() Obtain Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+ * @method void setServicesExtra(array $ServicesExtra) Set Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
  */
 class ModifyServiceTemplateAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
     public $Services;
 
     /**
+     * @var array Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     */
+    public $ServicesExtra;
+
+    /**
      * @param string $ServiceTemplateId Protocol port template instance ID, such as `ppm-529nwwj8`.
      * @param string $ServiceTemplateName Protocol port template name.
      * @param array $Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * @param array $ServicesExtra Protocol port information with remarks. Supported ports include single port, multiple ports, consecutive ports and other ports. Supported protocols include TCP, UDP, ICMP, and GRE.
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class ModifyServiceTemplateAttributeRequest extends AbstractModel
 
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = $param["Services"];
+        }
+
+        if (array_key_exists("ServicesExtra",$param) and $param["ServicesExtra"] !== null) {
+            $this->ServicesExtra = [];
+            foreach ($param["ServicesExtra"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServicesExtra, $obj);
+            }
         }
     }
 }

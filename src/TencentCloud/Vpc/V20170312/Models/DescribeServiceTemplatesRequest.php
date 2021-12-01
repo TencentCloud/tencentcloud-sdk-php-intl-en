@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeServiceTemplates request structure.
  *
- * @method array getFilters() Obtain Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
- * @method void setFilters(array $Filters) Set Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+ * @method array getFilters() Obtain Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
+ * @method void setFilters(array $Filters) Set Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
  * @method string getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(string $Offset) Set Offset. The default value is 0.
  * @method string getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
@@ -34,9 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeServiceTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+     * @var array Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
      */
     public $Filters;
 
@@ -51,9 +54,10 @@ class DescribeServiceTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters Filter conditions.
-<li>service-template-name - String - (Filter condition) Protocol port template name.</li>
-<li>service-template-id - String - (Filter condition) Protocol port template instance ID, such as `ppm-e6dy460g`.</li>
+     * @param array $Filters Filters
+<li>service-template-name - Protocol port template name.</li>
+<li>service-template-id - Protocol port template ID, such as `ppm-e6dy460g`.</li>
+<li>service-port-Protocol port.</li>
      * @param string $Offset Offset. The default value is 0.
      * @param string $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */

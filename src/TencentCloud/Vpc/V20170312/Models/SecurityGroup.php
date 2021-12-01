@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedTime(string $CreatedTime) Set Security group creation time.
  * @method array getTagSet() Obtain Tag key-value pairs.
  * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
+ * @method string getUpdateTime() Obtain Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SecurityGroup extends AbstractModel
 {
@@ -73,6 +77,12 @@ class SecurityGroup extends AbstractModel
     public $TagSet;
 
     /**
+     * @var string Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $SecurityGroupId The security group instance ID, such as `sg-ohuuioma`.
      * @param string $SecurityGroupName Security group can be named freely, but cannot exceed 60 characters.
      * @param string $SecurityGroupDesc The remarks for the security group. The maximum length is 100 characters.
@@ -80,6 +90,8 @@ class SecurityGroup extends AbstractModel
      * @param boolean $IsDefault Whether it is the default security group (which cannot be deleted).
      * @param string $CreatedTime Security group creation time.
      * @param array $TagSet Tag key-value pairs.
+     * @param string $UpdateTime Security group update time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -125,6 +137,10 @@ class SecurityGroup extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

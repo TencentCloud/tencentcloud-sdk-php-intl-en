@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeIpGeolocationInfos request structure.
  *
- * @method array getAddressIps() Obtain IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
- * @method void setAddressIps(array $AddressIps) Set IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
- * @method IpField getFields() Obtain Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
- * @method void setFields(IpField $Fields) Set Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+ * @method array getAddressIps() Obtain The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+ * @method void setAddressIps(array $AddressIps) Set The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+ * @method IpField getFields() Obtain Fields of the IP addresses to be queried.
+ * @method void setFields(IpField $Fields) Set Fields of the IP addresses to be queried.
  */
 class DescribeIpGeolocationInfosRequest extends AbstractModel
 {
     /**
-     * @var array IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
+     * @var array The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
      */
     public $AddressIps;
 
     /**
-     * @var IpField Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+     * @var IpField Fields of the IP addresses to be queried.
      */
     public $Fields;
 
     /**
-     * @param array $AddressIps IP addresses to be queried. Both IPv4 and IPv6 addresses are supported.
-     * @param IpField $Fields Fields of the IP addresses to be queried, including `Country`, `Province`, `City`, `Region`, `Isp`, `AsName` and `AsId`
+     * @param array $AddressIps The list of IP addresses (only IPv4 addresses are available currently) to be queried; upper limit: 100
+     * @param IpField $Fields Fields of the IP addresses to be queried.
      */
     function __construct()
     {

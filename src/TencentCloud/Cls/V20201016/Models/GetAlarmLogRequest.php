@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContext(string $Context) Set This field is used to load more logs. Pass through the last `Context` value returned to get more log content.
  * @method string getSort() Obtain Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
  * @method void setSort(string $Sort) Set Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
- * @method boolean getUseNewAnalysis() Obtain 
- * @method void setUseNewAnalysis(boolean $UseNewAnalysis) Set 
+ * @method boolean getUseNewAnalysis() Obtain If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) Set If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
  */
 class GetAlarmLogRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class GetAlarmLogRequest extends AbstractModel
     public $Sort;
 
     /**
-     * @var boolean 
+     * @var boolean If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
      */
     public $UseNewAnalysis;
 
@@ -79,7 +79,7 @@ class GetAlarmLogRequest extends AbstractModel
      * @param integer $Limit Number of logs returned in a single query. Maximum value: 100
      * @param string $Context This field is used to load more logs. Pass through the last `Context` value returned to get more log content.
      * @param string $Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-     * @param boolean $UseNewAnalysis 
+     * @param boolean $UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
      */
     function __construct()
     {

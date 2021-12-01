@@ -32,10 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-2`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-2`.
- * @method string getType() Obtain VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
- * @method void setType(string $Type) Set VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+ * @method string getType() Obtain VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
+ * @method void setType(string $Type) Set VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method string getCdcId() Obtain CDC instance ID
+ * @method void setCdcId(string $CdcId) Set CDC instance ID
+ * @method integer getMaxConnection() Obtain Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+ * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
  */
 class CreateVpnGatewayRequest extends AbstractModel
 {
@@ -70,7 +74,7 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var string VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * @var string VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
      */
     public $Type;
 
@@ -80,14 +84,26 @@ class CreateVpnGatewayRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string CDC instance ID
+     */
+    public $CdcId;
+
+    /**
+     * @var integer Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field in the response of the [`DescribeVpcs`](https://intl.cloud.tencent.com/document/product/215/15778?from_cn_redirect=1) API.
      * @param string $VpnGatewayName The VPN gateway name. The maximum length is 60 bytes.
      * @param integer $InternetMaxBandwidthOut The public network bandwidth configuration. Available bandwidth specifications: 5, 10, 20, 50, and 100. Unit: Mbps
      * @param string $InstanceChargeType The VPN gateway billing mode. PREPAID: prepaid means monthly subscription. POSTPAID_BY_HOUR: postpaid means pay-as-you-go. Default: POSTPAID_BY_HOUR. If prepaid mode is specified, the `InstanceChargePrepaid` parameter must be entered.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Parameter settings for prepaid billing mode, also known as monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. This parameter is mandatory for prepaid instances.
      * @param string $Zone The availability zone, such as `ap-guangzhou-2`.
-     * @param string $Type VPN gateway type. Value: `CCN`, indicates CCN-type VPN gateway
+     * @param string $Type VPN gateway type. Values: `CCN` (CCN VPN gateway), `SSL` (SSL VPN gateway)
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param string $CdcId CDC instance ID
+     * @param integer $MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway. Valid values: [5, 10, 20, 50, 100]. This parameter is only required for SSL VPN gateways.
      */
     function __construct()
     {
@@ -138,6 +154,14 @@ class CreateVpnGatewayRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

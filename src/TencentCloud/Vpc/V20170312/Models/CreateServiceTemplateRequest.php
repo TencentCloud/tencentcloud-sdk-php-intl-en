@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getServiceTemplateName() Obtain Template name of the protocol port
  * @method void setServiceTemplateName(string $ServiceTemplateName) Set Template name of the protocol port
- * @method array getServices() Obtain It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
- * @method void setServices(array $Services) Set It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+ * @method array getServices() Obtain Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+ * @method void setServices(array $Services) Set Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+ * @method array getServicesExtra() Obtain You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+ * @method void setServicesExtra(array $ServicesExtra) Set You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
  */
 class CreateServiceTemplateRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateServiceTemplateRequest extends AbstractModel
     public $ServiceTemplateName;
 
     /**
-     * @var array It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * @var array Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
      */
     public $Services;
 
     /**
+     * @var array You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     */
+    public $ServicesExtra;
+
+    /**
      * @param string $ServiceTemplateName Template name of the protocol port
-     * @param array $Services It supports single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP, and GRE.
+     * @param array $Services Supported ports inlcude single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
+     * @param array $ServicesExtra You can add remarks. Supported ports include single port, multiple ports, consecutive ports and all ports. Supported protocols include TCP, UDP, ICMP and GRE. Either Services or ServicesExtra is required.
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateServiceTemplateRequest extends AbstractModel
 
         if (array_key_exists("Services",$param) and $param["Services"] !== null) {
             $this->Services = $param["Services"];
+        }
+
+        if (array_key_exists("ServicesExtra",$param) and $param["ServicesExtra"] !== null) {
+            $this->ServicesExtra = [];
+            foreach ($param["ServicesExtra"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServicesExtra, $obj);
+            }
         }
     }
 }

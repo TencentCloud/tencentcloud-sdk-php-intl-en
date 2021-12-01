@@ -41,6 +41,9 @@ Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
+<li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
  * @method void setFilters(array $Filters) Set Filter list
@@ -56,6 +59,9 @@ Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
+Type: String
+Required: no
+<li>blueprint-state</li>Filter by **image status**.
 Type: String
 Required: no
 
@@ -94,6 +100,9 @@ Required: no
 <li>blueprint-name</li>Filter by **image name**.
 Type: String
 Required: no
+<li>blueprint-state</li>Filter by **image status**.
+Type: String
+Required: no
 
 Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
      */
@@ -116,6 +125,9 @@ Valid values: `LINUX_UNIX`: Linux or Unix; `WINDOWS`: Windows
 Type: String
 Required: no
 <li>blueprint-name</li>Filter by **image name**.
+Type: String
+Required: no
+<li>blueprint-state</li>Filter by **image status**.
 Type: String
 Required: no
 

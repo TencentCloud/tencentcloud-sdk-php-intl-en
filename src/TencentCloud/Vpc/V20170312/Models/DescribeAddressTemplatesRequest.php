@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAddressTemplates request structure.
  *
- * @method array getFilters() Obtain Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
- * @method void setFilters(array $Filters) Set Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+ * @method array getFilters() Obtain Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
+ * @method void setFilters(array $Filters) Set Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
  * @method string getOffset() Obtain Offset. The default value is 0.
  * @method void setOffset(string $Offset) Set Offset. The default value is 0.
  * @method string getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
@@ -34,9 +36,10 @@ use TencentCloud\Common\AbstractModel;
 class DescribeAddressTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+     * @var array Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
      */
     public $Filters;
 
@@ -51,9 +54,10 @@ class DescribeAddressTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param array $Filters Filter conditions.
-<li>address-template-name - String - (Filter condition) IP address template name.</li>
-<li>address-template-id - String - (Filter condition) IP address template instance ID, such as `ipm-mdunqeb6`.</li>
+     * @param array $Filters Filters
+<li>address-template-name - IP address template name.</li>
+<li>address-template-id - IP address template ID, such as `ipm-mdunqeb6`.</li>
+<li>address-ip - IP address.</li>
      * @param string $Offset Offset. The default value is 0.
      * @param string $Limit Number of values to be returned. The default value is 20. Maximum is 100.
      */

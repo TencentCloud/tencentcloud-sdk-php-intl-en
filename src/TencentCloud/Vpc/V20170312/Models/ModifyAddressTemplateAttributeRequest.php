@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
  * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
  * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
+ * @method array getAddressesExtra() Obtain Address information with remarks, including the IP, CIDR block or IP address range.
+ * @method void setAddressesExtra(array $AddressesExtra) Set Address information with remarks, including the IP, CIDR block or IP address range.
  */
 class ModifyAddressTemplateAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
     public $Addresses;
 
     /**
+     * @var array Address information with remarks, including the IP, CIDR block or IP address range.
+     */
+    public $AddressesExtra;
+
+    /**
      * @param string $AddressTemplateId IP address template instance ID, such as `ipm-mdunqeb6`.
      * @param string $AddressTemplateName IP address template name.
      * @param array $Addresses Address information, including IP, CIDR and IP address range.
+     * @param array $AddressesExtra Address information with remarks, including the IP, CIDR block or IP address range.
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class ModifyAddressTemplateAttributeRequest extends AbstractModel
 
         if (array_key_exists("Addresses",$param) and $param["Addresses"] !== null) {
             $this->Addresses = $param["Addresses"];
+        }
+
+        if (array_key_exists("AddressesExtra",$param) and $param["AddressesExtra"] !== null) {
+            $this->AddressesExtra = [];
+            foreach ($param["AddressesExtra"] as $key => $value){
+                $obj = new AddressInfo();
+                $obj->deserialize($value);
+                array_push($this->AddressesExtra, $obj);
+            }
         }
     }
 }

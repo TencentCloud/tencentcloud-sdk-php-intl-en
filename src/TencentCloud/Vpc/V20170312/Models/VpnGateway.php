@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVersion(string $Version) Set Gateway instance version.
  * @method string getNetworkInstanceId() Obtain CCN instance ID when the value of Type is CCN.
  * @method void setNetworkInstanceId(string $NetworkInstanceId) Set CCN instance ID when the value of Type is CCN.
+ * @method string getCdcId() Obtain CDC instance ID
+ * @method void setCdcId(string $CdcId) Set CDC instance ID
+ * @method integer getMaxConnection() Obtain Maximum number of connected clients allowed for the SSL VPN gateway.
+ * @method void setMaxConnection(integer $MaxConnection) Set Maximum number of connected clients allowed for the SSL VPN gateway.
  */
 class VpnGateway extends AbstractModel
 {
@@ -150,6 +154,16 @@ class VpnGateway extends AbstractModel
     public $NetworkInstanceId;
 
     /**
+     * @var string CDC instance ID
+     */
+    public $CdcId;
+
+    /**
+     * @var integer Maximum number of connected clients allowed for the SSL VPN gateway.
+     */
+    public $MaxConnection;
+
+    /**
      * @param string $VpnGatewayId Gateway instance ID.
      * @param string $VpcId VPC instance ID.
      * @param string $VpnGatewayName Gateway instance name.
@@ -168,6 +182,8 @@ class VpnGateway extends AbstractModel
      * @param array $VpnGatewayQuotaSet Gateway bandwidth quota information.
      * @param string $Version Gateway instance version.
      * @param string $NetworkInstanceId CCN instance ID when the value of Type is CCN.
+     * @param string $CdcId CDC instance ID
+     * @param integer $MaxConnection Maximum number of connected clients allowed for the SSL VPN gateway.
      */
     function __construct()
     {
@@ -257,6 +273,14 @@ class VpnGateway extends AbstractModel
 
         if (array_key_exists("NetworkInstanceId",$param) and $param["NetworkInstanceId"] !== null) {
             $this->NetworkInstanceId = $param["NetworkInstanceId"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
+
+        if (array_key_exists("MaxConnection",$param) and $param["MaxConnection"] !== null) {
+            $this->MaxConnection = $param["MaxConnection"];
         }
     }
 }

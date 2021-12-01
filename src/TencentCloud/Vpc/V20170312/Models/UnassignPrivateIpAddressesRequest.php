@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceId(string $NetworkInterfaceId) Set The ID of the ENI instance, such as `eni-m6dyj72l`.
  * @method array getPrivateIpAddresses() Obtain The information of the specified private IPs. You can specify a maximum of 10 each time.
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
+ * @method string getInstanceId() Obtain Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
  */
 class UnassignPrivateIpAddressesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
     public $PrivateIpAddresses;
 
     /**
+     * @var string Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-m6dyj72l`.
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
+     * @param string $InstanceId Instance ID of the server bound with this IP. This parameter is only applicable when you need to return an IP and unbind the related servers.
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class UnassignPrivateIpAddressesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PrivateIpAddresses, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

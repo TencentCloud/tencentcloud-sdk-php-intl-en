@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCcnId() Obtain The CCN instance ID, such as `ccn-f49l6u0z`.
  * @method void setCcnId(string $CcnId) Set The CCN instance ID, such as `ccn-f49l6u0z`.
- * @method string getCcnName() Obtain The name of the CCN. The maximum length is 60 characters.
- * @method void setCcnName(string $CcnName) Set The name of the CCN. The maximum length is 60 characters.
- * @method string getCcnDescription() Obtain The description of the CCN. The maximum length is 100 characters.
- * @method void setCcnDescription(string $CcnDescription) Set The description of the CCN. The maximum length is 100 characters.
+ * @method string getCcnName() Obtain The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+ * @method void setCcnName(string $CcnName) Set The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+ * @method string getCcnDescription() Obtain The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+ * @method void setCcnDescription(string $CcnDescription) Set The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
  */
 class ModifyCcnAttributeRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyCcnAttributeRequest extends AbstractModel
     public $CcnId;
 
     /**
-     * @var string The name of the CCN. The maximum length is 60 characters.
+     * @var string The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public $CcnName;
 
     /**
-     * @var string The description of the CCN. The maximum length is 100 characters.
+     * @var string The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     public $CcnDescription;
 
     /**
      * @param string $CcnId The CCN instance ID, such as `ccn-f49l6u0z`.
-     * @param string $CcnName The name of the CCN. The maximum length is 60 characters.
-     * @param string $CcnDescription The description of the CCN. The maximum length is 100 characters.
+     * @param string $CcnName The name of CCN instance. Up to 60 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
+     * @param string $CcnDescription The description of CCN instance. Up to 100 characters allowed. It can contain up to 60 bytes. Either `CcnName` or `CcnDescription` must be specified.
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeRequestId(string $InvokeRequestId) Set Terminated invocation request ID
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
+ * @method boolean getGraceShutdown() Obtain Specifies whether to enable graceful shutdown
+ * @method void setGraceShutdown(boolean $GraceShutdown) Set Specifies whether to enable graceful shutdown
  */
 class TerminateAsyncEventRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TerminateAsyncEventRequest extends AbstractModel
     public $Namespace;
 
     /**
+     * @var boolean Specifies whether to enable graceful shutdown
+     */
+    public $GraceShutdown;
+
+    /**
      * @param string $FunctionName Function name
      * @param string $InvokeRequestId Terminated invocation request ID
      * @param string $Namespace Namespace
+     * @param boolean $GraceShutdown Specifies whether to enable graceful shutdown
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class TerminateAsyncEventRequest extends AbstractModel
 
         if (array_key_exists("Namespace",$param) and $param["Namespace"] !== null) {
             $this->Namespace = $param["Namespace"];
+        }
+
+        if (array_key_exists("GraceShutdown",$param) and $param["GraceShutdown"] !== null) {
+            $this->GraceShutdown = $param["GraceShutdown"];
         }
     }
 }

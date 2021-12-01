@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
  * @method string getChargeType() Obtain The billing mode of the bandwidth package.
  * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package.
+ * @method boolean getMigrateOnRefund() Obtain When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+ * @method void setMigrateOnRefund(boolean $MigrateOnRefund) Set When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
     public $ChargeType;
 
     /**
+     * @var boolean When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+     */
+    public $MigrateOnRefund;
+
+    /**
      * @param string $BandwidthPackageId The unique ID of the bandwidth package.
      * @param string $BandwidthPackageName The name of the bandwidth package.
      * @param string $ChargeType The billing mode of the bandwidth package.
+     * @param boolean $MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("MigrateOnRefund",$param) and $param["MigrateOnRefund"] !== null) {
+            $this->MigrateOnRefund = $param["MigrateOnRefund"];
         }
     }
 }

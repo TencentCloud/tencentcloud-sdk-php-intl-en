@@ -20,14 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UploadLog request structure.
  *
-
+ * @method string getTopicId() Obtain Topic ID
+ * @method void setTopicId(string $TopicId) Set Topic ID
+ * @method string getHashKey() Obtain Topic partition where data will be written into by `HashKey` 
+ * @method void setHashKey(string $HashKey) Set Topic partition where data will be written into by `HashKey` 
+ * @method string getCompressType() Obtain Compression type
+ * @method void setCompressType(string $CompressType) Set Compression type
  */
 class UploadLogRequest extends AbstractModel
 {
-
+    /**
+     * @var string Topic ID
+     */
+    public $TopicId;
 
     /**
+     * @var string Topic partition where data will be written into by `HashKey` 
+     */
+    public $HashKey;
 
+    /**
+     * @var string Compression type
+     */
+    public $CompressType;
+
+    /**
+     * @param string $TopicId Topic ID
+     * @param string $HashKey Topic partition where data will be written into by `HashKey` 
+     * @param string $CompressType Compression type
      */
     function __construct()
     {
@@ -42,6 +62,16 @@ class UploadLogRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TopicId",$param) and $param["TopicId"] !== null) {
+            $this->TopicId = $param["TopicId"];
+        }
 
+        if (array_key_exists("HashKey",$param) and $param["HashKey"] !== null) {
+            $this->HashKey = $param["HashKey"];
+        }
+
+        if (array_key_exists("CompressType",$param) and $param["CompressType"] !== null) {
+            $this->CompressType = $param["CompressType"];
+        }
     }
 }

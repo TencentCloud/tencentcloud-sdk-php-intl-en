@@ -38,10 +38,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAnalysisResults(array $AnalysisResults) Set Log analysis result. If `Analysis` is `False`, `null` may be returned
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysisRecords() Obtain 
- * @method void setAnalysisRecords(array $AnalysisRecords) Set 
- * @method array getColumns() Obtain 
- * @method void setColumns(array $Columns) Set 
+ * @method array getAnalysisRecords() Obtain New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAnalysisRecords(array $AnalysisRecords) Set New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getColumns() Obtain Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setColumns(array $Columns) Set Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -81,12 +85,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AnalysisResults;
 
     /**
-     * @var array 
+     * @var array New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $AnalysisRecords;
 
     /**
-     * @var array 
+     * @var array Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Columns;
 
@@ -105,8 +111,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AnalysisRecords 
-     * @param array $Columns 
+     * @param array $AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

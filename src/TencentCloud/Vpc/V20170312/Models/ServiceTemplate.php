@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceSet(array $ServiceSet) Set Protocol port information.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method array getServiceExtraSet() Obtain Protocol port template information with remarks
+ * @method void setServiceExtraSet(array $ServiceExtraSet) Set Protocol port template information with remarks
  */
 class ServiceTemplate extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ServiceTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array Protocol port template information with remarks
+     */
+    public $ServiceExtraSet;
+
+    /**
      * @param string $ServiceTemplateId Protocol port instance ID, such as `ppm-f5n1f8da`.
      * @param string $ServiceTemplateName Template name.
      * @param array $ServiceSet Protocol port information.
      * @param string $CreatedTime Creation Time.
+     * @param array $ServiceExtraSet Protocol port template information with remarks
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class ServiceTemplate extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ServiceExtraSet",$param) and $param["ServiceExtraSet"] !== null) {
+            $this->ServiceExtraSet = [];
+            foreach ($param["ServiceExtraSet"] as $key => $value){
+                $obj = new ServicesInfo();
+                $obj->deserialize($value);
+                array_push($this->ServiceExtraSet, $obj);
+            }
         }
     }
 }

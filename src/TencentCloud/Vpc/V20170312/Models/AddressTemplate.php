@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddressSet(array $AddressSet) Set IP address information.
  * @method string getCreatedTime() Obtain Creation Time.
  * @method void setCreatedTime(string $CreatedTime) Set Creation Time.
+ * @method array getAddressExtraSet() Obtain IP address information with remarks
+ * @method void setAddressExtraSet(array $AddressExtraSet) Set IP address information with remarks
  */
 class AddressTemplate extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AddressTemplate extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array IP address information with remarks
+     */
+    public $AddressExtraSet;
+
+    /**
      * @param string $AddressTemplateName IP address template name.
      * @param string $AddressTemplateId The unique ID of the IP address template instance.
      * @param array $AddressSet IP address information.
      * @param string $CreatedTime Creation Time.
+     * @param array $AddressExtraSet IP address information with remarks
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class AddressTemplate extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("AddressExtraSet",$param) and $param["AddressExtraSet"] !== null) {
+            $this->AddressExtraSet = [];
+            foreach ($param["AddressExtraSet"] as $key => $value){
+                $obj = new AddressInfo();
+                $obj->deserialize($value);
+                array_push($this->AddressExtraSet, $obj);
+            }
         }
     }
 }

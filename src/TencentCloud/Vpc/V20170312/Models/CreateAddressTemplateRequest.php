@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAddressTemplateName() Obtain The name of the IP address template
  * @method void setAddressTemplateName(string $AddressTemplateName) Set The name of the IP address template
- * @method array getAddresses() Obtain Address information, including IP, CIDR and IP address range.
- * @method void setAddresses(array $Addresses) Set Address information, including IP, CIDR and IP address range.
+ * @method array getAddresses() Obtain The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+ * @method void setAddresses(array $Addresses) Set The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+ * @method array getAddressesExtra() Obtain The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+ * @method void setAddressesExtra(array $AddressesExtra) Set The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
  */
 class CreateAddressTemplateRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class CreateAddressTemplateRequest extends AbstractModel
     public $AddressTemplateName;
 
     /**
-     * @var array Address information, including IP, CIDR and IP address range.
+     * @var array The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      */
     public $Addresses;
 
     /**
+     * @var array The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     */
+    public $AddressesExtra;
+
+    /**
      * @param string $AddressTemplateName The name of the IP address template
-     * @param array $Addresses Address information, including IP, CIDR and IP address range.
+     * @param array $Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
+     * @param array $AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class CreateAddressTemplateRequest extends AbstractModel
 
         if (array_key_exists("Addresses",$param) and $param["Addresses"] !== null) {
             $this->Addresses = $param["Addresses"];
+        }
+
+        if (array_key_exists("AddressesExtra",$param) and $param["AddressesExtra"] !== null) {
+            $this->AddressesExtra = [];
+            foreach ($param["AddressesExtra"] as $key => $value){
+                $obj = new AddressInfo();
+                $obj->deserialize($value);
+                array_push($this->AddressesExtra, $obj);
+            }
         }
     }
 }

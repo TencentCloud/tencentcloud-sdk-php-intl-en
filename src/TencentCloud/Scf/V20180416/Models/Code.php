@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getCosBucketName() Obtain Object bucket name (enter the custom part of the bucket name without `-appid`)
  * @method void setCosBucketName(string $CosBucketName) Set Object bucket name (enter the custom part of the bucket name without `-appid`)
- * @method string getCosObjectName() Obtain COS object path
- * @method void setCosObjectName(string $CosObjectName) Set COS object path
+ * @method string getCosObjectName() Obtain File path of code package stored in COS, which should start with “/”
+ * @method void setCosObjectName(string $CosObjectName) Set File path of code package stored in COS, which should start with “/”
  * @method string getZipFile() Obtain This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
  * @method void setZipFile(string $ZipFile) Set This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
  * @method string getCosBucketRegion() Obtain COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
@@ -59,7 +59,7 @@ class Code extends AbstractModel
     public $CosBucketName;
 
     /**
-     * @var string COS object path
+     * @var string File path of code package stored in COS, which should start with “/”
      */
     public $CosObjectName;
 
@@ -130,7 +130,7 @@ class Code extends AbstractModel
 
     /**
      * @param string $CosBucketName Object bucket name (enter the custom part of the bucket name without `-appid`)
-     * @param string $CosObjectName COS object path
+     * @param string $CosObjectName File path of code package stored in COS, which should start with “/”
      * @param string $ZipFile This parameter contains a .zip file (up to 50 MB) of the function code file and its dependencies. When this API is used, the content of the .zip file needs to be Base64-encoded
      * @param string $CosBucketRegion COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
      * @param string $DemoId `DemoId` is required if Demo is used for the creation.
