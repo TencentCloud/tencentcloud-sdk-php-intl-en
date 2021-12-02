@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setExampleSql(string $ExampleSql) Set Sample SQL
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getHost() Obtain Host address of the account
+ * @method void setHost(string $Host) Set Host address of the account
  */
 class SlowLogData extends AbstractModel
 {
@@ -153,6 +155,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ExampleSql;
 
     /**
+     * @var string Host address of the account
+     */
+    public $Host;
+
+    /**
      * @param string $CheckSum Statement checksum for querying details
      * @param string $Db Database name
      * @param string $FingerPrint Abstracted SQL statement
@@ -172,6 +179,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $User Account
      * @param string $ExampleSql Sample SQL
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Host Host address of the account
      */
     function __construct()
     {
@@ -256,6 +264,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ExampleSql",$param) and $param["ExampleSql"] !== null) {
             $this->ExampleSql = $param["ExampleSql"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }
