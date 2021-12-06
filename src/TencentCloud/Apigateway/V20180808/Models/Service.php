@@ -92,6 +92,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSetType(string $SetType) Set Cluster type
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeploymentType() Obtain Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+ * @method void setDeploymentType(string $DeploymentType) Set Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
  */
 class Service extends AbstractModel
 {
@@ -204,6 +208,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SetType;
 
     /**
+     * @var string Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public $DeploymentType;
+
+    /**
      * @param integer $InnerHttpsPort Port for HTTPS access over private network.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceDesc Custom service description.
@@ -240,6 +250,8 @@ Note: this field may return null, indicating that no valid values found.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SetType Cluster type
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
      */
     function __construct()
     {
@@ -329,6 +341,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
             $this->SetType = $param["SetType"];
+        }
+
+        if (array_key_exists("DeploymentType",$param) and $param["DeploymentType"] !== null) {
+            $this->DeploymentType = $param["DeploymentType"];
         }
     }
 }

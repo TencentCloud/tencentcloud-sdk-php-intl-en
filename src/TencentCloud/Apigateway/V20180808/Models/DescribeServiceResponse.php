@@ -88,6 +88,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSetType(string $SetType) Set Cluster type
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDeploymentType() Obtain Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+ * @method void setDeploymentType(string $DeploymentType) Set Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+ * @method string getSpecialUse() Obtain Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSpecialUse(string $SpecialUse) Set Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -224,6 +232,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SetType;
 
     /**
+     * @var string Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     */
+    public $DeploymentType;
+
+    /**
+     * @var string Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SpecialUse;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -263,6 +283,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SetType Cluster type
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DeploymentType Cluster type for service deployment
+Note: this field may return null, indicating that no valid values found.
+     * @param string $SpecialUse Whether it’s for special usage
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -387,6 +411,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SetType",$param) and $param["SetType"] !== null) {
             $this->SetType = $param["SetType"];
+        }
+
+        if (array_key_exists("DeploymentType",$param) and $param["DeploymentType"] !== null) {
+            $this->DeploymentType = $param["DeploymentType"];
+        }
+
+        if (array_key_exists("SpecialUse",$param) and $param["SpecialUse"] !== null) {
+            $this->SpecialUse = $param["SpecialUse"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -78,6 +78,10 @@ Monthly subscription refund
  * @method void setResourceId(string $ResourceId) Set ID of the instance to be queried
  * @method string getPayMode() Obtain Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
  * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+ * @method string getBusinessCode() Obtain Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method void setBusinessCode(string $BusinessCode) Set Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -143,6 +147,12 @@ Monthly subscription refund
     public $PayMode;
 
     /**
+     * @var string Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public $BusinessCode;
+
+    /**
      * @param integer $Offset Offset
      * @param integer $Limit Quantity, maximum is 1000
      * @param string $Month Month; format: yyyy-mm. This value cannot be earlier than the month when Bill 2.0 is enabled. Last 24 months data are available.
@@ -172,6 +182,8 @@ Monthly subscription specification adjustment
 Monthly subscription refund
      * @param string $ResourceId ID of the instance to be queried
      * @param string $PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
+     * @param string $BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     function __construct()
     {
@@ -216,6 +228,10 @@ Monthly subscription refund
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
         }
     }
 }

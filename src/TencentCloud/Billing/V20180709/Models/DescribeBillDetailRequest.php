@@ -42,10 +42,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayMode(string $PayMode) Set Billing mode: prePay/postPay
  * @method string getResourceId() Obtain Queries information on a specified resource
  * @method void setResourceId(string $ResourceId) Set Queries information on a specified resource
- * @method string getActionType() Obtain 
- * @method void setActionType(string $ActionType) Set 
+ * @method string getActionType() Obtain Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
+ * @method void setActionType(string $ActionType) Set Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
  * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
  * @method void setProjectId(integer $ProjectId) Set Project ID: ID of the project to which the resource belongs
+ * @method string getBusinessCode() Obtain Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method void setBusinessCode(string $BusinessCode) Set Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -101,7 +145,27 @@ class DescribeBillDetailRequest extends AbstractModel
     public $ResourceId;
 
     /**
-     * @var string 
+     * @var string Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
      */
     public $ActionType;
 
@@ -109,6 +173,12 @@ class DescribeBillDetailRequest extends AbstractModel
      * @var integer Project ID: ID of the project to which the resource belongs
      */
     public $ProjectId;
+
+    /**
+     * @var string Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     */
+    public $BusinessCode;
 
     /**
      * @param integer $Offset Offset
@@ -122,8 +192,30 @@ class DescribeBillDetailRequest extends AbstractModel
      * @param string $ProductCode Queries information on a specified product
      * @param string $PayMode Billing mode: prePay/postPay
      * @param string $ResourceId Queries information on a specified resource
-     * @param string $ActionType 
+     * @param string $ActionType Action type to query. Valid values:
+Purchase
+Renewal
+Modify
+Refund
+Deduction
+Hourly settlement
+Daily settlement
+Monthly settlement
+Offline project deduction
+Offline deduction
+adjust-CR
+adjust-DR
+One-off RI Fee
+Spot
+Hourly RI fee
+New monthly subscription
+Monthly subscription renewal
+Monthly subscription specification adjustment
+Monthly subscription specification adjustment
+Monthly subscription refund
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
+     * @param string $BusinessCode Business code
+Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     function __construct()
     {
@@ -184,6 +276,10 @@ class DescribeBillDetailRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("BusinessCode",$param) and $param["BusinessCode"] !== null) {
+            $this->BusinessCode = $param["BusinessCode"];
         }
     }
 }

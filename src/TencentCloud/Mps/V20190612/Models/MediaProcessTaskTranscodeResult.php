@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(MediaTranscodeItem $Output) Set Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setProgress(integer $Progress) Set Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class MediaProcessTaskTranscodeResult extends AbstractModel
 {
@@ -69,6 +73,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
@@ -76,6 +86,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TranscodeTaskInput $Input Input for a transcoding task.
      * @param MediaTranscodeItem $Output Output of a transcoding task.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress Transcoding progress. Value range: 0-100
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -114,6 +126,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new MediaTranscodeItem();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }
