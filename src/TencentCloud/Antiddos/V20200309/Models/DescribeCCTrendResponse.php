@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setId(string $Id) Set Instance ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getMetricName() Obtain Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
- * @method void setMetricName(string $MetricName) Set Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+ * @method string getMetricName() Obtain Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+ * @method void setMetricName(string $MetricName) Set Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -87,7 +87,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Id;
 
     /**
-     * @var string Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * @var string Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      */
     public $MetricName;
 
@@ -106,7 +106,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $Data Value array
      * @param string $Id Instance ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $MetricName Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * @param string $MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Beginning of the time range for the query
  * @method string getEndTime() Obtain End of the time range for the query
  * @method void setEndTime(string $EndTime) Set End of the time range for the query
- * @method string getMetricName() Obtain Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
- * @method void setMetricName(string $MetricName) Set Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+ * @method string getMetricName() Obtain Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
+ * @method void setMetricName(string $MetricName) Set Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
  * @method string getDomain() Obtain (Optional) Domain name
  * @method void setDomain(string $Domain) Set (Optional) Domain name
  * @method string getId() Obtain Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
@@ -65,7 +65,7 @@ class DescribeCCTrendRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * @var string Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      */
     public $MetricName;
 
@@ -85,7 +85,7 @@ class DescribeCCTrendRequest extends AbstractModel
      * @param integer $Period Sampling period. Valid values: `300` (5 minutes), `3600` (one hour), `86400` (one day)
      * @param string $StartTime Beginning of the time range for the query
      * @param string $EndTime End of the time range for the query
-     * @param string $MetricName Metric. Valid values: `inqps`: total peak requests; `dropqps`: peak attack requests
+     * @param string $MetricName Metric. Valid values: `inqps` (total QPS peaks), `dropqps` (attack QPS peaks), `incount` (total number of requests), and `dropcount` (number of attack requests).
      * @param string $Domain (Optional) Domain name
      * @param string $Id Instance ID. Leave this field empty when `Business` is `basic`, as basic protection does not require an instance.
      */

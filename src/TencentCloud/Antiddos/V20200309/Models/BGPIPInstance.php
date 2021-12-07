@@ -92,6 +92,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDomain(string $Domain) Set Recommended domain name for clients to access.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDamDDoSStatus() Obtain Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+ * @method void setDamDDoSStatus(integer $DamDDoSStatus) Set Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+ * @method integer getV6Flag() Obtain 
+ * @method void setV6Flag(integer $V6Flag) Set 
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -200,6 +204,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Domain;
 
     /**
+     * @var integer Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+     */
+    public $DamDDoSStatus;
+
+    /**
+     * @var integer 
+     */
+    public $V6Flag;
+
+    /**
      * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
      * @param BGPIPInstanceSpecification $SpecificationLimit Anti-DDoS instance specifications
      * @param BGPIPInstanceUsages $Usage Anti-DDoS instance usage statistics
@@ -236,6 +250,8 @@ Note: This field is `null` if the EIP is not bound to an Anti-DDoS Advanced inst
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Domain Recommended domain name for clients to access.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DamDDoSStatus Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
+     * @param integer $V6Flag 
      */
     function __construct()
     {
@@ -324,6 +340,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("DamDDoSStatus",$param) and $param["DamDDoSStatus"] !== null) {
+            $this->DamDDoSStatus = $param["DamDDoSStatus"];
+        }
+
+        if (array_key_exists("V6Flag",$param) and $param["V6Flag"] !== null) {
+            $this->V6Flag = $param["V6Flag"];
         }
     }
 }
