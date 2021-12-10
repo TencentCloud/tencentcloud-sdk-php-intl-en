@@ -20,28 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * BindingPolicyObject request structure.
  *
- * @method integer getGroupId() Obtain Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
- * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
  * @method string getModule() Obtain Required. The value is fixed to monitor.
  * @method void setModule(string $Module) Set Required. The value is fixed to monitor.
+ * @method integer getGroupId() Obtain Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+ * @method void setGroupId(integer $GroupId) Set Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+ * @method string getPolicyId() Obtain Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
  * @method integer getInstanceGroupId() Obtain Instance group ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method array getDimensions() Obtain Dimensions of an object to be bound.
  * @method void setDimensions(array $Dimensions) Set Dimensions of an object to be bound.
- * @method string getPolicyId() Obtain Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
- * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
     /**
-     * @var integer Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
+     * @var string Required. The value is fixed to monitor.
+     */
+    public $Module;
+
+    /**
+     * @var integer Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
      */
     public $GroupId;
 
     /**
-     * @var string Required. The value is fixed to monitor.
+     * @var string Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
      */
-    public $Module;
+    public $PolicyId;
 
     /**
      * @var integer Instance group ID.
@@ -54,16 +59,11 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
-     * @var string Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
-     */
-    public $PolicyId;
-
-    /**
-     * @param integer $GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., 0, can be passed in.
      * @param string $Module Required. The value is fixed to monitor.
+     * @param integer $GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
+     * @param string $PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
      * @param integer $InstanceGroupId Instance group ID.
      * @param array $Dimensions Dimensions of an object to be bound.
-     * @param string $PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
      */
     function __construct()
     {
@@ -78,12 +78,16 @@ class BindingPolicyObjectRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
+            $this->Module = $param["Module"];
+        }
+
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
         }
 
-        if (array_key_exists("Module",$param) and $param["Module"] !== null) {
-            $this->Module = $param["Module"];
+        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
+            $this->PolicyId = $param["PolicyId"];
         }
 
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
@@ -97,10 +101,6 @@ class BindingPolicyObjectRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
-        }
-
-        if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
-            $this->PolicyId = $param["PolicyId"];
         }
     }
 }

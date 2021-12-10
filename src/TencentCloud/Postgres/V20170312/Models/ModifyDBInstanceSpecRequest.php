@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setActivityId(integer $ActivityId) Set Campaign ID.
  * @method integer getSwitchTag() Obtain Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
  * @method void setSwitchTag(integer $SwitchTag) Set Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
- * @method string getSwitchStartTime() Obtain The earliest time to start a switch.
- * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch.
- * @method string getSwitchEndTime() Obtain The latest time to start a switch.
- * @method void setSwitchEndTime(string $SwitchEndTime) Set The latest time to start a switch.
+ * @method string getSwitchStartTime() Obtain The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+ * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+ * @method string getSwitchEndTime() Obtain The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+ * @method void setSwitchEndTime(string $SwitchEndTime) Set The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
  */
 class ModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -77,12 +77,12 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
     public $SwitchTag;
 
     /**
-     * @var string The earliest time to start a switch.
+     * @var string The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
      */
     public $SwitchStartTime;
 
     /**
-     * @var string The latest time to start a switch.
+     * @var string The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
      */
     public $SwitchEndTime;
 
@@ -94,8 +94,8 @@ class ModifyDBInstanceSpecRequest extends AbstractModel
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      * @param integer $ActivityId Campaign ID.
      * @param integer $SwitchTag Switch time after instance configurations are modified. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
-     * @param string $SwitchStartTime The earliest time to start a switch.
-     * @param string $SwitchEndTime The latest time to start a switch.
+     * @param string $SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+     * @param string $SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
      */
     function __construct()
     {

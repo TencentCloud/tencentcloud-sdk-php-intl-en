@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RemoveUserFromGroup request structure.
  *
- * @method array getInfo() Obtain The UID of the user to be deleted and an array corresponding to the User Group IDs
- * @method void setInfo(array $Info) Set The UID of the user to be deleted and an array corresponding to the User Group IDs
+ * @method array getInfo() Obtain The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
+ * @method void setInfo(array $Info) Set The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
  */
 class RemoveUserFromGroupRequest extends AbstractModel
 {
     /**
-     * @var array The UID of the user to be deleted and an array corresponding to the User Group IDs
+     * @var array The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
      */
     public $Info;
 
     /**
-     * @param array $Info The UID of the user to be deleted and an array corresponding to the User Group IDs
+     * @param array $Info The user’s UIN/UID to be deleted and the array corresponding to the user group ID.
      */
     function __construct()
     {

@@ -80,6 +80,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set The array of tags bound to an instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDBKernelVersion() Obtain Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ServerlessDBInstance extends AbstractModel
 {
@@ -174,6 +178,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TagList;
 
     /**
+     * @var string Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DBKernelVersion;
+
+    /**
      * @param string $DBInstanceId Instance ID, which is the unique identifier
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DBInstanceName Instance name
@@ -203,6 +213,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $DBDatabaseList Information of the databases in an instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $TagList The array of tags bound to an instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DBKernelVersion Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -291,6 +303,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
         }
     }
 }

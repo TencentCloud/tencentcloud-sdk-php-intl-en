@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
  * @method string getDBCharset() Obtain Instance database character set
  * @method void setDBCharset(string $DBCharset) Set Instance database character set
- * @method string getDBVersion() Obtain PostgreSQL kernel version
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL kernel version
+ * @method string getDBVersion() Obtain PostgreSQL major version
+ * @method void setDBVersion(string $DBVersion) Set PostgreSQL major version
  * @method string getCreateTime() Obtain Instance creation time
  * @method void setCreateTime(string $CreateTime) Set Instance creation time
  * @method string getUpdateTime() Obtain Instance last modified time
@@ -94,6 +94,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Elimination time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDBKernelVersion() Obtain Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getNetworkAccessList() Obtain Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -173,7 +181,7 @@ class DBInstance extends AbstractModel
     public $DBCharset;
 
     /**
-     * @var string PostgreSQL kernel version
+     * @var string PostgreSQL major version
      */
     public $DBVersion;
 
@@ -263,6 +271,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $OfflineTime;
 
     /**
+     * @var string Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DBKernelVersion;
+
+    /**
+     * @var array Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NetworkAccessList;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
@@ -278,7 +298,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      * @param string $DBCharset Instance database character set
-     * @param string $DBVersion PostgreSQL kernel version
+     * @param string $DBVersion PostgreSQL major version
      * @param string $CreateTime Instance creation time
      * @param string $UpdateTime Instance last modified time
      * @param string $ExpireTime Instance expiration time
@@ -300,6 +320,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Elimination time
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $NetworkAccessList Network information list of the instance
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -450,6 +474,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
             $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
+            $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("NetworkAccessList",$param) and $param["NetworkAccessList"] !== null) {
+            $this->NetworkAccessList = [];
+            foreach ($param["NetworkAccessList"] as $key => $value){
+                $obj = new NetworkAccess();
+                $obj->deserialize($value);
+                array_push($this->NetworkAccessList, $obj);
+            }
         }
     }
 }

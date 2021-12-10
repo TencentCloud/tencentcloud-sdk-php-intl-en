@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information on the association between a sub-user and a User Group
  *
- * @method integer getUid() Obtain Sub-user UID
- * @method void setUid(integer $Uid) Set Sub-user UID
  * @method integer getGroupId() Obtain User Group ID
  * @method void setGroupId(integer $GroupId) Set User Group ID
+ * @method integer getUid() Obtain Sub-user UID
+ * @method void setUid(integer $Uid) Set Sub-user UID
+ * @method integer getUin() Obtain Sub-user UIN. For UIN and UID, at least one of them is required.
+ * @method void setUin(integer $Uin) Set Sub-user UIN. For UIN and UID, at least one of them is required.
  */
 class GroupIdOfUidInfo extends AbstractModel
 {
-    /**
-     * @var integer Sub-user UID
-     */
-    public $Uid;
-
     /**
      * @var integer User Group ID
      */
     public $GroupId;
 
     /**
-     * @param integer $Uid Sub-user UID
+     * @var integer Sub-user UID
+     */
+    public $Uid;
+
+    /**
+     * @var integer Sub-user UIN. For UIN and UID, at least one of them is required.
+     */
+    public $Uin;
+
+    /**
      * @param integer $GroupId User Group ID
+     * @param integer $Uid Sub-user UID
+     * @param integer $Uin Sub-user UIN. For UIN and UID, at least one of them is required.
      */
     function __construct()
     {
@@ -54,12 +62,16 @@ class GroupIdOfUidInfo extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
+        }
+
         if (array_key_exists("Uid",$param) and $param["Uid"] !== null) {
             $this->Uid = $param["Uid"];
         }
 
-        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
-            $this->GroupId = $param["GroupId"];
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
         }
     }
 }

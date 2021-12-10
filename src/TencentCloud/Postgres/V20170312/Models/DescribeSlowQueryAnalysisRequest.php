@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
  * @method string getDatabaseName() Obtain Filter by database name. This parameter is optional.
  * @method void setDatabaseName(string $DatabaseName) Set Filter by database name. This parameter is optional.
- * @method string getOrderBy() Obtain Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
- * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
- * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending).
- * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending).
- * @method integer getLimit() Obtain Number of entries per page. Value range: [1,100].
- * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [1,100].
- * @method integer getOffset() Obtain Pagination offset. Value range: [0,INF).
- * @method void setOffset(integer $Offset) Set Pagination offset. Value range: [0,INF).
+ * @method string getOrderBy() Obtain Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
+ * @method void setOrderBy(string $OrderBy) Set Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
+ * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+ * @method integer getLimit() Obtain Number of entries per page. Value range: [1,100]. Default value: `50`.
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Value range: [1,100]. Default value: `50`.
+ * @method integer getOffset() Obtain Pagination offset. Value range: [0,INF). Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Pagination offset. Value range: [0,INF). Default value: `0`.
  */
 class DescribeSlowQueryAnalysisRequest extends AbstractModel
 {
@@ -60,22 +60,22 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
     public $DatabaseName;
 
     /**
-     * @var string Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
+     * @var string Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending).
+     * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
      */
     public $OrderByType;
 
     /**
-     * @var integer Number of entries per page. Value range: [1,100].
+     * @var integer Number of entries per page. Value range: [1,100]. Default value: `50`.
      */
     public $Limit;
 
     /**
-     * @var integer Pagination offset. Value range: [0,INF).
+     * @var integer Pagination offset. Value range: [0,INF). Default value: `0`.
      */
     public $Offset;
 
@@ -84,10 +84,10 @@ class DescribeSlowQueryAnalysisRequest extends AbstractModel
      * @param string $StartTime Start timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss". The log is retained for seven days by default, so the start timestamp must fall within the retention period.
      * @param string $EndTime End timestamp of the query range in the format of "YYYY-MM-DD HH:mm:ss".
      * @param string $DatabaseName Filter by database name. This parameter is optional.
-     * @param string $OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`.
-     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending).
-     * @param integer $Limit Number of entries per page. Value range: [1,100].
-     * @param integer $Offset Pagination offset. Value range: [0,INF).
+     * @param string $OrderBy Sort by field. Valid values: `CallNum`, `CostTime`, `AvgCostTime`. Default value: `CallNum`.
+     * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending). Default value: `desc`.
+     * @param integer $Limit Number of entries per page. Value range: [1,100]. Default value: `50`.
+     * @param integer $Offset Pagination offset. Value range: [0,INF). Default value: `0`.
      */
     function __construct()
     {

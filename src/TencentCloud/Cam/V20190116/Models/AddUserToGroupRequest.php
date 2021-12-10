@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUserToGroup request structure.
  *
- * @method array getInfo() Obtain How sub-user UIDs are associated with the ID of the user group they are added to.
- * @method void setInfo(array $Info) Set How sub-user UIDs are associated with the ID of the user group they are added to.
+ * @method array getInfo() Obtain The association between the user group ID and the sub-user UIN/UID.
+ * @method void setInfo(array $Info) Set The association between the user group ID and the sub-user UIN/UID.
  */
 class AddUserToGroupRequest extends AbstractModel
 {
     /**
-     * @var array How sub-user UIDs are associated with the ID of the user group they are added to.
+     * @var array The association between the user group ID and the sub-user UIN/UID.
      */
     public $Info;
 
     /**
-     * @param array $Info How sub-user UIDs are associated with the ID of the user group they are added to.
+     * @param array $Info The association between the user group ID and the sub-user UIN/UID.
      */
     function __construct()
     {

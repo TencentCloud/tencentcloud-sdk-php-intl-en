@@ -66,6 +66,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setRebalance(integer $Rebalance) Set Whether to enable automatic load balancing
  * @method array getDBInstanceNetInfo() Obtain Network information
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Network information
+ * @method array getNetworkAccessList() Obtain Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ReadOnlyGroup extends AbstractModel
 {
@@ -161,6 +165,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBInstanceNetInfo;
 
     /**
+     * @var array Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NetworkAccessList;
+
+    /**
      * @param string $ReadOnlyGroupId RO group identifier
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ReadOnlyGroupName RO group name
@@ -184,6 +194,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $ReadOnlyDBInstanceList Instance details
      * @param integer $Rebalance Whether to enable automatic load balancing
      * @param array $DBInstanceNetInfo Network information
+     * @param array $NetworkAccessList Network information list of the RO group
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -273,6 +285,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new DBInstanceNetInfo();
                 $obj->deserialize($value);
                 array_push($this->DBInstanceNetInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("NetworkAccessList",$param) and $param["NetworkAccessList"] !== null) {
+            $this->NetworkAccessList = [];
+            foreach ($param["NetworkAccessList"] as $key => $value){
+                $obj = new NetworkAccess();
+                $obj->deserialize($value);
+                array_push($this->NetworkAccessList, $obj);
             }
         }
     }

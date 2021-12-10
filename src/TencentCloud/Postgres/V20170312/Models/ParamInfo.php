@@ -28,9 +28,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setName(string $Name) Set Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getParamValueType() Obtain Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+ * @method string getParamValueType() Obtain Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setParamValueType(string $ParamValueType) Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+ * @method void setParamValueType(string $ParamValueType) Set Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getUnit() Obtain Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -104,7 +110,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Name;
 
     /**
-     * @var string Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * @var string Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ParamValueType;
@@ -198,7 +207,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Name Parameter name
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values)
+     * @param string $ParamValueType Value type of the parameter. Valid values: `integer`, `real` (floating-point), `bool`, `enum`, `mutil_enum` (this type of parameter can be set to multiple enumerated values).
+For an `integer` or `real` parameter, the `Min` field represents the minimum value and the `Max` field the maximum value. 
+For a `bool` parameter, the valid values include `true` and `false`; 
+For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
 Note: this field may return `null`, indicating that no valid values can be obtained.

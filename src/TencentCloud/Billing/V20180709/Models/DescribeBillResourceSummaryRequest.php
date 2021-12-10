@@ -51,7 +51,6 @@ Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
  * @method void setActionType(string $ActionType) Set Action type to query. Valid values:
 Purchase
@@ -71,7 +70,6 @@ Spot
 Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
-Monthly subscription specification adjustment
 Monthly subscription specification adjustment
 Monthly subscription refund
  * @method string getResourceId() Obtain ID of the instance to be queried
@@ -131,7 +129,6 @@ Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
 Monthly subscription specification adjustment
-Monthly subscription specification adjustment
 Monthly subscription refund
      */
     public $ActionType;
@@ -177,7 +174,6 @@ Spot
 Hourly RI fee
 New monthly subscription
 Monthly subscription renewal
-Monthly subscription specification adjustment
 Monthly subscription specification adjustment
 Monthly subscription refund
      * @param string $ResourceId ID of the instance to be queried
