@@ -98,9 +98,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDBKernelVersion(string $DBKernelVersion) Set Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getNetworkAccessList() Obtain Network information list of the instance
+ * @method array getNetworkAccessList() Obtain Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNetworkAccessList(array $NetworkAccessList) Set Network information list of the instance
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
@@ -277,7 +277,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBKernelVersion;
 
     /**
-     * @var array Network information list of the instance
+     * @var array Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $NetworkAccessList;
@@ -322,7 +322,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DBKernelVersion Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $NetworkAccessList Network information list of the instance
+     * @param array $NetworkAccessList Network access list of the instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
