@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getRole() Obtain Role bound to the function
  * @method void setRole(string $Role) Set Role bound to the function
+ * @method string getInstallDependency() Obtain Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+ * @method void setInstallDependency(string $InstallDependency) Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
  * @method string getClsLogsetId() Obtain CLS Logset ID to which the function logs are shipped
  * @method void setClsLogsetId(string $ClsLogsetId) Set CLS Logset ID to which the function logs are shipped
  * @method string getClsTopicId() Obtain CLS Topic ID to which the function logs are shipped
@@ -66,6 +68,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAsyncRunEnable(string $AsyncRunEnable) Set Whether to enable the async attribute. TRUE: yes; FALSE: no
  * @method string getTraceEnable() Obtain Whether to enable event tracking. TRUE: yes; FALSE: no
  * @method void setTraceEnable(string $TraceEnable) Set Whether to enable event tracking. TRUE: yes; FALSE: no
+ * @method string getProtocolType() Obtain Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+ * @method void setProtocolType(string $ProtocolType) Set Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+ * @method ProtocolParams getProtocolParams() Obtain Parameters of the specified protocol
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) Set Parameters of the specified protocol
  */
 class CreateFunctionRequest extends AbstractModel
 {
@@ -123,6 +129,11 @@ class CreateFunctionRequest extends AbstractModel
      * @var string Role bound to the function
      */
     public $Role;
+
+    /**
+     * @var string Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public $InstallDependency;
 
     /**
      * @var string CLS Logset ID to which the function logs are shipped
@@ -185,6 +196,16 @@ class CreateFunctionRequest extends AbstractModel
     public $TraceEnable;
 
     /**
+     * @var string Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+     */
+    public $ProtocolType;
+
+    /**
+     * @var ProtocolParams Parameters of the specified protocol
+     */
+    public $ProtocolParams;
+
+    /**
      * @param string $FunctionName Name of the new function. The name can contain 2 to 60 characters, including English letters, digits, hyphens (-), and underscores (_). The name must start with a letter and cannot end with a hyphen or underscore.
      * @param Code $Code Function code. Note: `COS`, `ZipFile`, and `DemoId` cannot be specified at the same time.
      * @param string $Handler Function handler name. It supports the format of "file name.handler name" where the file name and handler name are separated with a "." (for Java, it is in the format of "package name.class name::handler name"). File and handler names can contain 2–60 letters, digits, underscores, and dashes and must start and end with letters
@@ -196,6 +217,7 @@ class CreateFunctionRequest extends AbstractModel
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Namespace Function namespace
      * @param string $Role Role bound to the function
+     * @param string $InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
      * @param string $ClsLogsetId CLS Logset ID to which the function logs are shipped
      * @param string $ClsTopicId CLS Topic ID to which the function logs are shipped
      * @param string $Type Function type. The default value is `Event`. Enter `Event` if you need to create a trigger function. Enter `HTTP` if you need to create an HTTP function service.
@@ -208,6 +230,8 @@ class CreateFunctionRequest extends AbstractModel
      * @param array $Tags Tag parameter of the function. It is an array of key-value pairs.
      * @param string $AsyncRunEnable Whether to enable the async attribute. TRUE: yes; FALSE: no
      * @param string $TraceEnable Whether to enable event tracking. TRUE: yes; FALSE: no
+     * @param string $ProtocolType Protocols supported by HTTP-triggered functions. Valid value: `WS` (WebSockets)
+     * @param ProtocolParams $ProtocolParams Parameters of the specified protocol
      */
     function __construct()
     {
@@ -269,6 +293,10 @@ class CreateFunctionRequest extends AbstractModel
             $this->Role = $param["Role"];
         }
 
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
+        }
+
         if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
             $this->ClsLogsetId = $param["ClsLogsetId"];
         }
@@ -328,6 +356,15 @@ class CreateFunctionRequest extends AbstractModel
 
         if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
             $this->TraceEnable = $param["TraceEnable"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
     }
 }

@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcConfig(VpcConfig $VpcConfig) Set Function VPC configuration
  * @method string getRole() Obtain Role bound to the function
  * @method void setRole(string $Role) Set Role bound to the function
+ * @method string getInstallDependency() Obtain Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+ * @method void setInstallDependency(string $InstallDependency) Set Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
  * @method string getClsLogsetId() Obtain CLS logset ID to which logs are shipped
  * @method void setClsLogsetId(string $ClsLogsetId) Set CLS logset ID to which logs are shipped
  * @method string getClsTopicId() Obtain CLS Topic ID to which logs are shipped
@@ -56,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCfsConfig(CfsConfig $CfsConfig) Set File system configuration input parameter, which is used for the function to bind the CFS file system
  * @method integer getInitTimeout() Obtain The function initialization timeout period
  * @method void setInitTimeout(integer $InitTimeout) Set The function initialization timeout period
+ * @method ProtocolParams getProtocolParams() Obtain Parameters of the specified protocol
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) Set Parameters of the specified protocol
  */
 class UpdateFunctionConfigurationRequest extends AbstractModel
 {
@@ -105,6 +109,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $Role;
 
     /**
+     * @var string Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
+     */
+    public $InstallDependency;
+
+    /**
      * @var string CLS logset ID to which logs are shipped
      */
     public $ClsLogsetId;
@@ -150,6 +159,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
     public $InitTimeout;
 
     /**
+     * @var ProtocolParams Parameters of the specified protocol
+     */
+    public $ProtocolParams;
+
+    /**
      * @param string $FunctionName Name of the function to be modified
      * @param string $Description Function description. It can contain up to 1,000 characters, including letters, digits, spaces, commas (,), periods (.), and Chinese characters.
      * @param integer $MemorySize Memory size available for function during execution. Default value: 128 MB. Value range: 64 or 128-3,072 MB in increments of 128 MB.
@@ -159,6 +173,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param string $Namespace Function namespace
      * @param VpcConfig $VpcConfig Function VPC configuration
      * @param string $Role Role bound to the function
+     * @param string $InstallDependency Specifies whether to [install dependency online](https://intl.cloud.tencent.com/document/product/583/37920?from_cn_redirect=1). `TRUE`: yes. Default to `FALSE`. It is only available for Node.js functions.
      * @param string $ClsLogsetId CLS logset ID to which logs are shipped
      * @param string $ClsTopicId CLS Topic ID to which logs are shipped
      * @param string $Publish It specifies whether to synchronously publish a new version during the update. The default value is `FALSE`, indicating not to publish a new version
@@ -168,6 +183,7 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
      * @param PublicNetConfigIn $PublicNetConfig Public network access configuration
      * @param CfsConfig $CfsConfig File system configuration input parameter, which is used for the function to bind the CFS file system
      * @param integer $InitTimeout The function initialization timeout period
+     * @param ProtocolParams $ProtocolParams Parameters of the specified protocol
      */
     function __construct()
     {
@@ -220,6 +236,10 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
             $this->Role = $param["Role"];
         }
 
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
+        }
+
         if (array_key_exists("ClsLogsetId",$param) and $param["ClsLogsetId"] !== null) {
             $this->ClsLogsetId = $param["ClsLogsetId"];
         }
@@ -262,6 +282,11 @@ class UpdateFunctionConfigurationRequest extends AbstractModel
 
         if (array_key_exists("InitTimeout",$param) and $param["InitTimeout"] !== null) {
             $this->InitTimeout = $param["InitTimeout"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
     }
 }

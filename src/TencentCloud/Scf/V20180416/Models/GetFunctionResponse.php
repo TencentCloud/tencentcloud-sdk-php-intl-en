@@ -120,6 +120,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTraceEnable(string $TraceEnable) Set Specifies whether to enable event tracking
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProtocolType() Obtain Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+ * @method void setProtocolType(string $ProtocolType) Set Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+ * @method ProtocolParams getProtocolParams() Obtain Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProtocolParams(ProtocolParams $ProtocolParams) Set Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -344,6 +352,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TraceEnable;
 
     /**
+     * @var string Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+     */
+    public $ProtocolType;
+
+    /**
+     * @var ProtocolParams Parameters of the specified protocol
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProtocolParams;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -398,6 +418,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $AsyncRunEnable Specifies whether to enable asynchronization 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TraceEnable Specifies whether to enable event tracking
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ProtocolType Protocols supported by HTTP-triggered functions. It supports WebSockets for now.
+Note: This field may return null, indicating that no valid value was found.
+     * @param ProtocolParams $ProtocolParams Parameters of the specified protocol
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -607,6 +631,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TraceEnable",$param) and $param["TraceEnable"] !== null) {
             $this->TraceEnable = $param["TraceEnable"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
+        }
+
+        if (array_key_exists("ProtocolParams",$param) and $param["ProtocolParams"] !== null) {
+            $this->ProtocolParams = new ProtocolParams();
+            $this->ProtocolParams->deserialize($param["ProtocolParams"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
