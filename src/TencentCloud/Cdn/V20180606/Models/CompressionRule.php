@@ -18,17 +18,11 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Compression rules configuration. Up to 100 entries can be set.
+ * Intelligent compression rule configuration
  *
  * @method boolean getCompress() Obtain true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCompress(boolean $Compress) Set true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFileExtensions() Obtain Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileExtensions(array $FileExtensions) Set Compress according to the file suffix type
-Such as: jpg, txt
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getMinLength() Obtain The minimum file size to trigger compression (in bytes)
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -48,6 +42,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
 gzip: specifies Gzip compression
 brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getFileExtensions() Obtain Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setFileExtensions(array $FileExtensions) Set Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getRuleType() Obtain Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRuleType(string $RuleType) Set Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getRulePaths() Obtain Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRulePaths(array $RulePaths) Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class CompressionRule extends AbstractModel
 {
@@ -56,13 +86,6 @@ class CompressionRule extends AbstractModel
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Compress;
-
-    /**
-     * @var array Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $FileExtensions;
 
     /**
      * @var integer The minimum file size to trigger compression (in bytes)
@@ -86,10 +109,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Algorithms;
 
     /**
-     * @param boolean $Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $FileExtensions Compress according to the file suffix type
+     * @var array Compress according to the file suffix type
 Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $FileExtensions;
+
+    /**
+     * @var string Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RuleType;
+
+    /**
+     * @var array Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RulePaths;
+
+    /**
+     * @param boolean $Compress true: must be set as true, enables compression
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MinLength The minimum file size to trigger compression (in bytes)
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -100,6 +150,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 gzip: specifies Gzip compression
 brotli: specifies Brotli compression
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $FileExtensions Compress according to the file suffix type
+Such as: jpg, txt
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $RuleType Rule types:
+`all`: effective for all files.
+`file`: effective for specified file suffixes.
+`directory`: effective for specified paths.
+`path`: effective for specified absolute paths.
+`contentType`: effective when the `ContentType` is specified
+If this field is specified, `FileExtensions` does not take effect.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $RulePaths Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `contentType`, enter `text/html`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -118,10 +186,6 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Compress = $param["Compress"];
         }
 
-        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
-            $this->FileExtensions = $param["FileExtensions"];
-        }
-
         if (array_key_exists("MinLength",$param) and $param["MinLength"] !== null) {
             $this->MinLength = $param["MinLength"];
         }
@@ -132,6 +196,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Algorithms",$param) and $param["Algorithms"] !== null) {
             $this->Algorithms = $param["Algorithms"];
+        }
+
+        if (array_key_exists("FileExtensions",$param) and $param["FileExtensions"] !== null) {
+            $this->FileExtensions = $param["FileExtensions"];
+        }
+
+        if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
+            $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("RulePaths",$param) and $param["RulePaths"] !== null) {
+            $this->RulePaths = $param["RulePaths"];
         }
     }
 }

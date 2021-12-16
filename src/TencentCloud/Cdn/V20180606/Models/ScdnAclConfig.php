@@ -22,13 +22,17 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Whether to enable. Valid values: `on` and `off`.
  * @method void setSwitch(string $Switch) Set Whether to enable. Valid values: `on` and `off`.
- * @method array getScriptData() Obtain ACL rule group, which is required when the access control is on.
+ * @method array getScriptData() Obtain This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setScriptData(array $ScriptData) Set ACL rule group, which is required when the access control is on.
+ * @method void setScriptData(array $ScriptData) Set This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method ScdnErrorPage getErrorPage() Obtain Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Error page configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAdvancedScriptData() Obtain ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvancedScriptData(array $AdvancedScriptData) Set ACL rule group, which is required when the access control is on.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnAclConfig extends AbstractModel
@@ -39,7 +43,7 @@ class ScdnAclConfig extends AbstractModel
     public $Switch;
 
     /**
-     * @var array ACL rule group, which is required when the access control is on.
+     * @var array This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ScriptData;
@@ -51,10 +55,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ErrorPage;
 
     /**
+     * @var array ACL rule group, which is required when the access control is on.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvancedScriptData;
+
+    /**
      * @param string $Switch Whether to enable. Valid values: `on` and `off`.
-     * @param array $ScriptData ACL rule group, which is required when the access control is on.
+     * @param array $ScriptData This field is disused. Please use `AdvancedScriptData` instead.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ScdnErrorPage $ErrorPage Error page configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AdvancedScriptData ACL rule group, which is required when the access control is on.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -86,6 +98,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("ErrorPage",$param) and $param["ErrorPage"] !== null) {
             $this->ErrorPage = new ScdnErrorPage();
             $this->ErrorPage->deserialize($param["ErrorPage"]);
+        }
+
+        if (array_key_exists("AdvancedScriptData",$param) and $param["AdvancedScriptData"] !== null) {
+            $this->AdvancedScriptData = [];
+            foreach ($param["AdvancedScriptData"] as $key => $value){
+                $obj = new AdvancedScdnAclGroup();
+                $obj->deserialize($value);
+                array_push($this->AdvancedScriptData, $obj);
+            }
         }
     }
 }

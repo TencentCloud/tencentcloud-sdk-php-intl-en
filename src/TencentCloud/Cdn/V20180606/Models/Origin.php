@@ -33,32 +33,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setOrigins(array $Origins) Set Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOriginType() Obtain Master origin server type
-The following types are supported for input parameters:
-domain: domain name type
-cos: COS origin
-ip: IP list used as origin server
-ipv6: origin server list is a single IPv6 address
-ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOriginType(string $OriginType) Set Master origin server type
-The following types are supported for input parameters:
-domain: domain name type
-cos: COS origin
-ip: IP list used as origin server
-ipv6: origin server list is a single IPv6 address
-ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOriginType() Obtain Primary origin server type
+Input:
+`domain`: domain name
+`cos`: COS bucket address
+`ip`: IP address
+`ipv6`: a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ip_domain`: both IP addresses and domain names (only available to beta users)
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Output: 
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to enter the corresponding `OriginType`.
+The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginType(string $OriginType) Set Primary origin server type
+Input:
+`domain`: domain name
+`cos`: COS bucket address
+`ip`: IP address
+`ipv6`: a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ip_domain`: both IP addresses and domain names (only available to beta users)
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Output: 
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to enter the corresponding `OriginType`.
+The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getServerName() Obtain Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -87,16 +93,26 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setBackupOrigins(array $BackupOrigins) Set Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getBackupOriginType() Obtain Backup origin server type, which supports the following types:
-domain: domain name type
-ip: IP list used as origin server
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setBackupOriginType(string $BackupOriginType) Set Backup origin server type, which supports the following types:
-domain: domain name type
-ip: IP list used as origin server
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getBackupOriginType() Obtain Secondary origin type. Values:
+`domain`: domain name
+`ip`: IP address
+When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupOriginType(string $BackupOriginType) Set Secondary origin type. Values:
+`domain`: domain name
+`ip`: IP address
+When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getBackupServerName() Obtain Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setBackupServerName(string $BackupServerName) Set Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
@@ -111,6 +127,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPathBasedOrigin(array $PathBasedOrigin) Set Path-based origin-pull configurations
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method AdvanceHttps getAdvanceHttps() Obtain 
+ * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) Set 
  */
 class Origin extends AbstractModel
 {
@@ -122,19 +140,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Origins;
 
     /**
-     * @var string Master origin server type
-The following types are supported for input parameters:
-domain: domain name type
-cos: COS origin
-ip: IP list used as origin server
-ipv6: origin server list is a single IPv6 address
-ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Primary origin server type
+Input:
+`domain`: domain name
+`cos`: COS bucket address
+`ip`: IP address
+`ipv6`: a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ip_domain`: both IP addresses and domain names (only available to beta users)
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Output: 
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to enter the corresponding `OriginType`.
+The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginType;
 
@@ -169,11 +190,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupOrigins;
 
     /**
-     * @var string Backup origin server type, which supports the following types:
-domain: domain name type
-ip: IP list used as origin server
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Secondary origin type. Values:
+`domain`: domain name
+`ip`: IP address
+When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $BackupOriginType;
 
@@ -201,22 +227,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PathBasedOrigin;
 
     /**
+     * @var AdvanceHttps 
+     */
+    public $AdvanceHttps;
+
+    /**
      * @param array $Origins Master origin server list
 When modifying the origin server, you need to enter the corresponding OriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OriginType Master origin server type
-The following types are supported for input parameters:
-domain: domain name type
-cos: COS origin
-ip: IP list used as origin server
-ipv6: origin server list is a single IPv6 address
-ip_ipv6: origin server list is multiple IPv4 addresses and an IPv6 address
-The following types of output parameters are added:
-image: Cloud Infinite origin
-ftp: legacy FTP origin, which is no longer maintained.
-When modifying `Origins`, you need to enter the corresponding OriginType.
-The IPv6 feature is not generally available yet. Please send in a whitelist application to use this feature.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $OriginType Primary origin server type
+Input:
+`domain`: domain name
+`cos`: COS bucket address
+`ip`: IP address
+`ipv6`: a single IPv6 address
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ip_domain`: both IP addresses and domain names (only available to beta users)
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Output: 
+`image`: Cloud Infinite origin
+`ftp`: FTP origin (disused)
+When modifying `Origins`, you need to enter the corresponding `OriginType`.
+The IPv6 feature is now only available to beta users. Please submit an application to use this feature.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ServerName Host header used when accessing the master origin server. If left empty, the acceleration domain name will be used by default.
 If a wildcard domain name is accessed, then the sub-domain name during the access will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -231,11 +265,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $BackupOrigins Backup origin server list
 When modifying the backup origin server, you need to enter the corresponding BackupOriginType.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $BackupOriginType Backup origin server type, which supports the following types:
-domain: domain name type
-ip: IP list used as origin server
-When modifying BackupOrigins, you need to enter the corresponding BackupOriginType.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $BackupOriginType Secondary origin type. Values:
+`domain`: domain name
+`ip`: IP address
+When modifying `BackupOrigins`, you need to enter the corresponding `BackupOriginType`.
+The following backup origin servers are only available to beta users. Submit an application if you want to become a beta user.
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6`: multiple IPv4 addresses and one IPv6 address
+`ipv6_domain`: multiple IPv6 addresses and one domain name
+`ip_ipv6_domain`: multiple IPv4 and IPv6 addresses and one domain name
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $BackupServerName Host header used when accessing the backup origin server. If left empty, the ServerName of master origin server will be used by default.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $BasePath 
@@ -243,6 +282,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $PathBasedOrigin Path-based origin-pull configurations
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvanceHttps $AdvanceHttps 
      */
     function __construct()
     {
@@ -309,6 +349,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->PathBasedOrigin, $obj);
             }
+        }
+
+        if (array_key_exists("AdvanceHttps",$param) and $param["AdvanceHttps"] !== null) {
+            $this->AdvanceHttps = new AdvanceHttps();
+            $this->AdvanceHttps->deserialize($param["AdvanceHttps"]);
         }
     }
 }

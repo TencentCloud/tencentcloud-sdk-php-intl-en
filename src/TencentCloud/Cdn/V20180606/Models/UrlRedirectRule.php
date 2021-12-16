@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRedirectHost(string $RedirectHost) Set Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getFullMatch() Obtain Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFullMatch(boolean $FullMatch) Set Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class UrlRedirectRule extends AbstractModel
 {
@@ -55,10 +59,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RedirectHost;
 
     /**
+     * @var boolean Whether to use full-path matching or arbitrary matching
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FullMatch;
+
+    /**
      * @param integer $RedirectStatusCode Redirect status code. Valid values: 301, 302
      * @param string $Pattern URL to be matched. Only URLs are supported, while parameters are not. The exact match is used by default. In regex match, up to 5 wildcards `*` are supported. The URL can contain up to 1,024 characters.
      * @param string $RedirectUrl Target URL, starting with `/` and excluding parameters. The path can contain up to 1,024 characters. The wildcards in the matching path can be respectively captured using `$1`, `$2`, `$3`, `$4`, and `$5`. Up to 10 values can be captured.
      * @param string $RedirectHost Target host. It should be a standard domain name starting with `http://` or `https://`. If it is left empty, “http://[current domain name]” will be used by default.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $FullMatch Whether to use full-path matching or arbitrary matching
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -88,6 +100,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("RedirectHost",$param) and $param["RedirectHost"] !== null) {
             $this->RedirectHost = $param["RedirectHost"];
+        }
+
+        if (array_key_exists("FullMatch",$param) and $param["FullMatch"] !== null) {
+            $this->FullMatch = $param["FullMatch"];
         }
     }
 }

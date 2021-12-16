@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRules(array $Rules) Set Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAdvancedRules() Obtain Advanced custom CC attack defense rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvancedRules(array $AdvancedRules) Set Advanced custom CC attack defense rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnConfig extends AbstractModel
 {
@@ -41,8 +45,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Rules;
 
     /**
+     * @var array Advanced custom CC attack defense rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvancedRules;
+
+    /**
      * @param string $Switch Valid values: `on` and `off`.
      * @param array $Rules Custom CC attack defense rule
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AdvancedRules Advanced custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -68,6 +80,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new ScdnCCRules();
                 $obj->deserialize($value);
                 array_push($this->Rules, $obj);
+            }
+        }
+
+        if (array_key_exists("AdvancedRules",$param) and $param["AdvancedRules"] !== null) {
+            $this->AdvancedRules = [];
+            foreach ($param["AdvancedRules"] as $key => $value){
+                $obj = new AdvancedCCRules();
+                $obj->deserialize($value);
+                array_push($this->AdvancedRules, $obj);
             }
         }
     }

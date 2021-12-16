@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTimestamp(integer $Timestamp) Set SQL execution time.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getQueryTime() Obtain SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setQueryTime(float $QueryTime) Set SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getQueryTime() Obtain SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQueryTime(float $QueryTime) Set SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getSqlText() Obtain SQL statement.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSqlText(string $SqlText) Set SQL statement.
@@ -44,10 +44,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDatabase(string $Database) Set Database name.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method float getLockTime() Obtain Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLockTime(float $LockTime) Set Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method float getLockTime() Obtain Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLockTime(float $LockTime) Set Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getRowsExamined() Obtain Number of scanned rows.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRowsExamined(integer $RowsExamined) Set Number of scanned rows.
@@ -74,8 +74,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Timestamp;
 
     /**
-     * @var float SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $QueryTime;
 
@@ -104,8 +104,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Database;
 
     /**
-     * @var float Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var float Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $LockTime;
 
@@ -136,8 +136,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $Timestamp SQL execution time.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $QueryTime SQL execution duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $QueryTime SQL execution duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $SqlText SQL statement.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $UserHost Client address.
@@ -146,8 +146,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Database Database name.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param float $LockTime Lock duration.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param float $LockTime Lock duration in seconds.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $RowsExamined Number of scanned rows.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $RowsSent Number of rows in result set.

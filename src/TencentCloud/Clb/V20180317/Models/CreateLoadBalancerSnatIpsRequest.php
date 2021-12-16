@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getLoadBalancerId() Obtain Unique ID of a CLB instance, e.g., lb-12345678.
  * @method void setLoadBalancerId(string $LoadBalancerId) Set Unique ID of a CLB instance, e.g., lb-12345678.
- * @method array getSnatIps() Obtain Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
- * @method void setSnatIps(array $SnatIps) Set Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
- * @method integer getNumber() Obtain Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
- * @method void setNumber(integer $Number) Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+ * @method array getSnatIps() Obtain Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+ * @method void setSnatIps(array $SnatIps) Set Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+ * @method integer getNumber() Obtain Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
+ * @method void setNumber(integer $Number) Set Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
  */
 class CreateLoadBalancerSnatIpsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class CreateLoadBalancerSnatIpsRequest extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var array Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
+     * @var array Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
      */
     public $SnatIps;
 
     /**
-     * @var integer Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     * @var integer Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
      */
     public $Number;
 
     /**
      * @param string $LoadBalancerId Unique ID of a CLB instance, e.g., lb-12345678.
-     * @param array $SnatIps Information of the SNAT IP to be added. You can apply for a specified IP or apply for an automatically assigned IP by specifying a subnet.
-     * @param integer $Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available.
+     * @param array $SnatIps Information of the SNAT IP to be added. You can specify a SNAT IP or use the one automatically assigned by a subnet.
+     * @param integer $Number Number of SNAT IPs to be added. This parameter is used in conjunction with `SnatIps`. Note that if `Ip` is specified in `SnapIps`, this parameter is not available. It defaults to `1` and the upper limit is `10`.
      */
     function __construct()
     {

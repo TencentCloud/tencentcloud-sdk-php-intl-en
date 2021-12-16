@@ -104,6 +104,8 @@ server: specifies to query data of service region (where a CDN node is located)
 client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
  * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method integer getLimit() Obtain Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+ * @method void setLimit(integer $Limit) Set Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
  */
 class ListTopDataRequest extends AbstractModel
 {
@@ -194,6 +196,11 @@ client: specifies to query data of the client region (where a user request devic
     public $Product;
 
     /**
+     * @var integer Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
+     */
+    public $Limit;
+
+    /**
      * @param string $StartTime Query start time in the format of `yyyy-MM-dd HH:mm:ss`
 Only supports data query at daily granularity. The date in the input parameter is used as the start date.
 Data generated after or at 00:00:00 on the start date will be returned
@@ -236,6 +243,7 @@ If `Metric` is `url`, `path`, `district`, or `isp` and `Filter` is `flux` or `re
 server: specifies to query data of service region (where a CDN node is located)
 client: specifies to query data of the client region (where a user request device is located). If `Metric` is `host`, `Filter` can only be `flux`, `request`, or `bandwidth`
      * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param integer $Limit Returns the first N data entries. The default value is 100 if this parameter is not specified, whereas 1000 if `Metric` is `url`.
      */
     function __construct()
     {
@@ -292,6 +300,10 @@ client: specifies to query data of the client region (where a user request devic
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

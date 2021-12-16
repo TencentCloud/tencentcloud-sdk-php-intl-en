@@ -46,6 +46,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getReturnCode() Obtain HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setReturnCode(integer $ReturnCode) Set HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class IpFilter extends AbstractModel
 {
@@ -79,6 +85,13 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $FilterRules;
 
     /**
+     * @var integer HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ReturnCode;
+
+    /**
      * @param string $Switch IP blocklist/allowlist configuration switch
 on: enabled
 off: disabled
@@ -92,6 +105,9 @@ Up to 50 allowlists or blocklists can be entered
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
+Valid values: 400-499
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -125,6 +141,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
                 $obj->deserialize($value);
                 array_push($this->FilterRules, $obj);
             }
+        }
+
+        if (array_key_exists("ReturnCode",$param) and $param["ReturnCode"] !== null) {
+            $this->ReturnCode = $param["ReturnCode"];
         }
     }
 }

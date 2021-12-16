@@ -84,10 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFollowRedirect(FollowRedirect $FollowRedirect) Set 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method ErrorPage getErrorPage() Obtain Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setErrorPage(ErrorPage $ErrorPage) Set Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ErrorPage getErrorPage() Obtain Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setErrorPage(ErrorPage $ErrorPage) Set Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method RequestHeader getRequestHeader() Obtain Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRequestHeader(RequestHeader $RequestHeader) Set Custom request header configuration
@@ -246,17 +246,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAdvanceSet() Obtain Advanced configuration set
+ * @method array getAdvanceSet() Obtain Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAdvanceSet(array $AdvanceSet) Set Advanced configuration set
+ * @method void setAdvanceSet(array $AdvanceSet) Set Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method OfflineCache getOfflineCache() Obtain Offline cache
+ * @method OfflineCache getOfflineCache() Obtain Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
+ * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method OriginCombine getOriginCombine() Obtain Merging pull requests
+ * @method OriginCombine getOriginCombine() Obtain Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
+ * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method PostSize getPostMaxSize() Obtain POST request configuration item
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -273,6 +273,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method WebSocket getWebSocket() Obtain WebSocket configuration.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method RemoteAuthentication getRemoteAuthentication() Obtain Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) Set Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ShareCname getShareCname() Obtain Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setShareCname(ShareCname $ShareCname) Set Shared CNAME configuration (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
@@ -378,8 +386,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $FollowRedirect;
 
     /**
-     * @var ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ErrorPage;
 
@@ -595,19 +603,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Ipv6Access;
 
     /**
-     * @var array Advanced configuration set
+     * @var array Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $AdvanceSet;
 
     /**
-     * @var OfflineCache Offline cache
+     * @var OfflineCache Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OfflineCache;
 
     /**
-     * @var OriginCombine Merging pull requests
+     * @var OriginCombine Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginCombine;
@@ -635,6 +643,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $WebSocket;
+
+    /**
+     * @var RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RemoteAuthentication;
+
+    /**
+     * @var ShareCname Shared CNAME configuration (only available to beta users)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ShareCname;
 
     /**
      * @param string $ResourceId Domain name ID
@@ -669,8 +689,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param FollowRedirect $FollowRedirect 301/302 origin-pull follow-redirect configuration
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param ErrorPage $ErrorPage Custom error page configuration (in beta)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ErrorPage $ErrorPage Configuration of custom error page
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RequestHeader $RequestHeader Custom request header configuration
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ResponseHeader $ResponseHeader Custom response header configuration
@@ -750,11 +770,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AdvanceSet Advanced configuration set
+     * @param array $AdvanceSet Advanced configuration settings
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OfflineCache $OfflineCache Offline cache
+     * @param OfflineCache $OfflineCache Offline cache (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param OriginCombine $OriginCombine Merging pull requests
+     * @param OriginCombine $OriginCombine Merging origin-pull requests (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param PostSize $PostMaxSize POST request configuration item
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -763,6 +783,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param WebSocket $WebSocket WebSocket configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RemoteAuthentication $RemoteAuthentication Remote authentication configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ShareCname $ShareCname Shared CNAME configuration (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -1060,6 +1084,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
             $this->WebSocket = new WebSocket();
             $this->WebSocket->deserialize($param["WebSocket"]);
+        }
+
+        if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
+            $this->RemoteAuthentication = new RemoteAuthentication();
+            $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
+        }
+
+        if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
+            $this->ShareCname = new ShareCname();
+            $this->ShareCname->deserialize($param["ShareCname"]);
         }
     }
 }

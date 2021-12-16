@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Precise access control match rule
  *
- * @method string getMatchKey() Obtain Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
- * @method void setMatchKey(string $MatchKey) Set Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
- * @method string getLogiOperator() Obtain Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
- * @method void setLogiOperator(string $LogiOperator) Set Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
- * @method string getMatchValue() Obtain Match value
- * @method void setMatchValue(string $MatchValue) Set Match value
+ * @method string getMatchKey() Obtain Keyword
+ * @method void setMatchKey(string $MatchKey) Set Keyword
+ * @method string getLogiOperator() Obtain Logical operator. Valid values:
+ * @method void setLogiOperator(string $LogiOperator) Set Logical operator. Valid values:
+ * @method string getMatchValue() Obtain Matched value
+ * @method void setMatchValue(string $MatchValue) Set Matched value
  */
 class ScdnAclRule extends AbstractModel
 {
     /**
-     * @var string Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
+     * @var string Keyword
      */
     public $MatchKey;
 
     /**
-     * @var string Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
+     * @var string Logical operator. Valid values:
      */
     public $LogiOperator;
 
     /**
-     * @var string Match value
+     * @var string Matched value
      */
     public $MatchValue;
 
     /**
-     * @param string $MatchKey Match keywords. Valid values: `params`, `url`, `ip`, `referer`, and `user-agent`.
-     * @param string $LogiOperator Logical operator. Valid values: `exclude`, `include`, `notequal`, `equal`, `len-less`, `len-equal`, and `len-more`.
-     * @param string $MatchValue Match value
+     * @param string $MatchKey Keyword
+     * @param string $LogiOperator Logical operator. Valid values:
+     * @param string $MatchValue Matched value
      */
     function __construct()
     {

@@ -26,6 +26,10 @@ off: disabled
  * @method void setSwitch(string $Switch) Set Range GETs configuration switch
 on: enabled
 off: disabled
+ * @method array getRangeRules() Obtain Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRangeRules(array $RangeRules) Set Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RangeOriginPull extends AbstractModel
 {
@@ -37,9 +41,17 @@ off: disabled
     public $Switch;
 
     /**
+     * @var array Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RangeRules;
+
+    /**
      * @param string $Switch Range GETs configuration switch
 on: enabled
 off: disabled
+     * @param array $RangeRules Range GETs configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -56,6 +68,15 @@ off: disabled
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("RangeRules",$param) and $param["RangeRules"] !== null) {
+            $this->RangeRules = [];
+            foreach ($param["RangeRules"] as $key => $value){
+                $obj = new RangeOriginPullRule();
+                $obj->deserialize($value);
+                array_push($this->RangeRules, $obj);
+            }
         }
     }
 }

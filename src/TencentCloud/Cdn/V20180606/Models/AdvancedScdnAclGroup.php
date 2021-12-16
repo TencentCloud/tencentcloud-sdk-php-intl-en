@@ -26,14 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConfigure(array $Configure) Set Specific configurations
  * @method string getResult() Obtain Action. Valid values: `intercept` and `redirect`.
  * @method void setResult(string $Result) Set Action. Valid values: `intercept` and `redirect`.
- * @method string getStatus() Obtain Whether the rule is effective. Valid values: `active` and `inactive`.
- * @method void setStatus(string $Status) Set Whether the rule is effective. Valid values: `active` and `inactive`.
- * @method ScdnErrorPage getErrorPage() Obtain Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Whether the rule is activated. Valid values: `active` and `inactive`.
+ * @method void setStatus(string $Status) Set Whether the rule is activated. Valid values: `active` and `inactive`.
+ * @method ScdnErrorPage getErrorPage() Obtain Error page configuration
+ * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Error page configuration
  */
-class ScdnAclGroup extends AbstractModel
+class AdvancedScdnAclGroup extends AbstractModel
 {
     /**
      * @var string Rule name
@@ -51,13 +49,12 @@ class ScdnAclGroup extends AbstractModel
     public $Result;
 
     /**
-     * @var string Whether the rule is effective. Valid values: `active` and `inactive`.
+     * @var string Whether the rule is activated. Valid values: `active` and `inactive`.
      */
     public $Status;
 
     /**
-     * @var ScdnErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var ScdnErrorPage Error page configuration
      */
     public $ErrorPage;
 
@@ -65,9 +62,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $RuleName Rule name
      * @param array $Configure Specific configurations
      * @param string $Result Action. Valid values: `intercept` and `redirect`.
-     * @param string $Status Whether the rule is effective. Valid values: `active` and `inactive`.
-     * @param ScdnErrorPage $ErrorPage Error page configuration.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Status Whether the rule is activated. Valid values: `active` and `inactive`.
+     * @param ScdnErrorPage $ErrorPage Error page configuration
      */
     function __construct()
     {
@@ -89,7 +85,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("Configure",$param) and $param["Configure"] !== null) {
             $this->Configure = [];
             foreach ($param["Configure"] as $key => $value){
-                $obj = new ScdnAclRule();
+                $obj = new AdvancedScdnAclRule();
                 $obj->deserialize($value);
                 array_push($this->Configure, $obj);
             }

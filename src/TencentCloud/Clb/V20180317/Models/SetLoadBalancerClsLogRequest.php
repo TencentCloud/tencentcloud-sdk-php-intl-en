@@ -23,11 +23,25 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLoadBalancerId() Obtain CLB instance ID
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getLogSetId() Obtain CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
  * @method void setLogSetId(string $LogSetId) Set CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
  * @method string getLogTopicId() Obtain CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
  * @method void setLogTopicId(string $LogTopicId) Set CLS log topic ID
- * @method string getLogType() Obtain Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
- * @method void setLogType(string $LogType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
+ * @method string getLogType() Obtain Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
+ * @method void setLogType(string $LogType) Set Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
  */
 class SetLoadBalancerClsLogRequest extends AbstractModel
 {
@@ -38,24 +52,38 @@ class SetLoadBalancerClsLogRequest extends AbstractModel
 
     /**
      * @var string CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public $LogSetId;
 
     /**
      * @var string CLS log topic ID
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      */
     public $LogTopicId;
 
     /**
-     * @var string Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * @var string Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
      */
     public $LogType;
 
     /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $LogSetId CLS logset ID
+<li>Enter the ID of logset you need to add or update. You can acquire the ID by invoking [DescribeLogsets](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
      * @param string $LogTopicId CLS log topic ID
-     * @param string $LogType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+<li>Enter the ID of log topic you need to add or update. You can acquire the ID by invoking [DescribeTopics](https://intl.cloud.tencent.com/document/product/614/56454?from_cn_redirect=1).</li>
+<li>To delete the log set, set this parameter to `null`.</li>
+     * @param string $LogType Log type:
+<li>`ACCESS`: access logs</li>
+<li>`HEALTH`: health check logs</li>
+Default: `ACCESS`
      */
     function __construct()
     {

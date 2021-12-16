@@ -55,6 +55,12 @@ hex: hexadecimal
  * @method void setTimeFormat(string $TimeFormat) Set Timestamp settings
 dec: decimal
 hex: hexadecimal
+ * @method string getBackupSecretKey() Obtain Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AuthenticationTypeD extends AbstractModel
 {
@@ -103,6 +109,13 @@ hex: hexadecimal
     public $TimeFormat;
 
     /**
+     * @var string Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BackupSecretKey;
+
+    /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -119,6 +132,9 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
      * @param string $TimeFormat Timestamp settings
 dec: decimal
 hex: hexadecimal
+     * @param string $BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -159,6 +175,10 @@ hex: hexadecimal
 
         if (array_key_exists("TimeFormat",$param) and $param["TimeFormat"] !== null) {
             $this->TimeFormat = $param["TimeFormat"];
+        }
+
+        if (array_key_exists("BackupSecretKey",$param) and $param["BackupSecretKey"] !== null) {
+            $this->BackupSecretKey = $param["BackupSecretKey"];
         }
     }
 }

@@ -38,6 +38,12 @@ If it contains an asterisk (*), this indicates all files.
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
  * @method void setFilterType(string $FilterType) Set allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+ * @method string getBackupSecretKey() Obtain Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupSecretKey(string $BackupSecretKey) Set Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AuthenticationTypeB extends AbstractModel
 {
@@ -67,6 +73,13 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
     public $FilterType;
 
     /**
+     * @var string Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BackupSecretKey;
+
+    /**
      * @param string $SecretKey The key for signature calculation
 Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -76,6 +89,9 @@ Unit: second. The maximum value is 630720000.
 If it contains an asterisk (*), this indicates all files.
      * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
 blacklist: indicates that only the file types in the FileExtensions list are authenticated
+     * @param string $BackupSecretKey Backup key, which is used to calculate a signature.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -104,6 +120,10 @@ blacklist: indicates that only the file types in the FileExtensions list are aut
 
         if (array_key_exists("FilterType",$param) and $param["FilterType"] !== null) {
             $this->FilterType = $param["FilterType"];
+        }
+
+        if (array_key_exists("BackupSecretKey",$param) and $param["BackupSecretKey"] !== null) {
+            $this->BackupSecretKey = $param["BackupSecretKey"];
         }
     }
 }

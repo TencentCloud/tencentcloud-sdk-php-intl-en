@@ -1,0 +1,77 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Cdn\V20180606\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Shared CNAME configuration
+ *
+ * @method string getSwitch() Obtain Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+ * @method void setSwitch(string $Switch) Set Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+ * @method string getCname() Obtain Shared CNAME to be configured
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCname(string $Cname) Set Shared CNAME to be configured
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ */
+class ShareCname extends AbstractModel
+{
+    /**
+     * @var string Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+     */
+    public $Switch;
+
+    /**
+     * @var string Shared CNAME to be configured
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Cname;
+
+    /**
+     * @param string $Switch Specifies whether to enable Shared CNAME. If it is set to `off`, the default CNAME is used. If it is set to `on`, a shared CNAME is used.
+
+* ShareCname is only available to beta users. To use this feature, please submit a ticket for application.
+     * @param string $Cname Shared CNAME to be configured
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
+            $this->Cname = $param["Cname"];
+        }
+    }
+}

@@ -83,13 +83,15 @@ Applicable to cases where the acceleration domain name configuration differs for
  * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific region configuration
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
  * @method string getArea() Obtain Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
  * @method void setArea(string $Area) Set Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
  * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
@@ -98,8 +100,8 @@ global: global acceleration
  * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blocklist/allowlist Configuration
  * @method AccessControl getAccessControl() Obtain Access control
  * @method void setAccessControl(AccessControl $AccessControl) Set Access control
- * @method UrlRedirect getUrlRedirect() Obtain URL redirect configuration
- * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set URL redirect configuration
+ * @method UrlRedirect getUrlRedirect() Obtain Configuration of URL rewriting
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set Configuration of URL rewriting
  * @method array getAccessPort() Obtain Access port configuration
  * @method void setAccessPort(array $AccessPort) Set Access port configuration
  * @method AdvancedAuthentication getAdvancedAuthentication() Obtain Timestamp hotlink protection advanced configuration (allowlist feature)
@@ -118,6 +120,10 @@ global: global acceleration
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
  * @method WebSocket getWebSocket() Obtain WebSocket configuration.
  * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
+ * @method RemoteAuthentication getRemoteAuthentication() Obtain Configuration of remote authentication
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) Set Configuration of remote authentication
+ * @method ShareCname getShareCname() Obtain Shared CNAME configuration (only available to beta users)
+ * @method void setShareCname(ShareCname $ShareCname) Set Shared CNAME configuration (only available to beta users)
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -262,9 +268,10 @@ Applicable to cases where the acceleration domain name configuration differs for
 
     /**
      * @var string Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public $Area;
 
@@ -289,7 +296,7 @@ global: global acceleration
     public $AccessControl;
 
     /**
-     * @var UrlRedirect URL redirect configuration
+     * @var UrlRedirect Configuration of URL rewriting
      */
     public $UrlRedirect;
 
@@ -339,6 +346,16 @@ global: global acceleration
     public $WebSocket;
 
     /**
+     * @var RemoteAuthentication Configuration of remote authentication
+     */
+    public $RemoteAuthentication;
+
+    /**
+     * @var ShareCname Shared CNAME configuration (only available to beta users)
+     */
+    public $ShareCname;
+
+    /**
      * @param string $Domain Domain name
      * @param integer $ProjectId Project ID
      * @param Origin $Origin Origin server configuration
@@ -371,14 +388,15 @@ media: streaming media VOD acceleration
      * @param SpecificConfig $SpecificConfig Specific region configuration
 Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
      * @param string $Area Domain name acceleration region
-mainland: acceleration inside mainland China
-overseas: acceleration outside mainland China
-global: global acceleration
+`mainland`: acceleration inside the Chinese mainland
+`overseas`: acceleration outside the Chinese mainland
+`global`: global acceleration
+When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
      * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
      * @param UserAgentFilter $UserAgentFilter UA blocklist/allowlist Configuration
      * @param AccessControl $AccessControl Access control
-     * @param UrlRedirect $UrlRedirect URL redirect configuration
+     * @param UrlRedirect $UrlRedirect Configuration of URL rewriting
      * @param array $AccessPort Access port configuration
      * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
@@ -388,6 +406,8 @@ global: global acceleration
      * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
      * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
      * @param WebSocket $WebSocket WebSocket configuration.
+     * @param RemoteAuthentication $RemoteAuthentication Configuration of remote authentication
+     * @param ShareCname $ShareCname Shared CNAME configuration (only available to beta users)
      */
     function __construct()
     {
@@ -605,6 +625,16 @@ global: global acceleration
         if (array_key_exists("WebSocket",$param) and $param["WebSocket"] !== null) {
             $this->WebSocket = new WebSocket();
             $this->WebSocket->deserialize($param["WebSocket"]);
+        }
+
+        if (array_key_exists("RemoteAuthentication",$param) and $param["RemoteAuthentication"] !== null) {
+            $this->RemoteAuthentication = new RemoteAuthentication();
+            $this->RemoteAuthentication->deserialize($param["RemoteAuthentication"]);
+        }
+
+        if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
+            $this->ShareCname = new ShareCname();
+            $this->ShareCname->deserialize($param["ShareCname"]);
         }
     }
 }
