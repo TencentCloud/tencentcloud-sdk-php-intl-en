@@ -31,7 +31,7 @@ use TencentCloud\Common\AbstractModel;
  * @method string getType() Obtain The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
  * @method void setType(string $Type) Set The default value is default. TCB indicates that the namespace is developed and created through the mini-program cloud.
  */
-class Namespace extends AbstractModel
+class NamespaceInfo extends AbstractModel
 {
     /**
      * @var string Creation time of the namespace
