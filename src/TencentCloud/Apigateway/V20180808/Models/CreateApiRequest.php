@@ -114,6 +114,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
  * @method string getServiceScfFunctionType() Obtain SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
  * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) Set SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+ * @method string getEIAMAppType() Obtain EIAM application type.
+ * @method void setEIAMAppType(string $EIAMAppType) Set EIAM application type.
+ * @method string getEIAMAuthType() Obtain EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+ * @method void setEIAMAuthType(string $EIAMAuthType) Set EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+ * @method integer getTokenTimeout() Obtain Validity of the EIAM application token. Unit: second. Default value: `7200`.
+ * @method void setTokenTimeout(integer $TokenTimeout) Set Validity of the EIAM application token. Unit: second. Default value: `7200`.
+ * @method string getEIAMAppId() Obtain EIAM application ID.
+ * @method void setEIAMAppId(string $EIAMAppId) Set EIAM application ID.
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -353,6 +361,26 @@ class CreateApiRequest extends AbstractModel
     public $ServiceScfFunctionType;
 
     /**
+     * @var string EIAM application type.
+     */
+    public $EIAMAppType;
+
+    /**
+     * @var string EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public $EIAMAuthType;
+
+    /**
+     * @var integer Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public $TokenTimeout;
+
+    /**
+     * @var string EIAM application ID.
+     */
+    public $EIAMAppId;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
@@ -400,6 +428,10 @@ class CreateApiRequest extends AbstractModel
      * @param string $UserType User type.
      * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      * @param string $ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     * @param string $EIAMAppType EIAM application type.
+     * @param string $EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     * @param integer $TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     * @param string $EIAMAppId EIAM application ID.
      */
     function __construct()
     {
@@ -636,6 +668,22 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {
             $this->ServiceScfFunctionType = $param["ServiceScfFunctionType"];
+        }
+
+        if (array_key_exists("EIAMAppType",$param) and $param["EIAMAppType"] !== null) {
+            $this->EIAMAppType = $param["EIAMAppType"];
+        }
+
+        if (array_key_exists("EIAMAuthType",$param) and $param["EIAMAuthType"] !== null) {
+            $this->EIAMAuthType = $param["EIAMAuthType"];
+        }
+
+        if (array_key_exists("TokenTimeout",$param) and $param["TokenTimeout"] !== null) {
+            $this->TokenTimeout = $param["TokenTimeout"];
+        }
+
+        if (array_key_exists("EIAMAppId",$param) and $param["EIAMAppId"] !== null) {
+            $this->EIAMAppId = $param["EIAMAppId"];
         }
     }
 }

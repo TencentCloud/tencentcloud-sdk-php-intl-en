@@ -94,8 +94,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getDamDDoSStatus() Obtain Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
  * @method void setDamDDoSStatus(integer $DamDDoSStatus) Set Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
- * @method integer getV6Flag() Obtain 
- * @method void setV6Flag(integer $V6Flag) Set 
+ * @method integer getV6Flag() Obtain Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setV6Flag(integer $V6Flag) Set Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -209,7 +211,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DamDDoSStatus;
 
     /**
-     * @var integer 
+     * @var integer Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $V6Flag;
 
@@ -251,7 +254,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $Domain Recommended domain name for clients to access.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $DamDDoSStatus Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
-     * @param integer $V6Flag 
+     * @param integer $V6Flag Whether it’s an IPv6 address. `1`: Yes; `0`: No.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
 Time range: <= 1 day, supported minimum granularity: 60 seconds;
 Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
 Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+ * @method string getIsp() Obtain Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+ * @method void setIsp(string $Isp) Set Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
  */
 class DescribeProxyStatisticsRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
     public $Granularity;
 
     /**
+     * @var string Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
+     */
+    public $Isp;
+
+    /**
      * @param string $ProxyId Connection ID
      * @param string $StartTime Start time (2019-03-25 12:00:00)
      * @param string $EndTime End time (2019-03-25 12:00:00)
@@ -76,6 +83,7 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
 Time range: <= 1 day, supported minimum granularity: 60 seconds;
 Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
 Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+     * @param string $Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
 
         if (array_key_exists("Granularity",$param) and $param["Granularity"] !== null) {
             $this->Granularity = $param["Granularity"];
+        }
+
+        if (array_key_exists("Isp",$param) and $param["Isp"] !== null) {
+            $this->Isp = $param["Isp"];
         }
     }
 }

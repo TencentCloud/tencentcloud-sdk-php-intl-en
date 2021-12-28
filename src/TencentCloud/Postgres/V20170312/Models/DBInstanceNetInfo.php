@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(integer $Port) Set Connection port address
  * @method string getNetType() Obtain Network type. 1: inner (private network address), 2: public (public network address)
  * @method void setNetType(string $NetType) Set Network type. 1: inner (private network address), 2: public (public network address)
- * @method string getStatus() Obtain Network connection status
- * @method void setStatus(string $Status) Set Network connection status
+ * @method string getStatus() Obtain Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+ * @method void setStatus(string $Status) Set Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+ * @method string getVpcId() Obtain VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVpcId(string $VpcId) Set VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSubnetId() Obtain Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -54,16 +62,32 @@ class DBInstanceNetInfo extends AbstractModel
     public $NetType;
 
     /**
-     * @var string Network connection status
+     * @var string Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
      */
     public $Status;
+
+    /**
+     * @var string VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $VpcId;
+
+    /**
+     * @var string Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubnetId;
 
     /**
      * @param string $Address DNS domain name
      * @param string $Ip Ip
      * @param integer $Port Connection port address
      * @param string $NetType Network type. 1: inner (private network address), 2: public (public network address)
-     * @param string $Status Network connection status
+     * @param string $Status Network connection status. Valid values: `initing` (never enabled before), `opened` (enabled), `closed` (disabled), `opening` (enabling), `closing` (disabling)
+     * @param string $VpcId VPC ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SubnetId Subnet ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +120,14 @@ class DBInstanceNetInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

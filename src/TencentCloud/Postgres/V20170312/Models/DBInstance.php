@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID
  * @method string getDBInstanceName() Obtain Instance name
  * @method void setDBInstanceName(string $DBInstanceName) Set Instance name
- * @method string getDBInstanceStatus() Obtain Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
- * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+ * @method string getDBInstanceStatus() Obtain Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
+ * @method void setDBInstanceStatus(string $DBInstanceStatus) Set Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
  * @method integer getDBInstanceMemory() Obtain Assigned instance memory size in GB
  * @method void setDBInstanceMemory(integer $DBInstanceMemory) Set Assigned instance memory size in GB
  * @method integer getDBInstanceStorage() Obtain Assigned instance storage capacity in GB
@@ -98,10 +98,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDBKernelVersion(string $DBKernelVersion) Set Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getNetworkAccessList() Obtain Network access list of the instance
+ * @method array getNetworkAccessList() Obtain Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the instance
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDBMajorVersion() Obtain 
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -141,7 +143,7 @@ class DBInstance extends AbstractModel
     public $DBInstanceName;
 
     /**
-     * @var string Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+     * @var string Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
      */
     public $DBInstanceStatus;
 
@@ -277,10 +279,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBKernelVersion;
 
     /**
-     * @var array Network access list of the instance
+     * @var array Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $NetworkAccessList;
+
+    /**
+     * @var string 
+     */
+    public $DBMajorVersion;
 
     /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
@@ -290,7 +297,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $SubnetId SubnetId
      * @param string $DBInstanceId Instance ID
      * @param string $DBInstanceName Instance name
-     * @param string $DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`
+     * @param string $DBInstanceStatus Instance status. Valid values: `applying`, `init` (to be initialized), `initing` (initializing), `running`, `limited run`, `isolated`, `recycling`, `recycled`, `job running`, `offline`, `migrating`, `expanding`, `waitSwitch` (waiting for switch), `switching`, `readonly`, `restarting`, `network changing`
      * @param integer $DBInstanceMemory Assigned instance memory size in GB
      * @param integer $DBInstanceStorage Assigned instance storage capacity in GB
      * @param integer $DBInstanceCpu Number of assigned CPUs
@@ -322,8 +329,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DBKernelVersion Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $NetworkAccessList Network access list of the instance
+     * @param array $NetworkAccessList Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DBMajorVersion 
      */
     function __construct()
     {
@@ -487,6 +495,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->NetworkAccessList, $obj);
             }
+        }
+
+        if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
+            $this->DBMajorVersion = $param["DBMajorVersion"];
         }
     }
 }

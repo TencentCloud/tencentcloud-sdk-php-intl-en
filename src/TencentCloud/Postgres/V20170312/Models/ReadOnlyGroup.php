@@ -66,9 +66,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setRebalance(integer $Rebalance) Set Whether to enable automatic load balancing
  * @method array getDBInstanceNetInfo() Obtain Network information
  * @method void setDBInstanceNetInfo(array $DBInstanceNetInfo) Set Network information
- * @method array getNetworkAccessList() Obtain Network access list of the RO group
+ * @method array getNetworkAccessList() Obtain Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the RO group
+ * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ReadOnlyGroup extends AbstractModel
@@ -165,7 +165,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBInstanceNetInfo;
 
     /**
-     * @var array Network access list of the RO group
+     * @var array Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $NetworkAccessList;
@@ -194,7 +194,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $ReadOnlyDBInstanceList Instance details
      * @param integer $Rebalance Whether to enable automatic load balancing
      * @param array $DBInstanceNetInfo Network information
-     * @param array $NetworkAccessList Network access list of the RO group
+     * @param array $NetworkAccessList Network access list of the RO group (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

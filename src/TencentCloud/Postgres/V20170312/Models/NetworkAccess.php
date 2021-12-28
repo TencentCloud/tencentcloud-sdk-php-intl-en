@@ -18,15 +18,15 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Network information.
+ * Network information. (This parameter structure has been deprecated. Please use `DBInstanceNetInfo` to query network information.)
  *
- * @method string getResourceId() Obtain Network resource ID, instance ID or RO group ID (this field has been deprecated)
+ * @method string getResourceId() Obtain Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceId(string $ResourceId) Set Network resource ID, instance ID or RO group ID (this field has been deprecated)
+ * @method void setResourceId(string $ResourceId) Set Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getResourceType() Obtain Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+ * @method integer getResourceType() Obtain Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResourceType(integer $ResourceType) Set Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+ * @method void setResourceType(integer $ResourceType) Set Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain VPC ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -56,13 +56,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class NetworkAccess extends AbstractModel
 {
     /**
-     * @var string Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * @var string Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ResourceId;
 
     /**
-     * @var integer Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * @var integer Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ResourceType;
@@ -104,9 +104,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $VpcStatus;
 
     /**
-     * @param string $ResourceId Network resource ID, instance ID or RO group ID (this field has been deprecated)
+     * @param string $ResourceId Network resource ID, instance ID, or RO group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ResourceType Resource type. Valid values: `1` (instance), `2` (RO group) (this field has been deprecated)
+     * @param integer $ResourceType Resource type. Valid values: `1` (instance), `2` (RO group)
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $VpcId VPC ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
