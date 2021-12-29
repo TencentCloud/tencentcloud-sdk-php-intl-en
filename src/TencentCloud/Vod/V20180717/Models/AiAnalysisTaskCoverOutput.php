@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result information of intelligent cover generating
  *
- * @method array getCoverSet() Obtain List of intelligently generated covers.
- * @method void setCoverSet(array $CoverSet) Set List of intelligently generated covers.
+ * @method array getCoverSet() Obtain List of intelligently generated thumbnails
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+ * @method void setCoverSet(array $CoverSet) Set List of intelligently generated thumbnails
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+ * @method string getCoverSetFileUrl() Obtain URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+ * @method void setCoverSetFileUrl(string $CoverSetFileUrl) Set URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+ * @method string getCoverSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setCoverSetFileUrlExpireTime(string $CoverSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiAnalysisTaskCoverOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated covers.
+     * @var array List of intelligently generated thumbnails
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
      */
     public $CoverSet;
 
     /**
-     * @param array $CoverSet List of intelligently generated covers.
+     * @var string URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+     */
+    public $CoverSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public $CoverSetFileUrlExpireTime;
+
+    /**
+     * @param array $CoverSet List of intelligently generated thumbnails
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `CoverSetFileUrl`.
+     * @param string $CoverSetFileUrl URL to the file for intelligently generated thumbnails. The file is in JSON format and has the same data structure as `CoverSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `CoverSetFileUrlExpireTime`.
+     * @param string $CoverSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated thumbnails, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiAnalysisTaskCoverOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CoverSet, $obj);
             }
+        }
+
+        if (array_key_exists("CoverSetFileUrl",$param) and $param["CoverSetFileUrl"] !== null) {
+            $this->CoverSetFileUrl = $param["CoverSetFileUrl"];
+        }
+
+        if (array_key_exists("CoverSetFileUrlExpireTime",$param) and $param["CoverSetFileUrlExpireTime"] !== null) {
+            $this->CoverSetFileUrlExpireTime = $param["CoverSetFileUrlExpireTime"];
         }
     }
 }

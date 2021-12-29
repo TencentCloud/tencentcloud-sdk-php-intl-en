@@ -20,27 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ListClsLogTopics response structure.
  *
- * @method LogSetInfo getLogset() Obtain Logset information
- * @method void setLogset(LogSetInfo $Logset) Set Logset information
- * @method array getTopics() Obtain Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopics(array $Topics) Set Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method LogSetInfo getLogset() Obtain Information of logsets in the Shanghai region
+ * @method void setLogset(LogSetInfo $Logset) Set Information of logsets in the Shanghai region
+ * @method array getTopics() Obtain Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTopics(array $Topics) Set Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getExtraLogset() Obtain Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExtraLogset(array $ExtraLogset) Set Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ListClsLogTopicsResponse extends AbstractModel
 {
     /**
-     * @var LogSetInfo Logset information
+     * @var LogSetInfo Information of logsets in the Shanghai region
      */
     public $Logset;
 
     /**
-     * @var array Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Topics;
+
+    /**
+     * @var array Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExtraLogset;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +58,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param LogSetInfo $Logset Logset information
-     * @param array $Topics Log topic information list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param LogSetInfo $Logset Information of logsets in the Shanghai region
+     * @param array $Topics Information of log topics in the Shanghai region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ExtraLogset Information on logsets in regions except Shanghai
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +89,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new TopicInfo();
                 $obj->deserialize($value);
                 array_push($this->Topics, $obj);
+            }
+        }
+
+        if (array_key_exists("ExtraLogset",$param) and $param["ExtraLogset"] !== null) {
+            $this->ExtraLogset = [];
+            foreach ($param["ExtraLogset"] as $key => $value){
+                $obj = new ExtraLogset();
+                $obj->deserialize($value);
+                array_push($this->ExtraLogset, $obj);
             }
         }
 

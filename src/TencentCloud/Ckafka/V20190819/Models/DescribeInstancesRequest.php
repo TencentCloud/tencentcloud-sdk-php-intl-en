@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
  * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
  * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
- * @method string getTagKey() Obtain Tag key match.
- * @method void setTagKey(string $TagKey) Set Tag key match.
+ * @method string getTagKey() Obtain Tag key value (this field has been deprecated).
+ * @method void setTagKey(string $TagKey) Set Tag key value (this field has been deprecated).
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -61,7 +61,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Tag key match.
+     * @var string Tag key value (this field has been deprecated).
      */
     public $TagKey;
 
@@ -71,7 +71,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
      * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
-     * @param string $TagKey Tag key match.
+     * @param string $TagKey Tag key value (this field has been deprecated).
      */
     function __construct()
     {

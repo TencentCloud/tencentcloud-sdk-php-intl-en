@@ -44,10 +44,14 @@ violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: political figure.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSegmentSet() Obtain List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+ * @method string getSegmentSetFileUrl() Obtain URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
@@ -76,10 +80,20 @@ Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/mili
     public $Label;
 
     /**
-     * @var array List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public $SegmentSet;
+
+    /**
+     * @var string URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public $SegmentSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public $SegmentSetFileUrlExpireTime;
 
     /**
      * @param float $Confidence Score of detected politically sensitive information in video between 0 and 100.
@@ -94,8 +108,10 @@ violation_photo:
 <li>violation_photo: violating photo.</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
 <li>politician: political figure.</li>
-     * @param array $SegmentSet List of video segments that contain the detected politically sensitive information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SegmentSet List of video segments that contain politically sensitive information
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+     * @param string $SegmentSetFileUrl URL to the file for video segments that contain politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {
@@ -129,6 +145,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("SegmentSetFileUrl",$param) and $param["SegmentSetFileUrl"] !== null) {
+            $this->SegmentSetFileUrl = $param["SegmentSetFileUrl"];
+        }
+
+        if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
+            $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
         }
     }
 }

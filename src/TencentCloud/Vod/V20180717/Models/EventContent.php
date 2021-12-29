@@ -110,6 +110,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) Set Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class EventContent extends AbstractModel
 {
@@ -223,6 +227,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
+     * @var RestoreMediaTask Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RestoreMediaCompleteEvent;
+
+    /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      * @param string $EventType <b>Supported event types:</b>
 <li>NewFileUpload: finished video upload</li>
@@ -268,6 +278,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RestoreMediaTask $RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -358,6 +370,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
             $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
             $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
+        }
+
+        if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {
+            $this->RestoreMediaCompleteEvent = new RestoreMediaTask();
+            $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
         }
     }
 }

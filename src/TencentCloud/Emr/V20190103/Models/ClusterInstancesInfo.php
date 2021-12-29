@@ -194,6 +194,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setZone(string $Zone) Set Availability zone
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSceneName() Obtain Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSceneName(string $SceneName) Set Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSceneServiceClass() Obtain Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSceneServiceClass(string $SceneServiceClass) Set Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSceneEmrVersion() Obtain Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSceneEmrVersion(string $SceneEmrVersion) Set Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getDisplayName() Obtain Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setDisplayName(string $DisplayName) Set Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getVpcName() Obtain VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setVpcName(string $VpcName) Set VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSubnetName() Obtain Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSubnetName(string $SubnetName) Set Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -405,6 +429,42 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $Zone;
 
     /**
+     * @var string Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SceneName;
+
+    /**
+     * @var string Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SceneServiceClass;
+
+    /**
+     * @var string Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SceneEmrVersion;
+
+    /**
+     * @var string Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $DisplayName;
+
+    /**
+     * @var string VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $VpcName;
+
+    /**
+     * @var string Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SubnetName;
+
+    /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId Cluster ID
@@ -492,6 +552,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Zone Availability zone
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SceneName Scenario name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SceneServiceClass Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SceneEmrVersion Scenario-based EMR version
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $DisplayName Scenario-based cluster type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $VpcName VPC name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -630,6 +702,30 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
+        }
+
+        if (array_key_exists("SceneServiceClass",$param) and $param["SceneServiceClass"] !== null) {
+            $this->SceneServiceClass = $param["SceneServiceClass"];
+        }
+
+        if (array_key_exists("SceneEmrVersion",$param) and $param["SceneEmrVersion"] !== null) {
+            $this->SceneEmrVersion = $param["SceneEmrVersion"];
+        }
+
+        if (array_key_exists("DisplayName",$param) and $param["DisplayName"] !== null) {
+            $this->DisplayName = $param["DisplayName"];
+        }
+
+        if (array_key_exists("VpcName",$param) and $param["VpcName"] !== null) {
+            $this->VpcName = $param["VpcName"];
+        }
+
+        if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
+            $this->SubnetName = $param["SubnetName"];
         }
     }
 }

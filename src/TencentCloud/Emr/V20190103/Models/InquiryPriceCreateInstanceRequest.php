@@ -80,6 +80,16 @@ use TencentCloud\Common\AbstractModel;
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
+ * @method string getSceneName() Obtain Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+ * @method void setSceneName(string $SceneName) Set Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -166,6 +176,15 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
     public $ProductId;
 
     /**
+     * @var string Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public $SceneName;
+
+    /**
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -196,6 +215,11 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>2: EMR v2.0.1.</li>
 <li>4: EMR v2.1.0.</li>
 <li>7: EMR v3.0.0.</li>
+     * @param string $SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
      */
     function __construct()
     {
@@ -264,6 +288,10 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
         }
     }
 }

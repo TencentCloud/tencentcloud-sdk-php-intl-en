@@ -108,6 +108,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeleteRouteTimestamp(string $DeleteRouteTimestamp) Set Time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRemainingPartitions() Obtain Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRemainingPartitions(integer $RemainingPartitions) Set Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRemainingTopics() Obtain Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method DynamicDiskConfig getDynamicDiskConfig() Obtain 
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set 
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -284,6 +294,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeleteRouteTimestamp;
 
     /**
+     * @var integer Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RemainingPartitions;
+
+    /**
+     * @var integer Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RemainingTopics;
+
+    /**
+     * @var DynamicDiskConfig 
+     */
+    public $DynamicDiskConfig;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param array $VipList VIP list information of access point
@@ -328,6 +355,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DeleteRouteTimestamp Time
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RemainingPartitions Number of remaining creatable partitions
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RemainingTopics Number of remaining creatable topics
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param DynamicDiskConfig $DynamicDiskConfig 
      */
     function __construct()
     {
@@ -480,6 +512,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DeleteRouteTimestamp",$param) and $param["DeleteRouteTimestamp"] !== null) {
             $this->DeleteRouteTimestamp = $param["DeleteRouteTimestamp"];
+        }
+
+        if (array_key_exists("RemainingPartitions",$param) and $param["RemainingPartitions"] !== null) {
+            $this->RemainingPartitions = $param["RemainingPartitions"];
+        }
+
+        if (array_key_exists("RemainingTopics",$param) and $param["RemainingTopics"] !== null) {
+            $this->RemainingTopics = $param["RemainingTopics"];
+        }
+
+        if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
+            $this->DynamicDiskConfig = new DynamicDiskConfig();
+            $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
         }
     }
 }

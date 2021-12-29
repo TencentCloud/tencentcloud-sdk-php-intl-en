@@ -34,6 +34,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setChannel(string $Channel) Set Either `cdn` or `ecdn`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDeleted() Obtain Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDeleted(string $Deleted) Set Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -65,12 +69,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Channel;
 
     /**
+     * @var string Whether the log topic has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Deleted;
+
+    /**
      * @param string $TopicId Topic ID
      * @param string $TopicName Topic name
      * @param integer $Enabled Whether to enable publishing
      * @param string $CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Channel Either `cdn` or `ecdn`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Deleted Whether the log topic has been removed from CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -104,6 +116,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Channel",$param) and $param["Channel"] !== null) {
             $this->Channel = $param["Channel"];
+        }
+
+        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
+            $this->Deleted = $param["Deleted"];
         }
     }
 }

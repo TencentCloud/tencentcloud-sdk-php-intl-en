@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Source file information
  *
- * @method string getSourceType() Obtain Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSourceType(string $SourceType) Set Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSourceType() Obtain Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
+ * @method void setSourceType(string $SourceType) Set Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
  * @method string getSourceContext() Obtain Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSourceContext(string $SourceContext) Set Field passed through when a file is created.
@@ -40,12 +40,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class MediaSourceData extends AbstractModel
 {
     /**
-     * @var string Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
      */
     public $SourceType;
 
@@ -56,12 +56,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SourceContext;
 
     /**
-     * @param string $SourceType Source category of media file:
-<li>Record: recording, such as LVB recording and LVB time shifting recording.</li>
-<li>Upload: upload, such as pull for upload, upload from server, and UCG upload from client.</li>
-<li>VideoProcessing: video processing, such as video splicing and video clipping.</li>
-<li>Unknown: unknown source.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SourceType Source of a media file:
+<li>`Record`: recording, such as live or time-shift recording</li>
+<li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
+<li>`VideoProcessing`: video processing, such as video splicing and video clipping</li>
+<li>`WebPageRecord`: panoramic recording </li>
+<li>`Unknown`: unknown source</li>
      * @param string $SourceContext Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
      */

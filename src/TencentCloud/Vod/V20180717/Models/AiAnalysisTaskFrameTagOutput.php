@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result information of intelligent frame-specific tagging
  *
- * @method array getSegmentSet() Obtain List of frame-specific video tags.
- * @method void setSegmentSet(array $SegmentSet) Set List of frame-specific video tags.
+ * @method array getSegmentSet() Obtain List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+ * @method void setSegmentSet(array $SegmentSet) Set List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+ * @method string getSegmentSetFileUrl() Obtain URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiAnalysisTaskFrameTagOutput extends AbstractModel
 {
     /**
-     * @var array List of frame-specific video tags.
+     * @var array List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public $SegmentSet;
 
     /**
-     * @param array $SegmentSet List of frame-specific video tags.
+     * @var string URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     */
+    public $SegmentSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public $SegmentSetFileUrlExpireTime;
+
+    /**
+     * @param array $SegmentSet List of frame-specific video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
+     * @param string $SegmentSetFileUrl URL to the file for frame-specific video tags. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file for frame-specific video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiAnalysisTaskFrameTagOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("SegmentSetFileUrl",$param) and $param["SegmentSetFileUrl"] !== null) {
+            $this->SegmentSetFileUrl = $param["SegmentSetFileUrl"];
+        }
+
+        if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
+            $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
         }
     }
 }

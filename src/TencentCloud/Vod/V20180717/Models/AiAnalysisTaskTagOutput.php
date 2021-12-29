@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result information of intelligent tagging
  *
- * @method array getTagSet() Obtain List of intelligently generated video tags.
- * @method void setTagSet(array $TagSet) Set List of intelligently generated video tags.
+ * @method array getTagSet() Obtain List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+ * @method void setTagSet(array $TagSet) Set List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+ * @method string getTagSetFileUrl() Obtain URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+ * @method void setTagSetFileUrl(string $TagSetFileUrl) Set URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+ * @method string getTagSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setTagSetFileUrlExpireTime(string $TagSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiAnalysisTaskTagOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video tags.
+     * @var array List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
      */
     public $TagSet;
 
     /**
-     * @param array $TagSet List of intelligently generated video tags.
+     * @var string URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     */
+    public $TagSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public $TagSetFileUrlExpireTime;
+
+    /**
+     * @param array $TagSet List of intelligently generated video tags
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `TagSetFileUrl`.
+     * @param string $TagSetFileUrl URL to the file for intelligently generated video tags. The file is in JSON format and has the same data structure as `TagSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `TagSetFileUrlExpireTime`.
+     * @param string $TagSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video tags, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiAnalysisTaskTagOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("TagSetFileUrl",$param) and $param["TagSetFileUrl"] !== null) {
+            $this->TagSetFileUrl = $param["TagSetFileUrl"];
+        }
+
+        if (array_key_exists("TagSetFileUrlExpireTime",$param) and $param["TagSetFileUrlExpireTime"] !== null) {
+            $this->TagSetFileUrlExpireTime = $param["TagSetFileUrlExpireTime"];
         }
     }
 }

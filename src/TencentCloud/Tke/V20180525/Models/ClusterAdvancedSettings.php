@@ -56,8 +56,8 @@ The following conditions are required to use ipvs-bpf network mode:
  * @method void setAuditLogsetId(string $AuditLogsetId) Set Specifies the ID of logset to which the audit logs are uploaded.
  * @method string getAuditLogTopicId() Obtain Specifies the ID of topic to which the audit logs are uploaded.
  * @method void setAuditLogTopicId(string $AuditLogTopicId) Set Specifies the ID of topic to which the audit logs are uploaded.
- * @method string getVpcCniType() Obtain Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
- * @method void setVpcCniType(string $VpcCniType) Set Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+ * @method string getVpcCniType() Obtain Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
+ * @method void setVpcCniType(string $VpcCniType) Set Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
  * @method string getRuntimeVersion() Obtain Runtime version
  * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
  * @method boolean getEnableCustomizedPodCIDR() Obtain Indicates whether to enable the custom mode for the node’s pod CIDR range
@@ -136,7 +136,7 @@ The following conditions are required to use ipvs-bpf network mode:
     public $AuditLogTopicId;
 
     /**
-     * @var string Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * @var string Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
      */
     public $VpcCniType;
 
@@ -179,7 +179,7 @@ The following conditions are required to use ipvs-bpf network mode:
      * @param boolean $AuditEnabled Indicates whether to enable auditing
      * @param string $AuditLogsetId Specifies the ID of logset to which the audit logs are uploaded.
      * @param string $AuditLogTopicId Specifies the ID of topic to which the audit logs are uploaded.
-     * @param string $VpcCniType Specifies whether the VPC CNI type is multi-IP ENI or or independent ENI.
+     * @param string $VpcCniType Specifies the ENI type. Values: `tke-route-eni` (multi-IP shared ENI); `tke-direct-eni` (independent ENI). It defaults to `tke-route-eni`.
      * @param string $RuntimeVersion Runtime version
      * @param boolean $EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
      * @param integer $BasePodNumber The basic number of Pods in custom mode

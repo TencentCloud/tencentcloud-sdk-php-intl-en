@@ -38,6 +38,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation date
  * @method string getRegion() Obtain Region
  * @method void setRegion(string $Region) Set Region
+ * @method string getDeleted() Obtain Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDeleted(string $Deleted) Set Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRegionEn() Obtain Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRegionEn(string $RegionEn) Set Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LogSetInfo extends AbstractModel
 {
@@ -83,6 +91,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Region;
 
     /**
+     * @var string Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Deleted;
+
+    /**
+     * @var string Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RegionEn;
+
+    /**
      * @param integer $AppId Developer ID
      * @param string $Channel Channel
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -92,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $LogsetSavePeriod Log retention period in days
      * @param string $CreateTime Creation date
      * @param string $Region Region
+     * @param string $Deleted Whether the logset has been removed from CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RegionEn Whether English is used in this region
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -136,6 +160,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Deleted",$param) and $param["Deleted"] !== null) {
+            $this->Deleted = $param["Deleted"];
+        }
+
+        if (array_key_exists("RegionEn",$param) and $param["RegionEn"] !== null) {
+            $this->RegionEn = $param["RegionEn"];
         }
     }
 }

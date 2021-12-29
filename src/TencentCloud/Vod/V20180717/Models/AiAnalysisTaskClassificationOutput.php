@@ -20,18 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result information of intelligent categorization
  *
- * @method array getClassificationSet() Obtain List of intelligently generated video categories.
- * @method void setClassificationSet(array $ClassificationSet) Set List of intelligently generated video categories.
+ * @method array getClassificationSet() Obtain List of intelligently generated video categories
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+ * @method void setClassificationSet(array $ClassificationSet) Set List of intelligently generated video categories
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+ * @method string getClassificationSetFileUrl() Obtain URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+ * @method void setClassificationSetFileUrl(string $ClassificationSetFileUrl) Set URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+ * @method string getClassificationSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setClassificationSetFileUrlExpireTime(string $ClassificationSetFileUrlExpireTime) Set Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiAnalysisTaskClassificationOutput extends AbstractModel
 {
     /**
-     * @var array List of intelligently generated video categories.
+     * @var array List of intelligently generated video categories
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
      */
     public $ClassificationSet;
 
     /**
-     * @param array $ClassificationSet List of intelligently generated video categories.
+     * @var string URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+     */
+    public $ClassificationSetFileUrl;
+
+    /**
+     * @var string Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     */
+    public $ClassificationSetFileUrlExpireTime;
+
+    /**
+     * @param array $ClassificationSet List of intelligently generated video categories
+<font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `ClassificationSetFileUrl`.
+     * @param string $ClassificationSetFileUrl URL to the file for intelligently generated video categories. The file is in JSON format and has the same data structure as `ClassificationSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `ClassificationSetFileUrlExpireTime`.
+     * @param string $ClassificationSetFileUrlExpireTime Expiration time of the URL to the file for intelligently generated video categories, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {
@@ -53,6 +73,14 @@ class AiAnalysisTaskClassificationOutput extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ClassificationSet, $obj);
             }
+        }
+
+        if (array_key_exists("ClassificationSetFileUrl",$param) and $param["ClassificationSetFileUrl"] !== null) {
+            $this->ClassificationSetFileUrl = $param["ClassificationSetFileUrl"];
+        }
+
+        if (array_key_exists("ClassificationSetFileUrlExpireTime",$param) and $param["ClassificationSetFileUrlExpireTime"] !== null) {
+            $this->ClassificationSetFileUrlExpireTime = $param["ClassificationSetFileUrlExpireTime"];
         }
     }
 }

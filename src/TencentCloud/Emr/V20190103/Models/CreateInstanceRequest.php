@@ -154,6 +154,16 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
  * @method void setMetaDBInfo(CustomMetaInfo $MetaDBInfo) Set Custom MetaDB instance information
  * @method string getApplicationRole() Obtain Custom application role.
  * @method void setApplicationRole(string $ApplicationRole) Set Custom application role.
+ * @method string getSceneName() Obtain Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+ * @method void setSceneName(string $SceneName) Set Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -333,6 +343,15 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
     public $ApplicationRole;
 
     /**
+     * @var string Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
+     */
+    public $SceneName;
+
+    /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -400,6 +419,11 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
      * @param string $UnifyMetaInstanceId EMR-MetaDB instance
      * @param CustomMetaInfo $MetaDBInfo Custom MetaDB instance information
      * @param string $ApplicationRole Custom application role.
+     * @param string $SceneName Scenario-based values:
+Hadoop-Kudu
+Hadoop-Zookeeper
+Hadoop-Presto
+Hadoop-Hbase
      */
     function __construct()
     {
@@ -536,6 +560,10 @@ This parameter can be obtained in the `SecurityGroupId` field in the return valu
 
         if (array_key_exists("ApplicationRole",$param) and $param["ApplicationRole"] !== null) {
             $this->ApplicationRole = $param["ApplicationRole"];
+        }
+
+        if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
+            $this->SceneName = $param["SceneName"];
         }
     }
 }
