@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIP(string $IP) Set Client IP of a connection
  * @method integer getCount() Obtain Number of connections corresponding to a client IP
  * @method void setCount(integer $Count) Set Number of connections corresponding to a client IP
+ * @method boolean getInternalService() Obtain Whether it is the Tencent Cloud IP for automated testing
+ * @method void setInternalService(boolean $InternalService) Set Whether it is the Tencent Cloud IP for automated testing
  */
 class ClientConnection extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ClientConnection extends AbstractModel
     public $Count;
 
     /**
+     * @var boolean Whether it is the Tencent Cloud IP for automated testing
+     */
+    public $InternalService;
+
+    /**
      * @param string $IP Client IP of a connection
      * @param integer $Count Number of connections corresponding to a client IP
+     * @param boolean $InternalService Whether it is the Tencent Cloud IP for automated testing
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ClientConnection extends AbstractModel
 
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("InternalService",$param) and $param["InternalService"] !== null) {
+            $this->InternalService = $param["InternalService"];
         }
     }
 }

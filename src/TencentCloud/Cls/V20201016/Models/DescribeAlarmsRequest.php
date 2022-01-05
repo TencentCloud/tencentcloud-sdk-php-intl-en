@@ -22,66 +22,70 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFilters() Obtain <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
  * @method void setFilters(array $Filters) Set <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
@@ -92,35 +96,37 @@ class DescribeAlarmsRequest extends AbstractModel
     /**
      * @var array <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public $Filters;
 
@@ -137,35 +143,37 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     /**
      * @param array $Filters <br><li> name
 
-Filter by **alarm policy name**.
-Type: String
+Filter by **alarm policy name**
+Type: string
 
 Required: no
 
 <br><li> alarmId
 
-Filter by **alarm policy ID**.
-Type: String
+Filter by **alarm policy ID**
+Type: string
 
 Required: no
 
 <br><li> topicId
 
-Filter by **log topic ID of monitoring object**.
+Filter by **log topic ID**
 
-Type: String
+Type: string
 
 Required: no
 
 <br><li> enable
 
-Filter by **enablement status**.
+Filter by **enablement status**
 
-Type: String
+Type: string
+
+Note: The valid values of `enable` include `1`, `t`, `T`, `TRUE`, `true`, `True`, `0`, `f`, `F`, `FALSE`, `false`, and `False`. If other values are entered, an “invalid parameter” error will be returned.
 
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
      */

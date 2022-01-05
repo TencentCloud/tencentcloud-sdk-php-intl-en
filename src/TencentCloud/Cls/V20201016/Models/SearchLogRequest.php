@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) Set Query statement. Maximum length: 4096
  * @method integer getLimit() Obtain Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
  * @method void setLimit(integer $Limit) Set Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
- * @method string getContext() Obtain This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
- * @method void setContext(string $Context) Set This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+ * @method string getContext() Obtain This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+ * @method void setContext(string $Context) Set This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
  * @method string getSort() Obtain Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
  * @method void setSort(string $Sort) Set Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
  * @method boolean getUseNewAnalysis() Obtain If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
@@ -65,7 +65,7 @@ class SearchLogRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+     * @var string This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
      */
     public $Context;
 
@@ -85,7 +85,7 @@ class SearchLogRequest extends AbstractModel
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param string $Query Query statement. Maximum length: 4096
      * @param integer $Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
-     * @param string $Context This field is used to load more logs. Pass through the last `Context` value returned to get more log content. It will expire after 1 hour.
+     * @param string $Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
      * @param string $Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
      * @param boolean $UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
      */

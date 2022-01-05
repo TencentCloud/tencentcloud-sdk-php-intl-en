@@ -25,10 +25,11 @@ use TencentCloud\Cls\V20201016\Models as Models;
 /**
  * @method Models\ApplyConfigToMachineGroupResponse ApplyConfigToMachineGroup(Models\ApplyConfigToMachineGroupRequest $req) This API is used to apply the collection configuration to the specified machine group.
  * @method Models\CreateAlarmResponse CreateAlarm(Models\CreateAlarmRequest $req) This API is used to create an alarm policy.
- * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) This API is used to create an alarm notification template.
+ * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) This API is used to create a notification group.
  * @method Models\CreateAsyncContextTaskResponse CreateAsyncContextTask(Models\CreateAsyncContextTaskRequest $req) This API is used to create an offline context search task.
  * @method Models\CreateAsyncSearchTaskResponse CreateAsyncSearchTask(Models\CreateAsyncSearchTaskRequest $req) This API is used to create an offline search task.
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) This API is used to create a collection rule configuration.
+ * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a shipping task.
  * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) This API is used to create a log download task.
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) This API is used to create an index.
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) This API is used to create a logset. The ID of the created logset is returned.
@@ -36,25 +37,27 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateShipperResponse CreateShipper(Models\CreateShipperRequest $req) This API is used to create a shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a log topic.
  * @method Models\DeleteAlarmResponse DeleteAlarm(Models\DeleteAlarmRequest $req) This API is used to delete an alarm policy.
- * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) This API is used to delete an alarm notification template.
+ * @method Models\DeleteAlarmNoticeResponse DeleteAlarmNotice(Models\DeleteAlarmNoticeRequest $req) This API is used to delete a notification group.
  * @method Models\DeleteAsyncContextTaskResponse DeleteAsyncContextTask(Models\DeleteAsyncContextTaskRequest $req) This API is used to delete an offline context search task.
  * @method Models\DeleteAsyncSearchTaskResponse DeleteAsyncSearchTask(Models\DeleteAsyncSearchTaskRequest $req) This API is used to delete an offline search task.
  * @method Models\DeleteConfigResponse DeleteConfig(Models\DeleteConfigRequest $req) This API is used to delete a collection rule configuration.
  * @method Models\DeleteConfigFromMachineGroupResponse DeleteConfigFromMachineGroup(Models\DeleteConfigFromMachineGroupRequest $req) This API is used to delete the collection configuration applied to a machine group.
+ * @method Models\DeleteConsumerResponse DeleteConsumer(Models\DeleteConsumerRequest $req) This API is used to delete a shipping task.
  * @method Models\DeleteExportResponse DeleteExport(Models\DeleteExportRequest $req) This API is used to delete a log download task.
  * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) This API is used to delete the index configuration of a log topic.
  * @method Models\DeleteLogsetResponse DeleteLogset(Models\DeleteLogsetRequest $req) This API is used to delete a logset.
  * @method Models\DeleteMachineGroupResponse DeleteMachineGroup(Models\DeleteMachineGroupRequest $req) This API is used to delete a machine group.
  * @method Models\DeleteShipperResponse DeleteShipper(Models\DeleteShipperRequest $req) This API is used to delete a shipping rule.
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete a log topic.
- * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) This API is used to get the list of alarm notification templates.
- * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) This API is used to get the list of alarm policies.
+ * @method Models\DescribeAlarmNoticesResponse DescribeAlarmNotices(Models\DescribeAlarmNoticesRequest $req) This API is used to get the notification group list.
+ * @method Models\DescribeAlarmsResponse DescribeAlarms(Models\DescribeAlarmsRequest $req) This API is used to get the alarm policy list.
  * @method Models\DescribeAsyncContextResultResponse DescribeAsyncContextResult(Models\DescribeAsyncContextResultRequest $req) This API is used to get the result of an offline context search task.
  * @method Models\DescribeAsyncContextTasksResponse DescribeAsyncContextTasks(Models\DescribeAsyncContextTasksRequest $req) This API is used to get the list of offline context search tasks.
  * @method Models\DescribeAsyncSearchResultResponse DescribeAsyncSearchResult(Models\DescribeAsyncSearchResultRequest $req) This API is used to get the result of an offline search task.
  * @method Models\DescribeAsyncSearchTasksResponse DescribeAsyncSearchTasks(Models\DescribeAsyncSearchTasksRequest $req) This API is used to get the list of offline search tasks.
  * @method Models\DescribeConfigMachineGroupsResponse DescribeConfigMachineGroups(Models\DescribeConfigMachineGroupsRequest $req) This API is used to get the machine group bound to a collection rule configuration.
  * @method Models\DescribeConfigsResponse DescribeConfigs(Models\DescribeConfigsRequest $req) This API is used to get a collection rule configuration.
+ * @method Models\DescribeConsumerResponse DescribeConsumer(Models\DescribeConsumerRequest $req) This API is used to query a shipping task.
  * @method Models\DescribeExportsResponse DescribeExports(Models\DescribeExportsRequest $req) This API is used to get the list of log download tasks.
  * @method Models\DescribeIndexResponse DescribeIndex(Models\DescribeIndexRequest $req) This API is used to get the index configuration information.
  * @method Models\DescribeLogContextResponse DescribeLogContext(Models\DescribeLogContextRequest $req) This API is used to search for content in the log context.
@@ -69,8 +72,9 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\GetAlarmLogResponse GetAlarmLog(Models\GetAlarmLogRequest $req) This API is used to get the records of alarm tasks.
  * @method Models\MergePartitionResponse MergePartition(Models\MergePartitionRequest $req) This API is used to merge a topic partition in read/write state. During merge, a topic partition ID can be specified, and CLS will automatically merge the partition adjacent to the right of the range.
  * @method Models\ModifyAlarmResponse ModifyAlarm(Models\ModifyAlarmRequest $req) This API is used to modify an alarm policy. At least one valid configuration item needs to be modified.
- * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) This API is used to modify an alarm notification template.
+ * @method Models\ModifyAlarmNoticeResponse ModifyAlarmNotice(Models\ModifyAlarmNoticeRequest $req) This API is used to modify a notification group.
  * @method Models\ModifyConfigResponse ModifyConfig(Models\ModifyConfigRequest $req) This API is used to modify a collection rule configuration.
+ * @method Models\ModifyConsumerResponse ModifyConsumer(Models\ModifyConsumerRequest $req) This API is used to modify a shipping task.
  * @method Models\ModifyIndexResponse ModifyIndex(Models\ModifyIndexRequest $req) This API is used to modify the index configuration.
 
  * @method Models\ModifyLogsetResponse ModifyLogset(Models\ModifyLogsetRequest $req) This API is used to modify a logset.
@@ -78,7 +82,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\ModifyShipperResponse ModifyShipper(Models\ModifyShipperRequest $req) This API is used to modify an existing shipping rule. To use this API, you need to grant CLS the write permission of the specified bucket.
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) This API is used to modify a log topic.
  * @method Models\RetryShipperTaskResponse RetryShipperTask(Models\RetryShipperTaskRequest $req) This API is used to retry a failed shipping task.
- * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) This API is used to search for logs.
+ * @method Models\SearchLogResponse SearchLog(Models\SearchLogRequest $req) This API is used to search logs. It is subject to the default API rate limit, and the number of concurrent calls to the same log topic cannot exceed 15.
  * @method Models\SplitPartitionResponse SplitPartition(Models\SplitPartitionRequest $req) This API is used to split a topic partition.
  * @method Models\UploadLogResponse UploadLog(Models\UploadLogRequest $req) ## Feature Description
 
