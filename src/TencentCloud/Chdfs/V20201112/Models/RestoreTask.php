@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRestoreTaskId(integer $RestoreTaskId) Set Restoration task ID
  * @method string getFilePath() Obtain Restoration task file path
  * @method void setFilePath(string $FilePath) Set Restoration task file path
- * @method integer getType() Obtain Restoration task type (1: standard; 2: expedited; 3: bulk)
- * @method void setType(integer $Type) Set Restoration task type (1: standard; 2: expedited; 3: bulk)
+ * @method integer getType() Obtain Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
+ * @method void setType(integer $Type) Set Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
  * @method integer getDays() Obtain Validity period (in days) of the temporary copy generated during restoration
  * @method void setDays(integer $Days) Set Validity period (in days) of the temporary copy generated during restoration
  * @method integer getStatus() Obtain Restoration task status (1: binding file; 2: file binding completed; 3: restoring file; 4: file restoration completed)
@@ -46,7 +46,7 @@ class RestoreTask extends AbstractModel
     public $FilePath;
 
     /**
-     * @var integer Restoration task type (1: standard; 2: expedited; 3: bulk)
+     * @var integer Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
      */
     public $Type;
 
@@ -68,7 +68,7 @@ class RestoreTask extends AbstractModel
     /**
      * @param integer $RestoreTaskId Restoration task ID
      * @param string $FilePath Restoration task file path
-     * @param integer $Type Restoration task type (1: standard; 2: expedited; 3: bulk)
+     * @param integer $Type Restoration task type (`1`: standard; `2`: expedited; `3`: bulk, with only the expedited type available currently)
      * @param integer $Days Validity period (in days) of the temporary copy generated during restoration
      * @param integer $Status Restoration task status (1: binding file; 2: file binding completed; 3: restoring file; 4: file restoration completed)
      * @param string $CreateTime Creation time

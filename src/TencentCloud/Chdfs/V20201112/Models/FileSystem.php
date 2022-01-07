@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSuperUsers(array $SuperUsers) Set List of superuser names
  * @method boolean getPosixAcl() Obtain POSIX permission control
  * @method void setPosixAcl(boolean $PosixAcl) Set POSIX permission control
+ * @method boolean getEnableRanger() Obtain Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setEnableRanger(boolean $EnableRanger) Set Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method array getRangerServiceAddresses() Obtain List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) Set List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
  */
 class FileSystem extends AbstractModel
 {
@@ -101,6 +109,18 @@ class FileSystem extends AbstractModel
     public $PosixAcl;
 
     /**
+     * @var boolean Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param integer $AppId Resource owner `AppId`
      * @param string $FileSystemName File system name
      * @param string $Description File system description
@@ -112,6 +132,10 @@ class FileSystem extends AbstractModel
      * @param integer $Status File system status (1: creating; 2: created successfully; 3: failed to create)
      * @param array $SuperUsers List of superuser names
      * @param boolean $PosixAcl POSIX permission control
+     * @param boolean $EnableRanger Whether to enable verification of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param array $RangerServiceAddresses List of Ranger service addresses
+Note: this field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -168,6 +192,14 @@ class FileSystem extends AbstractModel
 
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }

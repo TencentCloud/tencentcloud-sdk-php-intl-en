@@ -34,6 +34,10 @@ Note: the file system capacity after change cannot be smaller than the currently
  * @method void setSuperUsers(array $SuperUsers) Set List of superuser names, which can be an empty array
  * @method boolean getPosixAcl() Obtain Whether to verify POSIX ACL
  * @method void setPosixAcl(boolean $PosixAcl) Set Whether to verify POSIX ACL
+ * @method boolean getEnableRanger() Obtain Whether to enable verification of Ranger service addresses
+ * @method void setEnableRanger(boolean $EnableRanger) Set Whether to enable verification of Ranger service addresses
+ * @method array getRangerServiceAddresses() Obtain List of Ranger service addresses, which can be an empty array
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) Set List of Ranger service addresses, which can be an empty array
  */
 class ModifyFileSystemRequest extends AbstractModel
 {
@@ -69,6 +73,16 @@ Note: the file system capacity after change cannot be smaller than the currently
     public $PosixAcl;
 
     /**
+     * @var boolean Whether to enable verification of Ranger service addresses
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array List of Ranger service addresses, which can be an empty array
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param string $FileSystemId File system ID
      * @param string $FileSystemName File system name
      * @param string $Description File system description
@@ -76,6 +90,8 @@ Note: the file system capacity after change cannot be smaller than the currently
 Note: the file system capacity after change cannot be smaller than the currently used capacity
      * @param array $SuperUsers List of superuser names, which can be an empty array
      * @param boolean $PosixAcl Whether to verify POSIX ACL
+     * @param boolean $EnableRanger Whether to enable verification of Ranger service addresses
+     * @param array $RangerServiceAddresses List of Ranger service addresses, which can be an empty array
      */
     function __construct()
     {
@@ -112,6 +128,14 @@ Note: the file system capacity after change cannot be smaller than the currently
 
         if (array_key_exists("PosixAcl",$param) and $param["PosixAcl"] !== null) {
             $this->PosixAcl = $param["PosixAcl"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }

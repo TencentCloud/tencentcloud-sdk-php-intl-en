@@ -22,14 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method FileSystem getFileSystem() Obtain File system
  * @method void setFileSystem(FileSystem $FileSystem) Set File system
- * @method integer getCapacityUsed() Obtain Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
+ * @method integer getCapacityUsed() Obtain Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setCapacityUsed(integer $CapacityUsed) Set Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method integer getArchiveCapacityUsed() Obtain Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCapacityUsed(integer $CapacityUsed) Set Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
+ * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) Set Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getArchiveCapacityUsed() Obtain Used ARCHIVE storage capacity (in bytes)
+ * @method integer getStandardCapacityUsed() Obtain Used STANDARD capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setArchiveCapacityUsed(integer $ArchiveCapacityUsed) Set Used ARCHIVE storage capacity (in bytes)
+ * @method void setStandardCapacityUsed(integer $StandardCapacityUsed) Set Used STANDARD capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDegradeCapacityUsed() Obtain Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+ * @method void setDegradeCapacityUsed(integer $DegradeCapacityUsed) Set Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -41,16 +49,28 @@ class DescribeFileSystemResponse extends AbstractModel
     public $FileSystem;
 
     /**
-     * @var integer Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
      */
     public $CapacityUsed;
 
     /**
-     * @var integer Used ARCHIVE storage capacity (in bytes)
+     * @var integer Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $ArchiveCapacityUsed;
+
+    /**
+     * @var integer Used STANDARD capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $StandardCapacityUsed;
+
+    /**
+     * @var integer Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     */
+    public $DegradeCapacityUsed;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -59,10 +79,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param FileSystem $FileSystem File system
-     * @param integer $CapacityUsed Used capacity (in bytes), including STANDARD storage and ARCHIVE storage
+     * @param integer $CapacityUsed Used capacity of the file system, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
+     * @param integer $ArchiveCapacityUsed Used ARCHIVE capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ArchiveCapacityUsed Used ARCHIVE storage capacity (in bytes)
+     * @param integer $StandardCapacityUsed Used STANDARD capacity of COS, in bytes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DegradeCapacityUsed Used STANDARD_IA capacity of COS, in bytes
+Note: this field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -89,6 +113,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ArchiveCapacityUsed",$param) and $param["ArchiveCapacityUsed"] !== null) {
             $this->ArchiveCapacityUsed = $param["ArchiveCapacityUsed"];
+        }
+
+        if (array_key_exists("StandardCapacityUsed",$param) and $param["StandardCapacityUsed"] !== null) {
+            $this->StandardCapacityUsed = $param["StandardCapacityUsed"];
+        }
+
+        if (array_key_exists("DegradeCapacityUsed",$param) and $param["DegradeCapacityUsed"] !== null) {
+            $this->DegradeCapacityUsed = $param["DegradeCapacityUsed"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDays() Obtain Trigger time (in days)
  * @method void setDays(integer $Days) Set Trigger time (in days)
- * @method integer getType() Obtain Transition type (1: archive; 2: deletion)
- * @method void setType(integer $Type) Set Transition type (1: archive; 2: deletion)
+ * @method integer getType() Obtain Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
+ * @method void setType(integer $Type) Set Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
  */
 class Transition extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Transition extends AbstractModel
     public $Days;
 
     /**
-     * @var integer Transition type (1: archive; 2: deletion)
+     * @var integer Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
      */
     public $Type;
 
     /**
      * @param integer $Days Trigger time (in days)
-     * @param integer $Type Transition type (1: archive; 2: deletion)
+     * @param integer $Type Transition type (`1`: transition to ARCHIVE; `2`: delete; `3`: transition to STANDARD_IA)
      */
     function __construct()
     {

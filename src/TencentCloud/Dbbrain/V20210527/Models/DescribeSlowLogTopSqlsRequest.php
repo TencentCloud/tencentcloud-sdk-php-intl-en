@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getStartTime() Obtain Start time, such as "2019-09-10 12:13:14".
  * @method void setStartTime(string $StartTime) Set Start time, such as "2019-09-10 12:13:14".
- * @method string getEndTime() Obtain End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
- * @method void setEndTime(string $EndTime) Set End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+ * @method string getEndTime() Obtain End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
+ * @method void setEndTime(string $EndTime) Set End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
  * @method string getSortBy() Obtain Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined. Default value: QueryTime.
  * @method void setSortBy(string $SortBy) Set Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined. Default value: QueryTime.
  * @method string getOrderBy() Obtain Sorting order. Valid values: ASC (ascending), DESC (descending). Default value: DESC.
@@ -52,7 +52,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @var string End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
      */
     public $EndTime;
 
@@ -89,7 +89,7 @@ class DescribeSlowLogTopSqlsRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID.
      * @param string $StartTime Start time, such as "2019-09-10 12:13:14".
-     * @param string $EndTime End time, such as "2019-09-10 12:13:14". The interval between the end time and the start time can be up to 7 days.
+     * @param string $EndTime End time in the format of "2019-09-11 10:13:14". The interval between the end time and the start time can be up to 7 days.
      * @param string $SortBy Sorting key. Valid values: QueryTime, ExecTimes, RowsSent, LockTime, RowsExamined. Default value: QueryTime.
      * @param string $OrderBy Sorting order. Valid values: ASC (ascending), DESC (descending). Default value: DESC.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.

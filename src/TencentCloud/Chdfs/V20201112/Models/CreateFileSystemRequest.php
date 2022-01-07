@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRootInodeUser(string $RootInodeUser) Set Username of the root directory Inode, which is `hadoop` by default
  * @method string getRootInodeGroup() Obtain Group name of the root directory Inode, which is `supergroup` by default
  * @method void setRootInodeGroup(string $RootInodeGroup) Set Group name of the root directory Inode, which is `supergroup` by default
+ * @method boolean getEnableRanger() Obtain Whether to enable verification of Ranger service addresses
+ * @method void setEnableRanger(boolean $EnableRanger) Set Whether to enable verification of Ranger service addresses
+ * @method array getRangerServiceAddresses() Obtain List of Ranger service addresses (empty array by default)
+ * @method void setRangerServiceAddresses(array $RangerServiceAddresses) Set List of Ranger service addresses (empty array by default)
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateFileSystemRequest extends AbstractModel
     public $RootInodeGroup;
 
     /**
+     * @var boolean Whether to enable verification of Ranger service addresses
+     */
+    public $EnableRanger;
+
+    /**
+     * @var array List of Ranger service addresses (empty array by default)
+     */
+    public $RangerServiceAddresses;
+
+    /**
      * @param string $FileSystemName File system name
      * @param integer $CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
      * @param boolean $PosixAcl Whether to verify POSIX ACL
@@ -80,6 +94,8 @@ class CreateFileSystemRequest extends AbstractModel
      * @param array $SuperUsers List of superuser names, which is an empty array by default
      * @param string $RootInodeUser Username of the root directory Inode, which is `hadoop` by default
      * @param string $RootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
+     * @param boolean $EnableRanger Whether to enable verification of Ranger service addresses
+     * @param array $RangerServiceAddresses List of Ranger service addresses (empty array by default)
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("RootInodeGroup",$param) and $param["RootInodeGroup"] !== null) {
             $this->RootInodeGroup = $param["RootInodeGroup"];
+        }
+
+        if (array_key_exists("EnableRanger",$param) and $param["EnableRanger"] !== null) {
+            $this->EnableRanger = $param["EnableRanger"];
+        }
+
+        if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
+            $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
         }
     }
 }
