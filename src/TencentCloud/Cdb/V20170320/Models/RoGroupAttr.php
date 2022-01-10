@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinRoInGroup(integer $MinRoInGroup) Set Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
  * @method string getWeightMode() Obtain Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
  * @method void setWeightMode(string $WeightMode) Set Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
+ * @method integer getReplicationDelayTime() Obtain Replication delay.
+ * @method void setReplicationDelayTime(integer $ReplicationDelayTime) Set Replication delay.
  */
 class RoGroupAttr extends AbstractModel
 {
@@ -59,11 +61,17 @@ class RoGroupAttr extends AbstractModel
     public $WeightMode;
 
     /**
+     * @var integer Replication delay.
+     */
+    public $ReplicationDelayTime;
+
+    /**
      * @param string $RoGroupName RO group name.
      * @param integer $RoMaxDelayTime Maximum delay threshold for RO instances in seconds. Minimum value: 1. Please note that this value will take effect only if an instance removal policy is enabled in the RO group.
      * @param integer $RoOfflineDelay Whether to enable instance removal. Valid values: 1 (enabled), 0 (not enabled). Please note that if instance removal is enabled, the delay threshold parameter (`RoMaxDelayTime`) must be set.
      * @param integer $MinRoInGroup Minimum number of instances to be retained, which can be set to any value less than or equal to the number of RO instances in the RO group. Please note that if this value is set to be greater than the number of RO instances, no removal will be performed, and if it is set to 0, all instances with an excessive delay will be removed.
      * @param string $WeightMode Weighting mode. Supported values include `system` (automatically assigned by the system) and `custom` (defined by user). Please note that if the `custom` mode is selected, the RO instance weight configuration parameter (RoWeightValues) must be set.
+     * @param integer $ReplicationDelayTime Replication delay.
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class RoGroupAttr extends AbstractModel
 
         if (array_key_exists("WeightMode",$param) and $param["WeightMode"] !== null) {
             $this->WeightMode = $param["WeightMode"];
+        }
+
+        if (array_key_exists("ReplicationDelayTime",$param) and $param["ReplicationDelayTime"] !== null) {
+            $this->ReplicationDelayTime = $param["ReplicationDelayTime"];
         }
     }
 }

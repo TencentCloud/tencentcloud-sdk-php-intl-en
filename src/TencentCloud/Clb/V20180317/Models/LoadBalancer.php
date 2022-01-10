@@ -216,6 +216,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setHealthLogTopicId(string $HealthLogTopicId) Set Health check log topic ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getClusterIds() Obtain 
+ * @method void setClusterIds(array $ClusterIds) Set 
+ * @method array getAttributeFlags() Obtain CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAttributeFlags(array $AttributeFlags) Set CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -522,6 +528,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $HealthLogTopicId;
 
     /**
+     * @var array 
+     */
+    public $ClusterIds;
+
+    /**
+     * @var array CLB attribute
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AttributeFlags;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -619,6 +636,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $HealthLogSetId Health check logset ID of CLB CLS
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $HealthLogTopicId Health check log topic ID of CLB CLS
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ClusterIds 
+     * @param array $AttributeFlags CLB attribute
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -857,6 +877,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("HealthLogTopicId",$param) and $param["HealthLogTopicId"] !== null) {
             $this->HealthLogTopicId = $param["HealthLogTopicId"];
+        }
+
+        if (array_key_exists("ClusterIds",$param) and $param["ClusterIds"] !== null) {
+            $this->ClusterIds = $param["ClusterIds"];
+        }
+
+        if (array_key_exists("AttributeFlags",$param) and $param["AttributeFlags"] !== null) {
+            $this->AttributeFlags = $param["AttributeFlags"];
         }
     }
 }

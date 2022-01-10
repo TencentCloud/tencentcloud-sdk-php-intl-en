@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of CLB instance lists returned. Default value: 20; maximum value: 100.
  * @method integer getOffset() Obtain Starting offset of the CLB instance list returned. Default value: 0.
  * @method void setOffset(integer $Offset) Set Starting offset of the CLB instance list returned. Default value: 0.
- * @method array getFields() Obtain List of fields to be returned. The `LoadBalancerId` and `LoadBalancerName` are returned by default.
- * @method void setFields(array $Fields) Set List of fields to be returned. The `LoadBalancerId` and `LoadBalancerName` are returned by default.
+ * @method array getFields() Obtain List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
+ * @method void setFields(array $Fields) Set List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
  * @method string getTargetType() Obtain Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
  * @method void setTargetType(string $TargetType) Set Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
  * @method array getFilters() Obtain Filter condition of querying lists describing CLB instance details:
@@ -64,7 +64,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var array List of fields to be returned. The `LoadBalancerId` and `LoadBalancerName` are returned by default.
+     * @var array List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
      */
     public $Fields;
 
@@ -91,7 +91,7 @@ class DescribeLoadBalancersDetailRequest extends AbstractModel
     /**
      * @param integer $Limit Number of CLB instance lists returned. Default value: 20; maximum value: 100.
      * @param integer $Offset Starting offset of the CLB instance list returned. Default value: 0.
-     * @param array $Fields List of fields to be returned. The `LoadBalancerId` and `LoadBalancerName` are returned by default.
+     * @param array $Fields List of fields. Only fields specified will be returned. If it’s left blank, `null` is returned. The fields `LoadBalancerId` and `LoadBalancerName` are added by default. For details about fields, see <a href="https://intl.cloud.tencent.com/document/api/214/30694?from_cn_redirect=1#LoadBalancerDetail">LoadBalancerDetail</a>.
      * @param string $TargetType Target type. Valid values: NODE and GROUP. If the list of fields contains `TargetId`, `TargetAddress`, `TargetPort`, `TargetWeight` and other fields, `Target` of the target group or non-target group must be exported.
      * @param array $Filters Filter condition of querying lists describing CLB instance details:
 <li> loadbalancer-id - String - Required: no - (Filter condition) CLB instance ID, such as "lb-12345678". </li>

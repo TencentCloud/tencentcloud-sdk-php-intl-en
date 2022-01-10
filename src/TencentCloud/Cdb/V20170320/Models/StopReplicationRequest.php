@@ -18,20 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StopDelayReplication request structure.
+ * StopReplication request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain Read-Only instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Read-Only instance ID.
  */
-class StopDelayReplicationRequest extends AbstractModel
+class StopReplicationRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Read-Only instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId Read-Only instance ID.
      */
     function __construct()
     {

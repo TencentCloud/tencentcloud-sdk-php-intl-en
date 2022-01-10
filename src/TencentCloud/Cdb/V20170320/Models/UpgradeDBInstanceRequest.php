@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFastUpgrade(integer $FastUpgrade) Set Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
  * @method integer getMaxDelayTime() Obtain Delay threshold. Value range: 1-10. Default value: `10`.
  * @method void setMaxDelayTime(integer $MaxDelayTime) Set Delay threshold. Value range: 1-10. Default value: `10`.
+ * @method integer getCrossCluster() Obtain Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+ * @method void setCrossCluster(integer $CrossCluster) Set Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+ * @method string getZoneId() Obtain New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+ * @method void setZoneId(string $ZoneId) Set New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $MaxDelayTime;
 
     /**
+     * @var integer Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+     */
+    public $CrossCluster;
+
+    /**
+     * @var string New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
+     */
+    public $ZoneId;
+
+    /**
      * @param string $InstanceId Instance ID in the format of `cdb-c1nl9rpv` or `cdbro-c1nl9rpv`. It is the same as the instance ID displayed on the TencentDB Console page. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the ID, whose value is the `InstanceId` value in output parameters.
      * @param integer $Memory Memory size in MB after upgrade. To ensure that the `Memory` value to be passed in is valid, please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/product/236/17229?from_cn_redirect=1) API to query the specifications of the memory that can be upgraded to.
      * @param integer $Volume Disk size in GB after upgrade. To ensure that the `Volume` value to be passed in is valid, please use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/product/236/17229?from_cn_redirect=1) API to query the specifications of the disk that can be upgraded to.
@@ -136,6 +150,8 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param integer $Cpu The number of CPU cores after the instance is upgraded. If this parameter is left empty, the number of CPU cores will be automatically filled in according to the `Memory` value.
      * @param integer $FastUpgrade Whether to enable QuickChange. Valid values: `0` (no), `1` (yes). After QuickChange is enabled, the required resources will be checked. QuickChange is performed only when the required resources support the feature; otherwise, an error message will be returned.
      * @param integer $MaxDelayTime Delay threshold. Value range: 1-10. Default value: `10`.
+     * @param integer $CrossCluster Whether to migrate the source node across AZs. Valid values: `0` (no), `1`(yes). Default value: `0`. If it is `1`, you can modify the source node AZ.
+     * @param string $ZoneId New AZ of the source node. This field is only valid when `CrossCluster` is `1`. Only migration across AZs in the same region is supported.
      */
     function __construct()
     {
@@ -204,6 +220,14 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
             $this->MaxDelayTime = $param["MaxDelayTime"];
+        }
+
+        if (array_key_exists("CrossCluster",$param) and $param["CrossCluster"] !== null) {
+            $this->CrossCluster = $param["CrossCluster"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

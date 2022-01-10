@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method boolean getNeedWorkSecurityGroup() Obtain Whether to enable the node’s default security group (default: `No`, Aphla feature)
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
+ * @method string getSubnetId() Obtain When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+ * @method void setSubnetId(string $SubnetId) Set When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ClusterBasicSettings extends AbstractModel
     public $NeedWorkSecurityGroup;
 
     /**
+     * @var string When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+     */
+    public $SubnetId;
+
+    /**
      * @param string $ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
      * @param string $ClusterVersion Cluster version. The default value is 1.10.5.
      * @param string $ClusterName Cluster name
@@ -96,6 +103,7 @@ class ClusterBasicSettings extends AbstractModel
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param boolean $NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * @param string $SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("NeedWorkSecurityGroup",$param) and $param["NeedWorkSecurityGroup"] !== null) {
             $this->NeedWorkSecurityGroup = $param["NeedWorkSecurityGroup"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

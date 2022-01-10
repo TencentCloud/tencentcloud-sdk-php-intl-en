@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterAdvancedSettings(ClusterAdvancedSettings $ClusterAdvancedSettings) Set Advanced configuration information of the cluster
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Advanced configuration information of the node
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Advanced configuration information of the node
- * @method array getExistedInstancesForNode() Obtain Configuration information of an existing instance
- * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) Set Configuration information of an existing instance
+ * @method array getExistedInstancesForNode() Obtain The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
+ * @method void setExistedInstancesForNode(array $ExistedInstancesForNode) Set The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
  * @method array getInstanceDataDiskMountSettings() Obtain CVM type and the corresponding data disk mounting configuration information.
  * @method void setInstanceDataDiskMountSettings(array $InstanceDataDiskMountSettings) Set CVM type and the corresponding data disk mounting configuration information.
  * @method array getExtensionAddons() Obtain Information of the add-on to be installed
@@ -72,7 +72,7 @@ class CreateClusterRequest extends AbstractModel
     public $InstanceAdvancedSettings;
 
     /**
-     * @var array Configuration information of an existing instance
+     * @var array The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
      */
     public $ExistedInstancesForNode;
 
@@ -93,7 +93,7 @@ class CreateClusterRequest extends AbstractModel
      * @param ClusterBasicSettings $ClusterBasicSettings Basic configuration information of the cluster
      * @param ClusterAdvancedSettings $ClusterAdvancedSettings Advanced configuration information of the cluster
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Advanced configuration information of the node
-     * @param array $ExistedInstancesForNode Configuration information of an existing instance
+     * @param array $ExistedInstancesForNode The configuration information for existing instances. All instances must be in the same VPC. Up to 100 instances are allowed in one VPC. Spot instances are not supported.
      * @param array $InstanceDataDiskMountSettings CVM type and the corresponding data disk mounting configuration information.
      * @param array $ExtensionAddons Information of the add-on to be installed
      */

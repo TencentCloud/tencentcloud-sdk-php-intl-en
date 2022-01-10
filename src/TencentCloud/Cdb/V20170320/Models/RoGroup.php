@@ -58,6 +58,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRoGroupZone(string $RoGroupZone) Set Read-only group AZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDelayReplicationTime() Obtain Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDelayReplicationTime(integer $DelayReplicationTime) Set Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RoGroup extends AbstractModel
 {
@@ -141,6 +145,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RoGroupZone;
 
     /**
+     * @var integer Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DelayReplicationTime;
+
+    /**
      * @param string $RoGroupMode Read-only group mode. Valid values: `alone` (the system assigns a read-only group automatically), `allinone` (a new read-only group will be created), `join` (an existing read-only group will be used).
      * @param string $RoGroupId Read-only group ID.
      * @param string $RoGroupName Read-only group name.
@@ -160,6 +170,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RoGroupZone Read-only group AZ.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $DelayReplicationTime Replication delay.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -237,6 +249,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RoGroupZone",$param) and $param["RoGroupZone"] !== null) {
             $this->RoGroupZone = $param["RoGroupZone"];
+        }
+
+        if (array_key_exists("DelayReplicationTime",$param) and $param["DelayReplicationTime"] !== null) {
+            $this->DelayReplicationTime = $param["DelayReplicationTime"];
         }
     }
 }

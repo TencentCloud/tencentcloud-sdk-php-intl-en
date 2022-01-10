@@ -14,24 +14,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoReplicationDelay response structure.
+ * DescribeLoadBalancerOverview request structure.
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+
  */
-class ModifyRoReplicationDelayResponse extends AbstractModel
+class DescribeLoadBalancerOverviewRequest extends AbstractModel
 {
-    /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public $RequestId;
+
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class ModifyRoReplicationDelayResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
-        }
+
     }
 }

@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
  * @method integer getDeleteSnapshot() Obtain Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
  * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+ * @method AutoMountConfiguration getAutoMountConfiguration() Obtain When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+ * @method void setAutoMountConfiguration(AutoMountConfiguration $AutoMountConfiguration) Set When a cloud disk is created, automatically initialize it and attach it to the specified mount point
  */
 class CreateDisksRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class CreateDisksRequest extends AbstractModel
     public $DeleteSnapshot;
 
     /**
+     * @var AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
+     */
+    public $AutoMountConfiguration;
+
+    /**
      * @param Placement $Placement The location of the instance. The availability zone and the project that the instance belongs to can be specified using this parameter. If the project is not specified, it will be created under the default project.
      * @param string $DiskChargeType Cloud disk billing method. POSTPAID_BY_HOUR: pay as you go by hour<br><li>CDCPAID: Billed together with the bound dedicated cluster<br>For information about the pricing of each method, see the cloud disk [Pricing Overview](https://intl.cloud.tencent.com/document/product/362/2413?from_cn_redirect=1).
      * @param string $DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD
@@ -136,6 +143,7 @@ class CreateDisksRequest extends AbstractModel
      * @param string $Encrypt This parameter is used to create an encrypted cloud disk. Its value is always ENCRYPT.
      * @param DiskChargePrepaid $DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk. 
      * @param integer $DeleteSnapshot Whether to delete the associated non-permanent snapshots when a cloud disk is terminated. Valid values: `0` (do not delete); `1` (delete). Default value: `0`. To find out whether a snapshot is permanent, you can call the `DescribeSnapshots` API and check the `IsPermanent` field (`true`: permanent; `false`: non-permanent) in its response.
+     * @param AutoMountConfiguration $AutoMountConfiguration When a cloud disk is created, automatically initialize it and attach it to the specified mount point
      */
     function __construct()
     {
@@ -211,6 +219,11 @@ class CreateDisksRequest extends AbstractModel
 
         if (array_key_exists("DeleteSnapshot",$param) and $param["DeleteSnapshot"] !== null) {
             $this->DeleteSnapshot = $param["DeleteSnapshot"];
+        }
+
+        if (array_key_exists("AutoMountConfiguration",$param) and $param["AutoMountConfiguration"] !== null) {
+            $this->AutoMountConfiguration = new AutoMountConfiguration();
+            $this->AutoMountConfiguration->deserialize($param["AutoMountConfiguration"]);
         }
     }
 }

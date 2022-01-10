@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSnapshotId(string $SnapshotId) Set Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
  * @method string getDiskId() Obtain ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
  * @method void setDiskId(string $DiskId) Set ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+ * @method boolean getAutoStopInstance() Obtain Specifies whether to shut down a CVM automatically before a rollback
+ * @method void setAutoStopInstance(boolean $AutoStopInstance) Set Specifies whether to shut down a CVM automatically before a rollback
+ * @method boolean getAutoStartInstance() Obtain Specifies whether to start up a CVM automatically after a rollback
+ * @method void setAutoStartInstance(boolean $AutoStartInstance) Set Specifies whether to start up a CVM automatically after a rollback
  */
 class ApplySnapshotRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ApplySnapshotRequest extends AbstractModel
     public $DiskId;
 
     /**
+     * @var boolean Specifies whether to shut down a CVM automatically before a rollback
+     */
+    public $AutoStopInstance;
+
+    /**
+     * @var boolean Specifies whether to start up a CVM automatically after a rollback
+     */
+    public $AutoStartInstance;
+
+    /**
      * @param string $SnapshotId Snapshot ID, which can be queried via [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1).
      * @param string $DiskId ID of the original cloud disk corresponding to the snapshot, which can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+     * @param boolean $AutoStopInstance Specifies whether to shut down a CVM automatically before a rollback
+     * @param boolean $AutoStartInstance Specifies whether to start up a CVM automatically after a rollback
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ApplySnapshotRequest extends AbstractModel
 
         if (array_key_exists("DiskId",$param) and $param["DiskId"] !== null) {
             $this->DiskId = $param["DiskId"];
+        }
+
+        if (array_key_exists("AutoStopInstance",$param) and $param["AutoStopInstance"] !== null) {
+            $this->AutoStopInstance = $param["AutoStopInstance"];
+        }
+
+        if (array_key_exists("AutoStartInstance",$param) and $param["AutoStartInstance"] !== null) {
+            $this->AutoStartInstance = $param["AutoStartInstance"];
         }
     }
 }

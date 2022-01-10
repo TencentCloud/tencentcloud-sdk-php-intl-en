@@ -18,7 +18,7 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoGroupInfo response structure.
+ * StopReplication response structure.
  *
  * @method string getAsyncRequestId() Obtain Async task ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -27,7 +27,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyRoGroupInfoResponse extends AbstractModel
+class StopReplicationResponse extends AbstractModel
 {
     /**
      * @var string Async task ID.

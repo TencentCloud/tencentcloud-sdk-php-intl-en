@@ -18,28 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyRoReplicationDelay request structure.
+ * StartReplication request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getReplicationDelay() Obtain Replication delay in seconds. Value range: 1 to 259200.
- * @method void setReplicationDelay(integer $ReplicationDelay) Set Replication delay in seconds. Value range: 1 to 259200.
+ * @method string getInstanceId() Obtain Read-Only instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Read-Only instance ID.
  */
-class ModifyRoReplicationDelayRequest extends AbstractModel
+class StartReplicationRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Read-Only instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var integer Replication delay in seconds. Value range: 1 to 259200.
-     */
-    public $ReplicationDelay;
-
-    /**
-     * @param string $InstanceId Instance ID
-     * @param integer $ReplicationDelay Replication delay in seconds. Value range: 1 to 259200.
+     * @param string $InstanceId Read-Only instance ID.
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class ModifyRoReplicationDelayRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ReplicationDelay",$param) and $param["ReplicationDelay"] !== null) {
-            $this->ReplicationDelay = $param["ReplicationDelay"];
         }
     }
 }

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoWeightValues(array $RoWeightValues) Set Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
  * @method integer getIsBalanceRoLoad() Obtain Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
  * @method void setIsBalanceRoLoad(integer $IsBalanceRoLoad) Set Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+ * @method integer getReplicationDelayTime() Obtain This field has been deprecated.
+ * @method void setReplicationDelayTime(integer $ReplicationDelayTime) Set This field has been deprecated.
  */
 class ModifyRoGroupInfoRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyRoGroupInfoRequest extends AbstractModel
     public $IsBalanceRoLoad;
 
     /**
+     * @var integer This field has been deprecated.
+     */
+    public $ReplicationDelayTime;
+
+    /**
      * @param string $RoGroupId RO group ID.
      * @param RoGroupAttr $RoGroupInfo RO group details.
      * @param array $RoWeightValues Weights of instances in RO group. If the weighting mode of an RO group is changed to custom mode, this parameter must be set, and a weight value needs to be set for each RO instance.
      * @param integer $IsBalanceRoLoad Whether to rebalance the loads of read-only replicas in the RO group. Valid values: `1` (yes), `0` (no). Default value: `0`. If this parameter is set to `1`, connections to the read-only replicas in the RO group will be interrupted transiently. Please ensure that your application has a reconnection mechanism.
+     * @param integer $ReplicationDelayTime This field has been deprecated.
      */
     function __construct()
     {
@@ -90,6 +98,10 @@ class ModifyRoGroupInfoRequest extends AbstractModel
 
         if (array_key_exists("IsBalanceRoLoad",$param) and $param["IsBalanceRoLoad"] !== null) {
             $this->IsBalanceRoLoad = $param["IsBalanceRoLoad"];
+        }
+
+        if (array_key_exists("ReplicationDelayTime",$param) and $param["ReplicationDelayTime"] !== null) {
+            $this->ReplicationDelayTime = $param["ReplicationDelayTime"];
         }
     }
 }
