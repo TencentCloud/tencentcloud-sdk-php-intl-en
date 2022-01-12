@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceVersion(string $DBInstanceVersion) Set Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
  * @method string getDBCharset() Obtain Instance database character set
  * @method void setDBCharset(string $DBCharset) Set Instance database character set
- * @method string getDBVersion() Obtain PostgreSQL major version
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL major version
+ * @method string getDBVersion() Obtain PostgreSQL version number
+ * @method void setDBVersion(string $DBVersion) Set PostgreSQL version number
  * @method string getCreateTime() Obtain Instance creation time
  * @method void setCreateTime(string $CreateTime) Set Instance creation time
  * @method string getUpdateTime() Obtain Instance last modified time
@@ -102,8 +102,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setNetworkAccessList(array $NetworkAccessList) Set Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDBMajorVersion() Obtain 
- * @method void setDBMajorVersion(string $DBMajorVersion) Set 
+ * @method string getDBMajorVersion() Obtain PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getDBNodeSet() Obtain 
+ * @method void setDBNodeSet(array $DBNodeSet) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -183,7 +187,7 @@ class DBInstance extends AbstractModel
     public $DBCharset;
 
     /**
-     * @var string PostgreSQL major version
+     * @var string PostgreSQL version number
      */
     public $DBVersion;
 
@@ -285,9 +289,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NetworkAccessList;
 
     /**
-     * @var string 
+     * @var string PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DBMajorVersion;
+
+    /**
+     * @var array 
+     */
+    public $DBNodeSet;
 
     /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
@@ -305,7 +315,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $DBInstanceType Instance type. 1: primary (master instance), 2: readonly (read-only instance), 3: guard (disaster recovery instance), 4: temp (temp instance)
      * @param string $DBInstanceVersion Instance edition. Currently, only `standard` edition (dual-server high-availability one-master-one-slave edition) is supported
      * @param string $DBCharset Instance database character set
-     * @param string $DBVersion PostgreSQL major version
+     * @param string $DBVersion PostgreSQL version number
      * @param string $CreateTime Instance creation time
      * @param string $UpdateTime Instance last modified time
      * @param string $ExpireTime Instance expiration time
@@ -331,7 +341,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $NetworkAccessList Network access list of the instance (this field has been deprecated)
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $DBMajorVersion 
+     * @param string $DBMajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $DBNodeSet 
      */
     function __construct()
     {
@@ -499,6 +511,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
             $this->DBMajorVersion = $param["DBMajorVersion"];
+        }
+
+        if (array_key_exists("DBNodeSet",$param) and $param["DBNodeSet"] !== null) {
+            $this->DBNodeSet = [];
+            foreach ($param["DBNodeSet"] as $key => $value){
+                $obj = new DBNode();
+                $obj->deserialize($value);
+                array_push($this->DBNodeSet, $obj);
+            }
         }
     }
 }

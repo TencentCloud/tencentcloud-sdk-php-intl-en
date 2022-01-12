@@ -20,17 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeLicense response structure.
  *
+ * @method string getDealName() Obtain Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setDealName(string $DealName) Set Order ID
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class UpgradeLicenseResponse extends AbstractModel
 {
     /**
+     * @var string Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $DealName;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param string $DealName Order ID
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +58,10 @@ class UpgradeLicenseResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

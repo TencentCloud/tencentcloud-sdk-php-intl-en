@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSyncCheckJob response structure.
+ * BatchModifyTopicAttributes response structure.
  *
+ * @method array getResult() Obtain Returned result.
+ * @method void setResult(array $Result) Set Returned result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateSyncCheckJobResponse extends AbstractModel
+class BatchModifyTopicAttributesResponse extends AbstractModel
 {
+    /**
+     * @var array Returned result.
+     */
+    public $Result;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $Result Returned result.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,15 @@ class CreateSyncCheckJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new BatchModifyTopicResultDTO();
+                $obj->deserialize($value);
+                array_push($this->Result, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * SwitchDrToMaster response structure.
+ * BatchModifyGroupOffsets response structure.
  *
- * @method string getAsyncRequestId() Obtain Backend async task request ID
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Backend async task request ID
+ * @method JgwOperateResponse getResult() Obtain Returned result.
+ * @method void setResult(JgwOperateResponse $Result) Set Returned result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class SwitchDrToMasterResponse extends AbstractModel
+class BatchModifyGroupOffsetsResponse extends AbstractModel
 {
     /**
-     * @var string Backend async task request ID
+     * @var JgwOperateResponse Returned result.
      */
-    public $AsyncRequestId;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class SwitchDrToMasterResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Backend async task request ID
+     * @param JgwOperateResponse $Result Returned result.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,9 @@ class SwitchDrToMasterResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = new JgwOperateResponse();
+            $this->Result->deserialize($param["Result"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

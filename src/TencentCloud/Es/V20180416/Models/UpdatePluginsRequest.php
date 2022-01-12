@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart
  * @method boolean getForceUpdate() Obtain Whether to reinstall
  * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall
+ * @method integer getPluginType() Obtain 0: system plugin
+ * @method void setPluginType(integer $PluginType) Set 0: system plugin
  */
 class UpdatePluginsRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class UpdatePluginsRequest extends AbstractModel
     public $ForceUpdate;
 
     /**
+     * @var integer 0: system plugin
+     */
+    public $PluginType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param array $InstallPluginList List of names of the plugins to be installed
      * @param array $RemovePluginList List of names of the plugins to be uninstalled
      * @param boolean $ForceRestart Whether to force restart
      * @param boolean $ForceUpdate Whether to reinstall
+     * @param integer $PluginType 0: system plugin
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdatePluginsRequest extends AbstractModel
 
         if (array_key_exists("ForceUpdate",$param) and $param["ForceUpdate"] !== null) {
             $this->ForceUpdate = $param["ForceUpdate"];
+        }
+
+        if (array_key_exists("PluginType",$param) and $param["PluginType"] !== null) {
+            $this->PluginType = $param["PluginType"];
         }
     }
 }

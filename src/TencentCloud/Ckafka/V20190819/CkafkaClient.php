@@ -24,6 +24,8 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
 
 /**
  * @method Models\BatchCreateAclResponse BatchCreateAcl(Models\BatchCreateAclRequest $req) This API is used to create ACL policies in batches.
+ * @method Models\BatchModifyGroupOffsetsResponse BatchModifyGroupOffsets(Models\BatchModifyGroupOffsetsRequest $req) This API is used to batch modify consumer group offsets.
+ * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) This API is used to batch set topic attributes.
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) This API is used to add an ACL policy.
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) This API is used to add a partition in a topic.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a CKafka topic.
@@ -41,7 +43,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\DescribeGroupResponse DescribeGroup(Models\DescribeGroupRequest $req) This API is used to enumerate consumer groups (simplified).
  * @method Models\DescribeGroupInfoResponse DescribeGroupInfo(Models\DescribeGroupInfoRequest $req) This API is used to get consumer group information.
  * @method Models\DescribeGroupOffsetsResponse DescribeGroupOffsets(Models\DescribeGroupOffsetsRequest $req) This API is used to get the consumer group offset.
- * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) This API is used to get instance attributes.
+ * @method Models\DescribeInstanceAttributesResponse DescribeInstanceAttributes(Models\DescribeInstanceAttributesRequest $req) This API is used to get instance attributes. 
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to get the list of CKafka instances under a user account.
  * @method Models\DescribeInstancesDetailResponse DescribeInstancesDetail(Models\DescribeInstancesDetailRequest $req) This API is used to get instance list details under a user account.
  * @method Models\DescribeRegionResponse DescribeRegion(Models\DescribeRegionRequest $req) This API is used to enumerate regions, and can be called only in Guangzhou.

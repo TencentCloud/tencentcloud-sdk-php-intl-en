@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSpecCode() Obtain Specification ID
  * @method void setSpecCode(string $SpecCode) Set Specification ID
- * @method string getVersion() Obtain PostgreSQL kernel version number
- * @method void setVersion(string $Version) Set PostgreSQL kernel version number
+ * @method string getVersion() Obtain PostgerSQL version number
+ * @method void setVersion(string $Version) Set PostgerSQL version number
  * @method string getVersionName() Obtain Full version name corresponding to kernel number
  * @method void setVersionName(string $VersionName) Set Full version name corresponding to kernel number
  * @method integer getCpu() Obtain Number of CPU cores
@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPid(integer $Pid) Set Billing ID for this specification
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
+ * @method string getMajorVersion() Obtain PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMajorVersion(string $MajorVersion) Set PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getKernelVersion() Obtain PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setKernelVersion(string $KernelVersion) Set PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -49,7 +57,7 @@ class SpecItemInfo extends AbstractModel
     public $SpecCode;
 
     /**
-     * @var string PostgreSQL kernel version number
+     * @var string PostgerSQL version number
      */
     public $Version;
 
@@ -94,8 +102,20 @@ class SpecItemInfo extends AbstractModel
     public $Type;
 
     /**
+     * @var string PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MajorVersion;
+
+    /**
+     * @var string PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $KernelVersion;
+
+    /**
      * @param string $SpecCode Specification ID
-     * @param string $Version PostgreSQL kernel version number
+     * @param string $Version PostgerSQL version number
      * @param string $VersionName Full version name corresponding to kernel number
      * @param integer $Cpu Number of CPU cores
      * @param integer $Memory Memory size in MB
@@ -104,6 +124,10 @@ class SpecItemInfo extends AbstractModel
      * @param integer $Qps Estimated QPS for this specification
      * @param integer $Pid Billing ID for this specification
      * @param string $Type Machine type
+     * @param string $MajorVersion PostgreSQL major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $KernelVersion PostgreSQL kernel version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -156,6 +180,14 @@ class SpecItemInfo extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("MajorVersion",$param) and $param["MajorVersion"] !== null) {
+            $this->MajorVersion = $param["MajorVersion"];
+        }
+
+        if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
+            $this->KernelVersion = $param["KernelVersion"];
         }
     }
 }

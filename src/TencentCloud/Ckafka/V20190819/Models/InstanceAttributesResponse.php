@@ -116,8 +116,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRemainingTopics(integer $RemainingTopics) Set Number of remaining creatable topics
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method DynamicDiskConfig getDynamicDiskConfig() Obtain 
- * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set 
+ * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceAttributesResponse extends AbstractModel
 {
@@ -306,7 +308,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RemainingTopics;
 
     /**
-     * @var DynamicDiskConfig 
+     * @var DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DynamicDiskConfig;
 
@@ -359,7 +362,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $RemainingTopics Number of remaining creatable topics
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param DynamicDiskConfig $DynamicDiskConfig 
+     * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

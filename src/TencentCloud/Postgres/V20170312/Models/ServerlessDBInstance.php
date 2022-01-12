@@ -84,6 +84,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDBKernelVersion(string $DBKernelVersion) Set Database kernel version
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDBMajorVersion() Obtain Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ServerlessDBInstance extends AbstractModel
 {
@@ -184,6 +188,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBKernelVersion;
 
     /**
+     * @var string Database major version number
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DBMajorVersion;
+
+    /**
      * @param string $DBInstanceId Instance ID, which is the unique identifier
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DBInstanceName Instance name
@@ -215,6 +225,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $TagList The array of tags bound to an instance
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DBKernelVersion Database kernel version
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DBMajorVersion Database major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -307,6 +319,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
             $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("DBMajorVersion",$param) and $param["DBMajorVersion"] !== null) {
+            $this->DBMajorVersion = $param["DBMajorVersion"];
         }
     }
 }

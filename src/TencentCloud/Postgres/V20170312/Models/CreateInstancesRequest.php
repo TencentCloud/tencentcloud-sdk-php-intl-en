@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) Set Instance root account password
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getDBVersion() Obtain PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+ * @method string getDBVersion() Obtain PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+ * @method void setDBVersion(string $DBVersion) Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
  * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
  * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
@@ -62,10 +62,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
  * @method array getSecurityGroupIds() Obtain Security group IDs
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group IDs
- * @method string getDBMajorVersion() Obtain 
- * @method void setDBMajorVersion(string $DBMajorVersion) Set 
- * @method string getDBKernelVersion() Obtain 
- * @method void setDBKernelVersion(string $DBKernelVersion) Set 
+ * @method string getDBMajorVersion() Obtain PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+ * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+ * @method array getDBNodeSet() Obtain 
+ * @method void setDBNodeSet(array $DBNodeSet) Set 
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -115,7 +117,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     * @var string PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
      */
     public $DBVersion;
 
@@ -175,14 +177,19 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string 
+     * @var string PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
      */
     public $DBMajorVersion;
 
     /**
-     * @var string 
+     * @var string PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
      */
     public $DBKernelVersion;
+
+    /**
+     * @var array 
+     */
+    public $DBNodeSet;
 
     /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
@@ -194,7 +201,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $AdminName Instance root account name
      * @param string $AdminPassword Instance root account password
      * @param integer $ProjectId Project ID
-     * @param string $DBVersion PostgreSQL major version. Valid values: `9.3`, `9.5`, `10`, `11`, `12`, `13`, `9.3.5`, `9.5.4`, `10.4`, `11.8`, `12.4`.
+     * @param string $DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
      * @param string $InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
      * @param integer $AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
@@ -206,8 +213,9 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.
      * @param array $SecurityGroupIds Security group IDs
-     * @param string $DBMajorVersion 
-     * @param string $DBKernelVersion 
+     * @param string $DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * @param string $DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * @param array $DBNodeSet 
      */
     function __construct()
     {
@@ -317,6 +325,15 @@ class CreateInstancesRequest extends AbstractModel
 
         if (array_key_exists("DBKernelVersion",$param) and $param["DBKernelVersion"] !== null) {
             $this->DBKernelVersion = $param["DBKernelVersion"];
+        }
+
+        if (array_key_exists("DBNodeSet",$param) and $param["DBNodeSet"] !== null) {
+            $this->DBNodeSet = [];
+            foreach ($param["DBNodeSet"] as $key => $value){
+                $obj = new DBNode();
+                $obj->deserialize($value);
+                array_push($this->DBNodeSet, $obj);
+            }
         }
     }
 }

@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance information of disaster recovery sync, which records the information of the master instance or disaster recovery instance
+ * BatchModifyTopicAttributes request structure.
  *
- * @method string getRegion() Obtain Region name, such as ap-guangzhou
- * @method void setRegion(string $Region) Set Region name, such as ap-guangzhou
- * @method string getInstanceId() Obtain Short instance ID
- * @method void setInstanceId(string $InstanceId) Set Short instance ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method array getTopic() Obtain Topic attribute list
+ * @method void setTopic(array $Topic) Set Topic attribute list
  */
-class SyncInstanceInfo extends AbstractModel
+class BatchModifyTopicAttributesRequest extends AbstractModel
 {
     /**
-     * @var string Region name, such as ap-guangzhou
-     */
-    public $Region;
-
-    /**
-     * @var string Short instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $Region Region name, such as ap-guangzhou
-     * @param string $InstanceId Short instance ID
+     * @var array Topic attribute list
+     */
+    public $Topic;
+
+    /**
+     * @param string $InstanceId Instance ID.
+     * @param array $Topic Topic attribute list
      */
     function __construct()
     {
@@ -54,12 +54,17 @@ class SyncInstanceInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
-            $this->Region = $param["Region"];
-        }
-
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("Topic",$param) and $param["Topic"] !== null) {
+            $this->Topic = [];
+            foreach ($param["Topic"] as $key => $value){
+                $obj = new BatchModifyTopicInfo();
+                $obj->deserialize($value);
+                array_push($this->Topic, $obj);
+            }
         }
     }
 }

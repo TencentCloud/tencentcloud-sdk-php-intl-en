@@ -28,6 +28,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) This API is used to query the eligible ES cluster logs in the current region.
  * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) This API is used to query the operation history of an instance by specified criteria.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
+ * @method Models\DescribeViewsResponse DescribeViews(Models\DescribeViewsRequest $req) This API is used to query view data from three dimensions: cluster, node, and Kibana.
  * @method Models\GetRequestTargetNodeTypesResponse GetRequestTargetNodeTypes(Models\GetRequestTargetNodeTypesRequest $req) This API is used to get the node types used to receive client requests.
  * @method Models\RestartInstanceResponse RestartInstance(Models\RestartInstanceRequest $req) This API is used to restart an ES cluster instance (for operations such as system update). 
  * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) This API is used to restart Kibana. 

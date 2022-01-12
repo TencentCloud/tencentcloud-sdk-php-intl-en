@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * StartSyncJob response structure.
+ * DescribeViews request structure.
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getInstanceId() Obtain Cluster instance ID
+ * @method void setInstanceId(string $InstanceId) Set Cluster instance ID
  */
-class StartSyncJobResponse extends AbstractModel
+class DescribeViewsRequest extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Cluster instance ID
      */
-    public $RequestId;
+    public $InstanceId;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $InstanceId Cluster instance ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class StartSyncJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

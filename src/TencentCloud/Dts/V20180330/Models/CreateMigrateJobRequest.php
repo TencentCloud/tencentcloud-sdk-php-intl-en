@@ -24,36 +24,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJobName(string $JobName) Set Data migration task name
  * @method MigrateOption getMigrateOption() Obtain Migration task configuration options
  * @method void setMigrateOption(MigrateOption $MigrateOption) Set Migration task configuration options
- * @method string getSrcDatabaseType() Obtain Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
- * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+ * @method string getSrcDatabaseType() Obtain Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
  * @method string getSrcAccessType() Obtain Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
  * @method void setSrcAccessType(string $SrcAccessType) Set Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
  * @method SrcInfo getSrcInfo() Obtain Source instance information, which is correlated with the migration task type
  * @method void setSrcInfo(SrcInfo $SrcInfo) Set Source instance information, which is correlated with the migration task type
- * @method string getDstDatabaseType() Obtain Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
- * @method void setDstDatabaseType(string $DstDatabaseType) Set Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+ * @method string getDstDatabaseType() Obtain Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
+ * @method void setDstDatabaseType(string $DstDatabaseType) Set Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
  * @method string getDstAccessType() Obtain Target instance access type, which currently only supports cdb (TencentDB instance)
  * @method void setDstAccessType(string $DstAccessType) Set Target instance access type, which currently only supports cdb (TencentDB instance)
  * @method DstInfo getDstInfo() Obtain Destination instance information
  * @method void setDstInfo(DstInfo $DstInfo) Set Destination instance information
  * @method string getDatabaseInfo() Obtain Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
  * @method void setDatabaseInfo(string $DatabaseInfo) Set Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+ * @method array getTags() Obtain Tag of the instance to be migrated.
+ * @method void setTags(array $Tags) Set Tag of the instance to be migrated.
  */
 class CreateMigrateJobRequest extends AbstractModel
 {
@@ -68,7 +62,7 @@ class CreateMigrateJobRequest extends AbstractModel
     public $MigrateOption;
 
     /**
-     * @var string Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @var string Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public $SrcDatabaseType;
 
@@ -83,7 +77,7 @@ class CreateMigrateJobRequest extends AbstractModel
     public $SrcInfo;
 
     /**
-     * @var string Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @var string Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
      */
     public $DstDatabaseType;
 
@@ -100,34 +94,32 @@ class CreateMigrateJobRequest extends AbstractModel
     /**
      * @var string Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      */
     public $DatabaseInfo;
 
     /**
+     * @var array Tag of the instance to be migrated.
+     */
+    public $Tags;
+
+    /**
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
-     * @param string $SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @param string $SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
      * @param string $SrcAccessType Source instance access type. Valid values: extranet (public network), cvm (CVM-based self-created instance), dcg (Direct Connect-enabled instance), vpncloud (Tencent Cloud VPN-enabled instance), cdb (TencentDB instance), ccn (CCN instance)
      * @param SrcInfo $SrcInfo Source instance information, which is correlated with the migration task type
-     * @param string $DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona. For more information on the supported types in a specific region, see the migration task creation page in the console.
+     * @param string $DstDatabaseType Target instance access type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, and Percona, SQL Server, and TDSQL-C for MySQL. For more information on the supported types in a specific region, see the migration task creation page in the console.
      * @param string $DstAccessType Target instance access type, which currently only supports cdb (TencentDB instance)
      * @param DstInfo $DstInfo Destination instance information
      * @param string $DatabaseInfo Information of the source table to be migrated, which is described in JSON string format. It is required if MigrateOption.MigrateObject is 2 (migrating the specified table).
 For databases with a database-table structure:
-[{Database:db1,Table:[table1,table2]},{Database:db2}]
+[{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
 For databases with a database-schema-table structure:
-[{Database:db1,Schema:s1
-Table:[table1,table2]},{Database:db1,Schema:s2
-Table:[table1,table2]},{Database:db2,Schema:s1
-Table:[table1,table2]},{Database:db3},{Database:db4
-Schema:s1}]
+[{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
+     * @param array $Tags Tag of the instance to be migrated.
      */
     function __construct()
     {
@@ -179,6 +171,15 @@ Schema:s1}]
 
         if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
             $this->DatabaseInfo = $param["DatabaseInfo"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagItem();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

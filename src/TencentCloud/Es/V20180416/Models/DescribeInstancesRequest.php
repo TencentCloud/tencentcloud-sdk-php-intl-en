@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set Node tag information list
  * @method array getIpList() Obtain VPC VIP list
  * @method void setIpList(array $IpList) Set VPC VIP list
+ * @method array getZoneList() Obtain List of availability zones
+ * @method void setZoneList(array $ZoneList) Set List of availability zones
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $IpList;
 
     /**
+     * @var array List of availability zones
+     */
+    public $ZoneList;
+
+    /**
      * @param string $Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      * @param array $InstanceIds List of cluster instance IDs
      * @param array $InstanceNames List of cluster instance names
@@ -96,6 +103,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param integer $OrderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
      * @param array $TagList Node tag information list
      * @param array $IpList VPC VIP list
+     * @param array $ZoneList List of availability zones
      */
     function __construct()
     {
@@ -149,6 +157,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("IpList",$param) and $param["IpList"] !== null) {
             $this->IpList = $param["IpList"];
+        }
+
+        if (array_key_exists("ZoneList",$param) and $param["ZoneList"] !== null) {
+            $this->ZoneList = $param["ZoneList"];
         }
     }
 }

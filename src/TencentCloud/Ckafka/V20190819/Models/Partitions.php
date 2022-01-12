@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSyncCheckJob request structure.
+ * Partition information
  *
- * @method string getJobId() Obtain ID of the disaster recovery sync task to be queried
- * @method void setJobId(string $JobId) Set ID of the disaster recovery sync task to be queried
+ * @method integer getPartition() Obtain Partition.
+ * @method void setPartition(integer $Partition) Set Partition.
+ * @method integer getOffset() Obtain Partition consumption offset.
+ * @method void setOffset(integer $Offset) Set Partition consumption offset.
  */
-class DescribeSyncCheckJobRequest extends AbstractModel
+class Partitions extends AbstractModel
 {
     /**
-     * @var string ID of the disaster recovery sync task to be queried
+     * @var integer Partition.
      */
-    public $JobId;
+    public $Partition;
 
     /**
-     * @param string $JobId ID of the disaster recovery sync task to be queried
+     * @var integer Partition consumption offset.
+     */
+    public $Offset;
+
+    /**
+     * @param integer $Partition Partition.
+     * @param integer $Offset Partition consumption offset.
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeSyncCheckJobRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("JobId",$param) and $param["JobId"] !== null) {
-            $this->JobId = $param["JobId"];
+        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
+            $this->Partition = $param["Partition"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

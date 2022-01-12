@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getDealName() Obtain Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setDealName(string $DealName) Set Order ID
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +37,20 @@ class CreateInstanceResponse extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string Order ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $DealName;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $InstanceId Instance ID
+     * @param string $DealName Order ID
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +68,10 @@ class CreateInstanceResponse extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

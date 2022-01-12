@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
  * @method integer getRetentionBytes() Obtain Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+ * @method array getTags() Obtain Tag list.
+ * @method void setTags(array $Tags) Set Tag list.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -122,6 +124,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $RetentionBytes;
 
     /**
+     * @var array Tag list.
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -136,6 +143,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
      * @param string $AclRuleName Name of the preset ACL rule.
      * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
+     * @param array $Tags Tag list.
      */
     function __construct()
     {
@@ -204,6 +212,15 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("RetentionBytes",$param) and $param["RetentionBytes"] !== null) {
             $this->RetentionBytes = $param["RetentionBytes"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dts\V20180330\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifySyncJob response structure.
+ * 
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getRole() Obtain 
+ * @method void setRole(string $Role) Set 
+ * @method string getZone() Obtain 
+ * @method void setZone(string $Zone) Set 
  */
-class ModifySyncJobResponse extends AbstractModel
+class DBNode extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string 
      */
-    public $RequestId;
+    public $Role;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string 
+     */
+    public $Zone;
+
+    /**
+     * @param string $Role 
+     * @param string $Zone 
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class ModifySyncJobResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
         }
     }
 }

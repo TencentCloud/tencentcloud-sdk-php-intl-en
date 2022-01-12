@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRebalanceTime(integer $RebalanceTime) Set Modification of the rebalancing time after upgrade
  * @method integer getPublicNetwork() Obtain Timestamp
  * @method void setPublicNetwork(integer $PublicNetwork) Set Timestamp
+ * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy configuration.
+ * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy configuration.
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $PublicNetwork;
 
     /**
+     * @var DynamicDiskConfig Dynamic disk expansion policy configuration.
+     */
+    public $DynamicDiskConfig;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
      * @param string $InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
@@ -80,6 +87,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param DynamicRetentionTime $DynamicRetentionConfig Dynamic message retention policy configuration
      * @param integer $RebalanceTime Modification of the rebalancing time after upgrade
      * @param integer $PublicNetwork Timestamp
+     * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy configuration.
      */
     function __construct()
     {
@@ -122,6 +130,11 @@ class ModifyInstanceAttributesRequest extends AbstractModel
 
         if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
             $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
+            $this->DynamicDiskConfig = new DynamicDiskConfig();
+            $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
         }
     }
 }

@@ -50,6 +50,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setPhysical(string $Physical) Set Purchase of Physical Dedicated Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getPublicNetwork() Obtain Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublicNetwork(string $PublicNetwork) Set Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPublicNetworkLimit() Obtain Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublicNetworkLimit(string $PublicNetworkLimit) Set Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ZoneResponse extends AbstractModel
 {
@@ -109,6 +117,18 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $Physical;
 
     /**
+     * @var string Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublicNetwork;
+
+    /**
+     * @var string Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublicNetworkLimit;
+
+    /**
      * @param array $ZoneList Zone list
      * @param integer $MaxBuyInstanceNum Maximum number of instances to be purchased
      * @param integer $MaxBandwidth Maximum bandwidth in MB/S
@@ -124,6 +144,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $Physical Purchase of Physical Dedicated Edition configurations
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PublicNetworkLimit Public network bandwidth configuration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -188,6 +212,14 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("Physical",$param) and $param["Physical"] !== null) {
             $this->Physical = $param["Physical"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("PublicNetworkLimit",$param) and $param["PublicNetworkLimit"] !== null) {
+            $this->PublicNetworkLimit = $param["PublicNetworkLimit"];
         }
     }
 }

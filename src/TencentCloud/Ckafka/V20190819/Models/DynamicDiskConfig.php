@@ -18,44 +18,60 @@ namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Dynamic disk expansion configuration
  *
- * @method integer getEnable() Obtain 
- * @method void setEnable(integer $Enable) Set 
- * @method integer getStepForwardPercentage() Obtain 
- * @method void setStepForwardPercentage(integer $StepForwardPercentage) Set 
- * @method integer getDiskQuotaPercentage() Obtain 
- * @method void setDiskQuotaPercentage(integer $DiskQuotaPercentage) Set 
- * @method integer getMaxDiskSpace() Obtain 
- * @method void setMaxDiskSpace(integer $MaxDiskSpace) Set 
+ * @method integer getEnable() Obtain Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEnable(integer $Enable) Set Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getStepForwardPercentage() Obtain Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStepForwardPercentage(integer $StepForwardPercentage) Set Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDiskQuotaPercentage() Obtain Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiskQuotaPercentage(integer $DiskQuotaPercentage) Set Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxDiskSpace() Obtain Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxDiskSpace(integer $MaxDiskSpace) Set Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DynamicDiskConfig extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Enable;
 
     /**
-     * @var integer 
+     * @var integer Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $StepForwardPercentage;
 
     /**
-     * @var integer 
+     * @var integer Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiskQuotaPercentage;
 
     /**
-     * @var integer 
+     * @var integer Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $MaxDiskSpace;
 
     /**
-     * @param integer $Enable 
-     * @param integer $StepForwardPercentage 
-     * @param integer $DiskQuotaPercentage 
-     * @param integer $MaxDiskSpace 
+     * @param integer $Enable Whether to enable dynamic disk expansion configuration. `0`: disable, `1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $StepForwardPercentage Percentage of dynamic disk expansion each time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DiskQuotaPercentage Disk quota threshold (in percentage) for triggering the automatic disk expansion event.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxDiskSpace Max disk space in GB.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

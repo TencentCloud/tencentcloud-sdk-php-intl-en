@@ -95,29 +95,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setEnableHotWarmMode(boolean $EnableHotWarmMode) Set Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getWarmNodeType() Obtain Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setWarmNodeType(string $WarmNodeType) Set Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method integer getWarmNodeNum() Obtain Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setWarmNodeNum(integer $WarmNodeNum) Set Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method integer getWarmCpuNum() Obtain Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setWarmCpuNum(integer $WarmCpuNum) Set Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWarmMemSize() Obtain Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarmMemSize(integer $WarmMemSize) Set Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getWarmMemSize() Obtain Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setWarmMemSize(integer $WarmMemSize) Set Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getWarmDiskType() Obtain Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setWarmDiskType(string $WarmDiskType) Set Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getWarmDiskSize() Obtain Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarmDiskSize(integer $WarmDiskSize) Set Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getWarmDiskSize() Obtain Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setWarmDiskSize(integer $WarmDiskSize) Set Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
  * @method array getNodeInfoList() Obtain Cluster node information list
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeInfoList(array $NodeInfoList) Set Cluster node information list
@@ -184,6 +184,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSecurityGroups(array $SecurityGroups) Set Security group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getColdNodeType() Obtain Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdNodeType(string $ColdNodeType) Set Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getColdNodeNum() Obtain Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdNodeNum(integer $ColdNodeNum) Set Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getColdCpuNum() Obtain Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdCpuNum(integer $ColdCpuNum) Set Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getColdMemSize() Obtain Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdMemSize(integer $ColdMemSize) Set Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getColdDiskType() Obtain Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdDiskType(string $ColdDiskType) Set Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getColdDiskSize() Obtain Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColdDiskSize(integer $ColdDiskSize) Set Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getFrozenNodeType() Obtain Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenNodeType(string $FrozenNodeType) Set Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getFrozenNodeNum() Obtain Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenNodeNum(integer $FrozenNodeNum) Set Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getFrozenCpuNum() Obtain Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenCpuNum(integer $FrozenCpuNum) Set Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getFrozenMemSize() Obtain Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenMemSize(integer $FrozenMemSize) Set Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getFrozenDiskType() Obtain Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenDiskType(string $FrozenDiskType) Set Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getFrozenDiskSize() Obtain Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setFrozenDiskSize(integer $FrozenDiskSize) Set Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -370,37 +418,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmNodeType;
 
     /**
      * @var integer Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmNodeNum;
 
     /**
      * @var integer Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmCpuNum;
 
     /**
-     * @var integer Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmMemSize;
 
     /**
      * @var string Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmDiskType;
 
     /**
-     * @var integer Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $WarmDiskSize;
 
@@ -506,6 +554,78 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $SecurityGroups;
 
     /**
+     * @var string Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdNodeType;
+
+    /**
+     * @var integer Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdNodeNum;
+
+    /**
+     * @var integer Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdCpuNum;
+
+    /**
+     * @var integer Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdMemSize;
+
+    /**
+     * @var string Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdDiskType;
+
+    /**
+     * @var integer Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColdDiskSize;
+
+    /**
+     * @var string Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenNodeType;
+
+    /**
+     * @var integer Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenNodeNum;
+
+    /**
+     * @var integer Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenCpuNum;
+
+    /**
+     * @var integer Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenMemSize;
+
+    /**
+     * @var string Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenDiskType;
+
+    /**
+     * @var integer Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $FrozenDiskSize;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -544,17 +664,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param boolean $EnableHotWarmMode Whether it is a hot/warm cluster <li>true: yes </li><li>false: no</li>
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $WarmNodeType Warm node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $WarmNodeNum Number of warm nodes
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $WarmCpuNum Number of warm node CPU cores
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $WarmMemSize Warm node memory size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $WarmMemSize Warm node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $WarmDiskType Warm node disk type
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $WarmDiskSize Warm node disk size in GB
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $WarmDiskSize Warm node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      * @param array $NodeInfoList Cluster node information list
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EsPublicUrl ES public IP address
@@ -588,6 +708,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $SecurityGroups Security group ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ColdNodeType Cold node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $ColdNodeNum Number of cold nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $ColdCpuNum Number of cold node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $ColdMemSize Cold node memory size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $ColdDiskType Cold node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $ColdDiskSize Cold node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $FrozenNodeType Frozen node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $FrozenNodeNum Number of frozen nodes
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $FrozenCpuNum Number of frozen node CPU cores
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $FrozenMemSize Frozen node memory size (GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $FrozenDiskType Frozen node disk type
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -858,6 +1002,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("ColdNodeType",$param) and $param["ColdNodeType"] !== null) {
+            $this->ColdNodeType = $param["ColdNodeType"];
+        }
+
+        if (array_key_exists("ColdNodeNum",$param) and $param["ColdNodeNum"] !== null) {
+            $this->ColdNodeNum = $param["ColdNodeNum"];
+        }
+
+        if (array_key_exists("ColdCpuNum",$param) and $param["ColdCpuNum"] !== null) {
+            $this->ColdCpuNum = $param["ColdCpuNum"];
+        }
+
+        if (array_key_exists("ColdMemSize",$param) and $param["ColdMemSize"] !== null) {
+            $this->ColdMemSize = $param["ColdMemSize"];
+        }
+
+        if (array_key_exists("ColdDiskType",$param) and $param["ColdDiskType"] !== null) {
+            $this->ColdDiskType = $param["ColdDiskType"];
+        }
+
+        if (array_key_exists("ColdDiskSize",$param) and $param["ColdDiskSize"] !== null) {
+            $this->ColdDiskSize = $param["ColdDiskSize"];
+        }
+
+        if (array_key_exists("FrozenNodeType",$param) and $param["FrozenNodeType"] !== null) {
+            $this->FrozenNodeType = $param["FrozenNodeType"];
+        }
+
+        if (array_key_exists("FrozenNodeNum",$param) and $param["FrozenNodeNum"] !== null) {
+            $this->FrozenNodeNum = $param["FrozenNodeNum"];
+        }
+
+        if (array_key_exists("FrozenCpuNum",$param) and $param["FrozenCpuNum"] !== null) {
+            $this->FrozenCpuNum = $param["FrozenCpuNum"];
+        }
+
+        if (array_key_exists("FrozenMemSize",$param) and $param["FrozenMemSize"] !== null) {
+            $this->FrozenMemSize = $param["FrozenMemSize"];
+        }
+
+        if (array_key_exists("FrozenDiskType",$param) and $param["FrozenDiskType"] !== null) {
+            $this->FrozenDiskType = $param["FrozenDiskType"];
+        }
+
+        if (array_key_exists("FrozenDiskSize",$param) and $param["FrozenDiskSize"] !== null) {
+            $this->FrozenDiskSize = $param["FrozenDiskSize"];
         }
     }
 }
