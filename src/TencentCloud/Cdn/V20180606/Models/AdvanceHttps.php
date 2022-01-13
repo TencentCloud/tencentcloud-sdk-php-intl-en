@@ -18,60 +18,96 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Custom HTTPS forwarding configuration
  *
- * @method string getCustomTlsStatus() Obtain 
- * @method void setCustomTlsStatus(string $CustomTlsStatus) Set 
- * @method array getTlsVersion() Obtain 
- * @method void setTlsVersion(array $TlsVersion) Set 
- * @method string getCipher() Obtain 
- * @method void setCipher(string $Cipher) Set 
- * @method string getVerifyOriginType() Obtain 
- * @method void setVerifyOriginType(string $VerifyOriginType) Set 
- * @method ServerCert getCertInfo() Obtain 
- * @method void setCertInfo(ServerCert $CertInfo) Set 
- * @method ClientCert getOriginCertInfo() Obtain 
- * @method void setOriginCertInfo(ClientCert $OriginCertInfo) Set 
+ * @method string getCustomTlsStatus() Obtain Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCustomTlsStatus(string $CustomTlsStatus) Set Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTlsVersion() Obtain Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTlsVersion(array $TlsVersion) Set Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCipher() Obtain Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCipher(string $Cipher) Set Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getVerifyOriginType() Obtain Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVerifyOriginType(string $VerifyOriginType) Set Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ServerCert getCertInfo() Obtain Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCertInfo(ServerCert $CertInfo) Set Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ClientCert getOriginCertInfo() Obtain Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOriginCertInfo(ClientCert $OriginCertInfo) Set Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AdvanceHttps extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CustomTlsStatus;
 
     /**
-     * @var array 
+     * @var array Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $TlsVersion;
 
     /**
-     * @var string 
+     * @var string Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Cipher;
 
     /**
-     * @var string 
+     * @var string Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $VerifyOriginType;
 
     /**
-     * @var ServerCert 
+     * @var ServerCert Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CertInfo;
 
     /**
-     * @var ClientCert 
+     * @var ClientCert Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginCertInfo;
 
     /**
-     * @param string $CustomTlsStatus 
-     * @param array $TlsVersion 
-     * @param string $Cipher 
-     * @param string $VerifyOriginType 
-     * @param ServerCert $CertInfo 
-     * @param ClientCert $OriginCertInfo 
+     * @param string $CustomTlsStatus Custom TLS data switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Cipher Custom encryption suite
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $VerifyOriginType Origin authentication type
+`off`: disable authentication
+`oneWay`: authenticate the origin 
+`twoWay`: two-way authentication
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ServerCert $CertInfo Information of the origin-pull certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ClientCert $OriginCertInfo Information of the origin server certificate
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

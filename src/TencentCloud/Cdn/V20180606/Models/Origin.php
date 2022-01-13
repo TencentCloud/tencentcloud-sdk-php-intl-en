@@ -127,8 +127,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPathBasedOrigin(array $PathBasedOrigin) Set Path-based origin-pull configurations
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method AdvanceHttps getAdvanceHttps() Obtain 
- * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) Set 
+ * @method AdvanceHttps getAdvanceHttps() Obtain Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) Set Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
 {
@@ -227,7 +229,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PathBasedOrigin;
 
     /**
-     * @var AdvanceHttps 
+     * @var AdvanceHttps Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $AdvanceHttps;
 
@@ -282,7 +285,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $PathBasedOrigin Path-based origin-pull configurations
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param AdvanceHttps $AdvanceHttps 
+     * @param AdvanceHttps $AdvanceHttps Advanced HTTPS forwarding configuration
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
