@@ -34,6 +34,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setModTime(string $ModTime) Set Update time
 Note: This field may return null, indicating that no valid value was found.
+ * @method string getStatus() Obtain Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class FunctionVersion extends AbstractModel
 {
@@ -61,6 +65,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $ModTime;
 
     /**
+     * @var string Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $Version Function version name
      * @param string $Description Version description
 Note: This field may return null, indicating that no valid values is found.
@@ -68,6 +78,8 @@ Note: This field may return null, indicating that no valid values is found.
 Note: This field may return null, indicating that no valid value was found.
      * @param string $ModTime Update time
 Note: This field may return null, indicating that no valid value was found.
+     * @param string $Status Version status
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("ModTime",$param) and $param["ModTime"] !== null) {
             $this->ModTime = $param["ModTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

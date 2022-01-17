@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateFunctionCode request structure.
  *
- * @method string getHandler() Obtain Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
- * @method void setHandler(string $Handler) Set Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
  * @method string getFunctionName() Obtain Name of the function to be modified
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be modified
+ * @method string getHandler() Obtain Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+ * @method void setHandler(string $Handler) Set Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
  * @method string getCosBucketName() Obtain COS bucket name
  * @method void setCosBucketName(string $CosBucketName) Set COS bucket name
  * @method string getCosObjectName() Obtain COS object path
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Function namespace
  * @method string getCosBucketRegion() Obtain COS region. Note: Beijing includes ap-beijing and ap-beijing-1.
  * @method void setCosBucketRegion(string $CosBucketRegion) Set COS region. Note: Beijing includes ap-beijing and ap-beijing-1.
+ * @method string getInstallDependency() Obtain Whether to install dependencies automatically
+ * @method void setInstallDependency(string $InstallDependency) Set Whether to install dependencies automatically
  * @method string getEnvId() Obtain Function environment
  * @method void setEnvId(string $EnvId) Set Function environment
  * @method string getPublish() Obtain It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
@@ -46,14 +48,14 @@ use TencentCloud\Common\AbstractModel;
 class UpdateFunctionCodeRequest extends AbstractModel
 {
     /**
-     * @var string Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
-     */
-    public $Handler;
-
-    /**
      * @var string Name of the function to be modified
      */
     public $FunctionName;
+
+    /**
+     * @var string Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
+     */
+    public $Handler;
 
     /**
      * @var string COS bucket name
@@ -81,6 +83,11 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $CosBucketRegion;
 
     /**
+     * @var string Whether to install dependencies automatically
+     */
+    public $InstallDependency;
+
+    /**
      * @var string Function environment
      */
     public $EnvId;
@@ -101,13 +108,14 @@ class UpdateFunctionCodeRequest extends AbstractModel
     public $CodeSource;
 
     /**
-     * @param string $Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
      * @param string $FunctionName Name of the function to be modified
+     * @param string $Handler Function handler name, which is in the `file name.function name` form. Use a period (.) to separate a file name and function name. The file name and function name must start and end with letters and contain 2-60 characters, including letters, digits, underscores (_), and hyphens (-).
      * @param string $CosBucketName COS bucket name
      * @param string $CosObjectName COS object path
      * @param string $ZipFile It contains a function code file and its dependencies in the ZIP format. When you use this API, the ZIP file needs to be encoded with Base64. Up to 20 MB is supported.
      * @param string $Namespace Function namespace
      * @param string $CosBucketRegion COS region. Note: Beijing includes ap-beijing and ap-beijing-1.
+     * @param string $InstallDependency Whether to install dependencies automatically
      * @param string $EnvId Function environment
      * @param string $Publish It specifies whether to synchronously release a new version during the update. The default value is `FALSE`, indicating not to release a new version.
      * @param Code $Code Function code
@@ -126,12 +134,12 @@ class UpdateFunctionCodeRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Handler",$param) and $param["Handler"] !== null) {
-            $this->Handler = $param["Handler"];
-        }
-
         if (array_key_exists("FunctionName",$param) and $param["FunctionName"] !== null) {
             $this->FunctionName = $param["FunctionName"];
+        }
+
+        if (array_key_exists("Handler",$param) and $param["Handler"] !== null) {
+            $this->Handler = $param["Handler"];
         }
 
         if (array_key_exists("CosBucketName",$param) and $param["CosBucketName"] !== null) {
@@ -152,6 +160,10 @@ class UpdateFunctionCodeRequest extends AbstractModel
 
         if (array_key_exists("CosBucketRegion",$param) and $param["CosBucketRegion"] !== null) {
             $this->CosBucketRegion = $param["CosBucketRegion"];
+        }
+
+        if (array_key_exists("InstallDependency",$param) and $param["InstallDependency"] !== null) {
+            $this->InstallDependency = $param["InstallDependency"];
         }
 
         if (array_key_exists("EnvId",$param) and $param["EnvId"] !== null) {

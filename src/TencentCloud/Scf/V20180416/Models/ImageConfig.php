@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRegistryId(string $RegistryId) Set The temp token that a TCR Enterprise instance uses to obtain an image. It’s required when `ImageType` is `enterprise`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getEntryPoint() Obtain Entry point of the application
+ * @method string getEntryPoint() Obtain Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEntryPoint(string $EntryPoint) Set Entry point of the application
+ * @method void setEntryPoint(string $EntryPoint) Set Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCommand() Obtain entrypoint execution command
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -60,7 +60,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RegistryId;
 
     /**
-     * @var string Entry point of the application
+     * @var string Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $EntryPoint;
@@ -82,7 +82,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $ImageUri {domain}/{namespace}/{imageName}:{tag}@{digest}
      * @param string $RegistryId The temp token that a TCR Enterprise instance uses to obtain an image. It’s required when `ImageType` is `enterprise`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $EntryPoint Entry point of the application
+     * @param string $EntryPoint Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Command entrypoint execution command
 Note: this field may return `null`, indicating that no valid values can be obtained.

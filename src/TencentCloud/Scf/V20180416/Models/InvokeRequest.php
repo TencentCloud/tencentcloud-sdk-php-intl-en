@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Function name
  * @method string getInvocationType() Obtain Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
  * @method void setInvocationType(string $InvocationType) Set Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
- * @method string getQualifier() Obtain Version number or name of the triggered function
- * @method void setQualifier(string $Qualifier) Set Version number or name of the triggered function
+ * @method string getQualifier() Obtain The version or alias of the triggered function. It defaults to $LATEST
+ * @method void setQualifier(string $Qualifier) Set The version or alias of the triggered function. It defaults to $LATEST
  * @method string getClientContext() Obtain Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
  * @method void setClientContext(string $ClientContext) Set Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
  * @method string getLogType() Obtain Null for async invocations
@@ -48,7 +48,7 @@ class InvokeRequest extends AbstractModel
     public $InvocationType;
 
     /**
-     * @var string Version number or name of the triggered function
+     * @var string The version or alias of the triggered function. It defaults to $LATEST
      */
     public $Qualifier;
 
@@ -75,7 +75,7 @@ class InvokeRequest extends AbstractModel
     /**
      * @param string $FunctionName Function name
      * @param string $InvocationType Fill in `RequestResponse` for synchronized invocations (default and recommended) and `Event` for asychronized invocations. Note that for synchronized invocations, the max timeout period is 300s. Choose asychronized invocations if the required timeout period is longer than 300 seconds. You can also use [InvokeFunction](https://intl.cloud.tencent.com/document/product/583/58400?from_cn_redirect=1) for synchronized invocations. 
-     * @param string $Qualifier Version number or name of the triggered function
+     * @param string $Qualifier The version or alias of the triggered function. It defaults to $LATEST
      * @param string $ClientContext Function running parameter, which is in the JSON format. The maximum parameter size is 6 MB for synchronized invocations and 128KB for asynchronized invocations. This field corresponds to [event input parameter](https://intl.cloud.tencent.com/document/product/583/9210?from_cn_redirect=1#.E5.87.BD.E6.95.B0.E5.85.A5.E5.8F.82.3Ca-id.3D.22input.22.3E.3C.2Fa.3E).
      * @param string $LogType Null for async invocations
      * @param string $Namespace Namespace

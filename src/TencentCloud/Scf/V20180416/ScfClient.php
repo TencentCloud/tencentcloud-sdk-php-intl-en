@@ -44,12 +44,14 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\DeleteTriggerResponse DeleteTrigger(Models\DeleteTriggerRequest $req) This API is used to delete an existing trigger based on the input parameters.
  * @method Models\GetAccountResponse GetAccount(Models\GetAccountRequest $req) This API is used to get the account information.
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) This API is used to get the alias details such as the name, description, version, and routing information.
+ * @method Models\GetAsyncEventStatusResponse GetAsyncEventStatus(Models\GetAsyncEventStatusRequest $req) This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
  * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) This API is used to obtain the download address of the function code package.
  * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) This API is used to return function running logs according to the specified log query criteria.
  * @method Models\GetLayerVersionResponse GetLayerVersion(Models\GetLayerVersionRequest $req) This API is used to get the layer version details, including links used to download files in the layer.
  * @method Models\GetProvisionedConcurrencyConfigResponse GetProvisionedConcurrencyConfig(Models\GetProvisionedConcurrencyConfigRequest $req) This API is used to get the provisioned concurrency details of a function or its specified version.
+ * @method Models\GetRequestStatusResponse GetRequestStatus(Models\GetRequestStatusRequest $req) This API is used to query the status of a single function request.
  * @method Models\GetReservedConcurrencyConfigResponse GetReservedConcurrencyConfig(Models\GetReservedConcurrencyConfigRequest $req) This API is used to obtain the reserved quota details of a function. 
  * @method Models\InvokeResponse Invoke(Models\InvokeRequest $req) This API is used to run a function.
  * @method Models\InvokeFunctionResponse InvokeFunction(Models\InvokeFunctionRequest $req)  This API is used to invoke functions synchronously.

@@ -22,15 +22,24 @@ use TencentCloud\Common\AbstractModel;
 If more than one filter exists, the logical relationship between these filters is `AND`.
 If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
  *
- * @method string getName() Obtain Fields to be filtered
- * @method void setName(string $Name) Set Fields to be filtered
+ * @method string getName() Obtain Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
+ * @method void setName(string $Name) Set Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
  * @method array getValues() Obtain Filter values of the field
  * @method void setValues(array $Values) Set Filter values of the field
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string Fields to be filtered
+     * @var string Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
      */
     public $Name;
 
@@ -40,7 +49,10 @@ class Filter extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name Fields to be filtered
+     * @param string $Name Fields to be filtered. Up to 10 conditions allowed.
+Values of `Name`: `VpcId`, `SubnetId`, `ClsTopicId`, `ClsLogsetId`, `Role`, `CfsId`, `CfsMountInsId`, `Eip`. Values limit: 1.
+Name options: Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable. Values limit: 20.
+When `Name` is `Runtime`, `CustomImage` refers to the image type function 
      * @param array $Values Filter values of the field
      */
     function __construct()
