@@ -35,6 +35,7 @@ use TencentCloud\Lighthouse\V20200324\Models as Models;
 * Batch operations are supported. The maximum number of instances in each request is 100. If instances not available for the operation are selected, you will get an error code.
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\AttachCcnResponse AttachCcn(Models\AttachCcnRequest $req) This API is used to associate a CCN instance.
+ * @method Models\AttachDisksResponse AttachDisks(Models\AttachDisksRequest $req) This API is used to attach one or more cloud disks.
  * @method Models\CreateBlueprintResponse CreateBlueprint(Models\CreateBlueprintRequest $req) This API is used to create an image.
  * @method Models\CreateFirewallRulesResponse CreateFirewallRules(Models\CreateFirewallRulesRequest $req) This API is used to add a firewall rule on an instance.
 
@@ -65,8 +66,14 @@ In the `FirewallRules` parameter:
 The snapshot must be in `NORMAL` status. To query the status of a snapshot, you can call the `DescribeSnapshots` API and see the `SnapshotState` field in the response.
  * @method Models\DescribeBlueprintInstancesResponse DescribeBlueprintInstances(Models\DescribeBlueprintInstancesRequest $req) This API is used to query the information of an image instance.
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) This API is used to query the information of an image.
+ * @method Models\DescribeBundleDiscountResponse DescribeBundleDiscount(Models\DescribeBundleDiscountRequest $req) This API is used to query the discount information of a package.
  * @method Models\DescribeBundlesResponse DescribeBundles(Models\DescribeBundlesRequest $req) This API is used to query the information of a package.
  * @method Models\DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstances(Models\DescribeCcnAttachedInstancesRequest $req) This API is used to query the information of instances associated with CCN.
+ * @method Models\DescribeDiskConfigsResponse DescribeDiskConfigs(Models\DescribeDiskConfigsRequest $req) This API is used to query the cloud disk configuration.
+ * @method Models\DescribeDiskDiscountResponse DescribeDiskDiscount(Models\DescribeDiskDiscountRequest $req) This API is used to query the discount information of a cloud disk.
+ * @method Models\DescribeDisksResponse DescribeDisks(Models\DescribeDisksRequest $req) This API is used to query the information of one or more cloud disks.
+ * @method Models\DescribeDisksDeniedActionsResponse DescribeDisksDeniedActions(Models\DescribeDisksDeniedActionsRequest $req) This API is used to query the list of operation limits of one or more cloud disks.
+ * @method Models\DescribeDisksReturnableResponse DescribeDisksReturnable(Models\DescribeDisksReturnableRequest $req) This API is used to query whether the specified cloud disk can be returned.
  * @method Models\DescribeFirewallRulesResponse DescribeFirewallRules(Models\DescribeFirewallRulesRequest $req) This API is used to query the firewall rules of an instance.
  * @method Models\DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplate(Models\DescribeFirewallRulesTemplateRequest $req) This API is used to query a firewall rule template.
  * @method Models\DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotas(Models\DescribeGeneralResourceQuotasRequest $req) This API is used to query the quota information of general resources.
@@ -84,6 +91,7 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
 * If no parameter is defined, the status of a certain number of instances under the current account will be returned. The number is specified by `Limit` and is 20 by default.
 * The latest operation (LatestOperation) and the latest operation status (LatestOperationState) of the instance can be queried.
  * @method Models\DescribeInstancesDeniedActionsResponse DescribeInstancesDeniedActions(Models\DescribeInstancesDeniedActionsRequest $req) This API is used to query the list of operation limits of one or more instances.
+ * @method Models\DescribeInstancesDiskNumResponse DescribeInstancesDiskNum(Models\DescribeInstancesDiskNumRequest $req) This API is used to query the number of cloud disks attached to instances.
  * @method Models\DescribeInstancesReturnableResponse DescribeInstancesReturnable(Models\DescribeInstancesReturnableRequest $req) This API is used to query whether the specified instance can be returned.
  * @method Models\DescribeInstancesTrafficPackagesResponse DescribeInstancesTrafficPackages(Models\DescribeInstancesTrafficPackagesRequest $req) This API is used to query the traffic package details of one or more instances.
  * @method Models\DescribeKeyPairsResponse DescribeKeyPairs(Models\DescribeKeyPairsRequest $req) This API is used to query key pairs.
@@ -94,6 +102,7 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
  * @method Models\DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActions(Models\DescribeSnapshotsDeniedActionsRequest $req) This API is used to query the list of operation limits of one or more snapshots.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query the list of AZs in a region.
  * @method Models\DetachCcnResponse DetachCcn(Models\DetachCcnRequest $req) This API is used to unassociate a CCN instance.
+ * @method Models\DetachDisksResponse DetachDisks(Models\DetachDisksRequest $req) This API is used to detach one or more cloud disks.
  * @method Models\DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairs(Models\DisassociateInstancesKeyPairsRequest $req) This API is used to unbind an instance from the specified key pair.
 
 * Only instances on LINUX_UNIX in [RUNNING, STOPPED] status are supported. Instances in `RUNNING` status will be forcibly shut down before unbinding.
@@ -103,9 +112,13 @@ The snapshot must be in `NORMAL` status. To query the status of a snapshot, you 
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) This API is used to import the specified key pair.
  * @method Models\InquirePriceCreateBlueprintResponse InquirePriceCreateBlueprint(Models\InquirePriceCreateBlueprintRequest $req) This API is used to query the price of a created image.
+ * @method Models\InquirePriceCreateDisksResponse InquirePriceCreateDisks(Models\InquirePriceCreateDisksRequest $req) This API is used to query the price of purchasing cloud disks.
  * @method Models\InquirePriceCreateInstancesResponse InquirePriceCreateInstances(Models\InquirePriceCreateInstancesRequest $req) This API is used to query the price of a created instance.
+ * @method Models\InquirePriceRenewDisksResponse InquirePriceRenewDisks(Models\InquirePriceRenewDisksRequest $req) This API is used to query the price of renewing cloud disks.
  * @method Models\InquirePriceRenewInstancesResponse InquirePriceRenewInstances(Models\InquirePriceRenewInstancesRequest $req) This API is used to query the price of renewed instance.
  * @method Models\ModifyBlueprintAttributeResponse ModifyBlueprintAttribute(Models\ModifyBlueprintAttributeRequest $req) This API is used to modify an image attribute.
+ * @method Models\ModifyDisksAttributeResponse ModifyDisksAttribute(Models\ModifyDisksAttributeRequest $req) This API is used to modify cloud disk attributes.
+ * @method Models\ModifyDisksRenewFlagResponse ModifyDisksRenewFlag(Models\ModifyDisksRenewFlagRequest $req) This API is used to modify the configuration of auto-renewal of cloud disks.
  * @method Models\ModifyFirewallRuleDescriptionResponse ModifyFirewallRuleDescription(Models\ModifyFirewallRuleDescriptionRequest $req) This API is used to modify the description of a single firewall rule.
 
 * `FirewallVersion` is used to specify the version of the firewall to be manipulated. If the `FirewallVersion` value passed in is not equal to the current latest version of the firewall, a failure will be returned. If `FirewallVersion` is not passed in, the description of the specified rule will be modified directly.
@@ -172,6 +185,7 @@ Note: Just like powering off a physical PC, a forced shutdown may cause data los
 * The instance status will become `STOPPING` when the API is called successfully and will become `STOPPED` when the instance is successfully shut down.
 * Batch operations are supported. The maximum number of instances in each request is 100.
 * This API is async. After the request is sent successfully, a `RequestId` will be returned. At this time, the operation is not completed immediately. The result of the instance operation can be queried by calling the `DescribeInstances` API. If the latest operation status (LatestOperationState) of the instance is `SUCCESS`, the operation is successful.
+ * @method Models\TerminateDisksResponse TerminateDisks(Models\TerminateDisksRequest $req) This API is used to terminate one or more cloud disk.
  * @method Models\TerminateInstancesResponse TerminateInstances(Models\TerminateInstancesRequest $req) This API is used to terminate one or more instances.
 
 * Instances in `SHUTDOWN` status can be terminated through this API and cannot be recovered.

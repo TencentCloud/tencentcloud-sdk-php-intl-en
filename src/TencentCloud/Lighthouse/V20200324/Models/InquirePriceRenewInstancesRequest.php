@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceIds(array $InstanceIds) Set Instance to be renewed.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+ * @method boolean getRenewDataDisk() Obtain Whether to renew the data disk
+ * @method void setRenewDataDisk(boolean $RenewDataDisk) Set Whether to renew the data disk
+ * @method boolean getAlignInstanceExpiredTime() Obtain Whether the data disk has the same expiration time as the instance
+ * @method void setAlignInstanceExpiredTime(boolean $AlignInstanceExpiredTime) Set Whether the data disk has the same expiration time as the instance
  */
 class InquirePriceRenewInstancesRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
+     * @var boolean Whether to renew the data disk
+     */
+    public $RenewDataDisk;
+
+    /**
+     * @var boolean Whether the data disk has the same expiration time as the instance
+     */
+    public $AlignInstanceExpiredTime;
+
+    /**
      * @param array $InstanceIds Instance to be renewed.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
+     * @param boolean $RenewDataDisk Whether to renew the data disk
+     * @param boolean $AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
      */
     function __construct()
     {
@@ -61,6 +77,14 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
         if (array_key_exists("InstanceChargePrepaid",$param) and $param["InstanceChargePrepaid"] !== null) {
             $this->InstanceChargePrepaid = new InstanceChargePrepaid();
             $this->InstanceChargePrepaid->deserialize($param["InstanceChargePrepaid"]);
+        }
+
+        if (array_key_exists("RenewDataDisk",$param) and $param["RenewDataDisk"] !== null) {
+            $this->RenewDataDisk = $param["RenewDataDisk"];
+        }
+
+        if (array_key_exists("AlignInstanceExpiredTime",$param) and $param["AlignInstanceExpiredTime"] !== null) {
+            $this->AlignInstanceExpiredTime = $param["AlignInstanceExpiredTime"];
         }
     }
 }

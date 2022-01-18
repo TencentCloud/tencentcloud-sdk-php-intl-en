@@ -18,29 +18,19 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquirePriceRenewInstances response structure.
+ * DescribeDiskConfigs response structure.
  *
- * @method Price getPrice() Obtain Price query information.
- * @method void setPrice(Price $Price) Set Price query information.
- * @method array getDataDiskPriceSet() Obtain List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDataDiskPriceSet(array $DataDiskPriceSet) Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDiskConfigSet() Obtain List of cloud disk configurations.
+ * @method void setDiskConfigSet(array $DiskConfigSet) Set List of cloud disk configurations.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquirePriceRenewInstancesResponse extends AbstractModel
+class DescribeDiskConfigsResponse extends AbstractModel
 {
     /**
-     * @var Price Price query information.
+     * @var array List of cloud disk configurations.
      */
-    public $Price;
-
-    /**
-     * @var array List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $DataDiskPriceSet;
+    public $DiskConfigSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +38,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param Price $Price Price query information.
-     * @param array $DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $DiskConfigSet List of cloud disk configurations.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,17 +54,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = new Price();
-            $this->Price->deserialize($param["Price"]);
-        }
-
-        if (array_key_exists("DataDiskPriceSet",$param) and $param["DataDiskPriceSet"] !== null) {
-            $this->DataDiskPriceSet = [];
-            foreach ($param["DataDiskPriceSet"] as $key => $value){
-                $obj = new DataDiskPrice();
+        if (array_key_exists("DiskConfigSet",$param) and $param["DiskConfigSet"] !== null) {
+            $this->DiskConfigSet = [];
+            foreach ($param["DiskConfigSet"] as $key => $value){
+                $obj = new DiskConfig();
                 $obj->deserialize($value);
-                array_push($this->DataDiskPriceSet, $obj);
+                array_push($this->DiskConfigSet, $obj);
             }
         }
 

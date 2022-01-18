@@ -104,6 +104,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setOsName(string $OsName) Set OS name.
  * @method string getZone() Obtain AZ.
  * @method void setZone(string $Zone) Set AZ.
+ * @method array getTags() Obtain The list of tags associated with the instance
+ * @method void setTags(array $Tags) Set The list of tags associated with the instance
  */
 class Instance extends AbstractModel
 {
@@ -250,6 +252,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Zone;
 
     /**
+     * @var array The list of tags associated with the instance
+     */
+    public $Tags;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $BundleId Package ID.
      * @param string $BlueprintId Image ID.
@@ -292,6 +299,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Platform OS type.
      * @param string $OsName OS name.
      * @param string $Zone AZ.
+     * @param array $Tags The list of tags associated with the instance
      */
     function __construct()
     {
@@ -407,6 +415,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
