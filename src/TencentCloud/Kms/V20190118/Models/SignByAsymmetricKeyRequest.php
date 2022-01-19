@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SignByAsymmetricKey request structure.
  *
- * @method string getAlgorithm() Obtain Signature algorithm. Supported algorithm: SM2DSA.
- * @method void setAlgorithm(string $Algorithm) Set Signature algorithm. Supported algorithm: SM2DSA.
- * @method string getMessage() Obtain The original message or message abstract. For an original message, the length before Base64 encoding can contain up to 4,096 bytes. For a message abstract, the SM2 signature algorithm only supports 32-byte (before Base64 encoding) message abstracts.
- * @method void setMessage(string $Message) Set The original message or message abstract. For an original message, the length before Base64 encoding can contain up to 4,096 bytes. For a message abstract, the SM2 signature algorithm only supports 32-byte (before Base64 encoding) message abstracts.
+ * @method string getAlgorithm() Obtain Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+ * @method void setAlgorithm(string $Algorithm) Set Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+ * @method string getMessage() Obtain Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
+ * @method void setMessage(string $Message) Set Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
  * @method string getKeyId() Obtain Unique ID of a key
  * @method void setKeyId(string $KeyId) Set Unique ID of a key
  * @method string getMessageType() Obtain Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class SignByAsymmetricKeyRequest extends AbstractModel
 {
     /**
-     * @var string Signature algorithm. Supported algorithm: SM2DSA.
+     * @var string Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
      */
     public $Algorithm;
 
     /**
-     * @var string The original message or message abstract. For an original message, the length before Base64 encoding can contain up to 4,096 bytes. For a message abstract, the SM2 signature algorithm only supports 32-byte (before Base64 encoding) message abstracts.
+     * @var string Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
      */
     public $Message;
 
@@ -52,8 +52,8 @@ class SignByAsymmetricKeyRequest extends AbstractModel
     public $MessageType;
 
     /**
-     * @param string $Algorithm Signature algorithm. Supported algorithm: SM2DSA.
-     * @param string $Message The original message or message abstract. For an original message, the length before Base64 encoding can contain up to 4,096 bytes. For a message abstract, the SM2 signature algorithm only supports 32-byte (before Base64 encoding) message abstracts.
+     * @param string $Algorithm Signature algorithm. The valid values include `SM2DSA`, `ECC_P256_R1`, `RSA_PSS_SHA_256`, and `RSA_PKCS1_SHA_256`, etc. You can get a full list of supported algorithms using the ListAlgorithms API.
+     * @param string $Message Full message or message abstract. Before Base64 encoding, an original message can contain up to 4,096 bytes while a message abstract must be 32 bytes.
      * @param string $KeyId Unique ID of a key
      * @param string $MessageType Message type. Valid values: `RAW` (indicating an original message; used by default if the parameter is not passed in) and `DIGEST`.
      */

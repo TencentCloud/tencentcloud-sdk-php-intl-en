@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * VerifyByAsymmetricKey response structure.
  *
- * @method boolean getSignatureValid() Obtain Whether the signature is valid.
- * @method void setSignatureValid(boolean $SignatureValid) Set Whether the signature is valid.
+ * @method boolean getSignatureValid() Obtain Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
+ * @method void setSignatureValid(boolean $SignatureValid) Set Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class VerifyByAsymmetricKeyResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether the signature is valid.
+     * @var boolean Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
      */
     public $SignatureValid;
 
@@ -38,7 +38,7 @@ class VerifyByAsymmetricKeyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $SignatureValid Whether the signature is valid.
+     * @param boolean $SignatureValid Whether the signature is valid. `true`: the signature is valid; `false`: the signature is invalid.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

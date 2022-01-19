@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Kms\V20190118\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Encrypt response structure.
+ * SendMessage response structure.
  *
- * @method string getCiphertextBlob() Obtain Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
- * @method void setCiphertextBlob(string $CiphertextBlob) Set Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
- * @method string getKeyId() Obtain Globally unique ID of the CMK used for encryption
- * @method void setKeyId(string $KeyId) Set Globally unique ID of the CMK used for encryption
+ * @method array getMessageId() Obtain Message ID list.
+ * @method void setMessageId(array $MessageId) Set Message ID list.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class EncryptResponse extends AbstractModel
+class SendMessageResponse extends AbstractModel
 {
     /**
-     * @var string Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
+     * @var array Message ID list.
      */
-    public $CiphertextBlob;
-
-    /**
-     * @var string Globally unique ID of the CMK used for encryption
-     */
-    public $KeyId;
+    public $MessageId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class EncryptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CiphertextBlob Base64-encoded ciphertext, which is the encrypted information of the ciphertext and key. To get the plaintext, you need to pass in this field to the Decrypt API.
-     * @param string $KeyId Globally unique ID of the CMK used for encryption
+     * @param array $MessageId Message ID list.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,12 +54,8 @@ class EncryptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CiphertextBlob",$param) and $param["CiphertextBlob"] !== null) {
-            $this->CiphertextBlob = $param["CiphertextBlob"];
-        }
-
-        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
-            $this->KeyId = $param["KeyId"];
+        if (array_key_exists("MessageId",$param) and $param["MessageId"] !== null) {
+            $this->MessageId = $param["MessageId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

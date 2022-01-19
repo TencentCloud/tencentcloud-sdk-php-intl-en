@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModeType(string $ModeType) Set CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
  * @method string getZone() Obtain Availability zone where the direct connect gateway resides.
  * @method void setZone(string $Zone) Set Availability zone where the direct connect gateway resides.
+ * @method string getHaZoneGroupId() Obtain ID of DC highly available placement group
+ * @method void setHaZoneGroupId(string $HaZoneGroupId) Set ID of DC highly available placement group
  */
 class CreateDirectConnectGatewayRequest extends AbstractModel
 {
@@ -81,6 +83,11 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string ID of DC highly available placement group
+     */
+    public $HaZoneGroupId;
+
+    /**
      * @param string $DirectConnectGatewayName The name of the direct connect gateway.
      * @param string $NetworkType The type of the associated network. Valid values:
 <li>VPC</li>
@@ -92,6 +99,7 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 <li>NAT - NAT type</li>NAT gateway supports network address translation. The specified type cannot be modified. A VPC can create one NAT direct connect gateway and one non-NAT direct connect gateway
      * @param string $ModeType CCN route publishing method. Valid values: `standard` and `exquisite`. This parameter is only valid for the CCN direct connect gateway.
      * @param string $Zone Availability zone where the direct connect gateway resides.
+     * @param string $HaZoneGroupId ID of DC highly available placement group
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ class CreateDirectConnectGatewayRequest extends AbstractModel
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("HaZoneGroupId",$param) and $param["HaZoneGroupId"] !== null) {
+            $this->HaZoneGroupId = $param["HaZoneGroupId"];
         }
     }
 }

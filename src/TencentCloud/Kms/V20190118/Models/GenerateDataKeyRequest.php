@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNumberOfBytes(integer $NumberOfBytes) Set Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
  * @method string getEncryptionContext() Obtain JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
  * @method void setEncryptionContext(string $EncryptionContext) Set JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+ * @method string getEncryptionPublicKey() Obtain PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+ * @method void setEncryptionPublicKey(string $EncryptionPublicKey) Set PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+ * @method string getEncryptionAlgorithm() Obtain Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+ * @method void setEncryptionAlgorithm(string $EncryptionAlgorithm) Set Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
  */
 class GenerateDataKeyRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class GenerateDataKeyRequest extends AbstractModel
     public $EncryptionContext;
 
     /**
+     * @var string PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     */
+    public $EncryptionPublicKey;
+
+    /**
+     * @var string Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+     */
+    public $EncryptionAlgorithm;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $KeySpec Specifies the encryption algorithm and size of the `DataKey`. Valid values: AES_128, AES_256. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param integer $NumberOfBytes Length of the `DataKey`. If both `NumberOfBytes` and `KeySpec` are specified, `NumberOfBytes` will prevail. Minimum value: 1; maximum value: 1024. Either `KeySpec` or `NumberOfBytes` must be specified.
      * @param string $EncryptionContext JSON string of key-value pair. If this field is used, the same string should be entered when the returned `DataKey` is decrypted.
+     * @param string $EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     * @param string $EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class GenerateDataKeyRequest extends AbstractModel
 
         if (array_key_exists("EncryptionContext",$param) and $param["EncryptionContext"] !== null) {
             $this->EncryptionContext = $param["EncryptionContext"];
+        }
+
+        if (array_key_exists("EncryptionPublicKey",$param) and $param["EncryptionPublicKey"] !== null) {
+            $this->EncryptionPublicKey = $param["EncryptionPublicKey"];
+        }
+
+        if (array_key_exists("EncryptionAlgorithm",$param) and $param["EncryptionAlgorithm"] !== null) {
+            $this->EncryptionAlgorithm = $param["EncryptionAlgorithm"];
         }
     }
 }

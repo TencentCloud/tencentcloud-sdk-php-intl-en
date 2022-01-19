@@ -48,12 +48,12 @@ This API is completed asynchronously. If you need to query the execution result 
 >?This API is async. You can call the [`DescribeVpcTaskResult`](https://intl.cloud.tencent.com/document/api/215/59037?from_cn_redirect=1) API to query the task result. When the task is completed, you can continue other tasks.
 >
  * @method Models\AssociateAddressResponse AssociateAddress(Models\AssociateAddressRequest $req) This API is used to bind an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short) to the specified private IP of an instance or ENI.
-* The EIP is essentially bound to the primary private IP of the primary ENI on a CVM instance.
-* The EIP binding will automatically unbind and release the public IP previously bound to the CVM instance.
-* To bind another EIP to the private IP of the specified ENI (not the primary private IP of the primary ENI), you must first unbind the EIP.
-* To bind an EIP to a NAT Gateway, use the [`AssociateNatGatewayAddress`](https://intl.cloud.tencent.com/document/product/215/36722?from_cn_redirect=1) API.
-* EIP that is in arrears or blocked cannot be bound.
-* Only EIP in the UNBIND status can be bound.
+* Binding an EIP to a CVM instance is actually binding the EIP to the primary private IP of the primary ENI on the CVM instance.
+* When an EIP is bound, the public IP previously bound to the CVM instance will be unbound and released automatically.
+* To bind another EIP to the private IP of the specified ENI, you must first unbind the EIP.
+* To bind an EIP to a NAT Gateway, use the API [AssociateNatGatewayAddress](https://intl.cloud.tencent.com/document/product/215/36722?from_cn_redirect=1).
+* An EIP cannot be bound if it’s overdue or blocked
+* Only EIP in the `UNBIND` status can be bound.
  * @method Models\AssociateDirectConnectGatewayNatGatewayResponse AssociateDirectConnectGatewayNatGateway(Models\AssociateDirectConnectGatewayNatGatewayRequest $req) This API is used to bind a direct connect gateway with a NAT gateway,  and direct its default route to the NAT Gateway.
  * @method Models\AssociateNatGatewayAddressResponse AssociateNatGatewayAddress(Models\AssociateNatGatewayAddressRequest $req) This API is used to bind an EIP to NAT Gateway.
  * @method Models\AssociateNetworkAclSubnetsResponse AssociateNetworkAclSubnets(Models\AssociateNetworkAclSubnetsRequest $req) This API is used to associate a network ACL with subnets in a VPC instance.
@@ -430,8 +430,8 @@ Note: When this API is called, all routing policies in the current route table a
  * @method Models\ResetVpnConnectionResponse ResetVpnConnection(Models\ResetVpnConnectionRequest $req) The API (ResetVpnConnection) is used to reset VPN tunnels.
  * @method Models\ResetVpnGatewayInternetMaxBandwidthResponse ResetVpnGatewayInternetMaxBandwidth(Models\ResetVpnGatewayInternetMaxBandwidthRequest $req) This API (ResetVpnGatewayInternetMaxBandwidth) is used to adjust the bandwidth cap of VPN gateways. Currently, only configuration upgrade is supported. VPN gateways with monthly subscription must be within the validity period.
  * @method Models\SetCcnRegionBandwidthLimitsResponse SetCcnRegionBandwidthLimits(Models\SetCcnRegionBandwidthLimitsRequest $req) This API (SetCcnRegionBandwidthLimits) is used to set the outbound bandwidth cap for CCNs in each region. This API can only set the outbound bandwidth cap for regions in the network instances that have already been associated.
- * @method Models\TransformAddressResponse TransformAddress(Models\TransformAddressRequest $req) This API (TransformAddress) is used to switch common public IPs into [Elastic IPs](https://intl.cloud.tencent.comhttps://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1?from_cn_redirect=1).
-* The platform limits the number of times that a user can unbind an EIP and reassign public IPs in each region per day. For more information, see [EIP product introduction](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1)). The preceding quota can be obtained through the [DescribeAddressQuota](https://intl.cloud.tencent.com/document/api/213/1378?from_cn_redirect=1) API.
+ * @method Models\TransformAddressResponse TransformAddress(Models\TransformAddressRequest $req) This API is used to convert a common public IP into an [Elastic IP](https://intl.cloud.tencent.com/document/product/213/1941?from_cn_redirect=1) (EIP for short).
+* Tencent Cloud limits the number of times that a user can unbind EIPs and reassign public IPs in each region per day. For more information, see product introduction of [Elastic IP](https://intl.cloud.tencent.com/document/product/213/5733?from_cn_redirect=1). The preceding quota can be obtained through the API [DescribeAddressQuota](https://intl.cloud.tencent.com/document/product/215/16701).
  * @method Models\UnassignIpv6AddressesResponse UnassignIpv6Addresses(Models\UnassignIpv6AddressesRequest $req) This API is used to release the IPv6 addresses of an ENI. <br />
 This API is completed asynchronously. If you need to query the execution result of an async task, please use the `RequestId` returned by this API to poll the `DescribeVpcTaskResult` API.
  * @method Models\UnassignIpv6CidrBlockResponse UnassignIpv6CidrBlock(Models\UnassignIpv6CidrBlockRequest $req) This API (UnassignIpv6CidrBlock) is used to release IPv6 IP ranges.

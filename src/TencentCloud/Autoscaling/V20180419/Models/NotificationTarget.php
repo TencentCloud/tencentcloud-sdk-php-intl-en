@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Notification target
  *
- * @method string getTargetType() Obtain Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
- * @method void setTargetType(string $TargetType) Set Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
- * @method string getQueueName() Obtain Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
- * @method void setQueueName(string $QueueName) Set Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
- * @method string getTopicName() Obtain Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
- * @method void setTopicName(string $TopicName) Set Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+ * @method string getTargetType() Obtain Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+ * @method void setTargetType(string $TargetType) Set Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+ * @method string getQueueName() Obtain Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+ * @method void setQueueName(string $QueueName) Set Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+ * @method string getTopicName() Obtain Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
+ * @method void setTopicName(string $TopicName) Set Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
  */
 class NotificationTarget extends AbstractModel
 {
     /**
-     * @var string Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
+     * @var string Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
      */
     public $TargetType;
 
     /**
-     * @var string Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
+     * @var string Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
      */
     public $QueueName;
 
     /**
-     * @var string Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+     * @var string Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     public $TopicName;
 
     /**
-     * @param string $TargetType Target type. Value range: `CMQ_QUEUE`, `CMQ_TOPIC`.
-<li> CMQ_QUEUE: CMQ_QUEUE: CMQ queue model.</li>
-<li> CMQ_TOPIC: CMQ topic model.</li>
-     * @param string $QueueName Queue name. If `TargetType` is `CMQ_QUEUE`, this parameter is required.
-     * @param string $TopicName Topic name. If `TargetType` is `CMQ_TOPIC`, this parameter is required.
+     * @param string $TargetType Target type. Valid values: `CMQ_QUEUE`, `CMQ_TOPIC`, `TDMQ_CMQ_QUEUE` and `TDMQ_CMQ_TOPIC`.
+<li> CMQ_QUEUE: Tencent Cloud message queue - queue model.</li>
+<li> CMQ_TOPIC: Tencent Cloud message queue - topic model.</li>
+<li> TDMQ_CMQ_QUEUE: Tencent Cloud TDMQ message queue - queue model.</li>
+<li> TDMQ_CMQ_TOPIC: Tencent Cloud TDMQ message queue - topic model.</li>
+     * @param string $QueueName Queue name. This parameter is required when `TargetType` is `CMQ_QUEUE` or `TDMQ_CMQ_QUEUE`.
+     * @param string $TopicName Topic name. This parameter is required when `TargetType` is `CMQ_TOPIC` or `TDMQ_CMQ_TOPIC`.
      */
     function __construct()
     {

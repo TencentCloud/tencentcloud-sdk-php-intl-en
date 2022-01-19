@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCiphertextBlob(string $CiphertextBlob) Set The ciphertext data to be decrypted.
  * @method string getEncryptionContext() Obtain JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
  * @method void setEncryptionContext(string $EncryptionContext) Set JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+ * @method string getEncryptionPublicKey() Obtain PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+ * @method void setEncryptionPublicKey(string $EncryptionPublicKey) Set PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+ * @method string getEncryptionAlgorithm() Obtain Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+ * @method void setEncryptionAlgorithm(string $EncryptionAlgorithm) Set Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
  */
 class DecryptRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class DecryptRequest extends AbstractModel
     public $EncryptionContext;
 
     /**
+     * @var string PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     */
+    public $EncryptionPublicKey;
+
+    /**
+     * @var string Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
+     */
+    public $EncryptionAlgorithm;
+
+    /**
      * @param string $CiphertextBlob The ciphertext data to be decrypted.
      * @param string $EncryptionContext JSON string of key-value pair. If this parameter is specified for `Encrypt`, the same parameter needs to be provided when the `Decrypt` API is called. The maximum length is 1,024 bytes.
+     * @param string $EncryptionPublicKey PEM-encoded public key (2048-bit RSA/SM2 key), which can be used to encrypt the `Plaintext` returned. If this field is left empty, the `Plaintext` will not be encrypted.
+     * @param string $EncryptionAlgorithm Asymmetric encryption algorithm. Valid values: `SM2(C1C3C2)`, `RSAES_PKCS1_V1_5`, `RSAES_OAEP_SHA_1`, and `RSAES_OAEP_SHA_256`. This field is used in combination with `EncryptionPublicKey` for encryption. If it is left empty, a SM2 public key will be used by default.
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class DecryptRequest extends AbstractModel
 
         if (array_key_exists("EncryptionContext",$param) and $param["EncryptionContext"] !== null) {
             $this->EncryptionContext = $param["EncryptionContext"];
+        }
+
+        if (array_key_exists("EncryptionPublicKey",$param) and $param["EncryptionPublicKey"] !== null) {
+            $this->EncryptionPublicKey = $param["EncryptionPublicKey"];
+        }
+
+        if (array_key_exists("EncryptionAlgorithm",$param) and $param["EncryptionAlgorithm"] !== null) {
+            $this->EncryptionAlgorithm = $param["EncryptionAlgorithm"];
         }
     }
 }

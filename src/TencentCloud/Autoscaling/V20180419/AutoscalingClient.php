@@ -25,6 +25,7 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
 /**
  * @method Models\AttachInstancesResponse AttachInstances(Models\AttachInstancesRequest $req) This API (AttachInstances) is used to add CVM instances to an auto scaling group.
 
+ * @method Models\AttachLoadBalancersResponse AttachLoadBalancers(Models\AttachLoadBalancersRequest $req) This API is used to add CLBs to a security group.
  * @method Models\ClearLaunchConfigurationAttributesResponse ClearLaunchConfigurationAttributes(Models\ClearLaunchConfigurationAttributesRequest $req) This API is used to clear specific attributes of the launch configuration.
  * @method Models\CompleteLifecycleActionResponse CompleteLifecycleAction(Models\CompleteLifecycleActionRequest $req) This API (CompleteLifecycleAction) is used to complete a lifecycle action.
 
@@ -100,6 +101,7 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
  * @method Models\DeleteScheduledActionResponse DeleteScheduledAction(Models\DeleteScheduledActionRequest $req) This API (DeleteScheduledAction) is used to delete the specified scheduled task.
  * @method Models\DescribeAccountLimitsResponse DescribeAccountLimits(Models\DescribeAccountLimitsRequest $req) This API (DescribeAccountLimits) is used to query the limits of user's AS resources.
  * @method Models\DescribeAutoScalingActivitiesResponse DescribeAutoScalingActivities(Models\DescribeAutoScalingActivitiesRequest $req) This API (DescribeAutoScalingActivities) is used to query the activity history of an auto scaling group.
+ * @method Models\DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvices(Models\DescribeAutoScalingAdvicesRequest $req) This API is used to query suggestions for scaling group configurations.
  * @method Models\DescribeAutoScalingGroupLastActivitiesResponse DescribeAutoScalingGroupLastActivities(Models\DescribeAutoScalingGroupLastActivitiesRequest $req) This API is used to query the latest activity history of an auto scaling group.
  * @method Models\DescribeAutoScalingGroupsResponse DescribeAutoScalingGroups(Models\DescribeAutoScalingGroupsRequest $req) This API (DescribeAutoScalingGroups) is used to query the information of auto scaling groups.
 
@@ -130,6 +132,7 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
+ * @method Models\DetachLoadBalancersResponse DetachLoadBalancers(Models\DetachLoadBalancersRequest $req) This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
  * @method Models\DisableAutoScalingGroupResponse DisableAutoScalingGroup(Models\DisableAutoScalingGroupRequest $req) This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) This API (EnableAutoScalingGroup) is used to enable the specified auto scaling group.
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) This API (ExecuteScalingPolicy) is used to execute a scaling policy.
@@ -142,6 +145,7 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 
 * The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
 * This API supports modifying certain simple types of attributes.
+ * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) This API is used to modify the target rule attributes of the CLB in the scaling group.
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) This API is used to modify the cloud load balancers of a scaling group.
 
 * This API can specify a new cloud load balancer configuration for the scaling group. The new configuration overwrites the original load balancer configuration.

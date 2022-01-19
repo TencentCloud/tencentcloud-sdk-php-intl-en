@@ -48,6 +48,14 @@ This parameter is optional for a CCN-based VPN tunnel.
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
  * @method string getRouteType() Obtain Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
  * @method void setRouteType(string $RouteType) Set Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+ * @method string getNegotiationType() Obtain Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+ * @method void setNegotiationType(string $NegotiationType) Set Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+ * @method integer getDpdEnable() Obtain Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+ * @method void setDpdEnable(integer $DpdEnable) Set Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+ * @method string getDpdTimeout() Obtain DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+ * @method void setDpdTimeout(string $DpdTimeout) Set DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+ * @method string getDpdAction() Obtain The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+ * @method void setDpdAction(string $DpdAction) Set The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
  */
 class CreateVpnConnectionRequest extends AbstractModel
 {
@@ -118,6 +126,26 @@ This parameter is optional for a CCN-based VPN tunnel.
     public $RouteType;
 
     /**
+     * @var string Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     */
+    public $NegotiationType;
+
+    /**
+     * @var integer Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     */
+    public $DpdEnable;
+
+    /**
+     * @var string DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     */
+    public $DpdTimeout;
+
+    /**
+     * @var string The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+     */
+    public $DpdAction;
+
+    /**
      * @param string $VpnGatewayId The ID of the VPN gateway instance.
      * @param string $CustomerGatewayId The ID of the customer gateway, such as `cgw-2wqq41m9`. You can query the customer gateway by using the `DescribeCustomerGateways` API.
      * @param string $VpnConnectionName Gateway can be named freely, but the maximum length is 60 characters.
@@ -132,6 +160,10 @@ This parameter is optional for a CCN-based VPN tunnel.
      * @param string $HealthCheckLocalIp Local IP address for the health check
      * @param string $HealthCheckRemoteIp Peer IP address for the health check
      * @param string $RouteType Tunnel type. Valid values: `STATIC`, `StaticRoute`, and `Policy`.
+     * @param string $NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     * @param integer $DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     * @param string $DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     * @param string $DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
      */
     function __construct()
     {
@@ -208,6 +240,22 @@ This parameter is optional for a CCN-based VPN tunnel.
 
         if (array_key_exists("RouteType",$param) and $param["RouteType"] !== null) {
             $this->RouteType = $param["RouteType"];
+        }
+
+        if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
+            $this->NegotiationType = $param["NegotiationType"];
+        }
+
+        if (array_key_exists("DpdEnable",$param) and $param["DpdEnable"] !== null) {
+            $this->DpdEnable = $param["DpdEnable"];
+        }
+
+        if (array_key_exists("DpdTimeout",$param) and $param["DpdTimeout"] !== null) {
+            $this->DpdTimeout = $param["DpdTimeout"];
+        }
+
+        if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
+            $this->DpdAction = $param["DpdAction"];
         }
     }
 }

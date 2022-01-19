@@ -82,6 +82,40 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setZone(string $Zone) Set Availability zone where the direct connect gateway resides.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getEnableFlowDetails() Obtain The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEnableFlowDetails(integer $EnableFlowDetails) Set The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getFlowDetailsUpdateTime() Obtain The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFlowDetailsUpdateTime(string $FlowDetailsUpdateTime) Set The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getNewAfc() Obtain Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+ * @method void setNewAfc(integer $NewAfc) Set Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+ * @method string getAccessNetworkType() Obtain Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+ * @method void setAccessNetworkType(string $AccessNetworkType) Set Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+ * @method array getHaZoneList() Obtain AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+ * @method void setHaZoneList(array $HaZoneList) Set AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
  */
 class DirectConnectGateway extends AbstractModel
 {
@@ -185,6 +219,43 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Zone;
 
     /**
+     * @var integer The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EnableFlowDetails;
+
+    /**
+     * @var string The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FlowDetailsUpdateTime;
+
+    /**
+     * @var integer Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public $NewAfc;
+
+    /**
+     * @var string Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public $AccessNetworkType;
+
+    /**
+     * @var array AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
+     */
+    public $HaZoneList;
+
+    /**
      * @param string $DirectConnectGatewayId Direct Connect `ID`.
      * @param string $DirectConnectGatewayName Direct Connect gateway name.
      * @param string $VpcId The `ID` of the `VPC` instance associated with the Direct Connect gateway.
@@ -216,6 +287,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Zone Availability zone where the direct connect gateway resides.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $EnableFlowDetails The status of gateway traffic monitoring
+0: disable
+1: enable
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $FlowDetailsUpdateTime The last time when the gateway traffic monitoring is enabled/disabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $NewAfc Whether gateway traffic monitoring is supported
+0: No
+1: Yes
+Note: this field may return `null`, indicating that no valid values can be found.
+     * @param string $AccessNetworkType Direct connect gateway access network types:
+<li>`VXLAN` - VXLAN type.</li>
+<li>`MPLS` - MPLS type.</li>
+<li>`Hybrid` - Hybrid type.</li>
+Note: this field may return `null`, indicating that no valid values can be found.
+     * @param array $HaZoneList AZ list of direct connect gateway with cross-AZ placement groups
+Note: this field may return `null`, indicating that no valid values can be found.
      */
     function __construct()
     {
@@ -296,6 +384,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("EnableFlowDetails",$param) and $param["EnableFlowDetails"] !== null) {
+            $this->EnableFlowDetails = $param["EnableFlowDetails"];
+        }
+
+        if (array_key_exists("FlowDetailsUpdateTime",$param) and $param["FlowDetailsUpdateTime"] !== null) {
+            $this->FlowDetailsUpdateTime = $param["FlowDetailsUpdateTime"];
+        }
+
+        if (array_key_exists("NewAfc",$param) and $param["NewAfc"] !== null) {
+            $this->NewAfc = $param["NewAfc"];
+        }
+
+        if (array_key_exists("AccessNetworkType",$param) and $param["AccessNetworkType"] !== null) {
+            $this->AccessNetworkType = $param["AccessNetworkType"];
+        }
+
+        if (array_key_exists("HaZoneList",$param) and $param["HaZoneList"] !== null) {
+            $this->HaZoneList = $param["HaZoneList"];
         }
     }
 }

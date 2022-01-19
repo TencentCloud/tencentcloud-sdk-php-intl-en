@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckLocalIp(string $HealthCheckLocalIp) Set Local IP address for the tunnel health check
  * @method string getHealthCheckRemoteIp() Obtain Peer IP address for the tunnel health check
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the tunnel health check
+ * @method string getNegotiationType() Obtain Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+ * @method void setNegotiationType(string $NegotiationType) Set Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+ * @method integer getDpdEnable() Obtain Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+ * @method void setDpdEnable(integer $DpdEnable) Set Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+ * @method string getDpdTimeout() Obtain DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+ * @method void setDpdTimeout(string $DpdTimeout) Set DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+ * @method string getDpdAction() Obtain The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+ * @method void setDpdAction(string $DpdAction) Set The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
  */
 class ModifyVpnConnectionAttributeRequest extends AbstractModel
 {
@@ -87,6 +95,26 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
     public $HealthCheckRemoteIp;
 
     /**
+     * @var string Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     */
+    public $NegotiationType;
+
+    /**
+     * @var integer Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     */
+    public $DpdEnable;
+
+    /**
+     * @var string DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     */
+    public $DpdTimeout;
+
+    /**
+     * @var string The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
+     */
+    public $DpdAction;
+
+    /**
      * @param string $VpnConnectionId The ID of the VPN tunnel instance, such as `vpnx-f49l6u0z`.
      * @param string $VpnConnectionName VPN tunnel can be named freely, but the maximum length is 60 characters.
      * @param string $PreShareKey The pre-shared key.
@@ -96,6 +124,10 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
      * @param boolean $EnableHealthCheck Whether to enable the tunnel health check.
      * @param string $HealthCheckLocalIp Local IP address for the tunnel health check
      * @param string $HealthCheckRemoteIp Peer IP address for the tunnel health check
+     * @param string $NegotiationType Negotiation type. Valid values: `active` (default value), `passive` and `flowTrigger`.
+     * @param integer $DpdEnable Specifies whether to enable DPD. Valid values: `0` (disable) and `1` (enable)
+     * @param string $DpdTimeout DPD timeout period. Default: 30; unit: second. If the request is not responded within this period, the peer end is considered not exists. This parameter is valid when the value of `DpdEnable` is 1. 
+     * @param string $DpdAction The action after DPD timeout. Valid values: `clear` (disconnect) and `restart` (try again). It’s valid when `DpdEnable` is `1`. 
      */
     function __construct()
     {
@@ -151,6 +183,22 @@ class ModifyVpnConnectionAttributeRequest extends AbstractModel
 
         if (array_key_exists("HealthCheckRemoteIp",$param) and $param["HealthCheckRemoteIp"] !== null) {
             $this->HealthCheckRemoteIp = $param["HealthCheckRemoteIp"];
+        }
+
+        if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
+            $this->NegotiationType = $param["NegotiationType"];
+        }
+
+        if (array_key_exists("DpdEnable",$param) and $param["DpdEnable"] !== null) {
+            $this->DpdEnable = $param["DpdEnable"];
+        }
+
+        if (array_key_exists("DpdTimeout",$param) and $param["DpdTimeout"] !== null) {
+            $this->DpdTimeout = $param["DpdTimeout"];
+        }
+
+        if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
+            $this->DpdAction = $param["DpdAction"];
         }
     }
 }

@@ -102,6 +102,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
  * @method EnhancedService getEnhancedService() Obtain Specifies whether to enable additional services, such as security services and monitoring service.
  * @method void setEnhancedService(EnhancedService $EnhancedService) Set Specifies whether to enable additional services, such as security services and monitoring service.
+ * @method string getCamRoleName() Obtain CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+ * @method void setCamRoleName(string $CamRoleName) Set CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
  */
 class ModifyLaunchConfigurationAttributesRequest extends AbstractModel
 {
@@ -215,6 +217,11 @@ This field requires passing in the `InstanceName` field. Other fields that are n
     public $EnhancedService;
 
     /**
+     * @var string CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
+     */
+    public $CamRoleName;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $ImageId Valid [image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-8toqc6s3`. There are four types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><li>Marketplace images </li><br/>You can obtain the available image IDs in the following ways: <br/><li>For `public images`, `custom images`, and `shared images`, log in to the [console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE) to query the image IDs; for `marketplace images`, query the image IDs through [Cloud Marketplace](https://market.cloud.tencent.com/list). </li><li>This value can be obtained from the `ImageId` field in the return value of the [DescribeImages API](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1).</li>
      * @param array $InstanceTypes List of instance types. Each type specifies different resource specifications. This list contains up to 10 instance types.
@@ -256,6 +263,7 @@ This field requires passing the `HostName` field. Other fields that are not pass
 If this field is configured in a launch configuration, the `InstanceName` of a CVM created by the scaling group will be generated according to the configuration; otherwise, it will be in the `as-{{AutoScalingGroupName }}` format.
 This field requires passing in the `InstanceName` field. Other fields that are not passed in will use their default values.
      * @param EnhancedService $EnhancedService Specifies whether to enable additional services, such as security services and monitoring service.
+     * @param string $CamRoleName CAM role name. This parameter can be obtained from the `roleName` field returned by DescribeRoleList API.
      */
     function __construct()
     {
@@ -348,6 +356,10 @@ This field requires passing in the `InstanceName` field. Other fields that are n
         if (array_key_exists("EnhancedService",$param) and $param["EnhancedService"] !== null) {
             $this->EnhancedService = new EnhancedService();
             $this->EnhancedService->deserialize($param["EnhancedService"]);
+        }
+
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
         }
     }
 }

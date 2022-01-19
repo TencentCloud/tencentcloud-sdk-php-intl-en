@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyId() Obtain Globally unique CMK ID
  * @method void setKeyId(string $KeyId) Set Globally unique CMK ID
- * @method string getPlaintext() Obtain Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
- * @method void setPlaintext(string $Plaintext) Set Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+ * @method string getPlaintext() Obtain If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
+ * @method void setPlaintext(string $Plaintext) Set If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +37,8 @@ class DecryptResponse extends AbstractModel
     public $KeyId;
 
     /**
-     * @var string Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+     * @var string If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
      */
     public $Plaintext;
 
@@ -46,7 +49,8 @@ class DecryptResponse extends AbstractModel
 
     /**
      * @param string $KeyId Globally unique CMK ID
-     * @param string $Plaintext Decrypted plaintext. This field is Base64-encoded. In order to get the original plaintext, the Base64-decoding is needed
+     * @param string $Plaintext If `EncryptionPublicKey` is left empty, a Base64-encoded ciphertext will be returned. To get the plaintext, you need to decode the ciphertext first.
+If `EncryptionPublicKey` is specified, this field will return the Base64-encoded ciphertext encrypted with the specified public key. To get the plaintext, you need to decode the ciphertext and upload the corresponding private key.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -61,6 +61,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) This API is used to change the password.
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) This API is used to modify topic attributes.
+ * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) This API is used to send messages through the HTTP access layer.
  */
 
 class CkafkaClient extends AbstractClient

@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
  * @method array getNotificationUserGroupIds() Obtain Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
  * @method void setNotificationUserGroupIds(array $NotificationUserGroupIds) Set Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
- * @method string getQueueName() Obtain CMQ queue name.
- * @method void setQueueName(string $QueueName) Set CMQ queue name.
- * @method string getTopicName() Obtain CMQ topic name.
- * @method void setTopicName(string $TopicName) Set CMQ topic name.
+ * @method string getQueueName() Obtain CMQ or TDMQ CMQ queue name.
+ * @method void setQueueName(string $QueueName) Set CMQ or TDMQ CMQ queue name.
+ * @method string getTopicName() Obtain CMQ or TDMQ CMQ toipc name.
+ * @method void setTopicName(string $TopicName) Set CMQ or TDMQ CMQ toipc name.
  */
 class ModifyNotificationConfigurationRequest extends AbstractModel
 {
@@ -67,12 +67,12 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
     public $NotificationUserGroupIds;
 
     /**
-     * @var string CMQ queue name.
+     * @var string CMQ or TDMQ CMQ queue name.
      */
     public $QueueName;
 
     /**
-     * @var string CMQ topic name.
+     * @var string CMQ or TDMQ CMQ toipc name.
      */
     public $TopicName;
 
@@ -86,8 +86,8 @@ class ModifyNotificationConfigurationRequest extends AbstractModel
 <li>REPLACE_UNHEALTHY_INSTANCE_SUCCESSFUL: unhealthy instance replacement succeeded</li>
 <li>REPLACE_UNHEALTHY_INSTANCE_FAILED: unhealthy instance replacement failed</li>
      * @param array $NotificationUserGroupIds Notification group ID, which is the set of user group IDs. You can query the user group IDs through the [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) API.
-     * @param string $QueueName CMQ queue name.
-     * @param string $TopicName CMQ topic name.
+     * @param string $QueueName CMQ or TDMQ CMQ queue name.
+     * @param string $TopicName CMQ or TDMQ CMQ toipc name.
      */
     function __construct()
     {

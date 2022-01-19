@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestinationCidrBlock(string $DestinationCidrBlock) Set IDC IP range.
  * @method array getASPath() Obtain The `AS-Path` attribute of `BGP`.
  * @method void setASPath(array $ASPath) Set The `AS-Path` attribute of `BGP`.
+ * @method string getDescription() Obtain Remarks
+ * @method void setDescription(string $Description) Set Remarks
+ * @method string getUpdateTime() Obtain Last updated time
+ * @method void setUpdateTime(string $UpdateTime) Set Last updated time
  */
 class DirectConnectGatewayCcnRoute extends AbstractModel
 {
@@ -45,9 +49,21 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
     public $ASPath;
 
     /**
+     * @var string Remarks
+     */
+    public $Description;
+
+    /**
+     * @var string Last updated time
+     */
+    public $UpdateTime;
+
+    /**
      * @param string $RouteId Route ID.
      * @param string $DestinationCidrBlock IDC IP range.
      * @param array $ASPath The `AS-Path` attribute of `BGP`.
+     * @param string $Description Remarks
+     * @param string $UpdateTime Last updated time
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class DirectConnectGatewayCcnRoute extends AbstractModel
 
         if (array_key_exists("ASPath",$param) and $param["ASPath"] !== null) {
             $this->ASPath = $param["ASPath"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
+            $this->UpdateTime = $param["UpdateTime"];
         }
     }
 }

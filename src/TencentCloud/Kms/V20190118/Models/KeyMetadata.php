@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set CMK description
  * @method string getKeyState() Obtain CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
  * @method void setKeyState(string $KeyState) Set CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
- * @method string getKeyUsage() Obtain CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, and `ASYMMETRIC_SIGN_VERIFY_SM2`.
- * @method void setKeyUsage(string $KeyUsage) Set CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, and `ASYMMETRIC_SIGN_VERIFY_SM2`.
+ * @method string getKeyUsage() Obtain CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
+ * @method void setKeyUsage(string $KeyUsage) Set CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
  * @method integer getType() Obtain CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
  * @method void setType(integer $Type) Set CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
  * @method integer getCreatorUin() Obtain Creator
@@ -83,7 +83,7 @@ class KeyMetadata extends AbstractModel
     public $KeyState;
 
     /**
-     * @var string CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, and `ASYMMETRIC_SIGN_VERIFY_SM2`.
+     * @var string CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
      */
     public $KeyUsage;
 
@@ -140,7 +140,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $CreateTime Key creation time
      * @param string $Description CMK description
      * @param string $KeyState CMK status. Valid values: Enabled, Disabled, PendingDelete, PendingImport, Archived.
-     * @param string $KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, and `ASYMMETRIC_SIGN_VERIFY_SM2`.
+     * @param string $KeyUsage CMK purpose. Valid values: `ENCRYPT_DECRYPT`, `ASYMMETRIC_DECRYPT_RSA_2048`, `ASYMMETRIC_DECRYPT_SM2`, `ASYMMETRIC_SIGN_VERIFY_SM2`, `ASYMMETRIC_SIGN_VERIFY_RSA_2048`, and `ASYMMETRIC_SIGN_VERIFY_ECC`.
      * @param integer $Type CMK type. 2: FIPS-compliant; 4: SM-CRYPTO
      * @param integer $CreatorUin Creator
      * @param boolean $KeyRotationEnabled Whether key rotation is enabled
