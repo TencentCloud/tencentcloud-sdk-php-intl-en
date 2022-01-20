@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionAreaName(string $RegionAreaName) Set Name of the region where the data center locates
  * @method string getIDCType() Obtain Data center type. `dc`: data center; `ec`: edge server.
  * @method void setIDCType(string $IDCType) Set Data center type. `dc`: data center; `ec`: edge server.
+ * @method integer getFeatureBitmap() Obtain 
+ * @method void setFeatureBitmap(integer $FeatureBitmap) Set 
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -73,6 +75,11 @@ class AccessRegionDetial extends AbstractModel
     public $IDCType;
 
     /**
+     * @var integer 
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
      * @param array $ConcurrentList Value array of the available concurrence
@@ -80,6 +87,7 @@ class AccessRegionDetial extends AbstractModel
      * @param string $RegionArea Region where the data center locates
      * @param string $RegionAreaName Name of the region where the data center locates
      * @param string $IDCType Data center type. `dc`: data center; `ec`: edge server.
+     * @param integer $FeatureBitmap 
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class AccessRegionDetial extends AbstractModel
 
         if (array_key_exists("IDCType",$param) and $param["IDCType"] !== null) {
             $this->IDCType = $param["IDCType"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

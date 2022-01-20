@@ -48,8 +48,12 @@ The connection is to be replicated if this parameter is set.
  * @method void setBillingType(integer $BillingType) Set Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
- * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
- * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
+ * @method string getNetworkType() Obtain Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+ * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+ * @method integer getHttp3Supported() Obtain 
+ * @method void setHttp3Supported(integer $Http3Supported) Set 
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -116,9 +120,19 @@ The connection is to be replicated if this parameter is set.
     public $IPAddressVersion;
 
     /**
-     * @var string Network type. Valid values: `normal` (default), `cn2`
+     * @var string Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
      */
     public $NetworkType;
+
+    /**
+     * @var string Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     */
+    public $PackageType;
+
+    /**
+     * @var integer 
+     */
+    public $Http3Supported;
 
     /**
      * @param integer $ProjectId Project ID of connection.
@@ -135,7 +149,9 @@ For more information, please see How to Ensure Idempotence.
 The connection is to be replicated if this parameter is set.
      * @param integer $BillingType Billing mode (0: bill-by-bandwidth, 1: bill-by-traffic. Default value: bill-by-bandwidth)
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-     * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
+     * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+     * @param integer $Http3Supported 
      */
     function __construct()
     {
@@ -205,6 +221,14 @@ The connection is to be replicated if this parameter is set.
 
         if (array_key_exists("NetworkType",$param) and $param["NetworkType"] !== null) {
             $this->NetworkType = $param["NetworkType"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

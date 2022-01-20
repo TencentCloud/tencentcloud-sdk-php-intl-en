@@ -60,6 +60,8 @@ which is left empty by default. Specify this parameter when cloning a strong syn
  * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
  * @method boolean getDryRun() Obtain Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
  * @method void setDryRun(boolean $DryRun) Set Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+ * @method string getCageId() Obtain Financial cage ID.
+ * @method void setCageId(string $CageId) Set Financial cage ID.
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -160,6 +162,11 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     public $DryRun;
 
     /**
+     * @var string Financial cage ID.
+     */
+    public $CageId;
+
+    /**
      * @param string $InstanceId ID of the instance to be cloned from
      * @param string $SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
      * @param integer $SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
@@ -180,6 +187,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
      * @param integer $InstanceNodes The number of nodes of the clone. If this parameter is set to `3` or the `BackupZone` parameter is specified, the clone will have three nodes. If this parameter is set to `2` or left empty, the clone will have two nodes.
      * @param string $DeployGroupId Placement group ID.
      * @param boolean $DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
+     * @param string $CageId Financial cage ID.
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
+            $this->CageId = $param["CageId"];
         }
     }
 }

@@ -72,6 +72,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setUserScript(string $UserScript) Set Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method array getTags() Obtain Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NodePool extends AbstractModel
 {
@@ -174,6 +178,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $UserScript;
 
     /**
+     * @var array Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
@@ -200,6 +210,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $UserScript Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param array $Tags Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -295,6 +307,15 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
             $this->UserScript = $param["UserScript"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

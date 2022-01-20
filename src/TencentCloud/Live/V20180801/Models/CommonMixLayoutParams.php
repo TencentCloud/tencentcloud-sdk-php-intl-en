@@ -20,12 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * General stream mix layout parameter.
  *
- * @method integer getImageLayer() Obtain Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
- * @method void setImageLayer(integer $ImageLayer) Set Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+ * @method integer getImageLayer() Obtain Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
+ * @method void setImageLayer(integer $ImageLayer) Set Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
  * @method integer getInputType() Obtain Input type. Value range: [0,5].
 If this parameter is left empty, 0 will be used by default.
 0: the input stream is audio/video.
@@ -40,16 +42,6 @@ If this parameter is left empty, 0 will be used by default.
 3: the input stream is canvas. 
 4: the input stream is audio.
 5: the input stream is pure video.
- * @method float getImageWidth() Obtain Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
- * @method void setImageWidth(float $ImageWidth) Set Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
  * @method float getImageHeight() Obtain Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -60,6 +52,16 @@ Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
+ * @method float getImageWidth() Obtain Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+ * @method void setImageWidth(float $ImageWidth) Set Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
  * @method float getLocationX() Obtain X-axis offset of input in output video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -108,9 +110,10 @@ Gray: 0x999999
 class CommonMixLayoutParams extends AbstractModel
 {
     /**
-     * @var integer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+     * @var integer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
      */
     public $ImageLayer;
 
@@ -126,15 +129,6 @@ If this parameter is left empty, 0 will be used by default.
     public $InputType;
 
     /**
-     * @var float Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
-     */
-    public $ImageWidth;
-
-    /**
      * @var float Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -142,6 +136,15 @@ If this parameter is left empty, the input stream height will be used by default
 If percentage is used, the expected output is (percentage * background height).
      */
     public $ImageHeight;
+
+    /**
+     * @var float Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
+     */
+    public $ImageWidth;
 
     /**
      * @var float X-axis offset of input in output video image. Value range:
@@ -182,9 +185,10 @@ Gray: 0x999999
     public $WatermarkId;
 
     /**
-     * @param integer $ImageLayer Input layer. Value range: [1,16].
-1) For `image_layer` of background stream (i.e., main host video image or canvas), enter 1.
-2) For audio stream mix, this parameter is also required.
+     * @param integer $ImageLayer Input layer. Value range: [1,16]
+(1) For the background stream, i.e., the room owner’s image or the canvas, set this parameter to `1`.
+(2) This parameter is required for audio-only stream mixing as well.
+Note that two inputs cannot have the same `ImageLayer` value.
      * @param integer $InputType Input type. Value range: [0,5].
 If this parameter is left empty, 0 will be used by default.
 0: the input stream is audio/video.
@@ -192,16 +196,16 @@ If this parameter is left empty, 0 will be used by default.
 3: the input stream is canvas. 
 4: the input stream is audio.
 5: the input stream is pure video.
-     * @param float $ImageWidth Output width of input video image. Value range:
-Pixel: [0,2000]
-Percentage: [0.01,0.99]
-If this parameter is left empty, the input stream width will be used by default.
-If percentage is used, the expected output is (percentage * background width).
      * @param float $ImageHeight Output height of input video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
 If this parameter is left empty, the input stream height will be used by default.
 If percentage is used, the expected output is (percentage * background height).
+     * @param float $ImageWidth Output width of input video image. Value range:
+Pixel: [0,2000]
+Percentage: [0.01,0.99]
+If this parameter is left empty, the input stream width will be used by default.
+If percentage is used, the expected output is (percentage * background width).
      * @param float $LocationX X-axis offset of input in output video image. Value range:
 Pixel: [0,2000]
 Percentage: [0.01,0.99]
@@ -246,12 +250,12 @@ Gray: 0x999999
             $this->InputType = $param["InputType"];
         }
 
-        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
-            $this->ImageWidth = $param["ImageWidth"];
-        }
-
         if (array_key_exists("ImageHeight",$param) and $param["ImageHeight"] !== null) {
             $this->ImageHeight = $param["ImageHeight"];
+        }
+
+        if (array_key_exists("ImageWidth",$param) and $param["ImageWidth"] !== null) {
+            $this->ImageWidth = $param["ImageWidth"];
         }
 
         if (array_key_exists("LocationX",$param) and $param["LocationX"] !== null) {

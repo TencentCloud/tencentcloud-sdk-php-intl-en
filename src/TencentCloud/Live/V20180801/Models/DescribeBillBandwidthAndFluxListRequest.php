@@ -48,6 +48,26 @@ Default value: 5.
 Default value: 5.
  * @method string getServiceName() Obtain Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
  * @method void setServiceName(string $ServiceName) Set Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+ * @method array getRegionNames() Obtain Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+ * @method void setRegionNames(array $RegionNames) Set Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
  */
 class DescribeBillBandwidthAndFluxListRequest extends AbstractModel
 {
@@ -90,6 +110,20 @@ Default value: 5.
     public $ServiceName;
 
     /**
+     * @var array Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
+     */
+    public $RegionNames;
+
+    /**
      * @param string $StartTime Start time point in the format of `yyyy-mm-dd HH:MM:SS`.
      * @param string $EndTime End time point in the format of yyyy-mm-dd HH:MM:SS. The difference between the start time and end time cannot be greater than 31 days. Data in the last 3 years can be queried.
      * @param array $PlayDomains LVB playback domain name. If this parameter is left empty, full data will be queried.
@@ -104,6 +138,16 @@ Note: LEB only supports querying data for all regions.
 1440: 1-day granularity (the query time span should be within one month).
 Default value: 5.
      * @param string $ServiceName Service name. Valid values: LVB, LEB. The sum of LVB and LEB usage will be returned if this parameter is left empty.
+     * @param array $RegionNames Region. Valid values:
+China Mainland
+Asia Pacific I
+Asia Pacific II
+Asia Pacific III
+Europe
+North America
+South America
+Middle East
+Africa
      */
     function __construct()
     {
@@ -140,6 +184,10 @@ Default value: 5.
 
         if (array_key_exists("ServiceName",$param) and $param["ServiceName"] !== null) {
             $this->ServiceName = $param["ServiceName"];
+        }
+
+        if (array_key_exists("RegionNames",$param) and $param["RegionNames"] !== null) {
+            $this->RegionNames = $param["RegionNames"];
         }
     }
 }

@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method InstanceExtraArgs getExtraArgs() Obtain Node custom parameter
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Node custom parameter
+ * @method array getTags() Obtain Resource tag
+ * @method void setTags(array $Tags) Set Resource tag
+ * @method integer getUnschedulable() Obtain 
+ * @method void setUnschedulable(integer $Unschedulable) Set 
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $ExtraArgs;
 
     /**
+     * @var array Resource tag
+     */
+    public $Tags;
+
+    /**
+     * @var integer 
+     */
+    public $Unschedulable;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -112,6 +126,8 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param string $OsName Operating system name
      * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param InstanceExtraArgs $ExtraArgs Node custom parameter
+     * @param array $Tags Resource tag
+     * @param integer $Unschedulable 
      */
     function __construct()
     {
@@ -179,6 +195,19 @@ class ModifyClusterNodePoolRequest extends AbstractModel
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
+            $this->Unschedulable = $param["Unschedulable"];
         }
     }
 }

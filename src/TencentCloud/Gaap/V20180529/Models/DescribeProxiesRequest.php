@@ -33,6 +33,7 @@ AccessRegion - String - Required: No - Filter by access region.
 RealServerRegion - String - Required: No - Filter by origin server region.
 GroupId - String - Required: No - Filter by connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
  * @method void setFilters(array $Filters) Set Filter condition   
 The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
 ProjectId - String - Required: No - Filter by project ID.   
@@ -40,6 +41,7 @@ AccessRegion - String - Required: No - Filter by access region.
 RealServerRegion - String - Required: No - Filter by origin server region.
 GroupId - String - Required: No - Filter by connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
  * @method array getProxyIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
  * @method void setProxyIds(array $ProxyIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
  * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -98,6 +100,7 @@ AccessRegion - String - Required: No - Filter by access region.
 RealServerRegion - String - Required: No - Filter by origin server region.
 GroupId - String - Required: No - Filter by connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
      */
     public $Filters;
 
@@ -148,6 +151,7 @@ AccessRegion - String - Required: No - Filter by access region.
 RealServerRegion - String - Required: No - Filter by origin server region.
 GroupId - String - Required: No - Filter by connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
+PackageType - String - Required: No - Filter by package type of connection groups.
      * @param array $ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
      * @param array $TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connections tagged any of them will be pulled.

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDestRegion(string $DestRegion) Set Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
- * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
- * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
  */
 class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeAccessRegionsByDestRegionRequest extends AbstractModel
     public $IPAddressVersion;
 
     /**
-     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @var string Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     public $PackageType;
 
     /**
      * @param string $DestRegion Origin server region: the DescribeDestRegions API returns the value of `RegionId` field of `DestRegionSet`.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
      */
     function __construct()
     {

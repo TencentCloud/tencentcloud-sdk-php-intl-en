@@ -38,6 +38,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setAnnotations(array $Annotations) Set Refer to annotations in prometheus rule
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getRuleState() Obtain Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRuleState(integer $RuleState) Set Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class PrometheusAlertRule extends AbstractModel
 {
@@ -79,6 +83,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $Annotations;
 
     /**
+     * @var integer Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RuleState;
+
+    /**
      * @param string $Name Rule name
      * @param string $Rule PromQL contents
      * @param array $Labels Additional labels
@@ -88,6 +98,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $Annotations Refer to annotations in prometheus rule
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $RuleState Alarm rule status
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -138,6 +150,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->Annotations, $obj);
             }
+        }
+
+        if (array_key_exists("RuleState",$param) and $param["RuleState"] !== null) {
+            $this->RuleState = $param["RuleState"];
         }
     }
 }

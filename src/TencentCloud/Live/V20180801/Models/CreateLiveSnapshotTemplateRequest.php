@@ -40,10 +40,10 @@ Only letters, digits, underscores, and hyphens can be contained.
  * @method void setDescription(string $Description) Set Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
- * @method integer getSnapshotInterval() Obtain Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
- * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+ * @method integer getSnapshotInterval() Obtain Screencapturing interval (s). Default value: 10
+Value range: 2-300
+ * @method void setSnapshotInterval(integer $SnapshotInterval) Set Screencapturing interval (s). Default value: 10
+Value range: 2-300
  * @method integer getWidth() Obtain Screenshot width. Default value: `0` (original width)
 Value range: 0-3000
  * @method void setWidth(integer $Width) Set Screenshot width. Default value: `0` (original width)
@@ -104,8 +104,8 @@ Only letters, digits, underscores, and hyphens can be contained.
     public $Description;
 
     /**
-     * @var integer Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+     * @var integer Screencapturing interval (s). Default value: 10
+Value range: 2-300
      */
     public $SnapshotInterval;
 
@@ -153,8 +153,8 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
      * @param string $Description Description.
 Maximum length: 1,024 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
-     * @param integer $SnapshotInterval Screencapturing interval in seconds. Default value: 10s.
-Value range: 5-300s.
+     * @param integer $SnapshotInterval Screencapturing interval (s). Default value: 10
+Value range: 2-300
      * @param integer $Width Screenshot width. Default value: `0` (original width)
 Value range: 0-3000
      * @param integer $Height Screenshot height. Default value: `0` (original height)

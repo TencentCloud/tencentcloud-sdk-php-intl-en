@@ -58,12 +58,14 @@ Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
  * @method integer getNeedAudio() Obtain Whether to keep the audio. 0: no; 1: yes. Default value: 1.
  * @method void setNeedAudio(integer $NeedAudio) Set Whether to keep the audio. 0: no; 1: yes. Default value: 1.
- * @method integer getHeight() Obtain Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
- * @method void setHeight(integer $Height) Set Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+ * @method integer getHeight() Obtain Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
+ * @method void setHeight(integer $Height) Set Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
  * @method integer getFps() Obtain Frame rate. Default value: 0.
 Value range: 0-60
  * @method void setFps(integer $Fps) Set Frame rate. Default value: 0.
@@ -169,9 +171,10 @@ It must be a multiple of 2. The original width is 0.
     public $NeedAudio;
 
     /**
-     * @var integer Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+     * @var integer Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
      */
     public $Height;
 
@@ -258,9 +261,10 @@ origin: original codec as the output codec
 Value range: 0-3000
 It must be a multiple of 2. The original width is 0.
      * @param integer $NeedAudio Whether to keep the audio. 0: no; 1: yes. Default value: 1.
-     * @param integer $Height Height. Default value: 0.
-Value range: [0,3000]
-The value must be a multiple of 2, and 0 is the original height.
+     * @param integer $Height Height. Default value: 0
+Value range: 0-3000
+The value must be a multiple of 2. The original height is `0`.
+This parameter is required for a top speed codec template (when `AiTransCode` is `1`).
      * @param integer $Fps Frame rate. Default value: 0.
 Value range: 0-60
      * @param integer $Gop Keyframe interval in seconds. Default value: original interval

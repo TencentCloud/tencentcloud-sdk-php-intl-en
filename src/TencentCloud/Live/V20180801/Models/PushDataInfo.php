@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerIp(string $ServerIp) Set IP of the server that receives the stream.
  * @method integer getVideoFps() Obtain Pushed video frame rate in Hz.
  * @method void setVideoFps(integer $VideoFps) Set Pushed video frame rate in Hz.
- * @method integer getVideoSpeed() Obtain Pushed video bitrate in bps.
- * @method void setVideoSpeed(integer $VideoSpeed) Set Pushed video bitrate in bps.
+ * @method integer getVideoSpeed() Obtain Video bitrate (Kbps) for publishing
+ * @method void setVideoSpeed(integer $VideoSpeed) Set Video bitrate (Kbps) for publishing
  * @method integer getAudioFps() Obtain Pushed audio frame rate in Hz.
  * @method void setAudioFps(integer $AudioFps) Set Pushed audio frame rate in Hz.
- * @method integer getAudioSpeed() Obtain Pushed audio bitrate in bps.
- * @method void setAudioSpeed(integer $AudioSpeed) Set Pushed audio bitrate in bps.
+ * @method integer getAudioSpeed() Obtain Audio bitrate (Kbps) for publishing
+ * @method void setAudioSpeed(integer $AudioSpeed) Set Audio bitrate (Kbps) for publishing
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getBeginPushTime() Obtain Push start time.
@@ -87,7 +87,7 @@ class PushDataInfo extends AbstractModel
     public $VideoFps;
 
     /**
-     * @var integer Pushed video bitrate in bps.
+     * @var integer Video bitrate (Kbps) for publishing
      */
     public $VideoSpeed;
 
@@ -97,7 +97,7 @@ class PushDataInfo extends AbstractModel
     public $AudioFps;
 
     /**
-     * @var integer Pushed audio bitrate in bps.
+     * @var integer Audio bitrate (Kbps) for publishing
      */
     public $AudioSpeed;
 
@@ -154,9 +154,9 @@ Example: H.264.
      * @param string $ClientIp Push client IP.
      * @param string $ServerIp IP of the server that receives the stream.
      * @param integer $VideoFps Pushed video frame rate in Hz.
-     * @param integer $VideoSpeed Pushed video bitrate in bps.
+     * @param integer $VideoSpeed Video bitrate (Kbps) for publishing
      * @param integer $AudioFps Pushed audio frame rate in Hz.
-     * @param integer $AudioSpeed Pushed audio bitrate in bps.
+     * @param integer $AudioSpeed Audio bitrate (Kbps) for publishing
      * @param string $PushDomain Push domain name.
      * @param string $BeginPushTime Push start time.
      * @param string $Acodec Audio codec,

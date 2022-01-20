@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
  * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
- * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
- * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+ * @method integer getHttp3Supported() Obtain 
+ * @method void setHttp3Supported(integer $Http3Supported) Set 
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -75,9 +77,14 @@ class CheckProxyCreateRequest extends AbstractModel
     public $NetworkType;
 
     /**
-     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
      */
     public $PackageType;
+
+    /**
+     * @var integer 
+     */
+    public $Http3Supported;
 
     /**
      * @param string $AccessRegion Access (acceleration) region of the connection. The value can be obtained via the DescribeAccessRegionsByDestRegion API.
@@ -87,7 +94,8 @@ class CheckProxyCreateRequest extends AbstractModel
      * @param string $GroupId Connection group ID that needs to be entered when a connection is created in a connection group
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
-     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
+     * @param integer $Http3Supported 
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class CheckProxyCreateRequest extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

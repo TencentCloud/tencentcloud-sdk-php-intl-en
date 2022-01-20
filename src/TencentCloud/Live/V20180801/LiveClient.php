@@ -59,8 +59,8 @@ Note: at least enter one callback URL.
   4. This calling method does not support recording streams outside Mainland China for the time being.
  * @method Models\CreateLiveRecordRuleResponse CreateLiveRecordRule(Models\CreateLiveRecordRuleRequest $req) To create a recording rule, you need to first call the [CreateLiveRecordTemplate](https://intl.cloud.tencent.com/document/product/267/32614?from_cn_redirect=1) API to create a recording template and bind the returned template ID to the stream.
 <br>Recording-related document: [LVB Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1).
- * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) After a recording template is created and a template ID is successfully returned, you need to call the [CreateLiveRecordRule](https://intl.cloud.tencent.com/document/product/267/32615?from_cn_redirect=1) API and bind the template ID to the stream.
-<br>Recording-related document: [LVB Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1).
+ * @method Models\CreateLiveRecordTemplateResponse CreateLiveRecordTemplate(Models\CreateLiveRecordTemplateRequest $req) This API is used to create a recording template. You can create up to 50 templates. To use a template, you need to call the [CreateLiveRecordRule](https://intl.cloud.tencent.com/document/product/267/32615?from_cn_redirect=1) API to bind the template ID returned by this API to a stream.
+<br>More on recording: [Live Recording](https://intl.cloud.tencent.com/document/product/267/32739?from_cn_redirect=1)
  * @method Models\CreateLiveSnapshotRuleResponse CreateLiveSnapshotRule(Models\CreateLiveSnapshotRuleRequest $req) This API is used to create a screencapturing rule. You need to first call the [CreateLiveSnapshotTemplate](https://intl.cloud.tencent.com/document/product/267/32624?from_cn_redirect=1) API to create a screencapturing template to bind the returned template ID to the stream.
 <br>Screencapturing document: [LVB Screencapturing](https://intl.cloud.tencent.com/document/product/267/32737?from_cn_redirect=1).
 Note: only one screencapturing template can be associated with one domain name.
@@ -141,15 +141,16 @@ Notes:
  * @method Models\DescribeLiveStreamPublishedListResponse DescribeLiveStreamPublishedList(Models\DescribeLiveStreamPublishedListRequest $req) This API is used to return the list of pushed streams. <br>
 Note: Up to 10,000 entries can be queried per page. More data can be obtained by adjusting the query time range.
  * @method Models\DescribeLiveStreamPushInfoListResponse DescribeLiveStreamPushInfoList(Models\DescribeLiveStreamPushInfoListRequest $req) This API is used to query the push information of all real-time streams, including client IP, server IP, frame rate, bitrate, domain name, and push start time.
- * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) This API is used to get the stream status, such as active, inactive, or disabled.
-Note: this API is used to query the stream status, and should not be relied too much upon in important business scenarios.
+ * @method Models\DescribeLiveStreamStateResponse DescribeLiveStreamState(Models\DescribeLiveStreamStateRequest $req) This API is used to get the stream status, which may be active, inactive, or disabled.
 
 Notes:
-1. You should not rely on the results returned by this API to initiate/interrupt live streams.
-2. The application can get and store the status of live rooms via [Stream Push and Interruption Event Notification](https://intl.cloud.tencent.com/document/product/267/47025?from_cn_redirect=1).
-3. You can use the [DescribeLiveStreamOnlineList](https://intl.cloud.tencent.com/document/product/267/20472?from_cn_redirect=1) API to regularly (with the interval larger than 1 minute) check the status of live rooms monitored by the application.
-4. If you find that a stream is inactive using the stream status query API, you can use other above-mentioned methods to check its status.
-5. If access or resolution errors occur when you use the API to query, you can regard the stream as active, and do not perform operations on the application.
+This API allows you to query the status of a stream in real time. Given external factors such as network jitter, note the following when you determine whether a host is online:
+1. If possible, use your own logic of stream starting/stopping in a room, such as streaming signaling on the client and the online heartbeat of a host, to determine whether the host is online.
+2. If your application does not provide the room management feature, use the following methods to determine whether a host is online:
+2.1 Use the [live stream callback](https://intl.cloud.tencent.com/document/product/267/20388?from_cn_redirect=1).
+2.2 Call [DescribeLiveStreamOnlineList](https://intl.cloud.tencent.com/document/api/267/20472?from_cn_redirect=1) on a regular basis (interval > 1 min).
+2.3 Call this API.
+2.4 A host is considered to be online if the result returned by any of the above methods indicates so. If an API call times out or a parsing error occurs, to minimize the impact on your business, CSS will also consider the host online.
  * @method Models\DescribeLiveTranscodeDetailInfoResponse DescribeLiveTranscodeDetailInfo(Models\DescribeLiveTranscodeDetailInfoRequest $req) This API is used to query the details of transcoding on a specified day or in a specified period of time.
  * @method Models\DescribeLiveTranscodeRulesResponse DescribeLiveTranscodeRules(Models\DescribeLiveTranscodeRulesRequest $req) This API is used to get the list of transcoding rules.
  * @method Models\DescribeLiveTranscodeTemplateResponse DescribeLiveTranscodeTemplate(Models\DescribeLiveTranscodeTemplateRequest $req) This API is used to get a single transcoding template.
@@ -189,7 +190,7 @@ Referer information is included in HTTP requests. After you enable referer confi
  * @method Models\ResumeDelayLiveStreamResponse ResumeDelayLiveStream(Models\ResumeDelayLiveStreamRequest $req) This API is used to cancel the delay setting and recover the real-time display of the live streaming image.
  * @method Models\ResumeLiveStreamResponse ResumeLiveStream(Models\ResumeLiveStreamRequest $req) This API is used to resume the push of a specific stream.
  * @method Models\StopLiveRecordResponse StopLiveRecord(Models\StopLiveRecordRequest $req) Note: Recording files are stored on the VOD platform. To use the recording feature, you need to activate a VOD account and ensure that it is available. After the recording files are stored, applicable fees (including storage fees and downstream playback traffic fees) will be charged according to the VOD billing method. For more information, please see the corresponding document.
- * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) This API is used to end a recording prematurely and terminate an ongoing recording task. After the task is successfully terminated, it will not restart.
+ * @method Models\StopRecordTaskResponse StopRecordTask(Models\StopRecordTaskRequest $req) This API is used to terminate an ongoing recording task and generate a recording file.
  * @method Models\UnBindLiveDomainCertResponse UnBindLiveDomainCert(Models\UnBindLiveDomainCertRequest $req) This API is used to unbind a domain name certificate.
  * @method Models\UpdateLiveWatermarkResponse UpdateLiveWatermark(Models\UpdateLiveWatermarkRequest $req) This API is used to update a watermark.
  */

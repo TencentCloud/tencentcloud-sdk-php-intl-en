@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeParamTemplates request structure.
  *
-
+ * @method array getEngineVersions() Obtain 
+ * @method void setEngineVersions(array $EngineVersions) Set 
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
-
+    /**
+     * @var array 
+     */
+    public $EngineVersions;
 
     /**
-
+     * @param array $EngineVersions 
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
+            $this->EngineVersions = $param["EngineVersions"];
+        }
     }
 }

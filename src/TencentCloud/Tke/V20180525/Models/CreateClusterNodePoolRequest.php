@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodePoolOs(string $NodePoolOs) Set Operating system of the node pool
  * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method array getTags() Obtain Resource tag
+ * @method void setTags(array $Tags) Set Resource tag
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var array Resource tag
+     */
+    public $Tags;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $AutoScalingGroupPara AS group parameters
      * @param string $LaunchConfigurePara Running parameters
@@ -104,6 +111,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param array $Taints Taints
      * @param string $NodePoolOs Operating system of the node pool
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param array $Tags Resource tag
      */
     function __construct()
     {
@@ -167,6 +175,15 @@ class CreateClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("OsCustomizeType",$param) and $param["OsCustomizeType"] !== null) {
             $this->OsCustomizeType = $param["OsCustomizeType"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

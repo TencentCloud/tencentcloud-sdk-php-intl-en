@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() Obtain List of cloud disk IDs required to be returned.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs required to be returned.
+ * @method integer getDeleteSnapshot() Obtain Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+ * @method void setDeleteSnapshot(integer $DeleteSnapshot) Set Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
  */
 class TerminateDisksRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class TerminateDisksRequest extends AbstractModel
     public $DiskIds;
 
     /**
+     * @var integer Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
+     */
+    public $DeleteSnapshot;
+
+    /**
      * @param array $DiskIds List of cloud disk IDs required to be returned.
+     * @param integer $DeleteSnapshot Delete the associated non-permanently reserved snapshots upon deletion of the source cloud disk. `0`: No (default). `1`: Yes. To check whether a snapshot is permanently reserved, refer to the `IsPermanent` field returned by the `DescribeSnapshots` API. 
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class TerminateDisksRequest extends AbstractModel
         }
         if (array_key_exists("DiskIds",$param) and $param["DiskIds"] !== null) {
             $this->DiskIds = $param["DiskIds"];
+        }
+
+        if (array_key_exists("DeleteSnapshot",$param) and $param["DeleteSnapshot"] !== null) {
+            $this->DeleteSnapshot = $param["DeleteSnapshot"];
         }
     }
 }

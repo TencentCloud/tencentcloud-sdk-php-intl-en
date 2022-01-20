@@ -128,9 +128,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getBanStatus() Obtain Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
@@ -138,6 +140,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method array getIPList() Obtain 
  * @method void setIPList(array $IPList) Set 
+ * @method integer getHttp3Supported() Obtain 
+ * @method void setHttp3Supported(integer $Http3Supported) Set 
  */
 class ProxyInfo extends AbstractModel
 {
@@ -312,7 +316,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $NetworkType;
 
     /**
-     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @var string Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $PackageType;
@@ -327,6 +332,11 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      * @var array 
      */
     public $IPList;
+
+    /**
+     * @var integer 
+     */
+    public $Http3Supported;
 
     /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
@@ -383,11 +393,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), 
+and `CrossBorder` (cross-MLC-border connection).
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $IPList 
+     * @param integer $Http3Supported 
      */
     function __construct()
     {
@@ -540,6 +552,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->IPList, $obj);
             }
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }
