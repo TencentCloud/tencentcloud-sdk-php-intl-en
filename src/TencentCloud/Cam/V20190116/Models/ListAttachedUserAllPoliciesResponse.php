@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dcdb\V20180411\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProjectSecurityGroups response structure.
+ * ListAttachedUserAllPolicies response structure.
  *
- * @method array getGroups() Obtain Security group details
- * @method void setGroups(array $Groups) Set Security group details
- * @method integer getTotal() Obtain Number of security groups.
- * @method void setTotal(integer $Total) Set Number of security groups.
+ * @method array getPolicyList() Obtain Policy list.
+ * @method void setPolicyList(array $PolicyList) Set Policy list.
+ * @method integer getTotalNum() Obtain Total number of policies.
+ * @method void setTotalNum(integer $TotalNum) Set Total number of policies.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProjectSecurityGroupsResponse extends AbstractModel
+class ListAttachedUserAllPoliciesResponse extends AbstractModel
 {
     /**
-     * @var array Security group details
+     * @var array Policy list.
      */
-    public $Groups;
+    public $PolicyList;
 
     /**
-     * @var integer Number of security groups.
+     * @var integer Total number of policies.
      */
-    public $Total;
+    public $TotalNum;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Groups Security group details
-     * @param integer $Total Number of security groups.
+     * @param array $PolicyList Policy list.
+     * @param integer $TotalNum Total number of policies.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +62,17 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
+        if (array_key_exists("PolicyList",$param) and $param["PolicyList"] !== null) {
+            $this->PolicyList = [];
+            foreach ($param["PolicyList"] as $key => $value){
+                $obj = new AttachedUserPolicy();
                 $obj->deserialize($value);
-                array_push($this->Groups, $obj);
+                array_push($this->PolicyList, $obj);
             }
         }
 
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
+            $this->TotalNum = $param["TotalNum"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getBusinessCodeName() Obtain Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
  * @method void setBusinessCodeName(string $BusinessCodeName) Set Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
- * @method string getProductCodeName() Obtain Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
- * @method void setProductCodeName(string $ProductCodeName) Set Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+ * @method string getProductCodeName() Obtain Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
+ * @method void setProductCodeName(string $ProductCodeName) Set Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
  * @method string getPayModeName() Obtain Billing mode
  * @method void setPayModeName(string $PayModeName) Set Billing mode
  * @method string getProjectName() Obtain Project
@@ -84,10 +84,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOwnerUin(string $OwnerUin) Set Resource owner UIN; '-' is returned if no value is obtained
  * @method string getOperateUin() Obtain Operator UIN; '-' is returned if no value is obtained
  * @method void setOperateUin(string $OperateUin) Set Operator UIN; '-' is returned if no value is obtained
- * @method string getBusinessCode() Obtain 
- * @method void setBusinessCode(string $BusinessCode) Set 
- * @method string getProductCode() Obtain 
- * @method void setProductCode(string $ProductCode) Set 
+ * @method string getBusinessCode() Obtain Product code
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+ * @method string getProductCode() Obtain Subproduct code
+ * @method void setProductCode(string $ProductCode) Set Subproduct code
  * @method integer getRegionId() Obtain 
  * @method void setRegionId(integer $RegionId) Set 
  */
@@ -99,7 +99,7 @@ class BillResourceSummary extends AbstractModel
     public $BusinessCodeName;
 
     /**
-     * @var string Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+     * @var string Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
      */
     public $ProductCodeName;
 
@@ -246,12 +246,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OperateUin;
 
     /**
-     * @var string 
+     * @var string Product code
      */
     public $BusinessCode;
 
     /**
-     * @var string 
+     * @var string Subproduct code
      */
     public $ProductCode;
 
@@ -262,7 +262,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
-     * @param string $ProductCodeName Sub-product name: sub-categories of Tencent Cloud services, such as CVM-Standard S1; if no subproduct name is obtained, '-' is returned.
+     * @param string $ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
      * @param string $PayModeName Billing mode
      * @param string $ProjectName Project
      * @param string $RegionName Region
@@ -293,8 +293,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $PayerUin Payer UIN
      * @param string $OwnerUin Resource owner UIN; '-' is returned if no value is obtained
      * @param string $OperateUin Operator UIN; '-' is returned if no value is obtained
-     * @param string $BusinessCode 
-     * @param string $ProductCode 
+     * @param string $BusinessCode Product code
+     * @param string $ProductCode Subproduct code
      * @param integer $RegionId 
      */
     function __construct()

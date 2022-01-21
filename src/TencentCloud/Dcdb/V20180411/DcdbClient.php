@@ -46,6 +46,7 @@ If no filter is specified, 10 instances will be returned by default. Up to 100 i
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) This API is used to query the table information of a TencentDB instance.
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) This API is used to query the list of databases of a TencentDB instance.
  * @method Models\DescribeDcnDetailResponse DescribeDcnDetail(Models\DescribeDcnDetailRequest $req) This API is used to query the disaster recovery details of an instance.
+ * @method Models\DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(Models\DescribeFileDownloadUrlRequest $req) This API is used to get the download URL of a specific backup or log file of a database.
  * @method Models\DescribeFlowResponse DescribeFlow(Models\DescribeFlowRequest $req) This API is used to query task status.
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) This API is used to query the security group details of a project.
  * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) This API is used to query the project list.

@@ -23,12 +23,10 @@ use TencentCloud\Common\AbstractModel;
 + Supports uploading certificates of PEM format for deployment
 Note: when uploading certificates of PEM format, the Base64 encoding is required.
  *
- * @method string getCertId() Obtain Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertId(string $CertId) Set Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCertId() Obtain Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCertId(string $CertId) Set Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCertName() Obtain Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -67,9 +65,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ServerCert extends AbstractModel
 {
     /**
-     * @var string Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CertId;
 
@@ -115,9 +112,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @param string $CertId Server certificate ID
-This is auto-generated when the certificate is being hosted by the SSL Certificate Service
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CertName Server certificate name
 This is auto-generated when the certificate is being hosted by the SSL Certificate Service
 Note: this field may return null, indicating that no valid values can be obtained.

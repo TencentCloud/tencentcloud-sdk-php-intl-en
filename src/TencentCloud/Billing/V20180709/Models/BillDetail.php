@@ -61,15 +61,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTags(array $Tags) Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getBusinessCode() Obtain Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setBusinessCode(string $BusinessCode) Set Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method string getProductCode() Obtain Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setProductCode(string $ProductCode) Set Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getActionType() Obtain Transaction type/code (optional)
- * @method void setActionType(string $ActionType) Set Transaction type/code (optional)
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getActionType() Obtain Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setActionType(string $ActionType) Set Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method string getRegionId() Obtain 
  * @method void setRegionId(string $RegionId) Set 
  * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
@@ -175,18 +177,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $BusinessCode;
 
     /**
      * @var string Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ProductCode;
 
     /**
-     * @var string Transaction type/code (optional)
+     * @var string Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ActionType;
 
@@ -222,10 +225,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $BusinessCode Product code
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $ProductCode Subproduct code
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ActionType Transaction type/code (optional)
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $ActionType Transaction type
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $RegionId 
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
      */

@@ -67,6 +67,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) This API is used to list the access keys associated with a specified CAM user.
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.
+ * @method Models\ListAttachedUserAllPoliciesResponse ListAttachedUserAllPolicies(Models\ListAttachedUserAllPoliciesRequest $req) This API is used to list policies associated with the user (including those inherited from the user group).
  * @method Models\ListAttachedUserPoliciesResponse ListAttachedUserPolicies(Models\ListAttachedUserPoliciesRequest $req) This API (ListAttachedUserPolicies) is used to query the list of policies associated with a sub-account.
  * @method Models\ListCollaboratorsResponse ListCollaborators(Models\ListCollaboratorsRequest $req) This API is used to get the collaborator list.
  * @method Models\ListEntitiesForPolicyResponse ListEntitiesForPolicy(Models\ListEntitiesForPolicyRequest $req) This API (ListEntitiesForPolicy) is used to query the list of entities associated with a policy.

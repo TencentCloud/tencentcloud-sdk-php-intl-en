@@ -86,10 +86,10 @@ Monthly subscription specification adjustment
 Monthly subscription refund
  * @method integer getProjectId() Obtain Project ID: ID of the project to which the resource belongs
  * @method void setProjectId(integer $ProjectId) Set Project ID: ID of the project to which the resource belongs
- * @method string getBusinessCode() Obtain Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
- * @method void setBusinessCode(string $BusinessCode) Set Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method string getBusinessCode() Obtain Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  */
 class DescribeBillDetailRequest extends AbstractModel
 {
@@ -175,8 +175,8 @@ Monthly subscription refund
     public $ProjectId;
 
     /**
-     * @var string Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @var string Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     public $BusinessCode;
 
@@ -214,8 +214,8 @@ Monthly subscription specification adjustment
 Monthly subscription specification adjustment
 Monthly subscription refund
      * @param integer $ProjectId Project ID: ID of the project to which the resource belongs
-     * @param string $BusinessCode Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @param string $BusinessCode Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     function __construct()
     {

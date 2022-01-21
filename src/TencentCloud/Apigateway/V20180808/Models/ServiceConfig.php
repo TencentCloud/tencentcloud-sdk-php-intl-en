@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
  * @method string getMethod() Obtain API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
  * @method void setMethod(string $Method) Set API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+ * @method CosConfig getCosConfig() Obtain API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCosConfig(CosConfig $CosConfig) Set API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ServiceConfig extends AbstractModel
 {
@@ -59,11 +63,19 @@ class ServiceConfig extends AbstractModel
     public $Method;
 
     /**
+     * @var CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CosConfig;
+
+    /**
      * @param string $Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
      * @param string $UniqVpcId Unique VPC ID.
      * @param string $Url API backend service URL, which is required if `ServiceType` is `HTTP`.
      * @param string $Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
      * @param string $Method API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+     * @param CosConfig $CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +108,11 @@ class ServiceConfig extends AbstractModel
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("CosConfig",$param) and $param["CosConfig"] !== null) {
+            $this->CosConfig = new CosConfig();
+            $this->CosConfig->deserialize($param["CosConfig"]);
         }
     }
 }

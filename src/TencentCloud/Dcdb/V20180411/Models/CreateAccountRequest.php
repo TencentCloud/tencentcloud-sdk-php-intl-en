@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserName(string $UserName) Set AccountName
  * @method string getHost() Obtain Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
  * @method void setHost(string $Host) Set Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
- * @method string getPassword() Obtain Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
- * @method void setPassword(string $Password) Set Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+ * @method string getPassword() Obtain Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
+ * @method void setPassword(string $Password) Set Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
  * @method integer getReadOnly() Obtain Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
  * @method void setReadOnly(integer $ReadOnly) Set Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
  * @method string getDescription() Obtain Account remarks, which can contain 0-256 letters, digits, and common symbols.
@@ -55,7 +55,7 @@ class CreateAccountRequest extends AbstractModel
     public $Host;
 
     /**
-     * @var string Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @var string Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
      */
     public $Password;
 
@@ -79,7 +79,7 @@ It is recommended that this parameter be set to a value greater than 10. This pa
      * @param string $InstanceId Instance ID in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
      * @param string $UserName AccountName
      * @param string $Host Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
-     * @param string $Password Account password, which can contain 6-32 letters, digits, and common symbols but not semicolons, single quotation marks, and double quotation marks.
+     * @param string $Password Account password. It must contain 8-32 characters in all of the following four types: lowercase letters, uppercase letters, digits, and symbols (()~!@#$%^&*-+=_|{}[]:<>,.?/), and cannot start with a slash (/).
      * @param integer $ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail; 3: only the secondary will be read from.
      * @param string $Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      * @param integer $DelayThresh If the secondary delay exceeds the set value of this parameter, the secondary will be deemed to have failed.

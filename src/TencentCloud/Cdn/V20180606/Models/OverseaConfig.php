@@ -122,6 +122,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVideoSeek(VideoSeek $VideoSeek) Set Video dragging configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method OssPrivateAccess getOssPrivateAccess() Obtain Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class OverseaConfig extends AbstractModel
 {
@@ -270,6 +278,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $VideoSeek;
 
     /**
+     * @var AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AwsPrivateAccess;
+
+    /**
+     * @var OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OssPrivateAccess;
+
+    /**
      * @param Authentication $Authentication Timestamp hotlink protection configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param BandwidthAlert $BandwidthAlert Bandwidth cap configuration.
@@ -318,6 +338,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param VideoSeek $VideoSeek Video dragging configuration.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AwsPrivateAccess $AwsPrivateAccess Private access for S3 origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OssPrivateAccess $OssPrivateAccess Private access for OSS origin
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -449,6 +473,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("VideoSeek",$param) and $param["VideoSeek"] !== null) {
             $this->VideoSeek = new VideoSeek();
             $this->VideoSeek->deserialize($param["VideoSeek"]);
+        }
+
+        if (array_key_exists("AwsPrivateAccess",$param) and $param["AwsPrivateAccess"] !== null) {
+            $this->AwsPrivateAccess = new AwsPrivateAccess();
+            $this->AwsPrivateAccess->deserialize($param["AwsPrivateAccess"]);
+        }
+
+        if (array_key_exists("OssPrivateAccess",$param) and $param["OssPrivateAccess"] !== null) {
+            $this->OssPrivateAccess = new OssPrivateAccess();
+            $this->OssPrivateAccess->deserialize($param["OssPrivateAccess"]);
         }
     }
 }

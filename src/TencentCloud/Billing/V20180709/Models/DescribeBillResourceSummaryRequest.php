@@ -76,10 +76,10 @@ Monthly subscription refund
  * @method void setResourceId(string $ResourceId) Set ID of the instance to be queried
  * @method string getPayMode() Obtain Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
  * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
- * @method string getBusinessCode() Obtain Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
- * @method void setBusinessCode(string $BusinessCode) Set Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method string getBusinessCode() Obtain Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+ * @method void setBusinessCode(string $BusinessCode) Set Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
  */
 class DescribeBillResourceSummaryRequest extends AbstractModel
 {
@@ -144,8 +144,8 @@ Monthly subscription refund
     public $PayMode;
 
     /**
-     * @var string Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @var string Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     public $BusinessCode;
 
@@ -178,8 +178,8 @@ Monthly subscription specification adjustment
 Monthly subscription refund
      * @param string $ResourceId ID of the instance to be queried
      * @param string $PayMode Billing mode. Valid values: `prePay` (prepaid), `postPay` (postpaid)
-     * @param string $BusinessCode Business code
-Note: To query business codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
+     * @param string $BusinessCode Product code
+Note: To query the product codes used in the current month, call <a href="https://intl.cloud.tencent.com/document/product/555/35761?from_cn_redirect=1">DescribeBillSummaryByProduct</a>.
      */
     function __construct()
     {

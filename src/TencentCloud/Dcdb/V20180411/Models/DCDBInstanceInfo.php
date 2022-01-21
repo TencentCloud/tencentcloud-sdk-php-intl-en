@@ -136,6 +136,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DCDBInstanceInfo extends AbstractModel
 {
@@ -390,6 +394,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $InstanceType;
 
     /**
+     * @var array Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param integer $AppId Application ID
@@ -447,6 +457,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $DcnDstNum The number of DCN disaster recovery instances
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (standard primary instance), `3` (standard disaster recovery instance), `4` (dedicated disaster recovery instance)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ResourceTags Instance tag information
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -657,6 +669,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }
