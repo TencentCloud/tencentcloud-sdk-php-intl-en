@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SendEmail request structure.
  *
- * @method string getFromEmailAddress() Obtain Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
- * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+ * @method string getFromEmailAddress() Obtain Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
+ * @method void setFromEmailAddress(string $FromEmailAddress) Set Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
  * @method array getDestination() Obtain Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method string getSubject() Obtain Email subject.
@@ -38,13 +38,15 @@ Tencent Cloud team <noreply@mail.qcloud.com>
  * @method void setSimple(Simple $Simple) Set Email content when sending emails by calling the API.
  * @method array getAttachments() Obtain Email attachments
  * @method void setAttachments(array $Attachments) Set Email attachments
+ * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  */
 class SendEmailRequest extends AbstractModel
 {
     /**
-     * @var string Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+     * @var string Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
      */
     public $FromEmailAddress;
 
@@ -79,15 +81,21 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $Attachments;
 
     /**
-     * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format: 
-Sender <email address>, for example:
-Tencent Cloud team <noreply@mail.qcloud.com>
+     * @var string Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public $Unsubscribe;
+
+    /**
+     * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
+To display the sender name, enter the address in the following format: 
+Sender <email address>
      * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
      * @param Template $Template Template when sending emails using a template.
      * @param Simple $Simple Email content when sending emails by calling the API.
      * @param array $Attachments Email attachments
+     * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ Tencent Cloud team <noreply@mail.qcloud.com>
                 $obj->deserialize($value);
                 array_push($this->Attachments, $obj);
             }
+        }
+
+        if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
+            $this->Unsubscribe = $param["Unsubscribe"];
         }
     }
 }

@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
  * @method string getTagKey() Obtain Tag key value (this field has been deprecated).
  * @method void setTagKey(string $TagKey) Set Tag key value (this field has been deprecated).
+ * @method string getVpcId() Obtain VPC ID.
+ * @method void setVpcId(string $VpcId) Set VPC ID.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKey;
 
     /**
+     * @var string VPC ID.
+     */
+    public $VpcId;
+
+    /**
      * @param string $InstanceId (Filter) filter by instance ID
      * @param string $SearchWord (Filter) filter by instance name. Fuzzy search is supported
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
      * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 100.
      * @param string $TagKey Tag key value (this field has been deprecated).
+     * @param string $VpcId VPC ID.
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
             $this->TagKey = $param["TagKey"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
         }
     }
 }

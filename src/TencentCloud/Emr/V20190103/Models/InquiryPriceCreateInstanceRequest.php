@@ -90,6 +90,8 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+ * @method array getExternalService() Obtain Shared component information
+ * @method void setExternalService(array $ExternalService) Set Shared component information
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -185,6 +187,11 @@ Hadoop-Hbase
     public $SceneName;
 
     /**
+     * @var array Shared component information
+     */
+    public $ExternalService;
+
+    /**
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -220,6 +227,7 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+     * @param array $ExternalService Shared component information
      */
     function __construct()
     {
@@ -292,6 +300,15 @@ Hadoop-Hbase
 
         if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
             $this->SceneName = $param["SceneName"];
+        }
+
+        if (array_key_exists("ExternalService",$param) and $param["ExternalService"] !== null) {
+            $this->ExternalService = [];
+            foreach ($param["ExternalService"] as $key => $value){
+                $obj = new ExternalService();
+                $obj->deserialize($value);
+                array_push($this->ExternalService, $obj);
+            }
         }
     }
 }

@@ -23,7 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTemplateID() Obtain Template ID. If you don’t have any template, please create one.
  * @method void setTemplateID(integer $TemplateID) Set Template ID. If you don’t have any template, please create one.
  * @method string getTemplateData() Obtain Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
  * @method void setTemplateData(string $TemplateData) Set Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
  */
 class Template extends AbstractModel
 {
@@ -34,12 +38,16 @@ class Template extends AbstractModel
 
     /**
      * @var string Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
      */
     public $TemplateData;
 
     /**
      * @param integer $TemplateID Template ID. If you don’t have any template, please create one.
      * @param string $TemplateData Variable parameters in the template. Please use `json.dump` to format the JSON object into a string type. The object is a set of key-value pairs. Each key denotes a variable, which is represented by {{key}}. The key will be replaced with the corresponding value (represented by {{value}}) when sending the email.
+Note: The parameter value cannot be data of a complex type such as HTML.
+Example: {"name":"xxx","age":"xx"}
      */
     function __construct()
     {

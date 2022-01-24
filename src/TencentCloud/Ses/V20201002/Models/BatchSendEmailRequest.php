@@ -30,8 +30,8 @@ Tencent Cloud team <noreply@mail.qcloud.com>
  * @method void setReceiverId(integer $ReceiverId) Set Recipient group ID
  * @method string getSubject() Obtain Email subject
  * @method void setSubject(string $Subject) Set Email subject
- * @method integer getTaskType() Obtain Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
- * @method void setTaskType(integer $TaskType) Set Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+ * @method integer getTaskType() Obtain Task type. `1`: immediate; `2`: scheduled; `3`: recurring
+ * @method void setTaskType(integer $TaskType) Set Task type. `1`: immediate; `2`: scheduled; `3`: recurring
  * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
  * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
  * @method Template getTemplate() Obtain Template when emails are sent using a template
@@ -44,6 +44,8 @@ Tencent Cloud team <noreply@mail.qcloud.com>
  * @method void setCycleParam(CycleEmailParam $CycleParam) Set Parameter required for a recurring sending task
  * @method TimedEmailParam getTimedParam() Obtain Parameter required for a scheduled sending task
  * @method void setTimedParam(TimedEmailParam $TimedParam) Set Parameter required for a scheduled sending task
+ * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+ * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  */
 class BatchSendEmailRequest extends AbstractModel
 {
@@ -65,7 +67,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $Subject;
 
     /**
-     * @var integer Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+     * @var integer Task type. `1`: immediate; `2`: scheduled; `3`: recurring
      */
     public $TaskType;
 
@@ -100,18 +102,24 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $TimedParam;
 
     /**
+     * @var string Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     */
+    public $Unsubscribe;
+
+    /**
      * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
 Sender <email address>, for example:
 Tencent Cloud team <noreply@mail.qcloud.com>
      * @param integer $ReceiverId Recipient group ID
      * @param string $Subject Email subject
-     * @param integer $TaskType Task type. Valid values: `1`: batch; `2`: scheduled; `3`: recurring
+     * @param integer $TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
      * @param Template $Template Template when emails are sent using a template
      * @param Simple $Simple Email content when emails are sent by calling the API
      * @param array $Attachments Email attachments
      * @param CycleEmailParam $CycleParam Parameter required for a recurring sending task
      * @param TimedEmailParam $TimedParam Parameter required for a scheduled sending task
+     * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ Tencent Cloud team <noreply@mail.qcloud.com>
         if (array_key_exists("TimedParam",$param) and $param["TimedParam"] !== null) {
             $this->TimedParam = new TimedEmailParam();
             $this->TimedParam->deserialize($param["TimedParam"]);
+        }
+
+        if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
+            $this->Unsubscribe = $param["Unsubscribe"];
         }
     }
 }

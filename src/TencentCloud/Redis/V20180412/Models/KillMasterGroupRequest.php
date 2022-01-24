@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
     b. Uppercase letters (A-Z)
     c. Digits (0-9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+ * @method array getShardIds() Obtain Node information of a single-AZ deployed instance
+ * @method void setShardIds(array $ShardIds) Set Node information of a single-AZ deployed instance
  */
 class KillMasterGroupRequest extends AbstractModel
 {
@@ -56,6 +58,11 @@ class KillMasterGroupRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var array Node information of a single-AZ deployed instance
+     */
+    public $ShardIds;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Password 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
 2. The password cannot start with a slash (/).
@@ -64,6 +71,7 @@ class KillMasterGroupRequest extends AbstractModel
     b. Uppercase letters (A-Z)
     c. Digits (0-9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+     * @param array $ShardIds Node information of a single-AZ deployed instance
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class KillMasterGroupRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("ShardIds",$param) and $param["ShardIds"] !== null) {
+            $this->ShardIds = $param["ShardIds"];
         }
     }
 }

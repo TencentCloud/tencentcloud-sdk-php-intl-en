@@ -90,6 +90,18 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setRebalanceTime(string $RebalanceTime) Set Time of scheduled upgrade
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method integer getPartitionNumber() Obtain Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPartitionNumber(integer $PartitionNumber) Set Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPublicNetworkChargeType() Obtain Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublicNetworkChargeType(string $PublicNetworkChargeType) Set Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getPublicNetwork() Obtain Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class InstanceDetail extends AbstractModel
 {
@@ -237,6 +249,24 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $RebalanceTime;
 
     /**
+     * @var integer Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PartitionNumber;
+
+    /**
+     * @var string Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublicNetworkChargeType;
+
+    /**
+     * @var integer Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublicNetwork;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Vip Instance VIP information
@@ -272,6 +302,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $RebalanceTime Time of scheduled upgrade
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param integer $PartitionNumber Number of partitions in the current instance.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PublicNetworkChargeType Public network bandwidth type.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $PublicNetwork Public network bandwidth.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -402,6 +438,18 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("RebalanceTime",$param) and $param["RebalanceTime"] !== null) {
             $this->RebalanceTime = $param["RebalanceTime"];
+        }
+
+        if (array_key_exists("PartitionNumber",$param) and $param["PartitionNumber"] !== null) {
+            $this->PartitionNumber = $param["PartitionNumber"];
+        }
+
+        if (array_key_exists("PublicNetworkChargeType",$param) and $param["PublicNetworkChargeType"] !== null) {
+            $this->PublicNetworkChargeType = $param["PublicNetworkChargeType"];
+        }
+
+        if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
+            $this->PublicNetwork = $param["PublicNetwork"];
         }
     }
 }

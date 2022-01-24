@@ -14,36 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Dbbrain\V20210527\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMailProfile response structure.
+ * ListReceivers response structure.
  *
- * @method array getProfileList() Obtain Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProfileList(array $ProfileList) Set Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total number
+ * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method array getData() Obtain Data record
+ * @method void setData(array $Data) Set Data record
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeMailProfileResponse extends AbstractModel
+class ListReceiversResponse extends AbstractModel
 {
     /**
-     * @var array Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $ProfileList;
-
-    /**
-     * @var integer Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Total number
      */
     public $TotalCount;
+
+    /**
+     * @var array Data record
+     */
+    public $Data;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +45,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $ProfileList Email configuration details.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of the configured emails.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total number
+     * @param array $Data Data record
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,17 +62,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProfileList",$param) and $param["ProfileList"] !== null) {
-            $this->ProfileList = [];
-            foreach ($param["ProfileList"] as $key => $value){
-                $obj = new UserProfile();
-                $obj->deserialize($value);
-                array_push($this->ProfileList, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new ReceiverData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
