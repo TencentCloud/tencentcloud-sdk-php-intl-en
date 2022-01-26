@@ -44,10 +44,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNextRotationTime(integer $NextRotationTime) Set Start time of the next rotation in UNIX timestamp format
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSecretType() Obtain 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSecretType(integer $SecretType) Set 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSecretType() Obtain `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecretType(integer $SecretType) Set `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getProductName() Obtain Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProductName(string $ProductName) Set Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
@@ -63,6 +69,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method array getAssociatedInstanceIDs() Obtain ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAssociatedInstanceIDs(array $AssociatedInstanceIDs) Set ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTargetUin() Obtain UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTargetUin(integer $TargetUin) Set UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class SecretMetadata extends AbstractModel
@@ -120,8 +130,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $NextRotationTime;
 
     /**
-     * @var integer 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SecretType;
 
@@ -150,6 +163,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AssociatedInstanceIDs;
 
     /**
+     * @var integer UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TargetUin;
+
+    /**
      * @param string $SecretName Credential name
      * @param string $Description Credential description
      * @param string $KmsKeyId KMS `KeyId` used to encrypt the credential
@@ -162,8 +181,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NextRotationTime Start time of the next rotation in UNIX timestamp format
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $SecretType 0: user-defined credential; 1: Tencent Cloud service credential.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $SecretType `0`: user-defined secret.
+`1`: Tencent Cloud services secret.
+`2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ProductName Tencent Cloud service name, which takes effect only when `SecretType` is 1 (Tencent Cloud service credential)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceName Secret name. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
@@ -171,6 +193,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $ProjectID Project ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AssociatedInstanceIDs ID of the CVM instance associated with the SSH key. ID. This field is only valid when the `SecretType` is set to `2` (SSH key secret).
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TargetUin UIN of the Tencent Cloud API key. This field is valid when the secret type is Tencent Cloud API key secret.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -244,6 +268,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AssociatedInstanceIDs",$param) and $param["AssociatedInstanceIDs"] !== null) {
             $this->AssociatedInstanceIDs = $param["AssociatedInstanceIDs"];
+        }
+
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
     }
 }

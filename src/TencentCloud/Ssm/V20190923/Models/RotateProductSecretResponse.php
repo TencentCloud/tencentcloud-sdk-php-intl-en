@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RotateProductSecret response structure.
  *
- * @method integer getFlowID() Obtain Async rotation task ID.
- * @method void setFlowID(integer $FlowID) Set Async rotation task ID.
+ * @method integer getFlowID() Obtain Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
+ * @method void setFlowID(integer $FlowID) Set Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class RotateProductSecretResponse extends AbstractModel
 {
     /**
-     * @var integer Async rotation task ID.
+     * @var integer Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
      */
     public $FlowID;
 
@@ -38,7 +38,7 @@ class RotateProductSecretResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $FlowID Async rotation task ID.
+     * @param integer $FlowID Asynchronous rotation task ID. This field is valid when `SecretType` is `1` (i.e., the secret type is Tencent Cloud services secret, such as MySQL/TDSQL credentials).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

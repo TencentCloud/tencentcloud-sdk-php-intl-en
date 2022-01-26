@@ -48,7 +48,8 @@ For Tencent Cloud service credentials such as MySQL credentials, this API is use
  * @method Models\PutSecretValueResponse PutSecretValue(Models\PutSecretValueRequest $req) This API adds the new version of the credential content under the specified credential. One credential can have up to 10 versions. New versions can be added to credentials only in `Enabled` or `Disabled` status.
 This API is only applicable to user-defined credentials but not Tencent Cloud service credentials.
  * @method Models\RestoreSecretResponse RestoreSecret(Models\RestoreSecretRequest $req) This API is used to restore a `PendingDelete` Secret, canceling its scheduled deletion. The restored Secret will be in `Disabled` status. You can call the `EnableSecret` API to enable this Secret again.
- * @method Models\RotateProductSecretResponse RotateProductSecret(Models\RotateProductSecretRequest $req) This API is used to rotate a Tencent Cloud service credential. It is only applicable to Tencent Cloud service credentials in `Enabled` status but not Tencent Cloud service credentials in other status or user-defined credentials.
+ * @method Models\RotateProductSecretResponse RotateProductSecret(Models\RotateProductSecretRequest $req) This API is used to rotate secrets for Tencent Cloud services or Tencent Cloud API key pairs.
+Note that only the secrets with the "Enabled" status can be rotated.
  * @method Models\UpdateDescriptionResponse UpdateDescription(Models\UpdateDescriptionRequest $req) This API is used to update the description of a Secret. This API can only update Secrets in `Enabled` or `Disabled` status.
  * @method Models\UpdateRotationStatusResponse UpdateRotationStatus(Models\UpdateRotationStatusRequest $req) This API is used to set a Tencent Cloud service credential rotation policy, including the following parameters:
 Specifies whether to enable rotation

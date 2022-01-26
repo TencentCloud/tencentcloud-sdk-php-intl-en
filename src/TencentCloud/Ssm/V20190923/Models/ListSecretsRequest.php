@@ -49,9 +49,11 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
  * @method integer getSecretType() Obtain `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
  * @method void setSecretType(integer $SecretType) Set `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
  * @method string getProductName() Obtain This parameter is valid only when SecretType is `1`.
  
 An empty value indicates querying all types of Tencent Cloud service secrets.
@@ -106,6 +108,7 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
      * @var integer `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
      */
     public $SecretType;
 
@@ -135,6 +138,7 @@ The `PendingCreate` and `CreateFailed` status only take effect when `SecretType`
      * @param integer $SecretType `0` (default): user-defined secret.
 `1`: Tencent Cloud services secret.
 `2`: SSH key secret.
+`3`: Tencent Cloud API key secret.
      * @param string $ProductName This parameter is valid only when SecretType is `1`.
  
 An empty value indicates querying all types of Tencent Cloud service secrets.

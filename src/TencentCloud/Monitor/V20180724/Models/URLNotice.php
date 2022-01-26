@@ -32,6 +32,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setValidationCode(string $ValidationCode) Set Verification code
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStartTime() Obtain Start time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStartTime(integer $StartTime) Set Start time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getEndTime() Obtain End time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEndTime(integer $EndTime) Set End time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class URLNotice extends AbstractModel
 {
@@ -54,12 +62,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ValidationCode;
 
     /**
+     * @var integer Start time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $StartTime;
+
+    /**
+     * @var integer End time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EndTime;
+
+    /**
      * @param string $URL Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IsValid Whether verification is passed. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ValidationCode Verification code
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $StartTime Start time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $EndTime End time of the notification in seconds, which is calculated from 00:00:00.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +108,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ValidationCode",$param) and $param["ValidationCode"] !== null) {
             $this->ValidationCode = $param["ValidationCode"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
     }
 }
