@@ -87,6 +87,11 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
 * Batch operation is supported. You can unmount multiple cloud disks from the same CVM in a single request. If any of these cloud disks cannot be unmounted, the operation fails and a specific error code returns.
 * This is an async API. A successful request does not mean that the cloud disks have been unmounted successfully. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query the status of cloud disks. When the status changes from `ATTACHED` to `UNATTACHED`, the unmounting is successful.
  * @method Models\GetSnapOverviewResponse GetSnapOverview(Models\GetSnapOverviewRequest $req) This API is used to get snapshot overview information.
+ * @method Models\InitializeDisksResponse InitializeDisks(Models\InitializeDisksRequest $req) This API is used to reinitialize the cloud disks. Note the following when reinitializing the cloud disks:
+1. For a cloud disk created from a snapshot, it is rolled back to the state of the snapshot;
+2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
+3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
+4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
  * @method Models\InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(Models\InquirePriceModifyDiskExtraPerformanceRequest $req) This API is used to query the price for adjusting the cloud disk’s extra performance.
  * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
 

@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNewSubnetId(string $NewSubnetId) Set ID of the new subnet
  * @method integer getOldIpRetainTime() Obtain Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
  * @method void setOldIpRetainTime(integer $OldIpRetainTime) Set Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
+ * @method string getVip() Obtain New VIP
+ * @method void setVip(string $Vip) Set New VIP
  */
 class ModifyDBInstanceNetworkRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
     public $OldIpRetainTime;
 
     /**
+     * @var string New VIP
+     */
+    public $Vip;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $NewVpcId ID of the new VPC
      * @param string $NewSubnetId ID of the new subnet
      * @param integer $OldIpRetainTime Retention period (in hours) of the original VIP. Value range: `0-168`. Default value: `0`, indicating the original VIP is released immediately.
+     * @param string $Vip New VIP
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyDBInstanceNetworkRequest extends AbstractModel
 
         if (array_key_exists("OldIpRetainTime",$param) and $param["OldIpRetainTime"] !== null) {
             $this->OldIpRetainTime = $param["OldIpRetainTime"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }
