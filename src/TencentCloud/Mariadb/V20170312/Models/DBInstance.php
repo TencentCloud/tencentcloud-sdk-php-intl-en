@@ -148,6 +148,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -416,6 +420,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $InstanceType;
 
     /**
+     * @var array Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $InstanceId Instance ID, which uniquely identifies a TDSQL instance
      * @param string $InstanceName Customizable instance name
      * @param integer $AppId Application ID of instance
@@ -480,6 +490,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (primary instance), `3` (disaster recovery instance), and `4` (dedicated disaster recovery instance).
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceTags Instance tag information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -692,6 +704,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new ResourceTag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

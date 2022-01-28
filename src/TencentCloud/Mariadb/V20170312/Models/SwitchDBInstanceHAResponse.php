@@ -18,26 +18,19 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProjectSecurityGroups response structure.
+ * SwitchDBInstanceHA response structure.
  *
- * @method array getGroups() Obtain Security group details
- * @method void setGroups(array $Groups) Set Security group details
- * @method integer getTotal() Obtain Total number of security groups.
- * @method void setTotal(integer $Total) Set Total number of security groups.
+ * @method integer getFlowId() Obtain Async task ID
+ * @method void setFlowId(integer $FlowId) Set Async task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProjectSecurityGroupsResponse extends AbstractModel
+class SwitchDBInstanceHAResponse extends AbstractModel
 {
     /**
-     * @var array Security group details
+     * @var integer Async task ID
      */
-    public $Groups;
-
-    /**
-     * @var integer Total number of security groups.
-     */
-    public $Total;
+    public $FlowId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Groups Security group details
-     * @param integer $Total Total number of security groups.
+     * @param integer $FlowId Async task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
-                $obj->deserialize($value);
-                array_push($this->Groups, $obj);
-            }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
