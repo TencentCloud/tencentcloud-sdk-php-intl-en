@@ -232,6 +232,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setFrozenDiskSize(integer $FrozenDiskSize) Set Frozen node disk size (in GB)
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getHealthStatus() Obtain Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setHealthStatus(integer $HealthStatus) Set Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -626,6 +630,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $FrozenDiskSize;
 
     /**
+     * @var integer Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $HealthStatus;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -731,6 +741,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $FrozenDiskType Frozen node disk type
 Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $FrozenDiskSize Frozen node disk size (in GB)
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -1050,6 +1062,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("FrozenDiskSize",$param) and $param["FrozenDiskSize"] !== null) {
             $this->FrozenDiskSize = $param["FrozenDiskSize"];
+        }
+
+        if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
+            $this->HealthStatus = $param["HealthStatus"];
         }
     }
 }

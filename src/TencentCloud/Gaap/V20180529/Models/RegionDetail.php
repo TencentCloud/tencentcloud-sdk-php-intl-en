@@ -30,6 +30,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionAreaName(string $RegionAreaName) Set Name of the region where the data center locates
  * @method string getIDCType() Obtain Data center type. `dc`: data center; `ec`: edge server.
  * @method void setIDCType(string $IDCType) Set Data center type. `dc`: data center; `ec`: edge server.
+ * @method integer getFeatureBitmap() Obtain Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFeatureBitmap(integer $FeatureBitmap) Set Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RegionDetail extends AbstractModel
 {
@@ -59,11 +83,39 @@ class RegionDetail extends AbstractModel
     public $IDCType;
 
     /**
+     * @var integer Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param string $RegionId Region ID
      * @param string $RegionName Region name in Chinese or English
      * @param string $RegionArea Region where the data center locates
      * @param string $RegionAreaName Name of the region where the data center locates
      * @param string $IDCType Data center type. `dc`: data center; `ec`: edge server.
+     * @param integer $FeatureBitmap Feature bitmap. Valid values:
+`0`: the feature is not supported;
+`1`: the feature is supported.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +148,10 @@ class RegionDetail extends AbstractModel
 
         if (array_key_exists("IDCType",$param) and $param["IDCType"] !== null) {
             $this->IDCType = $param["IDCType"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

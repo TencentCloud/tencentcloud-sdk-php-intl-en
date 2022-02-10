@@ -66,8 +66,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
  * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
  * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
- * @method array getDBNodeSet() Obtain 
- * @method void setDBNodeSet(array $DBNodeSet) Set 
+ * @method array getDBNodeSet() Obtain Instance node information, which is required if you purchase a multi-AZ deployed instance.
+ * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information, which is required if you purchase a multi-AZ deployed instance.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -187,7 +187,7 @@ class CreateInstancesRequest extends AbstractModel
     public $DBKernelVersion;
 
     /**
-     * @var array 
+     * @var array Instance node information, which is required if you purchase a multi-AZ deployed instance.
      */
     public $DBNodeSet;
 
@@ -215,7 +215,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param array $SecurityGroupIds Security group IDs
      * @param string $DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
      * @param string $DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
-     * @param array $DBNodeSet 
+     * @param array $DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
      */
     function __construct()
     {

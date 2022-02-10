@@ -52,8 +52,8 @@ The connection is to be replicated if this parameter is set.
  * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
  * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
  * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
- * @method integer getHttp3Supported() Obtain 
- * @method void setHttp3Supported(integer $Http3Supported) Set 
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
  */
 class CreateProxyRequest extends AbstractModel
 {
@@ -130,7 +130,7 @@ The connection is to be replicated if this parameter is set.
     public $PackageType;
 
     /**
-     * @var integer 
+     * @var integer Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
      */
     public $Http3Supported;
 
@@ -151,7 +151,7 @@ The connection is to be replicated if this parameter is set.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland).
      * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general), `Accelerator` (specific for games), and `CrossBorder` (cross-MLC-border connection).
-     * @param integer $Http3Supported 
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
      */
     function __construct()
     {

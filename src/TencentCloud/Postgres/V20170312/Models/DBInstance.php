@@ -106,8 +106,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getDBNodeSet() Obtain 
- * @method void setDBNodeSet(array $DBNodeSet) Set 
+ * @method array getDBNodeSet() Obtain Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -295,7 +297,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBMajorVersion;
 
     /**
-     * @var array 
+     * @var array Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $DBNodeSet;
 
@@ -343,7 +346,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $DBMajorVersion PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $DBNodeSet 
+     * @param array $DBNodeSet Instance node information
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

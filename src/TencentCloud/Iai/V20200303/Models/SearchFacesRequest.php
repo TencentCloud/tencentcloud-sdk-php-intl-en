@@ -21,7 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * SearchFaces request structure.
  *
  * @method array getGroupIds() Obtain List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
  * @method void setGroupIds(array $GroupIds) Set List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
  * @method string getImage() Obtain Base64-encoded image data, which cannot exceed 5 MB.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
@@ -81,6 +83,7 @@ class SearchFacesRequest extends AbstractModel
 {
     /**
      * @var array List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
      */
     public $GroupIds;
 
@@ -149,6 +152,7 @@ If the image quality does not meet the requirement, the returned result will pro
 
     /**
      * @param array $GroupIds List of groups to be searched in (up to 100). The array element value is the `GroupId` in the `CreateGroup` API.
+You cannot search for groups using different algorithm model versions (`FaceModelVersion`) at a time.
      * @param string $Image Base64-encoded image data, which cannot exceed 5 MB.
 The long side cannot exceed 4,000 px for images in JPG format or 2,000 px for images in other formats.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.

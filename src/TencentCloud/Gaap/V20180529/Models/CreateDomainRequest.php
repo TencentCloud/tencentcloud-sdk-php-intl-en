@@ -34,6 +34,14 @@ This field is required only when the mutual authentication method is adopted.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
  * @method void setPolyClientCertificateIds(array $PolyClientCertificateIds) Set Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
  */
 class CreateDomainRequest extends AbstractModel
 {
@@ -65,6 +73,14 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
     public $PolyClientCertificateIds;
 
     /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ListenerId Listener ID.
      * @param string $Domain Domain name to be created. Each listener supports up to 100 domain names.
      * @param string $CertificateId Server certificate, which is used for the HTTPS interaction between client and GAAP.
@@ -72,6 +88,10 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
 This field is required only when the mutual authentication method is adopted.
      * @param array $PolyClientCertificateIds Client CA certificate, which is used for the HTTPS interaction between the client and GAAP.
 This field or the `ClientCertificateId` field is required for mutual authentication only.
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+HTTP3 is not enabled by default. You can enable it with this field SetDomainHttp3.
      */
     function __construct()
     {
@@ -104,6 +124,10 @@ This field or the `ClientCertificateId` field is required for mutual authenticat
 
         if (array_key_exists("PolyClientCertificateIds",$param) and $param["PolyClientCertificateIds"] !== null) {
             $this->PolyClientCertificateIds = $param["PolyClientCertificateIds"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

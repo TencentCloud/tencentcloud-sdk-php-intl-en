@@ -60,6 +60,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProxyType(integer $ProxyType) Set Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -124,6 +132,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProxyType;
 
     /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $GroupId Connection group ID
      * @param string $Domain Connection group domain name
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -144,6 +160,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $ProxyType Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -202,6 +222,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProxyType",$param) and $param["ProxyType"] !== null) {
             $this->ProxyType = $param["ProxyType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

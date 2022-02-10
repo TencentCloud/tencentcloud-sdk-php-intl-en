@@ -18,28 +18,36 @@ namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance node information including node type and AZ.
  *
- * @method string getRole() Obtain 
- * @method void setRole(string $Role) Set 
- * @method string getZone() Obtain 
- * @method void setZone(string $Zone) Set 
+ * @method string getRole() Obtain Node type. Valid values:
+`Primary`;
+`Standby`.
+ * @method void setRole(string $Role) Set Node type. Valid values:
+`Primary`;
+`Standby`.
+ * @method string getZone() Obtain AZ where the node resides, such as ap-guangzhou-1.
+ * @method void setZone(string $Zone) Set AZ where the node resides, such as ap-guangzhou-1.
  */
 class DBNode extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Node type. Valid values:
+`Primary`;
+`Standby`.
      */
     public $Role;
 
     /**
-     * @var string 
+     * @var string AZ where the node resides, such as ap-guangzhou-1.
      */
     public $Zone;
 
     /**
-     * @param string $Role 
-     * @param string $Zone 
+     * @param string $Role Node type. Valid values:
+`Primary`;
+`Standby`.
+     * @param string $Zone AZ where the node resides, such as ap-guangzhou-1.
      */
     function __construct()
     {

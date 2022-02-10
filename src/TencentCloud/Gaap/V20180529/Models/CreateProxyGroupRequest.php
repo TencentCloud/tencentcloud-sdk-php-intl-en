@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method string getPackageType() Obtain Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
  * @method void setPackageType(string $PackageType) Set Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -73,6 +83,15 @@ class CreateProxyGroupRequest extends AbstractModel
     public $PackageType;
 
     /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public $Http3Supported;
+
+    /**
      * @param integer $ProjectId Project ID of connection group
      * @param string $GroupName Alias of connection group
      * @param string $RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
@@ -80,6 +99,11 @@ class CreateProxyGroupRequest extends AbstractModel
      * @param array $AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      * @param string $PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
+After the connection is created, you cannot change your HTTP3 setting.
      */
     function __construct()
     {
@@ -130,6 +154,10 @@ class CreateProxyGroupRequest extends AbstractModel
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

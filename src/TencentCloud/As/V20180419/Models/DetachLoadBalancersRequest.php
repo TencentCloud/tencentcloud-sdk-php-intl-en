@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain Scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method array getForwardLoadBalancerIdentifications() Obtain List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
- * @method void setForwardLoadBalancerIdentifications(array $ForwardLoadBalancerIdentifications) Set List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+ * @method array getLoadBalancerIds() Obtain List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+ * @method array getForwardLoadBalancerIdentifications() Obtain List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+ * @method void setForwardLoadBalancerIdentifications(array $ForwardLoadBalancerIdentifications) Set List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
  */
 class DetachLoadBalancersRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DetachLoadBalancersRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var array List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @var array List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public $LoadBalancerIds;
 
     /**
-     * @var array List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @var array List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     public $ForwardLoadBalancerIdentifications;
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID
-     * @param array $LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
-     * @param array $ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancers` cannot be specified at the same time.
+     * @param array $LoadBalancerIds List of classic CLB IDs. Up to 20 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
+     * @param array $ForwardLoadBalancerIdentifications List of application CLB IDs. Up to 50 IDs are allowed. `LoadBalancerIds` and `ForwardLoadBalancerIdentifications` cannot be specified at the same time.
      */
     function __construct()
     {

@@ -40,12 +40,24 @@ Either `Url` or `Image` must be provided; if both are provided, only `Url` will 
 We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
- * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.  
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.  
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+ * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
  */
 class DetectLiveFaceRequest extends AbstractModel
 {
@@ -68,9 +80,15 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
     public $Url;
 
     /**
-     * @var string Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.  
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * @var string Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     public $FaceModelVersion;
 
@@ -85,9 +103,15 @@ Either `Url` or `Image` must be provided; if both are provided, only `Url` will 
 We recommend storing the image in Tencent Cloud, as a Tencent Cloud URL can guarantee higher download speed and stability. 
 The download speed and stability of non-Tencent Cloud URLs may be low.
 PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
-     * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.  
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     function __construct()
     {

@@ -20,33 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Flow Log
  *
- * @method string getVpcId() Obtain ID of the VPC instance
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance
+ * @method string getVpcId() Obtain ID of the VPC instance.
+ * @method void setVpcId(string $VpcId) Set ID of the VPC instance.
  * @method string getFlowLogId() Obtain The unique ID of the flow log.
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  * @method string getFlowLogName() Obtain The name of the flow log instance.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
  * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
  * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
- * @method string getResourceId() Obtain The unique ID of the resource.
- * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
+ * @method string getResourceId() Obtain The unique ID of the resource
+ * @method void setResourceId(string $ResourceId) Set The unique ID of the resource
  * @method string getTrafficType() Obtain Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method void setTrafficType(string $TrafficType) Set Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
- * @method string getCloudLogId() Obtain The storage ID of the flow log.
- * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
- * @method string getCloudLogState() Obtain The storage ID status of the flow log.
- * @method void setCloudLogState(string $CloudLogState) Set The storage ID status of the flow log.
+ * @method string getCloudLogId() Obtain The storage ID of the flow log
+ * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log
+ * @method string getCloudLogState() Obtain Flow log storage ID status.
+ * @method void setCloudLogState(string $CloudLogState) Set Flow log storage ID status.
  * @method string getFlowLogDescription() Obtain The flow log description.
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The flow log description.
  * @method string getCreatedTime() Obtain The creation time of the flow log.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time of the flow log.
- * @method array getTagSet() Obtain Tag list, such as [{"Key": "city", "Value": "shanghai"}]
- * @method void setTagSet(array $TagSet) Set Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method array getTagSet() Obtain Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method void setTagSet(array $TagSet) Set Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method boolean getEnable() Obtain Whether to enable. `true`: yes; `false`: no.
+ * @method void setEnable(boolean $Enable) Set Whether to enable. `true`: yes; `false`: no.
+ * @method string getStorageType() Obtain Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+ * @method void setStorageType(string $StorageType) Set Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+ * @method FlowLogStorage getFlowLogStorage() Obtain Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+ * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) Set Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
  */
 class FlowLog extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance
+     * @var string ID of the VPC instance.
      */
     public $VpcId;
 
@@ -66,7 +76,7 @@ class FlowLog extends AbstractModel
     public $ResourceType;
 
     /**
-     * @var string The unique ID of the resource.
+     * @var string The unique ID of the resource
      */
     public $ResourceId;
 
@@ -76,12 +86,12 @@ class FlowLog extends AbstractModel
     public $TrafficType;
 
     /**
-     * @var string The storage ID of the flow log.
+     * @var string The storage ID of the flow log
      */
     public $CloudLogId;
 
     /**
-     * @var string The storage ID status of the flow log.
+     * @var string Flow log storage ID status.
      */
     public $CloudLogState;
 
@@ -96,22 +106,44 @@ class FlowLog extends AbstractModel
     public $CreatedTime;
 
     /**
-     * @var array Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     * @var array Tag list, such as [{"Key": "city", "Value": "shanghai"}].
      */
     public $TagSet;
 
     /**
-     * @param string $VpcId ID of the VPC instance
+     * @var boolean Whether to enable. `true`: yes; `false`: no.
+     */
+    public $Enable;
+
+    /**
+     * @var string Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public $StorageType;
+
+    /**
+     * @var FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
+     */
+    public $FlowLogStorage;
+
+    /**
+     * @param string $VpcId ID of the VPC instance.
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
-     * @param string $ResourceId The unique ID of the resource.
+     * @param string $ResourceId The unique ID of the resource
      * @param string $TrafficType Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
-     * @param string $CloudLogId The storage ID of the flow log.
-     * @param string $CloudLogState The storage ID status of the flow log.
+     * @param string $CloudLogId The storage ID of the flow log
+     * @param string $CloudLogState Flow log storage ID status.
      * @param string $FlowLogDescription The flow log description.
      * @param string $CreatedTime The creation time of the flow log.
-     * @param array $TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param array $TagSet Tag list, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param boolean $Enable Whether to enable. `true`: yes; `false`: no.
+     * @param string $StorageType Consumer end types: cls and ckafka
+Note: this field may return `null`, indicating that no valid value can be found.
+     * @param FlowLogStorage $FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
+Note: this field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {
@@ -173,6 +205,19 @@ class FlowLog extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSet, $obj);
             }
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
+            $this->FlowLogStorage = new FlowLogStorage();
+            $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
         }
     }
 }

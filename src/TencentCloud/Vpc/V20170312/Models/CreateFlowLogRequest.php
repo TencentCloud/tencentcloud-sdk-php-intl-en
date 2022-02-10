@@ -28,14 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
  * @method string getTrafficType() Obtain Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
  * @method void setTrafficType(string $TrafficType) Set Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
- * @method string getCloudLogId() Obtain The storage ID of the flow log.
- * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
  * @method string getVpcId() Obtain The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
  * @method void setVpcId(string $VpcId) Set The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
  * @method string getFlowLogDescription() Obtain The description of the flow log instance
  * @method void setFlowLogDescription(string $FlowLogDescription) Set The description of the flow log instance
+ * @method string getCloudLogId() Obtain The storage ID of the flow log.
+ * @method void setCloudLogId(string $CloudLogId) Set The storage ID of the flow log.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method string getStorageType() Obtain Consumer types: `cls` and `ckafka`
+ * @method void setStorageType(string $StorageType) Set Consumer types: `cls` and `ckafka`
+ * @method FlowLogStorage getFlowLogStorage() Obtain Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+ * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) Set Information of the flow log consumer, which is required when the consumer type is `ckafka`.
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -60,11 +64,6 @@ class CreateFlowLogRequest extends AbstractModel
     public $TrafficType;
 
     /**
-     * @var string The storage ID of the flow log.
-     */
-    public $CloudLogId;
-
-    /**
      * @var string The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
      */
     public $VpcId;
@@ -75,19 +74,36 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogDescription;
 
     /**
+     * @var string The storage ID of the flow log.
+     */
+    public $CloudLogId;
+
+    /**
      * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
+
+    /**
+     * @var string Consumer types: `cls` and `ckafka`
+     */
+    public $StorageType;
+
+    /**
+     * @var FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+     */
+    public $FlowLogStorage;
 
     /**
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
      * @param string $ResourceId The unique ID of the resource.
      * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
-     * @param string $CloudLogId The storage ID of the flow log.
      * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.
      * @param string $FlowLogDescription The description of the flow log instance
+     * @param string $CloudLogId The storage ID of the flow log.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+     * @param string $StorageType Consumer types: `cls` and `ckafka`
+     * @param FlowLogStorage $FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
      */
     function __construct()
     {
@@ -118,16 +134,16 @@ class CreateFlowLogRequest extends AbstractModel
             $this->TrafficType = $param["TrafficType"];
         }
 
-        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
-            $this->CloudLogId = $param["CloudLogId"];
-        }
-
         if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
             $this->VpcId = $param["VpcId"];
         }
 
         if (array_key_exists("FlowLogDescription",$param) and $param["FlowLogDescription"] !== null) {
             $this->FlowLogDescription = $param["FlowLogDescription"];
+        }
+
+        if (array_key_exists("CloudLogId",$param) and $param["CloudLogId"] !== null) {
+            $this->CloudLogId = $param["CloudLogId"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -137,6 +153,15 @@ class CreateFlowLogRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
+        }
+
+        if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
+            $this->FlowLogStorage = new FlowLogStorage();
+            $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
         }
     }
 }

@@ -25,6 +25,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
 /**
  * @method Models\CheckInstanceResponse CheckInstance(Models\CheckInstanceRequest $req) This API is used to verify the information of the Enterprise Edition instance.
  * @method Models\CreateImmutableTagRulesResponse CreateImmutableTagRules(Models\CreateImmutableTagRulesRequest $req) This API is used to create the tag immutability rule.
+ * @method Models\CreateInstanceTokenResponse CreateInstanceToken(Models\CreateInstanceTokenRequest $req) This API is used to create a temporary or long-term instance access credential.
  * @method Models\CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicy(Models\CreateMultipleSecurityPolicyRequest $req) This API is used to create multiple public network access allowlist policies of the TCR instance.
  * @method Models\CreateReplicationInstanceResponse CreateReplicationInstance(Models\CreateReplicationInstanceRequest $req) This API is used to create a replication instance.
  * @method Models\DeleteImmutableTagRulesResponse DeleteImmutableTagRules(Models\DeleteImmutableTagRulesRequest $req)  This API is used to delete the tag immutability rule.

@@ -34,8 +34,30 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRegionAreaName(string $RegionAreaName) Set Name of the region where the data center locates
  * @method string getIDCType() Obtain Data center type. `dc`: data center; `ec`: edge server.
  * @method void setIDCType(string $IDCType) Set Data center type. `dc`: data center; `ec`: edge server.
- * @method integer getFeatureBitmap() Obtain 
- * @method void setFeatureBitmap(integer $FeatureBitmap) Set 
+ * @method integer getFeatureBitmap() Obtain Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFeatureBitmap(integer $FeatureBitmap) Set Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AccessRegionDetial extends AbstractModel
 {
@@ -75,7 +97,18 @@ class AccessRegionDetial extends AbstractModel
     public $IDCType;
 
     /**
-     * @var integer 
+     * @var integer Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $FeatureBitmap;
 
@@ -87,7 +120,18 @@ class AccessRegionDetial extends AbstractModel
      * @param string $RegionArea Region where the data center locates
      * @param string $RegionAreaName Name of the region where the data center locates
      * @param string $IDCType Data center type. `dc`: data center; `ec`: edge server.
-     * @param integer $FeatureBitmap 
+     * @param integer $FeatureBitmap Feature bitmap. Valid values:
+`0`: disable the feature;
+`1`: enable the feature.
+Each bit in the bitmap represents a feature:
+1st bit: layer-4 acceleration;
+2nd bit: layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: dedicated BGP access;
+6th bit: non-BGP access;
+7th bit: QoS acceleration.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

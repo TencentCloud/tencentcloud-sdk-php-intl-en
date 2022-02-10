@@ -40,12 +40,24 @@ then all the persons in the group will have description fields named "student ID
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
  * @method string getTag() Obtain Group remarks, which can contain 0 to 40 characters.
  * @method void setTag(string $Tag) Set Group remarks, which can contain 0 to 40 characters.
- * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+ * @method string getFaceModelVersion() Obtain Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
  */
 class CreateGroupRequest extends AbstractModel
 {
@@ -76,9 +88,15 @@ You can enter content in the corresponding field to register a person's student 
     public $Tag;
 
     /**
-     * @var string Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * @var string Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     public $FaceModelVersion;
 
@@ -93,9 +111,15 @@ Example: if you set the "custom description field" of a group to ["student ID","
 then all the persons in the group will have description fields named "student ID", "employee ID", and "mobile number". 
 You can enter content in the corresponding field to register a person's student ID, employee ID, and mobile number.
      * @param string $Tag Group remarks, which can contain 0 to 40 characters.
-     * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service. Valid values: 2.0, 3.0.
-This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API previously, `2.0` will be used by default. 
-Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is thus recommended.
+     * @param string $FaceModelVersion Algorithm model version used by the Face Recognition service.
+
+Currently, `2.0` and `3.0` are supported.
+
+This parameter is `3.0` by default starting from April 2, 2020. If it is left empty for accounts that used this API, `2.0` will be used by default.
+
+The parameter can be set only to `3.0` for accounts that purchase the service after November 26, 2020.
+
+Different algorithm model versions correspond to different face recognition algorithms. The 3.0 version has a better overall effect than the legacy version and is recommended.
      */
     function __construct()
     {

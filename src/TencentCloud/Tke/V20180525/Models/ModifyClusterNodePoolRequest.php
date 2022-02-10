@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Node custom parameter
  * @method array getTags() Obtain Resource tag
  * @method void setTags(array $Tags) Set Resource tag
- * @method integer getUnschedulable() Obtain 
- * @method void setUnschedulable(integer $Unschedulable) Set 
+ * @method integer getUnschedulable() Obtain Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
+ * @method void setUnschedulable(integer $Unschedulable) Set Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -110,7 +110,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer 
+     * @var integer Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      */
     public $Unschedulable;
 
@@ -127,7 +127,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param InstanceExtraArgs $ExtraArgs Node custom parameter
      * @param array $Tags Resource tag
-     * @param integer $Unschedulable 
+     * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      */
     function __construct()
     {

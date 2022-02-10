@@ -74,10 +74,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -177,10 +185,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IPAddressVersion;
 
     /**
-     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $PackageType;
+
+    /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Http3Supported;
 
     /**
      * @param integer $CreateTime Creation time
@@ -210,8 +226,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group) and `Accelerator` (game accelerator connection group).
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable;
+`1`: enable.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -302,6 +322,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
             $this->PackageType = $param["PackageType"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

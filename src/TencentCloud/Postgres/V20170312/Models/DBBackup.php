@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternalAddr(string $InternalAddr) Set Download address on private network
  * @method string getExternalAddr() Obtain Download address on public network
  * @method void setExternalAddr(string $ExternalAddr) Set Download address on public network
+ * @method string getSetId() Obtain Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSetId(string $SetId) Set Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class DBBackup extends AbstractModel
 {
@@ -101,6 +105,12 @@ class DBBackup extends AbstractModel
     public $ExternalAddr;
 
     /**
+     * @var string Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SetId;
+
+    /**
      * @param integer $Id Unique backup file ID
      * @param string $StartTime File generation start time
      * @param string $EndTime File generation end time
@@ -112,6 +122,8 @@ class DBBackup extends AbstractModel
      * @param array $DbList DB list
      * @param string $InternalAddr Download address on private network
      * @param string $ExternalAddr Download address on public network
+     * @param string $SetId Backup set ID
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ class DBBackup extends AbstractModel
 
         if (array_key_exists("ExternalAddr",$param) and $param["ExternalAddr"] !== null) {
             $this->ExternalAddr = $param["ExternalAddr"];
+        }
+
+        if (array_key_exists("SetId",$param) and $param["SetId"] !== null) {
+            $this->SetId = $param["SetId"];
         }
     }
 }

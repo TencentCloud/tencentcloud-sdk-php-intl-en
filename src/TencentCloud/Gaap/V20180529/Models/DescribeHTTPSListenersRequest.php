@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names.
  * @method string getGroupId() Obtain Connection group ID as a filter
  * @method void setGroupId(string $GroupId) Set Connection group ID as a filter
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
  */
 class DescribeHTTPSListenersRequest extends AbstractModel
 {
@@ -80,6 +90,15 @@ class DescribeHTTPSListenersRequest extends AbstractModel
     public $GroupId;
 
     /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ProxyId Filter condition. Connection ID.
      * @param string $ListenerId Filter condition. Exact query by listener IDs.
      * @param string $ListenerName Filter condition. Exact query by listener names.
@@ -88,6 +107,11 @@ class DescribeHTTPSListenersRequest extends AbstractModel
      * @param integer $Limit Quantity limit. The default value is 20.
      * @param string $SearchValue Filter condition. It supports fuzzy query by ports or listener names.
      * @param string $GroupId Connection group ID as a filter
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: If HTTP3 is enabled for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+After the connection is created, you cannot change your HTTP3 setting.
      */
     function __construct()
     {
@@ -132,6 +156,10 @@ class DescribeHTTPSListenersRequest extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

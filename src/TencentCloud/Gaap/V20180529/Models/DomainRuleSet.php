@@ -114,6 +114,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setBanStatus(string $BanStatus) Set Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DomainRuleSet extends AbstractModel
 {
@@ -245,6 +253,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $BanStatus;
 
     /**
+     * @var integer Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $Domain Forwarding rule domain name.
      * @param array $RuleSet Forwarding rule list of the domain name.
      * @param string $CertificateId Server certificate ID of the domain. When it is `default`, it indicates that the default certificate will be used (i.e., the certificate configured for the listener).
@@ -291,6 +307,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 2: deleting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $BanStatus Blocking-related status of the domain name. `BANNED`: the domain name is blocked; `RECOVER`: the domain name is unblocked or normal; `BANNING`: the domain name is being blocked; `RECOVERING`: the domain name is being unblocked; `BAN_FAILED`: the blocking fails; RECOVER_FAILED: the unblocking fails.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
+`0`: disable HTTP3;
+`1`: enable HTTP3.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -399,6 +419,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("BanStatus",$param) and $param["BanStatus"] !== null) {
             $this->BanStatus = $param["BanStatus"];
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain Scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
- * @method array getForwardLoadBalancers() Obtain List of application CLBs to modify.Up to 50 CLBs allowed.
- * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs to modify.Up to 50 CLBs allowed.
+ * @method array getForwardLoadBalancers() Obtain List of application CLBs to modify. Up to 50 CLBs allowed.
+ * @method void setForwardLoadBalancers(array $ForwardLoadBalancers) Set List of application CLBs to modify. Up to 50 CLBs allowed.
  */
 class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyLoadBalancerTargetAttributesRequest extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
-     * @var array List of application CLBs to modify.Up to 50 CLBs allowed.
+     * @var array List of application CLBs to modify. Up to 50 CLBs allowed.
      */
     public $ForwardLoadBalancers;
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID
-     * @param array $ForwardLoadBalancers List of application CLBs to modify.Up to 50 CLBs allowed.
+     * @param array $ForwardLoadBalancers List of application CLBs to modify. Up to 50 CLBs allowed.
      */
     function __construct()
     {

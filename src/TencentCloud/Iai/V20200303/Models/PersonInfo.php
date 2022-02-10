@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPersonExDescriptions(array $PersonExDescriptions) Set Content of person description field
  * @method array getFaceIds() Obtain List of contained face images
  * @method void setFaceIds(array $FaceIds) Set List of contained face images
- * @method integer getCreationTimestamp() Obtain Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
- * @method void setCreationTimestamp(integer $CreationTimestamp) Set Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+ * @method integer getCreationTimestamp() Obtain Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
+ * @method void setCreationTimestamp(integer $CreationTimestamp) Set Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
  */
 class PersonInfo extends AbstractModel
 {
@@ -63,8 +63,8 @@ class PersonInfo extends AbstractModel
     public $FaceIds;
 
     /**
-     * @var integer Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+     * @var integer Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
      */
     public $CreationTimestamp;
 
@@ -74,8 +74,8 @@ The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universa
      * @param integer $Gender Person gender
      * @param array $PersonExDescriptions Content of person description field
      * @param array $FaceIds List of contained face images
-     * @param integer $CreationTimestamp Person creation time and date (`CreationTimestamp`), whose value is the number of milliseconds between the UNIX epoch time and the group creation time. 
-The UNIX epoch time is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the UNIX time document.
+     * @param integer $CreationTimestamp Person creation time, measured in the number of milliseconds elapsed since the Unix epoch 
+The Unix epoch is 00:00:00, Thursday, January 1, 1970, Coordinated Universal Time (UTC). For more information, please see the Unix time document.
      */
     function __construct()
     {
