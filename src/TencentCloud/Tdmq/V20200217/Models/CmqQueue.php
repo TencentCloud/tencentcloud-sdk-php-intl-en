@@ -122,6 +122,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNamespaceName(string $NamespaceName) Set Namespace name
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxUnackedMsgNum() Obtain The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxMsgBacklogSize() Obtain Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxMsgBacklogSize(integer $MaxMsgBacklogSize) Set Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class CmqQueue extends AbstractModel
 {
@@ -285,6 +297,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $NamespaceName;
 
     /**
+     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
+     * @var integer The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxUnackedMsgNum;
+
+    /**
+     * @var integer Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxMsgBacklogSize;
+
+    /**
      * @param string $QueueId Message queue ID.
      * @param string $QueueName Message queue name.
      * @param integer $Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
@@ -336,6 +366,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $NamespaceName Namespace name
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxMsgBacklogSize Maximum size of heaped messages in bytes.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -468,6 +504,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("MaxUnackedMsgNum",$param) and $param["MaxUnackedMsgNum"] !== null) {
+            $this->MaxUnackedMsgNum = $param["MaxUnackedMsgNum"];
+        }
+
+        if (array_key_exists("MaxMsgBacklogSize",$param) and $param["MaxMsgBacklogSize"] !== null) {
+            $this->MaxMsgBacklogSize = $param["MaxMsgBacklogSize"];
         }
     }
 }

@@ -18,26 +18,29 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProducers response structure.
+ * DescribePublishers response structure.
  *
- * @method array getProducerSets() Obtain Array set of producers.
- * @method void setProducerSets(array $ProducerSets) Set Array set of producers.
- * @method integer getTotalCount() Obtain Total number of records.
- * @method void setTotalCount(integer $TotalCount) Set Total number of records.
+ * @method integer getTotalCount() Obtain Total number of query results.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of query results.
+ * @method array getPublishers() Obtain List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublishers(array $Publishers) Set List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProducersResponse extends AbstractModel
+class DescribePublishersResponse extends AbstractModel
 {
     /**
-     * @var array Array set of producers.
-     */
-    public $ProducerSets;
-
-    /**
-     * @var integer Total number of records.
+     * @var integer Total number of query results.
      */
     public $TotalCount;
+
+    /**
+     * @var array List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Publishers;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +48,9 @@ class DescribeProducersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ProducerSets Array set of producers.
-     * @param integer $TotalCount Total number of records.
+     * @param integer $TotalCount Total number of query results.
+     * @param array $Publishers List of producer information.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +66,17 @@ class DescribeProducersResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ProducerSets",$param) and $param["ProducerSets"] !== null) {
-            $this->ProducerSets = [];
-            foreach ($param["ProducerSets"] as $key => $value){
-                $obj = new Producer();
-                $obj->deserialize($value);
-                array_push($this->ProducerSets, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Publishers",$param) and $param["Publishers"] !== null) {
+            $this->Publishers = [];
+            foreach ($param["Publishers"] as $key => $value){
+                $obj = new Publisher();
+                $obj->deserialize($value);
+                array_push($this->Publishers, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBindClusterId(integer $BindClusterId) Set ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
- * @method array getTags() Obtain List of cluster tags
- * @method void setTags(array $Tags) Set List of cluster tags
+ * @method array getTags() Obtain Cluster tag list (deprecated).
+ * @method void setTags(array $Tags) Set Cluster tag list (deprecated).
  * @method boolean getPublicAccessEnabled() Obtain Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
  * @method void setPublicAccessEnabled(boolean $PublicAccessEnabled) Set Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
  */
@@ -49,7 +49,7 @@ class CreateClusterRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array List of cluster tags
+     * @var array Cluster tag list (deprecated).
      */
     public $Tags;
 
@@ -62,7 +62,7 @@ class CreateClusterRequest extends AbstractModel
      * @param string $ClusterName Cluster name, which can contain up to 16 letters, digits, hyphens, and underscores.
      * @param integer $BindClusterId ID of your dedicated physical cluster. If it is not passed in, cluster resources will be created in a public cluster by default.
      * @param string $Remark Remarks (up to 128 characters).
-     * @param array $Tags List of cluster tags
+     * @param array $Tags Cluster tag list (deprecated).
      * @param boolean $PublicAccessEnabled Whether to enable public network access. If this parameter is left empty, the feature will be enabled by default
      */
     function __construct()

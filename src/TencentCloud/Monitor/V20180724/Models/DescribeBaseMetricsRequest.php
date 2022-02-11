@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Service namespace. Tencent Cloud services have different namespaces. For more information on service namespaces, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the namespace of CVM
  * @method string getMetricName() Obtain Metric name. Tencent Cloud services have different metric names. For more information on metric names, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the metric names of CVM
  * @method void setMetricName(string $MetricName) Set Metric name. Tencent Cloud services have different metric names. For more information on metric names, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the metric names of CVM
+ * @method array getDimensions() Obtain Filter by dimension. This parameter is optional.
+ * @method void setDimensions(array $Dimensions) Set Filter by dimension. This parameter is optional.
  */
 class DescribeBaseMetricsRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeBaseMetricsRequest extends AbstractModel
     public $MetricName;
 
     /**
+     * @var array Filter by dimension. This parameter is optional.
+     */
+    public $Dimensions;
+
+    /**
      * @param string $Namespace Service namespace. Tencent Cloud services have different namespaces. For more information on service namespaces, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the namespace of CVM
      * @param string $MetricName Metric name. Tencent Cloud services have different metric names. For more information on metric names, see the monitoring metric documentation of each service. For example, see [CVM Monitoring Metrics](https://intl.cloud.tencent.com/document/product/248/6843?from_cn_redirect=1) for the metric names of CVM
+     * @param array $Dimensions Filter by dimension. This parameter is optional.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeBaseMetricsRequest extends AbstractModel
 
         if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
             $this->MetricName = $param["MetricName"];
+        }
+
+        if (array_key_exists("Dimensions",$param) and $param["Dimensions"] !== null) {
+            $this->Dimensions = $param["Dimensions"];
         }
     }
 }

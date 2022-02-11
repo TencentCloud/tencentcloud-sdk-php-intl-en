@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setHealthyInfo(string $HealthyInfo) Set Cluster health information
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
- * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+ * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+ * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
  * @method integer getMaxNamespaceNum() Obtain Maximum number of namespaces
  * @method void setMaxNamespaceNum(integer $MaxNamespaceNum) Set Maximum number of namespaces
  * @method integer getMaxTopicNum() Obtain Maximum number of topics
@@ -140,7 +140,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HealthyInfo;
 
     /**
-     * @var integer Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
      */
     public $Status;
 
@@ -256,7 +256,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Healthy Whether the cluster is healthy. 1: healthy; 0: exceptional
      * @param string $HealthyInfo Cluster health information
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: deleting; 3: deleted; 5. creation failed; 6: deletion failed
+     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
      * @param integer $MaxNamespaceNum Maximum number of namespaces
      * @param integer $MaxTopicNum Maximum number of topics
      * @param integer $MaxQps Maximum QPS
