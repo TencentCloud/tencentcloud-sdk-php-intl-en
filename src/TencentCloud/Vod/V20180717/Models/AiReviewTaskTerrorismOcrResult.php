@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of OCR-based terrorism information detection in text task in content audit
+ * Result for OCR-based recognition of terrorism content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Input of OCR-based terrorism information detection in text task in content audit.
- * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Input of OCR-based terrorism information detection in text task in content audit.
- * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Output of OCR-based terrorism information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Output of OCR-based terrorism information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Input for OCR-based recognition of terrorism content
+ * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Input for OCR-based recognition of terrorism content
+ * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Output for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Output for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskTerrorismOcrResult extends AbstractModel
 {
@@ -58,13 +58,13 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewTerrorismOcrTaskInput Input of OCR-based terrorism information detection in text task in content audit.
+     * @var AiReviewTerrorismOcrTaskInput Input for OCR-based recognition of terrorism content
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismOcrTaskOutput Output of OCR-based terrorism information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTerrorismOcrTaskOutput Output for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
-     * @param AiReviewTerrorismOcrTaskInput $Input Input of OCR-based terrorism information detection in text task in content audit.
-     * @param AiReviewTerrorismOcrTaskOutput $Output Output of OCR-based terrorism information detection in text task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewTerrorismOcrTaskInput $Input Input for OCR-based recognition of terrorism content
+     * @param AiReviewTerrorismOcrTaskOutput $Output Output for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

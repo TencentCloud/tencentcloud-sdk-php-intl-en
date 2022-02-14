@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDrmType(string $DrmType) Set Encryption type.
  * @method string getUrl() Obtain Playback address.
  * @method void setUrl(string $Url) Set Playback address.
+ * @method integer getSize() Obtain File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+ * @method void setSize(integer $Size) Set File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
  */
 class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 {
@@ -52,10 +60,22 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
     public $Url;
 
     /**
+     * @var integer File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
+     */
+    public $Size;
+
+    /**
      * @param integer $Definition Adaptive bitrate streaming specification.
      * @param string $Package Container format. Valid values: hls, dash.
      * @param string $DrmType Encryption type.
      * @param string $Url Playback address.
+     * @param integer $Size File size (bytes)
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+<li>If the file is a DASH file, the value of this parameter is the sum of the size of the MPD and segment files.</li>
+<li><font color=red>Note</font>: For adaptive bitrate streaming files generated before 2022-01-10T16:00:00Z, the value of this parameter is `0`.</li>
      */
     function __construct()
     {
@@ -84,6 +104,10 @@ class AdaptiveDynamicStreamingInfoItem extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Size",$param) and $param["Size"] !== null) {
+            $this->Size = $param["Size"];
         }
     }
 }

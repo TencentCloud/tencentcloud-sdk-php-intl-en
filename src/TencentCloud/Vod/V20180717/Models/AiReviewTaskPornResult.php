@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of porn information detection task in content audit
+ * Result for intelligent recognition of pornographic content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPornTaskInput getInput() Obtain Input of porn information detection task in content audit.
- * @method void setInput(AiReviewPornTaskInput $Input) Set Input of porn information detection task in content audit.
- * @method AiReviewPornTaskOutput getOutput() Obtain Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPornTaskOutput $Output) Set Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPornTaskInput getInput() Obtain Input for intelligent recognition of pornographic content
+ * @method void setInput(AiReviewPornTaskInput $Input) Set Input for intelligent recognition of pornographic content
+ * @method AiReviewPornTaskOutput getOutput() Obtain Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewPornTaskOutput $Output) Set Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskPornResult extends AbstractModel
 {
@@ -61,13 +61,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var AiReviewPornTaskInput Input of porn information detection task in content audit.
+     * @var AiReviewPornTaskInput Input for intelligent recognition of pornographic content
      */
     public $Input;
 
     /**
-     * @var AiReviewPornTaskOutput Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPornTaskOutput Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPornTaskInput $Input Input of porn information detection task in content audit.
-     * @param AiReviewPornTaskOutput $Output Output of porn information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPornTaskInput $Input Input for intelligent recognition of pornographic content
+     * @param AiReviewPornTaskOutput $Output Output for intelligent recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

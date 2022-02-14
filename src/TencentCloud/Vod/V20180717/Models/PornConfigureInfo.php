@@ -18,48 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of porn information detection task
+ * Parameters for recognition of pornographic content
  *
- * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PornAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method PornImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setImgReviewInfo(PornImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PornAsrReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setAsrReviewInfo(PornAsrReviewTemplateInfo $AsrReviewInfo) Set Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PornOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOcrReviewInfo(PornOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class PornConfigureInfo extends AbstractModel
 {
     /**
-     * @var PornImgReviewTemplateInfo Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PornImgReviewTemplateInfo Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PornAsrReviewTemplateInfo Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PornAsrReviewTemplateInfo Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PornOcrReviewTemplateInfo Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PornOcrReviewTemplateInfo Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PornImgReviewTemplateInfo $ImgReviewInfo Control parameter of porn information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PornAsrReviewTemplateInfo $AsrReviewInfo Control parameter of porn information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Control parameter of porn information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PornImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of pornographic content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PornAsrReviewTemplateInfo $AsrReviewInfo Parameters for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PornOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

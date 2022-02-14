@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of politically sensitive information detection task in content audit
+ * Result for intelligent recognition of politically sensitive content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPoliticalTaskInput getInput() Obtain Input of politically sensitive information detection task in content audit.
- * @method void setInput(AiReviewPoliticalTaskInput $Input) Set Input of politically sensitive information detection task in content audit.
- * @method AiReviewPoliticalTaskOutput getOutput() Obtain Output of politically sensitive information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPoliticalTaskOutput $Output) Set Output of politically sensitive information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPoliticalTaskInput getInput() Obtain Input for intelligent recognition of politically sensitive content
+ * @method void setInput(AiReviewPoliticalTaskInput $Input) Set Input for intelligent recognition of politically sensitive content
+ * @method AiReviewPoliticalTaskOutput getOutput() Obtain Output for intelligent recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewPoliticalTaskOutput $Output) Set Output for intelligent recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskPoliticalResult extends AbstractModel
 {
@@ -61,13 +61,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var AiReviewPoliticalTaskInput Input of politically sensitive information detection task in content audit.
+     * @var AiReviewPoliticalTaskInput Input for intelligent recognition of politically sensitive content
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalTaskOutput Output of politically sensitive information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPoliticalTaskOutput Output for intelligent recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPoliticalTaskInput $Input Input of politically sensitive information detection task in content audit.
-     * @param AiReviewPoliticalTaskOutput $Output Output of politically sensitive information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPoliticalTaskInput $Input Input for intelligent recognition of politically sensitive content
+     * @param AiReviewPoliticalTaskOutput $Output Output for intelligent recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

@@ -64,10 +64,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and result of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAiContentReviewResultSet() Obtain Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAiContentReviewResultSet() Obtain Status and result of an intelligent recognition task
+ * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Status and result of an intelligent recognition task
  * @method array getAiAnalysisResultSet() Obtain Execution status and result of video content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAiAnalysisResultSet(array $AiAnalysisResultSet) Set Execution status and result of video content analysis task.
@@ -160,8 +158,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaProcessResultSet;
 
     /**
-     * @var array Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Status and result of an intelligent recognition task
      */
     public $AiContentReviewResultSet;
 
@@ -227,8 +224,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param MediaMetaData $MetaData Source video metadata.
      * @param array $MediaProcessResultSet Execution status and result of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AiContentReviewResultSet Execution status and result of video content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AiContentReviewResultSet Status and result of an intelligent recognition task
      * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AiRecognitionResultSet Execution status and result of video content recognition task.

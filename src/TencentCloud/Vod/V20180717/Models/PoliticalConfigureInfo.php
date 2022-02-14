@@ -18,48 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of politically sensitive information detection task
+ * Parameters for recognition of politically sensitive content
  *
- * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method PoliticalImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PoliticalAsrReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfo $AsrReviewInfo) Set Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PoliticalOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class PoliticalConfigureInfo extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfo Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PoliticalImgReviewTemplateInfo Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfo Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PoliticalAsrReviewTemplateInfo Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfo Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PoliticalOcrReviewTemplateInfo Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Control parameter of politically sensitive information detection in video image.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo Control parameter of politically sensitive information detection in text.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param PoliticalImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of politically sensitive content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PoliticalAsrReviewTemplateInfo $AsrReviewInfo Parameters for ASR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PoliticalOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

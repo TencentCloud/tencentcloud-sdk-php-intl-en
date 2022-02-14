@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of custom audit task.
+ * Parameters for custom recognition
  *
- * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() Obtain Control parameter of custom figure audit.
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) Set Control parameter of custom figure audit.
- * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of custom speech audit.
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of custom speech audit.
- * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of custom text audit.
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of custom text audit.
+ * @method UserDefineFaceReviewTemplateInfoForUpdate getFaceReviewInfo() Obtain Parameters for custom facial recognition
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo) Set Parameters for custom facial recognition
+ * @method UserDefineAsrTextReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Parameters for custom ASR-based recognition
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo) Set Parameters for custom ASR-based recognition
+ * @method UserDefineOcrTextReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for custom OCR-based recognition
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for custom OCR-based recognition
  */
 class UserDefineConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfoForUpdate Control parameter of custom figure audit.
+     * @var UserDefineFaceReviewTemplateInfoForUpdate Parameters for custom facial recognition
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfoForUpdate Control parameter of custom speech audit.
+     * @var UserDefineAsrTextReviewTemplateInfoForUpdate Parameters for custom ASR-based recognition
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfoForUpdate Control parameter of custom text audit.
+     * @var UserDefineOcrTextReviewTemplateInfoForUpdate Parameters for custom OCR-based recognition
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo Control parameter of custom figure audit.
-     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of custom speech audit.
-     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of custom text audit.
+     * @param UserDefineFaceReviewTemplateInfoForUpdate $FaceReviewInfo Parameters for custom facial recognition
+     * @param UserDefineAsrTextReviewTemplateInfoForUpdate $AsrReviewInfo Parameters for custom ASR-based recognition
+     * @param UserDefineOcrTextReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for custom OCR-based recognition
      */
     function __construct()
     {

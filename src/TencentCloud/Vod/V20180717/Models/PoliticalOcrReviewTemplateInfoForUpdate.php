@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of politically sensitive information detection in text task.
+ * Parameters for OCR-based recognition of politically sensitive content
  *
- * @method string getSwitch() Obtain Switch of politically sensitive information detection in text task. Valid values:
-<li>ON: enables politically sensitive information detection in text task;</li>
-<li>OFF: disables politically sensitive information detection in text task.</li>
- * @method void setSwitch(string $Switch) Set Switch of politically sensitive information detection in text task. Valid values:
-<li>ON: enables politically sensitive information detection in text task;</li>
-<li>OFF: disables politically sensitive information detection in text task.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
- * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+ * @method string getSwitch() Obtain Whether to enable OCR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable OCR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method integer getBlockConfidence() Obtain Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+ * @method integer getReviewConfidence() Obtain Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
  */
 class PoliticalOcrReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of politically sensitive information detection in text task. Valid values:
-<li>ON: enables politically sensitive information detection in text task;</li>
-<li>OFF: disables politically sensitive information detection in text task.</li>
+     * @var string Whether to enable OCR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
+     * @var integer Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * @var integer Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of politically sensitive information detection in text task. Valid values:
-<li>ON: enables politically sensitive information detection in text task;</li>
-<li>OFF: disables politically sensitive information detection in text task.</li>
-     * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0–100.
-     * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0–100.
+     * @param string $Switch Whether to enable OCR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param integer $BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. Value range: 0-100
+     * @param integer $ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. Value range: 0-100
      */
     function __construct()
     {

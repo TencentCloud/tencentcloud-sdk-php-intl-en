@@ -18,28 +18,28 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of terrorism information detection task.
+ * Parameters for recognition of terrorism content
  *
- * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of terrorism information detection in video image task.
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of terrorism information detection in video image task.
- * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of terrorism information detection in text task.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of terrorism information detection in text task.
+ * @method TerrorismImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Parameters for recognition of terrorism content in images
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Parameters for recognition of terrorism content in images
+ * @method TerrorismOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
  */
 class TerrorismConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfoForUpdate Control parameter of terrorism information detection in video image task.
+     * @var TerrorismImgReviewTemplateInfoForUpdate Parameters for recognition of terrorism content in images
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfoForUpdate Control parameter of terrorism information detection in text task.
+     * @var TerrorismOcrReviewTemplateInfoForUpdate Parameters for OCR-based recognition of terrorism content
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of terrorism information detection in video image task.
-     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of terrorism information detection in text task.
+     * @param TerrorismImgReviewTemplateInfoForUpdate $ImgReviewInfo Parameters for recognition of terrorism content in images
+     * @param TerrorismOcrReviewTemplateInfoForUpdate $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
      */
     function __construct()
     {

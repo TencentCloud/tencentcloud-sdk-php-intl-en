@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of terrorism information detection task in content audit
+ * Result for intelligent recognition of terrorism content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTerrorismTaskInput getInput() Obtain Input of terrorism information detection task in content audit.
- * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Input of terrorism information detection task in content audit.
- * @method AiReviewTerrorismTaskOutput getOutput() Obtain Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewTerrorismTaskInput getInput() Obtain Input for intelligent recognition of terrorism content
+ * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Input for intelligent recognition of terrorism content
+ * @method AiReviewTerrorismTaskOutput getOutput() Obtain Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskTerrorismResult extends AbstractModel
 {
@@ -61,13 +61,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var AiReviewTerrorismTaskInput Input of terrorism information detection task in content audit.
+     * @var AiReviewTerrorismTaskInput Input for intelligent recognition of terrorism content
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismTaskOutput Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTerrorismTaskOutput Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTerrorismTaskInput $Input Input of terrorism information detection task in content audit.
-     * @param AiReviewTerrorismTaskOutput $Output Output of terrorism information detection task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewTerrorismTaskInput $Input Input for intelligent recognition of terrorism content
+     * @param AiReviewTerrorismTaskOutput $Output Output for intelligent recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

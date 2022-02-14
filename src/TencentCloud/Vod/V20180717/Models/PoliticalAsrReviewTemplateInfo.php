@@ -18,44 +18,44 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of politically sensitive information detection in speech task
+ * Parameters for ASR-based recognition of politically sensitive content
  *
- * @method string getSwitch() Obtain Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
- * @method void setSwitch(string $Switch) Set Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
- * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
- * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+ * @method string getSwitch() Obtain Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method integer getReviewConfidence() Obtain Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+ * @method integer getBlockConfidence() Obtain Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
  */
 class PoliticalAsrReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
+     * @var string Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public $Switch;
 
     /**
-     * @var integer Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-     */
-    public $BlockConfidence;
-
-    /**
-     * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+     * @var integer Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of politically sensitive information detection in speech task. Valid values:
-<li>ON: enables politically sensitive information detection in speech task;</li>
-<li>OFF: disables politically sensitive information detection in speech task.</li>
-     * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0-100.
-     * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0-100.
+     * @var integer Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
+     */
+    public $BlockConfidence;
+
+    /**
+     * @param string $Switch Whether to enable ASR-based recognition of politically sensitive content. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param integer $ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `75` will be used by default. Value range: 0-100
+     * @param integer $BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `100` will be used by default. Value range: 0-100
      */
     function __construct()
     {
@@ -74,12 +74,12 @@ class PoliticalAsrReviewTemplateInfo extends AbstractModel
             $this->Switch = $param["Switch"];
         }
 
-        if (array_key_exists("BlockConfidence",$param) and $param["BlockConfidence"] !== null) {
-            $this->BlockConfidence = $param["BlockConfidence"];
-        }
-
         if (array_key_exists("ReviewConfidence",$param) and $param["ReviewConfidence"] !== null) {
             $this->ReviewConfidence = $param["ReviewConfidence"];
+        }
+
+        if (array_key_exists("BlockConfidence",$param) and $param["BlockConfidence"] !== null) {
+            $this->BlockConfidence = $param["BlockConfidence"];
         }
     }
 }

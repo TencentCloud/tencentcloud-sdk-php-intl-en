@@ -34,10 +34,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
@@ -81,8 +81,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiContentReviewTaskInput Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $AiContentReviewTask;
 
@@ -122,8 +122,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiContentReviewTaskInput $AiContentReviewTask Intelligent recognition task
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.

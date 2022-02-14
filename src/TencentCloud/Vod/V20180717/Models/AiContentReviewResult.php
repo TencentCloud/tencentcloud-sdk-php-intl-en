@@ -18,180 +18,180 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content audit result
+ * Intelligent recognition result
  *
  * @method string getType() Obtain Task type. Valid values:
-<li>`Porn`: porn information recognition in images</li>
-<li>`Terrorism`: terrorism information recognition in images</li>
-<li>`Political`: politically sensitive information recognition in images</li>
-<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
-<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
-<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
-<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
-<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
-<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
-<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
+<li>`Porn`: recognition of pornographic content in images</li>
+<li>`Terrorism`: recognition of terrorism content in images</li>
+<li>`Political`: recognition of politically sensitive content in images</li>
+<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
+<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
+<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
+<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
+<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
+<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
+<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
  * @method void setType(string $Type) Set Task type. Valid values:
-<li>`Porn`: porn information recognition in images</li>
-<li>`Terrorism`: terrorism information recognition in images</li>
-<li>`Political`: politically sensitive information recognition in images</li>
-<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
-<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
-<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
-<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
-<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
-<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
-<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
- * @method AiReviewTaskPornResult getPornTask() Obtain Query result of intelligent porn information detection in video image task in video content audit, which is valid when task type is `Porn`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPornTask(AiReviewTaskPornResult $PornTask) Set Query result of intelligent porn information detection in video image task in video content audit, which is valid when task type is `Porn`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskTerrorismResult getTerrorismTask() Obtain Query result of intelligent terrorism information detection in video image task in video content audit, which is valid when task type is `Terrorism`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTerrorismTask(AiReviewTaskTerrorismResult $TerrorismTask) Set Query result of intelligent terrorism information detection in video image task in video content audit, which is valid when task type is `Terrorism`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskPoliticalResult getPoliticalTask() Obtain Query result of intelligent politically sensitive information detection in video image task in video content audit, which is valid when task type is `Political`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPoliticalTask(AiReviewTaskPoliticalResult $PoliticalTask) Set Query result of intelligent politically sensitive information detection in video image task in video content audit, which is valid when task type is `Political`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskPornAsrResult getPornAsrTask() Obtain Query result of ASR-based porn information detection in speech task in video content audit, which is valid when task type is `Porn.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPornAsrTask(AiReviewTaskPornAsrResult $PornAsrTask) Set Query result of ASR-based porn information detection in speech task in video content audit, which is valid when task type is `Porn.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskPornOcrResult getPornOcrTask() Obtain Query result of OCR-based porn information detection in text task in video content audit, which is valid when task type is `Porn.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPornOcrTask(AiReviewTaskPornOcrResult $PornOcrTask) Set Query result of OCR-based porn information detection in text task in video content audit, which is valid when task type is `Porn.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskPoliticalAsrResult getPoliticalAsrTask() Obtain Query result of ASR-based politically sensitive information detection in speech task in video content audit, which is valid when task type is `Political.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPoliticalAsrTask(AiReviewTaskPoliticalAsrResult $PoliticalAsrTask) Set Query result of ASR-based politically sensitive information detection in speech task in video content audit, which is valid when task type is `Political.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskPoliticalOcrResult getPoliticalOcrTask() Obtain Query result of OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult $PoliticalOcrTask) Set Query result of OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() Obtain Query result of OCR-based terrorism information detection in text task in video content audit, which is valid when task type is `Terrorism.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult $TerrorismOcrTask) Set Query result of OCR-based terrorism information detection in text task in video content audit, which is valid when task type is `Terrorism.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() Obtain Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid when task type is `Prohibited.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask) Set Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid when task type is `Prohibited.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() Obtain Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+<li>`Porn`: recognition of pornographic content in images</li>
+<li>`Terrorism`: recognition of terrorism content in images</li>
+<li>`Political`: recognition of politically sensitive content in images</li>
+<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
+<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
+<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
+<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
+<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
+<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
+<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+ * @method AiReviewTaskPornResult getPornTask() Obtain Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPornTask(AiReviewTaskPornResult $PornTask) Set Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskTerrorismResult getTerrorismTask() Obtain Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setTerrorismTask(AiReviewTaskTerrorismResult $TerrorismTask) Set Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskPoliticalResult getPoliticalTask() Obtain Result for intelligent recognition of politically sensitive content in images. This parameter is valid when `Type` is `Political`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPoliticalTask(AiReviewTaskPoliticalResult $PoliticalTask) Set Result for intelligent recognition of politically sensitive content in images. This parameter is valid when `Type` is `Political`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskPornAsrResult getPornAsrTask() Obtain Result for ASR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPornAsrTask(AiReviewTaskPornAsrResult $PornAsrTask) Set Result for ASR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskPornOcrResult getPornOcrTask() Obtain Result for OCR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPornOcrTask(AiReviewTaskPornOcrResult $PornOcrTask) Set Result for OCR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskPoliticalAsrResult getPoliticalAsrTask() Obtain Result for ASR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPoliticalAsrTask(AiReviewTaskPoliticalAsrResult $PoliticalAsrTask) Set Result for ASR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskPoliticalOcrResult getPoliticalOcrTask() Obtain Result for OCR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPoliticalOcrTask(AiReviewTaskPoliticalOcrResult $PoliticalOcrTask) Set Result for OCR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskTerrorismOcrResult getTerrorismOcrTask() Obtain Result for OCR-based recognition of terrorism content. This parameter is valid when `Type` is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setTerrorismOcrTask(AiReviewTaskTerrorismOcrResult $TerrorismOcrTask) Set Result for OCR-based recognition of terrorism content. This parameter is valid when `Type` is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskProhibitedOcrResult getProhibitedOcrTask() Obtain Result for OCR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setProhibitedOcrTask(AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask) Set Result for OCR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiReviewTaskProhibitedAsrResult getProhibitedAsrTask() Obtain Result for ASR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setProhibitedAsrTask(AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask) Set Result for ASR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiContentReviewResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<li>`Porn`: porn information recognition in images</li>
-<li>`Terrorism`: terrorism information recognition in images</li>
-<li>`Political`: politically sensitive information recognition in images</li>
-<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
-<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
-<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
-<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
-<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
-<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
-<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
+<li>`Porn`: recognition of pornographic content in images</li>
+<li>`Terrorism`: recognition of terrorism content in images</li>
+<li>`Political`: recognition of politically sensitive content in images</li>
+<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
+<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
+<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
+<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
+<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
+<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
+<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
      */
     public $Type;
 
     /**
-     * @var AiReviewTaskPornResult Query result of intelligent porn information detection in video image task in video content audit, which is valid when task type is `Porn`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPornResult Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PornTask;
 
     /**
-     * @var AiReviewTaskTerrorismResult Query result of intelligent terrorism information detection in video image task in video content audit, which is valid when task type is `Terrorism`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskTerrorismResult Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $TerrorismTask;
 
     /**
-     * @var AiReviewTaskPoliticalResult Query result of intelligent politically sensitive information detection in video image task in video content audit, which is valid when task type is `Political`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPoliticalResult Result for intelligent recognition of politically sensitive content in images. This parameter is valid when `Type` is `Political`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PoliticalTask;
 
     /**
-     * @var AiReviewTaskPornAsrResult Query result of ASR-based porn information detection in speech task in video content audit, which is valid when task type is `Porn.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPornAsrResult Result for ASR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PornAsrTask;
 
     /**
-     * @var AiReviewTaskPornOcrResult Query result of OCR-based porn information detection in text task in video content audit, which is valid when task type is `Porn.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPornOcrResult Result for OCR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PornOcrTask;
 
     /**
-     * @var AiReviewTaskPoliticalAsrResult Query result of ASR-based politically sensitive information detection in speech task in video content audit, which is valid when task type is `Political.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPoliticalAsrResult Result for ASR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PoliticalAsrTask;
 
     /**
-     * @var AiReviewTaskPoliticalOcrResult Query result of OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskPoliticalOcrResult Result for OCR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PoliticalOcrTask;
 
     /**
-     * @var AiReviewTaskTerrorismOcrResult Query result of OCR-based terrorism information detection in text task in video content audit, which is valid when task type is `Terrorism.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskTerrorismOcrResult Result for OCR-based recognition of terrorism content. This parameter is valid when `Type` is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $TerrorismOcrTask;
 
     /**
-     * @var AiReviewTaskProhibitedAsrResult Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid when task type is `Prohibited.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $ProhibitedAsrTask;
-
-    /**
-     * @var AiReviewTaskProhibitedOcrResult Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTaskProhibitedOcrResult Result for OCR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ProhibitedOcrTask;
 
     /**
+     * @var AiReviewTaskProhibitedAsrResult Result for ASR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $ProhibitedAsrTask;
+
+    /**
      * @param string $Type Task type. Valid values:
-<li>`Porn`: porn information recognition in images</li>
-<li>`Terrorism`: terrorism information recognition in images</li>
-<li>`Political`: politically sensitive information recognition in images</li>
-<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
-<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
-<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
-<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
-<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
-<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
-<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
-     * @param AiReviewTaskPornResult $PornTask Query result of intelligent porn information detection in video image task in video content audit, which is valid when task type is `Porn`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskTerrorismResult $TerrorismTask Query result of intelligent terrorism information detection in video image task in video content audit, which is valid when task type is `Terrorism`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskPoliticalResult $PoliticalTask Query result of intelligent politically sensitive information detection in video image task in video content audit, which is valid when task type is `Political`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskPornAsrResult $PornAsrTask Query result of ASR-based porn information detection in speech task in video content audit, which is valid when task type is `Porn.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskPornOcrResult $PornOcrTask Query result of OCR-based porn information detection in text task in video content audit, which is valid when task type is `Porn.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskPoliticalAsrResult $PoliticalAsrTask Query result of ASR-based politically sensitive information detection in speech task in video content audit, which is valid when task type is `Political.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskPoliticalOcrResult $PoliticalOcrTask Query result of OCR-based politically sensitive information detection in text task in video content audit, which is valid when task type is `Political.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskTerrorismOcrResult $TerrorismOcrTask Query result of OCR-based terrorism information detection in text task in video content audit, which is valid when task type is `Terrorism.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask Query result of ASR-based prohibited information detection in speech task in video content audit, which is valid when task type is `Prohibited.Asr`.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask Query result of OCR-based prohibited information detection in text task in video content audit, which is valid when task type is `Prohibited.Ocr`.
-Note: this field may return null, indicating that no valid values can be obtained.
+<li>`Porn`: recognition of pornographic content in images</li>
+<li>`Terrorism`: recognition of terrorism content in images</li>
+<li>`Political`: recognition of politically sensitive content in images</li>
+<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
+<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
+<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
+<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
+<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
+<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
+<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+     * @param AiReviewTaskPornResult $PornTask Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskTerrorismResult $TerrorismTask Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskPoliticalResult $PoliticalTask Result for intelligent recognition of politically sensitive content in images. This parameter is valid when `Type` is `Political`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskPornAsrResult $PornAsrTask Result for ASR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskPornOcrResult $PornOcrTask Result for OCR-based recognition of pornographic content. This parameter is valid when `Type` is `Porn.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskPoliticalAsrResult $PoliticalAsrTask Result for ASR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskPoliticalOcrResult $PoliticalOcrTask Result for OCR-based recognition of politically sensitive content. This parameter is valid when `Type` is `Political.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskTerrorismOcrResult $TerrorismOcrTask Result for OCR-based recognition of terrorism content. This parameter is valid when `Type` is `Terrorism.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskProhibitedOcrResult $ProhibitedOcrTask Result for OCR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Ocr`.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiReviewTaskProhibitedAsrResult $ProhibitedAsrTask Result for ASR-based recognition of banned content. This parameter is valid when `Type` is `Prohibited.Asr`.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {
@@ -250,14 +250,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->TerrorismOcrTask->deserialize($param["TerrorismOcrTask"]);
         }
 
-        if (array_key_exists("ProhibitedAsrTask",$param) and $param["ProhibitedAsrTask"] !== null) {
-            $this->ProhibitedAsrTask = new AiReviewTaskProhibitedAsrResult();
-            $this->ProhibitedAsrTask->deserialize($param["ProhibitedAsrTask"]);
-        }
-
         if (array_key_exists("ProhibitedOcrTask",$param) and $param["ProhibitedOcrTask"] !== null) {
             $this->ProhibitedOcrTask = new AiReviewTaskProhibitedOcrResult();
             $this->ProhibitedOcrTask->deserialize($param["ProhibitedOcrTask"]);
+        }
+
+        if (array_key_exists("ProhibitedAsrTask",$param) and $param["ProhibitedAsrTask"] !== null) {
+            $this->ProhibitedAsrTask = new AiReviewTaskProhibitedAsrResult();
+            $this->ProhibitedAsrTask->deserialize($param["ProhibitedAsrTask"]);
         }
     }
 }

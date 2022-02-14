@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of OCR-based prohibited information detection in text task in content audit
+ * Result for OCR-based recognition of banned content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input of OCR-based prohibited information detection in text task in content audit
- * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input of OCR-based prohibited information detection in text task in content audit
- * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Output of OCR-based prohibited information detection in text task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output of OCR-based prohibited information detection in text task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewProhibitedOcrTaskInput getInput() Obtain Input for OCR-based recognition of banned content
+ * @method void setInput(AiReviewProhibitedOcrTaskInput $Input) Set Input for OCR-based recognition of banned content
+ * @method AiReviewProhibitedOcrTaskOutput getOutput() Obtain Output for OCR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output for OCR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskProhibitedOcrResult extends AbstractModel
 {
@@ -58,13 +58,13 @@ class AiReviewTaskProhibitedOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewProhibitedOcrTaskInput Input of OCR-based prohibited information detection in text task in content audit
+     * @var AiReviewProhibitedOcrTaskInput Input for OCR-based recognition of banned content
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedOcrTaskOutput Output of OCR-based prohibited information detection in text task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewProhibitedOcrTaskOutput Output for OCR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
-     * @param AiReviewProhibitedOcrTaskInput $Input Input of OCR-based prohibited information detection in text task in content audit
-     * @param AiReviewProhibitedOcrTaskOutput $Output Output of OCR-based prohibited information detection in text task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewProhibitedOcrTaskInput $Input Input for OCR-based recognition of banned content
+     * @param AiReviewProhibitedOcrTaskOutput $Output Output for OCR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

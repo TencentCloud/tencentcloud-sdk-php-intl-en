@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Summary metadata of WeChat Mini Program audit.
+ *  
  *
  * @method string getType() Obtain Audit type. 
 <li>Porn: porn image,</li>

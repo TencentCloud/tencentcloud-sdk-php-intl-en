@@ -18,68 +18,68 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * OCR-detected politically sensitive information in text
+ * Output for OCR-based recognition of politically sensitive content
  *
- * @method float getConfidence() Obtain Score of OCR-detected politically sensitive information in text between 0 and 100.
- * @method void setConfidence(float $Confidence) Set Score of OCR-detected politically sensitive information in text between 0 and 100.
- * @method string getSuggestion() Obtain Suggestion for OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain OCR-detected politically sensitive information
+ * @method float getConfidence() Obtain Confidence score for the OCR-detected politically sensitive content. Value range: 0-100
+ * @method void setConfidence(float $Confidence) Set Confidence score for the OCR-detected politically sensitive content. Value range: 0-100
+ * @method string getSuggestion() Obtain Processing suggestion for the OCR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the OCR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method array getSegmentSet() Obtain List of video segments that contain OCR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain OCR-detected politically sensitive information
+ * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain OCR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
- * @method string getSegmentSetFileUrl() Obtain URL to the file for video segments that contain OCR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
- * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file for video segments that contain OCR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method string getSegmentSetFileUrl() Obtain URL to the file for video segments that contain OCR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file for video segments that contain OCR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
  */
 class AiReviewPoliticalOcrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of OCR-detected politically sensitive information in text between 0 and 100.
+     * @var float Confidence score for the OCR-detected politically sensitive content. Value range: 0-100
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string Processing suggestion for the OCR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
     /**
-     * @var array List of video segments that contain OCR-detected politically sensitive information
+     * @var array List of video segments that contain OCR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
      */
     public $SegmentSet;
 
     /**
-     * @var string URL to the file for video segments that contain OCR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @var string URL to the file for video segments that contain OCR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
      */
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @var string Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @param float $Confidence Score of OCR-detected politically sensitive information in text between 0 and 100.
-     * @param string $Suggestion Suggestion for OCR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param array $SegmentSet List of video segments that contain OCR-detected politically sensitive information
+     * @param float $Confidence Confidence score for the OCR-detected politically sensitive content. Value range: 0-100
+     * @param string $Suggestion Processing suggestion for the OCR-detected politically sensitive content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param array $SegmentSet List of video segments that contain OCR-detected politically sensitive content
 <font color=red>Note</font>: This list displays the first 100 results at most. You can get all the results from the file at the URL specified by `SegmentSetFileUrl`.
-     * @param string $SegmentSetFileUrl URL to the file for video segments that contain OCR-detected politically sensitive information. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive information, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
+     * @param string $SegmentSetFileUrl URL to the file for video segments that contain OCR-detected politically sensitive content. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time specified by `SegmentSetFileUrlExpireTime`.
+     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file for video segments that contain OCR-detected politically sensitive content, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format)
      */
     function __construct()
     {

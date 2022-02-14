@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of ASR-based prohibited information detection in speech task in content audit
+ * Input parameters for ASR-based recognition of banned content
  *
  * @method integer getDefinition() Obtain Prohibited information detection template ID.
  * @method void setDefinition(integer $Definition) Set Prohibited information detection template ID.

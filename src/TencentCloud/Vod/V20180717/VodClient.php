@@ -210,17 +210,19 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for an audio/video media file in VOD, including:
-1. Video transcoding (with watermark);
-2. Animated image generating;
-3. Time point screencapturing;
-4. Sampled screencapturing;
-5. Image sprite generating;
-6. Cover generating by screencapturing;
-7. Adaptive bitrate streaming (with encryption);
-8. Intelligent content audit (detection of porn, terrorism, and politically sensitive information);
-9. Intelligent content analysis (tag, category, cover, and frame-specific tag);
-10. Intelligent content recognition (opening and closing credits, face, full text, text keyword, full speech, speech keyword, and object).
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a media processing task on a VOD file. The task may include:
+1. Video transcoding (with watermark)
+2. Animated image generating
+3. Time point screenshot
+4. Sampled screenshot
+5. Image sprite generating
+6. Taking a screenshot to use as the thumbnail
+7. Adaptive bitrate streaming and encryption
+8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+
+If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
  * @method Models\ProcessMediaByProcedureResponse ProcessMediaByProcedure(Models\ProcessMediaByProcedureRequest $req) This API is used to initiate a processing task for a VOD video with a task flow template.
 There are two ways to create a task flow template:
 1. Create and modify a task flow template in the console;

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of video content audit task.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of video content audit task.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameters for intelligent recognition
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameters for intelligent recognition
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Video content analysis task parameter.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of video content recognition task.
@@ -56,7 +56,7 @@ class ProcessMediaRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Type parameter of video content audit task.
+     * @var AiContentReviewTaskInput Parameters for intelligent recognition
      */
     public $AiContentReviewTask;
 
@@ -103,7 +103,7 @@ class ProcessMediaRequest extends AbstractModel
     /**
      * @param string $FileId Media file ID, i.e., the globally unique ID of a file in VOD assigned by the VOD backend after successful upload. This field can be obtained through the [video upload completion event notification](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) or [VOD Console](https://console.cloud.tencent.com/vod/media).
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of video content audit task.
+     * @param AiContentReviewTaskInput $AiContentReviewTask Parameters for intelligent recognition
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of video content recognition task.
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: -10-10. If this parameter is left empty, 0 will be used.

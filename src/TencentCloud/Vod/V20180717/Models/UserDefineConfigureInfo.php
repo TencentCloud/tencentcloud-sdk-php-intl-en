@@ -18,48 +18,48 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of custom audit task
+ * Parameters for custom recognition
  *
- * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method UserDefineFaceReviewTemplateInfo getFaceReviewInfo() Obtain Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setFaceReviewInfo(UserDefineFaceReviewTemplateInfo $FaceReviewInfo) Set Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method UserDefineAsrTextReviewTemplateInfo getAsrReviewInfo() Obtain Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setAsrReviewInfo(UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo) Set Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method UserDefineOcrTextReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOcrReviewInfo(UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo) Set Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class UserDefineConfigureInfo extends AbstractModel
 {
     /**
-     * @var UserDefineFaceReviewTemplateInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var UserDefineFaceReviewTemplateInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $FaceReviewInfo;
 
     /**
-     * @var UserDefineAsrTextReviewTemplateInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var UserDefineAsrTextReviewTemplateInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var UserDefineOcrTextReviewTemplateInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var UserDefineOcrTextReviewTemplateInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Control parameter of custom figure audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo Control parameter of custom speech audit.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo Control parameter of custom text audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param UserDefineFaceReviewTemplateInfo $FaceReviewInfo Parameters for custom facial recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param UserDefineAsrTextReviewTemplateInfo $AsrReviewInfo Parameters for custom ASR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param UserDefineOcrTextReviewTemplateInfo $OcrReviewInfo Parameters for custom OCR-based recognition
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

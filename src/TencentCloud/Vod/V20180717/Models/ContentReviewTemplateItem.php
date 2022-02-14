@@ -18,26 +18,26 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Content audit template details
+ * Intelligent recognition template details
  *
- * @method integer getDefinition() Obtain Unique ID of content audit template.
- * @method void setDefinition(integer $Definition) Set Unique ID of content audit template.
- * @method string getName() Obtain Content audit template name. Length limit: 64 characters.
- * @method void setName(string $Name) Set Content audit template name. Length limit: 64 characters.
- * @method string getComment() Obtain Content audit template description. Length limit: 256 characters.
- * @method void setComment(string $Comment) Set Content audit template description. Length limit: 256 characters.
- * @method PornConfigureInfo getPornConfigure() Obtain Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getDefinition() Obtain Unique ID of an intelligent recognition template
+ * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent recognition template
+ * @method string getName() Obtain Name of an intelligent recognition template. Max 64 characters
+ * @method void setName(string $Name) Set Name of an intelligent recognition template. Max 64 characters
+ * @method string getComment() Obtain Description of an intelligent recognition template. Max 256 characters
+ * @method void setComment(string $Comment) Set Description of an intelligent recognition template. Max 256 characters
+ * @method PornConfigureInfo getPornConfigure() Obtain Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
  * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
@@ -46,16 +46,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getReviewWallSwitch() Obtain Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
- * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getReviewWallSwitch() Obtain Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
+ * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
  * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -66,35 +66,35 @@ Note: this field may return null, indicating that no valid values can be obtaine
 class ContentReviewTemplateItem extends AbstractModel
 {
     /**
-     * @var integer Unique ID of content audit template.
+     * @var integer Unique ID of an intelligent recognition template
      */
     public $Definition;
 
     /**
-     * @var string Content audit template name. Length limit: 64 characters.
+     * @var string Name of an intelligent recognition template. Max 64 characters
      */
     public $Name;
 
     /**
-     * @var string Content audit template description. Length limit: 256 characters.
+     * @var string Description of an intelligent recognition template. Max 256 characters
      */
     public $Comment;
 
     /**
-     * @var PornConfigureInfo Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PornConfigureInfo Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TerrorismConfigureInfo Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var PoliticalConfigureInfo Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $PoliticalConfigure;
 
@@ -107,15 +107,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var UserDefineConfigureInfo Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $UserDefineConfigure;
 
     /**
-     * @var string Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * @var string Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
      */
     public $ReviewWallSwitch;
 
@@ -135,24 +135,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
-     * @param integer $Definition Unique ID of content audit template.
-     * @param string $Name Content audit template name. Length limit: 64 characters.
-     * @param string $Comment Content audit template description. Length limit: 256 characters.
-     * @param PornConfigureInfo $PornConfigure Porn information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Terrorism information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Definition Unique ID of an intelligent recognition template
+     * @param string $Name Name of an intelligent recognition template. Max 64 characters
+     * @param string $Comment Description of an intelligent recognition template. Max 256 characters
+     * @param PornConfigureInfo $PornConfigure Parameters for recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param TerrorismConfigureInfo $TerrorismConfigure Parameters for recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param PoliticalConfigureInfo $PoliticalConfigure Parameters for recognition of politically sensitive content
+Note: This field may return `null`, indicating that no valid value can be found.
      * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param UserDefineConfigureInfo $UserDefineConfigure Custom content audit control parameter.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ReviewWallSwitch Switch controlling whether to add audit result to review list (for human review).
-<li>ON: yes;</li>
-<li>OFF: no.</li>
+     * @param UserDefineConfigureInfo $UserDefineConfigure Custom recognition parameters
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $ReviewWallSwitch Whether to subject the recognition result to human review
+<li>ON</li>
+<li>OFF</li>
      * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).

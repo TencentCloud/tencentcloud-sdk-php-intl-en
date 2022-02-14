@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
 <li>OFF: disables intelligent face recognition task.</li>
  * @method float getScore() Obtain Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
  * @method void setScore(float $Score) Set Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
- * @method array getDefaultLibraryLabelSet() Obtain Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
- * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
+ * @method array getDefaultLibraryLabelSet() Obtain Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
+<li>`entertainment`: people in the entertainment industry</li>
+<li>`sport`: sports celebrities</li>
+<li>`politician`: politically sensitive people</li>
+ * @method void setDefaultLibraryLabelSet(array $DefaultLibraryLabelSet) Set Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
+<li>`entertainment`: people in the entertainment industry</li>
+<li>`sport`: sports celebrities</li>
+<li>`politician`: politically sensitive people</li>
  * @method array getUserDefineLibraryLabelSet() Obtain Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
 You can specify up to 100 labels, with each containing up to 16 characters.
  * @method void setUserDefineLibraryLabelSet(array $UserDefineLibraryLabelSet) Set Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
@@ -66,10 +66,10 @@ class FaceConfigureInfo extends AbstractModel
     public $Score;
 
     /**
-     * @var array Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
+     * @var array Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
+<li>`entertainment`: people in the entertainment industry</li>
+<li>`sport`: sports celebrities</li>
+<li>`politician`: politically sensitive people</li>
      */
     public $DefaultLibraryLabelSet;
 
@@ -93,10 +93,10 @@ Default value: All (both default and custom figure libraries will be used.)
 <li>ON: enables intelligent face recognition task;</li>
 <li>OFF: disables intelligent face recognition task.</li>
      * @param float $Score Face recognition filter score. If this score is reached or exceeded, a recognition result will be returned. Value range: 0–100. Default value: 95.
-     * @param array $DefaultLibraryLabelSet Default figure filter tag, which specifies the default figure tag that needs to be returned. If this parameter is left empty or a blank value is entered, all results of the default figures will be returned. Valid values:
-<li>entertainment: entertainment celebrity;</li>
-<li>sport: sports celebrity;</li>
-<li>politician: politically sensitive figure.</li>
+     * @param array $DefaultLibraryLabelSet Default face filter labels, which specify the types of faces to return. If this parameter is left empty, the recognition results for all labels are returned. Valid values:
+<li>`entertainment`: people in the entertainment industry</li>
+<li>`sport`: sports celebrities</li>
+<li>`politician`: politically sensitive people</li>
      * @param array $UserDefineLibraryLabelSet Custom face labels for filtering. After you specify a label, callbacks of face images without this label will be returned. If this parameter is not specified or left empty, callbacks of all face images will be returned.
 You can specify up to 100 labels, with each containing up to 16 characters.
      * @param string $FaceLibrary Figure library. Valid values:

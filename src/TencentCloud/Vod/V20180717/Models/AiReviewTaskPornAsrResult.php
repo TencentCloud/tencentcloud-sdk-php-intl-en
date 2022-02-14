@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of ASR-based porn information detection in speech task in content audit
+ * Result for ASR-based recognition of pornographic content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPornAsrTaskInput getInput() Obtain Input of ASR-based porn information detection in speech task in content audit.
- * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Input of ASR-based porn information detection in speech task in content audit.
- * @method AiReviewPornAsrTaskOutput getOutput() Obtain Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPornAsrTaskInput getInput() Obtain Input for ASR-based recognition of pornographic content
+ * @method void setInput(AiReviewPornAsrTaskInput $Input) Set Input for ASR-based recognition of pornographic content
+ * @method AiReviewPornAsrTaskOutput getOutput() Obtain Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewPornAsrTaskOutput $Output) Set Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskPornAsrResult extends AbstractModel
 {
@@ -61,13 +61,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var AiReviewPornAsrTaskInput Input of ASR-based porn information detection in speech task in content audit.
+     * @var AiReviewPornAsrTaskInput Input for ASR-based recognition of pornographic content
      */
     public $Input;
 
     /**
-     * @var AiReviewPornAsrTaskOutput Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPornAsrTaskOutput Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -77,9 +77,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPornAsrTaskInput $Input Input of ASR-based porn information detection in speech task in content audit.
-     * @param AiReviewPornAsrTaskOutput $Output Output of ASR-based porn information detection in speech task in content audit.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPornAsrTaskInput $Input Input for ASR-based recognition of pornographic content
+     * @param AiReviewPornAsrTaskOutput $Output Output for ASR-based recognition of pornographic content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

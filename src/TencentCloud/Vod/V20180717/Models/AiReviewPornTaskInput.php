@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of porn information detection task in content audit
+ * Input parameters for intelligent recognition of pornographic content
  *
- * @method integer getDefinition() Obtain Porn information detection template ID.
- * @method void setDefinition(integer $Definition) Set Porn information detection template ID.
+ * @method integer getDefinition() Obtain ID of the template for recognition of pornographic content
+ * @method void setDefinition(integer $Definition) Set ID of the template for recognition of pornographic content
  */
 class AiReviewPornTaskInput extends AbstractModel
 {
     /**
-     * @var integer Porn information detection template ID.
+     * @var integer ID of the template for recognition of pornographic content
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Porn information detection template ID.
+     * @param integer $Definition ID of the template for recognition of pornographic content
      */
     function __construct()
     {

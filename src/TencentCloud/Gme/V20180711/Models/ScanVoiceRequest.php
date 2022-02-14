@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() Obtain Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
  * @method void setBizId(integer $BizId) Set Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
- * @method array getScenes() Obtain Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
- * @method void setScenes(array $Scenes) Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+ * @method array getScenes() Obtain Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+ * @method void setScenes(array $Scenes) Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
  * @method boolean getLive() Obtain Whether it is a live stream. false: audio file detection, true: audio stream detection.
  * @method void setLive(boolean $Live) Set Whether it is a live stream. false: audio file detection, true: audio stream detection.
  * @method array getTasks() Obtain Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
  * @method string getCallback() Obtain Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
  * @method void setCallback(string $Callback) Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+ * @method string getLang() Obtain The language. `jp` represents Japanese
+ * @method void setLang(string $Lang) Set The language. `jp` represents Japanese
  */
 class ScanVoiceRequest extends AbstractModel
 {
@@ -43,7 +45,7 @@ class ScanVoiceRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var array Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * @var array Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
      */
     public $Scenes;
 
@@ -65,13 +67,19 @@ class ScanVoiceRequest extends AbstractModel
     public $Callback;
 
     /**
+     * @var string The language. `jp` represents Japanese
+     */
+    public $Lang;
+
+    /**
      * @param integer $BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
-     * @param array $Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, politically sensitive, advertising, terrorism, and prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * @param array $Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
      * @param boolean $Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
      * @param array $Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
 <li>DataId: unique data ID</li>
 <li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
      * @param string $Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+     * @param string $Lang The language. `jp` represents Japanese
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ScanVoiceRequest extends AbstractModel
 
         if (array_key_exists("Callback",$param) and $param["Callback"] !== null) {
             $this->Callback = $param["Callback"];
+        }
+
+        if (array_key_exists("Lang",$param) and $param["Lang"] !== null) {
+            $this->Lang = $param["Lang"];
         }
     }
 }

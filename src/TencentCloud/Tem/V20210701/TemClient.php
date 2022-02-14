@@ -27,6 +27,10 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) This API is used to generate a COS temporary key.
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) This API is used to create an environment.
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) This API is used to bind a cloud resource.
+ * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) This API is used to delete an application.
+  - Stop the application if it’s running
+  - Delete resources associated with this application
+  - Delele the application
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) This API is used to delete an ingress rule.
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) This API is used to deploy an application.
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) This API is used to get the list of application pods.
@@ -38,7 +42,10 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) This API is used to modify the basic information of an application.
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) This API is used to edit an environment.
  * @method Models\ModifyIngressResponse ModifyIngress(Models\ModifyIngressRequest $req) This API is used to create or update an ingress rule.
+ * @method Models\RestartApplicationResponse RestartApplication(Models\RestartApplicationRequest $req) This API is used to restart an application.
  * @method Models\RestartApplicationPodResponse RestartApplicationPod(Models\RestartApplicationPodRequest $req) This API is used to restart an application pod.
+ * @method Models\RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersion(Models\RollingUpdateApplicationByVersionRequest $req) This API is used to configure the rolling update policy for an application.
+ * @method Models\StopApplicationResponse StopApplication(Models\StopApplicationRequest $req) This API is used to stop an application.
  */
 
 class TemClient extends AbstractClient

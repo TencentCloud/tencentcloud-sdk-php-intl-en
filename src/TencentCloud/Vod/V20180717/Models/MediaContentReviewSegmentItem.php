@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected porn/terrorism segment identified in content audit
+ * Video segment containing detected pornographic or terrorism content
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Score of a suspected porn segment.
- * @method void setConfidence(float $Confidence) Set Score of a suspected porn segment.
- * @method string getLabel() Obtain Tag of porn information detection result of a suspected segment.
- * @method void setLabel(string $Label) Set Tag of porn information detection result of a suspected segment.
- * @method string getSuggestion() Obtain Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+ * @method float getConfidence() Obtain Confidence score for the detected pornographic content
+ * @method void setConfidence(float $Confidence) Set Confidence score for the detected pornographic content
+ * @method string getLabel() Obtain Label for the detected pornographic content
+ * @method void setLabel(string $Label) Set Label for the detected pornographic content
+ * @method string getSuggestion() Obtain Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
  * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
  * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
@@ -58,20 +58,20 @@ class MediaContentReviewSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var float Score of a suspected porn segment.
+     * @var float Confidence score for the detected pornographic content
      */
     public $Confidence;
 
     /**
-     * @var string Tag of porn information detection result of a suspected segment.
+     * @var string Label for the detected pornographic content
      */
     public $Label;
 
     /**
-     * @var string Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
@@ -94,12 +94,12 @@ class MediaContentReviewSegmentItem extends AbstractModel
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Score of a suspected porn segment.
-     * @param string $Label Tag of porn information detection result of a suspected segment.
-     * @param string $Suggestion Suggestion for porn information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @param float $Confidence Confidence score for the detected pornographic content
+     * @param string $Label Label for the detected pornographic content
+     * @param string $Suggestion Processing suggestion for the detected pornographic content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      * @param string $Url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
      * @param integer $PicUrlExpireTimeStamp This field has been disused. Please use `PicUrlExpireTime`.

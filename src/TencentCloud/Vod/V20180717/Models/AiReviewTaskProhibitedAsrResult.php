@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of ASR-based prohibited information detection in speech task in content audit
+ * Result for ASR-based recognition of banned content
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewProhibitedAsrTaskInput getInput() Obtain Input of ASR-based prohibited information detection in speech task in content audit
- * @method void setInput(AiReviewProhibitedAsrTaskInput $Input) Set Input of ASR-based prohibited information detection in speech task in content audit
- * @method AiReviewProhibitedAsrTaskOutput getOutput() Obtain Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewProhibitedAsrTaskOutput $Output) Set Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewProhibitedAsrTaskInput getInput() Obtain Input for ASR-based recognition of banned content
+ * @method void setInput(AiReviewProhibitedAsrTaskInput $Input) Set Input for ASR-based recognition of banned content
+ * @method AiReviewProhibitedAsrTaskOutput getOutput() Obtain Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOutput(AiReviewProhibitedAsrTaskOutput $Output) Set Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class AiReviewTaskProhibitedAsrResult extends AbstractModel
 {
@@ -58,13 +58,13 @@ class AiReviewTaskProhibitedAsrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewProhibitedAsrTaskInput Input of ASR-based prohibited information detection in speech task in content audit
+     * @var AiReviewProhibitedAsrTaskInput Input for ASR-based recognition of banned content
      */
     public $Input;
 
     /**
-     * @var AiReviewProhibitedAsrTaskOutput Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewProhibitedAsrTaskOutput Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Output;
 
@@ -73,9 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
-     * @param AiReviewProhibitedAsrTaskInput $Input Input of ASR-based prohibited information detection in speech task in content audit
-     * @param AiReviewProhibitedAsrTaskOutput $Output Output of ASR-based prohibited information detection in speech task in content audit
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewProhibitedAsrTaskInput $Input Input for ASR-based recognition of banned content
+     * @param AiReviewProhibitedAsrTaskOutput $Output Output for ASR-based recognition of banned content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

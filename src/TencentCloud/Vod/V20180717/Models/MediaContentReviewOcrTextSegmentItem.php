@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected segment identified during OCR-based text audit in content audit
+ * Video segment containing OCR-detected suspicious content
  *
  * @method float getStartTimeOffset() Obtain Start time offset of suspected segment in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -32,16 +32,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConfidence(float $Confidence) Set Confidence of suspected segment.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSuggestion() Obtain Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSuggestion(string $Suggestion) Set Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSuggestion() Obtain Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
  * @method array getKeywordSet() Obtain List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setKeywordSet(array $KeywordSet) Set List of suspected keywords.
@@ -78,11 +76,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Confidence;
 
     /**
-     * @var string Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
@@ -116,11 +113,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $Confidence Confidence of suspected segment.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Suggestion Suggestion for suspected segment audit. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Suggestion Processing suggestion for the detected suspicious content. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      * @param array $KeywordSet List of suspected keywords.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AreaCoordSet Zone coordinates (at the pixel level) of suspected text: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.

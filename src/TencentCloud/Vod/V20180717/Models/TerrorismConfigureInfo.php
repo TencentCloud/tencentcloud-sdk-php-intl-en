@@ -18,36 +18,36 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of terrorism information detection task
+ * Parameters for recognition of terrorism content
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TerrorismImgReviewTemplateInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var TerrorismOcrReviewTemplateInfo Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Control parameter of terrorism information detection in video image task.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Control parameter of terrorism information detection in text task.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Parameters for recognition of terrorism content in images
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Parameters for OCR-based recognition of terrorism content
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

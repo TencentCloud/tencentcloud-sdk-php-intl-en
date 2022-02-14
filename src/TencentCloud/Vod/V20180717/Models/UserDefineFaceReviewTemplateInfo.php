@@ -18,56 +18,56 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of custom figure audit task
+ * Parameters for custom facial recognition
  *
- * @method string getSwitch() Obtain Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
- * @method void setSwitch(string $Switch) Set Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
- * @method array getLabelSet() Obtain Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method void setLabelSet(array $LabelSet) Set Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
- * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
- * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
- * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
- * @method void setReviewConfidence(integer $ReviewConfidence) Set Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+ * @method string getSwitch() Obtain Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method array getLabelSet() Obtain Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+ * @method void setLabelSet(array $LabelSet) Set Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+ * @method integer getBlockConfidence() Obtain Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
+ * @method void setBlockConfidence(integer $BlockConfidence) Set Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
+ * @method integer getReviewConfidence() Obtain Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
+ * @method void setReviewConfidence(integer $ReviewConfidence) Set Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
  */
 class UserDefineFaceReviewTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
+     * @var string Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public $Switch;
 
     /**
-     * @var array Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
+     * @var array Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
      */
     public $LabelSet;
 
     /**
-     * @var integer Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
+     * @var integer Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
      */
     public $BlockConfidence;
 
     /**
-     * @var integer Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+     * @var integer Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
      */
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of custom figure audit task. Valid values:
-<li>ON: enables custom figure audit task;</li>
-<li>OFF: disables custom figure audit task.</li>
-     * @param array $LabelSet Custom figure filter tag. If an audit result contains the selected tag, it will be returned; if the filter tag is empty, all audit results will be returned. To use the tag filtering feature, you need to add the corresponding tag when adding materials for the custom figure library.
-There can be up to 10 tags, each with a length limit of 16 characters.
-     * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 97 will be used by default. Value range: 0-100.
-     * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 95 will be used by default. Value range: 0-100.
+     * @param string $Switch Whether to enable custom facial recognition. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param array $LabelSet Filter labels for custom facial recognition. Results containing the specified labels are returned. If no labels are specified, all results are returned. To filter by labels, specify the labels when adding custom facial libraries.
+Up to 10 labels are allowed, each containing no more than 16 characters.
+     * @param integer $BlockConfidence Confidence score threshold for determining that something should be blocked. If this threshold is reached, VOD will suggest that the content be blocked. If this parameter is left empty, `97` will be used by default. Value range: 0-100
+     * @param integer $ReviewConfidence Confidence score threshold for human review. If this threshold is reached, human review is needed. If this parameter is left empty, `95` will be used by default. Value range: 0-100
      */
     function __construct()
     {

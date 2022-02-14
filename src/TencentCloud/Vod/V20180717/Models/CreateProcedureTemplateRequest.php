@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Parameter of AI-based content audit task.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Parameter of AI-based content audit task.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Intelligent recognition task
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Intelligent recognition task
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of AI-based content recognition task.
@@ -53,7 +53,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Parameter of AI-based content audit task.
+     * @var AiContentReviewTaskInput Intelligent recognition task
      */
     public $AiContentReviewTask;
 
@@ -76,7 +76,7 @@ class CreateProcedureTemplateRequest extends AbstractModel
      * @param string $Name Task flow name (up to 20 characters).
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Parameter of AI-based content audit task.
+     * @param AiContentReviewTaskInput $AiContentReviewTask Intelligent recognition task
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.

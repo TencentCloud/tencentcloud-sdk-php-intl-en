@@ -18,20 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task type of intelligent content audit
+ * Type of intelligent recognition task
  *
- * @method integer getDefinition() Obtain Video content audit template ID.
- * @method void setDefinition(integer $Definition) Set Video content audit template ID.
+ * @method integer getDefinition() Obtain Intelligent recognition template ID
+ * @method void setDefinition(integer $Definition) Set Intelligent recognition template ID
  */
 class AiContentReviewTaskInput extends AbstractModel
 {
     /**
-     * @var integer Video content audit template ID.
+     * @var integer Intelligent recognition template ID
      */
     public $Definition;
 
     /**
-     * @param integer $Definition Video content audit template ID.
+     * @param integer $Definition Intelligent recognition template ID
      */
     function __construct()
     {
