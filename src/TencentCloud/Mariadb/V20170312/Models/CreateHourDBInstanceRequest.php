@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHourDBInstance request structure.
  *
- * @method array getZones() Obtain AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
- * @method void setZones(array $Zones) Set AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+ * @method array getZones() Obtain AZs to deploy instance nodes. You can specify up to two AZs.
+ * @method void setZones(array $Zones) Set AZs to deploy instance nodes. You can specify up to two AZs.
  * @method integer getNodeCount() Obtain Number of nodes.
  * @method void setNodeCount(integer $NodeCount) Set Number of nodes.
  * @method integer getMemory() Obtain Memory size in GB.
@@ -68,7 +68,7 @@ If this parameter is left empty, `10.1.9` will be used.
 class CreateHourDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var array AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+     * @var array AZs to deploy instance nodes. You can specify up to two AZs.
      */
     public $Zones;
 
@@ -162,7 +162,7 @@ If this parameter is left empty, `10.1.9` will be used.
     public $RollbackTime;
 
     /**
-     * @param array $Zones AZs to deploy instance nodes. You can specify up to two AZs. If each shard has one primary node and two replica nodes, two of the three will be deployed in the first AZ you have specified.
+     * @param array $Zones AZs to deploy instance nodes. You can specify up to two AZs.
      * @param integer $NodeCount Number of nodes.
      * @param integer $Memory Memory size in GB.
      * @param integer $Storage Storage size in GB.

@@ -65,6 +65,7 @@ Note: accounts with the same username but different hosts are different accounts
  * @method Models\OpenDBExtranetAccessResponse OpenDBExtranetAccess(Models\OpenDBExtranetAccessRequest $req) This API is used to enable public network access for a TencentDB instance. After that, you can access the instance with the public domain name and port obtained through the `DescribeDCDBInstances` API.
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) This API is used to reset the password of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
+ * @method Models\SwitchDBInstanceHAResponse SwitchDBInstanceHA(Models\SwitchDBInstanceHARequest $req) This API is used to start a source-replica switch of instances.
  */
 
 class DcdbClient extends AbstractClient
