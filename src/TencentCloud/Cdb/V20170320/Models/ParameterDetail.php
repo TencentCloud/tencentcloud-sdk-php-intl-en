@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Parameter name
  * @method void setName(string $Name) Set Parameter name
- * @method string getParamType() Obtain Parameter type
- * @method void setParamType(string $ParamType) Set Parameter type
+ * @method string getParamType() Obtain Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
+ * @method void setParamType(string $ParamType) Set Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
  * @method string getDefault() Obtain Default value of the parameter
  * @method void setDefault(string $Default) Set Default value of the parameter
  * @method string getDescription() Obtain Parameter description
@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMin(integer $Min) Set Minimum value of the parameter
  * @method array getEnumValue() Obtain Enumerated values of the parameter. It is null if the parameter is non-enumerated
  * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
+ * @method string getMaxFunc() Obtain Maximum parameter value, which is valid only when `ParamType` is set to `func`
+ * @method void setMaxFunc(string $MaxFunc) Set Maximum parameter value, which is valid only when `ParamType` is set to `func`
+ * @method string getMinFunc() Obtain Minimum parameter value, which is valid only when `ParamType` is set to `func`
+ * @method void setMinFunc(string $MinFunc) Set Minimum parameter value, which is valid only when `ParamType` is set to `func`
  */
 class ParameterDetail extends AbstractModel
 {
@@ -47,7 +51,7 @@ class ParameterDetail extends AbstractModel
     public $Name;
 
     /**
-     * @var string Parameter type
+     * @var string Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
      */
     public $ParamType;
 
@@ -87,8 +91,18 @@ class ParameterDetail extends AbstractModel
     public $EnumValue;
 
     /**
+     * @var string Maximum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public $MaxFunc;
+
+    /**
+     * @var string Minimum parameter value, which is valid only when `ParamType` is set to `func`
+     */
+    public $MinFunc;
+
+    /**
      * @param string $Name Parameter name
-     * @param string $ParamType Parameter type
+     * @param string $ParamType Parameter type. Valid values: `integer`, `enum`, `float`, `string`, `func`
      * @param string $Default Default value of the parameter
      * @param string $Description Parameter description
      * @param string $CurrentValue Current value of the parameter
@@ -96,6 +110,8 @@ class ParameterDetail extends AbstractModel
      * @param integer $Max Maximum value of the parameter
      * @param integer $Min Minimum value of the parameter
      * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
+     * @param string $MaxFunc Maximum parameter value, which is valid only when `ParamType` is set to `func`
+     * @param string $MinFunc Minimum parameter value, which is valid only when `ParamType` is set to `func`
      */
     function __construct()
     {
@@ -144,6 +160,14 @@ class ParameterDetail extends AbstractModel
 
         if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
             $this->EnumValue = $param["EnumValue"];
+        }
+
+        if (array_key_exists("MaxFunc",$param) and $param["MaxFunc"] !== null) {
+            $this->MaxFunc = $param["MaxFunc"];
+        }
+
+        if (array_key_exists("MinFunc",$param) and $param["MinFunc"] !== null) {
+            $this->MinFunc = $param["MinFunc"];
         }
     }
 }

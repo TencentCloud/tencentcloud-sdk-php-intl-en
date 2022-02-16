@@ -18,20 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates request structure.
+ * ModifyCDBProxyDesc response structure.
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class ModifyCDBProxyDescResponse extends AbstractModel
 {
     /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $EngineVersions;
+    public $RequestId;
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

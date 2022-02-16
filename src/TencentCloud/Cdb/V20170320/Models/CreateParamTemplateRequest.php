@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Source parameter template ID.
  * @method array getParamList() Obtain List of parameters.
  * @method void setParamList(array $ParamList) Set List of parameters.
+ * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
+     * @var string Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public $TemplateType;
+
+    /**
      * @param string $Name Parameter template name.
      * @param string $Description Parameter template description.
      * @param string $EngineVersion MySQL version number.
      * @param integer $TemplateId Source parameter template ID.
      * @param array $ParamList List of parameters.
+     * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class CreateParamTemplateRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
     }
 }

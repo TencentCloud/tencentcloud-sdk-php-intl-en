@@ -18,20 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates request structure.
+ * DescribeLocalBinlogConfig request structure.
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class DescribeLocalBinlogConfigRequest extends AbstractModel
 {
     /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
+     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
-    public $EngineVersions;
+    public $InstanceId;
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

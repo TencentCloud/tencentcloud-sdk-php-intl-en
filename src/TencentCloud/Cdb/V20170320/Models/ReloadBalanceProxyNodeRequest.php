@@ -18,20 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates request structure.
+ * ReloadBalanceProxyNode request structure.
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+ * @method string getProxyGroupId() Obtain Proxy group ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class ReloadBalanceProxyNodeRequest extends AbstractModel
 {
     /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
+     * @var string Proxy group ID
      */
-    public $EngineVersions;
+    public $ProxyGroupId;
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * @param string $ProxyGroupId Proxy group ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

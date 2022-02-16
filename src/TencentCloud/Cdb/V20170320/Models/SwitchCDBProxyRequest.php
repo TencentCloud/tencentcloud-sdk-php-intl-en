@@ -18,20 +18,28 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates request structure.
+ * SwitchCDBProxy request structure.
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getProxyGroupId() Obtain Database proxy ID
+ * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy ID
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class SwitchCDBProxyRequest extends AbstractModel
 {
     /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
+     * @var string Instance ID
      */
-    public $EngineVersions;
+    public $InstanceId;
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * @var string Database proxy ID
+     */
+    public $ProxyGroupId;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param string $ProxyGroupId Database proxy ID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
+            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

@@ -18,20 +18,16 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeParamTemplates request structure.
+ * Instance weight
  *
- * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
- * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+
  */
-class DescribeParamTemplatesRequest extends AbstractModel
+class RoWeight extends AbstractModel
 {
-    /**
-     * @var array Engine version. If it is left empty, all parameter templates will be queried.
-     */
-    public $EngineVersions;
+
 
     /**
-     * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+
      */
     function __construct()
     {
@@ -46,8 +42,6 @@ class DescribeParamTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
-            $this->EngineVersions = $param["EngineVersions"];
-        }
+
     }
 }

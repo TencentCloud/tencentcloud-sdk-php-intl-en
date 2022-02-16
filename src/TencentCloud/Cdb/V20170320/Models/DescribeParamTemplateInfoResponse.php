@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setItems(array $Items) Set Parameter details
  * @method string getDescription() Obtain Parameter template description
  * @method void setDescription(string $Description) Set Parameter template description
+ * @method string getTemplateType() Obtain Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method void setTemplateType(string $TemplateType) Set Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -68,6 +70,11 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
     public $Description;
 
     /**
+     * @var string Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public $TemplateType;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +86,7 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
      * @param integer $TotalCount Number of parameters in the parameter template
      * @param array $Items Parameter details
      * @param string $Description Parameter template description
+     * @param string $TemplateType Parameter template type. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -121,6 +129,10 @@ class DescribeParamTemplateInfoResponse extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
