@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionRequestId(string $FunctionRequestId) Set ID of the request to be queried
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
- * @method string getStartTime() Obtain Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
- * @method void setStartTime(string $StartTime) Set Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
- * @method string getEndTime() Obtain End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
- * @method void setEndTime(string $EndTime) Set End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+ * @method string getStartTime() Obtain Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+ * @method void setStartTime(string $StartTime) Set Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+ * @method string getEndTime() Obtain End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
+ * @method void setEndTime(string $EndTime) Set End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
  */
 class GetRequestStatusRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class GetRequestStatusRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
+     * @var string Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
      */
     public $StartTime;
 
     /**
-     * @var string End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+     * @var string End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
      */
     public $EndTime;
 
@@ -62,8 +62,8 @@ class GetRequestStatusRequest extends AbstractModel
      * @param string $FunctionName Function name
      * @param string $FunctionRequestId ID of the request to be queried
      * @param string $Namespace Function namespace
-     * @param string $StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to the current time minus 24 hours.
-     * @param string $EndTime End time of the query, for example `2017-05-16 20:59:59`. If it’s left empty, it defaults to the current time. Note that the EndTime should be later than the StartTime
+     * @param string $StartTime Start time of the query, for example `2017-05-16 20:00:00`. If it’s left empty, it defaults to 15 minutes before the current time.
+     * @param string $EndTime End time of the query. such as `2017-05-16 20:59:59`. If `StartTime` is not specified, `EndTime` defaults to the current time. If `StartTime` is specified, `EndTime` is required, and it need to be later than the `StartTime`.
      */
     function __construct()
     {

@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterEipEipAddressStatus(array $FilterEipEipAddressStatus) Set Anti-DDoS Advanced instance binding status filter. Valid values: `BINDING`, `BIND`, `UNBINDING`, `UNBIND`. This filter is only valid when `FilterEipType = 1`.
  * @method integer getFilterDamDDoSStatus() Obtain Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
  * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) Set Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+ * @method string getFilterStatus() Obtain Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+ * @method void setFilterStatus(string $FilterStatus) Set Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -112,6 +114,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterDamDDoSStatus;
 
     /**
+     * @var string Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public $FilterStatus;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
      * @param string $FilterIp IP filter
@@ -128,6 +135,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param integer $FilterEipType Whether to obtain only Anti-DDoS EIP instances. `1`: Yes; `0`: No.
      * @param array $FilterEipEipAddressStatus Anti-DDoS Advanced instance binding status filter. Valid values: `BINDING`, `BIND`, `UNBINDING`, `UNBIND`. This filter is only valid when `FilterEipType = 1`.
      * @param integer $FilterDamDDoSStatus Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
+     * @param string $FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
      */
     function __construct()
     {
@@ -180,6 +188,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterDamDDoSStatus",$param) and $param["FilterDamDDoSStatus"] !== null) {
             $this->FilterDamDDoSStatus = $param["FilterDamDDoSStatus"];
+        }
+
+        if (array_key_exists("FilterStatus",$param) and $param["FilterStatus"] !== null) {
+            $this->FilterStatus = $param["FilterStatus"];
         }
     }
 }

@@ -32,14 +32,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setEntryPoint(string $EntryPoint) Set Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCommand() Obtain entrypoint execution command
+ * @method string getCommand() Obtain The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCommand(string $Command) Set entrypoint execution command
+ * @method void setCommand(string $Command) Set The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getArgs() Obtain Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setArgs(string $Args) Set Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getArgs() Obtain The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setArgs(string $Args) Set The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class ImageConfig extends AbstractModel
 {
@@ -66,14 +66,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $EntryPoint;
 
     /**
-     * @var string entrypoint execution command
+     * @var string The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Command;
 
     /**
-     * @var string Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     public $Args;
 
@@ -84,10 +84,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $EntryPoint Disused
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Command entrypoint execution command
+     * @param string $Command The command to start up the container, such as `python`. If it’s not specified, Entrypoint in Dockerfile is used.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Args Command parameters
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Args The parameters to start up the container. Separate parameters with spaces, such as `u app.py`. If it’s not specified, `CMD in Dockerfile is used.
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInvokeRequestId(string $InvokeRequestId) Set Terminated invocation request ID
  * @method string getNamespace() Obtain Namespace
  * @method void setNamespace(string $Namespace) Set Namespace
- * @method boolean getGraceShutdown() Obtain Disused
- * @method void setGraceShutdown(boolean $GraceShutdown) Set Disused
+ * @method boolean getGraceShutdown() Obtain Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
+ * @method void setGraceShutdown(boolean $GraceShutdown) Set Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
  */
 class TerminateAsyncEventRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class TerminateAsyncEventRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var boolean Disused
+     * @var boolean Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
      */
     public $GraceShutdown;
 
@@ -55,7 +55,7 @@ class TerminateAsyncEventRequest extends AbstractModel
      * @param string $FunctionName Function name
      * @param string $InvokeRequestId Terminated invocation request ID
      * @param string $Namespace Namespace
-     * @param boolean $GraceShutdown Disused
+     * @param boolean $GraceShutdown Whether to enable grace shutdown. If it’s `true`, a `SIGTERM` signal is sent to the specified request. See [Sending termination signal](https://intl.cloud.tencent.com/document/product/583/63969?from_cn_redirect=1#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]. It’s set to `false` by default.
      */
     function __construct()
     {

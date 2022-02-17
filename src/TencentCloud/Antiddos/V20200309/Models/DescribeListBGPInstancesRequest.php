@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterName(string $FilterName) Set Name filter
  * @method integer getFilterLine() Obtain Line filter. Valid values: 1: BGP; 2: Non-BGP.
  * @method void setFilterLine(integer $FilterLine) Set Line filter. Valid values: 1: BGP; 2: Non-BGP.
+ * @method string getFilterStatus() Obtain Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+ * @method void setFilterStatus(string $FilterStatus) Set Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+ * @method string getFilterBoundStatus() Obtain Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+ * @method void setFilterBoundStatus(string $FilterBoundStatus) Set Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterLine;
 
     /**
+     * @var string Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     */
+    public $FilterStatus;
+
+    /**
+     * @var string Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     */
+    public $FilterBoundStatus;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
      * @param string $FilterIp IP filter
@@ -80,6 +94,8 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterRegion Region filter. For example, `ap-guangzhou`.
      * @param string $FilterName Name filter
      * @param integer $FilterLine Line filter. Valid values: 1: BGP; 2: Non-BGP.
+     * @param string $FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @param string $FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterLine",$param) and $param["FilterLine"] !== null) {
             $this->FilterLine = $param["FilterLine"];
+        }
+
+        if (array_key_exists("FilterStatus",$param) and $param["FilterStatus"] !== null) {
+            $this->FilterStatus = $param["FilterStatus"];
+        }
+
+        if (array_key_exists("FilterBoundStatus",$param) and $param["FilterBoundStatus"] !== null) {
+            $this->FilterBoundStatus = $param["FilterBoundStatus"];
         }
     }
 }

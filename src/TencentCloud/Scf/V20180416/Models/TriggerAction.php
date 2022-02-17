@@ -32,6 +32,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTriggerCronConfig(string $TriggerCronConfig) Set Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProvisionedType() Obtain The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setProvisionedType(string $ProvisionedType) Set The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class TriggerAction extends AbstractModel
 {
@@ -54,12 +58,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TriggerCronConfig;
 
     /**
+     * @var string The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $ProvisionedType;
+
+    /**
      * @param string $TriggerName Scheduled action name
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $TriggerProvisionedConcurrencyNum Target provisioned concurrency of the scheduled scaling action 
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TriggerCronConfig Trigger time of the scheduled action in Cron expression. Seven fields are required and should be separated with a space.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ProvisionedType The provision type. Value: `Default`
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TriggerCronConfig",$param) and $param["TriggerCronConfig"] !== null) {
             $this->TriggerCronConfig = $param["TriggerCronConfig"];
+        }
+
+        if (array_key_exists("ProvisionedType",$param) and $param["ProvisionedType"] !== null) {
+            $this->ProvisionedType = $param["ProvisionedType"];
         }
     }
 }

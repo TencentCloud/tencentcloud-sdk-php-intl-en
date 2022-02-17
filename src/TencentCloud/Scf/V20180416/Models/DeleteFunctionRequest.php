@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFunctionName(string $FunctionName) Set Name of the function to be deleted
  * @method string getNamespace() Obtain Function namespace
  * @method void setNamespace(string $Namespace) Set Function namespace
- * @method string getQualifier() Obtain Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
- * @method void setQualifier(string $Qualifier) Set Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+ * @method string getQualifier() Obtain ID of the version to delete. All versions are deleted if it’s left empty.
+ * @method void setQualifier(string $Qualifier) Set ID of the version to delete. All versions are deleted if it’s left empty.
  */
 class DeleteFunctionRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DeleteFunctionRequest extends AbstractModel
     public $Namespace;
 
     /**
-     * @var string Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     * @var string ID of the version to delete. All versions are deleted if it’s left empty.
      */
     public $Qualifier;
 
     /**
      * @param string $FunctionName Name of the function to be deleted
      * @param string $Namespace Function namespace
-     * @param string $Qualifier Function version. Enter the number of the version that needs to be deleted, otherwise all versions of the function will be deleted.
+     * @param string $Qualifier ID of the version to delete. All versions are deleted if it’s left empty.
      */
     function __construct()
     {

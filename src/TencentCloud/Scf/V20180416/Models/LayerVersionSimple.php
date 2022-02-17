@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Specifies a layer version
  *
- * @method string getLayerName() Obtain Layer name
- * @method void setLayerName(string $LayerName) Set Layer name
- * @method integer getLayerVersion() Obtain Version number
- * @method void setLayerVersion(integer $LayerVersion) Set Version number
+ * @method string getLayerName() Obtain Name of the layer to bind. Leave it blank if you want to unbind layers
+ * @method void setLayerName(string $LayerName) Set Name of the layer to bind. Leave it blank if you want to unbind layers
+ * @method integer getLayerVersion() Obtain Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
+ * @method void setLayerVersion(integer $LayerVersion) Set Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
  */
 class LayerVersionSimple extends AbstractModel
 {
     /**
-     * @var string Layer name
+     * @var string Name of the layer to bind. Leave it blank if you want to unbind layers
      */
     public $LayerName;
 
     /**
-     * @var integer Version number
+     * @var integer Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
      */
     public $LayerVersion;
 
     /**
-     * @param string $LayerName Layer name
-     * @param integer $LayerVersion Version number
+     * @param string $LayerName Name of the layer to bind. Leave it blank if you want to unbind layers
+     * @param integer $LayerVersion Version ID f the layer to bind/unbind. If the layer version to unbind is the only layer version of the function version, enter `0`.
      */
     function __construct()
     {

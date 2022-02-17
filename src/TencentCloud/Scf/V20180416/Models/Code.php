@@ -32,22 +32,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDemoId(string $DemoId) Set `DemoId` is required if Demo is used for the creation.
  * @method string getTempCosObjectName() Obtain `TempCosObjectName` is required if TempCos is used for the creation.
  * @method void setTempCosObjectName(string $TempCosObjectName) Set `TempCosObjectName` is required if TempCos is used for the creation.
- * @method string getGitUrl() Obtain Git address
- * @method void setGitUrl(string $GitUrl) Set Git address
- * @method string getGitUserName() Obtain Git user name
- * @method void setGitUserName(string $GitUserName) Set Git user name
- * @method string getGitPassword() Obtain Git password
- * @method void setGitPassword(string $GitPassword) Set Git password
- * @method string getGitPasswordSecret() Obtain Git password after encryption. In general, this value is not required.
- * @method void setGitPasswordSecret(string $GitPasswordSecret) Set Git password after encryption. In general, this value is not required.
- * @method string getGitBranch() Obtain Git branch
- * @method void setGitBranch(string $GitBranch) Set Git branch
- * @method string getGitDirectory() Obtain Code path in Git repository
- * @method void setGitDirectory(string $GitDirectory) Set Code path in Git repository
- * @method string getGitCommitId() Obtain Version to be pulled
- * @method void setGitCommitId(string $GitCommitId) Set Version to be pulled
- * @method string getGitUserNameSecret() Obtain Git user name after encryption. In general, this value is not required.
- * @method void setGitUserNameSecret(string $GitUserNameSecret) Set Git user name after encryption. In general, this value is not required.
+ * @method string getGitUrl() Obtain (Disused) Git address
+ * @method void setGitUrl(string $GitUrl) Set (Disused) Git address
+ * @method string getGitUserName() Obtain (Disused) Git username
+ * @method void setGitUserName(string $GitUserName) Set (Disused) Git username
+ * @method string getGitPassword() Obtain (Disused) Git password
+ * @method void setGitPassword(string $GitPassword) Set (Disused) Git password
+ * @method string getGitPasswordSecret() Obtain (Disused) Git password after encryption. It’s usually not required.
+ * @method void setGitPasswordSecret(string $GitPasswordSecret) Set (Disused) Git password after encryption. It’s usually not required.
+ * @method string getGitBranch() Obtain (Disused) Git branch
+ * @method void setGitBranch(string $GitBranch) Set (Disused) Git branch
+ * @method string getGitDirectory() Obtain (Disused) Directory to the codes in the Git repository. 
+ * @method void setGitDirectory(string $GitDirectory) Set (Disused) Directory to the codes in the Git repository. 
+ * @method string getGitCommitId() Obtain (Disused) 
+ * @method void setGitCommitId(string $GitCommitId) Set (Disused) 
+ * @method string getGitUserNameSecret() Obtain (Disused) Git username after encryption. It’s usually not required.
+ * @method void setGitUserNameSecret(string $GitUserNameSecret) Set (Disused) Git username after encryption. It’s usually not required.
  * @method ImageConfig getImageConfig() Obtain TCR image configurations
  * @method void setImageConfig(ImageConfig $ImageConfig) Set TCR image configurations
  */
@@ -84,42 +84,42 @@ class Code extends AbstractModel
     public $TempCosObjectName;
 
     /**
-     * @var string Git address
+     * @var string (Disused) Git address
      */
     public $GitUrl;
 
     /**
-     * @var string Git user name
+     * @var string (Disused) Git username
      */
     public $GitUserName;
 
     /**
-     * @var string Git password
+     * @var string (Disused) Git password
      */
     public $GitPassword;
 
     /**
-     * @var string Git password after encryption. In general, this value is not required.
+     * @var string (Disused) Git password after encryption. It’s usually not required.
      */
     public $GitPasswordSecret;
 
     /**
-     * @var string Git branch
+     * @var string (Disused) Git branch
      */
     public $GitBranch;
 
     /**
-     * @var string Code path in Git repository
+     * @var string (Disused) Directory to the codes in the Git repository. 
      */
     public $GitDirectory;
 
     /**
-     * @var string Version to be pulled
+     * @var string (Disused) 
      */
     public $GitCommitId;
 
     /**
-     * @var string Git user name after encryption. In general, this value is not required.
+     * @var string (Disused) Git username after encryption. It’s usually not required.
      */
     public $GitUserNameSecret;
 
@@ -135,14 +135,14 @@ class Code extends AbstractModel
      * @param string $CosBucketRegion COS region. For Beijing regions, you need to import `ap-beijing`. For Beijing Region 1, you need to input `ap-beijing-1`. For other regions, no import is required.
      * @param string $DemoId `DemoId` is required if Demo is used for the creation.
      * @param string $TempCosObjectName `TempCosObjectName` is required if TempCos is used for the creation.
-     * @param string $GitUrl Git address
-     * @param string $GitUserName Git user name
-     * @param string $GitPassword Git password
-     * @param string $GitPasswordSecret Git password after encryption. In general, this value is not required.
-     * @param string $GitBranch Git branch
-     * @param string $GitDirectory Code path in Git repository
-     * @param string $GitCommitId Version to be pulled
-     * @param string $GitUserNameSecret Git user name after encryption. In general, this value is not required.
+     * @param string $GitUrl (Disused) Git address
+     * @param string $GitUserName (Disused) Git username
+     * @param string $GitPassword (Disused) Git password
+     * @param string $GitPasswordSecret (Disused) Git password after encryption. It’s usually not required.
+     * @param string $GitBranch (Disused) Git branch
+     * @param string $GitDirectory (Disused) Directory to the codes in the Git repository. 
+     * @param string $GitCommitId (Disused) 
+     * @param string $GitUserNameSecret (Disused) Git username after encryption. It’s usually not required.
      * @param ImageConfig $ImageConfig TCR image configurations
      */
     function __construct()
