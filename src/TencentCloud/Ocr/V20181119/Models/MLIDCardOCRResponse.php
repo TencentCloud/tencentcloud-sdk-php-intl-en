@@ -28,14 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAddress(string $Address) Set Address
  * @method string getSex() Obtain Gender
  * @method void setSex(string $Sex) Set Gender
- * @method array getWarn() Obtain Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
- * @method void setWarn(array $Warn) Set Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+ * @method array getWarn() Obtain Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
+ * @method void setWarn(array $Warn) Set Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
  * @method string getImage() Obtain Identity photo
  * @method void setImage(string $Image) Set Identity photo
  * @method string getAdvancedInfo() Obtain Extended field:
@@ -100,10 +102,11 @@ class MLIDCardOCRResponse extends AbstractModel
     public $Sex;
 
     /**
-     * @var array Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+     * @var array Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
      */
     public $Warn;
 
@@ -152,10 +155,11 @@ MyKid   Kid card
      * @param string $Name Name
      * @param string $Address Address
      * @param string $Sex Gender
-     * @param array $Warn Alarm code
--9103	Alarm for photographed document
--9102	Alarm for photocopied document
--9106       Alarm for covered card
+     * @param array $Warn Warning code
+-9103 Warning for spoofed card
+-9102 Warning for photocopied card
+-9106 Warning for covered card
+-9107 Warning for blurry image
      * @param string $Image Identity photo
      * @param string $AdvancedInfo Extended field:
 {
