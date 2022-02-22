@@ -58,6 +58,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthLimit(float $BandwidthLimit) Set The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
  * @method integer getCapacity() Obtain Total capacity of the file system
  * @method void setCapacity(integer $Capacity) Set Total capacity of the file system
+ * @method array getTags() Obtain File system tag list
+ * @method void setTags(array $Tags) Set File system tag list
  */
 class FileSystemInfo extends AbstractModel
 {
@@ -157,6 +159,11 @@ class FileSystemInfo extends AbstractModel
     public $Capacity;
 
     /**
+     * @var array File system tag list
+     */
+    public $Tags;
+
+    /**
      * @param string $CreationTime Creation time
      * @param string $CreationToken Custom name
      * @param string $FileSystemId File system ID
@@ -176,6 +183,7 @@ class FileSystemInfo extends AbstractModel
      * @param integer $AppId Application ID
      * @param float $BandwidthLimit The upper limit on the file system’s throughput, which is determined based on its current usage, and bound resource packs for both storage and throughput
      * @param integer $Capacity Total capacity of the file system
+     * @param array $Tags File system tag list
      */
     function __construct()
     {
@@ -265,6 +273,15 @@ class FileSystemInfo extends AbstractModel
 
         if (array_key_exists("Capacity",$param) and $param["Capacity"] !== null) {
             $this->Capacity = $param["Capacity"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

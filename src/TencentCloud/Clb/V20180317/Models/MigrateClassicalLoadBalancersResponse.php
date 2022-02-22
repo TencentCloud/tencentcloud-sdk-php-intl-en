@@ -18,39 +18,19 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateLoadBalancer response structure.
+ * MigrateClassicalLoadBalancers response structure.
  *
- * @method array getLoadBalancerIds() Obtain Array of unique CLB instance IDs.
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of unique CLB instance IDs.
- * @method string getDealName() Obtain Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDealName(string $DealName) Set Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateLoadBalancerResponse extends AbstractModel
+class MigrateClassicalLoadBalancersResponse extends AbstractModel
 {
-    /**
-     * @var array Array of unique CLB instance IDs.
-     */
-    public $LoadBalancerIds;
-
-    /**
-     * @var string Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public $DealName;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $LoadBalancerIds Array of unique CLB instance IDs.
-     * @param string $DealName Order ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,14 +46,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
-            $this->LoadBalancerIds = $param["LoadBalancerIds"];
-        }
-
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

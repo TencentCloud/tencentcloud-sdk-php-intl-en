@@ -30,7 +30,22 @@ This is an async API. After it is returned successfully, you can call the `Descr
  * @method Models\BatchModifyTargetWeightResponse BatchModifyTargetWeight(Models\BatchModifyTargetWeightRequest $req) This API is used to modify forwarding weights of real servers bound to CLB listeners in batches. Up to 500 servers can be unbound in a batch. As this API is async, you should check whether the task is successful by passing the RequestId returned to the API call `DescribeTaskStatus`.<br/> This API is supported by CLB layer-4 and layer-7 listeners, but not Classis CLB counterparts.
 
  * @method Models\BatchRegisterTargetsResponse BatchRegisterTargets(Models\BatchRegisterTargetsRequest $req) This API is used to bind CVM instances or ENIs in batches. Up to 500 servers can be bound in a batch. It supports cross-region binding, and layer-4 and layer-7 (TCP/UDP/HTTP/HTTPS) protocols.
- * @method Models\CloneLoadBalancerResponse CloneLoadBalancer(Models\CloneLoadBalancerRequest $req) This API is used to generate a CLB instance that has the same rules and binding relations as the specified CLB instance.
+ * @method Models\CloneLoadBalancerResponse CloneLoadBalancer(Models\CloneLoadBalancerRequest $req) This API is used to create a CLB instance with the same forwarding rules and binding relation as the source CLB instance. Note that this API is asynchronous, which means that changes to the source CLB after the invocation are not cloned.
+
+Use limits:
+Classic network-based CLBs, Classic CLBs, IPv6 CLBs, and NAT64 CLBs are not supported.
+Monthly-subscribed CLB instances are not supported.
+QUIC and port listeners are not supported.
+The CLB backend server cannot be bound to a target group or an SCF function.
+The following settings will not be cloned automatically: "Custom Configuration", "Redirection Configuration" and "Allow Traffic by Default in Security Group".
+
+Permissions:
+The required permissions are as follows: `CreateLoadBalancer`, `CreateLoadBalancerListeners`, `CreateListenerRules`, `BatchRegisterTargets`, `SetLoadBalancerSecurityGroups`, `ModifyLoadBalancerAttributes`, `SetLoadBalancerClsLog`, and `DeleteLoadBalancer`. Note that `DeleteLoadBalancer` is used to roll back in case of cloning failures. If you do not have the permission, the failure data will remain.
+
+Notes:
+For a BGP bandwidth package, you need to pass the package ID.
+To clone a dedicated CLB cluster, specify it in the parameter, otherwise a shared CLB cluster is created.
+This API is only available for beta users. To try it out, [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=163&source=0&data_title=%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1%20CLB&step=1).
  * @method Models\CreateClsLogSetResponse CreateClsLogSet(Models\CreateClsLogSetRequest $req) This API is used to create a CLB exclusive logset for storing CLB logs.
  * @method Models\CreateListenerResponse CreateListener(Models\CreateListenerRequest $req) This API is used to create a listener for a CLB instance.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestId as an input parameter to check whether this task is successful.
@@ -65,6 +80,7 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DescribeClassicalLBListenersResponse DescribeClassicalLBListeners(Models\DescribeClassicalLBListenersRequest $req) This API (DescribeClassicalLBListeners) is used to get the listener information of a classic CLB.
  * @method Models\DescribeClassicalLBTargetsResponse DescribeClassicalLBTargets(Models\DescribeClassicalLBTargetsRequest $req) This API is used to get the real servers bound to a classic CLB instance.
  * @method Models\DescribeClsLogSetResponse DescribeClsLogSet(Models\DescribeClsLogSetRequest $req) This API is used to get the CLB exclusive logset.
+ * @method Models\DescribeCrossTargetsResponse DescribeCrossTargets(Models\DescribeCrossTargetsRequest $req) Queries information of CVMs and ENIs that use cross-region binding 2.0
  * @method Models\DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateList(Models\DescribeCustomizedConfigAssociateListRequest $req) This API is used to query the configured location, bound server or bound CLB instance. If there are domain names, the result will be filtered by domain name.
  * @method Models\DescribeCustomizedConfigListResponse DescribeCustomizedConfigList(Models\DescribeCustomizedConfigListRequest $req) This API is used to pull custom configuration lists to return the user configuration of `AppId`.
  * @method Models\DescribeLBListenersResponse DescribeLBListeners(Models\DescribeLBListenersRequest $req) This API is used to query CLB instances bound to the CVM or ENI.
@@ -86,6 +102,8 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\DisassociateTargetGroupsResponse DisassociateTargetGroups(Models\DisassociateTargetGroupsRequest $req) This API is used to unbind target groups from a rule.
 This is an async API. After it is returned successfully, you can call the `DescribeTaskStatus` API with the returned `RequestID` as an input parameter to check whether this task is successful.
  * @method Models\ManualRewriteResponse ManualRewrite(Models\ManualRewriteRequest $req) After the original access address and the address to be redirected are configured manually, the system will automatically redirect requests made to the original access address to the target address of the corresponding path. Multiple paths can be configured as a redirection policy under one domain name to achieve automatic redirection between HTTP and HTTPS. A redirection policy should meet the following rules: if A has already been redirected to B, then it cannot be redirected to C (unless the original redirection relationship is deleted and a new one is created), and B cannot be redirected to any other addresses.
+ * @method Models\MigrateClassicalLoadBalancersResponse MigrateClassicalLoadBalancers(Models\MigrateClassicalLoadBalancersRequest $req) This API is used to upgrade classic CLB instances to application CLB instances.
+This is an async API. After it is returned successfully, you can check the action result by calling `DescribeLoadBalancers`. 
  * @method Models\ModifyBlockIPListResponse ModifyBlockIPList(Models\ModifyBlockIPListRequest $req) This API is used to modify the client IP blocklist of a CLB instance. One forwarding rule supports blocking up to 2,000,000 IPs. One blocklist can contain up to 2,000,000 entries.
 (This API is in beta test. To use it, please submit a ticket.)
  * @method Models\ModifyDomainResponse ModifyDomain(Models\ModifyDomainRequest $req) This API (ModifyDomain) is used to modify a domain name under a layer-7 CLB listener.
@@ -95,7 +113,7 @@ This is an async API. After it is returned successfully, you can call the Descri
  * @method Models\ModifyListenerResponse ModifyListener(Models\ModifyListenerRequest $req) This API (ModifyListener) is used to modify the attributes of a CLB listener, such as listener name, health check parameter, certificate information, and forwarding policy.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
  * @method Models\ModifyLoadBalancerAttributesResponse ModifyLoadBalancerAttributes(Models\ModifyLoadBalancerAttributesRequest $req) This API is used to modify the attributes of a CLB instance such as name and cross-region attributes.
- * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) This API is used to upgrade shared CLB instances to LCU-supported CLB instances (downgrade is not allowed) and upgrade/downgrade the specification of LCU-supported instances.
+ * @method Models\ModifyLoadBalancerSlaResponse ModifyLoadBalancerSla(Models\ModifyLoadBalancerSlaRequest $req) This API is used to upgrade shared CLB instances to LCU-supported CLB instances.
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API (ModifyRule) is used to modify the attributes of a forwarding rule under a layer-7 CLB listener, such as forwarding path, health check attribute, and forwarding policy.
 This is an async API. After it is returned successfully, you can call the DescribeTaskStatus API with the returned RequestID as an input parameter to check whether this task is successful.
  * @method Models\ModifyTargetGroupAttributeResponse ModifyTargetGroupAttribute(Models\ModifyTargetGroupAttributeRequest $req) This API is used to rename a target group or modify its default port attribute.

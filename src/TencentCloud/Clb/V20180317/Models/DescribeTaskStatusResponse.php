@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStatus() Obtain Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
  * @method void setStatus(integer $Status) Set Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
+ * @method array getLoadBalancerIds() Obtain Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +37,20 @@ class DescribeTaskStatusResponse extends AbstractModel
     public $Status;
 
     /**
+     * @var array Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $LoadBalancerIds;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param integer $Status Current status of a task. Value range: 0 (succeeded), 1 (failed), 2 (in progress).
+     * @param array $LoadBalancerIds Array of unique CLB instance IDs.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +68,10 @@ class DescribeTaskStatusResponse extends AbstractModel
         }
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("LoadBalancerIds",$param) and $param["LoadBalancerIds"] !== null) {
+            $this->LoadBalancerIds = $param["LoadBalancerIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

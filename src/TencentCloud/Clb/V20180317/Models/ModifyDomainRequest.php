@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDomain request structure.
  *
- * @method string getLoadBalancerId() Obtain CLB instance ID
- * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
- * @method string getListenerId() Obtain CLB listener ID
- * @method void setListenerId(string $ListenerId) Set CLB listener ID
+ * @method string getLoadBalancerId() Obtain CLB instance ID.
+ * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID.
+ * @method string getListenerId() Obtain CLB listener ID.
+ * @method void setListenerId(string $ListenerId) Set CLB listener ID.
  * @method string getDomain() Obtain Legacy domain name under a listener.
  * @method void setDomain(string $Domain) Set Legacy domain name under a listener.
  * @method string getNewDomain() Obtain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class ModifyDomainRequest extends AbstractModel
 {
     /**
-     * @var string CLB instance ID
+     * @var string CLB instance ID.
      */
     public $LoadBalancerId;
 
     /**
-     * @var string CLB listener ID
+     * @var string CLB listener ID.
      */
     public $ListenerId;
 
@@ -52,8 +52,8 @@ class ModifyDomainRequest extends AbstractModel
     public $NewDomain;
 
     /**
-     * @param string $LoadBalancerId CLB instance ID
-     * @param string $ListenerId CLB listener ID
+     * @param string $LoadBalancerId CLB instance ID.
+     * @param string $ListenerId CLB listener ID.
      * @param string $Domain Legacy domain name under a listener.
      * @param string $NewDomain New domain name. 	Length limit: 1-120. There are three usage formats: non-regular expression, wildcard, and regular expression. A non-regular expression can only contain letters, digits, "-", and ".". In a wildcard, "*" can only be at the beginning or the end. A regular expressions must begin with a "~".
      */

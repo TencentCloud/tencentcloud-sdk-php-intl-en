@@ -18,12 +18,12 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Parameter for instance specification adjustment
+ * Instance specification adjustment parameters
  *
  * @method string getLoadBalancerId() Obtain ID of the CLB instance
  * @method void setLoadBalancerId(string $LoadBalancerId) Set ID of the CLB instance
- * @method string getSlaType() Obtain Target instance specification
- * @method void setSlaType(string $SlaType) Set Target instance specification
+ * @method string getSlaType() Obtain To upgrade to LCU-supported CLB instances. It must be `SLA`.
+ * @method void setSlaType(string $SlaType) Set To upgrade to LCU-supported CLB instances. It must be `SLA`.
  */
 class SlaUpdateParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SlaUpdateParam extends AbstractModel
     public $LoadBalancerId;
 
     /**
-     * @var string Target instance specification
+     * @var string To upgrade to LCU-supported CLB instances. It must be `SLA`.
      */
     public $SlaType;
 
     /**
      * @param string $LoadBalancerId ID of the CLB instance
-     * @param string $SlaType Target instance specification
+     * @param string $SlaType To upgrade to LCU-supported CLB instances. It must be `SLA`.
      */
     function __construct()
     {

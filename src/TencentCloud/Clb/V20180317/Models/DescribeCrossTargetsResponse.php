@@ -18,33 +18,26 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTargetGroupInstances response structure.
+ * DescribeCrossTargets response structure.
  *
- * @method integer getTotalCount() Obtain Number of results returned for the current query
- * @method void setTotalCount(integer $TotalCount) Set Number of results returned for the current query
- * @method array getTargetGroupInstanceSet() Obtain Information of the bound server
- * @method void setTargetGroupInstanceSet(array $TargetGroupInstanceSet) Set Information of the bound server
- * @method integer getRealCount() Obtain The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
- * @method void setRealCount(integer $RealCount) Set The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
+ * @method integer getTotalCount() Obtain Total number of real server lists
+ * @method void setTotalCount(integer $TotalCount) Set Total number of real server lists
+ * @method array getCrossTargetSet() Obtain Real server list
+ * @method void setCrossTargetSet(array $CrossTargetSet) Set Real server list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTargetGroupInstancesResponse extends AbstractModel
+class DescribeCrossTargetsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of results returned for the current query
+     * @var integer Total number of real server lists
      */
     public $TotalCount;
 
     /**
-     * @var array Information of the bound server
+     * @var array Real server list
      */
-    public $TargetGroupInstanceSet;
-
-    /**
-     * @var integer The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
-     */
-    public $RealCount;
+    public $CrossTargetSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class DescribeTargetGroupInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of results returned for the current query
-     * @param array $TargetGroupInstanceSet Information of the bound server
-     * @param integer $RealCount The actual total number of bound instances, which is not affected by the setting of `Limit`, `Offset` and the CAM permissions.
+     * @param integer $TotalCount Total number of real server lists
+     * @param array $CrossTargetSet Real server list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -74,17 +66,13 @@ class DescribeTargetGroupInstancesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("TargetGroupInstanceSet",$param) and $param["TargetGroupInstanceSet"] !== null) {
-            $this->TargetGroupInstanceSet = [];
-            foreach ($param["TargetGroupInstanceSet"] as $key => $value){
-                $obj = new TargetGroupBackend();
+        if (array_key_exists("CrossTargetSet",$param) and $param["CrossTargetSet"] !== null) {
+            $this->CrossTargetSet = [];
+            foreach ($param["CrossTargetSet"] as $key => $value){
+                $obj = new CrossTargets();
                 $obj->deserialize($value);
-                array_push($this->TargetGroupInstanceSet, $obj);
+                array_push($this->CrossTargetSet, $obj);
             }
-        }
-
-        if (array_key_exists("RealCount",$param) and $param["RealCount"] !== null) {
-            $this->RealCount = $param["RealCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

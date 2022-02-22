@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
 Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
  * @method void setLoadBalancerName(string $LoadBalancerName) Set Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
 Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
- * @method integer getProjectId() Obtain ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
- * @method void setProjectId(integer $ProjectId) Set ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+ * @method integer getProjectId() Obtain Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
  * @method string getMasterZoneId() Obtain Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
  * @method void setMasterZoneId(string $MasterZoneId) Set Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
  * @method string getSlaveZoneId() Obtain Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
 Note: A secondary AZ carries traffic when the primary AZ fails. 
  * @method void setSlaveZoneId(string $SlaveZoneId) Set Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
@@ -56,8 +56,8 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
  * @method void setSnatIps(array $SnatIps) Set Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
  * @method array getClusterIds() Obtain ID of the public network CLB dedicated cluster
  * @method void setClusterIds(array $ClusterIds) Set ID of the public network CLB dedicated cluster
- * @method string getSlaType() Obtain 
- * @method void setSlaType(string $SlaType) Set 
+ * @method string getSlaType() Obtain Guaranteed performance specification.
+ * @method void setSlaType(string $SlaType) Set Guaranteed performance specification.
  * @method string getClusterTag() Obtain Tag of the STGW dedicated cluster
  * @method void setClusterTag(string $ClusterTag) Set Tag of the STGW dedicated cluster
  * @method array getZones() Obtain Availability zones for nearby access of private network CLB instances to distribute traffic
@@ -79,13 +79,13 @@ Note: if the name of a new CLB instance already exists, a default name will be g
     public $LoadBalancerName;
 
     /**
-     * @var integer ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+     * @var integer Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
      */
     public $ProjectId;
 
     /**
      * @var string Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
      */
     public $MasterZoneId;
 
@@ -146,7 +146,7 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
     public $ClusterIds;
 
     /**
-     * @var string 
+     * @var string Guaranteed performance specification.
      */
     public $SlaType;
 
@@ -169,9 +169,9 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
      * @param string $LoadBalancerId CLB instance ID
      * @param string $LoadBalancerName Clones the name of the CLB instance. The name must be 1-60 characters containing letters, numbers, "-" or "_".
 Note: if the name of a new CLB instance already exists, a default name will be generated automatically.
-     * @param integer $ProjectId ID of the project to which a CLB instance belongs, which can be obtained through the DescribeProject API. If this parameter is not passed in, the default project will be used.
+     * @param integer $ProjectId Project ID of the CLB instance, which can be obtained through the [`DescribeProject`](https://intl.cloud.tencent.com/document/product/378/4400?from_cn_redirect=1) API. If this field is not specified, it will default to the default project.
      * @param string $MasterZoneId Sets the primary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB.
-Note: A primary AZ is the default AZ that carries traffic. When it fails, the optimal secondary AZ is chosen automatically to take its place. 
+Note: A primary AZ carries traffic by default, while a secondary AZ does not. It only works when the primary AZ is faulty.
      * @param string $SlaveZoneId Sets the secondary AZ ID for cross-AZ disaster recovery, such as `100001` or `ap-guangzhou-1`, which is applicable only to public network CLB instances.
 Note: A secondary AZ carries traffic when the primary AZ fails. 
      * @param string $ZoneId Specifies an AZ ID for creating a CLB instance, such as `ap-guangzhou-1`, which is applicable only to public network CLB instances.
@@ -184,7 +184,7 @@ Note: A secondary AZ carries traffic when the primary AZ fails.
      * @param boolean $SnatPro Whether to support binding cross-VPC IPs or cross-region IPs
      * @param array $SnatIps Creates `SnatIp` when the binding IPs of other VPCs feature is enabled
      * @param array $ClusterIds ID of the public network CLB dedicated cluster
-     * @param string $SlaType 
+     * @param string $SlaType Guaranteed performance specification.
      * @param string $ClusterTag Tag of the STGW dedicated cluster
      * @param array $Zones Availability zones for nearby access of private network CLB instances to distribute traffic
      * @param string $EipAddressId Unique ID of an EIP, which can only be used when binding the EIP of a private network CLB instance (e.g., `eip-11112222`)
