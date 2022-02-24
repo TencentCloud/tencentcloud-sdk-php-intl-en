@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time
  * @method integer getEndTime() Obtain End time
  * @method void setEndTime(integer $EndTime) Set End time
- * @method string getType() Obtain ["pagepv","allcount"]
- * @method void setType(string $Type) Set ["pagepv","allcount"]
+ * @method string getType() Obtain `pagepv`: PV view; `allcount`: performance view; `falls`: page loading waterfall plot; `samp`: FMP, `day`: 14-day data, `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
+ * @method void setType(string $Type) Set `pagepv`: PV view; `allcount`: performance view; `falls`: page loading waterfall plot; `samp`: FMP, `day`: 14-day data, `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
  * @method string getLevel() Obtain Log level
  * @method void setLevel(string $Level) Set Log level
  * @method string getIsp() Obtain ISP
@@ -83,7 +83,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string ["pagepv","allcount"]
+     * @var string `pagepv`: PV view; `allcount`: performance view; `falls`: page loading waterfall plot; `samp`: FMP, `day`: 14-day data, `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
      */
     public $Type;
 
@@ -181,7 +181,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param integer $ID Project ID
      * @param integer $StartTime Start time
      * @param integer $EndTime End time
-     * @param string $Type ["pagepv","allcount"]
+     * @param string $Type `pagepv`: PV view; `allcount`: performance view; `falls`: page loading waterfall plot; `samp`: FMP, `day`: 14-day data, `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
      * @param string $Level Log level
      * @param string $Isp ISP
      * @param string $Area Region

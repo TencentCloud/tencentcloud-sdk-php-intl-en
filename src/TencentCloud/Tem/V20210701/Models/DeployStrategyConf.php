@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDeployStrategyType(integer $DeployStrategyType) Set Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
  * @method integer getBatchInterval() Obtain Interval between batches
  * @method void setBatchInterval(integer $BatchInterval) Set Interval between batches
+ * @method integer getMinAvailable() Obtain The minimum number of available pods
+ * @method void setMinAvailable(integer $MinAvailable) Set The minimum number of available pods
  */
 class DeployStrategyConf extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DeployStrategyConf extends AbstractModel
     public $BatchInterval;
 
     /**
+     * @var integer The minimum number of available pods
+     */
+    public $MinAvailable;
+
+    /**
      * @param integer $TotalBatchCount Total batches
      * @param integer $BetaBatchNum Number of pods for the beta batch
      * @param integer $DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
      * @param integer $BatchInterval Interval between batches
+     * @param integer $MinAvailable The minimum number of available pods
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DeployStrategyConf extends AbstractModel
 
         if (array_key_exists("BatchInterval",$param) and $param["BatchInterval"] !== null) {
             $this->BatchInterval = $param["BatchInterval"];
+        }
+
+        if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
+            $this->MinAvailable = $param["MinAvailable"];
         }
     }
 }

@@ -54,6 +54,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setClusterStatus(string $ClusterStatus) Set Environment cluster status
  * @method boolean getEnableTswTraceService() Obtain Whether to enable TSW
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) Set Whether to enable TSW
+ * @method integer getLocked() Obtain Whether the environment is locked. `1`: locked; `0`: not locked
+ * @method void setLocked(integer $Locked) Set Whether the environment is locked. `1`: locked; `0`: not locked
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -139,6 +141,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $EnableTswTraceService;
 
     /**
+     * @var integer Whether the environment is locked. `1`: locked; `0`: not locked
+     */
+    public $Locked;
+
+    /**
      * @param string $EnvironmentId Environment ID
      * @param string $Channel Channel
      * @param string $EnvironmentName Environment name
@@ -156,6 +163,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $SubnetId Subnet
      * @param string $ClusterStatus Environment cluster status
      * @param boolean $EnableTswTraceService Whether to enable TSW
+     * @param integer $Locked Whether the environment is locked. `1`: locked; `0`: not locked
      */
     function __construct()
     {
@@ -232,6 +240,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
             $this->EnableTswTraceService = $param["EnableTswTraceService"];
+        }
+
+        if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
+            $this->Locked = $param["Locked"];
         }
     }
 }

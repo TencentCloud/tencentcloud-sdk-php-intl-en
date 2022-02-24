@@ -152,6 +152,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTargetHealth(string $TargetHealth) Set Health status of the target real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDomains() Obtain List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDomains(string $Domains) Set List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancerDetail extends AbstractModel
 {
@@ -354,6 +358,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TargetHealth;
 
     /**
+     * @var string List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Domains;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $LoadBalancerType CLB instance network type:
@@ -420,6 +430,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TargetHealth Health status of the target real server.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Domains List o domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -572,6 +584,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TargetHealth",$param) and $param["TargetHealth"] !== null) {
             $this->TargetHealth = $param["TargetHealth"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

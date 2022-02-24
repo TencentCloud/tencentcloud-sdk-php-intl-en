@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * PurgeUrlsCache response structure.
  *
- * @method string getTaskId() Obtain Purge task ID. The first ten digits are the UTC time when the task is submitted.
- * @method void setTaskId(string $TaskId) Set Purge task ID. The first ten digits are the UTC time when the task is submitted.
+ * @method string getTaskId() Obtain Purge task ID
+ * @method void setTaskId(string $TaskId) Set Purge task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class PurgeUrlsCacheResponse extends AbstractModel
 {
     /**
-     * @var string Purge task ID. The first ten digits are the UTC time when the task is submitted.
+     * @var string Purge task ID
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class PurgeUrlsCacheResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TaskId Purge task ID. The first ten digits are the UTC time when the task is submitted.
+     * @param string $TaskId Purge task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,6 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain ClusterId (cluster ID)
  * @method void setClusterId(string $ClusterId) Set ClusterId (cluster ID)
+ * @method array getFilters() Obtain ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+ * @method void setFilters(array $Filters) Set ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
  */
 class DescribeClusterNodePoolsRequest extends AbstractModel
 {
@@ -31,7 +69,49 @@ class DescribeClusterNodePoolsRequest extends AbstractModel
     public $ClusterId;
 
     /**
+     * @var array ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+     */
+    public $Filters;
+
+    /**
      * @param string $ClusterId ClusterId (cluster ID)
+     * @param array $Filters ·  NodePoolsName
+    Filters by the node pool name
+    Type: String
+    Required: No
+
+·  NodePoolsId
+    Filters by the node pool ID
+    Type: String
+    Required: No
+
+·  tags
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
+
+·  tag:tag-key
+    Filters by key-value pairs of tags
+    Type: String
+    Required: No
      */
     function __construct()
     {
@@ -48,6 +128,15 @@ class DescribeClusterNodePoolsRequest extends AbstractModel
         }
         if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
             $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new Filter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
         }
     }
 }

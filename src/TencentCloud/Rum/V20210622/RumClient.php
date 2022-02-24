@@ -87,7 +87,7 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) This API is used to get the list of allowlists.
  * @method Models\ModifyInstanceResponse ModifyInstance(Models\ModifyInstanceRequest $req) This API is used to modify an instance.
  * @method Models\ModifyProjectResponse ModifyProject(Models\ModifyProjectRequest $req) This API is used to modify a RUM project.
- * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) This API is used to add or modify a project limit.
+ * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) This API is used to add or modify data reporting limit.
  * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) This API is used to resume an instance.
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) This API is used to stop an instance.
  */

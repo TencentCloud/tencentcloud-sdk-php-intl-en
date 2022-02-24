@@ -24,6 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setKey(string $Key) Set Key
  * @method string getValue() Obtain Value
  * @method void setValue(string $Value) Set Value
+ * @method string getType() Obtain `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setType(string $Type) Set `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getConfig() Obtain Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setConfig(string $Config) Set Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class Pair extends AbstractModel
 {
@@ -38,8 +46,24 @@ class Pair extends AbstractModel
     public $Value;
 
     /**
+     * @var string `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $Type;
+
+    /**
+     * @var string Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $Config;
+
+    /**
      * @param string $Key Key
      * @param string $Value Value
+     * @param string $Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
+Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $Config Configuration name
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {
@@ -60,6 +84,14 @@ class Pair extends AbstractModel
 
         if (array_key_exists("Value",$param) and $param["Value"] !== null) {
             $this->Value = $param["Value"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("Config",$param) and $param["Config"] !== null) {
+            $this->Config = $param["Config"];
         }
     }
 }

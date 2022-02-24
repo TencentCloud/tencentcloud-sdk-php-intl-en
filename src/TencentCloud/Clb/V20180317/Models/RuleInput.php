@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP/HTTPS forwarding rule (input)
  *
- * @method string getDomain() Obtain Domain name of the forwarding rule. Length: 1-80.
- * @method void setDomain(string $Domain) Set Domain name of the forwarding rule. Length: 1-80.
  * @method string getUrl() Obtain Forwarding rule path. Length: 1-200.
  * @method void setUrl(string $Url) Set Forwarding rule path. Length: 1-200.
+ * @method string getDomain() Obtain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+ * @method void setDomain(string $Domain) Set The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
  * @method integer getSessionExpireTime() Obtain Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
  * @method HealthCheck getHealthCheck() Obtain Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
@@ -48,18 +48,20 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setTrpcFunc(string $TrpcFunc) Set TRPC calling service API, which is required when `ForwardType` is `TRPC`.
  * @method boolean getQuic() Obtain Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
  * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+ * @method array getDomains() Obtain The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+ * @method void setDomains(array $Domains) Set The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
  */
 class RuleInput extends AbstractModel
 {
     /**
-     * @var string Domain name of the forwarding rule. Length: 1-80.
-     */
-    public $Domain;
-
-    /**
      * @var string Forwarding rule path. Length: 1-200.
      */
     public $Url;
+
+    /**
+     * @var string The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
+     */
+    public $Domain;
 
     /**
      * @var integer Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
@@ -118,8 +120,13 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Quic;
 
     /**
-     * @param string $Domain Domain name of the forwarding rule. Length: 1-80.
+     * @var array The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+     */
+    public $Domains;
+
+    /**
      * @param string $Url Forwarding rule path. Length: 1-200.
+     * @param string $Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
      * @param HealthCheck $HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
      * @param CertificateInput $Certificate Certificate information
@@ -132,6 +139,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $TrpcCallee TRPC callee server route, which is required when `ForwardType` is `TRPC`.
      * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
+     * @param array $Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
      */
     function __construct()
     {
@@ -146,12 +154,12 @@ They represent weighted round robin, least connections, and IP hash, respectivel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
-            $this->Domain = $param["Domain"];
-        }
-
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
         }
 
         if (array_key_exists("SessionExpireTime",$param) and $param["SessionExpireTime"] !== null) {
@@ -198,6 +206,10 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = $param["Quic"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

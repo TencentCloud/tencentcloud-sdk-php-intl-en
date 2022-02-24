@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setArea(string $Area) Set Acceleration region. Valid values: mainland, oversea, global.
  * @method string getReadonly() Obtain Domain name lock status. normal: not locked; global: globally locked
  * @method void setReadonly(string $Readonly) Set Domain name lock status. normal: not locked; global: globally locked
+ * @method array getTag() Obtain Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+ * @method void setTag(array $Tag) Set Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
  */
 class DomainBriefInfo extends AbstractModel
 {
@@ -108,6 +112,12 @@ class DomainBriefInfo extends AbstractModel
     public $Readonly;
 
     /**
+     * @var array Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
+     */
+    public $Tag;
+
+    /**
      * @param string $ResourceId Domain name ID.
      * @param integer $AppId Tencent Cloud account ID.
      * @param string $Domain CDN acceleration domain name.
@@ -120,6 +130,8 @@ class DomainBriefInfo extends AbstractModel
      * @param string $Disable Domain name blockage status. Valid values: normal (normal), overdue (service is suspended due to arrears), quota (trial traffic package is used up), malicious (malicious user), ddos (DDoS attack), idle (no traffic), unlicensed (no ICP filing), capping (bandwidth cap reached), readonly (read-only)
      * @param string $Area Acceleration region. Valid values: mainland, oversea, global.
      * @param string $Readonly Domain name lock status. normal: not locked; global: globally locked
+     * @param array $Tag Domain name tag
+Note: This field may return `null`, indicating that no valid value can be found.
      */
     function __construct()
     {
@@ -181,6 +193,15 @@ class DomainBriefInfo extends AbstractModel
 
         if (array_key_exists("Readonly",$param) and $param["Readonly"] !== null) {
             $this->Readonly = $param["Readonly"];
+        }
+
+        if (array_key_exists("Tag",$param) and $param["Tag"] !== null) {
+            $this->Tag = [];
+            foreach ($param["Tag"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tag, $obj);
+            }
         }
     }
 }

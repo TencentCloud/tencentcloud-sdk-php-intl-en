@@ -112,6 +112,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserType(string $UserType) Set User type.
  * @method boolean getIsBase64Encoded() Obtain Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
  * @method void setIsBase64Encoded(boolean $IsBase64Encoded) Set Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+ * @method string getEventBusId() Obtain Event bus ID.
+ * @method void setEventBusId(string $EventBusId) Set Event bus ID.
  * @method string getServiceScfFunctionType() Obtain SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
  * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) Set SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
  * @method string getEIAMAppType() Obtain EIAM application type.
@@ -356,6 +358,11 @@ class CreateApiRequest extends AbstractModel
     public $IsBase64Encoded;
 
     /**
+     * @var string Event bus ID.
+     */
+    public $EventBusId;
+
+    /**
      * @var string SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
      */
     public $ServiceScfFunctionType;
@@ -427,6 +434,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $TargetNamespaceId TSF Serverless namespace ID (in beta test).
      * @param string $UserType User type.
      * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
+     * @param string $EventBusId Event bus ID.
      * @param string $ServiceScfFunctionType SCF function type, which takes effect if the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
      * @param string $EIAMAppType EIAM application type.
      * @param string $EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
@@ -664,6 +672,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("IsBase64Encoded",$param) and $param["IsBase64Encoded"] !== null) {
             $this->IsBase64Encoded = $param["IsBase64Encoded"];
+        }
+
+        if (array_key_exists("EventBusId",$param) and $param["EventBusId"] !== null) {
+            $this->EventBusId = $param["EventBusId"];
         }
 
         if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {

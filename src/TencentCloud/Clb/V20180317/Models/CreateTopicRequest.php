@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) Set The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
  * @method string getTopicType() Obtain Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  * @method void setTopicType(string $TopicType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+ * @method integer getPeriod() Obtain Logset retention period (in days). Default: 30 days.
+ * @method void setPeriod(integer $Period) Set Logset retention period (in days). Default: 30 days.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateTopicRequest extends AbstractModel
     public $TopicType;
 
     /**
+     * @var integer Logset retention period (in days). Default: 30 days.
+     */
+    public $Period;
+
+    /**
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
      * @param string $TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
+     * @param integer $Period Logset retention period (in days). Default: 30 days.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("TopicType",$param) and $param["TopicType"] !== null) {
             $this->TopicType = $param["TopicType"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
     }
 }

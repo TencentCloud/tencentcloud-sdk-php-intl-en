@@ -46,6 +46,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setBackupOriginType(string $BackupOriginType) Set Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method AdvanceHttps getAdvanceHttps() Obtain HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvanceHttps(AdvanceHttps $AdvanceHttps) Set HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Origin extends AbstractModel
 {
@@ -87,6 +91,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $BackupOriginType;
 
     /**
+     * @var AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvanceHttps;
+
+    /**
      * @param array $Origins Primary origin server list. IP and the domain name of the origin server cannot be entered at the same time. Configure origin server port in the format of ["origin1:port1", "origin2:port2"]. Configure origin-pull weight in the format of ["origin1::weight1", "origin2::weight2"]. Configure both port and weight in the format of ["origin1:port1:weight1", "origin2:port2:weight2"]. Valid range of weight value: 0 - 100.
      * @param string $OriginType Primary origin server type. Valid values: domain (domain name origin server), ip (IP origin server).
 This is required when setting `Origins`.
@@ -100,6 +110,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $BackupOriginType Secondary origin server type, which is the same as `OriginType`.
 This is required when setting `BackupOrigins`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param AdvanceHttps $AdvanceHttps HTTPS advanced origin-pull configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -136,6 +148,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BackupOriginType",$param) and $param["BackupOriginType"] !== null) {
             $this->BackupOriginType = $param["BackupOriginType"];
+        }
+
+        if (array_key_exists("AdvanceHttps",$param) and $param["AdvanceHttps"] !== null) {
+            $this->AdvanceHttps = new AdvanceHttps();
+            $this->AdvanceHttps->deserialize($param["AdvanceHttps"]);
         }
     }
 }

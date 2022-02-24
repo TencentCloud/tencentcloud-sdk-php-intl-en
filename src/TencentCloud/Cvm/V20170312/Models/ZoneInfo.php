@@ -57,7 +57,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -73,6 +73,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
  * @method void setZone(string $Zone) Set Availability zone name, such as `ap-guangzhou-3`.
 The following is a list of all availability zones:
 <li> ap-chongqing-1 </li>
@@ -110,7 +111,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -126,6 +127,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
  * @method string getZoneName() Obtain Availability zone description, such as Guangzhou Zone 3.
  * @method void setZoneName(string $ZoneName) Set Availability zone description, such as Guangzhou Zone 3.
  * @method string getZoneId() Obtain Availability zone ID.
@@ -173,7 +175,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -189,6 +191,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      */
     public $Zone;
 
@@ -245,7 +248,7 @@ The following is a list of all availability zones:
 <li> ap-mumbai-1 </li>
 <li> ap-mumbai-2 </li>
 <li> eu-moscow-1 </li>
-<li> ap-beijing-1 </li>
+<li> ap-beijing-1 (sold out) </li>
 <li> ap-beijing-2 </li>
 <li> ap-beijing-3 </li>
 <li> ap-beijing-4 </li>
@@ -261,6 +264,7 @@ The following is a list of all availability zones:
 <li> na-ashburn-2 </li>
 <li> ap-nanjing-1 </li>
 <li> ap-nanjing-2 </li>
+<li> sa-saopaulo-1</li>
      * @param string $ZoneName Availability zone description, such as Guangzhou Zone 3.
      * @param string $ZoneId Availability zone ID.
      * @param string $ZoneState Availability zone status. Valid values: `AVAILABLE`: available; `UNAVAILABLE`: unavailable.

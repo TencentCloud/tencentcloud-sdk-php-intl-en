@@ -42,6 +42,8 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
  * @method void setSnapshotIds(array $SnapshotIds) Set Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
  * @method boolean getDryRun() Obtain Success status of this request, without affecting the resources involved
  * @method void setDryRun(boolean $DryRun) Set Success status of this request, without affecting the resources involved
+ * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a custom image.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a custom image.
  */
 class CreateImageRequest extends AbstractModel
 {
@@ -89,6 +91,11 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
     public $DryRun;
 
     /**
+     * @var array Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $ImageName Image name
      * @param string $InstanceId ID of the instance from which an image will be created. This parameter is required when using instance to create an image.
      * @param string $ImageDescription Image description
@@ -100,6 +107,7 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
      * @param array $DataDiskIds Specified data disk ID included in the full image created from the instance.
      * @param array $SnapshotIds Specified snapshot ID used to create an image. A system disk snapshot must be included. It cannot be passed together with `InstanceId`.
      * @param boolean $DryRun Success status of this request, without affecting the resources involved
+     * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ Click [here](https://intl.cloud.tencent.com/document/product/213/43498?from_cn_r
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

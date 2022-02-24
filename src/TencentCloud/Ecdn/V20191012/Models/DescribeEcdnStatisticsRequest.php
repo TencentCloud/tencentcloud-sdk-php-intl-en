@@ -40,16 +40,16 @@ request: number of requests
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
- * @method integer getInterval() Obtain Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
- * @method void setInterval(integer $Interval) Set Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+ * @method integer getInterval() Obtain Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
+ * @method void setInterval(integer $Interval) Set Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
  * @method array getDomains() Obtain Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.
@@ -96,11 +96,11 @@ request: number of requests
     public $Metrics;
 
     /**
-     * @var integer Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+     * @var integer Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
      */
     public $Interval;
 
@@ -137,11 +137,11 @@ request: number of requests
 3xx: returns the number of 3xx status codes or details of status codes starting with 3
 4xx: returns the number of 4xx status codes or details of status codes starting with 4
 5xx: returns the number of 5xx status codes or details of status codes starting with 5
-     * @param integer $Interval Time granularity, which can be:
-1 day	 1, 5, 15, 30, 60, 120, 240, 1440 
-2-3 days 15, 30, 60, 120, 240, 1440
-4-7 days 30, 60, 120, 240, 1440
-8-90 days	 60, 120, 240, 1440
+     * @param integer $Interval Sampling interval in minutes. The available options vary for different query period. See below: 
+1 day: `1`, `5`, `15`, `30`, `60`, `120`, `240`, `1440` 
+2 to 3 days: `15`, `30`, `60`, `120`, `240`, `1440`
+4 to 7 days: `30`, `60`, `120`, `240`, `1440`
+8 to 31 days: `60`, `120`, `240`, `1440`
      * @param array $Domains Specifies the list of domain names to be queried
 
 Up to 30 acceleration domain names can be queried at a time.

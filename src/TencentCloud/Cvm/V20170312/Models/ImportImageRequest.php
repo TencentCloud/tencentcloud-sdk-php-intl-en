@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDryRun(boolean $DryRun) Set Dry run to check the parameters without performing the operation
  * @method boolean getForce() Obtain Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
  * @method void setForce(boolean $Force) Set Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
+ * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a custom image.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a custom image.
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ImportImageRequest extends AbstractModel
     public $Force;
 
     /**
+     * @var array Tag description list. This parameter is used to bind a tag to a custom image.
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      * @param string $OsType OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
      * @param string $OsVersion OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
@@ -88,6 +95,7 @@ class ImportImageRequest extends AbstractModel
      * @param string $ImageDescription Image description
      * @param boolean $DryRun Dry run to check the parameters without performing the operation
      * @param boolean $Force Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
+     * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
      */
     function __construct()
     {
@@ -132,6 +140,15 @@ class ImportImageRequest extends AbstractModel
 
         if (array_key_exists("Force",$param) and $param["Force"] !== null) {
             $this->Force = $param["Force"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

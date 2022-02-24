@@ -20,8 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * WebSocket configuration.
  *
- * @method string getSwitch() Obtain WebSocket configuration switch, which can be `on` or `off`.
- * @method void setSwitch(string $Switch) Set WebSocket configuration switch, which can be `on` or `off`.
+ * @method string getSwitch() Obtain Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
+ * @method void setSwitch(string $Switch) Set Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
  * @method integer getTimeout() Obtain Sets timeout period in seconds. Maximum value: 65
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTimeout(integer $Timeout) Set Sets timeout period in seconds. Maximum value: 65
@@ -30,7 +34,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 class WebSocket extends AbstractModel
 {
     /**
-     * @var string WebSocket configuration switch, which can be `on` or `off`.
+     * @var string Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
      */
     public $Switch;
 
@@ -41,7 +47,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Timeout;
 
     /**
-     * @param string $Switch WebSocket configuration switch, which can be `on` or `off`.
+     * @param string $Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
+
+* WebSocket is now only available for beta users. To use it, please submit a ticket.
      * @param integer $Timeout Sets timeout period in seconds. Maximum value: 65
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */

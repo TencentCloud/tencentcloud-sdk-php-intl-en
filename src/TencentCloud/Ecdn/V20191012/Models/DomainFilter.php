@@ -20,28 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Filter for domain name query.
  *
- * @method string getName() Obtain Filter field name, which can be:
-- origin: primary origin server.
-- domain: domain name.
-- resourceId: domain name ID.
-- status: domain name status. Valid values: online, offline, processing.
-- disable: domain name blockage status. Valid values: normal, unlicensed.
-- projectId: project ID.
-- fullUrlCache: full path cache. Valid values: on, off.
-- https: whether to configure HTTPS. Valid values: on, off, processing.
-- originPullProtocol: origin-pull protocol type. Valid values: http, follow, https.
-- area: acceleration region. Valid values: mainland, overseas, global.
- * @method void setName(string $Name) Set Filter field name, which can be:
-- origin: primary origin server.
-- domain: domain name.
-- resourceId: domain name ID.
-- status: domain name status. Valid values: online, offline, processing.
-- disable: domain name blockage status. Valid values: normal, unlicensed.
-- projectId: project ID.
-- fullUrlCache: full path cache. Valid values: on, off.
-- https: whether to configure HTTPS. Valid values: on, off, processing.
-- originPullProtocol: origin-pull protocol type. Valid values: http, follow, https.
-- area: acceleration region. Valid values: mainland, overseas, global.
+ * @method string getName() Obtain Filters by the field name, which includes:
+- `origin`: Primary origin server.
+- `domain`: Domain name.
+- `resourceId`: Domain name ID.
+- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
+- `disable`: Whether the domain name is blocked. Valid values: `normal`, `unlicensed`.
+- `projectId`: Project ID.
+- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
+- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
+- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `area`: Acceleration region, which can be `mainland`，`overseas` or `global`.
+- `tagKey`: Tag key.
+ * @method void setName(string $Name) Set Filters by the field name, which includes:
+- `origin`: Primary origin server.
+- `domain`: Domain name.
+- `resourceId`: Domain name ID.
+- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
+- `disable`: Whether the domain name is blocked. Valid values: `normal`, `unlicensed`.
+- `projectId`: Project ID.
+- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
+- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
+- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `area`: Acceleration region, which can be `mainland`，`overseas` or `global`.
+- `tagKey`: Tag key.
  * @method array getValue() Obtain Filter field value.
  * @method void setValue(array $Value) Set Filter field value.
  * @method boolean getFuzzy() Obtain Whether to enable fuzzy query, which is supported only for filter fields `origin` and `domain`.
@@ -50,17 +52,18 @@ use TencentCloud\Common\AbstractModel;
 class DomainFilter extends AbstractModel
 {
     /**
-     * @var string Filter field name, which can be:
-- origin: primary origin server.
-- domain: domain name.
-- resourceId: domain name ID.
-- status: domain name status. Valid values: online, offline, processing.
-- disable: domain name blockage status. Valid values: normal, unlicensed.
-- projectId: project ID.
-- fullUrlCache: full path cache. Valid values: on, off.
-- https: whether to configure HTTPS. Valid values: on, off, processing.
-- originPullProtocol: origin-pull protocol type. Valid values: http, follow, https.
-- area: acceleration region. Valid values: mainland, overseas, global.
+     * @var string Filters by the field name, which includes:
+- `origin`: Primary origin server.
+- `domain`: Domain name.
+- `resourceId`: Domain name ID.
+- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
+- `disable`: Whether the domain name is blocked. Valid values: `normal`, `unlicensed`.
+- `projectId`: Project ID.
+- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
+- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
+- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `area`: Acceleration region, which can be `mainland`，`overseas` or `global`.
+- `tagKey`: Tag key.
      */
     public $Name;
 
@@ -75,17 +78,18 @@ class DomainFilter extends AbstractModel
     public $Fuzzy;
 
     /**
-     * @param string $Name Filter field name, which can be:
-- origin: primary origin server.
-- domain: domain name.
-- resourceId: domain name ID.
-- status: domain name status. Valid values: online, offline, processing.
-- disable: domain name blockage status. Valid values: normal, unlicensed.
-- projectId: project ID.
-- fullUrlCache: full path cache. Valid values: on, off.
-- https: whether to configure HTTPS. Valid values: on, off, processing.
-- originPullProtocol: origin-pull protocol type. Valid values: http, follow, https.
-- area: acceleration region. Valid values: mainland, overseas, global.
+     * @param string $Name Filters by the field name, which includes:
+- `origin`: Primary origin server.
+- `domain`: Domain name.
+- `resourceId`: Domain name ID.
+- `status`: Domain name status. Valid values: `online`, `offline`, and `processing`.
+- `disable`: Whether the domain name is blocked. Valid values: `normal`, `unlicensed`.
+- `projectId`: Project ID.
+- `fullUrlCache`: Whether to enable full-path cache, which can be `on` or `off`.
+- `https`: Whether to configure HTTPS, which can be `on`, `off` or `processing`.
+- `originPullProtocol`: Origin-pull protocol type, which can be `http`, `follow`, or `https`.
+- `area`: Acceleration region, which can be `mainland`，`overseas` or `global`.
+- `tagKey`: Tag key.
      * @param array $Value Filter field value.
      * @param boolean $Fuzzy Whether to enable fuzzy query, which is supported only for filter fields `origin` and `domain`.
      */

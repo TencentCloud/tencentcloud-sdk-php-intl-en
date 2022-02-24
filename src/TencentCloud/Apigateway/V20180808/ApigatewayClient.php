@@ -41,7 +41,7 @@ Each service in API Gateway provides a default domain name for users to call. If
  * @method Models\CreateIPStrategyResponse CreateIPStrategy(Models\CreateIPStrategyRequest $req) This API is used to create a service IP policy.
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) This API is used to create an API Gateway plugin.
  * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) This API is used to create a service.
-The maximum unit in API Gateway is service. Multiple APIs can be created in one service, and each service has a default domain name for users to call. You can also bind your own custom domain name to a service.
+A service is the biggest usage unit in API Gateway. Each service can contain multiple APIs and one default domain name for invocation. You can also bind your own custom domain name to a service. 
  * @method Models\CreateUsagePlanResponse CreateUsagePlan(Models\CreateUsagePlanRequest $req) This API is used to create a usage plan.
 To use API Gateway, you need to create a usage plan and bind it to a service environment.
  * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) This API is used to delete an API document.

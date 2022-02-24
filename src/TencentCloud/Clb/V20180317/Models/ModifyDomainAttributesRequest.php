@@ -24,18 +24,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerId(string $LoadBalancerId) Set CLB instance ID
  * @method string getListenerId() Obtain CLB listener ID
  * @method void setListenerId(string $ListenerId) Set CLB listener ID
- * @method string getDomain() Obtain Domain name, which must be under a created forwarding rule.
- * @method void setDomain(string $Domain) Set Domain name, which must be under a created forwarding rule.
- * @method string getNewDomain() Obtain New domain name
- * @method void setNewDomain(string $NewDomain) Set New domain name
+ * @method string getDomain() Obtain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+ * @method void setDomain(string $Domain) Set The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+ * @method string getNewDomain() Obtain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
+ * @method void setNewDomain(string $NewDomain) Set The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
  * @method CertificateInput getCertificate() Obtain Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
  * @method void setCertificate(CertificateInput $Certificate) Set Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
  * @method boolean getHttp2() Obtain Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method void setHttp2(boolean $Http2) Set Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
  * @method boolean getDefaultServer() Obtain Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
  * @method void setDefaultServer(boolean $DefaultServer) Set Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
- * @method string getNewDefaultServerDomain() Obtain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
- * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+ * @method string getNewDefaultServerDomain() Obtain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+ * @method void setNewDefaultServerDomain(string $NewDefaultServerDomain) Set Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+ * @method array getNewDomains() Obtain The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+ * @method void setNewDomains(array $NewDomains) Set The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
  */
 class ModifyDomainAttributesRequest extends AbstractModel
 {
@@ -50,12 +52,12 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $ListenerId;
 
     /**
-     * @var string Domain name, which must be under a created forwarding rule.
+     * @var string The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
      */
     public $Domain;
 
     /**
-     * @var string New domain name
+     * @var string The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
      */
     public $NewDomain;
 
@@ -75,19 +77,25 @@ class ModifyDomainAttributesRequest extends AbstractModel
     public $DefaultServer;
 
     /**
-     * @var string A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     * @var string Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
      */
     public $NewDefaultServerDomain;
 
     /**
+     * @var array The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
+     */
+    public $NewDomains;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
-     * @param string $Domain Domain name, which must be under a created forwarding rule.
-     * @param string $NewDomain New domain name
+     * @param string $Domain The domain name, which must be associated with an existing forwarding rule. If there are multiple domain names, you only need to specify one.
+     * @param string $NewDomain The one domain name to modify. `NewDomain` and `NewDomains` can not be both specified.
      * @param CertificateInput $Certificate Domain name certificate information. Note: This is only applicable to SNI-enabled listeners.
      * @param boolean $Http2 Whether to enable HTTP/2. Note: HTTP/2 can be enabled only for HTTPS domain names.
      * @param boolean $DefaultServer Whether to set this domain name as the default domain name. Note: Only one default domain name can be set under one listener.
-     * @param string $NewDefaultServerDomain A listener must be configured with a default domain name. If you need to disable the default domain name, you must specify another one as the new default domain name.
+     * @param string $NewDefaultServerDomain Specifies a new default domain name for the listener. This field is used when the original default domain name is disabled. If there are multiple domain names, specify one of them.
+     * @param array $NewDomains The new domain names to modify. `NewDomain` and `NewDomains` can not be both specified.
      */
     function __construct()
     {
@@ -133,6 +141,10 @@ class ModifyDomainAttributesRequest extends AbstractModel
 
         if (array_key_exists("NewDefaultServerDomain",$param) and $param["NewDefaultServerDomain"] !== null) {
             $this->NewDefaultServerDomain = $param["NewDefaultServerDomain"];
+        }
+
+        if (array_key_exists("NewDomains",$param) and $param["NewDomains"] !== null) {
+            $this->NewDomains = $param["NewDomains"];
         }
     }
 }

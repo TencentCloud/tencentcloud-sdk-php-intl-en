@@ -30,16 +30,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPackageName(string $PackageName) Set JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
  * @method string getFrom() Obtain Request source. Options: `IntelliJ`, `Coding`
  * @method void setFrom(string $From) Set Request source. Options: `IntelliJ`, `Coding`
- * @method string getDeployStrategyType() Obtain 
- * @method void setDeployStrategyType(string $DeployStrategyType) Set 
- * @method integer getTotalBatchCount() Obtain 
- * @method void setTotalBatchCount(integer $TotalBatchCount) Set 
- * @method integer getBatchInterval() Obtain 
- * @method void setBatchInterval(integer $BatchInterval) Set 
- * @method integer getBetaBatchNum() Obtain 
- * @method void setBetaBatchNum(integer $BetaBatchNum) Set 
- * @method integer getMinAvailable() Obtain 
- * @method void setMinAvailable(integer $MinAvailable) Set 
+ * @method string getDeployStrategyType() Obtain The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+ * @method void setDeployStrategyType(string $DeployStrategyType) Set The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+ * @method integer getTotalBatchCount() Obtain Total number of batches
+ * @method void setTotalBatchCount(integer $TotalBatchCount) Set Total number of batches
+ * @method integer getBatchInterval() Obtain Interval between the batches
+ * @method void setBatchInterval(integer $BatchInterval) Set Interval between the batches
+ * @method integer getBetaBatchNum() Obtain Number of instances in a beta batch
+ * @method void setBetaBatchNum(integer $BetaBatchNum) Set Number of instances in a beta batch
+ * @method integer getMinAvailable() Obtain Minimum number of available instances during the deployment
+ * @method void setMinAvailable(integer $MinAvailable) Set Minimum number of available instances during the deployment
  */
 class RollingUpdateApplicationByVersionRequest extends AbstractModel
 {
@@ -69,27 +69,27 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
     public $From;
 
     /**
-     * @var string 
+     * @var string The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
      */
     public $DeployStrategyType;
 
     /**
-     * @var integer 
+     * @var integer Total number of batches
      */
     public $TotalBatchCount;
 
     /**
-     * @var integer 
+     * @var integer Interval between the batches
      */
     public $BatchInterval;
 
     /**
-     * @var integer 
+     * @var integer Number of instances in a beta batch
      */
     public $BetaBatchNum;
 
     /**
-     * @var integer 
+     * @var integer Minimum number of available instances during the deployment
      */
     public $MinAvailable;
 
@@ -99,11 +99,11 @@ class RollingUpdateApplicationByVersionRequest extends AbstractModel
      * @param string $DeployVersion Update version. For image-based deployment, it is the value. For deployment with JAR/WAR files, it is `Version`.
      * @param string $PackageName JAR/WAR package name. It’s only required for deployment with JAR/WAR files.
      * @param string $From Request source. Options: `IntelliJ`, `Coding`
-     * @param string $DeployStrategyType 
-     * @param integer $TotalBatchCount 
-     * @param integer $BatchInterval 
-     * @param integer $BetaBatchNum 
-     * @param integer $MinAvailable 
+     * @param string $DeployStrategyType The deployment policy. Values: `AUTO` (automatically deploy), `BETA` (deploy a small batch first to test the result, and deploy the rest automatically) and `MANUAL` (manually deploy)
+     * @param integer $TotalBatchCount Total number of batches
+     * @param integer $BatchInterval Interval between the batches
+     * @param integer $BetaBatchNum Number of instances in a beta batch
+     * @param integer $MinAvailable Minimum number of available instances during the deployment
      */
     function __construct()
     {

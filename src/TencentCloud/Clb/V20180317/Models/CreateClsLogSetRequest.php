@@ -20,24 +20,24 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateClsLogSet request structure.
  *
- * @method integer getPeriod() Obtain Logset retention period in days; max value: 90
- * @method void setPeriod(integer $Period) Set Logset retention period in days; max value: 90
  * @method string getLogsetName() Obtain Logset name, which must be unique among all CLS logsets; default value: clb_logset
  * @method void setLogsetName(string $LogsetName) Set Logset name, which must be unique among all CLS logsets; default value: clb_logset
+ * @method integer getPeriod() Obtain Logset retention period (in days)
+ * @method void setPeriod(integer $Period) Set Logset retention period (in days)
  * @method string getLogsetType() Obtain Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  * @method void setLogsetType(string $LogsetType) Set Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  */
 class CreateClsLogSetRequest extends AbstractModel
 {
     /**
-     * @var integer Logset retention period in days; max value: 90
-     */
-    public $Period;
-
-    /**
      * @var string Logset name, which must be unique among all CLS logsets; default value: clb_logset
      */
     public $LogsetName;
+
+    /**
+     * @var integer Logset retention period (in days)
+     */
+    public $Period;
 
     /**
      * @var string Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
@@ -45,8 +45,8 @@ class CreateClsLogSetRequest extends AbstractModel
     public $LogsetType;
 
     /**
-     * @param integer $Period Logset retention period in days; max value: 90
      * @param string $LogsetName Logset name, which must be unique among all CLS logsets; default value: clb_logset
+     * @param integer $Period Logset retention period (in days)
      * @param string $LogsetType Logset type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
      */
     function __construct()
@@ -62,12 +62,12 @@ class CreateClsLogSetRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
-            $this->Period = $param["Period"];
-        }
-
         if (array_key_exists("LogsetName",$param) and $param["LogsetName"] !== null) {
             $this->LogsetName = $param["LogsetName"];
+        }
+
+        if (array_key_exists("Period",$param) and $param["Period"] !== null) {
+            $this->Period = $param["Period"];
         }
 
         if (array_key_exists("LogsetType",$param) and $param["LogsetType"] !== null) {

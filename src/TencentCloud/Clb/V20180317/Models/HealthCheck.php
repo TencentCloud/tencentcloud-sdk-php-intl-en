@@ -81,10 +81,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpVersion(string $HttpVersion) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceIpType() Obtain Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSourceIpType(integer $SourceIpType) Set Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSourceIpType() Obtain Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class HealthCheck extends AbstractModel
 {
@@ -179,8 +179,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpVersion;
 
     /**
-     * @var integer Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SourceIpType;
 
@@ -215,8 +215,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceIpType Specifies the source IP for health check. `0`: use the CLB VIP as the source IP; `1`: IP range starting with 100.64 serving as the source IP. Default: `0`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

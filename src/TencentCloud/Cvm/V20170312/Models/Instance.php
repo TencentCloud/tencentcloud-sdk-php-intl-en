@@ -106,6 +106,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setIsolatedSource(string $IsolatedSource) Set The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
 Note: this field may return null, indicating that no valid value was found.
+ * @method GPUInfo getGPUInfo() Obtain GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+ * @method void setGPUInfo(GPUInfo $GPUInfo) Set GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
  */
 class Instance extends AbstractModel
 {
@@ -289,6 +293,12 @@ Note: this field may return null, indicating that no valid value was found.
     public $IsolatedSource;
 
     /**
+     * @var GPUInfo GPU information. This field is only returned for GPU instances.
+Note: this field may return null, indicating that no valid value was found.
+     */
+    public $GPUInfo;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -331,6 +341,8 @@ Note: this field may return null, indicating that no valid value was found.
      * @param array $RdmaIpAddresses IP list of HPC cluster.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $IsolatedSource The isolation status of the instance. Valid values:<br><li>`ARREAR`: isolated due to overdue payment;<br></li><li>`EXPIRE`: isolated upon expiration;<br></li><li>`MANMADE`: isolated after manual returning;<br></li><li>`NOTISOLATED`: not isolated<br></li>
+Note: this field may return null, indicating that no valid value was found.
+     * @param GPUInfo $GPUInfo GPU information. This field is only returned for GPU instances.
 Note: this field may return null, indicating that no valid value was found.
      */
     function __construct()
@@ -495,6 +507,11 @@ Note: this field may return null, indicating that no valid value was found.
 
         if (array_key_exists("IsolatedSource",$param) and $param["IsolatedSource"] !== null) {
             $this->IsolatedSource = $param["IsolatedSource"];
+        }
+
+        if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {
+            $this->GPUInfo = new GPUInfo();
+            $this->GPUInfo->deserialize($param["GPUInfo"]);
         }
     }
 }

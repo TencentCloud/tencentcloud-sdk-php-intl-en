@@ -31,61 +31,81 @@ all clusters under the account will be obtained)
  * @method array getFilters() Obtain ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
  * @method void setFilters(array $Filters) Set ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
  * @method string getClusterType() Obtain Cluster type, such as `MANAGED_CLUSTER`
  * @method void setClusterType(string $ClusterType) Set Cluster type, such as `MANAGED_CLUSTER`
  */
@@ -111,32 +131,42 @@ all clusters under the account will be obtained)
      * @var array ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
      */
     public $Filters;
 
@@ -153,32 +183,42 @@ all clusters under the account will be obtained)
      * @param array $Filters ·  ClusterName
     Filters by the cluster name
     Type: String
-    Required: no
+    Required: No
+
+·  ClusterType
+    Filters by the cluster type
+    Type: String
+    Required: No
+
+·  ClusterStatus
+    Filters by the cluster status
+    Type: String
+    Required: No
 
 ·  Tags
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
 
 ·  vpc-id
     Filters by the VPC ID
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-key
     Filters by the tag key
     Type: String
-    Required: no
+    Required: No
 
 ·  tag-value
     Filters by the tag value
     Type: String
-    Required: no
+    Required: No
 
 ·  tag:tag-key
     Filters by key-value pairs of tags
     Type: String
-    Required: no
+    Required: No
      * @param string $ClusterType Cluster type, such as `MANAGED_CLUSTER`
      */
     function __construct()

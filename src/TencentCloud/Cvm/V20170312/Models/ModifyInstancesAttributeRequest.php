@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
- * @method string getInstanceName() Obtain Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
- * @method void setInstanceName(string $InstanceName) Set Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
- * @method array getSecurityGroups() Obtain ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
- * @method void setSecurityGroups(array $SecurityGroups) Set ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+ * @method string getInstanceName() Obtain The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+ * @method void setInstanceName(string $InstanceName) Set The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+ * @method array getSecurityGroups() Obtain IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+ * @method void setSecurityGroups(array $SecurityGroups) Set IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+ * @method boolean getDisableApiTermination() Obtain 
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set 
  */
 class ModifyInstancesAttributeRequest extends AbstractModel
 {
@@ -35,19 +39,27 @@ class ModifyInstancesAttributeRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var string Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
+     * @var string The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
      */
     public $InstanceName;
 
     /**
-     * @var array ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+     * @var array IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
      */
     public $SecurityGroups;
 
     /**
+     * @var boolean 
+     */
+    public $DisableApiTermination;
+
+    /**
      * @param array $InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
-     * @param string $InstanceName Instance name. You can specify any name you like, but its length cannot exceed 60 characters.
-     * @param array $SecurityGroups ID list of security groups of the instance. The instance will be associated with the specified security groups and will be disassociated from the original security groups.
+     * @param string $InstanceName The instance name, which can not exceed 60 characters
+<dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
+     * @param array $SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+     * @param boolean $DisableApiTermination 
      */
     function __construct()
     {
@@ -72,6 +84,10 @@ class ModifyInstancesAttributeRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

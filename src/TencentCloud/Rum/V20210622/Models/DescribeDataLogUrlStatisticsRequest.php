@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() Obtain Start time
  * @method void setStartTime(integer $StartTime) Set Start time
- * @method string getType() Obtain "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
- * @method void setType(string $Type) Set "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+ * @method string getType() Obtain `analysis`: exception analysis; `compare`: exception list comparison; `allcount`: performance view; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
+ * @method void setType(string $Type) Set `analysis`: exception analysis; `compare`: exception list comparison; `allcount`: performance view; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
  * @method integer getEndTime() Obtain End time
  * @method void setEndTime(integer $EndTime) Set End time
  * @method integer getID() Obtain Project ID
@@ -71,7 +71,7 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @var string `analysis`: exception analysis; `compare`: exception list comparison; `allcount`: performance view; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      */
     public $Type;
 
@@ -172,7 +172,7 @@ class DescribeDataLogUrlStatisticsRequest extends AbstractModel
 
     /**
      * @param integer $StartTime Start time
-     * @param string $Type "analysis", "compare", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+     * @param string $Type `analysis`: exception analysis; `compare`: exception list comparison; `allcount`: performance view; `condition`: condition list; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      * @param integer $EndTime End time
      * @param integer $ID Project ID
      * @param string $ExtSecond Custom 2

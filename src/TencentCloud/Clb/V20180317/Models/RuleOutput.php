@@ -82,6 +82,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setQuicStatus(string $QuicStatus) Set QUIC status
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDomains() Obtain List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDomains(array $Domains) Set List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class RuleOutput extends AbstractModel
 {
@@ -201,6 +205,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $QuicStatus;
 
     /**
+     * @var array List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Domains;
+
+    /**
      * @param string $LocationId Forwarding rule ID
      * @param string $Domain Domain name of the forwarding rule.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -232,6 +242,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $QuicStatus QUIC status
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Domains List of domain names associated with the forwarding rule
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -332,6 +344,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("QuicStatus",$param) and $param["QuicStatus"] !== null) {
             $this->QuicStatus = $param["QuicStatus"];
+        }
+
+        if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
+            $this->Domains = $param["Domains"];
         }
     }
 }

@@ -63,7 +63,11 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method string getJdkVersion() Obtain JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
  * @method void setJdkVersion(string $JdkVersion) Set JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
  * @method array getSecurityGroupIds() Obtain Security group IDs
@@ -102,6 +106,12 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) Set Scheduled auto scaling policy
  * @method integer getLogEnable() Obtain Specifies whether to enable logging. `1`: enable; `0`: do not enable
  * @method void setLogEnable(integer $LogEnable) Set Specifies whether to enable logging. `1`: enable; `0`: do not enable
+ * @method boolean getConfEdited() Obtain Whether the configuration is modified (except for the image configuration)
+ * @method void setConfEdited(boolean $ConfEdited) Set Whether the configuration is modified (except for the image configuration)
+ * @method boolean getSpeedUp() Obtain Whether the application acceleration is enabled 
+ * @method void setSpeedUp(boolean $SpeedUp) Set Whether the application acceleration is enabled 
+ * @method HealthCheckConfig getStartupProbe() Obtain Whether to enable probing
+ * @method void setStartupProbe(HealthCheckConfig $StartupProbe) Set Whether to enable probing
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -191,6 +201,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
 
     /**
      * @var string JDK version
+- KONA: use KONA JDK
+- OPEN: use open JDK
 - KONA: use KONA JDK
 - OPEN: use open JDK
      */
@@ -287,6 +299,21 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $LogEnable;
 
     /**
+     * @var boolean Whether the configuration is modified (except for the image configuration)
+     */
+    public $ConfEdited;
+
+    /**
+     * @var boolean Whether the application acceleration is enabled 
+     */
+    public $SpeedUp;
+
+    /**
+     * @var HealthCheckConfig Whether to enable probing
+     */
+    public $StartupProbe;
+
+    /**
      * @param string $ApplicationId Application ID
      * @param integer $InitPodNum Number of initialized pods
      * @param float $CpuSpec CPU specification
@@ -310,6 +337,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param string $JdkVersion JDK version
 - KONA: use KONA JDK
 - OPEN: use open JDK
+- KONA: use KONA JDK
+- OPEN: use open JDK
      * @param array $SecurityGroupIds Security group IDs
      * @param LogOutputConf $LogOutputConf Log output configuration
      * @param integer $SourceChannel Source channel
@@ -328,6 +357,9 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param array $HorizontalAutoscaler Auto scaling policy
      * @param array $CronHorizontalAutoscaler Scheduled auto scaling policy
      * @param integer $LogEnable Specifies whether to enable logging. `1`: enable; `0`: do not enable
+     * @param boolean $ConfEdited Whether the configuration is modified (except for the image configuration)
+     * @param boolean $SpeedUp Whether the application acceleration is enabled 
+     * @param HealthCheckConfig $StartupProbe Whether to enable probing
      */
     function __construct()
     {
@@ -516,6 +548,19 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
 
         if (array_key_exists("LogEnable",$param) and $param["LogEnable"] !== null) {
             $this->LogEnable = $param["LogEnable"];
+        }
+
+        if (array_key_exists("ConfEdited",$param) and $param["ConfEdited"] !== null) {
+            $this->ConfEdited = $param["ConfEdited"];
+        }
+
+        if (array_key_exists("SpeedUp",$param) and $param["SpeedUp"] !== null) {
+            $this->SpeedUp = $param["SpeedUp"];
+        }
+
+        if (array_key_exists("StartupProbe",$param) and $param["StartupProbe"] !== null) {
+            $this->StartupProbe = new HealthCheckConfig();
+            $this->StartupProbe->deserialize($param["StartupProbe"]);
         }
     }
 }

@@ -116,6 +116,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsBase64Trigger(boolean $IsBase64Trigger) Set Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
  * @method array getBase64EncodedTriggerRules() Obtain Header trigger rules. The number of rules cannot exceed 10.
  * @method void setBase64EncodedTriggerRules(array $Base64EncodedTriggerRules) Set Header trigger rules. The number of rules cannot exceed 10.
+ * @method string getEventBusId() Obtain Event bus ID.
+ * @method void setEventBusId(string $EventBusId) Set Event bus ID.
+ * @method string getServiceScfFunctionType() Obtain SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+ * @method void setServiceScfFunctionType(string $ServiceScfFunctionType) Set SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+ * @method string getEIAMAppType() Obtain EIAM application type.
+ * @method void setEIAMAppType(string $EIAMAppType) Set EIAM application type.
+ * @method string getEIAMAuthType() Obtain EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+ * @method void setEIAMAuthType(string $EIAMAuthType) Set EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+ * @method string getEIAMAppId() Obtain Validity of the EIAM application token. Unit: second. Default value: `7200`.
+ * @method void setEIAMAppId(string $EIAMAppId) Set Validity of the EIAM application token. Unit: second. Default value: `7200`.
+ * @method integer getTokenTimeout() Obtain EIAM application ID.
+ * @method void setTokenTimeout(integer $TokenTimeout) Set EIAM application ID.
  */
 class ModifyApiRequest extends AbstractModel
 {
@@ -360,6 +372,36 @@ class ModifyApiRequest extends AbstractModel
     public $Base64EncodedTriggerRules;
 
     /**
+     * @var string Event bus ID.
+     */
+    public $EventBusId;
+
+    /**
+     * @var string SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     */
+    public $ServiceScfFunctionType;
+
+    /**
+     * @var string EIAM application type.
+     */
+    public $EIAMAppType;
+
+    /**
+     * @var string EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     */
+    public $EIAMAuthType;
+
+    /**
+     * @var string Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     */
+    public $EIAMAppId;
+
+    /**
+     * @var integer EIAM application ID.
+     */
+    public $TokenTimeout;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, CLB, SCF, WEBSOCKET, TARGET (in beta test).
      * @param RequestConfig $RequestConfig Request frontend configuration.
@@ -408,6 +450,12 @@ class ModifyApiRequest extends AbstractModel
      * @param boolean $IsBase64Encoded Whether to enable Base64 encoding. This parameter takes effect only when the backend is SCF.
      * @param boolean $IsBase64Trigger Whether to trigger Base64 encoding by header. This parameter takes effect only when the backend is SCF.
      * @param array $Base64EncodedTriggerRules Header trigger rules. The number of rules cannot exceed 10.
+     * @param string $EventBusId Event bus ID.
+     * @param string $ServiceScfFunctionType SCF function type, which takes effect when the backend type is `SCF`. Valid values: `EVENT` and `HTTP`.
+     * @param string $EIAMAppType EIAM application type.
+     * @param string $EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
+     * @param string $EIAMAppId Validity of the EIAM application token. Unit: second. Default value: `7200`.
+     * @param integer $TokenTimeout EIAM application ID.
      */
     function __construct()
     {
@@ -649,6 +697,30 @@ class ModifyApiRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Base64EncodedTriggerRules, $obj);
             }
+        }
+
+        if (array_key_exists("EventBusId",$param) and $param["EventBusId"] !== null) {
+            $this->EventBusId = $param["EventBusId"];
+        }
+
+        if (array_key_exists("ServiceScfFunctionType",$param) and $param["ServiceScfFunctionType"] !== null) {
+            $this->ServiceScfFunctionType = $param["ServiceScfFunctionType"];
+        }
+
+        if (array_key_exists("EIAMAppType",$param) and $param["EIAMAppType"] !== null) {
+            $this->EIAMAppType = $param["EIAMAppType"];
+        }
+
+        if (array_key_exists("EIAMAuthType",$param) and $param["EIAMAuthType"] !== null) {
+            $this->EIAMAuthType = $param["EIAMAuthType"];
+        }
+
+        if (array_key_exists("EIAMAppId",$param) and $param["EIAMAppId"] !== null) {
+            $this->EIAMAppId = $param["EIAMAppId"];
+        }
+
+        if (array_key_exists("TokenTimeout",$param) and $param["TokenTimeout"] !== null) {
+            $this->TokenTimeout = $param["TokenTimeout"];
         }
     }
 }

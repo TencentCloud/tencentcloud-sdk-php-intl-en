@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getStartTime() Obtain Start time
  * @method void setStartTime(integer $StartTime) Set Start time
- * @method string getType() Obtain Type
- * @method void setType(string $Type) Set Type
+ * @method string getType() Obtain `allcount`: performance view; `day`: 14-day data; `condition`: condition list; `ckuv`: UV trend; `ckpv`: PV trend; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
+ * @method void setType(string $Type) Set `allcount`: performance view; `day`: 14-day data; `condition`: condition list; `ckuv`: UV trend; `ckpv`: PV trend; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
  * @method integer getEndTime() Obtain End time
  * @method void setEndTime(integer $EndTime) Set End time
  * @method integer getID() Obtain Project ID
@@ -73,7 +73,7 @@ class DescribeDataEventUrlRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string Type
+     * @var string `allcount`: performance view; `day`: 14-day data; `condition`: condition list; `ckuv`: UV trend; `ckpv`: PV trend; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      */
     public $Type;
 
@@ -179,7 +179,7 @@ class DescribeDataEventUrlRequest extends AbstractModel
 
     /**
      * @param integer $StartTime Start time
-     * @param string $Type Type
+     * @param string $Type `allcount`: performance view; `day`: 14-day data; `condition`: condition list; `ckuv`: UV trend; `ckpv`: PV trend; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      * @param integer $EndTime End time
      * @param integer $ID Project ID
      * @param string $ExtSecond Custom 2
