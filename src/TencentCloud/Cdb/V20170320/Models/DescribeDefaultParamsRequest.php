@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEngineVersion() Obtain MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
  * @method void setEngineVersion(string $EngineVersion) Set MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+ * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  */
 class DescribeDefaultParamsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeDefaultParamsRequest extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var string Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     */
+    public $TemplateType;
+
+    /**
      * @param string $EngineVersion MySQL version. Currently, the supported versions are ["5.1", "5.5", "5.6", "5.7"].
+     * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeDefaultParamsRequest extends AbstractModel
         }
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
+            $this->TemplateType = $param["TemplateType"];
         }
     }
 }

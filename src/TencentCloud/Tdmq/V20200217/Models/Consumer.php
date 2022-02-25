@@ -36,6 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setClientVersion(string $ClientVersion) Set Consumer version.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPartition() Obtain Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPartition(integer $Partition) Set Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Consumer extends AbstractModel
 {
@@ -64,6 +68,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ClientVersion;
 
     /**
+     * @var integer Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Partition;
+
+    /**
      * @param string $ConnectedSince The time when the consumer started connecting.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ConsumerAddr Consumer address.
@@ -72,6 +82,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClientVersion Consumer version.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Partition Serial number of the topic partition connected to the consumer.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -100,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ClientVersion",$param) and $param["ClientVersion"] !== null) {
             $this->ClientVersion = $param["ClientVersion"];
+        }
+
+        if (array_key_exists("Partition",$param) and $param["Partition"] !== null) {
+            $this->Partition = $param["Partition"];
         }
     }
 }

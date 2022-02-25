@@ -84,6 +84,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Modification time.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSubType() Obtain Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubType(string $SubType) Set Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getBlockedSubscriptionOnUnackedMsgs() Obtain Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBlockedSubscriptionOnUnackedMsgs(boolean $BlockedSubscriptionOnUnackedMsgs) Set Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxUnackedMsgNum() Obtain Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Subscription extends AbstractModel
 {
@@ -188,6 +200,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var string Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubType;
+
+    /**
+     * @var boolean Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BlockedSubscriptionOnUnackedMsgs;
+
+    /**
+     * @var integer Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxUnackedMsgNum;
+
+    /**
      * @param string $TopicName Topic name.
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $ConnectedSince The time when the consumer started connecting.
@@ -220,6 +250,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Modification time.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxUnackedMsgNum Maximum number of unacknowledged messages.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -310,6 +346,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SubType",$param) and $param["SubType"] !== null) {
+            $this->SubType = $param["SubType"];
+        }
+
+        if (array_key_exists("BlockedSubscriptionOnUnackedMsgs",$param) and $param["BlockedSubscriptionOnUnackedMsgs"] !== null) {
+            $this->BlockedSubscriptionOnUnackedMsgs = $param["BlockedSubscriptionOnUnackedMsgs"];
+        }
+
+        if (array_key_exists("MaxUnackedMsgNum",$param) and $param["MaxUnackedMsgNum"] !== null) {
+            $this->MaxUnackedMsgNum = $param["MaxUnackedMsgNum"];
         }
     }
 }

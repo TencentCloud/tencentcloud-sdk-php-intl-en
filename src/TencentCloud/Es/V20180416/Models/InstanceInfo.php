@@ -236,6 +236,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHealthStatus(integer $HealthStatus) Set Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getEsPrivateUrl() Obtain Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setEsPrivateUrl(string $EsPrivateUrl) Set Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getEsPrivateDomain() Obtain Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setEsPrivateDomain(string $EsPrivateDomain) Set Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -636,6 +644,18 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $HealthStatus;
 
     /**
+     * @var string Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $EsPrivateUrl;
+
+    /**
+     * @var string Private domain of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $EsPrivateDomain;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -743,6 +763,10 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $FrozenDiskSize Frozen node disk size (in GB)
 Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $HealthStatus Cluster health status. `-1`: Unknown; `0`: Green; `1`: Yellow; `2`: Red
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $EsPrivateUrl Private URL of the HTTPS cluster
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $EsPrivateDomain Private domain of the HTTPS cluster
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -1066,6 +1090,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("EsPrivateUrl",$param) and $param["EsPrivateUrl"] !== null) {
+            $this->EsPrivateUrl = $param["EsPrivateUrl"];
+        }
+
+        if (array_key_exists("EsPrivateDomain",$param) and $param["EsPrivateDomain"] !== null) {
+            $this->EsPrivateDomain = $param["EsPrivateDomain"];
         }
     }
 }

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
  * @method boolean getTrace() Obtain Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.
+ * @method array getTags() Obtain Tag array.
+ * @method void setTags(array $Tags) Set Tag array.
  */
 class CreateCmqTopicRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCmqTopicRequest extends AbstractModel
     public $Trace;
 
     /**
+     * @var array Tag array.
+     */
+    public $Tags;
+
+    /**
      * @param string $TopicName Topic name, which must be unique in the same topic under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
      * @param integer $MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
      * @param integer $FilterType Used to specify the message match policy for the topic. 1: tag match policy (default value); 2: routing match policy.
      * @param integer $MsgRetentionSeconds Message retention period. Value range: 60–86400 seconds (i.e., 1 minute–1 day). Default value: 86400.
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.
+     * @param array $Tags Tag array.
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateCmqTopicRequest extends AbstractModel
 
         if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
             $this->Trace = $param["Trace"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AZ sale configurations
  *
- * @method integer getStatus() Obtain AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
- * @method void setStatus(integer $Status) Set AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+ * @method integer getStatus() Obtain AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+ * @method void setStatus(integer $Status) Set AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
  * @method string getZoneName() Obtain AZ name
  * @method void setZoneName(string $ZoneName) Set AZ name
  * @method boolean getIsCustom() Obtain Whether it is a custom instance type
@@ -54,11 +54,21 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRemoteRoZone(array $RemoteRoZone) Set Information of supported cross-AZ read-only zone
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getExClusterStatus() Obtain AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+ * @method void setExClusterStatus(integer $ExClusterStatus) Set AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+ * @method array getExClusterRemoteRoZone() Obtain AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExClusterRemoteRoZone(array $ExClusterRemoteRoZone) Set AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method ZoneConf getExClusterZoneConf() Obtain AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExClusterZoneConf(ZoneConf $ExClusterZoneConf) Set AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ZoneSellConf extends AbstractModel
 {
     /**
-     * @var integer AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+     * @var integer AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
      */
     public $Status;
 
@@ -139,7 +149,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RemoteRoZone;
 
     /**
-     * @param integer $Status AZ status. Value range: 0 (not available), 1 (available), 2 (purchasable), 3 (not purchasable), 4 (not displayed)
+     * @var integer AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     */
+    public $ExClusterStatus;
+
+    /**
+     * @var array AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExClusterRemoteRoZone;
+
+    /**
+     * @var ZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExClusterZoneConf;
+
+    /**
+     * @param integer $Status AZ status used to indicate whether instances are purchasable. Value range: `1` (purchasable), `3` (not purchasable), `4` (AZ not displayed)
      * @param string $ZoneName AZ name
      * @param boolean $IsCustom Whether it is a custom instance type
      * @param boolean $IsSupportDr Whether disaster recovery is supported
@@ -156,6 +183,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $IsSupportRemoteRo Whether cross-AZ read-only access is supported
      * @param array $RemoteRoZone Information of supported cross-AZ read-only zone
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $ExClusterStatus AZ status used to indicate whether dedicated instances are purchasable. Valid values: `1 (purchasable), `3` (not purchasable), `4` (AZ not displayed)
+     * @param array $ExClusterRemoteRoZone AZ information of the cross-AZ deployed read-only instances which are associated with a dedicated instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param ZoneConf $ExClusterZoneConf AZ information of a multi-AZ deployed dedicated instance.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -238,6 +270,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RemoteRoZone",$param) and $param["RemoteRoZone"] !== null) {
             $this->RemoteRoZone = $param["RemoteRoZone"];
+        }
+
+        if (array_key_exists("ExClusterStatus",$param) and $param["ExClusterStatus"] !== null) {
+            $this->ExClusterStatus = $param["ExClusterStatus"];
+        }
+
+        if (array_key_exists("ExClusterRemoteRoZone",$param) and $param["ExClusterRemoteRoZone"] !== null) {
+            $this->ExClusterRemoteRoZone = $param["ExClusterRemoteRoZone"];
+        }
+
+        if (array_key_exists("ExClusterZoneConf",$param) and $param["ExClusterZoneConf"] !== null) {
+            $this->ExClusterZoneConf = new ZoneConf();
+            $this->ExClusterZoneConf->deserialize($param["ExClusterZoneConf"]);
         }
     }
 }

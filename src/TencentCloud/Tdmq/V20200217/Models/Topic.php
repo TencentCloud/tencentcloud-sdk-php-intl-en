@@ -116,6 +116,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setConsumerLimit(string $ConsumerLimit) Set Maximum number of consumers.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getPulsarTopicType() Obtain `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPulsarTopicType(integer $PulsarTopicType) Set `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Topic extends AbstractModel
 {
@@ -252,6 +262,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ConsumerLimit;
 
     /**
+     * @var integer `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PulsarTopicType;
+
+    /**
      * @param string $AverageMsgSize Average size of the messages published in the last interval in bytes.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ConsumerCount Number of consumers.
@@ -300,6 +319,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ConsumerLimit Maximum number of consumers.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $PulsarTopicType `0`: Non-persistent and non-partitioned
+`1`: Non-persistent and partitioned
+`2`: Persistent and non-partitioned
+`3`: Persistent and partitioned
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -401,6 +425,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ConsumerLimit",$param) and $param["ConsumerLimit"] !== null) {
             $this->ConsumerLimit = $param["ConsumerLimit"];
+        }
+
+        if (array_key_exists("PulsarTopicType",$param) and $param["PulsarTopicType"] !== null) {
+            $this->PulsarTopicType = $param["PulsarTopicType"];
         }
     }
 }

@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxTimeToLive(integer $MaxTimeToLive) Set Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
  * @method boolean getTrace() Obtain Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
+ * @method array getTags() Obtain Tag array.
+ * @method void setTags(array $Tags) Set Tag array.
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -129,6 +131,11 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Trace;
 
     /**
+     * @var array Tag array.
+     */
+    public $Tags;
+
+    /**
      * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
@@ -144,6 +151,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxReceiveCount Maximum receipt times. Value range: 1–1000
      * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
+     * @param array $Tags Tag array.
      */
     function __construct()
     {
@@ -216,6 +224,15 @@ class CreateCmqQueueRequest extends AbstractModel
 
         if (array_key_exists("Trace",$param) and $param["Trace"] !== null) {
             $this->Trace = $param["Trace"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
