@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Player configuration name.
  * @method void setName(string $Name) Set Player configuration name.
+ * @method string getAudioVideoType() Obtain Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+ * @method void setAudioVideoType(string $AudioVideoType) Set Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
  * @method string getDrmSwitch() Obtain Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -32,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set ID of the unencrypted adaptive bitrate streaming template that allows output.
  * @method DrmStreamingsInfoForUpdate getDrmStreamingsInfo() Obtain Content of the DRM-protected adaptive bitrate streaming template that allows output.
  * @method void setDrmStreamingsInfo(DrmStreamingsInfoForUpdate $DrmStreamingsInfo) Set Content of the DRM-protected adaptive bitrate streaming template that allows output.
+ * @method integer getTranscodeDefinition() Obtain ID of the transcoding template allowed for playback
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set ID of the transcoding template allowed for playback
  * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
  * @method array getResolutionNames() Obtain Display name of player for substreams with different resolutions.
@@ -59,6 +69,14 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $Name;
 
     /**
+     * @var string Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+     */
+    public $AudioVideoType;
+
+    /**
      * @var string Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -74,6 +92,11 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @var DrmStreamingsInfoForUpdate Content of the DRM-protected adaptive bitrate streaming template that allows output.
      */
     public $DrmStreamingsInfo;
+
+    /**
+     * @var integer ID of the transcoding template allowed for playback
+     */
+    public $TranscodeDefinition;
 
     /**
      * @var integer ID of the image sprite generating template that allows output.
@@ -110,11 +133,16 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
 
     /**
      * @param string $Name Player configuration name.
+     * @param string $AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
      * @param string $DrmSwitch Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
      * @param integer $AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output.
      * @param DrmStreamingsInfoForUpdate $DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
+     * @param integer $TranscodeDefinition ID of the transcoding template allowed for playback
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
      * @param array $ResolutionNames Display name of player for substreams with different resolutions.
      * @param string $Domain Domain name used for playback. If its value is `Default`, the domain name configured in [Default Distribution Configuration](https://intl.cloud.tencent.com/document/product/266/33373?from_cn_redirect=1) will be used.
@@ -142,6 +170,10 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
+            $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
             $this->DrmSwitch = $param["DrmSwitch"];
         }
@@ -153,6 +185,10 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
         if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfoForUpdate();
             $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+        }
+
+        if (array_key_exists("TranscodeDefinition",$param) and $param["TranscodeDefinition"] !== null) {
+            $this->TranscodeDefinition = $param["TranscodeDefinition"];
         }
 
         if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {

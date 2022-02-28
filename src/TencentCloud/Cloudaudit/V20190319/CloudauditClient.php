@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 /**
+ * @method Models\DescribeAuditTracksResponse DescribeAuditTracks(Models\DescribeAuditTracksRequest $req) This API is used to query the CloudAudit tracking set list.
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) This API is used to query CloudAudit logs.
  */
 

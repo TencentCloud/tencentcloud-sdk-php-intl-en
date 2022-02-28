@@ -22,18 +22,44 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
  * @method void setName(string $Name) Set Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
- * @method string getDrmSwitch() Obtain Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
- * @method void setDrmSwitch(string $DrmSwitch) Set Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
- * @method integer getAdaptiveDynamicStreamingDefinition() Obtain ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
- * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
- * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
- * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+ * @method string getAudioVideoType() Obtain Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+ * @method void setAudioVideoType(string $AudioVideoType) Set Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+ * @method string getDrmSwitch() Obtain Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+ * @method void setDrmSwitch(string $DrmSwitch) Set Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+ * @method integer getAdaptiveDynamicStreamingDefinition() Obtain ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+ * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+ * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+ * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+ * @method integer getTranscodeDefinition() Obtain ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
  * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
  * @method array getResolutionNames() Obtain Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
@@ -73,22 +99,43 @@ class CreateSuperPlayerConfigRequest extends AbstractModel
     public $Name;
 
     /**
-     * @var string Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
+     * @var string Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+     */
+    public $AudioVideoType;
+
+    /**
+     * @var string Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
      */
     public $DrmSwitch;
 
     /**
-     * @var integer ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
+     * @var integer ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
      */
     public $AdaptiveDynamicStreamingDefinition;
 
     /**
-     * @var DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+     * @var DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
      */
     public $DrmStreamingsInfo;
+
+    /**
+     * @var integer ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
+     */
+    public $TranscodeDefinition;
 
     /**
      * @var integer ID of the image sprite generating template that allows output.
@@ -131,12 +178,25 @@ Default value: OFF.
 
     /**
      * @param string $Name Player configuration name, which can contain up to 64 letters, digits, underscores, and hyphens (such as test_ABC-123) and must be unique under a user.
-     * @param string $DrmSwitch Switch of DRM-protected adaptive bitstream playback:
-<li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
-<li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
-Default value: OFF.
-     * @param integer $AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `OFF`.
-     * @param DrmStreamingsInfo $DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output, which is required if `DrmSwitch` is `ON`.
+     * @param string $AudioVideoType Type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming</li>
+<li>Transcode</li>
+<li>Original</li>
+Default value: `AdaptiveDynamicStream`
+     * @param string $DrmSwitch Whether to allow only adaptive bitrate streaming playback protected by DRM. Valid values:
+<li>`ON`: allow only adaptive bitrate streaming playback protected by DRM</li>
+<li>`OFF`: allow adaptive bitrate streaming playback not protected by DRM</li>
+Default value: `OFF`
+This parameter is valid when `AudioVideoType` is `AdaptiveDynamicStream`.
+     * @param integer $AdaptiveDynamicStreamingDefinition ID of the adaptive bitrate streaming template allowed for playback not protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `OFF`.
+     * @param DrmStreamingsInfo $DrmStreamingsInfo Content of the adaptive bitrate streaming template allowed for playback protected by DRM.
+
+This parameter is required if `AudioVideoType` is `AdaptiveDynamicStream` and `DrmSwitch` is `ON`.
+     * @param integer $TranscodeDefinition ID of the transcoding template allowed for playback
+
+This parameter is required if `AudioVideoType` is `Transcode`.
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
      * @param array $ResolutionNames Display name of player for substreams with different resolutions. If this parameter is left empty or an empty array, the default configuration will be used:
 <li>MinEdgeLength: 240, Name: LD;</li>
@@ -170,6 +230,10 @@ Default value: OFF.
             $this->Name = $param["Name"];
         }
 
+        if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
+            $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
             $this->DrmSwitch = $param["DrmSwitch"];
         }
@@ -181,6 +245,10 @@ Default value: OFF.
         if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
             $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+        }
+
+        if (array_key_exists("TranscodeDefinition",$param) and $param["TranscodeDefinition"] !== null) {
+            $this->TranscodeDefinition = $param["TranscodeDefinition"];
         }
 
         if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {
