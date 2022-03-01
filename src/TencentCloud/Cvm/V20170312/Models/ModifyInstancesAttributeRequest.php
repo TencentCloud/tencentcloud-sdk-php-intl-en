@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
  * @method array getSecurityGroups() Obtain IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
  * @method void setSecurityGroups(array $SecurityGroups) Set IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
- * @method boolean getDisableApiTermination() Obtain 
- * @method void setDisableApiTermination(boolean $DisableApiTermination) Set 
+ * @method boolean getDisableApiTermination() Obtain Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
  */
 class ModifyInstancesAttributeRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class ModifyInstancesAttributeRequest extends AbstractModel
     public $SecurityGroups;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
      */
     public $DisableApiTermination;
 
@@ -59,7 +59,7 @@ class ModifyInstancesAttributeRequest extends AbstractModel
      * @param string $InstanceName The instance name, which can not exceed 60 characters
 <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
      * @param array $SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
-     * @param boolean $DisableApiTermination 
+     * @param boolean $DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
      */
     function __construct()
     {
