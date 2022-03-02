@@ -23,13 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
  * @method string getServiceType() Obtain Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
  * @method void setServiceType(string $ServiceType) Set Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
  * @method Origin getOrigin() Obtain Origin server configuration
  * @method void setOrigin(Origin $Origin) Set Origin server configuration
  * @method integer getProjectId() Obtain Project ID. Default value: 0, indicating `Default Project`
@@ -102,8 +106,8 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
  * @method void setIpv6Access(Ipv6Access $Ipv6Access) Set IPv6 access configuration
  * @method OfflineCache getOfflineCache() Obtain Offline cache
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
- * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
- * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method Quic getQuic() Obtain QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+ * @method void setQuic(Quic $Quic) Set QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
  * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Access authentication for S3 origin
  * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Access authentication for S3 origin
  * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
@@ -118,9 +122,11 @@ class AddCdnDomainRequest extends AbstractModel
 
     /**
      * @var string Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public $ServiceType;
 
@@ -285,7 +291,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     public $OfflineCache;
 
     /**
-     * @var Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @var Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public $Quic;
 
@@ -302,9 +308,11 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
     /**
      * @param string $Domain Domain name
      * @param string $ServiceType Acceleration domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      * @param Origin $Origin Origin server configuration
      * @param integer $ProjectId Project ID. Default value: 0, indicating `Default Project`
      * @param IpFilter $IpFilter IP blocklist/allowlist configuration
@@ -341,7 +349,7 @@ Overseas acceleration service must be enabled to use overseas acceleration and g
      * @param array $Tag Tag configuration
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
-     * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param Quic $Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      * @param AwsPrivateAccess $AwsPrivateAccess Access authentication for S3 origin
      * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
      */

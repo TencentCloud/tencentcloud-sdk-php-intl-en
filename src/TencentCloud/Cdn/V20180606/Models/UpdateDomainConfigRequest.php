@@ -114,8 +114,8 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  * @method OriginCombine getOriginCombine() Obtain Merging pull requests
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
- * @method Quic getQuic() Obtain QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
- * @method void setQuic(Quic $Quic) Set QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+ * @method Quic getQuic() Obtain QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
+ * @method void setQuic(Quic $Quic) Set QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
  * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
  * @method WebSocket getWebSocket() Obtain WebSocket configuration.
@@ -331,7 +331,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     public $OriginCombine;
 
     /**
-     * @var Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @var Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public $Quic;
 
@@ -403,7 +403,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
      * @param OriginCombine $OriginCombine Merging pull requests
-     * @param Quic $Quic QUIC is in beta now. Please submit an application to join the beta. For more information, please see QUIC product documents.
+     * @param Quic $Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
      * @param WebSocket $WebSocket WebSocket configuration.
      * @param RemoteAuthentication $RemoteAuthentication Configuration of remote authentication

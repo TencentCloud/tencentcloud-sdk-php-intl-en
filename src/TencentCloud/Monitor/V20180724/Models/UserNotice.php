@@ -32,10 +32,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setEndTime(integer $EndTime) Set Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getNoticeWay() Obtain Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNoticeWay(array $NoticeWay) Set Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getNoticeWay() Obtain Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNoticeWay(array $NoticeWay) Set Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getUserIds() Obtain User `uid` list
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUserIds(array $UserIds) Set User `uid` list
@@ -64,6 +64,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNeedPhoneArriveNotice(integer $NeedPhoneArriveNotice) Set Whether receipt notification is required. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPhoneCallType() Obtain Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPhoneCallType(string $PhoneCallType) Set Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class UserNotice extends AbstractModel
 {
@@ -86,8 +90,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $EndTime;
 
     /**
-     * @var array Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $NoticeWay;
 
@@ -134,14 +138,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $NeedPhoneArriveNotice;
 
     /**
+     * @var string Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PhoneCallType;
+
+    /**
      * @param string $ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $EndTime Notification end time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $NoticeWay Notification channel list. Valid values: EMAIL (email), SMS (SMS), CALL (phone), WECHAT (WeChat)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $NoticeWay Notification channel list. Valid values: `EMAIL` (email), `SMS` (SMS), `CALL` (phone), `WECHAT` (WeChat), `RTX` (WeCom)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $UserIds User `uid` list
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $GroupIds User group ID list
@@ -156,6 +166,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $NeedPhoneArriveNotice Whether receipt notification is required. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -212,6 +224,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NeedPhoneArriveNotice",$param) and $param["NeedPhoneArriveNotice"] !== null) {
             $this->NeedPhoneArriveNotice = $param["NeedPhoneArriveNotice"];
+        }
+
+        if (array_key_exists("PhoneCallType",$param) and $param["PhoneCallType"] !== null) {
+            $this->PhoneCallType = $param["PhoneCallType"];
         }
     }
 }

@@ -39,11 +39,15 @@ use TencentCloud\Common\AbstractModel;
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
  * @method void setDimensions(string $Dimensions) Set The alarm object list, which is a JSON string. The outer array corresponds to multiple instances, and the inner array is the dimension of an object. For example, “CVM - Basic Monitor” can be written as:
 `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
  * @method array getReceiverUids() Obtain Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
  * @method void setReceiverUids(array $ReceiverUids) Set Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
  * @method array getReceiverGroups() Obtain Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
@@ -70,6 +74,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setNotBindingNoticeRule(integer $NotBindingNoticeRule) Set If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
  * @method integer getInstanceGroupId() Obtain Instance group ID.
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
+ * @method integer getNeedCorrespondence() Obtain Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+ * @method void setNeedCorrespondence(integer $NeedCorrespondence) Set Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -110,6 +116,8 @@ class DescribeAlarmPoliciesRequest extends AbstractModel
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
      */
     public $Dimensions;
 
@@ -171,6 +179,11 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $InstanceGroupId;
 
     /**
+     * @var integer Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+     */
+    public $NeedCorrespondence;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -183,6 +196,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 You can also refer to the “Example 2” below.
 
 For more information on the parameter samples of different Tencent Cloud services, see [Product Policy Type and Dimension Information](https://intl.cloud.tencent.com/document/product/248/50397?from_cn_redirect=1).
+
+Note: If `1` is passed in for `NeedCorrespondence`, the relationship between a policy and an instance needs to be returned. You can pass in up to 20 alarm object dimensions to avoid request timeout.
      * @param array $ReceiverUids Search by recipient. You can get the user list with the API [ListUsers](https://intl.cloud.tencent.com/document/product/598/34587?from_cn_redirect=1) in “Cloud Access Management” or query the sub-user information with the API [GetUser](https://intl.cloud.tencent.com/document/product/598/34590?from_cn_redirect=1). The `Uid` field in the returned result should be entered here.
      * @param array $ReceiverGroups Search by recipient group. You can get the user group list with the API [ListGroups](https://intl.cloud.tencent.com/document/product/598/34589?from_cn_redirect=1) in “Cloud Access Management” or query the user group list where a sub-user is in with the API [ListGroupsForUser](https://intl.cloud.tencent.com/document/product/598/34588?from_cn_redirect=1). The `GroupId` field in the returned result should be entered here.
      * @param array $PolicyType Filter by default policy. Valid values: DEFAULT (display default policy), NOT_DEFAULT (display non-default policies). If this parameter is left empty, all policies will be displayed
@@ -196,6 +211,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param array $Enable Filter by alarm status. Valid values: [1]: enabled; [0]: disabled; [0, 1]: all
      * @param integer $NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      * @param integer $InstanceGroupId Instance group ID.
+     * @param integer $NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
      */
     function __construct()
     {
@@ -280,6 +296,10 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 
         if (array_key_exists("InstanceGroupId",$param) and $param["InstanceGroupId"] !== null) {
             $this->InstanceGroupId = $param["InstanceGroupId"];
+        }
+
+        if (array_key_exists("NeedCorrespondence",$param) and $param["NeedCorrespondence"] !== null) {
+            $this->NeedCorrespondence = $param["NeedCorrespondence"];
         }
     }
 }

@@ -142,6 +142,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagInstances(array $TagInstances) Set Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getFilterDimensionsParam() Obtain Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFilterDimensionsParam(string $FilterDimensionsParam) Set Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -323,6 +327,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TagInstances;
 
     /**
+     * @var string Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FilterDimensionsParam;
+
+    /**
      * @param string $PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Alarm policy name
@@ -383,6 +393,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $OriginId Policy ID for instance/instance group binding and unbinding APIs (BindingPolicyObject, UnBindingAllPolicyObject, UnBindingPolicyObject)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $TagInstances Tag
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $FilterDimensionsParam Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -530,6 +542,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TagInstances, $obj);
             }
+        }
+
+        if (array_key_exists("FilterDimensionsParam",$param) and $param["FilterDimensionsParam"] !== null) {
+            $this->FilterDimensionsParam = $param["FilterDimensionsParam"];
         }
     }
 }

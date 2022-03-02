@@ -50,6 +50,18 @@ As long as one origin server is exceptional, this status will be exceptional. Pl
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setForwardHost(string $ForwardHost) Set The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getServerNameIndicationSwitch() Obtain Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getServerNameIndication() Obtain Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setServerNameIndication(string $ServerNameIndication) Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class RuleInfo extends AbstractModel
 {
@@ -117,6 +129,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ForwardHost;
 
     /**
+     * @var string Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ServerNameIndicationSwitch;
+
+    /**
+     * @var string Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ServerNameIndication;
+
+    /**
      * @param string $RuleId Rule information
      * @param string $ListenerId Listener information
      * @param string $Domain Rule domain name
@@ -132,6 +158,12 @@ If health check is not enabled, this status will always be normal.
 As long as one origin server is exceptional, this status will be exceptional. Please view `RealServerSet` for the status of specific origin servers.
      * @param string $ForwardHost The `host` carried in the request forwarded from the connection to the origin server. `default` indicates directly forwarding the received 'host'.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -198,6 +230,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ForwardHost",$param) and $param["ForwardHost"] !== null) {
             $this->ForwardHost = $param["ForwardHost"];
+        }
+
+        if (array_key_exists("ServerNameIndicationSwitch",$param) and $param["ServerNameIndicationSwitch"] !== null) {
+            $this->ServerNameIndicationSwitch = $param["ServerNameIndicationSwitch"];
+        }
+
+        if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
+            $this->ServerNameIndication = $param["ServerNameIndication"];
         }
     }
 }

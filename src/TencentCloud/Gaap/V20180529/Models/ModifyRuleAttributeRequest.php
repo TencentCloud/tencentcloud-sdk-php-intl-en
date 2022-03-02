@@ -46,10 +46,14 @@ lc: least connections.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
  * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
- * @method string getForwardHost() Obtain The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
- * @method void setForwardHost(string $ForwardHost) Set The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+ * @method string getForwardHost() Obtain The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+ * @method void setForwardHost(string $ForwardHost) Set The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+ * @method string getServerNameIndicationSwitch() Obtain Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+ * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+ * @method string getServerNameIndication() Obtain Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+ * @method void setServerNameIndication(string $ServerNameIndication) Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
  */
 class ModifyRuleAttributeRequest extends AbstractModel
 {
@@ -95,10 +99,20 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
     public $ForwardProtocol;
 
     /**
-     * @var string The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+     * @var string The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
      */
     public $ForwardHost;
+
+    /**
+     * @var string Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     */
+    public $ServerNameIndicationSwitch;
+
+    /**
+     * @var string Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     */
+    public $ServerNameIndication;
 
     /**
      * @param string $ListenerId Listener ID
@@ -114,8 +128,10 @@ lc: least connections.
      * @param string $Path Forwarding rule path
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports default, HTTP and HTTPS.
 If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used.
-     * @param string $ForwardHost The `host` carried in the request forwarded from the acceleration connection to the origin server.
-If `ForwardHost=default`, the domain name of rule will be used. For other cases, the value set in this field will be used.
+     * @param string $ForwardHost The forwarding host, which is carried in the request forwarded from the acceleration connection to the origin server.
+If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
+     * @param string $ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
+     * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
      */
     function __construct()
     {
@@ -161,6 +177,14 @@ If `ForwardHost=default`, the domain name of rule will be used. For other cases,
 
         if (array_key_exists("ForwardHost",$param) and $param["ForwardHost"] !== null) {
             $this->ForwardHost = $param["ForwardHost"];
+        }
+
+        if (array_key_exists("ServerNameIndicationSwitch",$param) and $param["ServerNameIndicationSwitch"] !== null) {
+            $this->ServerNameIndicationSwitch = $param["ServerNameIndicationSwitch"];
+        }
+
+        if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
+            $this->ServerNameIndication = $param["ServerNameIndication"];
         }
     }
 }

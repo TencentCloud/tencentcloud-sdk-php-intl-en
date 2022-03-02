@@ -74,10 +74,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
 `0`: disable;
 `1`: enable.
@@ -185,8 +185,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IPAddressVersion;
 
     /**
-     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $PackageType;
 
@@ -226,8 +226,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: disable;
 `1`: enable.

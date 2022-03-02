@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) Set Origin server name
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getInBanBlacklist() Obtain Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+ * @method void setInBanBlacklist(integer $InBanBlacklist) Set Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
  */
 class RealServer extends AbstractModel
 {
@@ -52,10 +54,16 @@ class RealServer extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+     */
+    public $InBanBlacklist;
+
+    /**
      * @param string $RealServerIP Origin server IP or domain name
      * @param string $RealServerId Origin server ID
      * @param string $RealServerName Origin server name
      * @param integer $ProjectId Project ID
+     * @param integer $InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class RealServer extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
+            $this->InBanBlacklist = $param["InBanBlacklist"];
         }
     }
 }

@@ -54,8 +54,8 @@ The default value is 0.
  * @method void setGaapCertificateId(string $GaapCertificateId) Set Connection SSL certificate ID, which is obtained from the certificate management page.
  * @method string getRealServerCertificateId() Obtain CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
  * @method void setRealServerCertificateId(string $RealServerCertificateId) Set CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
- * @method string getRealServerCertificateDomain() Obtain Domain name of the origin server certificate.
- * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) Set Domain name of the origin server certificate.
+ * @method string getRealServerCertificateDomain() Obtain This field has been disused. Use ServerNameIndication instead.
+ * @method void setRealServerCertificateDomain(string $RealServerCertificateDomain) Set This field has been disused. Use ServerNameIndication instead.
  * @method array getPolyRealServerCertificateIds() Obtain CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
  * @method void setPolyRealServerCertificateIds(array $PolyRealServerCertificateIds) Set CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
  */
@@ -111,7 +111,7 @@ The default value is 0.
     public $RealServerCertificateId;
 
     /**
-     * @var string Domain name of the origin server certificate.
+     * @var string This field has been disused. Use ServerNameIndication instead.
      */
     public $RealServerCertificateDomain;
 
@@ -138,7 +138,7 @@ The default value is 0.
      * @param string $BasicAuthConfId Basic authentication configuration ID, which is obtained from the certificate management page.
      * @param string $GaapCertificateId Connection SSL certificate ID, which is obtained from the certificate management page.
      * @param string $RealServerCertificateId CA certificate ID of the origin server, which is obtained from the certificate management page. When authenticating the origin server, enter this parameter or the `RealServerCertificateIds` parameter.
-     * @param string $RealServerCertificateDomain Domain name of the origin server certificate.
+     * @param string $RealServerCertificateDomain This field has been disused. Use ServerNameIndication instead.
      * @param array $PolyRealServerCertificateIds CA certificate IDs of multiple origin servers, which are obtained from the certificate management page. When authenticating the origin servers, enter this parameter or the `RealServerCertificateId` parameter.
      */
     function __construct()

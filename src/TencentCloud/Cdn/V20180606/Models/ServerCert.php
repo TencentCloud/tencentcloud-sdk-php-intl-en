@@ -61,6 +61,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Certificate remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getFrom() Obtain Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFrom(string $From) Set Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ServerCert extends AbstractModel
 {
@@ -112,6 +116,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
+     * @var string Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $From;
+
+    /**
      * @param string $CertId Server certificate ID, which is auto-generated when the certificate is added to Tencent Cloud SSL Certificates
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CertName Server certificate name
@@ -131,6 +141,8 @@ Can be left blank when used as an input parameter
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Message Certificate remarks
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $From Certificate source
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -171,6 +183,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("From",$param) and $param["From"] !== null) {
+            $this->From = $param["From"];
         }
     }
 }

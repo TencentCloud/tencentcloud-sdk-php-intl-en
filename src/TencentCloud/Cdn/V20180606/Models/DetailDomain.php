@@ -42,14 +42,18 @@ online: activated
 offline: disabled
  * @method integer getProjectId() Obtain Project ID, which can be viewed on the Tencent Cloud project management page
  * @method void setProjectId(integer $ProjectId) Set Project ID, which can be viewed on the Tencent Cloud project management page
- * @method string getServiceType() Obtain Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
- * @method void setServiceType(string $ServiceType) Set Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+ * @method string getServiceType() Obtain Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
+ * @method void setServiceType(string $ServiceType) Set Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
  * @method string getCreateTime() Obtain Domain name creation time
  * @method void setCreateTime(string $CreateTime) Set Domain name creation time
  * @method string getUpdateTime() Obtain Last modified time of domain name
@@ -282,6 +286,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setShareCname(ShareCname $ShareCname) Set Shared CNAME configuration (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method RuleEngine getRuleEngine() Obtain Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRuleEngine(RuleEngine $RuleEngine) Set Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -321,10 +329,12 @@ offline: disabled
     public $ProjectId;
 
     /**
-     * @var string Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+     * @var string Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      */
     public $ServiceType;
 
@@ -657,6 +667,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ShareCname;
 
     /**
+     * @var RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RuleEngine;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Acceleration domain name
@@ -668,10 +684,12 @@ processing: deploying
 online: activated
 offline: disabled
      * @param integer $ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
-     * @param string $ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+     * @param string $ServiceType Acceleration domain name service type
+`web`: Webpage file downloads
+`download`: Large file downloads
+`media`: Audio and video on demand acceleration
+`hybrid`: Dynamic and static content acceleration
+`dynamic`: Dynamic content acceleration
      * @param string $CreateTime Domain name creation time
      * @param string $UpdateTime Last modified time of domain name
      * @param Origin $Origin Origin server configuration
@@ -788,6 +806,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param ShareCname $ShareCname Shared CNAME configuration (only available to beta users)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RuleEngine $RuleEngine Rule engine
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -1094,6 +1114,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
             $this->ShareCname = new ShareCname();
             $this->ShareCname->deserialize($param["ShareCname"]);
+        }
+
+        if (array_key_exists("RuleEngine",$param) and $param["RuleEngine"] !== null) {
+            $this->RuleEngine = new RuleEngine();
+            $this->RuleEngine->deserialize($param["RuleEngine"]);
         }
     }
 }

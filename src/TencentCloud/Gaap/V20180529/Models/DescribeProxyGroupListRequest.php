@@ -34,12 +34,12 @@ Other values: specified project
 Other values: specified project
  * @method array getFilters() Obtain Filter condition   
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
-RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
-PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+`RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+`PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
  * @method void setFilters(array $Filters) Set Filter condition   
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
-RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
-PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+`RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+`PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
  * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
  * @method void setTagSet(array $TagSet) Set Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -68,8 +68,8 @@ Other values: specified project
     /**
      * @var array Filter condition   
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
-RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
-PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+`RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+`PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
      */
     public $Filters;
 
@@ -88,8 +88,8 @@ It supports up to 5 tags. If there are two or more tags, the connection groups t
 Other values: specified project
      * @param array $Filters Filter condition   
 Each request can have a maximum of 5 filter conditions for `Filter.Values`.
-RealServerRegion - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
-PackageType - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (game accelerator connection group).
+`RealServerRegion` - String - Required: No - Filter by origin server region. You can also check the value of `RegionId` returned by the `DescribeDestRegions` API.
+`PackageType` - String - Required: No - Filter by type of connection groups, which can be `Thunder` (general connection group) or `Accelerator` (silver connection group).
      * @param array $TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connection groups tagged any of them will be pulled.
      */
