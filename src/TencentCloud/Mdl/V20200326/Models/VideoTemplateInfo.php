@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBitrateCompressionRatio(integer $BitrateCompressionRatio) Set Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
  * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default)
  * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+ * @method string getWatermarkId() Obtain Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setWatermarkId(string $WatermarkId) Set Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class VideoTemplateInfo extends AbstractModel
 {
@@ -87,6 +91,12 @@ class VideoTemplateInfo extends AbstractModel
     public $RateControlMode;
 
     /**
+     * @var string Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $WatermarkId;
+
+    /**
      * @param string $Name Video transcoding template name, which can contain 1-20 letters and digits.
      * @param string $Vcodec Video codec. Valid values: H264/H265. If this parameter is left empty, the original value will be used.
      * @param integer $VideoBitrate Video bitrate. Value range: [50000,40000000]. The value can only be a multiple of 1,000. If this parameter is left empty, the original value will be used.
@@ -96,6 +106,8 @@ class VideoTemplateInfo extends AbstractModel
      * @param string $TopSpeed Whether to enable top speed codec. Valid value: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $BitrateCompressionRatio Top speed codec compression ratio. Value range: [0,50]. The lower the compression ratio, the higher the image quality.
      * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * @param string $WatermarkId Watermark ID
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ class VideoTemplateInfo extends AbstractModel
 
         if (array_key_exists("RateControlMode",$param) and $param["RateControlMode"] !== null) {
             $this->RateControlMode = $param["RateControlMode"];
+        }
+
+        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
+            $this->WatermarkId = $param["WatermarkId"];
         }
     }
 }

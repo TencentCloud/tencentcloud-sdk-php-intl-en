@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Input settings information.
  *
- * @method string getAppName() Obtain Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAppName(string $AppName) Set Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getStreamName() Obtain Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStreamName(string $StreamName) Set Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getSourceUrl() Obtain Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSourceUrl(string $SourceUrl) Set Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAppName() Obtain Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setAppName(string $AppName) Set Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getStreamName() Obtain Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setStreamName(string $StreamName) Set Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSourceUrl() Obtain Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSourceUrl(string $SourceUrl) Set Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getInputAddress() Obtain RTP/UDP input address, which does not need to be entered for the input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInputAddress(string $InputAddress) Set RTP/UDP input address, which does not need to be entered for the input parameter.
@@ -40,24 +40,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value was found.
  * @method void setSourceType(string $SourceType) Set Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
 Note: this field may return `null`, indicating that no valid value was found.
+ * @method integer getDelayTime() Obtain Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setDelayTime(integer $DelayTime) Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class InputSettingInfo extends AbstractModel
 {
     /**
-     * @var string Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $AppName;
 
     /**
-     * @var string Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $StreamName;
 
     /**
-     * @var string Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $SourceUrl;
 
@@ -74,16 +82,28 @@ Note: this field may return `null`, indicating that no valid value was found.
     public $SourceType;
 
     /**
-     * @param string $AppName Application name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $StreamName Stream name, which is used for RTMP_PUSH and can contain 1-32 letters and digits.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $SourceUrl Origin-pull URL, which is used for RTMP_PULL/HLS_PULL/MP4_PULL. Length limit: [1,512].
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $DelayTime;
+
+    /**
+     * @param string $AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SourceUrl Source URL, which is valid if `Type` is `RTMP_PULL`, `HLS_PULL`, or `MP4_PULL` and can contain 1-512 characters
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $InputAddress RTP/UDP input address, which does not need to be entered for the input parameter.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SourceType Source type for stream pulling and relaying. To pull content from private-read COS buckets under the current account, set this parameter to `TencentCOS`; otherwise, leave it empty.
 Note: this field may return `null`, indicating that no valid value was found.
+     * @param integer $DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
+Value range: 0 (default) or 10000-600000
+The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -116,6 +136,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("SourceType",$param) and $param["SourceType"] !== null) {
             $this->SourceType = $param["SourceType"];
+        }
+
+        if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
+            $this->DelayTime = $param["DelayTime"];
         }
     }
 }

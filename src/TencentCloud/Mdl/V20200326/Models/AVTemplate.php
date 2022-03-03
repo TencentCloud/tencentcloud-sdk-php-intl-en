@@ -48,6 +48,8 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
  * @method void setVideoBitrate(integer $VideoBitrate) Set Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
  * @method string getRateControlMode() Obtain Bitrate control mode. Valid values: `CBR`, `ABR` (default)
  * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+ * @method string getWatermarkId() Obtain Watermark ID
+ * @method void setWatermarkId(string $WatermarkId) Set Watermark ID
  */
 class AVTemplate extends AbstractModel
 {
@@ -118,6 +120,11 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     public $RateControlMode;
 
     /**
+     * @var string Watermark ID
+     */
+    public $WatermarkId;
+
+    /**
      * @param string $Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      * @param integer $NeedVideo Whether video is needed. `0`: not needed; `1`: needed
      * @param string $Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
@@ -132,6 +139,7 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000`, `24000`, `28000`, `32000`, `40000`, `48000`, `56000`, `64000`, `80000`, `96000`, `112000`, `128000`, `160000`, `192000`, `224000`, `256000`, `288000`, `320000`, `384000`, `448000`, `512000`, `576000`, `640000`, `768000`, `896000`, `1024000`
      * @param integer $VideoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
      * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
+     * @param string $WatermarkId Watermark ID
      */
     function __construct()
     {
@@ -196,6 +204,10 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 
         if (array_key_exists("RateControlMode",$param) and $param["RateControlMode"] !== null) {
             $this->RateControlMode = $param["RateControlMode"];
+        }
+
+        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
+            $this->WatermarkId = $param["WatermarkId"];
         }
     }
 }

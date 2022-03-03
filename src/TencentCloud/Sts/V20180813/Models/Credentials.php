@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Temporary credentials
  *
- * @method string getToken() Obtain token
- * @method void setToken(string $Token) Set token
- * @method string getTmpSecretId() Obtain Temporary credentials secret ID
- * @method void setTmpSecretId(string $TmpSecretId) Set Temporary credentials secret ID
- * @method string getTmpSecretKey() Obtain Temporary credentials secret key
- * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary credentials secret key
+ * @method string getToken() Obtain Token, which contains up to 4,096 bytes depending on the associated policies.
+ * @method void setToken(string $Token) Set Token, which contains up to 4,096 bytes depending on the associated policies.
+ * @method string getTmpSecretId() Obtain Temporary credentials key ID, which contains up to 1,024 bytes.
+ * @method void setTmpSecretId(string $TmpSecretId) Set Temporary credentials key ID, which contains up to 1,024 bytes.
+ * @method string getTmpSecretKey() Obtain Temporary credentials key, which contains up to 1,024 bytes.
+ * @method void setTmpSecretKey(string $TmpSecretKey) Set Temporary credentials key, which contains up to 1,024 bytes.
  */
 class Credentials extends AbstractModel
 {
     /**
-     * @var string token
+     * @var string Token, which contains up to 4,096 bytes depending on the associated policies.
      */
     public $Token;
 
     /**
-     * @var string Temporary credentials secret ID
+     * @var string Temporary credentials key ID, which contains up to 1,024 bytes.
      */
     public $TmpSecretId;
 
     /**
-     * @var string Temporary credentials secret key
+     * @var string Temporary credentials key, which contains up to 1,024 bytes.
      */
     public $TmpSecretKey;
 
     /**
-     * @param string $Token token
-     * @param string $TmpSecretId Temporary credentials secret ID
-     * @param string $TmpSecretKey Temporary credentials secret key
+     * @param string $Token Token, which contains up to 4,096 bytes depending on the associated policies.
+     * @param string $TmpSecretId Temporary credentials key ID, which contains up to 1,024 bytes.
+     * @param string $TmpSecretKey Temporary credentials key, which contains up to 1,024 bytes.
      */
     function __construct()
     {
