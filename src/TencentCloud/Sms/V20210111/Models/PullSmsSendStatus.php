@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReportStatus(string $ReportStatus) Set Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
  * @method string getDescription() Obtain Description of SMS receipt by user.
  * @method void setDescription(string $Description) Set Description of SMS receipt by user.
+ * @method string getSessionContext() Obtain User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSessionContext(string $SessionContext) Set User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PullSmsSendStatus extends AbstractModel
 {
@@ -73,6 +77,12 @@ class PullSmsSendStatus extends AbstractModel
     public $Description;
 
     /**
+     * @var string User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SessionContext;
+
+    /**
      * @param integer $UserReceiveTime Actual time of SMS receipt by user in seconds in the format of UNIX timestamp.
      * @param string $CountryCode Country (or region) code.
      * @param string $SubscriberNumber User's mobile number in a common format such as 13711112222.
@@ -80,6 +90,8 @@ class PullSmsSendStatus extends AbstractModel
      * @param string $SerialNo ID of the current delivery.
      * @param string $ReportStatus Whether the SMS message is actually received. Valid values: SUCCESS (success), FAIL (failure).
      * @param string $Description Description of SMS receipt by user.
+     * @param string $SessionContext User session content, which is the same as the `SessionContext` in the request and is empty by default. If you need to activate it, contact [SMS Helper](https://intl.cloud.tencent.com/document/product/382/3773?from_cn_redirect=1#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class PullSmsSendStatus extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }
