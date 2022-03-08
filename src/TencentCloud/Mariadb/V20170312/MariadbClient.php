@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Mariadb\V20170312\Models as Models;
 
 /**
+ * @method Models\ActivateHourDBInstanceResponse ActivateHourDBInstance(Models\ActivateHourDBInstanceRequest $req) This API is used to remove the isolation of pay-as-you-go instances.
  * @method Models\AssociateSecurityGroupsResponse AssociateSecurityGroups(Models\AssociateSecurityGroupsRequest $req) This API is used to associate security groups with Tencent Cloud resources in batches.
  * @method Models\CancelDcnJobResponse CancelDcnJob(Models\CancelDcnJobRequest $req) This API is used to cancel DCN synchronization.
  * @method Models\CloneAccountResponse CloneAccount(Models\CloneAccountRequest $req) This API is used to clone an instance account.
@@ -46,6 +47,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
  * @method Models\DescribeDBResourceUsageDetailsResponse DescribeDBResourceUsageDetails(Models\DescribeDBResourceUsageDetailsRequest $req) This API is used to view the current performance data of a database instance.
  * @method Models\DescribeDBSecurityGroupsResponse DescribeDBSecurityGroups(Models\DescribeDBSecurityGroupsRequest $req) This API is used to query the security group details of an instance.
  * @method Models\DescribeDBSlowLogsResponse DescribeDBSlowLogs(Models\DescribeDBSlowLogsRequest $req) This API is used to query the slow query log list.
+ * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) This API is used to query the table information of a TencentDB instance.
  * @method Models\DescribeDatabasesResponse DescribeDatabases(Models\DescribeDatabasesRequest $req) This API is used to query the list of databases of a TencentDB instance.
  * @method Models\DescribeDcnDetailResponse DescribeDcnDetail(Models\DescribeDcnDetailRequest $req) This API is used to query the disaster recovery details of an instance.
@@ -59,6 +61,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
  * @method Models\GrantAccountPrivilegesResponse GrantAccountPrivileges(Models\GrantAccountPrivilegesRequest $req) This API is used to grant permissions to a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
  * @method Models\InitDBInstancesResponse InitDBInstances(Models\InitDBInstancesRequest $req) This API is used to initialize TencentDB instances, including setting the default character set and table name case sensitivity.
+ * @method Models\IsolateHourDBInstanceResponse IsolateHourDBInstance(Models\IsolateHourDBInstanceRequest $req) This API is used to isolate pay-as-you-go instances.
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
  * @method Models\ModifyAccountPrivilegesResponse ModifyAccountPrivileges(Models\ModifyAccountPrivilegesRequest $req) This API is used to modify the permissions of a TencentDB instance account.

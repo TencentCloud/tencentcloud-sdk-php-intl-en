@@ -23,6 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cynosdb\V20190107\Models as Models;
 
 /**
+ * @method Models\ActivateInstanceResponse ActivateInstance(Models\ActivateInstanceRequest $req) This API is used to remove the isolation of an instance to make it accessible again.
  * @method Models\AddInstancesResponse AddInstances(Models\AddInstancesRequest $req) This API is used to add an instance in a cluster.
  * @method Models\CreateClustersResponse CreateClusters(Models\CreateClustersRequest $req) This API is used to create a cluster.
  * @method Models\DescribeAccountsResponse DescribeAccounts(Models\DescribeAccountsRequest $req) This API is used to query database management accounts.
@@ -48,6 +49,8 @@ use TencentCloud\Cynosdb\V20190107\Models as Models;
  * @method Models\ModifyMaintainPeriodConfigResponse ModifyMaintainPeriodConfig(Models\ModifyMaintainPeriodConfigRequest $req) This API is used to modify the maintenance time configuration.
  * @method Models\OfflineClusterResponse OfflineCluster(Models\OfflineClusterRequest $req) This API is used to deactivate a cluster.
  * @method Models\OfflineInstanceResponse OfflineInstance(Models\OfflineInstanceRequest $req) This API is used to deactivate an instance.
+ * @method Models\PauseServerlessResponse PauseServerless(Models\PauseServerlessRequest $req) This API is used to pause a serverless cluster.
+ * @method Models\ResumeServerlessResponse ResumeServerless(Models\ResumeServerlessRequest $req) This API is used to resume a serverless cluster.
  * @method Models\SetRenewFlagResponse SetRenewFlag(Models\SetRenewFlagRequest $req) This API is used to set auto-renewal for an instance.
  * @method Models\UpgradeInstanceResponse UpgradeInstance(Models\UpgradeInstanceRequest $req) This API is used to upgrade an instance.
  */

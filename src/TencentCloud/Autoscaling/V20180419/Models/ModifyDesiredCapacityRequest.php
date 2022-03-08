@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method integer getDesiredCapacity() Obtain Desired capacity
  * @method void setDesiredCapacity(integer $DesiredCapacity) Set Desired capacity
+ * @method integer getMinSize() Obtain Minimum number of instances. Value range: 0-2000.
+ * @method void setMinSize(integer $MinSize) Set Minimum number of instances. Value range: 0-2000.
+ * @method integer getMaxSize() Obtain Maximum number of instances. Value range: 0-2000.
+ * @method void setMaxSize(integer $MaxSize) Set Maximum number of instances. Value range: 0-2000.
  */
 class ModifyDesiredCapacityRequest extends AbstractModel
 {
@@ -38,8 +42,20 @@ class ModifyDesiredCapacityRequest extends AbstractModel
     public $DesiredCapacity;
 
     /**
+     * @var integer Minimum number of instances. Value range: 0-2000.
+     */
+    public $MinSize;
+
+    /**
+     * @var integer Maximum number of instances. Value range: 0-2000.
+     */
+    public $MaxSize;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param integer $DesiredCapacity Desired capacity
+     * @param integer $MinSize Minimum number of instances. Value range: 0-2000.
+     * @param integer $MaxSize Maximum number of instances. Value range: 0-2000.
      */
     function __construct()
     {
@@ -60,6 +76,14 @@ class ModifyDesiredCapacityRequest extends AbstractModel
 
         if (array_key_exists("DesiredCapacity",$param) and $param["DesiredCapacity"] !== null) {
             $this->DesiredCapacity = $param["DesiredCapacity"];
+        }
+
+        if (array_key_exists("MinSize",$param) and $param["MinSize"] !== null) {
+            $this->MinSize = $param["MinSize"];
+        }
+
+        if (array_key_exists("MaxSize",$param) and $param["MaxSize"] !== null) {
+            $this->MaxSize = $param["MaxSize"];
         }
     }
 }

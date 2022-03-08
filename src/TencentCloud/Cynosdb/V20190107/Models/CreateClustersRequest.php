@@ -36,12 +36,18 @@ use TencentCloud\Common\AbstractModel;
 <li> Valid values for `MYSQL`: 5.7 </li>
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method integer getCpu() Obtain Number of CPU cores of normal instance
- * @method void setCpu(integer $Cpu) Set Number of CPU cores of normal instance
- * @method integer getMemory() Obtain Memory of a non-serverless instance in GB
- * @method void setMemory(integer $Memory) Set Memory of a non-serverless instance in GB
- * @method integer getStorage() Obtain Storage capacity in GB
- * @method void setStorage(integer $Storage) Set Storage capacity in GB
+ * @method integer getCpu() Obtain It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+ * @method void setCpu(integer $Cpu) Set It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+ * @method integer getMemory() Obtain It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+ * @method void setMemory(integer $Memory) Set It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+ * @method integer getStorage() Obtain This parameter has been deprecated.
+Storage capacity in GB.
+ * @method void setStorage(integer $Storage) Set This parameter has been deprecated.
+Storage capacity in GB.
  * @method string getClusterName() Obtain Cluster name
  * @method void setClusterName(string $ClusterName) Set Cluster name
  * @method string getAdminPassword() Obtain Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
@@ -66,8 +72,10 @@ timeRollback: rollback by time point
  * @method void setOriginalClusterId(string $OriginalClusterId) Set Pass in the source cluster ID during rollback to find the source `poolId`
  * @method string getExpectTime() Obtain Specified time for time point rollback or snapshot time for snapshot rollback
  * @method void setExpectTime(string $ExpectTime) Set Specified time for time point rollback or snapshot time for snapshot rollback
- * @method integer getExpectTimeThresh() Obtain Specified allowed time range for time point rollback
- * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set Specified allowed time range for time point rollback
+ * @method integer getExpectTimeThresh() Obtain This parameter has been deprecated.
+Specified allowed time range for time point rollback
+ * @method void setExpectTimeThresh(integer $ExpectTimeThresh) Set This parameter has been deprecated.
+Specified allowed time range for time point rollback
  * @method integer getStorageLimit() Obtain The maximum storage of a non-serverless instance in GB
 If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
  * @method void setStorageLimit(integer $StorageLimit) Set The maximum storage of a non-serverless instance in GB
@@ -168,17 +176,20 @@ class CreateClustersRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer Number of CPU cores of normal instance
+     * @var integer It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
      */
     public $Cpu;
 
     /**
-     * @var integer Memory of a non-serverless instance in GB
+     * @var integer It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
      */
     public $Memory;
 
     /**
-     * @var integer Storage capacity in GB
+     * @var integer This parameter has been deprecated.
+Storage capacity in GB.
      */
     public $Storage;
 
@@ -231,7 +242,8 @@ timeRollback: rollback by time point
     public $ExpectTime;
 
     /**
-     * @var integer Specified allowed time range for time point rollback
+     * @var integer This parameter has been deprecated.
+Specified allowed time range for time point rollback
      */
     public $ExpectTimeThresh;
 
@@ -356,9 +368,12 @@ Clusters with storage billed in prepaid mode cannot be cloned or rolled back.
      * @param string $DbVersion Database version. Valid values: 
 <li> Valid values for `MYSQL`: 5.7 </li>
      * @param integer $ProjectId Project ID
-     * @param integer $Cpu Number of CPU cores of normal instance
-     * @param integer $Memory Memory of a non-serverless instance in GB
-     * @param integer $Storage Storage capacity in GB
+     * @param integer $Cpu It is required when `DbMode` is set to `NORMAL` or left empty.
+Number of CPU cores of a non-serverless instance
+     * @param integer $Memory It is required when `DbMode` is set to `NORMAL` or left empty.
+Memory of a non-serverless instance in GB
+     * @param integer $Storage This parameter has been deprecated.
+Storage capacity in GB.
      * @param string $ClusterName Cluster name
      * @param string $AdminPassword Account password (it must contain 8-64 characters in at least three of the following four types: uppercase letters, lowercase letters, digits, and symbols (~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/).)
      * @param integer $Port Port. Default value: 5432
@@ -371,7 +386,8 @@ timeRollback: rollback by time point
      * @param integer $RollbackId `snapshotId` for snapshot rollback or `queryId` for time point rollback. 0 indicates to determine whether the time point is valid
      * @param string $OriginalClusterId Pass in the source cluster ID during rollback to find the source `poolId`
      * @param string $ExpectTime Specified time for time point rollback or snapshot time for snapshot rollback
-     * @param integer $ExpectTimeThresh Specified allowed time range for time point rollback
+     * @param integer $ExpectTimeThresh This parameter has been deprecated.
+Specified allowed time range for time point rollback
      * @param integer $StorageLimit The maximum storage of a non-serverless instance in GB
 If `DbType` is `MYSQL` and the storage billing mode is prepaid, the parameter value cannot exceed the maximum storage corresponding to the CPU and memory specifications.
      * @param integer $InstanceCount Number of instances

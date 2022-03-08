@@ -40,8 +40,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(array $Filters) Set Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
  * @method string getDbType() Obtain Engine type. Valid values: MYSQL, POSTGRESQL
  * @method void setDbType(string $DbType) Set Engine type. Valid values: MYSQL, POSTGRESQL
- * @method string getStatus() Obtain Instance status
- * @method void setStatus(string $Status) Set Instance status
+ * @method string getStatus() Obtain Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
+ * @method void setStatus(string $Status) Set Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
  */
@@ -82,7 +96,14 @@ class DescribeInstancesRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var string Instance status
+     * @var string Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
      */
     public $Status;
 
@@ -102,7 +123,14 @@ class DescribeInstancesRequest extends AbstractModel
 <li> DESC: descending</li>
      * @param array $Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
      * @param string $DbType Engine type. Valid values: MYSQL, POSTGRESQL
-     * @param string $Status Instance status
+     * @param string $Status Instance status. Valid values:
+creating
+running
+isolating
+isolated
+activating: Removing the instance from isolation
+offlining: Eliminating the instance
+offlined: Instance eliminated
      * @param array $InstanceIds Instance ID list
      */
     function __construct()

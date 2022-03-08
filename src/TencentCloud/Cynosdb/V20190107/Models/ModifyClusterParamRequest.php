@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getParamList() Obtain The list of parameters to be modified
  * @method void setParamList(array $ParamList) Set The list of parameters to be modified
+ * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (execute during maintenance time), `no` (execute now)
+ * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
  */
 class ModifyClusterParamRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ParamList;
 
     /**
+     * @var string Valid values: `yes` (execute during maintenance time), `no` (execute now)
+     */
+    public $IsInMaintainPeriod;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $ParamList The list of parameters to be modified
+     * @param string $IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
      */
     function __construct()
     {
@@ -65,6 +73,10 @@ class ModifyClusterParamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ParamList, $obj);
             }
+        }
+
+        if (array_key_exists("IsInMaintainPeriod",$param) and $param["IsInMaintainPeriod"] !== null) {
+            $this->IsInMaintainPeriod = $param["IsInMaintainPeriod"];
         }
     }
 }
