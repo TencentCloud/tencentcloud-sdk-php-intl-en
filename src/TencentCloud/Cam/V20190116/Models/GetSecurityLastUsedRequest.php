@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSecurityLastUsed request structure.
  *
- * @method array getSecretIdList() Obtain A parameter used to query the key ID list.
- * @method void setSecretIdList(array $SecretIdList) Set A parameter used to query the key ID list.
+ * @method array getSecretIdList() Obtain Key ID list query. Up to 10 key IDs can be queried.
+ * @method void setSecretIdList(array $SecretIdList) Set Key ID list query. Up to 10 key IDs can be queried.
  */
 class GetSecurityLastUsedRequest extends AbstractModel
 {
     /**
-     * @var array A parameter used to query the key ID list.
+     * @var array Key ID list query. Up to 10 key IDs can be queried.
      */
     public $SecretIdList;
 
     /**
-     * @param array $SecretIdList A parameter used to query the key ID list.
+     * @param array $SecretIdList Key ID list query. Up to 10 key IDs can be queried.
      */
     function __construct()
     {

@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
 <li>UNAVAILABLE: packages cannot be changed currently</li>
  * @method Bundle getBundle() Obtain Package information.
  * @method void setBundle(Bundle $Bundle) Set Package information.
+ * @method string getNotSupportModifyMessage() Obtain The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNotSupportModifyMessage(string $NotSupportModifyMessage) Set The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ModifyBundle extends AbstractModel
 {
@@ -54,12 +58,20 @@ class ModifyBundle extends AbstractModel
     public $Bundle;
 
     /**
+     * @var string The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NotSupportModifyMessage;
+
+    /**
      * @param Price $ModifyPrice Price difference that you need to pay for the new instance package after change.
      * @param string $ModifyBundleState Package change status. Valid values:
 <li>SOLD_OUT: packages are sold out</li>
 <li>AVAILABLE: packages can be changed</li>
 <li>UNAVAILABLE: packages cannot be changed currently</li>
      * @param Bundle $Bundle Package information.
+     * @param string $NotSupportModifyMessage The reason of package changing failure. It’s empty if the package change status is `AVAILABLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -86,6 +98,10 @@ class ModifyBundle extends AbstractModel
         if (array_key_exists("Bundle",$param) and $param["Bundle"] !== null) {
             $this->Bundle = new Bundle();
             $this->Bundle->deserialize($param["Bundle"]);
+        }
+
+        if (array_key_exists("NotSupportModifyMessage",$param) and $param["NotSupportModifyMessage"] !== null) {
+            $this->NotSupportModifyMessage = $param["NotSupportModifyMessage"];
         }
     }
 }

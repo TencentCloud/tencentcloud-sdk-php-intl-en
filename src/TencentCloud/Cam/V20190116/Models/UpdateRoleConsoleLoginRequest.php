@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getConsoleLogin() Obtain Whether login is allowed. 1: yes, 0: no
  * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether login is allowed. 1: yes, 0: no
- * @method integer getRoleId() Obtain Role ID
- * @method void setRoleId(integer $RoleId) Set Role ID
- * @method string getRoleName() Obtain Role name
- * @method void setRoleName(string $RoleName) Set Role name
+ * @method integer getRoleId() Obtain Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+ * @method void setRoleId(integer $RoleId) Set Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+ * @method string getRoleName() Obtain Role name. Use either `RoleId` or `RoleName` as the input parameter.
+ * @method void setRoleName(string $RoleName) Set Role name. Use either `RoleId` or `RoleName` as the input parameter.
  */
 class UpdateRoleConsoleLoginRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UpdateRoleConsoleLoginRequest extends AbstractModel
     public $ConsoleLogin;
 
     /**
-     * @var integer Role ID
+     * @var integer Role ID. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public $RoleId;
 
     /**
-     * @var string Role name
+     * @var string Role name. Use either `RoleId` or `RoleName` as the input parameter.
      */
     public $RoleName;
 
     /**
      * @param integer $ConsoleLogin Whether login is allowed. 1: yes, 0: no
-     * @param integer $RoleId Role ID
-     * @param string $RoleName Role name
+     * @param integer $RoleId Role ID. Use either `RoleId` or `RoleName` as the input parameter.
+     * @param string $RoleName Role name. Use either `RoleId` or `RoleName` as the input parameter.
      */
     function __construct()
     {

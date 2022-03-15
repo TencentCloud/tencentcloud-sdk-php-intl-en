@@ -64,6 +64,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\GetSecurityLastUsedResponse GetSecurityLastUsed(Models\GetSecurityLastUsedRequest $req) This API is used to get a key’s recent usage details.
  * @method Models\GetServiceLinkedRoleDeletionStatusResponse GetServiceLinkedRoleDeletionStatus(Models\GetServiceLinkedRoleDeletionStatusRequest $req) This API is used to get the status of the service-linked role deletion based on the `TaskId`
  * @method Models\GetUserResponse GetUser(Models\GetUserRequest $req) This API is used to query sub-users.
+ * @method Models\GetUserAppIdResponse GetUserAppId(Models\GetUserAppIdRequest $req) This API is used to get the user AppId.
  * @method Models\ListAccessKeysResponse ListAccessKeys(Models\ListAccessKeysRequest $req) This API is used to list the access keys associated with a specified CAM user.
  * @method Models\ListAttachedGroupPoliciesResponse ListAttachedGroupPolicies(Models\ListAttachedGroupPoliciesRequest $req) This API (ListAttachedGroupPolicies) is used to query the list of policies associated with a user group.
  * @method Models\ListAttachedRolePoliciesResponse ListAttachedRolePolicies(Models\ListAttachedRolePoliciesRequest $req) This API (ListAttachedRolePolicies) is used to obtain the list of the policies associated with a role.

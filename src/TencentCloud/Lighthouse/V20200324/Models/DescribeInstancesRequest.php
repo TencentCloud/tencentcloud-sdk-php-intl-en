@@ -38,7 +38,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
  * @method void setFilters(array $Filters) Set Filter list
 <li>instance-name</li>Filter by the instance name
 Type: String
@@ -55,7 +55,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
@@ -85,7 +85,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
      */
     public $Filters;
 
@@ -117,7 +117,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      */

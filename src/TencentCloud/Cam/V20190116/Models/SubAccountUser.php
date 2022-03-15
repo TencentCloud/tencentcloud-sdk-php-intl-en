@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUin(integer $Uin) Set Sub-user ID
  * @method string getName() Obtain Sub-user name
  * @method void setName(string $Name) Set Sub-user name
- * @method integer getUid() Obtain Sub-user UID
- * @method void setUid(integer $Uid) Set Sub-user UID
+ * @method integer getUid() Obtain Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
+ * @method void setUid(integer $Uid) Set Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
  * @method string getRemark() Obtain Sub-user remarks
  * @method void setRemark(string $Remark) Set Sub-user remarks
  * @method string getCreateTime() Obtain Creation time
@@ -52,7 +52,7 @@ class SubAccountUser extends AbstractModel
     public $Name;
 
     /**
-     * @var integer Sub-user UID
+     * @var integer Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
      */
     public $Uid;
 
@@ -85,7 +85,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param integer $Uin Sub-user ID
      * @param string $Name Sub-user name
-     * @param integer $Uid Sub-user UID
+     * @param integer $Uid Sub-user UID. UID is the unique identifier of a user who is a message recipient, while UIN is a unique identifier of a user.
      * @param string $Remark Sub-user remarks
      * @param string $CreateTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.

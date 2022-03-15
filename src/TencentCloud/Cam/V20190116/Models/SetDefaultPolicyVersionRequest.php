@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getPolicyId() Obtain Policy ID
  * @method void setPolicyId(integer $PolicyId) Set Policy ID
- * @method integer getVersionId() Obtain Policy version ID
- * @method void setVersionId(integer $VersionId) Set Policy version ID
+ * @method integer getVersionId() Obtain Policy version, which can be obtained through `ListPolicyVersions`.
+ * @method void setVersionId(integer $VersionId) Set Policy version, which can be obtained through `ListPolicyVersions`.
  */
 class SetDefaultPolicyVersionRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetDefaultPolicyVersionRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var integer Policy version ID
+     * @var integer Policy version, which can be obtained through `ListPolicyVersions`.
      */
     public $VersionId;
 
     /**
      * @param integer $PolicyId Policy ID
-     * @param integer $VersionId Policy version ID
+     * @param integer $VersionId Policy version, which can be obtained through `ListPolicyVersions`.
      */
     function __construct()
     {

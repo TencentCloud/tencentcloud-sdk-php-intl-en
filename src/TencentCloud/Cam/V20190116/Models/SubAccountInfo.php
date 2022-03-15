@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getNickName() Obtain Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNickName(string $NickName) Set Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class SubAccountInfo extends AbstractModel
 {
@@ -90,6 +94,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CreateTime;
 
     /**
+     * @var string Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $NickName;
+
+    /**
      * @param integer $Uin Sub-user user ID
      * @param string $Name Sub-user username
      * @param integer $Uid Sub-user UID
@@ -100,6 +110,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Email Email
      * @param string $CreateTime Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $NickName Nickname.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -148,6 +160,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("NickName",$param) and $param["NickName"] !== null) {
+            $this->NickName = $param["NickName"];
         }
     }
 }

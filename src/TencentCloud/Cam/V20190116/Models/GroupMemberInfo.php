@@ -30,18 +30,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPhoneNum(string $PhoneNum) Set Mobile number
  * @method string getCountryCode() Obtain Mobile number country/area code
  * @method void setCountryCode(string $CountryCode) Set Mobile number country/area code
- * @method integer getPhoneFlag() Obtain If mobile number has been verified
- * @method void setPhoneFlag(integer $PhoneFlag) Set If mobile number has been verified
+ * @method integer getPhoneFlag() Obtain Whether the mobile phone has been verified. `0`: No; `1`: Yes.
+ * @method void setPhoneFlag(integer $PhoneFlag) Set Whether the mobile phone has been verified. `0`: No; `1`: Yes.
  * @method string getEmail() Obtain Email address
  * @method void setEmail(string $Email) Set Email address
- * @method integer getEmailFlag() Obtain If email has been verified
- * @method void setEmailFlag(integer $EmailFlag) Set If email has been verified
- * @method integer getUserType() Obtain User type
- * @method void setUserType(integer $UserType) Set User type
+ * @method integer getEmailFlag() Obtain Whether the email has been verified. `0`: No; `1`: Yes.
+ * @method void setEmailFlag(integer $EmailFlag) Set Whether the email has been verified. `0`: No; `1`: Yes.
+ * @method integer getUserType() Obtain User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
+ * @method void setUserType(integer $UserType) Set User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
  * @method string getCreateTime() Obtain Time policy created
  * @method void setCreateTime(string $CreateTime) Set Time policy created
- * @method integer getIsReceiverOwner() Obtain If the user is the main message recipient
- * @method void setIsReceiverOwner(integer $IsReceiverOwner) Set If the user is the main message recipient
+ * @method integer getIsReceiverOwner() Obtain Whether the user is the primary message recipient. `0`: No; `1`: Yes.
+ * @method void setIsReceiverOwner(integer $IsReceiverOwner) Set Whether the user is the primary message recipient. `0`: No; `1`: Yes.
  */
 class GroupMemberInfo extends AbstractModel
 {
@@ -71,7 +71,7 @@ class GroupMemberInfo extends AbstractModel
     public $CountryCode;
 
     /**
-     * @var integer If mobile number has been verified
+     * @var integer Whether the mobile phone has been verified. `0`: No; `1`: Yes.
      */
     public $PhoneFlag;
 
@@ -81,12 +81,12 @@ class GroupMemberInfo extends AbstractModel
     public $Email;
 
     /**
-     * @var integer If email has been verified
+     * @var integer Whether the email has been verified. `0`: No; `1`: Yes.
      */
     public $EmailFlag;
 
     /**
-     * @var integer User type
+     * @var integer User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
      */
     public $UserType;
 
@@ -96,7 +96,7 @@ class GroupMemberInfo extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var integer If the user is the main message recipient
+     * @var integer Whether the user is the primary message recipient. `0`: No; `1`: Yes.
      */
     public $IsReceiverOwner;
 
@@ -106,12 +106,12 @@ class GroupMemberInfo extends AbstractModel
      * @param string $Name Sub-user name
      * @param string $PhoneNum Mobile number
      * @param string $CountryCode Mobile number country/area code
-     * @param integer $PhoneFlag If mobile number has been verified
+     * @param integer $PhoneFlag Whether the mobile phone has been verified. `0`: No; `1`: Yes.
      * @param string $Email Email address
-     * @param integer $EmailFlag If email has been verified
-     * @param integer $UserType User type
+     * @param integer $EmailFlag Whether the email has been verified. `0`: No; `1`: Yes.
+     * @param integer $UserType User type. `1`: Global collaborator; `2`: Project collaborator; `3`: Message recipient.
      * @param string $CreateTime Time policy created
-     * @param integer $IsReceiverOwner If the user is the main message recipient
+     * @param integer $IsReceiverOwner Whether the user is the primary message recipient. `0`: No; `1`: Yes.
      */
     function __construct()
     {

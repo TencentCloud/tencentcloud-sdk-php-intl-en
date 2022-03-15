@@ -27,9 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getUid() Obtain Sub-user UID
  * @method void setUid(integer $Uid) Set Sub-user UID
  * @method string getRemark() Obtain Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Sub-user remarks
- * @method integer getConsoleLogin() Obtain If sub-user can log in to the Console
- * @method void setConsoleLogin(integer $ConsoleLogin) Set If sub-user can log in to the Console
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getConsoleLogin() Obtain Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
+ * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
  * @method string getPhoneNum() Obtain Mobile number
  * @method void setPhoneNum(string $PhoneNum) Set Mobile number
  * @method string getCountryCode() Obtain Country/Area code
@@ -58,11 +60,12 @@ class GetUserResponse extends AbstractModel
 
     /**
      * @var string Sub-user remarks
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var integer If sub-user can log in to the Console
+     * @var integer Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
      */
     public $ConsoleLogin;
 
@@ -91,7 +94,8 @@ class GetUserResponse extends AbstractModel
      * @param string $Name Sub-user username
      * @param integer $Uid Sub-user UID
      * @param string $Remark Sub-user remarks
-     * @param integer $ConsoleLogin If sub-user can log in to the Console
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ConsoleLogin Whether the sub-user can log in to the console. `0`: No; `1`: Yes.
      * @param string $PhoneNum Mobile number
      * @param string $CountryCode Country/Area code
      * @param string $Email Email

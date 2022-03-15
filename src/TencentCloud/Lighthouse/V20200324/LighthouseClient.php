@@ -49,6 +49,7 @@ In the `FirewallRules` parameter:
 * For the `Action` field, you can enter only `ACCEPT` or `DROP`.
 * The length of the `FirewallRuleDescription` field cannot exceed 64 characters.
  * @method Models\CreateInstanceSnapshotResponse CreateInstanceSnapshot(Models\CreateInstanceSnapshotRequest $req) This API is used to create a system disk snapshot of the specified instance.
+ * @method Models\CreateInstancesResponse CreateInstances(Models\CreateInstancesRequest $req) This API is used to create one or more Lighthouse instances.
  * @method Models\CreateKeyPairResponse CreateKeyPair(Models\CreateKeyPairRequest $req) This API is used to create a key pair.
  * @method Models\DeleteBlueprintsResponse DeleteBlueprints(Models\DeleteBlueprintsRequest $req) This API is used to delete an image.
  * @method Models\DeleteFirewallRulesResponse DeleteFirewallRules(Models\DeleteFirewallRulesRequest $req) This API is used to delete a firewall rule of an instance.

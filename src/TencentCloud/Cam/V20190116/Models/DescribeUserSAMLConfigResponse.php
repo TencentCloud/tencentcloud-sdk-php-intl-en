@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSAMLMetadata() Obtain SAML metadata document.
  * @method void setSAMLMetadata(string $SAMLMetadata) Set SAML metadata document.
- * @method integer getStatus() Obtain Status. `0`: not set, `11`: enabled, `2`: disabled.
- * @method void setStatus(integer $Status) Set Status. `0`: not set, `11`: enabled, `2`: disabled.
+ * @method integer getStatus() Obtain Status. `0`: not set, `1`: enabled, `2`: disabled.
+ * @method void setStatus(integer $Status) Set Status. `0`: not set, `1`: enabled, `2`: disabled.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
     public $SAMLMetadata;
 
     /**
-     * @var integer Status. `0`: not set, `11`: enabled, `2`: disabled.
+     * @var integer Status. `0`: not set, `1`: enabled, `2`: disabled.
      */
     public $Status;
 
@@ -46,7 +46,7 @@ class DescribeUserSAMLConfigResponse extends AbstractModel
 
     /**
      * @param string $SAMLMetadata SAML metadata document.
-     * @param integer $Status Status. `0`: not set, `11`: enabled, `2`: disabled.
+     * @param integer $Status Status. `0`: not set, `1`: enabled, `2`: disabled.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

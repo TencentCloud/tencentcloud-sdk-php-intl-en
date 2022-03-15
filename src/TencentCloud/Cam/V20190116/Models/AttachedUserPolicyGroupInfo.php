@@ -18,7 +18,7 @@ namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information on policies associated with the user via the user group.
+ * Information on policies that are associated with the user and inherited from the user group
  *
  * @method integer getGroupId() Obtain Group ID.
  * @method void setGroupId(integer $GroupId) Set Group ID.
