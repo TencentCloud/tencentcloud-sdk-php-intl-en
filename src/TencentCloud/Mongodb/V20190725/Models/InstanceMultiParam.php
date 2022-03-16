@@ -26,16 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultValue(string $DefaultValue) Set Default value
  * @method array getEnumValue() Obtain Acceptable values
  * @method void setEnumValue(array $EnumValue) Set Acceptable values
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect
+ * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+ * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
- * @method integer getStatus() Obtain Whether the TencentDB for MongoDB console has pulled parameter information successfully
- * @method void setStatus(integer $Status) Set Whether the TencentDB for MongoDB console has pulled parameter information successfully
+ * @method integer getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method void setStatus(integer $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
  * @method array getTips() Obtain Parameter description
  * @method void setTips(array $Tips) Set Parameter description
- * @method string getValueType() Obtain Data type of the parameter
- * @method void setValueType(string $ValueType) Set Data type of the parameter
+ * @method string getValueType() Obtain Data type of the current value. Default value: `multi`
+ * @method void setValueType(string $ValueType) Set Data type of the current value. Default value: `multi`
  */
 class InstanceMultiParam extends AbstractModel
 {
@@ -55,7 +55,7 @@ class InstanceMultiParam extends AbstractModel
     public $EnumValue;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect
+     * @var string Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public $NeedRestart;
 
@@ -65,7 +65,7 @@ class InstanceMultiParam extends AbstractModel
     public $ParamName;
 
     /**
-     * @var integer Whether the TencentDB for MongoDB console has pulled parameter information successfully
+     * @var integer Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public $Status;
 
@@ -75,7 +75,7 @@ class InstanceMultiParam extends AbstractModel
     public $Tips;
 
     /**
-     * @var string Data type of the parameter
+     * @var string Data type of the current value. Default value: `multi`
      */
     public $ValueType;
 
@@ -83,11 +83,11 @@ class InstanceMultiParam extends AbstractModel
      * @param string $CurrentValue Current value
      * @param string $DefaultValue Default value
      * @param array $EnumValue Acceptable values
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect
+     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      * @param string $ParamName Parameter name
-     * @param integer $Status Whether the TencentDB for MongoDB console has pulled parameter information successfully
+     * @param integer $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      * @param array $Tips Parameter description
-     * @param string $ValueType Data type of the parameter
+     * @param string $ValueType Data type of the current value. Default value: `multi`
      */
     function __construct()
     {

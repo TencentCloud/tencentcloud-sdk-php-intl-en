@@ -18,16 +18,14 @@ namespace TencentCloud\Mongodb\V20190725\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ResetDBInstancePassword request structure.
+ * ModifyDBInstanceSecurityGroup request structure.
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getUserName() Obtain Instance account name
- * @method void setUserName(string $UserName) Set Instance account name
- * @method string getPassword() Obtain New password, which must contain at least eight characters
- * @method void setPassword(string $Password) Set New password, which must contain at least eight characters
+ * @method array getSecurityGroupIds() Obtain Target security group IDs
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Target security group IDs
  */
-class ResetDBInstancePasswordRequest extends AbstractModel
+class ModifyDBInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
      * @var string Instance ID
@@ -35,19 +33,13 @@ class ResetDBInstancePasswordRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Instance account name
+     * @var array Target security group IDs
      */
-    public $UserName;
-
-    /**
-     * @var string New password, which must contain at least eight characters
-     */
-    public $Password;
+    public $SecurityGroupIds;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $UserName Instance account name
-     * @param string $Password New password, which must contain at least eight characters
+     * @param array $SecurityGroupIds Target security group IDs
      */
     function __construct()
     {
@@ -66,12 +58,8 @@ class ResetDBInstancePasswordRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
-            $this->UserName = $param["UserName"];
-        }
-
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
+            $this->SecurityGroupIds = $param["SecurityGroupIds"];
         }
     }
 }

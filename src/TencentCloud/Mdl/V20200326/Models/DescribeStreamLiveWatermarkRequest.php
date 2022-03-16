@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shard information
+ * DescribeStreamLiveWatermark request structure.
  *
- * @method string getReplicaSetId() Obtain Replica set ID
- * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID
+ * @method string getId() Obtain Watermark ID
+ * @method void setId(string $Id) Set Watermark ID
  */
-class ReplicaSetInfo extends AbstractModel
+class DescribeStreamLiveWatermarkRequest extends AbstractModel
 {
     /**
-     * @var string Replica set ID
+     * @var string Watermark ID
      */
-    public $ReplicaSetId;
+    public $Id;
 
     /**
-     * @param string $ReplicaSetId Replica set ID
+     * @param string $Id Watermark ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ReplicaSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
-            $this->ReplicaSetId = $param["ReplicaSetId"];
+        if (array_key_exists("Id",$param) and $param["Id"] !== null) {
+            $this->Id = $param["Id"];
         }
     }
 }

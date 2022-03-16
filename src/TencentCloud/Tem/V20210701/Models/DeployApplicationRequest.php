@@ -112,6 +112,20 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setSpeedUp(boolean $SpeedUp) Set Whether the application acceleration is enabled 
  * @method HealthCheckConfig getStartupProbe() Obtain Whether to enable probing
  * @method void setStartupProbe(HealthCheckConfig $StartupProbe) Set Whether to enable probing
+ * @method string getOsFlavour() Obtain The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+ * @method void setOsFlavour(string $OsFlavour) Set The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -314,6 +328,17 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $StartupProbe;
 
     /**
+     * @var string The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
+     */
+    public $OsFlavour;
+
+    /**
      * @param string $ApplicationId Application ID
      * @param integer $InitPodNum Number of initialized pods
      * @param float $CpuSpec CPU specification
@@ -360,6 +385,13 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param boolean $ConfEdited Whether the configuration is modified (except for the image configuration)
      * @param boolean $SpeedUp Whether the application acceleration is enabled 
      * @param HealthCheckConfig $StartupProbe Whether to enable probing
+     * @param string $OsFlavour The version of the operating system
+If `openjdk` is selected, the value can be: 
+- ALPINE
+- CENTOS
+If `konajdk` is selected, the value can be: 
+- ALPINE
+- TENCENTOS
      */
     function __construct()
     {
@@ -561,6 +593,10 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
         if (array_key_exists("StartupProbe",$param) and $param["StartupProbe"] !== null) {
             $this->StartupProbe = new HealthCheckConfig();
             $this->StartupProbe->deserialize($param["StartupProbe"]);
+        }
+
+        if (array_key_exists("OsFlavour",$param) and $param["OsFlavour"] !== null) {
+            $this->OsFlavour = $param["OsFlavour"];
         }
     }
 }

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupName(string $BackupName) Set The name of a backup file with download tasks to be queried
  * @method string getStartTime() Obtain The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
  * @method void setStartTime(string $StartTime) Set The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
- * @method string getEndTime() Obtain The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
- * @method void setEndTime(string $EndTime) Set The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+ * @method string getEndTime() Obtain The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
+ * @method void setEndTime(string $EndTime) Set The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
  * @method integer getOffset() Obtain Offset for pagination. Default value: `0`.
@@ -57,7 +57,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+     * @var string The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
      */
     public $EndTime;
 
@@ -90,7 +90,7 @@ class DescribeBackupDownloadTaskRequest extends AbstractModel
      * @param string $InstanceId Instance ID in the format of "cmgo-p8vnipr5", which is the same as the instance ID displayed in the TencentDB console
      * @param string $BackupName The name of a backup file with download tasks to be queried
      * @param string $StartTime The start time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the start time can be any time earlier than the end time.
-     * @param string $EndTime The end time of the query period. Tasks whose start time and end time fall within the query period will be queried. If it is left empty, the end time can be any time later than the start time.
+     * @param string $EndTime The end time of the query period. Tasks will be queried if their start and end times fall within the query period. If it is left empty, the end time can be any time later than the start time.
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default value: `20`.
      * @param integer $Offset Offset for pagination. Default value: `0`.
      * @param string $OrderBy The field used to sort the results. Valid values: `createTime` (default), `finishTime`.

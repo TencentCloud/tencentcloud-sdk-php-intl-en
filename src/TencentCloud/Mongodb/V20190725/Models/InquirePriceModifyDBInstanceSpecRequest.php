@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMemory(integer $Memory) Set Instance memory size in GB after specification adjustment.
  * @method integer getVolume() Obtain Instance disk size in GB after specification adjustment.
  * @method void setVolume(integer $Volume) Set Instance disk size in GB after specification adjustment.
+ * @method integer getNodeNum() Obtain Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+ * @method void setNodeNum(integer $NodeNum) Set Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+ * @method integer getReplicateSetNum() Obtain Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+ * @method void setReplicateSetNum(integer $ReplicateSetNum) Set Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
  */
 class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
     public $Volume;
 
     /**
+     * @var integer Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     */
+    public $NodeNum;
+
+    /**
+     * @var integer Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
+     */
+    public $ReplicateSetNum;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed in the TencentDB Console.
      * @param integer $Memory Instance memory size in GB after specification adjustment.
      * @param integer $Volume Instance disk size in GB after specification adjustment.
+     * @param integer $NodeNum Node quantity after configuration modification. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the node quantity remains unchanged.
+     * @param integer $ReplicateSetNum Shard quantity after configuration modification, which can only be increased rather than decreased. The value range is subject to the response parameter of the `DescribeSpecInfo` API. If this parameter is left empty, the shard quantity remains unchanged.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class InquirePriceModifyDBInstanceSpecRequest extends AbstractModel
 
         if (array_key_exists("Volume",$param) and $param["Volume"] !== null) {
             $this->Volume = $param["Volume"];
+        }
+
+        if (array_key_exists("NodeNum",$param) and $param["NodeNum"] !== null) {
+            $this->NodeNum = $param["NodeNum"];
+        }
+
+        if (array_key_exists("ReplicateSetNum",$param) and $param["ReplicateSetNum"] !== null) {
+            $this->ReplicateSetNum = $param["ReplicateSetNum"];
         }
     }
 }

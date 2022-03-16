@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The collection of modifiable text parameters of an instance.
  *
- * @method string getCurrentValue() Obtain Current value (not in use)
- * @method void setCurrentValue(string $CurrentValue) Set Current value (not in use)
- * @method string getDefaultValue() Obtain Default value (not in use)
- * @method void setDefaultValue(string $DefaultValue) Set Default value (not in use)
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect (not in use)
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect (not in use)
- * @method string getParamName() Obtain Parameter name (not in use)
- * @method void setParamName(string $ParamName) Set Parameter name (not in use)
- * @method string getTextValue() Obtain Acceptable values (not in use)
- * @method void setTextValue(string $TextValue) Set Acceptable values (not in use)
- * @method array getTips() Obtain Parameter description (not in use)
- * @method void setTips(array $Tips) Set Parameter description (not in use)
- * @method string getValueType() Obtain Data type of the parameter (not in use)
- * @method void setValueType(string $ValueType) Set Data type of the parameter (not in use)
- * @method string getStatus() Obtain Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
- * @method void setStatus(string $Status) Set Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+ * @method string getCurrentValue() Obtain Current value
+ * @method void setCurrentValue(string $CurrentValue) Set Current value
+ * @method string getDefaultValue() Obtain Default value
+ * @method void setDefaultValue(string $DefaultValue) Set Default value
+ * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect
+ * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect
+ * @method string getParamName() Obtain Parameter name
+ * @method void setParamName(string $ParamName) Set Parameter name
+ * @method string getTextValue() Obtain Value of a text parameter
+ * @method void setTextValue(string $TextValue) Set Value of a text parameter
+ * @method array getTips() Obtain Parameter description
+ * @method void setTips(array $Tips) Set Parameter description
+ * @method string getValueType() Obtain Value type
+ * @method void setValueType(string $ValueType) Set Value type
+ * @method string getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method void setStatus(string $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
  */
 class InstanceTextParam extends AbstractModel
 {
     /**
-     * @var string Current value (not in use)
+     * @var string Current value
      */
     public $CurrentValue;
 
     /**
-     * @var string Default value (not in use)
+     * @var string Default value
      */
     public $DefaultValue;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect (not in use)
+     * @var string Whether to restart the instance for the parameter to take effect
      */
     public $NeedRestart;
 
     /**
-     * @var string Parameter name (not in use)
+     * @var string Parameter name
      */
     public $ParamName;
 
     /**
-     * @var string Acceptable values (not in use)
+     * @var string Value of a text parameter
      */
     public $TextValue;
 
     /**
-     * @var array Parameter description (not in use)
+     * @var array Parameter description
      */
     public $Tips;
 
     /**
-     * @var string Data type of the parameter (not in use)
+     * @var string Value type
      */
     public $ValueType;
 
     /**
-     * @var string Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+     * @var string Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public $Status;
 
     /**
-     * @param string $CurrentValue Current value (not in use)
-     * @param string $DefaultValue Default value (not in use)
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect (not in use)
-     * @param string $ParamName Parameter name (not in use)
-     * @param string $TextValue Acceptable values (not in use)
-     * @param array $Tips Parameter description (not in use)
-     * @param string $ValueType Data type of the parameter (not in use)
-     * @param string $Status Whether the TencentDB for MongoDB console has pulled parameter information successfully (not in use)
+     * @param string $CurrentValue Current value
+     * @param string $DefaultValue Default value
+     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect
+     * @param string $ParamName Parameter name
+     * @param string $TextValue Value of a text parameter
+     * @param array $Tips Parameter description
+     * @param string $ValueType Value type
+     * @param string $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     function __construct()
     {

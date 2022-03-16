@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method integer getProjectId() Obtain Project ID
- * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getProjectId() Obtain Unique ID of an existing project (instead of a new project).
+ * @method void setProjectId(integer $ProjectId) Set Unique ID of an existing project (instead of a new project).
  */
 class AssignProjectRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class AssignProjectRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var integer Project ID
+     * @var integer Unique ID of an existing project (instead of a new project).
      */
     public $ProjectId;
 
     /**
      * @param array $InstanceIds List of instance IDs in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param integer $ProjectId Project ID
+     * @param integer $ProjectId Unique ID of an existing project (instead of a new project).
      */
     function __construct()
     {

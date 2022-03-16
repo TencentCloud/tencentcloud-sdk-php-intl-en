@@ -36,6 +36,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpend(integer $TimeSpend) Set Task duration in seconds
  * @method string getUrl() Obtain Backup download address
  * @method void setUrl(string $Url) Set Backup download address
+ * @method integer getBackupMethod() Obtain Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+ * @method void setBackupMethod(integer $BackupMethod) Set Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+ * @method string getBackupDesc() Obtain Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackupDesc(string $BackupDesc) Set Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class BackupDownloadTask extends AbstractModel
 {
@@ -80,6 +86,17 @@ class BackupDownloadTask extends AbstractModel
     public $Url;
 
     /**
+     * @var integer Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     */
+    public $BackupMethod;
+
+    /**
+     * @var string Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $BackupDesc;
+
+    /**
      * @param string $CreateTime Task creation time
      * @param string $BackupName Backup name
      * @param string $ReplicaSetId Shard name
@@ -88,6 +105,9 @@ class BackupDownloadTask extends AbstractModel
      * @param integer $Percent Task progress in percentage
      * @param integer $TimeSpend Task duration in seconds
      * @param string $Url Backup download address
+     * @param integer $BackupMethod Backup type of the backup file. Valid values: `0` (logical backup), `1` (physical backup)
+     * @param string $BackupDesc Backup description you set when starting a backup task
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -132,6 +152,14 @@ class BackupDownloadTask extends AbstractModel
 
         if (array_key_exists("Url",$param) and $param["Url"] !== null) {
             $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("BackupDesc",$param) and $param["BackupDesc"] !== null) {
+            $this->BackupDesc = $param["BackupDesc"];
         }
     }
 }

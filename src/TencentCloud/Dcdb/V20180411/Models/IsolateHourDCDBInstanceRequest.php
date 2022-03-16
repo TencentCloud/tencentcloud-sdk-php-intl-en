@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shard information
+ * IsolateHourDCDBInstance request structure.
  *
- * @method string getReplicaSetId() Obtain Replica set ID
- * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID
+ * @method array getInstanceIds() Obtain Instance ID list
+ * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
  */
-class ReplicaSetInfo extends AbstractModel
+class IsolateHourDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Replica set ID
+     * @var array Instance ID list
      */
-    public $ReplicaSetId;
+    public $InstanceIds;
 
     /**
-     * @param string $ReplicaSetId Replica set ID
+     * @param array $InstanceIds Instance ID list
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ReplicaSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
-            $this->ReplicaSetId = $param["ReplicaSetId"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

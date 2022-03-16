@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBatchInterval(integer $BatchInterval) Set Interval between batches
  * @method integer getMinAvailable() Obtain The minimum number of available pods
  * @method void setMinAvailable(integer $MinAvailable) Set The minimum number of available pods
+ * @method boolean getForce() Obtain Whether to enable force release
+ * @method void setForce(boolean $Force) Set Whether to enable force release
  */
 class DeployStrategyConf extends AbstractModel
 {
@@ -59,11 +61,17 @@ class DeployStrategyConf extends AbstractModel
     public $MinAvailable;
 
     /**
+     * @var boolean Whether to enable force release
+     */
+    public $Force;
+
+    /**
      * @param integer $TotalBatchCount Total batches
      * @param integer $BetaBatchNum Number of pods for the beta batch
      * @param integer $DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
      * @param integer $BatchInterval Interval between batches
      * @param integer $MinAvailable The minimum number of available pods
+     * @param boolean $Force Whether to enable force release
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class DeployStrategyConf extends AbstractModel
 
         if (array_key_exists("MinAvailable",$param) and $param["MinAvailable"] !== null) {
             $this->MinAvailable = $param["MinAvailable"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

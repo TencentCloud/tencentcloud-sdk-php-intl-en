@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shard information
+ * ActiveHourDCDBInstance request structure.
  *
- * @method string getReplicaSetId() Obtain Replica set ID
- * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID
+ * @method array getInstanceIds() Obtain List of instance IDs in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
  */
-class ReplicaSetInfo extends AbstractModel
+class ActiveHourDCDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Replica set ID
+     * @var array List of instance IDs in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
      */
-    public $ReplicaSetId;
+    public $InstanceIds;
 
     /**
-     * @param string $ReplicaSetId Replica set ID
+     * @param array $InstanceIds List of instance IDs in the format of dcdbt-ow728lmc, which can be obtained through the `DescribeDCDBInstances` API.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ReplicaSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
-            $this->ReplicaSetId = $param["ReplicaSetId"];
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

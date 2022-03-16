@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mongodb\V20190725\Models;
+namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Shard information
+ * DeleteStreamLiveWatermark response structure.
  *
- * @method string getReplicaSetId() Obtain Replica set ID
- * @method void setReplicaSetId(string $ReplicaSetId) Set Replica set ID
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ReplicaSetInfo extends AbstractModel
+class DeleteStreamLiveWatermarkResponse extends AbstractModel
 {
     /**
-     * @var string Replica set ID
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $ReplicaSetId;
+    public $RequestId;
 
     /**
-     * @param string $ReplicaSetId Replica set ID
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ReplicaSetInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ReplicaSetId",$param) and $param["ReplicaSetId"] !== null) {
-            $this->ReplicaSetId = $param["ReplicaSetId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

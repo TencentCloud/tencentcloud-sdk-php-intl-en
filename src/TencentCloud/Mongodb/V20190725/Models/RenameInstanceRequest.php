@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method string getNewName() Obtain Instance name
- * @method void setNewName(string $NewName) Set Instance name
+ * @method string getNewName() Obtain Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
+ * @method void setNewName(string $NewName) Set Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
  */
 class RenameInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RenameInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
      */
     public $NewName;
 
     /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param string $NewName Instance name
+     * @param string $NewName Custom name of the instance, which can contain up to 60 letters, digits, or symbols (_-)
      */
     function __construct()
     {

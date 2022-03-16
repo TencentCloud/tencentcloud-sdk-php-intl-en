@@ -28,18 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMax(string $Max) Set Maximum value
  * @method string getMin() Obtain Minimum value
  * @method void setMin(string $Min) Set Minimum value
- * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
- * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+ * @method string getNeedRestart() Obtain Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
+ * @method void setNeedRestart(string $NeedRestart) Set Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method array getTips() Obtain Parameter description
  * @method void setTips(array $Tips) Set Parameter description
  * @method string getValueType() Obtain Data type of the parameter
  * @method void setValueType(string $ValueType) Set Data type of the parameter
- * @method integer getStatus() Obtain Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
- * @method void setStatus(integer $Status) Set Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
- * @method string getUnit() Obtain This field is not in use
- * @method void setUnit(string $Unit) Set This field is not in use
+ * @method integer getStatus() Obtain Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method void setStatus(integer $Status) Set Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+ * @method string getUnit() Obtain Redundant field which can be ignored
+ * @method void setUnit(string $Unit) Set Redundant field which can be ignored
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -64,7 +64,7 @@ class InstanceIntegerParam extends AbstractModel
     public $Min;
 
     /**
-     * @var string Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+     * @var string Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      */
     public $NeedRestart;
 
@@ -84,12 +84,12 @@ class InstanceIntegerParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var integer Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
+     * @var integer Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
      */
     public $Status;
 
     /**
-     * @var string This field is not in use
+     * @var string Redundant field which can be ignored
      */
     public $Unit;
 
@@ -98,12 +98,12 @@ class InstanceIntegerParam extends AbstractModel
      * @param string $DefaultValue Default value
      * @param string $Max Maximum value
      * @param string $Min Minimum value
-     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no)
+     * @param string $NeedRestart Whether to restart the instance for the parameter to take effect. Valid values: `1` (yes), `0` (no, which means the parameter setting takes effect immediately)
      * @param string $ParamName Parameter name
      * @param array $Tips Parameter description
      * @param string $ValueType Data type of the parameter
-     * @param integer $Status Whether the TencentDB for MongoDB console has pulled parameter information successfully. Valid values: `1` (no), `0` (yes). This field is only used in the console.
-     * @param string $Unit This field is not in use
+     * @param integer $Status Whether `CurrentValue` is the parameter value actually in use. Valid values: `1` (yes), `0` (no)
+     * @param string $Unit Redundant field which can be ignored
      */
     function __construct()
     {

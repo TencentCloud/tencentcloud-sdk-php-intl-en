@@ -27,10 +27,12 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\CreateStreamLiveInputResponse CreateStreamLiveInput(Models\CreateStreamLiveInputRequest $req) This API is used to create a StreamLive input.
  * @method Models\CreateStreamLiveInputSecurityGroupResponse CreateStreamLiveInputSecurityGroup(Models\CreateStreamLiveInputSecurityGroupRequest $req) This API is used to create an input security group. Up to 5 security groups are allowed.
  * @method Models\CreateStreamLivePlanResponse CreateStreamLivePlan(Models\CreateStreamLivePlanRequest $req) This API is used to create an event in the plan.
+ * @method Models\CreateStreamLiveWatermarkResponse CreateStreamLiveWatermark(Models\CreateStreamLiveWatermarkRequest $req) This API is used to add a watermark.
  * @method Models\DeleteStreamLiveChannelResponse DeleteStreamLiveChannel(Models\DeleteStreamLiveChannelRequest $req) This API is used to delete a StreamLive channel.
  * @method Models\DeleteStreamLiveInputResponse DeleteStreamLiveInput(Models\DeleteStreamLiveInputRequest $req) This API is used to delete a StreamLive input.
  * @method Models\DeleteStreamLiveInputSecurityGroupResponse DeleteStreamLiveInputSecurityGroup(Models\DeleteStreamLiveInputSecurityGroupRequest $req) This API is used to delete an input security group.
  * @method Models\DeleteStreamLivePlanResponse DeleteStreamLivePlan(Models\DeleteStreamLivePlanRequest $req) This API is used to delete a StreamLive event.
+ * @method Models\DeleteStreamLiveWatermarkResponse DeleteStreamLiveWatermark(Models\DeleteStreamLiveWatermarkRequest $req) This API is used to delete a watermark.
  * @method Models\DescribeStreamLiveChannelResponse DescribeStreamLiveChannel(Models\DescribeStreamLiveChannelRequest $req) This API is used to query a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelAlertsResponse DescribeStreamLiveChannelAlerts(Models\DescribeStreamLiveChannelAlertsRequest $req) This API is used to query the alarm information of a StreamLive channel.
  * @method Models\DescribeStreamLiveChannelInputStatisticsResponse DescribeStreamLiveChannelInputStatistics(Models\DescribeStreamLiveChannelInputStatisticsRequest $req) This API is used to query input statistics.
@@ -43,9 +45,12 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(Models\DescribeStreamLiveInputsRequest $req) This API is used to query StreamLive inputs in batches.
  * @method Models\DescribeStreamLivePlansResponse DescribeStreamLivePlans(Models\DescribeStreamLivePlansRequest $req) This API is used to query the events in the plan in batches.
  * @method Models\DescribeStreamLiveRegionsResponse DescribeStreamLiveRegions(Models\DescribeStreamLiveRegionsRequest $req) This API is used to query all StreamLive regions.
+ * @method Models\DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(Models\DescribeStreamLiveWatermarkRequest $req) This API is used to query a watermark.
+ * @method Models\DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(Models\DescribeStreamLiveWatermarksRequest $req) This API is used to query multiple watermarks at a time.
  * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.
  * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.
  * @method Models\ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(Models\ModifyStreamLiveInputSecurityGroupRequest $req) This API is used to modify an input security group.
+ * @method Models\ModifyStreamLiveWatermarkResponse ModifyStreamLiveWatermark(Models\ModifyStreamLiveWatermarkRequest $req) This API is used to modify a watermark.
  * @method Models\StartStreamLiveChannelResponse StartStreamLiveChannel(Models\StartStreamLiveChannelRequest $req) This API is used to start a StreamLive channel.
  * @method Models\StopStreamLiveChannelResponse StopStreamLiveChannel(Models\StopStreamLiveChannelRequest $req) This API is used to stop a StreamLive channel.
  */

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
- * @method integer getLimit() Obtain The number of records that will be returned. Default value: 10,000.
- * @method void setLimit(integer $Limit) Set The number of records that will be returned. Default value: 10,000.
+ * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
+ * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  */
@@ -35,7 +35,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer The number of records that will be returned. Default value: 10,000.
+     * @var integer Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
      */
     public $Limit;
 
@@ -46,7 +46,7 @@ class DescribeClientConnectionsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of cmgo-p8vnipr5. It is the same as the instance ID displayed on the TencentDB Console page
-     * @param integer $Limit The number of records that will be returned. Default value: 10,000.
+     * @param integer $Limit Number of results to be returned for a single request. Value range: 1-1,000. Default value: 1,000
      * @param integer $Offset Offset. Default value: 0.
      */
     function __construct()
