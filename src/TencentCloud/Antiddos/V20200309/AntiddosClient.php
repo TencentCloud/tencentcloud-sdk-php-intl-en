@@ -27,6 +27,10 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancer(Models\AssociateDDoSEipLoadBalancerRequest $req) This API is used to bind an Anti-DDoS EIP to the specified private IP of a CLB instance.
  * @method Models\CreateBlackWhiteIpListResponse CreateBlackWhiteIpList(Models\CreateBlackWhiteIpListRequest $req) This API is used to add an Anti-DDoS IP blocklist/allowlist.
  * @method Models\CreateBoundIPResponse CreateBoundIP(Models\CreateBoundIPRequest $req) This API is used to bind an IP to an Anti-DDoS Pro instance Both single IP instances and multi-IP instances are available. Note that you should wait until the current binding or unbinding completes before using this async API for new operations.
+ * @method Models\CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicy(Models\CreateCCPrecisionPolicyRequest $req) This API is used to create a CC precise protection policy.
+ * @method Models\CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicy(Models\CreateCCReqLimitPolicyRequest $req) This API is used to create a CC frequency limit policy.
+ * @method Models\CreateCcBlackWhiteIpListResponse CreateCcBlackWhiteIpList(Models\CreateCcBlackWhiteIpListRequest $req) This API is used to create a layer 4 access control list to prevent CC attacks.
+ * @method Models\CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfig(Models\CreateCcGeoIPBlockConfigRequest $req) This API is used to create a regional blocking configuration.
  * @method Models\CreateDDoSAIResponse CreateDDoSAI(Models\CreateDDoSAIRequest $req) This API is used to set Anti-DDoS AI protection switches.
  * @method Models\CreateDDoSGeoIPBlockConfigResponse CreateDDoSGeoIPBlockConfig(Models\CreateDDoSGeoIPBlockConfigRequest $req) This API is used to add an Anti-DDoS region blocking configuration.
  * @method Models\CreateDDoSSpeedLimitConfigResponse CreateDDoSSpeedLimitConfig(Models\CreateDDoSSpeedLimitConfigRequest $req) This API is used to add Anti-DDoS access rate limit configurations.
@@ -39,6 +43,11 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) This API is used to add Anti-DDoS watermark configurations.
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) This API is used to add Anti-DDoS watermark keys.
  * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) This API is used to delete an Anti-DDoS IP blocklist/allowlist.
+ * @method Models\DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(Models\DeleteCCLevelPolicyRequest $req) This API is used to delete a level-defining policy of CC attacks. 
+ * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) This API is used to delete a CC precise protection policy.
+ * @method Models\DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(Models\DeleteCCThresholdPolicyRequest $req) This API is used to delete a CC cleansing threshold policy.
+ * @method Models\DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpList(Models\DeleteCcBlackWhiteIpListRequest $req) This API is used to delete a layer-4 access control list.
+ * @method Models\DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfig(Models\DeleteCcGeoIPBlockConfigRequest $req) This API is used to delete a regional blocking configuration.
  * @method Models\DeleteDDoSGeoIPBlockConfigResponse DeleteDDoSGeoIPBlockConfig(Models\DeleteDDoSGeoIPBlockConfigRequest $req) This API is used to delete Anti-DDoS region blocking configurations.
  * @method Models\DeleteDDoSSpeedLimitConfigResponse DeleteDDoSSpeedLimitConfig(Models\DeleteDDoSSpeedLimitConfigRequest $req) This API is used to delete Anti-DDoS access rate limit configurations.
  * @method Models\DeletePacketFilterConfigResponse DeletePacketFilterConfig(Models\DeletePacketFilterConfigRequest $req) This API is used to delete Anti-DDoS feature filtering rules.
@@ -47,7 +56,13 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) This API is used to querying the status of Anti-DDoS IP.
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) This API is used to get the traffic flow data collected in the specified period.
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
+ * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) This API is used to query the list of CC protection levels.
+ * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) This API is used the query a level-defining policy of CC attacks
+ * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) This API is used to obtain a CC precise protection policy.
+ * @method Models\DescribeCCThresholdListResponse DescribeCCThresholdList(Models\DescribeCCThresholdListRequest $req) This API is used to query the list of CC cleansing thresholds.
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
+ * @method Models\DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(Models\DescribeCcBlackWhiteIpListRequest $req) This API is used to obtain a layer-4 access control list.
+ * @method Models\DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(Models\DescribeCcGeoIPBlockConfigListRequest $req) This API is used to obtain a list of regional blocking configurations.
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) This API is used to get DDoS attack traffic bandwidth and attack packet rate.
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) This API is used to get the default alarm threshold of an IP.
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) This API is used to query layer-7 rules matched with certificate IDs.
@@ -67,6 +82,8 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) This API is used to get a list of intelligent scheduling domain names.
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) This API is used to get a list of Anti-DDoS watermark configurations.
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) This API is used to unbind an Anti-DDoS EIP.
+ * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) This API is used to modify a CC precise protection policy.
+ * @method Models\ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(Models\ModifyCcBlackWhiteIpListRequest $req) This API is used to modify a layer-4 access control list.
  * @method Models\ModifyDDoSGeoIPBlockConfigResponse ModifyDDoSGeoIPBlockConfig(Models\ModifyDDoSGeoIPBlockConfigRequest $req) This API is used to modify Anti-DDoS region blocking configurations.
  * @method Models\ModifyDDoSSpeedLimitConfigResponse ModifyDDoSSpeedLimitConfig(Models\ModifyDDoSSpeedLimitConfigRequest $req) This API is used to modify Anti-DDoS access rate limit configurations.
  * @method Models\ModifyDomainUsrNameResponse ModifyDomainUsrName(Models\ModifyDomainUsrNameRequest $req) This API is used to modify intelligent scheduling domain names.

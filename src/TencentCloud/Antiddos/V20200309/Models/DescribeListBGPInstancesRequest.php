@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterName(string $FilterName) Set Name filter
  * @method integer getFilterLine() Obtain Line filter. Valid values: 1: BGP; 2: Non-BGP.
  * @method void setFilterLine(integer $FilterLine) Set Line filter. Valid values: 1: BGP; 2: Non-BGP.
- * @method string getFilterStatus() Obtain Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
- * @method void setFilterStatus(string $FilterStatus) Set Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+ * @method string getFilterStatus() Obtain Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
+ * @method void setFilterStatus(string $FilterStatus) Set Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
  * @method string getFilterBoundStatus() Obtain Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
  * @method void setFilterBoundStatus(string $FilterBoundStatus) Set Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
  */
@@ -77,7 +77,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterLine;
 
     /**
-     * @var string Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @var string Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
      */
     public $FilterStatus;
 
@@ -94,7 +94,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterRegion Region filter. For example, `ap-guangzhou`.
      * @param string $FilterName Name filter
      * @param integer $FilterLine Line filter. Valid values: 1: BGP; 2: Non-BGP.
-     * @param string $FilterStatus Filters by instance status. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @param string $FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
      * @param string $FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
      */
     function __construct()

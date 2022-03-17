@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
  * @method integer getRenewFlag() Obtain Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
  * @method void setRenewFlag(integer $RenewFlag) Set Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
- * @method integer getHealthy() Obtain Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
- * @method void setHealthy(integer $Healthy) Set Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+ * @method integer getHealthy() Obtain Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
+ * @method void setHealthy(integer $Healthy) Set Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
  * @method string getHealthyMessage() Obtain Instance status information
  * @method void setHealthyMessage(string $HealthyMessage) Set Instance status information
  * @method integer getCreateTime() Obtain Instance creation time
@@ -166,7 +166,7 @@ class InstanceDetail extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var integer Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     * @var integer Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
      */
     public $Healthy;
 
@@ -279,7 +279,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $VpcId vpcId. If this parameter is empty, it means the basic network
      * @param string $SubnetId Subnet ID
      * @param integer $RenewFlag Whether to renew the instance automatically, which is an int-type enumerated value. 1: yes, 2: no
-     * @param integer $Healthy Instance status, which is an int-type value. 0: healthy, 1: alarmed, 2: exceptional
+     * @param integer $Healthy Instance status. An int-type value will be returned. `0`: Healthy, `1`: Alarmed, `2`: Exceptional
      * @param string $HealthyMessage Instance status information
      * @param integer $CreateTime Instance creation time
      * @param integer $ExpireTime Instance expiration time

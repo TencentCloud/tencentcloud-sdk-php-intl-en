@@ -23,8 +23,31 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cloudaudit\V20190319\Models as Models;
 
 /**
+ * @method Models\CreateAuditResponse CreateAudit(Models\CreateAuditRequest $req) Parameter requirements:
+1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
+ * @method Models\CreateAuditTrackResponse CreateAuditTrack(Models\CreateAuditTrackRequest $req) This API is used to create a tracking set.
+ * @method Models\DeleteAuditResponse DeleteAudit(Models\DeleteAuditRequest $req) This API is used to delete a tracking set.
+ * @method Models\DeleteAuditTrackResponse DeleteAuditTrack(Models\DeleteAuditTrackRequest $req) This API is used to delete a CloudAudit tracking set.
+ * @method Models\DescribeAuditResponse DescribeAudit(Models\DescribeAuditRequest $req) This API is used to query the details of a tracking set.
  * @method Models\DescribeAuditTracksResponse DescribeAuditTracks(Models\DescribeAuditTracksRequest $req) This API is used to query the CloudAudit tracking set list.
  * @method Models\DescribeEventsResponse DescribeEvents(Models\DescribeEventsRequest $req) This API is used to query CloudAudit logs.
+ * @method Models\GetAttributeKeyResponse GetAttributeKey(Models\GetAttributeKeyRequest $req) This API is used to query the valid values of `AttributeKey`.
+ * @method Models\InquireAuditCreditResponse InquireAuditCredit(Models\InquireAuditCreditRequest $req) This API is used to query the number of tracking sets that can be created.
+ * @method Models\ListAuditsResponse ListAudits(Models\ListAuditsRequest $req) This API is used to query the summary of tracking sets.
+ * @method Models\ListCmqEnableRegionResponse ListCmqEnableRegion(Models\ListCmqEnableRegionRequest $req) This API is used to query CloudAudit-enabled CMQ AZs.
+ * @method Models\ListCosEnableRegionResponse ListCosEnableRegion(Models\ListCosEnableRegionRequest $req) This API is used to query CloudAudit-enabled COS AZs.
+ * @method Models\LookUpEventsResponse LookUpEvents(Models\LookUpEventsRequest $req) This API is used to search for operation logs to help query relevant operation information.
+ * @method Models\ModifyAuditTrackResponse ModifyAuditTrack(Models\ModifyAuditTrackRequest $req) This API is used to modify a CloudAudit tracking set.
+ * @method Models\StartLoggingResponse StartLogging(Models\StartLoggingRequest $req) This API is used to enable a tracking set.
+ * @method Models\StopLoggingResponse StopLogging(Models\StopLoggingRequest $req) This API is used to disable a tracking set.
+ * @method Models\UpdateAuditResponse UpdateAudit(Models\UpdateAuditRequest $req) Parameter requirements:
+1. If the value of `IsCreateNewBucket` exists, `cosRegion` and `osBucketName` are required.
+2. If the value of `IsEnableCmqNotify` is 1, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` are required.
+3. If the value of `IsEnableCmqNotify` is 0, `IsCreateNewQueue`, `CmqRegion`, and `CmqQueueName` cannot be passed in.
+4. If the value of `IsEnableKmsEncry` is 1, `KmsRegion` and `KeyId` are required.
  */
 
 class CloudauditClient extends AbstractClient

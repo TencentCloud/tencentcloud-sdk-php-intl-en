@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinSize(integer $MinSize) Set Minimum number of instances set by the scheduled task.
  * @method string getCreatedTime() Obtain Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+ * @method string getScheduledType() Obtain Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+ * @method void setScheduledType(string $ScheduledType) Set Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
  */
 class ScheduledAction extends AbstractModel
 {
@@ -94,6 +96,11 @@ class ScheduledAction extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var string Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
+     */
+    public $ScheduledType;
+
+    /**
      * @param string $ScheduledActionId Scheduled task ID.
      * @param string $ScheduledActionName Scheduled task name.
      * @param string $AutoScalingGroupId ID of the auto scaling group where the scheduled task is located.
@@ -104,6 +111,7 @@ class ScheduledAction extends AbstractModel
      * @param integer $DesiredCapacity Desired number of instances set by the scheduled task.
      * @param integer $MinSize Minimum number of instances set by the scheduled task.
      * @param string $CreatedTime Creation time of the scheduled task. The value is in `UTC time` in the format of `YYYY-MM-DDThh:mm:ssZ` according to the `ISO8601` standard.
+     * @param string $ScheduledType Specifies how the scheduled action is executed. <br><li>`CRONTAB`: execute repeatedly <br><li>`ONCE`: execute only once
      */
     function __construct()
     {
@@ -156,6 +164,10 @@ class ScheduledAction extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("ScheduledType",$param) and $param["ScheduledType"] !== null) {
+            $this->ScheduledType = $param["ScheduledType"];
         }
     }
 }

@@ -164,6 +164,8 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+ * @method array getExternalService() Obtain Shared component information
+ * @method void setExternalService(array $ExternalService) Set Shared component information
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -352,6 +354,11 @@ Hadoop-Hbase
     public $SceneName;
 
     /**
+     * @var array Shared component information
+     */
+    public $ExternalService;
+
+    /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -424,6 +431,7 @@ Hadoop-Kudu
 Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
+     * @param array $ExternalService Shared component information
      */
     function __construct()
     {
@@ -564,6 +572,15 @@ Hadoop-Hbase
 
         if (array_key_exists("SceneName",$param) and $param["SceneName"] !== null) {
             $this->SceneName = $param["SceneName"];
+        }
+
+        if (array_key_exists("ExternalService",$param) and $param["ExternalService"] !== null) {
+            $this->ExternalService = [];
+            foreach ($param["ExternalService"] as $key => $value){
+                $obj = new ExternalService();
+                $obj->deserialize($value);
+                array_push($this->ExternalService, $obj);
+            }
         }
     }
 }

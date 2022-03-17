@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLoadBalancerID(string $LoadBalancerID) Set ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
  * @method string getLoadBalancerRegion() Obtain Region of the CLB instance, such as `ap-hongkong`.
  * @method void setLoadBalancerRegion(string $LoadBalancerRegion) Set Region of the CLB instance, such as `ap-hongkong`.
+ * @method string getVip() Obtain CLB private IP
+ * @method void setVip(string $Vip) Set CLB private IP
  */
 class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
     public $LoadBalancerRegion;
 
     /**
+     * @var string CLB private IP
+     */
+    public $Vip;
+
+    /**
      * @param string $InstanceId Anti-DDoS instance ID (only Anti-DDoS Advanced). For example, `bgpip-0000011x`.
      * @param string $Eip EIP of the Anti-DDoS instance ID.
      * @param string $LoadBalancerID ID of the CLB to bind, such as `lb-0000002i`. It can be queried in the console or obtained from `LoadBalancerId` returned by the `DescribeLoadBalancers` API.
      * @param string $LoadBalancerRegion Region of the CLB instance, such as `ap-hongkong`.
+     * @param string $Vip CLB private IP
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class AssociateDDoSEipLoadBalancerRequest extends AbstractModel
 
         if (array_key_exists("LoadBalancerRegion",$param) and $param["LoadBalancerRegion"] !== null) {
             $this->LoadBalancerRegion = $param["LoadBalancerRegion"];
+        }
+
+        if (array_key_exists("Vip",$param) and $param["Vip"] !== null) {
+            $this->Vip = $param["Vip"];
         }
     }
 }

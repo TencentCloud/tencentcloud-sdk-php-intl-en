@@ -92,6 +92,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setSecurityGroups(array $SecurityGroups) Set Security groups
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getPublicKeyId() Obtain SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPublicKeyId(string $PublicKeyId) Set SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EmrProductConfigOutter extends AbstractModel
 {
@@ -204,6 +208,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $SecurityGroups;
 
     /**
+     * @var string SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PublicKeyId;
+
+    /**
      * @param array $SoftInfo Software information
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $MasterNodeSize Number of master nodes
@@ -240,6 +250,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $SecurityGroups Security groups
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $PublicKeyId SSH key ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -328,6 +340,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("PublicKeyId",$param) and $param["PublicKeyId"] !== null) {
+            $this->PublicKeyId = $param["PublicKeyId"];
         }
     }
 }

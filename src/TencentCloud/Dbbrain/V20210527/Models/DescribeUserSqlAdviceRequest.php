@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSqlText(string $SqlText) Set SQL statement.
  * @method string getSchema() Obtain Database name.
  * @method void setSchema(string $Schema) Set Database name.
+ * @method string getProduct() Obtain Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+ * @method void setProduct(string $Product) Set Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
  */
 class DescribeUserSqlAdviceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeUserSqlAdviceRequest extends AbstractModel
     public $Schema;
 
     /**
+     * @var string Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
+     */
+    public $Product;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $SqlText SQL statement.
      * @param string $Schema Database name.
+     * @param string $Product Service type. Valid values: `mysql` (TencentDB for MySQL), `cynosdb` (TDSQL-C for MySQL), `dbbrain-mysql` (self-built MySQL). Default value: `mysql`.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeUserSqlAdviceRequest extends AbstractModel
 
         if (array_key_exists("Schema",$param) and $param["Schema"] !== null) {
             $this->Schema = $param["Schema"];
+        }
+
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
         }
     }
 }

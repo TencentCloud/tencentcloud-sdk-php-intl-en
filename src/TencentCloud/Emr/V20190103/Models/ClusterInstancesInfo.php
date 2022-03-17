@@ -218,6 +218,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setSubnetName(string $SubnetName) Set Subnet name
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getClusterExternalServiceInfo() Obtain Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) Set Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -465,6 +469,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $SubnetName;
 
     /**
+     * @var array Cluster dependency
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ClusterExternalServiceInfo;
+
+    /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId Cluster ID
@@ -563,6 +573,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $VpcName VPC name
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SubnetName Subnet name
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $ClusterExternalServiceInfo Cluster dependency
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -726,6 +738,15 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("SubnetName",$param) and $param["SubnetName"] !== null) {
             $this->SubnetName = $param["SubnetName"];
+        }
+
+        if (array_key_exists("ClusterExternalServiceInfo",$param) and $param["ClusterExternalServiceInfo"] !== null) {
+            $this->ClusterExternalServiceInfo = [];
+            foreach ($param["ClusterExternalServiceInfo"] as $key => $value){
+                $obj = new ClusterExternalServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->ClusterExternalServiceInfo, $obj);
+            }
         }
     }
 }
