@@ -20,34 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAlarmPolicyNotice request structure.
  *
- * @method string getModule() Obtain Module name. Enter "monitor" here
- * @method void setModule(string $Module) Set Module name. Enter "monitor" here
- * @method string getPolicyId() Obtain Alarm policy ID
- * @method void setPolicyId(string $PolicyId) Set Alarm policy ID
- * @method array getNoticeIds() Obtain Alarm notification template ID list
- * @method void setNoticeIds(array $NoticeIds) Set Alarm notification template ID list
+ * @method string getModule() Obtain Module name, which is specified as `monitor`.
+ * @method void setModule(string $Module) Set Module name, which is specified as `monitor`.
+ * @method string getPolicyId() Obtain Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+ * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+ * @method array getNoticeIds() Obtain List of alarm notification template IDs.
+ * @method void setNoticeIds(array $NoticeIds) Set List of alarm notification template IDs.
+ * @method array getPolicyIds() Obtain Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+ * @method void setPolicyIds(array $PolicyIds) Set Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
  */
 class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 {
     /**
-     * @var string Module name. Enter "monitor" here
+     * @var string Module name, which is specified as `monitor`.
      */
     public $Module;
 
     /**
-     * @var string Alarm policy ID
+     * @var string Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
      */
     public $PolicyId;
 
     /**
-     * @var array Alarm notification template ID list
+     * @var array List of alarm notification template IDs.
      */
     public $NoticeIds;
 
     /**
-     * @param string $Module Module name. Enter "monitor" here
-     * @param string $PolicyId Alarm policy ID
-     * @param array $NoticeIds Alarm notification template ID list
+     * @var array Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
+     */
+    public $PolicyIds;
+
+    /**
+     * @param string $Module Module name, which is specified as `monitor`.
+     * @param string $PolicyId Alarm policy ID. If both `PolicyIds` and this parameter are returned, only `PolicyIds` takes effect.
+     * @param array $NoticeIds List of alarm notification template IDs.
+     * @param array $PolicyIds Alarm policy ID array, which can be used to associate notification templates with multiple alarm policies. Max value: 30.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyAlarmPolicyNoticeRequest extends AbstractModel
 
         if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
             $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

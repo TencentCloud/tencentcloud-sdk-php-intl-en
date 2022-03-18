@@ -18,7 +18,7 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This parameter describes the configuration of automatically initializing and mounting the cloud disk to the CVM when purchasing a new cloud disk.
+ * Describes how a newly purchased cloud disk is initialized and mounted to a CVM
  *
  * @method array getInstanceId() Obtain ID of the instance to which the cloud disk is attached.
  * @method void setInstanceId(array $InstanceId) Set ID of the instance to which the cloud disk is attached.

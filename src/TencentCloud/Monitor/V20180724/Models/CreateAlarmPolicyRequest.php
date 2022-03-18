@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(integer $Enable) Set Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
  * @method integer getProjectId() Obtain Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
  * @method void setProjectId(integer $ProjectId) Set Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
- * @method integer getConditionTemplateId() Obtain ID of trigger condition template. This parameter can be left empty.
- * @method void setConditionTemplateId(integer $ConditionTemplateId) Set ID of trigger condition template. This parameter can be left empty.
+ * @method integer getConditionTemplateId() Obtain Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
+ * @method void setConditionTemplateId(integer $ConditionTemplateId) Set Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
  * @method AlarmPolicyCondition getCondition() Obtain Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
  * @method void setCondition(AlarmPolicyCondition $Condition) Set Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
  * @method AlarmPolicyEventCondition getEventCondition() Obtain Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
@@ -87,7 +87,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var integer ID of trigger condition template. This parameter can be left empty.
+     * @var integer Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
      */
     public $ConditionTemplateId;
 
@@ -129,7 +129,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param string $Remark Remarks with up to 100 letters, digits, underscores, and hyphens
      * @param integer $Enable Whether to enable. Valid values: 0 (no), 1 (yes). Default value: 1. This parameter can be left empty
      * @param integer $ProjectId Project ID. For products with different projects, a value other than `-1` must be passed in. `-1`: no project; `0`: default project. If no value is passed in, `-1` will be used. The supported project IDs can be viewed on the [**Account Center** > **Project Management**](https://console.cloud.tencent.com/project) page of the console.
-     * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
+     * @param integer $ConditionTemplateId Trigger condition template ID. Pass in this parameter if the policy is associated with the trigger condition template; otherwise, pass in the `Condition` parameter. The trigger condition template ID can be obtained via [`DescribeConditionsTemplateList`](https://intl.cloud.tencent.com/document/api/248/70250?from_cn_redirect=1).
      * @param AlarmPolicyCondition $Condition Metric trigger condition. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition. The supported events can be queried via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
      * @param array $NoticeIds List of notification rule IDs, which can be obtained via [DescribeAlarmNotices](https://intl.cloud.tencent.com/document/product/248/51280?from_cn_redirect=1)
