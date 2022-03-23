@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Name of RO AZ, such as ap-shanghai-1
  * @method string getInstanceId() Obtain RO instance ID in the format of cdbro-c1nl9rpv
  * @method void setInstanceId(string $InstanceId) Set RO instance ID in the format of cdbro-c1nl9rpv
- * @method integer getStatus() Obtain RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
- * @method void setStatus(integer $Status) Set RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+ * @method integer getStatus() Obtain RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
+ * @method void setStatus(integer $Status) Set RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
  * @method integer getInstanceType() Obtain Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
  * @method string getInstanceName() Obtain RO instance name
@@ -105,7 +105,7 @@ class RoInstanceInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+     * @var integer RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      */
     public $Status;
 
@@ -192,7 +192,7 @@ class RoInstanceInfo extends AbstractModel
      * @param string $Region RO instance region name, such as ap-shanghai
      * @param string $Zone Name of RO AZ, such as ap-shanghai-1
      * @param string $InstanceId RO instance ID in the format of cdbro-c1nl9rpv
-     * @param integer $Status RO instance status. Value range: 0 (creating), 1 (running), 4 (deleting)
+     * @param integer $Status RO instance status. Valid values: `0` (creating), `1` (running), `3` (remote RO), `4` (deleting). When the `DescribeDBInstances` API is used to query the information of the source instance, if the source instance is associated with a remote read-only instance, the returned status value of the remote read-only instance always shows 3.
      * @param integer $InstanceType Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only)
      * @param string $InstanceName RO instance name
      * @param integer $HourFeeStatus Pay-as-you-go billing status. Value range: 1 (normal), 2 (in arrears)

@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain TencentDB product type to be queried. Currently, only `mysql` is supported.
  * @method void setProduct(string $Product) Set TencentDB product type to be queried. Currently, only `mysql` is supported.
- * @method integer getOffset() Obtain Pagination offset.
- * @method void setOffset(integer $Offset) Set Pagination offset.
- * @method integer getLimit() Obtain Paginated query limit. Default value: 20.
- * @method void setLimit(integer $Limit) Set Paginated query limit. Default value: 20.
- * @method string getOrderBy() Obtain Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
- * @method void setOrderBy(string $OrderBy) Set Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
- * @method string getOrderDirection() Obtain Sorting order. Valid values: ASC (ascending), DESC (descending).
- * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: ASC (ascending), DESC (descending).
+ * @method integer getOffset() Obtain Paginated query offset. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Paginated query offset. Default value: `0`.
+ * @method integer getLimit() Obtain Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+ * @method string getOrderBy() Obtain Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+ * @method void setOrderBy(string $OrderBy) Set Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+ * @method string getOrderDirection() Obtain Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
+ * @method void setOrderDirection(string $OrderDirection) Set Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
  */
 class DescribeBackupSummariesRequest extends AbstractModel
 {
@@ -39,31 +39,31 @@ class DescribeBackupSummariesRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var integer Pagination offset.
+     * @var integer Paginated query offset. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Paginated query limit. Default value: 20.
+     * @var integer Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
      */
     public $Limit;
 
     /**
-     * @var string Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
+     * @var string Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
      */
     public $OrderBy;
 
     /**
-     * @var string Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * @var string Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
      */
     public $OrderDirection;
 
     /**
      * @param string $Product TencentDB product type to be queried. Currently, only `mysql` is supported.
-     * @param integer $Offset Pagination offset.
-     * @param integer $Limit Paginated query limit. Default value: 20.
-     * @param string $OrderBy Sorting criterion. Valid values: BackupVolume (backup capacity), DataBackupVolume (data backup capacity), BinlogBackupVolume (log backup capacity), AutoBackupVolume (automatic backup capacity), ManualBackupVolume (manual backup capacity).
-     * @param string $OrderDirection Sorting order. Valid values: ASC (ascending), DESC (descending).
+     * @param integer $Offset Paginated query offset. Default value: `0`.
+     * @param integer $Limit Maximum entries returned per page, which ranges from 1 to 100. Default value: `20`.
+     * @param string $OrderBy Sorting criterion. Valid values: `BackupVolume` (backup capacity), `DataBackupVolume` (data backup capacity), `BinlogBackupVolume` (log backup capacity), `AutoBackupVolume` (automatic backup capacity), `ManualBackupVolume` (manual backup capacity). Default value: `BackupVolume`.
+     * @param string $OrderDirection Sorting order. Valid values: `ASC` (ascending), `DESC` (descending). Default value: `ASC`.
      */
     function __construct()
     {
