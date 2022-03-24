@@ -46,6 +46,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setAclRuleList(array $AclRuleList) Set Preset ACL rule list.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method InstanceQuotaConfigResp getQuotaConfig() Obtain Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQuotaConfig(InstanceQuotaConfigResp $QuotaConfig) Set Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TopicAttributesResponse extends AbstractModel
 {
@@ -103,6 +107,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $AclRuleList;
 
     /**
+     * @var InstanceQuotaConfigResp Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $QuotaConfig;
+
+    /**
      * @param string $TopicId Topic ID
      * @param integer $CreateTime Creation time
      * @param string $Note Topic remarks
@@ -116,6 +126,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param array $AclRuleList Preset ACL rule list.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param InstanceQuotaConfigResp $QuotaConfig Traffic throttling policy in topic dimension.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -179,6 +191,11 @@ Note: `null` may be returned for this field, indicating that no valid values can
                 $obj->deserialize($value);
                 array_push($this->AclRuleList, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaConfig",$param) and $param["QuotaConfig"] !== null) {
+            $this->QuotaConfig = new InstanceQuotaConfigResp();
+            $this->QuotaConfig->deserialize($param["QuotaConfig"]);
         }
     }
 }

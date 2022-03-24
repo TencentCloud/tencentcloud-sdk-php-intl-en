@@ -44,6 +44,10 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setCcnRegionBandwidthLimit(CcnRegionBandwidthLimit $CcnRegionBandwidthLimit) Set The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
+ * @method string getMarketId() Obtain Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMarketId(string $MarketId) Set Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CcnBandwidthInfo extends AbstractModel
 {
@@ -84,6 +88,12 @@ Note: this field may return null, indicating that no valid value was found.
     public $CcnRegionBandwidthLimit;
 
     /**
+     * @var string Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MarketId;
+
+    /**
      * @param string $CcnId The CCN ID that the bandwidth belongs to.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $CreatedTime The creation time of the instance.
@@ -96,6 +106,8 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
      * @param CcnRegionBandwidthLimit $CcnRegionBandwidthLimit The information of the bandwidth regions and bandwidth caps. The parameter is only returned for the cross-region limit mode, but not for egress limit.
 Note: this field may return null, indicating that no valid value was found.
+     * @param string $MarketId Cloud marketplace instance ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -133,6 +145,10 @@ Note: this field may return null, indicating that no valid value was found.
         if (array_key_exists("CcnRegionBandwidthLimit",$param) and $param["CcnRegionBandwidthLimit"] !== null) {
             $this->CcnRegionBandwidthLimit = new CcnRegionBandwidthLimit();
             $this->CcnRegionBandwidthLimit->deserialize($param["CcnRegionBandwidthLimit"]);
+        }
+
+        if (array_key_exists("MarketId",$param) and $param["MarketId"] !== null) {
+            $this->MarketId = $param["MarketId"];
         }
     }
 }

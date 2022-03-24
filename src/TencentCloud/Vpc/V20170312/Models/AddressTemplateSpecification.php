@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IP address template.
+ * IP address template
  *
  * @method string getAddressId() Obtain The ID of the IP address, such as `ipm-2uw6ujo6`.
  * @method void setAddressId(string $AddressId) Set The ID of the IP address, such as `ipm-2uw6ujo6`.

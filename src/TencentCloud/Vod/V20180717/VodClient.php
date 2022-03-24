@@ -196,6 +196,19 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
  * @method Models\ModifyContentReviewTemplateResponse ModifyContentReviewTemplate(Models\ModifyContentReviewTemplateRequest $req) This API is used to modify custom intelligent video content recognition templates.
  * @method Models\ModifyImageSpriteTemplateResponse ModifyImageSpriteTemplate(Models\ModifyImageSpriteTemplateRequest $req) This API is used to modify a custom image sprite generating template.
  * @method Models\ModifyMediaInfoResponse ModifyMediaInfo(Models\ModifyMediaInfoRequest $req) This API is used to modify the attributes of a media file, including category, name, description, tag, expiration time, timestamp information, video thumbnail, and subtitle information.
+ * @method Models\ModifyMediaStorageClassResponse ModifyMediaStorageClass(Models\ModifyMediaStorageClassRequest $req) This API is used to modify the storage class of media files.
+If the current storage class is STANDARD, it can be changed to one of the following classes:
+<li>STANDARD_IA</li>
+<li>ARCHIVE</li>
+<li>DEEP ARCHIVE</li>
+If the current storage class is STANDARD_IA, it can be changed to one of the following classes:
+<li>STANDARD</li>
+<li>ARCHIVE</li>
+<li>DEEP ARCHIVE</li>
+If the current storage class is ARCHIVE, it can be changed to the following class:
+<li>STANDARD</li>
+If the current storage class is DEEP ARCHIVE, it can be changed to the following class:
+<li>STANDARD</li>
  * @method Models\ModifyPersonSampleResponse ModifyPersonSample(Models\ModifyPersonSampleRequest $req) This API is used to modify sample information according to the sample ID. You can modify the name and description, add, delete, and reset facial features or tags. Leave at least one image after deleting facial features. To leave no image, please use the reset operation.
  * @method Models\ModifySampleSnapshotTemplateResponse ModifySampleSnapshotTemplate(Models\ModifySampleSnapshotTemplateRequest $req) This API is used to modify a custom sampled screencapturing template.
  * @method Models\ModifySnapshotByTimeOffsetTemplateResponse ModifySnapshotByTimeOffsetTemplate(Models\ModifySnapshotByTimeOffsetTemplateRequest $req) This API is used to modify a custom time point screencapturing template.

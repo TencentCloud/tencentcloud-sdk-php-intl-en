@@ -45,6 +45,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\DescribeStreamLiveInputsResponse DescribeStreamLiveInputs(Models\DescribeStreamLiveInputsRequest $req) This API is used to query StreamLive inputs in batches.
  * @method Models\DescribeStreamLivePlansResponse DescribeStreamLivePlans(Models\DescribeStreamLivePlansRequest $req) This API is used to query the events in the plan in batches.
  * @method Models\DescribeStreamLiveRegionsResponse DescribeStreamLiveRegions(Models\DescribeStreamLiveRegionsRequest $req) This API is used to query all StreamLive regions.
+ * @method Models\DescribeStreamLiveTranscodeDetailResponse DescribeStreamLiveTranscodeDetail(Models\DescribeStreamLiveTranscodeDetailRequest $req) This API is used to query the transcoding information of StreamLive streams.
  * @method Models\DescribeStreamLiveWatermarkResponse DescribeStreamLiveWatermark(Models\DescribeStreamLiveWatermarkRequest $req) This API is used to query a watermark.
  * @method Models\DescribeStreamLiveWatermarksResponse DescribeStreamLiveWatermarks(Models\DescribeStreamLiveWatermarksRequest $req) This API is used to query multiple watermarks at a time.
  * @method Models\ModifyStreamLiveChannelResponse ModifyStreamLiveChannel(Models\ModifyStreamLiveChannelRequest $req) This API is used to modify a StreamLive channel.

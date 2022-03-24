@@ -20,12 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TESHD parameter configuration.
  *
- * @method string getType() Obtain TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
- * @method void setType(string $Type) Set TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+ * @method string getType() Obtain TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
+ * @method void setType(string $Type) Set TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
  * @method integer getMaxVideoBitrate() Obtain Maximum bitrate, which is valid when `Type` is `TESHD`.
 If this parameter is left blank or 0 is entered, there will be no upper limit for bitrate.
  * @method void setMaxVideoBitrate(integer $MaxVideoBitrate) Set Maximum bitrate, which is valid when `Type` is `TESHD`.
@@ -34,9 +30,7 @@ If this parameter is left blank or 0 is entered, there will be no upper limit fo
 class TEHDConfig extends AbstractModel
 {
     /**
-     * @var string TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+     * @var string TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
      */
     public $Type;
 
@@ -47,9 +41,7 @@ If this parameter is left blank or 0 is entered, there will be no upper limit fo
     public $MaxVideoBitrate;
 
     /**
-     * @param string $Type TESHD type. Valid values:
-<li>TEHD-100: TESHD-100.</li>
-If this parameter is left blank, TESHD will not be enabled.
+     * @param string $Type TESHD transcoding type. Valid values: <li>TEHD-100</li> <li>OFF (default)</li>
      * @param integer $MaxVideoBitrate Maximum bitrate, which is valid when `Type` is `TESHD`.
 If this parameter is left blank or 0 is entered, there will be no upper limit for bitrate.
      */

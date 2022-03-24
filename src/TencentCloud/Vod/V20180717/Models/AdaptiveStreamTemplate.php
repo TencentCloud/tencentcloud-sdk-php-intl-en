@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoveVideo(integer $RemoveVideo) Set Whether to remove a video stream. Valid values:
 <li>0: no</li>
 <li>1: yes</li>
+ * @method TEHDConfig getTEHDConfig() Obtain TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTEHDConfig(TEHDConfig $TEHDConfig) Set TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class AdaptiveStreamTemplate extends AbstractModel
 {
@@ -64,6 +68,12 @@ class AdaptiveStreamTemplate extends AbstractModel
     public $RemoveVideo;
 
     /**
+     * @var TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $TEHDConfig;
+
+    /**
      * @param VideoTemplateInfo $Video Video parameter information.
      * @param AudioTemplateInfo $Audio Audio parameter information.
      * @param integer $RemoveAudio Whether to remove audio stream. Valid values:
@@ -72,6 +82,8 @@ class AdaptiveStreamTemplate extends AbstractModel
      * @param integer $RemoveVideo Whether to remove a video stream. Valid values:
 <li>0: no</li>
 <li>1: yes</li>
+     * @param TEHDConfig $TEHDConfig TESHD transcoding parameters
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -102,6 +114,11 @@ class AdaptiveStreamTemplate extends AbstractModel
 
         if (array_key_exists("RemoveVideo",$param) and $param["RemoveVideo"] !== null) {
             $this->RemoveVideo = $param["RemoveVideo"];
+        }
+
+        if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
+            $this->TEHDConfig = new TEHDConfig();
+            $this->TEHDConfig->deserialize($param["TEHDConfig"]);
         }
     }
 }

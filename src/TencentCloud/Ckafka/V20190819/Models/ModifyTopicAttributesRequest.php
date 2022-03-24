@@ -50,6 +50,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionBytes(integer $RetentionBytes) Set Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
  * @method array getTags() Obtain Tag list.
  * @method void setTags(array $Tags) Set Tag list.
+ * @method integer getQuotaProducerByteRate() Obtain Production throttling in MB/sec.
+ * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set Production throttling in MB/sec.
+ * @method integer getQuotaConsumerByteRate() Obtain Consumption throttling in MB/sec.
+ * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption throttling in MB/sec.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -129,6 +133,16 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer Production throttling in MB/sec.
+     */
+    public $QuotaProducerByteRate;
+
+    /**
+     * @var integer Consumption throttling in MB/sec.
+     */
+    public $QuotaConsumerByteRate;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -144,6 +158,8 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param string $AclRuleName Name of the preset ACL rule.
      * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
      * @param array $Tags Tag list.
+     * @param integer $QuotaProducerByteRate Production throttling in MB/sec.
+     * @param integer $QuotaConsumerByteRate Consumption throttling in MB/sec.
      */
     function __construct()
     {
@@ -221,6 +237,14 @@ class ModifyTopicAttributesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("QuotaProducerByteRate",$param) and $param["QuotaProducerByteRate"] !== null) {
+            $this->QuotaProducerByteRate = $param["QuotaProducerByteRate"];
+        }
+
+        if (array_key_exists("QuotaConsumerByteRate",$param) and $param["QuotaConsumerByteRate"] !== null) {
+            $this->QuotaConsumerByteRate = $param["QuotaConsumerByteRate"];
         }
     }
 }

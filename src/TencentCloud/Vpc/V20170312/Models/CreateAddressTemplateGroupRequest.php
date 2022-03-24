@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAddressTemplateGroup request structure.
  *
- * @method string getAddressTemplateGroupName() Obtain The name of the IP address template group.
- * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set The name of the IP address template group.
- * @method array getAddressTemplateIds() Obtain The instance ID of the IP address template, such as `ipm-mdunqeb6`.
- * @method void setAddressTemplateIds(array $AddressTemplateIds) Set The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+ * @method string getAddressTemplateGroupName() Obtain Name of the IP address template group
+ * @method void setAddressTemplateGroupName(string $AddressTemplateGroupName) Set Name of the IP address template group
+ * @method array getAddressTemplateIds() Obtain IP address template instance ID, such as `ipm-mdunqeb6`.
+ * @method void setAddressTemplateIds(array $AddressTemplateIds) Set IP address template instance ID, such as `ipm-mdunqeb6`.
  */
 class CreateAddressTemplateGroupRequest extends AbstractModel
 {
     /**
-     * @var string The name of the IP address template group.
+     * @var string Name of the IP address template group
      */
     public $AddressTemplateGroupName;
 
     /**
-     * @var array The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+     * @var array IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     public $AddressTemplateIds;
 
     /**
-     * @param string $AddressTemplateGroupName The name of the IP address template group.
-     * @param array $AddressTemplateIds The instance ID of the IP address template, such as `ipm-mdunqeb6`.
+     * @param string $AddressTemplateGroupName Name of the IP address template group
+     * @param array $AddressTemplateIds IP address template instance ID, such as `ipm-mdunqeb6`.
      */
     function __construct()
     {

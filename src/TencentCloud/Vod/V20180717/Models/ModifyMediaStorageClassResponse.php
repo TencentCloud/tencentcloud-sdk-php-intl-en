@@ -14,16 +14,16 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Vpc\V20170312\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisassociateNetworkAclSubnets response structure.
+ * ModifyMediaStorageClass response structure.
  *
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DisassociateNetworkAclSubnetsResponse extends AbstractModel
+class ModifyMediaStorageClassResponse extends AbstractModel
 {
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.

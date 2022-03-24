@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAddressTemplate request structure.
  *
- * @method string getAddressTemplateName() Obtain The name of the IP address template
- * @method void setAddressTemplateName(string $AddressTemplateName) Set The name of the IP address template
+ * @method string getAddressTemplateName() Obtain IP address template name.
+ * @method void setAddressTemplateName(string $AddressTemplateName) Set IP address template name.
  * @method array getAddresses() Obtain The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
  * @method void setAddresses(array $Addresses) Set The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
  * @method array getAddressesExtra() Obtain The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateAddressTemplateRequest extends AbstractModel
 {
     /**
-     * @var string The name of the IP address template
+     * @var string IP address template name.
      */
     public $AddressTemplateName;
 
@@ -45,7 +45,7 @@ class CreateAddressTemplateRequest extends AbstractModel
     public $AddressesExtra;
 
     /**
-     * @param string $AddressTemplateName The name of the IP address template
+     * @param string $AddressTemplateName IP address template name.
      * @param array $Addresses The address information can be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      * @param array $AddressesExtra The address information can contain remarks and be presented by the IP, CIDR block or IP address range. Either Addresses or AddressesExtra is required.
      */

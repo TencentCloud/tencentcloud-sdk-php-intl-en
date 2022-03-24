@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
  * @method string getUpgradeMode() Obtain Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
  * @method void setUpgradeMode(string $UpgradeMode) Set Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+ * @method boolean getCosBackup() Obtain Whether to back up the cluster before version upgrade (no backup by default)
+ * @method void setCosBackup(boolean $CosBackup) Set Whether to back up the cluster before version upgrade (no backup by default)
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeMode;
 
     /**
+     * @var boolean Whether to back up the cluster before version upgrade (no backup by default)
+     */
+    public $CosBackup;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $EsVersion Target ES version. Valid values: 6.4.3, 6.8.2, 7.5.1
      * @param boolean $CheckOnly Whether to check for upgrade only. Default value: false
      * @param string $LicenseType Target X-Pack edition: <li>OSS: Open-source Edition </li><li>basic: Basic Edition </li>Currently only used for v5.6.4 to v6.x upgrade. Default value: basic
      * @param integer $BasicSecurityType Whether to enable X-Pack security authentication in Basic Edition 6.8 (and above) <li>1: disabled </li><li>2: enabled</li>
      * @param string $UpgradeMode Upgrade mode. <li>scale: blue/green deployment</li><li>restart: rolling restart</li>Default value: scale
+     * @param boolean $CosBackup Whether to back up the cluster before version upgrade (no backup by default)
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("UpgradeMode",$param) and $param["UpgradeMode"] !== null) {
             $this->UpgradeMode = $param["UpgradeMode"];
+        }
+
+        if (array_key_exists("CosBackup",$param) and $param["CosBackup"] !== null) {
+            $this->CosBackup = $param["CosBackup"];
         }
     }
 }

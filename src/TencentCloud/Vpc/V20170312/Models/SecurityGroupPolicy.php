@@ -24,8 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPolicyIndex(integer $PolicyIndex) Set The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
  * @method string getProtocol() Obtain Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
  * @method void setProtocol(string $Protocol) Set Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
- * @method string getPort() Obtain Port (all, discrete port, range).
- * @method void setPort(string $Port) Set Port (all, discrete port, range).
+ * @method string getPort() Obtain Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
+ * @method void setPort(string $Port) Set Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
  * @method ServiceTemplateSpecification getServiceTemplate() Obtain Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
  * @method void setServiceTemplate(ServiceTemplateSpecification $ServiceTemplate) Set Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
  * @method string getCidrBlock() Obtain IP range or IP (mutually exclusive).
@@ -56,7 +58,8 @@ class SecurityGroupPolicy extends AbstractModel
     public $Protocol;
 
     /**
-     * @var string Port (all, discrete port, range).
+     * @var string Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
      */
     public $Port;
 
@@ -103,7 +106,8 @@ class SecurityGroupPolicy extends AbstractModel
     /**
      * @param integer $PolicyIndex The index number of security group rules, which dynamically changes with the rules. This parameter can be obtained via the `DescribeSecurityGroupPolicies` API and used with the `Version` field in the returned value of the API.
      * @param string $Protocol Protocol. Valid values: TCP, UDP, ICMP, ICMPv6, ALL.
-     * @param string $Port Port (all, discrete port, range).
+     * @param string $Port Port (`all`, a single port, or a port range).
+Note: If the `Protocol` value is set to `ALL`, the `Port` value also needs to be set to `all`.
      * @param ServiceTemplateSpecification $ServiceTemplate Protocol port ID or protocol port group ID. ServiceTemplate and Protocol+Port are mutually exclusive.
      * @param string $CidrBlock IP range or IP (mutually exclusive).
      * @param string $Ipv6CidrBlock The CIDR block or IPv6 (mutually exclusive).
