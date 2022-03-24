@@ -42,6 +42,7 @@ Each service in API Gateway provides a default domain name for users to call. If
  * @method Models\CreatePluginResponse CreatePlugin(Models\CreatePluginRequest $req) This API is used to create an API Gateway plugin.
  * @method Models\CreateServiceResponse CreateService(Models\CreateServiceRequest $req) This API is used to create a service.
 A service is the biggest usage unit in API Gateway. Each service can contain multiple APIs and one default domain name for invocation. You can also bind your own custom domain name to a service. 
+ * @method Models\CreateUpstreamResponse CreateUpstream(Models\CreateUpstreamRequest $req) This API is used to create an upstream.
  * @method Models\CreateUsagePlanResponse CreateUsagePlan(Models\CreateUsagePlanRequest $req) This API is used to create a usage plan.
 To use API Gateway, you need to create a usage plan and bind it to a service environment.
  * @method Models\DeleteAPIDocResponse DeleteAPIDoc(Models\DeleteAPIDocRequest $req) This API is used to delete an API document.
@@ -53,6 +54,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
  * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) This API is used to delete a service in API Gateway.
  * @method Models\DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(Models\DeleteServiceSubDomainMappingRequest $req) This API is used to delete a custom domain name mapping in a service environment.
 You can use this API if you use a custom domain name and custom mapping. Please note that if you delete all mappings in all environments, a failure will be returned when this API is called.
+ * @method Models\DeleteUpstreamResponse DeleteUpstream(Models\DeleteUpstreamRequest $req) This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) This API is used to delete a usage plan.
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
@@ -69,8 +71,8 @@ This operation will also be denied if the current environment has not been publi
  * @method Models\DescribeApiForApiAppResponse DescribeApiForApiApp(Models\DescribeApiForApiAppRequest $req) This API is used to query the details of an API deployed at API Gateway.
  * @method Models\DescribeApiKeyResponse DescribeApiKey(Models\DescribeApiKeyRequest $req) This API is used to query the details of a key.
 After creating an API key, you can query its details by using this API.
- * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) This API is used to query the list of keys.
-If you have created multiple API key pairs, you can use this API to query the information of one or more keys. This API does not display the `secretKey`.
+ * @method Models\DescribeApiKeysStatusResponse DescribeApiKeysStatus(Models\DescribeApiKeysStatusRequest $req) This API is used to query the information of one or more API keys.
+ 
  * @method Models\DescribeApiUsagePlanResponse DescribeApiUsagePlan(Models\DescribeApiUsagePlanRequest $req) This API is used to query the details of API usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service and APIs under it.
  * @method Models\DescribeApisStatusResponse DescribeApisStatus(Models\DescribeApisStatusRequest $req) This API is used to view a certain API or the list of all APIs under a service and relevant information.
@@ -95,6 +97,8 @@ In API Gateway, you can bind custom domain names to a service for service call. 
  * @method Models\DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(Models\DescribeServiceUsagePlanRequest $req) This API is used to query the details of usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
  * @method Models\DescribeServicesStatusResponse DescribeServicesStatus(Models\DescribeServicesStatusRequest $req) This API is used to query the list of one or more services and return relevant domain name, time, and other information.
+ * @method Models\DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(Models\DescribeUpstreamBindApisRequest $req) This API is used to query the list of APIs bound with an upstream.
+ * @method Models\DescribeUpstreamsResponse DescribeUpstreams(Models\DescribeUpstreamsRequest $req) This API is used to query the list of upstreams.
  * @method Models\DescribeUsagePlanResponse DescribeUsagePlan(Models\DescribeUsagePlanRequest $req) This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
  * @method Models\DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(Models\DescribeUsagePlanEnvironmentsRequest $req) This API is used to query the list of environments bound to a usage plan.
 After binding a usage plan to environments, you can use this API to query all service environments bound to the usage plan.
@@ -115,6 +119,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
  * @method Models\ModifyServiceResponse ModifyService(Models\ModifyServiceRequest $req) This API is used to modify the relevant information of a service. After a service is created, its name, description, and service type can be modified.
  * @method Models\ModifyServiceEnvironmentStrategyResponse ModifyServiceEnvironmentStrategy(Models\ModifyServiceEnvironmentStrategyRequest $req) This API is used to modify a service throttling policy.
  * @method Models\ModifySubDomainResponse ModifySubDomain(Models\ModifySubDomainRequest $req) This API is used to modify the path mapping in the custom domain name settings of a service. The path mapping rule can be modified before it is bound to the custom domain name.
+ * @method Models\ModifyUpstreamResponse ModifyUpstream(Models\ModifyUpstreamRequest $req) This API is used to modify an upstream.
  * @method Models\ModifyUsagePlanResponse ModifyUsagePlan(Models\ModifyUsagePlanRequest $req) This API is used to modify the name, description, and QPS of a usage plan.
  * @method Models\ReleaseServiceResponse ReleaseService(Models\ReleaseServiceRequest $req) This API is used to publish a service.
 An API Gateway service can only be called when it is published to an environment and takes effect after creation. This API is used to publish a service to an environment such as the `release` environment.

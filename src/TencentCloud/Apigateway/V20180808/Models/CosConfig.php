@@ -42,6 +42,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAuthorization(boolean $Authorization) Set Whether to enable the backend COS signature for the API. It defaults to `false`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getPathMatchMode() Obtain The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPathMatchMode(string $PathMatchMode) Set The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CosConfig extends AbstractModel
 {
@@ -69,6 +81,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Authorization;
 
     /**
+     * @var string The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $PathMatchMode;
+
+    /**
      * @param string $Action Specifies how the backend COS bucket is called by the API. The frontend request method and Action can be:
 GET：GetObject
 PUT：PutObject
@@ -80,6 +102,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $Authorization Whether to enable the backend COS signature for the API. It defaults to `false`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $PathMatchMode The path matching mode of the backend COS service
+`BackEndPath`: Match the backend path
+`FullPath`: Match the full path
+
+Default: `BackEndPath`
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -104,6 +132,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Authorization",$param) and $param["Authorization"] !== null) {
             $this->Authorization = $param["Authorization"];
+        }
+
+        if (array_key_exists("PathMatchMode",$param) and $param["PathMatchMode"] !== null) {
+            $this->PathMatchMode = $param["PathMatchMode"];
         }
     }
 }

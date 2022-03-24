@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Tag information.
  * @method string getInstanceId() Obtain Dedicated instance ID
  * @method void setInstanceId(string $InstanceId) Set Dedicated instance ID
+ * @method string getUniqVpcId() Obtain VPC attribute
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC attribute
  */
 class CreateServiceRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateServiceRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string VPC attribute
+     */
+    public $UniqVpcId;
+
+    /**
      * @param string $ServiceName Custom service name.
      * @param string $Protocol Service frontend request type, such as `http`, `https`, and `http&https`.
      * @param string $ServiceDesc Custom service description.
@@ -104,6 +111,7 @@ class CreateServiceRequest extends AbstractModel
      * @param string $AppIdType User type, which is reserved and can be used by `serverless` users.
      * @param array $Tags Tag information.
      * @param string $InstanceId Dedicated instance ID
+     * @param string $UniqVpcId VPC attribute
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ class CreateServiceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
         }
     }
 }

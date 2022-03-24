@@ -36,16 +36,18 @@ Tencent Cloud team <noreply@mail.qcloud.com>
  * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
  * @method Template getTemplate() Obtain Template when emails are sent using a template
  * @method void setTemplate(Template $Template) Set Template when emails are sent using a template
- * @method Simple getSimple() Obtain Email content when emails are sent by calling the API
- * @method void setSimple(Simple $Simple) Set Email content when emails are sent by calling the API
- * @method array getAttachments() Obtain Email attachments
- * @method void setAttachments(array $Attachments) Set Email attachments
+ * @method Simple getSimple() Obtain Email content when emails are sent by calling the API. This parameter is currently unavailable.
+ * @method void setSimple(Simple $Simple) Set Email content when emails are sent by calling the API. This parameter is currently unavailable.
+ * @method array getAttachments() Obtain Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
+ * @method void setAttachments(array $Attachments) Set Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
  * @method CycleEmailParam getCycleParam() Obtain Parameter required for a recurring sending task
  * @method void setCycleParam(CycleEmailParam $CycleParam) Set Parameter required for a recurring sending task
  * @method TimedEmailParam getTimedParam() Obtain Parameter required for a scheduled sending task
  * @method void setTimedParam(TimedEmailParam $TimedParam) Set Parameter required for a scheduled sending task
  * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+ * @method integer getADLocation() Obtain 
+ * @method void setADLocation(integer $ADLocation) Set 
  */
 class BatchSendEmailRequest extends AbstractModel
 {
@@ -82,12 +84,12 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $Template;
 
     /**
-     * @var Simple Email content when emails are sent by calling the API
+     * @var Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
      */
     public $Simple;
 
     /**
-     * @var array Email attachments
+     * @var array Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      */
     public $Attachments;
 
@@ -107,6 +109,11 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $Unsubscribe;
 
     /**
+     * @var integer 
+     */
+    public $ADLocation;
+
+    /**
      * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com. To display the sender name, enter the address in the following format:
 Sender <email address>, for example:
 Tencent Cloud team <noreply@mail.qcloud.com>
@@ -115,11 +122,12 @@ Tencent Cloud team <noreply@mail.qcloud.com>
      * @param integer $TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
      * @param Template $Template Template when emails are sent using a template
-     * @param Simple $Simple Email content when emails are sent by calling the API
-     * @param array $Attachments Email attachments
+     * @param Simple $Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * @param array $Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      * @param CycleEmailParam $CycleParam Parameter required for a recurring sending task
      * @param TimedEmailParam $TimedParam Parameter required for a scheduled sending task
      * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * @param integer $ADLocation 
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ Tencent Cloud team <noreply@mail.qcloud.com>
 
         if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
             $this->Unsubscribe = $param["Unsubscribe"];
+        }
+
+        if (array_key_exists("ADLocation",$param) and $param["ADLocation"] !== null) {
+            $this->ADLocation = $param["ADLocation"];
         }
     }
 }

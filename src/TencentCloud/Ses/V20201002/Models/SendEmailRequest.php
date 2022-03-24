@@ -40,6 +40,8 @@ Sender <email address>
  * @method void setAttachments(array $Attachments) Set Email attachments
  * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+ * @method integer getTriggerType() Obtain Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+ * @method void setTriggerType(integer $TriggerType) Set Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
  */
 class SendEmailRequest extends AbstractModel
 {
@@ -86,6 +88,11 @@ Sender <email address>
     public $Unsubscribe;
 
     /**
+     * @var integer Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
+     */
+    public $TriggerType;
+
+    /**
      * @param string $FromEmailAddress Sender address. Enter a sender address, for example, noreply@mail.qcloud.com.
 To display the sender name, enter the address in the following format: 
 Sender <email address>
@@ -96,6 +103,7 @@ Sender <email address>
      * @param Simple $Simple Email content when sending emails by calling the API.
      * @param array $Attachments Email attachments
      * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
+     * @param integer $TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ Sender <email address>
 
         if (array_key_exists("Unsubscribe",$param) and $param["Unsubscribe"] !== null) {
             $this->Unsubscribe = $param["Unsubscribe"];
+        }
+
+        if (array_key_exists("TriggerType",$param) and $param["TriggerType"] !== null) {
+            $this->TriggerType = $param["TriggerType"];
         }
     }
 }

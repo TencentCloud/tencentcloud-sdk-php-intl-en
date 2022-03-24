@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ServiceConfig information
  *
- * @method string getProduct() Obtain Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
- * @method void setProduct(string $Product) Set Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+ * @method string getProduct() Obtain The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
+ * @method void setProduct(string $Product) Set The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
  * @method string getUniqVpcId() Obtain Unique VPC ID.
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID.
  * @method string getUrl() Obtain API backend service URL, which is required if `ServiceType` is `HTTP`.
@@ -38,7 +38,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class ServiceConfig extends AbstractModel
 {
     /**
-     * @var string Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+     * @var string The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
      */
     public $Product;
 
@@ -69,7 +69,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CosConfig;
 
     /**
-     * @param string $Product Backend type, which takes effect when VPC is enabled. Valid values: `clb` and `upstream` (VPC channel)
+     * @param string $Product The backend type. It’s available when `vpc` is enabled. Values: `clb`, `cvm` and `upstream`.
      * @param string $UniqVpcId Unique VPC ID.
      * @param string $Url API backend service URL, which is required if `ServiceType` is `HTTP`.
      * @param string $Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.

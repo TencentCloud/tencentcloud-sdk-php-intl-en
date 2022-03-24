@@ -24,18 +24,30 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setApiId(string $ApiId) Set API ID
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getPath() Obtain path
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPath(string $Path) Set path
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMethod() Obtain method
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMethod(string $Method) Set method
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getPath() Obtain Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPath(string $Path) Set Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getMethod() Obtain Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMethod(string $Method) Set Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getCreatedTime() Obtain Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getErrMsg() Obtain Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setErrMsg(string $ErrMsg) Set Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getApiName() Obtain API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setApiName(string $ApiName) Set API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CreateApiRsp extends AbstractModel
 {
@@ -46,14 +58,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ApiId;
 
     /**
-     * @var string path
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Path;
 
     /**
-     * @var string method
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Method;
 
@@ -64,14 +76,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CreatedTime;
 
     /**
+     * @var string Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
+     * @var string Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ErrMsg;
+
+    /**
+     * @var string API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ApiName;
+
+    /**
      * @param string $ApiId API ID
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Path path
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Method method
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Path Path
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Method Request method
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $CreatedTime Creation time
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Status of the import task
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ErrMsg Details of the error
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ApiName API name
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -100,6 +136,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ErrMsg",$param) and $param["ErrMsg"] !== null) {
+            $this->ErrMsg = $param["ErrMsg"];
+        }
+
+        if (array_key_exists("ApiName",$param) and $param["ApiName"] !== null) {
+            $this->ApiName = $param["ApiName"];
         }
     }
 }
