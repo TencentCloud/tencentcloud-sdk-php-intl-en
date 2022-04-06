@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter.
  * @method RecordParam getMp3Param() Obtain MP3 recording parameter, which is set when MP3 recording is enabled.
  * @method void setMp3Param(RecordParam $Mp3Param) Set MP3 recording parameter, which is set when MP3 recording is enabled.
+ * @method boolean getRemoveWatermark() Obtain Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+ * @method void setRemoveWatermark(boolean $RemoveWatermark) Set Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
  */
 class ModifyLiveRecordTemplateRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
+     * @var boolean Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public $RemoveWatermark;
+
+    /**
      * @param integer $TemplateId Template ID obtained through the `DescribeRecordTemplates` API.
      * @param string $TemplateName Template name.
      * @param string $Description Message description
@@ -96,6 +103,7 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
      * @param RecordParam $AacParam AAC recording parameter, which is set when AAC recording is enabled.
      * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter.
      * @param RecordParam $Mp3Param MP3 recording parameter, which is set when MP3 recording is enabled.
+     * @param boolean $RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
      */
     function __construct()
     {
@@ -150,6 +158,10 @@ class ModifyLiveRecordTemplateRequest extends AbstractModel
         if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
             $this->Mp3Param = new RecordParam();
             $this->Mp3Param->deserialize($param["Mp3Param"]);
+        }
+
+        if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
+            $this->RemoveWatermark = $param["RemoveWatermark"];
         }
     }
 }

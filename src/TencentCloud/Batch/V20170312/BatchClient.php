@@ -56,7 +56,6 @@ The job to be deleted must be in a completed state, and all task instances conta
  * @method Models\ModifyTaskTemplateResponse ModifyTaskTemplate(Models\ModifyTaskTemplateRequest $req) This API is used to modify a task template.
  * @method Models\RetryJobsResponse RetryJobs(Models\RetryJobsRequest $req) This API is used to retry the failing task instance in instances.
 Job retry is supported only if a job is in the "FAILED" state. After the retry operation succeeds, the instance will retry the failing task instances in each task in turn according to the task dependencies specified in the "DAG". The history information of the task instances will be reset, the instances will participate in subsequent scheduling and execution as if they are run for the first time.
- * @method Models\SubmitJobResponse SubmitJob(Models\SubmitJobRequest $req) This API is used to submit a instance.
  * @method Models\TerminateComputeNodeResponse TerminateComputeNode(Models\TerminateComputeNodeRequest $req) This API is used to terminate a compute node.
 Termination is allowed for nodes in the CREATED, CREATION_FAILED, RUNNING or ABNORMAL state.
  * @method Models\TerminateComputeNodesResponse TerminateComputeNodes(Models\TerminateComputeNodesRequest $req) This API is used to terminate compute nodes in batches. It is not allowed to repeatedly terminate the same node.

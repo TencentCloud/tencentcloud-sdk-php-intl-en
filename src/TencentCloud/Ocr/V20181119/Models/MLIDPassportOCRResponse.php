@@ -62,6 +62,10 @@ use TencentCloud\Common\AbstractModel;
         Confidence:0.9996
     }
 }
+ * @method string getCodeSet() Obtain The first row of the machine-readable zone (MRZ) at the bottom
+ * @method void setCodeSet(string $CodeSet) Set The first row of the machine-readable zone (MRZ) at the bottom
+ * @method string getCodeCrc() Obtain The second row of the MRZ at the bottom
+ * @method void setCodeCrc(string $CodeCrc) Set The second row of the MRZ at the bottom
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -129,6 +133,16 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $AdvancedInfo;
 
     /**
+     * @var string The first row of the machine-readable zone (MRZ) at the bottom
+     */
+    public $CodeSet;
+
+    /**
+     * @var string The second row of the MRZ at the bottom
+     */
+    public $CodeCrc;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -155,6 +169,8 @@ class MLIDPassportOCRResponse extends AbstractModel
         Confidence:0.9996
     }
 }
+     * @param string $CodeSet The first row of the machine-readable zone (MRZ) at the bottom
+     * @param string $CodeCrc The second row of the MRZ at the bottom
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -208,6 +224,14 @@ class MLIDPassportOCRResponse extends AbstractModel
 
         if (array_key_exists("AdvancedInfo",$param) and $param["AdvancedInfo"] !== null) {
             $this->AdvancedInfo = $param["AdvancedInfo"];
+        }
+
+        if (array_key_exists("CodeSet",$param) and $param["CodeSet"] !== null) {
+            $this->CodeSet = $param["CodeSet"];
+        }
+
+        if (array_key_exists("CodeCrc",$param) and $param["CodeCrc"] !== null) {
+            $this->CodeCrc = $param["CodeCrc"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

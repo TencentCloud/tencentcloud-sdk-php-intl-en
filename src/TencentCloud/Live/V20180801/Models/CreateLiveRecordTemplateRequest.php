@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set HLS-specific recording parameter.
  * @method RecordParam getMp3Param() Obtain Mp3 recording parameter, which is set when Mp3 recording is enabled.
  * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
+ * @method boolean getRemoveWatermark() Obtain Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+ * @method void setRemoveWatermark(boolean $RemoveWatermark) Set Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
@@ -93,6 +95,11 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $Mp3Param;
 
     /**
+     * @var boolean Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     */
+    public $RemoveWatermark;
+
+    /**
      * @param string $TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter, which is set when FLV recording is enabled.
@@ -104,6 +111,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
 1: LCB.
      * @param HlsSpecialParam $HlsSpecialParam HLS-specific recording parameter.
      * @param RecordParam $Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
+     * @param boolean $RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
      */
     function __construct()
     {
@@ -158,6 +166,10 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
         if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
             $this->Mp3Param = new RecordParam();
             $this->Mp3Param->deserialize($param["Mp3Param"]);
+        }
+
+        if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
+            $this->RemoveWatermark = $param["RemoveWatermark"];
         }
     }
 }

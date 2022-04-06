@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServerIp(string $ServerIp) Set IP of the server that receives the stream.
  * @method integer getVideoFps() Obtain Pushed video frame rate in Hz.
  * @method void setVideoFps(integer $VideoFps) Set Pushed video frame rate in Hz.
- * @method integer getVideoSpeed() Obtain Video bitrate (Kbps) for publishing
- * @method void setVideoSpeed(integer $VideoSpeed) Set Video bitrate (Kbps) for publishing
+ * @method integer getVideoSpeed() Obtain Video bitrate (bps) for publishing
+ * @method void setVideoSpeed(integer $VideoSpeed) Set Video bitrate (bps) for publishing
  * @method integer getAudioFps() Obtain Pushed audio frame rate in Hz.
  * @method void setAudioFps(integer $AudioFps) Set Pushed audio frame rate in Hz.
- * @method integer getAudioSpeed() Obtain Audio bitrate (Kbps) for publishing
- * @method void setAudioSpeed(integer $AudioSpeed) Set Audio bitrate (Kbps) for publishing
+ * @method integer getAudioSpeed() Obtain Audio bitrate (bps) for publishing
+ * @method void setAudioSpeed(integer $AudioSpeed) Set Audio bitrate (bps) for publishing
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getBeginPushTime() Obtain Push start time.
@@ -52,10 +52,10 @@ Example: H.264.
  * @method void setResolution(string $Resolution) Set Resolution.
  * @method integer getAsampleRate() Obtain Sample rate.
  * @method void setAsampleRate(integer $AsampleRate) Set Sample rate.
- * @method integer getMetaAudioSpeed() Obtain Audio bitrate in `metadata` in Kbps.
- * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) Set Audio bitrate in `metadata` in Kbps.
- * @method integer getMetaVideoSpeed() Obtain Video bitrate in `metadata` in Kbps.
- * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) Set Video bitrate in `metadata` in Kbps.
+ * @method integer getMetaAudioSpeed() Obtain Audio bitrate (bps) in metadata
+ * @method void setMetaAudioSpeed(integer $MetaAudioSpeed) Set Audio bitrate (bps) in metadata
+ * @method integer getMetaVideoSpeed() Obtain Video bitrate (bps) in metadata
+ * @method void setMetaVideoSpeed(integer $MetaVideoSpeed) Set Video bitrate (bps) in metadata
  * @method integer getMetaFps() Obtain Frame rate in `metadata`.
  * @method void setMetaFps(integer $MetaFps) Set Frame rate in `metadata`.
  */
@@ -87,7 +87,7 @@ class PushDataInfo extends AbstractModel
     public $VideoFps;
 
     /**
-     * @var integer Video bitrate (Kbps) for publishing
+     * @var integer Video bitrate (bps) for publishing
      */
     public $VideoSpeed;
 
@@ -97,7 +97,7 @@ class PushDataInfo extends AbstractModel
     public $AudioFps;
 
     /**
-     * @var integer Audio bitrate (Kbps) for publishing
+     * @var integer Audio bitrate (bps) for publishing
      */
     public $AudioSpeed;
 
@@ -134,12 +134,12 @@ Example: H.264.
     public $AsampleRate;
 
     /**
-     * @var integer Audio bitrate in `metadata` in Kbps.
+     * @var integer Audio bitrate (bps) in metadata
      */
     public $MetaAudioSpeed;
 
     /**
-     * @var integer Video bitrate in `metadata` in Kbps.
+     * @var integer Video bitrate (bps) in metadata
      */
     public $MetaVideoSpeed;
 
@@ -154,9 +154,9 @@ Example: H.264.
      * @param string $ClientIp Push client IP.
      * @param string $ServerIp IP of the server that receives the stream.
      * @param integer $VideoFps Pushed video frame rate in Hz.
-     * @param integer $VideoSpeed Video bitrate (Kbps) for publishing
+     * @param integer $VideoSpeed Video bitrate (bps) for publishing
      * @param integer $AudioFps Pushed audio frame rate in Hz.
-     * @param integer $AudioSpeed Audio bitrate (Kbps) for publishing
+     * @param integer $AudioSpeed Audio bitrate (bps) for publishing
      * @param string $PushDomain Push domain name.
      * @param string $BeginPushTime Push start time.
      * @param string $Acodec Audio codec,
@@ -165,8 +165,8 @@ Example: AAC.
 Example: H.264.
      * @param string $Resolution Resolution.
      * @param integer $AsampleRate Sample rate.
-     * @param integer $MetaAudioSpeed Audio bitrate in `metadata` in Kbps.
-     * @param integer $MetaVideoSpeed Video bitrate in `metadata` in Kbps.
+     * @param integer $MetaAudioSpeed Audio bitrate (bps) in metadata
+     * @param integer $MetaVideoSpeed Video bitrate (bps) in metadata
      * @param integer $MetaFps Frame rate in `metadata`.
      */
     function __construct()

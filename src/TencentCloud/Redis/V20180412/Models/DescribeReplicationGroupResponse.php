@@ -18,22 +18,26 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceCreateInstance response structure.
+ * DescribeReplicationGroup response structure.
  *
- * @method float getPrice() Obtain Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setPrice(float $Price) Set Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Number of replication group
+ * @method void setTotalCount(integer $TotalCount) Set Number of replication group
+ * @method array getGroups() Obtain Replication group info
+ * @method void setGroups(array $Groups) Set Replication group info
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquiryPriceCreateInstanceResponse extends AbstractModel
+class DescribeReplicationGroupResponse extends AbstractModel
 {
     /**
-     * @var float Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Number of replication group
      */
-    public $Price;
+    public $TotalCount;
+
+    /**
+     * @var array Replication group info
+     */
+    public $Groups;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +45,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param float $Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Number of replication group
+     * @param array $Groups Replication group info
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +62,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = [];
+            foreach ($param["Groups"] as $key => $value){
+                $obj = new Groups();
+                $obj->deserialize($value);
+                array_push($this->Groups, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

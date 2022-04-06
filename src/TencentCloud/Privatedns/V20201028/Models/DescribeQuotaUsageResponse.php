@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Privatedns\V20201028\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceCreateInstance response structure.
+ * DescribeQuotaUsage response structure.
  *
- * @method float getPrice() Obtain Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setPrice(float $Price) Set Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method TldQuota getTldQuota() Obtain TLD quota usage
+ * @method void setTldQuota(TldQuota $TldQuota) Set TLD quota usage
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquiryPriceCreateInstanceResponse extends AbstractModel
+class DescribeQuotaUsageResponse extends AbstractModel
 {
     /**
-     * @var float Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var TldQuota TLD quota usage
      */
-    public $Price;
+    public $TldQuota;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param float $Price Price. Unit: USD (accurate down to the cent)
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param TldQuota $TldQuota TLD quota usage
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +54,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
+        if (array_key_exists("TldQuota",$param) and $param["TldQuota"] !== null) {
+            $this->TldQuota = new TldQuota();
+            $this->TldQuota->deserialize($param["TldQuota"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

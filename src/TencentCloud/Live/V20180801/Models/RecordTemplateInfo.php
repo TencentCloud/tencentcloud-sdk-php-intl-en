@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter
  * @method RecordParam getMp3Param() Obtain MP3 recording parameter.
  * @method void setMp3Param(RecordParam $Mp3Param) Set MP3 recording parameter.
+ * @method boolean getRemoveWatermark() Obtain Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setRemoveWatermark(boolean $RemoveWatermark) Set Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class RecordTemplateInfo extends AbstractModel
 {
@@ -97,6 +101,12 @@ class RecordTemplateInfo extends AbstractModel
     public $Mp3Param;
 
     /**
+     * @var boolean Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $RemoveWatermark;
+
+    /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
      * @param string $Description Message description
@@ -108,6 +118,8 @@ class RecordTemplateInfo extends AbstractModel
 1: LCB.
      * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter
      * @param RecordParam $Mp3Param MP3 recording parameter.
+     * @param boolean $RemoveWatermark Whether the watermark is removed.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -166,6 +178,10 @@ class RecordTemplateInfo extends AbstractModel
         if (array_key_exists("Mp3Param",$param) and $param["Mp3Param"] !== null) {
             $this->Mp3Param = new RecordParam();
             $this->Mp3Param->deserialize($param["Mp3Param"]);
+        }
+
+        if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
+            $this->RemoveWatermark = $param["RemoveWatermark"];
         }
     }
 }
