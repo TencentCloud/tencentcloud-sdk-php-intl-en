@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserNotices(array $UserNotices) Set User notifications (up to 5)
  * @method array getURLNotices() Obtain Callback notifications (up to 3)
  * @method void setURLNotices(array $URLNotices) Set Callback notifications (up to 3)
+ * @method array getCLSNotices() Obtain The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+ * @method void setCLSNotices(array $CLSNotices) Set The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $URLNotices;
 
     /**
+     * @var array The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     */
+    public $CLSNotices;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param string $Name Notification template name, which can contain up to 60 characters
      * @param string $NoticeType Notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
      * @param string $NoticeLanguage Notification language. Valid values: zh-CN (Chinese), en-US (English)
      * @param array $UserNotices User notifications (up to 5)
      * @param array $URLNotices Callback notifications (up to 3)
+     * @param array $CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
      */
     function __construct()
     {
@@ -117,6 +125,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj = new URLNotice();
                 $obj->deserialize($value);
                 array_push($this->URLNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {
+            $this->CLSNotices = [];
+            foreach ($param["CLSNotices"] as $key => $value){
+                $obj = new CLSNotice();
+                $obj->deserialize($value);
+                array_push($this->CLSNotices, $obj);
             }
         }
     }

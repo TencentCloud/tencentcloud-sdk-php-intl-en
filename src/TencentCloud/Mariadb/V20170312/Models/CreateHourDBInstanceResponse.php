@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateHourDBInstance response structure.
  *
- * @method string getDealName() Obtain Order ID, which is used in the `DescribeOrders` API.
+ * @method string getDealName() Obtain Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
- * @method void setDealName(string $DealName) Set Order ID, which is used in the `DescribeOrders` API.
+ * @method void setDealName(string $DealName) Set Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
  * @method array getInstanceIds() Obtain IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -34,7 +34,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 class CreateHourDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var string Order ID, which is used in the `DescribeOrders` API.
+     * @var string Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
      */
     public $DealName;
@@ -51,7 +51,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param string $DealName Order ID, which is used in the `DescribeOrders` API.
+     * @param string $DealName Order ID, which is used for calling the `DescribeOrders` API.
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
      * @param array $InstanceIds IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
 Note: this field may return `null`, indicating that no valid values can be obtained.

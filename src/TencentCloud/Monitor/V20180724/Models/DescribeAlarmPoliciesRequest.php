@@ -76,6 +76,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method integer getNeedCorrespondence() Obtain Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
  * @method void setNeedCorrespondence(integer $NeedCorrespondence) Set Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+ * @method array getTriggerTasks() Obtain Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+ * @method void setTriggerTasks(array $TriggerTasks) Set Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -184,6 +186,11 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $NeedCorrespondence;
 
     /**
+     * @var array Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+     */
+    public $TriggerTasks;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -212,6 +219,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param integer $NotBindingNoticeRule If `1` is passed in, alarm policies with no notification rules configured are queried. If it is left empty or other values are passed in, all alarm policies are queried.
      * @param integer $InstanceGroupId Instance group ID.
      * @param integer $NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
+     * @param array $TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
      */
     function __construct()
     {
@@ -300,6 +308,15 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 
         if (array_key_exists("NeedCorrespondence",$param) and $param["NeedCorrespondence"] !== null) {
             $this->NeedCorrespondence = $param["NeedCorrespondence"];
+        }
+
+        if (array_key_exists("TriggerTasks",$param) and $param["TriggerTasks"] !== null) {
+            $this->TriggerTasks = [];
+            foreach ($param["TriggerTasks"] as $key => $value){
+                $obj = new AlarmPolicyTriggerTask();
+                $obj->deserialize($value);
+                array_push($this->TriggerTasks, $obj);
+            }
         }
     }
 }

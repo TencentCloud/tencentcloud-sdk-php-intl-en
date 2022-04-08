@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
  * @method string getSubnetId() Obtain When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
  * @method void setSubnetId(string $SubnetId) Set When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+ * @method string getClusterLevel() Obtain Cluster specifications available for managed clusters
+ * @method void setClusterLevel(string $ClusterLevel) Set Cluster specifications available for managed clusters
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() Obtain Auto cluster upgrade for managed clusters
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) Set Auto cluster upgrade for managed clusters
  */
 class ClusterBasicSettings extends AbstractModel
 {
@@ -94,6 +98,16 @@ class ClusterBasicSettings extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var string Cluster specifications available for managed clusters
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
      * @param string $ClusterVersion Cluster version. The default value is 1.10.5.
      * @param string $ClusterName Cluster name
@@ -104,6 +118,8 @@ class ClusterBasicSettings extends AbstractModel
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param boolean $NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
      * @param string $SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
+     * @param string $ClusterLevel Cluster specifications available for managed clusters
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters
      */
     function __construct()
     {
@@ -161,6 +177,15 @@ class ClusterBasicSettings extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
         }
     }
 }

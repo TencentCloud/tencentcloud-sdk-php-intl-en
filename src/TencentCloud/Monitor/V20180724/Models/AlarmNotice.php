@@ -60,6 +60,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyIds(array $PolicyIds) Set List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getCLSNotices() Obtain Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCLSNotices(array $CLSNotices) Set Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmNotice extends AbstractModel
 {
@@ -124,6 +128,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PolicyIds;
 
     /**
+     * @var array Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CLSNotices;
+
+    /**
      * @param string $Id Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Name Alarm notification template name
@@ -144,6 +154,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $PolicyIds List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $CLSNotices Channel to push alarm notifications to CLS.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -206,6 +218,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {
+            $this->CLSNotices = [];
+            foreach ($param["CLSNotices"] as $key => $value){
+                $obj = new CLSNotice();
+                $obj->deserialize($value);
+                array_push($this->CLSNotices, $obj);
+            }
         }
     }
 }

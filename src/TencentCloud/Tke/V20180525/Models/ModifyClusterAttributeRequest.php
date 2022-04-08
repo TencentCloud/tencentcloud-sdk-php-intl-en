@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterName(string $ClusterName) Set Cluster name
  * @method string getClusterDesc() Obtain Cluster description
  * @method void setClusterDesc(string $ClusterDesc) Set Cluster description
+ * @method string getClusterLevel() Obtain Cluster specification
+ * @method void setClusterLevel(string $ClusterLevel) Set Cluster specification
+ * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() Obtain Auto-upgrades cluster specification
+ * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) Set Auto-upgrades cluster specification
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $ClusterDesc;
 
     /**
+     * @var string Cluster specification
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var AutoUpgradeClusterLevel Auto-upgrades cluster specification
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $ProjectId Project of the Cluster
      * @param string $ClusterName Cluster name
      * @param string $ClusterDesc Cluster description
+     * @param string $ClusterLevel Cluster specification
+     * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel Auto-upgrades cluster specification
      */
     function __construct()
     {
@@ -84,6 +100,15 @@ class ModifyClusterAttributeRequest extends AbstractModel
 
         if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
             $this->ClusterDesc = $param["ClusterDesc"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
+            $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
         }
     }
 }

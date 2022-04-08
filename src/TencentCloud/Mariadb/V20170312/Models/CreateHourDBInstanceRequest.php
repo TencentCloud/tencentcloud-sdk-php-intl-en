@@ -36,15 +36,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcId(string $VpcId) Set Unique ID of the network. If this parameter is not passed in, the classic network will be used.
  * @method string getSubnetId() Obtain Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
  * @method void setSubnetId(string $SubnetId) Set Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
- * @method string getDbVersionId() Obtain Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+ * @method string getDbVersionId() Obtain Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
- * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+ * @method void setDbVersionId(string $DbVersionId) Set Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
  * @method string getInstanceName() Obtain Custom name of the instance.
  * @method void setInstanceName(string $InstanceName) Set Custom name of the instance.
@@ -58,8 +52,12 @@ If this parameter is left empty, `10.1.9` will be used.
  * @method void setDcnRegion(string $DcnRegion) Set If you create a disaster recovery instance, you need to use this parameter to specify the region of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
  * @method string getDcnInstanceId() Obtain If you create a disaster recovery instance, you need to use this parameter to specify the ID of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
  * @method void setDcnInstanceId(string $DcnInstanceId) Set If you create a disaster recovery instance, you need to use this parameter to specify the ID of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
- * @method array getInitParams() Obtain List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
- * @method void setInitParams(array $InitParams) Set List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+ * @method array getInitParams() Obtain List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+ * @method void setInitParams(array $InitParams) Set List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
  * @method string getRollbackInstanceId() Obtain ID of the instance whose backup data will be rolled back to the new instance you create.
  * @method void setRollbackInstanceId(string $RollbackInstanceId) Set ID of the instance whose backup data will be rolled back to the new instance you create.
  * @method string getRollbackTime() Obtain Rollback time.
@@ -108,10 +106,7 @@ class CreateHourDBInstanceRequest extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+     * @var string Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
      */
     public $DbVersionId;
@@ -147,7 +142,9 @@ If this parameter is left empty, `10.1.9` will be used.
     public $DcnInstanceId;
 
     /**
-     * @var array List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+     * @var array List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
      */
     public $InitParams;
 
@@ -170,10 +167,7 @@ If this parameter is left empty, `10.1.9` will be used.
      * @param integer $ProjectId Project ID. If this parameter is not passed in, the default project will be used.
      * @param string $VpcId Unique ID of the network. If this parameter is not passed in, the classic network will be used.
      * @param string $SubnetId Unique ID of the subnet. If `VpcId` is specified, this parameter is required.
-     * @param string $DbVersionId Database engine version. Valid values:
-10.0.10: MariaDB 10.0.10;
-10.1.9: MariaDB 10.1.9;
-5.7.17: Percona 5.7.17.
+     * @param string $DbVersionId Database engine version. Valid values: 10.0.10, 10.1.9, 5.7.17.
 If this parameter is left empty, `10.1.9` will be used.
      * @param string $InstanceName Custom name of the instance.
      * @param array $SecurityGroupIds Security group ID. If this parameter is not passed in, no security groups will be associated when the instance is created.
@@ -181,7 +175,9 @@ If this parameter is left empty, `10.1.9` will be used.
      * @param array $ResourceTags Array of tag key-value pairs.
      * @param string $DcnRegion If you create a disaster recovery instance, you need to use this parameter to specify the region of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
      * @param string $DcnInstanceId If you create a disaster recovery instance, you need to use this parameter to specify the ID of the associated primary instance so that the disaster recovery instance can sync data with the primary instance over the Data Communication Network (DCN).
-     * @param array $InitParams List of parameters. Valid values: `character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive); `innodb_page_size` (InnoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
+     * @param array $InitParams List of parameters. Valid values: 
+`character_set_server` (character set; required); `lower_case_table_names` (table name case sensitivity; required; 0: case-sensitive; 1: case-insensitive);
+`innodb_page_size` (innoDB data page size; default size: 16 KB); `sync_mode` (sync mode; 0: async; 1: strong sync; 2: downgradable strong sync; default value: 2).
      * @param string $RollbackInstanceId ID of the instance whose backup data will be rolled back to the new instance you create.
      * @param string $RollbackTime Rollback time.
      */

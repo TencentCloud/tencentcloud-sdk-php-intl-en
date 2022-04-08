@@ -20,8 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Cluster information
  *
- * @method string getStatus() Obtain Cluster status
- * @method void setStatus(string $Status) Set Cluster status
+ * @method string getStatus() Obtain Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
+ * @method void setStatus(string $Status) Set Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
  * @method string getUpdateTime() Obtain Update time
  * @method void setUpdateTime(string $UpdateTime) Set Update time
  * @method string getZone() Obtain AZ
@@ -96,7 +114,16 @@ pause
 class CynosdbCluster extends AbstractModel
 {
     /**
-     * @var string Cluster status
+     * @var string Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
      */
     public $Status;
 
@@ -268,7 +295,16 @@ pause
     public $NetAddrs;
 
     /**
-     * @param string $Status Cluster status
+     * @param string $Status Cluster status. Valid values are as follows:
+creating
+running
+isolating
+isolated
+activating (removing isolation)
+offlining (deactivating)
+offlined (deactivated)
+deleting
+deleted
      * @param string $UpdateTime Update time
      * @param string $Zone AZ
      * @param string $ClusterName Cluster name

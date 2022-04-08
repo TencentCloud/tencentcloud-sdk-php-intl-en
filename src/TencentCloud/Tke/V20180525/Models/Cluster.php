@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set ID of the project to which the cluster belongs
  * @method array getTagSpecification() Obtain Tag description list.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list.
- * @method string getClusterStatus() Obtain Cluster status (Running, Creating, or Abnormal)
- * @method void setClusterStatus(string $ClusterStatus) Set Cluster status (Running, Creating, or Abnormal)
+ * @method string getClusterStatus() Obtain Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
+ * @method void setClusterStatus(string $ClusterStatus) Set Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
  * @method string getProperty() Obtain Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
  * @method void setProperty(string $Property) Set Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
  * @method integer getClusterMaterNodeNum() Obtain Number of primary nodes currently in the cluster
@@ -70,6 +70,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setEnableExternalNode(boolean $EnableExternalNode) Set Specifies whether the cluster supports external nodes.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getClusterLevel() Obtain 
+ * @method void setClusterLevel(string $ClusterLevel) Set 
+ * @method boolean getAutoUpgradeClusterLevel() Obtain 
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set 
  */
 class Cluster extends AbstractModel
 {
@@ -124,7 +128,7 @@ class Cluster extends AbstractModel
     public $TagSpecification;
 
     /**
-     * @var string Cluster status (Running, Creating, or Abnormal)
+     * @var string Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
      */
     public $ClusterStatus;
 
@@ -175,6 +179,16 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $EnableExternalNode;
 
     /**
+     * @var string 
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var boolean 
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -185,7 +199,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      * @param integer $ClusterNodeNum Current number of nodes in the cluster
      * @param integer $ProjectId ID of the project to which the cluster belongs
      * @param array $TagSpecification Tag description list.
-     * @param string $ClusterStatus Cluster status (Running, Creating, or Abnormal)
+     * @param string $ClusterStatus Cluster status (`Running`, `Creating`, `Idling` or `Abnormal`)
      * @param string $Property Cluster attributes (including a map of different cluster attributes, with attribute fields including NodeNameType (lan-ip mode and hostname mode, with lan-ip mode as default))
      * @param integer $ClusterMaterNodeNum Number of primary nodes currently in the cluster
      * @param string $ImageId ID of the image used by the cluster
@@ -200,6 +214,8 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param boolean $EnableExternalNode Specifies whether the cluster supports external nodes.
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ClusterLevel 
+     * @param boolean $AutoUpgradeClusterLevel 
      */
     function __construct()
     {
@@ -294,6 +310,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("EnableExternalNode",$param) and $param["EnableExternalNode"] !== null) {
             $this->EnableExternalNode = $param["EnableExternalNode"];
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
         }
     }
 }
