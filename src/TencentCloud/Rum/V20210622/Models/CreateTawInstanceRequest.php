@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCountNum(string $CountNum) Set Number of data entries reported per day
  * @method string getPeriodRetain() Obtain Billing for data storage
  * @method void setPeriodRetain(string $PeriodRetain) Set Billing for data storage
+ * @method string getBuyingChannel() Obtain Instance purchase channel. Valid value: `cdn`.
+ * @method void setBuyingChannel(string $BuyingChannel) Set Instance purchase channel. Valid value: `cdn`.
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateTawInstanceRequest extends AbstractModel
     public $PeriodRetain;
 
     /**
+     * @var string Instance purchase channel. Valid value: `cdn`.
+     */
+    public $BuyingChannel;
+
+    /**
      * @param integer $AreaId Region ID (at least greater than 0)
      * @param integer $ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
      * @param integer $DataRetentionDays Data retention period (at least greater than 0)
@@ -88,6 +95,7 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $InstanceDesc Instance description (up to 1,024 bytes)
      * @param string $CountNum Number of data entries reported per day
      * @param string $PeriodRetain Billing for data storage
+     * @param string $BuyingChannel Instance purchase channel. Valid value: `cdn`.
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("PeriodRetain",$param) and $param["PeriodRetain"] !== null) {
             $this->PeriodRetain = $param["PeriodRetain"];
+        }
+
+        if (array_key_exists("BuyingChannel",$param) and $param["BuyingChannel"] !== null) {
+            $this->BuyingChannel = $param["BuyingChannel"];
         }
     }
 }

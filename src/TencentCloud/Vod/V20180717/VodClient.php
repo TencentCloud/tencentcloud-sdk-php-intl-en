@@ -119,6 +119,10 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     8. Information of a timestamp (keyFrameDescInfo): information of a timestamp set for a video.
     9. Information of transcoding to adaptive bitrate streaming (adaptiveDynamicStreamingInfo): specification, encryption type, container format, etc.
 2. The return packet can be configured to only contain certain information.
+ * @method Models\DescribeMediaPlayStatDetailsResponse DescribeMediaPlayStatDetails(Models\DescribeMediaPlayStatDetailsRequest $req) This API is used to query the playback statistics of a media file at the specified granularity.
+* You can query playback statistics in the past year.
+* If the granularity is an hour, the start and end time cannot be more than seven days apart.
+* If the granularity is a day, the start and end time cannot be more than 90 days apart.
  * @method Models\DescribeMediaProcessUsageDataResponse DescribeMediaProcessUsageData(Models\DescribeMediaProcessUsageDataRequest $req) This API is used to query the information of video processing usage within the specified time range.
    1. Statistics on video processing for the last 365 days can be queried.
    2. The query time range cannot be more than 90 days.
@@ -147,17 +151,6 @@ This API returns the video content duration for intelligent recognition in secon
  * @method Models\DescribeVodDomainsResponse DescribeVodDomains(Models\DescribeVodDomainsRequest $req) This API is used to query the list of VOD domain names.
  * @method Models\DescribeWatermarkTemplatesResponse DescribeWatermarkTemplates(Models\DescribeWatermarkTemplatesRequest $req) This API is used to query custom watermarking templates and supports paged queries by filters.
  * @method Models\DescribeWordSamplesResponse DescribeWordSamples(Models\DescribeWordSamplesRequest $req) This API is used to perform paginated queries of keyword sample information by use case, keyword, and tag.
- * @method Models\EditMediaResponse EditMedia(Models\EditMediaRequest $req) This API is used to edit a video (by clipping, splicing, etc.) to generate a new VOD video. Editing features include:
-
-1. Clipping a file in VOD to generate a new video;
-2. Splicing multiple files in VOD to generate a new video;
-3. Clipping multiple files in VOD and then splicing the clips to generate a new video;
-4. Directly generating a new video from a stream in VOD;
-5. Clipping a stream in VOD to generate a new video;
-6. Splicing multiple streams in VOD to generate a new video;
-7. Clipping multiple streams in VOD and then splicing the clips to generate a new video.
-
-You can also specify whether to perform a task flow for the generated new video.
  * @method Models\ExecuteFunctionResponse ExecuteFunction(Models\ExecuteFunctionRequest $req) This API is only used in special scenarios of custom development. Unless requested by VOD customer service, please do not call it.
  * @method Models\ForbidMediaDistributionResponse ForbidMediaDistribution(Models\ForbidMediaDistributionRequest $req) * After a media file is forbidden, except previewing it in the VOD Console, accessing the URLs of its various resources (such as source file, output files, and screenshots) in other scenarios will return error 403.
   It takes about 5-10 minutes for a forbidding/unblocking operation to take effect across the entire network.
@@ -223,6 +216,14 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate an image processing task. Image processing operations include the following:
+
+1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+
+><li>File size: < 5 MB</li>
+><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -309,7 +310,6 @@ The video clip (an M3U8 file) shares the same TS segments with the input video i
 As the video clip is not an independent video, it will not be managed as a VOD media asset. For example, it will not be counted in the total videos displayed on the VOD console, and also cannot be transcoded or published on WeChat.
 
 Clipping for temporary sharing is lightweight and incurs no additional storage fees. However, the video clip has the same lifecycle as the source recording video and cannot be transcoded or processed in other ways.
- * @method Models\WeChatMiniProgramPublishResponse WeChatMiniProgramPublish(Models\WeChatMiniProgramPublishRequest $req) This API is used to publish a VOD video on WeChat Mini Program for playback in the WeChat Mini Program player.
  */
 
 class VodClient extends AbstractClient

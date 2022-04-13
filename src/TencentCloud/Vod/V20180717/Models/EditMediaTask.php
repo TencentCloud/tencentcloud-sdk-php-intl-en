@@ -56,8 +56,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(EditMediaTaskOutput $Output) Set Output of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain Metadata of a source video
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
+ * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
  * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProcedureTaskId(string $ProcedureTaskId) Set If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
@@ -124,7 +124,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
-     * @var MediaMetaData Metadata of a source video
+     * @var MediaMetaData The metadata of the output video.
      */
     public $MetaData;
 
@@ -165,7 +165,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param EditMediaTaskOutput $Output Output of video editing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData Metadata of a source video
+     * @param MediaMetaData $MetaData The metadata of the output video.
      * @param string $ProcedureTaskId If a video processing flow is specified when a video editing task is initiated, this field will be the ID of the task flow.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.

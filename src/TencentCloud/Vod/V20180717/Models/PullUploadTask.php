@@ -44,8 +44,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of media file generated after pull for upload is completed.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain Metadata of a source video
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video
+ * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
+ * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
  * @method string getFileUrl() Obtain Playback address generated after pull for upload is completed.
  * @method void setFileUrl(string $FileUrl) Set Playback address generated after pull for upload is completed.
  * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
@@ -94,7 +94,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaBasicInfo;
 
     /**
-     * @var MediaMetaData Metadata of a source video
+     * @var MediaMetaData The metadata of the output video.
      */
     public $MetaData;
 
@@ -131,7 +131,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $FileId ID of video generated after pull for upload is completed.
      * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after pull for upload is completed.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData Metadata of a source video
+     * @param MediaMetaData $MetaData The metadata of the output video.
      * @param string $FileUrl Playback address generated after pull for upload is completed.
      * @param string $ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.

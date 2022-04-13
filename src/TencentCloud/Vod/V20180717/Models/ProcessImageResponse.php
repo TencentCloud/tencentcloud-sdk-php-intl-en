@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeScores response structure.
+ * ProcessImage response structure.
  *
- * @method array getScoreSet() Obtain Array
- * @method void setScoreSet(array $ScoreSet) Set Array
+ * @method array getContentReviewResultSet() Obtain The image recognition result.
+ * @method void setContentReviewResultSet(array $ContentReviewResultSet) Set The image recognition result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeScoresResponse extends AbstractModel
+class ProcessImageResponse extends AbstractModel
 {
     /**
-     * @var array Array
+     * @var array The image recognition result.
      */
-    public $ScoreSet;
+    public $ContentReviewResultSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class DescribeScoresResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $ScoreSet Array
+     * @param array $ContentReviewResultSet The image recognition result.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,12 +54,12 @@ class DescribeScoresResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ScoreSet",$param) and $param["ScoreSet"] !== null) {
-            $this->ScoreSet = [];
-            foreach ($param["ScoreSet"] as $key => $value){
-                $obj = new ScoreInfo();
+        if (array_key_exists("ContentReviewResultSet",$param) and $param["ContentReviewResultSet"] !== null) {
+            $this->ContentReviewResultSet = [];
+            foreach ($param["ContentReviewResultSet"] as $key => $value){
+                $obj = new ContentReviewResult();
                 $obj->deserialize($value);
-                array_push($this->ScoreSet, $obj);
+                array_push($this->ContentReviewResultSet, $obj);
             }
         }
 

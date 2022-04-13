@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTawInstances response structure.
+ * DescribeMediaPlayStatDetails response structure.
  *
- * @method array getInstanceSet() Obtain Instance list
- * @method void setInstanceSet(array $InstanceSet) Set Instance list
- * @method integer getTotalCount() Obtain Total number of instances
- * @method void setTotalCount(integer $TotalCount) Set Total number of instances
+ * @method array getPlayStatInfoSet() Obtain The playback statistics.
+ * @method void setPlayStatInfoSet(array $PlayStatInfoSet) Set The playback statistics.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTawInstancesResponse extends AbstractModel
+class DescribeMediaPlayStatDetailsResponse extends AbstractModel
 {
     /**
-     * @var array Instance list
+     * @var array The playback statistics.
      */
-    public $InstanceSet;
-
-    /**
-     * @var integer Total number of instances
-     */
-    public $TotalCount;
+    public $PlayStatInfoSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeTawInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceSet Instance list
-     * @param integer $TotalCount Total number of instances
+     * @param array $PlayStatInfoSet The playback statistics.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,13 @@ class DescribeTawInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
-            $this->InstanceSet = [];
-            foreach ($param["InstanceSet"] as $key => $value){
-                $obj = new RumInstanceInfo();
+        if (array_key_exists("PlayStatInfoSet",$param) and $param["PlayStatInfoSet"] !== null) {
+            $this->PlayStatInfoSet = [];
+            foreach ($param["PlayStatInfoSet"] as $key => $value){
+                $obj = new PlayStatInfo();
                 $obj->deserialize($value);
-                array_push($this->InstanceSet, $obj);
+                array_push($this->PlayStatInfoSet, $obj);
             }
-        }
-
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

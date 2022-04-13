@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of raw logs returned in a single query. Maximum value: 100
  * @method string getContext() Obtain Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
  * @method void setContext(string $Context) Set Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
- * @method string getQuery() Obtain Query statement. Maximum length: 4096
- * @method void setQuery(string $Query) Set Query statement. Maximum length: 4096
+ * @method string getQuery() Obtain Query statement, which can contain up to 4,096 characters.
+ * @method void setQuery(string $Query) Set Query statement, which can contain up to 4,096 characters.
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
  */
@@ -70,7 +70,7 @@ class DescribeLogListRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string Query statement. Maximum length: 4096
+     * @var string Query statement, which can contain up to 4,096 characters.
      */
     public $Query;
 
@@ -86,7 +86,7 @@ class DescribeLogListRequest extends AbstractModel
      * @param string $StartTime Start time
      * @param integer $Limit Number of raw logs returned in a single query. Maximum value: 100
      * @param string $Context Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
-     * @param string $Query Query statement. Maximum length: 4096
+     * @param string $Query Query statement, which can contain up to 4,096 characters.
      * @param string $EndTime End time
      */
     function __construct()

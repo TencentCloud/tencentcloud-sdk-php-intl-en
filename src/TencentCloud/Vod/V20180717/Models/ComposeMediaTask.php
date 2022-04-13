@@ -52,10 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(ComposeMediaTaskOutput $Output) Set Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method MediaMetaData getMetaData() Obtain Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getSessionId() Obtain ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
@@ -108,8 +108,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
-     * @var MediaMetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var MediaMetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $MetaData;
 
@@ -140,8 +140,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param ComposeMediaTaskOutput $Output Output of media file composing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param MediaMetaData $MetaData Metadata of a source video.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param MediaMetaData $MetaData The metadata of the output video.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is not carried or is left empty, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this parameter. It can contain up to 1000 characters.
      */

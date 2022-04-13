@@ -74,17 +74,17 @@ Default value: open.
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
- * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+ * @method string getFillType() Obtain The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
- * @method void setFillType(string $FillType) Set Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+ * @method void setFillType(string $FillType) Set The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
  */
 class SampleSnapshotTemplate extends AbstractModel
@@ -165,11 +165,11 @@ Default value: open.
     public $UpdateTime;
 
     /**
-     * @var string Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * @var string The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
      */
     public $FillType;
@@ -202,11 +202,11 @@ Default value: open.
      * @param integer $SampleInterval Sampling interval.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
-     * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
-<li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>
-<li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
-<li>white: fill with white. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with white color blocks.</li>
-<li>gauss: fill with Gaussian blur. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with Gaussian blur.</li>
+     * @param string $FillType The fill mode, or the way of processing a screenshot when the configured aspect ratio is different from that of the source video. Valid values:
+<li>stretch: Stretch the image frame by frame to fill the entire screen. The video image may become "squashed" or "stretched" after transcoding.</li>
+<li>black: Keep the image's original aspect ratio and fill the blank space with black bars.</li>
+<li>white: Keep the image’s original aspect ratio and fill the blank space with white bars.</li>
+<li>gauss: Keep the image’s original aspect ratio and apply Gaussian blur to the blank space.</li>
 Default value: black.
      */
     function __construct()
