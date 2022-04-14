@@ -30,6 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Function namespace. Default value: `default`
  * @method array getTriggerActions() Obtain Scheduled provisioned concurrency scaling action
  * @method void setTriggerActions(array $TriggerActions) Set Scheduled provisioned concurrency scaling action
+ * @method string getProvisionedType() Obtain Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+ * @method void setProvisionedType(string $ProvisionedType) Set Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+ * @method float getTrackingTarget() Obtain The target concurrency utilization. Range: (0,1) (two decimal places)
+ * @method void setTrackingTarget(float $TrackingTarget) Set The target concurrency utilization. Range: (0,1) (two decimal places)
+ * @method integer getMinCapacity() Obtain The minimum number of instances. It can not be smaller than `1`.
+ * @method void setMinCapacity(integer $MinCapacity) Set The minimum number of instances. It can not be smaller than `1`.
+ * @method integer getMaxCapacity() Obtain The maximum number of instances
+ * @method void setMaxCapacity(integer $MaxCapacity) Set The maximum number of instances
  */
 class PutProvisionedConcurrencyConfigRequest extends AbstractModel
 {
@@ -59,11 +77,45 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
     public $TriggerActions;
 
     /**
+     * @var string Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+     */
+    public $ProvisionedType;
+
+    /**
+     * @var float The target concurrency utilization. Range: (0,1) (two decimal places)
+     */
+    public $TrackingTarget;
+
+    /**
+     * @var integer The minimum number of instances. It can not be smaller than `1`.
+     */
+    public $MinCapacity;
+
+    /**
+     * @var integer The maximum number of instances
+     */
+    public $MaxCapacity;
+
+    /**
      * @param string $FunctionName Name of the function for which to set the provisioned concurrency
      * @param string $Qualifier Function version number. Note: the `$LATEST` version does not support provisioned concurrency
      * @param integer $VersionProvisionedConcurrencyNum Provisioned concurrency amount. Note: there is an upper limit for the sum of provisioned concurrency amounts of all versions, which currently is the function's maximum concurrency quota minus 100
      * @param string $Namespace Function namespace. Default value: `default`
      * @param array $TriggerActions Scheduled provisioned concurrency scaling action
+     * @param string $ProvisionedType Specifies the provisioned concurrency type.
+`Default`: Static provisioned concurrency. 
+`ConcurrencyUtilizationTracking`: Scales the concurrency automatically according to the concurrency utilization.
+If `ConcurrencyUtilizationTracking` is passed in, 
+
+`TrackingTarget`, `MinCapacity` and `MaxCapacity` are required, and `VersionProvisionedConcurrencyNum` must be `0`. 
+     * @param float $TrackingTarget The target concurrency utilization. Range: (0,1) (two decimal places)
+     * @param integer $MinCapacity The minimum number of instances. It can not be smaller than `1`.
+     * @param integer $MaxCapacity The maximum number of instances
      */
     function __construct()
     {
@@ -101,6 +153,22 @@ class PutProvisionedConcurrencyConfigRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TriggerActions, $obj);
             }
+        }
+
+        if (array_key_exists("ProvisionedType",$param) and $param["ProvisionedType"] !== null) {
+            $this->ProvisionedType = $param["ProvisionedType"];
+        }
+
+        if (array_key_exists("TrackingTarget",$param) and $param["TrackingTarget"] !== null) {
+            $this->TrackingTarget = $param["TrackingTarget"];
+        }
+
+        if (array_key_exists("MinCapacity",$param) and $param["MinCapacity"] !== null) {
+            $this->MinCapacity = $param["MinCapacity"];
+        }
+
+        if (array_key_exists("MaxCapacity",$param) and $param["MaxCapacity"] !== null) {
+            $this->MaxCapacity = $param["MaxCapacity"];
         }
     }
 }

@@ -32,7 +32,6 @@ Note: This API **does not** replicate the following objects or attributes of the
 You can manually configure the function after replication as required.
  * @method Models\CreateAliasResponse CreateAlias(Models\CreateAliasRequest $req) This API is used to create an alias for a function version. You can use the alias to mark a specific function version such as DEV/RELEASE. You can also modify the version pointed to by the alias at any time.
 An alias must point to a master version and can point to an additional version at the same time. If you specify an alias when invoking a function, the request will be sent to the versions pointed to by the alias. You can configure the ratio between the master version and additional version during request sending.
- * @method Models\CreateFunctionResponse CreateFunction(Models\CreateFunctionRequest $req) This API is used to create a function based on the input parameters.
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) This API is used to create a namespace based on the input parameters.
  * @method Models\CreateTriggerResponse CreateTrigger(Models\CreateTriggerRequest $req) This API is used to create a trigger based on the input parameters.
  * @method Models\DeleteAliasResponse DeleteAlias(Models\DeleteAliasRequest $req) This API is used to delete an alias of a function version.
@@ -45,7 +44,6 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\GetAccountResponse GetAccount(Models\GetAccountRequest $req) This API is used to get the account information.
  * @method Models\GetAliasResponse GetAlias(Models\GetAliasRequest $req) This API is used to get the alias details such as the name, description, version, and routing information.
  * @method Models\GetAsyncEventStatusResponse GetAsyncEventStatus(Models\GetAsyncEventStatusRequest $req) This API is used to get the status of an async function execution event. The event status is retained for 3*24 hours, counting from the completion of the event.
- * @method Models\GetFunctionResponse GetFunction(Models\GetFunctionRequest $req) This API is used to obtain function details, such as name, code, handler, associated trigger, and timeout.
  * @method Models\GetFunctionAddressResponse GetFunctionAddress(Models\GetFunctionAddressRequest $req) This API is used to obtain the download address of the function code package.
  * @method Models\GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfig(Models\GetFunctionEventInvokeConfigRequest $req) This API is used to get the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\GetFunctionLogsResponse GetFunctionLogs(Models\GetFunctionLogsRequest $req) This API returns function running logs according to the specified conditions. Note that this API has been disused. You can use [GetRequestStatus](https://intl.cloud.tencent.com/document/product/583/65348?from_cn_redirect=1) instead. See also [Retrieving Logs](https://intl.cloud.tencent.com/document/product/583/52637?from_cn_redirect=1).
@@ -71,7 +69,6 @@ An alias must point to a master version and can point to an additional version a
  * @method Models\TerminateAsyncEventResponse TerminateAsyncEvent(Models\TerminateAsyncEventRequest $req) This API is used to terminate a running async function event.
  * @method Models\UpdateAliasResponse UpdateAlias(Models\UpdateAliasRequest $req) This API is used to update the configuration of an alias.
  * @method Models\UpdateFunctionCodeResponse UpdateFunctionCode(Models\UpdateFunctionCodeRequest $req) This API is used to update the function code based on the input parameters.
- * @method Models\UpdateFunctionConfigurationResponse UpdateFunctionConfiguration(Models\UpdateFunctionConfigurationRequest $req) This API is used to update the function configuration based on the input parameters.
  * @method Models\UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfig(Models\UpdateFunctionEventInvokeConfigRequest $req) This API is used to update the async retry configuration of a function, including the number of retry attempts and message retention period.
  * @method Models\UpdateNamespaceResponse UpdateNamespace(Models\UpdateNamespaceRequest $req) This API is used to update a namespace.
  */

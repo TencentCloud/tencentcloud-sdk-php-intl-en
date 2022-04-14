@@ -58,17 +58,12 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) This API is used to query the list of CC protection levels.
  * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) This API is used the query a level-defining policy of CC attacks
- * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) This API is used to obtain a CC precise protection policy.
  * @method Models\DescribeCCThresholdListResponse DescribeCCThresholdList(Models\DescribeCCThresholdListRequest $req) This API is used to query the list of CC cleansing thresholds.
  * @method Models\DescribeCCTrendResponse DescribeCCTrend(Models\DescribeCCTrendRequest $req) This API is used to get CC attack data, including total QPS peaks, attack QPS, total number of requests and number of attack requests.
- * @method Models\DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpList(Models\DescribeCcBlackWhiteIpListRequest $req) This API is used to obtain a layer-4 access control list.
- * @method Models\DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigList(Models\DescribeCcGeoIPBlockConfigListRequest $req) This API is used to obtain a list of regional blocking configurations.
  * @method Models\DescribeDDoSTrendResponse DescribeDDoSTrend(Models\DescribeDDoSTrendRequest $req) This API is used to get DDoS attack traffic bandwidth and attack packet rate.
  * @method Models\DescribeDefaultAlarmThresholdResponse DescribeDefaultAlarmThreshold(Models\DescribeDefaultAlarmThresholdRequest $req) This API is used to get the default alarm threshold of an IP.
  * @method Models\DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertId(Models\DescribeL7RulesBySSLCertIdRequest $req) This API is used to query layer-7 rules matched with certificate IDs.
  * @method Models\DescribeListBGPIPInstancesResponse DescribeListBGPIPInstances(Models\DescribeListBGPIPInstancesRequest $req) This API is used to get a list of Anti-DDoS Advanced instances.
-
- * @method Models\DescribeListBGPInstancesResponse DescribeListBGPInstances(Models\DescribeListBGPInstancesRequest $req) This API is used to get a list of Anti-DDoS Pro instances.
 
  * @method Models\DescribeListBlackWhiteIpListResponse DescribeListBlackWhiteIpList(Models\DescribeListBlackWhiteIpListRequest $req) This API is used to get a list of Anti-DDoS IP blocklists/allowlists.
  * @method Models\DescribeListDDoSAIResponse DescribeListDDoSAI(Models\DescribeListDDoSAIRequest $req) This API is used to get a list of Anti-DDoS AI protection switches.

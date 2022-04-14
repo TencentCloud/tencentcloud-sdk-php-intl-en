@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSchedulingDomain request structure.
  *
-
+ * @method string getProduct() Obtain 
+ * @method void setProduct(string $Product) Set 
  */
 class CreateSchedulingDomainRequest extends AbstractModel
 {
-
+    /**
+     * @var string 
+     */
+    public $Product;
 
     /**
-
+     * @param string $Product 
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CreateSchedulingDomainRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("Product",$param) and $param["Product"] !== null) {
+            $this->Product = $param["Product"];
+        }
     }
 }

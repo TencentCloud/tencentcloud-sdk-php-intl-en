@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNamespace(string $Namespace) Set Namespace name
  * @method integer getFunctionsCount() Obtain Number of functions in namespace
  * @method void setFunctionsCount(integer $FunctionsCount) Set Number of functions in namespace
+ * @method integer getTotalConcurrencyMem() Obtain Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTotalConcurrencyMem(integer $TotalConcurrencyMem) Set Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTotalAllocatedConcurrencyMem() Obtain Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTotalAllocatedConcurrencyMem(integer $TotalAllocatedConcurrencyMem) Set Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class NamespaceUsage extends AbstractModel
 {
@@ -45,9 +53,25 @@ class NamespaceUsage extends AbstractModel
     public $FunctionsCount;
 
     /**
+     * @var integer Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TotalConcurrencyMem;
+
+    /**
+     * @var integer Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TotalAllocatedConcurrencyMem;
+
+    /**
      * @param array $Functions Function array
      * @param string $Namespace Namespace name
      * @param integer $FunctionsCount Number of functions in namespace
+     * @param integer $TotalConcurrencyMem Total memory quota of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TotalAllocatedConcurrencyMem Memory usage of the namespace
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -72,6 +96,14 @@ class NamespaceUsage extends AbstractModel
 
         if (array_key_exists("FunctionsCount",$param) and $param["FunctionsCount"] !== null) {
             $this->FunctionsCount = $param["FunctionsCount"];
+        }
+
+        if (array_key_exists("TotalConcurrencyMem",$param) and $param["TotalConcurrencyMem"] !== null) {
+            $this->TotalConcurrencyMem = $param["TotalConcurrencyMem"];
+        }
+
+        if (array_key_exists("TotalAllocatedConcurrencyMem",$param) and $param["TotalAllocatedConcurrencyMem"] !== null) {
+            $this->TotalAllocatedConcurrencyMem = $param["TotalAllocatedConcurrencyMem"];
         }
     }
 }
