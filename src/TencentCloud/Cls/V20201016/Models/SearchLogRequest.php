@@ -20,74 +20,122 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog request structure.
  *
- * @method string getTopicId() Obtain Log topic ID to be queried
- * @method void setTopicId(string $TopicId) Set Log topic ID to be queried
- * @method integer getFrom() Obtain Start time of the log to be queried, which is a Unix timestamp in milliseconds
- * @method void setFrom(integer $From) Set Start time of the log to be queried, which is a Unix timestamp in milliseconds
- * @method integer getTo() Obtain End time of the log to be queried, which is a Unix timestamp in milliseconds
- * @method void setTo(integer $To) Set End time of the log to be queried, which is a Unix timestamp in milliseconds
- * @method string getQuery() Obtain Query statement. Maximum length: 4096
- * @method void setQuery(string $Query) Set Query statement. Maximum length: 4096
- * @method integer getLimit() Obtain Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
- * @method void setLimit(integer $Limit) Set Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
- * @method string getContext() Obtain This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
- * @method void setContext(string $Context) Set This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
- * @method string getSort() Obtain Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
- * @method void setSort(string $Sort) Set Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
- * @method boolean getUseNewAnalysis() Obtain If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
- * @method void setUseNewAnalysis(boolean $UseNewAnalysis) Set If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+ * @method string getTopicId() Obtain ID of the log topic to be searched
+ * @method void setTopicId(string $TopicId) Set ID of the log topic to be searched
+ * @method integer getFrom() Obtain Start time of the log to be searched, which is a Unix timestamp in milliseconds
+ * @method void setFrom(integer $From) Set Start time of the log to be searched, which is a Unix timestamp in milliseconds
+ * @method integer getTo() Obtain End time of the log to be searched, which is a Unix timestamp in milliseconds
+ * @method void setTo(integer $To) Set End time of the log to be searched, which is a Unix timestamp in milliseconds
+ * @method string getQuery() Obtain Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+ * @method void setQuery(string $Query) Set Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+ * @method integer getLimit() Obtain The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+ * @method void setLimit(integer $Limit) Set The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+ * @method string getContext() Obtain You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+ * @method void setContext(string $Context) Set You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+ * @method string getSort() Obtain Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+ * @method void setSort(string $Sort) Set Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+ * @method boolean getUseNewAnalysis() Obtain If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+ * @method void setUseNewAnalysis(boolean $UseNewAnalysis) Set If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
  */
 class SearchLogRequest extends AbstractModel
 {
     /**
-     * @var string Log topic ID to be queried
+     * @var string ID of the log topic to be searched
      */
     public $TopicId;
 
     /**
-     * @var integer Start time of the log to be queried, which is a Unix timestamp in milliseconds
+     * @var integer Start time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public $From;
 
     /**
-     * @var integer End time of the log to be queried, which is a Unix timestamp in milliseconds
+     * @var integer End time of the log to be searched, which is a Unix timestamp in milliseconds
      */
     public $To;
 
     /**
-     * @var string Query statement. Maximum length: 4096
+     * @var string Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
      */
     public $Query;
 
     /**
-     * @var integer Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
+     * @var integer The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public $Limit;
 
     /**
-     * @var string This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
+     * @var string You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
     public $Context;
 
     /**
-     * @var string Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
+     * @var string Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
      */
     public $Sort;
 
     /**
-     * @var boolean If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+     * @var boolean If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
     public $UseNewAnalysis;
 
     /**
-     * @param string $TopicId Log topic ID to be queried
-     * @param integer $From Start time of the log to be queried, which is a Unix timestamp in milliseconds
-     * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
-     * @param string $Query Query statement. Maximum length: 4096
-     * @param integer $Limit Number of raw logs returned in a single query. Maximum value: 100. If the query statement (Query) contains an SQL query, you need to specify the number of SQL query results in `Query`. For more information, please visit https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1
-     * @param string $Context This parameter is used to load more logs. Pass through the last `Context` value returned to get more log content. Up to 10,000 raw logs can be obtained in total. This parameter expires in 1 hour.
-     * @param string $Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
-     * @param boolean $UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.
+     * @param string $TopicId ID of the log topic to be searched
+     * @param integer $From Start time of the log to be searched, which is a Unix timestamp in milliseconds
+     * @param integer $To End time of the log to be searched, which is a Unix timestamp in milliseconds
+     * @param string $Query Statement for search and analysis. Maximum length: 12 KB
+A statement is in the format of <a href="https://intl.cloud.tencent.com/document/product/614/47044?from_cn_redirect=1" target="_blank">[search rule]</a> | <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statement]</a>. You can omit the pipe symbol <code> | </code> and SQL statement when log analysis is not required.
+     * @param integer $Limit The number of raw logs returned by a single query. Maximum value: 1000. You need to use `Context` to continue to get logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * @param string $Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
+     * @param string $Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
+Notes:
+* This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+* To sort the analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58978?from_cn_redirect=1" target="_blank">SQL ORDER BY Syntax</a>.
+     * @param boolean $UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
+If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
+The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
      */
     function __construct()
     {

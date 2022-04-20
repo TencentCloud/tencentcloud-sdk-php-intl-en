@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteAlarmNotice request structure.
  *
- * @method string getAlarmNoticeId() Obtain Alarm notification template
- * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Alarm notification template
+ * @method string getAlarmNoticeId() Obtain Notification group ID
+ * @method void setAlarmNoticeId(string $AlarmNoticeId) Set Notification group ID
  */
 class DeleteAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string Alarm notification template
+     * @var string Notification group ID
      */
     public $AlarmNoticeId;
 
     /**
-     * @param string $AlarmNoticeId Alarm notification template
+     * @param string $AlarmNoticeId Notification group ID
      */
     function __construct()
     {

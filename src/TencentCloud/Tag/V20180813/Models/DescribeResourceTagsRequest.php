@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceType(string $ServiceType) Set Service type.
  * @method string getResourcePrefix() Obtain Resource prefix
  * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix
- * @method string getResourceId() Obtain Unique resource ID
- * @method void setResourceId(string $ResourceId) Set Unique resource ID
+ * @method string getResourceId() Obtain Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
+ * @method void setResourceId(string $ResourceId) Set Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
  * @method integer getOffset() Obtain Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
  * @method integer getLimit() Obtain Number of entries per page. Default value: 15
  * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 15
- * @method integer getCosResourceId() Obtain Whether it is a COS resource ID
- * @method void setCosResourceId(integer $CosResourceId) Set Whether it is a COS resource ID
+ * @method integer getCosResourceId() Obtain Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
+ * @method void setCosResourceId(integer $CosResourceId) Set Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
  */
 class DescribeResourceTagsRequest extends AbstractModel
 {
@@ -60,7 +60,7 @@ class DescribeResourceTagsRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @var string Unique resource ID
+     * @var string Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
      */
     public $ResourceId;
 
@@ -75,7 +75,7 @@ class DescribeResourceTagsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Whether it is a COS resource ID
+     * @var integer Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
      */
     public $CosResourceId;
 
@@ -84,10 +84,10 @@ class DescribeResourceTagsRequest extends AbstractModel
      * @param string $ResourceRegion Resource region.
      * @param string $ServiceType Service type.
      * @param string $ResourcePrefix Resource prefix
-     * @param string $ResourceId Unique resource ID
+     * @param string $ResourceId Unique resource ID. Queries with `ResourceId` only may be slow or fail to return results. We recommend you also enter `ServiceType`, `ResourcePrefix`, and `ResourceRegion` (which can be ignored for resources that don't have the region attribute) when entering `ResourceId`.
      * @param integer $Offset Data offset. Default value: 0. It must be an integer multiple of the `Limit` parameter
      * @param integer $Limit Number of entries per page. Default value: 15
-     * @param integer $CosResourceId Whether it is a COS resource ID
+     * @param integer $CosResourceId Whether it is a COS resource (0 or 1). This parameter is required when the entered `ResourceId` is a COS resource.
      */
     function __construct()
     {

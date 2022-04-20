@@ -20,79 +20,94 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchLog response structure.
  *
- * @method string getContext() Obtain `Context` for loading subsequent content. It will expire after 1 hour.
- * @method void setContext(string $Context) Set `Context` for loading subsequent content. It will expire after 1 hour.
- * @method boolean getListOver() Obtain Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
- * @method void setListOver(boolean $ListOver) Set Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
- * @method boolean getAnalysis() Obtain Whether the return is the analysis result
- * @method void setAnalysis(boolean $Analysis) Set Whether the return is the analysis result
- * @method array getColNames() Obtain If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setColNames(array $ColNames) Set If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getResults() Obtain Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setResults(array $Results) Set Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysisResults() Obtain Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysisResults(array $AnalysisResults) Set Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getAnalysisRecords() Obtain New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setAnalysisRecords(array $AnalysisRecords) Set New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getColumns() Obtain Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setColumns(array $Columns) Set Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getContext() Obtain You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+ * @method void setContext(string $Context) Set You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+ * @method boolean getListOver() Obtain Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+ * @method void setListOver(boolean $ListOver) Set Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+ * @method boolean getAnalysis() Obtain Whether the returned data is the analysis (SQL) result
+ * @method void setAnalysis(boolean $Analysis) Set Whether the returned data is the analysis (SQL) result
+ * @method array getResults() Obtain Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setResults(array $Results) Set Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getColNames() Obtain Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColNames(array $ColNames) Set Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getAnalysisResults() Obtain Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setAnalysisResults(array $AnalysisResults) Set Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getAnalysisRecords() Obtain Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setAnalysisRecords(array $AnalysisRecords) Set Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getColumns() Obtain Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setColumns(array $Columns) Set Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SearchLogResponse extends AbstractModel
 {
     /**
-     * @var string `Context` for loading subsequent content. It will expire after 1 hour.
+     * @var string You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
      */
     public $Context;
 
     /**
-     * @var boolean Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
+     * @var boolean Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
      */
     public $ListOver;
 
     /**
-     * @var boolean Whether the return is the analysis result
+     * @var boolean Whether the returned data is the analysis (SQL) result
      */
     public $Analysis;
 
     /**
-     * @var array If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public $ColNames;
-
-    /**
-     * @var array Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Results;
 
     /**
-     * @var array Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $ColNames;
+
+    /**
+     * @var array Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $AnalysisResults;
 
     /**
-     * @var array New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $AnalysisRecords;
 
     /**
-     * @var array Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Columns;
 
@@ -102,19 +117,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param string $Context `Context` for loading subsequent content. It will expire after 1 hour.
-     * @param boolean $ListOver Whether to return all raw log query results. This parameter is meaningless if the query statement (Query) contains an SQL query.
-     * @param boolean $Analysis Whether the return is the analysis result
-     * @param array $ColNames If `Analysis` is `true`, column name of the analysis result will be returned; otherwise, empty content will be returned.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Results Log query result. If `Analysis` is `True`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AnalysisResults Log analysis result. If `Analysis` is `False`, `null` may be returned
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $AnalysisRecords New log analysis result, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $Columns Column attribute of log analysis, which will be valid if `UseNewAnalysis` is `true`
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Context You can pass through the `Context` value (validity: 1 hour) returned by this API to continue to get more logs.
+     * @param boolean $ListOver Whether to return all raw log query results. If not, you can use `Context` to continue to get logs.
+Note: This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
+     * @param boolean $Analysis Whether the returned data is the analysis (SQL) result
+     * @param array $Results Raw logs that meet the search conditions
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $ColNames Column names of log analysis
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $AnalysisResults Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `false`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $AnalysisRecords Log analysis result
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $Columns Column attributes of log analysis
+This parameter is valid only when `UseNewAnalysis` is `true`.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -142,10 +162,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
             $this->Analysis = $param["Analysis"];
         }
 
-        if (array_key_exists("ColNames",$param) and $param["ColNames"] !== null) {
-            $this->ColNames = $param["ColNames"];
-        }
-
         if (array_key_exists("Results",$param) and $param["Results"] !== null) {
             $this->Results = [];
             foreach ($param["Results"] as $key => $value){
@@ -153,6 +169,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Results, $obj);
             }
+        }
+
+        if (array_key_exists("ColNames",$param) and $param["ColNames"] !== null) {
+            $this->ColNames = $param["ColNames"];
         }
 
         if (array_key_exists("AnalysisResults",$param) and $param["AnalysisResults"] !== null) {

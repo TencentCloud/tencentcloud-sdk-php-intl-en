@@ -96,6 +96,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setKafkaInfo(KafkaInfo $KafkaInfo) Set CKafka information when data subscription is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTxhBackupExpireDay() Obtain The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getUlogBackupExpireDay() Obtain The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUlogBackupExpireDay(integer $UlogBackupExpireDay) Set The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsReadOnlyUlogBackupExpireDay() Obtain Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsReadOnlyUlogBackupExpireDay(integer $IsReadOnlyUlogBackupExpireDay) Set Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ClusterInfo extends AbstractModel
 {
@@ -242,6 +254,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $KafkaInfo;
 
     /**
+     * @var integer The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TxhBackupExpireDay;
+
+    /**
+     * @var integer The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UlogBackupExpireDay;
+
+    /**
+     * @var integer Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsReadOnlyUlogBackupExpireDay;
+
+    /**
      * @param string $ClusterName Cluster name
      * @param string $ClusterId Cluster ID
      * @param string $Region Cluster region
@@ -280,6 +310,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param KafkaInfo $KafkaInfo CKafka information when data subscription is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TxhBackupExpireDay The number of days after which the cluster Txh backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $UlogBackupExpireDay The number of days after which the cluster Ulog backup file will expire and be deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsReadOnlyUlogBackupExpireDay Whether the expiration policy of cluster Ulog backup file is read-only. `0`: Yes; `1`: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -407,6 +443,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("KafkaInfo",$param) and $param["KafkaInfo"] !== null) {
             $this->KafkaInfo = new KafkaInfo();
             $this->KafkaInfo->deserialize($param["KafkaInfo"]);
+        }
+
+        if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
+            $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
+        }
+
+        if (array_key_exists("UlogBackupExpireDay",$param) and $param["UlogBackupExpireDay"] !== null) {
+            $this->UlogBackupExpireDay = $param["UlogBackupExpireDay"];
+        }
+
+        if (array_key_exists("IsReadOnlyUlogBackupExpireDay",$param) and $param["IsReadOnlyUlogBackupExpireDay"] !== null) {
+            $this->IsReadOnlyUlogBackupExpireDay = $param["IsReadOnlyUlogBackupExpireDay"];
         }
     }
 }

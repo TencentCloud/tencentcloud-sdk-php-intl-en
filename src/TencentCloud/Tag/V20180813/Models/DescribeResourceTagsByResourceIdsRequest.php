@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceType(string $ServiceType) Set Service type.
  * @method string getResourcePrefix() Obtain Resource prefix.
  * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix.
- * @method array getResourceIds() Obtain Unique resource ID.
- * @method void setResourceIds(array $ResourceIds) Set Unique resource ID.
+ * @method array getResourceIds() Obtain Array of resource IDs (up to 50)
+ * @method void setResourceIds(array $ResourceIds) Set Array of resource IDs (up to 50)
  * @method string getResourceRegion() Obtain The resource's region.
  * @method void setResourceRegion(string $ResourceRegion) Set The resource's region.
  * @method integer getOffset() Obtain Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
@@ -46,7 +46,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     public $ResourcePrefix;
 
     /**
-     * @var array Unique resource ID.
+     * @var array Array of resource IDs (up to 50)
      */
     public $ResourceIds;
 
@@ -68,7 +68,7 @@ class DescribeResourceTagsByResourceIdsRequest extends AbstractModel
     /**
      * @param string $ServiceType Service type.
      * @param string $ResourcePrefix Resource prefix.
-     * @param array $ResourceIds Unique resource ID.
+     * @param array $ResourceIds Array of resource IDs (up to 50)
      * @param string $ResourceRegion The resource's region.
      * @param integer $Offset Data offset. The default value is 0. Must be an integral multiple of the `Limit` parameter.
      * @param integer $Limit Page size. The default value is 0.

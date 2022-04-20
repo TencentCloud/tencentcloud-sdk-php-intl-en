@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Field information of key value or metafield index
  *
- * @method string getKey() Obtain The field that needs to be configured with a key value or metafield index
- * @method void setKey(string $Key) Set The field that needs to be configured with a key value or metafield index
+ * @method string getKey() Obtain When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
+ * @method void setKey(string $Key) Set When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
  * @method ValueInfo getValue() Obtain Field index description information
  * @method void setValue(ValueInfo $Value) Set Field index description information
  */
 class KeyValueInfo extends AbstractModel
 {
     /**
-     * @var string The field that needs to be configured with a key value or metafield index
+     * @var string When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
      */
     public $Key;
 
@@ -38,7 +38,7 @@ class KeyValueInfo extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Key The field that needs to be configured with a key value or metafield index
+     * @param string $Key When a key value or metafield index needs to be configured for a field, the metafield `Key` does not need to be prefixed with `__TAG__.` and is consistent with the one when logs are uploaded. `__TAG__.` will be prefixed automatically for display in the console.
      * @param ValueInfo $Value Field index description information
      */
     function __construct()

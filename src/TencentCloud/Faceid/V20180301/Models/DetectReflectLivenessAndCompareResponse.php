@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DetectReflectLivenessAndCompare response structure.
  *
- * @method string getBestFrameUrl() Obtain URL of the best screenshot (in JPG format) of the video after successful verification
- * @method void setBestFrameUrl(string $BestFrameUrl) Set URL of the best screenshot (in JPG format) of the video after successful verification
- * @method string getBestFrameMd5() Obtain MD5 hash value of the best screenshot of the video after successful verification
- * @method void setBestFrameMd5(string $BestFrameMd5) Set MD5 hash value of the best screenshot of the video after successful verification
- * @method string getResult() Obtain Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
- * @method void setResult(string $Result) Set Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+ * @method string getBestFrameUrl() Obtain Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+ * @method void setBestFrameUrl(string $BestFrameUrl) Set Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+ * @method string getBestFrameMd5() Obtain MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+ * @method void setBestFrameMd5(string $BestFrameMd5) Set MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+ * @method string getResult() Obtain Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
+ * @method void setResult(string $Result) Set Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
  * @method string getDescription() Obtain Service result description
  * @method void setDescription(string $Description) Set Service result description
  * @method float getSim() Obtain Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class DetectReflectLivenessAndCompareResponse extends AbstractModel
 {
     /**
-     * @var string URL of the best screenshot (in JPG format) of the video after successful verification
+     * @var string Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
      */
     public $BestFrameUrl;
 
     /**
-     * @var string MD5 hash value of the best screenshot of the video after successful verification
+     * @var string MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
      */
     public $BestFrameMd5;
 
     /**
-     * @var string Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+     * @var string Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
      */
     public $Result;
 
@@ -66,9 +66,9 @@ class DetectReflectLivenessAndCompareResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $BestFrameUrl URL of the best screenshot (in JPG format) of the video after successful verification
-     * @param string $BestFrameMd5 MD5 hash value of the best screenshot of the video after successful verification
-     * @param string $Result Service error code. `Success` will be returned for success. For error information, please see the `FailedOperation` section in the error code list below.
+     * @param string $BestFrameUrl Temporary URL of the best screenshot (.jpg) of the video after successful verification. Both the screenshot and the URL are valid for two hours only, so you need to download the screenshot within this period.
+     * @param string $BestFrameMd5 MD5 hash value (32-bit) of the best screenshot of the video after successful verification, which is used to verify the `BestFrame` consistency.
+     * @param string $Result Service error code. `Success` will be returned for success. For error information, see the `FailedOperation` section in the error code list below.
      * @param string $Description Service result description
      * @param float $Sim Similarity. Value range: [0.00, 100.00]. As a recommendation, when the similarity is greater than or equal to 70, it can be determined that the two faces are of the same person. You can adjust the threshold according to your specific scenario (the FAR at the threshold of 70 is 0.1%, and FAR at the threshold of 80 is 0.01%).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

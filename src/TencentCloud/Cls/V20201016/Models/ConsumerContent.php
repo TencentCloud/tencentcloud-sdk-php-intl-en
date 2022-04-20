@@ -28,6 +28,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method boolean getTagJsonNotTiled() Obtain This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) Set This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ConsumerContent extends AbstractModel
 {
@@ -44,9 +48,17 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $MetaFields;
 
     /**
+     * @var boolean This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $TagJsonNotTiled;
+
+    /**
      * @param boolean $EnableTag Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param boolean $TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -68,6 +80,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("MetaFields",$param) and $param["MetaFields"] !== null) {
             $this->MetaFields = $param["MetaFields"];
+        }
+
+        if (array_key_exists("TagJsonNotTiled",$param) and $param["TagJsonNotTiled"] !== null) {
+            $this->TagJsonNotTiled = $param["TagJsonNotTiled"];
         }
     }
 }

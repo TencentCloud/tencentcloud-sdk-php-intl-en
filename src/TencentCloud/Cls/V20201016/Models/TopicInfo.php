@@ -50,10 +50,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setStorageType(string $StorageType) Set Log topic storage class
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getPeriod() Obtain Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setPeriod(integer $Period) Set Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class TopicInfo extends AbstractModel
 {
@@ -117,8 +117,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $StorageType;
 
     /**
-     * @var integer Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Period;
 
@@ -138,8 +138,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $StorageType Log topic storage class
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Period Lifecycle in days
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {

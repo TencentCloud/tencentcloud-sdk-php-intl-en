@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlarmNotice request structure.
  *
- * @method string getName() Obtain Alarm template name
- * @method void setName(string $Name) Set Alarm template name
- * @method string getType() Obtain Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
- * @method void setType(string $Type) Set Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
- * @method array getNoticeReceivers() Obtain Information of the recipient in alarm template
- * @method void setNoticeReceivers(array $NoticeReceivers) Set Information of the recipient in alarm template
- * @method array getWebCallbacks() Obtain Alarm template callback information
- * @method void setWebCallbacks(array $WebCallbacks) Set Alarm template callback information
+ * @method string getName() Obtain Notification group name
+ * @method void setName(string $Name) Set Notification group name
+ * @method string getType() Obtain Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+ * @method void setType(string $Type) Set Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+ * @method array getNoticeReceivers() Obtain Notification recipient
+ * @method void setNoticeReceivers(array $NoticeReceivers) Set Notification recipient
+ * @method array getWebCallbacks() Obtain API callback information (including WeCom)
+ * @method void setWebCallbacks(array $WebCallbacks) Set API callback information (including WeCom)
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
     /**
-     * @var string Alarm template name
+     * @var string Notification group name
      */
     public $Name;
 
     /**
-     * @var string Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
+     * @var string Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
      */
     public $Type;
 
     /**
-     * @var array Information of the recipient in alarm template
+     * @var array Notification recipient
      */
     public $NoticeReceivers;
 
     /**
-     * @var array Alarm template callback information
+     * @var array API callback information (including WeCom)
      */
     public $WebCallbacks;
 
     /**
-     * @param string $Name Alarm template name
-     * @param string $Type Alarm template type. Valid values:
-<br><li> `Trigger`: alarm triggered
-<br><li> `Recovery`: alarm cleared
-<br><li> `All`: alarm triggered and alarm cleared
-     * @param array $NoticeReceivers Information of the recipient in alarm template
-     * @param array $WebCallbacks Alarm template callback information
+     * @param string $Name Notification group name
+     * @param string $Type Notification type. Valid values:
+<li> `Trigger`: alarm triggered
+<li> `Recovery`: alarm cleared
+<li> `All`: alarm triggered and alarm cleared
+     * @param array $NoticeReceivers Notification recipient
+     * @param array $WebCallbacks API callback information (including WeCom)
      */
     function __construct()
     {

@@ -20,68 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAlarmNotices request structure.
  *
- * @method array getFilters() Obtain <br><li> name
-
-Filter by **alarm notification template name**.
+ * @method array getFilters() Obtain <li> name
+Filter by **notification group name**.
 Type: String
-
-Required: no
-
-<br><li> alarmNoticeId
-
-Filter by **alarm notification template ID**.
+Required: No
+<li> alarmNoticeId
+Filter by **notification group ID**.
 Type: String
-
-Required: no
-
-<br><li> uid
-
+Required: No
+<li> uid
 Filter by **recipient ID**.
-
 Type: String
-
-Required: no
-
-<br><li> groupId
-
-Filter by **user group ID**.
-
-Type: String
-
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
- * @method void setFilters(array $Filters) Set <br><li> name
-
-Filter by **alarm notification template name**.
-Type: String
-
-Required: no
-
-<br><li> alarmNoticeId
-
-Filter by **alarm notification template ID**.
-Type: String
-
-Required: no
-
-<br><li> uid
-
+Required: No
+<li> groupId
 Filter by **recipient ID**.
-
 Type: String
+Required: No
 
-Required: no
-
-<br><li> groupId
-
-Filter by **user group ID**.
-
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
+ * @method void setFilters(array $Filters) Set <li> name
+Filter by **notification group name**.
 Type: String
+Required: No
+<li> alarmNoticeId
+Filter by **notification group ID**.
+Type: String
+Required: No
+<li> uid
+Filter by **recipient ID**.
+Type: String
+Required: No
+<li> groupId
+Filter by **recipient ID**.
+Type: String
+Required: No
 
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
  * @method integer getOffset() Obtain Page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Page offset. Default value: 0
  * @method integer getLimit() Obtain Maximum number of entries per page. Default value: 20. Maximum value: 100.
@@ -90,37 +64,24 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
 class DescribeAlarmNoticesRequest extends AbstractModel
 {
     /**
-     * @var array <br><li> name
-
-Filter by **alarm notification template name**.
+     * @var array <li> name
+Filter by **notification group name**.
 Type: String
-
-Required: no
-
-<br><li> alarmNoticeId
-
-Filter by **alarm notification template ID**.
+Required: No
+<li> alarmNoticeId
+Filter by **notification group ID**.
 Type: String
-
-Required: no
-
-<br><li> uid
-
+Required: No
+<li> uid
 Filter by **recipient ID**.
-
 Type: String
-
-Required: no
-
-<br><li> groupId
-
-Filter by **user group ID**.
-
+Required: No
+<li> groupId
+Filter by **recipient ID**.
 Type: String
+Required: No
 
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      */
     public $Filters;
 
@@ -135,37 +96,24 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
     public $Limit;
 
     /**
-     * @param array $Filters <br><li> name
-
-Filter by **alarm notification template name**.
+     * @param array $Filters <li> name
+Filter by **notification group name**.
 Type: String
-
-Required: no
-
-<br><li> alarmNoticeId
-
-Filter by **alarm notification template ID**.
+Required: No
+<li> alarmNoticeId
+Filter by **notification group ID**.
 Type: String
-
-Required: no
-
-<br><li> uid
-
+Required: No
+<li> uid
 Filter by **recipient ID**.
-
 Type: String
-
-Required: no
-
-<br><li> groupId
-
-Filter by **user group ID**.
-
+Required: No
+<li> groupId
+Filter by **recipient ID**.
 Type: String
+Required: No
 
-Required: no
-
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`.
+Each request can have up to 10 `Filters` and 5 `Filter.Values`.
      * @param integer $Offset Page offset. Default value: 0
      * @param integer $Limit Maximum number of entries per page. Default value: 20. Maximum value: 100.
      */

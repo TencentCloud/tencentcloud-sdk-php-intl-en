@@ -23,29 +23,33 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() Obtain Callback address
  * @method void setUrl(string $Url) Set Callback address
  * @method string getCallbackType() Obtain Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
  * @method void setCallbackType(string $CallbackType) Set Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
  * @method string getMethod() Obtain Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setMethod(string $Method) Set Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method array getHeaders() Obtain Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHeaders(array $Headers) Set Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getBody() Obtain Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setBody(string $Body) Set Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getBody() Obtain Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setBody(string $Body) Set Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
  * @method integer getIndex() Obtain Number
  * @method void setIndex(integer $Index) Set Number
  */
@@ -58,29 +62,31 @@ class WebCallback extends AbstractModel
 
     /**
      * @var string Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      */
     public $CallbackType;
 
     /**
      * @var string Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Method;
 
     /**
      * @var array Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Headers;
 
     /**
-     * @var string Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $Body;
 
@@ -92,17 +98,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * @param string $Url Callback address
      * @param string $CallbackType Callback type. Valid values:
-<br><li> WeCom
-<br><li> Http
+<li> WeCom
+<li> Http
      * @param string $Method Callback method. Valid values:
-<br><li> POST
-<br><li> PUT
+<li> POST
+<li> PUT
 Default value: `POST`. This parameter is required if `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param array $Headers Request header
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Body Request content, which is required when `CallbackType` is `Http`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This parameter is disused. To specify request headers, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Body Request content
+Note: This parameter is disused. To specify request content, see `CallBack` in <a href="https://intl.cloud.tencent.com/document/product/614/56466?from_cn_redirect=1">CreateAlarmNotice</a>.
+Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $Index Number
      */
     function __construct()

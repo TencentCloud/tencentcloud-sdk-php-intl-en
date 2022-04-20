@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() Obtain Log topic ID bound to the task
  * @method void setTopicId(string $TopicId) Set Log topic ID bound to the task
- * @method boolean getEffective() Obtain Whether to enable the shipping task
- * @method void setEffective(boolean $Effective) Set Whether to enable the shipping task
+ * @method boolean getEffective() Obtain Whether the shipping task takes effect (default: no)
+ * @method void setEffective(boolean $Effective) Set Whether the shipping task takes effect (default: no)
  * @method boolean getNeedContent() Obtain Whether to ship metadata. Default value: `false`
  * @method void setNeedContent(boolean $NeedContent) Set Whether to ship metadata. Default value: `false`
  * @method ConsumerContent getContent() Obtain Metadata to ship if `NeedContent` is `true`
@@ -39,7 +39,7 @@ class ModifyConsumerRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var boolean Whether to enable the shipping task
+     * @var boolean Whether the shipping task takes effect (default: no)
      */
     public $Effective;
 
@@ -60,7 +60,7 @@ class ModifyConsumerRequest extends AbstractModel
 
     /**
      * @param string $TopicId Log topic ID bound to the task
-     * @param boolean $Effective Whether to enable the shipping task
+     * @param boolean $Effective Whether the shipping task takes effect (default: no)
      * @param boolean $NeedContent Whether to ship metadata. Default value: `false`
      * @param ConsumerContent $Content Metadata to ship if `NeedContent` is `true`
      * @param Ckafka $Ckafka CKafka information

@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicId(string $TopicId) Set Log topic ID
  * @method boolean getStatus() Obtain It does not take effect by default
  * @method void setStatus(boolean $Status) Set It does not take effect by default
- * @method RuleInfo getRule() Obtain Index rule. Either `Rule` or `Effective` must exist.
- * @method void setRule(RuleInfo $Rule) Set Index rule. Either `Rule` or `Effective` must exist.
+ * @method RuleInfo getRule() Obtain Index rule
+ * @method void setRule(RuleInfo $Rule) Set Index rule
+ * @method boolean getIncludeInternalFields() Obtain 
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set 
+ * @method integer getMetadataFlag() Obtain 
+ * @method void setMetadataFlag(integer $MetadataFlag) Set 
  */
 class ModifyIndexRequest extends AbstractModel
 {
@@ -40,14 +44,26 @@ class ModifyIndexRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var RuleInfo Index rule. Either `Rule` or `Effective` must exist.
+     * @var RuleInfo Index rule
      */
     public $Rule;
 
     /**
+     * @var boolean 
+     */
+    public $IncludeInternalFields;
+
+    /**
+     * @var integer 
+     */
+    public $MetadataFlag;
+
+    /**
      * @param string $TopicId Log topic ID
      * @param boolean $Status It does not take effect by default
-     * @param RuleInfo $Rule Index rule. Either `Rule` or `Effective` must exist.
+     * @param RuleInfo $Rule Index rule
+     * @param boolean $IncludeInternalFields 
+     * @param integer $MetadataFlag 
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class ModifyIndexRequest extends AbstractModel
         if (array_key_exists("Rule",$param) and $param["Rule"] !== null) {
             $this->Rule = new RuleInfo();
             $this->Rule->deserialize($param["Rule"]);
+        }
+
+        if (array_key_exists("IncludeInternalFields",$param) and $param["IncludeInternalFields"] !== null) {
+            $this->IncludeInternalFields = $param["IncludeInternalFields"];
+        }
+
+        if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
+            $this->MetadataFlag = $param["MetadataFlag"];
         }
     }
 }

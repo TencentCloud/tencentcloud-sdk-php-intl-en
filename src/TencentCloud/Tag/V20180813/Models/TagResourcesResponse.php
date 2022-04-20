@@ -1,0 +1,78 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Tag\V20180813\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * TagResources response structure.
+ *
+ * @method array getFailedResources() Obtain Information of failed resources.
+When tag creating and binding succeeds, the returned `FailedResources` will be empty.
+When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+ * @method void setFailedResources(array $FailedResources) Set Information of failed resources.
+When tag creating and binding succeeds, the returned `FailedResources` will be empty.
+When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ */
+class TagResourcesResponse extends AbstractModel
+{
+    /**
+     * @var array Information of failed resources.
+When tag creating and binding succeeds, the returned `FailedResources` will be empty.
+When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+     */
+    public $FailedResources;
+
+    /**
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    public $RequestId;
+
+    /**
+     * @param array $FailedResources Information of failed resources.
+When tag creating and binding succeeds, the returned `FailedResources` will be empty.
+When tag creating and binding partially or completely fails, the returned `FailedResources` will display the details of failed resources.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("FailedResources",$param) and $param["FailedResources"] !== null) {
+            $this->FailedResources = [];
+            foreach ($param["FailedResources"] as $key => $value){
+                $obj = new FailedResource();
+                $obj->deserialize($value);
+                array_push($this->FailedResources, $obj);
+            }
+        }
+
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
+        }
+    }
+}

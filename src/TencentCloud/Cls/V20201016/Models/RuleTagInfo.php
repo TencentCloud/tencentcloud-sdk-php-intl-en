@@ -18,12 +18,12 @@ namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag index configuration information
+ * Metafield index configuration
  *
  * @method boolean getCaseSensitive() Obtain Case sensitivity
  * @method void setCaseSensitive(boolean $CaseSensitive) Set Case sensitivity
- * @method array getKeyValues() Obtain Field information in tag index configuration
- * @method void setKeyValues(array $KeyValues) Set Field information in tag index configuration
+ * @method array getKeyValues() Obtain Field information in the metafield index configuration
+ * @method void setKeyValues(array $KeyValues) Set Field information in the metafield index configuration
  */
 class RuleTagInfo extends AbstractModel
 {
@@ -33,13 +33,13 @@ class RuleTagInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var array Field information in tag index configuration
+     * @var array Field information in the metafield index configuration
      */
     public $KeyValues;
 
     /**
      * @param boolean $CaseSensitive Case sensitivity
-     * @param array $KeyValues Field information in tag index configuration
+     * @param array $KeyValues Field information in the metafield index configuration
      */
     function __construct()
     {

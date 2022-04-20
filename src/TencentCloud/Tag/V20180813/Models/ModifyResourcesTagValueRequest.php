@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyResourcesTagValue request structure.
  *
- * @method string getServiceType() Obtain Resource service name
- * @method void setServiceType(string $ServiceType) Set Resource service name
+ * @method string getServiceType() Obtain Resource service name (the third segment in the six-segment resource description)
+ * @method void setServiceType(string $ServiceType) Set Resource service name (the third segment in the six-segment resource description)
  * @method array getResourceIds() Obtain Resource ID array, which can contain up to 50 resources
  * @method void setResourceIds(array $ResourceIds) Set Resource ID array, which can contain up to 50 resources
  * @method string getTagKey() Obtain Tag key
  * @method void setTagKey(string $TagKey) Set Tag key
  * @method string getTagValue() Obtain Tag value
  * @method void setTagValue(string $TagValue) Set Tag value
- * @method string getResourceRegion() Obtain Resource region. This field is not required for resources that do not have the region attribute
- * @method void setResourceRegion(string $ResourceRegion) Set Resource region. This field is not required for resources that do not have the region attribute
- * @method string getResourcePrefix() Obtain Resource prefix, which is not required for COS buckets
- * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix, which is not required for COS buckets
+ * @method string getResourceRegion() Obtain Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+ * @method void setResourceRegion(string $ResourceRegion) Set Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+ * @method string getResourcePrefix() Obtain Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
+ * @method void setResourcePrefix(string $ResourcePrefix) Set Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
  */
 class ModifyResourcesTagValueRequest extends AbstractModel
 {
     /**
-     * @var string Resource service name
+     * @var string Resource service name (the third segment in the six-segment resource description)
      */
     public $ServiceType;
 
@@ -56,22 +56,22 @@ class ModifyResourcesTagValueRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string Resource region. This field is not required for resources that do not have the region attribute
+     * @var string Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
      */
     public $ResourceRegion;
 
     /**
-     * @var string Resource prefix, which is not required for COS buckets
+     * @var string Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
      */
     public $ResourcePrefix;
 
     /**
-     * @param string $ServiceType Resource service name
+     * @param string $ServiceType Resource service name (the third segment in the six-segment resource description)
      * @param array $ResourceIds Resource ID array, which can contain up to 50 resources
      * @param string $TagKey Tag key
      * @param string $TagValue Tag value
-     * @param string $ResourceRegion Resource region. This field is not required for resources that do not have the region attribute
-     * @param string $ResourcePrefix Resource prefix, which is not required for COS buckets
+     * @param string $ResourceRegion Resource region. If resources have the region attribute, this field is required; otherwise, it is optional.
+     * @param string $ResourcePrefix Resource prefix (the part before "/" in the last segment in the six-segment resource description), which is optional for COS buckets but required for other Tencent Cloud resources.
      */
     function __construct()
     {

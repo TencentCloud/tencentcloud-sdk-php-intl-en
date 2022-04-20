@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Tag key associated with the resource.
  * @method string getTagValue() Obtain Modified tag value.
  * @method void setTagValue(string $TagValue) Set Modified tag value.
- * @method string getResource() Obtain [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
- * @method void setResource(string $Resource) Set [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+ * @method string getResource() Obtain [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
+ * @method void setResource(string $Resource) Set [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
  */
 class UpdateResourceTagValueRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class UpdateResourceTagValueRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+     * @var string [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
     public $Resource;
 
     /**
      * @param string $TagKey Tag key associated with the resource.
      * @param string $TagValue Modified tag value.
-     * @param string $Resource [Six-segment resource description](https://cloud.tencent.com/document/product/598/10606)
+     * @param string $Resource [Six-segment resource description](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      */
     function __construct()
     {

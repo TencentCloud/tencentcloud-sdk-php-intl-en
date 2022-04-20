@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() Obtain Log topic ID to be queried
  * @method void setTopicId(string $TopicId) Set Log topic ID to be queried
- * @method string getBTime() Obtain Log time in the format of `YYYY-mm-dd HH:MM:SS`
- * @method void setBTime(string $BTime) Set Log time in the format of `YYYY-mm-dd HH:MM:SS`
+ * @method string getBTime() Obtain Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
+ * @method void setBTime(string $BTime) Set Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
  * @method string getPkgId() Obtain Log package number
  * @method void setPkgId(string $PkgId) Set Log package number
  * @method integer getPkgLogId() Obtain Log number in log package
@@ -41,7 +41,7 @@ class DescribeLogContextRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string Log time in the format of `YYYY-mm-dd HH:MM:SS`
+     * @var string Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
      */
     public $BTime;
 
@@ -67,7 +67,7 @@ class DescribeLogContextRequest extends AbstractModel
 
     /**
      * @param string $TopicId Log topic ID to be queried
-     * @param string $BTime Log time in the format of `YYYY-mm-dd HH:MM:SS`
+     * @param string $BTime Log time in the format of YYYY-mm-dd HH:MM:SS.FFF
      * @param string $PkgId Log package number
      * @param integer $PkgLogId Log number in log package
      * @param integer $PrevLogs Number of previous logs. Default value: 10

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getEnableTag() Obtain Enablement flag
  * @method void setEnableTag(boolean $EnableTag) Set Enablement flag
- * @method array getMetaFields() Obtain Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setMetaFields(array $MetaFields) Set Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getMetaFields() Obtain Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setMetaFields(array $MetaFields) Set Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class JsonInfo extends AbstractModel
 {
@@ -35,15 +35,15 @@ class JsonInfo extends AbstractModel
     public $EnableTag;
 
     /**
-     * @var array Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
      */
     public $MetaFields;
 
     /**
      * @param boolean $EnableTag Enablement flag
-     * @param array $MetaFields Metadata information list
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $MetaFields Metadata information list. Valid values: __SOURCE__; __FILENAME__; __TIMESTAMP__
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {

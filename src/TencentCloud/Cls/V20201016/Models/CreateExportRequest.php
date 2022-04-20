@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExport request structure.
  *
- * @method string getTopicId() Obtain Log topic
- * @method void setTopicId(string $TopicId) Set Log topic
- * @method string getQuery() Obtain Log export search statement
- * @method void setQuery(string $Query) Set Log export search statement
- * @method integer getCount() Obtain Number of logs to be exported. Maximum value: 10 million
- * @method void setCount(integer $Count) Set Number of logs to be exported. Maximum value: 10 million
+ * @method string getTopicId() Obtain Log topic ID
+ * @method void setTopicId(string $TopicId) Set Log topic ID
+ * @method integer getCount() Obtain Number of logs to be exported. Maximum value: 50 million
+ * @method void setCount(integer $Count) Set Number of logs to be exported. Maximum value: 50 million
+ * @method string getQuery() Obtain Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+ * @method void setQuery(string $Query) Set Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
  * @method integer getFrom() Obtain Start time of the log to be exported, which is a timestamp in milliseconds
  * @method void setFrom(integer $From) Set Start time of the log to be exported, which is a timestamp in milliseconds
  * @method integer getTo() Obtain End time of the log to be exported, which is a timestamp in milliseconds
@@ -38,19 +38,19 @@ use TencentCloud\Common\AbstractModel;
 class CreateExportRequest extends AbstractModel
 {
     /**
-     * @var string Log topic
+     * @var string Log topic ID
      */
     public $TopicId;
 
     /**
-     * @var string Log export search statement
-     */
-    public $Query;
-
-    /**
-     * @var integer Number of logs to be exported. Maximum value: 10 million
+     * @var integer Number of logs to be exported. Maximum value: 50 million
      */
     public $Count;
+
+    /**
+     * @var string Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
+     */
+    public $Query;
 
     /**
      * @var integer Start time of the log to be exported, which is a timestamp in milliseconds
@@ -73,9 +73,9 @@ class CreateExportRequest extends AbstractModel
     public $Format;
 
     /**
-     * @param string $TopicId Log topic
-     * @param string $Query Log export search statement
-     * @param integer $Count Number of logs to be exported. Maximum value: 10 million
+     * @param string $TopicId Log topic ID
+     * @param integer $Count Number of logs to be exported. Maximum value: 50 million
+     * @param string $Query Search statements for log export. <a href="https://intl.cloud.tencent.com/document/product/614/44061?from_cn_redirect=1" target="_blank">[SQL statements]</a> are not supported.
      * @param integer $From Start time of the log to be exported, which is a timestamp in milliseconds
      * @param integer $To End time of the log to be exported, which is a timestamp in milliseconds
      * @param string $Order Exported log sorting order by time. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
@@ -98,12 +98,12 @@ class CreateExportRequest extends AbstractModel
             $this->TopicId = $param["TopicId"];
         }
 
-        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
-            $this->Query = $param["Query"];
-        }
-
         if (array_key_exists("Count",$param) and $param["Count"] !== null) {
             $this->Count = $param["Count"];
+        }
+
+        if (array_key_exists("Query",$param) and $param["Query"] !== null) {
+            $this->Query = $param["Query"];
         }
 
         if (array_key_exists("From",$param) and $param["From"] !== null) {

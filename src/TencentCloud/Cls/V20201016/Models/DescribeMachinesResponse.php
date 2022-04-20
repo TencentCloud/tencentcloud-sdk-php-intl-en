@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateStartTime(string $UpdateStartTime) Set Preset start time of automatic update of machine group
  * @method string getUpdateEndTime() Obtain Preset end time of automatic update of machine group
  * @method void setUpdateEndTime(string $UpdateEndTime) Set Preset end time of automatic update of machine group
- * @method string getLatestAgentVersion() Obtain Latest LogListener version available to the current user
- * @method void setLatestAgentVersion(string $LatestAgentVersion) Set Latest LogListener version available to the current user
+ * @method string getLatestAgentVersion() Obtain Latest LogListener version available to the current user
+ * @method void setLatestAgentVersion(string $LatestAgentVersion) Set Latest LogListener version available to the current user
  * @method boolean getServiceLogging() Obtain Whether to enable the service log
  * @method void setServiceLogging(boolean $ServiceLogging) Set Whether to enable the service log
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -58,7 +58,7 @@ class DescribeMachinesResponse extends AbstractModel
     public $UpdateEndTime;
 
     /**
-     * @var string Latest LogListener version available to the current user
+     * @var string Latest LogListener version available to the current user
      */
     public $LatestAgentVersion;
 
@@ -77,7 +77,7 @@ class DescribeMachinesResponse extends AbstractModel
      * @param integer $AutoUpdate Whether to enable the automatic update feature for the machine group
      * @param string $UpdateStartTime Preset start time of automatic update of machine group
      * @param string $UpdateEndTime Preset end time of automatic update of machine group
-     * @param string $LatestAgentVersion Latest LogListener version available to the current user
+     * @param string $LatestAgentVersion Latest LogListener version available to the current user
      * @param boolean $ServiceLogging Whether to enable the service log
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

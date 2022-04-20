@@ -32,10 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSplit(boolean $AutoSplit) Set Whether to enable automatic split. Default value: true
  * @method integer getMaxSplitPartitions() Obtain Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
- * @method string getStorageType() Obtain Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
- * @method void setStorageType(string $StorageType) Set Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
- * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1–366. Default value: 30
- * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1–366. Default value: 30
+ * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+ * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+ * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+ * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -70,12 +70,12 @@ class CreateTopicRequest extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
-     * @var string Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
+     * @var string Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
      */
     public $StorageType;
 
     /**
-     * @var integer Lifecycle in days. Value range: 1–366. Default value: 30
+     * @var integer Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
      */
     public $Period;
 
@@ -86,8 +86,8 @@ class CreateTopicRequest extends AbstractModel
      * @param array $Tags Tag description list. This parameter is used to bind a tag to a log topic. Up to 10 tag key-value pairs are supported, and a resource can be bound to only one tag key.
      * @param boolean $AutoSplit Whether to enable automatic split. Default value: true
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
-     * @param string $StorageType Log topic storage class. Valid values: `hot`: real-time storage; `cold`: offline storage. Default value: `hot`. If `cold` is passed in, please contact the customer service to add the log topic to the allowlist first.
-     * @param integer $Period Lifecycle in days. Value range: 1–366. Default value: 30
+     * @param string $StorageType Log topic storage type. Valid values: `hot` (real-time storage); `cold` (IA storage). Default value: `hot`.
+     * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
      */
     function __construct()
     {

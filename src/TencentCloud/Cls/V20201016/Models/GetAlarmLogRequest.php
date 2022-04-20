@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTo(integer $To) Set End time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method string getQuery() Obtain Query statement. Maximum length: 1024
  * @method void setQuery(string $Query) Set Query statement. Maximum length: 1024
- * @method integer getLimit() Obtain Number of logs returned in a single query. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of logs returned in a single query. Maximum value: 100
+ * @method integer getLimit() Obtain Number of logs returned in a single query. Maximum value: 1000
+ * @method void setLimit(integer $Limit) Set Number of logs returned in a single query. Maximum value: 1000
  * @method string getContext() Obtain This field is used to load more logs. Pass through the last `Context` value returned to get more log content.
  * @method void setContext(string $Context) Set This field is used to load more logs. Pass through the last `Context` value returned to get more log content.
  * @method string getSort() Obtain Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
@@ -53,7 +53,7 @@ class GetAlarmLogRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer Number of logs returned in a single query. Maximum value: 100
+     * @var integer Number of logs returned in a single query. Maximum value: 1000
      */
     public $Limit;
 
@@ -76,7 +76,7 @@ class GetAlarmLogRequest extends AbstractModel
      * @param integer $From Start time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param string $Query Query statement. Maximum length: 1024
-     * @param integer $Limit Number of logs returned in a single query. Maximum value: 100
+     * @param integer $Limit Number of logs returned in a single query. Maximum value: 1000
      * @param string $Context This field is used to load more logs. Pass through the last `Context` value returned to get more log content.
      * @param string $Sort Order of the logs sorted by time returned by the log API. Valid values: `asc`: ascending; `desc`: descending. Default value: `desc`
      * @param boolean $UseNewAnalysis If the value is `true`, the new search method will be used, and the response parameters `AnalysisRecords` and `Columns` will be valid. If the value is `false`, the old search method will be used, and `AnalysisResults` and `ColNames` will be valid.

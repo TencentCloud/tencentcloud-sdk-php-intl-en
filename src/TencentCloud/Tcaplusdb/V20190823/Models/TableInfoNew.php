@@ -128,6 +128,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDbClusterInfoStruct(string $DbClusterInfoStruct) Set Information about global indexes, table caching, or data subscription
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTxhBackupExpireDay() Obtain The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class TableInfoNew extends AbstractModel
 {
@@ -294,6 +298,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DbClusterInfoStruct;
 
     /**
+     * @var integer The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TxhBackupExpireDay;
+
+    /**
      * @param string $TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TableInstanceId Table instance ID
@@ -348,6 +358,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DbClusterInfoStruct Information about global indexes, table caching, or data subscription
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -474,6 +486,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DbClusterInfoStruct",$param) and $param["DbClusterInfoStruct"] !== null) {
             $this->DbClusterInfoStruct = $param["DbClusterInfoStruct"];
+        }
+
+        if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
+            $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
         }
     }
 }
