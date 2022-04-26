@@ -40,17 +40,12 @@ If you currently use a password to log in, you will no longer be able to do so a
 * The name of the key pair must be unique.
 * You can save the private key to a file and use it as an authentication method for `SSH`.
 * Tencent Cloud does not save users' private keys. Be sure to save it yourself.
- * @method Models\CreateLaunchTemplateResponse CreateLaunchTemplate(Models\CreateLaunchTemplateRequest $req) This API is used to create an instance launch template.
-
-An instance launch template contains the configuration information required to create an instance, including instance type, data/system disk type and size, and security group, etc.
-
-When a template is created, it defaults to Version 1. You can use `CreateLaunchTemplateVersion` to create new versions of this template, with the version number increasing. When you run `RunInstances` to create instances, you can specify the instance launch template version. If it’s not specified, the default template version is used.
  * @method Models\CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersion(Models\CreateLaunchTemplateVersionRequest $req) This API is used to create an instance launch template based on the specified template ID and the corresponding template version number. The default version number will be used when no template version numbers are specified. Each instance launch template can have up to 30 version numbers.
  * @method Models\DeleteDisasterRecoverGroupsResponse DeleteDisasterRecoverGroups(Models\DeleteDisasterRecoverGroupsRequest $req) This API is used to delete a [spread placement group](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1). Only empty placement groups can be deleted. To delete a non-empty group, you need to terminate all the CVM instances in it first. Otherwise, the deletion will fail.
- * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) This API is used to delete images.
+ * @method Models\DeleteImagesResponse DeleteImages(Models\DeleteImagesRequest $req) This API is used to delete one or more images.
 
-* If the [ImageState](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#image_state) of an image is `Creating` or `In Use`, it cannot be deleted. Use [DescribeImages](https://intl.cloud.tencent.com/document/api/213/9418?from_cn_redirect=1) to query the image state.
-* You can only create up to 10 custom images in each region. If you have used up the quota, you can delete images to create new ones.
+* If the [ImageState](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image) of an image is `CREATING` or `USING`, the image cannot be deleted. Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API to query the image status.
+* Up to 10 custom images are allowed in each region. If you have run out of the quota, delete unused images to create new ones.
 * A shared image cannot be deleted.
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) This API is used to delete the key pairs hosted in Tencent Cloud.
 
@@ -69,26 +64,6 @@ When a template is created, it defaults to Version 1. You can use `CreateLaunchT
 * You can specify `Offset` and `Limit` to select a certain part of the results. By default, the information on the first 20 matching results is returned.
  * @method Models\DescribeImportImageOsResponse DescribeImportImageOs(Models\DescribeImportImageOsRequest $req) This API is used to query the list of supported operating systems of imported images.
  * @method Models\DescribeInstanceFamilyConfigsResponse DescribeInstanceFamilyConfigs(Models\DescribeInstanceFamilyConfigsRequest $req) This API is used to query a list of model families available to the current user in the current region.
- * @method Models\DescribeInstanceTypeConfigsResponse DescribeInstanceTypeConfigs(Models\DescribeInstanceTypeConfigsRequest $req) This API is used to query the model configuration of an instance.
-
-* You can filter the query results with `zone` or `instance-family`. For more information on filtering conditions, see [`Filter`](https://intl.cloud.tencent.com/document/api/213/15753?from_cn_redirect=1#Filter).
-* If no parameter is defined, the model configuration of all the instances in the specified region will be returned.
- * @method Models\DescribeInstanceVncUrlResponse DescribeInstanceVncUrl(Models\DescribeInstanceVncUrlRequest $req) This API is used to query the Virtual Network Console (VNC) URL of an instance for its login to the VNC.
-
-* It does not support `STOPPED` CVMs.
-* A VNC URL is only valid for 15 seconds. If you do not access the URL within 15 seconds, it will become invalid and you have to query a URL again.
-* Once the VNC URL is accessed, it will become invalid and you have to query a URL again if needed.
-* If the connection is interrupted, you can make up to 30 reconnection attempts per minute.
-* After getting the value `InstanceVncUrl`, you need to append `InstanceVncUrl=xxxx` to the end of the link <https://img.qcloud.com/qcloud/app/active_vnc/index.html?>.
-
-  - `InstanceVncUrl`: its value will be returned after the API is successfully called.
-
-    The final URL is in the following format:
-
-```
-https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F%2Fbjvnc.qcloud.com%3A26789%2Fvnc%3Fs%3DaHpjWnRVMFNhYmxKdDM5MjRHNlVTSVQwajNUSW0wb2tBbmFtREFCTmFrcy8vUUNPMG0wSHZNOUUxRm5PMmUzWmFDcWlOdDJIbUJxSTZDL0RXcHZxYnZZMmRkWWZWcEZia2lyb09XMzdKNmM9
-```
-
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query the details of instances.
 
 * You can filter the query results with the instance `ID`, name, or billing method. See `Filter` for more information.
@@ -107,7 +82,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersions(Models\DescribeLaunchTemplateVersionsRequest $req) This API is used to query the information of instance launch template versions.
  * @method Models\DescribeLaunchTemplatesResponse DescribeLaunchTemplates(Models\DescribeLaunchTemplatesRequest $req) This API is used to query one or more instance launch templates.
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) (Suspended) This API is used to query the information of regions. Due to platform policy, the update of this API has been temporarily stopped. Please try the new one as described in https://intl.cloud.tencent.com/document/product/1278/55255?from_cn_redirect=1
- * @method Models\DescribeReservedInstancesResponse DescribeReservedInstances(Models\DescribeReservedInstancesRequest $req) This API is used to list reserved instances the user has purchased.
  * @method Models\DescribeReservedInstancesConfigInfosResponse DescribeReservedInstancesConfigInfos(Models\DescribeReservedInstancesConfigInfosRequest $req) This API is used to describe reserved instance (RI) offerings. Currently, RIs are only offered to beta users.
  * @method Models\DescribeReservedInstancesOfferingsResponse DescribeReservedInstancesOfferings(Models\DescribeReservedInstancesOfferingsRequest $req) This API is used to describe Reserved Instance offerings that are available for purchase.
  * @method Models\DescribeZoneInstanceConfigInfosResponse DescribeZoneInstanceConfigInfos(Models\DescribeZoneInstanceConfigInfosRequest $req) This API is used to query the configurations of models in an availability zone.
@@ -122,7 +96,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\ImportImageResponse ImportImage(Models\ImportImageRequest $req) The API is used to import an image. The image imported can be used to create instances. Currently, this API can import images in formats like RAW, VHD, QCOW2, and VMDK.
  * @method Models\ImportKeyPairResponse ImportKeyPair(Models\ImportKeyPairRequest $req) This API is used to import key pairs.
 
-* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/9404?from_cn_redirect=1) to associate key pairs with instances.
+* You can use this API to import key pairs to a user account, but the key pairs will not be automatically associated with any instance. You may use [AssociasteInstancesKeyPair](https://intl.cloud.tencent.com/document/api/213/15698?from_cn_redirect=1) to associate key pairs with instances.
 * You need to specify the names of the key pairs and the content of the public keys.
 * If you only have private keys, you can convert them to public keys with the `SSL` tool before importing them.
  * @method Models\InquirePricePurchaseReservedInstancesOfferingResponse InquirePricePurchaseReservedInstancesOffering(Models\InquirePricePurchaseReservedInstancesOfferingRequest $req) This API is used to query the price of reserved instances. It only supports querying purchasable reserved instance offerings. Currently, RIs are only offered to beta users.
@@ -143,7 +117,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 
 * Currently, you can only use this API to query the price of non-elastic data disks whose [disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
 * Currently, you cannot use this API to query the price for [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances. *Also, you can only query the price of expanding one data disk at a time.
- * @method Models\InquiryPriceRunInstancesResponse InquiryPriceRunInstances(Models\InquiryPriceRunInstancesRequest $req) This API is used to query the price of creating instances. You can only use this API for instances whose configuration is within the purchase limit. For more information, see [RunInstances](https://intl.cloud.tencent.com/document/api/213/15730?from_cn_redirect=1).
  * @method Models\ModifyDisasterRecoverGroupAttributeResponse ModifyDisasterRecoverGroupAttribute(Models\ModifyDisasterRecoverGroupAttributeRequest $req) This API is used to modify the attributes of [spread placement groups](https://intl.cloud.tencent.com/document/product/213/15486?from_cn_redirect=1).
  * @method Models\ModifyHostsAttributeResponse ModifyHostsAttribute(Models\ModifyHostsAttributeRequest $req) This API is used to modify the attributes of a CDH instance, such as instance name and renewal flag. One of the two parameters, HostName and RenewFlag, must be set, but you cannot set both of them at the same time.
  * @method Models\ModifyImageAttributeResponse ModifyImageAttribute(Models\ModifyImageAttributeRequest $req) This API is used to modify image attributes.
@@ -212,12 +185,6 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
 * Currently, you can only use the API to expand non-elastic data disks whose [disk type](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#block_device) is `CLOUD_BASIC`, `CLOUD_PREMIUM`, or `CLOUD_SSD`. You can use [`DescribeDisks`](https://intl.cloud.tencent.com/document/api/362/16315?from_cn_redirect=1) to check whether a disk is elastic. If the `Portable` field in the response is `false`, it means that the disk is non-elastic.
 * Currently, this API does not support [CDH](https://intl.cloud.tencent.com/document/product/416?from_cn_redirect=1) instances.
 * Currently, only one data disk can be expanded at a time.
- * @method Models\RunInstancesResponse RunInstances(Models\RunInstancesRequest $req) This API is used to create one or more instances with a specified configuration.
-
-* After an instance is created successfully, it will start up automatically, and the [instance state](https://intl.cloud.tencent.com/document/api/213/9452?from_cn_redirect=1#instance_state) will become "Running".
-* If you create a pay-as-you-go instance billed on an hourly basis, an amount equivalent to the hourly rate will be frozen before the creation. Make sure your account balance is sufficient before calling this API.
-* The number of instances you can purchase through this API is subject to the [CVM instance purchase limit](https://intl.cloud.tencent.com/document/product/213/2664?from_cn_redirect=1). Both the instances created through this API and the console will be counted toward the quota.
-* This API is an async API. An instance `ID` list will be returned after you successfully make a creation request. However, it does not mean the creation has been completed. The state of the instance will be `Creating` during the creation. You can use [DescribeInstances](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) to query the status of the instance. If the status changes from `Creating` to `Running`, it means that the instance has been created successfully.
  * @method Models\StartInstancesResponse StartInstances(Models\StartInstancesRequest $req) This API is used to start instances.
 
 * You can only perform this operation on instances whose status is `STOPPED`.

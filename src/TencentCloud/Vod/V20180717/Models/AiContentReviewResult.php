@@ -21,27 +21,27 @@ use TencentCloud\Common\AbstractModel;
  * Intelligent recognition result
  *
  * @method string getType() Obtain Task type. Valid values:
-<li>`Porn`: recognition of pornographic content in images</li>
-<li>`Terrorism`: recognition of terrorism content in images</li>
-<li>`Political`: recognition of politically sensitive content in images</li>
-<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
-<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
-<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
-<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
-<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
-<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
-<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+<li>`Porn`: porn information recognition in images</li>
+<li>`Terrorism`: terrorism information recognition in images</li>
+<li>`Political`: politically sensitive information recognition in images</li>
+<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
+<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
+<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
+<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
+<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
+<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
+<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
  * @method void setType(string $Type) Set Task type. Valid values:
-<li>`Porn`: recognition of pornographic content in images</li>
-<li>`Terrorism`: recognition of terrorism content in images</li>
-<li>`Political`: recognition of politically sensitive content in images</li>
-<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
-<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
-<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
-<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
-<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
-<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
-<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+<li>`Porn`: porn information recognition in images</li>
+<li>`Terrorism`: terrorism information recognition in images</li>
+<li>`Political`: politically sensitive information recognition in images</li>
+<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
+<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
+<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
+<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
+<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
+<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
+<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
  * @method AiReviewTaskPornResult getPornTask() Obtain Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setPornTask(AiReviewTaskPornResult $PornTask) Set Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
@@ -87,16 +87,16 @@ class AiContentReviewResult extends AbstractModel
 {
     /**
      * @var string Task type. Valid values:
-<li>`Porn`: recognition of pornographic content in images</li>
-<li>`Terrorism`: recognition of terrorism content in images</li>
-<li>`Political`: recognition of politically sensitive content in images</li>
-<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
-<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
-<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
-<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
-<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
-<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
-<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+<li>`Porn`: porn information recognition in images</li>
+<li>`Terrorism`: terrorism information recognition in images</li>
+<li>`Political`: politically sensitive information recognition in images</li>
+<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
+<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
+<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
+<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
+<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
+<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
+<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
      */
     public $Type;
 
@@ -162,16 +162,16 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
     /**
      * @param string $Type Task type. Valid values:
-<li>`Porn`: recognition of pornographic content in images</li>
-<li>`Terrorism`: recognition of terrorism content in images</li>
-<li>`Political`: recognition of politically sensitive content in images</li>
-<li>`Porn.Asr`: ASR-based recognition of pornographic content</li>
-<li>`Porn.Ocr`: OCR-based recognition of pornographic content</li>
-<li>`Political.Asr`: ASR-based recognition of politically sensitive content</li>
-<li>`Political.Ocr`: OCR-based recognition of politically sensitive content</li>
-<li>`Terrorism.Ocr`: OCR-based recognition of terrorism content</li>
-<li>`Prohibited.Asr`: ASR-based recognition of banned content</li>
-<li>`Prohibited.Ocr`: OCR-based recognition of banned content</li>
+<li>`Porn`: porn information recognition in images</li>
+<li>`Terrorism`: terrorism information recognition in images</li>
+<li>`Political`: politically sensitive information recognition in images</li>
+<li>`Porn.Asr`: ASR-based porn information recognition in speech</li>
+<li>`Porn.Ocr`: OCR-based porn information recognition in text</li>
+<li>`Political.Asr`: ASR-based politically sensitive information recognition in speech</li>
+<li>`Political.Ocr`: OCR-based politically sensitive information recognition in text</li>
+<li>`Terrorism.Ocr`: OCR-based terrorism information recognition in text</li>
+<li>`Prohibited.Asr`: ASR-based prohibited information recognition in speech</li>
+<li>`Prohibited.Ocr`: OCR-based prohibited information recognition in text</li>
      * @param AiReviewTaskPornResult $PornTask Result for intelligent recognition of pornographic content in images. This parameter is valid when `Type` is `Porn`.
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param AiReviewTaskTerrorismResult $TerrorismTask Result for intelligent recognition of terrorism content in images. This parameter is valid when `Type` is `Terrorism`.
