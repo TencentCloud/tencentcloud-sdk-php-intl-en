@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDeployGroupList response structure.
+ * GetClusterLevelPrice response structure.
  *
- * @method integer getTotal() Obtain Number of eligible entries.
- * @method void setTotal(integer $Total) Set Number of eligible entries.
- * @method array getItems() Obtain List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setItems(array $Items) Set List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCost() Obtain Discount price (unit: US cent)
+ * @method void setCost(integer $Cost) Set Discount price (unit: US cent)
+ * @method integer getTotalCost() Obtain Original price (unit: US cent)
+ * @method void setTotalCost(integer $TotalCost) Set Original price (unit: US cent)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDeployGroupListResponse extends AbstractModel
+class GetClusterLevelPriceResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible entries.
+     * @var integer Discount price (unit: US cent)
      */
-    public $Total;
+    public $Cost;
 
     /**
-     * @var array List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Original price (unit: US cent)
      */
-    public $Items;
+    public $TotalCost;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $Total Number of eligible entries.
-     * @param array $Items List of returned results.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Cost Discount price (unit: US cent)
+     * @param integer $TotalCost Original price (unit: US cent)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,17 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
+        if (array_key_exists("Cost",$param) and $param["Cost"] !== null) {
+            $this->Cost = $param["Cost"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new DeployGroupInfo();
-                $obj->deserialize($value);
-                array_push($this->Items, $obj);
-            }
+        if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
+            $this->TotalCost = $param["TotalCost"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

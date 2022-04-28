@@ -18,28 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCDBProxy request structure.
+ * ResetRootAccount response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeCDBProxyRequest extends AbstractModel
+class ResetRootAccountResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $InstanceId;
+    public $RequestId;
 
     /**
-     * @var string Proxy group ID
-     */
-    public $ProxyGroupId;
-
-    /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Proxy group ID
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeCDBProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

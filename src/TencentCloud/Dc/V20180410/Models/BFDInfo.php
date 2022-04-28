@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dc\V20180410\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCDBProxy request structure.
+ * BFD configuration information
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
+ * @method integer getProbeFailedTimes() Obtain Number of health checks
+ * @method void setProbeFailedTimes(integer $ProbeFailedTimes) Set Number of health checks
+ * @method integer getInterval() Obtain Health check interval
+ * @method void setInterval(integer $Interval) Set Health check interval
  */
-class DescribeCDBProxyRequest extends AbstractModel
+class BFDInfo extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var integer Number of health checks
      */
-    public $InstanceId;
+    public $ProbeFailedTimes;
 
     /**
-     * @var string Proxy group ID
+     * @var integer Health check interval
      */
-    public $ProxyGroupId;
+    public $Interval;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Proxy group ID
+     * @param integer $ProbeFailedTimes Number of health checks
+     * @param integer $Interval Health check interval
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeCDBProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("ProbeFailedTimes",$param) and $param["ProbeFailedTimes"] !== null) {
+            $this->ProbeFailedTimes = $param["ProbeFailedTimes"];
         }
 
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) Set Maintenance window on Saturday. At least one time window is required in a week.
  * @method array getSunday() Obtain Maintenance window on Sunday. At least one time window is required in a week.
  * @method void setSunday(array $Sunday) Set Maintenance window on Sunday. At least one time window is required in a week.
+ * @method integer getMaxDelayTime() Obtain Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
  */
 class AddTimeWindowRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class AddTimeWindowRequest extends AbstractModel
     public $Sunday;
 
     /**
+     * @var integer Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $Monday Maintenance window on Monday. The format should be 10:00-12:00. You can set multiple time windows on a day. Each time window lasts from half an hour to three hours, and must start and end on the hour or half hour. At least one time window is required in a week. The same rule applies to the following parameters.
      * @param array $Tuesday Maintenance window on Tuesday. At least one time window is required in a week.
@@ -88,6 +95,7 @@ class AddTimeWindowRequest extends AbstractModel
      * @param array $Friday Maintenance window on Friday. At least one time window is required in a week.
      * @param array $Saturday Maintenance window on Saturday. At least one time window is required in a week.
      * @param array $Sunday Maintenance window on Sunday. At least one time window is required in a week.
+     * @param integer $MaxDelayTime Maximum delay threshold, which takes effect only for source instances and disaster recovery instances.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class AddTimeWindowRequest extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

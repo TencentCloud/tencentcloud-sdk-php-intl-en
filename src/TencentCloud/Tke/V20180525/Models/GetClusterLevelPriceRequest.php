@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyNameOrDescByDpId response structure.
+ * GetClusterLevelPrice request structure.
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getClusterLevel() Obtain The cluster model. It’s used for price query.
+ * @method void setClusterLevel(string $ClusterLevel) Set The cluster model. It’s used for price query.
  */
-class ModifyNameOrDescByDpIdResponse extends AbstractModel
+class GetClusterLevelPriceRequest extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string The cluster model. It’s used for price query.
      */
-    public $RequestId;
+    public $ClusterLevel;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $ClusterLevel The cluster model. It’s used for price query.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class ModifyNameOrDescByDpIdResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
         }
     }
 }

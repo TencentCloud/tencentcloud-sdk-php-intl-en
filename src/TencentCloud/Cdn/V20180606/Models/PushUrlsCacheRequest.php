@@ -50,6 +50,12 @@ Notes:
 1. This feature requires that the M3U8 index file can be directly requested and obtained.
 2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
 3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+ * @method boolean getDisableRange() Obtain Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+ * @method void setDisableRange(boolean $DisableRange) Set Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -89,6 +95,13 @@ Notes:
     public $ParseM3U8;
 
     /**
+     * @var boolean Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
+     */
+    public $DisableRange;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
@@ -104,6 +117,9 @@ Notes:
 1. This feature requires that the M3U8 index file can be directly requested and obtained.
 2. In the M3U8 index file, currently only the TS shards at the first to the third level can be recursively resolved.
 3. Prefetching the TS shards obtained through recursive resolution consumes the daily prefetch quota. If the usage exceeds the quota, the feature will be disabled and TS shards will not be prefetched.
+     * @param boolean $DisableRange Specifies whether to disable Range GETs.
+Notes:
+This feature is in beta test.
      */
     function __construct()
     {
@@ -136,6 +152,10 @@ Notes:
 
         if (array_key_exists("ParseM3U8",$param) and $param["ParseM3U8"] !== null) {
             $this->ParseM3U8 = $param["ParseM3U8"];
+        }
+
+        if (array_key_exists("DisableRange",$param) and $param["DisableRange"] !== null) {
+            $this->DisableRange = $param["DisableRange"];
         }
     }
 }

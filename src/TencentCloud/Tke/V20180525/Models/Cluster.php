@@ -70,10 +70,14 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setEnableExternalNode(boolean $EnableExternalNode) Set Specifies whether the cluster supports external nodes.
 Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method string getClusterLevel() Obtain 
- * @method void setClusterLevel(string $ClusterLevel) Set 
- * @method boolean getAutoUpgradeClusterLevel() Obtain 
- * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set 
+ * @method string getClusterLevel() Obtain Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterLevel(string $ClusterLevel) Set Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getAutoUpgradeClusterLevel() Obtain The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -179,12 +183,14 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $EnableExternalNode;
 
     /**
-     * @var string 
+     * @var string Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ClusterLevel;
 
     /**
-     * @var boolean 
+     * @var boolean The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
      */
     public $AutoUpgradeClusterLevel;
 
@@ -214,8 +220,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return null, indicating that no valid value is obtained.
      * @param boolean $EnableExternalNode Specifies whether the cluster supports external nodes.
 Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ClusterLevel 
-     * @param boolean $AutoUpgradeClusterLevel 
+     * @param string $ClusterLevel Cluster models. It’s valid for managed clusters.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $AutoUpgradeClusterLevel The target cluster model for auto-upgrade
+Note: this field may return null, indicating that no valid value is obtained.
      */
     function __construct()
     {

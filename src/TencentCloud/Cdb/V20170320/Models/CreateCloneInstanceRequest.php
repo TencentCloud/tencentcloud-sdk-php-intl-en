@@ -62,6 +62,8 @@ which is left empty by default. Specify this parameter when cloning a strong syn
  * @method void setDryRun(boolean $DryRun) Set Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
  * @method string getCageId() Obtain Financial cage ID.
  * @method void setCageId(string $CageId) Set Financial cage ID.
+ * @method integer getProjectId() Obtain Project ID. Default value: 0.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. Default value: 0.
  */
 class CreateCloneInstanceRequest extends AbstractModel
 {
@@ -167,6 +169,11 @@ which is left empty by default. Specify this parameter when cloning a strong syn
     public $CageId;
 
     /**
+     * @var integer Project ID. Default value: 0.
+     */
+    public $ProjectId;
+
+    /**
      * @param string $InstanceId ID of the instance to be cloned from
      * @param string $SpecifiedRollbackTime To roll back the cloned instance to a specific point in time, set this parameter to a value in the format of "yyyy-mm-dd hh:mm:ss".
      * @param integer $SpecifiedBackupId To roll back the cloned instance to a specific physical backup file, set this parameter to the ID of the physical backup file. The ID can be obtained by the [DescribeBackups](https://intl.cloud.tencent.com/document/api/236/15842?from_cn_redirect=1) API.
@@ -188,6 +195,7 @@ which is left empty by default. Specify this parameter when cloning a strong syn
      * @param string $DeployGroupId Placement group ID.
      * @param boolean $DryRun Whether to check the request without creating any instance. Valid values: `true`, `false` (default). After being submitted, the request will be checked to see if it is in correct format and has all required parameters with valid values. An error code is returned if the check failed, and `RequestId` is returned if the check succeeded. After a successful check, no instance will be created if this parameter is set to `true`, whereas an instance will be created and if it is set to `false`.
      * @param string $CageId Financial cage ID.
+     * @param integer $ProjectId Project ID. Default value: 0.
      */
     function __construct()
     {
@@ -285,6 +293,10 @@ which is left empty by default. Specify this parameter when cloning a strong syn
 
         if (array_key_exists("CageId",$param) and $param["CageId"] !== null) {
             $this->CageId = $param["CageId"];
+        }
+
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
         }
     }
 }

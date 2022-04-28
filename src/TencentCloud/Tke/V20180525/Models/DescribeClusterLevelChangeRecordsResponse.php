@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAccounts response structure.
+ * DescribeClusterLevelChangeRecords response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible accounts.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible accounts.
- * @method array getItems() Obtain Details of eligible accounts.
- * @method void setItems(array $Items) Set Details of eligible accounts.
- * @method integer getMaxUserConnections() Obtain The maximum number of instance connections (set by the MySQL parameter `max_connections`)
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+ * @method integer getTotalCount() Obtain Total number
+ * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method array getItems() Obtain Cluster model
+ * @method void setItems(array $Items) Set Cluster model
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeAccountsResponse extends AbstractModel
+class DescribeClusterLevelChangeRecordsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible accounts.
+     * @var integer Total number
      */
     public $TotalCount;
 
     /**
-     * @var array Details of eligible accounts.
+     * @var array Cluster model
      */
     public $Items;
-
-    /**
-     * @var integer The maximum number of instance connections (set by the MySQL parameter `max_connections`)
-     */
-    public $MaxUserConnections;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class DescribeAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible accounts.
-     * @param array $Items Details of eligible accounts.
-     * @param integer $MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     * @param integer $TotalCount Total number
+     * @param array $Items Cluster model
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,14 +69,10 @@ class DescribeAccountsResponse extends AbstractModel
         if (array_key_exists("Items",$param) and $param["Items"] !== null) {
             $this->Items = [];
             foreach ($param["Items"] as $key => $value){
-                $obj = new AccountInfo();
+                $obj = new ClusterLevelChangeRecord();
                 $obj->deserialize($value);
                 array_push($this->Items, $obj);
             }
-        }
-
-        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
-            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

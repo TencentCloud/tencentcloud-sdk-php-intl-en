@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(array $Saturday) Set List of maintenance time windows on Saturday.
  * @method array getSunday() Obtain List of maintenance time windows on Sunday.
  * @method void setSunday(array $Sunday) Set List of maintenance time windows on Sunday.
+ * @method integer getMaxDelayTime() Obtain Maximum data delay threshold
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum data delay threshold
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -75,6 +77,11 @@ class DescribeTimeWindowResponse extends AbstractModel
     public $Sunday;
 
     /**
+     * @var integer Maximum data delay threshold
+     */
+    public $MaxDelayTime;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -87,6 +94,7 @@ class DescribeTimeWindowResponse extends AbstractModel
      * @param array $Friday List of maintenance time windows on Friday.
      * @param array $Saturday List of maintenance time windows on Saturday.
      * @param array $Sunday List of maintenance time windows on Sunday.
+     * @param integer $MaxDelayTime Maximum data delay threshold
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -128,6 +136,10 @@ class DescribeTimeWindowResponse extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

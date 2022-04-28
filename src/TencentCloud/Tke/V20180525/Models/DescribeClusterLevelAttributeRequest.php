@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDeployGroups request structure.
+ * DescribeClusterLevelAttribute request structure.
  *
- * @method array getDeployGroupIds() Obtain List of IDs of placement groups to be deleted.
- * @method void setDeployGroupIds(array $DeployGroupIds) Set List of IDs of placement groups to be deleted.
+ * @method string getClusterID() Obtain Cluster ID (available for cluster model adjustment)
+ * @method void setClusterID(string $ClusterID) Set Cluster ID (available for cluster model adjustment)
  */
-class DeleteDeployGroupsRequest extends AbstractModel
+class DescribeClusterLevelAttributeRequest extends AbstractModel
 {
     /**
-     * @var array List of IDs of placement groups to be deleted.
+     * @var string Cluster ID (available for cluster model adjustment)
      */
-    public $DeployGroupIds;
+    public $ClusterID;
 
     /**
-     * @param array $DeployGroupIds List of IDs of placement groups to be deleted.
+     * @param string $ClusterID Cluster ID (available for cluster model adjustment)
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteDeployGroupsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupIds",$param) and $param["DeployGroupIds"] !== null) {
-            $this->DeployGroupIds = $param["DeployGroupIds"];
+        if (array_key_exists("ClusterID",$param) and $param["ClusterID"] !== null) {
+            $this->ClusterID = $param["ClusterID"];
         }
     }
 }

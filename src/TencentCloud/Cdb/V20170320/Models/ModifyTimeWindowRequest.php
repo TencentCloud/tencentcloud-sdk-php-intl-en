@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeRanges(array $TimeRanges) Set Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
  * @method array getWeekdays() Obtain Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
  * @method void setWeekdays(array $Weekdays) Set Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+ * @method integer getMaxDelayTime() Obtain Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
  */
 class ModifyTimeWindowRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyTimeWindowRequest extends AbstractModel
     public $Weekdays;
 
     /**
+     * @var integer Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
      * @param array $TimeRanges Time period available for maintenance after modification in the format of 10:00-12:00. Each period lasts from half an hour to three hours, with the start time and end time aligned by half-hour. Up to two time periods can be set. Start and end time range: [00:00, 24:00].
      * @param array $Weekdays Specifies for which day to modify the time period. Value range: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday. If it is not specified or is left blank, the time period will be modified for every day by default.
+     * @param integer $MaxDelayTime Data delay threshold. It takes effect only for source instance and disaster recovery instance. Default value: 10.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyTimeWindowRequest extends AbstractModel
 
         if (array_key_exists("Weekdays",$param) and $param["Weekdays"] !== null) {
             $this->Weekdays = $param["Weekdays"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

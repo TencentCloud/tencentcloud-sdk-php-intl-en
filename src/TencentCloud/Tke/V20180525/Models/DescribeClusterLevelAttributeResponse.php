@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccounts response structure.
+ * DescribeClusterLevelAttribute response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task request ID, which can be used to query the execution result of an async task.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID, which can be used to query the execution result of an async task.
+ * @method integer getTotalCount() Obtain Total number
+ * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method array getItems() Obtain Cluster model
+ * @method void setItems(array $Items) Set Cluster model
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAccountsResponse extends AbstractModel
+class DescribeClusterLevelAttributeResponse extends AbstractModel
 {
     /**
-     * @var string Async task request ID, which can be used to query the execution result of an async task.
+     * @var integer Total number
      */
-    public $AsyncRequestId;
+    public $TotalCount;
+
+    /**
+     * @var array Cluster model
+     */
+    public $Items;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class CreateAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task request ID, which can be used to query the execution result of an async task.
+     * @param integer $TotalCount Total number
+     * @param array $Items Cluster model
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new ClusterLevelAttribute();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

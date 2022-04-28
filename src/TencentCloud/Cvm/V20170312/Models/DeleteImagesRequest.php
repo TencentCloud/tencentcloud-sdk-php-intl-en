@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getImageIds() Obtain List of the IDs of the instances to be deleted.
  * @method void setImageIds(array $ImageIds) Set List of the IDs of the instances to be deleted.
+ * @method boolean getDeleteBindedSnap() Obtain Whether to delete the snapshot associated with the image
+ * @method void setDeleteBindedSnap(boolean $DeleteBindedSnap) Set Whether to delete the snapshot associated with the image
+ * @method boolean getDryRun() Obtain Check whether deleting an image is supported
+ * @method void setDryRun(boolean $DryRun) Set Check whether deleting an image is supported
  */
 class DeleteImagesRequest extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DeleteImagesRequest extends AbstractModel
     public $ImageIds;
 
     /**
+     * @var boolean Whether to delete the snapshot associated with the image
+     */
+    public $DeleteBindedSnap;
+
+    /**
+     * @var boolean Check whether deleting an image is supported
+     */
+    public $DryRun;
+
+    /**
      * @param array $ImageIds List of the IDs of the instances to be deleted.
+     * @param boolean $DeleteBindedSnap Whether to delete the snapshot associated with the image
+     * @param boolean $DryRun Check whether deleting an image is supported
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DeleteImagesRequest extends AbstractModel
         }
         if (array_key_exists("ImageIds",$param) and $param["ImageIds"] !== null) {
             $this->ImageIds = $param["ImageIds"];
+        }
+
+        if (array_key_exists("DeleteBindedSnap",$param) and $param["DeleteBindedSnap"] !== null) {
+            $this->DeleteBindedSnap = $param["DeleteBindedSnap"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

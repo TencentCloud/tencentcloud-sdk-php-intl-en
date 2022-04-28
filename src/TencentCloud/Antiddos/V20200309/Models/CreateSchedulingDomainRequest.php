@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSchedulingDomain request structure.
  *
- * @method string getProduct() Obtain 
- * @method void setProduct(string $Product) Set 
+ * @method string getProduct() Obtain Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
+ * @method void setProduct(string $Product) Set Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
  */
 class CreateSchedulingDomainRequest extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
      */
     public $Product;
 
     /**
-     * @param string $Product 
+     * @param string $Product Indicates whether a hybrid cloud product is used.
+`hybrid`: Anti-DDoS Service Platform
+For other products, leave this field empty.
      */
     function __construct()
     {

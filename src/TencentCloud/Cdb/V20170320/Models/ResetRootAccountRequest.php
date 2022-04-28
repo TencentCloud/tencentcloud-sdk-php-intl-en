@@ -18,28 +18,20 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCDBProxy request structure.
+ * ResetRootAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
-class DescribeCDBProxyRequest extends AbstractModel
+class ResetRootAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @var string Proxy group ID
-     */
-    public $ProxyGroupId;
-
-    /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Proxy group ID
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {
@@ -56,10 +48,6 @@ class DescribeCDBProxyRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
         }
     }
 }

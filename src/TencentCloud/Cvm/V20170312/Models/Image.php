@@ -56,6 +56,10 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setSnapshotSet(array $SnapshotSet) Set Information on the snapshots associated with the image
 Note: This field may return null, indicating that no valid value is found.
+ * @method array getTags() Obtain The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setTags(array $Tags) Set The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class Image extends AbstractModel
 {
@@ -138,6 +142,12 @@ Note: This field may return null, indicating that no valid value is found.
     public $SnapshotSet;
 
     /**
+     * @var array The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Tags;
+
+    /**
      * @param string $ImageId Image ID
      * @param string $OsName Operating system of the image
      * @param string $ImageType Image type
@@ -156,6 +166,8 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      * @param array $SnapshotSet Information on the snapshots associated with the image
 Note: This field may return null, indicating that no valid value is found.
+     * @param array $Tags The list of tags bound to the image.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -232,6 +244,15 @@ Note: This field may return null, indicating that no valid value is found.
                 $obj = new Snapshot();
                 $obj->deserialize($value);
                 array_push($this->SnapshotSet, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

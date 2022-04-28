@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDeployGroups response structure.
+ * Resource usage details
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getName() Obtain Resource name
+ * @method void setName(string $Name) Set Resource name
+ * @method integer getUsage() Obtain Resource usage
+ * @method void setUsage(integer $Usage) Set Resource usage
  */
-class DeleteDeployGroupsResponse extends AbstractModel
+class ResourceUsageDetail extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Resource name
      */
-    public $RequestId;
+    public $Name;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var integer Resource usage
+     */
+    public $Usage;
+
+    /**
+     * @param string $Name Resource name
+     * @param integer $Usage Resource usage
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteDeployGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Usage",$param) and $param["Usage"] !== null) {
+            $this->Usage = $param["Usage"];
         }
     }
 }

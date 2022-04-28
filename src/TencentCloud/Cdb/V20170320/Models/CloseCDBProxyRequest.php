@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getProxyGroupId() Obtain Proxy group ID
  * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
- * @method boolean getOnlyCloseRW() Obtain Whether only to disable read/write separation. Valid values: `true`, `false`
- * @method void setOnlyCloseRW(boolean $OnlyCloseRW) Set Whether only to disable read/write separation. Valid values: `true`, `false`
+ * @method boolean getOnlyCloseRW() Obtain Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
+ * @method void setOnlyCloseRW(boolean $OnlyCloseRW) Set Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
  */
 class CloseCDBProxyRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class CloseCDBProxyRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var boolean Whether only to disable read/write separation. Valid values: `true`, `false`
+     * @var boolean Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
      */
     public $OnlyCloseRW;
 
     /**
      * @param string $InstanceId Instance ID
      * @param string $ProxyGroupId Proxy group ID
-     * @param boolean $OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`
+     * @param boolean $OnlyCloseRW Whether only to disable read/write separation. Valid values: `true`, `false`. Default value: `false`.
      */
     function __construct()
     {

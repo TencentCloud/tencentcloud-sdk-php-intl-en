@@ -70,6 +70,14 @@ Default value: Non-zero.
  * @method void setTencentBackupAddress(string $TencentBackupAddress) Set TencentBackupAddress, i.e., Tencent-side standby IP address
  * @method string getCloudAttachId() Obtain Cloud Attached Connection Service ID
  * @method void setCloudAttachId(string $CloudAttachId) Set Cloud Attached Connection Service ID
+ * @method integer getBfdEnable() Obtain Whether to enable BFD
+ * @method void setBfdEnable(integer $BfdEnable) Set Whether to enable BFD
+ * @method integer getNqaEnable() Obtain Whether to enable NQA
+ * @method void setNqaEnable(integer $NqaEnable) Set Whether to enable NQA
+ * @method BFDInfo getBfdInfo() Obtain BFD configuration information
+ * @method void setBfdInfo(BFDInfo $BfdInfo) Set BFD configuration information
+ * @method NQAInfo getNqaInfo() Obtain NQA configuration information
+ * @method void setNqaInfo(NQAInfo $NqaInfo) Set NQA configuration information
  */
 class CreateDirectConnectTunnelRequest extends AbstractModel
 {
@@ -163,6 +171,26 @@ Default value: Non-zero.
     public $CloudAttachId;
 
     /**
+     * @var integer Whether to enable BFD
+     */
+    public $BfdEnable;
+
+    /**
+     * @var integer Whether to enable NQA
+     */
+    public $NqaEnable;
+
+    /**
+     * @var BFDInfo BFD configuration information
+     */
+    public $BfdInfo;
+
+    /**
+     * @var NQAInfo NQA configuration information
+     */
+    public $NqaInfo;
+
+    /**
      * @param string $DirectConnectId Direct Connect ID, such as `dc-kd7d06of`.
      * @param string $DirectConnectTunnelName Dedicated tunnel name.
      * @param string $DirectConnectOwnerAccount Connection owner, who is the current customer by default.
@@ -188,6 +216,10 @@ Default value: Non-zero.
      * @param string $CustomerAddress CustomerAddress: User-side IP address.
      * @param string $TencentBackupAddress TencentBackupAddress, i.e., Tencent-side standby IP address
      * @param string $CloudAttachId Cloud Attached Connection Service ID
+     * @param integer $BfdEnable Whether to enable BFD
+     * @param integer $NqaEnable Whether to enable NQA
+     * @param BFDInfo $BfdInfo BFD configuration information
+     * @param NQAInfo $NqaInfo NQA configuration information
      */
     function __construct()
     {
@@ -270,6 +302,24 @@ Default value: Non-zero.
 
         if (array_key_exists("CloudAttachId",$param) and $param["CloudAttachId"] !== null) {
             $this->CloudAttachId = $param["CloudAttachId"];
+        }
+
+        if (array_key_exists("BfdEnable",$param) and $param["BfdEnable"] !== null) {
+            $this->BfdEnable = $param["BfdEnable"];
+        }
+
+        if (array_key_exists("NqaEnable",$param) and $param["NqaEnable"] !== null) {
+            $this->NqaEnable = $param["NqaEnable"];
+        }
+
+        if (array_key_exists("BfdInfo",$param) and $param["BfdInfo"] !== null) {
+            $this->BfdInfo = new BFDInfo();
+            $this->BfdInfo->deserialize($param["BfdInfo"]);
+        }
+
+        if (array_key_exists("NqaInfo",$param) and $param["NqaInfo"] !== null) {
+            $this->NqaInfo = new NQAInfo();
+            $this->NqaInfo->deserialize($param["NqaInfo"]);
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
- * @method string getName() Obtain Template name.
- * @method void setName(string $Name) Set Template name.
- * @method string getDescription() Obtain Template description.
- * @method void setDescription(string $Description) Set Template description.
+ * @method string getName() Obtain Template name (up to 64 characters)
+ * @method void setName(string $Name) Set Template name (up to 64 characters)
+ * @method string getDescription() Obtain Template description (up to 255 characters)
+ * @method void setDescription(string $Description) Set Template description (up to 255 characters)
  * @method array getParamList() Obtain List of parameters.
  * @method void setParamList(array $ParamList) Set List of parameters.
  */
@@ -37,12 +37,12 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $TemplateId;
 
     /**
-     * @var string Template name.
+     * @var string Template name (up to 64 characters)
      */
     public $Name;
 
     /**
-     * @var string Template description.
+     * @var string Template description (up to 255 characters)
      */
     public $Description;
 
@@ -53,8 +53,8 @@ class ModifyParamTemplateRequest extends AbstractModel
 
     /**
      * @param integer $TemplateId Template ID.
-     * @param string $Name Template name.
-     * @param string $Description Template description.
+     * @param string $Name Template name (up to 64 characters)
+     * @param string $Description Template description (up to 255 characters)
      * @param array $ParamList List of parameters.
      */
     function __construct()

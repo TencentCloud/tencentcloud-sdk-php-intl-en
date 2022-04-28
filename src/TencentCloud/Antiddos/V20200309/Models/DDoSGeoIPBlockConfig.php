@@ -21,14 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * Anti-DDoS region blocking configuration
  *
  * @method string getRegionType() Obtain Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
  * @method void setRegionType(string $RegionType) Set Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
  * @method string getAction() Obtain Blocking action. Valid values:
 `drop`: the request is blocked.
@@ -47,9 +47,9 @@ class DDoSGeoIPBlockConfig extends AbstractModel
 {
     /**
      * @var string Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
      */
     public $RegionType;
@@ -74,9 +74,9 @@ oversea: outside the Chinese mainland
 
     /**
      * @param string $RegionType Region type. Valid values:
-oversea: outside the Chinese mainland
-`china`: the Chinese mainland
-`customized`: custom region
+`oversea`: Outside the Chinese mainland
+`china`: The Chinese mainland
+`customized`: User-specified region
 ]
      * @param string $Action Blocking action. Valid values:
 `drop`: the request is blocked.

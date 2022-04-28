@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getProxyGroupId() Obtain Database proxy ID
  * @method void setProxyGroupId(string $ProxyGroupId) Set Database proxy ID
- * @method integer getProxyCount() Obtain Number of proxy nodes
- * @method void setProxyCount(integer $ProxyCount) Set Number of proxy nodes
- * @method integer getCpu() Obtain Number of CPU cores per proxy node
- * @method void setCpu(integer $Cpu) Set Number of CPU cores per proxy node
+ * @method integer getProxyCount() Obtain The number of proxy nodes
+ * @method void setProxyCount(integer $ProxyCount) Set The number of proxy nodes
+ * @method integer getCpu() Obtain The number of CPU cores per proxy node
+ * @method void setCpu(integer $Cpu) Set The number of CPU cores per proxy node
  * @method integer getMem() Obtain Memory per proxy node
  * @method void setMem(integer $Mem) Set Memory per proxy node
  * @method string getReloadBalance() Obtain Load rebalance mode. Valid values: `auto`, `manual`
@@ -48,12 +48,12 @@ class UpgradeCDBProxyRequest extends AbstractModel
     public $ProxyGroupId;
 
     /**
-     * @var integer Number of proxy nodes
+     * @var integer The number of proxy nodes
      */
     public $ProxyCount;
 
     /**
-     * @var integer Number of CPU cores per proxy node
+     * @var integer The number of CPU cores per proxy node
      */
     public $Cpu;
 
@@ -75,8 +75,8 @@ class UpgradeCDBProxyRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param string $ProxyGroupId Database proxy ID
-     * @param integer $ProxyCount Number of proxy nodes
-     * @param integer $Cpu Number of CPU cores per proxy node
+     * @param integer $ProxyCount The number of proxy nodes
+     * @param integer $Cpu The number of CPU cores per proxy node
      * @param integer $Mem Memory per proxy node
      * @param string $ReloadBalance Load rebalance mode. Valid values: `auto`, `manual`
      * @param string $UpgradeTime Upgrade time. Valid values: `nowTime` (upgrade immediately), `timeWindow` (upgrade during instance maintenance time)

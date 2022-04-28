@@ -18,19 +18,29 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateDeployGroup response structure.
+ * DescribeAuditRules response structure.
  *
- * @method string getDeployGroupId() Obtain Placement group ID.
- * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID.
+ * @method integer getTotalCount() Obtain Number of eligible audit rules
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible audit rules
+ * @method array getItems() Obtain Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setItems(array $Items) Set Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateDeployGroupResponse extends AbstractModel
+class DescribeAuditRulesResponse extends AbstractModel
 {
     /**
-     * @var string Placement group ID.
+     * @var integer Number of eligible audit rules
      */
-    public $DeployGroupId;
+    public $TotalCount;
+
+    /**
+     * @var array Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Items;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +48,9 @@ class CreateDeployGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $DeployGroupId Placement group ID.
+     * @param integer $TotalCount Number of eligible audit rules
+     * @param array $Items Audit rule details
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +66,17 @@ class CreateDeployGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("DeployGroupId",$param) and $param["DeployGroupId"] !== null) {
-            $this->DeployGroupId = $param["DeployGroupId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new AuditRule();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

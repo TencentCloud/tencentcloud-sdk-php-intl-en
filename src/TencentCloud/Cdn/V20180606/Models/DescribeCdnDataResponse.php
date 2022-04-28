@@ -14,26 +14,42 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyDBInstanceVipVport response structure.
+ * DescribeCdnData response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getInterval() Obtain Time granularity of the returned data. Specify one of the following during querying:
+min: 1 minute
+5min: 5 minutes
+hour: 1 hour
+day: 1 day
+ * @method void setInterval(string $Interval) Set Time granularity of the returned data. Specify one of the following during querying:
+min: 1 minute
+5min: 5 minutes
+hour: 1 hour
+day: 1 day
+ * @method array getData() Obtain Returned data details of the specified conditional query
+ * @method void setData(array $Data) Set Returned data details of the specified conditional query
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyDBInstanceVipVportResponse extends AbstractModel
+class DescribeCdnDataResponse extends AbstractModel
 {
     /**
-     * @var string Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Time granularity of the returned data. Specify one of the following during querying:
+min: 1 minute
+5min: 5 minutes
+hour: 1 hour
+day: 1 day
      */
-    public $AsyncRequestId;
+    public $Interval;
+
+    /**
+     * @var array Returned data details of the specified conditional query
+     */
+    public $Data;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +57,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task ID. (This returned field has been disused)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Interval Time granularity of the returned data. Specify one of the following during querying:
+min: 1 minute
+5min: 5 minutes
+hour: 1 hour
+day: 1 day
+     * @param array $Data Returned data details of the specified conditional query
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +78,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
+            $this->Interval = $param["Interval"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new ResourceData();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

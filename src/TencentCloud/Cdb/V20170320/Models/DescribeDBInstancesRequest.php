@@ -48,8 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneIds(array $ZoneIds) Set AZ ID.
  * @method array getSubnetIds() Obtain Subnet ID.
  * @method void setSubnetIds(array $SubnetIds) Set Subnet ID.
- * @method array getCdbErrors() Obtain Lock flag.
- * @method void setCdbErrors(array $CdbErrors) Set Lock flag.
+ * @method array getCdbErrors() Obtain Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
+ * @method void setCdbErrors(array $CdbErrors) Set Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
  * @method string getOrderBy() Obtain Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
  * @method void setOrderBy(string $OrderBy) Set Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
  * @method string getOrderDirection() Obtain Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
@@ -76,6 +76,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeysForSearch(array $TagKeysForSearch) Set Whether to use the tag key as a filter condition
  * @method array getCageIds() Obtain Financial cage IDs.
  * @method void setCageIds(array $CageIds) Set Financial cage IDs.
+ * @method array getTagValues() Obtain Tag value
+ * @method void setTagValues(array $TagValues) Set Tag value
+ * @method array getUniqueVpcIds() Obtain VPC character vpcId
+ * @method void setUniqueVpcIds(array $UniqueVpcIds) Set VPC character vpcId
+ * @method array getUniqSubnetIds() Obtain VPC character subnetId
+ * @method void setUniqSubnetIds(array $UniqSubnetIds) Set VPC character subnetId
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -150,7 +156,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var array Lock flag.
+     * @var array Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
      */
     public $CdbErrors;
 
@@ -220,6 +226,21 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $CageIds;
 
     /**
+     * @var array Tag value
+     */
+    public $TagValues;
+
+    /**
+     * @var array VPC character vpcId
+     */
+    public $UniqueVpcIds;
+
+    /**
+     * @var array VPC character subnetId
+     */
+    public $UniqSubnetIds;
+
+    /**
      * @param integer $ProjectId Project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -234,7 +255,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $VpcIds VPC ID.
      * @param array $ZoneIds AZ ID.
      * @param array $SubnetIds Subnet ID.
-     * @param array $CdbErrors Lock flag.
+     * @param array $CdbErrors Whether to lock disk write. Valid values: `0`(unlock), `1`(lock). Default value: 0.
      * @param string $OrderBy Sort by field of the returned result set. Currently, supported values include "InstanceId", "InstanceName", "CreateTime", and "DeadlineTime".
      * @param string $OrderDirection Sorting method of the returned result set. Currently, "ASC" or "DESC" is supported.
      * @param integer $WithSecurityGroup Whether security group ID is used as a filter
@@ -248,6 +269,9 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $DeployGroupIds Placement group ID list.
      * @param array $TagKeysForSearch Whether to use the tag key as a filter condition
      * @param array $CageIds Financial cage IDs.
+     * @param array $TagValues Tag value
+     * @param array $UniqueVpcIds VPC character vpcId
+     * @param array $UniqSubnetIds VPC character subnetId
      */
     function __construct()
     {
@@ -372,6 +396,18 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("CageIds",$param) and $param["CageIds"] !== null) {
             $this->CageIds = $param["CageIds"];
+        }
+
+        if (array_key_exists("TagValues",$param) and $param["TagValues"] !== null) {
+            $this->TagValues = $param["TagValues"];
+        }
+
+        if (array_key_exists("UniqueVpcIds",$param) and $param["UniqueVpcIds"] !== null) {
+            $this->UniqueVpcIds = $param["UniqueVpcIds"];
+        }
+
+        if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
+            $this->UniqSubnetIds = $param["UniqSubnetIds"];
         }
     }
 }

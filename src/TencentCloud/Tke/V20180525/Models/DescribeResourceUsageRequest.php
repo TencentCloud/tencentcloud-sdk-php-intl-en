@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeCDBProxy request structure.
+ * DescribeResourceUsage request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getProxyGroupId() Obtain Proxy group ID
- * @method void setProxyGroupId(string $ProxyGroupId) Set Proxy group ID
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
  */
-class DescribeCDBProxyRequest extends AbstractModel
+class DescribeResourceUsageRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string Cluster ID
      */
-    public $InstanceId;
+    public $ClusterId;
 
     /**
-     * @var string Proxy group ID
-     */
-    public $ProxyGroupId;
-
-    /**
-     * @param string $InstanceId Instance ID
-     * @param string $ProxyGroupId Proxy group ID
+     * @param string $ClusterId Cluster ID
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DescribeCDBProxyRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("ProxyGroupId",$param) and $param["ProxyGroupId"] !== null) {
-            $this->ProxyGroupId = $param["ProxyGroupId"];
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
         }
     }
 }

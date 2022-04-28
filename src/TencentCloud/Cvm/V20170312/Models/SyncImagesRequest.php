@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setImageIds(array $ImageIds) Set List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
  * @method array getDestinationRegions() Obtain List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
  * @method void setDestinationRegions(array $DestinationRegions) Set List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+ * @method boolean getDryRun() Obtain Checks whether image synchronization can be initiated 
+ * @method void setDryRun(boolean $DryRun) Set Checks whether image synchronization can be initiated 
  */
 class SyncImagesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SyncImagesRequest extends AbstractModel
     public $DestinationRegions;
 
     /**
+     * @var boolean Checks whether image synchronization can be initiated 
+     */
+    public $DryRun;
+
+    /**
      * @param array $ImageIds List of image IDs. You can obtain the image IDs in two ways: <br><li>Call the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) API and find the value of `ImageId` in the response. <br><li>Find the image IDs in the [Image Console](https://console.cloud.tencent.com/cvm/image). <br>The specified images must meet the following requirement: <br><li>the images must be in the `NORMAL` state. <br>For more information on image status, see [Image Data Table](https://intl.cloud.tencent.com/document/product/213/15753?from_cn_redirect=1#Image).
      * @param array $DestinationRegions List of destination regions for synchronization. A destination region must meet the following requirements: <br><li>It cannot be the source region. <br><li>It must be valid. <br><li>Currently some regions do not support image synchronization. <br>For specific regions, see [Region](https://intl.cloud.tencent.com/document/product/213/6091?from_cn_redirect=1).
+     * @param boolean $DryRun Checks whether image synchronization can be initiated 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SyncImagesRequest extends AbstractModel
 
         if (array_key_exists("DestinationRegions",$param) and $param["DestinationRegions"] !== null) {
             $this->DestinationRegions = $param["DestinationRegions"];
+        }
+
+        if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
+            $this->DryRun = $param["DryRun"];
         }
     }
 }

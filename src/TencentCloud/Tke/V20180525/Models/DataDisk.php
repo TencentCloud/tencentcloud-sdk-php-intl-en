@@ -40,10 +40,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setMountTarget(string $MountTarget) Set Mounting directory
 Note: This field may return null, indicating that no valid value was found.
- * @method string getDiskPartition() Obtain The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setDiskPartition(string $DiskPartition) Set The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getDiskPartition() Obtain Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiskPartition(string $DiskPartition) Set Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DataDisk extends AbstractModel
 {
@@ -78,8 +78,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $MountTarget;
 
     /**
-     * @var string The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiskPartition;
 
@@ -94,8 +94,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $MountTarget Mounting directory
 Note: This field may return null, indicating that no valid value was found.
-     * @param string $DiskPartition The name of the device or partition to mount
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $DiskPartition Mounted device name or partition name (only required when adding an existing node)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
