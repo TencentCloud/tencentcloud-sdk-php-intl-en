@@ -92,8 +92,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setVip(string $Vip) Set Instance IP
  * @method integer getVport() Obtain Port number
  * @method void setVport(integer $Vport) Set Port number
- * @method integer getCdbError() Obtain Lock flag
- * @method void setCdbError(integer $CdbError) Set Lock flag
+ * @method integer getCdbError() Obtain Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
+ * @method void setCdbError(integer $CdbError) Set Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
  * @method string getUniqVpcId() Obtain VPC descriptor, such as "vpc-5v8wn9mg"
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC descriptor, such as "vpc-5v8wn9mg"
  * @method string getUniqSubnetId() Obtain Subnet descriptor, such as "subnet-1typ0s7d"
@@ -288,7 +288,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Vport;
 
     /**
-     * @var integer Lock flag
+     * @var integer Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
      */
     public $CdbError;
 
@@ -388,7 +388,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Instance creation time
      * @param string $Vip Instance IP
      * @param integer $Vport Port number
-     * @param integer $CdbError Lock flag
+     * @param integer $CdbError Whether the disk write is locked (It depends on whether the instance data in disk exceeds its quota). Valid values: `0` (unlocked), `1` (locked).
      * @param string $UniqVpcId VPC descriptor, such as "vpc-5v8wn9mg"
      * @param string $UniqSubnetId Subnet descriptor, such as "subnet-1typ0s7d"
      * @param string $PhysicalId Physical ID

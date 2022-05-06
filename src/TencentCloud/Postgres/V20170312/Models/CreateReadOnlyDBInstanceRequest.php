@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSupportIpv6(integer $NeedSupportIpv6) Set Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
  * @method string getReadOnlyGroupId() Obtain RO group ID
  * @method void setReadOnlyGroupId(string $ReadOnlyGroupId) Set RO group ID
- * @method Tag getTagList() Obtain The information of tags to be associated with instances. This parameter is left empty by default.
- * @method void setTagList(Tag $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
+ * @method Tag getTagList() Obtain The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
+ * @method void setTagList(Tag $TagList) Set The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
  * @method array getSecurityGroupIds() Obtain Security group ID
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group ID
  */
@@ -154,7 +154,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $ReadOnlyGroupId;
 
     /**
-     * @var Tag The information of tags to be associated with instances. This parameter is left empty by default.
+     * @var Tag The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
      */
     public $TagList;
 
@@ -182,7 +182,7 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @param string $Name Instance name (which will be supported in the future)
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no).
      * @param string $ReadOnlyGroupId RO group ID
-     * @param Tag $TagList The information of tags to be associated with instances. This parameter is left empty by default.
+     * @param Tag $TagList The information of tags to be bound with the purchased instance, which is left empty by default (type: tag array).
      * @param array $SecurityGroupIds Security group ID
      */
     function __construct()

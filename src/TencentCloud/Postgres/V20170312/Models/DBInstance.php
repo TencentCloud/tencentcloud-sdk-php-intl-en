@@ -110,6 +110,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsSupportTDE() Obtain Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsSupportTDE(integer $IsSupportTDE) Set Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -303,6 +307,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DBNodeSet;
 
     /**
+     * @var integer Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsSupportTDE;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
@@ -348,6 +358,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $DBNodeSet Instance node information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -524,6 +536,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->DBNodeSet, $obj);
             }
+        }
+
+        if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
+            $this->IsSupportTDE = $param["IsSupportTDE"];
         }
     }
 }

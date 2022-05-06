@@ -18,22 +18,22 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of an upstream
+ * Upstream details
  *
- * @method string getUpstreamId() Obtain Unique ID of the upstream
- * @method void setUpstreamId(string $UpstreamId) Set Unique ID of the upstream
- * @method string getUpstreamName() Obtain Name of the upstream 
- * @method void setUpstreamName(string $UpstreamName) Set Name of the upstream 
- * @method string getUpstreamDescription() Obtain Description of the upstream
- * @method void setUpstreamDescription(string $UpstreamDescription) Set Description of the upstream
- * @method string getScheme() Obtain Protocol
- * @method void setScheme(string $Scheme) Set Protocol
- * @method string getAlgorithm() Obtain Load balancing algorithm
- * @method void setAlgorithm(string $Algorithm) Set Load balancing algorithm
- * @method string getUniqVpcId() Obtain Unique VPC ID.
- * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID.
- * @method integer getRetries() Obtain Number of retried attempts
- * @method void setRetries(integer $Retries) Set Number of retried attempts
+ * @method string getUpstreamId() Obtain Unique upstream ID
+ * @method void setUpstreamId(string $UpstreamId) Set Unique upstream ID
+ * @method string getUpstreamName() Obtain Upstream name
+ * @method void setUpstreamName(string $UpstreamName) Set Upstream name
+ * @method string getUpstreamDescription() Obtain Upstream description
+ * @method void setUpstreamDescription(string $UpstreamDescription) Set Upstream description
+ * @method string getScheme() Obtain Backend protocol. Valid values: `HTTP`, `HTTPS`
+ * @method void setScheme(string $Scheme) Set Backend protocol. Valid values: `HTTP`, `HTTPS`
+ * @method string getAlgorithm() Obtain Load balancing algorithm. Valid value: `ROUND_ROBIN`
+ * @method void setAlgorithm(string $Algorithm) Set Load balancing algorithm. Valid value: `ROUND_ROBIN`
+ * @method string getUniqVpcId() Obtain Unique VPC ID
+ * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID
+ * @method integer getRetries() Obtain Number of retry attempts
+ * @method void setRetries(integer $Retries) Set Number of retry attempts
  * @method array getNodes() Obtain Backend nodes
  * @method void setNodes(array $Nodes) Set Backend nodes
  * @method string getCreatedTime() Obtain Creation time.
@@ -46,51 +46,51 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setHealthChecker(UpstreamHealthChecker $HealthChecker) Set Health check configuration
 Note: This field may return `null`, indicating that no valid value was found.
- * @method string getUpstreamType() Obtain Type of the upstream
- * @method void setUpstreamType(string $UpstreamType) Set Type of the upstream
- * @method array getK8sServices() Obtain Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setK8sServices(array $K8sServices) Set Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
- * @method string getUpstreamHost() Obtain Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setUpstreamHost(string $UpstreamHost) Set Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getUpstreamType() Obtain Upstream type. Valid values: `IP_PORT`, `K8S`
+ * @method void setUpstreamType(string $UpstreamType) Set Upstream type. Valid values: `IP_PORT`, `K8S`
+ * @method array getK8sServices() Obtain Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setK8sServices(array $K8sServices) Set Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method string getUpstreamHost() Obtain The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setUpstreamHost(string $UpstreamHost) Set The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
  */
 class UpstreamInfo extends AbstractModel
 {
     /**
-     * @var string Unique ID of the upstream
+     * @var string Unique upstream ID
      */
     public $UpstreamId;
 
     /**
-     * @var string Name of the upstream 
+     * @var string Upstream name
      */
     public $UpstreamName;
 
     /**
-     * @var string Description of the upstream
+     * @var string Upstream description
      */
     public $UpstreamDescription;
 
     /**
-     * @var string Protocol
+     * @var string Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public $Scheme;
 
     /**
-     * @var string Load balancing algorithm
+     * @var string Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public $Algorithm;
 
     /**
-     * @var string Unique VPC ID.
+     * @var string Unique VPC ID
      */
     public $UniqVpcId;
 
     /**
-     * @var integer Number of retried attempts
+     * @var integer Number of retry attempts
      */
     public $Retries;
 
@@ -117,41 +117,41 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $HealthChecker;
 
     /**
-     * @var string Type of the upstream
+     * @var string Upstream type. Valid values: `IP_PORT`, `K8S`
      */
     public $UpstreamType;
 
     /**
-     * @var array Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public $K8sServices;
 
     /**
-     * @var string Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public $UpstreamHost;
 
     /**
-     * @param string $UpstreamId Unique ID of the upstream
-     * @param string $UpstreamName Name of the upstream 
-     * @param string $UpstreamDescription Description of the upstream
-     * @param string $Scheme Protocol
-     * @param string $Algorithm Load balancing algorithm
-     * @param string $UniqVpcId Unique VPC ID.
-     * @param integer $Retries Number of retried attempts
+     * @param string $UpstreamId Unique upstream ID
+     * @param string $UpstreamName Upstream name
+     * @param string $UpstreamDescription Upstream description
+     * @param string $Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
+     * @param string $Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
+     * @param string $UniqVpcId Unique VPC ID
+     * @param integer $Retries Number of retry attempts
      * @param array $Nodes Backend nodes
      * @param string $CreatedTime Creation time.
      * @param array $Tags Label
 Note: This field may return `null`, indicating that no valid value was found.
      * @param UpstreamHealthChecker $HealthChecker Health check configuration
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $UpstreamType Type of the upstream
-     * @param array $K8sServices Configuration of K8s service
-Note: This field may return `null`, indicating that no valid value was found.
-     * @param string $UpstreamHost Host of the upstream
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $UpstreamType Upstream type. Valid values: `IP_PORT`, `K8S`
+     * @param array $K8sServices Configuration of TKE service
+Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param string $UpstreamHost The Host header that the gateway forwards to the upstream
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     function __construct()
     {

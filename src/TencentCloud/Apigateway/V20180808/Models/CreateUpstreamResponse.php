@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateUpstream response structure.
  *
- * @method string getUpstreamId() Obtain The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setUpstreamId(string $UpstreamId) Set The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getUpstreamId() Obtain The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setUpstreamId(string $UpstreamId) Set The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateUpstreamResponse extends AbstractModel
 {
     /**
-     * @var string The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var string The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public $UpstreamId;
 
@@ -41,8 +41,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param string $UpstreamId The unique upstream IP returned
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $UpstreamId The unique upstream ID returned
+Note: This field may return `NULL`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

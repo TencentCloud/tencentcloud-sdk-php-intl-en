@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLogJson(string $LogJson) Set Serialized JSON string of log content
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHostName() Obtain Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setHostName(string $HostName) Set Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class LogInfo extends AbstractModel
 {
@@ -83,6 +87,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LogJson;
 
     /**
+     * @var string Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $HostName;
+
+    /**
      * @param integer $Time Log time in milliseconds
      * @param string $TopicId Log topic ID
      * @param string $TopicName Log topic name
@@ -92,6 +102,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $PkgLogId Log ID in request package
      * @param string $LogJson Serialized JSON string of log content
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -136,6 +148,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LogJson",$param) and $param["LogJson"] !== null) {
             $this->LogJson = $param["LogJson"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

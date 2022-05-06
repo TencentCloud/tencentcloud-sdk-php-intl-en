@@ -20,51 +20,60 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUpstream request structure.
  *
- * @method string getUpstreamId() Obtain Unique ID of the upstream
- * @method void setUpstreamId(string $UpstreamId) Set Unique ID of the upstream
- * @method string getUpstreamName() Obtain Name of the upstream 
- * @method void setUpstreamName(string $UpstreamName) Set Name of the upstream 
- * @method string getUpstreamDescription() Obtain Description of the upstream
- * @method void setUpstreamDescription(string $UpstreamDescription) Set Description of the upstream
- * @method string getScheme() Obtain Backend protocol. Values: `HTTP`, `HTTPS`
- * @method void setScheme(string $Scheme) Set Backend protocol. Values: `HTTP`, `HTTPS`
- * @method string getAlgorithm() Obtain The balancing method can only be `ROUND_ROBIN`.
- * @method void setAlgorithm(string $Algorithm) Set The balancing method can only be `ROUND_ROBIN`.
+ * @method string getUpstreamId() Obtain Unique upstream ID
+ * @method void setUpstreamId(string $UpstreamId) Set Unique upstream ID
+ * @method string getUpstreamName() Obtain Upstream name
+ * @method void setUpstreamName(string $UpstreamName) Set Upstream name
+ * @method string getUpstreamDescription() Obtain Upstream description
+ * @method void setUpstreamDescription(string $UpstreamDescription) Set Upstream description
+ * @method string getScheme() Obtain Backend protocol. Valid values: `HTTP`, `HTTPS`
+ * @method void setScheme(string $Scheme) Set Backend protocol. Valid values: `HTTP`, `HTTPS`
+ * @method string getUpstreamType() Obtain Upstream access type. Valid values: `IP_PORT`, `K8S`
+ * @method void setUpstreamType(string $UpstreamType) Set Upstream access type. Valid values: `IP_PORT`, `K8S`
+ * @method string getAlgorithm() Obtain Load balancing algorithm. Valid value: `ROUND_ROBIN`
+ * @method void setAlgorithm(string $Algorithm) Set Load balancing algorithm. Valid value: `ROUND_ROBIN`
  * @method string getUniqVpcId() Obtain Unique VPC ID.
  * @method void setUniqVpcId(string $UniqVpcId) Set Unique VPC ID.
  * @method integer getRetries() Obtain Retry attempts. It defaults to `3`.
  * @method void setRetries(integer $Retries) Set Retry attempts. It defaults to `3`.
- * @method string getUpstreamHost() Obtain The host header in the request sending to the backend
- * @method void setUpstreamHost(string $UpstreamHost) Set The host header in the request sending to the backend
+ * @method string getUpstreamHost() Obtain Gateway forwarding to the upstream Host request header
+ * @method void setUpstreamHost(string $UpstreamHost) Set Gateway forwarding to the upstream Host request header
  * @method array getNodes() Obtain List of backend nodes
  * @method void setNodes(array $Nodes) Set List of backend nodes
- * @method array getK8sService() Obtain Configuration of K8s service
- * @method void setK8sService(array $K8sService) Set Configuration of K8s service
+ * @method UpstreamHealthChecker getHealthChecker() Obtain Health check configuration
+ * @method void setHealthChecker(UpstreamHealthChecker $HealthChecker) Set Health check configuration
+ * @method array getK8sService() Obtain Configuration of TKE service
+ * @method void setK8sService(array $K8sService) Set Configuration of TKE service
  */
 class ModifyUpstreamRequest extends AbstractModel
 {
     /**
-     * @var string Unique ID of the upstream
+     * @var string Unique upstream ID
      */
     public $UpstreamId;
 
     /**
-     * @var string Name of the upstream 
+     * @var string Upstream name
      */
     public $UpstreamName;
 
     /**
-     * @var string Description of the upstream
+     * @var string Upstream description
      */
     public $UpstreamDescription;
 
     /**
-     * @var string Backend protocol. Values: `HTTP`, `HTTPS`
+     * @var string Backend protocol. Valid values: `HTTP`, `HTTPS`
      */
     public $Scheme;
 
     /**
-     * @var string The balancing method can only be `ROUND_ROBIN`.
+     * @var string Upstream access type. Valid values: `IP_PORT`, `K8S`
+     */
+    public $UpstreamType;
+
+    /**
+     * @var string Load balancing algorithm. Valid value: `ROUND_ROBIN`
      */
     public $Algorithm;
 
@@ -79,7 +88,7 @@ class ModifyUpstreamRequest extends AbstractModel
     public $Retries;
 
     /**
-     * @var string The host header in the request sending to the backend
+     * @var string Gateway forwarding to the upstream Host request header
      */
     public $UpstreamHost;
 
@@ -89,21 +98,28 @@ class ModifyUpstreamRequest extends AbstractModel
     public $Nodes;
 
     /**
-     * @var array Configuration of K8s service
+     * @var UpstreamHealthChecker Health check configuration
+     */
+    public $HealthChecker;
+
+    /**
+     * @var array Configuration of TKE service
      */
     public $K8sService;
 
     /**
-     * @param string $UpstreamId Unique ID of the upstream
-     * @param string $UpstreamName Name of the upstream 
-     * @param string $UpstreamDescription Description of the upstream
-     * @param string $Scheme Backend protocol. Values: `HTTP`, `HTTPS`
-     * @param string $Algorithm The balancing method can only be `ROUND_ROBIN`.
+     * @param string $UpstreamId Unique upstream ID
+     * @param string $UpstreamName Upstream name
+     * @param string $UpstreamDescription Upstream description
+     * @param string $Scheme Backend protocol. Valid values: `HTTP`, `HTTPS`
+     * @param string $UpstreamType Upstream access type. Valid values: `IP_PORT`, `K8S`
+     * @param string $Algorithm Load balancing algorithm. Valid value: `ROUND_ROBIN`
      * @param string $UniqVpcId Unique VPC ID.
      * @param integer $Retries Retry attempts. It defaults to `3`.
-     * @param string $UpstreamHost The host header in the request sending to the backend
+     * @param string $UpstreamHost Gateway forwarding to the upstream Host request header
      * @param array $Nodes List of backend nodes
-     * @param array $K8sService Configuration of K8s service
+     * @param UpstreamHealthChecker $HealthChecker Health check configuration
+     * @param array $K8sService Configuration of TKE service
      */
     function __construct()
     {
@@ -134,6 +150,10 @@ class ModifyUpstreamRequest extends AbstractModel
             $this->Scheme = $param["Scheme"];
         }
 
+        if (array_key_exists("UpstreamType",$param) and $param["UpstreamType"] !== null) {
+            $this->UpstreamType = $param["UpstreamType"];
+        }
+
         if (array_key_exists("Algorithm",$param) and $param["Algorithm"] !== null) {
             $this->Algorithm = $param["Algorithm"];
         }
@@ -157,6 +177,11 @@ class ModifyUpstreamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Nodes, $obj);
             }
+        }
+
+        if (array_key_exists("HealthChecker",$param) and $param["HealthChecker"] !== null) {
+            $this->HealthChecker = new UpstreamHealthChecker();
+            $this->HealthChecker->deserialize($param["HealthChecker"]);
         }
 
         if (array_key_exists("K8sService",$param) and $param["K8sService"] !== null) {

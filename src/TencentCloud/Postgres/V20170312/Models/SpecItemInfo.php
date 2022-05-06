@@ -48,6 +48,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setKernelVersion(string $KernelVersion) Set PostgreSQL kernel version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsSupportTDE() Obtain Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setIsSupportTDE(integer $IsSupportTDE) Set Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class SpecItemInfo extends AbstractModel
 {
@@ -114,6 +118,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $KernelVersion;
 
     /**
+     * @var integer Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $IsSupportTDE;
+
+    /**
      * @param string $SpecCode Specification ID
      * @param string $Version PostgerSQL version number
      * @param string $VersionName Full version name corresponding to kernel number
@@ -128,6 +138,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $KernelVersion PostgreSQL kernel version number
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsSupportTDE Whether TDE data encryption is supported. Valid values: 0 (no), 1 (yes)
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -188,6 +200,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("KernelVersion",$param) and $param["KernelVersion"] !== null) {
             $this->KernelVersion = $param["KernelVersion"];
+        }
+
+        if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
+            $this->IsSupportTDE = $param["IsSupportTDE"];
         }
     }
 }

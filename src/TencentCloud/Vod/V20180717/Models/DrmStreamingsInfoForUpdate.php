@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSimpleAesDefinition() Obtain ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
  * @method void setSimpleAesDefinition(integer $SimpleAesDefinition) Set ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+ * @method integer getWidevineDefinition() Obtain The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+ * @method void setWidevineDefinition(integer $WidevineDefinition) Set The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+ * @method integer getFairPlayDefinition() Obtain The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+ * @method void setFairPlayDefinition(integer $FairPlayDefinition) Set The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
  */
 class DrmStreamingsInfoForUpdate extends AbstractModel
 {
@@ -31,7 +35,19 @@ class DrmStreamingsInfoForUpdate extends AbstractModel
     public $SimpleAesDefinition;
 
     /**
+     * @var integer The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+     */
+    public $WidevineDefinition;
+
+    /**
+     * @var integer The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
+     */
+    public $FairPlayDefinition;
+
+    /**
      * @param integer $SimpleAesDefinition ID of the adaptive bitrate streaming template whose protection type is SimpleAES.
+     * @param integer $WidevineDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by Widewine.
+     * @param integer $FairPlayDefinition The ID of the adaptive bitrate streaming template that encrypts the streams by FairPlay.
      */
     function __construct()
     {
@@ -48,6 +64,14 @@ class DrmStreamingsInfoForUpdate extends AbstractModel
         }
         if (array_key_exists("SimpleAesDefinition",$param) and $param["SimpleAesDefinition"] !== null) {
             $this->SimpleAesDefinition = $param["SimpleAesDefinition"];
+        }
+
+        if (array_key_exists("WidevineDefinition",$param) and $param["WidevineDefinition"] !== null) {
+            $this->WidevineDefinition = $param["WidevineDefinition"];
+        }
+
+        if (array_key_exists("FairPlayDefinition",$param) and $param["FairPlayDefinition"] !== null) {
+            $this->FairPlayDefinition = $param["FairPlayDefinition"];
         }
     }
 }

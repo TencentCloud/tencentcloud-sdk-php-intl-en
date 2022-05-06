@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdminPassword(string $AdminPassword) Set Instance root account password
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getDBVersion() Obtain PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+ * @method string getDBVersion() Obtain PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
+ * @method void setDBVersion(string $DBVersion) Set PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
  * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
  * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
@@ -62,12 +62,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagList(array $TagList) Set The information of tags to be associated with instances. This parameter is left empty by default.
  * @method array getSecurityGroupIds() Obtain Security group IDs
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Security group IDs
- * @method string getDBMajorVersion() Obtain PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
- * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
- * @method string getDBKernelVersion() Obtain PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
- * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+ * @method string getDBMajorVersion() Obtain PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+ * @method void setDBMajorVersion(string $DBMajorVersion) Set PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+ * @method string getDBKernelVersion() Obtain PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
+ * @method void setDBKernelVersion(string $DBKernelVersion) Set PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
  * @method array getDBNodeSet() Obtain Instance node information, which is required if you purchase a multi-AZ deployed instance.
  * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information, which is required if you purchase a multi-AZ deployed instance.
+ * @method integer getNeedSupportTDE() Obtain Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+ * @method void setNeedSupportTDE(integer $NeedSupportTDE) Set Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+ * @method string getKMSKeyId() Obtain KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+ * @method void setKMSKeyId(string $KMSKeyId) Set KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+ * @method string getKMSRegion() Obtain The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+ * @method void setKMSRegion(string $KMSRegion) Set The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -117,7 +123,7 @@ class CreateInstancesRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * @var string PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      */
     public $DBVersion;
 
@@ -177,12 +183,12 @@ class CreateInstancesRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
-     * @var string PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
+     * @var string PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
      */
     public $DBMajorVersion;
 
     /**
-     * @var string PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * @var string PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      */
     public $DBKernelVersion;
 
@@ -190,6 +196,21 @@ class CreateInstancesRequest extends AbstractModel
      * @var array Instance node information, which is required if you purchase a multi-AZ deployed instance.
      */
     public $DBNodeSet;
+
+    /**
+     * @var integer Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+     */
+    public $NeedSupportTDE;
+
+    /**
+     * @var string KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+     */
+    public $KMSKeyId;
+
+    /**
+     * @var string The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     */
+    public $KMSRegion;
 
     /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
@@ -201,7 +222,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param string $AdminName Instance root account name
      * @param string $AdminPassword Instance root account password
      * @param integer $ProjectId Project ID
-     * @param string $DBVersion PostgreSQL version number. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created.
+     * @param string $DBVersion PostgreSQL version. If it is specified, an instance running the latest kernel of PostgreSQL `DBVersion` will be created. You must pass in at least one of the following parameters: DBVersion, DBMajorVersion, DBKernelVersion.
      * @param string $InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
      * @param integer $AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
@@ -213,9 +234,12 @@ class CreateInstancesRequest extends AbstractModel
      * @param integer $NeedSupportIpv6 Whether to support IPv6 address access. Valid values: `1` (yes), `0` (no). Default value: `0`
      * @param array $TagList The information of tags to be associated with instances. This parameter is left empty by default.
      * @param array $SecurityGroupIds Security group IDs
-     * @param string $DBMajorVersion PostgreSQL major version number. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created.
-     * @param string $DBKernelVersion PostgreSQL kernel version number. If it is specified, an instance running kernel `DBKernelVersion` will be created.
+     * @param string $DBMajorVersion PostgreSQL major version. Valid values: `10`, `11`, `12`, `13`. If it is specified, an instance running the latest kernel of PostgreSQL `DBMajorVersion` will be created. You must pass in at least one of the following parameters: DBMajorVersion, DBVersion, DBKernelVersion.
+     * @param string $DBKernelVersion PostgreSQL kernel version. If it is specified, an instance running the latest kernel of PostgreSQL `DBKernelVersion` will be created. You must pass in one of the following parameters: DBKernelVersion, DBVersion, DBMajorVersion.
      * @param array $DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
+     * @param integer $NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
+     * @param string $KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
+     * @param string $KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
      */
     function __construct()
     {
@@ -334,6 +358,18 @@ class CreateInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DBNodeSet, $obj);
             }
+        }
+
+        if (array_key_exists("NeedSupportTDE",$param) and $param["NeedSupportTDE"] !== null) {
+            $this->NeedSupportTDE = $param["NeedSupportTDE"];
+        }
+
+        if (array_key_exists("KMSKeyId",$param) and $param["KMSKeyId"] !== null) {
+            $this->KMSKeyId = $param["KMSKeyId"];
+        }
+
+        if (array_key_exists("KMSRegion",$param) and $param["KMSRegion"] !== null) {
+            $this->KMSRegion = $param["KMSRegion"];
         }
     }
 }

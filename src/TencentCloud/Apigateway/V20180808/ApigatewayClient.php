@@ -54,7 +54,7 @@ To use API Gateway, you need to create a usage plan and bind it to a service env
  * @method Models\DeleteServiceResponse DeleteService(Models\DeleteServiceRequest $req) This API is used to delete a service in API Gateway.
  * @method Models\DeleteServiceSubDomainMappingResponse DeleteServiceSubDomainMapping(Models\DeleteServiceSubDomainMappingRequest $req) This API is used to delete a custom domain name mapping in a service environment.
 You can use this API if you use a custom domain name and custom mapping. Please note that if you delete all mappings in all environments, a failure will be returned when this API is called.
- * @method Models\DeleteUpstreamResponse DeleteUpstream(Models\DeleteUpstreamRequest $req) This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with an API.
+ * @method Models\DeleteUpstreamResponse DeleteUpstream(Models\DeleteUpstreamRequest $req) This API is used to delete an upstream. Note that you can only delete an upstream when it’s not bound with any APIs.
  * @method Models\DeleteUsagePlanResponse DeleteUsagePlan(Models\DeleteUsagePlanRequest $req) This API is used to delete a usage plan.
  * @method Models\DemoteServiceUsagePlanResponse DemoteServiceUsagePlan(Models\DemoteServiceUsagePlanRequest $req) This API is used to degrade a usage plan of a service in an environment to the API level.
 This operation will be denied if there are no APIs under the service.
@@ -97,8 +97,8 @@ In API Gateway, you can bind custom domain names to a service for service call. 
  * @method Models\DescribeServiceUsagePlanResponse DescribeServiceUsagePlan(Models\DescribeServiceUsagePlanRequest $req) This API is used to query the details of usage plans in a service.
 To make authentication and throttling for a service take effect, you need to bind a usage plan to it. This API is used to query all usage plans bound to a service.
  * @method Models\DescribeServicesStatusResponse DescribeServicesStatus(Models\DescribeServicesStatusRequest $req) This API is used to query the list of one or more services and return relevant domain name, time, and other information.
- * @method Models\DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(Models\DescribeUpstreamBindApisRequest $req) This API is used to query the list of APIs bound with an upstream.
- * @method Models\DescribeUpstreamsResponse DescribeUpstreams(Models\DescribeUpstreamsRequest $req) This API is used to query the list of upstreams.
+ * @method Models\DescribeUpstreamBindApisResponse DescribeUpstreamBindApis(Models\DescribeUpstreamBindApisRequest $req) This API is used to query APIs bound with an upstream.
+ * @method Models\DescribeUpstreamsResponse DescribeUpstreams(Models\DescribeUpstreamsRequest $req) This API is used to query details of upstreams under the current account.
  * @method Models\DescribeUsagePlanResponse DescribeUsagePlan(Models\DescribeUsagePlanRequest $req) This API is used to query the details of a usage plan, such as its name, QPS, creation time, and bound environment.
  * @method Models\DescribeUsagePlanEnvironmentsResponse DescribeUsagePlanEnvironments(Models\DescribeUsagePlanEnvironmentsRequest $req) This API is used to query the list of environments bound to a usage plan.
 After binding a usage plan to environments, you can use this API to query all service environments bound to the usage plan.

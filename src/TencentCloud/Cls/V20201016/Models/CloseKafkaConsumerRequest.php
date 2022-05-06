@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteUpstream request structure.
+ * CloseKafkaConsumer request structure.
  *
- * @method string getUpstreamId() Obtain ID of the upstream to be deleted
- * @method void setUpstreamId(string $UpstreamId) Set ID of the upstream to be deleted
+ * @method string getFromTopicId() Obtain CLS topic identifier
+ * @method void setFromTopicId(string $FromTopicId) Set CLS topic identifier
  */
-class DeleteUpstreamRequest extends AbstractModel
+class CloseKafkaConsumerRequest extends AbstractModel
 {
     /**
-     * @var string ID of the upstream to be deleted
+     * @var string CLS topic identifier
      */
-    public $UpstreamId;
+    public $FromTopicId;
 
     /**
-     * @param string $UpstreamId ID of the upstream to be deleted
+     * @param string $FromTopicId CLS topic identifier
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteUpstreamRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpstreamId",$param) and $param["UpstreamId"] !== null) {
-            $this->UpstreamId = $param["UpstreamId"];
+        if (array_key_exists("FromTopicId",$param) and $param["FromTopicId"] !== null) {
+            $this->FromTopicId = $param["FromTopicId"];
         }
     }
 }

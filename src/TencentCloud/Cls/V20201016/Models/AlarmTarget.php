@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuery(string $Query) Set Query statement
  * @method integer getNumber() Obtain Monitoring object number, which is incremental from 1.
  * @method void setNumber(integer $Number) Set Monitoring object number, which is incremental from 1.
- * @method integer getStartTimeOffset() Obtain Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
- * @method void setStartTimeOffset(integer $StartTimeOffset) Set Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
- * @method integer getEndTimeOffset() Obtain Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
- * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+ * @method integer getStartTimeOffset() Obtain Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+ * @method void setStartTimeOffset(integer $StartTimeOffset) Set Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+ * @method integer getEndTimeOffset() Obtain Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+ * @method void setEndTimeOffset(integer $EndTimeOffset) Set Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
  * @method string getLogsetId() Obtain Logset ID
  * @method void setLogsetId(string $LogsetId) Set Logset ID
  */
@@ -51,12 +51,12 @@ class AlarmTarget extends AbstractModel
     public $Number;
 
     /**
-     * @var integer Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
+     * @var integer Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
      */
     public $StartTimeOffset;
 
     /**
-     * @var integer Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * @var integer Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
      */
     public $EndTimeOffset;
 
@@ -69,8 +69,8 @@ class AlarmTarget extends AbstractModel
      * @param string $TopicId Log topic ID
      * @param string $Query Query statement
      * @param integer $Number Monitoring object number, which is incremental from 1.
-     * @param integer $StartTimeOffset Offset of the query start time from the current time in minutes. The value cannot be positive. Value range: -1440–0.
-     * @param integer $EndTimeOffset Offset of the query end time from the current time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
+     * @param integer $StartTimeOffset Offset of the query start time from the alarm execution time in minutes. The value cannot be positive. Value range: -1440–0.
+     * @param integer $EndTimeOffset Offset of the query end time from the alarm execution time in minutes. The value cannot be positive and must be greater than `StartTimeOffset`. Value range: -1440–0.
      * @param string $LogsetId Logset ID
      */
     function __construct()

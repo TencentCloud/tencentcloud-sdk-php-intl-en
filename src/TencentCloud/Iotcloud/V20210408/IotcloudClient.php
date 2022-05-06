@@ -39,6 +39,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\UpdateDeviceLogLevelResponse UpdateDeviceLogLevel(Models\UpdateDeviceLogLevelRequest $req) This API is used to set the device log level.  
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) This API is used to enable or disable multiple devices. 
  * @method Models\UpdatePrivateCAResponse UpdatePrivateCA(Models\UpdatePrivateCARequest $req) This API is used to update a private CA certificate.
+ * @method Models\UpdateProductDynamicRegisterResponse UpdateProductDynamicRegister(Models\UpdateProductDynamicRegisterRequest $req) This API is used to update the configuration of product dynamic registration. 
  */
 
 class IotcloudClient extends AbstractClient

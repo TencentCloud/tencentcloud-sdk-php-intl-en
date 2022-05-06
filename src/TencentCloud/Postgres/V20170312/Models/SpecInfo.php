@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
  * @method array getSpecItemInfoList() Obtain Specification details list
  * @method void setSpecItemInfoList(array $SpecItemInfoList) Set Specification details list
+ * @method array getSupportKMSRegions() Obtain Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSupportKMSRegions(array $SupportKMSRegions) Set Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class SpecInfo extends AbstractModel
 {
@@ -45,9 +49,17 @@ class SpecInfo extends AbstractModel
     public $SpecItemInfoList;
 
     /**
+     * @var array Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $SupportKMSRegions;
+
+    /**
      * @param string $Region Region abbreviation, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone AZ abbreviate, which corresponds to the `Zone` field of `ZoneSet`
      * @param array $SpecItemInfoList Specification details list
+     * @param array $SupportKMSRegions Regions where KMS is supported
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -77,6 +89,10 @@ class SpecInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SpecItemInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("SupportKMSRegions",$param) and $param["SupportKMSRegions"] !== null) {
+            $this->SupportKMSRegions = $param["SupportKMSRegions"];
         }
     }
 }

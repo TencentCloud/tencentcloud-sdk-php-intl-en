@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpstreams request structure.
  *
- * @method integer getLimit() Obtain Number of results returned in a page
- * @method void setLimit(integer $Limit) Set Number of results returned in a page
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
- * @method array getFilters() Obtain Filters
- * @method void setFilters(array $Filters) Set Filters
+ * @method integer getLimit() Obtain Number of entries per page
+ * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method integer getOffset() Obtain The starting position of paging
+ * @method void setOffset(integer $Offset) Set The starting position of paging
+ * @method array getFilters() Obtain Filters. Valid values: `UpstreamId` and `UpstreamName`
+ * @method void setFilters(array $Filters) Set Filters. Valid values: `UpstreamId` and `UpstreamName`
  */
 class DescribeUpstreamsRequest extends AbstractModel
 {
     /**
-     * @var integer Number of results returned in a page
+     * @var integer Number of entries per page
      */
     public $Limit;
 
     /**
-     * @var integer Page offset
+     * @var integer The starting position of paging
      */
     public $Offset;
 
     /**
-     * @var array Filters
+     * @var array Filters. Valid values: `UpstreamId` and `UpstreamName`
      */
     public $Filters;
 
     /**
-     * @param integer $Limit Number of results returned in a page
-     * @param integer $Offset Page offset
-     * @param array $Filters Filters
+     * @param integer $Limit Number of entries per page
+     * @param integer $Offset The starting position of paging
+     * @param array $Filters Filters. Valid values: `UpstreamId` and `UpstreamName`
      */
     function __construct()
     {

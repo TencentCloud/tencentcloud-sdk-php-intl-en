@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the queried upstreams
+ * The returned result of upstream query
  *
  * @method integer getTotalCount() Obtain Total number of results
  * @method void setTotalCount(integer $TotalCount) Set Total number of results

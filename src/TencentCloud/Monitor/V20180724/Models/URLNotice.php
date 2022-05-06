@@ -40,6 +40,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setEndTime(integer $EndTime) Set End time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getWeekday() Obtain Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWeekday(array $Weekday) Set Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class URLNotice extends AbstractModel
 {
@@ -74,6 +78,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $EndTime;
 
     /**
+     * @var array Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Weekday;
+
+    /**
      * @param string $URL Callback URL, which can contain up to 256 characters
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $IsValid Whether verification is passed. Valid values: 0 (no), 1 (yes)
@@ -84,6 +94,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $EndTime End time of the notification in seconds, which is calculated from 00:00:00.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -116,6 +128,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
+            $this->Weekday = $param["Weekday"];
         }
     }
 }

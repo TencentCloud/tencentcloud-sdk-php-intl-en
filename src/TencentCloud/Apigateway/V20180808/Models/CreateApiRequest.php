@@ -124,6 +124,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTokenTimeout(integer $TokenTimeout) Set Validity of the EIAM application token. Unit: second. Default value: `7200`.
  * @method string getEIAMAppId() Obtain EIAM application ID.
  * @method void setEIAMAppId(string $EIAMAppId) Set EIAM application ID.
+ * @method string getOwner() Obtain Owner of the resource
+ * @method void setOwner(string $Owner) Set Owner of the resource
  */
 class CreateApiRequest extends AbstractModel
 {
@@ -388,6 +390,11 @@ class CreateApiRequest extends AbstractModel
     public $EIAMAppId;
 
     /**
+     * @var string Owner of the resource
+     */
+    public $Owner;
+
+    /**
      * @param string $ServiceId Unique service ID of API.
      * @param string $ServiceType API backend service type. Valid values: HTTP, MOCK, TSF, SCF, WEBSOCKET, TARGET (in beta test).
      * @param integer $ServiceTimeout API backend service timeout period in seconds.
@@ -440,6 +447,7 @@ class CreateApiRequest extends AbstractModel
      * @param string $EIAMAuthType EIAM application authentication type. Valid values: `AuthenticationOnly`, `Authentication`, `Authorization`.
      * @param integer $TokenTimeout Validity of the EIAM application token. Unit: second. Default value: `7200`.
      * @param string $EIAMAppId EIAM application ID.
+     * @param string $Owner Owner of the resource
      */
     function __construct()
     {
@@ -696,6 +704,10 @@ class CreateApiRequest extends AbstractModel
 
         if (array_key_exists("EIAMAppId",$param) and $param["EIAMAppId"] !== null) {
             $this->EIAMAppId = $param["EIAMAppId"];
+        }
+
+        if (array_key_exists("Owner",$param) and $param["Owner"] !== null) {
+            $this->Owner = $param["Owner"];
         }
     }
 }

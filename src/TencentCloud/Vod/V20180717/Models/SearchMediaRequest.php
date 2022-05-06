@@ -66,10 +66,10 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 10.</li>
  * @method void setSourceTypes(array $SourceTypes) Set Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
 <li>Array length limit: 10.</li>
- * @method array getStreamIds() Obtain [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method void setStreamIds(array $StreamIds) Set [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+ * @method array getStreamIds() Obtain The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
+ * @method void setStreamIds(array $StreamIds) Set The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
  * @method array getVids() Obtain Unique ID of LVB recording file. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
  * @method void setVids(array $Vids) Set Unique ID of LVB recording file. Any element in the set can be matched.
@@ -144,10 +144,10 @@ Search text, which fuzzily matches the media file name or description. The more 
 Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
  * @method void setSourceType(string $SourceType) Set (This is not recommended. `SourceTypes` should be used instead)
 Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
- * @method string getStreamId() Obtain (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
- * @method void setStreamId(string $StreamId) Set (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+ * @method string getStreamId() Obtain (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
+ * @method void setStreamId(string $StreamId) Set (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
  * @method string getVid() Obtain (This is not recommended. `Vids` should be used instead)
 Unique ID of LVB recording file.
  * @method void setVid(string $Vid) Set (This is not recommended. `Vids` should be used instead)
@@ -231,8 +231,8 @@ class SearchMediaRequest extends AbstractModel
     public $SourceTypes;
 
     /**
-     * @var array [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+     * @var array The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
      */
     public $StreamIds;
 
@@ -322,8 +322,8 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
     public $SourceType;
 
     /**
-     * @var string (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+     * @var string (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
      */
     public $StreamId;
 
@@ -375,8 +375,8 @@ End time in the creation time range.
 <li>Image: image file</li>
      * @param array $SourceTypes Media file source set. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
 <li>Array length limit: 10.</li>
-     * @param array $StreamIds [Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) set. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
+     * @param array $StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
+<li>Array length limit: 10</li>
      * @param array $Vids Unique ID of LVB recording file. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
      * @param TimeRange $CreateTime Matches files created within the time period.
@@ -414,8 +414,8 @@ End time in the creation time range.
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
 Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
-     * @param string $StreamId (This is not recommended. `StreamIds` should be used instead)
-[Stream ID](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1).
+     * @param string $StreamId (Not recommended. Consider using `StreamIds` instead.)
+The live stream code.
      * @param string $Vid (This is not recommended. `Vids` should be used instead)
 Unique ID of LVB recording file.
      * @param string $StartTime (This is not recommended. `CreateTime` should be used instead)

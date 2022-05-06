@@ -92,10 +92,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values found.
  * @method void setDeploymentType(string $DeploymentType) Set Cluster type for service deployment
 Note: this field may return null, indicating that no valid values found.
- * @method string getSpecialUse() Obtain Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSpecialUse(string $SpecialUse) Set Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSpecialUse() Obtain Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setSpecialUse(string $SpecialUse) Set Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -238,8 +238,8 @@ Note: this field may return null, indicating that no valid values found.
     public $DeploymentType;
 
     /**
-     * @var string Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public $SpecialUse;
 
@@ -285,8 +285,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DeploymentType Cluster type for service deployment
 Note: this field may return null, indicating that no valid values found.
-     * @param string $SpecialUse Whether it’s for special usage
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SpecialUse Whether the service if for special usage. Valid values: `DEFAULT` (general usage), `HTTP_DNS`.
+Note: This field may return `NULL`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

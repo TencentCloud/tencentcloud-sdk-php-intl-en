@@ -68,6 +68,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setPhoneCallType(string $PhoneCallType) Set Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getWeekday() Obtain Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setWeekday(array $Weekday) Set Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class UserNotice extends AbstractModel
 {
@@ -144,6 +148,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $PhoneCallType;
 
     /**
+     * @var array Notification cycle. The values 1-7 indicate Monday to Sunday.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Weekday;
+
+    /**
      * @param string $ReceiverType Recipient type. Valid values: USER (user), GROUP (user group)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $StartTime Notification start time, which is expressed by the number of seconds since 00:00:00. Value range: 0–86399
@@ -167,6 +177,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $NeedPhoneArriveNotice Whether receipt notification is required. Valid values: 0 (no), 1 (yes)
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PhoneCallType Dial type. `SYNC` (simultaneous dial), `CIRCLE` (polled dial). Default value: `CIRCLE`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Weekday Notification cycle. The values 1-7 indicate Monday to Sunday.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -228,6 +240,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PhoneCallType",$param) and $param["PhoneCallType"] !== null) {
             $this->PhoneCallType = $param["PhoneCallType"];
+        }
+
+        if (array_key_exists("Weekday",$param) and $param["Weekday"] !== null) {
+            $this->Weekday = $param["Weekday"];
         }
     }
 }

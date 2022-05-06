@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteUpstream response structure.
+ * OpenKafkaConsumer response structure.
  *
- * @method string getUpstreamId() Obtain ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
- * @method void setUpstreamId(string $UpstreamId) Set ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method string getTopicID() Obtain `TopicId` to be consumed
+ * @method void setTopicID(string $TopicID) Set `TopicId` to be consumed
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteUpstreamResponse extends AbstractModel
+class OpenKafkaConsumerResponse extends AbstractModel
 {
     /**
-     * @var string ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * @var string `TopicId` to be consumed
      */
-    public $UpstreamId;
+    public $TopicID;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param string $UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param string $TopicID `TopicId` to be consumed
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +54,8 @@ Note: This field may return `NULL`, indicating that no valid value was found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpstreamId",$param) and $param["UpstreamId"] !== null) {
-            $this->UpstreamId = $param["UpstreamId"];
+        if (array_key_exists("TopicID",$param) and $param["TopicID"] !== null) {
+            $this->TopicID = $param["TopicID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

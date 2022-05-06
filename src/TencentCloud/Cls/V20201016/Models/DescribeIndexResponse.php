@@ -30,6 +30,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getModifyTime() Obtain Index modification time. The default value is the index creation time.
  * @method void setModifyTime(string $ModifyTime) Set Index modification time. The default value is the index creation time.
+ * @method boolean getIncludeInternalFields() Obtain Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getMetadataFlag() Obtain Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setMetadataFlag(integer $MetadataFlag) Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -57,6 +65,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ModifyTime;
 
     /**
+     * @var boolean Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $IncludeInternalFields;
+
+    /**
+     * @var integer Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $MetadataFlag;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -67,6 +87,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param RuleInfo $Rule Index configuration information
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ModifyTime Index modification time. The default value is the index creation time.
+     * @param boolean $IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+Note: This field may return `null`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -97,6 +121,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
             $this->ModifyTime = $param["ModifyTime"];
+        }
+
+        if (array_key_exists("IncludeInternalFields",$param) and $param["IncludeInternalFields"] !== null) {
+            $this->IncludeInternalFields = $param["IncludeInternalFields"];
+        }
+
+        if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
+            $this->MetadataFlag = $param["MetadataFlag"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

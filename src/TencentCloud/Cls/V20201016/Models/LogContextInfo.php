@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPkgLogId(integer $PkgLogId) Set Log number in log package
  * @method integer getBTime() Obtain Log timestamp
  * @method void setBTime(integer $BTime) Set Log timestamp
+ * @method string getHostName() Obtain Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setHostName(string $HostName) Set Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class LogContextInfo extends AbstractModel
 {
@@ -66,12 +70,20 @@ class LogContextInfo extends AbstractModel
     public $BTime;
 
     /**
+     * @var string Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $HostName;
+
+    /**
      * @param string $Source Log source device
      * @param string $Filename Collection path
      * @param string $Content Log content
      * @param string $PkgId Log package number
      * @param integer $PkgLogId Log number in log package
      * @param integer $BTime Log timestamp
+     * @param string $HostName Source host name of logs
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class LogContextInfo extends AbstractModel
 
         if (array_key_exists("BTime",$param) and $param["BTime"] !== null) {
             $this->BTime = $param["BTime"];
+        }
+
+        if (array_key_exists("HostName",$param) and $param["HostName"] !== null) {
+            $this->HostName = $param["HostName"];
         }
     }
 }

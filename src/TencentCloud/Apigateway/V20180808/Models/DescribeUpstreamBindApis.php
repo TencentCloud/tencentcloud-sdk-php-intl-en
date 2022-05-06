@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Querying the list of APIs bound with an upstream.
+ * Queries APIs bound with an upstream
  *
  * @method integer getTotalCount() Obtain Total number
  * @method void setTotalCount(integer $TotalCount) Set Total number

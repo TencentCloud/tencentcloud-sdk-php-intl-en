@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
  * @method string getMethod() Obtain API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
  * @method void setMethod(string $Method) Set API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+ * @method string getUpstreamId() Obtain It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setUpstreamId(string $UpstreamId) Set It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
  * @method CosConfig getCosConfig() Obtain API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCosConfig(CosConfig $CosConfig) Set API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
@@ -63,6 +67,12 @@ class ServiceConfig extends AbstractModel
     public $Method;
 
     /**
+     * @var string It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
+     */
+    public $UpstreamId;
+
+    /**
      * @var CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -74,6 +84,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $Url API backend service URL, which is required if `ServiceType` is `HTTP`.
      * @param string $Path API backend service path, such as `/path`, which is required if `ServiceType` is `HTTP`. The frontend and backend paths can be different.
      * @param string $Method API backend service request method, such as `GET`, which is required if `ServiceType` is `HTTP`. The frontend and backend methods can be different
+     * @param string $UpstreamId It’s required for `upstream`.
+Note: This field may return `NULL`, indicating that no valid value was found.
      * @param CosConfig $CosConfig API backend COS configuration. It’s required if the `ServiceType` is ·`COS`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -108,6 +120,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Method",$param) and $param["Method"] !== null) {
             $this->Method = $param["Method"];
+        }
+
+        if (array_key_exists("UpstreamId",$param) and $param["UpstreamId"] !== null) {
+            $this->UpstreamId = $param["UpstreamId"];
         }
 
         if (array_key_exists("CosConfig",$param) and $param["CosConfig"] !== null) {

@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPluginName() Obtain Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
  * @method void setPluginName(string $PluginName) Set Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
- * @method string getPluginType() Obtain Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`.
- * @method void setPluginType(string $PluginType) Set Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`.
+ * @method string getPluginType() Obtain Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
+ * @method void setPluginType(string $PluginType) Set Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
  * @method string getPluginData() Obtain Plugin definition statement in json format
  * @method void setPluginData(string $PluginData) Set Plugin definition statement in json format
  * @method string getDescription() Obtain Plugin description within 200 characters
  * @method void setDescription(string $Description) Set Plugin description within 200 characters
+ * @method array getTags() Obtain Label
+ * @method void setTags(array $Tags) Set Label
  */
 class CreatePluginRequest extends AbstractModel
 {
@@ -37,7 +39,7 @@ class CreatePluginRequest extends AbstractModel
     public $PluginName;
 
     /**
-     * @var string Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`.
+     * @var string Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
      */
     public $PluginType;
 
@@ -52,10 +54,16 @@ class CreatePluginRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array Label
+     */
+    public $Tags;
+
+    /**
      * @param string $PluginName Custom plugin name. A plugin name should contain 2-50 characters out of a-z, A-Z, 0-9, and _, which must begin with a letter and end with a letter or a number.
-     * @param string $PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`.
+     * @param string $PluginType Plugin type. Valid values: `IPControl`, `TrafficControl`, `Cors`, `CustomReq`, `CustomAuth`, `Routing`, `TrafficControlByParameter`, `CircuitBreaker`, `ProxyCache`
      * @param string $PluginData Plugin definition statement in json format
      * @param string $Description Plugin description within 200 characters
+     * @param array $Tags Label
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class CreatePluginRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -28,8 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetricNames(array $MetricNames) Set Metric name list
  * @method array getConditions() Obtain Dimension condition. The `=` and `in` operators are supported
  * @method void setConditions(array $Conditions) Set Dimension condition. The `=` and `in` operators are supported
- * @method integer getPeriod() Obtain Statistical granularity in s. Default value: 300
- * @method void setPeriod(integer $Period) Set Statistical granularity in s. Default value: 300
+ * @method integer getPeriod() Obtain Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
+ * @method void setPeriod(integer $Period) Set Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
  * @method string getStartTime() Obtain Start time, which is the current time by default, such as 2020-12-08T19:51:23+08:00
  * @method void setStartTime(string $StartTime) Set Start time, which is the current time by default, such as 2020-12-08T19:51:23+08:00
  * @method string getEndTime() Obtain End time, which is the current time by default, such as 2020-12-08T19:51:23+08:00
@@ -60,7 +70,12 @@ class DescribeStatisticDataRequest extends AbstractModel
     public $Conditions;
 
     /**
-     * @var integer Statistical granularity in s. Default value: 300
+     * @var integer Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
      */
     public $Period;
 
@@ -84,7 +99,12 @@ class DescribeStatisticDataRequest extends AbstractModel
      * @param string $Namespace Namespace. Valid values: QCE/TKE
      * @param array $MetricNames Metric name list
      * @param array $Conditions Dimension condition. The `=` and `in` operators are supported
-     * @param integer $Period Statistical granularity in s. Default value: 300
+     * @param integer $Period Statistical period in seconds. Default value: 300. Optional values: 60, 300, 3,600, and 86,400.
+Due to the storage period limit, the statistical period is subject to the time range of statistics:
+60s: The time range is less than 12 hours, and the timespan between `StartTime` and the current time cannot exceed 15 days.
+300s: The time range is less than three days, and the timespan between `StartTime` and the current time cannot exceed 31 days.
+3,600s: The time range is less than 30 days, and the timespan between `StartTime` and the current time cannot exceed 93 days.
+86,400s: The time range is less than 186 days, and the timespan between `StartTime` and the current time cannot exceed 186 days.
      * @param string $StartTime Start time, which is the current time by default, such as 2020-12-08T19:51:23+08:00
      * @param string $EndTime End time, which is the current time by default, such as 2020-12-08T19:51:23+08:00
      * @param array $GroupBys `groupBy` by the specified dimension

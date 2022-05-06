@@ -48,6 +48,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWay(string $Way) Set Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
  * @method string getManualBackupName() Obtain Manual backup alias
  * @method void setManualBackupName(string $ManualBackupName) Set Manual backup alias
+ * @method string getSaveMode() Obtain Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+ * @method void setSaveMode(string $SaveMode) Set Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
  */
 class BackupInfo extends AbstractModel
 {
@@ -122,6 +124,11 @@ class BackupInfo extends AbstractModel
     public $ManualBackupName;
 
     /**
+     * @var string Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     */
+    public $SaveMode;
+
+    /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
@@ -136,6 +143,7 @@ class BackupInfo extends AbstractModel
      * @param string $Method Backup method. Valid values: `full` (full backup), `partial` (partial backup).
      * @param string $Way Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
      * @param string $ManualBackupName Manual backup alias
+     * @param string $SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
      */
     function __construct()
     {
@@ -204,6 +212,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("ManualBackupName",$param) and $param["ManualBackupName"] !== null) {
             $this->ManualBackupName = $param["ManualBackupName"];
+        }
+
+        if (array_key_exists("SaveMode",$param) and $param["SaveMode"] !== null) {
+            $this->SaveMode = $param["SaveMode"];
         }
     }
 }

@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUpstreamBindApis request structure.
  *
- * @method integer getLimit() Obtain Number of results returned in a page
- * @method void setLimit(integer $Limit) Set Number of results returned in a page
- * @method integer getOffset() Obtain Page offset
- * @method void setOffset(integer $Offset) Set Page offset
+ * @method integer getLimit() Obtain Number of entries per page
+ * @method void setLimit(integer $Limit) Set Number of entries per page
+ * @method integer getOffset() Obtain The starting position of paging
+ * @method void setOffset(integer $Offset) Set The starting position of paging
  * @method string getUpstreamId() Obtain Upstream ID
  * @method void setUpstreamId(string $UpstreamId) Set Upstream ID
  * @method array getFilters() Obtain Filters the results by `ServiceId` and `ApiId`
@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
 class DescribeUpstreamBindApisRequest extends AbstractModel
 {
     /**
-     * @var integer Number of results returned in a page
+     * @var integer Number of entries per page
      */
     public $Limit;
 
     /**
-     * @var integer Page offset
+     * @var integer The starting position of paging
      */
     public $Offset;
 
@@ -52,8 +52,8 @@ class DescribeUpstreamBindApisRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Limit Number of results returned in a page
-     * @param integer $Offset Page offset
+     * @param integer $Limit Number of entries per page
+     * @param integer $Offset The starting position of paging
      * @param string $UpstreamId Upstream ID
      * @param array $Filters Filters the results by `ServiceId` and `ApiId`
      */

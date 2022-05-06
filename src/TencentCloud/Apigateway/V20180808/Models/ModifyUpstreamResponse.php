@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyUpstream response structure.
  *
- * @method UpstreamInfo getResult() Obtain Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setResult(UpstreamInfo $Result) Set Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method UpstreamInfo getResult() Obtain Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method void setResult(UpstreamInfo $Result) Set Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyUpstreamResponse extends AbstractModel
 {
     /**
-     * @var UpstreamInfo Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var UpstreamInfo Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
      */
     public $Result;
 
@@ -41,8 +41,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param UpstreamInfo $Result Information of the upstream after the modification
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param UpstreamInfo $Result Return modified upstream information
+Note: This field may return `NULL`, indicating that no valid value was found.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

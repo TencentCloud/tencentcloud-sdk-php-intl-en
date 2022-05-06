@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Apigateway\V20180808\Models;
+namespace TencentCloud\Ses\V20201002\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteUpstream response structure.
+ * BatchSendEmail response structure.
  *
- * @method string getUpstreamId() Obtain ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
- * @method void setUpstreamId(string $UpstreamId) Set ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+ * @method integer getTaskId() Obtain Sending task ID
+ * @method void setTaskId(integer $TaskId) Set Sending task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteUpstreamResponse extends AbstractModel
+class BatchSendEmailResponse extends AbstractModel
 {
     /**
-     * @var string ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * @var integer Sending task ID
      */
-    public $UpstreamId;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: This field may return `NULL`, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param string $UpstreamId ID of the deleted upstream
-Note: This field may return `NULL`, indicating that no valid value was found.
+     * @param integer $TaskId Sending task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +54,8 @@ Note: This field may return `NULL`, indicating that no valid value was found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("UpstreamId",$param) and $param["UpstreamId"] !== null) {
-            $this->UpstreamId = $param["UpstreamId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

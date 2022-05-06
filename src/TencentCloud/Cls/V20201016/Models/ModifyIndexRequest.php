@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(boolean $Status) Set It does not take effect by default
  * @method RuleInfo getRule() Obtain Index rule
  * @method void setRule(RuleInfo $Rule) Set Index rule
- * @method boolean getIncludeInternalFields() Obtain 
- * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set 
- * @method integer getMetadataFlag() Obtain 
- * @method void setMetadataFlag(integer $MetadataFlag) Set 
+ * @method boolean getIncludeInternalFields() Obtain Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+ * @method integer getMetadataFlag() Obtain Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+ * @method void setMetadataFlag(integer $MetadataFlag) Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
  */
 class ModifyIndexRequest extends AbstractModel
 {
@@ -49,12 +49,12 @@ class ModifyIndexRequest extends AbstractModel
     public $Rule;
 
     /**
-     * @var boolean 
+     * @var boolean Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
      */
     public $IncludeInternalFields;
 
     /**
-     * @var integer 
+     * @var integer Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
      */
     public $MetadataFlag;
 
@@ -62,8 +62,8 @@ class ModifyIndexRequest extends AbstractModel
      * @param string $TopicId Log topic ID
      * @param boolean $Status It does not take effect by default
      * @param RuleInfo $Rule Index rule
-     * @param boolean $IncludeInternalFields 
-     * @param integer $MetadataFlag 
+     * @param boolean $IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     * @param integer $MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
      */
     function __construct()
     {

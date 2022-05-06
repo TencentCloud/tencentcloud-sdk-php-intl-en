@@ -32,6 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogExpireDays(integer $BinlogExpireDays) Set Binlog file retention period in days.
  * @method CommonTimeWindow getBackupTimeWindow() Obtain Time window for automatic instance backup.
  * @method void setBackupTimeWindow(CommonTimeWindow $BackupTimeWindow) Set Time window for automatic instance backup.
+ * @method string getEnableBackupPeriodSave() Obtain Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+ * @method void setEnableBackupPeriodSave(string $EnableBackupPeriodSave) Set Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+ * @method integer getBackupPeriodSaveDays() Obtain Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+ * @method void setBackupPeriodSaveDays(integer $BackupPeriodSaveDays) Set Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+ * @method string getBackupPeriodSaveInterval() Obtain Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+ * @method void setBackupPeriodSaveInterval(string $BackupPeriodSaveInterval) Set Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+ * @method integer getBackupPeriodSaveCount() Obtain Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+ * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) Set Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+ * @method string getStartBackupPeriodSaveDate() Obtain The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+ * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) Set The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -68,6 +78,31 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $BackupTimeWindow;
 
     /**
+     * @var string Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     */
+    public $EnableBackupPeriodSave;
+
+    /**
+     * @var integer Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+     */
+    public $BackupPeriodSaveDays;
+
+    /**
+     * @var string Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+     */
+    public $BackupPeriodSaveInterval;
+
+    /**
+     * @var integer Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+     */
+    public $BackupPeriodSaveCount;
+
+    /**
+     * @var string The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+     */
+    public $StartBackupPeriodSaveDate;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +114,11 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param string $BackupMethod Backup mode. Value range: physical, logical
      * @param integer $BinlogExpireDays Binlog file retention period in days.
      * @param CommonTimeWindow $BackupTimeWindow Time window for automatic instance backup.
+     * @param string $EnableBackupPeriodSave Switch for archive backup retention. Valid values: `off` (disable), `on` (enable). Default value:`off`.
+     * @param integer $BackupPeriodSaveDays Maximum days of archive backup retention. Valid range: 90-3650. Default value: 1080.
+     * @param string $BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
+     * @param integer $BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
+     * @param string $StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -117,6 +157,26 @@ class DescribeBackupConfigResponse extends AbstractModel
         if (array_key_exists("BackupTimeWindow",$param) and $param["BackupTimeWindow"] !== null) {
             $this->BackupTimeWindow = new CommonTimeWindow();
             $this->BackupTimeWindow->deserialize($param["BackupTimeWindow"]);
+        }
+
+        if (array_key_exists("EnableBackupPeriodSave",$param) and $param["EnableBackupPeriodSave"] !== null) {
+            $this->EnableBackupPeriodSave = $param["EnableBackupPeriodSave"];
+        }
+
+        if (array_key_exists("BackupPeriodSaveDays",$param) and $param["BackupPeriodSaveDays"] !== null) {
+            $this->BackupPeriodSaveDays = $param["BackupPeriodSaveDays"];
+        }
+
+        if (array_key_exists("BackupPeriodSaveInterval",$param) and $param["BackupPeriodSaveInterval"] !== null) {
+            $this->BackupPeriodSaveInterval = $param["BackupPeriodSaveInterval"];
+        }
+
+        if (array_key_exists("BackupPeriodSaveCount",$param) and $param["BackupPeriodSaveCount"] !== null) {
+            $this->BackupPeriodSaveCount = $param["BackupPeriodSaveCount"];
+        }
+
+        if (array_key_exists("StartBackupPeriodSaveDate",$param) and $param["StartBackupPeriodSaveDate"] !== null) {
+            $this->StartBackupPeriodSaveDate = $param["StartBackupPeriodSaveDate"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

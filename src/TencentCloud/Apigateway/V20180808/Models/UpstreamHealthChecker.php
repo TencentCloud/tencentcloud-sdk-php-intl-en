@@ -18,7 +18,7 @@ namespace TencentCloud\Apigateway\V20180808\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Upstream health check configuration
+ * Upstream health check parameter configuration
  *
  * @method boolean getEnableActiveCheck() Obtain Specifies whether to enable active health check
  * @method void setEnableActiveCheck(boolean $EnableActiveCheck) Set Specifies whether to enable active health check

@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRule(RuleInfo $Rule) Set Index rule
  * @method boolean getStatus() Obtain Whether to take effect. Default value: true
  * @method void setStatus(boolean $Status) Set Whether to take effect. Default value: true
+ * @method boolean getIncludeInternalFields() Obtain Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+ * @method void setIncludeInternalFields(boolean $IncludeInternalFields) Set Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+ * @method integer getMetadataFlag() Obtain Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+ * @method void setMetadataFlag(integer $MetadataFlag) Set Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
  */
 class CreateIndexRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class CreateIndexRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var boolean Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     */
+    public $IncludeInternalFields;
+
+    /**
+     * @var integer Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
+     */
+    public $MetadataFlag;
+
+    /**
      * @param string $TopicId Log topic ID
      * @param RuleInfo $Rule Index rule
      * @param boolean $Status Whether to take effect. Default value: true
+     * @param boolean $IncludeInternalFields Internal field marker of full-text index. Default value: `false`. Valid value: `false`: excluding internal fields; `true`: including internal fields
+     * @param integer $MetadataFlag Metadata flag. Default value: `0`. Valid value: `0`: full-text index (including the metadata field with key-value index enabled); `1`: full-text index (including all metadata fields); `2`: full-text index (excluding metadata fields).
      */
     function __construct()
     {
@@ -73,6 +89,14 @@ class CreateIndexRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IncludeInternalFields",$param) and $param["IncludeInternalFields"] !== null) {
+            $this->IncludeInternalFields = $param["IncludeInternalFields"];
+        }
+
+        if (array_key_exists("MetadataFlag",$param) and $param["MetadataFlag"] !== null) {
+            $this->MetadataFlag = $param["MetadataFlag"];
         }
     }
 }
