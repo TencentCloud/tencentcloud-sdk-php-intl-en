@@ -54,6 +54,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method boolean getMixed() Obtain Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
  * @method void setMixed(boolean $Mixed) Set Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
+ * @method string getRewriteType() Obtain Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRewriteType(string $RewriteType) Set Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class IngressInfo extends AbstractModel
 {
@@ -119,6 +127,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Mixed;
 
     /**
+     * @var string Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RewriteType;
+
+    /**
      * @param string $EnvironmentId Environment ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ClusterNamespace Environment namespace
@@ -136,6 +152,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $CreateTime Creation time
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $Mixed Whether to listen on both the HTTP 80 port and HTTPS 443 port. The default value is `false`. The optional value `true` means listening on both the HTTP 80 port and HTTPS 443 port.
+     * @param string $RewriteType Redirection mode. Values:
+- `AUTO` (automatically redirect HTTP to HTTPS)
+- `NONE` (no redirection)
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -202,6 +222,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Mixed",$param) and $param["Mixed"] !== null) {
             $this->Mixed = $param["Mixed"];
+        }
+
+        if (array_key_exists("RewriteType",$param) and $param["RewriteType"] !== null) {
+            $this->RewriteType = $param["RewriteType"];
         }
     }
 }

@@ -126,6 +126,8 @@ If `openjdk` is selected, the value can be:
 If `konajdk` is selected, the value can be: 
 - ALPINE
 - TENCENTOS
+ * @method EnablePrometheusConf getEnablePrometheusConf() Obtain Specifies whether to enable Prometheus metric
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) Set Specifies whether to enable Prometheus metric
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -339,6 +341,11 @@ If `konajdk` is selected, the value can be:
     public $OsFlavour;
 
     /**
+     * @var EnablePrometheusConf Specifies whether to enable Prometheus metric
+     */
+    public $EnablePrometheusConf;
+
+    /**
      * @param string $ApplicationId Application ID
      * @param integer $InitPodNum Number of initialized pods
      * @param float $CpuSpec CPU specification
@@ -392,6 +399,7 @@ If `openjdk` is selected, the value can be:
 If `konajdk` is selected, the value can be: 
 - ALPINE
 - TENCENTOS
+     * @param EnablePrometheusConf $EnablePrometheusConf Specifies whether to enable Prometheus metric
      */
     function __construct()
     {
@@ -597,6 +605,11 @@ If `konajdk` is selected, the value can be:
 
         if (array_key_exists("OsFlavour",$param) and $param["OsFlavour"] !== null) {
             $this->OsFlavour = $param["OsFlavour"];
+        }
+
+        if (array_key_exists("EnablePrometheusConf",$param) and $param["EnablePrometheusConf"] !== null) {
+            $this->EnablePrometheusConf = new EnablePrometheusConf();
+            $this->EnablePrometheusConf->deserialize($param["EnablePrometheusConf"]);
         }
     }
 }

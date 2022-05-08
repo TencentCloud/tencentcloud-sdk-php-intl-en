@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms. The current minimum value is 60,000 ms.
  * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
  * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
- * @method integer getMaxMessageBytes() Obtain Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
- * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+ * @method integer getMaxMessageBytes() Obtain Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
  * @method string getCleanUpPolicy() Obtain Message deletion policy. Valid values: delete, compact
  * @method void setCleanUpPolicy(string $CleanUpPolicy) Set Message deletion policy. Valid values: delete, compact
  * @method array getIpWhiteList() Obtain IP allowlist, which is required if the value of `enableWhileList` is 1.
@@ -98,7 +98,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $SegmentMs;
 
     /**
-     * @var integer Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+     * @var integer Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      */
     public $MaxMessageBytes;
 
@@ -151,7 +151,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param integer $UncleanLeaderElectionEnable 0: false, 1: true. Default value: 0.
      * @param integer $RetentionMs Message retention period in ms. The current minimum value is 60,000 ms.
      * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 86,400,000 ms.
-     * @param integer $MaxMessageBytes Maximum topic message length in bytes. The maximum value is 8,388,608 bytes (i.e., 8 MB).
+     * @param integer $MaxMessageBytes Max message size in bytes. Max value: 8,388,608 bytes (8 MB).
      * @param string $CleanUpPolicy Message deletion policy. Valid values: delete, compact
      * @param array $IpWhiteList IP allowlist, which is required if the value of `enableWhileList` is 1.
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.

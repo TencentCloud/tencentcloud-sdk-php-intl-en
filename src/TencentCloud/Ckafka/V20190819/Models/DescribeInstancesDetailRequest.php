@@ -32,10 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
  * @method string getTagKey() Obtain Tag key match.
  * @method void setTagKey(string $TagKey) Set Tag key match.
- * @method array getFilters() Obtain Filter.
- * @method void setFilters(array $Filters) Set Filter.
+ * @method array getFilters() Obtain Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
+ * @method void setFilters(array $Filters) Set Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
  * @method string getInstanceIds() Obtain This parameter has been deprecated and replaced with `InstanceIdList`.
  * @method void setInstanceIds(string $InstanceIds) Set This parameter has been deprecated and replaced with `InstanceIdList`.
+ * @method array getInstanceIdList() Obtain Filter by instance ID.
+ * @method void setInstanceIdList(array $InstanceIdList) Set Filter by instance ID.
  */
 class DescribeInstancesDetailRequest extends AbstractModel
 {
@@ -70,7 +72,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $TagKey;
 
     /**
-     * @var array Filter.
+     * @var array Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
      */
     public $Filters;
 
@@ -80,14 +82,20 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var array Filter by instance ID.
+     */
+    public $InstanceIdList;
+
+    /**
      * @param string $InstanceId (Filter) filter by instance ID
      * @param string $SearchWord (Filter) filter by instance name. Fuzzy search is supported
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
      * @param integer $Offset Offset. If this parameter is left empty, `0` will be used by default.
      * @param integer $Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.
      * @param string $TagKey Tag key match.
-     * @param array $Filters Filter.
+     * @param array $Filters Filter. Valid values of `filter.Name` include `Ip`, `VpcId`, `SubNetId`, `InstanceType`, and `InstanceId`. Up to 10 values can be passed for `filter.Values`.
      * @param string $InstanceIds This parameter has been deprecated and replaced with `InstanceIdList`.
+     * @param array $InstanceIdList Filter by instance ID.
      */
     function __construct()
     {
@@ -137,6 +145,10 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("InstanceIdList",$param) and $param["InstanceIdList"] !== null) {
+            $this->InstanceIdList = $param["InstanceIdList"];
         }
     }
 }

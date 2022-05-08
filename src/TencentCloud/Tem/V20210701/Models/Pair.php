@@ -32,6 +32,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setConfig(string $Config) Set Configuration name
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getSecret() Obtain Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setSecret(string $Secret) Set Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class Pair extends AbstractModel
 {
@@ -58,12 +62,20 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Config;
 
     /**
+     * @var string Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Secret;
+
+    /**
      * @param string $Key Key
      * @param string $Value Value
      * @param string $Type `default``: Custom. `reserved`: System variable. `referenced`: Referenced configuration item.
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $Config Configuration name
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $Secret Encrypt configuration name
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -92,6 +104,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("Secret",$param) and $param["Secret"] !== null) {
+            $this->Secret = $param["Secret"];
         }
     }
 }

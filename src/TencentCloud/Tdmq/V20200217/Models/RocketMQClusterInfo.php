@@ -36,6 +36,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setPublicEndPoint(string $PublicEndPoint) Set Public network access address
  * @method string getVpcEndPoint() Obtain VPC access address
  * @method void setVpcEndPoint(string $VpcEndPoint) Set VPC access address
+ * @method boolean getSupportNamespaceEndpoint() Obtain Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) Set Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -76,6 +80,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $VpcEndPoint;
 
     /**
+     * @var boolean Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SupportNamespaceEndpoint;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region information
@@ -84,6 +94,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PublicEndPoint Public network access address
      * @param string $VpcEndPoint VPC access address
+     * @param boolean $SupportNamespaceEndpoint Whether the namespace access point is supported.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +136,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("VpcEndPoint",$param) and $param["VpcEndPoint"] !== null) {
             $this->VpcEndPoint = $param["VpcEndPoint"];
+        }
+
+        if (array_key_exists("SupportNamespaceEndpoint",$param) and $param["SupportNamespaceEndpoint"] !== null) {
+            $this->SupportNamespaceEndpoint = $param["SupportNamespaceEndpoint"];
         }
     }
 }

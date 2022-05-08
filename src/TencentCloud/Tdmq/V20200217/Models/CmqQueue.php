@@ -134,6 +134,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMaxMsgBacklogSize(integer $MaxMsgBacklogSize) Set Maximum size of heaped messages in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CmqQueue extends AbstractModel
 {
@@ -315,6 +319,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $MaxMsgBacklogSize;
 
     /**
+     * @var integer Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RetentionSizeInMB;
+
+    /**
      * @param string $QueueId Message queue ID.
      * @param string $QueueName Message queue name.
      * @param integer $Qps Limit of the number of messages produced per second. The value for consumed messages is 1.1 times this value.
@@ -372,6 +382,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $MaxMsgBacklogSize Maximum size of heaped messages in bytes.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -516,6 +528,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("MaxMsgBacklogSize",$param) and $param["MaxMsgBacklogSize"] !== null) {
             $this->MaxMsgBacklogSize = $param["MaxMsgBacklogSize"];
+        }
+
+        if (array_key_exists("RetentionSizeInMB",$param) and $param["RetentionSizeInMB"] !== null) {
+            $this->RetentionSizeInMB = $param["RetentionSizeInMB"];
         }
     }
 }

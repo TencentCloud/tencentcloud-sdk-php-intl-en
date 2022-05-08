@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVisibilityTimeout(integer $VisibilityTimeout) Set Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
  * @method integer getMaxMsgSize() Obtain Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
  * @method void setMaxMsgSize(integer $MaxMsgSize) Set Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
- * @method integer getMsgRetentionSeconds() Obtain Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
- * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
- * @method integer getRewindSeconds() Obtain Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
- * @method void setRewindSeconds(integer $RewindSeconds) Set Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+ * @method integer getMsgRetentionSeconds() Obtain The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+ * @method void setMsgRetentionSeconds(integer $MsgRetentionSeconds) Set The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+ * @method integer getRewindSeconds() Obtain Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method void setRewindSeconds(integer $RewindSeconds) Set Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
  * @method integer getTransaction() Obtain 1: transaction queue; 0: general queue
  * @method void setTransaction(integer $Transaction) Set 1: transaction queue; 0: general queue
  * @method integer getFirstQueryInterval() Obtain First lookback interval
@@ -52,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
  * @method array getTags() Obtain Tag array.
  * @method void setTags(array $Tags) Set Tag array.
+ * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -81,12 +83,12 @@ class CreateCmqQueueRequest extends AbstractModel
     public $MaxMsgSize;
 
     /**
-     * @var integer Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
+     * @var integer The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
      */
     public $MsgRetentionSeconds;
 
     /**
-     * @var integer Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+     * @var integer Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public $RewindSeconds;
 
@@ -136,13 +138,18 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     */
+    public $RetentionSizeInMB;
+
+    /**
      * @param string $QueueName Queue name, which must be unique under the same account in the same region. It can contain up to 64 letters, digits, and hyphens and must begin with a letter.
      * @param integer $MaxMsgHeapNum Maximum number of heaped messages. The value range is 1,000,000–10,000,000 during the beta test and can be 1,000,000–1,000,000,000 after the product is officially released. The default value is 10,000,000 during the beta test and will be 100,000,000 after the product is officially released.
      * @param integer $PollingWaitSeconds Long polling wait time for message reception. Value range: 0–30 seconds. Default value: 0.
      * @param integer $VisibilityTimeout Message visibility timeout period. Value range: 1–43200 seconds (i.e., 12 hours). Default value: 30.
      * @param integer $MaxMsgSize Maximum message length. Value range: 1024–65536 bytes (i.e., 1–64 KB). Default value: 65536.
-     * @param integer $MsgRetentionSeconds Message retention period. Value range: 60–1296000 seconds (i.e., 1 minute–15 days). Default value: 345600 (i.e., 4 days).
-     * @param integer $RewindSeconds Whether to enable the message rewinding feature for a queue. Value range: 0–msgRetentionSeconds, where 0 means not to enable this feature, while `msgRetentionSeconds` indicates that the maximum rewindable period is the message retention period of the queue.
+     * @param integer $MsgRetentionSeconds The max period during which a message is retained before it is automatically acknowledged. Value range: 30-43,200 seconds (30 seconds to 12 hours). Default value: 3600 seconds (1 hour).
+     * @param integer $RewindSeconds Rewindable time of messages in the queue. Value range: 0-1,296,000s (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      * @param integer $Transaction 1: transaction queue; 0: general queue
      * @param integer $FirstQueryInterval First lookback interval
      * @param integer $MaxQueryCount Maximum number of lookbacks
@@ -152,6 +159,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
      * @param array $Tags Tag array.
+     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     function __construct()
     {
@@ -233,6 +241,10 @@ class CreateCmqQueueRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RetentionSizeInMB",$param) and $param["RetentionSizeInMB"] !== null) {
+            $this->RetentionSizeInMB = $param["RetentionSizeInMB"];
         }
     }
 }

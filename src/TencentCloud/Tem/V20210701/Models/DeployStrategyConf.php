@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTotalBatchCount(integer $TotalBatchCount) Set Total batches
  * @method integer getBetaBatchNum() Obtain Number of pods for the beta batch
  * @method void setBetaBatchNum(integer $BetaBatchNum) Set Number of pods for the beta batch
- * @method integer getDeployStrategyType() Obtain Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
- * @method void setDeployStrategyType(integer $DeployStrategyType) Set Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+ * @method integer getDeployStrategyType() Obtain Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
+ * @method void setDeployStrategyType(integer $DeployStrategyType) Set Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
  * @method integer getBatchInterval() Obtain Interval between batches
  * @method void setBatchInterval(integer $BatchInterval) Set Interval between batches
  * @method integer getMinAvailable() Obtain The minimum number of available pods
@@ -46,7 +46,7 @@ class DeployStrategyConf extends AbstractModel
     public $BetaBatchNum;
 
     /**
-     * @var integer Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+     * @var integer Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
      */
     public $DeployStrategyType;
 
@@ -68,7 +68,7 @@ class DeployStrategyConf extends AbstractModel
     /**
      * @param integer $TotalBatchCount Total batches
      * @param integer $BetaBatchNum Number of pods for the beta batch
-     * @param integer $DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual)
+     * @param integer $DeployStrategyType Batch deployment policy. `0`: automatically; `1`: manually; `2`: beta batch (manual), `3`: initial release
      * @param integer $BatchInterval Interval between batches
      * @param integer $MinAvailable The minimum number of available pods
      * @param boolean $Force Whether to enable force release

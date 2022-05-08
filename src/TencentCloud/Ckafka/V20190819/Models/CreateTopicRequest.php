@@ -40,10 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinInsyncReplicas(integer $MinInsyncReplicas) Set Default value: 1
  * @method integer getUncleanLeaderElectionEnable() Obtain Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
  * @method void setUncleanLeaderElectionEnable(integer $UncleanLeaderElectionEnable) Set Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
- * @method integer getRetentionMs() Obtain Message retention period in ms, which is optional. The current minimum value is 60,000 ms
- * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+ * @method integer getRetentionMs() Obtain Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
+ * @method void setRetentionMs(integer $RetentionMs) Set Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
  * @method integer getSegmentMs() Obtain Segment rolling duration in ms. The current minimum value is 3,600,000 ms
  * @method void setSegmentMs(integer $SegmentMs) Set Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+ * @method integer getMaxMessageBytes() Obtain Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+ * @method void setMaxMessageBytes(integer $MaxMessageBytes) Set Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
  * @method integer getEnableAclRule() Obtain Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method void setEnableAclRule(integer $EnableAclRule) Set Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
@@ -106,7 +108,7 @@ class CreateTopicRequest extends AbstractModel
     public $UncleanLeaderElectionEnable;
 
     /**
-     * @var integer Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+     * @var integer Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
      */
     public $RetentionMs;
 
@@ -114,6 +116,11 @@ class CreateTopicRequest extends AbstractModel
      * @var integer Segment rolling duration in ms. The current minimum value is 3,600,000 ms
      */
     public $SegmentMs;
+
+    /**
+     * @var integer Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
+     */
+    public $MaxMessageBytes;
 
     /**
      * @var integer Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
@@ -146,8 +153,9 @@ class CreateTopicRequest extends AbstractModel
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
      * @param integer $MinInsyncReplicas Default value: 1
      * @param integer $UncleanLeaderElectionEnable Whether to allow an unsynced replica to be elected as leader. false: no, true: yes. Default value: false
-     * @param integer $RetentionMs Message retention period in ms, which is optional. The current minimum value is 60,000 ms
+     * @param integer $RetentionMs Message retention period in milliseconds, which is optional. Min value: 60,000 ms.
      * @param integer $SegmentMs Segment rolling duration in ms. The current minimum value is 3,600,000 ms
+     * @param integer $MaxMessageBytes Max message size in bytes. Value range: 1,024 bytes (1 KB) to 8,388,608 bytes (8 MB).
      * @param integer $EnableAclRule Preset ACL rule. `1`: enable, `0`: disable. Default value: `0`.
      * @param string $AclRuleName Name of the preset ACL rule.
      * @param integer $RetentionBytes Message retention file size in bytes, which is an optional parameter. Default value: -1. Currently, the min value that can be entered is 1,048,576 B.
@@ -212,6 +220,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("SegmentMs",$param) and $param["SegmentMs"] !== null) {
             $this->SegmentMs = $param["SegmentMs"];
+        }
+
+        if (array_key_exists("MaxMessageBytes",$param) and $param["MaxMessageBytes"] !== null) {
+            $this->MaxMessageBytes = $param["MaxMessageBytes"];
         }
 
         if (array_key_exists("EnableAclRule",$param) and $param["EnableAclRule"] !== null) {

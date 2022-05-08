@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setResourceId(string $ResourceId) Set Resource ID
  * @method integer getSourceChannel() Obtain Source channel
  * @method void setSourceChannel(integer $SourceChannel) Set Source channel
+ * @method string getResourceFrom() Obtain Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+ * @method void setResourceFrom(string $ResourceFrom) Set Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+ * @method string getResourceConfig() Obtain Resource extra configuration
+ * @method void setResourceConfig(string $ResourceConfig) Set Resource extra configuration
  */
 class CreateResourceRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class CreateResourceRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var string Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+     */
+    public $ResourceFrom;
+
+    /**
+     * @var string Resource extra configuration
+     */
+    public $ResourceConfig;
+
+    /**
      * @param string $EnvironmentId Environment ID
      * @param string $ResourceType Resource type. Valid values: `CFS` (file system), `CLS` (log service), `TSE_SRE` (registry)
      * @param string $ResourceId Resource ID
      * @param integer $SourceChannel Source channel
+     * @param string $ResourceFrom Source of the resource. Values: `existing` (choose an existing resource), `creating` (create a new resource)
+     * @param string $ResourceConfig Resource extra configuration
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class CreateResourceRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("ResourceFrom",$param) and $param["ResourceFrom"] !== null) {
+            $this->ResourceFrom = $param["ResourceFrom"];
+        }
+
+        if (array_key_exists("ResourceConfig",$param) and $param["ResourceConfig"] !== null) {
+            $this->ResourceConfig = $param["ResourceConfig"];
         }
     }
 }

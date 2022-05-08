@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
  * @method integer getRouteId() Obtain Route ID
  * @method void setRouteId(integer $RouteId) Set Route ID
- * @method integer getVipType() Obtain VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
- * @method void setVipType(integer $VipType) Set VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+ * @method integer getVipType() Obtain VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
+ * @method void setVipType(integer $VipType) Set VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
  * @method array getVipList() Obtain Virtual IP list
  * @method void setVipList(array $VipList) Set Virtual IP list
  * @method string getDomain() Obtain Domain name
@@ -66,7 +66,7 @@ class Route extends AbstractModel
     public $RouteId;
 
     /**
-     * @var integer VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+     * @var integer VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
      */
     public $VipType;
 
@@ -100,7 +100,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 2: SSL (SSL-encrypted communication, which does not carry user information and is supported for legacy versions and Community Edition)
 3: SASL_SSL (SSL-encrypted communication, which authenticates the login through SASL before data start and is supported only for Community Edition)
      * @param integer $RouteId Route ID
-     * @param integer $VipType VIP network type (1: public network TGW; 2: classic network; 3: VPC; 4: supporting network (Standard Edition); 5: SSL public network access; 6: BM VPC; 7: supporting network (Pro Edition))
+     * @param integer $VipType VIP network type (1: Public network TGW; 2: Classic network; 3: VPC; 4: Supporting network (IDC environment); 5: SSL public network access; 6: BM VPC; 7: Supporting network (CVM environment)).
      * @param array $VipList Virtual IP list
      * @param string $Domain Domain name
 Note: this field may return null, indicating that no valid values can be obtained.

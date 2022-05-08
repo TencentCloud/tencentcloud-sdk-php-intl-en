@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tdmq\V20200217\Models;
+namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Topic's key information
+ * Enable Prometheus monitoring
  *
- * @method string getEnvironmentId() Obtain Environment (namespace) name.
- * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
- * @method string getTopicName() Obtain Topic name.
- * @method void setTopicName(string $TopicName) Set Topic name.
+ * @method integer getPort() Obtain The listening port of the applicaiton
+ * @method void setPort(integer $Port) Set The listening port of the applicaiton
+ * @method string getPath() Obtain URL path for monitoring
+ * @method void setPath(string $Path) Set URL path for monitoring
  */
-class TopicRecord extends AbstractModel
+class EnablePrometheusConf extends AbstractModel
 {
     /**
-     * @var string Environment (namespace) name.
+     * @var integer The listening port of the applicaiton
      */
-    public $EnvironmentId;
+    public $Port;
 
     /**
-     * @var string Topic name.
+     * @var string URL path for monitoring
      */
-    public $TopicName;
+    public $Path;
 
     /**
-     * @param string $EnvironmentId Environment (namespace) name.
-     * @param string $TopicName Topic name.
+     * @param integer $Port The listening port of the applicaiton
+     * @param string $Path URL path for monitoring
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TopicRecord extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
-            $this->EnvironmentId = $param["EnvironmentId"];
+        if (array_key_exists("Port",$param) and $param["Port"] !== null) {
+            $this->Port = $param["Port"];
         }
 
-        if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
-            $this->TopicName = $param["TopicName"];
+        if (array_key_exists("Path",$param) and $param["Path"] !== null) {
+            $this->Path = $param["Path"];
         }
     }
 }

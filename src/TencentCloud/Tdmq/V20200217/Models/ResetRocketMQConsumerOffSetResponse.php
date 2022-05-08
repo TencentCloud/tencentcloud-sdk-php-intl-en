@@ -18,35 +18,19 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeRocketMQGroups response structure.
+ * ResetRocketMQConsumerOffSet response structure.
  *
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
- * @method array getGroups() Obtain List of subscription groups
- * @method void setGroups(array $Groups) Set List of subscription groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeRocketMQGroupsResponse extends AbstractModel
+class ResetRocketMQConsumerOffSetResponse extends AbstractModel
 {
-    /**
-     * @var integer Total number
-     */
-    public $TotalCount;
-
-    /**
-     * @var array List of subscription groups
-     */
-    public $Groups;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number
-     * @param array $Groups List of subscription groups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeRocketMQGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new RocketMQGroup();
-                $obj->deserialize($value);
-                array_push($this->Groups, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

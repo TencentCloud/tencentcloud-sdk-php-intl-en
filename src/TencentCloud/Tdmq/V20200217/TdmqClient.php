@@ -50,31 +50,17 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DeleteRocketMQNamespaceResponse DeleteRocketMQNamespace(Models\DeleteRocketMQNamespaceRequest $req) This API is used to delete a RocketMQ namespace.
  * @method Models\DeleteRocketMQTopicResponse DeleteRocketMQTopic(Models\DeleteRocketMQTopicRequest $req) This API is used to delete a RocketMQ topic.
  * @method Models\DeleteRolesResponse DeleteRoles(Models\DeleteRolesRequest $req) This API is used to delete one or multiple roles.
- * @method Models\DeleteSubscriptionsResponse DeleteSubscriptions(Models\DeleteSubscriptionsRequest $req) This API is used to delete a subscription.
- * @method Models\DeleteTopicsResponse DeleteTopics(Models\DeleteTopicsRequest $req) This API is used to batch delete topics.
- * @method Models\DescribeBindClustersResponse DescribeBindClusters(Models\DescribeBindClustersRequest $req) This API is used to get the list of dedicated clusters bound to a user.
  * @method Models\DescribeBindVpcsResponse DescribeBindVpcs(Models\DescribeBindVpcsRequest $req) This API is used to get the tenant-VPC binding relationship.
  * @method Models\DescribeClusterDetailResponse DescribeClusterDetail(Models\DescribeClusterDetailRequest $req) This API is used to get the details of a cluster.
- * @method Models\DescribeClustersResponse DescribeClusters(Models\DescribeClustersRequest $req) This API is used to get the list of clusters.
  * @method Models\DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueues(Models\DescribeCmqDeadLetterSourceQueuesRequest $req) This API is used to enumerate the source queues of a CMQ dead letter queue.
  * @method Models\DescribeCmqQueueDetailResponse DescribeCmqQueueDetail(Models\DescribeCmqQueueDetailRequest $req) This API is used to query the details of a CMQ queue.
- * @method Models\DescribeCmqQueuesResponse DescribeCmqQueues(Models\DescribeCmqQueuesRequest $req) This API is used to query all CMQ queues.
  * @method Models\DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetail(Models\DescribeCmqSubscriptionDetailRequest $req) This API is used to query the CMQ subscription details.
  * @method Models\DescribeCmqTopicDetailResponse DescribeCmqTopicDetail(Models\DescribeCmqTopicDetailRequest $req) This API is used to query the details of a CMQ topic.
- * @method Models\DescribeCmqTopicsResponse DescribeCmqTopics(Models\DescribeCmqTopicsRequest $req) This API is used to enumerate all CMQ topics.
  * @method Models\DescribeEnvironmentAttributesResponse DescribeEnvironmentAttributes(Models\DescribeEnvironmentAttributesRequest $req) This API is used to get the attributes of the specified namespace.
- * @method Models\DescribeEnvironmentRolesResponse DescribeEnvironmentRoles(Models\DescribeEnvironmentRolesRequest $req) This API is used to get the list of namespace roles.
- * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) This API is used to get the list of namespaces under a tenant.
  * @method Models\DescribePublisherSummaryResponse DescribePublisherSummary(Models\DescribePublisherSummaryRequest $req) This API is used to obtain message production overview information.
  * @method Models\DescribePublishersResponse DescribePublishers(Models\DescribePublishersRequest $req) This API is used to obtain the list of producer information.
  * @method Models\DescribeRocketMQClusterResponse DescribeRocketMQCluster(Models\DescribeRocketMQClusterRequest $req) This API is used to get the information of a specific RocketMQ cluster.
- * @method Models\DescribeRocketMQClustersResponse DescribeRocketMQClusters(Models\DescribeRocketMQClustersRequest $req) This API is used to get the list of RocketMQ clusters.
- * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) This API is used to get the list of RocketMQ consumer groups.
- * @method Models\DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(Models\DescribeRocketMQNamespacesRequest $req) This API is used to get the list of RocketMQ namespaces.
- * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) This API is used to get the list of RocketMQ topics.
  * @method Models\DescribeRolesResponse DescribeRoles(Models\DescribeRolesRequest $req) This API is used to get the list of roles.
- * @method Models\DescribeSubscriptionsResponse DescribeSubscriptions(Models\DescribeSubscriptionsRequest $req) This API is used to query the list of subscribers under the specified environment and topic.
- * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) This API is used to get the list of topics under an environment.
  * @method Models\ModifyClusterResponse ModifyCluster(Models\ModifyClusterRequest $req) This API is used to update a cluster.
  * @method Models\ModifyCmqQueueAttributeResponse ModifyCmqQueueAttribute(Models\ModifyCmqQueueAttributeRequest $req) This API is used to modify the attributes of a CMQ queue.
  * @method Models\ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttribute(Models\ModifyCmqSubscriptionAttributeRequest $req) This API is used to modify the attributes of a CMQ subscription.
@@ -90,6 +76,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\PublishCmqMsgResponse PublishCmqMsg(Models\PublishCmqMsgRequest $req) This API is used to send a CMQ topic message.
  * @method Models\ReceiveMessageResponse ReceiveMessage(Models\ReceiveMessageRequest $req) This API is used to receive messages sent to the specified topic.
  * @method Models\ResetMsgSubOffsetByTimestampResponse ResetMsgSubOffsetByTimestamp(Models\ResetMsgSubOffsetByTimestampRequest $req) This API is used to rewind a message by timestamp, accurate down to the millisecond.
+ * @method Models\ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSet(Models\ResetRocketMQConsumerOffSetRequest $req) This API is used to reset the consumption offset of a specified consumer group to a specified timestamp.
  * @method Models\RewindCmqQueueResponse RewindCmqQueue(Models\RewindCmqQueueRequest $req) This API is used to rewind a CMQ queue.
  * @method Models\SendBatchMessagesResponse SendBatchMessages(Models\SendBatchMessagesRequest $req) This API is used to batch send messages.
 

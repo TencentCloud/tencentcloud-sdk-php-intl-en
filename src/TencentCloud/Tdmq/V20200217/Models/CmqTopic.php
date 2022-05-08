@@ -80,6 +80,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setNamespaceName(string $NamespaceName) Set Namespace name
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class CmqTopic extends AbstractModel
 {
@@ -170,6 +174,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $NamespaceName;
 
     /**
+     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $TopicId Topic ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TopicName Topic name.
@@ -200,6 +210,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $NamespaceName Namespace name
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -273,6 +285,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("NamespaceName",$param) and $param["NamespaceName"] !== null) {
             $this->NamespaceName = $param["NamespaceName"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }
