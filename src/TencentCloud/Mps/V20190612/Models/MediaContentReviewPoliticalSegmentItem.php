@@ -18,78 +18,78 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Suspected politically sensitive segment identified during content audit
+ * The information about the sensitive segments detected.
  *
  * @method float getStartTimeOffset() Obtain Start time offset of a suspected segment in seconds.
  * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a suspected segment in seconds.
  * @method float getEndTimeOffset() Obtain End time offset of a suspected segment in seconds.
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End time offset of a suspected segment in seconds.
- * @method float getConfidence() Obtain Score of a suspected politically sensitive segment.
- * @method void setConfidence(float $Confidence) Set Score of a suspected politically sensitive segment.
- * @method string getSuggestion() Obtain Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method string getName() Obtain Name of a politically sensitive figure or violating photo.
- * @method void setName(string $Name) Set Name of a politically sensitive figure or violating photo.
- * @method string getLabel() Obtain Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+ * @method float getConfidence() Obtain The confidence score for the detected sensitive segments.
+ * @method void setConfidence(float $Confidence) Set The confidence score for the detected sensitive segments.
+ * @method string getSuggestion() Obtain The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method string getName() Obtain The name of a sensitive person or banned icon.
+ * @method void setName(string $Name) Set The name of a sensitive person or banned icon.
+ * @method string getLabel() Obtain The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
- * @method void setLabel(string $Label) Set Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+<li>sensitive_military (sensitive people in military)</li>
+ * @method void setLabel(string $Label) Set The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
  * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
  * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
- * @method array getAreaCoordSet() Obtain Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
- * @method void setAreaCoordSet(array $AreaCoordSet) Set Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+ * @method array getAreaCoordSet() Obtain The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
+ * @method void setAreaCoordSet(array $AreaCoordSet) Set The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
  * @method string getPicUrlExpireTime() Obtain Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  */
@@ -106,48 +106,48 @@ class MediaContentReviewPoliticalSegmentItem extends AbstractModel
     public $EndTimeOffset;
 
     /**
-     * @var float Score of a suspected politically sensitive segment.
+     * @var float The confidence score for the detected sensitive segments.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
     /**
-     * @var string Name of a politically sensitive figure or violating photo.
+     * @var string The name of a sensitive person or banned icon.
      */
     public $Name;
 
     /**
-     * @var string Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+     * @var string The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
      */
     public $Label;
 
@@ -158,7 +158,7 @@ military:
     public $Url;
 
     /**
-     * @var array Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * @var array The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      */
     public $AreaCoordSet;
 
@@ -170,39 +170,39 @@ military:
     /**
      * @param float $StartTimeOffset Start time offset of a suspected segment in seconds.
      * @param float $EndTimeOffset End time offset of a suspected segment in seconds.
-     * @param float $Confidence Score of a suspected politically sensitive segment.
-     * @param string $Suggestion Suggestion for politically sensitive information detection of a suspected segment. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param string $Name Name of a politically sensitive figure or violating photo.
-     * @param string $Label Tags for the results of politically sensitive information detection of suspected video segments. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) and this parameter is as follows:
+     * @param float $Confidence The confidence score for the detected sensitive segments.
+     * @param string $Suggestion The suggestion for handling the sensitive segments. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param string $Name The name of a sensitive person or banned icon.
+     * @param string $Label The labels for the detected sensitive segments. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#PoliticalImgReviewTemplateInfo) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 politician:
-<li>nation_politician: head of state/government;</li>
-<li>province_politician: province/state leader;</li>
-<li>bureau_politician: ministry leader;</li>
-<li>county_politician: county/city leader;</li>
-<li>rural_politician: town leader;</li>
-<li>sensitive_politician: politically sensitive figure.</li>
-<li>foreign_politician: head of a foreign country/government.</li>
+<li>nation_politician (state leader)</li>
+<li>province_politician (provincial officials)</li>
+<li>bureau_politician (bureau-level officials)</li>
+<li>county_politician (county-level officials)</li>
+<li>rural_politician (township-level officials)</li>
+<li>sensitive_politician (sensitive people)</li>
+<li>foreign_politician (state leaders of other countries)</li>
 entertainment:
-<li>sensitive_entertainment: sensitive entertainment celebrity.</li>
+<li>sensitive_entertainment (sensitive people in the entertainment industry</li>
 sport:
-<li>sensitive_sport: sensitive sports figure.</li>
+<li>sensitive_sport (sensitive sports celebrities)</li>
 entrepreneur:
-<li>sensitive_entrepreneur: sensitive business figure.</li>
+<li>sensitive_entrepreneur</li>
 scholar:
-<li>sensitive_scholar: sensitive educator.</li>
+<li>sensitive_scholar</li>
 celebrity:
-<li>sensitive_celebrity: sensitive well-known figure;</li>
-<li>historical_celebrity: well-known historical figure.</li>
+<li>sensitive_celebrity</li>
+<li>historical_celebrity (sensitive historical figures)</li>
 military:
-<li>sensitive_military: militarily sensitive figure.</li>
+<li>sensitive_military (sensitive people in military)</li>
      * @param string $Url URL of a suspected image (which will not be permanently stored
  and will be deleted after `PicUrlExpireTime`).
-     * @param array $AreaCoordSet Zone coordinates (at the pixel level) of a politically sensitive figure or violating photo: [x1, y1, x2, y2], i.e., the coordinates of the top-left and bottom-right corners.
+     * @param array $AreaCoordSet The coordinates (pixel) of the detected sensitive people or banned icons. The format is [x1, y1, x2, y2], which indicates the coordinates of the top-left and bottom-right corners.
      * @param string $PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */
     function __construct()

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of a terrorism information detection task during content audit
+ * The result of sensitive information detection.
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewTerrorismTaskInput getInput() Obtain Input for a terrorism information detection task during content audit.
- * @method void setInput(AiReviewTerrorismTaskInput $Input) Set Input for a terrorism information detection task during content audit.
- * @method AiReviewTerrorismTaskOutput getOutput() Obtain Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewTerrorismTaskInput getInput() Obtain The input parameter for sensitive information detection.
+ * @method void setInput(AiReviewTerrorismTaskInput $Input) Set The input parameter for sensitive information detection.
+ * @method AiReviewTerrorismTaskOutput getOutput() Obtain The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOutput(AiReviewTerrorismTaskOutput $Output) Set The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AiReviewTaskTerrorismResult extends AbstractModel
 {
@@ -58,13 +58,13 @@ class AiReviewTaskTerrorismResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewTerrorismTaskInput Input for a terrorism information detection task during content audit.
+     * @var AiReviewTerrorismTaskInput The input parameter for sensitive information detection.
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismTaskOutput Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewTerrorismTaskOutput The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -73,9 +73,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see [Error Code List](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
-     * @param AiReviewTerrorismTaskInput $Input Input for a terrorism information detection task during content audit.
-     * @param AiReviewTerrorismTaskOutput $Output Output of a terrorism information detection task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewTerrorismTaskInput $Input The input parameter for sensitive information detection.
+     * @param AiReviewTerrorismTaskOutput $Output The output of sensitive information detection.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

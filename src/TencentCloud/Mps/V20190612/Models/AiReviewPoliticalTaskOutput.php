@@ -18,72 +18,72 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Politically sensitive information
+ * The sensitive information detected.
  *
- * @method float getConfidence() Obtain Score of the detected politically sensitive information in video from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Score of the detected politically sensitive information in video from 0 to 100.
- * @method string getSuggestion() Obtain Suggestion for the detected politically sensitive information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for the detected politically sensitive information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method string getLabel() Obtain Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and this parameter is as follows:
+ * @method float getConfidence() Obtain The confidence score for the detection of sensitive information. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set The confidence score for the detection of sensitive information. Value range: 0-100.
+ * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method string getLabel() Obtain The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: political figure.</li>
- * @method void setLabel(string $Label) Set Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and this parameter is as follows:
+<li>politician</li>
+ * @method void setLabel(string $Label) Set The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: political figure.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain the detected politically sensitive information.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected politically sensitive information.
+<li>politician</li>
+ * @method array getSegmentSet() Obtain The video segments that contain sensitive information.
+ * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information.
  */
 class AiReviewPoliticalTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of the detected politically sensitive information in video from 0 to 100.
+     * @var float The confidence score for the detection of sensitive information. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for the detected politically sensitive information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
     /**
-     * @var string Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and this parameter is as follows:
+     * @var string The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: political figure.</li>
+<li>politician</li>
      */
     public $Label;
 
     /**
-     * @var array List of video segments that contain the detected politically sensitive information.
+     * @var array The video segments that contain sensitive information.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Score of the detected politically sensitive information in video from 0 to 100.
-     * @param string $Suggestion Suggestion for the detected politically sensitive information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param string $Label Tags for the results of video politically sensitive information detection. The relationship between the `LabelSet` parameter in the content audit template [controlling tasks of video politically sensitive information detection](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) and this parameter is as follows:
+     * @param float $Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * @param string $Suggestion The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param string $Label The labels for the detected sensitive content. The relationship between the values of this parameter and those of the `LabelSet` parameter in [PoliticalImgReviewTemplateInfo](https://intl.cloud.tencent.com/document/api/862/37615?from_cn_redirect=1#AiReviewPoliticalTaskOutput) is as follows:
 violation_photo:
-<li>violation_photo: violating photo.</li>
+<li>violation_photo (banned icons)</li>
 Other values (politician/entertainment/sport/entrepreneur/scholar/celebrity/military):
-<li>politician: political figure.</li>
-     * @param array $SegmentSet List of video segments that contain the detected politically sensitive information.
+<li>politician</li>
+     * @param array $SegmentSet The video segments that contain sensitive information.
      */
     function __construct()
     {

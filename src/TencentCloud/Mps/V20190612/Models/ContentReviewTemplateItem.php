@@ -30,14 +30,14 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Porn information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTerrorismConfigure(TerrorismConfigureInfo $TerrorismConfigure) Set The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method PoliticalConfigureInfo getPoliticalConfigure() Obtain The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPoliticalConfigure(PoliticalConfigureInfo $PoliticalConfigure) Set The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method ProhibitedConfigureInfo getProhibitedConfigure() Obtain Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>
@@ -79,14 +79,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PornConfigure;
 
     /**
-     * @var TerrorismConfigureInfo Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TerrorismConfigureInfo The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $TerrorismConfigure;
 
     /**
-     * @var PoliticalConfigureInfo Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var PoliticalConfigureInfo The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $PoliticalConfigure;
 
@@ -120,10 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Comment Description of a content audit template. Length limit: 256 characters.
      * @param PornConfigureInfo $PornConfigure Porn information detection control parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismConfigureInfo $TerrorismConfigure Terrorism information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PoliticalConfigureInfo $PoliticalConfigure Politically sensitive information detection control parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TerrorismConfigureInfo $TerrorismConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param PoliticalConfigureInfo $PoliticalConfigure The parameters for detecting sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param ProhibitedConfigureInfo $ProhibitedConfigure Control parameter of prohibited information detection. Prohibited information includes:
 <li>Abusive;</li>
 <li>Drug-related.</li>

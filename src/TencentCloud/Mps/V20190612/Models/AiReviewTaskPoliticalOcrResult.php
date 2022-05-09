@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of an OCR-based politically sensitive information detection in text task during content audit
+ * The result of OCR-based detection of politically sensitive information.
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -30,12 +30,12 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AiReviewPoliticalOcrTaskInput getInput() Obtain Input for an OCR-based politically sensitive information detection in text task during content audit.
- * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set Input for an OCR-based politically sensitive information detection in text task during content audit.
- * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPoliticalOcrTaskInput getInput() Obtain The input parameter for OCR-based detection of politically sensitive information.
+ * @method void setInput(AiReviewPoliticalOcrTaskInput $Input) Set The input parameter for OCR-based detection of politically sensitive information.
+ * @method AiReviewPoliticalOcrTaskOutput getOutput() Obtain The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOutput(AiReviewPoliticalOcrTaskOutput $Output) Set The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AiReviewTaskPoliticalOcrResult extends AbstractModel
 {
@@ -61,13 +61,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var AiReviewPoliticalOcrTaskInput Input for an OCR-based politically sensitive information detection in text task during content audit.
+     * @var AiReviewPoliticalOcrTaskInput The input parameter for OCR-based detection of politically sensitive information.
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalOcrTaskOutput Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPoliticalOcrTaskOutput The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -77,9 +77,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AiReviewPoliticalOcrTaskInput $Input Input for an OCR-based politically sensitive information detection in text task during content audit.
-     * @param AiReviewPoliticalOcrTaskOutput $Output Output of an OCR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPoliticalOcrTaskInput $Input The input parameter for OCR-based detection of politically sensitive information.
+     * @param AiReviewPoliticalOcrTaskOutput $Output The output of OCR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

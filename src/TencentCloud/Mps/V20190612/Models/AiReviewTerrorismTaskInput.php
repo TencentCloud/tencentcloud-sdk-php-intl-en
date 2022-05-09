@@ -18,20 +18,20 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input parameter type of a terrorism information detection task during content audit
+ * The input parameter for the detection of sensitive information.
  *
- * @method integer getDefinition() Obtain ID of a terrorism information detection template.
- * @method void setDefinition(integer $Definition) Set ID of a terrorism information detection template.
+ * @method integer getDefinition() Obtain The template ID.
+ * @method void setDefinition(integer $Definition) Set The template ID.
  */
 class AiReviewTerrorismTaskInput extends AbstractModel
 {
     /**
-     * @var integer ID of a terrorism information detection template.
+     * @var integer The template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition ID of a terrorism information detection template.
+     * @param integer $Definition The template ID.
      */
     function __construct()
     {

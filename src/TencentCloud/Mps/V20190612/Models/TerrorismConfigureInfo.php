@@ -18,32 +18,28 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a terrorism information detection task
+ * The parameters for detecting sensitive information.
  *
- * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain Control parameter of terrorism information detection in text task.
- * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set Control parameter of terrorism information detection in text task.
+ * @method TerrorismImgReviewTemplateInfo getImgReviewInfo() Obtain The parameters for detecting sensitive information in images.
+ * @method void setImgReviewInfo(TerrorismImgReviewTemplateInfo $ImgReviewInfo) Set The parameters for detecting sensitive information in images.
+ * @method TerrorismOcrReviewTemplateInfo getOcrReviewInfo() Obtain The parameters for detecting sensitive information based on OCR.
+ * @method void setOcrReviewInfo(TerrorismOcrReviewTemplateInfo $OcrReviewInfo) Set The parameters for detecting sensitive information based on OCR.
  */
 class TerrorismConfigureInfo extends AbstractModel
 {
     /**
-     * @var TerrorismImgReviewTemplateInfo Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TerrorismImgReviewTemplateInfo The parameters for detecting sensitive information in images.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var TerrorismOcrReviewTemplateInfo Control parameter of terrorism information detection in text task.
+     * @var TerrorismOcrReviewTemplateInfo The parameters for detecting sensitive information based on OCR.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo Control parameter of a terrorism information detection in image task.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo Control parameter of terrorism information detection in text task.
+     * @param TerrorismImgReviewTemplateInfo $ImgReviewInfo The parameters for detecting sensitive information in images.
+     * @param TerrorismOcrReviewTemplateInfo $OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     function __construct()
     {

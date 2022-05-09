@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of OCR-based terrorism information detection in text task in content audit
+ * The result of OCR-based detection of terrorism content.
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
 <li>70000: internal service error. Please try again.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewTerrorismOcrTaskInput getInput() Obtain Input of OCR-based terrorism information detection in text task in content audit.
- * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set Input of OCR-based terrorism information detection in text task in content audit.
- * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain Output of OCR-based terrorism information detection in text task in content audit.
- * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set Output of OCR-based terrorism information detection in text task in content audit.
+ * @method AiReviewTerrorismOcrTaskInput getInput() Obtain The input parameter for OCR-based detection of terrorism content.
+ * @method void setInput(AiReviewTerrorismOcrTaskInput $Input) Set The input parameter for OCR-based detection of terrorism content.
+ * @method AiReviewTerrorismOcrTaskOutput getOutput() Obtain The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOutput(AiReviewTerrorismOcrTaskOutput $Output) Set The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AiReviewTaskTerrorismOcrResult extends AbstractModel
 {
@@ -65,12 +67,13 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewTerrorismOcrTaskInput Input of OCR-based terrorism information detection in text task in content audit.
+     * @var AiReviewTerrorismOcrTaskInput The input parameter for OCR-based detection of terrorism content.
      */
     public $Input;
 
     /**
-     * @var AiReviewTerrorismOcrTaskOutput Output of OCR-based terrorism information detection in text task in content audit.
+     * @var AiReviewTerrorismOcrTaskOutput The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -82,8 +85,9 @@ class AiReviewTaskTerrorismOcrResult extends AbstractModel
 <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
 <li>70000: internal service error. Please try again.</li>
      * @param string $Message Error message.
-     * @param AiReviewTerrorismOcrTaskInput $Input Input of OCR-based terrorism information detection in text task in content audit.
-     * @param AiReviewTerrorismOcrTaskOutput $Output Output of OCR-based terrorism information detection in text task in content audit.
+     * @param AiReviewTerrorismOcrTaskInput $Input The input parameter for OCR-based detection of terrorism content.
+     * @param AiReviewTerrorismOcrTaskOutput $Output The output of OCR-based detection of terrorism content.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

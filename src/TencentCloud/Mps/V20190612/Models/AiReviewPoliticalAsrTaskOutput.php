@@ -18,48 +18,48 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ASR-detected politically sensitive information in text
+ * The information about the sensitive content detected based on ASR.
  *
- * @method float getConfidence() Obtain Score of the ASR-detected politically sensitive information in text from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Score of the ASR-detected politically sensitive information in text from 0 to 100.
- * @method string getSuggestion() Obtain Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method array getSegmentSet() Obtain List of video segments that contain ASR-detected politically sensitive information in text.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain ASR-detected politically sensitive information in text.
+ * @method float getConfidence() Obtain The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
+ * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method array getSegmentSet() Obtain The video segments that contain sensitive information detected based on ASR.
+ * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information detected based on ASR.
  */
 class AiReviewPoliticalAsrTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of the ASR-detected politically sensitive information in text from 0 to 100.
+     * @var float The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
     /**
-     * @var array List of video segments that contain ASR-detected politically sensitive information in text.
+     * @var array The video segments that contain sensitive information detected based on ASR.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Score of the ASR-detected politically sensitive information in text from 0 to 100.
-     * @param string $Suggestion Suggestion for the ASR-detected politically sensitive information in text. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param array $SegmentSet List of video segments that contain ASR-detected politically sensitive information in text.
+     * @param float $Confidence The confidence score for the ASR-based detection of sensitive information. Value range: 0-100.
+     * @param string $Suggestion The suggestion for handling the sensitive information detected based on ASR. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param array $SegmentSet The video segments that contain sensitive information detected based on ASR.
      */
     function __construct()
     {

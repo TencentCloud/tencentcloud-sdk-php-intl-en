@@ -18,92 +18,92 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Terrorism information
+ * The information about the sensitive content detected.
  *
- * @method float getConfidence() Obtain Score of the detected terrorism information in a video from 0 to 100.
- * @method void setConfidence(float $Confidence) Set Score of the detected terrorism information in a video from 0 to 100.
- * @method string getSuggestion() Obtain Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
- * @method string getLabel() Obtain Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
- * @method void setLabel(string $Label) Set Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
- * @method array getSegmentSet() Obtain List of video segments that contain the detected terrorism information.
- * @method void setSegmentSet(array $SegmentSet) Set List of video segments that contain the detected terrorism information.
+ * @method float getConfidence() Obtain The confidence score for the detection of sensitive information. Value range: 0-100.
+ * @method void setConfidence(float $Confidence) Set The confidence score for the detection of sensitive information. Value range: 0-100.
+ * @method string getSuggestion() Obtain The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+ * @method string getLabel() Obtain The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+ * @method void setLabel(string $Label) Set The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+ * @method array getSegmentSet() Obtain The video segments that contain sensitive information.
+ * @method void setSegmentSet(array $SegmentSet) Set The video segments that contain sensitive information.
  */
 class AiReviewTerrorismTaskOutput extends AbstractModel
 {
     /**
-     * @var float Score of the detected terrorism information in a video from 0 to 100.
+     * @var float The confidence score for the detection of sensitive information. Value range: 0-100.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
+     * @var string The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
      */
     public $Suggestion;
 
     /**
-     * @var string Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
+     * @var string The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
      */
     public $Label;
 
     /**
-     * @var array List of video segments that contain the detected terrorism information.
+     * @var array The video segments that contain sensitive information.
      */
     public $SegmentSet;
 
     /**
-     * @param float $Confidence Score of the detected terrorism information in a video from 0 to 100.
-     * @param string $Suggestion Suggestion for the detected terrorism information. Valid values:
-<li>pass.</li>
-<li>review.</li>
-<li>block.</li>
-     * @param string $Label Tags for detected terrorism information in a video. Valid values:
-<li>`guns`: weapons and guns</li>
-<li>`crowd`: crowds</li>
-<li>`police`: police forces</li>
-<li>`bloody`: bloodiness</li>
-<li>`banners`: terrorism flags</li>
-<li>`militant`: militants</li>
-<li>`explosion`: explosions and fires</li>
-<li>`terrorists`: terrorists</li>
-<li>`scenario`: terrorism images</li>
-     * @param array $SegmentSet List of video segments that contain the detected terrorism information.
+     * @param float $Confidence The confidence score for the detection of sensitive information. Value range: 0-100.
+     * @param string $Suggestion The suggestion for handling the sensitive information detected. Valid values:
+<li>pass</li>
+<li>review</li>
+<li>block</li>
+     * @param string $Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+<li>scenario (sensitive scenes) </li>
+     * @param array $SegmentSet The video segments that contain sensitive information.
      */
     function __construct()
     {

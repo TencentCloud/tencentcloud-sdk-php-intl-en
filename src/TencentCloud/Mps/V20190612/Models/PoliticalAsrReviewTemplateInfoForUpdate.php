@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a politically sensitive information detection in speech task.
+ * The parameters for detecting sensitive information based on ASR.
  *
- * @method string getSwitch() Obtain Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
- * @method void setSwitch(string $Switch) Set Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+ * @method string getSwitch() Obtain Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class PoliticalAsrReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+     * @var string Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public $Switch;
 
@@ -51,9 +51,9 @@ class PoliticalAsrReviewTemplateInfoForUpdate extends AbstractModel
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of a politically sensitive information detection in speech task. Valid values:
-<li>ON: Enables a politically sensitive information detection in speech task;</li>
-<li>OFF: Disables a politically sensitive information detection in speech task.</li>
+     * @param string $Switch Whether to detect sensitive information based on ASR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. Value range: 0-100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. Value range: 0-100.
      */

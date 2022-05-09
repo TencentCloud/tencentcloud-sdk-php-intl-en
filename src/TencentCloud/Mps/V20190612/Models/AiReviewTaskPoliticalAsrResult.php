@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result type of an ASR-based politically sensitive information detection in text task during content audit
+ * The result of ASR-based detection of politically sensitive information.
  *
  * @method string getStatus() Obtain Task status. Valid values: PROCESSING, SUCCESS, FAIL.
  * @method void setStatus(string $Status) Set Task status. Valid values: PROCESSING, SUCCESS, FAIL.
@@ -28,12 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method AiReviewPoliticalAsrTaskInput getInput() Obtain Input for an ASR-based politically sensitive information detection in text task during content audit.
- * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) Set Input for an ASR-based politically sensitive information detection in text task during content audit.
- * @method AiReviewPoliticalAsrTaskOutput getOutput() Obtain Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) Set Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiReviewPoliticalAsrTaskInput getInput() Obtain The input parameter for ASR-based detection of politically sensitive information.
+ * @method void setInput(AiReviewPoliticalAsrTaskInput $Input) Set The input parameter for ASR-based detection of politically sensitive information.
+ * @method AiReviewPoliticalAsrTaskOutput getOutput() Obtain The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOutput(AiReviewPoliticalAsrTaskOutput $Output) Set The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AiReviewTaskPoliticalAsrResult extends AbstractModel
 {
@@ -58,13 +58,13 @@ class AiReviewTaskPoliticalAsrResult extends AbstractModel
     public $Message;
 
     /**
-     * @var AiReviewPoliticalAsrTaskInput Input for an ASR-based politically sensitive information detection in text task during content audit.
+     * @var AiReviewPoliticalAsrTaskInput The input parameter for ASR-based detection of politically sensitive information.
      */
     public $Input;
 
     /**
-     * @var AiReviewPoliticalAsrTaskOutput Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var AiReviewPoliticalAsrTaskOutput The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Output;
 
@@ -73,9 +73,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; otherwise it is failed. For details about the values, see the list of [Error Codes](https://intl.cloud.tencent.com/document/product/862/50369?from_cn_redirect=1#.E8.A7.86.E9.A2.91.E5.A4.84.E7.90.86.E7.B1.BB.E9.94.99.E8.AF.AF.E7.A0.81).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; otherwise it is failed. This parameter is no longer recommended. Consider using the new error code parameter ErrCodeExt.
      * @param string $Message Error message.
-     * @param AiReviewPoliticalAsrTaskInput $Input Input for an ASR-based politically sensitive information detection in text task during content audit.
-     * @param AiReviewPoliticalAsrTaskOutput $Output Output of an ASR-based politically sensitive information detection in text task during content audit.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiReviewPoliticalAsrTaskInput $Input The input parameter for ASR-based detection of politically sensitive information.
+     * @param AiReviewPoliticalAsrTaskOutput $Output The output of ASR-based detection of politically sensitive information.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -35,17 +35,18 @@ use TencentCloud\Mps\V20190612\Models as Models;
  * @method Models\CreateTranscodeTemplateResponse CreateTranscodeTemplate(Models\CreateTranscodeTemplateRequest $req) This API is used to create a custom transcoding template. Up to 1,000 templates can be created.
  * @method Models\CreateWatermarkTemplateResponse CreateWatermarkTemplate(Models\CreateWatermarkTemplateRequest $req) This API is used to create a custom watermarking template. Up to 1,000 templates can be created.
  * @method Models\CreateWordSamplesResponse CreateWordSamples(Models\CreateWordSamplesRequest $req) This API is used to create keyword samples in batches for video processing operations such as content recognition and inappropriate information detection with the help of the OCR and ASR technologies.
- * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) This API is used to set a processing rule for media files uploaded to the specified directory of a COS bucket, including:
-1. Video transcoding (with watermark);
-2. Animated image generating;
-3. Time point screencapturing;
-4. Sampled screencapturing;
-5. Image sprite generating;
-6. Video conversion to adaptive bitrate streaming;
-7. Intelligent content audit (detection of porn, terrorism, and politically sensitive information);
-8. Intelligent content recognition (face recognition, full text recognition, text keyword recognition, full speech recognition, and speech keyword recognition).
+ * @method Models\CreateWorkflowResponse CreateWorkflow(Models\CreateWorkflowRequest $req) This API is used to create a workflow for media files uploaded to a specified COS bucket. A workflow may include the following tasks:
+1. Video transcoding (with watermark)
+2. Animated image generating
+3. Time point screencapturing
+4. Sampled screencapturing
+5. Image sprite generating
+6. Adaptive bitrate streaming
+7. Intelligent content moderation (detection of pornographic and sensitive content)
+8. Intelligent content analysis (labeling, categorization, thumbnail generation, frame-specific labeling)
+9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
 
-Note: Once successfully created, a workflow is disabled by default and needs to be enabled manually.
+Note: A workflow is disabled upon creation. You need to manually enable it.
  * @method Models\DeleteAIAnalysisTemplateResponse DeleteAIAnalysisTemplate(Models\DeleteAIAnalysisTemplateRequest $req) This API is used to delete a custom content analysis template.
 
 Note: templates with an ID below 10000 are preset and cannot be deleted.
@@ -106,21 +107,22 @@ Note: templates with an ID below 10000 are preset and cannot be modified.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
  * @method Models\ParseNotificationResponse ParseNotification(Models\ParseNotificationRequest $req) This API is used to parse the content of an MPS event notification from the `msgBody` field in the message received from CMQ.
 Instead of initiating a video processing task, this API is used to help generate SDKs for various programming languages. You can parse the event notification based on the analytic function of the SDKs.
- * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate tasks to process live streaming media files. Such tasks include:
+ * @method Models\ProcessLiveStreamResponse ProcessLiveStream(Models\ProcessLiveStreamRequest $req) This API is used to initiate live stream processing tasks. Such tasks may include the following:
 
-* Intelligent content moderation (detecting porn, terrorism, and politically sensitive information in image and porn information in speech)
+* Intelligent content moderation (detection of pornographic content in images and speech, detection of sensitive information)
 * Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
 
 Live stream processing event notifications are written into specified CMQ queues in real time. Users need to obtain event notification results from such CMQ queues. Output files of the processing tasks are written into destination buckets specified by users.
- * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a processing task for media files in COS, including:
-1. Video transcoding (with watermark);
-2. Animated image generating;
-3. Time point screencapturing;
-4. Sampled screencapturing;
-5. Image sprite generating;
-6. Video conversion to adaptive bitrate streaming;
-7. Intelligent content audit (detection of porn, terrorism, and politically sensitive information);
-8. Intelligent content recognition (face recognition, full text recognition, text keyword recognition, full speech recognition, and speech keyword recognition).
+ * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate processing tasks for media files in COS. Such tasks may include the following:
+1. Video transcoding (with watermark)
+2. Animated image generating
+3. Time point screencapturing
+4. Sampled screencapturing
+5. Image sprite generating
+6. Adaptive bitrate streaming
+7. Intelligent content moderation (detection of pornographic and sensitive content)
+8. Intelligent content analysis (labeling, categorization, thumbnail generation, frame-specific labeling)
+9. Intelligent content recognition (face, full text, text keyword, full speech, and speech keyword)
  * @method Models\ResetWorkflowResponse ResetWorkflow(Models\ResetWorkflowRequest $req) This API is used to reset an existing workflow that is disabled.
  */
 

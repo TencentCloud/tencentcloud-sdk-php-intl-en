@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Result of AI-based live stream audit
  *
- * @method string getType() Obtain Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
- * @method void setType(string $Type) Set Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+ * @method string getType() Obtain The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
+ * @method void setType(string $Type) Set The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
  * @method array getImagePornResultSet() Obtain Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
  * @method void setImagePornResultSet(array $ImagePornResultSet) Set Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
- * @method array getImageTerrorismResultSet() Obtain Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
- * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) Set Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
- * @method array getImagePoliticalResultSet() Obtain Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
- * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+ * @method array getImageTerrorismResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+ * @method void setImageTerrorismResultSet(array $ImageTerrorismResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+ * @method array getImagePoliticalResultSet() Obtain The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
+ * @method void setImagePoliticalResultSet(array $ImagePoliticalResultSet) Set The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
  * @method array getVoicePornResultSet() Obtain Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
  * @method void setVoicePornResultSet(array $VoicePornResultSet) Set Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
  */
 class LiveStreamAiReviewResultItem extends AbstractModel
 {
     /**
-     * @var string Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+     * @var string The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
      */
     public $Type;
 
@@ -56,12 +56,12 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     public $ImagePornResultSet;
 
     /**
-     * @var array Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
+     * @var array The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
      */
     public $ImageTerrorismResultSet;
 
     /**
-     * @var array Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+     * @var array The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
      */
     public $ImagePoliticalResultSet;
 
@@ -71,14 +71,14 @@ class LiveStreamAiReviewResultItem extends AbstractModel
     public $VoicePornResultSet;
 
     /**
-     * @param string $Type Content audit type. Valid values:
-<li>ImagePorn: Porn information detection in image</li>
-<li>ImageTerrorism: Terrorism information detection in image</li>
-<li>ImagePolitical: Politically sensitive information detection in image</li>
-<li>PornVoice: Porn information detection in speech</li>
+     * @param string $Type The type of the moderation result. Valid values:
+<li>ImagePorn</li>
+<li>ImageTerrorism</li>
+<li>ImagePolitical</li>
+<li>PornVoice (pornographic content in speech)</li>
      * @param array $ImagePornResultSet Result of porn information detection in image, which is valid when `Type` is `ImagePorn`.
-     * @param array $ImageTerrorismResultSet Result of terrorism information detection in image, which is valid when `Type` is `ImageTerrorism`.
-     * @param array $ImagePoliticalResultSet Result of politically sensitive information detection in image, which is valid when `Type` is `ImagePolitical`.
+     * @param array $ImageTerrorismResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImageTerrorism`.
+     * @param array $ImagePoliticalResultSet The result of detecting sensitive information in images, which is valid if `Type` is `ImagePolitical`.
      * @param array $VoicePornResultSet Result of porn information detection in speech, which is valid when `Type` is `PornVoice`.
      */
     function __construct()

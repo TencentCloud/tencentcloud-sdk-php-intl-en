@@ -18,40 +18,40 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Result of terrorism information detection in image in AI-based live stream content audit
+ * The result of detecting sensitive information in live streaming videos.
  *
  * @method float getStartPtsTime() Obtain Start PTS time of a suspected segment in seconds.
  * @method void setStartPtsTime(float $StartPtsTime) Set Start PTS time of a suspected segment in seconds.
  * @method float getEndPtsTime() Obtain End PTS time of a suspected segment in seconds.
  * @method void setEndPtsTime(float $EndPtsTime) Set End PTS time of a suspected segment in seconds.
- * @method float getConfidence() Obtain Score of a suspected terrorism segment.
- * @method void setConfidence(float $Confidence) Set Score of a suspected terrorism segment.
- * @method string getSuggestion() Obtain Suggestion for terrorism information detection of a suspected segment. Valid values:
+ * @method float getConfidence() Obtain The confidence score for the detected sensitive segments.
+ * @method void setConfidence(float $Confidence) Set The confidence score for the detected sensitive segments.
+ * @method string getSuggestion() Obtain The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set Suggestion for terrorism information detection of a suspected segment. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
- * @method void setLabel(string $Label) Set Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+ * @method string getLabel() Obtain The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
+ * @method void setLabel(string $Label) Set The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
  * @method string getUrl() Obtain URL of a suspected image (which will not be permanently stored
 and will be deleted after `PicUrlExpireTime`).
  * @method void setUrl(string $Url) Set URL of a suspected image (which will not be permanently stored
@@ -72,12 +72,12 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $EndPtsTime;
 
     /**
-     * @var float Score of a suspected terrorism segment.
+     * @var float The confidence score for the detected sensitive segments.
      */
     public $Confidence;
 
     /**
-     * @var string Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * @var string The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -85,15 +85,15 @@ class LiveStreamAiReviewImageTerrorismResult extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * @var string The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
      */
     public $Label;
 
@@ -111,20 +111,20 @@ and will be deleted after `PicUrlExpireTime`).
     /**
      * @param float $StartPtsTime Start PTS time of a suspected segment in seconds.
      * @param float $EndPtsTime End PTS time of a suspected segment in seconds.
-     * @param float $Confidence Score of a suspected terrorism segment.
-     * @param string $Suggestion Suggestion for terrorism information detection of a suspected segment. Valid values:
+     * @param float $Confidence The confidence score for the detected sensitive segments.
+     * @param string $Suggestion The suggestion for handling the sensitive segments. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label Tag of the detected terrorism information in a video. Valid values:
-<li>guns: Weapons and guns.</li>
-<li>crowd: Crowd.</li>
-<li>police: Police force.</li>
-<li>bloody: Bloody scenes.</li>
-<li>banners: Terrorism flags.</li>
-<li>militant: Militants.</li>
-<li>explosion: Explosions and fires.</li>
-<li>terrorists: Terrorists.</li>
+     * @param string $Label The labels for the detected sensitive content. Valid values:
+<li>guns</li>
+<li>crowd</li>
+<li>police</li>
+<li>bloody</li>
+<li>banners (sensitive flags)</li>
+<li>militant</li>
+<li>explosion</li>
+<li>terrorists</li>
      * @param string $Url URL of a suspected image (which will not be permanently stored
 and will be deleted after `PicUrlExpireTime`).
      * @param string $PicUrlExpireTime Expiration time of a suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).

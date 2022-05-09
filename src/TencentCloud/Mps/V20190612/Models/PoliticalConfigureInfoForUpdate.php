@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of a politically sensitive information detection task.
+ * The parameters for detecting sensitive information.
  *
- * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain Control parameter of politically sensitive information detection in image.
- * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set Control parameter of politically sensitive information detection in image.
- * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain Control parameter of politically sensitive information detection in speech.
- * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set Control parameter of politically sensitive information detection in speech.
- * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain Control parameter of politically sensitive information detection in text.
- * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set Control parameter of politically sensitive information detection in text.
+ * @method PoliticalImgReviewTemplateInfoForUpdate getImgReviewInfo() Obtain The parameters for detecting sensitive information in images.
+ * @method void setImgReviewInfo(PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo) Set The parameters for detecting sensitive information in images.
+ * @method PoliticalAsrReviewTemplateInfoForUpdate getAsrReviewInfo() Obtain The parameters for detecting sensitive information based on ASR.
+ * @method void setAsrReviewInfo(PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo) Set The parameters for detecting sensitive information based on ASR.
+ * @method PoliticalOcrReviewTemplateInfoForUpdate getOcrReviewInfo() Obtain The parameters for detecting sensitive information based on OCR.
+ * @method void setOcrReviewInfo(PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo) Set The parameters for detecting sensitive information based on OCR.
  */
 class PoliticalConfigureInfoForUpdate extends AbstractModel
 {
     /**
-     * @var PoliticalImgReviewTemplateInfoForUpdate Control parameter of politically sensitive information detection in image.
+     * @var PoliticalImgReviewTemplateInfoForUpdate The parameters for detecting sensitive information in images.
      */
     public $ImgReviewInfo;
 
     /**
-     * @var PoliticalAsrReviewTemplateInfoForUpdate Control parameter of politically sensitive information detection in speech.
+     * @var PoliticalAsrReviewTemplateInfoForUpdate The parameters for detecting sensitive information based on ASR.
      */
     public $AsrReviewInfo;
 
     /**
-     * @var PoliticalOcrReviewTemplateInfoForUpdate Control parameter of politically sensitive information detection in text.
+     * @var PoliticalOcrReviewTemplateInfoForUpdate The parameters for detecting sensitive information based on OCR.
      */
     public $OcrReviewInfo;
 
     /**
-     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo Control parameter of politically sensitive information detection in image.
-     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo Control parameter of politically sensitive information detection in speech.
-     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo Control parameter of politically sensitive information detection in text.
+     * @param PoliticalImgReviewTemplateInfoForUpdate $ImgReviewInfo The parameters for detecting sensitive information in images.
+     * @param PoliticalAsrReviewTemplateInfoForUpdate $AsrReviewInfo The parameters for detecting sensitive information based on ASR.
+     * @param PoliticalOcrReviewTemplateInfoForUpdate $OcrReviewInfo The parameters for detecting sensitive information based on OCR.
      */
     function __construct()
     {

@@ -18,14 +18,14 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Control parameter of terrorism information detection in text task
+ * The parameters for detecting sensitive information based on OCR.
  *
- * @method string getSwitch() Obtain Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
- * @method void setSwitch(string $Switch) Set Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+ * @method string getSwitch() Obtain Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
  * @method integer getBlockConfidence() Obtain Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
  * @method void setBlockConfidence(integer $BlockConfidence) Set Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
  * @method integer getReviewConfidence() Obtain Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
@@ -34,9 +34,9 @@ use TencentCloud\Common\AbstractModel;
 class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+     * @var string Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      */
     public $Switch;
 
@@ -51,9 +51,9 @@ class TerrorismOcrReviewTemplateInfoForUpdate extends AbstractModel
     public $ReviewConfidence;
 
     /**
-     * @param string $Switch Switch of terrorism information detection in text task. Valid values:
-<li>ON: enables terrorism information detection in text task;</li>
-<li>OFF: disables terrorism information detection in text task.</li>
+     * @param string $Switch Whether to detect sensitive information based on OCR. Valid values:
+<li>ON</li>
+<li>OFF</li>
      * @param integer $BlockConfidence Threshold score for violation. If this score is reached or exceeded during intelligent audit, it will be deemed that a suspected violation has occurred. If this parameter is left empty, 100 will be used by default. Value range: 0–100.
      * @param integer $ReviewConfidence Threshold score for human audit. If this score is reached or exceeded during intelligent audit, human audit will be considered necessary. If this parameter is left empty, 75 will be used by default. Value range: 0–100.
      */
