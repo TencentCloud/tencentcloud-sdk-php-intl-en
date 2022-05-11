@@ -29,8 +29,10 @@ For tasks in incremental migration mode, you need to call this API before migrat
 If the task status queried through the (DescribeMigrateJobs) API is ready (status=8), you can call this API to complete the migration task.
 
  * @method Models\CreateMigrateCheckJobResponse CreateMigrateCheckJob(Models\CreateMigrateCheckJobRequest $req) This API is used to create a migration check task.
-Before migration, you should call this API to create a check. Migration will start only if the check succeeds. You can view the check result through the DescribeMigrateCheckJob API.
+Before migration, you should call this API to create a check. Migration will start only if the check succeeds. You can view the check result through the `DescribeMigrateCheckJob` API.
 After successful check, if the migration task needs to be modified, a new check task should be created and migration will begin only after the new check succeeds.
+
+For a finance zone link, use the domain name https://dts.ap-shenzhen-fsi.tencentcloudapi.com.
  * @method Models\CreateMigrateJobResponse CreateMigrateJob(Models\CreateMigrateJobRequest $req) This API (CreateMigrateJob) is used to create a data migration task.
 
 For a finance zone linkage, please use the domain name dts.ap-shenzhen-fsi.tencentcloudapi.com.

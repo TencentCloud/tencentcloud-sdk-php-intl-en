@@ -50,6 +50,10 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
+ * @method string getSrcNodeType() Obtain Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+ * @method void setSrcNodeType(string $SrcNodeType) Set Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+ * @method array getSrcInfoMulti() Obtain Source instance information, which is correlated with the migration task type.
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) Set Source instance information, which is correlated with the migration task type.
  */
 class ModifyMigrateJobRequest extends AbstractModel
 {
@@ -101,6 +105,16 @@ This field does not need to be set when the entire instance is to be migrated
     public $DatabaseInfo;
 
     /**
+     * @var string Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public $SrcNodeType;
+
+    /**
+     * @var array Source instance information, which is correlated with the migration task type.
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobId ID of the data migration task to be modified
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
@@ -116,6 +130,8 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
 
 This field does not need to be set when the entire instance is to be migrated
+     * @param string $SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     * @param array $SrcInfoMulti Source instance information, which is correlated with the migration task type.
      */
     function __construct()
     {
@@ -163,6 +179,19 @@ This field does not need to be set when the entire instance is to be migrated
 
         if (array_key_exists("DatabaseInfo",$param) and $param["DatabaseInfo"] !== null) {
             $this->DatabaseInfo = $param["DatabaseInfo"];
+        }
+
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
+            }
         }
     }
 }

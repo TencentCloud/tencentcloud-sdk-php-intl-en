@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSrcInfoMulti() Obtain Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) Set Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class MigrateJobInfo extends AbstractModel
 {
@@ -146,6 +150,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Tags;
 
     /**
+     * @var array Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobId Data migration task ID
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
@@ -164,6 +174,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $ErrorInfo Prompt message for task error, which is not null or empty when an error occurs with the task
      * @param array $Tags Tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SrcInfoMulti Information of the source instance, a cluster edition instance whose access type is not `cdb`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -257,6 +269,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj = new TagItem();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
             }
         }
     }

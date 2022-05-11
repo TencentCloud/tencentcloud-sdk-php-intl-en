@@ -76,6 +76,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled. 0: do not enable, 1: enable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSubscribeVersion() Obtain Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+ * @method void setSubscribeVersion(string $SubscribeVersion) Set Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+ * @method array getErrors() Obtain Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setErrors(array $Errors) Set Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -214,6 +220,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AutoRenewFlag;
 
     /**
+     * @var string Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+     */
+    public $SubscribeVersion;
+
+    /**
+     * @var array Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Errors;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -247,6 +264,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $AutoRenewFlag Whether auto-renewal is enabled. 0: do not enable, 1: enable
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SubscribeVersion Data subscription edition. `txdts`: Legacy edition; `kafka`: Kafka edition.
+     * @param array $Errors Error message.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -374,6 +394,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
             $this->AutoRenewFlag = $param["AutoRenewFlag"];
+        }
+
+        if (array_key_exists("SubscribeVersion",$param) and $param["SubscribeVersion"] !== null) {
+            $this->SubscribeVersion = $param["SubscribeVersion"];
+        }
+
+        if (array_key_exists("Errors",$param) and $param["Errors"] !== null) {
+            $this->Errors = [];
+            foreach ($param["Errors"] as $key => $value){
+                $obj = new SubsErr();
+                $obj->deserialize($value);
+                array_push($this->Errors, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

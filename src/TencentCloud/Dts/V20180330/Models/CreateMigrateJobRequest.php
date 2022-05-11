@@ -48,6 +48,10 @@ For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
  * @method array getTags() Obtain Tag of the instance to be migrated.
  * @method void setTags(array $Tags) Set Tag of the instance to be migrated.
+ * @method string getSrcNodeType() Obtain Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+ * @method void setSrcNodeType(string $SrcNodeType) Set Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+ * @method array getSrcInfoMulti() Obtain Source instance information, which is correlated with the migration task type.
+ * @method void setSrcInfoMulti(array $SrcInfoMulti) Set Source instance information, which is correlated with the migration task type.
  */
 class CreateMigrateJobRequest extends AbstractModel
 {
@@ -106,6 +110,16 @@ For databases with a database-schema-table structure:
     public $Tags;
 
     /**
+     * @var string Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     */
+    public $SrcNodeType;
+
+    /**
+     * @var array Source instance information, which is correlated with the migration task type.
+     */
+    public $SrcInfoMulti;
+
+    /**
      * @param string $JobName Data migration task name
      * @param MigrateOption $MigrateOption Migration task configuration options
      * @param string $SrcDatabaseType Source instance database type, which currently supports MySQL, Redis, MongoDB, PostgreSQL, MariaDB, Percona, and SQL Server. For more information on the supported types in a specific region, see the migration task creation page in the console.
@@ -120,6 +134,8 @@ For databases with a database-table structure:
 For databases with a database-schema-table structure:
 [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
      * @param array $Tags Tag of the instance to be migrated.
+     * @param string $SrcNodeType Source instance type. `simple`: Primary/Secondary node; `cluster`: Cluster node. If this field is left empty, the value defaults to primary/secondary node.
+     * @param array $SrcInfoMulti Source instance information, which is correlated with the migration task type.
      */
     function __construct()
     {
@@ -179,6 +195,19 @@ For databases with a database-schema-table structure:
                 $obj = new TagItem();
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("SrcNodeType",$param) and $param["SrcNodeType"] !== null) {
+            $this->SrcNodeType = $param["SrcNodeType"];
+        }
+
+        if (array_key_exists("SrcInfoMulti",$param) and $param["SrcInfoMulti"] !== null) {
+            $this->SrcInfoMulti = [];
+            foreach ($param["SrcInfoMulti"] as $key => $value){
+                $obj = new SrcInfo();
+                $obj->deserialize($value);
+                array_push($this->SrcInfoMulti, $obj);
             }
         }
     }
