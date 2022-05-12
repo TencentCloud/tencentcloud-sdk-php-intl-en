@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLaunchConfigurations response structure.
+ * ReleaseWanAddress response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible launch configurations.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible launch configurations.
- * @method array getLaunchConfigurationSet() Obtain List of launch configuration details.
- * @method void setLaunchConfigurationSet(array $LaunchConfigurationSet) Set List of launch configuration details.
+ * @method integer getFlowId() Obtain Async task ID
+ * @method void setFlowId(integer $FlowId) Set Async task ID
+ * @method string getWanStatus() Obtain Status of disabling public network access
+ * @method void setWanStatus(string $WanStatus) Set Status of disabling public network access
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeLaunchConfigurationsResponse extends AbstractModel
+class ReleaseWanAddressResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible launch configurations.
+     * @var integer Async task ID
      */
-    public $TotalCount;
+    public $FlowId;
 
     /**
-     * @var array List of launch configuration details.
+     * @var string Status of disabling public network access
      */
-    public $LaunchConfigurationSet;
+    public $WanStatus;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DescribeLaunchConfigurationsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible launch configurations.
-     * @param array $LaunchConfigurationSet List of launch configuration details.
+     * @param integer $FlowId Async task ID
+     * @param string $WanStatus Status of disabling public network access
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +62,12 @@ class DescribeLaunchConfigurationsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
-        if (array_key_exists("LaunchConfigurationSet",$param) and $param["LaunchConfigurationSet"] !== null) {
-            $this->LaunchConfigurationSet = [];
-            foreach ($param["LaunchConfigurationSet"] as $key => $value){
-                $obj = new LaunchConfiguration();
-                $obj->deserialize($value);
-                array_push($this->LaunchConfigurationSet, $obj);
-            }
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

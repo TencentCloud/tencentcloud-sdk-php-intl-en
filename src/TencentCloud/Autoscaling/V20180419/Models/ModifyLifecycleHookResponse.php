@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\As\V20180419\Models;
+namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance tag. This parameter is used to bind tags to newly added instances.
+ * ModifyLifecycleHook response structure.
  *
- * @method string getKey() Obtain Tag key
- * @method void setKey(string $Key) Set Tag key
- * @method string getValue() Obtain Tag value
- * @method void setValue(string $Value) Set Tag value
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InstanceTag extends AbstractModel
+class ModifyLifecycleHookResponse extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $Key;
+    public $RequestId;
 
     /**
-     * @var string Tag value
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Tag key
-     * @param string $Value Tag value
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class InstanceTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

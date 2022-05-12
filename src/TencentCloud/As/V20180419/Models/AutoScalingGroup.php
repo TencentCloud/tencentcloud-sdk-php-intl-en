@@ -24,8 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
  * @method string getAutoScalingGroupName() Obtain Auto scaling group name
  * @method void setAutoScalingGroupName(string $AutoScalingGroupName) Set Auto scaling group name
- * @method string getAutoScalingGroupStatus() Obtain Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
- * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) Set Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+ * @method string getAutoScalingGroupStatus() Obtain Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
+ * @method void setAutoScalingGroupStatus(string $AutoScalingGroupStatus) Set Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
  * @method string getCreatedTime() Obtain Creation time in UTC format
  * @method void setCreatedTime(string $CreatedTime) Set Creation time in UTC format
  * @method integer getDefaultCooldown() Obtain Default cooldown period in seconds
@@ -110,7 +130,17 @@ class AutoScalingGroup extends AbstractModel
     public $AutoScalingGroupName;
 
     /**
-     * @var string Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+     * @var string Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
      */
     public $AutoScalingGroupStatus;
 
@@ -264,7 +294,17 @@ A valid value will be returned only when `InstanceAllocationPolicy` is set to `S
     /**
      * @param string $AutoScalingGroupId Auto scaling group ID
      * @param string $AutoScalingGroupName Auto scaling group name
-     * @param string $AutoScalingGroupStatus Current status of the auto scaling group. Value range: <br><li>NORMAL: normal <br><li>CVM_ABNORMAL: Exception with the launch configuration <br><li>LB_ABNORMAL: exception with the load balancer <br><li>VPC_ABNORMAL: exception with the VPC <br><li>INSUFFICIENT_BALANCE: insufficient balance <br><li>LB_BACKEND_REGION_NOT_MATCH: the backend region of the CLB instance is not the same as the one of AS service.<br>
+     * @param string $AutoScalingGroupStatus Current scaling group status. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>CVM_ABNORMAL: Abnormal launch configuration<br>
+<li>LB_ABNORMAL: Abnormal load balancer<br>
+<li>LB_LISTENER_ABNORMAL: Abnormal load balancer listener<br>
+<li>LB_LOCATION_ABNORMAL: Abnormal forwarding configuration of the load balancer listener<br>
+<li>VPC_ABNORMAL: VPC network error<br>
+<li>SUBNET_ABNORMAL: VPC subnet exception<br>
+<li>INSUFFICIENT_BALANCE: Insufficient account balance<br>
+<li>LB_BACKEND_REGION_NOT_MATCH: The CLB backend and the AS service are not in the same region.<br>
+<li>LB_BACKEND_VPC_NOT_MATCH: The CLB instance and the scaling group are not in the same VPC.
      * @param string $CreatedTime Creation time in UTC format
      * @param integer $DefaultCooldown Default cooldown period in seconds
      * @param integer $DesiredCapacity Desired number of instances

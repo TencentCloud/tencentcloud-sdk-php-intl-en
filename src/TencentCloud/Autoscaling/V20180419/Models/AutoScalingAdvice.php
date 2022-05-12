@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoScalingGroupId() Obtain Scaling group ID
  * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
+ * @method string getLevel() Obtain Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+ * @method void setLevel(string $Level) Set Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
  * @method array getAdvices() Obtain A collection of suggestions for scaling group configurations.
  * @method void setAdvices(array $Advices) Set A collection of suggestions for scaling group configurations.
  */
@@ -33,12 +41,24 @@ class AutoScalingAdvice extends AbstractModel
     public $AutoScalingGroupId;
 
     /**
+     * @var string Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
+     */
+    public $Level;
+
+    /**
      * @var array A collection of suggestions for scaling group configurations.
      */
     public $Advices;
 
     /**
      * @param string $AutoScalingGroupId Scaling group ID
+     * @param string $Level Scaling group warning level. Valid values:<br>
+<li>NORMAL: Normal<br>
+<li>WARNING: Warning<br>
+<li>CRITICAL: Serious warning<br>
      * @param array $Advices A collection of suggestions for scaling group configurations.
      */
     function __construct()
@@ -56,6 +76,10 @@ class AutoScalingAdvice extends AbstractModel
         }
         if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
             $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
 
         if (array_key_exists("Advices",$param) and $param["Advices"] !== null) {

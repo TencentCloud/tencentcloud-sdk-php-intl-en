@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScaleInInstances response structure.
+ * AllocateWanAddress response structure.
  *
- * @method string getActivityId() Obtain Scaling activity ID
- * @method void setActivityId(string $ActivityId) Set Scaling activity ID
+ * @method integer getFlowId() Obtain Async task ID
+ * @method void setFlowId(integer $FlowId) Set Async task ID
+ * @method string getWanStatus() Obtain Status of enabling public network access
+ * @method void setWanStatus(string $WanStatus) Set Status of enabling public network access
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ScaleInInstancesResponse extends AbstractModel
+class AllocateWanAddressResponse extends AbstractModel
 {
     /**
-     * @var string Scaling activity ID
+     * @var integer Async task ID
      */
-    public $ActivityId;
+    public $FlowId;
+
+    /**
+     * @var string Status of enabling public network access
+     */
+    public $WanStatus;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class ScaleInInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ActivityId Scaling activity ID
+     * @param integer $FlowId Async task ID
+     * @param string $WanStatus Status of enabling public network access
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,12 @@ class ScaleInInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
+        }
+
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

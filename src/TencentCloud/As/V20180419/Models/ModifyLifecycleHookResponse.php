@@ -18,27 +18,19 @@ namespace TencentCloud\As\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScaleOutInstances response structure.
+ * ModifyLifecycleHook response structure.
  *
- * @method string getActivityId() Obtain Scaling activity ID
- * @method void setActivityId(string $ActivityId) Set Scaling activity ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ScaleOutInstancesResponse extends AbstractModel
+class ModifyLifecycleHookResponse extends AbstractModel
 {
-    /**
-     * @var string Scaling activity ID
-     */
-    public $ActivityId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $ActivityId Scaling activity ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,10 +46,6 @@ class ScaleOutInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\As\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableAutoScalingGroup request structure.
+ * Tendis node information
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getNodeId() Obtain Node ID
+ * @method void setNodeId(string $NodeId) Set Node ID
+ * @method string getNodeRole() Obtain Node role
+ * @method void setNodeRole(string $NodeRole) Set Node role
  */
-class DisableAutoScalingGroupRequest extends AbstractModel
+class TendisNodes extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Node ID
      */
-    public $AutoScalingGroupId;
+    public $NodeId;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
+     * @var string Node role
+     */
+    public $NodeRole;
+
+    /**
+     * @param string $NodeId Node ID
+     * @param string $NodeRole Node role
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DisableAutoScalingGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("NodeRole",$param) and $param["NodeRole"] !== null) {
+            $this->NodeRole = $param["NodeRole"];
         }
     }
 }

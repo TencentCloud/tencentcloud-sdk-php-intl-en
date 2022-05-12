@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ScaleOutInstances response structure.
+ * ChangeReplicaToMaster response structure.
  *
- * @method string getActivityId() Obtain Scaling activity ID
- * @method void setActivityId(string $ActivityId) Set Scaling activity ID
+ * @method integer getTaskId() Obtain Async task ID
+ * @method void setTaskId(integer $TaskId) Set Async task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ScaleOutInstancesResponse extends AbstractModel
+class ChangeReplicaToMasterResponse extends AbstractModel
 {
     /**
-     * @var string Scaling activity ID
+     * @var integer Async task ID
      */
-    public $ActivityId;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class ScaleOutInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ActivityId Scaling activity ID
+     * @param integer $TaskId Async task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class ScaleOutInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ActivityId",$param) and $param["ActivityId"] !== null) {
-            $this->ActivityId = $param["ActivityId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

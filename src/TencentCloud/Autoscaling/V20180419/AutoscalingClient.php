@@ -35,12 +35,6 @@ use TencentCloud\Autoscaling\V20180419\Models as Models;
  * @method Models\CreateAutoScalingGroupFromInstanceResponse CreateAutoScalingGroupFromInstance(Models\CreateAutoScalingGroupFromInstanceRequest $req) This API is used to create launch configurations and scaling groups based on an instance.
 
 Note: for a scaling group that is created based on a monthly-subscribed instance, the instances added for scale-out are pay-as-you-go instance.
- * @method Models\CreateLaunchConfigurationResponse CreateLaunchConfiguration(Models\CreateLaunchConfigurationRequest $req) This API (CreateLaunchConfiguration) is used to create a launch configuration.
-
-* A few fields of a launch configuration can be modified through `ModifyLaunchConfigurationAttributes`. To use a new launch configuration, it is recommended to create it from scratch.
-
-* You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
-
  * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) This API (CreateLifeCycleHook) is used to create a lifecycle hook.
 
 * You can configure message notifications in the following format for lifecycle hooks, which will be sent to your CMQ queue by AS:
@@ -111,10 +105,6 @@ When the notification is sent to a CMQ topic or queue, the following contents ar
 
 * You can query the details of instances based on information such as instance ID and auto scaling group ID. For more information on filters, see `Filter`.
 * If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of instances of the current user will be returned.
- * @method Models\DescribeLaunchConfigurationsResponse DescribeLaunchConfigurations(Models\DescribeLaunchConfigurationsRequest $req) This API (DescribeLaunchConfigurations) is used to query the information of launch configurations.
-
-* You can query the launch configuration details based on information such as launch configuration ID and name. For more information on filters, see `Filter`.
-* If the parameter is empty, a certain number (specified by `Limit` and 20 by default) of launch configurations of the current user will be returned.
  * @method Models\DescribeLifecycleHooksResponse DescribeLifecycleHooks(Models\DescribeLifecycleHooksRequest $req) This API (DescribeLifecycleHooks) is used to query the information of lifecycle hooks.
 
 * You can query the details of lifecycle hooks based on information such as auto scaling group ID, lifecycle hook ID, or lifecycle hook name. For more information on filters, see `Filter`.
@@ -133,7 +123,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
  * @method Models\DetachLoadBalancersResponse DetachLoadBalancers(Models\DetachLoadBalancersRequest $req) This API is used to unbind one or more CLBs from a scaling group. This API will not terminate CLBs.
- * @method Models\DisableAutoScalingGroupResponse DisableAutoScalingGroup(Models\DisableAutoScalingGroupRequest $req) This API (DisableAutoScalingGroup) is used to disable the specified auto scaling group.
  * @method Models\EnableAutoScalingGroupResponse EnableAutoScalingGroup(Models\EnableAutoScalingGroupRequest $req) This API (EnableAutoScalingGroup) is used to enable the specified auto scaling group.
  * @method Models\ExecuteScalingPolicyResponse ExecuteScalingPolicy(Models\ExecuteScalingPolicyRequest $req) This API (ExecuteScalingPolicy) is used to execute a scaling policy.
 
@@ -145,6 +134,7 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 
 * The changes of launch configuration do not affect the existing instances. New instances will be created based on the modified configuration.
 * This API supports modifying certain simple types of attributes.
+ * @method Models\ModifyLifecycleHookResponse ModifyLifecycleHook(Models\ModifyLifecycleHookRequest $req) This API is used to modify the lifecycle hook.
  * @method Models\ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributes(Models\ModifyLoadBalancerTargetAttributesRequest $req) This API is used to modify the target rule attributes of the CLB in the scaling group.
  * @method Models\ModifyLoadBalancersResponse ModifyLoadBalancers(Models\ModifyLoadBalancersRequest $req) This API is used to modify the cloud load balancers of a scaling group.
 
@@ -159,16 +149,6 @@ If the parameter is empty, a certain number (specified by `Limit` and 20 by defa
 * If the number of remaining `IN_SERVICE` instances in the scaling group is less than the minimum capacity, this API will return an error.
 * However, if the scaling group is in `DISABLED` status, the removal will not verify the relationship between the number of `IN_SERVICE` instances and the minimum capacity.
 * This removal will unassociate the CVM from the CLB instance that has been configured for the scaling group.
- * @method Models\ScaleInInstancesResponse ScaleInInstances(Models\ScaleInInstancesRequest $req) This API is used to reduce the specified number of instances from the scaling group, which returns the scaling activity ID `ActivityId`.
-* The scaling group is not active.
-* The scale-in instances will be selected according to the `TerminationPolicies` policy as described in [Reducing Capacity](https://intl.cloud.tencent.com/document/product/377/8563?from_cn_redirect=1).
-* Only the `IN_SERVICE` instances will be reduced. To reduce instances in other statues, use the [`DetachInstances`](https://intl.cloud.tencent.com/document/api/377/20436?from_cn_redirect=1) or [`RemoveInstances`](https://intl.cloud.tencent.com/document/api/377/20431?from_cn_redirect=1) API.
-* The desired capacity will be reduced accordingly. The new desired capacity should be no less than the minimum capacity.
-* If the scale-in activity failed or partially succeeded, the final desired capacity only deducts the instances that have been reduced successfully.
- * @method Models\ScaleOutInstancesResponse ScaleOutInstances(Models\ScaleOutInstancesRequest $req) This API is used to add the specified number of instances to the scaling group, which returns the scaling activity ID `ActivityId`.
-* The scaling group is not active.
-* The desired capacity will be increased accordingly. The new desired capacity should be no more than the maximum capacity.
-* If the scale-out activity failed or partially succeeded, the final desired capacity only includes the instances that have been added successfully.
  * @method Models\SetInstancesProtectionResponse SetInstancesProtection(Models\SetInstancesProtectionRequest $req) This API is used to enable scale-in protection for an instance.
 When scale-in protection is enabled, the instance will not be removed in scale-in activities triggered by replacement of unhealthy instances, alarm threshold reached, change of desired quantity, etc.
  * @method Models\StartAutoScalingInstancesResponse StartAutoScalingInstances(Models\StartAutoScalingInstancesRequest $req) This API is used to start up CVM instances in a scaling group.
@@ -179,10 +159,6 @@ When scale-in protection is enabled, the instance will not be removed in scale-i
 * Shutting down instances in the `IN_SERVICE` status will reduce the desired capacity, but the desired capacity cannot be less than the minimum value.
 * To use the `STOP_CHARGING` shutdown, the instances you want to shut down must satisfy the conditions of [no charges when shut down](https://intl.cloud.tencent.com/document/product/213/19918?from_cn_redirect=1).
 * This API supports batch operation. Up to 100 instances can be shut down in each request.
- * @method Models\UpgradeLaunchConfigurationResponse UpgradeLaunchConfiguration(Models\UpgradeLaunchConfigurationRequest $req) This API (UpgradeLaunchConfiguration) is used to upgrade a launch configuration.
-
-* This API is used to upgrade a launch configuration in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.
-* After the launch configuration is upgraded, the existing instances that have been created by it will not be changed, but new instances will be created according to the new configuration.
  * @method Models\UpgradeLifecycleHookResponse UpgradeLifecycleHook(Models\UpgradeLifecycleHookRequest $req) This API (UpgradeLifecycleHook) is used to upgrade a lifecycle hook.
 
 * This API is used to upgrade a lifecycle hook in a "completely overriding" manner, i.e., it uniformly sets a new configuration according to the API parameters regardless of the original parameters. If optional fields are left empty, their default values will be used.

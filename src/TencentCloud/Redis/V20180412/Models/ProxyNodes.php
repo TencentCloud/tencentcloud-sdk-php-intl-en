@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpgradeLaunchConfiguration response structure.
+ * Proxy node information
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getNodeId() Obtain Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNodeId(string $NodeId) Set Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
-class UpgradeLaunchConfigurationResponse extends AbstractModel
+class ProxyNodes extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public $RequestId;
+    public $NodeId;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $NodeId Node ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class UpgradeLaunchConfigurationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
+            $this->NodeId = $param["NodeId"];
         }
     }
 }

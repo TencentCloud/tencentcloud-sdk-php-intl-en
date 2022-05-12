@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Autoscaling\V20180419\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DisableAutoScalingGroup request structure.
+ * AllocateWanAddress request structure.
  *
- * @method string getAutoScalingGroupId() Obtain Auto scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Auto scaling group ID
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
-class DisableAutoScalingGroupRequest extends AbstractModel
+class AllocateWanAddressRequest extends AbstractModel
 {
     /**
-     * @var string Auto scaling group ID
+     * @var string Instance ID.
      */
-    public $AutoScalingGroupId;
+    public $InstanceId;
 
     /**
-     * @param string $AutoScalingGroupId Auto scaling group ID
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DisableAutoScalingGroupRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }
