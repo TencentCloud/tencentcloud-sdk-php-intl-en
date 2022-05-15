@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT configuration information of the created input.
  *
+ * @method string getMode() Obtain The SRT mode. Valid values: LISTENER (default), CALLER.
+ * @method void setMode(string $Mode) Set The SRT mode. Valid values: LISTENER (default), CALLER.
  * @method string getStreamId() Obtain Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
  * @method void setStreamId(string $StreamId) Set Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
  * @method integer getLatency() Obtain Latency in ms. Default value: 0. Value range: [0, 3000].
@@ -34,9 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassphrase(string $Passphrase) Set Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
  * @method integer getPbKeyLen() Obtain Key length. Default value: 0. Valid values: 0, 16, 24, 32.
  * @method void setPbKeyLen(integer $PbKeyLen) Set Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+ * @method array getSourceAddresses() Obtain The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+ * @method void setSourceAddresses(array $SourceAddresses) Set The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
  */
 class CreateInputSRTSettings extends AbstractModel
 {
+    /**
+     * @var string The SRT mode. Valid values: LISTENER (default), CALLER.
+     */
+    public $Mode;
+
     /**
      * @var string Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      */
@@ -73,6 +82,12 @@ class CreateInputSRTSettings extends AbstractModel
     public $PbKeyLen;
 
     /**
+     * @var array The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
+     */
+    public $SourceAddresses;
+
+    /**
+     * @param string $Mode The SRT mode. Valid values: LISTENER (default), CALLER.
      * @param string $StreamId Stream ID, which can contain 0 to 512 letters, digits, and special characters (.#!:&,=_-).
      * @param integer $Latency Latency in ms. Default value: 0. Value range: [0, 3000].
      * @param integer $RecvLatency Receive latency in ms. Default value: 120. Value range: [0, 3000].
@@ -80,6 +95,7 @@ class CreateInputSRTSettings extends AbstractModel
      * @param integer $PeerIdleTimeout Peer timeout period in ms. Default value: 5000. Value range: [1000, 10000].
      * @param string $Passphrase Decryption key, which is empty by default, indicating not to encrypt. Only ASCII codes can be filled. Length: [10, 79].
      * @param integer $PbKeyLen Key length. Default value: 0. Valid values: 0, 16, 24, 32.
+     * @param array $SourceAddresses The SRT peer address, which is required if `Mode` is `CALLER`. Only one address is allowed.
      */
     function __construct()
     {
@@ -94,6 +110,10 @@ class CreateInputSRTSettings extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
         if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
             $this->StreamId = $param["StreamId"];
         }
@@ -120,6 +140,15 @@ class CreateInputSRTSettings extends AbstractModel
 
         if (array_key_exists("PbKeyLen",$param) and $param["PbKeyLen"] !== null) {
             $this->PbKeyLen = $param["PbKeyLen"];
+        }
+
+        if (array_key_exists("SourceAddresses",$param) and $param["SourceAddresses"] !== null) {
+            $this->SourceAddresses = [];
+            foreach ($param["SourceAddresses"] as $key => $value){
+                $obj = new SRTSourceAddressReq();
+                $obj->deserialize($value);
+                array_push($this->SourceAddresses, $obj);
+            }
         }
     }
 }

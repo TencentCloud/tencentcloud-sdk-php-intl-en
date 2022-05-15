@@ -20,6 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT configuration information of the queried input.
  *
+ * @method string getMode() Obtain The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMode(string $Mode) Set The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getStreamId() Obtain Stream ID.
  * @method void setStreamId(string $StreamId) Set Stream ID.
  * @method integer getLatency() Obtain Latency.
@@ -34,9 +38,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPassphrase(string $Passphrase) Set Decryption key.
  * @method integer getPbKeyLen() Obtain Key length.
  * @method void setPbKeyLen(integer $PbKeyLen) Set Key length.
+ * @method array getSourceAddresses() Obtain The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSourceAddresses(array $SourceAddresses) Set The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DescribeInputSRTSettings extends AbstractModel
 {
+    /**
+     * @var string The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Mode;
+
     /**
      * @var string Stream ID.
      */
@@ -73,6 +87,14 @@ class DescribeInputSRTSettings extends AbstractModel
     public $PbKeyLen;
 
     /**
+     * @var array The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SourceAddresses;
+
+    /**
+     * @param string $Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $StreamId Stream ID.
      * @param integer $Latency Latency.
      * @param integer $RecvLatency Receive latency.
@@ -80,6 +102,8 @@ class DescribeInputSRTSettings extends AbstractModel
      * @param integer $PeerIdleTimeout Peer idle timeout period.
      * @param string $Passphrase Decryption key.
      * @param integer $PbKeyLen Key length.
+     * @param array $SourceAddresses The SRT peer address.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -94,6 +118,10 @@ class DescribeInputSRTSettings extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
         if (array_key_exists("StreamId",$param) and $param["StreamId"] !== null) {
             $this->StreamId = $param["StreamId"];
         }
@@ -120,6 +148,15 @@ class DescribeInputSRTSettings extends AbstractModel
 
         if (array_key_exists("PbKeyLen",$param) and $param["PbKeyLen"] !== null) {
             $this->PbKeyLen = $param["PbKeyLen"];
+        }
+
+        if (array_key_exists("SourceAddresses",$param) and $param["SourceAddresses"] !== null) {
+            $this->SourceAddresses = [];
+            foreach ($param["SourceAddresses"] as $key => $value){
+                $obj = new SRTSourceAddressResp();
+                $obj->deserialize($value);
+                array_push($this->SourceAddresses, $obj);
+            }
         }
     }
 }

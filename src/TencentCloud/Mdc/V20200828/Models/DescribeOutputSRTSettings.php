@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SRT configuration information of the queried output.
  *
- * @method array getDestinations() Obtain Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDestinations(array $Destinations) Set Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getDestinations() Obtain A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDestinations(array $Destinations) Set A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getStreamId() Obtain Stream ID.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStreamId(string $StreamId) Set Stream ID.
@@ -52,12 +52,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPbKeyLen(integer $PbKeyLen) Set Encryption key length.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMode() Obtain The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMode(string $Mode) Set The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSourceAddresses() Obtain The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSourceAddresses(array $SourceAddresses) Set The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DescribeOutputSRTSettings extends AbstractModel
 {
     /**
-     * @var array Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Destinations;
 
@@ -104,8 +112,20 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PbKeyLen;
 
     /**
-     * @param array $Destinations Push destination address information list.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Mode;
+
+    /**
+     * @var array The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SourceAddresses;
+
+    /**
+     * @param array $Destinations A list of the destination addresses for relay. This parameter is valid if `Mode` is `CALLER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $StreamId Stream ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Latency Latency.
@@ -120,6 +140,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $PbKeyLen Encryption key length.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Mode The SRT mode.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SourceAddresses The server’s listen address, which is valid if `Mode` is `LISTENER`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -169,6 +193,19 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("PbKeyLen",$param) and $param["PbKeyLen"] !== null) {
             $this->PbKeyLen = $param["PbKeyLen"];
+        }
+
+        if (array_key_exists("Mode",$param) and $param["Mode"] !== null) {
+            $this->Mode = $param["Mode"];
+        }
+
+        if (array_key_exists("SourceAddresses",$param) and $param["SourceAddresses"] !== null) {
+            $this->SourceAddresses = [];
+            foreach ($param["SourceAddresses"] as $key => $value){
+                $obj = new OutputSRTSourceAddressResp();
+                $obj->deserialize($value);
+                array_push($this->SourceAddresses, $obj);
+            }
         }
     }
 }

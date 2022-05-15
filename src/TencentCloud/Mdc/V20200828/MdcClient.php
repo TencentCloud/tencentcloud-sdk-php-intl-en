@@ -24,12 +24,22 @@ use TencentCloud\Mdc\V20200828\Models as Models;
 
 /**
  * @method Models\CreateStreamLinkFlowResponse CreateStreamLinkFlow(Models\CreateStreamLinkFlowRequest $req) This API is used to create a StreamLink flow.
+ * @method Models\CreateStreamLinkOutputInfoResponse CreateStreamLinkOutputInfo(Models\CreateStreamLinkOutputInfoRequest $req) This API is used to create a StreamLink output.
  * @method Models\DeleteStreamLinkFlowResponse DeleteStreamLinkFlow(Models\DeleteStreamLinkFlowRequest $req) This API is used to delete a StreamLink flow.
  * @method Models\DeleteStreamLinkOutputResponse DeleteStreamLinkOutput(Models\DeleteStreamLinkOutputRequest $req) This API is used to delete an output of a StreamLink flow.
  * @method Models\DescribeStreamLinkFlowResponse DescribeStreamLinkFlow(Models\DescribeStreamLinkFlowRequest $req) This API is used to query the configuration information of a StreamLink flow.
+ * @method Models\DescribeStreamLinkFlowLogsResponse DescribeStreamLinkFlowLogs(Models\DescribeStreamLinkFlowLogsRequest $req) This API is used to query the logs of a StreamLink flow.
+ * @method Models\DescribeStreamLinkFlowMediaStatisticsResponse DescribeStreamLinkFlowMediaStatistics(Models\DescribeStreamLinkFlowMediaStatisticsRequest $req) This API is used to query the media quality of a StreamLink flow.
+
+ * @method Models\DescribeStreamLinkFlowRealtimeStatusResponse DescribeStreamLinkFlowRealtimeStatus(Models\DescribeStreamLinkFlowRealtimeStatusRequest $req) This API is used to query the current status of a flow.
+ * @method Models\DescribeStreamLinkFlowSRTStatisticsResponse DescribeStreamLinkFlowSRTStatistics(Models\DescribeStreamLinkFlowSRTStatisticsRequest $req) This API is used to query the SRT streaming performance of a StreamLink flow.
+ * @method Models\DescribeStreamLinkFlowStatisticsResponse DescribeStreamLinkFlowStatistics(Models\DescribeStreamLinkFlowStatisticsRequest $req) This API is used to query the media quality of a StreamLink flow.
+
  * @method Models\DescribeStreamLinkFlowsResponse DescribeStreamLinkFlows(Models\DescribeStreamLinkFlowsRequest $req) This API is used to query the configuration information of multiple StreamLink flows in batches.
  * @method Models\DescribeStreamLinkRegionsResponse DescribeStreamLinkRegions(Models\DescribeStreamLinkRegionsRequest $req) This API is used to query all StreamLink regions.
  * @method Models\ModifyStreamLinkFlowResponse ModifyStreamLinkFlow(Models\ModifyStreamLinkFlowRequest $req) This API is used to modify the configuration information of a StreamLink flow.
+ * @method Models\ModifyStreamLinkInputResponse ModifyStreamLinkInput(Models\ModifyStreamLinkInputRequest $req) This API is used to modify an input of a StreamLink flow.
+ * @method Models\ModifyStreamLinkOutputInfoResponse ModifyStreamLinkOutputInfo(Models\ModifyStreamLinkOutputInfoRequest $req) This API is used to modify an output of a StreamLink flow.
  * @method Models\StartStreamLinkFlowResponse StartStreamLinkFlow(Models\StartStreamLinkFlowRequest $req) This API is used to start a StreamLink flow.
  * @method Models\StopStreamLinkFlowResponse StopStreamLinkFlow(Models\StopStreamLinkFlowRequest $req) This API is used to stop a StreamLink flow.
  */
