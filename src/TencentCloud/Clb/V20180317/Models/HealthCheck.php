@@ -81,9 +81,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttpVersion(string $HttpVersion) Set Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getSourceIpType() Obtain Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+ * @method integer getSourceIpType() Obtain Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+ * @method void setSourceIpType(integer $SourceIpType) Set Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getExtendedCode() Obtain GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setExtendedCode(string $ExtendedCode) Set GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class HealthCheck extends AbstractModel
@@ -179,10 +183,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HttpVersion;
 
     /**
-     * @var integer Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * @var integer Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SourceIpType;
+
+    /**
+     * @var string GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ExtendedCode;
 
     /**
      * @param integer $HealthSwitch Whether to enable health check. 1: enable; 0: disable.
@@ -215,7 +225,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HttpVersion Health check protocol (a custom check parameter), which is required if the value of CheckType is HTTP. This parameter represents the HTTP version of the real server. Value range: HTTP/1.0, HTTP/1.1. (Applicable only to TCP listeners.)
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $SourceIpType Specifies the type of IP for health check. `0` (default): Use the CLB VIP as the source IP. `1`: Use the IP range starting with 100.64 as the source IP.
+     * @param integer $SourceIpType Specifies the type of IP for health check. `0` (default): CLB VIP. `1`: Use the IP range starting with 100.64 as the source IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ExtendedCode GRPC health check status code, which is only applicable to rules with GRPC as the backend forwarding protocol. It can be a single number (such as `20`), multiple numbers (such as `20,25`) or a range (such as `0-99`). The default value is `12`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -293,6 +305,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SourceIpType",$param) and $param["SourceIpType"] !== null) {
             $this->SourceIpType = $param["SourceIpType"];
+        }
+
+        if (array_key_exists("ExtendedCode",$param) and $param["ExtendedCode"] !== null) {
+            $this->ExtendedCode = $param["ExtendedCode"];
         }
     }
 }

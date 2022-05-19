@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video clipping task information. This structure is only used for tasks initiated by the [ClipVideo](https://intl.cloud.tencent.com/document/product/266/10156?from_cn_redirect=1) API in v2017.
+ * The details of a video editing task. This parameter is only valid for tasks initiated by the v2017 video editing API.
  *
  * @method string getTaskId() Obtain Video clipping task ID.
  * @method void setTaskId(string $TaskId) Set Video clipping task ID.

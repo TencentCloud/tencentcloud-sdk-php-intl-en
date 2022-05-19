@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video transcoding task information. This structure is only used for tasks initiated by the [ConvertVodFile](https://intl.cloud.tencent.com/document/product/266/7822?from_cn_redirect=1) API in v2017.
+ * The details of a video transcoding task. This parameter is only valid for tasks initiated by the v2017 video transcoding API.
  *
  * @method string getTaskId() Obtain Transcoding task ID.
  * @method void setTaskId(string $TaskId) Set Transcoding task ID.

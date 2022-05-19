@@ -29,7 +29,7 @@ use TencentCloud\Cls\V20201016\Models as Models;
  * @method Models\CreateAlarmNoticeResponse CreateAlarmNotice(Models\CreateAlarmNoticeRequest $req) This API is used to create a notification group.
  * @method Models\CreateConfigResponse CreateConfig(Models\CreateConfigRequest $req) This API is used to create a collection rule configuration.
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a shipping task.
- * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) This API is used to create a download task to export raw logs.
+ * @method Models\CreateExportResponse CreateExport(Models\CreateExportRequest $req) This API is used to create a download task. To get the returned download address, call `DescribeExports` to view the task list. The `CosPath` parameter is also included for download address. For more information, visit https://intl.cloud.tencent.com/document/product/614/56449.?from_cn_redirect=1
  * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) This API is used to create an index.
  * @method Models\CreateLogsetResponse CreateLogset(Models\CreateLogsetRequest $req) This API is used to create a logset. The ID of the created logset is returned.
  * @method Models\CreateMachineGroupResponse CreateMachineGroup(Models\CreateMachineGroupRequest $req) This API is used to create a machine group.

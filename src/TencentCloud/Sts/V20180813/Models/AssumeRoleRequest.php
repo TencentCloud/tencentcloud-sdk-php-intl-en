@@ -50,6 +50,8 @@ Note:
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
  * @method void setExternalId(string $ExternalId) Set External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+ * @method array getTags() Obtain List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+ * @method void setTags(array $Tags) Set List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -89,6 +91,11 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
     public $ExternalId;
 
     /**
+     * @var array List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+     */
+    public $Tags;
+
+    /**
      * @param string $RoleArn Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 General role:
 qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
@@ -104,6 +111,7 @@ Note:
 3. The policy cannot contain the `principal` element.
      * @param string $ExternalId External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
+     * @param array $Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
      */
     function __construct()
     {
@@ -136,6 +144,15 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
 
         if (array_key_exists("ExternalId",$param) and $param["ExternalId"] !== null) {
             $this->ExternalId = $param["ExternalId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -33,6 +33,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) This API is used to create a topic IP allowlist.
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) This API is used to add a user.
  * @method Models\DeleteAclResponse DeleteAcl(Models\DeleteAclRequest $req) This API is used to delete an ACL.
+ * @method Models\DeleteRouteResponse DeleteRoute(Models\DeleteRouteRequest $req) This API is used to delete a route.
  * @method Models\DeleteRouteTriggerTimeResponse DeleteRouteTriggerTime(Models\DeleteRouteTriggerTimeRequest $req) This API is used to modify the delayed trigger time of route deletion.
  * @method Models\DeleteTopicResponse DeleteTopic(Models\DeleteTopicRequest $req) This API is used to delete a CKafka topic.
  * @method Models\DeleteTopicIpWhiteListResponse DeleteTopicIpWhiteList(Models\DeleteTopicIpWhiteListRequest $req) This API is used to delete a topic IP allowlist.

@@ -30,6 +30,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) This API (AttachUserPolicy) is used to associates a policy with a user.
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) This API is used to verify a custom multi-factor Token.
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) This API is used to create a user group.
+ * @method Models\CreateOIDCConfigResponse CreateOIDCConfig(Models\CreateOIDCConfigRequest $req) This API is used to create role OIDC configurations.
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) This API (CreatePolicy) is used to create a policy.
  * @method Models\CreatePolicyVersionResponse CreatePolicyVersion(Models\CreatePolicyVersionRequest $req) This API is used to add a policy version. After creating a policy version, you can easily change the policy by changing the policy version.
  * @method Models\CreateRoleResponse CreateRole(Models\CreateRoleRequest $req) This API (CreateRole) is used to create a role.
@@ -38,6 +39,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\CreateUserOIDCConfigResponse CreateUserOIDCConfig(Models\CreateUserOIDCConfigRequest $req) This API is used to create a user OIDC configuration. Only one user OIDC IdP can be created, and the user SAML SSO IdP will be automatically disabled after it is created.
  * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) This API is used to create user SAML configurations.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) This API is used to delete a user group.
+ * @method Models\DeleteOIDCConfigResponse DeleteOIDCConfig(Models\DeleteOIDCConfigRequest $req) This API is used to delete OIDC IdPs.
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) This API (DeletePolicy) is used to delete a policy.
  * @method Models\DeletePolicyVersionResponse DeletePolicyVersion(Models\DeletePolicyVersionRequest $req) This API is used to delete a policy version of a policy.
  * @method Models\DeleteRoleResponse DeleteRole(Models\DeleteRoleRequest $req) This API (DeleteRole) is used to delete a specified role.
@@ -46,6 +48,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\DeleteServiceLinkedRoleResponse DeleteServiceLinkedRole(Models\DeleteServiceLinkedRoleRequest $req) This API is used to delete a service-linked role.
  * @method Models\DeleteUserResponse DeleteUser(Models\DeleteUserRequest $req) This API is used to delete a sub-user.
  * @method Models\DeleteUserPermissionsBoundaryResponse DeleteUserPermissionsBoundary(Models\DeleteUserPermissionsBoundaryRequest $req) This API is used to delete a user permission boundary.
+ * @method Models\DescribeOIDCConfigResponse DescribeOIDCConfig(Models\DescribeOIDCConfigRequest $req) This API is used to query role OIDC configurations.
  * @method Models\DescribeRoleListResponse DescribeRoleList(Models\DescribeRoleListRequest $req) This API (DescribeRoleList) is used to get the role list under the account.
  * @method Models\DescribeSafeAuthFlagCollResponse DescribeSafeAuthFlagColl(Models\DescribeSafeAuthFlagCollRequest $req) This API is used to query security settings.
  * @method Models\DescribeSafeAuthFlagIntlResponse DescribeSafeAuthFlagIntl(Models\DescribeSafeAuthFlagIntlRequest $req) This API is used to query security settings.
@@ -88,6 +91,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) This API is used to set account verification for login and sensitive operations for sub-users.
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
+ * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) This API is used to modify role OIDC configurations.
  * @method Models\UpdatePolicyResponse UpdatePolicy(Models\UpdatePolicyRequest $req) This API is used to update a policy.
 This API will update the default version of an existing policy instead of creating a new one. If no policy exists, a default version will be created.
  * @method Models\UpdateRoleConsoleLoginResponse UpdateRoleConsoleLogin(Models\UpdateRoleConsoleLoginRequest $req) This API is used to modify a role's login permissions.

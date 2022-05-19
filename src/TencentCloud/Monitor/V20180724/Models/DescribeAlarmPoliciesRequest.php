@@ -78,6 +78,8 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setNeedCorrespondence(integer $NeedCorrespondence) Set Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
  * @method array getTriggerTasks() Obtain Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
  * @method void setTriggerTasks(array $TriggerTasks) Set Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+ * @method array getOneClickPolicyType() Obtain Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+ * @method void setOneClickPolicyType(array $OneClickPolicyType) Set Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -191,6 +193,11 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $TriggerTasks;
 
     /**
+     * @var array Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+     */
+    public $OneClickPolicyType;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -220,6 +227,7 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param integer $InstanceGroupId Instance group ID.
      * @param integer $NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
      * @param array $TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
+     * @param array $OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
      */
     function __construct()
     {
@@ -317,6 +325,10 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
                 $obj->deserialize($value);
                 array_push($this->TriggerTasks, $obj);
             }
+        }
+
+        if (array_key_exists("OneClickPolicyType",$param) and $param["OneClickPolicyType"] !== null) {
+            $this->OneClickPolicyType = $param["OneClickPolicyType"];
         }
     }
 }

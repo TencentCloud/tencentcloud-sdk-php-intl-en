@@ -54,8 +54,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
+ * @method string getType() Obtain The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setType(string $Type) Set The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ContentReviewTemplateItem extends AbstractModel
 {
@@ -117,7 +123,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Type;
 
@@ -139,7 +148,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
-     * @param string $Type 
+     * @param string $Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

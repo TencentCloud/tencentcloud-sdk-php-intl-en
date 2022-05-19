@@ -146,6 +146,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setFilterDimensionsParam(string $FilterDimensionsParam) Set Information on the filter dimension associated with a policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsOneClick() Obtain Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsOneClick(integer $IsOneClick) Set Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getOneClickStatus() Obtain Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOneClickStatus(integer $OneClickStatus) Set Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -333,6 +341,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $FilterDimensionsParam;
 
     /**
+     * @var integer Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsOneClick;
+
+    /**
+     * @var integer Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OneClickStatus;
+
+    /**
      * @param string $PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Alarm policy name
@@ -395,6 +415,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $TagInstances Tag
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $FilterDimensionsParam Information on the filter dimension associated with a policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsOneClick Whether it is a quick alarm policy.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $OneClickStatus Whether the quick alarm policy is enabled.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -546,6 +570,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("FilterDimensionsParam",$param) and $param["FilterDimensionsParam"] !== null) {
             $this->FilterDimensionsParam = $param["FilterDimensionsParam"];
+        }
+
+        if (array_key_exists("IsOneClick",$param) and $param["IsOneClick"] !== null) {
+            $this->IsOneClick = $param["IsOneClick"];
+        }
+
+        if (array_key_exists("OneClickStatus",$param) and $param["OneClickStatus"] !== null) {
+            $this->OneClickStatus = $param["OneClickStatus"];
         }
     }
 }

@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+ * @method string getType() Obtain The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setType(string $Type) Set The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AIAnalysisTemplateItem extends AbstractModel
 {
@@ -87,6 +95,14 @@ class AIAnalysisTemplateItem extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Type;
+
+    /**
      * @param integer $Definition Unique ID of intelligent analysis template.
      * @param string $Name Intelligent analysis template name.
      * @param string $Comment Intelligent analysis template description.
@@ -96,6 +112,10 @@ class AIAnalysisTemplateItem extends AbstractModel
      * @param FrameTagConfigureInfo $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/862/37710?from_cn_redirect=1#52).
+     * @param string $Type The template type. Valid values:
+* Preset
+* Custom
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -148,6 +168,10 @@ class AIAnalysisTemplateItem extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

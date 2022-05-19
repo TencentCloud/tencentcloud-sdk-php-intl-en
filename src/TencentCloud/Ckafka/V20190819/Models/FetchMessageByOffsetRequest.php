@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopic(string $Topic) Set Topic name
  * @method integer getPartition() Obtain Partition ID
  * @method void setPartition(integer $Partition) Set Partition ID
- * @method integer getOffset() Obtain Offset information
- * @method void setOffset(integer $Offset) Set Offset information
+ * @method integer getOffset() Obtain Offset information, which is required.
+ * @method void setOffset(integer $Offset) Set Offset information, which is required.
  */
 class FetchMessageByOffsetRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class FetchMessageByOffsetRequest extends AbstractModel
     public $Partition;
 
     /**
-     * @var integer Offset information
+     * @var integer Offset information, which is required.
      */
     public $Offset;
 
@@ -55,7 +55,7 @@ class FetchMessageByOffsetRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param string $Topic Topic name
      * @param integer $Partition Partition ID
-     * @param integer $Offset Offset information
+     * @param integer $Offset Offset information, which is required.
      */
     function __construct()
     {

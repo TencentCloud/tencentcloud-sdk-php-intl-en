@@ -24,22 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getEndTime() Obtain End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
  * @method void setEndTime(string $EndTime) Set End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
- * @method string getType() Obtain Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
- * @method void setType(string $Type) Set Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+ * @method string getType() Obtain The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+ * @method void setType(string $Type) Set The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
  * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
@@ -56,14 +58,15 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var string Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+     * @var string The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      */
     public $Type;
 
@@ -75,14 +78,15 @@ class DescribeMediaProcessUsageDataRequest extends AbstractModel
     /**
      * @param string $StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). The end date must be on or after the start date.
-     * @param string $Type Type of media processing task. Valid values:
-<li>`Transcoding`: basic transcoding</li>
-<li>`Transcoding-TESHD`: TESHD transcoding</li>
-<li>`Editing`: video editing</li>
-<li>`AdaptiveBitrateStreaming`: adaptive bitrate streaming</li>
-<li>`ContentAudit`: content moderation</li>
-<li>`RemoveWatermark`: watermark removal</li>
-<li>`Transcode`: transcoding, including basic transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+     * @param string $Type The type of media processing task. Valid values:
+<li>Transcoding: General transcoding</li>
+<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Editing: Video editing</li>
+<li>Editing-TESHD: TESHD editing</li>
+<li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
+<li>ContentAudit: Content moderation</li>
+<li>RemoveWatermark: Watermark removal</li>
+<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
      * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()

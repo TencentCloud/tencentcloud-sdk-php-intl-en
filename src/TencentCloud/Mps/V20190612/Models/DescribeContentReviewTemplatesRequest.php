@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 50.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 50.
+ * @method string getType() Obtain The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+ * @method void setType(string $Type) Set The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
  */
 class DescribeContentReviewTemplatesRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
+     */
+    public $Type;
+
+    /**
      * @param array $Definitions Unique ID of intelligent content recognition templates as the filter. Array length limit: 50
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 50.
+     * @param string $Type The filter for querying templates. If this parameter is left empty, both preset and custom templates are returned. Valid values:
+* Preset
+* Custom
      */
     function __construct()
     {
@@ -72,6 +88,10 @@ class DescribeContentReviewTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

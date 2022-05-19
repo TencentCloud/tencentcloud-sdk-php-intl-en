@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * CreateLoadBalancer response structure.
  *
  * @method array getLoadBalancerIds() Obtain Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setLoadBalancerIds(array $LoadBalancerIds) Set Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getDealName() Obtain Order ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDealName(string $DealName) Set Order ID.
@@ -33,6 +37,8 @@ class CreateLoadBalancerResponse extends AbstractModel
 {
     /**
      * @var array Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $LoadBalancerIds;
 
@@ -49,6 +55,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param array $LoadBalancerIds Array of unique CLB instance IDs.
+This field may return `null` in some cases, such as there is delay during instance creation. You can query the IDs of the created instances by invoking `DescribeTaskStatus` with the `RequestId` or `DealName` returned by this API.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $DealName Order ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

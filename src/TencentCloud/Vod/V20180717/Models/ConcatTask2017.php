@@ -18,7 +18,7 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video splicing task information. This structure is only used for tasks initiated by the [ConcatVideo](https://intl.cloud.tencent.com/document/product/266/7821?from_cn_redirect=1) API in v2017.
+ * The details of a video splicing task. This parameter is only valid for tasks initiated by the v2017 video splicing API.
  *
  * @method string getTaskId() Obtain Video splicing task ID.
  * @method void setTaskId(string $TaskId) Set Video splicing task ID.

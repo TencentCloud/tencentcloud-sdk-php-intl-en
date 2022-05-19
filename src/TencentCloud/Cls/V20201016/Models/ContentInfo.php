@@ -30,6 +30,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setJson(JsonInfo $Json) Set JSON format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ParquetInfo getParquet() Obtain `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setParquet(ParquetInfo $Parquet) Set `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ContentInfo extends AbstractModel
 {
@@ -51,11 +55,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Json;
 
     /**
+     * @var ParquetInfo `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Parquet;
+
+    /**
      * @param string $Format Content format. Valid values: `json`, `csv`
      * @param CsvInfo $Csv CSV format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param JsonInfo $Json JSON format content description
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ParquetInfo $Parquet `Parquet` format description
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -82,6 +94,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("Json",$param) and $param["Json"] !== null) {
             $this->Json = new JsonInfo();
             $this->Json->deserialize($param["Json"]);
+        }
+
+        if (array_key_exists("Parquet",$param) and $param["Parquet"] !== null) {
+            $this->Parquet = new ParquetInfo();
+            $this->Parquet->deserialize($param["Parquet"]);
         }
     }
 }

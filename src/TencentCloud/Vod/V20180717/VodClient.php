@@ -110,7 +110,17 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
     1. HLS file: VOD counts playback times when M3U8 files are accessed, but not when TS files are accessed.
     2. Other files (MP4 files for example): VOD does not count playback times when the playback request carries the `range` parameter and the `start` parameter in `range` is not `0`. In other cases, VOD counts playback times.
 * Statistics on playback devices: VOD counts playback times on mobile clients when the playback request carries the `UserAgent` parameter which includes an identifier such as `Android` or `iPhone`. In other cases, VOD counts playback times on PC clients.
+ * @method Models\DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(Models\DescribeImageReviewUsageDataRequest $req) This API is used to query your daily usage of the image recognition feature in a specified time period.
+   1. You can query statistics from the last 365 days.
+   2. The maximum query period is 90 days.
+   3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+
  * @method Models\DescribeImageSpriteTemplatesResponse DescribeImageSpriteTemplates(Models\DescribeImageSpriteTemplatesRequest $req) This API is used to query the list of image sprite generating templates and supports paged queries by filters.
+ * @method Models\DescribeLicenseUsageDataResponse DescribeLicenseUsageData(Models\DescribeLicenseUsageDataRequest $req) This API is used to query daily playback license requests in a specified time period.
+   1. You can query statistics from the last 365 days.
+   2. The maximum query period is 90 days.
+   3. If the period specified is longer than one day, the statistics returned will be on a daily basis; otherwise, they will be on a 5-minute basis.
+
  * @method Models\DescribeMediaInfosResponse DescribeMediaInfos(Models\DescribeMediaInfosRequest $req) 1. This API can get multiple types of information of multiple media files, including:
     1. Basic information (basicInfo): media name, category, playback address, cover image, etc.
     2. Metadata (metaData): size, duration, video stream information, audio stream information, etc.
@@ -224,9 +234,11 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
- * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is used to initiate an image processing task. Image processing operations include the following:
+ * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
 
-1. Intelligent recognition of pornographic, terrorism, and politically sensitive content
+This API is used to initiate an image processing task. Image processing operations include the following:
+
+1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
 
 ><li>File size: < 5 MB</li>
 ><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
@@ -261,6 +273,12 @@ There are two ways to create a task flow template:
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
  * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) This API is used to reset a custom task flow template.  
+ * @method Models\ReviewImageResponse ReviewImage(Models\ReviewImageRequest $req) This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
+
+><li>File size: < 5 MB</li>
+><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
+><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
+
  * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) This API is used to search for media information and supports filtering and sorting the returned results in many ways. You can:
 - Specify the file ID set `FileIds` to return the media files with any ID in the set.
 - Fuzzily search by multiple media filenames `Names` or multiple descriptions `Descriptions`.

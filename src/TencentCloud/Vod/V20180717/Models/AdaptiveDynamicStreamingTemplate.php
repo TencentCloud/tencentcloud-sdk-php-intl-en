@@ -36,16 +36,16 @@ use TencentCloud\Common\AbstractModel;
 <li>HLS.</li>
  * @method void setFormat(string $Format) Set Adaptive bitstream format. Valid value:
 <li>HLS.</li>
- * @method string getDrmType() Obtain DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
- * @method void setDrmType(string $DrmType) Set DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+ * @method string getDrmType() Obtain The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+ * @method void setDrmType(string $DrmType) Set The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
  * @method array getStreamInfos() Obtain Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
@@ -96,11 +96,11 @@ class AdaptiveDynamicStreamingTemplate extends AbstractModel
     public $Format;
 
     /**
-     * @var string DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+     * @var string The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public $DrmType;
 
@@ -142,11 +142,11 @@ If this field is a blank string, DRM will not be performed on the video.
      * @param string $Comment Description of a transcoding to adaptive bitrate streaming template.
      * @param string $Format Adaptive bitstream format. Valid value:
 <li>HLS.</li>
-     * @param string $DrmType DRM type. Valid values:
-<li>FairPlay;</li>
-<li>SimpleAES;</li>
-<li>Widevine.</li>
-If this field is a blank string, DRM will not be performed on the video.
+     * @param string $DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      * @param array $StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>

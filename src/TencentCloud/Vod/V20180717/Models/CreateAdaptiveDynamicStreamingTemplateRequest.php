@@ -30,12 +30,16 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
  * @method string getName() Obtain Template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Template name. Length limit: 64 characters.
- * @method string getDrmType() Obtain DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
- * @method void setDrmType(string $DrmType) Set DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+ * @method string getDrmType() Obtain The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
+ * @method void setDrmType(string $DrmType) Set The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -77,9 +81,11 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
     public $Name;
 
     /**
-     * @var string DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+     * @var string The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      */
     public $DrmType;
 
@@ -115,9 +121,11 @@ Default value: no.
      * @param array $StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
      * @param string $Name Template name. Length limit: 64 characters.
-     * @param string $DrmType DRM scheme type. Valid values:
-<li>SimpleAES.</li>
-If this field is an empty string, DRM will not be performed on the video.
+     * @param string $DrmType The DRM type. Valid values:
+<li>SimpleAES</li>
+<li>Widevine</li>
+<li>FairPlay</li>
+If this parameter is an empty string, it indicates that the video is not protected by DRM.
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>

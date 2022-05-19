@@ -20,16 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameter
  *
- * @method string getCodec() Obtain Video stream encoder. Valid values:
+ * @method string getCodec() Obtain The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
- * @method void setCodec(string $Codec) Set Video stream encoder. Valid values:
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
+ * @method void setCodec(string $Codec) Set The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
  * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
  * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0,100].
@@ -88,12 +94,18 @@ Default value: black
 <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
 <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 Default value: black
- * @method integer getVcrf() Obtain Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
- * @method void setVcrf(integer $Vcrf) Set Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+ * @method integer getVcrf() Obtain The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
+ * @method void setVcrf(integer $Vcrf) Set The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
  * @method integer getGop() Obtain I-frame interval in frames. Valid values: 0 and 1-100000.
 When this parameter is set to 0 or left empty, `Gop` will be automatically set.
  * @method void setGop(integer $Gop) Set I-frame interval in frames. Valid values: 0 and 1-100000.
@@ -102,11 +114,14 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
 class VideoTemplateInfo extends AbstractModel
 {
     /**
-     * @var string Video stream encoder. Valid values:
+     * @var string The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
      */
     public $Codec;
 
@@ -164,9 +179,12 @@ Default value: black
     public $FillType;
 
     /**
-     * @var integer Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+     * @var integer The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
      */
     public $Vcrf;
 
@@ -177,11 +195,14 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     public $Gop;
 
     /**
-     * @param string $Codec Video stream encoder. Valid values:
+     * @param string $Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
 <li>av1: AOMedia Video 1</li>
-Currently, a resolution within 640x480 must be specified for H.265. and the `av1` container only supports mp4.
+<li>H.266: H.266</li>
+<font color=red>Notes:</font>
+<li>The AOMedia Video 1 and H.266 codecs can only be used for MP4 files.</li>
+<li> Only CRF is supported for H.266 currently.</li>
      * @param integer $Fps Video frame rate in Hz. Value range: [0,100].
 If the value is 0, the frame rate will be the same as that of the source video.
      * @param integer $Bitrate Bitrate of video stream in Kbps. Value range: 0 and [128, 35,000].
@@ -211,9 +232,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>white: fills the uncovered area with white color, without changing the image's aspect ratio.</li>
 <li>gauss: applies Gaussian blur to the uncovered area, without changing the image's aspect ratio.</li>
 Default value: black
-     * @param integer $Vcrf Video Constant Rate Factor (CRF). Value range: 1-51.
-If this parameter is specified, CRF will be used to control video bitrate for transcoding and the original video bitrate will not be used.
-We don’t recommend specifying this parameter unless you have special requirements.
+     * @param integer $Vcrf The video constant rate factor (CRF). Value range: 1-51.
+
+<font color=red>Notes:</font>
+<li>If this parameter is specified, CRF encoding will be used and the bitrate parameter will be ignored.</li>
+<li>If `Codec` is `H.266`, this parameter is required (`28` is recommended).</li>
+<li>We don’t recommend using this parameter unless you have special requirements.</li>
      * @param integer $Gop I-frame interval in frames. Valid values: 0 and 1-100000.
 When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      */
