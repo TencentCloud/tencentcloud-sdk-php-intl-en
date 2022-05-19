@@ -18,28 +18,36 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * TerminateInstance request structure.
+ * ModifyResourceScheduler request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method array getResourceIds() Obtain ID of terminated node. This parameter is reserved and does not need to be configured.
- * @method void setResourceIds(array $ResourceIds) Set ID of terminated node. This parameter is reserved and does not need to be configured.
+ * @method string getInstanceId() Obtain EMR cluster ID
+ * @method void setInstanceId(string $InstanceId) Set EMR cluster ID
+ * @method string getOldValue() Obtain The original scheduler: `fair`
+ * @method void setOldValue(string $OldValue) Set The original scheduler: `fair`
+ * @method string getNewValue() Obtain The new scheduler: `capacity`
+ * @method void setNewValue(string $NewValue) Set The new scheduler: `capacity`
  */
-class TerminateInstanceRequest extends AbstractModel
+class ModifyResourceSchedulerRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string EMR cluster ID
      */
     public $InstanceId;
 
     /**
-     * @var array ID of terminated node. This parameter is reserved and does not need to be configured.
+     * @var string The original scheduler: `fair`
      */
-    public $ResourceIds;
+    public $OldValue;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param array $ResourceIds ID of terminated node. This parameter is reserved and does not need to be configured.
+     * @var string The new scheduler: `capacity`
+     */
+    public $NewValue;
+
+    /**
+     * @param string $InstanceId EMR cluster ID
+     * @param string $OldValue The original scheduler: `fair`
+     * @param string $NewValue The new scheduler: `capacity`
      */
     function __construct()
     {
@@ -58,8 +66,12 @@ class TerminateInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("ResourceIds",$param) and $param["ResourceIds"] !== null) {
-            $this->ResourceIds = $param["ResourceIds"];
+        if (array_key_exists("OldValue",$param) and $param["OldValue"] !== null) {
+            $this->OldValue = $param["OldValue"];
+        }
+
+        if (array_key_exists("NewValue",$param) and $param["NewValue"] !== null) {
+            $this->NewValue = $param["NewValue"];
         }
     }
 }
