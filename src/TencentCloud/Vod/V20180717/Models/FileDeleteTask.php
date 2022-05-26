@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIdSet() Obtain List of IDs of deleted files.
  * @method void setFileIdSet(array $FileIdSet) Set List of IDs of deleted files.
+ * @method array getFileDeleteResultInfo() Obtain The information of the files deleted.
+ * @method void setFileDeleteResultInfo(array $FileDeleteResultInfo) Set The information of the files deleted.
  */
 class FileDeleteTask extends AbstractModel
 {
@@ -31,7 +33,13 @@ class FileDeleteTask extends AbstractModel
     public $FileIdSet;
 
     /**
+     * @var array The information of the files deleted.
+     */
+    public $FileDeleteResultInfo;
+
+    /**
      * @param array $FileIdSet List of IDs of deleted files.
+     * @param array $FileDeleteResultInfo The information of the files deleted.
      */
     function __construct()
     {
@@ -48,6 +56,15 @@ class FileDeleteTask extends AbstractModel
         }
         if (array_key_exists("FileIdSet",$param) and $param["FileIdSet"] !== null) {
             $this->FileIdSet = $param["FileIdSet"];
+        }
+
+        if (array_key_exists("FileDeleteResultInfo",$param) and $param["FileDeleteResultInfo"] !== null) {
+            $this->FileDeleteResultInfo = [];
+            foreach ($param["FileDeleteResultInfo"] as $key => $value){
+                $obj = new FileDeleteResultItem();
+                $obj->deserialize($value);
+                array_push($this->FileDeleteResultInfo, $obj);
+            }
         }
     }
 }

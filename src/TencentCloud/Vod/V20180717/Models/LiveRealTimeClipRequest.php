@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * LiveRealTimeClip request structure.
  *
- * @method string getStreamId() Obtain [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
- * @method void setStreamId(string $StreamId) Set [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+ * @method string getStreamId() Obtain The live stream code.
+ * @method void setStreamId(string $StreamId) Set The live stream code.
  * @method string getStartTime() Obtain Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setStartTime(string $StartTime) Set Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getEndTime() Obtain End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class LiveRealTimeClipRequest extends AbstractModel
 {
     /**
-     * @var string [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+     * @var string The live stream code.
      */
     public $StreamId;
 
@@ -94,7 +94,7 @@ class LiveRealTimeClipRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $StreamId [LVB code](https://intl.cloud.tencent.com/document/product/267/5959?from_cn_redirect=1) of a stream.
+     * @param string $StreamId The live stream code.
      * @param string $StartTime Start time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $EndTime End time of stream clipping in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param integer $IsPersistence Whether to clip persistently. 0: no, 1: yes. Default: no.
