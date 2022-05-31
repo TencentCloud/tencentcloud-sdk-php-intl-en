@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFlowLogName() Obtain The name of the flow log instance.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
- * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
- * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+ * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
+ * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
  * @method string getResourceId() Obtain The unique ID of the resource.
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource.
  * @method string getTrafficType() Obtain Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
@@ -49,7 +49,7 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @var string The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
      */
     public $ResourceType;
 
@@ -95,7 +95,7 @@ class CreateFlowLogRequest extends AbstractModel
 
     /**
      * @param string $FlowLogName The name of the flow log instance.
-     * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
      * @param string $ResourceId The unique ID of the resource.
      * @param string $TrafficType Type of the flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $VpcId The VPC ID or unique ID of the resource. We recommend using the unique ID. This parameter is required unless the `ResourceType` is set to `CCN`.

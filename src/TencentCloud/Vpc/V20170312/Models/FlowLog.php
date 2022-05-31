@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFlowLogId(string $FlowLogId) Set The unique ID of the flow log.
  * @method string getFlowLogName() Obtain The name of the flow log instance.
  * @method void setFlowLogName(string $FlowLogName) Set The name of the flow log instance.
- * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
- * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+ * @method string getResourceType() Obtain The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
+ * @method void setResourceType(string $ResourceType) Set The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
  * @method string getResourceId() Obtain The unique ID of the resource
  * @method void setResourceId(string $ResourceId) Set The unique ID of the resource
  * @method string getTrafficType() Obtain Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
@@ -71,7 +71,7 @@ class FlowLog extends AbstractModel
     public $FlowLogName;
 
     /**
-     * @var string The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @var string The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
      */
     public $ResourceType;
 
@@ -131,7 +131,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
      * @param string $VpcId ID of the VPC instance.
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
-     * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, and `CCN`.
+     * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
      * @param string $ResourceId The unique ID of the resource
      * @param string $TrafficType Type of flow logs to be collected. Valid values: `ACCEPT`, `REJECT` and `ALL`.
      * @param string $CloudLogId The storage ID of the flow log

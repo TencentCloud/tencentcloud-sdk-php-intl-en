@@ -18,20 +18,20 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateNatGatewaySourceIpTranslationNatRule response structure.
+ * DisableFlowLogs request structure.
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method array getFlowLogIds() Obtain Flow log ID.
+ * @method void setFlowLogIds(array $FlowLogIds) Set Flow log ID.
  */
-class CreateNatGatewaySourceIpTranslationNatRuleResponse extends AbstractModel
+class DisableFlowLogsRequest extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var array Flow log ID.
      */
-    public $RequestId;
+    public $FlowLogIds;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param array $FlowLogIds Flow log ID.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CreateNatGatewaySourceIpTranslationNatRuleResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("FlowLogIds",$param) and $param["FlowLogIds"] !== null) {
+            $this->FlowLogIds = $param["FlowLogIds"];
         }
     }
 }
