@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConsoleLogin(integer $ConsoleLogin) Set Whether login is allowed. 1: yes, 0: no
  * @method integer getSessionDuration() Obtain The maximum validity period of the temporary key for creating a role (range: 0-43200)
  * @method void setSessionDuration(integer $SessionDuration) Set The maximum validity period of the temporary key for creating a role (range: 0-43200)
+ * @method array getTags() Obtain Tags bound to the role.
+ * @method void setTags(array $Tags) Set Tags bound to the role.
  */
 class CreateRoleRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateRoleRequest extends AbstractModel
     public $SessionDuration;
 
     /**
+     * @var array Tags bound to the role.
+     */
+    public $Tags;
+
+    /**
      * @param string $RoleName Role name
      * @param string $PolicyDocument Policy document
      * @param string $Description Role description
      * @param integer $ConsoleLogin Whether login is allowed. 1: yes, 0: no
      * @param integer $SessionDuration The maximum validity period of the temporary key for creating a role (range: 0-43200)
+     * @param array $Tags Tags bound to the role.
      */
     function __construct()
     {
@@ -96,6 +104,15 @@ class CreateRoleRequest extends AbstractModel
 
         if (array_key_exists("SessionDuration",$param) and $param["SessionDuration"] !== null) {
             $this->SessionDuration = $param["SessionDuration"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RoleTags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -62,14 +62,10 @@ use TencentCloud\Common\AbstractModel;
 <li>28: EMR v3.2.0</li>
 <li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
- * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
- * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
  * @method array getSoftware() Obtain List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
  * @method void setSoftware(array $Software) Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
- * @method NewResourceSpec getResourceSpec() Obtain Node resource specification.
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node resource specification.
  * @method integer getSupportHA() Obtain Whether to enable high node availability. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
@@ -86,8 +82,6 @@ Enter an instance value: `hive` or `flink`.
 <li>0: pay-as-you-go.</li>
  * @method void setPayMode(integer $PayMode) Set Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
- * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
- * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method integer getTimeSpan() Obtain Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
@@ -106,8 +100,14 @@ Enter an instance value: `hive` or `flink`.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings. This parameter allows you to set the login password or key for your purchased node.
 <li>If the key is set, the password will be only used for login to the native component WebUI.</li>
 <li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+ * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+ * @method void setVPCSettings(VPCSettings $VPCSettings) Set Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+ * @method NewResourceSpec getResourceSpec() Obtain Node resource specification.
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node resource specification.
  * @method COSSettings getCOSSettings() Obtain Parameter required for enabling COS access.
  * @method void setCOSSettings(COSSettings $COSSettings) Set Parameter required for enabling COS access.
+ * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+ * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method string getSgId() Obtain Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
  * @method void setSgId(string $SgId) Set Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
  * @method array getPreExecutedFileSettings() Obtain [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
@@ -166,6 +166,12 @@ Hadoop-Presto
 Hadoop-Hbase
  * @method array getExternalService() Obtain Shared component information
  * @method void setExternalService(array $ExternalService) Set Shared component information
+ * @method integer getVersionID() Obtain 
+ * @method void setVersionID(integer $VersionID) Set 
+ * @method boolean getMultiZone() Obtain `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+ * @method void setMultiZone(boolean $MultiZone) Set `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+ * @method array getMultiZoneSettings() Obtain Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+ * @method void setMultiZoneSettings(array $MultiZoneSettings) Set Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -195,20 +201,10 @@ class CreateInstanceRequest extends AbstractModel
     public $ProductId;
 
     /**
-     * @var VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
-     */
-    public $VPCSettings;
-
-    /**
      * @var array List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
      */
     public $Software;
-
-    /**
-     * @var NewResourceSpec Node resource specification.
-     */
-    public $ResourceSpec;
 
     /**
      * @var integer Whether to enable high node availability. Valid values:
@@ -229,11 +225,6 @@ Enter an instance value: `hive` or `flink`.
 <li>0: pay-as-you-go.</li>
      */
     public $PayMode;
-
-    /**
-     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
-     */
-    public $Placement;
 
     /**
      * @var integer Purchase duration of instance, which needs to be used together with `TimeUnit`.
@@ -257,9 +248,24 @@ Enter an instance value: `hive` or `flink`.
     public $LoginSettings;
 
     /**
+     * @var VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     */
+    public $VPCSettings;
+
+    /**
+     * @var NewResourceSpec Node resource specification.
+     */
+    public $ResourceSpec;
+
+    /**
      * @var COSSettings Parameter required for enabling COS access.
      */
     public $COSSettings;
+
+    /**
+     * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+     */
+    public $Placement;
 
     /**
      * @var string Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
@@ -359,6 +365,21 @@ Hadoop-Hbase
     public $ExternalService;
 
     /**
+     * @var integer 
+     */
+    public $VersionID;
+
+    /**
+     * @var boolean `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     */
+    public $MultiZone;
+
+    /**
+     * @var array Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
+     */
+    public $MultiZoneSettings;
+
+    /**
      * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>1: EMR v1.3.1</li>
 <li>2: EMR v2.0.1</li>
@@ -380,10 +401,8 @@ Hadoop-Hbase
 <li>28: EMR v3.2.0</li>
 <li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
-     * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
      * @param array $Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
-     * @param NewResourceSpec $ResourceSpec Node resource specification.
      * @param integer $SupportHA Whether to enable high node availability. Valid values:
 <li>0: does not enable high availability of node.</li>
 <li>1: enables high availability of node.</li>
@@ -392,7 +411,6 @@ Enter an instance value: `hive` or `flink`.
 <li>Only letters, numbers, dashes (-), and underscores (_) are supported.</li>
      * @param integer $PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
-     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
@@ -402,7 +420,10 @@ Enter an instance value: `hive` or `flink`.
      * @param LoginSettings $LoginSettings Instance login settings. This parameter allows you to set the login password or key for your purchased node.
 <li>If the key is set, the password will be only used for login to the native component WebUI.</li>
 <li>If the key is not set, the password will be used for login to all purchased nodes and the native component WebUI.</li>
+     * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
+     * @param NewResourceSpec $ResourceSpec Node resource specification.
      * @param COSSettings $COSSettings Parameter required for enabling COS access.
+     * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param string $SgId Security group to which an instance belongs in the format of `sg-xxxxxxxx`. This parameter can be obtained from the `SecurityGroupId` field in the return value of the [DescribeSecurityGroups](https://intl.cloud.tencent.com/document/api/215/15808) API.
      * @param array $PreExecutedFileSettings [Bootstrap action](https://intl.cloud.tencent.com/document/product/589/35656?from_cn_redirect=1) script settings
      * @param integer $AutoRenew Whether auto-renewal is enabled. Valid values:
@@ -432,6 +453,9 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
      * @param array $ExternalService Shared component information
+     * @param integer $VersionID 
+     * @param boolean $MultiZone `true` indicates that the multi-AZ deployment mode is enabled. This parameter is available only in cluster creation and cannot be changed after setting.
+     * @param array $MultiZoneSettings Node resource specs. The actual number of AZs is set, with the first AZ as the primary AZ, the second as the backup AZ, and the third as the arbitrator AZ. If the multi-AZ mode is not enabled, set the value to `1`.
      */
     function __construct()
     {
@@ -450,18 +474,8 @@ Hadoop-Hbase
             $this->ProductId = $param["ProductId"];
         }
 
-        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
-            $this->VPCSettings = new VPCSettings();
-            $this->VPCSettings->deserialize($param["VPCSettings"]);
-        }
-
         if (array_key_exists("Software",$param) and $param["Software"] !== null) {
             $this->Software = $param["Software"];
-        }
-
-        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
-            $this->ResourceSpec = new NewResourceSpec();
-            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
         }
 
         if (array_key_exists("SupportHA",$param) and $param["SupportHA"] !== null) {
@@ -474,11 +488,6 @@ Hadoop-Hbase
 
         if (array_key_exists("PayMode",$param) and $param["PayMode"] !== null) {
             $this->PayMode = $param["PayMode"];
-        }
-
-        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
-            $this->Placement = new Placement();
-            $this->Placement->deserialize($param["Placement"]);
         }
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
@@ -494,9 +503,24 @@ Hadoop-Hbase
             $this->LoginSettings->deserialize($param["LoginSettings"]);
         }
 
+        if (array_key_exists("VPCSettings",$param) and $param["VPCSettings"] !== null) {
+            $this->VPCSettings = new VPCSettings();
+            $this->VPCSettings->deserialize($param["VPCSettings"]);
+        }
+
+        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
+            $this->ResourceSpec = new NewResourceSpec();
+            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
+        }
+
         if (array_key_exists("COSSettings",$param) and $param["COSSettings"] !== null) {
             $this->COSSettings = new COSSettings();
             $this->COSSettings->deserialize($param["COSSettings"]);
+        }
+
+        if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
+            $this->Placement = new Placement();
+            $this->Placement->deserialize($param["Placement"]);
         }
 
         if (array_key_exists("SgId",$param) and $param["SgId"] !== null) {
@@ -580,6 +604,23 @@ Hadoop-Hbase
                 $obj = new ExternalService();
                 $obj->deserialize($value);
                 array_push($this->ExternalService, $obj);
+            }
+        }
+
+        if (array_key_exists("VersionID",$param) and $param["VersionID"] !== null) {
+            $this->VersionID = $param["VersionID"];
+        }
+
+        if (array_key_exists("MultiZone",$param) and $param["MultiZone"] !== null) {
+            $this->MultiZone = $param["MultiZone"];
+        }
+
+        if (array_key_exists("MultiZoneSettings",$param) and $param["MultiZoneSettings"] !== null) {
+            $this->MultiZoneSettings = [];
+            foreach ($param["MultiZoneSettings"] as $key => $value){
+                $obj = new MultiZoneSetting();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneSettings, $obj);
             }
         }
     }

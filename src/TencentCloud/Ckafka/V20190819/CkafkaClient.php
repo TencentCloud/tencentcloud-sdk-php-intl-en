@@ -61,6 +61,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) This API is used to query messages based on a specified offset position.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
+ * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.
  * @method Models\ModifyPasswordResponse ModifyPassword(Models\ModifyPasswordRequest $req) This API is used to change the password.
  * @method Models\ModifyTopicAttributesResponse ModifyTopicAttributes(Models\ModifyTopicAttributesRequest $req) This API is used to modify topic attributes.
  * @method Models\SendMessageResponse SendMessage(Models\SendMessageRequest $req) This API is used to send messages through the HTTP access layer.

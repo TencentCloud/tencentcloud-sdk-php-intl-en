@@ -30,8 +30,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTimeSpan(integer $TimeSpan) Set Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
- * @method NewResourceSpec getResourceSpec() Obtain Node specification queried for price.
- * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node specification queried for price.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
  * @method integer getPayMode() Obtain Instance billing mode. Valid values:
@@ -54,6 +52,8 @@ use TencentCloud\Common\AbstractModel;
 <li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+ * @method NewResourceSpec getResourceSpec() Obtain Node specification queried for price.
+ * @method void setResourceSpec(NewResourceSpec $ResourceSpec) Set Node specification queried for price.
  * @method Placement getPlacement() Obtain Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method VPCSettings getVPCSettings() Obtain Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
@@ -92,6 +92,10 @@ Hadoop-Presto
 Hadoop-Hbase
  * @method array getExternalService() Obtain Shared component information
  * @method void setExternalService(array $ExternalService) Set Shared component information
+ * @method integer getVersionID() Obtain 
+ * @method void setVersionID(integer $VersionID) Set 
+ * @method array getMultiZoneSettings() Obtain AZ specs
+ * @method void setMultiZoneSettings(array $MultiZoneSettings) Set AZ specs
  */
 class InquiryPriceCreateInstanceRequest extends AbstractModel
 {
@@ -107,11 +111,6 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
      */
     public $TimeSpan;
-
-    /**
-     * @var NewResourceSpec Node specification queried for price.
-     */
-    public $ResourceSpec;
 
     /**
      * @var string Currency.
@@ -139,6 +138,11 @@ class InquiryPriceCreateInstanceRequest extends AbstractModel
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
      */
     public $Software;
+
+    /**
+     * @var NewResourceSpec Node specification queried for price.
+     */
+    public $ResourceSpec;
 
     /**
      * @var Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
@@ -192,12 +196,21 @@ Hadoop-Hbase
     public $ExternalService;
 
     /**
+     * @var integer 
+     */
+    public $VersionID;
+
+    /**
+     * @var array AZ specs
+     */
+    public $MultiZoneSettings;
+
+    /**
      * @param string $TimeUnit Time unit of instance purchase duration. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Purchase duration of instance, which needs to be used together with `TimeUnit`.
 <li>When `TimeUnit` is `s`, this parameter can only be filled with 3600, indicating a pay-as-you-go instance.</li>
 <li>When `TimeUnit` is `m`, the number entered in this parameter indicates the purchase duration of the monthly-subscription instance; for example, 1 means one month</li>
-     * @param NewResourceSpec $ResourceSpec Node specification queried for price.
      * @param string $Currency Currency.
      * @param integer $PayMode Instance billing mode. Valid values:
 <li>0: pay-as-you-go.</li>
@@ -209,6 +222,7 @@ Hadoop-Hbase
 <li>When `ProductId` is 2, the required components include hadoop-2.7.3, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 4, the required components include hadoop-2.8.4, knox-1.2.0, and zookeeper-3.4.9</li>
 <li>When `ProductId` is 7, the required components include hadoop-3.1.2, knox-1.2.0, and zookeeper-3.4.9</li>
+     * @param NewResourceSpec $ResourceSpec Node specification queried for price.
      * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param VPCSettings $VPCSettings Configuration information of VPC. This parameter is used to specify the VPC ID, subnet ID, etc.
      * @param string $MetaType Hive-shared metadatabase type. Valid values:
@@ -228,6 +242,8 @@ Hadoop-Zookeeper
 Hadoop-Presto
 Hadoop-Hbase
      * @param array $ExternalService Shared component information
+     * @param integer $VersionID 
+     * @param array $MultiZoneSettings AZ specs
      */
     function __construct()
     {
@@ -250,11 +266,6 @@ Hadoop-Hbase
             $this->TimeSpan = $param["TimeSpan"];
         }
 
-        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
-            $this->ResourceSpec = new NewResourceSpec();
-            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
-        }
-
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
         }
@@ -269,6 +280,11 @@ Hadoop-Hbase
 
         if (array_key_exists("Software",$param) and $param["Software"] !== null) {
             $this->Software = $param["Software"];
+        }
+
+        if (array_key_exists("ResourceSpec",$param) and $param["ResourceSpec"] !== null) {
+            $this->ResourceSpec = new NewResourceSpec();
+            $this->ResourceSpec->deserialize($param["ResourceSpec"]);
         }
 
         if (array_key_exists("Placement",$param) and $param["Placement"] !== null) {
@@ -308,6 +324,19 @@ Hadoop-Hbase
                 $obj = new ExternalService();
                 $obj->deserialize($value);
                 array_push($this->ExternalService, $obj);
+            }
+        }
+
+        if (array_key_exists("VersionID",$param) and $param["VersionID"] !== null) {
+            $this->VersionID = $param["VersionID"];
+        }
+
+        if (array_key_exists("MultiZoneSettings",$param) and $param["MultiZoneSettings"] !== null) {
+            $this->MultiZoneSettings = [];
+            foreach ($param["MultiZoneSettings"] as $key => $value){
+                $obj = new MultiZoneSetting();
+                $obj->deserialize($value);
+                array_push($this->MultiZoneSettings, $obj);
             }
         }
     }

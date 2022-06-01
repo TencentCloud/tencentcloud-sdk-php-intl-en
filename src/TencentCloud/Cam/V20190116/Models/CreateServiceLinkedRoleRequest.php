@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCustomSuffix(string $CustomSuffix) Set Custom suffix. A string you provide, which is combined with the service-provided prefix to form the complete role name.
  * @method string getDescription() Obtain Role description.
  * @method void setDescription(string $Description) Set Role description.
+ * @method array getTags() Obtain Tags bound to the role.
+ * @method void setTags(array $Tags) Set Tags bound to the role.
  */
 class CreateServiceLinkedRoleRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateServiceLinkedRoleRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var array Tags bound to the role.
+     */
+    public $Tags;
+
+    /**
      * @param array $QCSServiceName Authorized service, i.e., Tencent Cloud service entity with this role attached.
      * @param string $CustomSuffix Custom suffix. A string you provide, which is combined with the service-provided prefix to form the complete role name.
      * @param string $Description Role description.
+     * @param array $Tags Tags bound to the role.
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class CreateServiceLinkedRoleRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RoleTags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

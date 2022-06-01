@@ -222,6 +222,22 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setClusterExternalServiceInfo(array $ClusterExternalServiceInfo) Set Cluster dependency
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getUniqVpcId() Obtain The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUniqVpcId(string $UniqVpcId) Set The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getUniqSubnetId() Obtain The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTopologyInfoList() Obtain Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTopologyInfoList(array $TopologyInfoList) Set Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsMultiZoneCluster() Obtain Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ClusterInstancesInfo extends AbstractModel
 {
@@ -475,6 +491,30 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $ClusterExternalServiceInfo;
 
     /**
+     * @var string The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var array Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TopologyInfoList;
+
+    /**
+     * @var boolean Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsMultiZoneCluster;
+
+    /**
      * @param integer $Id ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ClusterId Cluster ID
@@ -576,6 +616,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $ClusterExternalServiceInfo Cluster dependency
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $UniqVpcId The VPC ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $UniqSubnetId The subnet ID string type of the cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TopologyInfoList Node information
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsMultiZoneCluster Multi-AZ cluster
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -747,6 +795,27 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->ClusterExternalServiceInfo, $obj);
             }
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("TopologyInfoList",$param) and $param["TopologyInfoList"] !== null) {
+            $this->TopologyInfoList = [];
+            foreach ($param["TopologyInfoList"] as $key => $value){
+                $obj = new TopologyInfo();
+                $obj->deserialize($value);
+                array_push($this->TopologyInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
+            $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
         }
     }
 }

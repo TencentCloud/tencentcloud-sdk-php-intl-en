@@ -180,6 +180,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSupportModifyPayMode(integer $SupportModifyPayMode) Set Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getRootStorageType() Obtain System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRootStorageType(integer $RootStorageType) Set System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getZone() Obtain AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setZone(string $Zone) Set AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method SubnetInfo getSubnetInfo() Obtain Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSubnetInfo(SubnetInfo $SubnetInfo) Set Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getClients() Obtain Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setClients(string $Clients) Set Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -424,6 +440,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $SupportModifyPayMode;
 
     /**
+     * @var integer System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RootStorageType;
+
+    /**
+     * @var string AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Zone;
+
+    /**
+     * @var SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SubnetInfo;
+
+    /**
+     * @var string Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Clients;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -504,6 +544,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $SupportModifyPayMode Whether to support billing mode change. `0`: no; `1`: yes
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $RootStorageType System disk type
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Zone AZ information
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param SubnetInfo $SubnetInfo Subnet
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Clients Client
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -687,6 +735,23 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SupportModifyPayMode",$param) and $param["SupportModifyPayMode"] !== null) {
             $this->SupportModifyPayMode = $param["SupportModifyPayMode"];
+        }
+
+        if (array_key_exists("RootStorageType",$param) and $param["RootStorageType"] !== null) {
+            $this->RootStorageType = $param["RootStorageType"];
+        }
+
+        if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
+            $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("SubnetInfo",$param) and $param["SubnetInfo"] !== null) {
+            $this->SubnetInfo = new SubnetInfo();
+            $this->SubnetInfo->deserialize($param["SubnetInfo"]);
+        }
+
+        if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
+            $this->Clients = $param["Clients"];
         }
     }
 }

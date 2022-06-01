@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPage(integer $Page) Set Page number, beginning from 1
  * @method integer getRp() Obtain Number of lines per page, no greater than 200
  * @method void setRp(integer $Rp) Set Number of lines per page, no greater than 200
+ * @method array getTags() Obtain A parameter used to filter the list of roles under a tag.
+ * @method void setTags(array $Tags) Set A parameter used to filter the list of roles under a tag.
  */
 class DescribeRoleListRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeRoleListRequest extends AbstractModel
     public $Rp;
 
     /**
+     * @var array A parameter used to filter the list of roles under a tag.
+     */
+    public $Tags;
+
+    /**
      * @param integer $Page Page number, beginning from 1
      * @param integer $Rp Number of lines per page, no greater than 200
+     * @param array $Tags A parameter used to filter the list of roles under a tag.
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DescribeRoleListRequest extends AbstractModel
 
         if (array_key_exists("Rp",$param) and $param["Rp"] !== null) {
             $this->Rp = $param["Rp"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RoleTags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

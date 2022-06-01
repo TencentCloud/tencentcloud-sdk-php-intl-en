@@ -46,6 +46,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeletionTaskId(string $DeletionTaskId) Set Task identifier for deleting a service-linked role 
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class RoleInfo extends AbstractModel
 {
@@ -103,6 +107,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DeletionTaskId;
 
     /**
+     * @var array Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $RoleId Role ID
      * @param string $RoleName Role name
      * @param string $PolicyDocument Role policy document
@@ -116,6 +126,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $DeletionTaskId Task identifier for deleting a service-linked role 
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tags.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DeletionTaskId",$param) and $param["DeletionTaskId"] !== null) {
             $this->DeletionTaskId = $param["DeletionTaskId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new RoleTags();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
