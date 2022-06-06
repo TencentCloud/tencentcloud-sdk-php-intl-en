@@ -108,6 +108,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getInstanceNote() Obtain Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInstanceNote(string $InstanceNote) Set Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getBackupCycle() Obtain Backup cycle
+ * @method void setBackupCycle(array $BackupCycle) Set Backup cycle
+ * @method string getBackupCycleType() Obtain Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+ * @method void setBackupCycleType(string $BackupCycleType) Set Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+ * @method integer getBackupSaveDays() Obtain Data (log) backup retention period
+ * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period
+ * @method string getInstanceType() Obtain Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
  */
 class DBInstance extends AbstractModel
 {
@@ -308,6 +320,32 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $BackupModel;
 
     /**
+     * @var string Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $InstanceNote;
+
+    /**
+     * @var array Backup cycle
+     */
+    public $BackupCycle;
+
+    /**
+     * @var string Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+     */
+    public $BackupCycleType;
+
+    /**
+     * @var integer Data (log) backup retention period
+     */
+    public $BackupSaveDays;
+
+    /**
+     * @var string Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     */
+    public $InstanceType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -352,6 +390,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node (default value)), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node (valid for Always On clusters)), `slave_no_pkg` (do not archive the backup files of the replica node (valid for Always On clusters)). This parameter is invalid for read-only instances.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $InstanceNote Instance backup info
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $BackupCycle Backup cycle
+     * @param string $BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
+     * @param integer $BackupSaveDays Data (log) backup retention period
+     * @param string $InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
      */
     function __construct()
     {
@@ -521,6 +565,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
             $this->BackupModel = $param["BackupModel"];
+        }
+
+        if (array_key_exists("InstanceNote",$param) and $param["InstanceNote"] !== null) {
+            $this->InstanceNote = $param["InstanceNote"];
+        }
+
+        if (array_key_exists("BackupCycle",$param) and $param["BackupCycle"] !== null) {
+            $this->BackupCycle = $param["BackupCycle"];
+        }
+
+        if (array_key_exists("BackupCycleType",$param) and $param["BackupCycleType"] !== null) {
+            $this->BackupCycleType = $param["BackupCycleType"];
+        }
+
+        if (array_key_exists("BackupSaveDays",$param) and $param["BackupSaveDays"] !== null) {
+            $this->BackupSaveDays = $param["BackupSaveDays"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

@@ -22,14 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getBackupType() Obtain Backup mode, which supports daily backup only. Valid value: daily.
- * @method void setBackupType(string $BackupType) Set Backup mode, which supports daily backup only. Valid value: daily.
+ * @method string getBackupType() Obtain Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
+ * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
  * @method integer getBackupTime() Obtain Backup time. Value range: an integer from 0 to 23.
  * @method void setBackupTime(integer $BackupTime) Set Backup time. Value range: an integer from 0 to 23.
  * @method integer getBackupDay() Obtain Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
  * @method void setBackupDay(integer $BackupDay) Set Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
  * @method string getBackupModel() Obtain Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
  * @method void setBackupModel(string $BackupModel) Set Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+ * @method array getBackupCycle() Obtain The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+ * @method void setBackupCycle(array $BackupCycle) Set The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+ * @method integer getBackupSaveDays() Obtain Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+ * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
  */
 class ModifyBackupStrategyRequest extends AbstractModel
 {
@@ -39,7 +43,7 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Backup mode, which supports daily backup only. Valid value: daily.
+     * @var string Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
      */
     public $BackupType;
 
@@ -59,11 +63,23 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $BackupModel;
 
     /**
+     * @var array The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     */
+    public $BackupCycle;
+
+    /**
+     * @var integer Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+     */
+    public $BackupSaveDays;
+
+    /**
      * @param string $InstanceId Instance ID.
-     * @param string $BackupType Backup mode, which supports daily backup only. Valid value: daily.
+     * @param string $BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
      * @param integer $BackupTime Backup time. Value range: an integer from 0 to 23.
      * @param integer $BackupDay Backup interval in days when the `BackupType` is `daily`. Valid value: 1.
      * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
+     * @param array $BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
+     * @param integer $BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ModifyBackupStrategyRequest extends AbstractModel
 
         if (array_key_exists("BackupModel",$param) and $param["BackupModel"] !== null) {
             $this->BackupModel = $param["BackupModel"];
+        }
+
+        if (array_key_exists("BackupCycle",$param) and $param["BackupCycle"] !== null) {
+            $this->BackupCycle = $param["BackupCycle"];
+        }
+
+        if (array_key_exists("BackupSaveDays",$param) and $param["BackupSaveDays"] !== null) {
+            $this->BackupSaveDays = $param["BackupSaveDays"];
         }
     }
 }

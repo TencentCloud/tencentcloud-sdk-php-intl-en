@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Account remarks
  * @method boolean getIsAdmin() Obtain Whether it is an admin account. Default value: no
  * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account. Default value: no
+ * @method string getAuthentication() Obtain Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+ * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
  */
 class AccountCreateInfo extends AbstractModel
 {
@@ -59,11 +61,17 @@ class AccountCreateInfo extends AbstractModel
     public $IsAdmin;
 
     /**
+     * @var string Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
+     */
+    public $Authentication;
+
+    /**
      * @param string $UserName Instance username
      * @param string $Password Instance password
      * @param array $DBPrivileges List of database permissions
      * @param string $Remark Account remarks
      * @param boolean $IsAdmin Whether it is an admin account. Default value: no
+     * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`. Default value: `sql-sqlserver authentication`.
      */
     function __construct()
     {
@@ -101,6 +109,10 @@ class AccountCreateInfo extends AbstractModel
 
         if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
             $this->IsAdmin = $param["IsAdmin"];
+        }
+
+        if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
+            $this->Authentication = $param["Authentication"];
         }
     }
 }

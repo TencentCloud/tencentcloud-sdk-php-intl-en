@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbs(array $Dbs) Set Information of read and write permissions of this account on relevant databases
  * @method boolean getIsAdmin() Obtain Whether it is an admin account
  * @method void setIsAdmin(boolean $IsAdmin) Set Whether it is an admin account
+ * @method string getAuthentication() Obtain Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+ * @method void setAuthentication(string $Authentication) Set Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+ * @method string getHost() Obtain The host required for `win-windows authentication` account
+ * @method void setHost(string $Host) Set The host required for `win-windows authentication` account
  */
 class AccountDetail extends AbstractModel
 {
@@ -87,6 +91,16 @@ class AccountDetail extends AbstractModel
     public $IsAdmin;
 
     /**
+     * @var string Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+     */
+    public $Authentication;
+
+    /**
+     * @var string The host required for `win-windows authentication` account
+     */
+    public $Host;
+
+    /**
      * @param string $Name Account name
      * @param string $Remark Account remarks
      * @param string $CreateTime Account creation time
@@ -96,6 +110,8 @@ class AccountDetail extends AbstractModel
      * @param string $InternalStatus Internal account status, which should be `enable` normally
      * @param array $Dbs Information of read and write permissions of this account on relevant databases
      * @param boolean $IsAdmin Whether it is an admin account
+     * @param string $Authentication Valid values: `win-windows authentication`, `sql-sqlserver authentication`.
+     * @param string $Host The host required for `win-windows authentication` account
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class AccountDetail extends AbstractModel
 
         if (array_key_exists("IsAdmin",$param) and $param["IsAdmin"] !== null) {
             $this->IsAdmin = $param["IsAdmin"];
+        }
+
+        if (array_key_exists("Authentication",$param) and $param["Authentication"] !== null) {
+            $this->Authentication = $param["Authentication"];
+        }
+
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
         }
     }
 }

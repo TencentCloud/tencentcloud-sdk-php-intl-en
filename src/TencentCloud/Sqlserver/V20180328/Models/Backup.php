@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupName(string $BackupName) Set Backup task name (customizable)
  * @method string getGroupId() Obtain Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
  * @method void setGroupId(string $GroupId) Set Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+ * @method string getBackupFormat() Obtain Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+ * @method void setBackupFormat(string $BackupFormat) Set Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
  */
 class Backup extends AbstractModel
 {
@@ -115,6 +117,11 @@ class Backup extends AbstractModel
     public $GroupId;
 
     /**
+     * @var string Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
+     */
+    public $BackupFormat;
+
+    /**
      * @param string $FileName File name. The name of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      * @param integer $Size File size in KB. The size of an unarchived backup file is returned by the `DescribeBackupFiles` API instead of this parameter.
      * @param string $StartTime Backup start time
@@ -128,6 +135,7 @@ class Backup extends AbstractModel
      * @param integer $BackupWay Backup mode. 0: scheduled, 1: manual
      * @param string $BackupName Backup task name (customizable)
      * @param string $GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
+     * @param string $BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).
      */
     function __construct()
     {
@@ -192,6 +200,10 @@ class Backup extends AbstractModel
 
         if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
             $this->GroupId = $param["GroupId"];
+        }
+
+        if (array_key_exists("BackupFormat",$param) and $param["BackupFormat"] !== null) {
+            $this->BackupFormat = $param["BackupFormat"];
         }
     }
 }

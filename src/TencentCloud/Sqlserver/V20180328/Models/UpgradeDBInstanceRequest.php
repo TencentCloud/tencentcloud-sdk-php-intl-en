@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHAType(string $HAType) Set Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
  * @method string getMultiZones() Obtain Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
  * @method void setMultiZones(string $MultiZones) Set Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+ * @method integer getWaitSwitch() Obtain The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+ * @method void setWaitSwitch(integer $WaitSwitch) Set The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
  */
 class UpgradeDBInstanceRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class UpgradeDBInstanceRequest extends AbstractModel
     public $MultiZones;
 
     /**
+     * @var integer The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
+     */
+    public $WaitSwitch;
+
+    /**
      * @param string $InstanceId Instance ID in the format of mssql-j8kv137v
      * @param integer $Memory Memory size after instance upgrade in GB, which cannot be smaller than the current instance memory size
      * @param integer $Storage Storage capacity after instance upgrade in GB, which cannot be smaller than the current instance storage capacity
@@ -96,6 +103,7 @@ class UpgradeDBInstanceRequest extends AbstractModel
      * @param string $DBVersion Upgrade the SQL Server version. Supported versions include SQL Server 2008 Enterprise (`2008R2`), SQL Server 2012 Enterprise (`2012SP3`), etc. As the purchasable versions are region-specific, you can use the `DescribeProductConfig` API to query the information of purchasable versions in each region. Downgrading is unsupported. If this parameter is left empty, the SQL Server version will not be changed.
      * @param string $HAType Upgrade the high availability architecture from image-based disaster recovery to Always On cluster disaster recovery. This parameter is valid only for instances which support Always On high availability and run SQL Server 2017 or later. Neither downgrading to image-based disaster recovery nor upgrading from cluster disaster recovery to Always On disaster recovery is supported. If this parameter is left empty, the high availability architecture will not be changed.
      * @param string $MultiZones Change the instance deployment scheme. Valid values: `SameZones` (change to single-AZ deployment, which does not support cross-AZ disaster recovery), `MultiZones` (change to multi-AZ deployment, which supports cross-AZ disaster recovery).
+     * @param integer $WaitSwitch The time when configuration adjustment task is performed. Valid values: `0` (execute immediately), `1` (execute during maintenance time). Default value: `1`.
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class UpgradeDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("MultiZones",$param) and $param["MultiZones"] !== null) {
             $this->MultiZones = $param["MultiZones"];
+        }
+
+        if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
+            $this->WaitSwitch = $param["WaitSwitch"];
         }
     }
 }
