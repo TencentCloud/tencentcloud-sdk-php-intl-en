@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Docker container mount volume
+ * DeleteIndex response structure.
  *
- * @method string getContainerPath() Obtain Container path
- * @method void setContainerPath(string $ContainerPath) Set Container path
- * @method string getHostPath() Obtain Host path
- * @method void setHostPath(string $HostPath) Set Host path
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DockerContainerVolume extends AbstractModel
+class DeleteIndexResponse extends AbstractModel
 {
     /**
-     * @var string Container path
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $ContainerPath;
+    public $RequestId;
 
     /**
-     * @var string Host path
-     */
-    public $HostPath;
-
-    /**
-     * @param string $ContainerPath Container path
-     * @param string $HostPath Host path
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class DockerContainerVolume extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContainerPath",$param) and $param["ContainerPath"] !== null) {
-            $this->ContainerPath = $param["ContainerPath"];
-        }
-
-        if (array_key_exists("HostPath",$param) and $param["HostPath"] !== null) {
-            $this->HostPath = $param["HostPath"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

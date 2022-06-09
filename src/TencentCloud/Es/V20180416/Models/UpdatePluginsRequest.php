@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstallPluginList(array $InstallPluginList) Set List of names of the plugins to be installed
  * @method array getRemovePluginList() Obtain List of names of the plugins to be uninstalled
  * @method void setRemovePluginList(array $RemovePluginList) Set List of names of the plugins to be uninstalled
- * @method boolean getForceRestart() Obtain Whether to force restart
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart
- * @method boolean getForceUpdate() Obtain Whether to reinstall
- * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall
+ * @method boolean getForceRestart() Obtain Whether to force restart the cluster. The default value is `false`.
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster. The default value is `false`.
+ * @method boolean getForceUpdate() Obtain Whether to reinstall the cluster. The default value is `false`.
+ * @method void setForceUpdate(boolean $ForceUpdate) Set Whether to reinstall the cluster. The default value is `false`.
  * @method integer getPluginType() Obtain 0: system plugin
  * @method void setPluginType(integer $PluginType) Set 0: system plugin
  */
@@ -51,12 +51,12 @@ class UpdatePluginsRequest extends AbstractModel
     public $RemovePluginList;
 
     /**
-     * @var boolean Whether to force restart
+     * @var boolean Whether to force restart the cluster. The default value is `false`.
      */
     public $ForceRestart;
 
     /**
-     * @var boolean Whether to reinstall
+     * @var boolean Whether to reinstall the cluster. The default value is `false`.
      */
     public $ForceUpdate;
 
@@ -69,8 +69,8 @@ class UpdatePluginsRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param array $InstallPluginList List of names of the plugins to be installed
      * @param array $RemovePluginList List of names of the plugins to be uninstalled
-     * @param boolean $ForceRestart Whether to force restart
-     * @param boolean $ForceUpdate Whether to reinstall
+     * @param boolean $ForceRestart Whether to force restart the cluster. The default value is `false`.
+     * @param boolean $ForceUpdate Whether to reinstall the cluster. The default value is `false`.
      * @param integer $PluginType 0: system plugin
      */
     function __construct()

@@ -14,33 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Iotcloud\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquirePriceRenewInstances response structure.
+ * CreateProduct response structure.
  *
- * @method Price getPrice() Obtain Price query information.
- * @method void setPrice(Price $Price) Set Price query information.
- * @method array getDataDiskPriceSet() Obtain List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDataDiskPriceSet(array $DataDiskPriceSet) Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProductName() Obtain Product name
+ * @method void setProductName(string $ProductName) Set Product name
+ * @method string getProductId() Obtain Product ID, the globally unique ID assigned by Tencent Cloud.
+ * @method void setProductId(string $ProductId) Set Product ID, the globally unique ID assigned by Tencent Cloud.
+ * @method ProductProperties getProductProperties() Obtain Product properties
+ * @method void setProductProperties(ProductProperties $ProductProperties) Set Product properties
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquirePriceRenewInstancesResponse extends AbstractModel
+class CreateProductResponse extends AbstractModel
 {
     /**
-     * @var Price Price query information.
+     * @var string Product name
      */
-    public $Price;
+    public $ProductName;
 
     /**
-     * @var array List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Product ID, the globally unique ID assigned by Tencent Cloud.
      */
-    public $DataDiskPriceSet;
+    public $ProductId;
+
+    /**
+     * @var ProductProperties Product properties
+     */
+    public $ProductProperties;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +52,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param Price $Price Price query information.
-     * @param array $DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ProductName Product name
+     * @param string $ProductId Product ID, the globally unique ID assigned by Tencent Cloud.
+     * @param ProductProperties $ProductProperties Product properties
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,18 +70,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = new Price();
-            $this->Price->deserialize($param["Price"]);
+        if (array_key_exists("ProductName",$param) and $param["ProductName"] !== null) {
+            $this->ProductName = $param["ProductName"];
         }
 
-        if (array_key_exists("DataDiskPriceSet",$param) and $param["DataDiskPriceSet"] !== null) {
-            $this->DataDiskPriceSet = [];
-            foreach ($param["DataDiskPriceSet"] as $key => $value){
-                $obj = new DataDiskPrice();
-                $obj->deserialize($value);
-                array_push($this->DataDiskPriceSet, $obj);
-            }
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("ProductProperties",$param) and $param["ProductProperties"] !== null) {
+            $this->ProductProperties = new ProductProperties();
+            $this->ProductProperties->deserialize($param["ProductProperties"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

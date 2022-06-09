@@ -38,6 +38,18 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMetricConfig(MetricConfig $MetricConfig) Set Metric configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsAdvanced() Obtain Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsAdvanced(integer $IsAdvanced) Set Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsOpen() Obtain Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsOpen(integer $IsOpen) Set Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getProductId() Obtain Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProductId(integer $ProductId) Set Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Metric extends AbstractModel
 {
@@ -83,6 +95,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MetricConfig;
 
     /**
+     * @var integer Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsOpen;
+
+    /**
+     * @var integer Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProductId;
+
+    /**
      * @param string $Namespace Alarm policy type
      * @param string $MetricName Metric name
      * @param string $Description Metric display name
@@ -92,6 +122,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Unit Unit
      * @param MetricConfig $MetricConfig Metric configuration
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsAdvanced Whether it is an advanced metric. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsOpen Whether the advanced metric feature is enabled. 1: Yes; 0: No.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -137,6 +173,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MetricConfig",$param) and $param["MetricConfig"] !== null) {
             $this->MetricConfig = new MetricConfig();
             $this->MetricConfig->deserialize($param["MetricConfig"]);
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

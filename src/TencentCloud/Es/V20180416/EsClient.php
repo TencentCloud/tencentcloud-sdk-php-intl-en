@@ -23,8 +23,12 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Es\V20180416\Models as Models;
 
 /**
+ * @method Models\CreateIndexResponse CreateIndex(Models\CreateIndexRequest $req) This API is used to create indices.
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to create an ES cluster instance with the specified specification.
+ * @method Models\DeleteIndexResponse DeleteIndex(Models\DeleteIndexRequest $req) This API is used to delete indices.
  * @method Models\DeleteInstanceResponse DeleteInstance(Models\DeleteInstanceRequest $req) This API is used to terminate a cluster instance. 
+ * @method Models\DescribeIndexListResponse DescribeIndexList(Models\DescribeIndexListRequest $req) This API is used to obtain the index list.
+ * @method Models\DescribeIndexMetaResponse DescribeIndexMeta(Models\DescribeIndexMetaRequest $req) This API is used to obtain index metadata.
  * @method Models\DescribeInstanceLogsResponse DescribeInstanceLogs(Models\DescribeInstanceLogsRequest $req) This API is used to query the eligible ES cluster logs in the current region.
  * @method Models\DescribeInstanceOperationsResponse DescribeInstanceOperations(Models\DescribeInstanceOperationsRequest $req) This API is used to query the operation history of an instance by specified criteria.
  * @method Models\DescribeInstancesResponse DescribeInstances(Models\DescribeInstancesRequest $req) This API is used to query all eligible instances in the current region under the current account.
@@ -34,6 +38,7 @@ use TencentCloud\Es\V20180416\Models as Models;
  * @method Models\RestartKibanaResponse RestartKibana(Models\RestartKibanaRequest $req) This API is used to restart Kibana. 
  * @method Models\RestartNodesResponse RestartNodes(Models\RestartNodesRequest $req) This API is used to restart cluster nodes.
  * @method Models\UpdateDictionariesResponse UpdateDictionaries(Models\UpdateDictionariesRequest $req) This API is used to update ES cluster dictionaries.
+ * @method Models\UpdateIndexResponse UpdateIndex(Models\UpdateIndexRequest $req) This API is used to update indices.
  * @method Models\UpdateInstanceResponse UpdateInstance(Models\UpdateInstanceRequest $req) This API is used for operations such as modifying node specification, renaming an instance, modifying configuration, resetting password, and setting Kibana blocklist/allowlist. `InstanceId` is required, while `ForceRestart` is optional. Other parameters or parameter combinations and their meanings are as follows:
 - InstanceName: renames an instance (only for instance identification)
 - NodeInfoList: modifies node configuration (horizontally scaling nodes, vertically scaling nodes, adding primary nodes, adding cold nodes, etc.)

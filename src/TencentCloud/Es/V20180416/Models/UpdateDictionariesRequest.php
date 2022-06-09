@@ -30,10 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSynonym(array $Synonym) Set COS address of the synonym dictionary
  * @method array getQQDict() Obtain COS address of the QQ dictionary
  * @method void setQQDict(array $QQDict) Set COS address of the QQ dictionary
- * @method integer getUpdateType() Obtain 0: Install; 1: Delete
- * @method void setUpdateType(integer $UpdateType) Set 0: Install; 1: Delete
- * @method boolean getForceRestart() Obtain Whether to force restart the cluster
- * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster
+ * @method integer getUpdateType() Obtain `0` (default): Install, `1`: Delete
+ * @method void setUpdateType(integer $UpdateType) Set `0` (default): Install, `1`: Delete
+ * @method boolean getForceRestart() Obtain Whether to force restart the cluster. The default value is `false`.
+ * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart the cluster. The default value is `false`.
  */
 class UpdateDictionariesRequest extends AbstractModel
 {
@@ -63,12 +63,12 @@ class UpdateDictionariesRequest extends AbstractModel
     public $QQDict;
 
     /**
-     * @var integer 0: Install; 1: Delete
+     * @var integer `0` (default): Install, `1`: Delete
      */
     public $UpdateType;
 
     /**
-     * @var boolean Whether to force restart the cluster
+     * @var boolean Whether to force restart the cluster. The default value is `false`.
      */
     public $ForceRestart;
 
@@ -78,8 +78,8 @@ class UpdateDictionariesRequest extends AbstractModel
      * @param array $IkStopwords COS address of the stopword dictionary for the IK analyzer
      * @param array $Synonym COS address of the synonym dictionary
      * @param array $QQDict COS address of the QQ dictionary
-     * @param integer $UpdateType 0: Install; 1: Delete
-     * @param boolean $ForceRestart Whether to force restart the cluster
+     * @param integer $UpdateType `0` (default): Install, `1`: Delete
+     * @param boolean $ForceRestart Whether to force restart the cluster. The default value is `false`.
      */
     function __construct()
     {

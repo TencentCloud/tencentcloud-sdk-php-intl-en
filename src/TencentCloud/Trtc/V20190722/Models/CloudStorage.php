@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccessKey(string $AccessKey) Set The access_key of the cloud storage account.
  * @method string getSecretKey() Obtain The secret_key of the cloud storage account.
  * @method void setSecretKey(string $SecretKey) Set The secret_key of the cloud storage account.
- * @method array getFileNamePrefix() Obtain The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
- * @method void setFileNamePrefix(array $FileNamePrefix) Set The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+ * @method array getFileNamePrefix() Obtain The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+ * @method void setFileNamePrefix(array $FileNamePrefix) Set The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
  */
 class CloudStorage extends AbstractModel
 {
@@ -64,7 +64,7 @@ class CloudStorage extends AbstractModel
     public $SecretKey;
 
     /**
-     * @var array The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+     * @var array The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
      */
     public $FileNamePrefix;
 
@@ -75,7 +75,7 @@ class CloudStorage extends AbstractModel
      * @param string $Bucket The storage bucket.
      * @param string $AccessKey The access_key of the cloud storage account.
      * @param string $SecretKey The secret_key of the cloud storage account.
-     * @param array $FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z) and numbers (0-9). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
+     * @param array $FileNamePrefix The bucket to save data, which is an array of strings that can contain letters (a-z and A-Z), numbers (0-9), underscores (_), and hyphens (-). For example, if the value of this parameter is `["prefix1", "prefix2"]`, the recording file `xxx.m3u8` will be saved as `prefix1/prefix2/TaskId/xxx.m3u8`.
      */
     function __construct()
     {

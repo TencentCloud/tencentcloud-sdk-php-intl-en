@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information on tags
+ * UpdateIndex response structure.
  *
- * @method string getKey() Obtain Tag key.
- * @method void setKey(string $Key) Set Tag key.
- * @method string getValue() Obtain Tag value.
- * @method void setValue(string $Value) Set Tag value.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class Tag extends AbstractModel
+class UpdateIndexResponse extends AbstractModel
 {
     /**
-     * @var string Tag key.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $Key;
+    public $RequestId;
 
     /**
-     * @var string Tag value.
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Tag key.
-     * @param string $Value Tag value.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class Tag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

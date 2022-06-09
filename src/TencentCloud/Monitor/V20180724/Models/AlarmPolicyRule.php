@@ -100,6 +100,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setRuleType(string $RuleType) Set Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method integer getIsAdvanced() Obtain Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsAdvanced(integer $IsAdvanced) Set Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsOpen() Obtain Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsOpen(integer $IsOpen) Set Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProductId() Obtain Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProductId(string $ProductId) Set Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -188,6 +200,24 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $RuleType;
 
     /**
+     * @var integer Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IsOpen;
+
+    /**
+     * @var string Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProductId;
+
+    /**
      * @param string $MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
@@ -228,6 +258,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $RuleType Trigger condition type. `STATIC`: static threshold; `dynamic`: dynamic threshold. If you do not specify this parameter when creating or editing a policy, `STATIC` is used by default.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param integer $IsAdvanced Whether it is an advanced metric. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsOpen Whether the advanced metric feature is enabled. 0: No; 1: Yes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ProductId Integration center product ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -285,6 +321,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

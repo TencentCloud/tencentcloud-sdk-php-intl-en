@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableRanger(boolean $EnableRanger) Set Whether to enable verification of Ranger service addresses
  * @method array getRangerServiceAddresses() Obtain List of Ranger service addresses (empty array by default)
  * @method void setRangerServiceAddresses(array $RangerServiceAddresses) Set List of Ranger service addresses (empty array by default)
+ * @method array getTags() Obtain Multiple resource tags, which can be an empty array
+ * @method void setTags(array $Tags) Set Multiple resource tags, which can be an empty array
  */
 class CreateFileSystemRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class CreateFileSystemRequest extends AbstractModel
     public $RangerServiceAddresses;
 
     /**
+     * @var array Multiple resource tags, which can be an empty array
+     */
+    public $Tags;
+
+    /**
      * @param string $FileSystemName File system name
      * @param integer $CapacityQuota File system capacity (in bytes), which can range from 1 GB to 1 PB and must be an integer multiple of 1 GB
      * @param boolean $PosixAcl Whether to verify POSIX ACL
@@ -96,6 +103,7 @@ class CreateFileSystemRequest extends AbstractModel
      * @param string $RootInodeGroup Group name of the root directory Inode, which is `supergroup` by default
      * @param boolean $EnableRanger Whether to enable verification of Ranger service addresses
      * @param array $RangerServiceAddresses List of Ranger service addresses (empty array by default)
+     * @param array $Tags Multiple resource tags, which can be an empty array
      */
     function __construct()
     {
@@ -144,6 +152,15 @@ class CreateFileSystemRequest extends AbstractModel
 
         if (array_key_exists("RangerServiceAddresses",$param) and $param["RangerServiceAddresses"] !== null) {
             $this->RangerServiceAddresses = $param["RangerServiceAddresses"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

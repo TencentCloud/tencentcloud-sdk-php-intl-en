@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Es\V20180416\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeGeneralResourceQuotas response structure.
+ * DescribeIndexMeta response structure.
  *
- * @method array getGeneralResourceQuotaSet() Obtain List of general resource quota details.
- * @method void setGeneralResourceQuotaSet(array $GeneralResourceQuotaSet) Set List of general resource quota details.
+ * @method IndexMetaField getIndexMetaField() Obtain Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIndexMetaField(IndexMetaField $IndexMetaField) Set Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeGeneralResourceQuotasResponse extends AbstractModel
+class DescribeIndexMetaResponse extends AbstractModel
 {
     /**
-     * @var array List of general resource quota details.
+     * @var IndexMetaField Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
-    public $GeneralResourceQuotaSet;
+    public $IndexMetaField;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +41,8 @@ class DescribeGeneralResourceQuotasResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $GeneralResourceQuotaSet List of general resource quota details.
+     * @param IndexMetaField $IndexMetaField Index metadata field
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,13 +58,9 @@ class DescribeGeneralResourceQuotasResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("GeneralResourceQuotaSet",$param) and $param["GeneralResourceQuotaSet"] !== null) {
-            $this->GeneralResourceQuotaSet = [];
-            foreach ($param["GeneralResourceQuotaSet"] as $key => $value){
-                $obj = new GeneralResourceQuota();
-                $obj->deserialize($value);
-                array_push($this->GeneralResourceQuotaSet, $obj);
-            }
+        if (array_key_exists("IndexMetaField",$param) and $param["IndexMetaField"] !== null) {
+            $this->IndexMetaField = new IndexMetaField();
+            $this->IndexMetaField->deserialize($param["IndexMetaField"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

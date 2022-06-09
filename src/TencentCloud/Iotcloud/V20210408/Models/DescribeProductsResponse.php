@@ -14,29 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Iotcloud\V20210408\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateInstances response structure.
+ * DescribeProducts response structure.
  *
- * @method array getInstanceIdSet() Obtain List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
-
-You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
- * @method void setInstanceIdSet(array $InstanceIdSet) Set List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
-
-You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
+ * @method integer getTotalCount() Obtain Total number of products
+ * @method void setTotalCount(integer $TotalCount) Set Total number of products
+ * @method array getProducts() Obtain List of product details
+ * @method void setProducts(array $Products) Set List of product details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateInstancesResponse extends AbstractModel
+class DescribeProductsResponse extends AbstractModel
 {
     /**
-     * @var array List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
-
-You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
+     * @var integer Total number of products
      */
-    public $InstanceIdSet;
+    public $TotalCount;
+
+    /**
+     * @var array List of product details
+     */
+    public $Products;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -44,9 +45,8 @@ You can call `DescribeInstances` API, and find the instance ID in the `Instances
     public $RequestId;
 
     /**
-     * @param array $InstanceIdSet List of IDs created by using this API. The returning of IDs does not mean that the instances are created successfully.
-
-You can call `DescribeInstances` API, and find the instance ID in the `InstancesSet` returned to check its status. If the `status` is `running`, the instance is created successfully.
+     * @param integer $TotalCount Total number of products
+     * @param array $Products List of product details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,8 +62,17 @@ You can call `DescribeInstances` API, and find the instance ID in the `Instances
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceIdSet",$param) and $param["InstanceIdSet"] !== null) {
-            $this->InstanceIdSet = $param["InstanceIdSet"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Products",$param) and $param["Products"] !== null) {
+            $this->Products = [];
+            foreach ($param["Products"] as $key => $value){
+                $obj = new ProductInfo();
+                $obj->deserialize($value);
+                array_push($this->Products, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,14 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeZones request structure.
  *
-
+ * @method string getOrderField() Obtain Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+ * @method void setOrderField(string $OrderField) Set Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+ * @method string getOrder() Obtain Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+ * @method void setOrder(string $Order) Set Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
  */
 class DescribeZonesRequest extends AbstractModel
 {
-
+    /**
+     * @var string Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+     */
+    public $OrderField;
 
     /**
+     * @var string Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
+     */
+    public $Order;
 
+    /**
+     * @param string $OrderField Sorting field. Valid values:
+<li>`ZONE`: Sort by the availability zone.
+<li>`INSTANCE_DISPLAY_LABEL`: Sort by the labels of availability zones. Labels include `HIDDEN`, `NORMAL` and `SELECTED`.
+The default value is `ZONE`.
+     * @param string $Order Specifies how availability zones are listed. Valid values:
+<li>ASC: Ascending sort. 
+<li>DESC: Descending sort.
+The default value is `ASC`.
      */
     function __construct()
     {
@@ -42,6 +78,12 @@ class DescribeZonesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
 
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
     }
 }

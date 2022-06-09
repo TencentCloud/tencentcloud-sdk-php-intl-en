@@ -89,6 +89,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\RemoveUserFromGroupResponse RemoveUserFromGroup(Models\RemoveUserFromGroupRequest $req) This API is used to delete users from a user group.
  * @method Models\SetDefaultPolicyVersionResponse SetDefaultPolicyVersion(Models\SetDefaultPolicyVersionRequest $req) This API is used to set the operative policy version.
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) This API is used to set account verification for login and sensitive operations for sub-users.
+ * @method Models\TagRoleResponse TagRole(Models\TagRoleRequest $req) This API is used to bind tags to a role.
+ * @method Models\UntagRoleResponse UntagRole(Models\UntagRoleRequest $req) This API is used to unbind tags from a role.
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) This API is used to modify role OIDC configurations.

@@ -25,6 +25,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
 /**
  * @method Models\CreateDeviceResponse CreateDevice(Models\CreateDeviceRequest $req) This API is used to create an IoT Hub device. 
  * @method Models\CreatePrivateCAResponse CreatePrivateCA(Models\CreatePrivateCARequest $req) This API is used to create a private CA certificate.
+ * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) This API is used to create a new IoT communication product. 
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) This API is used to delete an IoT Hub device. 
  * @method Models\DeletePrivateCAResponse DeletePrivateCA(Models\DeletePrivateCARequest $req) This API is used to delete a private CA certificate.
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) This API is used to delete an IoT Hub product.
@@ -35,6 +36,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\DescribePrivateCAsResponse DescribePrivateCAs(Models\DescribePrivateCAsRequest $req) This API is used to get the list of private CA certificates.
  * @method Models\DescribeProductResponse DescribeProduct(Models\DescribeProductRequest $req) This API is used to query product details.
  * @method Models\DescribeProductCAResponse DescribeProductCA(Models\DescribeProductCARequest $req) This API is used to query the CA certificates bound to a product.
+ * @method Models\DescribeProductsResponse DescribeProducts(Models\DescribeProductsRequest $req) This API is used to obtain the product list. 
  * @method Models\SetProductsForbiddenStatusResponse SetProductsForbiddenStatus(Models\SetProductsForbiddenStatusRequest $req) This API is used to enable or disable multiple products at a time.
  * @method Models\UpdateDeviceLogLevelResponse UpdateDeviceLogLevel(Models\UpdateDeviceLogLevelRequest $req) This API is used to set the device log level.  
  * @method Models\UpdateDevicesEnableStateResponse UpdateDevicesEnableState(Models\UpdateDevicesEnableStateRequest $req) This API is used to enable or disable multiple devices. 

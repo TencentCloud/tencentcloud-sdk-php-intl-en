@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Lighthouse\V20200324\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Container environment variables
+ * UntagRole response structure.
  *
- * @method string getKey() Obtain Environment variable key
- * @method void setKey(string $Key) Set Environment variable key
- * @method string getValue() Obtain Environment variable value
- * @method void setValue(string $Value) Set Environment variable value
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ContainerEnv extends AbstractModel
+class UntagRoleResponse extends AbstractModel
 {
     /**
-     * @var string Environment variable key
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $Key;
+    public $RequestId;
 
     /**
-     * @var string Environment variable value
-     */
-    public $Value;
-
-    /**
-     * @param string $Key Environment variable key
-     * @param string $Value Environment variable value
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ContainerEnv extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
-            $this->Key = $param["Key"];
-        }
-
-        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
-            $this->Value = $param["Value"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

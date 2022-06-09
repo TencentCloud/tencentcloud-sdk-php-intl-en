@@ -154,6 +154,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setOneClickStatus(integer $OneClickStatus) Set Whether the quick alarm policy is enabled.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getAdvancedMetricNumber() Obtain The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAdvancedMetricNumber(integer $AdvancedMetricNumber) Set The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -353,6 +357,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $OneClickStatus;
 
     /**
+     * @var integer The number of advanced metrics.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AdvancedMetricNumber;
+
+    /**
      * @param string $PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Alarm policy name
@@ -419,6 +429,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $IsOneClick Whether it is a quick alarm policy.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $OneClickStatus Whether the quick alarm policy is enabled.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $AdvancedMetricNumber The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -578,6 +590,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("OneClickStatus",$param) and $param["OneClickStatus"] !== null) {
             $this->OneClickStatus = $param["OneClickStatus"];
+        }
+
+        if (array_key_exists("AdvancedMetricNumber",$param) and $param["AdvancedMetricNumber"] !== null) {
+            $this->AdvancedMetricNumber = $param["AdvancedMetricNumber"];
         }
     }
 }
