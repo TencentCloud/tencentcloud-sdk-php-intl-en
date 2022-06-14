@@ -56,6 +56,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setDeviceTypeName(string $DeviceTypeName) Set Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+ * @method string getEngineType() Obtain Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setEngineType(string $EngineType) Set Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class SellConfig extends AbstractModel
 {
@@ -142,6 +146,12 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $DeviceTypeName;
 
     /**
+     * @var string Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $EngineType;
+
+    /**
      * @param string $Device (Disused) Device type
      * @param string $Type (Disused) Purchasable specification description 
      * @param string $CdbType (Disused) Instance type 
@@ -160,6 +170,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
      * @param string $DeviceTypeName Instance resource isolation type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
+     * @param string $EngineType Engine type. Valid values: `Innodb`,`RocksDB`.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -236,6 +248,10 @@ Note: `null` may be returned for this field, indicating that no valid values can
 
         if (array_key_exists("DeviceTypeName",$param) and $param["DeviceTypeName"] !== null) {
             $this->DeviceTypeName = $param["DeviceTypeName"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

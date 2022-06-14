@@ -82,6 +82,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqueVpcIds(array $UniqueVpcIds) Set VPC character vpcId
  * @method array getUniqSubnetIds() Obtain VPC character subnetId
  * @method void setUniqSubnetIds(array $UniqSubnetIds) Set VPC character subnetId
+ * @method array getTags() Obtain Tag key value
+ * @method void setTags(array $Tags) Set Tag key value
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -241,6 +243,11 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $UniqSubnetIds;
 
     /**
+     * @var array Tag key value
+     */
+    public $Tags;
+
+    /**
      * @param integer $ProjectId Project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -272,6 +279,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $TagValues Tag value
      * @param array $UniqueVpcIds VPC character vpcId
      * @param array $UniqSubnetIds VPC character subnetId
+     * @param array $Tags Tag key value
      */
     function __construct()
     {
@@ -408,6 +416,15 @@ class DescribeDBInstancesRequest extends AbstractModel
 
         if (array_key_exists("UniqSubnetIds",$param) and $param["UniqSubnetIds"] !== null) {
             $this->UniqSubnetIds = $param["UniqSubnetIds"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
