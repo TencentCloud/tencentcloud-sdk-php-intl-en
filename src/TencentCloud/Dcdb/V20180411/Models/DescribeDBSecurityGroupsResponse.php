@@ -14,33 +14,43 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Emr\V20190103\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeUsersForUserManager response structure.
+ * DescribeDBSecurityGroups response structure.
  *
- * @method integer getTotalCnt() Obtain Total number
- * @method void setTotalCnt(integer $TotalCnt) Set Total number
- * @method array getUserManagerUserList() Obtain User information list
+ * @method array getGroups() Obtain Security group details
+ * @method void setGroups(array $Groups) Set Security group details
+ * @method string getVIP() Obtain Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVIP(string $VIP) Set Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVPort() Obtain Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
- * @method void setUserManagerUserList(array $UserManagerUserList) Set User information list
+ * @method void setVPort(string $VPort) Set Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeUsersForUserManagerResponse extends AbstractModel
+class DescribeDBSecurityGroupsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number
+     * @var array Security group details
      */
-    public $TotalCnt;
+    public $Groups;
 
     /**
-     * @var array User information list
+     * @var string Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VIP;
+
+    /**
+     * @var string Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $UserManagerUserList;
+    public $VPort;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +58,10 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $RequestId;
 
     /**
-     * @param integer $TotalCnt Total number
-     * @param array $UserManagerUserList User information list
+     * @param array $Groups Security group details
+     * @param string $VIP Instance VIP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VPort Instance Port
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -66,17 +78,21 @@ Note: This field may return null, indicating that no valid value can be obtained
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCnt",$param) and $param["TotalCnt"] !== null) {
-            $this->TotalCnt = $param["TotalCnt"];
+        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
+            $this->Groups = [];
+            foreach ($param["Groups"] as $key => $value){
+                $obj = new SecurityGroup();
+                $obj->deserialize($value);
+                array_push($this->Groups, $obj);
+            }
         }
 
-        if (array_key_exists("UserManagerUserList",$param) and $param["UserManagerUserList"] !== null) {
-            $this->UserManagerUserList = [];
-            foreach ($param["UserManagerUserList"] as $key => $value){
-                $obj = new UserManagerUserBriefInfo();
-                $obj->deserialize($value);
-                array_push($this->UserManagerUserList, $obj);
-            }
+        if (array_key_exists("VIP",$param) and $param["VIP"] !== null) {
+            $this->VIP = $param["VIP"];
+        }
+
+        if (array_key_exists("VPort",$param) and $param["VPort"] !== null) {
+            $this->VPort = $param["VPort"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

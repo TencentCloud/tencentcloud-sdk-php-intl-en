@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Eb\V20210416\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateEventBus response structure.
+ * DescribeOrders response structure.
  *
- * @method string getEventBusId() Obtain Event bus ID
- * @method void setEventBusId(string $EventBusId) Set Event bus ID
+ * @method integer getTotalCount() Obtain Returned number of orders
+ * @method void setTotalCount(integer $TotalCount) Set Returned number of orders
+ * @method array getDeals() Obtain Order information list
+ * @method void setDeals(array $Deals) Set Order information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateEventBusResponse extends AbstractModel
+class DescribeOrdersResponse extends AbstractModel
 {
     /**
-     * @var string Event bus ID
+     * @var integer Returned number of orders
      */
-    public $EventBusId;
+    public $TotalCount;
+
+    /**
+     * @var array Order information list
+     */
+    public $Deals;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class CreateEventBusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $EventBusId Event bus ID
+     * @param integer $TotalCount Returned number of orders
+     * @param array $Deals Order information list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,17 @@ class CreateEventBusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EventBusId",$param) and $param["EventBusId"] !== null) {
-            $this->EventBusId = $param["EventBusId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Deals",$param) and $param["Deals"] !== null) {
+            $this->Deals = [];
+            foreach ($param["Deals"] as $key => $value){
+                $obj = new Deal();
+                $obj->deserialize($value);
+                array_push($this->Deals, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

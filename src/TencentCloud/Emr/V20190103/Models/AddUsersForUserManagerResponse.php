@@ -20,17 +20,41 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUsersForUserManager response structure.
  *
+ * @method array getSuccessUserList() Obtain The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSuccessUserList(array $SuccessUserList) Set The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFailedUserList() Obtain The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFailedUserList(array $FailedUserList) Set The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class AddUsersForUserManagerResponse extends AbstractModel
 {
     /**
+     * @var array The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SuccessUserList;
+
+    /**
+     * @var array The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $FailedUserList;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $SuccessUserList The user list that is successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $FailedUserList The user list that is not successfully added
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +70,14 @@ class AddUsersForUserManagerResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SuccessUserList",$param) and $param["SuccessUserList"] !== null) {
+            $this->SuccessUserList = $param["SuccessUserList"];
+        }
+
+        if (array_key_exists("FailedUserList",$param) and $param["FailedUserList"] !== null) {
+            $this->FailedUserList = $param["FailedUserList"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

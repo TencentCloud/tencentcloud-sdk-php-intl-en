@@ -14,20 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Eb\V20210416\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CheckRule request structure.
+ * DescribeOrders request structure.
  *
-
+ * @method array getDealNames() Obtain List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
+ * @method void setDealNames(array $DealNames) Set List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
  */
-class CheckRuleRequest extends AbstractModel
+class DescribeOrdersRequest extends AbstractModel
 {
-
+    /**
+     * @var array List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
+     */
+    public $DealNames;
 
     /**
-
+     * @param array $DealNames List of long order IDs to be queried, which are returned by the APIs for creating, renewing, or scaling instances.
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class CheckRuleRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("DealNames",$param) and $param["DealNames"] !== null) {
+            $this->DealNames = $param["DealNames"];
+        }
     }
 }

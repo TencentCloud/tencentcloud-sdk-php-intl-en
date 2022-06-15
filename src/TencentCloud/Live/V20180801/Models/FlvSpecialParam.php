@@ -18,20 +18,20 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLiveDomainPlayInfoList request structure.
+ * Special FLV recording setting.
  *
- * @method array getPlayDomains() Obtain Playback domain name list.
- * @method void setPlayDomains(array $PlayDomains) Set Playback domain name list.
+ * @method boolean getUploadInRecording() Obtain Whether to enable upload while recording. This parameter is only valid for FLV recording.
+ * @method void setUploadInRecording(boolean $UploadInRecording) Set Whether to enable upload while recording. This parameter is only valid for FLV recording.
  */
-class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
+class FlvSpecialParam extends AbstractModel
 {
     /**
-     * @var array Playback domain name list.
+     * @var boolean Whether to enable upload while recording. This parameter is only valid for FLV recording.
      */
-    public $PlayDomains;
+    public $UploadInRecording;
 
     /**
-     * @param array $PlayDomains Playback domain name list.
+     * @param boolean $UploadInRecording Whether to enable upload while recording. This parameter is only valid for FLV recording.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DescribeLiveDomainPlayInfoListRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("PlayDomains",$param) and $param["PlayDomains"] !== null) {
-            $this->PlayDomains = $param["PlayDomains"];
+        if (array_key_exists("UploadInRecording",$param) and $param["UploadInRecording"] !== null) {
+            $this->UploadInRecording = $param["UploadInRecording"];
         }
     }
 }

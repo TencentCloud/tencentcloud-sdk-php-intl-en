@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMp3Param(RecordParam $Mp3Param) Set Mp3 recording parameter, which is set when Mp3 recording is enabled.
  * @method boolean getRemoveWatermark() Obtain Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
  * @method void setRemoveWatermark(boolean $RemoveWatermark) Set Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+ * @method FlvSpecialParam getFlvSpecialParam() Obtain A special parameter for FLV recording.
+ * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) Set A special parameter for FLV recording.
  */
 class CreateLiveRecordTemplateRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
     public $RemoveWatermark;
 
     /**
+     * @var FlvSpecialParam A special parameter for FLV recording.
+     */
+    public $FlvSpecialParam;
+
+    /**
      * @param string $TemplateName Template name. Only letters, digits, underscores, and hyphens can be contained.
      * @param string $Description Message description
      * @param RecordParam $FlvParam FLV recording parameter, which is set when FLV recording is enabled.
@@ -112,6 +119,7 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
      * @param HlsSpecialParam $HlsSpecialParam HLS-specific recording parameter.
      * @param RecordParam $Mp3Param Mp3 recording parameter, which is set when Mp3 recording is enabled.
      * @param boolean $RemoveWatermark Whether to remove the watermark. This parameter is invalid if `IsDelayLive` is `1`.
+     * @param FlvSpecialParam $FlvSpecialParam A special parameter for FLV recording.
      */
     function __construct()
     {
@@ -170,6 +178,11 @@ class CreateLiveRecordTemplateRequest extends AbstractModel
 
         if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
             $this->RemoveWatermark = $param["RemoveWatermark"];
+        }
+
+        if (array_key_exists("FlvSpecialParam",$param) and $param["FlvSpecialParam"] !== null) {
+            $this->FlvSpecialParam = new FlvSpecialParam();
+            $this->FlvSpecialParam->deserialize($param["FlvSpecialParam"]);
         }
     }
 }

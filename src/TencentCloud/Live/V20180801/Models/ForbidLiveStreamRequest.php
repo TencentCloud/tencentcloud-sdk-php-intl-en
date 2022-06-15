@@ -26,14 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomainName(string $DomainName) Set Your push domain name.
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method string getResumeTime() Obtain Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+ * @method string getResumeTime() Obtain The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
- * @method void setResumeTime(string $ResumeTime) Set Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
+ * @method void setResumeTime(string $ResumeTime) Set The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
  * @method string getReason() Obtain Reason for forbidding.
 Note: Be sure to enter the reason for forbidding to avoid any faulty operations.
 Length limit: 2,048 bytes.
@@ -59,10 +59,10 @@ class ForbidLiveStreamRequest extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+     * @var string The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
      */
     public $ResumeTime;
 
@@ -77,10 +77,10 @@ Length limit: 2,048 bytes.
      * @param string $AppName Push path, which is the same as the AppName in push and playback addresses and is "live" by default.
      * @param string $DomainName Your push domain name.
      * @param string $StreamName Stream name.
-     * @param string $ResumeTime Time to resume the stream in UTC format, such as 2018-11-29T19:00:00Z.
+     * @param string $ResumeTime The time (in UTC format) to resume the stream, such as 2018-11-29T19:00:00Z.
 Notes:
-1. The duration of forbidding is 7 days by default and can be up to 90 days.
-2. The Beijing time is in UTC+8. This value should be in the format as required by ISO 8601. For more information, please see [ISO Date and Time Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+1. The default stream disabling period is seven days. A stream can be disabled for up to 90 days.
+2. Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
      * @param string $Reason Reason for forbidding.
 Note: Be sure to enter the reason for forbidding to avoid any faulty operations.
 Length limit: 2,048 bytes.

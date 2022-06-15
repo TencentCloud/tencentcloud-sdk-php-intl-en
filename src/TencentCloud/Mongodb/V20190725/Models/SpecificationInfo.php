@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ information
  * @method array getSpecItems() Obtain Purchasable specification information
  * @method void setSpecItems(array $SpecItems) Set Purchasable specification information
+ * @method integer getSupportMultiAZ() Obtain Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+ * @method void setSupportMultiAZ(integer $SupportMultiAZ) Set Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
  */
 class SpecificationInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class SpecificationInfo extends AbstractModel
     public $SpecItems;
 
     /**
+     * @var integer Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
+     */
+    public $SupportMultiAZ;
+
+    /**
      * @param string $Region Region information
      * @param string $Zone AZ information
      * @param array $SpecItems Purchasable specification information
+     * @param integer $SupportMultiAZ Whether cross-AZ deployment is supported. Valid values: `1` (yes), `0` (no).
      */
     function __construct()
     {
@@ -77,6 +85,10 @@ class SpecificationInfo extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SpecItems, $obj);
             }
+        }
+
+        if (array_key_exists("SupportMultiAZ",$param) and $param["SupportMultiAZ"] !== null) {
+            $this->SupportMultiAZ = $param["SupportMultiAZ"];
         }
     }
 }

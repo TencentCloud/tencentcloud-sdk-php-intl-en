@@ -14,24 +14,28 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Eb\V20210416\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * UpdateEventBus response structure.
+ * User management list filter
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getUserName() Obtain Username
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUserName(string $UserName) Set Username
+Note: This field may return null, indicating that no valid value can be obtained.
  */
-class UpdateEventBusResponse extends AbstractModel
+class UserManagerFilter extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Username
+Note: This field may return null, indicating that no valid value can be obtained.
      */
-    public $RequestId;
+    public $UserName;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $UserName Username
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -46,8 +50,8 @@ class UpdateEventBusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
         }
     }
 }

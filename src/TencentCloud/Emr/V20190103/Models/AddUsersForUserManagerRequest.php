@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddUsersForUserManager request structure.
  *
+ * @method string getInstanceId() Obtain Cluster string ID
+ * @method void setInstanceId(string $InstanceId) Set Cluster string ID
  * @method array getUserManagerUserList() Obtain User information list
  * @method void setUserManagerUserList(array $UserManagerUserList) Set User information list
  */
 class AddUsersForUserManagerRequest extends AbstractModel
 {
     /**
+     * @var string Cluster string ID
+     */
+    public $InstanceId;
+
+    /**
      * @var array User information list
      */
     public $UserManagerUserList;
 
     /**
+     * @param string $InstanceId Cluster string ID
      * @param array $UserManagerUserList User information list
      */
     function __construct()
@@ -46,6 +54,10 @@ class AddUsersForUserManagerRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
         if (array_key_exists("UserManagerUserList",$param) and $param["UserManagerUserList"] !== null) {
             $this->UserManagerUserList = [];
             foreach ($param["UserManagerUserList"] as $key => $value){

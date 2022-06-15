@@ -38,14 +38,18 @@ use TencentCloud\Common\AbstractModel;
 1: LCB.
  * @method void setIsDelayLive(integer $IsDelayLive) Set 0: LVB,
 1: LCB.
- * @method HlsSpecialParam getHlsSpecialParam() Obtain Custom HLS recording parameter
- * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set Custom HLS recording parameter
+ * @method HlsSpecialParam getHlsSpecialParam() Obtain A special parameter for HLS recording.
+ * @method void setHlsSpecialParam(HlsSpecialParam $HlsSpecialParam) Set A special parameter for HLS recording.
  * @method RecordParam getMp3Param() Obtain MP3 recording parameter.
  * @method void setMp3Param(RecordParam $Mp3Param) Set MP3 recording parameter.
  * @method boolean getRemoveWatermark() Obtain Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setRemoveWatermark(boolean $RemoveWatermark) Set Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method FlvSpecialParam getFlvSpecialParam() Obtain A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFlvSpecialParam(FlvSpecialParam $FlvSpecialParam) Set A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class RecordTemplateInfo extends AbstractModel
 {
@@ -91,7 +95,7 @@ class RecordTemplateInfo extends AbstractModel
     public $IsDelayLive;
 
     /**
-     * @var HlsSpecialParam Custom HLS recording parameter
+     * @var HlsSpecialParam A special parameter for HLS recording.
      */
     public $HlsSpecialParam;
 
@@ -107,6 +111,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $RemoveWatermark;
 
     /**
+     * @var FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $FlvSpecialParam;
+
+    /**
      * @param integer $TemplateId Template ID.
      * @param string $TemplateName Template name.
      * @param string $Description Message description
@@ -116,10 +126,12 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param RecordParam $AacParam AAC recording parameter.
      * @param integer $IsDelayLive 0: LVB,
 1: LCB.
-     * @param HlsSpecialParam $HlsSpecialParam Custom HLS recording parameter
+     * @param HlsSpecialParam $HlsSpecialParam A special parameter for HLS recording.
      * @param RecordParam $Mp3Param MP3 recording parameter.
      * @param boolean $RemoveWatermark Whether the watermark is removed.
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param FlvSpecialParam $FlvSpecialParam A special parameter for FLV recording.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -182,6 +194,11 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("RemoveWatermark",$param) and $param["RemoveWatermark"] !== null) {
             $this->RemoveWatermark = $param["RemoveWatermark"];
+        }
+
+        if (array_key_exists("FlvSpecialParam",$param) and $param["FlvSpecialParam"] !== null) {
+            $this->FlvSpecialParam = new FlvSpecialParam();
+            $this->FlvSpecialParam->deserialize($param["FlvSpecialParam"]);
         }
     }
 }
