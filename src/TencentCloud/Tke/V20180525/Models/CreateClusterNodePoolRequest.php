@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLabels(array $Labels) Set Labels
  * @method array getTaints() Obtain Taints
  * @method void setTaints(array $Taints) Set Taints
+ * @method string getContainerRuntime() Obtain Node pool runtime type and version
+ * @method void setContainerRuntime(string $ContainerRuntime) Set Node pool runtime type and version
+ * @method string getRuntimeVersion() Obtain Runtime version
+ * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
  * @method string getNodePoolOs() Obtain Operating system of the node pool
  * @method void setNodePoolOs(string $NodePoolOs) Set Operating system of the node pool
  * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
@@ -86,6 +90,16 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Taints;
 
     /**
+     * @var string Node pool runtime type and version
+     */
+    public $ContainerRuntime;
+
+    /**
+     * @var string Runtime version
+     */
+    public $RuntimeVersion;
+
+    /**
      * @var string Operating system of the node pool
      */
     public $NodePoolOs;
@@ -109,6 +123,8 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param string $Name Node pool name
      * @param array $Labels Labels
      * @param array $Taints Taints
+     * @param string $ContainerRuntime Node pool runtime type and version
+     * @param string $RuntimeVersion Runtime version
      * @param string $NodePoolOs Operating system of the node pool
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param array $Tags Resource tag
@@ -167,6 +183,14 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Taints, $obj);
             }
+        }
+
+        if (array_key_exists("ContainerRuntime",$param) and $param["ContainerRuntime"] !== null) {
+            $this->ContainerRuntime = $param["ContainerRuntime"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
 
         if (array_key_exists("NodePoolOs",$param) and $param["NodePoolOs"] !== null) {

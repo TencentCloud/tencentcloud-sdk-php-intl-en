@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
  * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
- * @method boolean getNeedWorkSecurityGroup() Obtain Whether to enable the node’s default security group (default: `No`, Aphla feature)
- * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set Whether to enable the node’s default security group (default: `No`, Aphla feature)
+ * @method boolean getNeedWorkSecurityGroup() Obtain Whether to enable the node’s default security group (default: `No`, Alpha feature)
+ * @method void setNeedWorkSecurityGroup(boolean $NeedWorkSecurityGroup) Set Whether to enable the node’s default security group (default: `No`, Alpha feature)
  * @method string getSubnetId() Obtain When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
  * @method void setSubnetId(string $SubnetId) Set When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
  * @method string getClusterLevel() Obtain Cluster specifications available for managed clusters
@@ -88,7 +88,7 @@ class ClusterBasicSettings extends AbstractModel
     public $OsCustomizeType;
 
     /**
-     * @var boolean Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * @var boolean Whether to enable the node’s default security group (default: `No`, Alpha feature)
      */
     public $NeedWorkSecurityGroup;
 
@@ -116,7 +116,7 @@ class ClusterBasicSettings extends AbstractModel
      * @param integer $ProjectId ID of the project to which the new resources in the cluster belong.
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a resource instance. Currently, a tag can only be bound to cluster instances.
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
-     * @param boolean $NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Aphla feature)
+     * @param boolean $NeedWorkSecurityGroup Whether to enable the node’s default security group (default: `No`, Alpha feature)
      * @param string $SubnetId When the Cilium Overlay add-on is selected, TKE will take two IPs from the subnet to create the private network CLB.
      * @param string $ClusterLevel Cluster specifications available for managed clusters
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel Auto cluster upgrade for managed clusters

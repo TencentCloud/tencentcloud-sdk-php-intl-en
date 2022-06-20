@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetId(string $SubnetId) Set The ID of the subnet where the cluster's port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster's VPC). 
  * @method boolean getIsExtranet() Obtain Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
  * @method void setIsExtranet(boolean $IsExtranet) Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+ * @method string getDomain() Obtain The domain name
+ * @method void setDomain(string $Domain) Set The domain name
+ * @method string getSecurityGroup() Obtain The security group in use. Required only for public network access.
+ * @method void setSecurityGroup(string $SecurityGroup) Set The security group in use. Required only for public network access.
+ * @method string getExtensiveParameters() Obtain The LB parameter. Required only for public network access.
+ * @method void setExtensiveParameters(string $ExtensiveParameters) Set The LB parameter. Required only for public network access.
  */
 class CreateClusterEndpointRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class CreateClusterEndpointRequest extends AbstractModel
     public $IsExtranet;
 
     /**
+     * @var string The domain name
+     */
+    public $Domain;
+
+    /**
+     * @var string The security group in use. Required only for public network access.
+     */
+    public $SecurityGroup;
+
+    /**
+     * @var string The LB parameter. Required only for public network access.
+     */
+    public $ExtensiveParameters;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $SubnetId The ID of the subnet where the cluster's port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster's VPC). 
      * @param boolean $IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
+     * @param string $Domain The domain name
+     * @param string $SecurityGroup The security group in use. Required only for public network access.
+     * @param string $ExtensiveParameters The LB parameter. Required only for public network access.
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class CreateClusterEndpointRequest extends AbstractModel
 
         if (array_key_exists("IsExtranet",$param) and $param["IsExtranet"] !== null) {
             $this->IsExtranet = $param["IsExtranet"];
+        }
+
+        if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
+            $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
+        }
+
+        if (array_key_exists("ExtensiveParameters",$param) and $param["ExtensiveParameters"] !== null) {
+            $this->ExtensiveParameters = $param["ExtensiveParameters"];
         }
     }
 }

@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEniSubnetIds(array $EniSubnetIds) Set Subnet ID of the ENI in VPC-CNI network mode
  * @method integer getClaimExpiredSeconds() Obtain Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
  * @method void setClaimExpiredSeconds(integer $ClaimExpiredSeconds) Set Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
+ * @method boolean getIgnoreServiceCIDRConflict() Obtain Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+ * @method void setIgnoreServiceCIDRConflict(boolean $IgnoreServiceCIDRConflict) Set Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
  */
 class ClusterCIDRSettings extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ClusterCIDRSettings extends AbstractModel
     public $ClaimExpiredSeconds;
 
     /**
+     * @var boolean Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+     */
+    public $IgnoreServiceCIDRConflict;
+
+    /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
      * @param integer $MaxNodePodNum Maximum number of pods on each node in the cluster
@@ -80,6 +87,7 @@ class ClusterCIDRSettings extends AbstractModel
      * @param string $ServiceCIDR The CIDR block used to assign cluster service IP addresses. It must conflict with neither the VPC CIDR block nor with CIDR blocks of other clusters in the same VPC instance. The IP range must be within the private network IP range, such as 10.1.0.0/14, 192.168.0.1/18, and 172.16.0.0/16.
      * @param array $EniSubnetIds Subnet ID of the ENI in VPC-CNI network mode
      * @param integer $ClaimExpiredSeconds Repossession time of ENI IP addresses in VPC-CNI network mode, whose range is [300,15768000)
+     * @param boolean $IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class ClusterCIDRSettings extends AbstractModel
 
         if (array_key_exists("ClaimExpiredSeconds",$param) and $param["ClaimExpiredSeconds"] !== null) {
             $this->ClaimExpiredSeconds = $param["ClaimExpiredSeconds"];
+        }
+
+        if (array_key_exists("IgnoreServiceCIDRConflict",$param) and $param["IgnoreServiceCIDRConflict"] !== null) {
+            $this->IgnoreServiceCIDRConflict = $param["IgnoreServiceCIDRConflict"];
         }
     }
 }

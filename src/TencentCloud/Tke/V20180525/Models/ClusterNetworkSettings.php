@@ -46,6 +46,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setSubnets(array $Subnets) Set The container subnet associated with the cluster
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getIgnoreServiceCIDRConflict() Obtain Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIgnoreServiceCIDRConflict(boolean $IgnoreServiceCIDRConflict) Set Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ClusterNetworkSettings extends AbstractModel
 {
@@ -103,6 +107,12 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $Subnets;
 
     /**
+     * @var boolean Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $IgnoreServiceCIDRConflict;
+
+    /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC.
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors. It defaults to not ignore.
      * @param integer $MaxNodePodNum Maximum number of pods on each node in the cluster. Default value: 256
@@ -116,6 +126,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param array $Subnets The container subnet associated with the cluster
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $IgnoreServiceCIDRConflict Whether to ignore ServiceCIDR conflict errors. It is only valid in VPC-CNI mode. Default value: `false`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -168,6 +180,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("Subnets",$param) and $param["Subnets"] !== null) {
             $this->Subnets = $param["Subnets"];
+        }
+
+        if (array_key_exists("IgnoreServiceCIDRConflict",$param) and $param["IgnoreServiceCIDRConflict"] !== null) {
+            $this->IgnoreServiceCIDRConflict = $param["IgnoreServiceCIDRConflict"];
         }
     }
 }

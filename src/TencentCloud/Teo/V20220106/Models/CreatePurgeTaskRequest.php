@@ -32,8 +32,24 @@ use TencentCloud\Common\AbstractModel;
 - `purge_prefix`: Purge by the prefix
 - `purge_host`: Purge by the Hostname
 - `purge_all`: Purge all cached contents
- * @method array getTargets() Obtain The target resource to be purged. One target per line.
- * @method void setTargets(array $Targets) Set The target resource to be purged. One target per line.
+ * @method array getTargets() Obtain Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
+ * @method void setTargets(array $Targets) Set Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
  * @method boolean getEncodeUrl() Obtain Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Specifies whether to transcode non-ASCII URLs according to RFC3986.
@@ -56,7 +72,15 @@ class CreatePurgeTaskRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var array The target resource to be purged. One target per line.
+     * @var array Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
      */
     public $Targets;
 
@@ -73,7 +97,15 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 - `purge_prefix`: Purge by the prefix
 - `purge_host`: Purge by the Hostname
 - `purge_all`: Purge all cached contents
-     * @param array $Targets The target resource to be purged. One target per line.
+     * @param array $Targets Target resource to be purged, which depends on the `Type` field.
+1. When `Type = purge_host`:
+Hostnames are purged, such as www.example.com and foo.bar.example.com.
+2. When `Type = purge_prefix`:
+Prefixes are purged, such as http://www.example.com/example.
+3. When `Type = purge_url`:
+URLs are purged, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`: All types of resources are purged.
+`Targets` is not a required field.
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
      */

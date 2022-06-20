@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAssociatedInstanceIds(array $AssociatedInstanceIds) Set `ID` list of instances associated with a key.
  * @method string getCreatedTime() Obtain Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
  * @method void setCreatedTime(string $CreatedTime) Set Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+ * @method array getTags() Obtain The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTags(array $Tags) Set The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class KeyPair extends AbstractModel
 {
@@ -80,6 +84,12 @@ class KeyPair extends AbstractModel
     public $CreatedTime;
 
     /**
+     * @var array The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $KeyId Key pair `ID`, the unique identifier of a key pair.
      * @param string $KeyName Key pair name.
      * @param integer $ProjectId `ID` of the project to which a key pair belongs.
@@ -88,6 +98,8 @@ class KeyPair extends AbstractModel
      * @param string $PrivateKey Content of private key in a key pair. Tencent Cloud do not keep private keys. Please keep it properly.
      * @param array $AssociatedInstanceIds `ID` list of instances associated with a key.
      * @param string $CreatedTime Creation time, which follows the `ISO8601` standard and uses `UTC` time in the format of `YYYY-MM-DDThh:mm:ssZ`.
+     * @param array $Tags The list of tags bound to the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,15 @@ class KeyPair extends AbstractModel
 
         if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
             $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

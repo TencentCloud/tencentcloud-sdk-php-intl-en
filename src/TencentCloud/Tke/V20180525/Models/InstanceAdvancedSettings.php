@@ -56,6 +56,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPreStartUserScript(string $PreStartUserScript) Set Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTaints() Obtain Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTaints(array $Taints) Set Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class InstanceAdvancedSettings extends AbstractModel
 {
@@ -114,6 +118,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PreStartUserScript;
 
     /**
+     * @var array Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Taints;
+
+    /**
      * @param string $MountTarget Data disk mount point. By default, no data disk is mounted. Data disks in ext3, ext4, or XFS file system formats will be mounted directly, while data disks in other file systems and unformatted data disks will automatically be formatted as ext4 (xfs for tlinux system) and then mounted. Please back up your data in advance. This setting is only applicable to CVMs with a single data disk.
 Note: in multi-disk scenarios, use the DataDisks data structure below to set the corresponding information, such as cloud disk type, cloud disk size, mount path, and whether to perform formatting.
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -132,6 +142,8 @@ Note: This field may return null, indicating that no valid value was found.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $PreStartUserScript Specifies the base64-encoded custom script to be executed before initialization of the node. It’s only valid for adding existing nodes for now.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Taints Node taint
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -191,6 +203,15 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PreStartUserScript",$param) and $param["PreStartUserScript"] !== null) {
             $this->PreStartUserScript = $param["PreStartUserScript"];
+        }
+
+        if (array_key_exists("Taints",$param) and $param["Taints"] !== null) {
+            $this->Taints = [];
+            foreach ($param["Taints"] as $key => $value){
+                $obj = new Taint();
+                $obj->deserialize($value);
+                array_push($this->Taints, $obj);
+            }
         }
     }
 }

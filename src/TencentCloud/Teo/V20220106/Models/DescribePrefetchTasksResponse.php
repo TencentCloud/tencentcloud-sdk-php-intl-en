@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusterAsGroup response structure.
+ * DescribePrefetchTasks response structure.
  *
- * @method string getLaunchConfigurationId() Obtain Launch configuration ID
- * @method void setLaunchConfigurationId(string $LaunchConfigurationId) Set Launch configuration ID
- * @method string getAutoScalingGroupId() Obtain Scaling group ID
- * @method void setAutoScalingGroupId(string $AutoScalingGroupId) Set Scaling group ID
+ * @method integer getTotalCount() Obtain Total entries that match the specified query condition
+ * @method void setTotalCount(integer $TotalCount) Set Total entries that match the specified query condition
+ * @method array getTasks() Obtain List of tasks returned
+ * @method void setTasks(array $Tasks) Set List of tasks returned
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateClusterAsGroupResponse extends AbstractModel
+class DescribePrefetchTasksResponse extends AbstractModel
 {
     /**
-     * @var string Launch configuration ID
+     * @var integer Total entries that match the specified query condition
      */
-    public $LaunchConfigurationId;
+    public $TotalCount;
 
     /**
-     * @var string Scaling group ID
+     * @var array List of tasks returned
      */
-    public $AutoScalingGroupId;
+    public $Tasks;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class CreateClusterAsGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LaunchConfigurationId Launch configuration ID
-     * @param string $AutoScalingGroupId Scaling group ID
+     * @param integer $TotalCount Total entries that match the specified query condition
+     * @param array $Tasks List of tasks returned
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,12 +62,17 @@ class CreateClusterAsGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LaunchConfigurationId",$param) and $param["LaunchConfigurationId"] !== null) {
-            $this->LaunchConfigurationId = $param["LaunchConfigurationId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("AutoScalingGroupId",$param) and $param["AutoScalingGroupId"] !== null) {
-            $this->AutoScalingGroupId = $param["AutoScalingGroupId"];
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new Task();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -44,6 +44,8 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
  * @method void setInstanceAdvancedSettingsOverrides(array $InstanceAdvancedSettingsOverrides) Set This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
 
 The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+ * @method string getImageId() Obtain Node image (it is required when creating a node)
+ * @method void setImageId(string $ImageId) Set Node image (it is required when creating a node)
  */
 class AddExistedInstancesRequest extends AbstractModel
 {
@@ -100,6 +102,11 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
     public $InstanceAdvancedSettingsOverrides;
 
     /**
+     * @var string Node image (it is required when creating a node)
+     */
+    public $ImageId;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Instance list. Spot instance is not supported.
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Detailed information of the instance
@@ -112,6 +119,7 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
      * @param array $InstanceAdvancedSettingsOverrides This parameter is used to customize the configuration of an instance, which corresponds to the `InstanceIds` one-to-one in sequence. If this parameter is passed in, the default parameter `InstanceAdvancedSettings` will be overwritten and will not take effect. If this parameter is not passed in, the `InstanceAdvancedSettings` will take effect for each instance.
 
 The array length of `InstanceAdvancedSettingsOverride` should be the same as the array length of `InstanceIds`. If its array length is greater than the `InstanceIds` array length, an error will be reported. If its array length is less than the `InstanceIds` array length, the instance without corresponding configuration will use the default configuration.
+     * @param string $ImageId Node image (it is required when creating a node)
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ The array length of `InstanceAdvancedSettingsOverride` should be the same as the
                 $obj->deserialize($value);
                 array_push($this->InstanceAdvancedSettingsOverrides, $obj);
             }
+        }
+
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
     }
 }

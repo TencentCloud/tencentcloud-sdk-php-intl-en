@@ -18,32 +18,28 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Failure reason
+ * HTTP header, used as input for the CreatePrefetchTask API
  *
- * @method string getReason() Obtain Failure reason
- * @method void setReason(string $Reason) Set Failure reason
- * @method array getTargets() Obtain List of resources failed to be processed. 
- 
- * @method void setTargets(array $Targets) Set List of resources failed to be processed. 
- 
+ * @method string getName() Obtain HTTP header name
+ * @method void setName(string $Name) Set HTTP header name
+ * @method string getValue() Obtain HTTP header value
+ * @method void setValue(string $Value) Set HTTP header value
  */
-class FailReason extends AbstractModel
+class Header extends AbstractModel
 {
     /**
-     * @var string Failure reason
+     * @var string HTTP header name
      */
-    public $Reason;
+    public $Name;
 
     /**
-     * @var array List of resources failed to be processed. 
- 
+     * @var string HTTP header value
      */
-    public $Targets;
+    public $Value;
 
     /**
-     * @param string $Reason Failure reason
-     * @param array $Targets List of resources failed to be processed. 
- 
+     * @param string $Name HTTP header name
+     * @param string $Value HTTP header value
      */
     function __construct()
     {
@@ -58,12 +54,12 @@ class FailReason extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Reason",$param) and $param["Reason"] !== null) {
-            $this->Reason = $param["Reason"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
-        if (array_key_exists("Targets",$param) and $param["Targets"] !== null) {
-            $this->Targets = $param["Targets"];
+        if (array_key_exists("Value",$param) and $param["Value"] !== null) {
+            $this->Value = $param["Value"];
         }
     }
 }
