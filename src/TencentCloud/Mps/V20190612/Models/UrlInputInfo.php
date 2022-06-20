@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a video processing URL object.
+ * The URL of the object to process.
  *
  * @method string getUrl() Obtain URL of a video.
  * @method void setUrl(string $Url) Set URL of a video.

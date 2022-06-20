@@ -18,22 +18,26 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Resource information of a CDH instance
+ * Resource information of the CDH instance
  *
  * @method integer getCpuTotal() Obtain Total number of CPU cores in the CDH instance
  * @method void setCpuTotal(integer $CpuTotal) Set Total number of CPU cores in the CDH instance
  * @method integer getCpuAvailable() Obtain Number of available CPU cores in the CDH instance
  * @method void setCpuAvailable(integer $CpuAvailable) Set Number of available CPU cores in the CDH instance
- * @method float getMemTotal() Obtain Total memory of the CDH instance; unit: GiB
- * @method void setMemTotal(float $MemTotal) Set Total memory of the CDH instance; unit: GiB
- * @method float getMemAvailable() Obtain Available memory of the CDH instance; unit: GiB
- * @method void setMemAvailable(float $MemAvailable) Set Available memory of the CDH instance; unit: GiB
- * @method integer getDiskTotal() Obtain Total disk size of the CDH instance; unit: GiB
- * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance; unit: GiB
- * @method integer getDiskAvailable() Obtain Avilable disk size of the CDH instance; unit: GiB
- * @method void setDiskAvailable(integer $DiskAvailable) Set Avilable disk size of the CDH instance; unit: GiB
- * @method string getDiskType() Obtain CDH instance disk type.
- * @method void setDiskType(string $DiskType) Set CDH instance disk type.
+ * @method float getMemTotal() Obtain Total memory size of the CDH instance (unit: GiB)
+ * @method void setMemTotal(float $MemTotal) Set Total memory size of the CDH instance (unit: GiB)
+ * @method float getMemAvailable() Obtain Available memory size of the CDH instance (unit: GiB)
+ * @method void setMemAvailable(float $MemAvailable) Set Available memory size of the CDH instance (unit: GiB)
+ * @method integer getDiskTotal() Obtain Total disk size of the CDH instance (unit: GiB)
+ * @method void setDiskTotal(integer $DiskTotal) Set Total disk size of the CDH instance (unit: GiB)
+ * @method integer getDiskAvailable() Obtain Available disk size of the CDH instance (unit: GiB)
+ * @method void setDiskAvailable(integer $DiskAvailable) Set Available disk size of the CDH instance (unit: GiB)
+ * @method string getDiskType() Obtain Disk type of the CDH instance
+ * @method void setDiskType(string $DiskType) Set Disk type of the CDH instance
+ * @method integer getGpuTotal() Obtain Total number of GPU cards in the CDH instance
+ * @method void setGpuTotal(integer $GpuTotal) Set Total number of GPU cards in the CDH instance
+ * @method integer getGpuAvailable() Obtain Number of available GPU cards in the CDH instance
+ * @method void setGpuAvailable(integer $GpuAvailable) Set Number of available GPU cards in the CDH instance
  */
 class HostResource extends AbstractModel
 {
@@ -48,38 +52,50 @@ class HostResource extends AbstractModel
     public $CpuAvailable;
 
     /**
-     * @var float Total memory of the CDH instance; unit: GiB
+     * @var float Total memory size of the CDH instance (unit: GiB)
      */
     public $MemTotal;
 
     /**
-     * @var float Available memory of the CDH instance; unit: GiB
+     * @var float Available memory size of the CDH instance (unit: GiB)
      */
     public $MemAvailable;
 
     /**
-     * @var integer Total disk size of the CDH instance; unit: GiB
+     * @var integer Total disk size of the CDH instance (unit: GiB)
      */
     public $DiskTotal;
 
     /**
-     * @var integer Avilable disk size of the CDH instance; unit: GiB
+     * @var integer Available disk size of the CDH instance (unit: GiB)
      */
     public $DiskAvailable;
 
     /**
-     * @var string CDH instance disk type.
+     * @var string Disk type of the CDH instance
      */
     public $DiskType;
 
     /**
+     * @var integer Total number of GPU cards in the CDH instance
+     */
+    public $GpuTotal;
+
+    /**
+     * @var integer Number of available GPU cards in the CDH instance
+     */
+    public $GpuAvailable;
+
+    /**
      * @param integer $CpuTotal Total number of CPU cores in the CDH instance
      * @param integer $CpuAvailable Number of available CPU cores in the CDH instance
-     * @param float $MemTotal Total memory of the CDH instance; unit: GiB
-     * @param float $MemAvailable Available memory of the CDH instance; unit: GiB
-     * @param integer $DiskTotal Total disk size of the CDH instance; unit: GiB
-     * @param integer $DiskAvailable Avilable disk size of the CDH instance; unit: GiB
-     * @param string $DiskType CDH instance disk type.
+     * @param float $MemTotal Total memory size of the CDH instance (unit: GiB)
+     * @param float $MemAvailable Available memory size of the CDH instance (unit: GiB)
+     * @param integer $DiskTotal Total disk size of the CDH instance (unit: GiB)
+     * @param integer $DiskAvailable Available disk size of the CDH instance (unit: GiB)
+     * @param string $DiskType Disk type of the CDH instance
+     * @param integer $GpuTotal Total number of GPU cards in the CDH instance
+     * @param integer $GpuAvailable Number of available GPU cards in the CDH instance
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class HostResource extends AbstractModel
 
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
+        }
+
+        if (array_key_exists("GpuTotal",$param) and $param["GpuTotal"] !== null) {
+            $this->GpuTotal = $param["GpuTotal"];
+        }
+
+        if (array_key_exists("GpuAvailable",$param) and $param["GpuAvailable"] !== null) {
+            $this->GpuAvailable = $param["GpuAvailable"];
         }
     }
 }

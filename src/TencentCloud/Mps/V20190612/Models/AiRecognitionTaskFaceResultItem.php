@@ -32,6 +32,54 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set Name of a figure.
  * @method array getSegmentSet() Obtain Result set of segments that contain a figure.
  * @method void setSegmentSet(array $SegmentSet) Set Result set of segments that contain a figure.
+ * @method string getGender() Obtain The person’s gender.
+<li>Male</li>
+<li>Female</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setGender(string $Gender) Set The person’s gender.
+<li>Male</li>
+<li>Female</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getBirthday() Obtain The person’s birth date.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBirthday(string $Birthday) Set The person’s birth date.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getProfession() Obtain The person’s job or job title.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setProfession(string $Profession) Set The person’s job or job title.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getSchoolOfGraduation() Obtain The college the person graduated from.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setSchoolOfGraduation(string $SchoolOfGraduation) Set The college the person graduated from.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getAbstract() Obtain The person’s profile.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAbstract(string $Abstract) Set The person’s profile.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPlaceOfBirth() Obtain The person’s place of birth.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setPlaceOfBirth(string $PlaceOfBirth) Set The person’s place of birth.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getPersonType() Obtain Whether the person is a politician or artist.
+<li>Politician</li>
+<li>Artist</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setPersonType(string $PersonType) Set Whether the person is a politician or artist.
+<li>Politician</li>
+<li>Artist</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getRemark() Obtain Sensitivity
+<li>Normal</li>
+<li>Sensitive</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRemark(string $Remark) Set Sensitivity
+<li>Normal</li>
+<li>Sensitive</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method string getUrl() Obtain The screenshot URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setUrl(string $Url) Set The screenshot URL.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class AiRecognitionTaskFaceResultItem extends AbstractModel
 {
@@ -58,12 +106,96 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
     public $SegmentSet;
 
     /**
+     * @var string The person’s gender.
+<li>Male</li>
+<li>Female</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Gender;
+
+    /**
+     * @var string The person’s birth date.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Birthday;
+
+    /**
+     * @var string The person’s job or job title.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Profession;
+
+    /**
+     * @var string The college the person graduated from.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $SchoolOfGraduation;
+
+    /**
+     * @var string The person’s profile.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Abstract;
+
+    /**
+     * @var string The person’s place of birth.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $PlaceOfBirth;
+
+    /**
+     * @var string Whether the person is a politician or artist.
+<li>Politician</li>
+<li>Artist</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $PersonType;
+
+    /**
+     * @var string Sensitivity
+<li>Normal</li>
+<li>Sensitive</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Remark;
+
+    /**
+     * @var string The screenshot URL.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $Url;
+
+    /**
      * @param string $Id Unique ID of a figure.
      * @param string $Type Figure library type, indicating to which figure library the recognized figure belongs:
 <li>Default: Default figure library;</li>
 <li>UserDefine: Custom figure library.</li>
      * @param string $Name Name of a figure.
      * @param array $SegmentSet Result set of segments that contain a figure.
+     * @param string $Gender The person’s gender.
+<li>Male</li>
+<li>Female</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Birthday The person’s birth date.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Profession The person’s job or job title.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $SchoolOfGraduation The college the person graduated from.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Abstract The person’s profile.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PlaceOfBirth The person’s place of birth.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $PersonType Whether the person is a politician or artist.
+<li>Politician</li>
+<li>Artist</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Remark Sensitivity
+<li>Normal</li>
+<li>Sensitive</li>
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param string $Url The screenshot URL.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -97,6 +229,42 @@ class AiRecognitionTaskFaceResultItem extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
+        }
+
+        if (array_key_exists("Gender",$param) and $param["Gender"] !== null) {
+            $this->Gender = $param["Gender"];
+        }
+
+        if (array_key_exists("Birthday",$param) and $param["Birthday"] !== null) {
+            $this->Birthday = $param["Birthday"];
+        }
+
+        if (array_key_exists("Profession",$param) and $param["Profession"] !== null) {
+            $this->Profession = $param["Profession"];
+        }
+
+        if (array_key_exists("SchoolOfGraduation",$param) and $param["SchoolOfGraduation"] !== null) {
+            $this->SchoolOfGraduation = $param["SchoolOfGraduation"];
+        }
+
+        if (array_key_exists("Abstract",$param) and $param["Abstract"] !== null) {
+            $this->Abstract = $param["Abstract"];
+        }
+
+        if (array_key_exists("PlaceOfBirth",$param) and $param["PlaceOfBirth"] !== null) {
+            $this->PlaceOfBirth = $param["PlaceOfBirth"];
+        }
+
+        if (array_key_exists("PersonType",$param) and $param["PersonType"] !== null) {
+            $this->PersonType = $param["PersonType"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
         }
     }
 }

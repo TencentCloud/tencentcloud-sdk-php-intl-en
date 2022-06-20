@@ -18,32 +18,32 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a video processing output object.
+ * The information of the media processing output object.
  *
- * @method string getType() Obtain Storage location type of a video processing output object. Only COS is supported currently.
- * @method void setType(string $Type) Set Storage location type of a video processing output object. Only COS is supported currently.
- * @method CosOutputStorage getCosOutputStorage() Obtain This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getType() Obtain The type of storage location for the media processing output object. Only COS is supported currently.
+ * @method void setType(string $Type) Set The type of storage location for the media processing output object. Only COS is supported currently.
+ * @method CosOutputStorage getCosOutputStorage() Obtain The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setCosOutputStorage(CosOutputStorage $CosOutputStorage) Set The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class TaskOutputStorage extends AbstractModel
 {
     /**
-     * @var string Storage location type of a video processing output object. Only COS is supported currently.
+     * @var string The type of storage location for the media processing output object. Only COS is supported currently.
      */
     public $Type;
 
     /**
-     * @var CosOutputStorage This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $CosOutputStorage;
 
     /**
-     * @param string $Type Storage location type of a video processing output object. Only COS is supported currently.
-     * @param CosOutputStorage $CosOutputStorage This parameter is valid and required when `Type` is COS, indicating the location of an output COS object after video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Type The type of storage location for the media processing output object. Only COS is supported currently.
+     * @param CosOutputStorage $CosOutputStorage The location to save the output object in COS. This parameter is valid and required when `Type` is COS.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {

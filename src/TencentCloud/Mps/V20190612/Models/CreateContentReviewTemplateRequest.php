@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateContentReviewTemplate request structure.
  *
- * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters
- * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters
- * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters
- * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters
+ * @method string getName() Obtain The name of the content moderation template. Length limit: 64 characters.
+ * @method void setName(string $Name) Set The name of the content moderation template. Length limit: 64 characters.
+ * @method string getComment() Obtain The template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set The template description. Length limit: 256 characters.
  * @method PornConfigureInfo getPornConfigure() Obtain Control parameter for porn information
  * @method void setPornConfigure(PornConfigureInfo $PornConfigure) Set Control parameter for porn information
  * @method TerrorismConfigureInfo getTerrorismConfigure() Obtain Control parameter for terrorism information
@@ -38,18 +38,18 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
- * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition tasks
- * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Control parameter for custom intelligent content recognition tasks
+ * @method UserDefineConfigureInfo getUserDefineConfigure() Obtain Custom content moderation parameters.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Custom content moderation parameters.
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Name of an intelligent content recognition template. Length limit: 64 characters
+     * @var string The name of the content moderation template. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of an intelligent content recognition template. Length limit: 256 characters
+     * @var string The template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -77,13 +77,13 @@ Note: this parameter is not supported yet.
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfo Control parameter for custom intelligent content recognition tasks
+     * @var UserDefineConfigureInfo Custom content moderation parameters.
      */
     public $UserDefineConfigure;
 
     /**
-     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters
-     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters
+     * @param string $Name The name of the content moderation template. Length limit: 64 characters.
+     * @param string $Comment The template description. Length limit: 256 characters.
      * @param PornConfigureInfo $PornConfigure Control parameter for porn information
      * @param TerrorismConfigureInfo $TerrorismConfigure Control parameter for terrorism information
      * @param PoliticalConfigureInfo $PoliticalConfigure Control parameter for politically sensitive information
@@ -91,7 +91,7 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
-     * @param UserDefineConfigureInfo $UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+     * @param UserDefineConfigureInfo $UserDefineConfigure Custom content moderation parameters.
      */
     function __construct()
     {

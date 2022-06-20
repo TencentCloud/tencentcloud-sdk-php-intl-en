@@ -110,6 +110,8 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method void setGPUInfo(GPUInfo $GPUInfo) Set GPU information. This field is only returned for GPU instances.
 Note: this field may return null, indicating that no valid value was found.
+ * @method string getLicenseType() Obtain Instance OS license type. Default value: `TencentCloud`
+ * @method void setLicenseType(string $LicenseType) Set Instance OS license type. Default value: `TencentCloud`
  */
 class Instance extends AbstractModel
 {
@@ -299,6 +301,11 @@ Note: this field may return null, indicating that no valid value was found.
     public $GPUInfo;
 
     /**
+     * @var string Instance OS license type. Default value: `TencentCloud`
+     */
+    public $LicenseType;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -344,6 +351,7 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
      * @param GPUInfo $GPUInfo GPU information. This field is only returned for GPU instances.
 Note: this field may return null, indicating that no valid value was found.
+     * @param string $LicenseType Instance OS license type. Default value: `TencentCloud`
      */
     function __construct()
     {
@@ -512,6 +520,10 @@ Note: this field may return null, indicating that no valid value was found.
         if (array_key_exists("GPUInfo",$param) and $param["GPUInfo"] !== null) {
             $this->GPUInfo = new GPUInfo();
             $this->GPUInfo->deserialize($param["GPUInfo"]);
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

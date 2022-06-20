@@ -28,8 +28,16 @@ use TencentCloud\Common\AbstractModel;
 <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
  * @method array getSecurityGroups() Obtain IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
  * @method void setSecurityGroups(array $SecurityGroups) Set IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+ * @method string getCamRoleName() Obtain The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+ * @method void setCamRoleName(string $CamRoleName) Set The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
  * @method boolean getDisableApiTermination() Obtain Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
  * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+ * @method string getCamRoleType() Obtain The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+ * @method void setCamRoleType(string $CamRoleType) Set The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
  */
 class ModifyInstancesAttributeRequest extends AbstractModel
 {
@@ -50,16 +58,32 @@ class ModifyInstancesAttributeRequest extends AbstractModel
     public $SecurityGroups;
 
     /**
+     * @var string The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
+     */
+    public $CamRoleName;
+
+    /**
      * @var boolean Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
      */
     public $DisableApiTermination;
+
+    /**
+     * @var string The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
+     */
+    public $CamRoleType;
 
     /**
      * @param array $InstanceIds Instance ID(s). To obtain the instance IDs, you can call [`DescribeInstances`](https://intl.cloud.tencent.com/document/api/213/15728?from_cn_redirect=1) and look for `InstanceId` in the response. The maximum number of instances in each request is 100.
      * @param string $InstanceName The instance name, which can not exceed 60 characters
 <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they can not be both specified.</dx-alert>
      * @param array $SecurityGroups IDs of security groups associated with the specified instance. You can associate with a security group by adding its ID, or cancel the association with a security group by removing its ID. <dx-alert infotype="explain" title="">Either `InstanceName` or `SecurityGroups` must be specified, but they cannot be both set.</dx-alert>
+     * @param string $CamRoleName The role bound with the instance. If it is not specified, it indicates to unbind the current role of the CVM.
      * @param boolean $DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: do not enable the instance protection.<br><br>Default Value: `FALSE`.
+     * @param string $CamRoleType The role type, which is used in conjunction with `CamRoleName`. The value is obtained in `RoleType` field, returning by `CAM DescribeRoleList` and `GetRole` APIs. Valid value: `user`, `system` and `service_linked`.
+For example, when `LinkedRoleIn` is contained in `CamRoleName` (such as `TKE_QCSLinkedRoleInPrometheusService`), the returned `RoleType` of `DescribeRoleList` and `GetRoleis` is `service_linked`, and the `CamRoleType` `service_linked`.
+When the value obtained in `RoleType` is `user` (default) or `system`, `CamRoleType` can be left empty.
      */
     function __construct()
     {
@@ -86,8 +110,16 @@ class ModifyInstancesAttributeRequest extends AbstractModel
             $this->SecurityGroups = $param["SecurityGroups"];
         }
 
+        if (array_key_exists("CamRoleName",$param) and $param["CamRoleName"] !== null) {
+            $this->CamRoleName = $param["CamRoleName"];
+        }
+
         if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
             $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("CamRoleType",$param) and $param["CamRoleType"] !== null) {
+            $this->CamRoleType = $param["CamRoleType"];
         }
     }
 }

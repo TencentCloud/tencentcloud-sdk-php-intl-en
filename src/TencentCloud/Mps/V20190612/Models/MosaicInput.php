@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Blur parameter type of video processing task
+ * The mosaic effect parameters to use in a media processing task.
  *
  * @method string getCoordinateOrigin() Obtain Origin position, which currently can only be:
 <li>TopLeft: the origin of coordinates is in the top-left corner of the video, and the origin of the blur is in the top-left corner of the image or text.</li>

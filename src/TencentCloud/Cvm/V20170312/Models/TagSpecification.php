@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Description of tags associated with resource instances during instance creation.
  *
- * @method string getResourceType() Obtain The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
- * @method void setResourceType(string $ResourceType) Set The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+ * @method string getResourceType() Obtain The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
+ * @method void setResourceType(string $ResourceType) Set The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
  * @method array getTags() Obtain List of tags
  * @method void setTags(array $Tags) Set List of tags
  */
 class TagSpecification extends AbstractModel
 {
     /**
-     * @var string The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+     * @var string The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
      */
     public $ResourceType;
 
@@ -38,7 +38,7 @@ class TagSpecification extends AbstractModel
     public $Tags;
 
     /**
-     * @param string $ResourceType The type of resource that bound with the tag. Valid values: `instance` (for CVM) and `host` (for CDH).
+     * @param string $ResourceType The type of resource that the tag is bound to. Valid values: `instance` (for CVM), `host` (for CDH) and `image` (for image).
      * @param array $Tags List of tags
      */
     function __construct()

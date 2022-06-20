@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Information of a live stream processing task
  *
- * @method string getTaskId() Obtain Video processing task ID.
- * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method string getTaskId() Obtain The media processing task ID.
+ * @method void setTaskId(string $TaskId) Set The media processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
@@ -38,7 +38,7 @@ use TencentCloud\Common\AbstractModel;
 class LiveStreamProcessTask extends AbstractModel
 {
     /**
-     * @var string Video processing task ID.
+     * @var string The media processing task ID.
      */
     public $TaskId;
 
@@ -65,7 +65,7 @@ class LiveStreamProcessTask extends AbstractModel
     public $Url;
 
     /**
-     * @param string $TaskId Video processing task ID.
+     * @param string $TaskId The media processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>

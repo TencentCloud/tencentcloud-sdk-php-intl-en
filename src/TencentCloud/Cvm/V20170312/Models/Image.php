@@ -60,6 +60,8 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTags(array $Tags) Set The list of tags bound to the image.
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getLicenseType() Obtain Image license type
+ * @method void setLicenseType(string $LicenseType) Set Image license type
  */
 class Image extends AbstractModel
 {
@@ -148,6 +150,11 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Tags;
 
     /**
+     * @var string Image license type
+     */
+    public $LicenseType;
+
+    /**
      * @param string $ImageId Image ID
      * @param string $OsName Operating system of the image
      * @param string $ImageType Image type
@@ -168,6 +175,7 @@ Note: This field may return null, indicating that no valid value is found.
 Note: This field may return null, indicating that no valid value is found.
      * @param array $Tags The list of tags bound to the image.
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $LicenseType Image license type
      */
     function __construct()
     {
@@ -254,6 +262,10 @@ Note: This field may return `null`, indicating that no valid value was found.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

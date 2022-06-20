@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mps\V20190612\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateContentReviewTemplate response structure.
+ * ExportImages response structure.
  *
- * @method integer getDefinition() Obtain The unique ID of the content moderation template.
- * @method void setDefinition(integer $Definition) Set The unique ID of the content moderation template.
+ * @method integer getTaskId() Obtain ID of the image export task
+ * @method void setTaskId(integer $TaskId) Set ID of the image export task
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateContentReviewTemplateResponse extends AbstractModel
+class ExportImagesResponse extends AbstractModel
 {
     /**
-     * @var integer The unique ID of the content moderation template.
+     * @var integer ID of the image export task
      */
-    public $Definition;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateContentReviewTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Definition The unique ID of the content moderation template.
+     * @param integer $TaskId ID of the image export task
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateContentReviewTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
-            $this->Definition = $param["Definition"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

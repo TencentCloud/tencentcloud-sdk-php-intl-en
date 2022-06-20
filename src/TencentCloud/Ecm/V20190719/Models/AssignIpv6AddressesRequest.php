@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpv6Addresses(array $Ipv6Addresses) Set List of specified IPv6 addresses. You can specify up to 10 IPv6 addresses at a time. The quota is calculated together with that of `Ipv6AddressCount`, a required input parameter alternative to this one.
  * @method integer getIpv6AddressCount() Obtain Number of automatically assigned IPv6 addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with that of `Ipv6Addresses`, a required input parameter alternative to this one.
  * @method void setIpv6AddressCount(integer $Ipv6AddressCount) Set Number of automatically assigned IPv6 addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with that of `Ipv6Addresses`, a required input parameter alternative to this one.
+ * @method string getIpv6ISP() Obtain Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+ * @method void setIpv6ISP(string $Ipv6ISP) Set Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
  */
 class AssignIpv6AddressesRequest extends AbstractModel
 {
@@ -52,10 +60,22 @@ class AssignIpv6AddressesRequest extends AbstractModel
     public $Ipv6AddressCount;
 
     /**
+     * @var string Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
+     */
+    public $Ipv6ISP;
+
+    /**
      * @param string $EcmRegion ECM region
      * @param string $NetworkInterfaceId ENI instance ID, such as `eni-1snva0vd`. Currently, only the primary ENI will be assigned the ID.
      * @param array $Ipv6Addresses List of specified IPv6 addresses. You can specify up to 10 IPv6 addresses at a time. The quota is calculated together with that of `Ipv6AddressCount`, a required input parameter alternative to this one.
      * @param integer $Ipv6AddressCount Number of automatically assigned IPv6 addresses. The total number of private IP addresses cannot exceed the quota. The quota is calculated together with that of `Ipv6Addresses`, a required input parameter alternative to this one.
+     * @param string $Ipv6ISP Ipv6 ISP. Valid values:
+`CTCC`: China Telecom
+`CUCC`: China Unicom
+`CMCC`: China Mobile
      */
     function __construct()
     {
@@ -89,6 +109,10 @@ class AssignIpv6AddressesRequest extends AbstractModel
 
         if (array_key_exists("Ipv6AddressCount",$param) and $param["Ipv6AddressCount"] !== null) {
             $this->Ipv6AddressCount = $param["Ipv6AddressCount"];
+        }
+
+        if (array_key_exists("Ipv6ISP",$param) and $param["Ipv6ISP"] !== null) {
+            $this->Ipv6ISP = $param["Ipv6ISP"];
         }
     }
 }

@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Type of a video processing task
+ * The type of media processing task.
  *
  * @method array getTranscodeTaskSet() Obtain List of transcoding tasks.
  * @method void setTranscodeTaskSet(array $TranscodeTaskSet) Set List of transcoding tasks.

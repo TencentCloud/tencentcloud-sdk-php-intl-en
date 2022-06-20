@@ -18,7 +18,7 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermark parameter type of a video processing task
+ * The watermark parameters to use in a media processing task.
  *
  * @method integer getDefinition() Obtain ID of a watermarking template.
  * @method void setDefinition(integer $Definition) Set ID of a watermarking template.

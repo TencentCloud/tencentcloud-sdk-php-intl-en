@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileInfos() Obtain Information of input video file.
  * @method void setFileInfos(array $FileInfos) Set Information of input video file.
- * @method TaskOutputStorage getOutputStorage() Obtain Target storage of video processing output file.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage of video processing output file.
- * @method string getOutputObjectPath() Obtain Target path of video processing output file.
- * @method void setOutputObjectPath(string $OutputObjectPath) Set Target path of video processing output file.
+ * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the media processing output file.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the media processing output file.
+ * @method string getOutputObjectPath() Obtain The path to save the media processing output file.
+ * @method void setOutputObjectPath(string $OutputObjectPath) Set The path to save the media processing output file.
  * @method EditMediaOutputConfig getOutputConfig() Obtain Configuration for output files of video editing
  * @method void setOutputConfig(EditMediaOutputConfig $OutputConfig) Set Configuration for output files of video editing
  * @method TaskNotifyConfig getTaskNotifyConfig() Obtain Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
@@ -45,12 +45,12 @@ class EditMediaRequest extends AbstractModel
     public $FileInfos;
 
     /**
-     * @var TaskOutputStorage Target storage of video processing output file.
+     * @var TaskOutputStorage The storage location of the media processing output file.
      */
     public $OutputStorage;
 
     /**
-     * @var string Target path of video processing output file.
+     * @var string The path to save the media processing output file.
      */
     public $OutputObjectPath;
 
@@ -81,8 +81,8 @@ class EditMediaRequest extends AbstractModel
 
     /**
      * @param array $FileInfos Information of input video file.
-     * @param TaskOutputStorage $OutputStorage Target storage of video processing output file.
-     * @param string $OutputObjectPath Target path of video processing output file.
+     * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file.
+     * @param string $OutputObjectPath The path to save the media processing output file.
      * @param EditMediaOutputConfig $OutputConfig Configuration for output files of video editing
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of task. If this parameter is left empty, no event notifications will be obtained.
      * @param integer $TasksPriority Task priority. The higher the value, the higher the priority. Value range: -10–10. If this parameter is left empty, 0 will be used.

@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyContentReviewTemplate request structure.
  *
- * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template
- * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template
- * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters
- * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters
- * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters
- * @method void setComment(string $Comment) Set Description of an intelligent content recognition template. Length limit: 256 characters
+ * @method integer getDefinition() Obtain The unique ID of the content moderation template.
+ * @method void setDefinition(integer $Definition) Set The unique ID of the content moderation template.
+ * @method string getName() Obtain The name of the content moderation template. Length limit: 64 characters.
+ * @method void setName(string $Name) Set The name of the content moderation template. Length limit: 64 characters.
+ * @method string getComment() Obtain The template description. Length limit: 256 characters.
+ * @method void setComment(string $Comment) Set The template description. Length limit: 256 characters.
  * @method PornConfigureInfoForUpdate getPornConfigure() Obtain Control parameter for porn information
  * @method void setPornConfigure(PornConfigureInfoForUpdate $PornConfigure) Set Control parameter for porn information
  * @method TerrorismConfigureInfoForUpdate getTerrorismConfigure() Obtain Control parameter for terrorism information
@@ -40,23 +40,23 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
- * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Control parameter for custom intelligent content recognition tasks
- * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Control parameter for custom intelligent content recognition tasks
+ * @method UserDefineConfigureInfoForUpdate getUserDefineConfigure() Obtain Custom content moderation parameters.
+ * @method void setUserDefineConfigure(UserDefineConfigureInfoForUpdate $UserDefineConfigure) Set Custom content moderation parameters.
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
     /**
-     * @var integer Unique ID of an intelligent content recognition template
+     * @var integer The unique ID of the content moderation template.
      */
     public $Definition;
 
     /**
-     * @var string Name of an intelligent content recognition template. Length limit: 64 characters
+     * @var string The name of the content moderation template. Length limit: 64 characters.
      */
     public $Name;
 
     /**
-     * @var string Description of an intelligent content recognition template. Length limit: 256 characters
+     * @var string The template description. Length limit: 256 characters.
      */
     public $Comment;
 
@@ -84,14 +84,14 @@ Note: this parameter is not supported yet.
     public $ProhibitedConfigure;
 
     /**
-     * @var UserDefineConfigureInfoForUpdate Control parameter for custom intelligent content recognition tasks
+     * @var UserDefineConfigureInfoForUpdate Custom content moderation parameters.
      */
     public $UserDefineConfigure;
 
     /**
-     * @param integer $Definition Unique ID of an intelligent content recognition template
-     * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters
-     * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters
+     * @param integer $Definition The unique ID of the content moderation template.
+     * @param string $Name The name of the content moderation template. Length limit: 64 characters.
+     * @param string $Comment The template description. Length limit: 256 characters.
      * @param PornConfigureInfoForUpdate $PornConfigure Control parameter for porn information
      * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter for terrorism information
      * @param PoliticalConfigureInfoForUpdate $PoliticalConfigure Control parameter for politically sensitive information
@@ -99,7 +99,7 @@ Note: this parameter is not supported yet.
 <li>Abusive;</li>
 <li>Drug-related.</li>
 Note: this parameter is not supported yet.
-     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Control parameter for custom intelligent content recognition tasks
+     * @param UserDefineConfigureInfoForUpdate $UserDefineConfigure Custom content moderation parameters.
      */
     function __construct()
     {

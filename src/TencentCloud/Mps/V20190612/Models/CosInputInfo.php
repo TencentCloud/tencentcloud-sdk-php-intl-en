@@ -18,36 +18,36 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the COS object for video processing.
+ * The information of the COS object to process.
  *
- * @method string getBucket() Obtain Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
- * @method void setBucket(string $Bucket) Set Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
- * @method string getRegion() Obtain Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
- * @method void setRegion(string $Region) Set Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
- * @method string getObject() Obtain Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
- * @method void setObject(string $Object) Set Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+ * @method string getBucket() Obtain The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+ * @method void setBucket(string $Bucket) Set The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+ * @method string getRegion() Obtain The region of the COS bucket, such as `ap-chongqing`.
+ * @method void setRegion(string $Region) Set The region of the COS bucket, such as `ap-chongqing`.
+ * @method string getObject() Obtain The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
+ * @method void setObject(string $Object) Set The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
  */
 class CosInputInfo extends AbstractModel
 {
     /**
-     * @var string Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
+     * @var string The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
      */
     public $Bucket;
 
     /**
-     * @var string Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
+     * @var string The region of the COS bucket, such as `ap-chongqing`.
      */
     public $Region;
 
     /**
-     * @var string Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+     * @var string The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
      */
     public $Object;
 
     /**
-     * @param string $Bucket Name of the COS bucket where a video processing object file is located, such as `TopRankVideo-125xxx88`.
-     * @param string $Region Region of the COS bucket where a video processing object file is located, such as `ap-chongqing`.
-     * @param string $Object Path to an input object file for video processing, such as `/movie/201907/WildAnimal.mov`.
+     * @param string $Bucket The COS bucket of the object to process, such as `TopRankVideo-125xxx88`.
+     * @param string $Region The region of the COS bucket, such as `ap-chongqing`.
+     * @param string $Object The path of the object to process, such as `/movie/201907/WildAnimal.mov`.
      */
     function __construct()
     {

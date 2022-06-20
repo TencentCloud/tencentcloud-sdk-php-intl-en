@@ -20,42 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Event notification configuration of a task.
  *
- * @method string getCmqModel() Obtain CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
- * @method void setCmqModel(string $CmqModel) Set CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
- * @method string getCmqRegion() Obtain CMQ region, such as `sh` and `bj`.
- * @method void setCmqRegion(string $CmqRegion) Set CMQ region, such as `sh` and `bj`.
- * @method string getQueueName() Obtain This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
- * @method void setQueueName(string $QueueName) Set This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
- * @method string getTopicName() Obtain This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
- * @method void setTopicName(string $TopicName) Set This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+ * @method string getCmqModel() Obtain The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+ * @method void setCmqModel(string $CmqModel) Set The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+ * @method string getCmqRegion() Obtain The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+ * @method void setCmqRegion(string $CmqRegion) Set The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+ * @method string getTopicName() Obtain The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+ * @method void setTopicName(string $TopicName) Set The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+ * @method string getQueueName() Obtain The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+ * @method void setQueueName(string $QueueName) Set The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
  * @method string getNotifyMode() Obtain Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
  * @method void setNotifyMode(string $NotifyMode) Set Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
- * @method string getNotifyType() Obtain Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
- * @method void setNotifyType(string $NotifyType) Set Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+ * @method string getNotifyType() Obtain The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
+ * @method void setNotifyType(string $NotifyType) Set The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
  * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
  * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
  */
 class TaskNotifyConfig extends AbstractModel
 {
     /**
-     * @var string CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
+     * @var string The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
      */
     public $CmqModel;
 
     /**
-     * @var string CMQ region, such as `sh` and `bj`.
+     * @var string The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
      */
     public $CmqRegion;
 
     /**
-     * @var string This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     */
-    public $QueueName;
-
-    /**
-     * @var string This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * @var string The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
      */
     public $TopicName;
+
+    /**
+     * @var string The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
+     */
+    public $QueueName;
 
     /**
      * @var string Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
@@ -63,7 +71,11 @@ class TaskNotifyConfig extends AbstractModel
     public $NotifyMode;
 
     /**
-     * @var string Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * @var string The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
      */
     public $NotifyType;
 
@@ -73,12 +85,16 @@ class TaskNotifyConfig extends AbstractModel
     public $NotifyUrl;
 
     /**
-     * @param string $CmqModel CMQ model. There are two types: `Queue` and `Topic`. Currently, only `Queue` is supported.
-     * @param string $CmqRegion CMQ region, such as `sh` and `bj`.
-     * @param string $QueueName This parameter is valid when the model is `Queue`, indicating the name of the CMQ queue for receiving event notifications.
-     * @param string $TopicName This parameter is valid when the model is `Topic`, indicating the name of the CMQ topic for receiving event notifications.
+     * @param string $CmqModel The CMQ or TDMQ-CMQ model. Valid values: Queue, Topic.
+     * @param string $CmqRegion The CMQ or TDMQ-CMQ region, such as `sh` (Shanghai) or `bj` (Beijing).
+     * @param string $TopicName The CMQ or TDMQ-CMQ topic to receive notifications. This parameter is valid when `CmqModel` is `Topic`.
+     * @param string $QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
      * @param string $NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
-     * @param string $NotifyType Notification type, `CMQ` by default. If `URL` is passed in, HTTP callbacks are sent to the URL specified by `NotifyUrl`.
+     * @param string $NotifyType The notification type. Valid values:
+<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>TDMQ-CMQ: Message queue</li>
+<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+Default value: `TDMQ-CMQ`.
      * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
      */
     function __construct()
@@ -102,12 +118,12 @@ class TaskNotifyConfig extends AbstractModel
             $this->CmqRegion = $param["CmqRegion"];
         }
 
-        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
-            $this->QueueName = $param["QueueName"];
-        }
-
         if (array_key_exists("TopicName",$param) and $param["TopicName"] !== null) {
             $this->TopicName = $param["TopicName"];
+        }
+
+        if (array_key_exists("QueueName",$param) and $param["QueueName"] !== null) {
+            $this->QueueName = $param["QueueName"];
         }
 
         if (array_key_exists("NotifyMode",$param) and $param["NotifyMode"] !== null) {

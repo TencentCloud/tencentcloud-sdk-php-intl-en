@@ -32,14 +32,14 @@ use TencentCloud\Common\AbstractModel;
 <li>Disabled: Disabled.</li>
  * @method WorkflowTrigger getTrigger() Obtain Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
  * @method void setTrigger(WorkflowTrigger $Trigger) Set Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
- * @method TaskOutputStorage getOutputStorage() Obtain Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TaskOutputStorage getOutputStorage() Obtain The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
@@ -56,8 +56,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTaskPriority() Obtain Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method void setTaskPriority(integer $TaskPriority) Set Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
- * @method string getOutputDir() Obtain Target directory of a video processing output file, such as `/movie/201907/`.
- * @method void setOutputDir(string $OutputDir) Set Target directory of a video processing output file, such as `/movie/201907/`.
+ * @method string getOutputDir() Obtain The directory to save the media processing output file, such as `/movie/201907/`.
+ * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, such as `/movie/201907/`.
  * @method string getCreateTime() Obtain Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setCreateTime(string $CreateTime) Set Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -88,14 +88,14 @@ class WorkflowInfo extends AbstractModel
     public $Trigger;
 
     /**
-     * @var TaskOutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var TaskOutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $OutputStorage;
 
     /**
-     * @var MediaProcessTaskInput Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaProcessTaskInput The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $MediaProcessTask;
 
@@ -128,7 +128,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TaskPriority;
 
     /**
-     * @var string Target directory of a video processing output file, such as `/movie/201907/`.
+     * @var string The directory to save the media processing output file, such as `/movie/201907/`.
      */
     public $OutputDir;
 
@@ -149,10 +149,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Enabled: Enabled,</li>
 <li>Disabled: Disabled.</li>
      * @param WorkflowTrigger $Trigger Input rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-     * @param TaskOutputStorage $OutputStorage Target storage of a video processing output file.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameter of a video processing task.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TaskOutputStorage $OutputStorage The location to save the media processing output file.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
@@ -161,7 +161,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task. If this parameter is left empty, no event notifications will be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TaskPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
-     * @param string $OutputDir Target directory of a video processing output file, such as `/movie/201907/`.
+     * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`.
      * @param string $CreateTime Creation time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a workflow in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      */

@@ -18,7 +18,7 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes the location of an instance, including its availability zone, project, host (for CDH products only), primary host IP, etc.
+ * Placement of an instance, including its availability zone, project, host (for CDH products only), master host IP, etc.
  *
  * @method string getZone() Obtain ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.
  * @method void setZone(string $Zone) Set ID of the availability zone where the instance resides. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/35071) API and obtain the ID in the returned `Zone` field.

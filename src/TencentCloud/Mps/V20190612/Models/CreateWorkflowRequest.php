@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWorkflowName(string $WorkflowName) Set Workflow name of up to 128 characters, which must be unique for the same user.
  * @method WorkflowTrigger getTrigger() Obtain Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
  * @method void setTrigger(WorkflowTrigger $Trigger) Set Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
- * @method TaskOutputStorage getOutputStorage() Obtain Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
- * @method string getOutputDir() Obtain Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
- * @method void setOutputDir(string $OutputDir) Set Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of a video processing task.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of a video processing task.
+ * @method TaskOutputStorage getOutputStorage() Obtain The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+ * @method string getOutputDir() Obtain The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+ * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
@@ -54,17 +54,17 @@ class CreateWorkflowRequest extends AbstractModel
     public $Trigger;
 
     /**
-     * @var TaskOutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * @var TaskOutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
      */
     public $OutputStorage;
 
     /**
-     * @var string Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
+     * @var string The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
      */
     public $OutputDir;
 
     /**
-     * @var MediaProcessTaskInput Parameter of a video processing task.
+     * @var MediaProcessTaskInput The media processing parameters to use.
      */
     public $MediaProcessTask;
 
@@ -96,9 +96,9 @@ class CreateWorkflowRequest extends AbstractModel
     /**
      * @param string $WorkflowName Workflow name of up to 128 characters, which must be unique for the same user.
      * @param WorkflowTrigger $Trigger Triggering rule bound to a workflow. If an uploaded video hits the rule for the object, the workflow will be triggered.
-     * @param TaskOutputStorage $OutputStorage Storage location of a video processing output file. If this parameter is left empty, the storage location in `Trigger` will be inherited.
-     * @param string $OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory where the source file is located.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameter of a video processing task.
+     * @param TaskOutputStorage $OutputStorage The location to save the output file of media processing. If this parameter is left empty, the storage location in `Trigger` will be inherited.
+     * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the output file will be saved to the same directory where the source file is located.
+     * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.

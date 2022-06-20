@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
  * @method void setForwardProtocol(string $ForwardProtocol) Set Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
- * @method string getForwardHost() Obtain The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
- * @method void setForwardHost(string $ForwardHost) Set The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+ * @method string getForwardHost() Obtain The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
+ * @method void setForwardHost(string $ForwardHost) Set The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
  * @method string getServerNameIndicationSwitch() Obtain Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
  * @method string getServerNameIndication() Obtain Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
@@ -89,7 +89,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
     public $ForwardProtocol;
 
     /**
-     * @var string The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+     * @var string The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
      */
     public $ForwardHost;
 
@@ -113,7 +113,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
      * @param RuleCheckParams $CheckParams Parameters related to origin server health check
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.
 If this field is not passed in, it indicates that the ForwardProtocol of the corresponding listener will be used.
-     * @param string $ForwardHost The forwarding host. If it’s not specified, the default host is used, that is the host with which the client initiates HTTP requests.
+     * @param string $ForwardHost The host to which the acceleration connection forwards. If this parameter is not specified, the default host will be used, i.e., the host with which the client initiates HTTP requests.
      * @param string $ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
      * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
      */

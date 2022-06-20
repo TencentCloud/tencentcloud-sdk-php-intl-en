@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ProcessMedia request structure.
  *
- * @method MediaInputInfo getInputInfo() Obtain Input information of a file for video processing.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Input information of a file for video processing.
- * @method TaskOutputStorage getOutputStorage() Obtain Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
- * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
- * @method string getOutputDir() Obtain Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
- * @method void setOutputDir(string $OutputDir) Set Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
- * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of a video processing task.
- * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of a video processing task.
+ * @method MediaInputInfo getInputInfo() Obtain The information of the file to process.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file to process.
+ * @method TaskOutputStorage getOutputStorage() Obtain The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+ * @method void setOutputStorage(TaskOutputStorage $OutputStorage) Set The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+ * @method string getOutputDir() Obtain The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+ * @method void setOutputDir(string $OutputDir) Set The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+ * @method MediaProcessTaskInput getMediaProcessTask() Obtain The media processing parameters to use.
+ * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set The media processing parameters to use.
  * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Type parameter of a video content audit task.
  * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Type parameter of a video content audit task.
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Video content analysis task parameter.
@@ -46,22 +46,22 @@ use TencentCloud\Common\AbstractModel;
 class ProcessMediaRequest extends AbstractModel
 {
     /**
-     * @var MediaInputInfo Input information of a file for video processing.
+     * @var MediaInputInfo The information of the file to process.
      */
     public $InputInfo;
 
     /**
-     * @var TaskOutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * @var TaskOutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      */
     public $OutputStorage;
 
     /**
-     * @var string Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
+     * @var string The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
      */
     public $OutputDir;
 
     /**
-     * @var MediaProcessTaskInput Parameter of a video processing task.
+     * @var MediaProcessTaskInput The media processing parameters to use.
      */
     public $MediaProcessTask;
 
@@ -101,10 +101,10 @@ class ProcessMediaRequest extends AbstractModel
     public $SessionContext;
 
     /**
-     * @param MediaInputInfo $InputInfo Input information of a file for video processing.
-     * @param TaskOutputStorage $OutputStorage Target bucket of a video processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
-     * @param string $OutputDir Target directory of a video processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be outputted to the same directory as that in `InputInfo`.
-     * @param MediaProcessTaskInput $MediaProcessTask Parameter of a video processing task.
+     * @param MediaInputInfo $InputInfo The information of the file to process.
+     * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
+     * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
+     * @param MediaProcessTaskInput $MediaProcessTask The media processing parameters to use.
      * @param AiContentReviewTaskInput $AiContentReviewTask Type parameter of a video content audit task.
      * @param AiAnalysisTaskInput $AiAnalysisTask Video content analysis task parameter.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of a video content recognition task.

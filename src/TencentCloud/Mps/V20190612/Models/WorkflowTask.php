@@ -18,10 +18,10 @@ namespace TencentCloud\Mps\V20190612\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of a video processing task
+ * The information of the media processing task.
  *
- * @method string getTaskId() Obtain Video processing task ID.
- * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method string getTaskId() Obtain The media processing task ID.
+ * @method void setTaskId(string $TaskId) Set The media processing task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Disused. Please use `ErrCode` of each specific task.
  * @method string getMessage() Obtain Disused. Please use `Message` of each specific task.
  * @method void setMessage(string $Message) Set Disused. Please use `Message` of each specific task.
- * @method MediaInputInfo getInputInfo() Obtain Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInputInfo(MediaInputInfo $InputInfo) Set Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method MediaInputInfo getInputInfo() Obtain The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method MediaMetaData getMetaData() Obtain Metadata of a source video.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of a source video.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMediaProcessResultSet() Obtain Execution status and result of a video processing task.
- * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set Execution status and result of a video processing task.
+ * @method array getMediaProcessResultSet() Obtain The execution status and result of the media processing task.
+ * @method void setMediaProcessResultSet(array $MediaProcessResultSet) Set The execution status and result of the media processing task.
  * @method array getAiContentReviewResultSet() Obtain Execution status and result of a video content audit task.
  * @method void setAiContentReviewResultSet(array $AiContentReviewResultSet) Set Execution status and result of a video content audit task.
  * @method array getAiAnalysisResultSet() Obtain Execution status and result of video content analysis task.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class WorkflowTask extends AbstractModel
 {
     /**
-     * @var string Video processing task ID.
+     * @var string The media processing task ID.
      */
     public $TaskId;
 
@@ -74,8 +74,8 @@ class WorkflowTask extends AbstractModel
     public $Message;
 
     /**
-     * @var MediaInputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var MediaInputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     public $InputInfo;
 
@@ -86,7 +86,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MetaData;
 
     /**
-     * @var array Execution status and result of a video processing task.
+     * @var array The execution status and result of the media processing task.
      */
     public $MediaProcessResultSet;
 
@@ -106,17 +106,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AiRecognitionResultSet;
 
     /**
-     * @param string $TaskId Video processing task ID.
+     * @param string $TaskId The media processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
      * @param integer $ErrCode Disused. Please use `ErrCode` of each specific task.
      * @param string $Message Disused. Please use `Message` of each specific task.
-     * @param MediaInputInfo $InputInfo Information of a target file of video processing.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param MediaInputInfo $InputInfo The information of the file processed.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param MediaMetaData $MetaData Metadata of a source video.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MediaProcessResultSet Execution status and result of a video processing task.
+     * @param array $MediaProcessResultSet The execution status and result of the media processing task.
      * @param array $AiContentReviewResultSet Execution status and result of a video content audit task.
      * @param array $AiAnalysisResultSet Execution status and result of video content analysis task.
      * @param array $AiRecognitionResultSet Execution status and result of a video content recognition task.
