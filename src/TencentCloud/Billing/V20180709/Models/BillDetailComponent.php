@@ -62,6 +62,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getContractPrice() Obtain Contract price
  * @method void setContractPrice(string $ContractPrice) Set Contract price
+ * @method string getInstanceType() Obtain The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setInstanceType(string $InstanceType) Set The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getRiTimeSpan() Obtain The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRiTimeSpan(string $RiTimeSpan) Set The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getOriginalCostWithRI() Obtain The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSPDeductionRate() Obtain The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSPDeductionRate(string $SPDeductionRate) Set The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSPDeduction() Obtain The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSPDeduction(string $SPDeduction) Set The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getOriginalCostWithSP() Obtain The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getBlendedDiscount() Obtain The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setBlendedDiscount(string $BlendedDiscount) Set The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class BillDetailComponent extends AbstractModel
 {
@@ -163,6 +191,48 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ContractPrice;
 
     /**
+     * @var string The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $InstanceType;
+
+    /**
+     * @var string The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RiTimeSpan;
+
+    /**
+     * @var string The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $OriginalCostWithRI;
+
+    /**
+     * @var string The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SPDeductionRate;
+
+    /**
+     * @var string The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $OriginalCostWithSP;
+
+    /**
+     * @var string The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $BlendedDiscount;
+
+    /**
      * @param string $ComponentCodeName Component type: type of a resource component, e.g. memory, disk, etc.
      * @param string $ItemCodeName Component name: name of a resource component, e.g. TencentDB for MySQL-memory
      * @param string $SinglePrice Component published price: original price of a resource component with the original granularity
@@ -184,6 +254,20 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $ComponentCode Component code
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ContractPrice Contract price
+     * @param string $InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $RiTimeSpan The usage duration deducted by a reserved instance. The unit of measurement for deduction is the same as that for usage duration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SPDeductionRate The discount multiplier that applies to the component based on the remaining commitment of the savings plan.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SPDeduction The savings plan deduction amount.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $BlendedDiscount The blended discount multiplier that combines the official website discount, reserved instance discount, and savings plan discount. If no reserved instance and savings plan discounts are available, the blended discount multiplier equals the discount multiplier.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -272,6 +356,34 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ContractPrice",$param) and $param["ContractPrice"] !== null) {
             $this->ContractPrice = $param["ContractPrice"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("RiTimeSpan",$param) and $param["RiTimeSpan"] !== null) {
+            $this->RiTimeSpan = $param["RiTimeSpan"];
+        }
+
+        if (array_key_exists("OriginalCostWithRI",$param) and $param["OriginalCostWithRI"] !== null) {
+            $this->OriginalCostWithRI = $param["OriginalCostWithRI"];
+        }
+
+        if (array_key_exists("SPDeductionRate",$param) and $param["SPDeductionRate"] !== null) {
+            $this->SPDeductionRate = $param["SPDeductionRate"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
+            $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
+        }
+
+        if (array_key_exists("BlendedDiscount",$param) and $param["BlendedDiscount"] !== null) {
+            $this->BlendedDiscount = $param["BlendedDiscount"];
         }
     }
 }

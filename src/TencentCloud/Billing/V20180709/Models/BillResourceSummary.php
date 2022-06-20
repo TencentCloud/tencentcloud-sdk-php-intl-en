@@ -90,6 +90,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setProductCode(string $ProductCode) Set Subproduct code
  * @method integer getRegionId() Obtain 
  * @method void setRegionId(integer $RegionId) Set 
+ * @method string getInstanceType() Obtain The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+ * @method void setInstanceType(string $InstanceType) Set The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+ * @method string getOriginalCostWithRI() Obtain The amount deducted by a reserved instance based on the original component cost.
+ * @method void setOriginalCostWithRI(string $OriginalCostWithRI) Set The amount deducted by a reserved instance based on the original component cost.
+ * @method string getSPDeduction() Obtain The savings plan deduction amount.
+ * @method void setSPDeduction(string $SPDeduction) Set The savings plan deduction amount.
+ * @method string getOriginalCostWithSP() Obtain The amount deducted by a savings plan based on the original component cost.
+ * @method void setOriginalCostWithSP(string $OriginalCostWithSP) Set The amount deducted by a savings plan based on the original component cost.
  */
 class BillResourceSummary extends AbstractModel
 {
@@ -261,6 +285,34 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RegionId;
 
     /**
+     * @var string The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     */
+    public $InstanceType;
+
+    /**
+     * @var string The amount deducted by a reserved instance based on the original component cost.
+     */
+    public $OriginalCostWithRI;
+
+    /**
+     * @var string The savings plan deduction amount.
+     */
+    public $SPDeduction;
+
+    /**
+     * @var string The amount deducted by a savings plan based on the original component cost.
+     */
+    public $OriginalCostWithSP;
+
+    /**
      * @param string $BusinessCodeName Product name: major categories of Tencent Cloud services, e.g. CVM and TencentDB for MySQL
      * @param string $ProductCodeName Subproduct name, which is the subcategory of a Tencent Cloud product, such as CVM-Standard S1. If no subproduct name can be obtained, `-` is returned.
      * @param string $PayModeName Billing mode
@@ -296,6 +348,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BusinessCode Product code
      * @param string $ProductCode Subproduct code
      * @param integer $RegionId 
+     * @param string $InstanceType The special instance (resource pack, reserved instance, savings plan, or spot instance) that is applied to deduction. Valid values:
+
+ri=Standard RI
+
+svp=Savings Plan
+
+si=Spot Instances
+
+rp=Resource Pack
+     * @param string $OriginalCostWithRI The amount deducted by a reserved instance based on the original component cost.
+     * @param string $SPDeduction The savings plan deduction amount.
+     * @param string $OriginalCostWithSP The amount deducted by a savings plan based on the original component cost.
      */
     function __construct()
     {
@@ -445,6 +509,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
             $this->RegionId = $param["RegionId"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("OriginalCostWithRI",$param) and $param["OriginalCostWithRI"] !== null) {
+            $this->OriginalCostWithRI = $param["OriginalCostWithRI"];
+        }
+
+        if (array_key_exists("SPDeduction",$param) and $param["SPDeduction"] !== null) {
+            $this->SPDeduction = $param["SPDeduction"];
+        }
+
+        if (array_key_exists("OriginalCostWithSP",$param) and $param["OriginalCostWithSP"] !== null) {
+            $this->OriginalCostWithSP = $param["OriginalCostWithSP"];
         }
     }
 }
