@@ -23,9 +23,14 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Tem\V20210701\Models as Models;
 
 /**
+ * @method Models\CreateApplicationResponse CreateApplication(Models\CreateApplicationRequest $req) This API is used to create an application.
  * @method Models\CreateCosTokenResponse CreateCosToken(Models\CreateCosTokenRequest $req) This API is used to generate a COS temporary key.
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) This API is used to create an environment.
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) This API is used to bind a cloud resource.
+ * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) This API is used to delete an application.
+  - Stop the application if it’s running
+  - Delete resources associated with this application
+  - Delele the application
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) This API is used to delete an ingress rule.
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) This API is used to deploy an application.
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) This API is used to get the list of application pods.

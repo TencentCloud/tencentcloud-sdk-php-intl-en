@@ -24,14 +24,18 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setEnableTag(boolean $EnableTag) Set Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
- * @method array getMetaFields() Obtain List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
- * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getMetaFields() Obtain List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getTagJsonNotTiled() Obtain This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setTagJsonNotTiled(boolean $TagJsonNotTiled) Set This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method integer getTimestampAccuracy() Obtain Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTimestampAccuracy(integer $TimestampAccuracy) Set Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumerContent extends AbstractModel
 {
@@ -42,8 +46,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $EnableTag;
 
     /**
-     * @var array List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @var array List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MetaFields;
 
@@ -54,12 +58,20 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $TagJsonNotTiled;
 
     /**
+     * @var integer Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TimestampAccuracy;
+
+    /**
      * @param boolean $EnableTag Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $MetaFields List of metadata to ship. Currently, only __SOURCE__, __FILENAME__, and __TIMESTAMP__ are supported.
-Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param integer $TimestampAccuracy Shipping timestamp precision in seconds (default) or milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("TagJsonNotTiled",$param) and $param["TagJsonNotTiled"] !== null) {
             $this->TagJsonNotTiled = $param["TagJsonNotTiled"];
+        }
+
+        if (array_key_exists("TimestampAccuracy",$param) and $param["TimestampAccuracy"] !== null) {
+            $this->TimestampAccuracy = $param["TimestampAccuracy"];
         }
     }
 }

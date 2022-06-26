@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method boolean getCaseSensitive() Obtain Case sensitivity
  * @method void setCaseSensitive(boolean $CaseSensitive) Set Case sensitivity
- * @method string getTokenizer() Obtain Full-Text index delimiter. Each character in the string represents a delimiter.
- * @method void setTokenizer(string $Tokenizer) Set Full-Text index delimiter. Each character in the string represents a delimiter.
+ * @method string getTokenizer() Obtain Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
+ * @method void setTokenizer(string $Tokenizer) Set Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setContainZH(boolean $ContainZH) Set Whether Chinese characters are contained
@@ -37,7 +41,9 @@ class FullTextInfo extends AbstractModel
     public $CaseSensitive;
 
     /**
-     * @var string Full-Text index delimiter. Each character in the string represents a delimiter.
+     * @var string Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
      */
     public $Tokenizer;
 
@@ -49,7 +55,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param boolean $CaseSensitive Case sensitivity
-     * @param string $Tokenizer Full-Text index delimiter. Each character in the string represents a delimiter.
+     * @param string $Tokenizer Separator of the full-text index. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\) as separators;
      * @param boolean $ContainZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */

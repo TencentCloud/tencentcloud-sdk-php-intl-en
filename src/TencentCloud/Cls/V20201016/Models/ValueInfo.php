@@ -22,8 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain Field type. Valid values: `long`, `text`, `double`
  * @method void setType(string $Type) Set Field type. Valid values: `long`, `text`, `double`
- * @method string getTokenizer() Obtain Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
- * @method void setTokenizer(string $Tokenizer) Set Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+ * @method string getTokenizer() Obtain Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+ * @method void setTokenizer(string $Tokenizer) Set Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
  * @method boolean getSqlFlag() Obtain Whether the analysis feature is enabled for the field
  * @method void setSqlFlag(boolean $SqlFlag) Set Whether the analysis feature is enabled for the field
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained
@@ -39,7 +45,10 @@ class ValueInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+     * @var string Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
      */
     public $Tokenizer;
 
@@ -56,7 +65,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param string $Type Field type. Valid values: `long`, `text`, `double`
-     * @param string $Tokenizer Field delimiter, which is meaningful only if the field type is `text`. Each character in the entered string represents a delimiter.
+     * @param string $Tokenizer Separator of fields. Each character represents a separator;
+Supports only English punctuation marks and (\n\t\r);
+`long` and `double` fields need to be null;
+We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
      * @param boolean $SqlFlag Whether the analysis feature is enabled for the field
      * @param boolean $ContainZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.
