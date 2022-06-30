@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The port forwarding rules of the NAT gateway
  *
- * @method string getIpProtocol() Obtain Network protocol. Available choices: `TCP`, `UDP`.
- * @method void setIpProtocol(string $IpProtocol) Set Network protocol. Available choices: `TCP`, `UDP`.
+ * @method string getIpProtocol() Obtain Network protocol. Valid values: `TCP`, `UDP`.
+ * @method void setIpProtocol(string $IpProtocol) Set Network protocol. Valid values: `TCP`, `UDP`.
  * @method string getPublicIpAddress() Obtain EIP.
  * @method void setPublicIpAddress(string $PublicIpAddress) Set EIP.
- * @method integer getPublicPort() Obtain Public port.
- * @method void setPublicPort(integer $PublicPort) Set Public port.
+ * @method integer getPublicPort() Obtain Public network port.
+ * @method void setPublicPort(integer $PublicPort) Set Public network port.
  * @method string getPrivateIpAddress() Obtain Private network address.
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Private network address.
  * @method integer getPrivatePort() Obtain Private network port.
  * @method void setPrivatePort(integer $PrivatePort) Set Private network port.
- * @method string getDescription() Obtain NAT gateway forwarding rule description.
- * @method void setDescription(string $Description) Set NAT gateway forwarding rule description.
+ * @method string getDescription() Obtain Description of NAT gateway forwarding rules.
+ * @method void setDescription(string $Description) Set Description of NAT gateway forwarding rules.
  */
 class DestinationIpPortTranslationNatRule extends AbstractModel
 {
     /**
-     * @var string Network protocol. Available choices: `TCP`, `UDP`.
+     * @var string Network protocol. Valid values: `TCP`, `UDP`.
      */
     public $IpProtocol;
 
@@ -46,7 +46,7 @@ class DestinationIpPortTranslationNatRule extends AbstractModel
     public $PublicIpAddress;
 
     /**
-     * @var integer Public port.
+     * @var integer Public network port.
      */
     public $PublicPort;
 
@@ -61,17 +61,17 @@ class DestinationIpPortTranslationNatRule extends AbstractModel
     public $PrivatePort;
 
     /**
-     * @var string NAT gateway forwarding rule description.
+     * @var string Description of NAT gateway forwarding rules.
      */
     public $Description;
 
     /**
-     * @param string $IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
+     * @param string $IpProtocol Network protocol. Valid values: `TCP`, `UDP`.
      * @param string $PublicIpAddress EIP.
-     * @param integer $PublicPort Public port.
+     * @param integer $PublicPort Public network port.
      * @param string $PrivateIpAddress Private network address.
      * @param integer $PrivatePort Private network port.
-     * @param string $Description NAT gateway forwarding rule description.
+     * @param string $Description Description of NAT gateway forwarding rules.
      */
     function __construct()
     {

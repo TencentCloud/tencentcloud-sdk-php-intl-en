@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getResourceId() Obtain Resource ID
  * @method void setResourceId(string $ResourceId) Set Resource ID
  * @method string getResourceType() Obtain Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setResourceType(string $ResourceType) Set Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getPrivateIpAddress() Obtain Source IP/IP range
  * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Source IP/IP range
  * @method array getPublicIpAddresses() Obtain Elastic IP address pool
@@ -34,18 +34,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setDescription(string $Description) Set Description
  * @method string getNatGatewaySnatId() Obtain SNAT rule ID
  * @method void setNatGatewaySnatId(string $NatGatewaySnatId) Set SNAT rule ID
- * @method string getNatGatewayId() Obtain NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setNatGatewayId(string $NatGatewayId) Set NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVpcId() Obtain VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVpcId(string $VpcId) Set VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getCreatedTime() Obtain Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getNatGatewayId() Obtain NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getVpcId() Obtain VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVpcId(string $VpcId) Set VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCreatedTime(string $CreatedTime) Set The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class SourceIpTranslationNatRule extends AbstractModel
 {
@@ -56,7 +56,7 @@ class SourceIpTranslationNatRule extends AbstractModel
 
     /**
      * @var string Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ResourceType;
 
@@ -81,37 +81,37 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NatGatewaySnatId;
 
     /**
-     * @var string NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $NatGatewayId;
 
     /**
-     * @var string VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
-     * @var string Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreatedTime;
 
     /**
      * @param string $ResourceId Resource ID
      * @param string $ResourceType Resource type. Valid values: SUBNET, NETWORKINTERFACE
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $PrivateIpAddress Source IP/IP range
      * @param array $PublicIpAddresses Elastic IP address pool
      * @param string $Description Description
      * @param string $NatGatewaySnatId SNAT rule ID
-     * @param string $NatGatewayId NAT Gateway ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $VpcId VPC ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $CreatedTime Creation time of a SNAT rule for a NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $NatGatewayId NAT gateway ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $VpcId VPC ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CreatedTime The creation time of a NAT gateway's SNAT rule.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 ]
  * @method string getFilterIp() Obtain IP filter
  * @method void setFilterIp(string $FilterIp) Set IP filter
+ * @method string getFilterCname() Obtain CNAME of the Anti-DDoS Advanced instance
+ * @method void setFilterCname(string $FilterCname) Set CNAME of the Anti-DDoS Advanced instance
  */
 class DescribeListIPAlarmConfigRequest extends AbstractModel
 {
@@ -68,6 +70,11 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
     public $FilterIp;
 
     /**
+     * @var string CNAME of the Anti-DDoS Advanced instance
+     */
+    public $FilterCname;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when Limit = 0. The maximum value is 100.
      * @param string $FilterInstanceId Anti-DDoS instance ID filter. Anti-DDoS instance prefix wildcard search is supported. For example, you can filter Anti-DDoS Pro instances by `bgp-*`.
@@ -76,6 +83,7 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
 `2`: alarm threshold for cleansing attack traffic
 ]
      * @param string $FilterIp IP filter
+     * @param string $FilterCname CNAME of the Anti-DDoS Advanced instance
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeListIPAlarmConfigRequest extends AbstractModel
 
         if (array_key_exists("FilterIp",$param) and $param["FilterIp"] !== null) {
             $this->FilterIp = $param["FilterIp"];
+        }
+
+        if (array_key_exists("FilterCname",$param) and $param["FilterCname"] !== null) {
+            $this->FilterCname = $param["FilterCname"];
         }
     }
 }

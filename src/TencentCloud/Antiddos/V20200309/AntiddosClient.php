@@ -81,6 +81,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) This API is used to get a list of Anti-DDoS protocol blocking configurations.
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) This API is used to get a list of intelligent scheduling domain names.
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) This API is used to get a list of Anti-DDoS watermark configurations.
+ * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) This API is used to obtain the list of DDoS attacks.
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) This API is used to unbind an Anti-DDoS EIP.
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) This API is used to modify a CC precise protection policy.
  * @method Models\ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(Models\ModifyCcBlackWhiteIpListRequest $req) This API is used to modify a layer-4 access control list.

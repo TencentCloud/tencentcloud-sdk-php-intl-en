@@ -98,6 +98,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setV6Flag(integer $V6Flag) Set Whether it’s an IPv6 address. `1`: Yes; `0`: No.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getBGPIPChannelFlag() Obtain Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setBGPIPChannelFlag(integer $BGPIPChannelFlag) Set Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getTagInfoList() Obtain 
+ * @method void setTagInfoList(array $TagInfoList) Set 
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -217,6 +223,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $V6Flag;
 
     /**
+     * @var integer Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $BGPIPChannelFlag;
+
+    /**
+     * @var array 
+     */
+    public $TagInfoList;
+
+    /**
      * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
      * @param BGPIPInstanceSpecification $SpecificationLimit Anti-DDoS instance specifications
      * @param BGPIPInstanceUsages $Usage Anti-DDoS instance usage statistics
@@ -256,6 +273,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $DamDDoSStatus Whether to enable Sec-MCA. Valid values: `1` (enabled) and `0` (disabled).
      * @param integer $V6Flag Whether it’s an IPv6 address. `1`: Yes; `0`: No.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $TagInfoList 
      */
     function __construct()
     {
@@ -352,6 +372,19 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("V6Flag",$param) and $param["V6Flag"] !== null) {
             $this->V6Flag = $param["V6Flag"];
+        }
+
+        if (array_key_exists("BGPIPChannelFlag",$param) and $param["BGPIPChannelFlag"] !== null) {
+            $this->BGPIPChannelFlag = $param["BGPIPChannelFlag"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
         }
     }
 }

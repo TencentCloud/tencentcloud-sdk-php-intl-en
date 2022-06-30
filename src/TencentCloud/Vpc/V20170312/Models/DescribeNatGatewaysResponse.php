@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNatGatewaySet() Obtain NAT gateway object array.
  * @method void setNatGatewaySet(array $NatGatewaySet) Set NAT gateway object array.
- * @method integer getTotalCount() Obtain The number of NAT gateway object sets meeting the conditions.
- * @method void setTotalCount(integer $TotalCount) Set The number of NAT gateway object sets meeting the conditions.
+ * @method integer getTotalCount() Obtain The number of eligible NAT gateway objects.
+ * @method void setTotalCount(integer $TotalCount) Set The number of eligible NAT gateway objects.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
     public $NatGatewaySet;
 
     /**
-     * @var integer The number of NAT gateway object sets meeting the conditions.
+     * @var integer The number of eligible NAT gateway objects.
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeNatGatewaysResponse extends AbstractModel
 
     /**
      * @param array $NatGatewaySet NAT gateway object array.
-     * @param integer $TotalCount The number of NAT gateway object sets meeting the conditions.
+     * @param integer $TotalCount The number of eligible NAT gateway objects.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

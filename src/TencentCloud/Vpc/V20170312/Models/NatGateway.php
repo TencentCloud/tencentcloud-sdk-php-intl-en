@@ -27,47 +27,51 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCreatedTime() Obtain NAT gateway creation time.
  * @method void setCreatedTime(string $CreatedTime) Set NAT gateway creation time.
  * @method string getState() Obtain The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
  * @method void setState(string $State) Set The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
  * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the gateway. Unit: Mbps.
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the gateway. Unit: Mbps.
  * @method integer getMaxConcurrentConnection() Obtain The concurrent connections cap of the gateway.
  * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set The concurrent connections cap of the gateway.
  * @method array getPublicIpAddressSet() Obtain The public IP object array of the bound NAT gateway.
  * @method void setPublicIpAddressSet(array $PublicIpAddressSet) Set The public IP object array of the bound NAT gateway.
- * @method string getNetworkState() Obtain The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
- * @method void setNetworkState(string $NetworkState) Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+ * @method string getNetworkState() Obtain The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
+ * @method void setNetworkState(string $NetworkState) Set The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
  * @method array getDestinationIpPortTranslationNatRuleSet() Obtain The port forwarding rules of the NAT gateway.
  * @method void setDestinationIpPortTranslationNatRuleSet(array $DestinationIpPortTranslationNatRuleSet) Set The port forwarding rules of the NAT gateway.
  * @method string getVpcId() Obtain VPC instance ID.
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
  * @method string getZone() Obtain The availability zone in which the NAT gateway is located.
  * @method void setZone(string $Zone) Set The availability zone in which the NAT gateway is located.
- * @method array getDirectConnectGatewayIds() Obtain IDs of direct connect gateway associated.
- * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set IDs of direct connect gateway associated.
+ * @method array getDirectConnectGatewayIds() Obtain ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDirectConnectGatewayIds(array $DirectConnectGatewayIds) Set ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getSubnetId() Obtain Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID.
- * @method array getTagSet() Obtain Tag key-value pair.
- * @method void setTagSet(array $TagSet) Set Tag key-value pair.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTagSet() Obtain Tag key-value pairs.
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs.
  * @method array getSecurityGroupSet() Obtain The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSecurityGroupSet(array $SecurityGroupSet) Set The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getSourceIpTranslationNatRuleSet() Obtain SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) Set SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getIsExclusive() Obtain Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setIsExclusive(boolean $IsExclusive) Set Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getSourceIpTranslationNatRuleSet() Obtain SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) Set SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsExclusive() Obtain Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIsExclusive(boolean $IsExclusive) Set Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getExclusiveGatewayBandwidth() Obtain Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) Set Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class NatGateway extends AbstractModel
 {
@@ -88,8 +92,8 @@ class NatGateway extends AbstractModel
 
     /**
      * @var string The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
      */
     public $State;
 
@@ -109,7 +113,7 @@ class NatGateway extends AbstractModel
     public $PublicIpAddressSet;
 
     /**
-     * @var string The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * @var string The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
      */
     public $NetworkState;
 
@@ -129,41 +133,43 @@ class NatGateway extends AbstractModel
     public $Zone;
 
     /**
-     * @var array IDs of direct connect gateway associated.
+     * @var array ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $DirectConnectGatewayIds;
 
     /**
      * @var string Subnet ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SubnetId;
 
     /**
-     * @var array Tag key-value pair.
+     * @var array Tag key-value pairs.
      */
     public $TagSet;
 
     /**
      * @var array The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SecurityGroupSet;
 
     /**
-     * @var array SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var array SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $SourceIpTranslationNatRuleSet;
 
     /**
-     * @var boolean Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $IsExclusive;
 
     /**
      * @var integer Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ExclusiveGatewayBandwidth;
 
@@ -172,26 +178,28 @@ Note: this field may return `null`, indicating that no valid value can be obtain
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
      * @param string $State The status of the NAT gateway.
- 'PENDING': Creating, 'DELETING': Deleting, 'AVAILABLE': Operating, 'UPDATING': Upgrading,
-‘FAILED’: Failed.
+ `PENDING`: Being created, `DELETING`: Being deleted, `AVAILABLE`: Running, `UPDATING`: Being upgraded,
+`FAILED`: Failed.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the gateway. Unit: Mbps.
      * @param integer $MaxConcurrentConnection The concurrent connections cap of the gateway.
      * @param array $PublicIpAddressSet The public IP object array of the bound NAT gateway.
-     * @param string $NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Account is in arrears and the service is suspended.
+     * @param string $NetworkState The NAT gateway status. `AVAILABLE`: Operating, `UNAVAILABLE`: Unavailable, `INSUFFICIENT`: Service suspended due to account overdue.
      * @param array $DestinationIpPortTranslationNatRuleSet The port forwarding rules of the NAT gateway.
      * @param string $VpcId VPC instance ID.
      * @param string $Zone The availability zone in which the NAT gateway is located.
-     * @param array $DirectConnectGatewayIds IDs of direct connect gateway associated.
+     * @param array $DirectConnectGatewayIds ID of the direct connect gateway bound.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $SubnetId Subnet ID.
-     * @param array $TagSet Tag key-value pair.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $TagSet Tag key-value pairs.
      * @param array $SecurityGroupSet The list of the security groups bound to the NAT Gateway
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT Gateway.
-Note: this field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $IsExclusive Whether the NAT Gateway is dedicated.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $SourceIpTranslationNatRuleSet SNAT forwarding rule of the NAT gateway.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsExclusive Whether the NAT gateway is dedicated.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

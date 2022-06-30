@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPrivateIpAddresses(array $PrivateIpAddresses) Set The information of the specified private IPs. You can specify a maximum of 10 each time.
  * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
  * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method string getTrunkingFlag() Obtain Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+ * @method void setTrunkingFlag(string $TrunkingFlag) Set Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
  */
 class CreateNetworkInterfaceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class CreateNetworkInterfaceRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var string Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public $TrunkingFlag;
+
+    /**
      * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      * @param string $SubnetId The subnet instance ID of the ENI, such as `subnet-0ap8nwca`.
@@ -88,6 +95,7 @@ class CreateNetworkInterfaceRequest extends AbstractModel
      * @param array $SecurityGroupIds Specifies the security group to be bound with, such as ['sg-1dd51d'].
      * @param array $PrivateIpAddresses The information of the specified private IPs. You can specify a maximum of 10 each time.
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param string $TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
      */
     function __construct()
     {
@@ -142,6 +150,10 @@ class CreateNetworkInterfaceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("TrunkingFlag",$param) and $param["TrunkingFlag"] !== null) {
+            $this->TrunkingFlag = $param["TrunkingFlag"];
         }
     }
 }

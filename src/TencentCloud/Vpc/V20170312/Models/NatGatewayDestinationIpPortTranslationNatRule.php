@@ -26,24 +26,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicIpAddress(string $PublicIpAddress) Set EIP.
  * @method integer getPublicPort() Obtain Public port.
  * @method void setPublicPort(integer $PublicPort) Set Public port.
- * @method string getPrivateIpAddress() Obtain Private network address.
- * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Private network address.
- * @method integer getPrivatePort() Obtain Private network port.
- * @method void setPrivatePort(integer $PrivatePort) Set Private network port.
+ * @method string getPrivateIpAddress() Obtain Private IP.
+ * @method void setPrivateIpAddress(string $PrivateIpAddress) Set Private IP.
+ * @method integer getPrivatePort() Obtain Private port.
+ * @method void setPrivatePort(integer $PrivatePort) Set Private port.
  * @method string getDescription() Obtain NAT gateway forwarding rule description.
  * @method void setDescription(string $Description) Set NAT gateway forwarding rule description.
  * @method string getNatGatewayId() Obtain NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setNatGatewayId(string $NatGatewayId) Set NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getCreatedTime() Obtain The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreatedTime(string $CreatedTime) Set The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 {
@@ -63,12 +63,12 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
     public $PublicPort;
 
     /**
-     * @var string Private network address.
+     * @var string Private IP.
      */
     public $PrivateIpAddress;
 
     /**
-     * @var integer Private network port.
+     * @var integer Private port.
      */
     public $PrivatePort;
 
@@ -79,19 +79,19 @@ class NatGatewayDestinationIpPortTranslationNatRule extends AbstractModel
 
     /**
      * @var string NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $NatGatewayId;
 
     /**
      * @var string VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
      * @var string The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $CreatedTime;
 
@@ -99,15 +99,15 @@ Note: This field may return null, indicating no valid value.
      * @param string $IpProtocol Network protocol. Available choices: `TCP`, `UDP`.
      * @param string $PublicIpAddress EIP.
      * @param integer $PublicPort Public port.
-     * @param string $PrivateIpAddress Private network address.
-     * @param integer $PrivatePort Private network port.
+     * @param string $PrivateIpAddress Private IP.
+     * @param integer $PrivatePort Private port.
      * @param string $Description NAT gateway forwarding rule description.
      * @param string $NatGatewayId NAT gateway ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $VpcId VPC ID.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $CreatedTime The creation time of the NAT gateway forwarding rule.
-Note: This field may return null, indicating no valid value.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

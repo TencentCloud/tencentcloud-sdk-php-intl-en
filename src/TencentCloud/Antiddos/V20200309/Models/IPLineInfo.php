@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 ]
  * @method string getEip() Obtain 
  * @method void setEip(string $Eip) Set 
+ * @method string getCname() Obtain CNAME of the instance
+ * @method void setCname(string $Cname) Set CNAME of the instance
+ * @method integer getResourceFlag() Obtain Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+ * @method void setResourceFlag(integer $ResourceFlag) Set Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
  */
 class IPLineInfo extends AbstractModel
 {
@@ -56,6 +60,16 @@ class IPLineInfo extends AbstractModel
     public $Eip;
 
     /**
+     * @var string CNAME of the instance
+     */
+    public $Cname;
+
+    /**
+     * @var integer Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
+     */
+    public $ResourceFlag;
+
+    /**
      * @param string $Type IP line type. Valid values:
 `bgp`: BGP IP
 `ctcc`: CTCC IP
@@ -64,6 +78,8 @@ class IPLineInfo extends AbstractModel
 `abroad`: IP outside the Chinese mainland
 ]
      * @param string $Eip 
+     * @param string $Cname CNAME of the instance
+     * @param integer $ResourceFlag Flag of the instance. `0`: Anti-DDoS Pro instance; `1`: Anti-DDoS Advanced instance; `2`: Non-Anti-DDoS Advanced instance.
      */
     function __construct()
     {
@@ -84,6 +100,14 @@ class IPLineInfo extends AbstractModel
 
         if (array_key_exists("Eip",$param) and $param["Eip"] !== null) {
             $this->Eip = $param["Eip"];
+        }
+
+        if (array_key_exists("Cname",$param) and $param["Cname"] !== null) {
+            $this->Cname = $param["Cname"];
+        }
+
+        if (array_key_exists("ResourceFlag",$param) and $param["ResourceFlag"] !== null) {
+            $this->ResourceFlag = $param["ResourceFlag"];
         }
     }
 }

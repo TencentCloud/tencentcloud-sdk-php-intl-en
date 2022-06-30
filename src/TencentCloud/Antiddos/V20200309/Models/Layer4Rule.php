@@ -34,8 +34,10 @@ UDP
 ]
  * @method array getRealServers() Obtain List of real servers
  * @method void setRealServers(array $RealServers) Set List of real servers
- * @method array getInstanceDetails() Obtain Anti-DDoS instance configured
- * @method void setInstanceDetails(array $InstanceDetails) Set Anti-DDoS instance configured
+ * @method array getInstanceDetails() Obtain Information of the Anti-DDoS instance
+ * @method void setInstanceDetails(array $InstanceDetails) Set Information of the Anti-DDoS instance
+ * @method array getInstanceDetailRule() Obtain Information of the Anti-DDoS instance configured
+ * @method void setInstanceDetailRule(array $InstanceDetailRule) Set Information of the Anti-DDoS instance configured
  */
 class Layer4Rule extends AbstractModel
 {
@@ -63,9 +65,14 @@ UDP
     public $RealServers;
 
     /**
-     * @var array Anti-DDoS instance configured
+     * @var array Information of the Anti-DDoS instance
      */
     public $InstanceDetails;
+
+    /**
+     * @var array Information of the Anti-DDoS instance configured
+     */
+    public $InstanceDetailRule;
 
     /**
      * @param integer $BackendPort Real server port. Value range: 1–65535.
@@ -75,7 +82,8 @@ TCP
 UDP
 ]
      * @param array $RealServers List of real servers
-     * @param array $InstanceDetails Anti-DDoS instance configured
+     * @param array $InstanceDetails Information of the Anti-DDoS instance
+     * @param array $InstanceDetailRule Information of the Anti-DDoS instance configured
      */
     function __construct()
     {
@@ -117,6 +125,15 @@ UDP
                 $obj = new InstanceRelation();
                 $obj->deserialize($value);
                 array_push($this->InstanceDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceDetailRule",$param) and $param["InstanceDetailRule"] !== null) {
+            $this->InstanceDetailRule = [];
+            foreach ($param["InstanceDetailRule"] as $key => $value){
+                $obj = new RuleInstanceRelation();
+                $obj->deserialize($value);
+                array_push($this->InstanceDetailRule, $obj);
             }
         }
     }

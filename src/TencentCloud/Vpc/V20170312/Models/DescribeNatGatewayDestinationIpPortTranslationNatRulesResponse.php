@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNatGatewayDestinationIpPortTranslationNatRuleSet() Obtain The object array of port forwarding rules for the NAT gateway.
  * @method void setNatGatewayDestinationIpPortTranslationNatRuleSet(array $NatGatewayDestinationIpPortTranslationNatRuleSet) Set The object array of port forwarding rules for the NAT gateway.
- * @method integer getTotalCount() Obtain The number of object arrays of NAT port forwarding rules meeting the conditions.
- * @method void setTotalCount(integer $TotalCount) Set The number of object arrays of NAT port forwarding rules meeting the conditions.
+ * @method integer getTotalCount() Obtain The number of eligible object arrays of NAT port forwarding rules.
+ * @method void setTotalCount(integer $TotalCount) Set The number of eligible object arrays of NAT port forwarding rules.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
     public $NatGatewayDestinationIpPortTranslationNatRuleSet;
 
     /**
-     * @var integer The number of object arrays of NAT port forwarding rules meeting the conditions.
+     * @var integer The number of eligible object arrays of NAT port forwarding rules.
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse extends Abs
 
     /**
      * @param array $NatGatewayDestinationIpPortTranslationNatRuleSet The object array of port forwarding rules for the NAT gateway.
-     * @param integer $TotalCount The number of object arrays of NAT port forwarding rules meeting the conditions.
+     * @param integer $TotalCount The number of eligible object arrays of NAT port forwarding rules.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNatGatewayIds() Obtain The unified ID of the NAT gateways, such as `nat-123xx454`.
  * @method void setNatGatewayIds(array $NatGatewayIds) Set The unified ID of the NAT gateways, such as `nat-123xx454`.
- * @method array getFilters() Obtain Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
- * @method void setFilters(array $Filters) Set Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
- * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
+ * @method array getFilters() Obtain Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+ * @method void setFilters(array $Filters) Set Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeNatGatewaysRequest extends AbstractModel
 {
@@ -45,33 +45,33 @@ class DescribeNatGatewaysRequest extends AbstractModel
     public $NatGatewayIds;
 
     /**
-     * @var array Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
+     * @var array Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param array $NatGatewayIds The unified ID of the NAT gateways, such as `nat-123xx454`.
-     * @param array $Filters Filter condition. `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li>nat-gateway-id - String - (Filter condition) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
-<li>vpc-id - String - (Filter condition) The unique ID of the VPC, such as `vpc-123xx454`.</li>
-<li>nat-gateway-name - String - (Filter condition) The name of the protocol port template instance, such as `test_nat`.</li>
-<li>tag-key - String - (Filter condition) The tag key, such as `test-key`.</li>
-     * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
+     * @param array $Filters Filters. `NatGatewayIds` and `Filters` cannot be specified at the same time.
+<li>nat-gateway-id - String - (Filter) The ID of the protocol port template instance, such as `nat-123xx454`.</li>
+<li>vpc-id - String - (Filter) The unique ID of the VPC, such as `vpc-123xx454`.</li>
+<li>nat-gateway-name - String - (Filter) The ID of the protocol port template instance, such as `test_nat`.</li>
+<li>tag-key - String - (Filter) The tag key, such as `test-key`.</li>
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

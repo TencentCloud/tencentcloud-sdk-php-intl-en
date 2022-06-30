@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStoragePeriod(float $StoragePeriod) Set The time-shift days.
  * @method string getTime() Obtain The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
  * @method void setTime(string $Time) Set The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
- * @method float getTotalDuration() Obtain 
- * @method void setTotalDuration(float $TotalDuration) Set 
+ * @method float getTotalDuration() Obtain The total time-shift duration (minutes).
+ * @method void setTotalDuration(float $TotalDuration) Set The total time-shift duration (minutes).
  */
 class TimeShiftBillData extends AbstractModel
 {
@@ -54,7 +54,7 @@ class TimeShiftBillData extends AbstractModel
     public $Time;
 
     /**
-     * @var float 
+     * @var float The total time-shift duration (minutes).
      */
     public $TotalDuration;
 
@@ -63,7 +63,7 @@ class TimeShiftBillData extends AbstractModel
      * @param float $Duration The time-shift video length (minutes).
      * @param float $StoragePeriod The time-shift days.
      * @param string $Time The time for the data returned. Format: YYYY-MM-DDThh:mm:ssZ.
-     * @param float $TotalDuration 
+     * @param float $TotalDuration The total time-shift duration (minutes).
      */
     function __construct()
     {

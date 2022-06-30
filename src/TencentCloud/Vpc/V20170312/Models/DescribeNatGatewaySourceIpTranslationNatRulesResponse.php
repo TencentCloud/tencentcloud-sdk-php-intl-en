@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeNatGatewaySourceIpTranslationNatRules response structure.
  *
- * @method array getSourceIpTranslationNatRuleSet() Obtain Object array of the SNAT rule for a NAT Gateway.
+ * @method array getSourceIpTranslationNatRuleSet() Obtain Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) Set Object array of the SNAT rule for a NAT Gateway.
+ * @method void setSourceIpTranslationNatRuleSet(array $SourceIpTranslationNatRuleSet) Set Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain The number of object arrays of eligible forwarding rules for a NAT Gateway
- * @method void setTotalCount(integer $TotalCount) Set The number of object arrays of eligible forwarding rules for a NAT Gateway
+ * @method integer getTotalCount() Obtain The number of eligible object arrays of a NAT gateway's forwarding rules.
+ * @method void setTotalCount(integer $TotalCount) Set The number of eligible object arrays of a NAT gateway's forwarding rules.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeNatGatewaySourceIpTranslationNatRulesResponse extends AbstractModel
 {
     /**
-     * @var array Object array of the SNAT rule for a NAT Gateway.
+     * @var array Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SourceIpTranslationNatRuleSet;
 
     /**
-     * @var integer The number of object arrays of eligible forwarding rules for a NAT Gateway
+     * @var integer The number of eligible object arrays of a NAT gateway's forwarding rules.
      */
     public $TotalCount;
 
@@ -48,9 +48,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $SourceIpTranslationNatRuleSet Object array of the SNAT rule for a NAT Gateway.
+     * @param array $SourceIpTranslationNatRuleSet Array of objects of a NAT gateway's SNAT rules.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $TotalCount The number of object arrays of eligible forwarding rules for a NAT Gateway
+     * @param integer $TotalCount The number of eligible object arrays of a NAT gateway's forwarding rules.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -112,6 +112,14 @@ Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 Value range: 0.0-0.5.
  * @method integer getShortEdgeAsHeight() Obtain Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
  * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) Set Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
+ * @method string getDRMType() Obtain The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+ * @method void setDRMType(string $DRMType) Set The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+ * @method string getDRMTracks() Obtain The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+ * @method void setDRMTracks(string $DRMTracks) Set The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
  */
 class CreateLiveTranscodeTemplateRequest extends AbstractModel
 {
@@ -242,6 +250,18 @@ Value range: 0.0-0.5.
     public $ShortEdgeAsHeight;
 
     /**
+     * @var string The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public $DRMType;
+
+    /**
+     * @var string The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     */
+    public $DRMTracks;
+
+    /**
      * @param string $TemplateName Template name, such as “900p”. This can be only a combination of letters and digits.
 Length limit:
   Standard transcoding: 1-10 characters
@@ -288,6 +308,10 @@ Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 
 Value range: 0.0-0.5.
      * @param integer $ShortEdgeAsHeight Whether to use the short side as the video height. 0: no, 1: yes. Default value: 0.
+     * @param string $DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
+     * @param string $DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. You can choose only one video track (SD, HD, UHD1, or UHD2).
+If you do not pass this parameter or pass in an empty string, the existing configuration will be reset.
      */
     function __construct()
     {
@@ -380,6 +404,14 @@ Value range: 0.0-0.5.
 
         if (array_key_exists("ShortEdgeAsHeight",$param) and $param["ShortEdgeAsHeight"] !== null) {
             $this->ShortEdgeAsHeight = $param["ShortEdgeAsHeight"];
+        }
+
+        if (array_key_exists("DRMType",$param) and $param["DRMType"] !== null) {
+            $this->DRMType = $param["DRMType"];
+        }
+
+        if (array_key_exists("DRMTracks",$param) and $param["DRMTracks"] !== null) {
+            $this->DRMTracks = $param["DRMTracks"];
         }
     }
 }

@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() Obtain The ID of the NAT gateway, such as `nat-df45454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The ID of the NAT gateway, such as `nat-df45454`.
- * @method integer getAddressCount() Obtain The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
- * @method void setAddressCount(integer $AddressCount) Set The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+ * @method integer getAddressCount() Obtain The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
+ * @method void setAddressCount(integer $AddressCount) Set The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
  * @method array getPublicIpAddresses() Obtain Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
  * @method void setPublicIpAddresses(array $PublicIpAddresses) Set Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
  * @method string getZone() Obtain The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
  * @method void setZone(string $Zone) Set The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
  * @method integer getStockPublicIpAddressesBandwidthOut() Obtain The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
  * @method void setStockPublicIpAddressesBandwidthOut(integer $StockPublicIpAddressesBandwidthOut) Set The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
- * @method integer getPublicIpAddressesBandwidthOut() Obtain The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
- * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) Set The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
- * @method boolean getPublicIpFromSameZone() Obtain 
- * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) Set 
+ * @method integer getPublicIpAddressesBandwidthOut() Obtain The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+ * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) Set The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+ * @method boolean getPublicIpFromSameZone() Obtain Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+ * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) Set Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
  */
 class AssociateNatGatewayAddressRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var integer The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @var integer The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
      */
     public $AddressCount;
 
@@ -63,23 +63,23 @@ class AssociateNatGatewayAddressRequest extends AbstractModel
     public $StockPublicIpAddressesBandwidthOut;
 
     /**
-     * @var integer The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @var integer The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public $PublicIpAddressesBandwidthOut;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public $PublicIpFromSameZone;
 
     /**
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
-     * @param integer $AddressCount The number of EIPs you want to apply for. The system will create the same number of EIPs as you require. Either `AddressCount` or `PublicAddresses` must be passed in.
+     * @param integer $AddressCount The number of EIPs you want to apply for. Either `AddressCount` or `PublicAddresses` must be passed in.
      * @param array $PublicIpAddresses Array of the EIPs bound to the NAT gateway. Either `AddressCount` or `PublicAddresses` must be passed in.
      * @param string $Zone The availability zone of the EIP, which is passed in when the EIP is automatically assigned.
      * @param integer $StockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
-     * @param integer $PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-     * @param boolean $PublicIpFromSameZone 
+     * @param integer $PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @param boolean $PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     function __construct()
     {

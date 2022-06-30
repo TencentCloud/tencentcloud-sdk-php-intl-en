@@ -22,28 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNatGatewayIds() Obtain NAT gateway ID.
  * @method void setNatGatewayIds(array $NatGatewayIds) Set NAT gateway ID.
- * @method array getFilters() Obtain Filter conditions:
+ * @method array getFilters() Obtain Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
- * @method void setFilters(array $Filters) Set Filter conditions:
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
+ * @method void setFilters(array $Filters) Set Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 100.
- * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 100.
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
 class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends AbstractModel
 {
@@ -53,41 +53,41 @@ class DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest extends Abst
     public $NatGatewayIds;
 
     /**
-     * @var array Filter conditions:
+     * @var array Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of values to be returned. The default value is 20. Maximum is 100.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param array $NatGatewayIds NAT gateway ID.
-     * @param array $Filters Filter conditions:
+     * @param array $Filters Filters:
 `NatGatewayIds` and `Filters` cannot be specified at the same time.
-<li> nat-gateway-id, the NAT gateway ID, such as `nat-0yi4hekt`.</li>
-<li> vpc-id, the VPC ID, such as `vpc-0yi4hekt`.</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`.</li>
-<li>public-port, the public network port.</li>
-<li>private-ip-address, the private IP, such as `10.0.0.1`.</li>
-<li>private-port, the private network port.</li>
-<li>description, the rule description.</li>
-     * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 100.
+<li> `nat-gateway-id`: The NAT gateway ID, such as `nat-0yi4hekt`.</li>
+<li> `vpc-id`: The VPC ID, such as `vpc-0yi4hekt`.</li>
+<li> `public-ip-address`: The EIP, such as `139.199.232.238`.</li>
+<li>`public-port`: The public network port.</li>
+<li>`private-ip-address`: The private IP, such as `10.0.0.1`.</li>
+<li>`private-port`. The private network port.</li>
+<li>`description`. The rule description.</li>
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()
     {

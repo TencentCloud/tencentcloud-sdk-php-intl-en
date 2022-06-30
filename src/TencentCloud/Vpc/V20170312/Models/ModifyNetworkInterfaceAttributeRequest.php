@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkInterfaceDescription(string $NetworkInterfaceDescription) Set ENI description can be named freely, but the maximum length is 60 characters.
  * @method array getSecurityGroupIds() Obtain The specified security groups to be bound with, such as ['sg-1dd51d'].
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The specified security groups to be bound with, such as ['sg-1dd51d'].
+ * @method string getTrunkingFlag() Obtain Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+ * @method void setTrunkingFlag(string $TrunkingFlag) Set Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
  */
 class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
     public $SecurityGroupIds;
 
     /**
+     * @var string Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
+     */
+    public $TrunkingFlag;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-pxir56ns`.
      * @param string $NetworkInterfaceName The name of the ENI. The maximum length is 60 characters.
      * @param string $NetworkInterfaceDescription ENI description can be named freely, but the maximum length is 60 characters.
      * @param array $SecurityGroupIds The specified security groups to be bound with, such as ['sg-1dd51d'].
+     * @param string $TrunkingFlag Configuration of the ENI trunking mode. Valid values: `Enable` and `Disable`. Default value: `Disable`.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ModifyNetworkInterfaceAttributeRequest extends AbstractModel
 
         if (array_key_exists("SecurityGroupIds",$param) and $param["SecurityGroupIds"] !== null) {
             $this->SecurityGroupIds = $param["SecurityGroupIds"];
+        }
+
+        if (array_key_exists("TrunkingFlag",$param) and $param["TrunkingFlag"] !== null) {
+            $this->TrunkingFlag = $param["TrunkingFlag"];
         }
     }
 }

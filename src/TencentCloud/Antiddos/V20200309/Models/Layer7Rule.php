@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProxyTypeList(array $ProxyTypeList) Set List of forwarding types
  * @method array getRealServers() Obtain List of real servers
  * @method void setRealServers(array $RealServers) Set List of real servers
- * @method array getInstanceDetails() Obtain Anti-DDoS instance configured
- * @method void setInstanceDetails(array $InstanceDetails) Set Anti-DDoS instance configured
+ * @method array getInstanceDetails() Obtain Information of the Anti-DDoS instance
+ * @method void setInstanceDetails(array $InstanceDetails) Set Information of the Anti-DDoS instance
+ * @method array getInstanceDetailRule() Obtain Information of the Anti-DDoS instance configured
+ * @method void setInstanceDetailRule(array $InstanceDetailRule) Set Information of the Anti-DDoS instance configured
  */
 class Layer7Rule extends AbstractModel
 {
@@ -47,15 +49,21 @@ class Layer7Rule extends AbstractModel
     public $RealServers;
 
     /**
-     * @var array Anti-DDoS instance configured
+     * @var array Information of the Anti-DDoS instance
      */
     public $InstanceDetails;
+
+    /**
+     * @var array Information of the Anti-DDoS instance configured
+     */
+    public $InstanceDetailRule;
 
     /**
      * @param string $Domain Domain name
      * @param array $ProxyTypeList List of forwarding types
      * @param array $RealServers List of real servers
-     * @param array $InstanceDetails Anti-DDoS instance configured
+     * @param array $InstanceDetails Information of the Anti-DDoS instance
+     * @param array $InstanceDetailRule Information of the Anti-DDoS instance configured
      */
     function __construct()
     {
@@ -98,6 +106,15 @@ class Layer7Rule extends AbstractModel
                 $obj = new InstanceRelation();
                 $obj->deserialize($value);
                 array_push($this->InstanceDetails, $obj);
+            }
+        }
+
+        if (array_key_exists("InstanceDetailRule",$param) and $param["InstanceDetailRule"] !== null) {
+            $this->InstanceDetailRule = [];
+            foreach ($param["InstanceDetailRule"] as $key => $value){
+                $obj = new RuleInstanceRelation();
+                $obj->deserialize($value);
+                array_push($this->InstanceDetailRule, $obj);
             }
         }
     }

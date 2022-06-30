@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getPolicyId() Obtain Policy ID
  * @method void setPolicyId(string $PolicyId) Set Policy ID
- * @method string getPolicyAction() Obtain Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
- * @method void setPolicyAction(string $PolicyAction) Set Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+ * @method string getPolicyAction() Obtain Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
+ * @method void setPolicyAction(string $PolicyAction) Set Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
  * @method array getPolicyList() Obtain Policy records
  * @method void setPolicyList(array $PolicyList) Set Policy records
  */
@@ -42,7 +42,7 @@ class ModifyCCPrecisionPolicyRequest extends AbstractModel
     public $PolicyId;
 
     /**
-     * @var string Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+     * @var string Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
      */
     public $PolicyAction;
 
@@ -54,7 +54,7 @@ class ModifyCCPrecisionPolicyRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param string $PolicyId Policy ID
-     * @param string $PolicyAction Action of limiting request frequency. Valid values: `alg` (limit request frequency via verification codes) and `drop`(drop requests).
+     * @param string $PolicyAction Specifies the action. `alg`: Verify the access request via CAPTCHA; `drop`: Drop the access request.
      * @param array $PolicyList Policy records
      */
     function __construct()

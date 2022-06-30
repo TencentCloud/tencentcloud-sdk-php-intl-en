@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNatGatewayName(string $NatGatewayName) Set The NAT gateway name, such as `test_nat`.
  * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
  * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
- * @method boolean getModifySecurityGroup() Obtain Whether to modify the security group bound to the NAT Gateway
- * @method void setModifySecurityGroup(boolean $ModifySecurityGroup) Set Whether to modify the security group bound to the NAT Gateway
+ * @method boolean getModifySecurityGroup() Obtain Whether to modify the security group bound to the NAT gateway
+ * @method void setModifySecurityGroup(boolean $ModifySecurityGroup) Set Whether to modify the security group bound to the NAT gateway
  * @method array getSecurityGroupIds() Obtain The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
  */
@@ -49,7 +49,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var boolean Whether to modify the security group bound to the NAT Gateway
+     * @var boolean Whether to modify the security group bound to the NAT gateway
      */
     public $ModifySecurityGroup;
 
@@ -62,7 +62,7 @@ class ModifyNatGatewayAttributeRequest extends AbstractModel
      * @param string $NatGatewayId The ID of the NAT gateway, such as `nat-df45454`.
      * @param string $NatGatewayName The NAT gateway name, such as `test_nat`.
      * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway. Unit: Mbps.
-     * @param boolean $ModifySecurityGroup Whether to modify the security group bound to the NAT Gateway
+     * @param boolean $ModifySecurityGroup Whether to modify the security group bound to the NAT gateway
      * @param array $SecurityGroupIds The final security groups bound to the NAT Gateway, such as `['sg-1n232323', 'sg-o4242424']`. An empty list indicates that all the security groups have been deleted.
      */
     function __construct()

@@ -22,28 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayName() Obtain NAT gateway name
  * @method void setNatGatewayName(string $NatGatewayName) Set NAT gateway name
- * @method string getVpcId() Obtain The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
- * @method void setVpcId(string $VpcId) Set The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
- * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
- * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
- * @method integer getMaxConcurrentConnection() Obtain The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
- * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
- * @method integer getAddressCount() Obtain The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
- * @method void setAddressCount(integer $AddressCount) Set The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
- * @method array getPublicIpAddresses() Obtain The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
- * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+ * @method string getVpcId() Obtain The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+ * @method void setVpcId(string $VpcId) Set The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+ * @method integer getInternetMaxBandwidthOut() Obtain The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+ * @method void setInternetMaxBandwidthOut(integer $InternetMaxBandwidthOut) Set The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+ * @method integer getMaxConcurrentConnection() Obtain The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+ * @method void setMaxConcurrentConnection(integer $MaxConcurrentConnection) Set The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+ * @method integer getAddressCount() Obtain The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+ * @method void setAddressCount(integer $AddressCount) Set The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+ * @method array getPublicIpAddresses() Obtain The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
+ * @method void setPublicIpAddresses(array $PublicIpAddresses) Set The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
  * @method string getZone() Obtain The availability zone, such as `ap-guangzhou-1`.
  * @method void setZone(string $Zone) Set The availability zone, such as `ap-guangzhou-1`.
- * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
- * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+ * @method array getTags() Obtain Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
+ * @method void setTags(array $Tags) Set Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
  * @method string getSubnetId() Obtain Subnet of the NAT gateway
  * @method void setSubnetId(string $SubnetId) Set Subnet of the NAT gateway
  * @method integer getStockPublicIpAddressesBandwidthOut() Obtain The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
  * @method void setStockPublicIpAddressesBandwidthOut(integer $StockPublicIpAddressesBandwidthOut) Set The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
- * @method integer getPublicIpAddressesBandwidthOut() Obtain The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
- * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) Set The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
- * @method boolean getPublicIpFromSameZone() Obtain 
- * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) Set 
+ * @method integer getPublicIpAddressesBandwidthOut() Obtain The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+ * @method void setPublicIpAddressesBandwidthOut(integer $PublicIpAddressesBandwidthOut) Set The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+ * @method boolean getPublicIpFromSameZone() Obtain Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
+ * @method void setPublicIpFromSameZone(boolean $PublicIpFromSameZone) Set Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
  */
 class CreateNatGatewayRequest extends AbstractModel
 {
@@ -53,27 +53,27 @@ class CreateNatGatewayRequest extends AbstractModel
     public $NatGatewayName;
 
     /**
-     * @var string The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
+     * @var string The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
      */
     public $VpcId;
 
     /**
-     * @var integer The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
+     * @var integer The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
      */
     public $InternetMaxBandwidthOut;
 
     /**
-     * @var integer The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
+     * @var integer The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
      */
     public $MaxConcurrentConnection;
 
     /**
-     * @var integer The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
+     * @var integer The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
      */
     public $AddressCount;
 
     /**
-     * @var array The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * @var array The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
      */
     public $PublicIpAddresses;
 
@@ -83,7 +83,7 @@ class CreateNatGatewayRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @var array Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      */
     public $Tags;
 
@@ -98,28 +98,28 @@ class CreateNatGatewayRequest extends AbstractModel
     public $StockPublicIpAddressesBandwidthOut;
 
     /**
-     * @var integer The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @var integer The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
      */
     public $PublicIpAddressesBandwidthOut;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     public $PublicIpFromSameZone;
 
     /**
      * @param string $NatGatewayName NAT gateway name
-     * @param string $VpcId The ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of DescribeVpcs API.
-     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100Mbps`.
-     * @param integer $MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Supported parameter values: `1000000, 3000000, 10000000`. The default value is `100000`.
-     * @param integer $AddressCount The number of EIPs that needs to be applied for. The system will create N number of EIPs according to your requirements. Either AddressCount or PublicAddresses must be passed in.
-     * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicAddresses must be passed in.
+     * @param string $VpcId The ID of the VPC instance, which can be obtained from the `VpcId` field in response of the `DescribeVpcs` API.
+     * @param integer $InternetMaxBandwidthOut The maximum outbound bandwidth of the NAT gateway (unit: Mbps). Supported parameter values: `20, 50, 100, 200, 500, 1000, 2000, 5000`. Default: `100`.
+     * @param integer $MaxConcurrentConnection The concurrent connection cap of the NAT gateway. Values: `1000000, 3000000, 10000000`. The default value is `1000000`.
+     * @param integer $AddressCount The number of EIPs that you want to apply for. Either `AddressCount` or `PublicIpAddresses` must be passed in.
+     * @param array $PublicIpAddresses The EIP array bound to the NAT gateway. Either AddressCount or PublicIpAddresses must be passed in.
      * @param string $Zone The availability zone, such as `ap-guangzhou-1`.
-     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}].
+     * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      * @param string $SubnetId Subnet of the NAT gateway
      * @param integer $StockPublicIpAddressesBandwidthOut The bandwidth size (in Mbps) of the EIP bound to the NAT gateway, which defaults to the maximum value applicable for the current user type.
-     * @param integer $PublicIpAddressesBandwidthOut The requested size of the public network IP bandwidth (in Mbps), which defaults to the maximum value applicable for the current user type.
-     * @param boolean $PublicIpFromSameZone 
+     * @param integer $PublicIpAddressesBandwidthOut The size of the public network IP bandwidth to be applied for (in Mbps), which defaults to the maximum value applicable for the current user type.
+     * @param boolean $PublicIpFromSameZone Whether the public IP and the NAT gateway must be in the same availability zone. Valid values: `true` and `false`. This parameter is valid only when `Zone` is specified.
      */
     function __construct()
     {

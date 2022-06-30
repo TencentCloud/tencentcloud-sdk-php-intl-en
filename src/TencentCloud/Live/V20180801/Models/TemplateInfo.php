@@ -112,6 +112,14 @@ Value range: 0.0-0.5.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method void setShortEdgeAsHeight(integer $ShortEdgeAsHeight) Set Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
 Note: this field may return `null`, indicating that no valid value is obtained.
+ * @method string getDRMType() Obtain The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDRMType(string $DRMType) Set The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDRMTracks() Obtain The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDRMTracks(string $DRMTracks) Set The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TemplateInfo extends AbstractModel
 {
@@ -246,6 +254,18 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $ShortEdgeAsHeight;
 
     /**
+     * @var string The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DRMType;
+
+    /**
+     * @var string The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DRMTracks;
+
+    /**
      * @param string $Vcodec Codec: h264/h265/origin. Default value: h264.
 
 origin: keep the original codec.
@@ -292,6 +312,10 @@ Target bitrate of top speed code = VideoBitrate * (1-AdaptBitratePercent)
 Value range: 0.0-0.5.
      * @param integer $ShortEdgeAsHeight Whether to take the shorter side as height. 0: no, 1: yes. Default value: 0.
 Note: this field may return `null`, indicating that no valid value is obtained.
+     * @param string $DRMType The DRM encryption type. Valid values: fairplay, normalaes, widevine.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DRMTracks The tracks to encrypt. Valid values: AUDIO, SD, HD, UHD1, UHD2. Separate multiple tracks with “|”. You can choose only one video track (SD, HD, UHD1, or UHD2).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -388,6 +412,14 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("ShortEdgeAsHeight",$param) and $param["ShortEdgeAsHeight"] !== null) {
             $this->ShortEdgeAsHeight = $param["ShortEdgeAsHeight"];
+        }
+
+        if (array_key_exists("DRMType",$param) and $param["DRMType"] !== null) {
+            $this->DRMType = $param["DRMType"];
+        }
+
+        if (array_key_exists("DRMTracks",$param) and $param["DRMTracks"] !== null) {
+            $this->DRMTracks = $param["DRMTracks"];
         }
     }
 }

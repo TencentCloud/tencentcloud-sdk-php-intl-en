@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getNatGatewayId() Obtain The unique ID of the NAT Gateway, such as `nat-123xx454`.
  * @method void setNatGatewayId(string $NatGatewayId) Set The unique ID of the NAT Gateway, such as `nat-123xx454`.
- * @method array getFilters() Obtain Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
- * @method void setFilters(array $Filters) Set Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
- * @method integer getOffset() Obtain Offset. Default is 0.
- * @method void setOffset(integer $Offset) Set Offset. Default is 0.
+ * @method array getFilters() Obtain Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+ * @method void setFilters(array $Filters) Set Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  */
@@ -43,15 +43,15 @@ class DescribeNatGatewaySourceIpTranslationNatRulesRequest extends AbstractModel
     public $NatGatewayId;
 
     /**
-     * @var array Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
+     * @var array Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
      */
     public $Filters;
 
     /**
-     * @var integer Offset. Default is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
@@ -62,11 +62,11 @@ class DescribeNatGatewaySourceIpTranslationNatRulesRequest extends AbstractModel
 
     /**
      * @param string $NatGatewayId The unique ID of the NAT Gateway, such as `nat-123xx454`.
-     * @param array $Filters Filter conditions:
-<li> resource-id, the subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
-<li> public-ip-address, the EIP, such as `139.199.232.238`</li>
-<li>description, the rule description</li>
-     * @param integer $Offset Offset. Default is 0.
+     * @param array $Filters Filter:
+<li>`resource-id`: The subnet ID (such as `subnet-0yi4hekt`) or CVM ID</li>
+<li>`public-ip-address`: The EIP, such as `139.199.232.238`</li>
+<li>`description` The rule description</li>
+     * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      */
     function __construct()

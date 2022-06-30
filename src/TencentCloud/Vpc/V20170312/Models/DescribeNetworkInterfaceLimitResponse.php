@@ -32,6 +32,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setExtendEniPrivateIpAddressQuantity(integer $ExtendEniPrivateIpAddressQuantity) Set Quota of IP addresses that can be allocated to each extension-mounted ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSubEniQuantity() Obtain The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubEniQuantity(integer $SubEniQuantity) Set The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getSubEniPrivateIpAddressQuantity() Obtain The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSubEniPrivateIpAddressQuantity(integer $SubEniPrivateIpAddressQuantity) Set The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -60,6 +68,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ExtendEniPrivateIpAddressQuantity;
 
     /**
+     * @var integer The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubEniQuantity;
+
+    /**
+     * @var integer The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SubEniPrivateIpAddressQuantity;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -71,6 +91,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ExtendEniPrivateIpAddressQuantity Quota of IP addresses that can be allocated to each extension-mounted ENI.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SubEniQuantity The quota of relayed ENIs
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $SubEniPrivateIpAddressQuantity The quota of IPs that can be assigned to each relayed ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -100,6 +124,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ExtendEniPrivateIpAddressQuantity",$param) and $param["ExtendEniPrivateIpAddressQuantity"] !== null) {
             $this->ExtendEniPrivateIpAddressQuantity = $param["ExtendEniPrivateIpAddressQuantity"];
+        }
+
+        if (array_key_exists("SubEniQuantity",$param) and $param["SubEniQuantity"] !== null) {
+            $this->SubEniQuantity = $param["SubEniQuantity"];
+        }
+
+        if (array_key_exists("SubEniPrivateIpAddressQuantity",$param) and $param["SubEniPrivateIpAddressQuantity"] !== null) {
+            $this->SubEniPrivateIpAddressQuantity = $param["SubEniPrivateIpAddressQuantity"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
