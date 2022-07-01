@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedOn(string $CreatedOn) Set Site creation date
  * @method string getModifiedOn() Obtain Site modification date
  * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
+ * @method string getCnameStatus() Obtain Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCnameStatus(string $CnameStatus) Set Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Zone extends AbstractModel
 {
@@ -105,6 +113,14 @@ class Zone extends AbstractModel
     public $ModifiedOn;
 
     /**
+     * @var string Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $CnameStatus;
+
+    /**
      * @param string $Id Site ID
      * @param string $Name Site name
      * @param array $OriginalNameServers List of name servers used by the site
@@ -120,6 +136,10 @@ class Zone extends AbstractModel
      * @param boolean $Paused Indicates whether the site is disabled
      * @param string $CreatedOn Site creation date
      * @param string $ModifiedOn Site modification date
+     * @param string $CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -168,6 +188,10 @@ class Zone extends AbstractModel
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
+            $this->CnameStatus = $param["CnameStatus"];
         }
     }
 }
