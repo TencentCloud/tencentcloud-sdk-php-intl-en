@@ -20,247 +20,249 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnData request structure.
  *
- * @method string getStartTime() Obtain Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method void setStartTime(string $StartTime) Set Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method string getEndTime() Obtain Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method void setEndTime(string $EndTime) Set Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+ * @method string getStartTime() Obtain Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setStartTime(string $StartTime) Set Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method string getEndTime() Obtain End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setEndTime(string $EndTime) Set End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
  * @method string getMetric() Obtain Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
  * @method void setMetric(string $Metric) Set Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
- * @method array getDomains() Obtain Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
- * @method void setDomains(array $Domains) Set Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
- * @method integer getProject() Obtain Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
- * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
- * @method string getInterval() Obtain Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
- * @method void setInterval(string $Interval) Set Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+ * @method array getDomains() Obtain Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
+ * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
+ * @method integer getProject() Obtain Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
+ * @method void setProject(integer $Project) Set Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
+ * @method string getInterval() Obtain Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
+ * @method void setInterval(string $Interval) Set Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
  * @method boolean getDetail() Obtain The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
  * @method void setDetail(boolean $Detail) Set The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
- * @method integer getIsp() Obtain Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+ * @method integer getIsp() Obtain Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
- * @method void setIsp(integer $Isp) Set Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+ * @method void setIsp(integer $Isp) Set Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
- * @method integer getDistrict() Obtain Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
- * @method void setDistrict(integer $District) Set Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+ * @method integer getDistrict() Obtain Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+ * @method void setDistrict(integer $District) Set Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
  * @method string getProtocol() Obtain Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
  * @method void setProtocol(string $Protocol) Set Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
- * @method string getDataSource() Obtain Specifies the data source to be queried, which can be seen as the allowlist function.
- * @method void setDataSource(string $DataSource) Set Specifies the data source to be queried, which can be seen as the allowlist function.
- * @method string getIpProtocol() Obtain Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
- * @method void setIpProtocol(string $IpProtocol) Set Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
- * @method string getArea() Obtain Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
- * @method void setArea(string $Area) Set Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
- * @method string getAreaType() Obtain Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
- * @method void setAreaType(string $AreaType) Set Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
+ * @method string getDataSource() Obtain Specifies the data source to be queried. It’s only open to beta users now. 
+ * @method void setDataSource(string $DataSource) Set Specifies the data source to be queried. It’s only open to beta users now. 
+ * @method string getIpProtocol() Obtain Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
+ * @method void setIpProtocol(string $IpProtocol) Set Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
+ * @method string getArea() Obtain Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+ * @method void setArea(string $Area) Set Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+ * @method string getAreaType() Obtain Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
+ * @method void setAreaType(string $AreaType) Set Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
  * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method string getTimeZone() Obtain Specifies a time zone to query. The default time zone is UTC+08:00.
+ * @method void setTimeZone(string $TimeZone) Set Specifies a time zone to query. The default time zone is UTC+08:00.
  */
 class DescribeCdnDataRequest extends AbstractModel
 {
     /**
-     * @var string Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * @var string Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $StartTime;
 
     /**
-     * @var string Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * @var string End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $EndTime;
 
     /**
      * @var string Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
      */
     public $Metric;
 
     /**
-     * @var array Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
+     * @var array Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
      */
     public $Domains;
 
     /**
-     * @var integer Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
+     * @var integer Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
      */
     public $Project;
 
     /**
-     * @var string Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * @var string Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      */
     public $Interval;
 
     /**
      * @var boolean The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
      */
     public $Detail;
 
     /**
-     * @var integer Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+     * @var integer Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public $Isp;
 
     /**
-     * @var integer Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+     * @var integer Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      */
     public $District;
 
     /**
      * @var string Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
      */
     public $Protocol;
 
     /**
-     * @var string Specifies the data source to be queried, which can be seen as the allowlist function.
+     * @var string Specifies the data source to be queried. It’s only open to beta users now. 
      */
     public $DataSource;
 
     /**
-     * @var string Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
+     * @var string Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
      */
     public $IpProtocol;
 
     /**
-     * @var string Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+     * @var string Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
      */
     public $Area;
 
     /**
-     * @var string Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+     * @var string Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
      */
     public $AreaType;
 
@@ -270,68 +272,74 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
     public $Product;
 
     /**
-     * @param string $StartTime Queries start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
-     * @param string $EndTime Queries end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * @var string Specifies a time zone to query. The default time zone is UTC+08:00.
+     */
+    public $TimeZone;
+
+    /**
+     * @param string $StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param string $EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      * @param string $Metric Specifies the metric to query, which can be:
-`flux`: traffic (in bytes)
-`fluxIn`: upstream traffic (in bytes), only used for the `ecdn` product
-`fluxOut`: downstream traffic (in bytes), only used for the `ecdn` product
-`bandwidth`: bandwidth (in bps)
-`bandwidthIn`: upstream bandwidth (in bps), only used for the `ecdn` product
-`bandwidthOut`: downstream bandwidth (in bps), only used for the `ecdn` product
-`request`: number of requests
-`hitRequest`: number of hit requests
-`requestHitRate`: request hit rate (in % with two decimal digits)
-`hitFlux`: hit traffic (in bytes)
-`fluxHitRate`: traffic hit rate (in % with two decimal digits)
-`statusCode`: status code. Number of 2xx, 3xx, 4xx, and 5xx status codes returned during the queried period.
-`2xx`: lists the number of all status codes starting with **2** returned during the queried period based on the specified interval (if any)
-`3xx`: lists the number of all status codes starting with **3** returned during the queried period based on the specified interval (if any)
-`4xx`: lists the number of all status codes starting with **4** returned during the queried period based on the specified interval (if any)
-`5xx`: lists the number of all status codes starting with **5** returned during the queried period based on the specified interval (if any)
+`flux`: Traffic (in bytes)
+`fluxIn`: Upstream traffic (in bytes), only used for the `ecdn` product
+`fluxOut`: Downstream traffic (in bytes), only used for the `ecdn` product
+`bandwidth`: Bandwidth (in bps)
+`bandwidthIn`: Upstream bandwidth (in bps), only used for the `ecdn` product
+`bandwidthOut`: Downstream bandwidth (in bps), only used for the `ecdn` product
+`request`: Number of requests
+`hitRequest`: Number of hit requests
+`requestHitRate`: Request hit rate (in % with two decimal digits)
+`hitFlux`: Hit traffic (in bytes)
+`fluxHitRate`: Traffic hit rate (in % with two decimal digits)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
 Specifies the status code to query. The return will be empty if the status code has never been generated.
-     * @param array $Domains Queries the information of specified domain names
-Specifies a domain name to query
-Specifies multiple domain names to query (30 at most at a time)
-Queries all Specifies an account to query all domain names
-     * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
-Please note that if domain names are specified, this parameter will be ignored.
-     * @param string $Interval Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * @param array $Domains Specifies the list of domain names to be queried
+You can specify one or more domain names.
+Up to 30 domain names can be queried in one request.
+If this parameter is not specified, it means to query all domain names under the current account.
+     * @param integer $Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+Note that `Project` will be ignored if `Domains` is specified.
+     * @param string $Interval Sampling interval. The available options vary for different query period. See below: 
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      * @param boolean $Detail The aggregate data for multiple domain names is returned by default (false) during a multi-domain-name query.
-You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-     * @param integer $Isp Specifies an ISP when you query the CDN data within Mainland China. If this is left blank, all ISPs will be queried.
+You can set it to true to return the details for each Domain (the statusCode metric is currently not supported).
+     * @param integer $Isp Specifies an ISP when you query the CDN data within the Chinese mainland. If this is left blank, all ISPs will be queried.
 To view ISP codes, see [ISP Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified an ISP, you cannot specify a province or an IP protocol for the same query.
-     * @param integer $District Specifies a province when you query the CDN data within Mainland China. If this is left blank, all provinces will be queried.
-Specifies a country/region when you query the CDN data outside Mainland China. If this is left blank, all countries/regions will be queried.
-To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8)
-If you have specified a province for your query on CDN data within mainland China, you cannot specify an ISP or an IP protocol for the same query.
+Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
+     * @param integer $District Specifies a province when you query the CDN data within the Chinese mainland. If this is left blank, all provinces will be queried.
+Specifies a country/region when you query the CDN data outside the Chinese mainland. If this is left blank, all countries/regions will be queried.
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E5.8C.BA.E5.9F.9F-.2F-.E8.BF.90.E8.90.A5.E5.95.86.E6.98.A0.E5.B0.84.E8.A1.A8).
+When `Area` is `mainland`, you can query by the province. Note that only one of `District`, `Isp` and `IpProtocol` can be specified.
      * @param string $Protocol Specifies the protocol to be queried; if you leave it blank, all protocols will be queried.
-all: All protocols
-http: specifies the HTTP metric to be queried
-https: specifies the HTTPS metric to be queried
-     * @param string $DataSource Specifies the data source to be queried, which can be seen as the allowlist function.
-     * @param string $IpProtocol Specified IP protocol to be queried. If this parameter is left empty, all protocols will be queried
-all: all protocols
-ipv4: specifies to query IPv4 metrics
-ipv6: specifies to query IPv6 metrics
-If the IP protocol to be queried is specified, the district and ISP cannot be specified at the same time
-Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
-     * @param string $Area Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
-     * @param string $AreaType Specifies a region type for your query on CDN data outside Mainland China. If this parameter is left blank, data on the service region will be queried. This parameter is valid only when `Area` is `overseas`.
-`server`: specifies to query data on the service region where Tencent Cloud CDN nodes are located;
-`client`: specifies to query data on the client region where the request devices are located.
+`all`: All protocols
+`http`: Query HTTP data
+`https`: Query HTTPS data
+     * @param string $DataSource Specifies the data source to be queried. It’s only open to beta users now. 
+     * @param string $IpProtocol Specifies the IP protocol to be queried. If it’s not specified, data of all IP protocols are returned.
+`all`: All protocols
+`ipv4`: Query IPv4 data
+`ipv6`: Query IPv6 data
+If `IpProtocol` is specified, `District` parameter can not be specified at the same time.
+Note: `ipv4` and `ipv6` are only available to beta users. 
+     * @param string $Area Specifies the service area. If it’s not specified, CDN data of the Chinese mainland are returned.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+     * @param string $AreaType Specify whether to query by the region of the server or client. This parameter is valid only when `Area` is `overseas`.
+`server`: Query by the location of server (Tencent Cloud CDN nodes)
+`client`: Query by the location of the client (where the request devices are located)
      * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param string $TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
      */
     function __construct()
     {
@@ -404,6 +412,10 @@ Note: non-IPv6 allowlisted users cannot specify `ipv4` and `ipv6` for query
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

@@ -20,27 +20,27 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Billing data details
  *
- * @method string getResource() Obtain Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
- * @method void setResource(string $Resource) Set Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+ * @method string getResource() Obtain Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
+ * @method void setResource(string $Resource) Set Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
  * @method array getBillingData() Obtain Billing data details
  * @method void setBillingData(array $BillingData) Set Billing data details
  */
 class ResourceBillingData extends AbstractModel
 {
     /**
-     * @var string Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+     * @var string Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
      */
     public $Resource;
 
@@ -50,11 +50,11 @@ all: the details at the account level
     public $BillingData;
 
     /**
-     * @param string $Resource Resource name, which is categorized as follows based on different query conditions:
-Specific domain name: domain name details
-multiDomains: aggregated details of multiple domain names
-Project ID: displays the ID of the specified project to be queried
-all: the details at the account level
+     * @param string $Resource Resource name, which is classified as follows based on different query filters:
+When a domain name is specified: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+A specific project ID: ID of the specifically queried project
+`all`: Details at the account level
      * @param array $BillingData Billing data details
      */
     function __construct()

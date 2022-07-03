@@ -23,21 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDomain() Obtain Acceleration domain name
  * @method void setDomain(string $Domain) Set Acceleration domain name
  * @method string getLayer() Obtain Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
  * @method void setLayer(string $Layer) Set Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
- * @method string getArea() Obtain Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
- * @method void setArea(string $Area) Set Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+ * @method string getArea() Obtain Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
+ * @method void setArea(string $Area) Set Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
  * @method boolean getSegment() Obtain Whether to return a value as an IP range
  * @method void setSegment(boolean $Segment) Set Whether to return a value as an IP range
  */
@@ -50,17 +50,17 @@ class DescribeIpStatusRequest extends AbstractModel
 
     /**
      * @var string Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
      */
     public $Layer;
 
     /**
-     * @var string Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+     * @var string Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
      */
     public $Area;
 
@@ -72,13 +72,13 @@ global: global nodes
     /**
      * @param string $Domain Acceleration domain name
      * @param string $Layer Node type.
-edge: edge server
-last: intermediate server
+`edge`: Edge server
+`last`: Intermediate server
 If this parameter is left empty, edge server information will be returned by default
-     * @param string $Area Region to be queried.
-mainland: domestic nodes
-overseas: overseas nodes
-global: global nodes
+     * @param string $Area Specifies a region to query.
+`mainland`: Nodes in the Chinese mainland
+`overseas`: Nodes outside the Chinese mainland
+`global`: Global nodes
      * @param boolean $Segment Whether to return a value as an IP range
      */
     function __construct()

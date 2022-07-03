@@ -18,40 +18,40 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Aggregate values of details; each metric has different aggregation methods based on its characteristics
+ * Aggregated value, which is aggregated from all data of each metric. Aggregation methods are used depending on the metric attributes.
  *
  * @method string getName() Obtain Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
  * @method void setName(string $Name) Set Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
- * @method float getValue() Obtain Aggregate data value
- * @method void setValue(float $Value) Set Aggregate data value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
+ * @method float getValue() Obtain Aggregated value
+ * @method void setValue(float $Value) Set Aggregated value
  */
 class SummarizedData extends AbstractModel
 {
     /**
      * @var string Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
      */
     public $Name;
 
     /**
-     * @var float Aggregate data value
+     * @var float Aggregated value
      */
     public $Value;
 
     /**
      * @param string $Name Aggregation method, which can be:
-sum: aggregate summation
-max: maximum value; in bandwidth mode, the peak bandwidth is calculated based on the aggregate data with 5-minute granularity.
-avg: average value
-     * @param float $Value Aggregate data value
+`sum`: Aggregate summation
+`max`: Maximum value. In bandwidth mode, the peak bandwidth is calculated based on the data aggregated in 5 minutes.
+`avg`: Average value
+     * @param float $Value Aggregated value
      */
     function __construct()
     {

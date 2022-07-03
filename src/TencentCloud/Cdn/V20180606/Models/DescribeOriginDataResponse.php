@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginData response structure.
  *
- * @method string getInterval() Obtain Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
- * @method void setInterval(string $Interval) Set Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+ * @method string getInterval() Obtain Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
+ * @method void setInterval(string $Interval) Set Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
  * @method array getData() Obtain Origin-pull data details of each resource.
  * @method void setData(array $Data) Set Origin-pull data details of each resource.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeOriginDataResponse extends AbstractModel
 {
     /**
-     * @var string Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+     * @var string Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
      */
     public $Interval;
 
@@ -45,7 +45,7 @@ class DescribeOriginDataResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Interval Time granularity of data statistics, which supports min (1 minute), 5min (5 minutes), hour (1 hour), and day (1 day).
+     * @param string $Interval Time granularity of data statistics, which supports `min` (1 minute), `5min` (5 minutes), `hour` (1 hour), and `day` (1 day).
      * @param array $Data Origin-pull data details of each resource.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

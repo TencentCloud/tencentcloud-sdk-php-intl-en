@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getIp() Obtain Node IP
  * @method void setIp(string $Ip) Set Node IP
- * @method string getDistrict() Obtain Node region
- * @method void setDistrict(string $District) Set Node region
- * @method string getIsp() Obtain Node ISP
- * @method void setIsp(string $Isp) Set Node ISP
- * @method string getCity() Obtain Node city
- * @method void setCity(string $City) Set Node city
- * @method string getStatus() Obtain Node status
-online: the node is online; scheduling service running
-offline: the node is offline
- * @method void setStatus(string $Status) Set Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+ * @method string getDistrict() Obtain Region of the node
+ * @method void setDistrict(string $District) Set Region of the node
+ * @method string getIsp() Obtain ISP of the node
+ * @method void setIsp(string $Isp) Set ISP of the node
+ * @method string getCity() Obtain City of the node
+ * @method void setCity(string $City) Set City of the node
+ * @method string getStatus() Obtain Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
+ * @method void setStatus(string $Status) Set Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
  */
 class IpStatus extends AbstractModel
 {
@@ -43,35 +43,35 @@ class IpStatus extends AbstractModel
     public $Ip;
 
     /**
-     * @var string Node region
+     * @var string Region of the node
      */
     public $District;
 
     /**
-     * @var string Node ISP
+     * @var string ISP of the node
      */
     public $Isp;
 
     /**
-     * @var string Node city
+     * @var string City of the node
      */
     public $City;
 
     /**
-     * @var string Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+     * @var string Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
      */
     public $Status;
 
     /**
      * @param string $Ip Node IP
-     * @param string $District Node region
-     * @param string $Isp Node ISP
-     * @param string $City Node city
-     * @param string $Status Node status
-online: the node is online; scheduling service running
-offline: the node is offline
+     * @param string $District Region of the node
+     * @param string $Isp ISP of the node
+     * @param string $City City of the node
+     * @param string $Status Status of the node
+`online`: The node is active and scheduling normally.
+`offline`: The node is inactive.
      */
     function __construct()
     {

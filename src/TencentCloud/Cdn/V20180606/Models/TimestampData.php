@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Timestamp and its corresponding value
  *
- * @method string getTime() Obtain Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
- * @method void setTime(string $Time) Set Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+ * @method string getTime() Obtain The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
+ * @method void setTime(string $Time) Set The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
  * @method float getValue() Obtain Data value
  * @method void setValue(float $Value) Set Data value
  */
 class TimestampData extends AbstractModel
 {
     /**
-     * @var string Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+     * @var string The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
      */
     public $Time;
 
@@ -41,8 +41,8 @@ Taking the 5-minute granularity as an example, 13:35:00 indicates that the stati
     public $Value;
 
     /**
-     * @param string $Time Statistical point in time in forward rounding mode
-Taking the 5-minute granularity as an example, 13:35:00 indicates that the statistical interval is between 13:35:00 and 13:39:59.
+     * @param string $Time The start point of the sampling period. 
+For example, if the time is set to 13:35:00, and `interval` is `5min`, the data returned is collected between 13:35:00 and 13:39:59
      * @param float $Value Data value
      */
     function __construct()

@@ -18,12 +18,12 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Domain name region configuration
+ * Region configuration for domain names
  *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
- * @method array getArea() Obtain Region list, where the element can be `mainland/overseas`
- * @method void setArea(array $Area) Set Region list, where the element can be `mainland/overseas`
+ * @method array getArea() Obtain Region list, where the element can be `mainland`/`overseas`
+ * @method void setArea(array $Area) Set Region list, where the element can be `mainland`/`overseas`
  */
 class DomainAreaConfig extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DomainAreaConfig extends AbstractModel
     public $Domain;
 
     /**
-     * @var array Region list, where the element can be `mainland/overseas`
+     * @var array Region list, where the element can be `mainland`/`overseas`
      */
     public $Area;
 
     /**
      * @param string $Domain Domain name
-     * @param array $Area Region list, where the element can be `mainland/overseas`
+     * @param array $Area Region list, where the element can be `mainland`/`overseas`
      */
     function __construct()
     {

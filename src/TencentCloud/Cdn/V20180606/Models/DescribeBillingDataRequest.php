@@ -20,76 +20,78 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBillingData request structure.
  *
- * @method string getStartTime() Obtain Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
- * @method void setStartTime(string $StartTime) Set Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
- * @method string getEndTime() Obtain Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
- * @method void setEndTime(string $EndTime) Set Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+ * @method string getStartTime() Obtain Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setStartTime(string $StartTime) Set Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method string getEndTime() Obtain End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setEndTime(string $EndTime) Set End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
  * @method string getInterval() Obtain Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
  * @method void setInterval(string $Interval) Set Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
  * @method string getDomain() Obtain Domain name whose billing data is to be queried
  * @method void setDomain(string $Domain) Set Domain name whose billing data is to be queried
- * @method integer getProject() Obtain Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
- * @method void setProject(integer $Project) Set Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+ * @method integer getProject() Obtain Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
+ * @method void setProject(integer $Project) Set Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
  * @method string getArea() Obtain Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
  * @method void setArea(string $Area) Set Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
  * @method integer getDistrict() Obtain Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
  * @method void setDistrict(integer $District) Set Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
  * @method string getMetric() Obtain Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
  * @method void setMetric(string $Metric) Set Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
  * @method string getProduct() Obtain Specifies the product to query, either `cdn` (default) or `ecdn`.
  * @method void setProduct(string $Product) Set Specifies the product to query, either `cdn` (default) or `ecdn`.
+ * @method string getTimeZone() Obtain 
+ * @method void setTimeZone(string $TimeZone) Set 
  */
 class DescribeBillingDataRequest extends AbstractModel
 {
     /**
-     * @var string Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * @var string Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $StartTime;
 
     /**
-     * @var string Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * @var string End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $EndTime;
 
@@ -100,7 +102,7 @@ The range between the start time and end time should be less than or equal to 90
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
      */
     public $Interval;
 
@@ -110,30 +112,30 @@ Querying 1-minute granularity data is not supported if the `Area` field is `over
     public $Domain;
 
     /**
-     * @var integer Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+     * @var integer Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
      */
     public $Project;
 
     /**
      * @var string Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
      */
     public $Area;
 
     /**
      * @var integer Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
      */
     public $District;
 
     /**
      * @var string Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      */
     public $Metric;
@@ -144,34 +146,40 @@ Default value: `bandwidth`
     public $Product;
 
     /**
-     * @param string $StartTime Query start time, e.g., 2018-09-04 10:40:00. The returned result will be later than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the first returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
-     * @param string $EndTime Query end time, e.g. 2018-09-04 10:40:00. The returned result will be earlier than or equal to the specified time
-The time will be rounded forward based on the granularity parameter `Interval`. For example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1-hour, the time for the last returned entry will be 2018-09-04 10:00:00
-The range between the start time and end time should be less than or equal to 90 days
+     * @var string 
+     */
+    public $TimeZone;
+
+    /**
+     * @param string $StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param string $EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      * @param string $Interval Time granularity, which can be:
 `min`: 1-minute granularity. The query period cannot exceed 24 hours.
 `5min`: 5-minute granularity. The query range cannot exceed 31 days.
 `hour`: 1-hour granularity. The query period cannot exceed 31 days.
 `day`: 1-day granularity. The query period cannot exceed 31 days.
 
-Querying 1-minute granularity data is not supported if the `Area` field is `overseas`.
+`min` is not supported if the `Area` field is `overseas`.
      * @param string $Domain Domain name whose billing data is to be queried
-     * @param integer $Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the `Domain` parameter is populated with specific domain name information, then the billing data of this domain name instead of the specified project will be returned
+     * @param integer $Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the `Domain` parameter is passed in, the `Proejct` parameter is ignored. Only the billing data of the specified domain name is returned. 
      * @param string $Area Acceleration region whose billing data is to be queried:
-mainland: in the mainland of China
-overseas: outside the mainland of China
+`mainland`: Regions within the Chinese mainland
+`overseas`: Regions outside the Chinese mainland
 If this parameter is left empty, `mainland` will be used by default
      * @param integer $District Country/region to be queried if `Area` is `overseas`
-For district or country/region codes, please see [District Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
+To view codes of provinces or countries/regions, see [Province Code Mappings](https://intl.cloud.tencent.com/document/product/228/6316?from_cn_redirect=1#.E7.9C.81.E4.BB.BD.E6.98.A0.E5.B0.84)
 If this parameter is left empty, all countries/regions will be queried
      * @param string $Metric Billing statistics type
-flux: bill-by-traffic
-bandwidth: bill-by-bandwidth
+`flux`: Bill by traffic
+`bandwidth`: Bill by bandwidth
 Default value: `bandwidth`
      * @param string $Product Specifies the product to query, either `cdn` (default) or `ecdn`.
+     * @param string $TimeZone 
      */
     function __construct()
     {
@@ -220,6 +228,10 @@ Default value: `bandwidth`
 
         if (array_key_exists("Product",$param) and $param["Product"] !== null) {
             $this->Product = $param["Product"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

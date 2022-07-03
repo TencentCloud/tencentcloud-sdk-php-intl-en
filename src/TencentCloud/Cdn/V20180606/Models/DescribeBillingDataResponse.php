@@ -21,15 +21,15 @@ use TencentCloud\Common\AbstractModel;
  * DescribeBillingData response structure.
  *
  * @method string getInterval() Obtain Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
  * @method void setInterval(string $Interval) Set Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
  * @method array getData() Obtain Data details
  * @method void setData(array $Data) Set Data details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -39,10 +39,10 @@ class DescribeBillingDataResponse extends AbstractModel
 {
     /**
      * @var string Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public $Interval;
 
@@ -58,10 +58,10 @@ day: 1-day
 
     /**
      * @param string $Interval Time granularity, which is specified by the parameter passed in during the query:
-min: 1-minute
-5min: 5-minute
-hour: 1-hour
-day: 1-day
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      * @param array $Data Data details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

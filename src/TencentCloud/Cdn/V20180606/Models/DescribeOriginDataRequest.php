@@ -20,121 +20,123 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeOriginData request structure.
  *
- * @method string getStartTime() Obtain Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method void setStartTime(string $StartTime) Set Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method string getEndTime() Obtain Query end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method void setEndTime(string $EndTime) Set Query end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
- * @method string getMetric() Obtain Specifies the query metric, which can be:
-flux: origin-pull traffic (in bytes)
-bandwidth: origin-pull bandwidth (in bps)
-request: number of origin-pull requests
-failRequest: number of failed origin-pull requests
-failRate: origin-pull failure rate (in %)
-statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
+ * @method string getStartTime() Obtain Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setStartTime(string $StartTime) Set Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method string getEndTime() Obtain End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method void setEndTime(string $EndTime) Set End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+ * @method string getMetric() Obtain Specifies the metric to query, which can be:
+`flux`: Origin-pull traffic (in bytes)
+`bandwidth`: Origin-pull bandwidth (in bps)
+`request`: Number of origin-pull requests
+`failRequest`: Number of failed origin-pull requests
+`failRate`: Origin-pull failure rate (in %)
+`statusCode`: Origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
- * @method void setMetric(string $Metric) Set Specifies the query metric, which can be:
-flux: origin-pull traffic (in bytes)
-bandwidth: origin-pull bandwidth (in bps)
-request: number of origin-pull requests
-failRequest: number of failed origin-pull requests
-failRate: origin-pull failure rate (in %)
-statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
+ * @method void setMetric(string $Metric) Set Specifies the metric to query, which can be:
+`flux`: Origin-pull traffic (in bytes)
+`bandwidth`: Origin-pull bandwidth (in bps)
+`request`: Number of origin-pull requests
+`failRequest`: Number of failed origin-pull requests
+`failRate`: Origin-pull failure rate (in %)
+`statusCode`: Origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
- * @method array getDomains() Obtain Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
- * @method void setDomains(array $Domains) Set Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
- * @method integer getProject() Obtain Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
-If the domain name information is specified, the domain name will prevail
- * @method void setProject(integer $Project) Set Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
-If the domain name information is specified, the domain name will prevail
- * @method string getInterval() Obtain Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
- * @method void setInterval(string $Interval) Set Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+ * @method array getDomains() Obtain Specifies the list of domain names to query. You can query up to 30 domain names at a time.
+ * @method void setDomains(array $Domains) Set Specifies the list of domain names to query. You can query up to 30 domain names at a time.
+ * @method integer getProject() Obtain Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time.
+If the domain name information is specified, this parameter can be ignored.
+ * @method void setProject(integer $Project) Set Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time.
+If the domain name information is specified, this parameter can be ignored.
+ * @method string getInterval() Obtain Time granularity, which can be:
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
+ * @method void setInterval(string $Interval) Set Time granularity, which can be:
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
  * @method boolean getDetail() Obtain The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
  * @method void setDetail(boolean $Detail) Set The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
- * @method string getArea() Obtain Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
- * @method void setArea(string $Area) Set Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+ * @method string getArea() Obtain Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+ * @method void setArea(string $Area) Set Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+ * @method string getTimeZone() Obtain Specifies a time zone to query. The default time zone is UTC+08:00.
+ * @method void setTimeZone(string $TimeZone) Set Specifies a time zone to query. The default time zone is UTC+08:00.
  */
 class DescribeOriginDataRequest extends AbstractModel
 {
     /**
-     * @var string Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * @var string Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $StartTime;
 
     /**
-     * @var string Query end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
+     * @var string End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
      */
     public $EndTime;
 
     /**
-     * @var string Specifies the query metric, which can be:
-flux: origin-pull traffic (in bytes)
-bandwidth: origin-pull bandwidth (in bps)
-request: number of origin-pull requests
-failRequest: number of failed origin-pull requests
-failRate: origin-pull failure rate (in %)
-statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
+     * @var string Specifies the metric to query, which can be:
+`flux`: Origin-pull traffic (in bytes)
+`bandwidth`: Origin-pull bandwidth (in bps)
+`request`: Number of origin-pull requests
+`failRequest`: Number of failed origin-pull requests
+`failRate`: Origin-pull failure rate (in %)
+`statusCode`: Origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
      */
     public $Metric;
 
     /**
-     * @var array Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
+     * @var array Specifies the list of domain names to query. You can query up to 30 domain names at a time.
      */
     public $Domains;
 
     /**
-     * @var integer Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
-If the domain name information is specified, the domain name will prevail
+     * @var integer Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time.
+If the domain name information is specified, this parameter can be ignored.
      */
     public $Project;
 
     /**
-     * @var string Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * @var string Time granularity, which can be:
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      */
     public $Interval;
 
@@ -145,45 +147,51 @@ You can set it to true to return the details for each Domain (the statusCode met
     public $Detail;
 
     /**
-     * @var string Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+     * @var string Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
      */
     public $Area;
 
     /**
-     * @param string $StartTime Query start time, such as 2018-09-04 10:40:00; the returned result is later than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query end time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the first returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
-     * @param string $EndTime Query end time, such as 2018-09-04 10:40:00; the returned result is earlier than or equal to the specified time.
-According to the specified time granularity, forward rounding is applied; for example, if the query start time is 2018-09-04 10:40:00 and the query time granularity is 1 hour, the time for the last returned entry will be 2018-09-04 10:00:00.
-The gap between the start time and end time should be less than or equal to 90 days.
-     * @param string $Metric Specifies the query metric, which can be:
-flux: origin-pull traffic (in bytes)
-bandwidth: origin-pull bandwidth (in bps)
-request: number of origin-pull requests
-failRequest: number of failed origin-pull requests
-failRate: origin-pull failure rate (in %)
-statusCode: origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
-2xx: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
-3xx: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
-4xx: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
-5xx: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
+     * @var string Specifies a time zone to query. The default time zone is UTC+08:00.
+     */
+    public $TimeZone;
+
+    /**
+     * @param string $StartTime Start time of the query, e.g., 2018-09-04 10:40:00.
+The specified start time will be rounded down based on the granularity parameter `Interval`. For example, if you set the start time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param string $EndTime End time of the query, e.g. 2018-09-04 10:40:00.
+The specified end time will be rounded down based on the granularity parameter `Interval`. For example, if you set the end time to 2018-09-04 10:40:00 with 1-hour granularity, the time will be rounded down to 2018-09-04 10:00:00.
+The period between the start time and end time can be up to 90 days.
+     * @param string $Metric Specifies the metric to query, which can be:
+`flux`: Origin-pull traffic (in bytes)
+`bandwidth`: Origin-pull bandwidth (in bps)
+`request`: Number of origin-pull requests
+`failRequest`: Number of failed origin-pull requests
+`failRate`: Origin-pull failure rate (in %)
+`statusCode`: Origin-pull status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx origin-pull status codes will be returned (in entries)
+`2xx`: Returns the aggregate list of 2xx origin-pull status codes and the data for origin-pull status codes starting with 2 (in entries)
+`3xx`: Returns the aggregate list of 3xx origin-pull status codes and the data for origin-pull status codes starting with 3 (in entries)
+`4xx`: Returns the aggregate list of 4xx origin-pull status codes and the data for origin-pull status codes starting with 4 (in entries)
+`5xx`: Returns the aggregate list of 5xx origin-pull status codes and the data for origin-pull status codes starting with 5 (in entries)
 It is supported to specify a status code for query. The return will be empty if the status code has never been generated.
-     * @param array $Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
-     * @param integer $Project Project ID, which can be viewed [here](https://console.cloud.tencent.com/project)
-If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time
-If the domain name information is specified, the domain name will prevail
-     * @param string $Interval Time granularity; valid values:
-`min`: data with 1-minute granularity is returned when the queried period is no longer than 24 hours. This value is not supported if the service region you want to query is outside Mainland China;
-`5min`: data with 5-minute granularity is returned when the queried period is no longer than 31 days;
-`hour`: data with 1-hour granularity is returned when the queried period is no longer than 31 days;
-`day`: data with 1-day granularity is returned when the queried period is longer than 31 days.
+     * @param array $Domains Specifies the list of domain names to query. You can query up to 30 domain names at a time.
+     * @param integer $Project Specifies the project ID to be queried. [Check project ID in the console](https://console.cloud.tencent.com/project)
+If the domain name is not specified, the specified project will be queried. Up to 30 acceleration domain names can be queried at a time.
+If the domain name information is specified, this parameter can be ignored.
+     * @param string $Interval Time granularity, which can be:
+`min`: Return data with 1-minute granularity. It’s available when the query period is  within 24 hours and `Area` is `mainland`.
+`5min`: Return data with 5-minute granularity. It’s available when the query period is within 31 days.
+`hour`: Return data with 1-hour granularity. It’s available when the query period is within 31 days.
+`day`: Return data with 1-day granularity. It’s available when the query period is longer than 31 days.
      * @param boolean $Detail The aggregate data for multiple domain names is returned by default (false) when multiple `Domains` are passed in.
 You can set it to true to return the details for each Domain (the statusCode metric is currently not supported)
-     * @param string $Area Specifies a service region. If this value is left blank, CDN data within Mainland China will be queried.
-`mainland`: specifies to query CDN data within Mainland China;
-`overseas`: specifies to query CDN data outside Mainland China.
+     * @param string $Area Specifies the service region. If this value is left blank, it means to query CDN data within the Chinese mainland.
+`mainland`: Query CDN data in the Chinese mainland.
+`overseas`: Query CDN data outside the Chinese mainland.
+     * @param string $TimeZone Specifies a time zone to query. The default time zone is UTC+08:00.
      */
     function __construct()
     {
@@ -228,6 +236,10 @@ You can set it to true to return the details for each Domain (the statusCode met
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
             $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

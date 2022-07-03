@@ -23,13 +23,13 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cdn\V20180606\Models as Models;
 
 /**
- * @method Models\AddCdnDomainResponse AddCdnDomain(Models\AddCdnDomainRequest $req) This API is used to add a CDN acceleration domain name.
+ * @method Models\AddCLSTopicDomainsResponse AddCLSTopicDomains(Models\AddCLSTopicDomainsRequest $req) This API is used to add one or more domains to a specified log topic.
  * @method Models\CreateClsLogTopicResponse CreateClsLogTopic(Models\CreateClsLogTopicRequest $req) This API is used to create a log topic. Up to 10 log topics can be created under one logset.
  * @method Models\CreateScdnFailedLogTaskResponse CreateScdnFailedLogTask(Models\CreateScdnFailedLogTaskRequest $req) This API is used to recreate a failed event log task.
  * @method Models\DeleteCdnDomainResponse DeleteCdnDomain(Models\DeleteCdnDomainRequest $req) This API is used to delete a specified acceleration domain name.
  * @method Models\DeleteClsLogTopicResponse DeleteClsLogTopic(Models\DeleteClsLogTopicRequest $req) This API is used to delete a log topic. Note: when a log topic is deleted, all logs of the domain names bound to it will no longer be published to the topic, and the logs previously published to the topic will be deleted. This action will take effect within 5-15 minutes.
  * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to query billing data details.
- * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) This API (DescribeCdnData) is used to query CDN real-time access monitoring data and supports the following metrics:
+ * @method Models\DescribeCdnDataResponse DescribeCdnData(Models\DescribeCdnDataRequest $req) This API is used to query CDN real-time access monitoring data and supports the following metrics:
 
 + Traffic (in bytes)
 + Bandwidth (in bps)
@@ -57,7 +57,7 @@ use TencentCloud\Cdn\V20180606\Models as Models;
 + Number of users who remain active for 5 minutes: Collects deduplicated statistics based on client IP addresses in the log with the 5-minute granularity.
 + Number of daily active users: Collects deduplicated statistics based on client IP addresses in the log with the 1-day granularity.
  * @method Models\DescribeMapInfoResponse DescribeMapInfo(Models\DescribeMapInfoRequest $req) This API (DescribeMapInfo) is used to query the IDs of districts or ISPs.
- * @method Models\DescribeOriginDataResponse DescribeOriginData(Models\DescribeOriginDataRequest $req) This API (DescribeOriginData) is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
+ * @method Models\DescribeOriginDataResponse DescribeOriginData(Models\DescribeOriginDataRequest $req) This API is used to query CDN real-time origin-pull monitoring data and supports the following metrics:
 
 + Origin-pull traffic (in bytes)
 + Origin-pull bandwidth (in bps)

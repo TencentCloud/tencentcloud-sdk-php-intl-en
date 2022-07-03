@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnData response structure.
  *
- * @method string getInterval() Obtain Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
- * @method void setInterval(string $Interval) Set Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+ * @method string getInterval() Obtain Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
+ * @method void setInterval(string $Interval) Set Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
  * @method array getData() Obtain Returned data details of the specified conditional query
  * @method void setData(array $Data) Set Returned data details of the specified conditional query
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,11 +38,11 @@ day: 1 day
 class DescribeCdnDataResponse extends AbstractModel
 {
     /**
-     * @var string Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+     * @var string Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      */
     public $Interval;
 
@@ -57,11 +57,11 @@ day: 1 day
     public $RequestId;
 
     /**
-     * @param string $Interval Time granularity of the returned data. Specify one of the following during querying:
-min: 1 minute
-5min: 5 minutes
-hour: 1 hour
-day: 1 day
+     * @param string $Interval Time granularity of the returned data. 
+`min`: 1 minute
+`5min`: 5 minutes
+`hour`: 1 hour
+`day`: 1 day
      * @param array $Data Returned data details of the specified conditional query
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Detailed access data
  *
- * @method string getMetric() Obtain Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
- * @method void setMetric(string $Metric) Set Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+ * @method string getMetric() Obtain Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
+ * @method void setMetric(string $Metric) Set Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
  * @method array getDetailData() Obtain Detailed data combination
  * @method void setDetailData(array $DetailData) Set Detailed data combination
  * @method SummarizedData getSummarizedData() Obtain Aggregate data combination
@@ -50,17 +50,17 @@ Alternatively, you can specify a status code for querying.
 class CdnData extends AbstractModel
 {
     /**
-     * @var string Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+     * @var string Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
      */
     public $Metric;
 
@@ -75,17 +75,17 @@ Alternatively, you can specify a status code for querying.
     public $SummarizedData;
 
     /**
-     * @param string $Metric Queries the specified metric:
-flux: traffic (in bytes)
-bandwidth: bandwidth (in bps)
-request: number of requests
-fluxHitRate: traffic hit rate (in %)
-statusCode: status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
-2XX: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
-3XX: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
-4XX: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
-5XX: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
-Alternatively, you can specify a status code for querying.
+     * @param string $Metric Queries by the specified metric:
+`flux`: Traffic (in bytes)
+`bandwidth`: Bandwidth (in bps)
+`request`: Number of requests
+`fluxHitRate`: Traffic hit rate (in %)
+`statusCode`: Status code. The aggregate data for 2xx, 3xx, 4xx, and 5xx status codes will be returned (in entries)
+`2XX`: Returns the aggregate list of 2xx status codes and the data for status codes starting with 2 (in entries)
+`3XX`: Returns the aggregate list of 3xx status codes and the data for status codes starting with 3 (in entries)
+`4XX`: Returns the aggregate list of 4xx status codes and the data for status codes starting with 4 (in entries)
+`5XX`: Returns the aggregate list of 5xx status codes and the data for status codes starting with 5 (in entries)
+You can also specify a status code for querying.
      * @param array $DetailData Detailed data combination
      * @param SummarizedData $SummarizedData Aggregate data combination
      */

@@ -18,29 +18,29 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This API is used to query an object and its origin-pull details
+ * This API is used to query an object and its origin-pull details.
  *
- * @method string getResource() Obtain Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
- * @method void setResource(string $Resource) Set Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+ * @method string getResource() Obtain Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
+ * @method void setResource(string $Resource) Set Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
  * @method array getOriginData() Obtain Origin-pull data details
  * @method void setOriginData(array $OriginData) Set Origin-pull data details
  */
 class ResourceOriginData extends AbstractModel
 {
     /**
-     * @var string Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+     * @var string Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
      */
     public $Resource;
 
@@ -50,11 +50,11 @@ all: This indicates the details at the account level
     public $OriginData;
 
     /**
-     * @param string $Resource Resource name, which is classified as follows based on different query conditions:
-A specific domain name: This indicates the details of this domain name
-multiDomains: This indicates the aggregate details of multiple domain names
-Project ID: This displays the ID of the specifically queried project
-all: This indicates the details at the account level
+     * @param string $Resource Resource name, which is classified as follows based on different query filters:
+A specific domain name: Details of the domain name
+`multiDomains`: Aggregated details of multiple domain names
+Project ID: ID of the specifically queried project
+`all`: Details at the account level
      * @param array $OriginData Origin-pull data details
      */
     function __construct()
