@@ -54,6 +54,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getResourceId() Obtain Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
  * @method void setResourceId(string $ResourceId) Set Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+ * @method string getHsmClusterId() Obtain ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setHsmClusterId(string $HsmClusterId) Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class KeyMetadata extends AbstractModel
 {
@@ -135,6 +139,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ResourceId;
 
     /**
+     * @var string ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $HsmClusterId;
+
+    /**
      * @param string $KeyId Globally unique CMK ID
      * @param string $Alias Alias that makes a key more recognizable and understandable
      * @param integer $CreateTime Key creation time
@@ -152,6 +162,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ValidTo It's valid when `Origin` is `EXTERNAL`, indicating the expiration date of key material. 0 means valid forever.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ResourceId Resource ID in the format of `creatorUin/$creatorUin/$keyId`.
+     * @param string $HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -224,6 +236,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
             $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
     }
 }

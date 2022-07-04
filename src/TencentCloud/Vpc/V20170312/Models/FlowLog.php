@@ -52,6 +52,10 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) Set Information of the consumer, which is returned when the consumer type is `ckafka`.
 Note: this field may return `null`, indicating that no valid value can be found.
+ * @method string getCloudLogRegion() Obtain The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCloudLogRegion(string $CloudLogRegion) Set The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class FlowLog extends AbstractModel
 {
@@ -128,6 +132,12 @@ Note: this field may return `null`, indicating that no valid value can be found.
     public $FlowLogStorage;
 
     /**
+     * @var string The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $CloudLogRegion;
+
+    /**
      * @param string $VpcId ID of the VPC instance.
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
@@ -144,6 +154,8 @@ Note: this field may return `null`, indicating that no valid value can be found.
 Note: this field may return `null`, indicating that no valid value can be found.
      * @param FlowLogStorage $FlowLogStorage Information of the consumer, which is returned when the consumer type is `ckafka`.
 Note: this field may return `null`, indicating that no valid value can be found.
+     * @param string $CloudLogRegion The region corresponding to the flow log storage ID.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -218,6 +230,10 @@ Note: this field may return `null`, indicating that no valid value can be found.
         if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
             $this->FlowLogStorage = new FlowLogStorage();
             $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
+        }
+
+        if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
+            $this->CloudLogRegion = $param["CloudLogRegion"];
         }
     }
 }

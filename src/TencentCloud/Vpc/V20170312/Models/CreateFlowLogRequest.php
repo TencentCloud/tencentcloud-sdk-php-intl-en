@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageType(string $StorageType) Set Consumer types: `cls` and `ckafka`
  * @method FlowLogStorage getFlowLogStorage() Obtain Information of the flow log consumer, which is required when the consumer type is `ckafka`.
  * @method void setFlowLogStorage(FlowLogStorage $FlowLogStorage) Set Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+ * @method string getCloudLogRegion() Obtain The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+ * @method void setCloudLogRegion(string $CloudLogRegion) Set The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
  */
 class CreateFlowLogRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateFlowLogRequest extends AbstractModel
     public $FlowLogStorage;
 
     /**
+     * @var string The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
+     */
+    public $CloudLogRegion;
+
+    /**
      * @param string $FlowLogName The name of the flow log instance.
      * @param string $ResourceType The type of resource associated with the flow log. Valid values: `VPC`, `SUBNET`, `NETWORKINTERFACE`, `CCN`, `NAT`, and `DCG`.
      * @param string $ResourceId The unique ID of the resource.
@@ -104,6 +111,7 @@ class CreateFlowLogRequest extends AbstractModel
      * @param array $Tags Bound tags, such as [{"Key": "city", "Value": "shanghai"}]
      * @param string $StorageType Consumer types: `cls` and `ckafka`
      * @param FlowLogStorage $FlowLogStorage Information of the flow log consumer, which is required when the consumer type is `ckafka`.
+     * @param string $CloudLogRegion The region corresponding to the flow log storage ID. If not passed in, this field defaults to the current region.
      */
     function __construct()
     {
@@ -162,6 +170,10 @@ class CreateFlowLogRequest extends AbstractModel
         if (array_key_exists("FlowLogStorage",$param) and $param["FlowLogStorage"] !== null) {
             $this->FlowLogStorage = new FlowLogStorage();
             $this->FlowLogStorage->deserialize($param["FlowLogStorage"]);
+        }
+
+        if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
+            $this->CloudLogRegion = $param["CloudLogRegion"];
         }
     }
 }

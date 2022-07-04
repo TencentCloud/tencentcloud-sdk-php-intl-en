@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagCode(integer $TagCode) Set Tag operation return code. 0: success; 1: internal error; 2: business processing error
  * @method string getTagMsg() Obtain Tag operation return information
  * @method void setTagMsg(string $TagMsg) Set Tag operation return information
+ * @method string getHsmClusterId() Obtain ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setHsmClusterId(string $HsmClusterId) Set ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -82,6 +86,12 @@ class CreateKeyResponse extends AbstractModel
     public $TagMsg;
 
     /**
+     * @var string ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $HsmClusterId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -95,6 +105,8 @@ class CreateKeyResponse extends AbstractModel
      * @param string $KeyUsage CMK usage
      * @param integer $TagCode Tag operation return code. 0: success; 1: internal error; 2: business processing error
      * @param string $TagMsg Tag operation return information
+     * @param string $HsmClusterId ID of the HSM cluster. This field is only valid for Exclusive and Managed KMS instances.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +152,10 @@ class CreateKeyResponse extends AbstractModel
 
         if (array_key_exists("TagMsg",$param) and $param["TagMsg"] !== null) {
             $this->TagMsg = $param["TagMsg"];
+        }
+
+        if (array_key_exists("HsmClusterId",$param) and $param["HsmClusterId"] !== null) {
+            $this->HsmClusterId = $param["HsmClusterId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

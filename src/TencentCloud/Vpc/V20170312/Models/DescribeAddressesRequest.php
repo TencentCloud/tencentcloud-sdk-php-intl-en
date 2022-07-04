@@ -52,10 +52,10 @@ use TencentCloud\Common\AbstractModel;
 <li> tag-key - String - Optional - Filter by tag key.</li>
 <li> tag-value - String - Optional - Filter by tag value.</li>
 <li> tag:tag-key - String - Optional - Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
- * @method integer getOffset() Obtain The Offset. The default value is 0. For more information on `Offset`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
- * @method void setOffset(integer $Offset) Set The Offset. The default value is 0. For more information on `Offset`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
- * @method integer getLimit() Obtain Number of returned results. The default value is 20. The maximum is 100. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
- * @method void setLimit(integer $Limit) Set Number of returned results. The default value is 20. The maximum is 100. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
+ * @method integer getOffset() Obtain The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+ * @method void setOffset(integer $Offset) Set The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
  */
 class DescribeAddressesRequest extends AbstractModel
 {
@@ -84,12 +84,12 @@ class DescribeAddressesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var integer The Offset. The default value is 0. For more information on `Offset`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
+     * @var integer The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned results. The default value is 20. The maximum is 100. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
      */
     public $Limit;
 
@@ -110,8 +110,8 @@ class DescribeAddressesRequest extends AbstractModel
 <li> tag-key - String - Optional - Filter by tag key.</li>
 <li> tag-value - String - Optional - Filter by tag value.</li>
 <li> tag:tag-key - String - Optional - Filter by tag key-value pair. Use a specific tag key to replace `tag-key`.</li>
-     * @param integer $Offset The Offset. The default value is 0. For more information on `Offset`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
-     * @param integer $Limit Number of returned results. The default value is 20. The maximum is 100. For more information on `Limit`, see the relevant sections in API [Overview](https://intl.cloud.tencent.com/document/product/11646).
+     * @param integer $Offset The Offset. The default value is 0. For more information about `Offset`, see the relevant section in the API documentation.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant section in the API documentation.
      */
     function __construct()
     {

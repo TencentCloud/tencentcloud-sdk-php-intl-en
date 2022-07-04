@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Auto scaling policy
  *
- * @method integer getMinReplicas() Obtain Minimum number of instances
- * @method void setMinReplicas(integer $MinReplicas) Set Minimum number of instances
- * @method integer getMaxReplicas() Obtain Maximum number of instances
- * @method void setMaxReplicas(integer $MaxReplicas) Set Maximum number of instances
+ * @method integer getMinReplicas() Obtain (Optional) Minimum number of instances
+ * @method void setMinReplicas(integer $MinReplicas) Set (Optional) Minimum number of instances
+ * @method integer getMaxReplicas() Obtain (Optional) Maximum number of instances
+ * @method void setMaxReplicas(integer $MaxReplicas) Set (Optional) Maximum number of instances
  * @method string getMetrics() Obtain Metrics (CPU or memory)
  * @method void setMetrics(string $Metrics) Set Metrics (CPU or memory)
  * @method integer getThreshold() Obtain Threshold (percentage)
  * @method void setThreshold(integer $Threshold) Set Threshold (percentage)
+ * @method boolean getEnabled() Obtain Whether it is enabled
+ * @method void setEnabled(boolean $Enabled) Set Whether it is enabled
  */
 class HorizontalAutoscaler extends AbstractModel
 {
     /**
-     * @var integer Minimum number of instances
+     * @var integer (Optional) Minimum number of instances
      */
     public $MinReplicas;
 
     /**
-     * @var integer Maximum number of instances
+     * @var integer (Optional) Maximum number of instances
      */
     public $MaxReplicas;
 
@@ -52,10 +54,16 @@ class HorizontalAutoscaler extends AbstractModel
     public $Threshold;
 
     /**
-     * @param integer $MinReplicas Minimum number of instances
-     * @param integer $MaxReplicas Maximum number of instances
+     * @var boolean Whether it is enabled
+     */
+    public $Enabled;
+
+    /**
+     * @param integer $MinReplicas (Optional) Minimum number of instances
+     * @param integer $MaxReplicas (Optional) Maximum number of instances
      * @param string $Metrics Metrics (CPU or memory)
      * @param integer $Threshold Threshold (percentage)
+     * @param boolean $Enabled Whether it is enabled
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class HorizontalAutoscaler extends AbstractModel
 
         if (array_key_exists("Threshold",$param) and $param["Threshold"] !== null) {
             $this->Threshold = $param["Threshold"];
+        }
+
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

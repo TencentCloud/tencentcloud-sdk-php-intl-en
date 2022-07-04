@@ -100,10 +100,10 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
  * @method void setReadiness(HealthCheckConfig $Readiness) Set Configuration of readiness probe
  * @method DeployStrategyConf getDeployStrategyConf() Obtain Configuration of batch release policies
  * @method void setDeployStrategyConf(DeployStrategyConf $DeployStrategyConf) Set Configuration of batch release policies
- * @method array getHorizontalAutoscaler() Obtain Auto scaling policy
- * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) Set Auto scaling policy
- * @method array getCronHorizontalAutoscaler() Obtain Scheduled auto scaling policy
- * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) Set Scheduled auto scaling policy
+ * @method array getHorizontalAutoscaler() Obtain Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+ * @method void setHorizontalAutoscaler(array $HorizontalAutoscaler) Set Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+ * @method array getCronHorizontalAutoscaler() Obtain Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
+ * @method void setCronHorizontalAutoscaler(array $CronHorizontalAutoscaler) Set Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
  * @method integer getLogEnable() Obtain Specifies whether to enable logging. `1`: enable; `0`: do not enable
  * @method void setLogEnable(integer $LogEnable) Set Specifies whether to enable logging. `1`: enable; `0`: do not enable
  * @method boolean getConfEdited() Obtain Whether the configuration is modified (except for the image configuration)
@@ -128,6 +128,8 @@ If `konajdk` is selected, the value can be:
 - TENCENTOS
  * @method EnablePrometheusConf getEnablePrometheusConf() Obtain Specifies whether to enable Prometheus metric
  * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) Set Specifies whether to enable Prometheus metric
+ * @method integer getEnableTracing() Obtain `1`: Enable APM collection; `0`: Disable APM collection
+ * @method void setEnableTracing(integer $EnableTracing) Set `1`: Enable APM collection; `0`: Disable APM collection
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -300,12 +302,12 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
     public $DeployStrategyConf;
 
     /**
-     * @var array Auto scaling policy
+     * @var array Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
      */
     public $HorizontalAutoscaler;
 
     /**
-     * @var array Scheduled auto scaling policy
+     * @var array Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
      */
     public $CronHorizontalAutoscaler;
 
@@ -344,6 +346,11 @@ If `konajdk` is selected, the value can be:
      * @var EnablePrometheusConf Specifies whether to enable Prometheus metric
      */
     public $EnablePrometheusConf;
+
+    /**
+     * @var integer `1`: Enable APM collection; `0`: Disable APM collection
+     */
+    public $EnableTracing;
 
     /**
      * @param string $ApplicationId Application ID
@@ -386,8 +393,8 @@ When the deployment type is `JAR` or `WAR`, this parameter indicates the package
      * @param HealthCheckConfig $Liveness Configuration of aliveness probe
      * @param HealthCheckConfig $Readiness Configuration of readiness probe
      * @param DeployStrategyConf $DeployStrategyConf Configuration of batch release policies
-     * @param array $HorizontalAutoscaler Auto scaling policy
-     * @param array $CronHorizontalAutoscaler Scheduled auto scaling policy
+     * @param array $HorizontalAutoscaler Auto scaling policy. (Disused. Please use APIs for auto scaling policy combinations)
+     * @param array $CronHorizontalAutoscaler Scheduled scaling policy (Disused. Please use APIs for auto scaling policy combinations)
      * @param integer $LogEnable Specifies whether to enable logging. `1`: enable; `0`: do not enable
      * @param boolean $ConfEdited Whether the configuration is modified (except for the image configuration)
      * @param boolean $SpeedUp Whether the application acceleration is enabled 
@@ -400,6 +407,7 @@ If `konajdk` is selected, the value can be:
 - ALPINE
 - TENCENTOS
      * @param EnablePrometheusConf $EnablePrometheusConf Specifies whether to enable Prometheus metric
+     * @param integer $EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
      */
     function __construct()
     {
@@ -610,6 +618,10 @@ If `konajdk` is selected, the value can be:
         if (array_key_exists("EnablePrometheusConf",$param) and $param["EnablePrometheusConf"] !== null) {
             $this->EnablePrometheusConf = new EnablePrometheusConf();
             $this->EnablePrometheusConf->deserialize($param["EnablePrometheusConf"]);
+        }
+
+        if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
+            $this->EnableTracing = $param["EnableTracing"];
         }
     }
 }

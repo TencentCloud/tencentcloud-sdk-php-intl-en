@@ -50,6 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilters(Filter $Filters) Set Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
 <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+ * @method string getCloudLogRegion() Obtain The region corresponding to the flow log storage ID.
+ * @method void setCloudLogRegion(string $CloudLogRegion) Set The region corresponding to the flow log storage ID.
  */
 class DescribeFlowLogsRequest extends AbstractModel
 {
@@ -121,6 +123,11 @@ class DescribeFlowLogsRequest extends AbstractModel
     public $Filters;
 
     /**
+     * @var string The region corresponding to the flow log storage ID.
+     */
+    public $CloudLogRegion;
+
+    /**
      * @param string $VpcId ID of the VPC instance
      * @param string $FlowLogId The unique ID of the flow log.
      * @param string $FlowLogName The name of the flow log instance.
@@ -136,6 +143,7 @@ class DescribeFlowLogsRequest extends AbstractModel
      * @param Filter $Filters Filter condition. `FlowLogIds` and `Filters` cannot be specified at the same time.
 <li>tag-key - String - Required: No - (Filter condition) Filter by tag key.</li>
 <li> tag:tag-key - String - Required: No - (Filter condition) Filter by tag key-value pair. The tag-key should be replaced with a specified tag key.</li>
+     * @param string $CloudLogRegion The region corresponding to the flow log storage ID.
      */
     function __construct()
     {
@@ -201,6 +209,10 @@ class DescribeFlowLogsRequest extends AbstractModel
         if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
             $this->Filters = new Filter();
             $this->Filters->deserialize($param["Filters"]);
+        }
+
+        if (array_key_exists("CloudLogRegion",$param) and $param["CloudLogRegion"] !== null) {
+            $this->CloudLogRegion = $param["CloudLogRegion"];
         }
     }
 }

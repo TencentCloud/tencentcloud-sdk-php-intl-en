@@ -38,6 +38,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setProResourceId(string $ProResourceId) Set Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getExclusiveVSMEnabled() Obtain Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setExclusiveVSMEnabled(boolean $ExclusiveVSMEnabled) Set Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getExclusiveHSMEnabled() Obtain Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setExclusiveHSMEnabled(boolean $ExclusiveHSMEnabled) Set Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -77,6 +85,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ProResourceId;
 
     /**
+     * @var boolean Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ExclusiveVSMEnabled;
+
+    /**
+     * @var boolean Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ExclusiveHSMEnabled;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -91,6 +111,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProResourceId Unique ID of the Ultimate Edition purchase record. If the Ultimate Edition is not activated, the returned value will be null.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $ExclusiveVSMEnabled Whether to activate Managed KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $ExclusiveHSMEnabled Whether to activate Exclusive KMS
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -128,6 +152,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProResourceId",$param) and $param["ProResourceId"] !== null) {
             $this->ProResourceId = $param["ProResourceId"];
+        }
+
+        if (array_key_exists("ExclusiveVSMEnabled",$param) and $param["ExclusiveVSMEnabled"] !== null) {
+            $this->ExclusiveVSMEnabled = $param["ExclusiveVSMEnabled"];
+        }
+
+        if (array_key_exists("ExclusiveHSMEnabled",$param) and $param["ExclusiveHSMEnabled"] !== null) {
+            $this->ExclusiveHSMEnabled = $param["ExclusiveHSMEnabled"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
