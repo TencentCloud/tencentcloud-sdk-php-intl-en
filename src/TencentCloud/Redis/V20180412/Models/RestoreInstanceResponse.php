@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RestoreInstance response structure.
  *
- * @method integer getTaskId() Obtain Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
- * @method void setTaskId(integer $TaskId) Set Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+ * @method integer getTaskId() Obtain Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
+ * @method void setTaskId(integer $TaskId) Set Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class RestoreInstanceResponse extends AbstractModel
 {
     /**
-     * @var integer Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+     * @var integer Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class RestoreInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId Task ID, which can be used to query the task execution status through the DescribeTaskInfo API
+     * @param integer $TaskId Task ID, which can be used to query the task execution status through the `DescribeTaskInfo` API.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

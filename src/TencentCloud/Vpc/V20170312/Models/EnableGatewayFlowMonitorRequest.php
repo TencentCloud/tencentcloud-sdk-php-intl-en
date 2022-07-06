@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableGatewayFlowMonitor request structure.
  *
- * @method string getGatewayId() Obtain Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
- * @method void setGatewayId(string $GatewayId) Set Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
+ * @method string getGatewayId() Obtain Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
+ * @method void setGatewayId(string $GatewayId) Set Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
  */
 class EnableGatewayFlowMonitorRequest extends AbstractModel
 {
     /**
-     * @var string Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
+     * @var string Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
      */
     public $GatewayId;
 
     /**
-     * @param string $GatewayId Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
+     * @param string $GatewayId Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
      */
     function __construct()
     {

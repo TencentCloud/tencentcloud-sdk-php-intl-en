@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteNetworkAcl request structure.
  *
- * @method string getNetworkAclId() Obtain Network ACL instance ID. Example: acl-12345678.
- * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID. Example: acl-12345678.
+ * @method string getNetworkAclId() Obtain Network ACL instance ID, such as `acl-12345678`.
+ * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID, such as `acl-12345678`.
  */
 class DeleteNetworkAclRequest extends AbstractModel
 {
     /**
-     * @var string Network ACL instance ID. Example: acl-12345678.
+     * @var string Network ACL instance ID, such as `acl-12345678`.
      */
     public $NetworkAclId;
 
     /**
-     * @param string $NetworkAclId Network ACL instance ID. Example: acl-12345678.
+     * @param string $NetworkAclId Network ACL instance ID, such as `acl-12345678`.
      */
     function __construct()
     {

@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateNetworkAcl request structure.
  *
- * @method string getVpcId() Obtain ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
- * @method void setVpcId(string $VpcId) Set ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
- * @method string getNetworkAclName() Obtain Name of the network ACL. The maximum length is 60 bytes.
- * @method void setNetworkAclName(string $NetworkAclName) Set Name of the network ACL. The maximum length is 60 bytes.
+ * @method string getVpcId() Obtain VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+ * @method void setVpcId(string $VpcId) Set VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+ * @method string getNetworkAclName() Obtain Network ACL name, which can contain up to 60 bytes.
+ * @method void setNetworkAclName(string $NetworkAclName) Set Network ACL name, which can contain up to 60 bytes.
  */
 class CreateNetworkAclRequest extends AbstractModel
 {
     /**
-     * @var string ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
+     * @var string VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
      */
     public $VpcId;
 
     /**
-     * @var string Name of the network ACL. The maximum length is 60 bytes.
+     * @var string Network ACL name, which can contain up to 60 bytes.
      */
     public $NetworkAclName;
 
     /**
-     * @param string $VpcId ID of the VPC instance. You can obtain the parameter value from the VpcId field in the returned result of the DescribeVpcs API.
-     * @param string $NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * @param string $VpcId VPC instance ID, which can be obtained from the `VpcId` field returned by `DescribeVpcs` API.
+     * @param string $NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     function __construct()
     {

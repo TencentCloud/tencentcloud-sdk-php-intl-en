@@ -18,7 +18,7 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Gateway bandwidth limit information
+ * Information of the gateway bandwidth limit
  *
  * @method string getVpcId() Obtain VPC instance ID.
  * @method void setVpcId(string $VpcId) Set VPC instance ID.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpAddress(string $IpAddress) Set CVM Private IP.
  * @method integer getBandwidth() Obtain Bandwidth limit value.
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth limit value.
- * @method string getCreateTime() Obtain The creation time.
- * @method void setCreateTime(string $CreateTime) Set The creation time.
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
  */
 class GatewayQos extends AbstractModel
 {
@@ -47,7 +47,7 @@ class GatewayQos extends AbstractModel
     public $Bandwidth;
 
     /**
-     * @var string The creation time.
+     * @var string Creation time.
      */
     public $CreateTime;
 
@@ -55,7 +55,7 @@ class GatewayQos extends AbstractModel
      * @param string $VpcId VPC instance ID.
      * @param string $IpAddress CVM Private IP.
      * @param integer $Bandwidth Bandwidth limit value.
-     * @param string $CreateTime The creation time.
+     * @param string $CreateTime Creation time.
      */
     function __construct()
     {

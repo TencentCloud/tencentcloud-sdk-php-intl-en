@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getAccountName() Obtain Sub-account name. If the root account is to be modified, enter `root`
- * @method void setAccountName(string $AccountName) Set Sub-account name. If the root account is to be modified, enter `root`
+ * @method string getAccountName() Obtain Sub-account name. If the root account is to be modified, enter `root`.
+ * @method void setAccountName(string $AccountName) Set Sub-account name. If the root account is to be modified, enter `root`.
  * @method string getAccountPassword() Obtain Sub-account password
  * @method void setAccountPassword(string $AccountPassword) Set Sub-account password
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
- * @method array getReadonlyPolicy() Obtain Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
- * @method string getPrivilege() Obtain Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
- * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
- * @method void setNoAuth(boolean $NoAuth) Set true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+ * @method array getReadonlyPolicy() Obtain Routing policy. Valid values: master (master node); replication (replica node)
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Valid values: master (master node); replication (replica node)
+ * @method string getPrivilege() Obtain Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+ * @method void setPrivilege(string $Privilege) Set Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+ * @method boolean getNoAuth() Obtain true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
+ * @method void setNoAuth(boolean $NoAuth) Set true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
  */
 class ModifyInstanceAccountRequest extends AbstractModel
 {
@@ -43,7 +43,7 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Sub-account name. If the root account is to be modified, enter `root`
+     * @var string Sub-account name. If the root account is to be modified, enter `root`.
      */
     public $AccountName;
 
@@ -58,28 +58,28 @@ class ModifyInstanceAccountRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var array Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
+     * @var array Routing policy. Valid values: master (master node); replication (replica node)
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
+     * @var string Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
      */
     public $Privilege;
 
     /**
-     * @var boolean true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+     * @var boolean true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
      */
     public $NoAuth;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $AccountName Sub-account name. If the root account is to be modified, enter `root`
+     * @param string $AccountName Sub-account name. If the root account is to be modified, enter `root`.
      * @param string $AccountPassword Sub-account password
      * @param string $Remark Sub-account description information
-     * @param array $ReadonlyPolicy Sub-account routing policy. Enter `master` to route to the primary node or `slave` to route to the secondary node
-     * @param string $Privilege Sub-account read/write policy. Enter `r` for read-only, `w` for write-only, or `rw` for read/write
-     * @param boolean $NoAuth true: make the root account password-free. This is applicable to root accounts only; sub-accounts cannot be made password-free
+     * @param array $ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * @param string $Privilege Sub-account read/write policy. Valid values: r (read-only); w (write-only); rw (read/write).
+     * @param boolean $NoAuth true: make the root account password-free. This is applicable to root accounts only. Sub-accounts cannot be made password-free.
      */
     function __construct()
     {

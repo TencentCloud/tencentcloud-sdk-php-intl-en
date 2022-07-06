@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPreValue(string $PreValue) Set Value before modification
  * @method string getNewValue() Obtain Value after modification
  * @method void setNewValue(string $NewValue) Set Value after modification
- * @method integer getStatus() Obtain Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
- * @method void setStatus(integer $Status) Set Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+ * @method integer getStatus() Obtain Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
+ * @method void setStatus(integer $Status) Set Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
  * @method string getModifyTime() Obtain Modification time
  * @method void setModifyTime(string $ModifyTime) Set Modification time
  */
@@ -49,7 +49,7 @@ class InstanceParamHistory extends AbstractModel
     public $NewValue;
 
     /**
-     * @var integer Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+     * @var integer Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
      */
     public $Status;
 
@@ -62,7 +62,7 @@ class InstanceParamHistory extends AbstractModel
      * @param string $ParamName Parameter name
      * @param string $PreValue Value before modification
      * @param string $NewValue Value after modification
-     * @param integer $Status Status. 1: modifying parameter configuration; 2: parameter configuration modified successfully; 3: failed to modify parameter configuration
+     * @param integer $Status Status. 1: modifying the parameter configuration; 2: modified the parameter configuration successfully; 3: failed to modify the parameter configuration
      * @param string $ModifyTime Modification time
      */
     function __construct()

@@ -26,12 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set Start time
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
- * @method integer getMinQueryTime() Obtain Slow query threshold in microseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in microseconds
- * @method integer getLimit() Obtain Page size
- * @method void setLimit(integer $Limit) Set Page size
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method integer getMinQueryTime() Obtain Slow query threshold in milliseconds
+ * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in milliseconds
+ * @method integer getLimit() Obtain Maximum number of results returned per page
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned per page
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  */
 class DescribeProxySlowLogRequest extends AbstractModel
 {
@@ -51,17 +51,17 @@ class DescribeProxySlowLogRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var integer Slow query threshold in microseconds
+     * @var integer Slow query threshold in milliseconds
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Page size
+     * @var integer Maximum number of results returned per page
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
@@ -69,9 +69,9 @@ class DescribeProxySlowLogRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $BeginTime Start time
      * @param string $EndTime End time
-     * @param integer $MinQueryTime Slow query threshold in microseconds
-     * @param integer $Limit Page size
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param integer $MinQueryTime Slow query threshold in milliseconds
+     * @param integer $Limit Maximum number of results returned per page
+     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      */
     function __construct()
     {

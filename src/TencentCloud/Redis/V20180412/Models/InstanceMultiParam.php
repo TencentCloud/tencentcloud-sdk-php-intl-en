@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Description of an instance parameter in Multi type
+ * Description of the instance parameter in Multi type
  *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Multi
  * @method void setValueType(string $ValueType) Set Parameter type: Multi
- * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Value range: true, false
- * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Value range: true, false
+ * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Valid values: true, false
+ * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Valid values: true, false
  * @method string getDefaultValue() Obtain Default value of the parameter
  * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
- * @method string getCurrentValue() Obtain Current value of a parameter
- * @method void setCurrentValue(string $CurrentValue) Set Current value of a parameter
+ * @method string getCurrentValue() Obtain Current value
+ * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getTips() Obtain Parameter description
  * @method void setTips(string $Tips) Set Parameter description
  * @method array getEnumValue() Obtain Parameter description
@@ -50,7 +50,7 @@ class InstanceMultiParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var string Whether restart is required after a modification is made. Value range: true, false
+     * @var string Whether restart is required after a modification is made. Valid values: true, false
      */
     public $NeedRestart;
 
@@ -60,7 +60,7 @@ class InstanceMultiParam extends AbstractModel
     public $DefaultValue;
 
     /**
-     * @var string Current value of a parameter
+     * @var string Current value
      */
     public $CurrentValue;
 
@@ -82,9 +82,9 @@ class InstanceMultiParam extends AbstractModel
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Multi
-     * @param string $NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * @param string $NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      * @param string $DefaultValue Default value of the parameter
-     * @param string $CurrentValue Current value of a parameter
+     * @param string $CurrentValue Current value
      * @param string $Tips Parameter description
      * @param array $EnumValue Parameter description
      * @param integer $Status Parameter status. 1: modifying; 2: modified

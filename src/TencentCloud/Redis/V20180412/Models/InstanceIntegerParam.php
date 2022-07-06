@@ -18,30 +18,30 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Descriptions of integer parameters of the instance
+ * Description of the instance parameter in Integer type
  *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Integer
  * @method void setValueType(string $ValueType) Set Parameter type: Integer
- * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Value range: true, false
- * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Value range: true, false
+ * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Valid values: true, false
+ * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Valid values: true, false
  * @method string getDefaultValue() Obtain Default value of the parameter
  * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
- * @method string getCurrentValue() Obtain Current value of a parameter
- * @method void setCurrentValue(string $CurrentValue) Set Current value of a parameter
+ * @method string getCurrentValue() Obtain Current value
+ * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getTips() Obtain Parameter description
  * @method void setTips(string $Tips) Set Parameter description
- * @method string getMin() Obtain Minimum value of a parameter
- * @method void setMin(string $Min) Set Minimum value of a parameter
- * @method string getMax() Obtain Maximum value of a parameter
- * @method void setMax(string $Max) Set Maximum value of a parameter
+ * @method string getMin() Obtain Minimum value of the parameter
+ * @method void setMin(string $Min) Set Minimum value of the parameter
+ * @method string getMax() Obtain Maximum value of the parameter
+ * @method void setMax(string $Max) Set Maximum value of the parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
  * @method string getUnit() Obtain Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUnit(string $Unit) Set Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceIntegerParam extends AbstractModel
 {
@@ -56,7 +56,7 @@ class InstanceIntegerParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var string Whether restart is required after a modification is made. Value range: true, false
+     * @var string Whether restart is required after a modification is made. Valid values: true, false
      */
     public $NeedRestart;
 
@@ -66,7 +66,7 @@ class InstanceIntegerParam extends AbstractModel
     public $DefaultValue;
 
     /**
-     * @var string Current value of a parameter
+     * @var string Current value
      */
     public $CurrentValue;
 
@@ -76,12 +76,12 @@ class InstanceIntegerParam extends AbstractModel
     public $Tips;
 
     /**
-     * @var string Minimum value of a parameter
+     * @var string Minimum value of the parameter
      */
     public $Min;
 
     /**
-     * @var string Maximum value of a parameter
+     * @var string Maximum value of the parameter
      */
     public $Max;
 
@@ -92,22 +92,22 @@ class InstanceIntegerParam extends AbstractModel
 
     /**
      * @var string Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Unit;
 
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Integer
-     * @param string $NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * @param string $NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      * @param string $DefaultValue Default value of the parameter
-     * @param string $CurrentValue Current value of a parameter
+     * @param string $CurrentValue Current value
      * @param string $Tips Parameter description
-     * @param string $Min Minimum value of a parameter
-     * @param string $Max Maximum value of a parameter
+     * @param string $Min Minimum value of the parameter
+     * @param string $Max Maximum value of the parameter
      * @param integer $Status Parameter status. 1: modifying; 2: modified
      * @param string $Unit Parameter unit
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReplicationRegionId(integer $ReplicationRegionId) Set Region ID of the replication instance
  * @method string getReplicationRegionName() Obtain Region name of the replication instance
  * @method void setReplicationRegionName(string $ReplicationRegionName) Set Region name of the replication instance
+ * @method boolean getSyncTag() Obtain Whether to sync TCR cloud tags to the COS Bucket
+ * @method void setSyncTag(boolean $SyncTag) Set Whether to sync TCR cloud tags to the COS Bucket
  */
 class CreateReplicationInstanceRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class CreateReplicationInstanceRequest extends AbstractModel
     public $ReplicationRegionName;
 
     /**
+     * @var boolean Whether to sync TCR cloud tags to the COS Bucket
+     */
+    public $SyncTag;
+
+    /**
      * @param string $RegistryId Master instance ID
      * @param integer $ReplicationRegionId Region ID of the replication instance
      * @param string $ReplicationRegionName Region name of the replication instance
+     * @param boolean $SyncTag Whether to sync TCR cloud tags to the COS Bucket
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class CreateReplicationInstanceRequest extends AbstractModel
 
         if (array_key_exists("ReplicationRegionName",$param) and $param["ReplicationRegionName"] !== null) {
             $this->ReplicationRegionName = $param["ReplicationRegionName"];
+        }
+
+        if (array_key_exists("SyncTag",$param) and $param["SyncTag"] !== null) {
+            $this->SyncTag = $param["SyncTag"];
         }
     }
 }

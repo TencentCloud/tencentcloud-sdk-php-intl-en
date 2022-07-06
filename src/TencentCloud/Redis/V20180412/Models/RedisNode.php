@@ -18,10 +18,10 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The operation information of Redis nodes
+ * Running information of Redis nodes
  *
- * @method integer getKeys() Obtain The number of keys on a node
- * @method void setKeys(integer $Keys) Set The number of keys on a node
+ * @method integer getKeys() Obtain Number of keys on the node
+ * @method void setKeys(integer $Keys) Set Number of keys on the node
  * @method string getSlot() Obtain Distribution of node slots
  * @method void setSlot(string $Slot) Set Distribution of node slots
  * @method string getNodeId() Obtain Node ID
@@ -34,7 +34,7 @@ use TencentCloud\Common\AbstractModel;
 class RedisNode extends AbstractModel
 {
     /**
-     * @var integer The number of keys on a node
+     * @var integer Number of keys on the node
      */
     public $Keys;
 
@@ -59,7 +59,7 @@ class RedisNode extends AbstractModel
     public $Role;
 
     /**
-     * @param integer $Keys The number of keys on a node
+     * @param integer $Keys Number of keys on the node
      * @param string $Slot Distribution of node slots
      * @param string $NodeId Node ID
      * @param string $Status Node status

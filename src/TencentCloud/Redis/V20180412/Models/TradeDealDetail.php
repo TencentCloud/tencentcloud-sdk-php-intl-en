@@ -18,18 +18,18 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Order deal information
+ * Order transaction information
  *
- * @method string getDealId() Obtain Order ID, which is used when a TencentCloud API is called
- * @method void setDealId(string $DealId) Set Order ID, which is used when a TencentCloud API is called
- * @method string getDealName() Obtain Long order ID, which is used when an order issue is submitted for assistance
- * @method void setDealName(string $DealName) Set Long order ID, which is used when an order issue is submitted for assistance
+ * @method string getDealId() Obtain Order ID, which is used when a TencentCloud API is called.
+ * @method void setDealId(string $DealId) Set Order ID, which is used when a TencentCloud API is called.
+ * @method string getDealName() Obtain Long order ID, which is used when an order issue is submitted for assistance.
+ * @method void setDealName(string $DealName) Set Long order ID, which is used when an order issue is submitted for assistance.
  * @method integer getZoneId() Obtain AZ ID
  * @method void setZoneId(integer $ZoneId) Set AZ ID
- * @method integer getGoodsNum() Obtain Number of instances associated with an order
- * @method void setGoodsNum(integer $GoodsNum) Set Number of instances associated with an order
- * @method string getCreater() Obtain Creates a user uin
- * @method void setCreater(string $Creater) Set Creates a user uin
+ * @method integer getGoodsNum() Obtain Number of instances associated with the order
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of instances associated with the order
+ * @method string getCreater() Obtain Creator UIN
+ * @method void setCreater(string $Creater) Set Creator UIN
  * @method string getCreatTime() Obtain Order creation time
  * @method void setCreatTime(string $CreatTime) Set Order creation time
  * @method string getOverdueTime() Obtain Order timeout period
@@ -40,20 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Order status. 1: unpaid; 2: paid but not delivered; 3: In delivery; 4: successfully delivered; 5: delivery failed; 6: refunded; 7: order closed; 8: order expired; 9: order invalidated; 10: product invalidated; 11: requested payment rejected; 12: paying
  * @method string getDescription() Obtain Order status description
  * @method void setDescription(string $Description) Set Order status description
- * @method integer getPrice() Obtain Actual total price of an order in 0.01 CNY
- * @method void setPrice(integer $Price) Set Actual total price of an order in 0.01 CNY
+ * @method integer getPrice() Obtain Actual total price of the order in 0.01 CNY
+ * @method void setPrice(integer $Price) Set Actual total price of the order in 0.01 CNY
  * @method array getInstanceIds() Obtain Instance ID
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID
  */
 class TradeDealDetail extends AbstractModel
 {
     /**
-     * @var string Order ID, which is used when a TencentCloud API is called
+     * @var string Order ID, which is used when a TencentCloud API is called.
      */
     public $DealId;
 
     /**
-     * @var string Long order ID, which is used when an order issue is submitted for assistance
+     * @var string Long order ID, which is used when an order issue is submitted for assistance.
      */
     public $DealName;
 
@@ -63,12 +63,12 @@ class TradeDealDetail extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var integer Number of instances associated with an order
+     * @var integer Number of instances associated with the order
      */
     public $GoodsNum;
 
     /**
-     * @var string Creates a user uin
+     * @var string Creator UIN
      */
     public $Creater;
 
@@ -98,7 +98,7 @@ class TradeDealDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Actual total price of an order in 0.01 CNY
+     * @var integer Actual total price of the order in 0.01 CNY
      */
     public $Price;
 
@@ -108,17 +108,17 @@ class TradeDealDetail extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param string $DealId Order ID, which is used when a TencentCloud API is called
-     * @param string $DealName Long order ID, which is used when an order issue is submitted for assistance
+     * @param string $DealId Order ID, which is used when a TencentCloud API is called.
+     * @param string $DealName Long order ID, which is used when an order issue is submitted for assistance.
      * @param integer $ZoneId AZ ID
-     * @param integer $GoodsNum Number of instances associated with an order
-     * @param string $Creater Creates a user uin
+     * @param integer $GoodsNum Number of instances associated with the order
+     * @param string $Creater Creator UIN
      * @param string $CreatTime Order creation time
      * @param string $OverdueTime Order timeout period
      * @param string $EndTime Order completion time
      * @param integer $Status Order status. 1: unpaid; 2: paid but not delivered; 3: In delivery; 4: successfully delivered; 5: delivery failed; 6: refunded; 7: order closed; 8: order expired; 9: order invalidated; 10: product invalidated; 11: requested payment rejected; 12: paying
      * @param string $Description Order status description
-     * @param integer $Price Actual total price of an order in 0.01 CNY
+     * @param integer $Price Actual total price of the order in 0.01 CNY
      * @param array $InstanceIds Instance ID
      */
     function __construct()

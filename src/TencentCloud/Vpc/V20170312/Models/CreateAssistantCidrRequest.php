@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssistantCidr request structure.
  *
- * @method string getVpcId() Obtain `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
- * @method void setVpcId(string $VpcId) Set `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
- * @method array getCidrBlocks() Obtain CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
- * @method void setCidrBlocks(array $CidrBlocks) Set CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+ * @method string getVpcId() Obtain `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+ * @method void setVpcId(string $VpcId) Set `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+ * @method array getCidrBlocks() Obtain Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
+ * @method void setCidrBlocks(array $CidrBlocks) Set Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
  */
 class CreateAssistantCidrRequest extends AbstractModel
 {
     /**
-     * @var string `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+     * @var string `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
      */
     public $VpcId;
 
     /**
-     * @var array CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * @var array Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
      */
     public $CidrBlocks;
 
     /**
-     * @param string $VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-     * @param array $CidrBlocks CIDR set, e.g. ["10.0.0.0/16", "172.16.0.0/16"]
+     * @param string $VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+     * @param array $CidrBlocks Array of CIDR blocks, such as ["10.0.0.0/16", "172.16.0.0/16"]
      */
     function __construct()
     {

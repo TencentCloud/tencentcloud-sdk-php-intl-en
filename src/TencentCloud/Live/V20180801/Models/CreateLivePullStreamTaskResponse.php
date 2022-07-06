@@ -14,21 +14,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * KillMasterGroup response structure.
+ * CreateLivePullStreamTask response structure.
  *
- * @method integer getTaskId() Obtain Async task ID
- * @method void setTaskId(integer $TaskId) Set Async task ID
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class KillMasterGroupResponse extends AbstractModel
+class CreateLivePullStreamTaskResponse extends AbstractModel
 {
     /**
-     * @var integer Async task ID
+     * @var string The task ID.
      */
     public $TaskId;
 
@@ -38,7 +38,7 @@ class KillMasterGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TaskId Async task ID
+     * @param string $TaskId The task ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

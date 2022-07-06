@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method boolean getUpgradeProxyAndRedisServer() Obtain Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+ * @method void setUpgradeProxyAndRedisServer(boolean $UpgradeProxyAndRedisServer) Set Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
  */
 class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var boolean Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     */
+    public $UpgradeProxyAndRedisServer;
+
+    /**
      * @param string $InstanceId Instance ID
+     * @param boolean $UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UpgradeProxyAndRedisServer",$param) and $param["UpgradeProxyAndRedisServer"] !== null) {
+            $this->UpgradeProxyAndRedisServer = $param["UpgradeProxyAndRedisServer"];
         }
     }
 }

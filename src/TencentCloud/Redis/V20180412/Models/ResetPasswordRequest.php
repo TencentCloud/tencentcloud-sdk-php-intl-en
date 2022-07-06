@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Redis instance ID
  * @method string getPassword() Obtain Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
  * @method void setPassword(string $Password) Set Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
- * @method boolean getNoAuth() Obtain Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
- * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+ * @method boolean getNoAuth() Obtain Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
+ * @method void setNoAuth(boolean $NoAuth) Set Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
  */
 class ResetPasswordRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class ResetPasswordRequest extends AbstractModel
     public $Password;
 
     /**
-     * @var boolean Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+     * @var boolean Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
      */
     public $NoAuth;
 
     /**
      * @param string $InstanceId Redis instance ID
      * @param string $Password Password reset (this parameter can be left blank when switching to password-free instance mode and is required in other cases)
-     * @param boolean $NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false
+     * @param boolean $NoAuth Whether to switch to password-free instance mode. false: switch to password-enabled instance mode; true: switch to password-free instance mode. Default value: false.
      */
     function __construct()
     {

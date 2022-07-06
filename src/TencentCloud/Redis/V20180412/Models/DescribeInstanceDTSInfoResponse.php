@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * DescribeInstanceDTSInfo response structure.
  *
  * @method string getJobId() Obtain DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobId(string $JobId) Set DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getJobName() Obtain DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobName(string $JobName) Set DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStatus() Obtain Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatusDesc() Obtain Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusDesc(string $StatusDesc) Set Status description
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getOffset() Obtain Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOffset(integer $Offset) Set Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getOffset() Obtain Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOffset(integer $Offset) Set Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCutDownTime() Obtain Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCutDownTime(string $CutDownTime) Set Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method DescribeInstanceDTSInstanceInfo getSrcInfo() Obtain Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcInfo(DescribeInstanceDTSInstanceInfo $SrcInfo) Set Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method DescribeInstanceDTSInstanceInfo getDstInfo() Obtain Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstInfo(DescribeInstanceDTSInstanceInfo $DstInfo) Set Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -59,49 +59,49 @@ class DescribeInstanceDTSInfoResponse extends AbstractModel
 {
     /**
      * @var string DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobId;
 
     /**
      * @var string DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobName;
 
     /**
      * @var integer Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var string Status description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusDesc;
 
     /**
-     * @var integer Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Offset;
 
     /**
      * @var string Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CutDownTime;
 
     /**
      * @var DescribeInstanceDTSInstanceInfo Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcInfo;
 
     /**
      * @var DescribeInstanceDTSInstanceInfo Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstInfo;
 
@@ -112,21 +112,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $JobId DTS task ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobName DTS task name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Task status. Valid values: 1 (Creating), 3 (Checking), 4 (CheckPass), 5 (CheckNotPass), 7 (Running), 8 (ReadyComplete), 9 (Success), 10 (Failed), 11 (Stopping), 12 (Completing)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StatusDesc Status description
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Offset Synchronization latency in bytes
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Offset Sync latency in bytes
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CutDownTime Disconnection time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DescribeInstanceDTSInstanceInfo $SrcInfo Source instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param DescribeInstanceDTSInstanceInfo $DstInfo Target instance information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

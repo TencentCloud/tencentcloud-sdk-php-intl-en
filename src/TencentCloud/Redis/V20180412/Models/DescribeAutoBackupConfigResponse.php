@@ -20,19 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAutoBackupConfig response structure.
  *
- * @method integer getAutoBackupType() Obtain Backup type. Auto backup type: 1 "scheduled rollback"
- * @method void setAutoBackupType(integer $AutoBackupType) Set Backup type. Auto backup type: 1 "scheduled rollback"
+ * @method integer getAutoBackupType() Obtain Backup type. Automatic backup type: 1 (scheduled rollback)
+ * @method void setAutoBackupType(integer $AutoBackupType) Set Backup type. Automatic backup type: 1 (scheduled rollback)
  * @method array getWeekDays() Obtain Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
  * @method void setWeekDays(array $WeekDays) Set Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
  * @method string getTimePeriod() Obtain Time period.
  * @method void setTimePeriod(string $TimePeriod) Set Time period.
+ * @method integer getBackupStorageDays() Obtain Number of days to retain full backup files
+ * @method void setBackupStorageDays(integer $BackupStorageDays) Set Number of days to retain full backup files
+ * @method integer getBinlogStorageDays() Obtain Number of days to retain Tendis binlog backup files
+ * @method void setBinlogStorageDays(integer $BinlogStorageDays) Set Number of days to retain Tendis binlog backup files
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAutoBackupConfigResponse extends AbstractModel
 {
     /**
-     * @var integer Backup type. Auto backup type: 1 "scheduled rollback"
+     * @var integer Backup type. Automatic backup type: 1 (scheduled rollback)
      */
     public $AutoBackupType;
 
@@ -47,14 +51,26 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
     public $TimePeriod;
 
     /**
+     * @var integer Number of days to retain full backup files
+     */
+    public $BackupStorageDays;
+
+    /**
+     * @var integer Number of days to retain Tendis binlog backup files
+     */
+    public $BinlogStorageDays;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param integer $AutoBackupType Backup type. Auto backup type: 1 "scheduled rollback"
+     * @param integer $AutoBackupType Backup type. Automatic backup type: 1 (scheduled rollback)
      * @param array $WeekDays Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.
      * @param string $TimePeriod Time period.
+     * @param integer $BackupStorageDays Number of days to retain full backup files
+     * @param integer $BinlogStorageDays Number of days to retain Tendis binlog backup files
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -80,6 +96,14 @@ class DescribeAutoBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("TimePeriod",$param) and $param["TimePeriod"] !== null) {
             $this->TimePeriod = $param["TimePeriod"];
+        }
+
+        if (array_key_exists("BackupStorageDays",$param) and $param["BackupStorageDays"] !== null) {
+            $this->BackupStorageDays = $param["BackupStorageDays"];
+        }
+
+        if (array_key_exists("BinlogStorageDays",$param) and $param["BinlogStorageDays"] !== null) {
+            $this->BinlogStorageDays = $param["BinlogStorageDays"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

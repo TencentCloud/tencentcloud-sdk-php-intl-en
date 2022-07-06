@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProduct() Obtain Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
  * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
- * @method array getSecurityGroupIds() Obtain The ID list of the security groups to be modified, which is an array of one or more security group IDs.
- * @method void setSecurityGroupIds(array $SecurityGroupIds) Set The ID list of the security groups to be modified, which is an array of one or more security group IDs.
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+ * @method array getSecurityGroupIds() Obtain ID list of the security groups to be modified, which is an array of one or more security group IDs.
+ * @method void setSecurityGroupIds(array $SecurityGroupIds) Set ID list of the security groups to be modified, which is an array of one or more security group IDs.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  */
 class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyDBInstanceSecurityGroupsRequest extends AbstractModel
     public $Product;
 
     /**
-     * @var array The ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * @var array ID list of the security groups to be modified, which is an array of one or more security group IDs.
      */
     public $SecurityGroupIds;
 
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * @var string Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public $InstanceId;
 
     /**
      * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-     * @param array $SecurityGroupIds The ID list of the security groups to be modified, which is an array of one or more security group IDs.
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB Console.
+     * @param array $SecurityGroupIds ID list of the security groups to be modified, which is an array of one or more security group IDs.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv or cdbro-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     function __construct()
     {

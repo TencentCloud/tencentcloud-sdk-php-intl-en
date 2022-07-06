@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DisableReplicaReadonly response structure.
  *
  * @method integer getTaskId() Obtain Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskId(integer $TaskId) Set Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -31,7 +31,7 @@ class DisableReplicaReadonlyResponse extends AbstractModel
 {
     /**
      * @var integer Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskId;
 
@@ -42,7 +42,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param integer $TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

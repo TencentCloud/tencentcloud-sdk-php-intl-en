@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeVpcTaskResult response structure.
  *
- * @method string getStatus() Obtain Execution result of an async task Valid values: `SUCCESS`: the task has been successfully executed; `FAILED`: the job execution failed; `RUNNING`: the job is executing.
- * @method void setStatus(string $Status) Set Execution result of an async task Valid values: `SUCCESS`: the task has been successfully executed; `FAILED`: the job execution failed; `RUNNING`: the job is executing.
+ * @method string getStatus() Obtain The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
+ * @method void setStatus(string $Status) Set The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
  * @method string getOutput() Obtain Output of the async task execution result
  * @method void setOutput(string $Output) Set Output of the async task execution result
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeVpcTaskResultResponse extends AbstractModel
 {
     /**
-     * @var string Execution result of an async task Valid values: `SUCCESS`: the task has been successfully executed; `FAILED`: the job execution failed; `RUNNING`: the job is executing.
+     * @var string The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
      */
     public $Status;
 
@@ -45,7 +45,7 @@ class DescribeVpcTaskResultResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Status Execution result of an async task Valid values: `SUCCESS`: the task has been successfully executed; `FAILED`: the job execution failed; `RUNNING`: the job is executing.
+     * @param string $Status The execution results of an async task. Valid values: `SUCCESS`(task executed successfully), `FAILED` (task execution failed), and `RUNNING` (task in progress). 
      * @param string $Output Output of the async task execution result
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

@@ -24,14 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Backup start time
  * @method string getBackupId() Obtain Backup ID
  * @method void setBackupId(string $BackupId) Set Backup ID
- * @method string getBackupType() Obtain Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
- * @method void setBackupType(string $BackupType) Set Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+ * @method string getBackupType() Obtain Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
+ * @method void setBackupType(string $BackupType) Set Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
  * @method integer getStatus() Obtain Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
  * @method void setStatus(integer $Status) Set Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
  * @method string getRemark() Obtain Backup remarks
  * @method void setRemark(string $Remark) Set Backup remarks
- * @method integer getLocked() Obtain Whether a backup is locked. 0: no; 1: yes
- * @method void setLocked(integer $Locked) Set Whether a backup is locked. 0: no; 1: yes
+ * @method integer getLocked() Obtain Whether a backup is locked. 0: no; 1: yes.
+ * @method void setLocked(integer $Locked) Set Whether a backup is locked. 0: no; 1: yes.
+ * @method integer getBackupSize() Obtain Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupSize(integer $BackupSize) Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFullBackup() Obtain Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFullBackup(integer $FullBackup) Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getInstanceType() Obtain Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceType(integer $InstanceType) Set Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RedisBackupSet extends AbstractModel
 {
@@ -46,7 +58,7 @@ class RedisBackupSet extends AbstractModel
     public $BackupId;
 
     /**
-     * @var string Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+     * @var string Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
      */
     public $BackupType;
 
@@ -61,17 +73,41 @@ class RedisBackupSet extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer Whether a backup is locked. 0: no; 1: yes
+     * @var integer Whether a backup is locked. 0: no; 1: yes.
      */
     public $Locked;
 
     /**
+     * @var integer Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackupSize;
+
+    /**
+     * @var integer Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FullBackup;
+
+    /**
+     * @var integer Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceType;
+
+    /**
      * @param string $StartTime Backup start time
      * @param string $BackupId Backup ID
-     * @param string $BackupType Backup type. manualBackupInstance: manual backup initiated by user; systemBackupInstance: midnight backup initiated by system
+     * @param string $BackupType Backup type. 1: manual backup initiated by the user; 0: automatic backup in the early morning initiated by the system
      * @param integer $Status Backup status. 1: backup is locked by another process; 2: backup is normal and not locked by any process; -1: backup has expired; 3: backup is being exported; 4: backup is exported successfully
      * @param string $Remark Backup remarks
-     * @param integer $Locked Whether a backup is locked. 0: no; 1: yes
+     * @param integer $Locked Whether a backup is locked. 0: no; 1: yes.
+     * @param integer $BackupSize Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FullBackup Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $InstanceType Internal field, which can be ignored.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -108,6 +144,18 @@ class RedisBackupSet extends AbstractModel
 
         if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
             $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("BackupSize",$param) and $param["BackupSize"] !== null) {
+            $this->BackupSize = $param["BackupSize"];
+        }
+
+        if (array_key_exists("FullBackup",$param) and $param["FullBackup"] !== null) {
+            $this->FullBackup = $param["FullBackup"];
+        }
+
+        if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
+            $this->InstanceType = $param["InstanceType"];
         }
     }
 }

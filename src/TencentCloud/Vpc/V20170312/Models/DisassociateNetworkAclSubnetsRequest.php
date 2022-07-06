@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateNetworkAclSubnets request structure.
  *
- * @method string getNetworkAclId() Obtain Network ACL instance ID. Example: acl-12345678.
- * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID. Example: acl-12345678.
- * @method array getSubnetIds() Obtain Array of subnet instance IDs. Example: [subnet-12345678].
- * @method void setSubnetIds(array $SubnetIds) Set Array of subnet instance IDs. Example: [subnet-12345678].
+ * @method string getNetworkAclId() Obtain Network ACL instance ID, such as `acl-12345678`.
+ * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID, such as `acl-12345678`.
+ * @method array getSubnetIds() Obtain Array of subnet instance IDs, such as [subnet-12345678].
+ * @method void setSubnetIds(array $SubnetIds) Set Array of subnet instance IDs, such as [subnet-12345678].
  */
 class DisassociateNetworkAclSubnetsRequest extends AbstractModel
 {
     /**
-     * @var string Network ACL instance ID. Example: acl-12345678.
+     * @var string Network ACL instance ID, such as `acl-12345678`.
      */
     public $NetworkAclId;
 
     /**
-     * @var array Array of subnet instance IDs. Example: [subnet-12345678].
+     * @var array Array of subnet instance IDs, such as [subnet-12345678].
      */
     public $SubnetIds;
 
     /**
-     * @param string $NetworkAclId Network ACL instance ID. Example: acl-12345678.
-     * @param array $SubnetIds Array of subnet instance IDs. Example: [subnet-12345678].
+     * @param string $NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+     * @param array $SubnetIds Array of subnet instance IDs, such as [subnet-12345678].
      */
     function __construct()
     {

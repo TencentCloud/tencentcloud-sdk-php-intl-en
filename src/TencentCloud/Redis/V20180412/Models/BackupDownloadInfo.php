@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileName(string $FileName) Set Backup file name
  * @method integer getFileSize() Obtain Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
  * @method void setFileSize(integer $FileSize) Set Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
- * @method string getDownloadUrl() Obtain Address (valid for 6 hours) used to download the backup file over a public network
- * @method void setDownloadUrl(string $DownloadUrl) Set Address (valid for 6 hours) used to download the backup file over a public network
- * @method string getInnerDownloadUrl() Obtain Address (valid for 6 hours) used to download the backup file over a private network
- * @method void setInnerDownloadUrl(string $InnerDownloadUrl) Set Address (valid for 6 hours) used to download the backup file over a private network
+ * @method string getDownloadUrl() Obtain Address (valid for six hours) used to download the backup file over the public network
+ * @method void setDownloadUrl(string $DownloadUrl) Set Address (valid for six hours) used to download the backup file over the public network
+ * @method string getInnerDownloadUrl() Obtain Address (valid for six hours) used to download the backup file over the private network
+ * @method void setInnerDownloadUrl(string $InnerDownloadUrl) Set Address (valid for six hours) used to download the backup file over the private network
  */
 class BackupDownloadInfo extends AbstractModel
 {
@@ -42,20 +42,20 @@ class BackupDownloadInfo extends AbstractModel
     public $FileSize;
 
     /**
-     * @var string Address (valid for 6 hours) used to download the backup file over a public network
+     * @var string Address (valid for six hours) used to download the backup file over the public network
      */
     public $DownloadUrl;
 
     /**
-     * @var string Address (valid for 6 hours) used to download the backup file over a private network
+     * @var string Address (valid for six hours) used to download the backup file over the private network
      */
     public $InnerDownloadUrl;
 
     /**
      * @param string $FileName Backup file name
      * @param integer $FileSize Backup file size in bytes. If the parameter value is `0`, the backup file size is unknown.
-     * @param string $DownloadUrl Address (valid for 6 hours) used to download the backup file over a public network
-     * @param string $InnerDownloadUrl Address (valid for 6 hours) used to download the backup file over a private network
+     * @param string $DownloadUrl Address (valid for six hours) used to download the backup file over the public network
+     * @param string $InnerDownloadUrl Address (valid for six hours) used to download the backup file over the private network
      */
     function __construct()
     {

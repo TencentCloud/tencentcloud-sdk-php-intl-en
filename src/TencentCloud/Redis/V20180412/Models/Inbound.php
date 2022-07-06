@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCidrIp(string $CidrIp) Set Source IP or IP address range, such as 192.168.0.0/16.
  * @method string getDesc() Obtain Description.
  * @method void setDesc(string $Desc) Set Description.
- * @method string getIpProtocol() Obtain Network protocol, such as UDP and TCP, etc.
- * @method void setIpProtocol(string $IpProtocol) Set Network protocol, such as UDP and TCP, etc.
+ * @method string getIpProtocol() Obtain Network protocol, such as UDP and TCP.
+ * @method void setIpProtocol(string $IpProtocol) Set Network protocol, such as UDP and TCP.
  * @method string getPortRange() Obtain Port.
  * @method void setPortRange(string $PortRange) Set Port.
  * @method string getServiceModule() Obtain All the protocols and ports that the service group ID represents.
@@ -60,7 +60,7 @@ class Inbound extends AbstractModel
     public $Desc;
 
     /**
-     * @var string Network protocol, such as UDP and TCP, etc.
+     * @var string Network protocol, such as UDP and TCP.
      */
     public $IpProtocol;
 
@@ -84,7 +84,7 @@ class Inbound extends AbstractModel
      * @param string $AddressModule All the addresses that the address group ID represents.
      * @param string $CidrIp Source IP or IP address range, such as 192.168.0.0/16.
      * @param string $Desc Description.
-     * @param string $IpProtocol Network protocol, such as UDP and TCP, etc.
+     * @param string $IpProtocol Network protocol, such as UDP and TCP.
      * @param string $PortRange Port.
      * @param string $ServiceModule All the protocols and ports that the service group ID represents.
      * @param string $Id All the addresses that the security group ID represents.

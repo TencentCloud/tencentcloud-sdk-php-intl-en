@@ -22,30 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Node name
  * @method void setName(string $Name) Set Node name
- * @method string getRunId() Obtain ID of the runtime node of an instance
- * @method void setRunId(string $RunId) Set ID of the runtime node of an instance
- * @method integer getRole() Obtain Cluster role. 0: primary; 1: secondary
- * @method void setRole(integer $Role) Set Cluster role. 0: primary; 1: secondary
+ * @method string getRunId() Obtain ID of the runtime node of the instance
+ * @method void setRunId(string $RunId) Set ID of the runtime node of the instance
+ * @method integer getRole() Obtain Cluster role. 0: master; 1: replica
+ * @method void setRole(integer $Role) Set Cluster role. 0: master; 1: replica
  * @method integer getStatus() Obtain Node status. 0: readwrite; 1: read; 2: backup
  * @method void setStatus(integer $Status) Set Node status. 0: readwrite; 1: read; 2: backup
  * @method integer getConnected() Obtain Service status. 0: down; 1: on
  * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
  * @method string getCreateTime() Obtain Node creation time
  * @method void setCreateTime(string $CreateTime) Set Node creation time
- * @method string getDownTime() Obtain Node deactivation time
- * @method void setDownTime(string $DownTime) Set Node deactivation time
+ * @method string getDownTime() Obtain Node elimination time
+ * @method void setDownTime(string $DownTime) Set Node elimination time
  * @method string getSlots() Obtain Distribution of node slots
  * @method void setSlots(string $Slots) Set Distribution of node slots
  * @method integer getKeys() Obtain Distribution of node keys
  * @method void setKeys(integer $Keys) Set Distribution of node keys
  * @method integer getQps() Obtain Node QPS
  * @method void setQps(integer $Qps) Set Node QPS
- * @method float getQpsSlope() Obtain QPS slope of a node
- * @method void setQpsSlope(float $QpsSlope) Set QPS slope of a node
+ * @method float getQpsSlope() Obtain Node QPS slope
+ * @method void setQpsSlope(float $QpsSlope) Set Node QPS slope
  * @method integer getStorage() Obtain Node storage
  * @method void setStorage(integer $Storage) Set Node storage
- * @method float getStorageSlope() Obtain Storage slope of a node
- * @method void setStorageSlope(float $StorageSlope) Set Storage slope of a node
+ * @method float getStorageSlope() Obtain Node storage slope
+ * @method void setStorageSlope(float $StorageSlope) Set Node storage slope
  */
 class InstanceClusterNode extends AbstractModel
 {
@@ -55,12 +55,12 @@ class InstanceClusterNode extends AbstractModel
     public $Name;
 
     /**
-     * @var string ID of the runtime node of an instance
+     * @var string ID of the runtime node of the instance
      */
     public $RunId;
 
     /**
-     * @var integer Cluster role. 0: primary; 1: secondary
+     * @var integer Cluster role. 0: master; 1: replica
      */
     public $Role;
 
@@ -80,7 +80,7 @@ class InstanceClusterNode extends AbstractModel
     public $CreateTime;
 
     /**
-     * @var string Node deactivation time
+     * @var string Node elimination time
      */
     public $DownTime;
 
@@ -100,7 +100,7 @@ class InstanceClusterNode extends AbstractModel
     public $Qps;
 
     /**
-     * @var float QPS slope of a node
+     * @var float Node QPS slope
      */
     public $QpsSlope;
 
@@ -110,24 +110,24 @@ class InstanceClusterNode extends AbstractModel
     public $Storage;
 
     /**
-     * @var float Storage slope of a node
+     * @var float Node storage slope
      */
     public $StorageSlope;
 
     /**
      * @param string $Name Node name
-     * @param string $RunId ID of the runtime node of an instance
-     * @param integer $Role Cluster role. 0: primary; 1: secondary
+     * @param string $RunId ID of the runtime node of the instance
+     * @param integer $Role Cluster role. 0: master; 1: replica
      * @param integer $Status Node status. 0: readwrite; 1: read; 2: backup
      * @param integer $Connected Service status. 0: down; 1: on
      * @param string $CreateTime Node creation time
-     * @param string $DownTime Node deactivation time
+     * @param string $DownTime Node elimination time
      * @param string $Slots Distribution of node slots
      * @param integer $Keys Distribution of node keys
      * @param integer $Qps Node QPS
-     * @param float $QpsSlope QPS slope of a node
+     * @param float $QpsSlope Node QPS slope
      * @param integer $Storage Node storage
-     * @param float $StorageSlope Storage slope of a node
+     * @param float $StorageSlope Node storage slope
      */
     function __construct()
     {

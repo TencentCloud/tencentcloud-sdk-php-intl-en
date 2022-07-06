@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getGroups() Obtain Security group rules.
  * @method void setGroups(array $Groups) Set Security group rules.
- * @method integer getTotal() Obtain Total number of the security groups meeting the condition.
- * @method void setTotal(integer $Total) Set Total number of the security groups meeting the condition.
+ * @method integer getTotal() Obtain Total number of eligible security groups.
+ * @method void setTotal(integer $Total) Set Total number of eligible security groups.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $Groups;
 
     /**
-     * @var integer Total number of the security groups meeting the condition.
+     * @var integer Total number of eligible security groups.
      */
     public $Total;
 
@@ -46,7 +46,7 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
 
     /**
      * @param array $Groups Security group rules.
-     * @param integer $Total Total number of the security groups meeting the condition.
+     * @param integer $Total Total number of eligible security groups.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBackupUrl response structure.
  *
- * @method array getDownloadUrl() Obtain Public network download address (valid for six hours). This field will be deprecated soon.
- * @method void setDownloadUrl(array $DownloadUrl) Set Public network download address (valid for six hours). This field will be deprecated soon.
- * @method array getInnerDownloadUrl() Obtain Private network download address (valid for six hours). This field will be deprecated soon.
- * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Private network download address (valid for six hours). This field will be deprecated soon.
- * @method array getFilenames() Obtain Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setFilenames(array $Filenames) Set Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getDownloadUrl() Obtain Public network download address (valid for six hours). This field will be disused soon.
+ * @method void setDownloadUrl(array $DownloadUrl) Set Public network download address (valid for six hours). This field will be disused soon.
+ * @method array getInnerDownloadUrl() Obtain Private network download address (valid for six hours). This field will be disused soon.
+ * @method void setInnerDownloadUrl(array $InnerDownloadUrl) Set Private network download address (valid for six hours). This field will be disused soon.
+ * @method array getFilenames() Obtain Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilenames(array $Filenames) Set Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getBackupInfos() Obtain List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBackupInfos(array $BackupInfos) Set List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeBackupUrlResponse extends AbstractModel
 {
     /**
-     * @var array Public network download address (valid for six hours). This field will be deprecated soon.
+     * @var array Public network download address (valid for six hours). This field will be disused soon.
      */
     public $DownloadUrl;
 
     /**
-     * @var array Private network download address (valid for six hours). This field will be deprecated soon.
+     * @var array Private network download address (valid for six hours). This field will be disused soon.
      */
     public $InnerDownloadUrl;
 
     /**
-     * @var array Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Filenames;
 
     /**
      * @var array List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BackupInfos;
 
@@ -65,12 +65,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param array $DownloadUrl Public network download address (valid for six hours). This field will be deprecated soon.
-     * @param array $InnerDownloadUrl Private network download address (valid for six hours). This field will be deprecated soon.
-     * @param array $Filenames Filename. This field will be deprecated soon.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $DownloadUrl Public network download address (valid for six hours). This field will be disused soon.
+     * @param array $InnerDownloadUrl Private network download address (valid for six hours). This field will be disused soon.
+     * @param array $Filenames Filename. This field will be disused soon.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $BackupInfos List of backup file information
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

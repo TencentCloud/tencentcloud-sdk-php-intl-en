@@ -18,7 +18,7 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of an instance
+ * Instance information
  *
  * @method string getInstanceName() Obtain Instance name
  * @method void setInstanceName(string $InstanceName) Set Instance name
@@ -26,28 +26,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getAppId() Obtain User ID
  * @method void setAppId(integer $AppId) Set User ID
- * @method integer getProjectId() Obtain Project ID of the instance
- * @method void setProjectId(integer $ProjectId) Set Project ID of the instance
+ * @method integer getProjectId() Obtain Instance project ID
+ * @method void setProjectId(integer $ProjectId) Set Instance project ID
  * @method string getRegion() Obtain Instance region
  * @method void setRegion(string $Region) Set Instance region
- * @method string getZone() Obtain Instance availability zone
- * @method void setZone(string $Zone) Set Instance availability zone
+ * @method string getZone() Obtain Instance AZ
+ * @method void setZone(string $Zone) Set Instance AZ
  * @method string getVpcId() Obtain Instance network ID
  * @method void setVpcId(string $VpcId) Set Instance network ID
  * @method string getSubnetId() Obtain Subnet ID
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method string getStatus() Obtain Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
- * @method void setStatus(string $Status) Set Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+ * @method string getStatus() Obtain Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
+ * @method void setStatus(string $Status) Set Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
  * @method array getVips() Obtain Instance network IP
  * @method void setVips(array $Vips) Set Instance network IP
  * @method integer getVport() Obtain Instance network port
  * @method void setVport(integer $Vport) Set Instance network port
  * @method string getCreatetime() Obtain Instance creation time
  * @method void setCreatetime(string $Createtime) Set Instance creation time
- * @method integer getPayMode() Obtain Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
- * @method void setPayMode(integer $PayMode) Set Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
- * @method integer getNetType() Obtain Network type. Valid values: `0` (classic network), `1` (VPC)
- * @method void setNetType(integer $NetType) Set Network type. Valid values: `0` (classic network), `1` (VPC)
+ * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription
+ * @method void setPayMode(integer $PayMode) Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
+ * @method integer getNetType() Obtain Network type. Valid values: 0 (classic network); 1 (VPC).
+ * @method void setNetType(integer $NetType) Set Network type. Valid values: 0 (classic network); 1 (VPC).
  */
 class RedisCommonInstanceList extends AbstractModel
 {
@@ -67,7 +67,7 @@ class RedisCommonInstanceList extends AbstractModel
     public $AppId;
 
     /**
-     * @var integer Project ID of the instance
+     * @var integer Instance project ID
      */
     public $ProjectId;
 
@@ -77,7 +77,7 @@ class RedisCommonInstanceList extends AbstractModel
     public $Region;
 
     /**
-     * @var string Instance availability zone
+     * @var string Instance AZ
      */
     public $Zone;
 
@@ -92,7 +92,7 @@ class RedisCommonInstanceList extends AbstractModel
     public $SubnetId;
 
     /**
-     * @var string Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+     * @var string Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
      */
     public $Status;
 
@@ -112,12 +112,12 @@ class RedisCommonInstanceList extends AbstractModel
     public $Createtime;
 
     /**
-     * @var integer Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
+     * @var integer Billing mode. 0: pay-as-you-go; 1: monthly subscription
      */
     public $PayMode;
 
     /**
-     * @var integer Network type. Valid values: `0` (classic network), `1` (VPC)
+     * @var integer Network type. Valid values: 0 (classic network); 1 (VPC).
      */
     public $NetType;
 
@@ -125,17 +125,17 @@ class RedisCommonInstanceList extends AbstractModel
      * @param string $InstanceName Instance name
      * @param string $InstanceId Instance ID
      * @param integer $AppId User ID
-     * @param integer $ProjectId Project ID of the instance
+     * @param integer $ProjectId Instance project ID
      * @param string $Region Instance region
-     * @param string $Zone Instance availability zone
+     * @param string $Zone Instance AZ
      * @param string $VpcId Instance network ID
      * @param string $SubnetId Subnet ID
-     * @param string $Status Instance status. Valid values: `1` (task running), `2` (instance running), `-2` (instance isolated), `-3` (instance being eliminated), `-4` (instance eliminated)
+     * @param string $Status Instance status. 1: task running; 2: instance running; -2: instance isolated; -3: instance being eliminated; -4: instance eliminated
      * @param array $Vips Instance network IP
      * @param integer $Vport Instance network port
      * @param string $Createtime Instance creation time
-     * @param integer $PayMode Billing mode. Valid values: `0` (pay-as-you-go), `1` (monthly subscription)
-     * @param integer $NetType Network type. Valid values: `0` (classic network), `1` (VPC)
+     * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * @param integer $NetType Network type. Valid values: 0 (classic network); 1 (VPC).
      */
     function __construct()
     {

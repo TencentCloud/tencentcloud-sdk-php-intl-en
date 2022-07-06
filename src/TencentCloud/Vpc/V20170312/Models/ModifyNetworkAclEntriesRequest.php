@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkAclEntries request structure.
  *
- * @method string getNetworkAclId() Obtain Network ACL instance ID. Example: acl-12345678.
- * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID. Example: acl-12345678.
- * @method NetworkAclEntrySet getNetworkAclEntrySet() Obtain Network ACL rule set.
- * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) Set Network ACL rule set.
+ * @method string getNetworkAclId() Obtain Network ACL instance ID, such as `acl-12345678`.
+ * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID, such as `acl-12345678`.
+ * @method NetworkAclEntrySet getNetworkAclEntrySet() Obtain Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+ * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) Set Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
  */
 class ModifyNetworkAclEntriesRequest extends AbstractModel
 {
     /**
-     * @var string Network ACL instance ID. Example: acl-12345678.
+     * @var string Network ACL instance ID, such as `acl-12345678`.
      */
     public $NetworkAclId;
 
     /**
-     * @var NetworkAclEntrySet Network ACL rule set.
+     * @var NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
      */
     public $NetworkAclEntrySet;
 
     /**
-     * @param string $NetworkAclId Network ACL instance ID. Example: acl-12345678.
-     * @param NetworkAclEntrySet $NetworkAclEntrySet Network ACL rule set.
+     * @param string $NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+     * @param NetworkAclEntrySet $NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
      */
     function __construct()
     {

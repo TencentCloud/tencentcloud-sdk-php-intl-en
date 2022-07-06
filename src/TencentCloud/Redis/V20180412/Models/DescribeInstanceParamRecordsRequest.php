@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method integer getLimit() Obtain Number of entries per page
- * @method void setLimit(integer $Limit) Set Number of entries per page
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method integer getLimit() Obtain Maximum number of results returned per page
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned per page
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  */
 class DescribeInstanceParamRecordsRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeInstanceParamRecordsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Number of entries per page
+     * @var integer Maximum number of results returned per page
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param integer $Limit Number of entries per page
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param integer $Limit Maximum number of results returned per page
+     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      */
     function __construct()
     {

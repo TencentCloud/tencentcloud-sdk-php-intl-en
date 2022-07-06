@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroup response structure.
  *
- * @method array getSecurityGroupDetails() Obtain Security group of a project
- * @method void setSecurityGroupDetails(array $SecurityGroupDetails) Set Security group of a project
+ * @method array getSecurityGroupDetails() Obtain Security group of the project
+ * @method void setSecurityGroupDetails(array $SecurityGroupDetails) Set Security group of the project
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeProjectSecurityGroupResponse extends AbstractModel
 {
     /**
-     * @var array Security group of a project
+     * @var array Security group of the project
      */
     public $SecurityGroupDetails;
 
@@ -38,7 +38,7 @@ class DescribeProjectSecurityGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SecurityGroupDetails Security group of a project
+     * @param array $SecurityGroupDetails Security group of the project
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

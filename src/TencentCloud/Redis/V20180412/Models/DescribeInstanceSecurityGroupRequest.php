@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceSecurityGroup request structure.
  *
- * @method array getInstanceIds() Obtain Instance list
- * @method void setInstanceIds(array $InstanceIds) Set Instance list
+ * @method array getInstanceIds() Obtain List of instances
+ * @method void setInstanceIds(array $InstanceIds) Set List of instances
  */
 class DescribeInstanceSecurityGroupRequest extends AbstractModel
 {
     /**
-     * @var array Instance list
+     * @var array List of instances
      */
     public $InstanceIds;
 
     /**
-     * @param array $InstanceIds Instance list
+     * @param array $InstanceIds List of instances
      */
     function __construct()
     {

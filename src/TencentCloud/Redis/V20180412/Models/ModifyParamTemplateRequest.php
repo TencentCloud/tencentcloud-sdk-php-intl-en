@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyParamTemplate request structure.
  *
- * @method string getTemplateId() Obtain ID of the parameter template to be modified.
- * @method void setTemplateId(string $TemplateId) Set ID of the parameter template to be modified.
+ * @method string getTemplateId() Obtain ID of the source parameter template.
+ * @method void setTemplateId(string $TemplateId) Set ID of the source parameter template.
  * @method string getName() Obtain New name after the parameter template is modified.
  * @method void setName(string $Name) Set New name after the parameter template is modified.
  * @method string getDescription() Obtain New description after the parameter template is modified.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyParamTemplateRequest extends AbstractModel
 {
     /**
-     * @var string ID of the parameter template to be modified.
+     * @var string ID of the source parameter template.
      */
     public $TemplateId;
 
@@ -52,7 +52,7 @@ class ModifyParamTemplateRequest extends AbstractModel
     public $ParamList;
 
     /**
-     * @param string $TemplateId ID of the parameter template to be modified.
+     * @param string $TemplateId ID of the source parameter template.
      * @param string $Name New name after the parameter template is modified.
      * @param string $Description New description after the parameter template is modified.
      * @param array $ParamList New parameter list after the parameter template is modified.

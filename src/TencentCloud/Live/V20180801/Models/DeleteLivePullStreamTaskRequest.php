@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag bound to the instance purchased via API
+ * DeleteLivePullStreamTask request structure.
  *
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain Tag value
- * @method void setTagValue(string $TagValue) Set Tag value
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
+ * @method string getOperator() Obtain The operator.
+ * @method void setOperator(string $Operator) Set The operator.
  */
-class ResourceTag extends AbstractModel
+class DeleteLivePullStreamTaskRequest extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string The task ID.
      */
-    public $TagKey;
+    public $TaskId;
 
     /**
-     * @var string Tag value
+     * @var string The operator.
      */
-    public $TagValue;
+    public $Operator;
 
     /**
-     * @param string $TagKey Tag key
-     * @param string $TagValue Tag value
+     * @param string $TaskId The task ID.
+     * @param string $Operator The operator.
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class ResourceTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

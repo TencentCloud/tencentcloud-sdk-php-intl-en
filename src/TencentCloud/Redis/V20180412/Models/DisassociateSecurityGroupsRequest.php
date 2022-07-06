@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
  * @method string getSecurityGroupId() Obtain Security group ID.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID.
- * @method array getInstanceIds() Obtain Instance ID list, which is an array of one or more instance IDs.
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list, which is an array of one or more instance IDs.
+ * @method array getInstanceIds() Obtain List of instance IDs, which is an array of one or more instance IDs.
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs, which is an array of one or more instance IDs.
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $SecurityGroupId;
 
     /**
-     * @var array Instance ID list, which is an array of one or more instance IDs.
+     * @var array List of instance IDs, which is an array of one or more instance IDs.
      */
     public $InstanceIds;
 
     /**
      * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
      * @param string $SecurityGroupId Security group ID.
-     * @param array $InstanceIds Instance ID list, which is an array of one or more instance IDs.
+     * @param array $InstanceIds List of instance IDs, which is an array of one or more instance IDs.
      */
     function __construct()
     {

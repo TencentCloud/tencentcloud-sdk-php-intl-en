@@ -20,37 +20,37 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCommonDBInstances request structure.
  *
- * @method array getVpcIds() Obtain List of instance VIPs
- * @method void setVpcIds(array $VpcIds) Set List of instance VIPs
+ * @method array getVpcIds() Obtain List of VPC IDs
+ * @method void setVpcIds(array $VpcIds) Set List of VPC IDs
  * @method array getSubnetIds() Obtain List of subnet IDs
  * @method void setSubnetIds(array $SubnetIds) Set List of subnet IDs
- * @method integer getPayMode() Obtain List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
- * @method void setPayMode(integer $PayMode) Set List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+ * @method integer getPayMode() Obtain List of billing modes. 0: monthly subscription; 1: pay-as-you-go
+ * @method void setPayMode(integer $PayMode) Set List of billing modes. 0: monthly subscription; 1: pay-as-you-go
  * @method array getInstanceIds() Obtain List of instance IDs
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs
  * @method array getInstanceNames() Obtain List of instance names
  * @method void setInstanceNames(array $InstanceNames) Set List of instance names
  * @method array getStatus() Obtain List of instance status
  * @method void setStatus(array $Status) Set List of instance status
- * @method string getOrderBy() Obtain Sort field
- * @method void setOrderBy(string $OrderBy) Set Sort field
- * @method string getOrderByType() Obtain Sort order
- * @method void setOrderByType(string $OrderByType) Set Sort order
+ * @method string getOrderBy() Obtain Sorting field
+ * @method void setOrderBy(string $OrderBy) Set Sorting field
+ * @method string getOrderByType() Obtain Sorting order
+ * @method void setOrderByType(string $OrderByType) Set Sorting order
  * @method array getVips() Obtain List of instance VIPs
  * @method void setVips(array $Vips) Set List of instance VIPs
  * @method array getUniqVpcIds() Obtain List of VPC IDs
  * @method void setUniqVpcIds(array $UniqVpcIds) Set List of VPC IDs
  * @method array getUniqSubnetIds() Obtain List of unique subnet IDs
  * @method void setUniqSubnetIds(array $UniqSubnetIds) Set List of unique subnet IDs
- * @method integer getLimit() Obtain Quantity limit. The default value `100` is recommended.
- * @method void setLimit(integer $Limit) Set Quantity limit. The default value `100` is recommended.
+ * @method integer getLimit() Obtain Quantity limit. Recommended default value: 100.
+ * @method void setLimit(integer $Limit) Set Quantity limit. Recommended default value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0
  */
 class DescribeCommonDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array List of instance VIPs
+     * @var array List of VPC IDs
      */
     public $VpcIds;
 
@@ -60,7 +60,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $SubnetIds;
 
     /**
-     * @var integer List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+     * @var integer List of billing modes. 0: monthly subscription; 1: pay-as-you-go
      */
     public $PayMode;
 
@@ -80,12 +80,12 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $Status;
 
     /**
-     * @var string Sort field
+     * @var string Sorting field
      */
     public $OrderBy;
 
     /**
-     * @var string Sort order
+     * @var string Sorting order
      */
     public $OrderByType;
 
@@ -105,7 +105,7 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $UniqSubnetIds;
 
     /**
-     * @var integer Quantity limit. The default value `100` is recommended.
+     * @var integer Quantity limit. Recommended default value: 100.
      */
     public $Limit;
 
@@ -115,18 +115,18 @@ class DescribeCommonDBInstancesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @param array $VpcIds List of instance VIPs
+     * @param array $VpcIds List of VPC IDs
      * @param array $SubnetIds List of subnet IDs
-     * @param integer $PayMode List of billing modes. Valid values: `0` (monthly subscription), `1` (pay-as-you-go)
+     * @param integer $PayMode List of billing modes. 0: monthly subscription; 1: pay-as-you-go
      * @param array $InstanceIds List of instance IDs
      * @param array $InstanceNames List of instance names
      * @param array $Status List of instance status
-     * @param string $OrderBy Sort field
-     * @param string $OrderByType Sort order
+     * @param string $OrderBy Sorting field
+     * @param string $OrderByType Sorting order
      * @param array $Vips List of instance VIPs
      * @param array $UniqVpcIds List of VPC IDs
      * @param array $UniqSubnetIds List of unique subnet IDs
-     * @param integer $Limit Quantity limit. The default value `100` is recommended.
+     * @param integer $Limit Quantity limit. Recommended default value: 100.
      * @param integer $Offset Offset. Default value: 0
      */
     function __construct()

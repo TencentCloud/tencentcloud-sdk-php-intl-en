@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ClearInstance request structure.
+ * AdjustPublicAddress request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getPassword() Obtain Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
- * @method void setPassword(string $Password) Set Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+ * @method string getInstanceId() Obtain The unique ID of the CVM instance, such as `ins-11112222`.
+ * @method void setInstanceId(string $InstanceId) Set The unique ID of the CVM instance, such as `ins-11112222`.
+ * @method string getAddressId() Obtain The unique ID of the EIP, such as `eip-11112222`.
+ * @method void setAddressId(string $AddressId) Set The unique ID of the EIP, such as `eip-11112222`.
  */
-class ClearInstanceRequest extends AbstractModel
+class AdjustPublicAddressRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string The unique ID of the CVM instance, such as `ins-11112222`.
      */
     public $InstanceId;
 
     /**
-     * @var string Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * @var string The unique ID of the EIP, such as `eip-11112222`.
      */
-    public $Password;
+    public $AddressId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $Password Redis instance password (this parameter is required for password-enabled instances but not for password-free instances)
+     * @param string $InstanceId The unique ID of the CVM instance, such as `ins-11112222`.
+     * @param string $AddressId The unique ID of the EIP, such as `eip-11112222`.
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class ClearInstanceRequest extends AbstractModel
             $this->InstanceId = $param["InstanceId"];
         }
 
-        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
-            $this->Password = $param["Password"];
+        if (array_key_exists("AddressId",$param) and $param["AddressId"] !== null) {
+            $this->AddressId = $param["AddressId"];
         }
     }
 }

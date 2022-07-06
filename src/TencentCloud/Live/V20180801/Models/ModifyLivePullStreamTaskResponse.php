@@ -14,39 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTaskList response structure.
+ * ModifyLivePullStreamTask response structure.
  *
- * @method integer getTotalCount() Obtain Total number of tasks
- * @method void setTotalCount(integer $TotalCount) Set Total number of tasks
- * @method array getTasks() Obtain Task details
- * @method void setTasks(array $Tasks) Set Task details
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTaskListResponse extends AbstractModel
+class ModifyLivePullStreamTaskResponse extends AbstractModel
 {
-    /**
-     * @var integer Total number of tasks
-     */
-    public $TotalCount;
-
-    /**
-     * @var array Task details
-     */
-    public $Tasks;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of tasks
-     * @param array $Tasks Task details
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeTaskListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
-            $this->Tasks = [];
-            foreach ($param["Tasks"] as $key => $value){
-                $obj = new TaskInfoDetail();
-                $obj->deserialize($value);
-                array_push($this->Tasks, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

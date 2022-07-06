@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableReplicaReadonly response structure.
  *
- * @method string getStatus() Obtain Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTaskId() Obtain Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTaskId(integer $TaskId) Set Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class EnableReplicaReadonlyResponse extends AbstractModel
 {
     /**
-     * @var string Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
      * @var integer Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TaskId;
 
@@ -51,10 +51,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param string $Status Valid values: `ERROR`, `OK`. This field has been deprecated.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Status Valid values: `ERROR`, `OK`. This field has been disused.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TaskId Task ID
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyAssistantCidr request structure.
  *
- * @method string getVpcId() Obtain `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
- * @method void setVpcId(string $VpcId) Set `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
- * @method array getNewCidrBlocks() Obtain Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
- * @method void setNewCidrBlocks(array $NewCidrBlocks) Set Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
- * @method array getOldCidrBlocks() Obtain Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
- * @method void setOldCidrBlocks(array $OldCidrBlocks) Set Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+ * @method string getVpcId() Obtain `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+ * @method void setVpcId(string $VpcId) Set `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+ * @method array getNewCidrBlocks() Obtain Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+ * @method void setNewCidrBlocks(array $NewCidrBlocks) Set Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+ * @method array getOldCidrBlocks() Obtain Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
+ * @method void setOldCidrBlocks(array $OldCidrBlocks) Set Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
  */
 class ModifyAssistantCidrRequest extends AbstractModel
 {
     /**
-     * @var string `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
+     * @var string `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
      */
     public $VpcId;
 
     /**
-     * @var array Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @var array Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
      */
     public $NewCidrBlocks;
 
     /**
-     * @var array Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @var array Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
      */
     public $OldCidrBlocks;
 
     /**
-     * @param string $VpcId `VPC` instance `ID`, e.g. `vpc-6v2ht8q5`.
-     * @param array $NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
-     * @param array $OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. Either or both of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @param string $VpcId `VPC` instance `ID`, such as `vpc-6v2ht8q5`.
+     * @param array $NewCidrBlocks Array of the secondary CIDR blocks to be added, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` and `OldCidrBlocks` must be specified.
+     * @param array $OldCidrBlocks Array of the secondary CIDR blocks to be deleted, such as ["10.0.0.0/16", "172.16.0.0/16"]. At least one of `NewCidrBlocks` or `OldCidrBlocks` must be specified.
      */
     function __construct()
     {

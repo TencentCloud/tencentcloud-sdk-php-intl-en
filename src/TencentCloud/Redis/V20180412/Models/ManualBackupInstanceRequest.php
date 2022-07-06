@@ -20,15 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ManualBackupInstance request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+ * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
  * @method string getRemark() Obtain Backup remarks
  * @method void setRemark(string $Remark) Set Backup remarks
+ * @method integer getStorageDays() Obtain Retention time in days. 0 indicates the default retention time.
+ * @method void setStorageDays(integer $StorageDays) Set Retention time in days. 0 indicates the default retention time.
  */
 class ManualBackupInstanceRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      */
     public $InstanceId;
 
@@ -38,8 +40,14 @@ class ManualBackupInstanceRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * @var integer Retention time in days. 0 indicates the default retention time.
+     */
+    public $StorageDays;
+
+    /**
+     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      * @param string $Remark Backup remarks
+     * @param integer $StorageDays Retention time in days. 0 indicates the default retention time.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ManualBackupInstanceRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("StorageDays",$param) and $param["StorageDays"] !== null) {
+            $this->StorageDays = $param["StorageDays"];
         }
     }
 }

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGatewayFlowQos response structure.
  *
- * @method array getGatewayQosSet() Obtain List of instance details.
- * @method void setGatewayQosSet(array $GatewayQosSet) Set List of instance details.
+ * @method array getGatewayQosSet() Obtain List of instance details
+ * @method void setGatewayQosSet(array $GatewayQosSet) Set List of instance details
  * @method integer getTotalCount() Obtain Number of eligible instances.
  * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGatewayFlowQosResponse extends AbstractModel
 {
     /**
-     * @var array List of instance details.
+     * @var array List of instance details
      */
     public $GatewayQosSet;
 
@@ -45,7 +45,7 @@ class DescribeGatewayFlowQosResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $GatewayQosSet List of instance details.
+     * @param array $GatewayQosSet List of instance details
      * @param integer $TotalCount Number of eligible instances.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

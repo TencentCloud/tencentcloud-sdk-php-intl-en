@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeInstanceVersion request structure.
  *
- * @method string getTargetInstanceType() Obtain The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
- * @method void setTargetInstanceType(string $TargetInstanceType) Set The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
- * @method integer getSwitchOption() Obtain Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
- * @method void setSwitchOption(integer $SwitchOption) Set Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+ * @method string getTargetInstanceType() Obtain Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+ * @method void setTargetInstanceType(string $TargetInstanceType) Set Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+ * @method integer getSwitchOption() Obtain Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
+ * @method void setSwitchOption(integer $SwitchOption) Set Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  */
 class UpgradeInstanceVersionRequest extends AbstractModel
 {
     /**
-     * @var string The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * @var string Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
      */
     public $TargetInstanceType;
 
     /**
-     * @var integer Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+     * @var integer Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
      */
     public $SwitchOption;
 
@@ -45,8 +45,8 @@ class UpgradeInstanceVersionRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param string $TargetInstanceType The target instance type to which the instance will change. It is the same as the `TypeId` parameter in the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
-     * @param integer $SwitchOption Switch mode. Valid values: 1 (switch during the maintenance window), 2 (switch immediately).
+     * @param string $TargetInstanceType Target instance type after the change, which is the same as the `Type` of the [CreateInstances](https://intl.cloud.tencent.com/document/api/239/20026?from_cn_redirect=1) API.
+     * @param integer $SwitchOption Switch mode. Valid values: 1 (switch during the maintenance time), 2 (switch now).
      * @param string $InstanceId Instance ID
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskType(string $TaskType) Set Task type
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getTaskMessage() Obtain Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
- * @method void setTaskMessage(string $TaskMessage) Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+ * @method string getTaskMessage() Obtain Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
+ * @method void setTaskMessage(string $TaskMessage) Set Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -56,7 +56,7 @@ class DescribeTaskInfoResponse extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+     * @var string Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
      */
     public $TaskMessage;
 
@@ -70,7 +70,7 @@ class DescribeTaskInfoResponse extends AbstractModel
      * @param string $StartTime Task start time
      * @param string $TaskType Task type
      * @param string $InstanceId Instance ID
-     * @param string $TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded
+     * @param string $TaskMessage Task message, which is displayed in case of an error. It will be blank if the status is running or succeeded.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

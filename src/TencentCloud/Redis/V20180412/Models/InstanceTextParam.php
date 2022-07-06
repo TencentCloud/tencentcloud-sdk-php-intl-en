@@ -18,22 +18,22 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Descriptions of text parameters of the instance
+ * Description of instance parameter in Char type
  *
  * @method string getParamName() Obtain Parameter name
  * @method void setParamName(string $ParamName) Set Parameter name
  * @method string getValueType() Obtain Parameter type: Text
  * @method void setValueType(string $ValueType) Set Parameter type: Text
- * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Value range: true, false
- * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Value range: true, false
+ * @method string getNeedRestart() Obtain Whether restart is required after a modification is made. Valid values: true, false
+ * @method void setNeedRestart(string $NeedRestart) Set Whether restart is required after a modification is made. Valid values: true, false
  * @method string getDefaultValue() Obtain Default value of the parameter
  * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter
- * @method string getCurrentValue() Obtain Current value of a parameter
- * @method void setCurrentValue(string $CurrentValue) Set Current value of a parameter
+ * @method string getCurrentValue() Obtain Current value
+ * @method void setCurrentValue(string $CurrentValue) Set Current value
  * @method string getTips() Obtain Parameter description
  * @method void setTips(string $Tips) Set Parameter description
- * @method array getTextValue() Obtain Value range of a parameter
- * @method void setTextValue(array $TextValue) Set Value range of a parameter
+ * @method array getTextValue() Obtain Valid values of the parameter
+ * @method void setTextValue(array $TextValue) Set Valid values of the parameter
  * @method integer getStatus() Obtain Parameter status. 1: modifying; 2: modified
  * @method void setStatus(integer $Status) Set Parameter status. 1: modifying; 2: modified
  */
@@ -50,7 +50,7 @@ class InstanceTextParam extends AbstractModel
     public $ValueType;
 
     /**
-     * @var string Whether restart is required after a modification is made. Value range: true, false
+     * @var string Whether restart is required after a modification is made. Valid values: true, false
      */
     public $NeedRestart;
 
@@ -60,7 +60,7 @@ class InstanceTextParam extends AbstractModel
     public $DefaultValue;
 
     /**
-     * @var string Current value of a parameter
+     * @var string Current value
      */
     public $CurrentValue;
 
@@ -70,7 +70,7 @@ class InstanceTextParam extends AbstractModel
     public $Tips;
 
     /**
-     * @var array Value range of a parameter
+     * @var array Valid values of the parameter
      */
     public $TextValue;
 
@@ -82,11 +82,11 @@ class InstanceTextParam extends AbstractModel
     /**
      * @param string $ParamName Parameter name
      * @param string $ValueType Parameter type: Text
-     * @param string $NeedRestart Whether restart is required after a modification is made. Value range: true, false
+     * @param string $NeedRestart Whether restart is required after a modification is made. Valid values: true, false
      * @param string $DefaultValue Default value of the parameter
-     * @param string $CurrentValue Current value of a parameter
+     * @param string $CurrentValue Current value
      * @param string $Tips Parameter description
-     * @param array $TextValue Value range of a parameter
+     * @param array $TextValue Valid values of the parameter
      * @param integer $Status Parameter status. 1: modifying; 2: modified
      */
     function __construct()

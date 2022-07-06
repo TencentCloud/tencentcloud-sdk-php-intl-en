@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRouteTableId() Obtain The unique ID of the route table
  * @method void setRouteTableId(string $RouteTableId) Set The unique ID of the route table
- * @method array getRouteItemIds() Obtain The unique ID of the routing policy
- * @method void setRouteItemIds(array $RouteItemIds) Set The unique ID of the routing policy
+ * @method array getRouteItemIds() Obtain The unique ID of the route
+ * @method void setRouteItemIds(array $RouteItemIds) Set The unique ID of the route
  */
 class NotifyRoutesRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class NotifyRoutesRequest extends AbstractModel
     public $RouteTableId;
 
     /**
-     * @var array The unique ID of the routing policy
+     * @var array The unique ID of the route
      */
     public $RouteItemIds;
 
     /**
      * @param string $RouteTableId The unique ID of the route table
-     * @param array $RouteItemIds The unique ID of the routing policy
+     * @param array $RouteItemIds The unique ID of the route
      */
     function __construct()
     {

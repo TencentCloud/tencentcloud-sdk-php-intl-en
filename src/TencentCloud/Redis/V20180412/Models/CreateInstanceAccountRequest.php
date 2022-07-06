@@ -24,24 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method string getAccountName() Obtain Sub-account name
  * @method void setAccountName(string $AccountName) Set Sub-account name
- * @method string getAccountPassword() Obtain 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+ * @method string getAccountPassword() Obtain 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
- * @method void setAccountPassword(string $AccountPassword) Set 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+ * @method void setAccountPassword(string $AccountPassword) Set 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
- * @method array getReadonlyPolicy() Obtain Routing policy. Enter `master` for primary node or `replication` for secondary node
- * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Enter `master` for primary node or `replication` for secondary node
- * @method string getPrivilege() Obtain Read/write policy. Valid values: r (read-only), rw (read/write).
- * @method void setPrivilege(string $Privilege) Set Read/write policy. Valid values: r (read-only), rw (read/write).
+ * @method array getReadonlyPolicy() Obtain Routing policy. Valid values: master (master node); replication (replica node)
+ * @method void setReadonlyPolicy(array $ReadonlyPolicy) Set Routing policy. Valid values: master (master node); replication (replica node)
+ * @method string getPrivilege() Obtain Read/Write policy. Valid values: r (read-only); rw (read/write).
+ * @method void setPrivilege(string $Privilege) Set Read/Write policy. Valid values: r (read-only); rw (read/write).
  * @method string getRemark() Obtain Sub-account description information
  * @method void setRemark(string $Remark) Set Sub-account description information
  */
@@ -58,23 +58,23 @@ class CreateInstanceAccountRequest extends AbstractModel
     public $AccountName;
 
     /**
-     * @var string 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * @var string 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
      */
     public $AccountPassword;
 
     /**
-     * @var array Routing policy. Enter `master` for primary node or `replication` for secondary node
+     * @var array Routing policy. Valid values: master (master node); replication (replica node)
      */
     public $ReadonlyPolicy;
 
     /**
-     * @var string Read/write policy. Valid values: r (read-only), rw (read/write).
+     * @var string Read/Write policy. Valid values: r (read-only); rw (read/write).
      */
     public $Privilege;
 
@@ -86,15 +86,15 @@ class CreateInstanceAccountRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param string $AccountName Sub-account name
-     * @param string $AccountPassword 1. The password must contain 8-30 characters. A password of 12 or more characters is recommended.
-2. The password cannot start with a slash (/).
-3. The password must contain at least two of the following four types:
-    a. Lowercase letters (a-z)
-    b. Uppercase letters (A-Z)
-    c. Digits (0-9)
+     * @param string $AccountPassword 1. The password must contain 8–30 characters. A password of 12 or more characters is recommended.
+2. It cannot start with a slash (/).
+3. It must contain characters in at least two of the following types:
+    a. Lowercase letters (a–z)
+    b. Uppercase letters (A–Z)
+    c. Digits (0–9)
     d. ()`~!@#$%^&*-+=_|{}[]:;<>,.?/
-     * @param array $ReadonlyPolicy Routing policy. Enter `master` for primary node or `replication` for secondary node
-     * @param string $Privilege Read/write policy. Valid values: r (read-only), rw (read/write).
+     * @param array $ReadonlyPolicy Routing policy. Valid values: master (master node); replication (replica node)
+     * @param string $Privilege Read/Write policy. Valid values: r (read-only); rw (read/write).
      * @param string $Remark Sub-account description information
      */
     function __construct()

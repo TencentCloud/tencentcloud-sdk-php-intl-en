@@ -14,32 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag bound to the instance purchased via API
+ * DeleteLivePullStreamTask response structure.
  *
- * @method string getTagKey() Obtain Tag key
- * @method void setTagKey(string $TagKey) Set Tag key
- * @method string getTagValue() Obtain Tag value
- * @method void setTagValue(string $TagValue) Set Tag value
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ResourceTag extends AbstractModel
+class DeleteLivePullStreamTaskResponse extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $TagKey;
+    public $RequestId;
 
     /**
-     * @var string Tag value
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey Tag key
-     * @param string $TagValue Tag value
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class ResourceTag extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

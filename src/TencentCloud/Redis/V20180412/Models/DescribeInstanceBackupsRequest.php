@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceBackups request structure.
  *
- * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
- * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+ * @method string getInstanceId() Obtain ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
  * @method integer getLimit() Obtain Instance list size. Default value: 20
  * @method void setLimit(integer $Limit) Set Instance list size. Default value: 20
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  * @method string getBeginTime() Obtain Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method void setBeginTime(string $BeginTime) Set Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
  * @method string getEndTime() Obtain End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeInstanceBackupsRequest extends AbstractModel
 {
     /**
-     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * @var string ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      */
     public $InstanceId;
 
@@ -46,7 +46,7 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
@@ -66,9 +66,9 @@ class DescribeInstanceBackupsRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the DescribeInstance API.
+     * @param string $InstanceId ID of the instance to be operated on, which can be obtained through the `InstanceId` field in the return value of the `DescribeInstance` API.
      * @param integer $Limit Instance list size. Default value: 20
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      * @param string $BeginTime Start time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 16:46:34. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
      * @param string $EndTime End time in the format of yyyy-MM-dd HH:mm:ss, such as 2017-02-08 19:09:26. This parameter is used to query the list of instance backups started during the [beginTime, endTime] range.
      * @param array $Status 1: backup in process; 2: backing up normally; 3: converting from backup to RDB file; 4: RDB conversion completed; -1: backup expired; -2: backup deleted.

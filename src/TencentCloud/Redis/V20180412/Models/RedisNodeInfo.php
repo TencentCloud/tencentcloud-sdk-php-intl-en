@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Redis master or replica node information
  *
- * @method integer getNodeType() Obtain Node type. Valid values: `0` (master node), `1` (replica node)
- * @method void setNodeType(integer $NodeType) Set Node type. Valid values: `0` (master node), `1` (replica node)
- * @method integer getNodeId() Obtain ID of the master or replica node, which is not required upon creation of the instance
- * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required upon creation of the instance
- * @method integer getZoneId() Obtain ID of the availability zone of the master or replica node
- * @method void setZoneId(integer $ZoneId) Set ID of the availability zone of the master or replica node
- * @method string getZoneName() Obtain ID of the availability zone of the master or replica node
- * @method void setZoneName(string $ZoneName) Set ID of the availability zone of the master or replica node
+ * @method integer getNodeType() Obtain Node type. 0: master node; 1: replica node
+ * @method void setNodeType(integer $NodeType) Set Node type. 0: master node; 1: replica node
+ * @method integer getNodeId() Obtain ID of the master or replica node, which is not required during instance creation
+ * @method void setNodeId(integer $NodeId) Set ID of the master or replica node, which is not required during instance creation
+ * @method integer getZoneId() Obtain AZ ID of the master or replica node
+ * @method void setZoneId(integer $ZoneId) Set AZ ID of the master or replica node
+ * @method string getZoneName() Obtain AZ name of the master or replica node
+ * @method void setZoneName(string $ZoneName) Set AZ name of the master or replica node
  */
 class RedisNodeInfo extends AbstractModel
 {
     /**
-     * @var integer Node type. Valid values: `0` (master node), `1` (replica node)
+     * @var integer Node type. 0: master node; 1: replica node
      */
     public $NodeType;
 
     /**
-     * @var integer ID of the master or replica node, which is not required upon creation of the instance
+     * @var integer ID of the master or replica node, which is not required during instance creation
      */
     public $NodeId;
 
     /**
-     * @var integer ID of the availability zone of the master or replica node
+     * @var integer AZ ID of the master or replica node
      */
     public $ZoneId;
 
     /**
-     * @var string ID of the availability zone of the master or replica node
+     * @var string AZ name of the master or replica node
      */
     public $ZoneName;
 
     /**
-     * @param integer $NodeType Node type. Valid values: `0` (master node), `1` (replica node)
-     * @param integer $NodeId ID of the master or replica node, which is not required upon creation of the instance
-     * @param integer $ZoneId ID of the availability zone of the master or replica node
-     * @param string $ZoneName ID of the availability zone of the master or replica node
+     * @param integer $NodeType Node type. 0: master node; 1: replica node
+     * @param integer $NodeId ID of the master or replica node, which is not required during instance creation
+     * @param integer $ZoneId AZ ID of the master or replica node
+     * @param string $ZoneName AZ name of the master or replica node
      */
     function __construct()
     {

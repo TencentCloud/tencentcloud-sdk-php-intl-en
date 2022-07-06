@@ -20,31 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGatewayFlowQos request structure.
  *
- * @method string getGatewayId() Obtain Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
- * @method void setGatewayId(string $GatewayId) Set Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
- * @method integer getBandwidth() Obtain Bandwidth limit value.
- * @method void setBandwidth(integer $Bandwidth) Set Bandwidth limit value.
+ * @method string getGatewayId() Obtain Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
+ * @method void setGatewayId(string $GatewayId) Set Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
+ * @method integer getBandwidth() Obtain Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
+ * @method void setBandwidth(integer $Bandwidth) Set Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
  * @method array getIpAddresses() Obtain CVM private IP addresses with limited bandwidth.
  * @method void setIpAddresses(array $IpAddresses) Set CVM private IP addresses with limited bandwidth.
  */
 class ModifyGatewayFlowQosRequest extends AbstractModel
 {
     /**
-     * @var string Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
+     * @var string Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
      */
     public $GatewayId;
 
     /**
-     * @var integer Bandwidth limit value.
+     * @var integer Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
      */
     public $Bandwidth;
 
@@ -54,11 +54,11 @@ ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
     public $IpAddresses;
 
     /**
-     * @param string $GatewayId Gateway instance ID, which currently supports these types:
-ID of Direct Connect gateway instance, e.g. `dcg-ltjahce6`;
-ID of NAT gateway instance, e.g. `nat-ltjahce6`;
-ID of VPN gateway instance, e.g. `vpn-ltjahce6`.
-     * @param integer $Bandwidth Bandwidth limit value.
+     * @param string $GatewayId Gateway instance ID. Supported types:
+Direct connect gateway instance, such as `dcg-ltjahce6`;
+NAT gateway instance, such as `nat-ltjahce6`;
+VPN gateway instance, such as `vpn-ltjahce6`.
+     * @param integer $Bandwidth Bandwidth limit value in Mbps. Valid values: >0: Set the limit to the specified value. 0: Block all traffic. -1: No bandwidth limit.
      * @param array $IpAddresses CVM private IP addresses with limited bandwidth.
      */
     function __construct()

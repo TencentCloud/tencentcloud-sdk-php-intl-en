@@ -18,7 +18,7 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details of the parameters in a parameter template
+ * Details of the parameters in the parameter template
  *
  * @method string getName() Obtain Parameter name
  * @method void setName(string $Name) Set Parameter name
@@ -28,22 +28,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefault(string $Default) Set Default value of the parameter
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
- * @method string getCurrentValue() Obtain Current value of the parameter
- * @method void setCurrentValue(string $CurrentValue) Set Current value of the parameter
- * @method integer getNeedReboot() Obtain Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
- * @method void setNeedReboot(integer $NeedReboot) Set Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+ * @method string getCurrentValue() Obtain Current value
+ * @method void setCurrentValue(string $CurrentValue) Set Current value
+ * @method integer getNeedReboot() Obtain Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
+ * @method void setNeedReboot(integer $NeedReboot) Set Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
  * @method string getMax() Obtain Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMax(string $Max) Set Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMin() Obtain Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMin(string $Min) Set Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getEnumValue() Obtain Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getEnumValue() Obtain Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnumValue(array $EnumValue) Set Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParameterDetail extends AbstractModel
 {
@@ -68,30 +68,30 @@ class ParameterDetail extends AbstractModel
     public $Description;
 
     /**
-     * @var string Current value of the parameter
+     * @var string Current value
      */
     public $CurrentValue;
 
     /**
-     * @var integer Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+     * @var integer Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
      */
     public $NeedReboot;
 
     /**
      * @var string Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Max;
 
     /**
      * @var string Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Min;
 
     /**
-     * @var array Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EnumValue;
 
@@ -100,14 +100,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $ParamType Data type of the parameter
      * @param string $Default Default value of the parameter
      * @param string $Description Parameter description
-     * @param string $CurrentValue Current value of the parameter
-     * @param integer $NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: `0` (no),`1` (yes)
+     * @param string $CurrentValue Current value
+     * @param integer $NeedReboot Whether the database needs to be restarted for the modified parameter to take effect. Valid values: 0 (no); 1 (yes).
      * @param string $Max Maximum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Min Minimum value of the parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $EnumValue Enumerated values of the parameter. It is null if the parameter is non-enumerated.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

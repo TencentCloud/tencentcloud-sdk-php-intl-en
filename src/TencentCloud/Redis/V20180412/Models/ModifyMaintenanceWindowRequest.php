@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getStartTime() Obtain Start time of the maintenance window, such as 17:00
- * @method void setStartTime(string $StartTime) Set Start time of the maintenance window, such as 17:00
- * @method string getEndTime() Obtain End time of the maintenance window, such as 19:00
- * @method void setEndTime(string $EndTime) Set End time of the maintenance window, such as 19:00
+ * @method string getStartTime() Obtain Maintenance start time, such as 17:00
+ * @method void setStartTime(string $StartTime) Set Maintenance start time, such as 17:00
+ * @method string getEndTime() Obtain Maintenance end time, such as 19:00
+ * @method void setEndTime(string $EndTime) Set Maintenance end time, such as 19:00
  */
 class ModifyMaintenanceWindowRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class ModifyMaintenanceWindowRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time of the maintenance window, such as 17:00
+     * @var string Maintenance start time, such as 17:00
      */
     public $StartTime;
 
     /**
-     * @var string End time of the maintenance window, such as 19:00
+     * @var string Maintenance end time, such as 19:00
      */
     public $EndTime;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param string $StartTime Start time of the maintenance window, such as 17:00
-     * @param string $EndTime End time of the maintenance window, such as 19:00
+     * @param string $StartTime Maintenance start time, such as 17:00
+     * @param string $EndTime Maintenance end time, such as 19:00
      */
     function __construct()
     {

@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time in the format of 2019-09-09 12:12:41
  * @method integer getMinQueryTime() Obtain Slow query threshold in ms
  * @method void setMinQueryTime(integer $MinQueryTime) Set Slow query threshold in ms
- * @method integer getLimit() Obtain The maximum number of results returned per page. Default value: `20`
- * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Default value: `20`
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method integer getLimit() Obtain Maximum number of results returned per page. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Maximum number of results returned per page. Default value: 20.
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  */
 class DescribeTendisSlowLogRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DescribeTendisSlowLogRequest extends AbstractModel
     public $MinQueryTime;
 
     /**
-     * @var integer The maximum number of results returned per page. Default value: `20`
+     * @var integer Maximum number of results returned per page. Default value: 20.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
@@ -70,8 +70,8 @@ class DescribeTendisSlowLogRequest extends AbstractModel
      * @param string $BeginTime Start time in the format of 2019-09-08 12:12:41
      * @param string $EndTime End time in the format of 2019-09-09 12:12:41
      * @param integer $MinQueryTime Slow query threshold in ms
-     * @param integer $Limit The maximum number of results returned per page. Default value: `20`
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param integer $Limit Maximum number of results returned per page. Default value: 20.
+     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      */
     function __construct()
     {

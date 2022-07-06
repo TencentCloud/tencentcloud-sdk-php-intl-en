@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getGroupId() Obtain Node group ID
  * @method void setGroupId(integer $GroupId) Set Node group ID
- * @method string getGroupName() Obtain Node group name
- * @method void setGroupName(string $GroupName) Set Node group name
- * @method string getZoneId() Obtain Node availability zone ID, such as ap-guangzhou-1
- * @method void setZoneId(string $ZoneId) Set Node availability zone ID, such as ap-guangzhou-1
- * @method string getRole() Obtain Node group type. Valid values: `master` (master node group), `replica` (replica node group)
- * @method void setRole(string $Role) Set Node group type. Valid values: `master` (master node group), `replica` (replica node group)
- * @method array getRedisNodes() Obtain The list of nodes in a node group
- * @method void setRedisNodes(array $RedisNodes) Set The list of nodes in a node group
+ * @method string getGroupName() Obtain Node group name, which is empty for the master node
+ * @method void setGroupName(string $GroupName) Set Node group name, which is empty for the master node
+ * @method string getZoneId() Obtain Node AZ ID, such as ap-guangzhou-1
+ * @method void setZoneId(string $ZoneId) Set Node AZ ID, such as ap-guangzhou-1
+ * @method string getRole() Obtain Node group type. Valid values: master (master node group); replica (replica node group)
+ * @method void setRole(string $Role) Set Node group type. Valid values: master (master node group); replica (replica node group)
+ * @method array getRedisNodes() Obtain List of nodes in the node group
+ * @method void setRedisNodes(array $RedisNodes) Set List of nodes in the node group
  */
 class ReplicaGroup extends AbstractModel
 {
@@ -39,31 +39,31 @@ class ReplicaGroup extends AbstractModel
     public $GroupId;
 
     /**
-     * @var string Node group name
+     * @var string Node group name, which is empty for the master node
      */
     public $GroupName;
 
     /**
-     * @var string Node availability zone ID, such as ap-guangzhou-1
+     * @var string Node AZ ID, such as ap-guangzhou-1
      */
     public $ZoneId;
 
     /**
-     * @var string Node group type. Valid values: `master` (master node group), `replica` (replica node group)
+     * @var string Node group type. Valid values: master (master node group); replica (replica node group)
      */
     public $Role;
 
     /**
-     * @var array The list of nodes in a node group
+     * @var array List of nodes in the node group
      */
     public $RedisNodes;
 
     /**
      * @param integer $GroupId Node group ID
-     * @param string $GroupName Node group name
-     * @param string $ZoneId Node availability zone ID, such as ap-guangzhou-1
-     * @param string $Role Node group type. Valid values: `master` (master node group), `replica` (replica node group)
-     * @param array $RedisNodes The list of nodes in a node group
+     * @param string $GroupName Node group name, which is empty for the master node
+     * @param string $ZoneId Node AZ ID, such as ap-guangzhou-1
+     * @param string $Role Node group type. Valid values: master (master node group); replica (replica node group)
+     * @param array $RedisNodes List of nodes in the node group
      */
     function __construct()
     {

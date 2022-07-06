@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorage(integer $Storage) Set Storage capacity
  * @method float getStorageSlope() Obtain Capacity slope
  * @method void setStorageSlope(float $StorageSlope) Set Capacity slope
- * @method string getRunid() Obtain ID of the runtime node of an instance
- * @method void setRunid(string $Runid) Set ID of the runtime node of an instance
+ * @method string getRunid() Obtain ID of the runtime node of the instance
+ * @method void setRunid(string $Runid) Set ID of the runtime node of the instance
  * @method integer getConnected() Obtain Service status. 0: down; 1: on
  * @method void setConnected(integer $Connected) Set Service status. 0: down; 1: on
  */
@@ -77,7 +77,7 @@ class InstanceClusterShard extends AbstractModel
     public $StorageSlope;
 
     /**
-     * @var string ID of the runtime node of an instance
+     * @var string ID of the runtime node of the instance
      */
     public $Runid;
 
@@ -94,7 +94,7 @@ class InstanceClusterShard extends AbstractModel
      * @param string $Slots Slot information
      * @param integer $Storage Storage capacity
      * @param float $StorageSlope Capacity slope
-     * @param string $Runid ID of the runtime node of an instance
+     * @param string $Runid ID of the runtime node of the instance
      * @param integer $Connected Service status. 0: down; 1: on
      */
     function __construct()

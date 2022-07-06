@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNetworkAclAttribute request structure.
  *
- * @method string getNetworkAclId() Obtain Network ACL instance ID. Example: acl-12345678.
- * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID. Example: acl-12345678.
- * @method string getNetworkAclName() Obtain Name of the network ACL. The maximum length is 60 bytes.
- * @method void setNetworkAclName(string $NetworkAclName) Set Name of the network ACL. The maximum length is 60 bytes.
+ * @method string getNetworkAclId() Obtain Network ACL instance ID, such as `acl-12345678`.
+ * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID, such as `acl-12345678`.
+ * @method string getNetworkAclName() Obtain Network ACL name, which can contain up to 60 bytes.
+ * @method void setNetworkAclName(string $NetworkAclName) Set Network ACL name, which can contain up to 60 bytes.
  */
 class ModifyNetworkAclAttributeRequest extends AbstractModel
 {
     /**
-     * @var string Network ACL instance ID. Example: acl-12345678.
+     * @var string Network ACL instance ID, such as `acl-12345678`.
      */
     public $NetworkAclId;
 
     /**
-     * @var string Name of the network ACL. The maximum length is 60 bytes.
+     * @var string Network ACL name, which can contain up to 60 bytes.
      */
     public $NetworkAclName;
 
     /**
-     * @param string $NetworkAclId Network ACL instance ID. Example: acl-12345678.
-     * @param string $NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
+     * @param string $NetworkAclId Network ACL instance ID, such as `acl-12345678`.
+     * @param string $NetworkAclName Network ACL name, which can contain up to 60 bytes.
      */
     function __construct()
     {

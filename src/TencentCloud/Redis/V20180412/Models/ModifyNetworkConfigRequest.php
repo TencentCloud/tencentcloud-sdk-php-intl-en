@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getOperation() Obtain Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
- * @method void setOperation(string $Operation) Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
- * @method string getVip() Obtain VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
- * @method void setVip(string $Vip) Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
- * @method string getVpcId() Obtain VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
- * @method void setVpcId(string $VpcId) Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method string getOperation() Obtain Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+ * @method void setOperation(string $Operation) Set Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+ * @method string getVip() Obtain VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+ * @method void setVip(string $Vip) Set VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+ * @method string getVpcId() Obtain VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
+ * @method void setVpcId(string $VpcId) Set VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
  * @method string getSubnetId() Obtain Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
  * @method void setSubnetId(string $SubnetId) Set Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+ * @method integer getRecycle() Obtain Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+ * @method void setRecycle(integer $Recycle) Set Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
  */
 class ModifyNetworkConfigRequest extends AbstractModel
 {
@@ -39,17 +41,17 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
+     * @var string Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
      */
     public $Operation;
 
     /**
-     * @var string VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
+     * @var string VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
      */
     public $Vip;
 
     /**
-     * @var string VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * @var string VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
      */
     public $VpcId;
 
@@ -59,11 +61,17 @@ class ModifyNetworkConfigRequest extends AbstractModel
     public $SubnetId;
 
     /**
+     * @var integer Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
+     */
+    public $Recycle;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param string $Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from basic network to VPC
-     * @param string $Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default
-     * @param string $VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * @param string $Operation Operation type. changeVip: modify the VIP of an instance; changeVpc: modify the subnet of an instance; changeBaseToVpc: change from classic network to VPC
+     * @param string $Vip VIP address, which is required for the `changeVip` operation. If this parameter is left blank, a random one will be assigned by default.
+     * @param string $VpcId VPC ID, which is required for `changeVpc` and `changeBaseToVpc` operations.
      * @param string $SubnetId Subnet ID, which is required for `changeVpc` and `changeBaseToVpc` operations
+     * @param integer $Recycle Retention time of the original VIP in days. Note that this parameter works only in the latest SDK. In earlier SDKs, the original VIP is released immediately. To view the SDK version, go to [SDK Center](https://intl.cloud.tencent.com/document/sdk?from_cn_redirect=1).
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class ModifyNetworkConfigRequest extends AbstractModel
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("Recycle",$param) and $param["Recycle"] !== null) {
+            $this->Recycle = $param["Recycle"];
         }
     }
 }

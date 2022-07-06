@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstance request structure.
  *
- * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
- * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+ * @method string getOperation() Obtain Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
+ * @method void setOperation(string $Operation) Set Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
  * @method array getInstanceIds() Obtain Instance ID
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID
- * @method array getInstanceNames() Obtain New name of instance
- * @method void setInstanceNames(array $InstanceNames) Set New name of instance
+ * @method array getInstanceNames() Obtain New name of the instance
+ * @method void setInstanceNames(array $InstanceNames) Set New name of the instance
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getAutoRenews() Obtain Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
- * @method void setAutoRenews(array $AutoRenews) Set Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+ * @method array getAutoRenews() Obtain Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
+ * @method void setAutoRenews(array $AutoRenews) Set Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
  * @method string getInstanceId() Obtain Disused
  * @method void setInstanceId(string $InstanceId) Set Disused
  * @method string getInstanceName() Obtain Disused
@@ -40,7 +40,7 @@ use TencentCloud\Common\AbstractModel;
 class ModifyInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+     * @var string Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
      */
     public $Operation;
 
@@ -50,7 +50,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array New name of instance
+     * @var array New name of the instance
      */
     public $InstanceNames;
 
@@ -60,7 +60,7 @@ class ModifyInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * @var array Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      */
     public $AutoRenews;
 
@@ -80,11 +80,11 @@ class ModifyInstanceRequest extends AbstractModel
     public $AutoRenew;
 
     /**
-     * @param string $Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance
+     * @param string $Operation Instance modification type. rename: rename an instance; modifyProject: modify the project of an instance; modifyAutoRenew: modify the auto-renewal flag of an instance.
      * @param array $InstanceIds Instance ID
-     * @param array $InstanceNames New name of instance
+     * @param array $InstanceNames New name of the instance
      * @param integer $ProjectId Project ID
-     * @param array $AutoRenews Auto-renewal flag. 0: default status (manual renewal), 1: auto-renewal enabled, 2: auto-renewal disabled
+     * @param array $AutoRenews Auto-renewal flag. 0: default status (manual renewal); 1: auto-renewal enabled; 2: auto-renewal disabled
      * @param string $InstanceId Disused
      * @param string $InstanceName Disused
      * @param integer $AutoRenew Disused

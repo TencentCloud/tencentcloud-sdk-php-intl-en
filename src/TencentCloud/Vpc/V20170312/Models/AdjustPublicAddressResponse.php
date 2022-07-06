@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceSecurityGroup response structure.
+ * AdjustPublicAddress response structure.
  *
- * @method array getInstanceSecurityGroupsDetail() Obtain Security group information of the instance
- * @method void setInstanceSecurityGroupsDetail(array $InstanceSecurityGroupsDetail) Set Security group information of the instance
+ * @method integer getTaskId() Obtain The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
+ * @method void setTaskId(integer $TaskId) Set The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeInstanceSecurityGroupResponse extends AbstractModel
+class AdjustPublicAddressResponse extends AbstractModel
 {
     /**
-     * @var array Security group information of the instance
+     * @var integer The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      */
-    public $InstanceSecurityGroupsDetail;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class DescribeInstanceSecurityGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InstanceSecurityGroupsDetail Security group information of the instance
+     * @param integer $TaskId The async task ID. You can use the [DescribeTaskResult](https://intl.cloud.tencent.com/document/api/215/36271?from_cn_redirect=1) API to query the task status.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,13 +54,8 @@ class DescribeInstanceSecurityGroupResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceSecurityGroupsDetail",$param) and $param["InstanceSecurityGroupsDetail"] !== null) {
-            $this->InstanceSecurityGroupsDetail = [];
-            foreach ($param["InstanceSecurityGroupsDetail"] as $key => $value){
-                $obj = new InstanceSecurityGroupDetail();
-                $obj->deserialize($value);
-                array_push($this->InstanceSecurityGroupsDetail, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

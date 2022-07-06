@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAssistantCidr response structure.
  *
- * @method array getAssistantCidrSet() Obtain A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setAssistantCidrSet(array $AssistantCidrSet) Set A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+ * @method array getAssistantCidrSet() Obtain Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAssistantCidrSet(array $AssistantCidrSet) Set Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateAssistantCidrResponse extends AbstractModel
 {
     /**
-     * @var array A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+     * @var array Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AssistantCidrSet;
 
@@ -41,8 +41,8 @@ Note: This field may return null, indicating that no valid value was found.
     public $RequestId;
 
     /**
-     * @param array $AssistantCidrSet A set of secondary CIDR blocks.
-Note: This field may return null, indicating that no valid value was found.
+     * @param array $AssistantCidrSet Array of secondary CIDR blocks.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

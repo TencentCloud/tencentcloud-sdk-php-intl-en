@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ApplyParamsTemplate request structure.
  *
- * @method array getInstanceIds() Obtain Instance ID list
- * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
- * @method string getTemplateId() Obtain The ID of the parameter template to be applied
- * @method void setTemplateId(string $TemplateId) Set The ID of the parameter template to be applied
+ * @method array getInstanceIds() Obtain List of instance IDs
+ * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs
+ * @method string getTemplateId() Obtain ID of the parameter template to be applied
+ * @method void setTemplateId(string $TemplateId) Set ID of the parameter template to be applied
  */
 class ApplyParamsTemplateRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID list
+     * @var array List of instance IDs
      */
     public $InstanceIds;
 
     /**
-     * @var string The ID of the parameter template to be applied
+     * @var string ID of the parameter template to be applied
      */
     public $TemplateId;
 
     /**
-     * @param array $InstanceIds Instance ID list
-     * @param string $TemplateId The ID of the parameter template to be applied
+     * @param array $InstanceIds List of instance IDs
+     * @param string $TemplateId ID of the parameter template to be applied
      */
     function __construct()
     {

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisableReplicaReadonly request structure.
  *
- * @method string getInstanceId() Obtain Serial ID of an instance
- * @method void setInstanceId(string $InstanceId) Set Serial ID of an instance
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
  */
 class DisableReplicaReadonlyRequest extends AbstractModel
 {
     /**
-     * @var string Serial ID of an instance
+     * @var string Instance ID
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Serial ID of an instance
+     * @param string $InstanceId Instance ID
      */
     function __construct()
     {

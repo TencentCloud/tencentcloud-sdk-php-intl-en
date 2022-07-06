@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommand(string $Command) Set Command
  * @method string getCommandLine() Obtain Command line details
  * @method void setCommandLine(string $CommandLine) Set Command line details
- * @method string getExecuteTime() Obtain Execution duration
- * @method void setExecuteTime(string $ExecuteTime) Set Execution duration
+ * @method string getExecuteTime() Obtain Execution time
+ * @method void setExecuteTime(string $ExecuteTime) Set Execution time
  */
 class InstanceProxySlowlogDetail extends AbstractModel
 {
@@ -54,7 +54,7 @@ class InstanceProxySlowlogDetail extends AbstractModel
     public $CommandLine;
 
     /**
-     * @var string Execution duration
+     * @var string Execution time
      */
     public $ExecuteTime;
 
@@ -63,7 +63,7 @@ class InstanceProxySlowlogDetail extends AbstractModel
      * @param string $Client Client address
      * @param string $Command Command
      * @param string $CommandLine Command line details
-     * @param string $ExecuteTime Execution duration
+     * @param string $ExecuteTime Execution time
      */
     function __construct()
     {

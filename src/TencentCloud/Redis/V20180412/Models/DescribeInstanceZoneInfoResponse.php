@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstanceZoneInfo response structure.
  *
- * @method integer getTotalCount() Obtain The number of instance node groups
- * @method void setTotalCount(integer $TotalCount) Set The number of instance node groups
- * @method array getReplicaGroups() Obtain The list of instance node groups
- * @method void setReplicaGroups(array $ReplicaGroups) Set The list of instance node groups
+ * @method integer getTotalCount() Obtain Number of instance node groups
+ * @method void setTotalCount(integer $TotalCount) Set Number of instance node groups
+ * @method array getReplicaGroups() Obtain List of instance node groups
+ * @method void setReplicaGroups(array $ReplicaGroups) Set List of instance node groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeInstanceZoneInfoResponse extends AbstractModel
 {
     /**
-     * @var integer The number of instance node groups
+     * @var integer Number of instance node groups
      */
     public $TotalCount;
 
     /**
-     * @var array The list of instance node groups
+     * @var array List of instance node groups
      */
     public $ReplicaGroups;
 
@@ -45,8 +45,8 @@ class DescribeInstanceZoneInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount The number of instance node groups
-     * @param array $ReplicaGroups The list of instance node groups
+     * @param integer $TotalCount Number of instance node groups
+     * @param array $ReplicaGroups List of instance node groups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
