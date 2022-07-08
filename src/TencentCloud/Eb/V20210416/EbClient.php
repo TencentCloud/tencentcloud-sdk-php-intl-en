@@ -23,7 +23,10 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Eb\V20210416\Models as Models;
 
 /**
+ * @method Models\CheckRuleResponse CheckRule(Models\CheckRuleRequest $req) This API is used to check a rule.
  * @method Models\CheckTransformationResponse CheckTransformation(Models\CheckTransformationRequest $req) This API is used to test rules and data on the ETL configuration page.
+ * @method Models\CreateConnectionResponse CreateConnection(Models\CreateConnectionRequest $req) This API is used to create an event connector.
+ * @method Models\CreateEventBusResponse CreateEventBus(Models\CreateEventBusRequest $req) This API is used to create an event bus.
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) This API is used to create an event rule.
  * @method Models\CreateTargetResponse CreateTarget(Models\CreateTargetRequest $req) This API is used to create a delivery target.
  * @method Models\CreateTransformationResponse CreateTransformation(Models\CreateTransformationRequest $req) This API is used to create a transformer.
@@ -32,6 +35,7 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) This API is used to delete an event rule.
  * @method Models\DeleteTargetResponse DeleteTarget(Models\DeleteTargetRequest $req) This API is used to delete a delivery target.
  * @method Models\DeleteTransformationResponse DeleteTransformation(Models\DeleteTransformationRequest $req) This API is used to delete a transformer.
+ * @method Models\GetEventBusResponse GetEventBus(Models\GetEventBusRequest $req) This API is used to get the details of an event bus.
  * @method Models\GetRuleResponse GetRule(Models\GetRuleRequest $req) This API is used to get the details of an event rule.
  * @method Models\GetTransformationResponse GetTransformation(Models\GetTransformationRequest $req) This API is used to get the details of a transformer.
  * @method Models\ListConnectionsResponse ListConnections(Models\ListConnectionsRequest $req) This API is used to get the list of event connectors.
@@ -39,6 +43,7 @@ use TencentCloud\Eb\V20210416\Models as Models;
  * @method Models\ListRulesResponse ListRules(Models\ListRulesRequest $req) This API is used to get the list of event rules.
  * @method Models\ListTargetsResponse ListTargets(Models\ListTargetsRequest $req) This API is used to get the list delivery targets.
  * @method Models\UpdateConnectionResponse UpdateConnection(Models\UpdateConnectionRequest $req) This API is used to update an event connector.
+ * @method Models\UpdateEventBusResponse UpdateEventBus(Models\UpdateEventBusRequest $req) This API is used to update an event bus.
  * @method Models\UpdateRuleResponse UpdateRule(Models\UpdateRuleRequest $req) This API is used to update an event rule.
  * @method Models\UpdateTargetResponse UpdateTarget(Models\UpdateTargetRequest $req) This API is used to update a delivery target.
  * @method Models\UpdateTransformationResponse UpdateTransformation(Models\UpdateTransformationRequest $req) This API is used to update a transformer.

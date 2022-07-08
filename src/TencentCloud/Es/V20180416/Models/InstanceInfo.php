@@ -38,12 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetUid(string $SubnetUid) Set UID of the subnet where the instance resides
  * @method integer getStatus() Obtain Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
  * @method void setStatus(integer $Status) Set Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+ * @method string getRenewFlag() Obtain This parameter is not used on the global website
+ * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
  * @method string getChargeType() Obtain Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
  * @method void setChargeType(string $ChargeType) Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
  * @method integer getChargePeriod() Obtain This parameter is not used on the global website
  * @method void setChargePeriod(integer $ChargePeriod) Set This parameter is not used on the global website
- * @method string getRenewFlag() Obtain This parameter is not used on the global website
- * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
  * @method string getNodeType() Obtain Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
  * @method void setNodeType(string $NodeType) Set Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
  * @method integer getNodeNum() Obtain Number of nodes
@@ -244,6 +244,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setEsPrivateDomain(string $EsPrivateDomain) Set Private domain of the HTTPS cluster
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getEsConfigSets() Obtain Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEsConfigSets(array $EsConfigSets) Set Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -293,6 +297,11 @@ class InstanceInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string This parameter is not used on the global website
+     */
+    public $RenewFlag;
+
+    /**
      * @var string Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
      */
     public $ChargeType;
@@ -301,11 +310,6 @@ class InstanceInfo extends AbstractModel
      * @var integer This parameter is not used on the global website
      */
     public $ChargePeriod;
-
-    /**
-     * @var string This parameter is not used on the global website
-     */
-    public $RenewFlag;
 
     /**
      * @var string Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
@@ -656,6 +660,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $EsPrivateDomain;
 
     /**
+     * @var array Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EsConfigSets;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -665,9 +675,9 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $VpcUid UID of the VPC where the instance resides
      * @param string $SubnetUid UID of the subnet where the instance resides
      * @param integer $Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+     * @param string $RenewFlag This parameter is not used on the global website
      * @param string $ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
      * @param integer $ChargePeriod This parameter is not used on the global website
-     * @param string $RenewFlag This parameter is not used on the global website
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      * @param integer $NodeNum Number of nodes
      * @param integer $CpuNum Number of CPU cores of the node
@@ -768,6 +778,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $EsPrivateDomain Private domain of the HTTPS cluster
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -818,16 +830,16 @@ Note: This field may return `null`, indicating that no valid value was found.
             $this->Status = $param["Status"];
         }
 
+        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
+            $this->RenewFlag = $param["RenewFlag"];
+        }
+
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
         }
 
         if (array_key_exists("ChargePeriod",$param) and $param["ChargePeriod"] !== null) {
             $this->ChargePeriod = $param["ChargePeriod"];
-        }
-
-        if (array_key_exists("RenewFlag",$param) and $param["RenewFlag"] !== null) {
-            $this->RenewFlag = $param["RenewFlag"];
         }
 
         if (array_key_exists("NodeType",$param) and $param["NodeType"] !== null) {
@@ -1098,6 +1110,15 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("EsPrivateDomain",$param) and $param["EsPrivateDomain"] !== null) {
             $this->EsPrivateDomain = $param["EsPrivateDomain"];
+        }
+
+        if (array_key_exists("EsConfigSets",$param) and $param["EsConfigSets"] !== null) {
+            $this->EsConfigSets = [];
+            foreach ($param["EsConfigSets"] as $key => $value){
+                $obj = new EsConfigSetInfo();
+                $obj->deserialize($value);
+                array_push($this->EsConfigSets, $obj);
+            }
         }
     }
 }
