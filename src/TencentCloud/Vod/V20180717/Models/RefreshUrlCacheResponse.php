@@ -18,27 +18,19 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ProcessImage response structure.
+ * RefreshUrlCache response structure.
  *
- * @method array getContentReviewResultSet() Obtain The image recognition result.
- * @method void setContentReviewResultSet(array $ContentReviewResultSet) Set The image recognition result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ProcessImageResponse extends AbstractModel
+class RefreshUrlCacheResponse extends AbstractModel
 {
-    /**
-     * @var array The image recognition result.
-     */
-    public $ContentReviewResultSet;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $ContentReviewResultSet The image recognition result.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,15 +46,6 @@ class ProcessImageResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ContentReviewResultSet",$param) and $param["ContentReviewResultSet"] !== null) {
-            $this->ContentReviewResultSet = [];
-            foreach ($param["ContentReviewResultSet"] as $key => $value){
-                $obj = new ContentReviewResult();
-                $obj->deserialize($value);
-                array_push($this->ContentReviewResultSet, $obj);
-            }
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

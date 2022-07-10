@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique ID of an intelligent content recognition template.
  * @method void setDefinition(integer $Definition) Set Unique ID of an intelligent content recognition template.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
@@ -48,8 +50,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyContentReviewTemplateRequest extends AbstractModel
 {
@@ -57,6 +57,11 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @var integer Unique ID of an intelligent content recognition template.
      */
     public $Definition;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
@@ -108,12 +113,8 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
     public $ReviewWallSwitch;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition Unique ID of an intelligent content recognition template.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
      * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      * @param TerrorismConfigureInfoForUpdate $TerrorismConfigure Control parameter for terrorism information.
@@ -127,7 +128,6 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
      * @param string $ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -144,6 +144,10 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -185,10 +189,6 @@ class ModifyContentReviewTemplateRequest extends AbstractModel
 
         if (array_key_exists("ReviewWallSwitch",$param) and $param["ReviewWallSwitch"] !== null) {
             $this->ReviewWallSwitch = $param["ReviewWallSwitch"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

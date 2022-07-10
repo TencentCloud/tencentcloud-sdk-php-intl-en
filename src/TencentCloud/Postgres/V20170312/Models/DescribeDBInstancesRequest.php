@@ -34,10 +34,10 @@ db-pay-mode: filter by billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
  * @method integer getLimit() Obtain The maximum number of results returned per page. Value range: 1-100. Default: `10`
  * @method void setLimit(integer $Limit) Set The maximum number of results returned per page. Value range: 1-100. Default: `10`
+ * @method integer getOffset() Obtain Data offset, which starts from 0.
+ * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
  * @method string getOrderBy() Obtain Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
  * @method void setOrderBy(string $OrderBy) Set Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
- * @method integer getOffset() Obtain Pagination offset, starting from 0
- * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0
  * @method string getOrderByType() Obtain Sorting order. Valid values: `asc` (ascending), `desc` (descending)
  * @method void setOrderByType(string $OrderByType) Set Sorting order. Valid values: `asc` (ascending), `desc` (descending)
  */
@@ -59,14 +59,14 @@ db-tag-key: filter by tag key (in string format)
     public $Limit;
 
     /**
+     * @var integer Data offset, which starts from 0.
+     */
+    public $Offset;
+
+    /**
      * @var string Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
      */
     public $OrderBy;
-
-    /**
-     * @var integer Pagination offset, starting from 0
-     */
-    public $Offset;
 
     /**
      * @var string Sorting order. Valid values: `asc` (ascending), `desc` (descending)
@@ -81,8 +81,8 @@ db-project-id: filter by project ID (in integer format)
 db-pay-mode: filter by billing mode (in string format)
 db-tag-key: filter by tag key (in string format)
      * @param integer $Limit The maximum number of results returned per page. Value range: 1-100. Default: `10`
+     * @param integer $Offset Data offset, which starts from 0.
      * @param string $OrderBy Sorting metric, such as instance name or creation time. Valid values: DBInstanceId, CreateTime, Name, EndTime
-     * @param integer $Offset Pagination offset, starting from 0
      * @param string $OrderByType Sorting order. Valid values: `asc` (ascending), `desc` (descending)
      */
     function __construct()
@@ -111,12 +111,12 @@ db-tag-key: filter by tag key (in string format)
             $this->Limit = $param["Limit"];
         }
 
-        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
-            $this->OrderBy = $param["OrderBy"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
         }
 
         if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {

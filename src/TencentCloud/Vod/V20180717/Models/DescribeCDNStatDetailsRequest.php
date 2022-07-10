@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method string getEndTime() Obtain End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
  * @method void setEndTime(string $EndTime) Set End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
  * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
  * @method string getArea() Obtain Service region. Valid values:
@@ -152,8 +154,6 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
 If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
- * @method integer getSubAppId() Obtain VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DescribeCDNStatDetailsRequest extends AbstractModel
 {
@@ -174,6 +174,11 @@ class DescribeCDNStatDetailsRequest extends AbstractModel
      * @var string End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      */
     public $EndTime;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var array List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
@@ -256,17 +261,13 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
     public $DataInterval;
 
     /**
-     * @var integer VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Metric Metrics to query. Valid values:
 <li>`Traffic`: traffic in bytes</li>
 <li>`Bandwidth`: bandwidth in bps</li>
 <li>`Requests`: the number of requests</li>
      * @param string $StartTime Start time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
      * @param string $EndTime End time in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?lang=en&pg=).
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. The usage data of all domain names is returned by default.
      * @param string $Area Service region. Valid values:
 <li>Chinese Mainland</li>
@@ -327,7 +328,6 @@ Default value: Chinese Mainland
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned. If the query period is larger than 24 hours, only data at 1-day granularity can be queried.</li>
 If the difference between `StartTime` and `EndTime` is larger than 24 hours, the default value of `DataInterval` is 1440.
-     * @param integer $SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -354,6 +354,10 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
             $this->EndTime = $param["EndTime"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
             $this->DomainNames = $param["DomainNames"];
         }
@@ -372,10 +376,6 @@ If the difference between `StartTime` and `EndTime` is larger than 24 hours, the
 
         if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
             $this->DataInterval = $param["DataInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

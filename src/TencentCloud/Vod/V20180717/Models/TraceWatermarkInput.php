@@ -18,24 +18,20 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The request parameters for an image recognition task.
+ * The information of a digital watermark.
  *
- * @method integer getDefinition() Obtain The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
- * @method void setDefinition(integer $Definition) Set The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+ * @method integer getDefinition() Obtain The watermark template ID.
+ * @method void setDefinition(integer $Definition) Set The watermark template ID.
  */
-class ImageContentReviewInput extends AbstractModel
+class TraceWatermarkInput extends AbstractModel
 {
     /**
-     * @var integer The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+     * @var integer The watermark template ID.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The ID of the image recognition template to use. Valid values:
-<li>10: All recognition types enabled</li>
+     * @param integer $Definition The watermark template ID.
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SetAutoRenewFlag request structure.
  *
- * @method array getDBInstanceIdSet() Obtain Instance ID array
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID array
+ * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
  * @method integer getAutoRenewFlag() Obtain Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
  */
 class SetAutoRenewFlagRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID array
+     * @var array List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public $DBInstanceIdSet;
 
@@ -38,7 +38,7 @@ class SetAutoRenewFlagRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @param array $DBInstanceIdSet Instance ID array
+     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      * @param integer $AutoRenewFlag Renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal upon expiration
      */
     function __construct()

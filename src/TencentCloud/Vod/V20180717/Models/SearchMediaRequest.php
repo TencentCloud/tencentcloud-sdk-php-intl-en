@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchMedia request structure.
  *
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getFileIds() Obtain File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -48,11 +50,11 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 10.</li>
  * @method void setClassIds(array $ClassIds) Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
- * @method array getTags() Obtain Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+ * @method array getTags() Obtain The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
- * @method void setTags(array $Tags) Set Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+ * @method void setTags(array $Tags) Set The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
  * @method array getCategories() Obtain File type. Any element in the set can be matched.
 <li>Video: video file</li>
@@ -124,8 +126,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStorageRegions(array $StorageRegions) Set Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method array getStorageClasses() Obtain An array of storage classes. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -176,6 +176,11 @@ End time in the creation time range.
 class SearchMediaRequest extends AbstractModel
 {
     /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var array File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -210,8 +215,8 @@ class SearchMediaRequest extends AbstractModel
     public $ClassIds;
 
     /**
-     * @var array Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+     * @var array The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
      */
     public $Tags;
@@ -296,11 +301,6 @@ class SearchMediaRequest extends AbstractModel
     public $StorageRegions;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @var array An array of storage classes. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -352,6 +352,7 @@ End time in the creation time range.
     public $EndTime;
 
     /**
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $FileIds File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
@@ -366,8 +367,8 @@ End time in the creation time range.
 <li>Array length limit: 10</li>
      * @param array $ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
-     * @param array $Tags Tag set, which matches any element in the set.
-<li>Tag length limit: 8 characters.</li>
+     * @param array $Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
+<li>Tag length limit: 16 characters.</li>
 <li>Array length limit: 10.</li>
      * @param array $Categories File type. Any element in the set can be matched.
 <li>Video: video file</li>
@@ -404,7 +405,6 @@ End time in the creation time range.
      * @param array $StorageRegions Regions where media files are stored, such as `ap-chongqing`. For more regions, see [Storage Regions](https://intl.cloud.tencent.com/document/product/266/9760?from_cn_redirect=1#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8).
 <li>Length limit for a single region: 20 characters</li>
 <li>Array length limit: 20</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      * @param array $StorageClasses An array of storage classes. Valid values:
 <li>STANDARD</li>
 <li>STANDARD_IA</li>
@@ -442,6 +442,10 @@ End time in the creation time range.
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("FileIds",$param) and $param["FileIds"] !== null) {
             $this->FileIds = $param["FileIds"];
         }
@@ -511,10 +515,6 @@ End time in the creation time range.
 
         if (array_key_exists("StorageRegions",$param) and $param["StorageRegions"] !== null) {
             $this->StorageRegions = $param["StorageRegions"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {

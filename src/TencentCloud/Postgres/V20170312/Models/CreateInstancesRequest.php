@@ -72,8 +72,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNeedSupportTDE(integer $NeedSupportTDE) Set Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
  * @method string getKMSKeyId() Obtain KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
  * @method void setKMSKeyId(string $KMSKeyId) Set KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
- * @method string getKMSRegion() Obtain The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
- * @method void setKMSRegion(string $KMSRegion) Set The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+ * @method string getKMSRegion() Obtain The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
+ * @method void setKMSRegion(string $KMSRegion) Set The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -208,7 +208,7 @@ class CreateInstancesRequest extends AbstractModel
     public $KMSKeyId;
 
     /**
-     * @var string The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     * @var string The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
      */
     public $KMSRegion;
 
@@ -239,7 +239,7 @@ class CreateInstancesRequest extends AbstractModel
      * @param array $DBNodeSet Instance node information, which is required if you purchase a multi-AZ deployed instance.
      * @param integer $NeedSupportTDE Whether to support transparent data encryption. Valid values: 1 (yes), 0 (no). Default value: 0.
      * @param string $KMSKeyId KeyId of custom key, which is required if you select custom key encryption. It is also the unique CMK identifier.
-     * @param string $KMSRegion The region where the KMS service is enabled. When “KMSRegion” is left empty, the “KMS” of the local domain will be enabled by default. If the local domain is not supported, you need to select another region supported by KMS.
+     * @param string $KMSRegion The region where the KMS service is enabled. When `KMSRegion` is left empty, the KMS of the current region will be enabled by default. If the current region is not supported, you need to select another region supported by KMS.
      */
     function __construct()
     {

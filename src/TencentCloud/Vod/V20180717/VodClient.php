@@ -234,16 +234,6 @@ If the current storage class is DEEP ARCHIVE, it can be changed to the following
  * @method Models\ModifyWatermarkTemplateResponse ModifyWatermarkTemplate(Models\ModifyWatermarkTemplateRequest $req) This API is used to modify a custom watermarking template. The watermark type cannot be modified.
  * @method Models\ModifyWordSampleResponse ModifyWordSample(Models\ModifyWordSampleRequest $req) This API is used to modify the use case and tag of a keyword. The keyword itself cannot be modified, but you can delete it and create another one if needed.
  * @method Models\ParseStreamingManifestResponse ParseStreamingManifest(Models\ParseStreamingManifestRequest $req) This API is used to parse the index file content and return the list of segment files to be uploaded when an HLS video is uploaded. A segment file path must be a relative path of the current directory or subdirectory instead of a URL or absolute path.
- * @method Models\ProcessImageResponse ProcessImage(Models\ProcessImageRequest $req) This API is <font color='red'>no longer used</font>. To initiate image recognition tasks, please use [ReviewImage](https://intl.cloud.tencent.com/document/api/266/73217?from_cn_redirect=1).
-
-This API is used to initiate an image processing task. Image processing operations include the following:
-
-1. Intelligent recognition of pornographic, terroristic, and politically sensitive content
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
  * @method Models\ProcessMediaResponse ProcessMedia(Models\ProcessMediaRequest $req) This API is used to initiate a media processing task on a VOD file. The task may include:
 1. Video transcoding (with watermark)
 2. Animated image generating
@@ -257,6 +247,12 @@ This API is used to initiate an image processing task. Image processing operatio
 10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+
+A digital watermark has the following restrictions:
+<li>Digital watermarks can only be image watermarks.</li>
+<li>Digital watermarks must be looped.</li>
+<li>If you use digital watermarks, the output video must be in HLS format.</li>
+<li>Digital watermarks can only be displayed in the upper half of a video.</li>
  * @method Models\ProcessMediaByProcedureResponse ProcessMediaByProcedure(Models\ProcessMediaByProcedureRequest $req) This API is used to initiate a processing task for a VOD video with a task flow template.
 There are two ways to create a task flow template:
 1. Create and modify a task flow template in the console;
@@ -272,13 +268,13 @@ There are two ways to create a task flow template:
  * @method Models\PushUrlCacheResponse PushUrlCache(Models\PushUrlCacheRequest $req) 1. This API is used to prefetch a list of specified URLs.
 2. The URL domain names must have already been registered with VOD.
 3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs that can be refreshed per day is 10,000.
+ * @method Models\RefreshUrlCacheResponse RefreshUrlCache(Models\RefreshUrlCacheRequest $req) 1. This API is used to purge URLs.
+2. The URL domain names must have already been registered with VOD.
+3. Up to 20 URLs can be specified in one request.
+4. By default, the maximum number of URLs allowed for purge per day is 100,000.
  * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) This API is used to reset a custom task flow template.  
- * @method Models\ReviewImageResponse ReviewImage(Models\ReviewImageRequest $req) This API is used to initiate an image recognition task to identify pornographic, terroristic, and politically sensitive content in images saved in VOD.
-
-><li>File size: < 5 MB</li>
-><li>Resolution: Preferably higher than 256 x 256. Resolution lower than this may compromise the recognition performance.</li>
-><li>Supported image formats: PNG, JPG, JPEG, BMP, GIF, WEBP</li>
-
+ * @method Models\RestoreMediaResponse RestoreMedia(Models\RestoreMediaRequest $req) This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
  * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) This API is used to search for media information and supports filtering and sorting the returned results in many ways. You can:
 - Specify the file ID set `FileIds` to return the media files with any ID in the set.
 - Fuzzily search by multiple media filenames `Names` or multiple descriptions `Descriptions`.

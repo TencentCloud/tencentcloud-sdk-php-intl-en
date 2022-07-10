@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisIsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain Resource ID list
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Resource ID list
+ * @method array getDBInstanceIdSet() Obtain List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
  * @method integer getPeriod() Obtain The valid period (in months) of the monthly-subscribed instance when removing it from isolation
  * @method void setPeriod(integer $Period) Set The valid period (in months) of the monthly-subscribed instance when removing it from isolation
  * @method boolean getAutoVoucher() Obtain Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
@@ -32,7 +32,7 @@ use TencentCloud\Common\AbstractModel;
 class DisIsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Resource ID list
+     * @var array List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
      */
     public $DBInstanceIdSet;
 
@@ -52,7 +52,7 @@ class DisIsolateDBInstancesRequest extends AbstractModel
     public $VoucherIds;
 
     /**
-     * @param array $DBInstanceIdSet Resource ID list
+     * @param array $DBInstanceIdSet List of resource IDs. Note that currently you cannot remove multiple instances from isolation at the same time. Only one instance ID can be passed in here.
      * @param integer $Period The valid period (in months) of the monthly-subscribed instance when removing it from isolation
      * @param boolean $AutoVoucher Whether to use vouchers. Valid values: `true` (yes), `false` (no). Default value: `false`.
      * @param array $VoucherIds Voucher ID list

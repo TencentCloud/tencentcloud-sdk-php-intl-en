@@ -24,10 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMediaCount(integer $MediaCount) Set Total number of current media files.
  * @method integer getTotalStorage() Obtain Total current storage capacity in bytes.
  * @method void setTotalStorage(integer $TotalStorage) Set Total current storage capacity in bytes.
- * @method integer getInfrequentStorage() Obtain Current Standard_IA storage capacity in bytes.
- * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current Standard_IA storage capacity in bytes.
  * @method integer getStandardStorage() Obtain Current Standard storage capacity in bytes.
  * @method void setStandardStorage(integer $StandardStorage) Set Current Standard storage capacity in bytes.
+ * @method integer getInfrequentStorage() Obtain Current Standard_IA storage capacity in bytes.
+ * @method void setInfrequentStorage(integer $InfrequentStorage) Set Current Standard_IA storage capacity in bytes.
+ * @method integer getArchiveStorage() Obtain The current ARCHIVE storage usage in bytes.
+ * @method void setArchiveStorage(integer $ArchiveStorage) Set The current ARCHIVE storage usage in bytes.
+ * @method integer getDeepArchiveStorage() Obtain The current DEEP ARCHIVE storage usage in bytes.
+ * @method void setDeepArchiveStorage(integer $DeepArchiveStorage) Set The current DEEP ARCHIVE storage usage in bytes.
  * @method array getStorageStat() Obtain Storage usage by billing region.
  * @method void setStorageStat(array $StorageStat) Set Storage usage by billing region.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -46,14 +50,24 @@ class DescribeStorageDataResponse extends AbstractModel
     public $TotalStorage;
 
     /**
+     * @var integer Current Standard storage capacity in bytes.
+     */
+    public $StandardStorage;
+
+    /**
      * @var integer Current Standard_IA storage capacity in bytes.
      */
     public $InfrequentStorage;
 
     /**
-     * @var integer Current Standard storage capacity in bytes.
+     * @var integer The current ARCHIVE storage usage in bytes.
      */
-    public $StandardStorage;
+    public $ArchiveStorage;
+
+    /**
+     * @var integer The current DEEP ARCHIVE storage usage in bytes.
+     */
+    public $DeepArchiveStorage;
 
     /**
      * @var array Storage usage by billing region.
@@ -68,8 +82,10 @@ class DescribeStorageDataResponse extends AbstractModel
     /**
      * @param integer $MediaCount Total number of current media files.
      * @param integer $TotalStorage Total current storage capacity in bytes.
-     * @param integer $InfrequentStorage Current Standard_IA storage capacity in bytes.
      * @param integer $StandardStorage Current Standard storage capacity in bytes.
+     * @param integer $InfrequentStorage Current Standard_IA storage capacity in bytes.
+     * @param integer $ArchiveStorage The current ARCHIVE storage usage in bytes.
+     * @param integer $DeepArchiveStorage The current DEEP ARCHIVE storage usage in bytes.
      * @param array $StorageStat Storage usage by billing region.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -94,12 +110,20 @@ class DescribeStorageDataResponse extends AbstractModel
             $this->TotalStorage = $param["TotalStorage"];
         }
 
+        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
+            $this->StandardStorage = $param["StandardStorage"];
+        }
+
         if (array_key_exists("InfrequentStorage",$param) and $param["InfrequentStorage"] !== null) {
             $this->InfrequentStorage = $param["InfrequentStorage"];
         }
 
-        if (array_key_exists("StandardStorage",$param) and $param["StandardStorage"] !== null) {
-            $this->StandardStorage = $param["StandardStorage"];
+        if (array_key_exists("ArchiveStorage",$param) and $param["ArchiveStorage"] !== null) {
+            $this->ArchiveStorage = $param["ArchiveStorage"];
+        }
+
+        if (array_key_exists("DeepArchiveStorage",$param) and $param["DeepArchiveStorage"] !== null) {
+            $this->DeepArchiveStorage = $param["DeepArchiveStorage"];
         }
 
         if (array_key_exists("StorageStat",$param) and $param["StorageStat"] !== null) {

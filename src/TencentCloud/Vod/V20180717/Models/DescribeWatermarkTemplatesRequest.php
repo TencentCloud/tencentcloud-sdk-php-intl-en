@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWatermarkTemplates request structure.
  *
- * @method array getDefinitions() Obtain Unique ID filter of watermarking templates. Array length limit: 100.
- * @method void setDefinitions(array $Definitions) Set Unique ID filter of watermarking templates. Array length limit: 100.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getType() Obtain Watermark type filter. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark.</li>
@@ -30,21 +30,21 @@ use TencentCloud\Common\AbstractModel;
 <li>text: text watermark.</li>
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
+ * @method array getDefinitions() Obtain Unique ID filter of watermarking templates. Array length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set Unique ID filter of watermarking templates. Array length limit: 100.
  * @method integer getLimit() Obtain Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
  * @method void setLimit(integer $Limit) Set Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DescribeWatermarkTemplatesRequest extends AbstractModel
 {
     /**
-     * @var array Unique ID filter of watermarking templates. Array length limit: 100.
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
-    public $Definitions;
+    public $SubAppId;
 
     /**
      * @var string Watermark type filter. Valid values:
@@ -59,6 +59,11 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var array Unique ID filter of watermarking templates. Array length limit: 100.
+     */
+    public $Definitions;
+
+    /**
      * @var integer Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
@@ -66,20 +71,15 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
-     * @param array $Definitions Unique ID filter of watermarking templates. Array length limit: 100.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Type Watermark type filter. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark.</li>
      * @param integer $Offset Pagination offset. Default value: 0.
+     * @param array $Definitions Unique ID filter of watermarking templates. Array length limit: 100.
      * @param integer $Limit Number of returned entries
 <li>Default value: 10;</li>
 <li>Maximum value: 100.</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -94,8 +94,8 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
-            $this->Definitions = $param["Definitions"];
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
@@ -106,12 +106,12 @@ class DescribeWatermarkTemplatesRequest extends AbstractModel
             $this->Offset = $param["Offset"];
         }
 
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
+            $this->Definitions = $param["Definitions"];
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
         }
     }
 }

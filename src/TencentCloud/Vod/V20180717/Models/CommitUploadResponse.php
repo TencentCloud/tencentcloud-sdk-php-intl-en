@@ -22,14 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Unique ID of media file.
  * @method void setFileId(string $FileId) Set Unique ID of media file.
- * @method string getMediaUrl() Obtain Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMediaUrl(string $MediaUrl) Set Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCoverUrl() Obtain Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCoverUrl(string $CoverUrl) Set Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMediaUrl() Obtain The media playback URL.
+ * @method void setMediaUrl(string $MediaUrl) Set The media playback URL.
+ * @method string getCoverUrl() Obtain The thumbnail URL.
+ * @method void setCoverUrl(string $CoverUrl) Set The thumbnail URL.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -41,14 +37,12 @@ class CommitUploadResponse extends AbstractModel
     public $FileId;
 
     /**
-     * @var string Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The media playback URL.
      */
     public $MediaUrl;
 
     /**
-     * @var string Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The thumbnail URL.
      */
     public $CoverUrl;
 
@@ -59,10 +53,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $FileId Unique ID of media file.
-     * @param string $MediaUrl Media playback address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CoverUrl Media cover address.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $MediaUrl The media playback URL.
+     * @param string $CoverUrl The thumbnail URL.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain Unique media file ID.
  * @method void setFileId(string $FileId) Set Unique media file ID.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Media filename, which can contain up to 64 characters.
  * @method void setName(string $Name) Set Media filename, which can contain up to 64 characters.
  * @method string getDescription() Obtain Media file description, which can contain up to 128 characters.
@@ -56,8 +58,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
 `ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
  * @method void setClearSubtitles(integer $ClearSubtitles) Set The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
 `ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyMediaInfoRequest extends AbstractModel
 {
@@ -65,6 +65,11 @@ class ModifyMediaInfoRequest extends AbstractModel
      * @var string Unique media file ID.
      */
     public $FileId;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Media filename, which can contain up to 64 characters.
@@ -140,12 +145,8 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
     public $ClearSubtitles;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $FileId Unique media file ID.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Media filename, which can contain up to 64 characters.
      * @param string $Description Media file description, which can contain up to 128 characters.
      * @param integer $ClassId Media file category ID.
@@ -163,7 +164,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
      * @param array $DeleteSubtitleIds Unique IDs of the subtitles to be deleted. In the same request, the subtitle IDs specified in `AddSubtitles` must be different from those in `DeleteSubtitleIds`.
      * @param integer $ClearSubtitles The value `1` indicates to delete all subtitle information of the media file. Other values are meaningless.
 `ClearSubtitles` and `AddSubtitles` cannot co-exist in the same request.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -180,6 +180,10 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -246,10 +250,6 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
 
         if (array_key_exists("ClearSubtitles",$param) and $param["ClearSubtitles"] !== null) {
             $this->ClearSubtitles = $param["ClearSubtitles"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

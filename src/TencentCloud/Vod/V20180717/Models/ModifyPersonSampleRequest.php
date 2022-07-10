@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() Obtain ID of a sample.
  * @method void setPersonId(string $PersonId) Set ID of a sample.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Name. Length limit: 128 characters.
  * @method void setName(string $Name) Set Name. Length limit: 128 characters.
  * @method string getDescription() Obtain Description. Length limit: 1,024 characters.
@@ -38,8 +40,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFaceOperationInfo(AiSampleFaceOperation $FaceOperationInfo) Set Information of operations on facial features.
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyPersonSampleRequest extends AbstractModel
 {
@@ -47,6 +47,11 @@ class ModifyPersonSampleRequest extends AbstractModel
      * @var string ID of a sample.
      */
     public $PersonId;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Name. Length limit: 128 characters.
@@ -77,12 +82,8 @@ class ModifyPersonSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $PersonId ID of a sample.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Name. Length limit: 128 characters.
      * @param string $Description Description. Length limit: 1,024 characters.
      * @param array $Usages Sample usage. Valid values:
@@ -91,7 +92,6 @@ class ModifyPersonSampleRequest extends AbstractModel
 3. All: used for content recognition and inappropriate information recognition; equivalent to 1+2
      * @param AiSampleFaceOperation $FaceOperationInfo Information of operations on facial features.
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -108,6 +108,10 @@ class ModifyPersonSampleRequest extends AbstractModel
         }
         if (array_key_exists("PersonId",$param) and $param["PersonId"] !== null) {
             $this->PersonId = $param["PersonId"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -130,10 +134,6 @@ class ModifyPersonSampleRequest extends AbstractModel
         if (array_key_exists("TagOperationInfo",$param) and $param["TagOperationInfo"] !== null) {
             $this->TagOperationInfo = new AiSampleTagOperation();
             $this->TagOperationInfo->deserialize($param["TagOperationInfo"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

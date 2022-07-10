@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataType(string $DataType) Set CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
  * @method integer getDataInterval() Obtain Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
@@ -42,10 +46,6 @@ Default value: 1440. Data at 1-day granularity will be returned.
 Default value: 1440. Data at 1-day granularity will be returned.
  * @method array getDomainNames() Obtain List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
  * @method void setDomainNames(array $DomainNames) Set List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
- * @method integer getSubAppId() Obtain ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
- * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
  */
 class DescribeCDNUsageDataRequest extends AbstractModel
 {
@@ -67,6 +67,12 @@ class DescribeCDNUsageDataRequest extends AbstractModel
     public $DataType;
 
     /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
+     */
+    public $SubAppId;
+
+    /**
      * @var integer Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
@@ -81,25 +87,19 @@ Default value: 1440. Data at 1-day granularity will be returned.
     public $DomainNames;
 
     /**
-     * @var integer ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $StartTime Start date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $EndTime End date in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). The end date must be after the start date.
      * @param string $DataType CDN statistics type. Valid values:
 <li>Flux: traffic in bytes.</li>
 <li>Bandwidth: bandwidth in bps.</li>
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
+You can set this parameter to 1 to query the total usage of all applications (including the primary application) as an admin (only 1-day granularity is supported).</b>
      * @param integer $DataInterval Time granularity of usage data in minutes. Valid values:
 <li>5: 5-minute granularity. The data at 5-minute granularity in the query period will be returned.</li>
 <li>60: 1-hour granularity. The data at 1-hour granularity in the query period will be returned.</li>
 <li>1440: 1-day granularity. The data at 1-day granularity in the query period will be returned.</li>
 Default value: 1440. Data at 1-day granularity will be returned.
      * @param array $DomainNames List of domain names. The usage data of up to 20 domain names can be queried at a time. You can specify multiple domain names and query their combined usage data. The usage data of all domain names will be returned by default.
-     * @param integer $SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-When the value of this field is 1, the total usage of all subapplications (including primary application) are queried by an admin. In this case, only 1-day granularity is supported.
      */
     function __construct()
     {
@@ -126,16 +126,16 @@ When the value of this field is 1, the total usage of all subapplications (inclu
             $this->DataType = $param["DataType"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("DataInterval",$param) and $param["DataInterval"] !== null) {
             $this->DataInterval = $param["DataInterval"];
         }
 
         if (array_key_exists("DomainNames",$param) and $param["DomainNames"] !== null) {
             $this->DomainNames = $param["DomainNames"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

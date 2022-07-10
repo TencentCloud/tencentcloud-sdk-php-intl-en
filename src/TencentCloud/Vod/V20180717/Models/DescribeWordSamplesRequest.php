@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeWordSamples request structure.
  *
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getUsages() Obtain <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
@@ -46,11 +48,14 @@ You can select multiple elements, which are connected by OR logic. If a use case
  * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
  * @method integer getLimit() Obtain Number of entries to be returned. Default value: 100. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of entries to be returned. Default value: 100. Maximum value: 100.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DescribeWordSamplesRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
@@ -85,11 +90,7 @@ You can select multiple elements, which are connected by OR logic. If a use case
     public $Limit;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $Usages <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
@@ -103,7 +104,6 @@ You can select multiple elements, which are connected by OR logic. If a use case
      * @param array $Tags Tag filter. Array length limit: 20 words.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of entries to be returned. Default value: 100. Maximum value: 100.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -118,6 +118,10 @@ You can select multiple elements, which are connected by OR logic. If a use case
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
             $this->Usages = $param["Usages"];
         }
@@ -136,10 +140,6 @@ You can select multiple elements, which are connected by OR logic. If a use case
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

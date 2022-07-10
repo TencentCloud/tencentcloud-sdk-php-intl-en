@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySubAppIdStatus request structure.
  *
- * @method integer getSubAppId() Obtain Subapplication ID.
- * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getStatus() Obtain Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>
@@ -36,7 +36,7 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
 class ModifySubAppIdStatusRequest extends AbstractModel
 {
     /**
-     * @var integer Subapplication ID.
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     public $SubAppId;
 
@@ -50,7 +50,7 @@ You cannot enable a subapplication whose status is “Destroying”. You can ena
     public $Status;
 
     /**
-     * @param integer $SubAppId Subapplication ID.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Status Subapplication status. Valid values:
 <li>On: enabled</li>
 <li>Off: disabled</li>

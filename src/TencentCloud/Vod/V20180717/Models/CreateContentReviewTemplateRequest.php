@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReviewWallSwitch(string $ReviewWallSwitch) Set Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an intelligent content recognition template. Length limit: 64 characters.
  * @method string getComment() Obtain Description of an intelligent content recognition template. Length limit: 256 characters.
@@ -46,8 +48,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserDefineConfigure(UserDefineConfigureInfo $UserDefineConfigure) Set Control parameter for custom intelligent content recognition.
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreateContentReviewTemplateRequest extends AbstractModel
 {
@@ -57,6 +57,11 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>OFF: no</li>
      */
     public $ReviewWallSwitch;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Name of an intelligent content recognition template. Length limit: 64 characters.
@@ -101,14 +106,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $ReviewWallSwitch Whether to allow the recognition result to enter the intelligent recognition platform (for human recognition).
 <li>ON: yes</li>
 <li>OFF: no</li>
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Name of an intelligent content recognition template. Length limit: 64 characters.
      * @param string $Comment Description of an intelligent content recognition template. Length limit: 256 characters.
      * @param PornConfigureInfo $PornConfigure Control parameter for porn information.
@@ -119,7 +120,6 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 <li>Drug-related.</li>
      * @param UserDefineConfigureInfo $UserDefineConfigure Control parameter for custom intelligent content recognition.
      * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -136,6 +136,10 @@ class CreateContentReviewTemplateRequest extends AbstractModel
         }
         if (array_key_exists("ReviewWallSwitch",$param) and $param["ReviewWallSwitch"] !== null) {
             $this->ReviewWallSwitch = $param["ReviewWallSwitch"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -173,10 +177,6 @@ class CreateContentReviewTemplateRequest extends AbstractModel
 
         if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
             $this->ScreenshotInterval = $param["ScreenshotInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

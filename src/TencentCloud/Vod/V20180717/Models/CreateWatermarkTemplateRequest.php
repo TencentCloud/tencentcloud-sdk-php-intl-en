@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
 <li>image: image watermark;</li>
 <li>text: text watermark;</li>
 <li>svg: SVG watermark.</li>
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Watermarking template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Watermarking template name. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
@@ -66,8 +68,6 @@ Default value: 0 px.
  * @method void setTextTemplate(TextWatermarkTemplateInput $TextTemplate) Set Text watermarking template. This field is required when `Type` is `text` and is invalid when `Type` is `image`.
  * @method SvgWatermarkInput getSvgTemplate() Obtain SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
  * @method void setSvgTemplate(SvgWatermarkInput $SvgTemplate) Set SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreateWatermarkTemplateRequest extends AbstractModel
 {
@@ -78,6 +78,11 @@ class CreateWatermarkTemplateRequest extends AbstractModel
 <li>svg: SVG watermark.</li>
      */
     public $Type;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Watermarking template name. Length limit: 64 characters.
@@ -131,15 +136,11 @@ Default value: 0 px.
     public $SvgTemplate;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Type Watermarking type. Valid values:
 <li>image: image watermark;</li>
 <li>text: text watermark;</li>
 <li>svg: SVG watermark.</li>
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Watermarking template name. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $CoordinateOrigin Origin position. Valid values:
@@ -159,7 +160,6 @@ Default value: 0 px.
      * @param ImageWatermarkInput $ImageTemplate Image watermarking template. This field is required when `Type` is `image` and is invalid when `Type` is `text`.
      * @param TextWatermarkTemplateInput $TextTemplate Text watermarking template. This field is required when `Type` is `text` and is invalid when `Type` is `image`.
      * @param SvgWatermarkInput $SvgTemplate SVG watermarking template. This field is required when `Type` is `svg` and is invalid when `Type` is `image` or `text`.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -176,6 +176,10 @@ Default value: 0 px.
         }
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -211,10 +215,6 @@ Default value: 0 px.
         if (array_key_exists("SvgTemplate",$param) and $param["SvgTemplate"] !== null) {
             $this->SvgTemplate = new SvgWatermarkInput();
             $this->SvgTemplate->deserialize($param["SvgTemplate"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

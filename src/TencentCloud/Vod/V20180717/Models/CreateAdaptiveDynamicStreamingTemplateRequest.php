@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAdaptiveDynamicStreamingTemplate request structure.
  *
- * @method string getFormat() Obtain Adaptive bitstream format. Valid values:
-<li>HLS.</li>
- * @method void setFormat(string $Format) Set Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+ * @method string getFormat() Obtain The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
+ * @method void setFormat(string $Format) Set The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
  * @method array getStreamInfos() Obtain Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Template name. Length limit: 64 characters.
  * @method string getDrmType() Obtain The DRM type. Valid values:
@@ -58,14 +62,13 @@ Default value: no.
 Default value: no.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
     /**
-     * @var string Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+     * @var string The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
      */
     public $Format;
 
@@ -74,6 +77,11 @@ class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
      */
     public $StreamInfos;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Template name. Length limit: 64 characters.
@@ -111,15 +119,12 @@ Default value: no.
     public $Comment;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
-     * @param string $Format Adaptive bitstream format. Valid values:
-<li>HLS.</li>
+     * @param string $Format The adaptive bitrate streaming format. Valid values:
+<li>HLS</li>
+<li>MPEG-DASH</li>
      * @param array $StreamInfos Parameter information of output substream for adaptive bitrate streaming. Up to 10 substreams can be output.
 Note: the frame rate of all substreams must be the same; otherwise, the frame rate of the first substream will be used as the output frame rate.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Template name. Length limit: 64 characters.
      * @param string $DrmType The DRM type. Valid values:
 <li>SimpleAES</li>
@@ -135,7 +140,6 @@ Default value: no.
 <li>1: yes.</li>
 Default value: no.
      * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -163,6 +167,10 @@ Default value: no.
             }
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -181,10 +189,6 @@ Default value: no.
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

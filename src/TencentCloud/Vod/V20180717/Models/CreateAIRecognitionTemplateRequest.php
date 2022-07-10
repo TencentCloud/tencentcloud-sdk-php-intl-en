@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAIRecognitionTemplate request structure.
  *
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Video content recognition template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Video content recognition template name. Length limit: 64 characters.
  * @method string getComment() Obtain Description of video content recognition template. Length limit: 256 characters.
@@ -42,11 +44,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setObjectConfigure(ObjectConfigureInfo $ObjectConfigure) Set Control parameter of object recognition.
  * @method float getScreenshotInterval() Obtain Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
  * @method void setScreenshotInterval(float $ScreenshotInterval) Set Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreateAIRecognitionTemplateRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
+
     /**
      * @var string Video content recognition template name. Length limit: 64 characters.
      */
@@ -103,11 +108,7 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
     public $ScreenshotInterval;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Video content recognition template name. Length limit: 64 characters.
      * @param string $Comment Description of video content recognition template. Length limit: 256 characters.
      * @param HeadTailConfigureInfo $HeadTailConfigure Control parameter of video opening and ending credits recognition.
@@ -119,7 +120,6 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
      * @param AsrWordsConfigureInfo $AsrWordsConfigure Control parameter of speech keyword recognition.
      * @param ObjectConfigureInfo $ObjectConfigure Control parameter of object recognition.
      * @param float $ScreenshotInterval Frame capturing interval in seconds. If this parameter is left empty, 1 second will be used by default. Minimum value: 0.5 seconds.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -134,6 +134,10 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -184,10 +188,6 @@ class CreateAIRecognitionTemplateRequest extends AbstractModel
 
         if (array_key_exists("ScreenshotInterval",$param) and $param["ScreenshotInterval"] !== null) {
             $this->ScreenshotInterval = $param["ScreenshotInterval"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

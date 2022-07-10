@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
  * @method array getSubtitleSet() Obtain List of subtitle IDs (maximum: 16)
  * @method void setSubtitleSet(array $SubtitleSet) Set List of subtitle IDs (maximum: 16)
  */
@@ -43,6 +45,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WatermarkSet;
 
     /**
+     * @var TraceWatermarkInput Digital watermark.
+     */
+    public $TraceWatermark;
+
+    /**
      * @var array List of subtitle IDs (maximum: 16)
      */
     public $SubtitleSet;
@@ -51,6 +58,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Definition Adaptive bitrate streaming template ID.
      * @param array $WatermarkSet List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TraceWatermarkInput $TraceWatermark Digital watermark.
      * @param array $SubtitleSet List of subtitle IDs (maximum: 16)
      */
     function __construct()
@@ -77,6 +85,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->WatermarkSet, $obj);
             }
+        }
+
+        if (array_key_exists("TraceWatermark",$param) and $param["TraceWatermark"] !== null) {
+            $this->TraceWatermark = new TraceWatermarkInput();
+            $this->TraceWatermark->deserialize($param["TraceWatermark"]);
         }
 
         if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {

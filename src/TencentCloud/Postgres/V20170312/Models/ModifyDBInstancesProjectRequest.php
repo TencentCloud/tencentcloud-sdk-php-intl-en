@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyDBInstancesProject request structure.
  *
- * @method array getDBInstanceIdSet() Obtain TencentDB for PostgreSQL instance ID array
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set TencentDB for PostgreSQL instance ID array
- * @method string getProjectId() Obtain New project ID of TencentDB for PostgreSQL instance
- * @method void setProjectId(string $ProjectId) Set New project ID of TencentDB for PostgreSQL instance
+ * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method string getProjectId() Obtain ID of the new project
+ * @method void setProjectId(string $ProjectId) Set ID of the new project
  */
 class ModifyDBInstancesProjectRequest extends AbstractModel
 {
     /**
-     * @var array TencentDB for PostgreSQL instance ID array
+     * @var array List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public $DBInstanceIdSet;
 
     /**
-     * @var string New project ID of TencentDB for PostgreSQL instance
+     * @var string ID of the new project
      */
     public $ProjectId;
 
     /**
-     * @param array $DBInstanceIdSet TencentDB for PostgreSQL instance ID array
-     * @param string $ProjectId New project ID of TencentDB for PostgreSQL instance
+     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot manipulate multiple instances at the same time. Only one instance ID can be passed in here.
+     * @param string $ProjectId ID of the new project
      */
     function __construct()
     {

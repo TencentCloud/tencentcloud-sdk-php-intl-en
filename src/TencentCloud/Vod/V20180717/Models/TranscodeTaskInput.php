@@ -26,18 +26,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkSet(array $WatermarkSet) Set List of up to 10 image or text watermarks.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
- * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
+ * @method TraceWatermarkInput getTraceWatermark() Obtain Digital watermark.
+ * @method void setTraceWatermark(TraceWatermarkInput $TraceWatermark) Set Digital watermark.
  * @method array getHeadTailSet() Obtain List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
  * @method void setHeadTailSet(array $HeadTailSet) Set List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
- * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
- * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+ * @method array getMosaicSet() Obtain List of blurs. Up to 10 ones can be supported.
+ * @method void setMosaicSet(array $MosaicSet) Set List of blurs. Up to 10 ones can be supported.
  * @method float getEndTimeOffset() Obtain End time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
@@ -46,6 +40,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+ * @method float getStartTimeOffset() Obtain Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+ * @method void setStartTimeOffset(float $StartTimeOffset) Set Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
  */
 class TranscodeTaskInput extends AbstractModel
 {
@@ -61,9 +63,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WatermarkSet;
 
     /**
-     * @var array List of blurs. Up to 10 ones can be supported.
+     * @var TraceWatermarkInput Digital watermark.
      */
-    public $MosaicSet;
+    public $TraceWatermark;
 
     /**
      * @var array List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
@@ -71,12 +73,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $HeadTailSet;
 
     /**
-     * @var float Start time offset of a transcoded video, in seconds.
-<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
-<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
-<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     * @var array List of blurs. Up to 10 ones can be supported.
      */
-    public $StartTimeOffset;
+    public $MosaicSet;
 
     /**
      * @var float End time offset of a transcoded video, in seconds.
@@ -87,19 +86,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $EndTimeOffset;
 
     /**
-     * @param integer $Definition Video transcoding template ID.
-     * @param array $WatermarkSet List of up to 10 image or text watermarks.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
-     * @param array $HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
-     * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
+     * @var float Start time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
+     */
+    public $StartTimeOffset;
+
+    /**
+     * @param integer $Definition Video transcoding template ID.
+     * @param array $WatermarkSet List of up to 10 image or text watermarks.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TraceWatermarkInput $TraceWatermark Digital watermark.
+     * @param array $HeadTailSet List of video opening/closing credits configuration template IDs. You can enter up to 10 IDs.
+     * @param array $MosaicSet List of blurs. Up to 10 ones can be supported.
      * @param float $EndTimeOffset End time offset of a transcoded video, in seconds.
 <li>If this parameter is left empty or set to 0, the transcoded video will end at the same time as the original video.</li>
 <li>If this parameter is set to a positive number (n for example), the transcoded video will end at the nth second of the original video.</li>
 <li>If this parameter is set to a negative number (-n for example), the transcoded video will end at the nth second before the end of the original video.</li>
+     * @param float $StartTimeOffset Start time offset of a transcoded video, in seconds.
+<li>If this parameter is left empty or set to 0, the transcoded video will start at the same time as the original video.</li>
+<li>If this parameter is set to a positive number (n for example), the transcoded video will start at the nth second of the original video.</li>
+<li>If this parameter is set to a negative number (-n for example), the transcoded video will start at the nth second before the end of the original video.</li>
      */
     function __construct()
     {
@@ -127,13 +135,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
             }
         }
 
-        if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
-            $this->MosaicSet = [];
-            foreach ($param["MosaicSet"] as $key => $value){
-                $obj = new MosaicInput();
-                $obj->deserialize($value);
-                array_push($this->MosaicSet, $obj);
-            }
+        if (array_key_exists("TraceWatermark",$param) and $param["TraceWatermark"] !== null) {
+            $this->TraceWatermark = new TraceWatermarkInput();
+            $this->TraceWatermark->deserialize($param["TraceWatermark"]);
         }
 
         if (array_key_exists("HeadTailSet",$param) and $param["HeadTailSet"] !== null) {
@@ -145,12 +149,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
             }
         }
 
-        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
-            $this->StartTimeOffset = $param["StartTimeOffset"];
+        if (array_key_exists("MosaicSet",$param) and $param["MosaicSet"] !== null) {
+            $this->MosaicSet = [];
+            foreach ($param["MosaicSet"] as $key => $value){
+                $obj = new MosaicInput();
+                $obj->deserialize($value);
+                array_push($this->MosaicSet, $obj);
+            }
         }
 
         if (array_key_exists("EndTimeOffset",$param) and $param["EndTimeOffset"] !== null) {
             $this->EndTimeOffset = $param["EndTimeOffset"];
+        }
+
+        if (array_key_exists("StartTimeOffset",$param) and $param["StartTimeOffset"] !== null) {
+            $this->StartTimeOffset = $param["StartTimeOffset"];
         }
     }
 }

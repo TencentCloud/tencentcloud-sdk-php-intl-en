@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAdaptiveDynamicStreamingTemplates request structure.
  *
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getDefinitions() Obtain Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
  * @method void setDefinitions(array $Definitions) Set Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
  * @method integer getOffset() Obtain Paged offset. Default value: 0.
@@ -32,11 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Template type filter. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
- * @method integer getSubAppId() Obtain ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
      */
@@ -60,18 +65,13 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $Definitions Unique ID filter of transcoding to adaptive bitrate streaming templates. Array length limit: 100.
      * @param integer $Offset Paged offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
      * @param string $Type Template type filter. Valid values:
 <li>Preset: preset template;</li>
 <li>Custom: custom template.</li>
-     * @param integer $SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -86,6 +86,10 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
             $this->Definitions = $param["Definitions"];
         }
@@ -100,10 +104,6 @@ class DescribeAdaptiveDynamicStreamingTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

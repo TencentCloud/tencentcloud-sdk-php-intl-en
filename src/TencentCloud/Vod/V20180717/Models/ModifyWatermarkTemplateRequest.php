@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique ID of watermarking template.
  * @method void setDefinition(integer $Definition) Set Unique ID of watermarking template.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Watermarking template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Watermarking template name. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
@@ -54,8 +56,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTextTemplate(TextWatermarkTemplateInputForUpdate $TextTemplate) Set Text watermarking template. This field is valid only for text watermarking templates.
  * @method SvgWatermarkInputForUpdate getSvgTemplate() Obtain SVG watermarking template. This field is only valid for SVG watermarking templates.
  * @method void setSvgTemplate(SvgWatermarkInputForUpdate $SvgTemplate) Set SVG watermarking template. This field is only valid for SVG watermarking templates.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyWatermarkTemplateRequest extends AbstractModel
 {
@@ -63,6 +63,11 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @var integer Unique ID of watermarking template.
      */
     public $Definition;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Watermarking template name. Length limit: 64 characters.
@@ -113,12 +118,8 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
     public $SvgTemplate;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition Unique ID of watermarking template.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Watermarking template name. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $CoordinateOrigin Origin position. Valid values:
@@ -135,7 +136,6 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
      * @param ImageWatermarkInputForUpdate $ImageTemplate Image watermarking template. This field is valid only for image watermarking templates.
      * @param TextWatermarkTemplateInputForUpdate $TextTemplate Text watermarking template. This field is valid only for text watermarking templates.
      * @param SvgWatermarkInputForUpdate $SvgTemplate SVG watermarking template. This field is only valid for SVG watermarking templates.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -152,6 +152,10 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -187,10 +191,6 @@ class ModifyWatermarkTemplateRequest extends AbstractModel
         if (array_key_exists("SvgTemplate",$param) and $param["SvgTemplate"] !== null) {
             $this->SvgTemplate = new SvgWatermarkInputForUpdate();
             $this->SvgTemplate->deserialize($param["SvgTemplate"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

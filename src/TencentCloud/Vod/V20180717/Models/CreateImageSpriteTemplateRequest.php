@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRowCount(integer $RowCount) Set Subimage row count of an image sprite.
  * @method integer getColumnCount() Obtain Subimage column count of an image sprite.
  * @method void setColumnCount(integer $ColumnCount) Set Subimage column count of an image sprite.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Name of an image sprite generating template. Length limit: 64 characters.
  * @method void setName(string $Name) Set Name of an image sprite generating template. Length limit: 64 characters.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
@@ -80,8 +82,6 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
- * @method integer getSubAppId() Obtain ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -108,6 +108,11 @@ class CreateImageSpriteTemplateRequest extends AbstractModel
      * @var integer Subimage column count of an image sprite.
      */
     public $ColumnCount;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Name of an image sprite generating template. Length limit: 64 characters.
@@ -156,11 +161,6 @@ Default value: open.
     public $ResolutionAdaptive;
 
     /**
-     * @var integer ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: by percent.</li>
 <li>Time: by time interval.</li>
@@ -169,6 +169,7 @@ Default value: open.
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
      * @param integer $RowCount Subimage row count of an image sprite.
      * @param integer $ColumnCount Subimage column count of an image sprite.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
@@ -191,7 +192,6 @@ Default value: 0.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
-     * @param integer $SubAppId ID of a [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -222,6 +222,10 @@ Default value: open.
             $this->ColumnCount = $param["ColumnCount"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
         }
@@ -244,10 +248,6 @@ Default value: open.
 
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

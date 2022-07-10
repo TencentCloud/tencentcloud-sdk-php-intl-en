@@ -40,29 +40,29 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWidth(integer $Width) Set Maximum value of the width of a video stream in px.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getSize() Obtain Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSize(integer $Size) Set Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getSize() Obtain The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
+ * @method void setSize(integer $Size) Set The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
  * @method float getDuration() Obtain Video duration in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDuration(float $Duration) Set Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getContainer() Obtain Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setContainer(string $Container) Set Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getMd5() Obtain MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMd5(string $Md5) Set MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getAudioStreamSet() Obtain Audio stream information.
+ * @method string getContainer() Obtain Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
+ * @method void setContainer(string $Container) Set Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getVideoStreamSet() Obtain Video stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setVideoStreamSet(array $VideoStreamSet) Set Video stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getAudioStreamSet() Obtain Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class MediaTranscodeItem extends AbstractModel
@@ -98,8 +98,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Width;
 
     /**
-     * @var integer Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
      */
     public $Size;
 
@@ -110,28 +110,28 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Duration;
 
     /**
-     * @var string Container, such as m4a and mp4.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $Container;
-
-    /**
      * @var string MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Md5;
 
     /**
-     * @var array Audio stream information.
+     * @var string Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
-    public $AudioStreamSet;
+    public $Container;
 
     /**
      * @var array Video stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $VideoStreamSet;
+
+    /**
+     * @var array Audio stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $AudioStreamSet;
 
     /**
      * @param string $Url Address of output video file.
@@ -144,17 +144,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Width Maximum value of the width of a video stream in px.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Size Total size of a media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Size The file size (bytes).
+<li>If the file is an HLS file, the value of this parameter is the sum of the size of the M3U8 and TS files.</li>
      * @param float $Duration Video duration in seconds.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Md5 MD5 value of video.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $AudioStreamSet Audio stream information.
+     * @param string $Container Container, such as m4a and mp4.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $VideoStreamSet Video stream information.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $AudioStreamSet Audio stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -198,21 +198,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Duration = $param["Duration"];
         }
 
-        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
-            $this->Container = $param["Container"];
-        }
-
         if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
             $this->Md5 = $param["Md5"];
         }
 
-        if (array_key_exists("AudioStreamSet",$param) and $param["AudioStreamSet"] !== null) {
-            $this->AudioStreamSet = [];
-            foreach ($param["AudioStreamSet"] as $key => $value){
-                $obj = new MediaAudioStreamItem();
-                $obj->deserialize($value);
-                array_push($this->AudioStreamSet, $obj);
-            }
+        if (array_key_exists("Container",$param) and $param["Container"] !== null) {
+            $this->Container = $param["Container"];
         }
 
         if (array_key_exists("VideoStreamSet",$param) and $param["VideoStreamSet"] !== null) {
@@ -221,6 +212,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj = new MediaVideoStreamItem();
                 $obj->deserialize($value);
                 array_push($this->VideoStreamSet, $obj);
+            }
+        }
+
+        if (array_key_exists("AudioStreamSet",$param) and $param["AudioStreamSet"] !== null) {
+            $this->AudioStreamSet = [];
+            foreach ($param["AudioStreamSet"] as $key => $value){
+                $obj = new MediaAudioStreamItem();
+                $obj->deserialize($value);
+                array_push($this->AudioStreamSet, $obj);
             }
         }
     }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDBInstanceId() Obtain Instance ID in the format of postgres-6fego161
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID in the format of postgres-6fego161
- * @method integer getLimit() Obtain Number of entries returned per page. Default value: 20. Value range: 1-100.
- * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 20. Value range: 1-100.
- * @method integer getOffset() Obtain Page number for data return in paged query. Pagination starts from 0
- * @method void setOffset(integer $Offset) Set Page number for data return in paged query. Pagination starts from 0
+ * @method integer getLimit() Obtain Number of entries returned per page. Default value: 10. Value range: 1–100.
+ * @method void setLimit(integer $Limit) Set Number of entries returned per page. Default value: 10. Value range: 1–100.
+ * @method integer getOffset() Obtain Data offset, which starts from 0.
+ * @method void setOffset(integer $Offset) Set Data offset, which starts from 0.
  * @method string getOrderBy() Obtain Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
  * @method void setOrderBy(string $OrderBy) Set Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
  * @method string getOrderByType() Obtain Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
@@ -39,12 +39,12 @@ class DescribeAccountsRequest extends AbstractModel
     public $DBInstanceId;
 
     /**
-     * @var integer Number of entries returned per page. Default value: 20. Value range: 1-100.
+     * @var integer Number of entries returned per page. Default value: 10. Value range: 1–100.
      */
     public $Limit;
 
     /**
-     * @var integer Page number for data return in paged query. Pagination starts from 0
+     * @var integer Data offset, which starts from 0.
      */
     public $Offset;
 
@@ -60,8 +60,8 @@ class DescribeAccountsRequest extends AbstractModel
 
     /**
      * @param string $DBInstanceId Instance ID in the format of postgres-6fego161
-     * @param integer $Limit Number of entries returned per page. Default value: 20. Value range: 1-100.
-     * @param integer $Offset Page number for data return in paged query. Pagination starts from 0
+     * @param integer $Limit Number of entries returned per page. Default value: 10. Value range: 1–100.
+     * @param integer $Offset Data offset, which starts from 0.
      * @param string $OrderBy Whether to sort by creation time or username. Valid values: `createTime` (sort by creation time), `name` (sort by username)
      * @param string $OrderByType Whether returns are sorted in ascending or descending order. Valid values: `desc` (descending), `asc` (ascending)
      */

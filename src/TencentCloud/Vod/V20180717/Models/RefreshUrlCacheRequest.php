@@ -18,19 +18,27 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeStorageRegions request structure.
+ * RefreshUrlCache request structure.
  *
+ * @method array getUrls() Obtain The URLs to purge. You can specify up to 20 URLs per request.
+ * @method void setUrls(array $Urls) Set The URLs to purge. You can specify up to 20 URLs per request.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  */
-class DescribeStorageRegionsRequest extends AbstractModel
+class RefreshUrlCacheRequest extends AbstractModel
 {
+    /**
+     * @var array The URLs to purge. You can specify up to 20 URLs per request.
+     */
+    public $Urls;
+
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     public $SubAppId;
 
     /**
+     * @param array $Urls The URLs to purge. You can specify up to 20 URLs per request.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     function __construct()
@@ -46,6 +54,10 @@ class DescribeStorageRegionsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Urls",$param) and $param["Urls"] !== null) {
+            $this->Urls = $param["Urls"];
+        }
+
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
         }

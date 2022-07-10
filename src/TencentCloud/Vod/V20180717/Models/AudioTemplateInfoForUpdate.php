@@ -20,38 +20,40 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Audio stream configuration parameter
  *
- * @method string getCodec() Obtain Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
- * @method void setCodec(string $Codec) Set Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+ * @method string getCodec() Obtain The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
+ * @method void setCodec(string $Codec) Set The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
  * @method integer getBitrate() Obtain Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
  * @method void setBitrate(integer $Bitrate) Set Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
  * @method integer getSampleRate() Obtain Audio stream sample rate. Valid values:
@@ -78,22 +80,23 @@ You cannot set the sound channel as stereo for media files in container formats 
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+     * @var string The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
      */
     public $Codec;
 
@@ -121,22 +124,23 @@ You cannot set the sound channel as stereo for media files in container formats 
     public $AudioChannel;
 
     /**
-     * @param string $Codec Audio stream encoder.
-When the outer `Container` parameter is `mp3`, the valid value is:
-<li>libmp3lame.</li>
-When the outer `Container` parameter is `ogg` or `flac`, the valid value is:
-<li>flac.</li>
-When the outer `Container` parameter is `m4a`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame;</li>
-<li>ac3.</li>
-When the outer `Container` parameter is `mp4` or `flv`, the valid values include:
-<li>libfdk_aac: more suitable for mp4;</li>
-<li>libmp3lame: More suitable for flv;</li>
-<li>mp2.</li>
-When the outer `Container` parameter is `hls`, the valid values include:
-<li>libfdk_aac;</li>
-<li>libmp3lame.</li>
+     * @param string $Codec The audio codec.
+If `Container` parameter is `mp3`, the valid value is:
+<li>libmp3lame</li>
+If `Container` is `ogg` or `flac`, the valid value is:
+<li>flac</li>
+If `Container` is `m4a`, the valid values are:
+<li>libfdk_aac</li>
+<li>libmp3lame</li>
+<li>ac3</li>
+If `Container` is `mp4` or `flv`, the valid values are:
+<li>libfdk_aac: more suitable for mp4</li>
+<li>libmp3lame: More suitable for flv</li>
+<li>mp2</li>
+If `Container` is `hls`, the valid values are:
+<li>libfdk_aac</li>
+If `Format` is `HLS` or `MPEG-DASH`, the valid values are:
+<li>libfdk_aac</li>
      * @param integer $Bitrate Audio stream bitrate in Kbps. Value range: 0 and [26, 256]. If the value is 0, the bitrate of the audio stream will be the same as that of the original audio.
      * @param integer $SampleRate Audio stream sample rate. Valid values:
 <li>32,000</li>

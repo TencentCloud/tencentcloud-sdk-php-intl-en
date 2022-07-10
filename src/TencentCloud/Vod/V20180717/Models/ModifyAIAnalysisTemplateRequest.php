@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Unique ID of video content analysis template.
  * @method void setDefinition(integer $Definition) Set Unique ID of video content analysis template.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getName() Obtain Video content analysis template name. Length limit: 64 characters.
  * @method void setName(string $Name) Set Video content analysis template name. Length limit: 64 characters.
  * @method string getComment() Obtain Video content analysis template description. Length limit: 256 characters.
@@ -36,8 +38,6 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFrameTagConfigure(FrameTagConfigureInfoForUpdate $FrameTagConfigure) Set Control parameter of intelligent frame-specific tagging task.
  * @method HighlightsConfigureInfoForUpdate getHighlightConfigure() Obtain Control parameter of an intelligent highlight generating task.
  * @method void setHighlightConfigure(HighlightsConfigureInfoForUpdate $HighlightConfigure) Set Control parameter of an intelligent highlight generating task.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyAIAnalysisTemplateRequest extends AbstractModel
 {
@@ -45,6 +45,11 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
      * @var integer Unique ID of video content analysis template.
      */
     public $Definition;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Video content analysis template name. Length limit: 64 characters.
@@ -82,12 +87,8 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
     public $HighlightConfigure;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param integer $Definition Unique ID of video content analysis template.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Video content analysis template name. Length limit: 64 characters.
      * @param string $Comment Video content analysis template description. Length limit: 256 characters.
      * @param ClassificationConfigureInfoForUpdate $ClassificationConfigure Control parameter of intelligent categorization task.
@@ -95,7 +96,6 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
      * @param CoverConfigureInfoForUpdate $CoverConfigure Control parameter of intelligent cover generating task.
      * @param FrameTagConfigureInfoForUpdate $FrameTagConfigure Control parameter of intelligent frame-specific tagging task.
      * @param HighlightsConfigureInfoForUpdate $HighlightConfigure Control parameter of an intelligent highlight generating task.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -112,6 +112,10 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
@@ -145,10 +149,6 @@ class ModifyAIAnalysisTemplateRequest extends AbstractModel
         if (array_key_exists("HighlightConfigure",$param) and $param["HighlightConfigure"] !== null) {
             $this->HighlightConfigure = new HighlightsConfigureInfoForUpdate();
             $this->HighlightConfigure->deserialize($param["HighlightConfigure"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IsolateDBInstances request structure.
  *
- * @method array getDBInstanceIdSet() Obtain Instance ID set
- * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set Instance ID set
+ * @method array getDBInstanceIdSet() Obtain List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
+ * @method void setDBInstanceIdSet(array $DBInstanceIdSet) Set List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
  */
 class IsolateDBInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance ID set
+     * @var array List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     public $DBInstanceIdSet;
 
     /**
-     * @param array $DBInstanceIdSet Instance ID set
+     * @param array $DBInstanceIdSet List of instance IDs. Note that currently you cannot isolate multiple instances at the same time. Only one instance ID can be passed in here.
      */
     function __construct()
     {

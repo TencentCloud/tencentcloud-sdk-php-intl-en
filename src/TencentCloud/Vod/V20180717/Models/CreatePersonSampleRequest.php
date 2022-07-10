@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getDescription() Obtain Description of a sample. Length limit: 1024 characters.
  * @method void setDescription(string $Description) Set Description of a sample. Length limit: 1024 characters.
  * @method array getFaceContents() Obtain String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
@@ -42,8 +44,6 @@ Note: the image must be a relatively clear full-face photo of a person and has a
  * @method void setTags(array $Tags) Set Tags of a sample
 <li>Array length limit: 20 tags</li>
 <li>Length limit of a tag: 128 characters</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class CreatePersonSampleRequest extends AbstractModel
 {
@@ -59,6 +59,11 @@ class CreatePersonSampleRequest extends AbstractModel
 3. All: equivalent to 1+2.
      */
     public $Usages;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Description of a sample. Length limit: 1024 characters.
@@ -79,23 +84,18 @@ Note: the image must be a relatively clear full-face photo of a person and has a
     public $Tags;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Name Name of a sample. Length limit: 20 characters.
      * @param array $Usages Usage of a sample. Valid values:
 1. Recognition: used for content recognition; equivalent to `Recognition.Face`
 2. Review: used for inappropriate information recognition; equivalent to `Review.Face`
 3. All: equivalent to 1+2.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Description Description of a sample. Length limit: 1024 characters.
      * @param array $FaceContents String generated after the sample image is encoded by [Base64](https://tools.ietf.org/html/rfc4648). Only JPEG and PNG images are supported. Array length limit: 5 images.
 Note: the image must be a relatively clear full-face photo of a person and has a resolution of no less than 200 x 200.
      * @param array $Tags Tags of a sample
 <li>Array length limit: 20 tags</li>
 <li>Length limit of a tag: 128 characters</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -118,6 +118,10 @@ Note: the image must be a relatively clear full-face photo of a person and has a
             $this->Usages = $param["Usages"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
         }
@@ -128,10 +132,6 @@ Note: the image must be a relatively clear full-face photo of a person and has a
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
             $this->Tags = $param["Tags"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

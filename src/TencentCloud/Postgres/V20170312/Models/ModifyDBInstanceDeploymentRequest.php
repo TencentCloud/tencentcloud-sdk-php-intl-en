@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBInstanceId(string $DBInstanceId) Set Instance ID.
  * @method array getDBNodeSet() Obtain Instance node information.
  * @method void setDBNodeSet(array $DBNodeSet) Set Instance node information.
- * @method integer getSwitchTag() Obtain Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
- * @method void setSwitchTag(integer $SwitchTag) Set Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
- * @method string getSwitchStartTime() Obtain The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
- * @method void setSwitchStartTime(string $SwitchStartTime) Set The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
- * @method string getSwitchEndTime() Obtain The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
- * @method void setSwitchEndTime(string $SwitchEndTime) Set The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+ * @method integer getSwitchTag() Obtain Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+ * @method void setSwitchTag(integer $SwitchTag) Set Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+ * @method string getSwitchStartTime() Obtain Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+ * @method void setSwitchStartTime(string $SwitchStartTime) Set Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+ * @method string getSwitchEndTime() Obtain Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+ * @method void setSwitchEndTime(string $SwitchEndTime) Set Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
  */
 class ModifyDBInstanceDeploymentRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class ModifyDBInstanceDeploymentRequest extends AbstractModel
     public $DBNodeSet;
 
     /**
-     * @var integer Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
+     * @var integer Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
      */
     public $SwitchTag;
 
     /**
-     * @var string The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
+     * @var string Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public $SwitchStartTime;
 
     /**
-     * @var string The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+     * @var string Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     public $SwitchEndTime;
 
     /**
      * @param string $DBInstanceId Instance ID.
      * @param array $DBNodeSet Instance node information.
-     * @param integer $SwitchTag Switch time. Valid values: `0` (switch immediately), `1` (switch at a specified time). Default value: `0`.
-     * @param string $SwitchStartTime The earliest time to start a switch in the format of "HH:MM:SS", such as "01:00:00".
-     * @param string $SwitchEndTime The latest time to start a switch in the format of "HH:MM:SS", such as "01:30:00".
+     * @param integer $SwitchTag Switch time. Valid values: `0` (switch now), `1` (switch at a specified time), `2` (switch during maintenance time). Default value: `0`.
+     * @param string $SwitchStartTime Switch start time in the format of `HH:MM:SS`, such as 01:00:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
+     * @param string $SwitchEndTime Switch end time in the format of `HH:MM:SS`, such as 01:30:00. When `SwitchTag` is 0 or 2, this parameter becomes invalid.
      */
     function __construct()
     {

@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getKeyword() Obtain Keyword. Length limit: 128 characters.
  * @method void setKeyword(string $Keyword) Set Keyword. Length limit: 128 characters.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getUsages() Obtain <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
@@ -42,8 +44,6 @@ use TencentCloud\Common\AbstractModel;
 7. All: equivalent to 1+2+3+4
  * @method AiSampleTagOperation getTagOperationInfo() Obtain Tag operation information.
  * @method void setTagOperationInfo(AiSampleTagOperation $TagOperationInfo) Set Tag operation information.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifyWordSampleRequest extends AbstractModel
 {
@@ -51,6 +51,11 @@ class ModifyWordSampleRequest extends AbstractModel
      * @var string Keyword. Length limit: 128 characters.
      */
     public $Keyword;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var array <b>Keyword usage. Valid values:</b>
@@ -71,12 +76,8 @@ class ModifyWordSampleRequest extends AbstractModel
     public $TagOperationInfo;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Keyword Keyword. Length limit: 128 characters.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $Usages <b>Keyword usage. Valid values:</b>
 1. Recognition.Ocr: OCR-based content recognition
 2. Recognition.Asr: ASR-based content recognition
@@ -87,7 +88,6 @@ class ModifyWordSampleRequest extends AbstractModel
 6. Review: ASR- and OCR-based inappropriate information recognition; equivalent to 3+4
 7. All: equivalent to 1+2+3+4
      * @param AiSampleTagOperation $TagOperationInfo Tag operation information.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -106,6 +106,10 @@ class ModifyWordSampleRequest extends AbstractModel
             $this->Keyword = $param["Keyword"];
         }
 
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Usages",$param) and $param["Usages"] !== null) {
             $this->Usages = $param["Usages"];
         }
@@ -113,10 +117,6 @@ class ModifyWordSampleRequest extends AbstractModel
         if (array_key_exists("TagOperationInfo",$param) and $param["TagOperationInfo"] !== null) {
             $this->TagOperationInfo = new AiSampleTagOperation();
             $this->TagOperationInfo->deserialize($param["TagOperationInfo"]);
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

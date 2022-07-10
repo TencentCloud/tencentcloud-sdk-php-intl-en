@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name to add to VOD. Note: a wildcard domain name is not supported.
  * @method void setDomain(string $Domain) Set Domain name to add to VOD. Note: a wildcard domain name is not supported.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getAccelerateArea() Obtain Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
@@ -32,8 +34,6 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
- * @method integer getSubAppId() Obtain VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
  */
 class CreateVodDomainRequest extends AbstractModel
 {
@@ -41,6 +41,11 @@ class CreateVodDomainRequest extends AbstractModel
      * @var string Domain name to add to VOD. Note: a wildcard domain name is not supported.
      */
     public $Domain;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Region to enable acceleration. Valid values:
@@ -52,18 +57,13 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
     public $AccelerateArea;
 
     /**
-     * @var integer VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Domain Domain name to add to VOD. Note: a wildcard domain name is not supported.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $AccelerateArea Region to enable acceleration. Valid values:
 <li>`Chinese Mainland`</li>
 <li>`Outside Chinese Mainland`</li>
 <li>`Global`</li>
 If `AccelerateArea` is not specified, VOD will enable acceleration in or outside Chinese mainland based on the regional information a user has configured with Tencent Cloud.
-     * @param integer $SubAppId VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -82,12 +82,12 @@ If `AccelerateArea` is not specified, VOD will enable acceleration in or outside
             $this->Domain = $param["Domain"];
         }
 
-        if (array_key_exists("AccelerateArea",$param) and $param["AccelerateArea"] !== null) {
-            $this->AccelerateArea = $param["AccelerateArea"];
-        }
-
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("AccelerateArea",$param) and $param["AccelerateArea"] !== null) {
+            $this->AccelerateArea = $param["AccelerateArea"];
         }
     }
 }
