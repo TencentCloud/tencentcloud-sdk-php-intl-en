@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskStatus(array $TaskStatus) Set Task status
  * @method array getResult() Obtain Task status
  * @method void setResult(array $Result) Set Task status
- * @method array getOperatorUin() Obtain Operator UIN
- * @method void setOperatorUin(array $OperatorUin) Set Operator UIN
- * @method array getOperateUin() Obtain 
- * @method void setOperateUin(array $OperateUin) Set 
+ * @method array getOperatorUin() Obtain The field `OperatorUin` has been disused and replaced by `OperateUin`.
+ * @method void setOperatorUin(array $OperatorUin) Set The field `OperatorUin` has been disused and replaced by `OperateUin`.
+ * @method array getOperateUin() Obtain Operator Uin
+ * @method void setOperateUin(array $OperateUin) Set Operator Uin
  */
 class DescribeTaskListRequest extends AbstractModel
 {
@@ -98,12 +98,12 @@ class DescribeTaskListRequest extends AbstractModel
     public $Result;
 
     /**
-     * @var array Operator UIN
+     * @var array The field `OperatorUin` has been disused and replaced by `OperateUin`.
      */
     public $OperatorUin;
 
     /**
-     * @var array 
+     * @var array Operator Uin
      */
     public $OperateUin;
 
@@ -118,8 +118,8 @@ class DescribeTaskListRequest extends AbstractModel
      * @param string $EndTime End time
      * @param array $TaskStatus Task status
      * @param array $Result Task status
-     * @param array $OperatorUin Operator UIN
-     * @param array $OperateUin 
+     * @param array $OperatorUin The field `OperatorUin` has been disused and replaced by `OperateUin`.
+     * @param array $OperateUin Operator Uin
      */
     function __construct()
     {
