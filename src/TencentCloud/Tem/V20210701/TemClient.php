@@ -34,6 +34,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) This API is used to delete an ingress rule.
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) This API is used to deploy an application.
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) This API is used to get the list of application pods.
+ * @method Models\DescribeApplicationsStatusResponse DescribeApplicationsStatus(Models\DescribeApplicationsStatusRequest $req) This API is used to query the status of all applications in an envrionment.
  * @method Models\DescribeEnvironmentsResponse DescribeEnvironments(Models\DescribeEnvironmentsRequest $req) This API is used to get the list of tenant environments.
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) This API is used to query an ingress rule.
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) This API is used to query the list of ingress rules.

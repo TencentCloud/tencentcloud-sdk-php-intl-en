@@ -50,10 +50,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSuggestion(string $Suggestion) Set This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getLabels() Obtain This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLabels(array $Labels) Set This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getLabels() Obtain Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setLabels(array $Labels) Set Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method InputInfo getInputInfo() Obtain This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setInputInfo(InputInfo $InputInfo) Set This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
@@ -82,6 +82,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setUpdatedAt(string $UpdatedAt) Set This field is used to return the last update time of the queried task in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getLabel() Obtain If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setLabel(string $Label) Set If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -131,8 +135,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Suggestion;
 
     /**
-     * @var array This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Labels;
 
@@ -179,6 +183,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UpdatedAt;
 
     /**
+     * @var string If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Label;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -199,8 +209,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Suggestion This field is used to return the operation suggestion for the maliciousness tag. When you get the determination result, the returned value indicates the operation suggested by the system. We recommend you handle different types of violations and suggestions according to your business needs. <br>Returned values: **Block**, **Review**, **Pass**.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Labels This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Labels Label of the malicious content detected. <br>Values: **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param InputInfo $InputInfo This field is used to return the media content information of the moderation service, mainly including the input file type and access URL.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $AudioText This field is used to return the recognized text content of an audio file. **Up to the first 1,000 characters** can be recognized.
@@ -215,6 +225,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $UpdatedAt This field is used to return the last update time of the queried task in ISO 8601 format.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Label If the recognition result is normal, this parameter is returned with the value `Normal`. If malicious content is recognized, the tag with the highest priority in the result of `Labels` is returned.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -299,6 +311,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("Label",$param) and $param["Label"] !== null) {
+            $this->Label = $param["Label"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
