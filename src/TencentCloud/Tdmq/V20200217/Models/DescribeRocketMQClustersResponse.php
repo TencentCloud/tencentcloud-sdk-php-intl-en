@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQClusters response structure.
  *
- * @method array getClusterList() Obtain Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setClusterList(array $ClusterList) Set Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method array getClusterList() Obtain Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterList(array $ClusterList) Set Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain The total number of returned results.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of returned results.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeRocketMQClustersResponse extends AbstractModel
 {
     /**
-     * @var array Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClusterList;
 
     /**
-     * @var integer Total number
+     * @var integer The total number of returned results.
      */
     public $TotalCount;
 
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $ClusterList Cluster information
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number
+     * @param array $ClusterList Cluster information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount The total number of returned results.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

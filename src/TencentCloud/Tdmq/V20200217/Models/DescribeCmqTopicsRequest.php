@@ -20,28 +20,28 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCmqTopics request structure.
  *
- * @method integer getOffset() Obtain Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
- * @method void setOffset(integer $Offset) Set Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
- * @method void setLimit(integer $Limit) Set Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+ * @method integer getOffset() Obtain Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+ * @method void setOffset(integer $Offset) Set Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+ * @method integer getLimit() Obtain The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+ * @method void setLimit(integer $Limit) Set The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
  * @method string getTopicName() Obtain Fuzzy search by `TopicName`
  * @method void setTopicName(string $TopicName) Set Fuzzy search by `TopicName`
- * @method array getTopicNameList() Obtain Filter by list of CMQ topic names
- * @method void setTopicNameList(array $TopicNameList) Set Filter by list of CMQ topic names
- * @method boolean getIsTagFilter() Obtain For filtering by tag, this must be configured to `true`.
- * @method void setIsTagFilter(boolean $IsTagFilter) Set For filtering by tag, this must be configured to `true`.
- * @method array getFilters() Obtain Filter. Currently, you can filter only by tag.
- * @method void setFilters(array $Filters) Set Filter. Currently, you can filter only by tag.
+ * @method array getTopicNameList() Obtain Filter by CMQ topic name.
+ * @method void setTopicNameList(array $TopicNameList) Set Filter by CMQ topic name.
+ * @method boolean getIsTagFilter() Obtain For filtering by tag, this parameter must be set to `true`.
+ * @method void setIsTagFilter(boolean $IsTagFilter) Set For filtering by tag, this parameter must be set to `true`.
+ * @method array getFilters() Obtain Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
+ * @method void setFilters(array $Filters) Set Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
  */
 class DescribeCmqTopicsRequest extends AbstractModel
 {
     /**
-     * @var integer Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
+     * @var integer Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
      */
     public $Offset;
 
     /**
-     * @var integer Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+     * @var integer The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
      */
     public $Limit;
 
@@ -51,27 +51,27 @@ class DescribeCmqTopicsRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var array Filter by list of CMQ topic names
+     * @var array Filter by CMQ topic name.
      */
     public $TopicNameList;
 
     /**
-     * @var boolean For filtering by tag, this must be configured to `true`.
+     * @var boolean For filtering by tag, this parameter must be set to `true`.
      */
     public $IsTagFilter;
 
     /**
-     * @var array Filter. Currently, you can filter only by tag.
+     * @var array Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
      */
     public $Filters;
 
     /**
-     * @param integer $Offset Starting position of the list of queues to be returned on the current page in case of paginated return. If a value is entered, `limit` is required. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
+     * @param integer $Offset Starting position of a queue list to be returned on the current page in case of paginated return. If a value is entered, `limit` must be specified. If this parameter is left empty, 0 will be used by default.
+     * @param integer $Limit The number of queues to be returned per page in case of paginated return. If this parameter is not passed in, 20 will be used by default. Maximum value: 50.
      * @param string $TopicName Fuzzy search by `TopicName`
-     * @param array $TopicNameList Filter by list of CMQ topic names
-     * @param boolean $IsTagFilter For filtering by tag, this must be configured to `true`.
-     * @param array $Filters Filter. Currently, you can filter only by tag.
+     * @param array $TopicNameList Filter by CMQ topic name.
+     * @param boolean $IsTagFilter For filtering by tag, this parameter must be set to `true`.
+     * @param array $Filters Filter. Currently, you can filter by tag. The tag name must be prefixed with “tag:”, such as “tag: owner”, “tag: environment”, or “tag: business”.
      */
     function __construct()
     {

@@ -20,43 +20,43 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQTopics request structure.
  *
- * @method integer getOffset() Obtain Query offset
- * @method void setOffset(integer $Offset) Set Query offset
- * @method integer getLimit() Obtain Query limit
- * @method void setLimit(integer $Limit) Set Query limit
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Namespace
- * @method void setNamespaceId(string $NamespaceId) Set Namespace
- * @method array getFilterType() Obtain Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
- * @method void setFilterType(array $FilterType) Set Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+ * @method integer getOffset() Obtain Offset for query.
+ * @method void setOffset(integer $Offset) Set Offset for query.
+ * @method integer getLimit() Obtain Query limit.
+ * @method void setLimit(integer $Limit) Set Query limit.
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getNamespaceId() Obtain Namespace.
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace.
+ * @method array getFilterType() Obtain Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
+ * @method void setFilterType(array $FilterType) Set Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
  * @method string getFilterName() Obtain Search by topic name. Fuzzy query is supported.
  * @method void setFilterName(string $FilterName) Set Search by topic name. Fuzzy query is supported.
  */
 class DescribeRocketMQTopicsRequest extends AbstractModel
 {
     /**
-     * @var integer Query offset
+     * @var integer Offset for query.
      */
     public $Offset;
 
     /**
-     * @var integer Query limit
+     * @var integer Query limit.
      */
     public $Limit;
 
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string Namespace.
      */
     public $NamespaceId;
 
     /**
-     * @var array Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+     * @var array Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      */
     public $FilterType;
 
@@ -66,11 +66,11 @@ class DescribeRocketMQTopicsRequest extends AbstractModel
     public $FilterName;
 
     /**
-     * @param integer $Offset Query offset
-     * @param integer $Limit Query limit
-     * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Namespace
-     * @param array $FilterType Filter by topic type. Valid values: Normal, GlobalOrder, PartitionedOrder, Transaction.
+     * @param integer $Offset Offset for query.
+     * @param integer $Limit Query limit.
+     * @param string $ClusterId Cluster ID.
+     * @param string $NamespaceId Namespace.
+     * @param array $FilterType Filter by topic type. Valid values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`.
      * @param string $FilterName Search by topic name. Fuzzy query is supported.
      */
     function __construct()

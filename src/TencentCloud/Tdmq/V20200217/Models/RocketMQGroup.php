@@ -20,126 +20,126 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ consumer group information
  *
- * @method string getName() Obtain Consumer group name
- * @method void setName(string $Name) Set Consumer group name
- * @method integer getConsumerNum() Obtain Number of online consumers
- * @method void setConsumerNum(integer $ConsumerNum) Set Number of online consumers
- * @method integer getTPS() Obtain Consumption TPS
- * @method void setTPS(integer $TPS) Set Consumption TPS
- * @method integer getTotalAccumulative() Obtain Total number of retained messages
- * @method void setTotalAccumulative(integer $TotalAccumulative) Set Total number of retained messages
- * @method integer getConsumptionMode() Obtain 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
- * @method void setConsumptionMode(integer $ConsumptionMode) Set 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
- * @method boolean getReadEnabled() Obtain Whether to allow consumption
- * @method void setReadEnabled(boolean $ReadEnabled) Set Whether to allow consumption
- * @method integer getRetryPartitionNum() Obtain Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRetryPartitionNum(integer $RetryPartitionNum) Set Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() Obtain Creation time in milliseconds
- * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds
- * @method integer getUpdateTime() Obtain Modification time in milliseconds
- * @method void setUpdateTime(integer $UpdateTime) Set Modification time in milliseconds
- * @method string getClientProtocol() Obtain Client protocol
- * @method void setClientProtocol(string $ClientProtocol) Set Client protocol
- * @method string getRemark() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getConsumerType() Obtain Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConsumerType(string $ConsumerType) Set Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getBroadcastEnabled() Obtain Whether to enable broadcast consumption
- * @method void setBroadcastEnabled(boolean $BroadcastEnabled) Set Whether to enable broadcast consumption
+ * @method string getName() Obtain Consumer group name.
+ * @method void setName(string $Name) Set Consumer group name.
+ * @method integer getConsumerNum() Obtain The number of online consumers.
+ * @method void setConsumerNum(integer $ConsumerNum) Set The number of online consumers.
+ * @method integer getTPS() Obtain Consumption TPS.
+ * @method void setTPS(integer $TPS) Set Consumption TPS.
+ * @method integer getTotalAccumulative() Obtain The total number of heaped messages.
+ * @method void setTotalAccumulative(integer $TotalAccumulative) Set The total number of heaped messages.
+ * @method integer getConsumptionMode() Obtain 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+ * @method void setConsumptionMode(integer $ConsumptionMode) Set 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+ * @method boolean getReadEnabled() Obtain Whether to allow consumption.
+ * @method void setReadEnabled(boolean $ReadEnabled) Set Whether to allow consumption.
+ * @method integer getRetryPartitionNum() Obtain The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetryPartitionNum(integer $RetryPartitionNum) Set The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Creation time in milliseconds.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds.
+ * @method integer getUpdateTime() Obtain Modification time in milliseconds.
+ * @method void setUpdateTime(integer $UpdateTime) Set Modification time in milliseconds.
+ * @method string getClientProtocol() Obtain Client protocol.
+ * @method void setClientProtocol(string $ClientProtocol) Set Client protocol.
+ * @method string getRemark() Obtain Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConsumerType() Obtain Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConsumerType(string $ConsumerType) Set Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getBroadcastEnabled() Obtain Whether to enable broadcast consumption.
+ * @method void setBroadcastEnabled(boolean $BroadcastEnabled) Set Whether to enable broadcast consumption.
  */
 class RocketMQGroup extends AbstractModel
 {
     /**
-     * @var string Consumer group name
+     * @var string Consumer group name.
      */
     public $Name;
 
     /**
-     * @var integer Number of online consumers
+     * @var integer The number of online consumers.
      */
     public $ConsumerNum;
 
     /**
-     * @var integer Consumption TPS
+     * @var integer Consumption TPS.
      */
     public $TPS;
 
     /**
-     * @var integer Total number of retained messages
+     * @var integer The total number of heaped messages.
      */
     public $TotalAccumulative;
 
     /**
-     * @var integer 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
+     * @var integer 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
      */
     public $ConsumptionMode;
 
     /**
-     * @var boolean Whether to allow consumption
+     * @var boolean Whether to allow consumption.
      */
     public $ReadEnabled;
 
     /**
-     * @var integer Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RetryPartitionNum;
 
     /**
-     * @var integer Creation time in milliseconds
+     * @var integer Creation time in milliseconds.
      */
     public $CreateTime;
 
     /**
-     * @var integer Modification time in milliseconds
+     * @var integer Modification time in milliseconds.
      */
     public $UpdateTime;
 
     /**
-     * @var string Client protocol
+     * @var string Client protocol.
      */
     public $ClientProtocol;
 
     /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var string Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerType;
 
     /**
-     * @var boolean Whether to enable broadcast consumption
+     * @var boolean Whether to enable broadcast consumption.
      */
     public $BroadcastEnabled;
 
     /**
-     * @param string $Name Consumer group name
-     * @param integer $ConsumerNum Number of online consumers
-     * @param integer $TPS Consumption TPS
-     * @param integer $TotalAccumulative Total number of retained messages
-     * @param integer $ConsumptionMode 0: cluster consumption mode; 1: broadcast consumption mode; -1: unknown
-     * @param boolean $ReadEnabled Whether to allow consumption
-     * @param integer $RetryPartitionNum Number of partitions in the retry letter topic
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTime Creation time in milliseconds
-     * @param integer $UpdateTime Modification time in milliseconds
-     * @param string $ClientProtocol Client protocol
-     * @param string $Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsumerType Consumer type. Enumerated values: ACTIVELY, PASSIVELY
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $BroadcastEnabled Whether to enable broadcast consumption
+     * @param string $Name Consumer group name.
+     * @param integer $ConsumerNum The number of online consumers.
+     * @param integer $TPS Consumption TPS.
+     * @param integer $TotalAccumulative The total number of heaped messages.
+     * @param integer $ConsumptionMode 0: Cluster consumption mode; 1: Broadcast consumption mode; -1: Unknown.
+     * @param boolean $ReadEnabled Whether to allow consumption.
+     * @param integer $RetryPartitionNum The number of partitions in a retry topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Creation time in milliseconds.
+     * @param integer $UpdateTime Modification time in milliseconds.
+     * @param string $ClientProtocol Client protocol.
+     * @param string $Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $BroadcastEnabled Whether to enable broadcast consumption.
      */
     function __construct()
     {

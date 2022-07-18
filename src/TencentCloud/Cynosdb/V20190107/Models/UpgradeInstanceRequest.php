@@ -24,18 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID
  * @method integer getCpu() Obtain Database CPU
  * @method void setCpu(integer $Cpu) Set Database CPU
- * @method integer getMemory() Obtain Database memory
- * @method void setMemory(integer $Memory) Set Database memory
+ * @method integer getMemory() Obtain Database memory in GB
+ * @method void setMemory(integer $Memory) Set Database memory in GB
  * @method string getUpgradeType() Obtain Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
  * @method void setUpgradeType(string $UpgradeType) Set Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
- * @method integer getStorageLimit() Obtain Storage upper limit. 0 indicates to use the standard configuration
- * @method void setStorageLimit(integer $StorageLimit) Set Storage upper limit. 0 indicates to use the standard configuration
+ * @method integer getStorageLimit() Obtain This parameter has been disused.
+ * @method void setStorageLimit(integer $StorageLimit) Set This parameter has been disused.
  * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
- * @method string getDbType() Obtain Database type. Valid values: 
-<li> MYSQL </li>
- * @method void setDbType(string $DbType) Set Database type. Valid values: 
-<li> MYSQL </li>
+ * @method string getDbType() Obtain This parameter has been disused.
+ * @method void setDbType(string $DbType) Set This parameter has been disused.
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  */
@@ -52,7 +50,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Database memory
+     * @var integer Database memory in GB
      */
     public $Memory;
 
@@ -62,7 +60,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $UpgradeType;
 
     /**
-     * @var integer Storage upper limit. 0 indicates to use the standard configuration
+     * @var integer This parameter has been disused.
      */
     public $StorageLimit;
 
@@ -72,8 +70,7 @@ class UpgradeInstanceRequest extends AbstractModel
     public $AutoVoucher;
 
     /**
-     * @var string Database type. Valid values: 
-<li> MYSQL </li>
+     * @var string This parameter has been disused.
      */
     public $DbType;
 
@@ -85,12 +82,11 @@ class UpgradeInstanceRequest extends AbstractModel
     /**
      * @param string $InstanceId Instance ID
      * @param integer $Cpu Database CPU
-     * @param integer $Memory Database memory
+     * @param integer $Memory Database memory in GB
      * @param string $UpgradeType Upgrade type. Valid values: upgradeImmediate, upgradeInMaintain
-     * @param integer $StorageLimit Storage upper limit. 0 indicates to use the standard configuration
+     * @param integer $StorageLimit This parameter has been disused.
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
-     * @param string $DbType Database type. Valid values: 
-<li> MYSQL </li>
+     * @param string $DbType This parameter has been disused.
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      */
     function __construct()

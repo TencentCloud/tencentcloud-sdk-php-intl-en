@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getResourceIds() Obtain ID of the instance to be manipulated
  * @method void setResourceIds(array $ResourceIds) Set ID of the instance to be manipulated
- * @method integer getAutoRenewFlag() Obtain Auto-Renewal flag
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-Renewal flag
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
  */
 class SetRenewFlagRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SetRenewFlagRequest extends AbstractModel
     public $ResourceIds;
 
     /**
-     * @var integer Auto-Renewal flag
+     * @var integer Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
      */
     public $AutoRenewFlag;
 
     /**
      * @param array $ResourceIds ID of the instance to be manipulated
-     * @param integer $AutoRenewFlag Auto-Renewal flag
+     * @param integer $AutoRenewFlag Auto-renewal flag. 0: normal renewal, 1: auto-renewal, 2: no renewal.
      */
     function __construct()
     {

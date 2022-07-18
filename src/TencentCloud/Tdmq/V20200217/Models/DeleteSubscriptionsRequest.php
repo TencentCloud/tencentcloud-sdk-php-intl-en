@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSubscriptions request structure.
  *
- * @method array getSubscriptionTopicSets() Obtain Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
- * @method void setSubscriptionTopicSets(array $SubscriptionTopicSets) Set Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+ * @method array getSubscriptionTopicSets() Obtain Subscription set. Up to 20 subscriptions can be deleted at a time.
+ * @method void setSubscriptionTopicSets(array $SubscriptionTopicSets) Set Subscription set. Up to 20 subscriptions can be deleted at a time.
  * @method string getClusterId() Obtain Pulsar cluster ID.
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID.
  * @method string getEnvironmentId() Obtain Environment (namespace) name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
- * @method boolean getForce() Obtain Whether to force deletion. Default value: false
- * @method void setForce(boolean $Force) Set Whether to force deletion. Default value: false
+ * @method boolean getForce() Obtain Whether to forcibly delete a subscription. Default value: `false`.
+ * @method void setForce(boolean $Force) Set Whether to forcibly delete a subscription. Default value: `false`.
  */
 class DeleteSubscriptionsRequest extends AbstractModel
 {
     /**
-     * @var array Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+     * @var array Subscription set. Up to 20 subscriptions can be deleted at a time.
      */
     public $SubscriptionTopicSets;
 
@@ -47,15 +47,15 @@ class DeleteSubscriptionsRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var boolean Whether to force deletion. Default value: false
+     * @var boolean Whether to forcibly delete a subscription. Default value: `false`.
      */
     public $Force;
 
     /**
-     * @param array $SubscriptionTopicSets Set of subscriptions. Up to 20 subscriptions can be deleted at a time.
+     * @param array $SubscriptionTopicSets Subscription set. Up to 20 subscriptions can be deleted at a time.
      * @param string $ClusterId Pulsar cluster ID.
      * @param string $EnvironmentId Environment (namespace) name.
-     * @param boolean $Force Whether to force deletion. Default value: false
+     * @param boolean $Force Whether to forcibly delete a subscription. Default value: `false`.
      */
     function __construct()
     {

@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCmqQueues response structure.
  *
- * @method integer getTotalCount() Obtain Quantity
- * @method void setTotalCount(integer $TotalCount) Set Quantity
- * @method array getQueueList() Obtain List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setQueueList(array $QueueList) Set List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain The number of queues.
+ * @method void setTotalCount(integer $TotalCount) Set The number of queues.
+ * @method array getQueueList() Obtain Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setQueueList(array $QueueList) Set Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCmqQueuesResponse extends AbstractModel
 {
     /**
-     * @var integer Quantity
+     * @var integer The number of queues.
      */
     public $TotalCount;
 
     /**
-     * @var array List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $QueueList;
 
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Quantity
-     * @param array $QueueList List of queues
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount The number of queues.
+     * @param array $QueueList Queue list.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

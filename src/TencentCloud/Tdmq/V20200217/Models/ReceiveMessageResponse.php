@@ -34,6 +34,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSubName(string $SubName) Set Returned subscriber name, which will be used when an acknowledgment consumer is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMessageIDList() Obtain MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMessageIDList(string $MessageIDList) Set MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMessagesPayload() Obtain Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMessagesPayload(string $MessagesPayload) Set Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -67,6 +75,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SubName;
 
     /**
+     * @var string MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MessageIDList;
+
+    /**
+     * @var string Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MessagesPayload;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +99,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SubName Returned subscriber name, which will be used when an acknowledgment consumer is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $MessageIDList MessageIDs returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MessagesPayload Message contents returned by `BatchReceivePolicy` at a time, which are separated by “###”.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -112,6 +136,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SubName",$param) and $param["SubName"] !== null) {
             $this->SubName = $param["SubName"];
+        }
+
+        if (array_key_exists("MessageIDList",$param) and $param["MessageIDList"] !== null) {
+            $this->MessageIDList = $param["MessageIDList"];
+        }
+
+        if (array_key_exists("MessagesPayload",$param) and $param["MessagesPayload"] !== null) {
+            $this->MessagesPayload = $param["MessagesPayload"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironments response structure.
  *
- * @method integer getTotalCount() Obtain Number of namespaces.
- * @method void setTotalCount(integer $TotalCount) Set Number of namespaces.
- * @method array getEnvironmentSet() Obtain Array set of namespaces.
- * @method void setEnvironmentSet(array $EnvironmentSet) Set Array set of namespaces.
+ * @method integer getTotalCount() Obtain The number of namespaces.
+ * @method void setTotalCount(integer $TotalCount) Set The number of namespaces.
+ * @method array getEnvironmentSet() Obtain Array of namespace sets.
+ * @method void setEnvironmentSet(array $EnvironmentSet) Set Array of namespace sets.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeEnvironmentsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of namespaces.
+     * @var integer The number of namespaces.
      */
     public $TotalCount;
 
     /**
-     * @var array Array set of namespaces.
+     * @var array Array of namespace sets.
      */
     public $EnvironmentSet;
 
@@ -45,8 +45,8 @@ class DescribeEnvironmentsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of namespaces.
-     * @param array $EnvironmentSet Array set of namespaces.
+     * @param integer $TotalCount The number of namespaces.
+     * @param array $EnvironmentSet Array of namespace sets.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

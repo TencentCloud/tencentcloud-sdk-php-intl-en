@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQNamespaces request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
- * @method string getNameKeyword() Obtain Search by name
- * @method void setNameKeyword(string $NameKeyword) Set Search by name
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The max number of returned results.
+ * @method void setLimit(integer $Limit) Set The max number of returned results.
+ * @method string getNameKeyword() Obtain Search by name.
+ * @method void setNameKeyword(string $NameKeyword) Set Search by name.
  */
 class DescribeRocketMQNamespacesRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number
+     * @var integer The max number of returned results.
      */
     public $Limit;
 
     /**
-     * @var string Search by name
+     * @var string Search by name.
      */
     public $NameKeyword;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param integer $Offset Offset
-     * @param integer $Limit Maximum number
-     * @param string $NameKeyword Search by name
+     * @param string $ClusterId Cluster ID.
+     * @param integer $Offset Offset.
+     * @param integer $Limit The max number of returned results.
+     * @param string $NameKeyword Search by name.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusters request structure.
  *
- * @method string getDbType() Obtain Engine type. Valid values: MYSQL, POSTGRESQL
- * @method void setDbType(string $DbType) Set Engine type. Valid values: MYSQL, POSTGRESQL
+ * @method string getDbType() Obtain Engine type. Currently, `MYSQL` is supported.
+ * @method void setDbType(string $DbType) Set Engine type. Currently, `MYSQL` is supported.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100
  * @method integer getOffset() Obtain Record offset. Default value: 0
@@ -44,7 +44,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeClustersRequest extends AbstractModel
 {
     /**
-     * @var string Engine type. Valid values: MYSQL, POSTGRESQL
+     * @var string Engine type. Currently, `MYSQL` is supported.
      */
     public $DbType;
 
@@ -78,7 +78,7 @@ class DescribeClustersRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param string $DbType Engine type. Valid values: MYSQL, POSTGRESQL
+     * @param string $DbType Engine type. Currently, `MYSQL` is supported.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100
      * @param integer $Offset Record offset. Default value: 0
      * @param string $OrderBy Sort by field. Valid values:

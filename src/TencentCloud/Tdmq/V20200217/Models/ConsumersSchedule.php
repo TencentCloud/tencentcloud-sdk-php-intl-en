@@ -20,74 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Consumption progress details
  *
- * @method integer getPartitions() Obtain Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPartitions(integer $Partitions) Set Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getNumberOfEntries() Obtain Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNumberOfEntries(integer $NumberOfEntries) Set Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMsgBacklog() Obtain Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgBacklog(integer $MsgBacklog) Set Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgRateOut() Obtain Sum of the numbers of messages delivered by the consumer per second.
- * @method void setMsgRateOut(string $MsgRateOut) Set Sum of the numbers of messages delivered by the consumer per second.
- * @method string getMsgThroughputOut() Obtain Number of bytes of messages consumed by the consumer per second.
- * @method void setMsgThroughputOut(string $MsgThroughputOut) Set Number of bytes of messages consumed by the consumer per second.
+ * @method integer getPartitions() Obtain ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPartitions(integer $Partitions) Set ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getNumberOfEntries() Obtain The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNumberOfEntries(integer $NumberOfEntries) Set The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMsgBacklog() Obtain The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgBacklog(integer $MsgBacklog) Set The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgRateOut() Obtain The total number of messages delivered by the consumer per second.
+ * @method void setMsgRateOut(string $MsgRateOut) Set The total number of messages delivered by the consumer per second.
+ * @method string getMsgThroughputOut() Obtain The size (in bytes) of messages consumed by the consumer per second.
+ * @method void setMsgThroughputOut(string $MsgThroughputOut) Set The size (in bytes) of messages consumed by the consumer per second.
  * @method string getMsgRateExpired() Obtain Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMsgRateExpired(string $MsgRateExpired) Set Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumersSchedule extends AbstractModel
 {
     /**
-     * @var integer Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Partitions;
 
     /**
-     * @var integer Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NumberOfEntries;
 
     /**
-     * @var integer Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgBacklog;
 
     /**
-     * @var string Sum of the numbers of messages delivered by the consumer per second.
+     * @var string The total number of messages delivered by the consumer per second.
      */
     public $MsgRateOut;
 
     /**
-     * @var string Number of bytes of messages consumed by the consumer per second.
+     * @var string The size (in bytes) of messages consumed by the consumer per second.
      */
     public $MsgThroughputOut;
 
     /**
      * @var string Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgRateExpired;
 
     /**
-     * @param integer $Partitions Current partition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $NumberOfEntries Number of messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
-     * @param string $MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
+     * @param integer $Partitions ID of the current partition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $NumberOfEntries The number of messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgRateOut The total number of messages delivered by the consumer per second.
+     * @param string $MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
      * @param string $MsgRateExpired Percentage of messages discarded due to timeout.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

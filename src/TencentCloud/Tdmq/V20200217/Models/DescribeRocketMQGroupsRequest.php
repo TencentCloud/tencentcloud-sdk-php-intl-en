@@ -20,44 +20,44 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQGroups request structure.
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getNamespaceId() Obtain Namespace
- * @method void setNamespaceId(string $NamespaceId) Set Namespace
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
+ * @method string getClusterId() Obtain Cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Cluster ID.
+ * @method string getNamespaceId() Obtain Namespace.
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace.
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The max number of returned results.
+ * @method void setLimit(integer $Limit) Set The max number of returned results.
  * @method string getFilterTopic() Obtain Topic name, which can be used to query all subscription groups under the topic
  * @method void setFilterTopic(string $FilterTopic) Set Topic name, which can be used to query all subscription groups under the topic
  * @method string getFilterGroup() Obtain Consumer group query by consumer group name. Fuzzy query is supported
  * @method void setFilterGroup(string $FilterGroup) Set Consumer group query by consumer group name. Fuzzy query is supported
- * @method string getSortedBy() Obtain Sort by specified field. Valid values: tps, accumulative.
- * @method void setSortedBy(string $SortedBy) Set Sort by specified field. Valid values: tps, accumulative.
- * @method string getSortOrder() Obtain Sort in ascending or descending order. Valid values: asc, desc.
- * @method void setSortOrder(string $SortOrder) Set Sort in ascending or descending order. Valid values: asc, desc.
- * @method string getFilterOneGroup() Obtain Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
- * @method void setFilterOneGroup(string $FilterOneGroup) Set Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+ * @method string getSortedBy() Obtain Sort by specified field. Valid values: `tps`, `accumulative`.
+ * @method void setSortedBy(string $SortedBy) Set Sort by specified field. Valid values: `tps`, `accumulative`.
+ * @method string getSortOrder() Obtain Sort in ascending or descending order. Valid values: `asc`, `desc`.
+ * @method void setSortOrder(string $SortOrder) Set Sort in ascending or descending order. Valid values: `asc`, `desc`.
+ * @method string getFilterOneGroup() Obtain Subscription group name. After it is specified, the information of only this subscription group will be returned.
+ * @method void setFilterOneGroup(string $FilterOneGroup) Set Subscription group name. After it is specified, the information of only this subscription group will be returned.
  */
 class DescribeRocketMQGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Cluster ID
+     * @var string Cluster ID.
      */
     public $ClusterId;
 
     /**
-     * @var string Namespace
+     * @var string Namespace.
      */
     public $NamespaceId;
 
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number
+     * @var integer The max number of returned results.
      */
     public $Limit;
 
@@ -72,30 +72,30 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $FilterGroup;
 
     /**
-     * @var string Sort by specified field. Valid values: tps, accumulative.
+     * @var string Sort by specified field. Valid values: `tps`, `accumulative`.
      */
     public $SortedBy;
 
     /**
-     * @var string Sort in ascending or descending order. Valid values: asc, desc.
+     * @var string Sort in ascending or descending order. Valid values: `asc`, `desc`.
      */
     public $SortOrder;
 
     /**
-     * @var string Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+     * @var string Subscription group name. After it is specified, the information of only this subscription group will be returned.
      */
     public $FilterOneGroup;
 
     /**
-     * @param string $ClusterId Cluster ID
-     * @param string $NamespaceId Namespace
-     * @param integer $Offset Offset
-     * @param integer $Limit Maximum number
+     * @param string $ClusterId Cluster ID.
+     * @param string $NamespaceId Namespace.
+     * @param integer $Offset Offset.
+     * @param integer $Limit The max number of returned results.
      * @param string $FilterTopic Topic name, which can be used to query all subscription groups under the topic
      * @param string $FilterGroup Consumer group query by consumer group name. Fuzzy query is supported
-     * @param string $SortedBy Sort by specified field. Valid values: tps, accumulative.
-     * @param string $SortOrder Sort in ascending or descending order. Valid values: asc, desc.
-     * @param string $FilterOneGroup Subscription group name. After it is specified, only the information of the corresponding subscription group will be returned.
+     * @param string $SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
+     * @param string $SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
+     * @param string $FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
      */
     function __construct()
     {

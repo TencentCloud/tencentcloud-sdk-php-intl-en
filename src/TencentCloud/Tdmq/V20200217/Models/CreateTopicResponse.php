@@ -24,26 +24,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name.
  * @method void setTopicName(string $TopicName) Set Topic name.
- * @method integer getPartitions() Obtain 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
- * @method void setPartitions(integer $Partitions) Set 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+ * @method integer getPartitions() Obtain Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
+ * @method void setPartitions(integer $Partitions) Set Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTopicType() Obtain 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicType(integer $TopicType) Set 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getTopicType() Obtain 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicType(integer $TopicType) Set 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -60,7 +58,7 @@ class CreateTopicResponse extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+     * @var integer Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
      */
     public $Partitions;
 
@@ -71,13 +69,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Remark;
 
     /**
-     * @var integer 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicType;
 
@@ -89,16 +86,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
-     * @param integer $Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic.
+     * @param integer $Partitions Valid value: 0 or 1. Non-partitioned topic: No partitions. A value greater than 1: The partition count of a partitioned topic. `0` is returned for existing non-partitioned topics, and `1` is returned for incremental non-partitioned topics.
      * @param string $Remark Remarks (up to 128 characters).
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $TopicType 0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

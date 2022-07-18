@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.
  * @method integer getTransaction() Obtain Whether to enable transaction. 1: yes; 0: no
  * @method void setTransaction(integer $Transaction) Set Whether to enable transaction. 1: yes; 0: no
- * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
- * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
  */
 class ModifyCmqQueueAttributeRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
     public $Transaction;
 
     /**
-     * @var integer Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @var integer Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public $RetentionSizeInMB;
 
@@ -151,7 +151,7 @@ class ModifyCmqQueueAttributeRequest extends AbstractModel
      * @param integer $Policy Dead letter queue policy
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is left empty, the feature will not be enabled.
      * @param integer $Transaction Whether to enable transaction. 1: yes; 0: no
-     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     function __construct()
     {

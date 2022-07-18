@@ -18,20 +18,20 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Dedicated cluster information
+ * Information of dedicated clusters
  *
- * @method string getClusterName() Obtain Physical cluster name
- * @method void setClusterName(string $ClusterName) Set Physical cluster name
+ * @method string getClusterName() Obtain Name of a physical cluster.
+ * @method void setClusterName(string $ClusterName) Set Name of a physical cluster.
  */
 class BindCluster extends AbstractModel
 {
     /**
-     * @var string Physical cluster name
+     * @var string Name of a physical cluster.
      */
     public $ClusterName;
 
     /**
-     * @param string $ClusterName Physical cluster name
+     * @param string $ClusterName Name of a physical cluster.
      */
     function __construct()
     {

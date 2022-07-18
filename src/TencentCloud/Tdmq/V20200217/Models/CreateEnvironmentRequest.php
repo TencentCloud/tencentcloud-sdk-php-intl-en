@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() Obtain Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores.
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores.
- * @method integer getMsgTTL() Obtain Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
- * @method void setMsgTTL(integer $MsgTTL) Set Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+ * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+ * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method string getClusterId() Obtain Pulsar cluster ID
@@ -39,7 +39,7 @@ class CreateEnvironmentRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+     * @var integer Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      */
     public $MsgTTL;
 
@@ -60,7 +60,7 @@ class CreateEnvironmentRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId Environment (namespace) name, which can contain up to 16 letters, digits, hyphens, and underscores.
-     * @param integer $MsgTTL Unconsumed message expiration time in seconds. Minimum value: 60; maximum value: 1296000 (15 days).
+     * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Pulsar cluster ID
      * @param RetentionPolicy $RetentionPolicy Message retention policy

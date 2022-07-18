@@ -18,40 +18,40 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tenant RocketMQ cluster details
+ * Details of the tenant’s RocketMQ cluster
  *
- * @method RocketMQClusterInfo getInfo() Obtain Cluster's basic information
- * @method void setInfo(RocketMQClusterInfo $Info) Set Cluster's basic information
- * @method RocketMQClusterConfig getConfig() Obtain Cluster configuration information
- * @method void setConfig(RocketMQClusterConfig $Config) Set Cluster configuration information
- * @method integer getStatus() Obtain Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method RocketMQClusterInfo getInfo() Obtain Basic cluster information.
+ * @method void setInfo(RocketMQClusterInfo $Info) Set Basic cluster information.
+ * @method RocketMQClusterConfig getConfig() Obtain Cluster configuration information.
+ * @method void setConfig(RocketMQClusterConfig $Config) Set Cluster configuration information.
+ * @method integer getStatus() Obtain Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQClusterDetail extends AbstractModel
 {
     /**
-     * @var RocketMQClusterInfo Cluster's basic information
+     * @var RocketMQClusterInfo Basic cluster information.
      */
     public $Info;
 
     /**
-     * @var RocketMQClusterConfig Cluster configuration information
+     * @var RocketMQClusterConfig Cluster configuration information.
      */
     public $Config;
 
     /**
-     * @var integer Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @param RocketMQClusterInfo $Info Cluster's basic information
-     * @param RocketMQClusterConfig $Config Cluster configuration information
-     * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RocketMQClusterInfo $Info Basic cluster information.
+     * @param RocketMQClusterConfig $Config Cluster configuration information.
+     * @param integer $Status Cluster status. 0: Creating; 1: Normal; 2: Terminating; 3: Deleted; 4. Isolated; 5. Creation failed; 6: Deletion failed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

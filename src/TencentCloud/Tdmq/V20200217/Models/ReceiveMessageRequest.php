@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverQueueSize(integer $ReceiverQueueSize) Set Default value: 1000. Messages received by the consumer will first be stored in the `receiverQueueSize` queue to tune the message receiving rate.
  * @method string getSubInitialPosition() Obtain Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
  * @method void setSubInitialPosition(string $SubInitialPosition) Set Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+ * @method integer getMaxNumMessages() Obtain This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+ * @method void setMaxNumMessages(integer $MaxNumMessages) Set This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+ * @method integer getMaxNumBytes() Obtain This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+ * @method void setMaxNumBytes(integer $MaxNumBytes) Set This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+ * @method integer getTimeout() Obtain This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+ * @method void setTimeout(integer $Timeout) Set This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
  */
 class ReceiveMessageRequest extends AbstractModel
 {
@@ -52,10 +58,28 @@ class ReceiveMessageRequest extends AbstractModel
     public $SubInitialPosition;
 
     /**
+     * @var integer This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public $MaxNumMessages;
+
+    /**
+     * @var integer This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public $MaxNumBytes;
+
+    /**
+     * @var integer This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     */
+    public $Timeout;
+
+    /**
      * @param string $Topic Name of the topic which receives the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
      * @param string $SubscriptionName Subscriber name
      * @param integer $ReceiverQueueSize Default value: 1000. Messages received by the consumer will first be stored in the `receiverQueueSize` queue to tune the message receiving rate.
      * @param string $SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+     * @param integer $MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     * @param integer $MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
+     * @param integer $Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class ReceiveMessageRequest extends AbstractModel
 
         if (array_key_exists("SubInitialPosition",$param) and $param["SubInitialPosition"] !== null) {
             $this->SubInitialPosition = $param["SubInitialPosition"];
+        }
+
+        if (array_key_exists("MaxNumMessages",$param) and $param["MaxNumMessages"] !== null) {
+            $this->MaxNumMessages = $param["MaxNumMessages"];
+        }
+
+        if (array_key_exists("MaxNumBytes",$param) and $param["MaxNumBytes"] !== null) {
+            $this->MaxNumBytes = $param["MaxNumBytes"];
+        }
+
+        if (array_key_exists("Timeout",$param) and $param["Timeout"] !== null) {
+            $this->Timeout = $param["Timeout"];
         }
     }
 }

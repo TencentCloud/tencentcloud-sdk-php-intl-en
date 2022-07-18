@@ -20,21 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ namespace information
  *
- * @method string getNamespaceId() Obtain Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
- * @method void setNamespaceId(string $NamespaceId) Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+ * @method string getNamespaceId() Obtain Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
  * @method integer getTtl() Obtain Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
  * @method void setTtl(integer $Ttl) Set Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
- * @method integer getRetentionTime() Obtain Retention period for persisted messages in milliseconds
- * @method void setRetentionTime(integer $RetentionTime) Set Retention period for persisted messages in milliseconds
- * @method string getRemark() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetentionTime() Obtain Retention period for persistently stored messages in milliseconds.
+ * @method void setRetentionTime(integer $RetentionTime) Set Retention period for persistently stored messages in milliseconds.
+ * @method string getRemark() Obtain Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPublicEndpoint() Obtain Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPublicEndpoint(string $PublicEndpoint) Set Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVpcEndpoint() Obtain VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVpcEndpoint(string $VpcEndpoint) Set VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQNamespace extends AbstractModel
 {
     /**
-     * @var string Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+     * @var string Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
      */
     public $NamespaceId;
 
@@ -44,22 +52,38 @@ class RocketMQNamespace extends AbstractModel
     public $Ttl;
 
     /**
-     * @var integer Retention period for persisted messages in milliseconds
+     * @var integer Retention period for persistently stored messages in milliseconds.
      */
     public $RetentionTime;
 
     /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @param string $NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores
+     * @var string Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PublicEndpoint;
+
+    /**
+     * @var string VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VpcEndpoint;
+
+    /**
+     * @param string $NamespaceId Namespace name, which can contain 3–64 letters, digits, hyphens, and underscores.
      * @param integer $Ttl Retention period for unconsumed messages in milliseconds. Valid range: 60 seconds–15 days.
-     * @param integer $RetentionTime Retention period for persisted messages in milliseconds
-     * @param string $Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetentionTime Retention period for persistently stored messages in milliseconds.
+     * @param string $Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PublicEndpoint Public network access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VpcEndpoint VPC access point address.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -88,6 +112,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("PublicEndpoint",$param) and $param["PublicEndpoint"] !== null) {
+            $this->PublicEndpoint = $param["PublicEndpoint"];
+        }
+
+        if (array_key_exists("VpcEndpoint",$param) and $param["VpcEndpoint"] !== null) {
+            $this->VpcEndpoint = $param["VpcEndpoint"];
         }
     }
 }

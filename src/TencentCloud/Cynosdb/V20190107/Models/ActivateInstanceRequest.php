@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getInstanceIdList() Obtain Array of instance IDs
- * @method void setInstanceIdList(array $InstanceIdList) Set Array of instance IDs
+ * @method array getInstanceIdList() Obtain List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
+ * @method void setInstanceIdList(array $InstanceIdList) Set List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
  */
 class ActivateInstanceRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ActivateInstanceRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Array of instance IDs
+     * @var array List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
      */
     public $InstanceIdList;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $InstanceIdList Array of instance IDs
+     * @param array $InstanceIdList List of instance IDs in the format of `cynosdbmysql-ins-n7ocdslw` as displayed in the TDSQL-C for MySQL console. You can use the instance list querying API to query the ID, i.e., the `InstanceId` value in the output parameters.
      */
     function __construct()
     {

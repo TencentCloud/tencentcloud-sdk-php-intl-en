@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTrace(boolean $Trace) Set Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
  * @method array getTags() Obtain Tag array.
  * @method void setTags(array $Tags) Set Tag array.
- * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
- * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method integer getRetentionSizeInMB() Obtain Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+ * @method void setRetentionSizeInMB(integer $RetentionSizeInMB) Set Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
  */
 class CreateCmqQueueRequest extends AbstractModel
 {
@@ -138,7 +138,7 @@ class CreateCmqQueueRequest extends AbstractModel
     public $Tags;
 
     /**
-     * @var integer Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @var integer Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     public $RetentionSizeInMB;
 
@@ -159,7 +159,7 @@ class CreateCmqQueueRequest extends AbstractModel
      * @param integer $MaxTimeToLive Maximum period in seconds before an unconsumed message expires, which is required if `policy` is 1. Value range: 300–43200. This value should be smaller than `msgRetentionSeconds` (maximum message retention period)
      * @param boolean $Trace Whether to enable message trace. true: yes; false: no. If this field is not configured, the feature will not be enabled
      * @param array $Tags Tag array.
-     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 1,024-10,240 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
+     * @param integer $RetentionSizeInMB Queue storage space configured for message rewind. Value range: 10,240-512,000 MB (if message rewind is enabled). The value “0” indicates that message rewind is not enabled.
      */
     function __construct()
     {

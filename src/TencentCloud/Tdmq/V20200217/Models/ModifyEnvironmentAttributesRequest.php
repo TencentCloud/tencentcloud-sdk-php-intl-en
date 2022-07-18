@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() Obtain Namespace name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Namespace name.
- * @method integer getMsgTTL() Obtain TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
- * @method void setMsgTTL(integer $MsgTTL) Set TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+ * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
+ * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
  * @method string getClusterId() Obtain Cluster ID
@@ -39,7 +39,7 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+     * @var integer Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      */
     public $MsgTTL;
 
@@ -60,7 +60,7 @@ class ModifyEnvironmentAttributesRequest extends AbstractModel
 
     /**
      * @param string $EnvironmentId Namespace name.
-     * @param integer $MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds.
+     * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Value range: 60s to 1,296,000s.
      * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Cluster ID
      * @param RetentionPolicy $RetentionPolicy Message retention policy

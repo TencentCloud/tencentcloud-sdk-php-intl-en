@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getParamList() Obtain The list of parameters to be modified
- * @method void setParamList(array $ParamList) Set The list of parameters to be modified
+ * @method array getParamList() Obtain List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+ * @method void setParamList(array $ParamList) Set List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
  * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (execute during maintenance time), `no` (execute now)
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
  */
@@ -35,7 +35,7 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array The list of parameters to be modified
+     * @var array List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
      */
     public $ParamList;
 
@@ -46,7 +46,7 @@ class ModifyClusterParamRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $ParamList The list of parameters to be modified
+     * @param array $ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
      * @param string $IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
      */
     function __construct()

@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RocketMQ topic information
  *
- * @method string getName() Obtain Topic name
- * @method void setName(string $Name) Set Topic name
- * @method string getRemark() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRemark(string $Remark) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPartitionNum() Obtain Number of read/write partitions
- * @method void setPartitionNum(integer $PartitionNum) Set Number of read/write partitions
- * @method integer getCreateTime() Obtain Creation time in milliseconds
- * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds
- * @method integer getUpdateTime() Obtain Creation time in milliseconds
- * @method void setUpdateTime(integer $UpdateTime) Set Creation time in milliseconds
+ * @method string getName() Obtain Topic name.
+ * @method void setName(string $Name) Set Topic name.
+ * @method string getRemark() Obtain Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPartitionNum() Obtain The number of read/write partitions.
+ * @method void setPartitionNum(integer $PartitionNum) Set The number of read/write partitions.
+ * @method integer getCreateTime() Obtain Creation time in milliseconds.
+ * @method void setCreateTime(integer $CreateTime) Set Creation time in milliseconds.
+ * @method integer getUpdateTime() Obtain Creation time in milliseconds.
+ * @method void setUpdateTime(integer $UpdateTime) Set Creation time in milliseconds.
  */
 class RocketMQTopic extends AbstractModel
 {
     /**
-     * @var string Topic name
+     * @var string Topic name.
      */
     public $Name;
 
     /**
-     * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Description.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
-     * @var integer Number of read/write partitions
+     * @var integer The number of read/write partitions.
      */
     public $PartitionNum;
 
     /**
-     * @var integer Creation time in milliseconds
+     * @var integer Creation time in milliseconds.
      */
     public $CreateTime;
 
     /**
-     * @var integer Creation time in milliseconds
+     * @var integer Creation time in milliseconds.
      */
     public $UpdateTime;
 
     /**
-     * @param string $Name Topic name
-     * @param string $Remark Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PartitionNum Number of read/write partitions
-     * @param integer $CreateTime Creation time in milliseconds
-     * @param integer $UpdateTime Creation time in milliseconds
+     * @param string $Name Topic name.
+     * @param string $Remark Description.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PartitionNum The number of read/write partitions.
+     * @param integer $CreateTime Creation time in milliseconds.
+     * @param integer $UpdateTime Creation time in milliseconds.
      */
     function __construct()
     {

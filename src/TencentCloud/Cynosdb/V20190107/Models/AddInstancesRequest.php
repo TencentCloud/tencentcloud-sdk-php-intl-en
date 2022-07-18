@@ -24,28 +24,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getCpu() Obtain Number of CPU cores
  * @method void setCpu(integer $Cpu) Set Number of CPU cores
- * @method integer getMemory() Obtain Memory
- * @method void setMemory(integer $Memory) Set Memory
- * @method integer getReadOnlyCount() Obtain Number of added read-only instances
- * @method void setReadOnlyCount(integer $ReadOnlyCount) Set Number of added read-only instances
- * @method string getInstanceGrpId() Obtain Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
- * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
- * @method string getVpcId() Obtain VPC ID
- * @method void setVpcId(string $VpcId) Set VPC ID
- * @method string getSubnetId() Obtain Subnet ID
- * @method void setSubnetId(string $SubnetId) Set Subnet ID
- * @method integer getPort() Obtain Port used when adding RO group
- * @method void setPort(integer $Port) Set Port used when adding RO group
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method integer getMemory() Obtain Memory in GB
+ * @method void setMemory(integer $Memory) Set Memory in GB
+ * @method integer getReadOnlyCount() Obtain Number of added read-only instances. Value range: (0,16].
+ * @method void setReadOnlyCount(integer $ReadOnlyCount) Set Number of added read-only instances. Value range: (0,16].
+ * @method string getInstanceGrpId() Obtain Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+ * @method void setInstanceGrpId(string $InstanceGrpId) Set Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+ * @method string getVpcId() Obtain VPC ID. This parameter has been disused.
+ * @method void setVpcId(string $VpcId) Set VPC ID. This parameter has been disused.
+ * @method string getSubnetId() Obtain Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+ * @method integer getPort() Obtain The port used when adding an RO group. Value range: [0,65535).
+ * @method void setPort(integer $Port) Set The port used when adding an RO group. Value range: [0,65535).
+ * @method string getInstanceName() Obtain Instance name. String length range: [0,64).
+ * @method void setInstanceName(string $InstanceName) Set Instance name. String length range: [0,64).
  * @method integer getAutoVoucher() Obtain Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
- * @method string getOrderSource() Obtain Order source
- * @method void setOrderSource(string $OrderSource) Set Order source
+ * @method string getOrderSource() Obtain Order source. String length range: [0,64).
+ * @method void setOrderSource(string $OrderSource) Set Order source. String length range: [0,64).
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  */
@@ -62,37 +62,37 @@ class AddInstancesRequest extends AbstractModel
     public $Cpu;
 
     /**
-     * @var integer Memory
+     * @var integer Memory in GB
      */
     public $Memory;
 
     /**
-     * @var integer Number of added read-only instances
+     * @var integer Number of added read-only instances. Value range: (0,16].
      */
     public $ReadOnlyCount;
 
     /**
-     * @var string Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
+     * @var string Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
      */
     public $InstanceGrpId;
 
     /**
-     * @var string VPC ID
+     * @var string VPC ID. This parameter has been disused.
      */
     public $VpcId;
 
     /**
-     * @var string Subnet ID
+     * @var string Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
      */
     public $SubnetId;
 
     /**
-     * @var integer Port used when adding RO group
+     * @var integer The port used when adding an RO group. Value range: [0,65535).
      */
     public $Port;
 
     /**
-     * @var string Instance name
+     * @var string Instance name. String length range: [0,64).
      */
     public $InstanceName;
 
@@ -108,7 +108,7 @@ class AddInstancesRequest extends AbstractModel
     public $DbType;
 
     /**
-     * @var string Order source
+     * @var string Order source. String length range: [0,64).
      */
     public $OrderSource;
 
@@ -120,17 +120,17 @@ class AddInstancesRequest extends AbstractModel
     /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
-     * @param integer $Memory Memory
-     * @param integer $ReadOnlyCount Number of added read-only instances
-     * @param string $InstanceGrpId Instance group ID, which is used when you add an instance in an existing RO group. If this parameter is left empty, an RO group will be created.
-     * @param string $VpcId VPC ID
-     * @param string $SubnetId Subnet ID
-     * @param integer $Port Port used when adding RO group
-     * @param string $InstanceName Instance name
+     * @param integer $Memory Memory in GB
+     * @param integer $ReadOnlyCount Number of added read-only instances. Value range: (0,16].
+     * @param string $InstanceGrpId Instance group ID, which is used when you add an instance to an existing RO group. If this parameter is left empty, an RO group will be created. We recommend you not pass in this value on the current version.
+     * @param string $VpcId VPC ID. This parameter has been disused.
+     * @param string $SubnetId Subnet ID. If `VpcId` is set, `SubnetId` is required. This parameter has been disused.
+     * @param integer $Port The port used when adding an RO group. Value range: [0,65535).
+     * @param string $InstanceName Instance name. String length range: [0,64).
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
-     * @param string $OrderSource Order source
+     * @param string $OrderSource Order source. String length range: [0,64).
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      */
     function __construct()

@@ -20,49 +20,49 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironmentRoles request structure.
  *
- * @method string getEnvironmentId() Obtain Environment (namespace) name (required).
- * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name (required).
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method string getClusterId() Obtain Pulsar cluster ID (required)
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID (required)
- * @method string getRoleName() Obtain Role name
- * @method void setRoleName(string $RoleName) Set Role name
+ * @method string getEnvironmentId() Obtain Environment/namespace name (required).
+ * @method void setEnvironmentId(string $EnvironmentId) Set Environment/namespace name (required).
+ * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
+ * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method string getClusterId() Obtain Pulsar cluster ID (required).
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID (required).
+ * @method string getRoleName() Obtain Role name.
+ * @method void setRoleName(string $RoleName) Set Role name.
  * @method array getFilters() Obtain * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
  * @method void setFilters(array $Filters) Set * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
  */
 class DescribeEnvironmentRolesRequest extends AbstractModel
 {
     /**
-     * @var string Environment (namespace) name (required).
+     * @var string Environment/namespace name (required).
      */
     public $EnvironmentId;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer Offset, which defaults to 0 if left empty.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
 
     /**
-     * @var string Pulsar cluster ID (required)
+     * @var string Pulsar cluster ID (required).
      */
     public $ClusterId;
 
     /**
-     * @var string Role name
+     * @var string Role name.
      */
     public $RoleName;
 
@@ -70,20 +70,20 @@ class DescribeEnvironmentRolesRequest extends AbstractModel
      * @var array * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
      */
     public $Filters;
 
     /**
-     * @param string $EnvironmentId Environment (namespace) name (required).
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param string $ClusterId Pulsar cluster ID (required)
-     * @param string $RoleName Role name
+     * @param string $EnvironmentId Environment/namespace name (required).
+     * @param integer $Offset Offset, which defaults to 0 if left empty.
+     * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+     * @param string $ClusterId Pulsar cluster ID (required).
+     * @param string $RoleName Role name.
      * @param array $Filters * RoleName
 Filter by role name for exact query.
 Type: String
-Required: no
+Required: No
      */
     function __construct()
     {

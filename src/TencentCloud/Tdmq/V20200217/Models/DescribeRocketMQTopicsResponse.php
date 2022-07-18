@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQTopics response structure.
  *
- * @method integer getTotalCount() Obtain Total number of records
- * @method void setTotalCount(integer $TotalCount) Set Total number of records
+ * @method integer getTotalCount() Obtain The total number of query records.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of query records.
  * @method array getTopics() Obtain List of topic information
  * @method void setTopics(array $Topics) Set List of topic information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRocketMQTopicsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of records
+     * @var integer The total number of query records.
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeRocketMQTopicsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of records
+     * @param integer $TotalCount The total number of query records.
      * @param array $Topics List of topic information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

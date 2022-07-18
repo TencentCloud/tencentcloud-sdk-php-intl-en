@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getNamespaces() Obtain List of namespaces
  * @method void setNamespaces(array $Namespaces) Set List of namespaces
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method integer getTotalCount() Obtain The total number of returned results.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of returned results.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeRocketMQNamespacesResponse extends AbstractModel
     public $Namespaces;
 
     /**
-     * @var integer Total number
+     * @var integer The total number of returned results.
      */
     public $TotalCount;
 
@@ -46,7 +46,7 @@ class DescribeRocketMQNamespacesResponse extends AbstractModel
 
     /**
      * @param array $Namespaces List of namespaces
-     * @param integer $TotalCount Total number
+     * @param integer $TotalCount The total number of returned results.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

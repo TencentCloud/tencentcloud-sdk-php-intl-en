@@ -24,34 +24,36 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Fuzzy match by topic name.
  * @method void setTopicName(string $TopicName) Set Fuzzy match by topic name.
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+ * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
+ * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
  * @method integer getTopicType() Obtain Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
  * @method void setTopicType(integer $TopicType) Set Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
- * @method string getClusterId() Obtain Pulsar cluster ID
- * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
+ * @method string getClusterId() Obtain Pulsar cluster ID.
+ * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID.
  * @method array getFilters() Obtain * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
  * @method void setFilters(array $Filters) Set * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
+ * @method integer getTopicCreator() Obtain Topic creator:
+1: User
+2: System
+ * @method void setTopicCreator(integer $TopicCreator) Set Topic creator:
+1: User
+2: System
  */
 class DescribeTopicsRequest extends AbstractModel
 {
@@ -66,28 +68,26 @@ class DescribeTopicsRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer Offset, which defaults to 0 if left empty.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
 
     /**
      * @var integer Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
      */
     public $TopicType;
 
     /**
-     * @var string Pulsar cluster ID
+     * @var string Pulsar cluster ID.
      */
     public $ClusterId;
 
@@ -95,27 +95,35 @@ class DescribeTopicsRequest extends AbstractModel
      * @var array * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
      */
     public $Filters;
 
     /**
+     * @var integer Topic creator:
+1: User
+2: System
+     */
+    public $TopicCreator;
+
+    /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Fuzzy match by topic name.
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @param integer $Offset Offset, which defaults to 0 if left empty.
+     * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      * @param integer $TopicType Topic type description:
-0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue;
-5: transaction message.
-     * @param string $ClusterId Pulsar cluster ID
+0: Non-persistent and non-partitioned topic;
+1: Non-persistent and partitioned topic;
+2: Persistent and non-partitioned topic;
+3: Persistent and partitioned topic.
+     * @param string $ClusterId Pulsar cluster ID.
      * @param array $Filters * TopicName
 Query by topic name for exact search.
 Type: String
-Required: no
+Required: No
+     * @param integer $TopicCreator Topic creator:
+1: User
+2: System
      */
     function __construct()
     {
@@ -161,6 +169,10 @@ Required: no
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("TopicCreator",$param) and $param["TopicCreator"] !== null) {
+            $this->TopicCreator = $param["TopicCreator"];
         }
     }
 }

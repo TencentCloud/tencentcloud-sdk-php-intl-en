@@ -22,20 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEnvironmentId() Obtain Fuzzy search by namespace name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Fuzzy search by namespace name.
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+ * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
+ * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
  * @method string getClusterId() Obtain Pulsar cluster ID
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method array getFilters() Obtain * EnvironmentId
 Filter by namespace for exact query.
 Type: String
-Required: no
+Required: No
  * @method void setFilters(array $Filters) Set * EnvironmentId
 Filter by namespace for exact query.
 Type: String
-Required: no
+Required: No
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
@@ -45,12 +45,12 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer Offset, which defaults to 0 if left empty.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
 
@@ -63,19 +63,19 @@ class DescribeEnvironmentsRequest extends AbstractModel
      * @var array * EnvironmentId
 Filter by namespace for exact query.
 Type: String
-Required: no
+Required: No
      */
     public $Filters;
 
     /**
      * @param string $EnvironmentId Fuzzy search by namespace name.
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @param integer $Offset Offset, which defaults to 0 if left empty.
+     * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      * @param string $ClusterId Pulsar cluster ID
      * @param array $Filters * EnvironmentId
 Filter by namespace for exact query.
 Type: String
-Required: no
+Required: No
      */
     function __construct()
     {

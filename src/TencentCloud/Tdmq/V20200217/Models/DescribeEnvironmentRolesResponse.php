@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEnvironmentRoles response structure.
  *
- * @method integer getTotalCount() Obtain Number of records.
- * @method void setTotalCount(integer $TotalCount) Set Number of records.
- * @method array getEnvironmentRoleSets() Obtain Set of namespace roles.
- * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) Set Set of namespace roles.
+ * @method integer getTotalCount() Obtain The number of records.
+ * @method void setTotalCount(integer $TotalCount) Set The number of records.
+ * @method array getEnvironmentRoleSets() Obtain Namespace role set.
+ * @method void setEnvironmentRoleSets(array $EnvironmentRoleSets) Set Namespace role set.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeEnvironmentRolesResponse extends AbstractModel
 {
     /**
-     * @var integer Number of records.
+     * @var integer The number of records.
      */
     public $TotalCount;
 
     /**
-     * @var array Set of namespace roles.
+     * @var array Namespace role set.
      */
     public $EnvironmentRoleSets;
 
@@ -45,8 +45,8 @@ class DescribeEnvironmentRolesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of records.
-     * @param array $EnvironmentRoleSets Set of namespace roles.
+     * @param integer $TotalCount The number of records.
+     * @param array $EnvironmentRoleSets Namespace role set.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

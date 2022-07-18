@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name.
  * @method void setTopicName(string $TopicName) Set Topic name.
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+ * @method integer getOffset() Obtain Offset, which defaults to 0 if left empty.
+ * @method void setOffset(integer $Offset) Set Offset, which defaults to 0 if left empty.
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
  * @method string getSubscriptionName() Obtain Fuzzy match by subscriber name.
  * @method void setSubscriptionName(string $SubscriptionName) Set Fuzzy match by subscriber name.
  * @method array getFilters() Obtain Data filter.
@@ -48,12 +48,12 @@ class DescribeSubscriptionsRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer Offset, which defaults to 0 if left empty.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
 
@@ -75,8 +75,8 @@ class DescribeSubscriptionsRequest extends AbstractModel
     /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @param integer $Offset Offset, which defaults to 0 if left empty.
+     * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      * @param string $SubscriptionName Fuzzy match by subscriber name.
      * @param array $Filters Data filter.
      * @param string $ClusterId Pulsar cluster ID

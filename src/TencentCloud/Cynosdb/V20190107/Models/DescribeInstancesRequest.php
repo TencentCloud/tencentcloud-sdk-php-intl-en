@@ -38,8 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li> DESC: descending</li>
  * @method array getFilters() Obtain Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
  * @method void setFilters(array $Filters) Set Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
- * @method string getDbType() Obtain Engine type. Valid values: MYSQL, POSTGRESQL
- * @method void setDbType(string $DbType) Set Engine type. Valid values: MYSQL, POSTGRESQL
+ * @method string getDbType() Obtain Engine type. Currently, `MYSQL` is supported.
+ * @method void setDbType(string $DbType) Set Engine type. Currently, `MYSQL` is supported.
  * @method string getStatus() Obtain Instance status. Valid values:
 creating
 running
@@ -91,7 +91,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var string Engine type. Valid values: MYSQL, POSTGRESQL
+     * @var string Engine type. Currently, `MYSQL` is supported.
      */
     public $DbType;
 
@@ -122,7 +122,7 @@ offlined: Instance eliminated
 <li> ASC: ascending</li>
 <li> DESC: descending</li>
      * @param array $Filters Filter. If more than one filter exists, the logical relationship between these filters is `AND`.
-     * @param string $DbType Engine type. Valid values: MYSQL, POSTGRESQL
+     * @param string $DbType Engine type. Currently, `MYSQL` is supported.
      * @param string $Status Instance status. Valid values:
 creating
 running

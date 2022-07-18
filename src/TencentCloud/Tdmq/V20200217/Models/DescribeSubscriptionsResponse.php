@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSubscriptions response structure.
  *
- * @method array getSubscriptionSets() Obtain Array set of subscribers.
- * @method void setSubscriptionSets(array $SubscriptionSets) Set Array set of subscribers.
- * @method integer getTotalCount() Obtain Quantity.
- * @method void setTotalCount(integer $TotalCount) Set Quantity.
+ * @method array getSubscriptionSets() Obtain Array of subscriber sets.
+ * @method void setSubscriptionSets(array $SubscriptionSets) Set Array of subscriber sets.
+ * @method integer getTotalCount() Obtain The total number of returned results.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of returned results.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeSubscriptionsResponse extends AbstractModel
 {
     /**
-     * @var array Array set of subscribers.
+     * @var array Array of subscriber sets.
      */
     public $SubscriptionSets;
 
     /**
-     * @var integer Quantity.
+     * @var integer The total number of returned results.
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeSubscriptionsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $SubscriptionSets Array set of subscribers.
-     * @param integer $TotalCount Quantity.
+     * @param array $SubscriptionSets Array of subscriber sets.
+     * @param integer $TotalCount The total number of returned results.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

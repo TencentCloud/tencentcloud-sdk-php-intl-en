@@ -20,90 +20,90 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Namespace information
  *
- * @method string getEnvironmentId() Obtain Namespace name
- * @method void setEnvironmentId(string $EnvironmentId) Set Namespace name
- * @method string getRemark() Obtain Remarks
- * @method void setRemark(string $Remark) Set Remarks
- * @method integer getMsgTTL() Obtain TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
- * @method void setMsgTTL(integer $MsgTTL) Set TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
- * @method string getCreateTime() Obtain Creation time
- * @method void setCreateTime(string $CreateTime) Set Creation time
- * @method string getUpdateTime() Obtain Modification time
- * @method void setUpdateTime(string $UpdateTime) Set Modification time
- * @method string getNamespaceId() Obtain Namespace ID
- * @method void setNamespaceId(string $NamespaceId) Set Namespace ID
- * @method string getNamespaceName() Obtain Namespace name
- * @method void setNamespaceName(string $NamespaceName) Set Namespace name
- * @method integer getTopicNum() Obtain Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicNum(integer $TopicNum) Set Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method RetentionPolicy getRetentionPolicy() Obtain Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getEnvironmentId() Obtain Namespace name.
+ * @method void setEnvironmentId(string $EnvironmentId) Set Namespace name.
+ * @method string getRemark() Obtain Description.
+ * @method void setRemark(string $Remark) Set Description.
+ * @method integer getMsgTTL() Obtain Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+ * @method void setMsgTTL(integer $MsgTTL) Set Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+ * @method string getCreateTime() Obtain Creation time.
+ * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getUpdateTime() Obtain Last modified.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified.
+ * @method string getNamespaceId() Obtain Namespace ID.
+ * @method void setNamespaceId(string $NamespaceId) Set Namespace ID.
+ * @method string getNamespaceName() Obtain Namespace name.
+ * @method void setNamespaceName(string $NamespaceName) Set Namespace name.
+ * @method integer getTopicNum() Obtain The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicNum(integer $TopicNum) Set The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method RetentionPolicy getRetentionPolicy() Obtain Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetentionPolicy(RetentionPolicy $RetentionPolicy) Set Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Environment extends AbstractModel
 {
     /**
-     * @var string Namespace name
+     * @var string Namespace name.
      */
     public $EnvironmentId;
 
     /**
-     * @var string Remarks
+     * @var string Description.
      */
     public $Remark;
 
     /**
-     * @var integer TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
+     * @var integer Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
      */
     public $MsgTTL;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Modification time
+     * @var string Last modified.
      */
     public $UpdateTime;
 
     /**
-     * @var string Namespace ID
+     * @var string Namespace ID.
      */
     public $NamespaceId;
 
     /**
-     * @var string Namespace name
+     * @var string Namespace name.
      */
     public $NamespaceName;
 
     /**
-     * @var integer Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicNum;
 
     /**
-     * @var RetentionPolicy Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var RetentionPolicy Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RetentionPolicy;
 
     /**
-     * @param string $EnvironmentId Namespace name
-     * @param string $Remark Remarks
-     * @param integer $MsgTTL TTL for unconsumed messages in seconds. Maximum value: 1296000 seconds (i.e., 15 days)
-     * @param string $CreateTime Creation time
-     * @param string $UpdateTime Modification time
-     * @param string $NamespaceId Namespace ID
-     * @param string $NamespaceName Namespace name
-     * @param integer $TopicNum Number of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param RetentionPolicy $RetentionPolicy Message retention policy
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $EnvironmentId Namespace name.
+     * @param string $Remark Description.
+     * @param integer $MsgTTL Retention period for unconsumed messages in seconds. Maximum value: 1,296,000 seconds (15 days).
+     * @param string $CreateTime Creation time.
+     * @param string $UpdateTime Last modified.
+     * @param string $NamespaceId Namespace ID.
+     * @param string $NamespaceName Namespace name.
+     * @param integer $TopicNum The number of topics.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param RetentionPolicy $RetentionPolicy Message retention policy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

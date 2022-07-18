@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicName() Obtain Topic name
  * @method void setTopicName(string $TopicName) Set Topic name
- * @method string getMsgContent() Obtain Message content
- * @method void setMsgContent(string $MsgContent) Set Message content
- * @method array getMsgTag() Obtain Message tag
- * @method void setMsgTag(array $MsgTag) Set Message tag
+ * @method string getMsgContent() Obtain Message content. The total message size is up to 1,024 KB.
+ * @method void setMsgContent(string $MsgContent) Set Message content. The total message size is up to 1,024 KB.
+ * @method array getMsgTag() Obtain Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
+ * @method void setMsgTag(array $MsgTag) Set Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
  */
 class PublishCmqMsgRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class PublishCmqMsgRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string Message content
+     * @var string Message content. The total message size is up to 1,024 KB.
      */
     public $MsgContent;
 
     /**
-     * @var array Message tag
+     * @var array Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
      */
     public $MsgTag;
 
     /**
      * @param string $TopicName Topic name
-     * @param string $MsgContent Message content
-     * @param array $MsgTag Message tag
+     * @param string $MsgContent Message content. The total message size is up to 1,024 KB.
+     * @param array $MsgTag Message tag. You can pass in multiple tags or a single route. Each tag or route can contain up to 64 characters.
      */
     function __construct()
     {

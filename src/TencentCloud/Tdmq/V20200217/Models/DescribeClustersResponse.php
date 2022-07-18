@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusters response structure.
  *
- * @method integer getTotalCount() Obtain Number of clusters
- * @method void setTotalCount(integer $TotalCount) Set Number of clusters
- * @method array getClusterSet() Obtain List of cluster information
- * @method void setClusterSet(array $ClusterSet) Set List of cluster information
+ * @method integer getTotalCount() Obtain The number of clusters.
+ * @method void setTotalCount(integer $TotalCount) Set The number of clusters.
+ * @method array getClusterSet() Obtain Cluster information list
+ * @method void setClusterSet(array $ClusterSet) Set Cluster information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeClustersResponse extends AbstractModel
 {
     /**
-     * @var integer Number of clusters
+     * @var integer The number of clusters.
      */
     public $TotalCount;
 
     /**
-     * @var array List of cluster information
+     * @var array Cluster information list
      */
     public $ClusterSet;
 
@@ -45,8 +45,8 @@ class DescribeClustersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of clusters
-     * @param array $ClusterSet List of cluster information
+     * @param integer $TotalCount The number of clusters.
+     * @param array $ClusterSet Cluster information list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

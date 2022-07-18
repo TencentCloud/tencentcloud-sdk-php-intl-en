@@ -18,44 +18,44 @@ namespace TencentCloud\Tdmq\V20200217\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Filters subscriptions
+ * Filter subscriptions
  *
- * @method boolean getConsumerHasCount() Obtain Whether to display only subscriptions that include real consumers.
- * @method void setConsumerHasCount(boolean $ConsumerHasCount) Set Whether to display only subscriptions that include real consumers.
- * @method boolean getConsumerHasBacklog() Obtain Whether to display only subscriptions with retained messages.
- * @method void setConsumerHasBacklog(boolean $ConsumerHasBacklog) Set Whether to display only subscriptions with retained messages.
- * @method boolean getConsumerHasExpired() Obtain Whether to display only subscriptions with messages discarded after expiration.
- * @method void setConsumerHasExpired(boolean $ConsumerHasExpired) Set Whether to display only subscriptions with messages discarded after expiration.
- * @method array getSubscriptionNames() Obtain Filter by subscription name for exact search.
- * @method void setSubscriptionNames(array $SubscriptionNames) Set Filter by subscription name for exact search.
+ * @method boolean getConsumerHasCount() Obtain Whether to only display subscriptions that include real consumers.
+ * @method void setConsumerHasCount(boolean $ConsumerHasCount) Set Whether to only display subscriptions that include real consumers.
+ * @method boolean getConsumerHasBacklog() Obtain Whether to only display subscriptions with heaped messages.
+ * @method void setConsumerHasBacklog(boolean $ConsumerHasBacklog) Set Whether to only display subscriptions with heaped messages.
+ * @method boolean getConsumerHasExpired() Obtain Whether to only display subscriptions with messages discarded after expiration.
+ * @method void setConsumerHasExpired(boolean $ConsumerHasExpired) Set Whether to only display subscriptions with messages discarded after expiration.
+ * @method array getSubscriptionNames() Obtain Filter by subscription name for exact query.
+ * @method void setSubscriptionNames(array $SubscriptionNames) Set Filter by subscription name for exact query.
  */
 class FilterSubscription extends AbstractModel
 {
     /**
-     * @var boolean Whether to display only subscriptions that include real consumers.
+     * @var boolean Whether to only display subscriptions that include real consumers.
      */
     public $ConsumerHasCount;
 
     /**
-     * @var boolean Whether to display only subscriptions with retained messages.
+     * @var boolean Whether to only display subscriptions with heaped messages.
      */
     public $ConsumerHasBacklog;
 
     /**
-     * @var boolean Whether to display only subscriptions with messages discarded after expiration.
+     * @var boolean Whether to only display subscriptions with messages discarded after expiration.
      */
     public $ConsumerHasExpired;
 
     /**
-     * @var array Filter by subscription name for exact search.
+     * @var array Filter by subscription name for exact query.
      */
     public $SubscriptionNames;
 
     /**
-     * @param boolean $ConsumerHasCount Whether to display only subscriptions that include real consumers.
-     * @param boolean $ConsumerHasBacklog Whether to display only subscriptions with retained messages.
-     * @param boolean $ConsumerHasExpired Whether to display only subscriptions with messages discarded after expiration.
-     * @param array $SubscriptionNames Filter by subscription name for exact search.
+     * @param boolean $ConsumerHasCount Whether to only display subscriptions that include real consumers.
+     * @param boolean $ConsumerHasBacklog Whether to only display subscriptions with heaped messages.
+     * @param boolean $ConsumerHasExpired Whether to only display subscriptions with messages discarded after expiration.
+     * @param array $SubscriptionNames Filter by subscription name for exact query.
      */
     function __construct()
     {

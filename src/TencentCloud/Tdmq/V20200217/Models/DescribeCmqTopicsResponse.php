@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCmqTopics response structure.
  *
- * @method array getTopicList() Obtain List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTopicList(array $TopicList) Set List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of topics
- * @method void setTotalCount(integer $TotalCount) Set Total number of topics
+ * @method array getTopicList() Obtain Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTopicList(array $TopicList) Set Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain The total number of topics.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of topics.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeCmqTopicsResponse extends AbstractModel
 {
     /**
-     * @var array List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicList;
 
     /**
-     * @var integer Total number of topics
+     * @var integer The total number of topics.
      */
     public $TotalCount;
 
@@ -48,9 +48,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $TopicList List of topics
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of topics
+     * @param array $TopicList Topic list.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount The total number of topics.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

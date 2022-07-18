@@ -24,20 +24,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
  * @method void setTopicName(string $TopicName) Set Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
- * @method integer getPartitions() Obtain 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
- * @method void setPartitions(integer $Partitions) Set 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+ * @method integer getPartitions() Obtain The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
+ * @method void setPartitions(integer $Partitions) Set The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters).
- * @method integer getTopicType() Obtain 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
- * @method void setTopicType(integer $TopicType) Set 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+ * @method integer getTopicType() Obtain This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
+ * @method void setTopicType(integer $TopicType) Set This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
  * @method string getClusterId() Obtain Pulsar cluster ID
  * @method void setClusterId(string $ClusterId) Set Pulsar cluster ID
  * @method integer getPulsarTopicType() Obtain Pulsar topic type.
@@ -64,7 +66,7 @@ class CreateTopicRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var integer 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+     * @var integer The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
      */
     public $Partitions;
 
@@ -74,11 +76,12 @@ class CreateTopicRequest extends AbstractModel
     public $Remark;
 
     /**
-     * @var integer 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+     * @var integer This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
      */
     public $TopicType;
 
@@ -99,13 +102,14 @@ class CreateTopicRequest extends AbstractModel
     /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name, which can contain up to 64 letters, digits, hyphens, and underscores.
-     * @param integer $Partitions 0: non-partitioned topic; other values: number of partitions in the partitioned topic (up to 128).
+     * @param integer $Partitions The value “1” indicates a non-partitioned topic (a topic with no partitions) will be created. A value between 1 (exclusive) and 128 (inclusive) indicates the partition count of a partitioned topic.
      * @param string $Remark Remarks (up to 128 characters).
-     * @param integer $TopicType 0: general message;
-1: globally sequential message;
-2: partitionally sequential message;
-3: retry letter queue;
-4: dead letter queue.
+     * @param integer $TopicType This input parameter will be disused soon. You can use `PulsarTopicType` instead.
+0: General message;
+1: Globally sequential message;
+2: Partitionally sequential message;
+3: Retry letter topic;
+4: Dead letter topic.
      * @param string $ClusterId Pulsar cluster ID
      * @param integer $PulsarTopicType Pulsar topic type.
 `0`: Non-persistent and non-partitioned

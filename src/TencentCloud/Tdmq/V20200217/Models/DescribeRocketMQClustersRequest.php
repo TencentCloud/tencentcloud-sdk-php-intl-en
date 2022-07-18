@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQClusters request structure.
  *
- * @method integer getOffset() Obtain Offset
- * @method void setOffset(integer $Offset) Set Offset
- * @method integer getLimit() Obtain Maximum number
- * @method void setLimit(integer $Limit) Set Maximum number
- * @method string getIdKeyword() Obtain Search by cluster ID
- * @method void setIdKeyword(string $IdKeyword) Set Search by cluster ID
- * @method string getNameKeyword() Obtain Search by cluster name
- * @method void setNameKeyword(string $NameKeyword) Set Search by cluster name
- * @method array getClusterIdList() Obtain Filter by list of cluster IDs
- * @method void setClusterIdList(array $ClusterIdList) Set Filter by list of cluster IDs
- * @method boolean getIsTagFilter() Obtain For filtering by tag, this must be configured to `true`
- * @method void setIsTagFilter(boolean $IsTagFilter) Set For filtering by tag, this must be configured to `true`
+ * @method integer getOffset() Obtain Offset.
+ * @method void setOffset(integer $Offset) Set Offset.
+ * @method integer getLimit() Obtain The max number of returned results.
+ * @method void setLimit(integer $Limit) Set The max number of returned results.
+ * @method string getIdKeyword() Obtain Search by cluster ID.
+ * @method void setIdKeyword(string $IdKeyword) Set Search by cluster ID.
+ * @method string getNameKeyword() Obtain Search by cluster name.
+ * @method void setNameKeyword(string $NameKeyword) Set Search by cluster name.
+ * @method array getClusterIdList() Obtain Filter by cluster ID.
+ * @method void setClusterIdList(array $ClusterIdList) Set Filter by cluster ID.
+ * @method boolean getIsTagFilter() Obtain For filtering by tag, this parameter must be set to `true`.
+ * @method void setIsTagFilter(boolean $IsTagFilter) Set For filtering by tag, this parameter must be set to `true`.
  * @method array getFilters() Obtain Filter. Currently, you can filter only by tag.
  * @method void setFilters(array $Filters) Set Filter. Currently, you can filter only by tag.
  */
 class DescribeRocketMQClustersRequest extends AbstractModel
 {
     /**
-     * @var integer Offset
+     * @var integer Offset.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number
+     * @var integer The max number of returned results.
      */
     public $Limit;
 
     /**
-     * @var string Search by cluster ID
+     * @var string Search by cluster ID.
      */
     public $IdKeyword;
 
     /**
-     * @var string Search by cluster name
+     * @var string Search by cluster name.
      */
     public $NameKeyword;
 
     /**
-     * @var array Filter by list of cluster IDs
+     * @var array Filter by cluster ID.
      */
     public $ClusterIdList;
 
     /**
-     * @var boolean For filtering by tag, this must be configured to `true`
+     * @var boolean For filtering by tag, this parameter must be set to `true`.
      */
     public $IsTagFilter;
 
@@ -73,12 +73,12 @@ class DescribeRocketMQClustersRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @param integer $Offset Offset
-     * @param integer $Limit Maximum number
-     * @param string $IdKeyword Search by cluster ID
-     * @param string $NameKeyword Search by cluster name
-     * @param array $ClusterIdList Filter by list of cluster IDs
-     * @param boolean $IsTagFilter For filtering by tag, this must be configured to `true`
+     * @param integer $Offset Offset.
+     * @param integer $Limit The max number of returned results.
+     * @param string $IdKeyword Search by cluster ID.
+     * @param string $NameKeyword Search by cluster name.
+     * @param array $ClusterIdList Filter by cluster ID.
+     * @param boolean $IsTagFilter For filtering by tag, this parameter must be set to `true`.
      * @param array $Filters Filter. Currently, you can filter only by tag.
      */
     function __construct()

@@ -25,77 +25,77 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEnvironmentId() Obtain Environment (namespace) name.
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getConnectedSince() Obtain The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setConnectedSince(string $ConnectedSince) Set The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getConsumerAddr() Obtain Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConsumerAddr(string $ConsumerAddr) Set Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getConsumerCount() Obtain Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConsumerCount(string $ConsumerCount) Set Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConsumerCount() Obtain The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConsumerCount(string $ConsumerCount) Set The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getConsumerName() Obtain Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConsumerName(string $ConsumerName) Set Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgBacklog() Obtain Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgBacklog(string $MsgBacklog) Set Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgRateExpired() Obtain Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRateExpired(string $MsgRateExpired) Set Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgRateOut() Obtain Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRateOut(string $MsgRateOut) Set Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgThroughputOut() Obtain Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgThroughputOut(string $MsgThroughputOut) Set Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgBacklog() Obtain The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgBacklog(string $MsgBacklog) Set The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgRateExpired() Obtain Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgRateExpired(string $MsgRateExpired) Set Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgRateOut() Obtain The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgRateOut(string $MsgRateOut) Set The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgThroughputOut() Obtain The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgThroughputOut(string $MsgThroughputOut) Set The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubscriptionName() Obtain Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubscriptionName(string $SubscriptionName) Set Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getConsumerSets() Obtain Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConsumerSets(array $ConsumerSets) Set Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsOnline() Obtain Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsOnline(boolean $IsOnline) Set Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsOnline() Obtain Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsOnline(boolean $IsOnline) Set Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getConsumersScheduleSets() Obtain Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setConsumersScheduleSets(array $ConsumersScheduleSets) Set Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRemark() Obtain Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUpdateTime() Obtain Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubType() Obtain Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubType(string $SubType) Set Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getBlockedSubscriptionOnUnackedMsgs() Obtain Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setBlockedSubscriptionOnUnackedMsgs(boolean $BlockedSubscriptionOnUnackedMsgs) Set Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getMaxUnackedMsgNum() Obtain Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxUnackedMsgNum() Obtain The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxUnackedMsgNum(integer $MaxUnackedMsgNum) Set The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Subscription extends AbstractModel
 {
@@ -111,109 +111,109 @@ class Subscription extends AbstractModel
 
     /**
      * @var string The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ConnectedSince;
 
     /**
      * @var string Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerAddr;
 
     /**
-     * @var string Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerCount;
 
     /**
      * @var string Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerName;
 
     /**
-     * @var string Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgBacklog;
 
     /**
-     * @var string Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgRateExpired;
 
     /**
-     * @var string Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgRateOut;
 
     /**
-     * @var string Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgThroughputOut;
 
     /**
      * @var string Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubscriptionName;
 
     /**
      * @var array Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerSets;
 
     /**
-     * @var boolean Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsOnline;
 
     /**
      * @var array Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumersScheduleSets;
 
     /**
      * @var string Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Remark;
 
     /**
      * @var string Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
     /**
      * @var string Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubType;
 
     /**
      * @var boolean Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BlockedSubscriptionOnUnackedMsgs;
 
     /**
-     * @var integer Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var integer The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxUnackedMsgNum;
 
@@ -221,41 +221,41 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $TopicName Topic name.
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $ConnectedSince The time when the consumer started connecting.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ConsumerAddr Consumer address.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ConsumerName Consumer name.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgBacklog Number of retained messages.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgRateExpired Proportion of messages under this subscription that were discarded but not sent after TTL.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgRateOut Sum of the numbers of messages delivered by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgThroughputOut Number of bytes of messages consumed by the consumer per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgBacklog The number of heaped messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgRateExpired Percentage of messages under this subscription that were discarded but not sent after TTL.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgRateOut The total number of messages delivered by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgThroughputOut The size (in bytes) of messages consumed by the consumer per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubscriptionName Subscription name.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ConsumerSets Set of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsOnline Whether it is online.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsOnline Whether the consumer is online.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ConsumersScheduleSets Set of consumption progress information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Remark Remarks.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Modification time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UpdateTime Last modified.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubType Subscription type. Valid values: `Exclusive`, `Shared`, `Failover`, and `Key_Shared`. An empty string or `NULL`: Unknown.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $BlockedSubscriptionOnUnackedMsgs Whether messages are blocked as the limit of unacknowledged messages has been reached.
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $MaxUnackedMsgNum Maximum number of unacknowledged messages.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxUnackedMsgNum The maximum number of unacknowledged messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

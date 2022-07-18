@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaintainStartTime(integer $MaintainStartTime) Set Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
  * @method integer getMaintainDuration() Obtain Maintenance duration in seconds. For example, one hour is represented by 3600
  * @method void setMaintainDuration(integer $MaintainDuration) Set Maintenance duration in seconds. For example, one hour is represented by 3600
- * @method array getMaintainWeekDays() Obtain Maintenance days of the week
- * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Maintenance days of the week
+ * @method array getMaintainWeekDays() Obtain Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
+ * @method void setMaintainWeekDays(array $MaintainWeekDays) Set Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
  */
 class ModifyMaintainPeriodConfigRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyMaintainPeriodConfigRequest extends AbstractModel
     public $MaintainDuration;
 
     /**
-     * @var array Maintenance days of the week
+     * @var array Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
      */
     public $MaintainWeekDays;
 
@@ -55,7 +55,7 @@ class ModifyMaintainPeriodConfigRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param integer $MaintainStartTime Maintenance start time in seconds. For example, 03:00 AM is represented by 10800
      * @param integer $MaintainDuration Maintenance duration in seconds. For example, one hour is represented by 3600
-     * @param array $MaintainWeekDays Maintenance days of the week
+     * @param array $MaintainWeekDays Maintenance days of the week. Valid values: [Mon, Tue, Wed, Thu, Fri, Sat, Sun].
      */
     function __construct()
     {

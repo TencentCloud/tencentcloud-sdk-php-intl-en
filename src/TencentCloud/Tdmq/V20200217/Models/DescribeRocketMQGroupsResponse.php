@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRocketMQGroups response structure.
  *
- * @method integer getTotalCount() Obtain Total number
- * @method void setTotalCount(integer $TotalCount) Set Total number
+ * @method integer getTotalCount() Obtain The total number of subscription groups.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of subscription groups.
  * @method array getGroups() Obtain List of subscription groups
  * @method void setGroups(array $Groups) Set List of subscription groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeRocketMQGroupsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number
+     * @var integer The total number of subscription groups.
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeRocketMQGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number
+     * @param integer $TotalCount The total number of subscription groups.
      * @param array $Groups List of subscription groups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

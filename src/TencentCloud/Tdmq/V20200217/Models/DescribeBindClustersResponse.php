@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBindClusters response structure.
  *
- * @method integer getTotalCount() Obtain Number of dedicated clusters
- * @method void setTotalCount(integer $TotalCount) Set Number of dedicated clusters
+ * @method integer getTotalCount() Obtain The number of dedicated clusters
+ * @method void setTotalCount(integer $TotalCount) Set The number of dedicated clusters
  * @method array getClusterSet() Obtain List of dedicated clusters
  * @method void setClusterSet(array $ClusterSet) Set List of dedicated clusters
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeBindClustersResponse extends AbstractModel
 {
     /**
-     * @var integer Number of dedicated clusters
+     * @var integer The number of dedicated clusters
      */
     public $TotalCount;
 
@@ -45,7 +45,7 @@ class DescribeBindClustersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of dedicated clusters
+     * @param integer $TotalCount The number of dedicated clusters
      * @param array $ClusterSet List of dedicated clusters
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

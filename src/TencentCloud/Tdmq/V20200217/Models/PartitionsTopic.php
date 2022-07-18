@@ -21,165 +21,165 @@ use TencentCloud\Common\AbstractModel;
  * Partitioned topic
  *
  * @method string getAverageMsgSize() Obtain Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAverageMsgSize(string $AverageMsgSize) Set Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getConsumerCount() Obtain Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setConsumerCount(string $ConsumerCount) Set Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getLastConfirmedEntry() Obtain Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setLastConfirmedEntry(string $LastConfirmedEntry) Set Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getConsumerCount() Obtain The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setConsumerCount(string $ConsumerCount) Set The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLastConfirmedEntry() Obtain The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLastConfirmedEntry(string $LastConfirmedEntry) Set The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLastLedgerCreatedTimestamp() Obtain Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLastLedgerCreatedTimestamp(string $LastLedgerCreatedTimestamp) Set Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgRateIn() Obtain Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRateIn(string $MsgRateIn) Set Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgRateOut() Obtain Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgRateOut(string $MsgRateOut) Set Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgThroughputIn() Obtain Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgThroughputIn(string $MsgThroughputIn) Set Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getMsgThroughputOut() Obtain Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMsgThroughputOut(string $MsgThroughputOut) Set Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getNumberOfEntries() Obtain Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setNumberOfEntries(string $NumberOfEntries) Set Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgRateIn() Obtain The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgRateIn(string $MsgRateIn) Set The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgRateOut() Obtain The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgRateOut(string $MsgRateOut) Set The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgThroughputIn() Obtain The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgThroughputIn(string $MsgThroughputIn) Set The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMsgThroughputOut() Obtain The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMsgThroughputOut(string $MsgThroughputOut) Set The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNumberOfEntries() Obtain The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNumberOfEntries(string $NumberOfEntries) Set The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPartitions() Obtain Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPartitions(integer $Partitions) Set Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getProducerCount() Obtain Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProducerCount(string $ProducerCount) Set Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getTotalSize() Obtain Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setTotalSize(string $TotalSize) Set Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProducerCount() Obtain The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProducerCount(string $ProducerCount) Set The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTotalSize() Obtain Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalSize(string $TotalSize) Set Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getTopicType() Obtain Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTopicType(integer $TopicType) Set Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PartitionsTopic extends AbstractModel
 {
     /**
      * @var string Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AverageMsgSize;
 
     /**
-     * @var string Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ConsumerCount;
 
     /**
-     * @var string Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastConfirmedEntry;
 
     /**
      * @var string Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LastLedgerCreatedTimestamp;
 
     /**
-     * @var string Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgRateIn;
 
     /**
-     * @var string Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgRateOut;
 
     /**
-     * @var string Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgThroughputIn;
 
     /**
-     * @var string Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MsgThroughputOut;
 
     /**
-     * @var string Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NumberOfEntries;
 
     /**
      * @var integer Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Partitions;
 
     /**
-     * @var string Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProducerCount;
 
     /**
-     * @var string Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalSize;
 
     /**
      * @var integer Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TopicType;
 
     /**
      * @param string $AverageMsgSize Average size of the messages published in the last interval in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ConsumerCount Number of consumers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $LastConfirmedEntry Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ConsumerCount The number of consumers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LastConfirmedEntry The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LastLedgerCreatedTimestamp Time when the last ledger was created.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgRateIn Number of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgRateOut Sum of the numbers of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgThroughputIn Number of bytes of messages published by local and replicated publishers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $MsgThroughputOut Number of bytes of messages delivered by local and replicated consumers per second.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $NumberOfEntries Total number of recorded messages.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgRateIn The number of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgRateOut The total number of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgThroughputIn The size (in bytes) of messages published by local and replicated publishers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MsgThroughputOut The size (in bytes) of messages delivered by local and replicated consumers per second.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NumberOfEntries The total number of recorded messages.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Partitions Subpartition ID.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $ProducerCount Number of producers.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $TotalSize Total amount of all stored messages in bytes.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProducerCount The number of producers.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TotalSize Total size of all stored messages in bytes.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $TopicType Topic type description.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

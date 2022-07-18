@@ -62,8 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRoGroup(RoGroup $RoGroup) Set Read-only instance information. This parameter must be passed in when purchasing read-only instances.
  * @method integer getAutoRenewFlag() Obtain This field is meaningless when purchasing pay-as-you-go instances.
  * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set This field is meaningless when purchasing pay-as-you-go instances.
- * @method string getInstanceName() Obtain Instance name.
- * @method void setInstanceName(string $InstanceName) Set Instance name.
+ * @method string getInstanceName() Obtain Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
+ * @method void setInstanceName(string $InstanceName) Set Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
  * @method array getResourceTags() Obtain Instance tag information.
  * @method void setResourceTags(array $ResourceTags) Set Instance tag information.
  * @method string getDeployGroupId() Obtain Placement group ID.
@@ -203,7 +203,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
     public $AutoRenewFlag;
 
     /**
-     * @var string Instance name.
+     * @var string Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
      */
     public $InstanceName;
 
@@ -304,7 +304,7 @@ class CreateDBInstanceHourRequest extends AbstractModel
      * @param array $SecurityGroup Security group parameter. You can use the [DescribeProjectSecurityGroups](https://intl.cloud.tencent.com/document/api/236/15850?from_cn_redirect=1) API to query the security group details of a project.
      * @param RoGroup $RoGroup Read-only instance information. This parameter must be passed in when purchasing read-only instances.
      * @param integer $AutoRenewFlag This field is meaningless when purchasing pay-as-you-go instances.
-     * @param string $InstanceName Instance name.
+     * @param string $InstanceName Instance name. For multiple instances purchased at one time, they will be distinguished by the name suffix number, such as instnaceName=db and goodsNum=3, their instance name is db1, db2 respectively.
      * @param array $ResourceTags Instance tag information.
      * @param string $DeployGroupId Placement group ID.
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idempotency of the request cannot be guaranteed.

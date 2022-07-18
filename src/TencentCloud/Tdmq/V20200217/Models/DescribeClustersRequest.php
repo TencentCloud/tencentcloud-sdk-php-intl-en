@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeClusters request structure.
  *
- * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default.
- * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default.
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
- * @method array getClusterIdList() Obtain Filter by list of cluster IDs
- * @method void setClusterIdList(array $ClusterIdList) Set Filter by list of cluster IDs
- * @method boolean getIsTagFilter() Obtain Whether to filter by tag
- * @method void setIsTagFilter(boolean $IsTagFilter) Set Whether to filter by tag
- * @method array getFilters() Obtain Filter. Currently, you can filter only by tag.
- * @method void setFilters(array $Filters) Set Filter. Currently, you can filter only by tag.
+ * @method integer getOffset() Obtain Start offset, which defaults to 0 if left empty.
+ * @method void setOffset(integer $Offset) Set Start offset, which defaults to 0 if left empty.
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+ * @method array getClusterIdList() Obtain Filter by cluster ID.
+ * @method void setClusterIdList(array $ClusterIdList) Set Filter by cluster ID.
+ * @method boolean getIsTagFilter() Obtain Whether to filter by tag.
+ * @method void setIsTagFilter(boolean $IsTagFilter) Set Whether to filter by tag.
+ * @method array getFilters() Obtain Filter. Currently, you can filter by tag.
+ * @method void setFilters(array $Filters) Set Filter. Currently, you can filter by tag.
  */
 class DescribeClustersRequest extends AbstractModel
 {
     /**
-     * @var integer Offset. If this parameter is left empty, 0 will be used by default.
+     * @var integer Start offset, which defaults to 0 if left empty.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
+     * @var integer The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
      */
     public $Limit;
 
     /**
-     * @var array Filter by list of cluster IDs
+     * @var array Filter by cluster ID.
      */
     public $ClusterIdList;
 
     /**
-     * @var boolean Whether to filter by tag
+     * @var boolean Whether to filter by tag.
      */
     public $IsTagFilter;
 
     /**
-     * @var array Filter. Currently, you can filter only by tag.
+     * @var array Filter. Currently, you can filter by tag.
      */
     public $Filters;
 
     /**
-     * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default.
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20.
-     * @param array $ClusterIdList Filter by list of cluster IDs
-     * @param boolean $IsTagFilter Whether to filter by tag
-     * @param array $Filters Filter. Currently, you can filter only by tag.
+     * @param integer $Offset Start offset, which defaults to 0 if left empty.
+     * @param integer $Limit The number of results to be returned, which defaults to 10 if left empty. The maximum value is 20.
+     * @param array $ClusterIdList Filter by cluster ID.
+     * @param boolean $IsTagFilter Whether to filter by tag.
+     * @param array $Filters Filter. Currently, you can filter by tag.
      */
     function __construct()
     {

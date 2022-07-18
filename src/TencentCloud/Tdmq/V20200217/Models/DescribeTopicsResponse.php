@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTopics response structure.
  *
- * @method array getTopicSets() Obtain Array set of topics.
- * @method void setTopicSets(array $TopicSets) Set Array set of topics.
- * @method integer getTotalCount() Obtain Number of topics.
- * @method void setTotalCount(integer $TotalCount) Set Number of topics.
+ * @method array getTopicSets() Obtain Array of topic sets.
+ * @method void setTopicSets(array $TopicSets) Set Array of topic sets.
+ * @method integer getTotalCount() Obtain The number of topics.
+ * @method void setTotalCount(integer $TotalCount) Set The number of topics.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTopicsResponse extends AbstractModel
 {
     /**
-     * @var array Array set of topics.
+     * @var array Array of topic sets.
      */
     public $TopicSets;
 
     /**
-     * @var integer Number of topics.
+     * @var integer The number of topics.
      */
     public $TotalCount;
 
@@ -45,8 +45,8 @@ class DescribeTopicsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TopicSets Array set of topics.
-     * @param integer $TotalCount Number of topics.
+     * @param array $TopicSets Array of topic sets.
+     * @param integer $TotalCount The number of topics.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
