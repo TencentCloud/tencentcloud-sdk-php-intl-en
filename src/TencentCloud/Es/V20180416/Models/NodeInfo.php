@@ -44,6 +44,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setDiskCount(integer $DiskCount) Set Number of node disks
  * @method integer getDiskEncrypt() Obtain Whether to encrypt node disk. 0: no (default); 1: yes.
  * @method void setDiskEncrypt(integer $DiskEncrypt) Set Whether to encrypt node disk. 0: no (default); 1: yes.
+ * @method integer getCpuNum() Obtain CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCpuNum(integer $CpuNum) Set CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMemSize() Obtain Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMemSize(integer $MemSize) Set Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeInfo extends AbstractModel
 {
@@ -92,6 +100,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $DiskEncrypt;
 
     /**
+     * @var integer CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CpuNum;
+
+    /**
+     * @var integer Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MemSize;
+
+    /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      * @param string $Type Node type<li>`hotData`: hot data node</li>
@@ -104,6 +124,10 @@ Default value: `hotData`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $DiskCount Number of node disks
      * @param integer $DiskEncrypt Whether to encrypt node disk. 0: no (default); 1: yes.
+     * @param integer $CpuNum CPU number
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -149,6 +173,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DiskEncrypt",$param) and $param["DiskEncrypt"] !== null) {
             $this->DiskEncrypt = $param["DiskEncrypt"];
+        }
+
+        if (array_key_exists("CpuNum",$param) and $param["CpuNum"] !== null) {
+            $this->CpuNum = $param["CpuNum"];
+        }
+
+        if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
+            $this->MemSize = $param["MemSize"];
         }
     }
 }
