@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Account remarks, which can contain 0-256 letters, digits, and common symbols.
  * @method integer getDelayThresh() Obtain Determines whether the secondary is unavailable based on the passed-in time
  * @method void setDelayThresh(integer $DelayThresh) Set Determines whether the secondary is unavailable based on the passed-in time
+ * @method integer getSlaveConst() Obtain Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+ * @method void setSlaveConst(integer $SlaveConst) Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+ * @method integer getMaxUserConnections() Obtain Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
  */
 class CreateAccountRequest extends AbstractModel
 {
@@ -73,6 +77,16 @@ class CreateAccountRequest extends AbstractModel
     public $DelayThresh;
 
     /**
+     * @var integer Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public $SlaveConst;
+
+    /**
+     * @var integer Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $InstanceId Instance ID, which is in the format of `tdsql-ow728lmc` and can be obtained through the `DescribeDBInstances` API.
      * @param string $UserName Login username, which can contain 1-32 letters, digits, underscores, and hyphens.
      * @param string $Host Host that can be logged in to, which is in the same format as the host of the MySQL account and supports wildcards, such as %, 10.%, and 10.20.%.
@@ -80,6 +94,8 @@ class CreateAccountRequest extends AbstractModel
      * @param integer $ReadOnly Whether to create a read-only account. 0: no; 1: for the account's SQL requests, the secondary will be used first, and if it is unavailable, the primary will be used; 2: the secondary will be used first, and if it is unavailable, the operation will fail.
      * @param string $Description Account remarks, which can contain 0-256 letters, digits, and common symbols.
      * @param integer $DelayThresh Determines whether the secondary is unavailable based on the passed-in time
+     * @param integer $SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     * @param integer $MaxUserConnections Maximum number of connections. If left empty or `0` is passed in, the connections will be unlimited. This parameter configuration is not supported for kernel version 10.1.
      */
     function __construct()
     {
@@ -120,6 +136,14 @@ class CreateAccountRequest extends AbstractModel
 
         if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
             $this->DelayThresh = $param["DelayThresh"];
+        }
+
+        if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
+            $this->SlaveConst = $param["SlaveConst"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

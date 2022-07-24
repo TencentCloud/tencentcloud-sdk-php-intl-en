@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The maximum number of results returned
  * @method string getBusiness() Obtain Business field, which can be ignored.
  * @method void setBusiness(string $Business) Set Business field, which can be ignored.
+ * @method string getCdcId() Obtain CDC business field, which can be ignored.
+ * @method void setCdcId(string $CdcId) Set CDC business field, which can be ignored.
  */
 class DescribeRegionRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DescribeRegionRequest extends AbstractModel
     public $Business;
 
     /**
+     * @var string CDC business field, which can be ignored.
+     */
+    public $CdcId;
+
+    /**
      * @param integer $Offset The offset value
      * @param integer $Limit The maximum number of results returned
      * @param string $Business Business field, which can be ignored.
+     * @param string $CdcId CDC business field, which can be ignored.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DescribeRegionRequest extends AbstractModel
 
         if (array_key_exists("Business",$param) and $param["Business"] !== null) {
             $this->Business = $param["Business"];
+        }
+
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
         }
     }
 }

@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDataHubId() Obtain Datahub access ID.
  * @method void setDataHubId(string $DataHubId) Set Datahub access ID.
- * @method array getMessage() Obtain Message content that is sent.
- * @method void setMessage(array $Message) Set Message content that is sent.
+ * @method array getMessage() Obtain Content of the message that has been sent. Up to 500 messages can be sent in a single request.
+ * @method void setMessage(array $Message) Set Content of the message that has been sent. Up to 500 messages can be sent in a single request.
  */
 class SendMessageRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class SendMessageRequest extends AbstractModel
     public $DataHubId;
 
     /**
-     * @var array Message content that is sent.
+     * @var array Content of the message that has been sent. Up to 500 messages can be sent in a single request.
      */
     public $Message;
 
     /**
      * @param string $DataHubId Datahub access ID.
-     * @param array $Message Message content that is sent.
+     * @param array $Message Content of the message that has been sent. Up to 500 messages can be sent in a single request.
      */
     function __construct()
     {

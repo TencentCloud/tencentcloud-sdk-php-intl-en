@@ -102,6 +102,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getClusterType() Obtain Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterType(string $ClusterType) Set Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFeatures() Obtain 
+ * @method void setFeatures(array $Features) Set 
  */
 class InstanceDetail extends AbstractModel
 {
@@ -267,6 +273,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PublicNetwork;
 
     /**
+     * @var string Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClusterType;
+
+    /**
+     * @var array 
+     */
+    public $Features;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Vip Instance VIP information
@@ -308,6 +325,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $PublicNetwork Public network bandwidth.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ClusterType Instance type.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Features 
      */
     function __construct()
     {
@@ -450,6 +470,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PublicNetwork",$param) and $param["PublicNetwork"] !== null) {
             $this->PublicNetwork = $param["PublicNetwork"];
+        }
+
+        if (array_key_exists("ClusterType",$param) and $param["ClusterType"] !== null) {
+            $this->ClusterType = $param["ClusterType"];
+        }
+
+        if (array_key_exists("Features",$param) and $param["Features"] !== null) {
+            $this->Features = $param["Features"];
         }
     }
 }

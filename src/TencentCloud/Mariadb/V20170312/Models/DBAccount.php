@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDelayThresh(integer $DelayThresh) Set This field is meaningful for read-only accounts, indicating that a replica should be selected if its delay from the primary is less than this value.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSlaveConst() Obtain Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+ * @method void setSlaveConst(integer $SlaveConst) Set Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
  */
 class DBAccount extends AbstractModel
 {
@@ -76,6 +78,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DelayThresh;
 
     /**
+     * @var integer Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
+     */
+    public $SlaveConst;
+
+    /**
      * @param string $UserName Username
      * @param string $Host Host from which a user can log in (corresponding to the `host` field for a MySQL user; a user is uniquely identified by username and host; this parameter is in IP format and ends with % for IP range; % can be entered; if this parameter is left empty, % will be used by default).
      * @param string $Description User remarks
@@ -84,6 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $ReadOnly Read-only flag. 0: no; 1: for the account's SQL requests, the replica will be used first, and if it is unavailable, the primary will be used; 2: the replica will be used first, and if it is unavailable, the operation will fail.
      * @param integer $DelayThresh This field is meaningful for read-only accounts, indicating that a replica should be selected if its delay from the primary is less than this value.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SlaveConst Whether to specify a replica server for read-only account. Valid values: `0` (No replica server is specified, which means that the proxy will select another available replica server to keep connection with the client if the current replica server doesn’t meet the requirement). `1` (The replica server is specified, which means that the connection will be disconnected if the specified replica server doesn’t meet the requirement.)
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DelayThresh",$param) and $param["DelayThresh"] !== null) {
             $this->DelayThresh = $param["DelayThresh"];
+        }
+
+        if (array_key_exists("SlaveConst",$param) and $param["SlaveConst"] !== null) {
+            $this->SlaveConst = $param["SlaveConst"];
         }
     }
 }

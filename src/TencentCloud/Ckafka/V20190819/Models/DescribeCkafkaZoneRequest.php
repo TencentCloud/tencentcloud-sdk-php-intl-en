@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCkafkaZone request structure.
  *
-
+ * @method string getCdcId() Obtain Cloud Dedicated Cluster (CDC) business parameter.
+ * @method void setCdcId(string $CdcId) Set Cloud Dedicated Cluster (CDC) business parameter.
  */
 class DescribeCkafkaZoneRequest extends AbstractModel
 {
-
+    /**
+     * @var string Cloud Dedicated Cluster (CDC) business parameter.
+     */
+    public $CdcId;
 
     /**
-
+     * @param string $CdcId Cloud Dedicated Cluster (CDC) business parameter.
      */
     function __construct()
     {
@@ -42,6 +46,8 @@ class DescribeCkafkaZoneRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-
+        if (array_key_exists("CdcId",$param) and $param["CdcId"] !== null) {
+            $this->CdcId = $param["CdcId"];
+        }
     }
 }

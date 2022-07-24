@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstances request structure.
  *
- * @method integer getLimit() Obtain Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
- * @method void setLimit(integer $Limit) Set Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 1000.
  * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
  * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
  * @method string getInstanceId() Obtain Instance ID, such as crs-6ubhgouj
@@ -68,11 +68,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTags(array $InstanceTags) Set Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
  * @method array getTagKeys() Obtain Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
  * @method void setTagKeys(array $TagKeys) Set Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+ * @method array getProductVersions() Obtain Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+ * @method void setProductVersions(array $ProductVersions) Set Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
  */
 class DescribeInstancesRequest extends AbstractModel
 {
     /**
-     * @var integer Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public $Limit;
 
@@ -192,7 +194,12 @@ class DescribeInstancesRequest extends AbstractModel
     public $TagKeys;
 
     /**
-     * @param integer $Limit Size of the instance list. If no value is specified for this parameter, it will be 20 by default. If the specified value is greater than the `DescribeInstancesPageLimit` configuration item in the specific configuration file `etc/conf/component.properties` (which is 1,000 by default if the configuration cannot be read), then the configuration item shall prevail.
+     * @var array Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+     */
+    public $ProductVersions;
+
+    /**
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 1000.
      * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      * @param string $InstanceId Instance ID, such as crs-6ubhgouj
      * @param string $OrderBy Enumerated values: projectId, createtime, instancename, type, curDeadline
@@ -216,6 +223,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param string $MonitorVersion Internal parameter, which can be ignored.
      * @param array $InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
      * @param array $TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
+     * @param array $ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
      */
     function __construct()
     {
@@ -329,6 +337,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("TagKeys",$param) and $param["TagKeys"] !== null) {
             $this->TagKeys = $param["TagKeys"];
+        }
+
+        if (array_key_exists("ProductVersions",$param) and $param["ProductVersions"] !== null) {
+            $this->ProductVersions = $param["ProductVersions"];
         }
     }
 }
