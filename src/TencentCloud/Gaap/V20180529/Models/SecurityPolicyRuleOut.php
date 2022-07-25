@@ -37,7 +37,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setProtocol(string $Protocol) Set Protocol type to be matched (TCP/UDP)
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPolicyId() Obtain Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyId(string $PolicyId) Set Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SecurityPolicyRuleOut extends AbstractModel
 {
@@ -75,6 +77,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyId;
 
@@ -88,6 +91,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Protocol Protocol type to be matched (TCP/UDP)
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyId Security policy ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

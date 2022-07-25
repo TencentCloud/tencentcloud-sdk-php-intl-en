@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(integer $StartTime) Set Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
  * @method integer getEndTime() Obtain End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
  * @method void setEndTime(integer $EndTime) Set End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
- * @method array getMonitorTypes() Obtain Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
- * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+ * @method array getMonitorTypes() Obtain Filter by monitor type. Valid values: "MT_QCE" (Tencent Cloud service monitoring), "MT_TAW" (application performance monitoring), "MT_RUM" (frontend performance monitoring), "MT_PROBE" (cloud automated testing). If this parameter is left empty, all types will be queried by default.
+ * @method void setMonitorTypes(array $MonitorTypes) Set Filter by monitor type. Valid values: "MT_QCE" (Tencent Cloud service monitoring), "MT_TAW" (application performance monitoring), "MT_RUM" (frontend performance monitoring), "MT_PROBE" (cloud automated testing). If this parameter is left empty, all types will be queried by default.
  * @method string getAlarmObject() Obtain Filter by alarm object. Fuzzy search with string is supported
  * @method void setAlarmObject(string $AlarmObject) Set Filter by alarm object. Fuzzy search with string is supported
  * @method array getAlarmStatus() Obtain Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
@@ -90,7 +90,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
     public $EndTime;
 
     /**
-     * @var array Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+     * @var array Filter by monitor type. Valid values: "MT_QCE" (Tencent Cloud service monitoring), "MT_TAW" (application performance monitoring), "MT_RUM" (frontend performance monitoring), "MT_PROBE" (cloud automated testing). If this parameter is left empty, all types will be queried by default.
      */
     public $MonitorTypes;
 
@@ -156,7 +156,7 @@ class DescribeAlarmHistoriesRequest extends AbstractModel
      * @param string $Order Sort by the first occurrence time in descending order by default. Valid values: ASC (ascending), DESC (descending)
      * @param integer $StartTime Start time, which is the timestamp one day ago by default and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is later than the `StartTime`.
      * @param integer $EndTime End time, which is the current timestamp and the time when the alarm `FirstOccurTime` first occurs. An alarm record can be searched only if its `FirstOccurTime` is earlier than the `EndTime`.
-     * @param array $MonitorTypes Filter by monitoring type. Valid value: `MT_QCE` (Tencent Cloud service monitoring). If this parameter is left empty, all types will be queried by default.
+     * @param array $MonitorTypes Filter by monitor type. Valid values: "MT_QCE" (Tencent Cloud service monitoring), "MT_TAW" (application performance monitoring), "MT_RUM" (frontend performance monitoring), "MT_PROBE" (cloud automated testing). If this parameter is left empty, all types will be queried by default.
      * @param string $AlarmObject Filter by alarm object. Fuzzy search with string is supported
      * @param array $AlarmStatus Filter by alarm status. Valid values: ALARM (not resolved), OK (resolved), NO_CONF (expired), NO_DATA (insufficient data). If this parameter is left empty, all will be queried by default
      * @param array $ProjectIds Filter by project ID. Valid values: `-1` (no project), `0` (default project)

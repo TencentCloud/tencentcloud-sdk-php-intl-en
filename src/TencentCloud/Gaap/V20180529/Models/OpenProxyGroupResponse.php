@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * OpenProxyGroup response structure.
  *
- * @method array getInvalidStatusInstanceSet() Obtain List of IDs of the connection instances that are not disabled, which cannot be enabled.
- * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) Set List of IDs of the connection instances that are not disabled, which cannot be enabled.
- * @method array getOperationFailedInstanceSet() Obtain List of IDs of the connection instances failed to be enabled.
- * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) Set List of IDs of the connection instances failed to be enabled.
+ * @method array getInvalidStatusInstanceSet() Obtain The connection instance ID list cannot be enabled if it’s not disabled.
+ * @method void setInvalidStatusInstanceSet(array $InvalidStatusInstanceSet) Set The connection instance ID list cannot be enabled if it’s not disabled.
+ * @method array getOperationFailedInstanceSet() Obtain ID list of connection instances failed to be enabled.
+ * @method void setOperationFailedInstanceSet(array $OperationFailedInstanceSet) Set ID list of connection instances failed to be enabled.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class OpenProxyGroupResponse extends AbstractModel
 {
     /**
-     * @var array List of IDs of the connection instances that are not disabled, which cannot be enabled.
+     * @var array The connection instance ID list cannot be enabled if it’s not disabled.
      */
     public $InvalidStatusInstanceSet;
 
     /**
-     * @var array List of IDs of the connection instances failed to be enabled.
+     * @var array ID list of connection instances failed to be enabled.
      */
     public $OperationFailedInstanceSet;
 
@@ -45,8 +45,8 @@ class OpenProxyGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $InvalidStatusInstanceSet List of IDs of the connection instances that are not disabled, which cannot be enabled.
-     * @param array $OperationFailedInstanceSet List of IDs of the connection instances failed to be enabled.
+     * @param array $InvalidStatusInstanceSet The connection instance ID list cannot be enabled if it’s not disabled.
+     * @param array $OperationFailedInstanceSet ID list of connection instances failed to be enabled.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

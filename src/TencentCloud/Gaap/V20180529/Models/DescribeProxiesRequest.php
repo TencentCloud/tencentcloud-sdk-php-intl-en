@@ -20,30 +20,30 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProxies request structure.
  *
- * @method array getInstanceIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
- * @method void setInstanceIds(array $InstanceIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
- * @method integer getOffset() Obtain Offset. The default value is 0.
- * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
- * @method integer getLimit() Obtain Number of results to be returned. The default value is 20, and the maximum value is 100.
- * @method void setLimit(integer $Limit) Set Number of results to be returned. The default value is 20, and the maximum value is 100.
- * @method array getFilters() Obtain Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+ * @method array getInstanceIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+ * @method void setInstanceIds(array $InstanceIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+ * @method integer getOffset() Obtain Offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
+ * @method array getFilters() Obtain Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
- * @method void setFilters(array $Filters) Set Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+ * @method void setFilters(array $Filters) Set Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
- * @method array getProxyIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
- * @method void setProxyIds(array $ProxyIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+ * @method array getProxyIds() Obtain Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
+ * @method void setProxyIds(array $ProxyIds) Set Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
  * @method array getTagSet() Obtain Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connections tagged any of them will be pulled.
  * @method void setTagSet(array $TagSet) Set Tag list. If this field exists, the list of the resources with the tag will be pulled.
@@ -55,57 +55,57 @@ When this field does not exist, all connections are pulled, including both not-g
 When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
  * @method string getOrder() Obtain Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
  * @method void setOrder(string $Order) Set Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
  * @method string getOrderField() Obtain Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
  * @method void setOrderField(string $OrderField) Set Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
  */
 class DescribeProxiesRequest extends AbstractModel
 {
     /**
-     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
+     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
      */
     public $InstanceIds;
 
     /**
-     * @var integer Offset. The default value is 0.
+     * @var integer Offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. The default value is 20, and the maximum value is 100.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 100.
      */
     public $Limit;
 
     /**
-     * @var array Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * @var array Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
      */
     public $Filters;
 
     /**
-     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+     * @var array Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
      */
     public $ProxyIds;
 
@@ -124,49 +124,49 @@ When this field does not exist, all connections are pulled, including both not-g
 
     /**
      * @var string Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
      */
     public $Order;
 
     /**
      * @var string Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
      */
     public $OrderField;
 
     /**
-     * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's an old parameter, please switch to ProxyIds.
-     * @param integer $Offset Offset. The default value is 0.
-     * @param integer $Limit Number of results to be returned. The default value is 20, and the maximum value is 100.
-     * @param array $Filters Filter condition   
-The upper limit for `Filters` in each request is 10 and 5 for `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` with this parameter. 
-ProjectId - String - Required: No - Filter by project ID.   
-AccessRegion - String - Required: No - Filter by access region.    
-RealServerRegion - String - Required: No - Filter by origin server region.
-GroupId - String - Required: No - Filter by connection group ID.
+     * @param array $InstanceIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s an old parameter, please switch to ProxyIds.
+     * @param integer $Offset Offset. Default value: 0.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
+     * @param array $Filters Filters   
+The upper limit on Filters for each request is 10, and the upper limit on Filter.Values is 5. This parameter does not support specifying InstanceIds and Filters at the same time. 
+ProjectId - String - Required: No - Filter by a project ID.   
+AccessRegion - String - Required: No - Filter by an access region.    
+RealServerRegion - String - Required: No - Filter by an origin server region.
+GroupId - String - Required: No - Filter by a connection group ID.
 IPAddressVersion - String - Required: No - Filter by IP version.
 PackageType - String - Required: No - Filter by package type of connection groups.
-     * @param array $ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It's a new parameter, and replaces InstanceIds.
+     * @param array $ProxyIds Queries by one or multiple instance IDs. The upper limit on the number of instances for each request is 100. This parameter does not support specifying InstanceIds and Filters at the same time. It’s a new parameter, and replaces InstanceIds.
      * @param array $TagSet Tag list. If this field exists, the list of the resources with the tag will be pulled.
 It supports up to 5 tags. If there are two or more tags, the connections tagged any of them will be pulled.
      * @param integer $Independent When this field is 1, only not-grouped connections are pulled.
 When this field is 0, only grouped connections are pulled.
 When this field does not exist, all connections are pulled, including both not-grouped and grouped connections.
      * @param string $Order Specifies how connections are listed. Valid values:
-`asc`: ascending order
-`desc`: descending order
+`asc`: Ascending order
+`desc`: Descending order
 Default: `desc`
      * @param string $OrderField Sorting field. Valid values:
-`create_time`: sort by the creation time
-`proxy_id`: sort by the connection ID
-`bandwidth`:sort by the bandwidth limit
-`concurrent_connections`: sort by the number of concurrent connections
+`create_time`: Sort by creation time
+`proxy_id`: Sort by connection ID
+`bandwidth`:Sort by bandwidth limit
+`concurrent_connections`: Sort by number of concurrent connections
 Default: `create_time`
      */
     function __construct()

@@ -50,6 +50,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
  * @method void setStatus(string $Status) Set Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -62,6 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
  * @method string getDomain() Obtain Accessed domain name.
  * @method void setDomain(string $Domain) Set Accessed domain name.
  * @method string getIP() Obtain Accessed IP.
@@ -126,9 +128,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getNetworkType() Obtain Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+ * @method string getNetworkType() Obtain Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+ * @method void setNetworkType(string $NetworkType) Set Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getPackageType() Obtain Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).
@@ -211,6 +213,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
      */
     public $Status;
 
@@ -323,7 +326,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IPAddressVersion;
 
     /**
-     * @var string Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * @var string Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $NetworkType;
@@ -382,6 +385,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `ISOLATED`: Isolated
 `CLONING`: Copying
 `RECOVERING`: Maintaining
+`MOVING`: Migrating
      * @param string $Domain Accessed domain name.
      * @param string $IP Accessed IP.
      * @param string $Version Connection versions: 1.0, 2.0, 3.0.
@@ -414,7 +418,7 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4`, `IPv6`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: custom security EIP.
+     * @param string $NetworkType Network type. `normal`: general BGP; `cn2`: Dedicated BGP; `triple`: Non-BGP (provided by the top 3 ISPs in the Chinese mainland); `secure_eip`: Custom security EIP.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $PackageType Package type of connections. Valid values: `Thunder` (general connection), `Accelerator` (silver connection), 
 and `CrossBorder` (cross-MLC-border connection).

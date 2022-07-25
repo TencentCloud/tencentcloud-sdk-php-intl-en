@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerName(string $RealServerName) Set Origin server name
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method array getTagSet() Obtain Tag list
+ * @method array getTagSet() Obtain Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTagSet(array $TagSet) Set Tag list
+ * @method void setTagSet(array $TagSet) Set Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BindRealServerInfo extends AbstractModel
@@ -56,7 +56,7 @@ class BindRealServerInfo extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var array Tag list
+     * @var array Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TagSet;
@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $RealServerId Origin server ID
      * @param string $RealServerName Origin server name
      * @param integer $ProjectId Project ID
-     * @param array $TagSet Tag list
+     * @param array $TagSet Tag list.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

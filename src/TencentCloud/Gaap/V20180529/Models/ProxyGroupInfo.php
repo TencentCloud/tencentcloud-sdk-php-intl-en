@@ -36,16 +36,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerRegionInfo(RegionDetail $RealServerRegionInfo) Set Target region
  * @method string getStatus() Obtain Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
  * @method void setStatus(string $Status) Set Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
  * @method array getTagSet() Obtain Tag list.
  * @method void setTagSet(array $TagSet) Set Tag list.
  * @method string getVersion() Obtain Connection group version
@@ -61,13 +63,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setProxyType(integer $ProxyType) Set Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupInfo extends AbstractModel
 {
@@ -101,10 +103,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @var string Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
      */
     public $Status;
 
@@ -133,9 +136,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var integer Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Http3Supported;
 
@@ -149,10 +152,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param RegionDetail $RealServerRegionInfo Target region
      * @param string $Status Connection group status.
 Where:
-0: running;
-1: creating;
-4: terminating;
-11: connection migrating.
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`MOVING`: Migrating
+`CHANGING`: Deploying
      * @param array $TagSet Tag list.
      * @param string $Version Connection group version
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -161,9 +165,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $ProxyType Whether the connection group contains a Microsoft connection
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Certificate details, including the certificate ID, name, type, content, and key content.
  *
- * @method string getCertificateId() Obtain Certificate ID.
- * @method void setCertificateId(string $CertificateId) Set Certificate ID.
+ * @method string getCertificateId() Obtain Certificate ID
+ * @method void setCertificateId(string $CertificateId) Set Certificate ID
  * @method integer getCertificateType() Obtain Certificate type.
  * @method void setCertificateType(integer $CertificateType) Set Certificate type.
  * @method string getCertificateAlias() Obtain Certificate name.
@@ -38,17 +38,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(integer $CreateTime) Set Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getBeginTime() Obtain Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method integer getBeginTime() Obtain Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setBeginTime(integer $BeginTime) Set Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method void setBeginTime(integer $BeginTime) Set Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getEndTime() Obtain Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method integer getEndTime() Obtain Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(integer $EndTime) Set Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+ * @method void setEndTime(integer $EndTime) Set Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getIssuerCN() Obtain Common name of the certificate's issuer.
+ * @method string getIssuerCN() Obtain Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIssuerCN(string $IssuerCN) Set Common name of the certificate's issuer.
+ * @method void setIssuerCN(string $IssuerCN) Set Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubjectCN() Obtain Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -58,7 +58,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class CertificateDetail extends AbstractModel
 {
     /**
-     * @var string Certificate ID.
+     * @var string Certificate ID
      */
     public $CertificateId;
 
@@ -91,19 +91,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CreateTime;
 
     /**
-     * @var integer Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @var integer Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $BeginTime;
 
     /**
-     * @var integer Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @var integer Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $EndTime;
 
     /**
-     * @var string Common name of the certificate's issuer.
+     * @var string Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IssuerCN;
@@ -115,7 +115,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SubjectCN;
 
     /**
-     * @param string $CertificateId Certificate ID.
+     * @param string $CertificateId Certificate ID
      * @param integer $CertificateType Certificate type.
      * @param string $CertificateAlias Certificate name.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -124,11 +124,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $BeginTime Certificate effective time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @param integer $BeginTime Time that the certificate takes effect. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $EndTime Certificate expiration time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
+     * @param integer $EndTime Certificate expiration time. Using the UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (Midnight in UTC/GMT).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $IssuerCN Common name of the certificate's issuer.
+     * @param string $IssuerCN Common name of the certificate’s issuer.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubjectCN Common name of the certificate subject.
 Note: This field may return null, indicating that no valid values can be obtained.

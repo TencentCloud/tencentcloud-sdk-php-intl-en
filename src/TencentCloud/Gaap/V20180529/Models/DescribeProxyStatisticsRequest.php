@@ -29,13 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method array getMetricNames() Obtain Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
  * @method void setMetricNames(array $MetricNames) Set Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
  * @method integer getGranularity() Obtain Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
  * @method void setGranularity(integer $Granularity) Set Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
  * @method string getIsp() Obtain Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
  * @method void setIsp(string $Isp) Set Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
  */
@@ -63,9 +63,9 @@ class DescribeProxyStatisticsRequest extends AbstractModel
 
     /**
      * @var integer Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
      */
     public $Granularity;
 
@@ -80,9 +80,9 @@ Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
      * @param string $EndTime End time (2019-03-25 12:00:00)
      * @param array $MetricNames Statistical metric name list. Valid values: `InBandwidth` (inbound bandwidth); `OutBandwidth` (outbound bandwidth); Concurrent (concurrence); `InPackets` (inbound packets); `OutPackets` (outbound packets); `PacketLoss` (packet loss rate); `Latency` (latency); `HttpQPS` (the number of HTTP requests); `HttpsQPS` (the number of HTTPS requests).
      * @param integer $Granularity Monitoring granularity. It currently supports: 60, 300, 3,600, and 86,400. Unit: seconds.
-Time range: <= 1 day, supported minimum granularity: 60 seconds;
-Time range: <= 7 days, supported minimum granularity: 3,600 seconds;
-Time range: <= 30 days, supported minimum granularity: 86,400 seconds;
+Time range: ≤ 3 day. Supported minimum granularity: 60 seconds;
+Time range: ≤ 7 day. Supported minimum granularity: 300 seconds;
+Time range: ≤ 30 days. Supported minimum granularity: 36,00 seconds;
      * @param string $Isp Specifies the ISP. Valid values: `CMCC`, `CUCC`, and `CTCC`. If it is not specified, all ISP data will be returned. Note that this field is valid only when a non-BGP connection is used.
      */
     function __construct()

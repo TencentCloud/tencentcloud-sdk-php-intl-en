@@ -23,27 +23,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getInstanceId() Obtain Connection instance ID.
  * @method void setInstanceId(string $InstanceId) Set Connection instance ID.
  * @method string getStatus() Obtain Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
  * @method void setStatus(string $Status) Set Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
  */
 class ProxyStatus extends AbstractModel
 {
@@ -54,32 +56,34 @@ class ProxyStatus extends AbstractModel
 
     /**
      * @var string Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
      */
     public $Status;
 
     /**
      * @param string $InstanceId Connection instance ID.
      * @param string $Status Connection status.
-Valid values:
-`RUNNING`: running
-`CREATING`: creating
-`DESTROYING`: terminating
-`OPENING`: enabling
-`CLOSING`: disabling
-`CLOSED`: disabled
-`ADJUSTING`: adjusting configuration
-`ISOLATING`: isolating
-`ISOLATED`: isolated
+Where:
+`RUNNING`: Running
+`CREATING`: Creating
+`DESTROYING`: Terminating
+`OPENING`: Enabling
+`CLOSING`: Disabling
+`CLOSED`: Disabled
+`ADJUSTING`: Adjusting configuration
+`ISOLATING`: Isolating
+`ISOLATED`: Isolated
+`MOVING`: Migrating
      */
     function __construct()
     {

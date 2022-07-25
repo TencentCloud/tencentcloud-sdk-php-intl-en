@@ -30,7 +30,7 @@ Note: This API unbinds the previously bound origin servers, and binds the origin
  * @method Models\CheckProxyCreateResponse CheckProxyCreate(Models\CheckProxyCreateRequest $req) This API (CheckProxyCreate) is used to query whether an acceleration connection with the specified configuration can be created.
  * @method Models\CloseProxiesResponse CloseProxies(Models\CloseProxiesRequest $req) This API (CloseProxies) is used to disable connections. If disabled, no traffic will be generated, but the basic configuration fee will still be incurred.
  * @method Models\CloseProxyGroupResponse CloseProxyGroup(Models\CloseProxyGroupRequest $req) This API is used to disable a connection group. Once disabled, the connection group will no longer generate traffic, but the basic connection configuration fees will still be incurred every day.
- * @method Models\CloseSecurityPolicyResponse CloseSecurityPolicy(Models\CloseSecurityPolicyRequest $req) This API is used to disable security policies.
+ * @method Models\CloseSecurityPolicyResponse CloseSecurityPolicy(Models\CloseSecurityPolicyRequest $req) This API is used to disable a security policy.
  * @method Models\CreateCertificateResponse CreateCertificate(Models\CreateCertificateRequest $req) This API (CreateCertificate) is used to create the GAAP certificates and configuration files, including basic authentication configuration files, client CA certificates, server SSL certificates, GAAP SSL certificates, and origin server CA certificates.
  * @method Models\CreateCustomHeaderResponse CreateCustomHeader(Models\CreateCustomHeaderRequest $req) This API is used to create a custom header of the HTTP/HTTPS listener. When client requests reach the listener, they will be forwarded to the origin with this custom hearer.
  * @method Models\CreateDomainResponse CreateDomain(Models\CreateDomainRequest $req) This API (CreateDomain) is used to create the access domain name for the HTTP/HTTPS listener. Clients request the backend data by accessing this domain.
@@ -46,13 +46,13 @@ This API only supports connections of version 3.0.
  * @method Models\CreateSecurityRulesResponse CreateSecurityRules(Models\CreateSecurityRulesRequest $req) This API is used to add security policy rules.
  * @method Models\CreateTCPListenersResponse CreateTCPListeners(Models\CreateTCPListenersRequest $req) This API (CreateTCPListeners) is used to batch create TCP listeners of single connections or connection groups.
  * @method Models\CreateUDPListenersResponse CreateUDPListeners(Models\CreateUDPListenersRequest $req) This API (CreateTCPListeners) is used to batch create UDP listeners of single connections or connection groups.
- * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) This API (DeleteCertificate) is used to delete certificates.
+ * @method Models\DeleteCertificateResponse DeleteCertificate(Models\DeleteCertificateRequest $req) This API is used to delete a certificate.
  * @method Models\DeleteDomainResponse DeleteDomain(Models\DeleteDomainRequest $req) This API (DeleteDomain) is only applicable to layer-7 listeners. It is used to delete the domain names of this listener, and all the rules under the domain name. All rules bound to the origin server are unbound automatically.
  * @method Models\DeleteDomainErrorPageInfoResponse DeleteDomainErrorPageInfo(Models\DeleteDomainErrorPageInfoRequest $req) This API is used to delete a custom error code for a domain name.
  * @method Models\DeleteListenersResponse DeleteListeners(Models\DeleteListenersRequest $req) This API (DeleteListeners) is used to batch delete the listeners of a connection or connection group, including layer-4/7 listeners.
  * @method Models\DeleteProxyGroupResponse DeleteProxyGroup(Models\DeleteProxyGroupRequest $req) This API (DeleteProxyGroup) is used to delete a connection group.
  * @method Models\DeleteRuleResponse DeleteRule(Models\DeleteRuleRequest $req) This API (DeleteRule) is used to delete the forwarding rules of HTTP/HTTPS listeners.
- * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) This API is used to delete security policies.
+ * @method Models\DeleteSecurityPolicyResponse DeleteSecurityPolicy(Models\DeleteSecurityPolicyRequest $req) This API is used to delete a security policy.
  * @method Models\DeleteSecurityRulesResponse DeleteSecurityRules(Models\DeleteSecurityRulesRequest $req) This API is used to delete security policy rules.
  * @method Models\DescribeAccessRegionsResponse DescribeAccessRegions(Models\DescribeAccessRegionsRequest $req) This API (DescribeAccessRegions) is used to query acceleration region (client access region).
  * @method Models\DescribeAccessRegionsByDestRegionResponse DescribeAccessRegionsByDestRegion(Models\DescribeAccessRegionsByDestRegionRequest $req) This API is used to query the available accelerator region based on the origin server region.
@@ -110,7 +110,7 @@ Note: Grouped connections currently do not support HTTP/HTTPS listeners.
  * @method Models\ModifyUDPListenerAttributeResponse ModifyUDPListenerAttribute(Models\ModifyUDPListenerAttributeRequest $req) This API (ModifyUDPListenerAttribute) is used to modify the UDP listener configuration of a connection instance, including modification of listener names and scheduling policies.
  * @method Models\OpenProxiesResponse OpenProxies(Models\OpenProxiesRequest $req) This API (OpenProxies) is used to enable one or more connections.
  * @method Models\OpenProxyGroupResponse OpenProxyGroup(Models\OpenProxyGroupRequest $req) This API is used to enable all connections in a connection group.
- * @method Models\OpenSecurityPolicyResponse OpenSecurityPolicy(Models\OpenSecurityPolicyRequest $req) This API is used to enable security policies.
+ * @method Models\OpenSecurityPolicyResponse OpenSecurityPolicy(Models\OpenSecurityPolicyRequest $req) This API is used to enable a security policy.
  * @method Models\RemoveRealServersResponse RemoveRealServers(Models\RemoveRealServersRequest $req) This API is used to delete the added origin server (server) IP or domain name.
  * @method Models\SetAuthenticationResponse SetAuthentication(Models\SetAuthenticationRequest $req) This API (SetAuthentication) is used for the advanced authentication configuration of connections, including authentication methods and their certificates. If only supports connections of version 3.0.
  */

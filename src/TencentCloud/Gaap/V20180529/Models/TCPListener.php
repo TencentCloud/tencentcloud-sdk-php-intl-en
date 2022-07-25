@@ -34,68 +34,68 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerType(string $RealServerType) Set Type of the origin server bound to listeners
  * @method string getProtocol() Obtain Listener protocol: TCP.
  * @method void setProtocol(string $Protocol) Set Listener protocol: TCP.
- * @method integer getListenerStatus() Obtain Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
- * @method string getScheduler() Obtain Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
- * @method void setScheduler(string $Scheduler) Set Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+ * @method integer getListenerStatus() Obtain Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+ * @method string getScheduler() Obtain Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
+ * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
  * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds).
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds).
  * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds).
  * @method void setDelayLoop(integer $DelayLoop) Set Time interval of origin server health check (unit: seconds).
- * @method integer getHealthCheck() Obtain Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
- * @method void setHealthCheck(integer $HealthCheck) Set Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
- * @method integer getBindStatus() Obtain Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
- * @method void setBindStatus(integer $BindStatus) Set Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+ * @method integer getHealthCheck() Obtain Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+ * @method void setHealthCheck(integer $HealthCheck) Set Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+ * @method integer getBindStatus() Obtain Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
+ * @method void setBindStatus(integer $BindStatus) Set Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
  * @method array getRealServerSet() Obtain Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
- * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
- * @method integer getClientIPMethod() Obtain Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClientIPMethod(integer $ClientIPMethod) Set Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getCreateTime() Obtain Listener creation time in the format of UNIX timestamp
+ * @method void setCreateTime(integer $CreateTime) Set Listener creation time in the format of UNIX timestamp
+ * @method integer getClientIPMethod() Obtain Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientIPMethod(integer $ClientIPMethod) Set Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHealthyThreshold() Obtain Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHealthyThreshold(integer $HealthyThreshold) Set Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getUnhealthyThreshold() Obtain Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUnhealthyThreshold(integer $UnhealthyThreshold) Set Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getFailoverSwitch() Obtain Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFailoverSwitch(integer $FailoverSwitch) Set Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getSessionPersist() Obtain Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionPersist(integer $SessionPersist) Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TCPListener extends AbstractModel
 {
@@ -131,20 +131,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var integer Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * @var integer Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public $ListenerStatus;
 
     /**
-     * @var string Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+     * @var string Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
      */
     public $Scheduler;
 
@@ -159,16 +159,16 @@ lc: least connection.
     public $DelayLoop;
 
     /**
-     * @var integer Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
+     * @var integer Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
      */
     public $HealthCheck;
 
     /**
-     * @var integer Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+     * @var integer Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
      */
     public $BindStatus;
 
@@ -179,37 +179,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealServerSet;
 
     /**
-     * @var integer Listener creation time; using UNIX timestamp.
+     * @var integer Listener creation time in the format of UNIX timestamp
      */
     public $CreateTime;
 
     /**
-     * @var integer Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClientIPMethod;
 
     /**
      * @var integer Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HealthyThreshold;
 
     /**
      * @var integer Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UnhealthyThreshold;
 
     /**
      * @var integer Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $FailoverSwitch;
 
     /**
      * @var integer Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SessionPersist;
 
@@ -221,37 +221,37 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealServerType Type of the origin server bound to listeners
      * @param string $Protocol Listener protocol: TCP.
-     * @param integer $ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
-     * @param string $Scheduler Origin server access policy of listener. Valid values:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connection.
+     * @param integer $ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+     * @param string $Scheduler Origin server access policy of listeners:
+`rr`: Round robin
+`wrr`: Weighted round robin
+`lc`: Least connection
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds).
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds).
-     * @param integer $HealthCheck Whether health check is enabled for listener. Valid values:
-0: disabled;
-1: enabled
-     * @param integer $BindStatus Status of origin server bound to listener. Valid values:
-0: exceptional;
-1: normal.
+     * @param integer $HealthCheck Whether to enable the listener health check:
+`0`: Disable
+`1`: Enable
+     * @param integer $BindStatus Status of the origin server bound to listeners:
+`0`: Abnormal
+`1`: Normal
      * @param array $RealServerSet Information of the origin server bound to listeners
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $CreateTime Listener creation time; using UNIX timestamp.
-     * @param integer $ClientIPMethod Describes how the listener obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $CreateTime Listener creation time in the format of UNIX timestamp
+     * @param integer $ClientIPMethod Describes how the listener obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $HealthyThreshold Healthy threshold. The number of consecutive successful health checks required before considering an origin server healthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $UnhealthyThreshold Unhealthy threshold. The number of consecutive failed health checks required before considering an origin server unhealthy. Value range: 1 - 10.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $FailoverSwitch Whether to enable the primary/secondary origin server mode for failover. Values: `1` (enabled); `0` (disabled). It’s not available if the origin type is `DOMAIN`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

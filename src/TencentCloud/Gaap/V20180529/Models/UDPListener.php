@@ -34,30 +34,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerType(string $RealServerType) Set Type of the origin server bound to listeners
  * @method string getProtocol() Obtain Listener protocol: UDP.
  * @method void setProtocol(string $Protocol) Set Listener protocol: UDP.
- * @method integer getListenerStatus() Obtain Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
- * @method void setListenerStatus(integer $ListenerStatus) Set Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+ * @method integer getListenerStatus() Obtain Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
+ * @method void setListenerStatus(integer $ListenerStatus) Set Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
  * @method string getScheduler() Obtain Origin server access policy of listeners
  * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners
- * @method integer getBindStatus() Obtain Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
- * @method void setBindStatus(integer $BindStatus) Set Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+ * @method integer getBindStatus() Obtain Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
+ * @method void setBindStatus(integer $BindStatus) Set Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
  * @method array getRealServerSet() Obtain Information of the origin server bound to listeners
  * @method void setRealServerSet(array $RealServerSet) Set Information of the origin server bound to listeners
- * @method integer getCreateTime() Obtain Listener creation time; using UNIX timestamp.
- * @method void setCreateTime(integer $CreateTime) Set Listener creation time; using UNIX timestamp.
+ * @method integer getCreateTime() Obtain Listener creation time in the format of UNIX timestamp
+ * @method void setCreateTime(integer $CreateTime) Set Listener creation time in the format of UNIX timestamp
  * @method integer getSessionPersist() Obtain Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionPersist(integer $SessionPersist) Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class UDPListener extends AbstractModel
 {
@@ -93,12 +93,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Protocol;
 
     /**
-     * @var integer Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * @var integer Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      */
     public $ListenerStatus;
 
@@ -108,7 +108,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Scheduler;
 
     /**
-     * @var integer Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+     * @var integer Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
      */
     public $BindStatus;
 
@@ -118,13 +118,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RealServerSet;
 
     /**
-     * @var integer Listener creation time; using UNIX timestamp.
+     * @var integer Listener creation time in the format of UNIX timestamp
      */
     public $CreateTime;
 
     /**
      * @var integer Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SessionPersist;
 
@@ -136,18 +136,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealServerType Type of the origin server bound to listeners
      * @param string $Protocol Listener protocol: UDP.
-     * @param integer $ListenerStatus Listener status. Valid values:
-0: running;
-1: creating;
-2: terminating;
-3: adjusting origin server;
-4: adjusting configuration.
+     * @param integer $ListenerStatus Listener status:
+`0`: Running
+`1`: Creating
+`2`: Terminating
+`3`: Adjusting origin server
+`4`: Adjusting configuration
      * @param string $Scheduler Origin server access policy of listeners
-     * @param integer $BindStatus Status of origin server bound to listener. 0: normal, 1: exceptional IP, 2: exceptional domain name resolution
+     * @param integer $BindStatus Origin server binding status of listeners. `0`: Normal; `1`: IP exception; `2`: Domain name resolution exception.
      * @param array $RealServerSet Information of the origin server bound to listeners
-     * @param integer $CreateTime Listener creation time; using UNIX timestamp.
+     * @param integer $CreateTime Listener creation time in the format of UNIX timestamp
      * @param integer $SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

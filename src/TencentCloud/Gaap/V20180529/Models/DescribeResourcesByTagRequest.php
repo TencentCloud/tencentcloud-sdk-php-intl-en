@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKey(string $TagKey) Set Tag key.
  * @method string getTagValue() Obtain Tag value.
  * @method void setTagValue(string $TagValue) Set Tag value.
- * @method string getResourceType() Obtain Resource type, including:
+ * @method string getResourceType() Obtain Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
 If this field is not specified, all resources with the tag will be queried.
- * @method void setResourceType(string $ResourceType) Set Resource type, including:
+ * @method void setResourceType(string $ResourceType) Set Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -48,7 +48,7 @@ class DescribeResourcesByTagRequest extends AbstractModel
     public $TagValue;
 
     /**
-     * @var string Resource type, including:
+     * @var string Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).
@@ -59,7 +59,7 @@ If this field is not specified, all resources with the tag will be queried.
     /**
      * @param string $TagKey Tag key.
      * @param string $TagValue Tag value.
-     * @param string $ResourceType Resource type, including:
+     * @param string $ResourceType Resource types:
 Proxy (connection);
 ProxyGroup (connection group);
 RealServer (origin server).

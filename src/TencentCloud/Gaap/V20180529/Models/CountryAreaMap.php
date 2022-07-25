@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContinentName(string $ContinentName) Set Continent name.
  * @method string getContinentInnerCode() Obtain Continent code.
  * @method void setContinentInnerCode(string $ContinentInnerCode) Set Continent code.
+ * @method string getRemark() Obtain Remark information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemark(string $Remark) Set Remark information
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CountryAreaMap extends AbstractModel
 {
@@ -66,12 +70,20 @@ class CountryAreaMap extends AbstractModel
     public $ContinentInnerCode;
 
     /**
+     * @var string Remark information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Remark;
+
+    /**
      * @param string $NationCountryName Country name.
      * @param string $NationCountryInnerCode Country code.
      * @param string $GeographicalZoneName Region name.
      * @param string $GeographicalZoneInnerCode Region code.
      * @param string $ContinentName Continent name.
      * @param string $ContinentInnerCode Continent code.
+     * @param string $Remark Remark information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -108,6 +120,10 @@ class CountryAreaMap extends AbstractModel
 
         if (array_key_exists("ContinentInnerCode",$param) and $param["ContinentInnerCode"] !== null) {
             $this->ContinentInnerCode = $param["ContinentInnerCode"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
         }
     }
 }

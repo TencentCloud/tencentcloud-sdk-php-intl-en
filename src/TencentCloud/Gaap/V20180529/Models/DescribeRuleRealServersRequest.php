@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) Set Forwarding rule ID
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
- * @method integer getLimit() Obtain Number of values to be returned. The default value is 20. Maximum is 1000.
- * @method void setLimit(integer $Limit) Set Number of values to be returned. The default value is 20. Maximum is 1000.
+ * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 1000.
+ * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 1000.
  */
 class DescribeRuleRealServersRequest extends AbstractModel
 {
@@ -40,14 +40,14 @@ class DescribeRuleRealServersRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of values to be returned. The default value is 20. Maximum is 1000.
+     * @var integer Number of returned results. Default value: 20. Maximum value: 1000.
      */
     public $Limit;
 
     /**
      * @param string $RuleId Forwarding rule ID
      * @param integer $Offset Offset. Default value: 0.
-     * @param integer $Limit Number of values to be returned. The default value is 20. Maximum is 1000.
+     * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 1000.
      */
     function __construct()
     {

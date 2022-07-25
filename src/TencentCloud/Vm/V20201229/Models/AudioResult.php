@@ -70,6 +70,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSubLabel(string $SubLabel) Set This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getRecognitionResults() Obtain List of recognized category labels
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRecognitionResults(array $RecognitionResults) Set List of recognized category labels
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AudioResult extends AbstractModel
 {
@@ -147,6 +151,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SubLabel;
 
     /**
+     * @var array List of recognized category labels
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RecognitionResults;
+
+    /**
      * @param integer $HitFlag This field is used to return whether the moderated content hit the moderation model. Valid values: 0 (**no**), 1 (**yes**).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Label This field is used to return the maliciousness tag in the detection result.<br>Returned values: **Normal**: normal; **Porn**: pornographic; **Abuse**: abusive; **Ad**: advertising; **Custom**: custom type of non-compliant content and other offensive, unsafe, or inappropriate types of content.
@@ -172,6 +182,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $RecognitionResults List of recognized category labels
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -247,6 +259,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("RecognitionResults",$param) and $param["RecognitionResults"] !== null) {
+            $this->RecognitionResults = [];
+            foreach ($param["RecognitionResults"] as $key => $value){
+                $obj = new RecognitionResult();
+                $obj->deserialize($value);
+                array_push($this->RecognitionResults, $obj);
+            }
         }
     }
 }

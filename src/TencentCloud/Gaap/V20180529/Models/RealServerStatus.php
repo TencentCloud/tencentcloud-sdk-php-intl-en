@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRealServerId() Obtain Origin server ID.
  * @method void setRealServerId(string $RealServerId) Set Origin server ID.
- * @method integer getBindStatus() Obtain 0: not bound, 1: bound to rule or listener.
- * @method void setBindStatus(integer $BindStatus) Set 0: not bound, 1: bound to rule or listener.
+ * @method integer getBindStatus() Obtain `0`: Not bound; `1`: Bound to rule or listener.
+ * @method void setBindStatus(integer $BindStatus) Set `0`: Not bound; `1`: Bound to rule or listener.
  * @method string getProxyId() Obtain ID of the connection bound to this origin server. This string is empty if they are not bound.
  * @method void setProxyId(string $ProxyId) Set ID of the connection bound to this origin server. This string is empty if they are not bound.
  * @method string getGroupId() Obtain ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGroupId(string $GroupId) Set ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RealServerStatus extends AbstractModel
 {
@@ -39,7 +39,7 @@ class RealServerStatus extends AbstractModel
     public $RealServerId;
 
     /**
-     * @var integer 0: not bound, 1: bound to rule or listener.
+     * @var integer `0`: Not bound; `1`: Bound to rule or listener.
      */
     public $BindStatus;
 
@@ -50,16 +50,16 @@ class RealServerStatus extends AbstractModel
 
     /**
      * @var string ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $GroupId;
 
     /**
      * @param string $RealServerId Origin server ID.
-     * @param integer $BindStatus 0: not bound, 1: bound to rule or listener.
+     * @param integer $BindStatus `0`: Not bound; `1`: Bound to rule or listener.
      * @param string $ProxyId ID of the connection bound to this origin server. This string is empty if they are not bound.
      * @param string $GroupId ID of the connection group bound to this origin server. This string is null if no connection groups are bound.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

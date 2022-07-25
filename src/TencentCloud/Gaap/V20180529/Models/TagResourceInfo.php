@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * Resource information of the tag
  *
  * @method string getResourceType() Obtain Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
  * @method void setResourceType(string $ResourceType) Set Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
- * @method string getResourceId() Obtain Resource ID
- * @method void setResourceId(string $ResourceId) Set Resource ID
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
+ * @method string getResourceId() Obtain Instance ID
+ * @method void setResourceId(string $ResourceId) Set Instance ID
  */
 class TagResourceInfo extends AbstractModel
 {
     /**
      * @var string Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
      */
     public $ResourceType;
 
     /**
-     * @var string Resource ID
+     * @var string Instance ID
      */
     public $ResourceId;
 
     /**
      * @param string $ResourceType Resource types:
-`Proxy`: connections;
-`ProxyGroup`: connection groups;
-`RealServer`: origin servers.
-     * @param string $ResourceId Resource ID
+`Proxy`: Connection
+`ProxyGroup`: Connection group
+`RealServer`: Origin server
+     * @param string $ResourceId Instance ID
      */
     function __construct()
     {

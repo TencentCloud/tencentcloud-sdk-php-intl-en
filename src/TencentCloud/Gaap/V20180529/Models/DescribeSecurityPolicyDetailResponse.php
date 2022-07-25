@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeSecurityPolicyDetail response structure.
  *
  * @method string getProxyId() Obtain Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProxyId(string $ProxyId) Set Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain Security policy status:
 BOUND (security policies enabled)
 UNBIND (security policies disabled)
@@ -47,7 +47,7 @@ class DescribeSecurityPolicyDetailResponse extends AbstractModel
 {
     /**
      * @var string Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyId;
 
@@ -82,7 +82,7 @@ UNBINDING (disabling security policies)
 
     /**
      * @param string $ProxyId Connection ID
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status Security policy status:
 BOUND (security policies enabled)
 UNBIND (security policies disabled)

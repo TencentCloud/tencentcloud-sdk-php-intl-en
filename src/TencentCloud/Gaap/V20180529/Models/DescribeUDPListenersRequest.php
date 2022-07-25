@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeUDPListeners request structure.
  *
- * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getProxyId() Obtain Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+ * @method void setProxyId(string $ProxyId) Set Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
  * @method string getListenerId() Obtain Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
  * @method void setListenerId(string $ListenerId) Set Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
  * @method string getListenerName() Obtain Filter condition. Exact query by listener names.
  * @method void setListenerName(string $ListenerName) Set Filter condition. Exact query by listener names.
  * @method integer getPort() Obtain Filter condition. Exact query by listener ports.
@@ -32,20 +36,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. The default value is 0.
  * @method integer getLimit() Obtain Quantity limit. The default value is 20.
  * @method void setLimit(integer $Limit) Set Quantity limit. The default value is 20.
- * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
- * @method void setGroupId(string $GroupId) Set Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+ * @method string getGroupId() Obtain Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
+ * @method void setGroupId(string $GroupId) Set Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
  * @method string getSearchValue() Obtain Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
  * @method void setSearchValue(string $SearchValue) Set Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
  */
 class DescribeUDPListenersRequest extends AbstractModel
 {
     /**
-     * @var string Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * @var string Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public $ProxyId;
 
     /**
      * @var string Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      */
     public $ListenerId;
 
@@ -70,7 +76,7 @@ class DescribeUDPListenersRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * @var string Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      */
     public $GroupId;
 
@@ -80,13 +86,15 @@ class DescribeUDPListenersRequest extends AbstractModel
     public $SearchValue;
 
     /**
-     * @param string $ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * @param string $ProxyId Filter condition that filters by connection ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      * @param string $ListenerId Filter condition. Exact query by listener IDs.
+When ProxyId is specified, the listener will be checked whether it belongs to the connection.
+When GroupId is specified, the listener will be checked whether it belongs to the connection group.
      * @param string $ListenerName Filter condition. Exact query by listener names.
      * @param integer $Port Filter condition. Exact query by listener ports.
      * @param integer $Offset Offset. The default value is 0.
      * @param integer $Limit Quantity limit. The default value is 20.
-     * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
+     * @param string $GroupId Filter condition that filters by connection group ID. You must specify at least one filter condition (ProxyId/GroupId/ListenerId), but ProxyId and GroupId cannot be set at the same time.
      * @param string $SearchValue Filter condition. It supports fuzzy query by ports or listener names. This parameter cannot be used with `ListenerName` or `Port`.
      */
     function __construct()

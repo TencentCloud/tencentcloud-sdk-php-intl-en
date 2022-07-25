@@ -27,15 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getProxyNum() Obtain Number of connections in connection group
  * @method void setProxyNum(integer $ProxyNum) Set Number of connections in connection group
  * @method integer getStatus() Obtain Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
  * @method void setStatus(integer $Status) Set Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
  * @method string getOwnerUin() Obtain Owner UIN
  * @method void setOwnerUin(string $OwnerUin) Set Owner UIN
  * @method string getCreateUin() Obtain Creation UIN
@@ -59,33 +61,33 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setTagSet(array $TagSet) Set Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPolicyId() Obtain Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyId(string $PolicyId) Set Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVersion() Obtain Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVersion(string $Version) Set Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getClientIPMethod() Obtain Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClientIPMethod(array $ClientIPMethod) Set Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -106,10 +108,11 @@ class ProxyGroupDetail extends AbstractModel
 
     /**
      * @var integer Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
      */
     public $Status;
 
@@ -162,39 +165,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PolicyId;
 
     /**
      * @var string Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Version;
 
     /**
-     * @var array Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var array Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ClientIPMethod;
 
     /**
      * @var string IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IPAddressVersion;
 
     /**
      * @var string Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PackageType;
 
     /**
      * @var integer Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Http3Supported;
 
@@ -203,10 +206,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $ProjectId Project ID
      * @param integer $ProxyNum Number of connections in connection group
      * @param integer $Status Connection group status:
-0: running normally;
-1: creating;
-4: terminating;
-11: migrating;
+`0`: Running normally
+`1`: Creating
+`4`: Terminating
+`11`: Migrating
+`12`: Deploying
      * @param string $OwnerUin Owner UIN
      * @param string $CreateUin Creation UIN
      * @param string $GroupName Connection name
@@ -219,19 +223,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $TagSet Tag list
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyId Security policy ID. This field exists if security policies are set.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Version Connection group version
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $ClientIPMethod Describes how the connection obtains client IPs. 0: TOA; 1: Proxy Protocol.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ClientIPMethod Describes how the connection obtains client IPs. `0`: TOA; `1`: Proxy Protocol.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (silver connection group), and `CrossBorder` (cross-MLC-border connection group).
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable;
-`1`: enable.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+`0`: Disable
+`1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
