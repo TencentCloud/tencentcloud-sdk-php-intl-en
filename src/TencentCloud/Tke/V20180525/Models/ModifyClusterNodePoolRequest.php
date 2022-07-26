@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Resource tag
  * @method integer getUnschedulable() Obtain Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
  * @method void setUnschedulable(integer $Unschedulable) Set Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
+ * @method boolean getDeletionProtection() Obtain Whether Deletion Protection is enabled
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $Unschedulable;
 
     /**
+     * @var boolean Whether Deletion Protection is enabled
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -128,6 +135,7 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param InstanceExtraArgs $ExtraArgs Node custom parameter
      * @param array $Tags Resource tag
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
+     * @param boolean $DeletionProtection Whether Deletion Protection is enabled
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("Unschedulable",$param) and $param["Unschedulable"] !== null) {
             $this->Unschedulable = $param["Unschedulable"];
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

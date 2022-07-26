@@ -66,6 +66,10 @@ The following conditions are required to use ipvs-bpf network mode:
  * @method void setBasePodNumber(integer $BasePodNumber) Set The basic number of Pods in custom mode
  * @method string getCiliumMode() Obtain Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
  * @method void setCiliumMode(string $CiliumMode) Set Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+ * @method boolean getIsDualStack() Obtain Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+ * @method void setIsDualStack(boolean $IsDualStack) Set Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+ * @method boolean getQGPUShareEnable() Obtain Whether to enable qGPU Sharing
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) Set Whether to enable qGPU Sharing
  */
 class ClusterAdvancedSettings extends AbstractModel
 {
@@ -161,6 +165,16 @@ The following conditions are required to use ipvs-bpf network mode:
     public $CiliumMode;
 
     /**
+     * @var boolean Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+     */
+    public $IsDualStack;
+
+    /**
+     * @var boolean Whether to enable qGPU Sharing
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @param boolean $IPVS Whether IPVS is enabled
      * @param boolean $AsEnabled Whether auto-scaling is enabled for nodes in the cluster (Enabling this function is not supported when you create a cluster)
      * @param string $ContainerRuntime Type of runtime component used by the cluster. The types include "docker" and "containerd". Default value: docker
@@ -184,6 +198,8 @@ The following conditions are required to use ipvs-bpf network mode:
      * @param boolean $EnableCustomizedPodCIDR Indicates whether to enable the custom mode for the node’s pod CIDR range
      * @param integer $BasePodNumber The basic number of Pods in custom mode
      * @param string $CiliumMode Specifies whether to enable Cilium. If it’s left empty, Cilium is not enabled. If `clusterIP` is passed in, it means to enable Cilium to support the clusterIP service type.
+     * @param boolean $IsDualStack Whether it is a dual-stack cluster in VPC-CNI mode. Default value: `false`, which indicates it is not a dual-stack cluster.
+     * @param boolean $QGPUShareEnable Whether to enable qGPU Sharing
      */
     function __construct()
     {
@@ -265,6 +281,14 @@ The following conditions are required to use ipvs-bpf network mode:
 
         if (array_key_exists("CiliumMode",$param) and $param["CiliumMode"] !== null) {
             $this->CiliumMode = $param["CiliumMode"];
+        }
+
+        if (array_key_exists("IsDualStack",$param) and $param["IsDualStack"] !== null) {
+            $this->IsDualStack = $param["IsDualStack"];
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
     }
 }

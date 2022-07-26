@@ -18,33 +18,26 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript response structure.
+ * DescribeECMInstances response structure.
  *
- * @method string getLink() Obtain Whether to download the link
- * @method void setLink(string $Link) Set Whether to download the link
- * @method string getToken() Obtain Whether to download the desired token
- * @method void setToken(string $Token) Set Whether to download the desired token
- * @method string getCommand() Obtain Whether to download the command
- * @method void setCommand(string $Command) Set Whether to download the command
+ * @method integer getTotalCount() Obtain Number of instances matched the condition
+ * @method void setTotalCount(integer $TotalCount) Set Number of instances matched the condition
+ * @method array getInstanceInfoSet() Obtain List of the returned instance information
+ * @method void setInstanceInfoSet(array $InstanceInfoSet) Set List of the returned instance information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DescribeECMInstancesResponse extends AbstractModel
 {
     /**
-     * @var string Whether to download the link
+     * @var integer Number of instances matched the condition
      */
-    public $Link;
+    public $TotalCount;
 
     /**
-     * @var string Whether to download the desired token
+     * @var array List of the returned instance information
      */
-    public $Token;
-
-    /**
-     * @var string Whether to download the command
-     */
-    public $Command;
+    public $InstanceInfoSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link Whether to download the link
-     * @param string $Token Whether to download the desired token
-     * @param string $Command Whether to download the command
+     * @param integer $TotalCount Number of instances matched the condition
+     * @param array $InstanceInfoSet List of the returned instance information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,16 +62,12 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists("InstanceInfoSet",$param) and $param["InstanceInfoSet"] !== null) {
+            $this->InstanceInfoSet = $param["InstanceInfoSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

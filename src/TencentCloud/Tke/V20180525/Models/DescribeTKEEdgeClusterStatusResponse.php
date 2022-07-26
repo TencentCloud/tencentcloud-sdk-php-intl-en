@@ -18,33 +18,26 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript response structure.
+ * DescribeTKEEdgeClusterStatus response structure.
  *
- * @method string getLink() Obtain Whether to download the link
- * @method void setLink(string $Link) Set Whether to download the link
- * @method string getToken() Obtain Whether to download the desired token
- * @method void setToken(string $Token) Set Whether to download the desired token
- * @method string getCommand() Obtain Whether to download the command
- * @method void setCommand(string $Command) Set Whether to download the command
+ * @method string getPhase() Obtain Current cluster status
+ * @method void setPhase(string $Phase) Set Current cluster status
+ * @method array getConditions() Obtain Array of cluster processes
+ * @method void setConditions(array $Conditions) Set Array of cluster processes
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DescribeTKEEdgeClusterStatusResponse extends AbstractModel
 {
     /**
-     * @var string Whether to download the link
+     * @var string Current cluster status
      */
-    public $Link;
+    public $Phase;
 
     /**
-     * @var string Whether to download the desired token
+     * @var array Array of cluster processes
      */
-    public $Token;
-
-    /**
-     * @var string Whether to download the command
-     */
-    public $Command;
+    public $Conditions;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link Whether to download the link
-     * @param string $Token Whether to download the desired token
-     * @param string $Command Whether to download the command
+     * @param string $Phase Current cluster status
+     * @param array $Conditions Array of cluster processes
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,16 +62,17 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
+        if (array_key_exists("Phase",$param) and $param["Phase"] !== null) {
+            $this->Phase = $param["Phase"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists("Conditions",$param) and $param["Conditions"] !== null) {
+            $this->Conditions = [];
+            foreach ($param["Conditions"] as $key => $value){
+                $obj = new ClusterCondition();
+                $obj->deserialize($value);
+                array_push($this->Conditions, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

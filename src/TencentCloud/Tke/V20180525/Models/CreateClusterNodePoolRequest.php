@@ -40,12 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContainerRuntime(string $ContainerRuntime) Set Node pool runtime type and version
  * @method string getRuntimeVersion() Obtain Runtime version
  * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
- * @method string getNodePoolOs() Obtain Operating system of the node pool
- * @method void setNodePoolOs(string $NodePoolOs) Set Operating system of the node pool
+ * @method string getNodePoolOs() Obtain Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
+ * @method void setNodePoolOs(string $NodePoolOs) Set Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
  * @method string getOsCustomizeType() Obtain Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method array getTags() Obtain Resource tag
  * @method void setTags(array $Tags) Set Resource tag
+ * @method boolean getDeletionProtection() Obtain Whether Deletion Protection is enabled
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
  */
 class CreateClusterNodePoolRequest extends AbstractModel
 {
@@ -100,7 +102,7 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $RuntimeVersion;
 
     /**
-     * @var string Operating system of the node pool
+     * @var string Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
      */
     public $NodePoolOs;
 
@@ -115,6 +117,11 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean Whether Deletion Protection is enabled
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $AutoScalingGroupPara AS group parameters
      * @param string $LaunchConfigurePara Running parameters
@@ -125,9 +132,10 @@ class CreateClusterNodePoolRequest extends AbstractModel
      * @param array $Taints Taints
      * @param string $ContainerRuntime Node pool runtime type and version
      * @param string $RuntimeVersion Runtime version
-     * @param string $NodePoolOs Operating system of the node pool
+     * @param string $NodePoolOs Node pool operating system (enter the image ID for a custom image, and enter the OS name for a public image)
      * @param string $OsCustomizeType Container image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
      * @param array $Tags Resource tag
+     * @param boolean $DeletionProtection Whether Deletion Protection is enabled
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ class CreateClusterNodePoolRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

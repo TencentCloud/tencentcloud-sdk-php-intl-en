@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTaskId() Obtain Request ID, i.e., the RequestId parameter returned by the API.
  * @method void setTaskId(string $TaskId) Set Request ID, i.e., the RequestId parameter returned by the API.
  * @method string getDealName() Obtain Order ID.
+Note: Either `TaskId` or `DealName` is required.
  * @method void setDealName(string $DealName) Set Order ID.
+Note: Either `TaskId` or `DealName` is required.
  */
 class DescribeTaskStatusRequest extends AbstractModel
 {
@@ -34,12 +36,14 @@ class DescribeTaskStatusRequest extends AbstractModel
 
     /**
      * @var string Order ID.
+Note: Either `TaskId` or `DealName` is required.
      */
     public $DealName;
 
     /**
      * @param string $TaskId Request ID, i.e., the RequestId parameter returned by the API.
      * @param string $DealName Order ID.
+Note: Either `TaskId` or `DealName` is required.
      */
     function __construct()
     {

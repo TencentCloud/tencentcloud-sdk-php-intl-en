@@ -76,6 +76,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Resource tag
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getDeletionProtection() Obtain Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class NodePool extends AbstractModel
 {
@@ -184,6 +188,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Tags;
 
     /**
+     * @var boolean Whether Deletion Protection is enabled
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DeletionProtection;
+
+    /**
      * @param string $NodePoolId Node pool ID
      * @param string $Name Node pool name
      * @param string $ClusterInstanceId Cluster instance ID
@@ -211,6 +221,8 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $UserScript Custom script
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param array $Tags Resource tag
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $DeletionProtection Whether Deletion Protection is enabled
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -316,6 +328,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
+            $this->DeletionProtection = $param["DeletionProtection"];
         }
     }
 }

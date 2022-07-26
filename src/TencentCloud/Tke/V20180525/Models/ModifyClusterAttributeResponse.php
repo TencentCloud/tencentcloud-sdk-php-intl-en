@@ -40,6 +40,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) Set Auto-upgrades cluster specification
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getQGPUShareEnable() Obtain Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) Set Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -76,6 +80,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $AutoUpgradeClusterLevel;
 
     /**
+     * @var boolean Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -91,6 +101,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel Auto-upgrades cluster specification
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $QGPUShareEnable Whether to enable qGPU Sharing
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -125,6 +137,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
             $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
             $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

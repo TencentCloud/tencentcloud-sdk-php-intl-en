@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterLevel(string $ClusterLevel) Set Cluster specification
  * @method AutoUpgradeClusterLevel getAutoUpgradeClusterLevel() Obtain Auto-upgrades cluster specification
  * @method void setAutoUpgradeClusterLevel(AutoUpgradeClusterLevel $AutoUpgradeClusterLevel) Set Auto-upgrades cluster specification
+ * @method boolean getQGPUShareEnable() Obtain Whether to enable qGPU Sharing
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) Set Whether to enable qGPU Sharing
  */
 class ModifyClusterAttributeRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyClusterAttributeRequest extends AbstractModel
     public $AutoUpgradeClusterLevel;
 
     /**
+     * @var boolean Whether to enable qGPU Sharing
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $ProjectId Project of the Cluster
      * @param string $ClusterName Cluster name
      * @param string $ClusterDesc Cluster description
      * @param string $ClusterLevel Cluster specification
      * @param AutoUpgradeClusterLevel $AutoUpgradeClusterLevel Auto-upgrades cluster specification
+     * @param boolean $QGPUShareEnable Whether to enable qGPU Sharing
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ModifyClusterAttributeRequest extends AbstractModel
         if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
             $this->AutoUpgradeClusterLevel = new AutoUpgradeClusterLevel();
             $this->AutoUpgradeClusterLevel->deserialize($param["AutoUpgradeClusterLevel"]);
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
     }
 }

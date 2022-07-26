@@ -18,33 +18,19 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript response structure.
+ * DescribeTKEEdgeExternalKubeconfig response structure.
  *
- * @method string getLink() Obtain Whether to download the link
- * @method void setLink(string $Link) Set Whether to download the link
- * @method string getToken() Obtain Whether to download the desired token
- * @method void setToken(string $Token) Set Whether to download the desired token
- * @method string getCommand() Obtain Whether to download the command
- * @method void setCommand(string $Command) Set Whether to download the command
+ * @method string getKubeconfig() Obtain Kubeconfig file content
+ * @method void setKubeconfig(string $Kubeconfig) Set Kubeconfig file content
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DescribeTKEEdgeExternalKubeconfigResponse extends AbstractModel
 {
     /**
-     * @var string Whether to download the link
+     * @var string Kubeconfig file content
      */
-    public $Link;
-
-    /**
-     * @var string Whether to download the desired token
-     */
-    public $Token;
-
-    /**
-     * @var string Whether to download the command
-     */
-    public $Command;
+    public $Kubeconfig;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +38,7 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link Whether to download the link
-     * @param string $Token Whether to download the desired token
-     * @param string $Command Whether to download the command
+     * @param string $Kubeconfig Kubeconfig file content
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,16 +54,8 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
-        }
-
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists("Kubeconfig",$param) and $param["Kubeconfig"] !== null) {
+            $this->Kubeconfig = $param["Kubeconfig"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -1,0 +1,177 @@
+<?php
+/*
+ * Copyright (c) 2017-2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *    http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+namespace TencentCloud\Tke\V20180525\Models;
+use TencentCloud\Common\AbstractModel;
+
+/**
+ * Edge compute cluster information
+ *
+ * @method string getClusterId() Obtain Cluster ID
+ * @method void setClusterId(string $ClusterId) Set Cluster ID
+ * @method string getClusterName() Obtain Cluster name
+ * @method void setClusterName(string $ClusterName) Set Cluster name
+ * @method string getVpcId() Obtain VPC ID
+ * @method void setVpcId(string $VpcId) Set VPC ID
+ * @method string getPodCIDR() Obtain Cluster Pod CIDR block
+ * @method void setPodCIDR(string $PodCIDR) Set Cluster Pod CIDR block
+ * @method string getServiceCIDR() Obtain Cluster service CIDR block
+ * @method void setServiceCIDR(string $ServiceCIDR) Set Cluster service CIDR block
+ * @method string getK8SVersion() Obtain 
+ * @method void setK8SVersion(string $K8SVersion) Set 
+ * @method string getStatus() Obtain Cluster status
+ * @method void setStatus(string $Status) Set Cluster status
+ * @method string getClusterDesc() Obtain Cluster description
+ * @method void setClusterDesc(string $ClusterDesc) Set Cluster description
+ * @method string getCreatedTime() Obtain Cluster creation time
+ * @method void setCreatedTime(string $CreatedTime) Set Cluster creation time
+ * @method string getEdgeClusterVersion() Obtain Edge cluster version
+ * @method void setEdgeClusterVersion(string $EdgeClusterVersion) Set Edge cluster version
+ * @method integer getMaxNodePodNum() Obtain Maximum number of Pods on the node
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setMaxNodePodNum(integer $MaxNodePodNum) Set Maximum number of Pods on the node
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ */
+class EdgeCluster extends AbstractModel
+{
+    /**
+     * @var string Cluster ID
+     */
+    public $ClusterId;
+
+    /**
+     * @var string Cluster name
+     */
+    public $ClusterName;
+
+    /**
+     * @var string VPC ID
+     */
+    public $VpcId;
+
+    /**
+     * @var string Cluster Pod CIDR block
+     */
+    public $PodCIDR;
+
+    /**
+     * @var string Cluster service CIDR block
+     */
+    public $ServiceCIDR;
+
+    /**
+     * @var string 
+     */
+    public $K8SVersion;
+
+    /**
+     * @var string Cluster status
+     */
+    public $Status;
+
+    /**
+     * @var string Cluster description
+     */
+    public $ClusterDesc;
+
+    /**
+     * @var string Cluster creation time
+     */
+    public $CreatedTime;
+
+    /**
+     * @var string Edge cluster version
+     */
+    public $EdgeClusterVersion;
+
+    /**
+     * @var integer Maximum number of Pods on the node
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $MaxNodePodNum;
+
+    /**
+     * @param string $ClusterId Cluster ID
+     * @param string $ClusterName Cluster name
+     * @param string $VpcId VPC ID
+     * @param string $PodCIDR Cluster Pod CIDR block
+     * @param string $ServiceCIDR Cluster service CIDR block
+     * @param string $K8SVersion 
+     * @param string $Status Cluster status
+     * @param string $ClusterDesc Cluster description
+     * @param string $CreatedTime Cluster creation time
+     * @param string $EdgeClusterVersion Edge cluster version
+     * @param integer $MaxNodePodNum Maximum number of Pods on the node
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    function __construct()
+    {
+
+    }
+
+    /**
+     * For internal only. DO NOT USE IT.
+     */
+    public function deserialize($param)
+    {
+        if ($param === null) {
+            return;
+        }
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("ClusterName",$param) and $param["ClusterName"] !== null) {
+            $this->ClusterName = $param["ClusterName"];
+        }
+
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("PodCIDR",$param) and $param["PodCIDR"] !== null) {
+            $this->PodCIDR = $param["PodCIDR"];
+        }
+
+        if (array_key_exists("ServiceCIDR",$param) and $param["ServiceCIDR"] !== null) {
+            $this->ServiceCIDR = $param["ServiceCIDR"];
+        }
+
+        if (array_key_exists("K8SVersion",$param) and $param["K8SVersion"] !== null) {
+            $this->K8SVersion = $param["K8SVersion"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("ClusterDesc",$param) and $param["ClusterDesc"] !== null) {
+            $this->ClusterDesc = $param["ClusterDesc"];
+        }
+
+        if (array_key_exists("CreatedTime",$param) and $param["CreatedTime"] !== null) {
+            $this->CreatedTime = $param["CreatedTime"];
+        }
+
+        if (array_key_exists("EdgeClusterVersion",$param) and $param["EdgeClusterVersion"] !== null) {
+            $this->EdgeClusterVersion = $param["EdgeClusterVersion"];
+        }
+
+        if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
+            $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        }
+    }
+}

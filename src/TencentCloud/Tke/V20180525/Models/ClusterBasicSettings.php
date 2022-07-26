@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Describes the basic configuration information of a cluster
  *
- * @method string getClusterOs() Obtain Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
- * @method void setClusterOs(string $ClusterOs) Set Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
+ * @method string getClusterOs() Obtain Cluster operating system. Public image (enter the image ID) and custom image (enter the image name) are supported. For details, see https://intl.cloud.tencent.com/document/product/457/68289?from_cn_redirect=1
+ * @method void setClusterOs(string $ClusterOs) Set Cluster operating system. Public image (enter the image ID) and custom image (enter the image name) are supported. For details, see https://intl.cloud.tencent.com/document/product/457/68289?from_cn_redirect=1
  * @method string getClusterVersion() Obtain Cluster version. The default value is 1.10.5.
  * @method void setClusterVersion(string $ClusterVersion) Set Cluster version. The default value is 1.10.5.
  * @method string getClusterName() Obtain Cluster name
@@ -48,7 +48,7 @@ use TencentCloud\Common\AbstractModel;
 class ClusterBasicSettings extends AbstractModel
 {
     /**
-     * @var string Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
+     * @var string Cluster operating system. Public image (enter the image ID) and custom image (enter the image name) are supported. For details, see https://intl.cloud.tencent.com/document/product/457/68289?from_cn_redirect=1
      */
     public $ClusterOs;
 
@@ -108,7 +108,7 @@ class ClusterBasicSettings extends AbstractModel
     public $AutoUpgradeClusterLevel;
 
     /**
-     * @param string $ClusterOs Cluster operating system. CentOS 7.2x86_64 or Ubuntu 16.04.1 LTSx86_64. Default value: Ubuntu 16.04.1 LTSx86_64
+     * @param string $ClusterOs Cluster operating system. Public image (enter the image ID) and custom image (enter the image name) are supported. For details, see https://intl.cloud.tencent.com/document/product/457/68289?from_cn_redirect=1
      * @param string $ClusterVersion Cluster version. The default value is 1.10.5.
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description

@@ -86,6 +86,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getAttrFlags() Obtain Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAttrFlags(array $AttrFlags) Set Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Listener extends AbstractModel
 {
@@ -195,6 +199,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $DeregisterTargetRst;
 
     /**
+     * @var array Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AttrFlags;
+
+    /**
      * @param string $ListenerId CLB listener ID
      * @param string $Protocol Listener protocol
      * @param integer $Port Listener port
@@ -228,6 +238,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $AttrFlags Attribute of listener
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -320,6 +332,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("DeregisterTargetRst",$param) and $param["DeregisterTargetRst"] !== null) {
             $this->DeregisterTargetRst = $param["DeregisterTargetRst"];
+        }
+
+        if (array_key_exists("AttrFlags",$param) and $param["AttrFlags"] !== null) {
+            $this->AttrFlags = $param["AttrFlags"];
         }
     }
 }

@@ -18,33 +18,26 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTKEEdgeScript response structure.
+ * DescribeTKEEdgeClusters response structure.
  *
- * @method string getLink() Obtain Whether to download the link
- * @method void setLink(string $Link) Set Whether to download the link
- * @method string getToken() Obtain Whether to download the desired token
- * @method void setToken(string $Token) Set Whether to download the desired token
- * @method string getCommand() Obtain Whether to download the command
- * @method void setCommand(string $Command) Set Whether to download the command
+ * @method integer getTotalCount() Obtain Total number of clusters
+ * @method void setTotalCount(integer $TotalCount) Set Total number of clusters
+ * @method array getClusters() Obtain Cluster information list
+ * @method void setClusters(array $Clusters) Set Cluster information list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeTKEEdgeScriptResponse extends AbstractModel
+class DescribeTKEEdgeClustersResponse extends AbstractModel
 {
     /**
-     * @var string Whether to download the link
+     * @var integer Total number of clusters
      */
-    public $Link;
+    public $TotalCount;
 
     /**
-     * @var string Whether to download the desired token
+     * @var array Cluster information list
      */
-    public $Token;
-
-    /**
-     * @var string Whether to download the command
-     */
-    public $Command;
+    public $Clusters;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Link Whether to download the link
-     * @param string $Token Whether to download the desired token
-     * @param string $Command Whether to download the command
+     * @param integer $TotalCount Total number of clusters
+     * @param array $Clusters Cluster information list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,16 +62,17 @@ class DescribeTKEEdgeScriptResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Link",$param) and $param["Link"] !== null) {
-            $this->Link = $param["Link"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Token",$param) and $param["Token"] !== null) {
-            $this->Token = $param["Token"];
-        }
-
-        if (array_key_exists("Command",$param) and $param["Command"] !== null) {
-            $this->Command = $param["Command"];
+        if (array_key_exists("Clusters",$param) and $param["Clusters"] !== null) {
+            $this->Clusters = [];
+            foreach ($param["Clusters"] as $key => $value){
+                $obj = new EdgeCluster();
+                $obj->deserialize($value);
+                array_push($this->Clusters, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -78,6 +78,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid value is obtained.
  * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set The target cluster model for auto-upgrade
 Note: this field may return null, indicating that no valid value is obtained.
+ * @method boolean getQGPUShareEnable() Obtain Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQGPUShareEnable(boolean $QGPUShareEnable) Set Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -195,6 +199,12 @@ Note: this field may return null, indicating that no valid value is obtained.
     public $AutoUpgradeClusterLevel;
 
     /**
+     * @var boolean Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $QGPUShareEnable;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -224,6 +234,8 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $AutoUpgradeClusterLevel The target cluster model for auto-upgrade
 Note: this field may return null, indicating that no valid value is obtained.
+     * @param boolean $QGPUShareEnable Whether to enable qGPU Sharing
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -326,6 +338,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 
         if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
             $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
+            $this->QGPUShareEnable = $param["QGPUShareEnable"];
         }
     }
 }
