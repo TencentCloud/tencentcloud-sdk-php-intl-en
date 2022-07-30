@@ -72,6 +72,10 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
  * @method void setTemplateId(string $TemplateId) Set ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
  * @method boolean getDryRun() Obtain false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
  * @method void setDryRun(boolean $DryRun) Set false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
+ * @method string getProductVersion() Obtain Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+ * @method void setProductVersion(string $ProductVersion) Set Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+ * @method string getRedisClusterId() Obtain Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+ * @method void setRedisClusterId(string $RedisClusterId) Set Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
  */
 class CreateInstancesRequest extends AbstractModel
 {
@@ -194,6 +198,16 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
     public $DryRun;
 
     /**
+     * @var string Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     */
+    public $ProductVersion;
+
+    /**
+     * @var string Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
+     */
+    public $RedisClusterId;
+
+    /**
      * @param integer $TypeId Instance type. Valid values: `2` (Redis 2.8 Memory Edition in standard architecture), `3` (CKV 3.2 Memory Edition in standard architecture), `4` (CKV 3.2 Memory Edition in cluster architecture), `6` (Redis 4.0 Memory Edition in standard architecture), `7` (Redis 4.0 Memory Edition in cluster architecture), `8` (Redis 5.0 Memory Edition in standard architecture), `9` (Redis 5.0 Memory Edition in cluster architecture).
      * @param integer $MemSize Memory capacity in MB, which must be a multiple of 1,024. It is subject to the purchasable specifications returned by the [DescribeProductInfo API](https://intl.cloud.tencent.com/document/api/239/30600?from_cn_redirect=1).
 If `TypeId` is the standard architecture, `MemSize` indicates the total memory capacity of the instance; if `TypeId` is the cluster architecture, `MemSize` indicates the memory capacity per shard.
@@ -220,6 +234,8 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
      * @param string $ZoneName Name of the AZ where the instance resides. For more information, see [Regions and AZs](https://intl.cloud.tencent.com/document/product/239/4106?from_cn_redirect=1).
      * @param string $TemplateId ID of the parameter template applied to the created instance. If this parameter is left blank, the default parameter template will be applied.
      * @param boolean $DryRun false: send a normal request and create an instance directly after the check is passed (default value); true: send a check request without creating an instance.
+     * @param string $ProductVersion Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). Default value: `local` (local disk edition)
+     * @param string $RedisClusterId Dedicated cluster ID, which is required when `ProductVersion` is "cdc".
      */
     function __construct()
     {
@@ -334,6 +350,14 @@ If the instance `TypeId` is CKV 3.2, the password can contain 8–30 letters and
 
         if (array_key_exists("DryRun",$param) and $param["DryRun"] !== null) {
             $this->DryRun = $param["DryRun"];
+        }
+
+        if (array_key_exists("ProductVersion",$param) and $param["ProductVersion"] !== null) {
+            $this->ProductVersion = $param["ProductVersion"];
+        }
+
+        if (array_key_exists("RedisClusterId",$param) and $param["RedisClusterId"] !== null) {
+            $this->RedisClusterId = $param["RedisClusterId"];
         }
     }
 }
