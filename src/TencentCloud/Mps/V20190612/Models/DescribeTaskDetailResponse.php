@@ -20,12 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeTaskDetail response structure.
  *
- * @method string getTaskType() Obtain Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
- * @method void setTaskType(string $TaskType) Set Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+ * @method string getTaskType() Obtain The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
+ * @method void setTaskType(string $TaskType) Set The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: Waiting;</li>
 <li>PROCESSING: Processing;</li>
@@ -40,12 +44,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getFinishTime() Obtain End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setFinishTime(string $FinishTime) Set End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method EditMediaTask getEditMediaTask() Obtain Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+ * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
  * @method WorkflowTask getWorkflowTask() Obtain Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWorkflowTask(WorkflowTask $WorkflowTask) Set Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method EditMediaTask getEditMediaTask() Obtain Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
- * @method void setEditMediaTask(EditMediaTask $EditMediaTask) Set Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
  * @method LiveStreamProcessTask getLiveStreamProcessTask() Obtain Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLiveStreamProcessTask(LiveStreamProcessTask $LiveStreamProcessTask) Set Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -62,15 +66,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method string getExtInfo() Obtain Extended information field, used in specific scenarios.
  * @method void setExtInfo(string $ExtInfo) Set Extended information field, used in specific scenarios.
+ * @method ScheduleTask getScheduleTask() Obtain The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScheduleTask(ScheduleTask $ScheduleTask) Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
-     * @var string Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+     * @var string The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public $TaskType;
 
@@ -98,15 +108,15 @@ class DescribeTaskDetailResponse extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
+     */
+    public $EditMediaTask;
+
+    /**
      * @var WorkflowTask Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $WorkflowTask;
-
-    /**
-     * @var EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
-     */
-    public $EditMediaTask;
 
     /**
      * @var LiveStreamProcessTask Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
@@ -141,14 +151,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExtInfo;
 
     /**
+     * @var ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ScheduleTask;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $TaskType Task type. Currently valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
-<li>LiveStreamProcessTask: Live stream processing task.</li>
+     * @param string $TaskType The task type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>LiveStreamProcessTask</li>
+<li>ScheduleTask (scheme)</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: Waiting;</li>
 <li>PROCESSING: Processing;</li>
@@ -156,9 +174,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $CreateTime Creation time of a task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $FinishTime End time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param EditMediaTask $EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      * @param WorkflowTask $WorkflowTask Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param EditMediaTask $EditMediaTask Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      * @param LiveStreamProcessTask $LiveStreamProcessTask Information of a live stream processing task. This field has a value only when `TaskType` is `LiveStreamProcessTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param TaskNotifyConfig $TaskNotifyConfig Event notification information of a task.
@@ -167,6 +185,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param string $ExtInfo Extended information field, used in specific scenarios.
+     * @param ScheduleTask $ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -202,14 +222,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->FinishTime = $param["FinishTime"];
         }
 
-        if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
-            $this->WorkflowTask = new WorkflowTask();
-            $this->WorkflowTask->deserialize($param["WorkflowTask"]);
-        }
-
         if (array_key_exists("EditMediaTask",$param) and $param["EditMediaTask"] !== null) {
             $this->EditMediaTask = new EditMediaTask();
             $this->EditMediaTask->deserialize($param["EditMediaTask"]);
+        }
+
+        if (array_key_exists("WorkflowTask",$param) and $param["WorkflowTask"] !== null) {
+            $this->WorkflowTask = new WorkflowTask();
+            $this->WorkflowTask->deserialize($param["WorkflowTask"]);
         }
 
         if (array_key_exists("LiveStreamProcessTask",$param) and $param["LiveStreamProcessTask"] !== null) {
@@ -236,6 +256,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ExtInfo",$param) and $param["ExtInfo"] !== null) {
             $this->ExtInfo = $param["ExtInfo"];
+        }
+
+        if (array_key_exists("ScheduleTask",$param) and $param["ScheduleTask"] !== null) {
+            $this->ScheduleTask = new ScheduleTask();
+            $this->ScheduleTask->deserialize($param["ScheduleTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

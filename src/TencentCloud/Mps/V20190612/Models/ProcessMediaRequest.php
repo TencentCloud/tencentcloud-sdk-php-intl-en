@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+ * @method integer getScheduleId() Obtain The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+ * @method void setScheduleId(integer $ScheduleId) Set The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -101,6 +109,14 @@ class ProcessMediaRequest extends AbstractModel
     public $SessionContext;
 
     /**
+     * @var integer The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     */
+    public $ScheduleId;
+
+    /**
      * @param MediaInputInfo $InputInfo The information of the file to process.
      * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
@@ -112,6 +128,10 @@ class ProcessMediaRequest extends AbstractModel
      * @param integer $TasksPriority Task flow priority. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @param integer $ScheduleId The scheme ID.
+Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
+2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
+3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
      */
     function __construct()
     {
@@ -175,6 +195,10 @@ class ProcessMediaRequest extends AbstractModel
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
+            $this->ScheduleId = $param["ScheduleId"];
         }
     }
 }

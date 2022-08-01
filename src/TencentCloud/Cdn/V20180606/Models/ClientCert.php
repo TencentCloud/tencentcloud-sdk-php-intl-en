@@ -20,70 +20,70 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTPS client certificate configuration
  *
- * @method string getCertificate() Obtain Client Certificate
+ * @method string getCertificate() Obtain Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setCertificate(string $Certificate) Set Client Certificate
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCertificate(string $Certificate) Set Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getCertName() Obtain Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCertName(string $CertName) Set Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getExpireTime() Obtain Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getDeployTime() Obtain Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setDeployTime(string $DeployTime) Set Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ClientCert extends AbstractModel
 {
     /**
-     * @var string Client Certificate
+     * @var string Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Certificate;
 
     /**
      * @var string Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CertName;
 
     /**
      * @var string Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ExpireTime;
 
     /**
      * @var string Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $DeployTime;
 
     /**
-     * @param string $Certificate Client Certificate
+     * @param string $Certificate Client certificate
 PEM format, requires Base64 encoding.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CertName Client certificate name
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $ExpireTime Certificate expiration time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $DeployTime Certificate issuance time
 When this is used as an input parameter, it can be left blank.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

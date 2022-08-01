@@ -29,67 +29,67 @@ use TencentCloud\Common\AbstractModel;
  * @method string getCname() Obtain CNAME address of domain name
  * @method void setCname(string $Cname) Set CNAME address of domain name
  * @method string getStatus() Obtain Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
  * @method void setStatus(string $Status) Set Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
  * @method integer getProjectId() Obtain Project ID, which can be viewed on the Tencent Cloud project management page
  * @method void setProjectId(integer $ProjectId) Set Project ID, which can be viewed on the Tencent Cloud project management page
  * @method string getServiceType() Obtain Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
  * @method void setServiceType(string $ServiceType) Set Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
- * @method string getCreateTime() Obtain Domain name creation time
- * @method void setCreateTime(string $CreateTime) Set Domain name creation time
- * @method string getUpdateTime() Obtain Last modified time of domain name
- * @method void setUpdateTime(string $UpdateTime) Set Last modified time of domain name
- * @method Origin getOrigin() Obtain Origin server configuration details
- * @method void setOrigin(Origin $Origin) Set Origin server configuration details
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+ * @method string getCreateTime() Obtain Domain name creation time.
+ * @method void setCreateTime(string $CreateTime) Set Domain name creation time.
+ * @method string getUpdateTime() Obtain Domain name update time.
+ * @method void setUpdateTime(string $UpdateTime) Set Domain name update time.
+ * @method Origin getOrigin() Obtain Origin server configuration details.
+ * @method void setOrigin(Origin $Origin) Set Origin server configuration details.
  * @method string getDisable() Obtain Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
  * @method void setDisable(string $Disable) Set Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
  * @method string getArea() Obtain Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
  * @method void setArea(string $Area) Set Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
  * @method string getReadonly() Obtain Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
  * @method void setReadonly(string $Readonly) Set Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
  * @method string getProduct() Obtain Product of the domain name, either `cdn` or `ecdn`.
  * @method void setProduct(string $Product) Set Product of the domain name, either `cdn` or `ecdn`.
  * @method string getParentHost() Obtain Primary domain name
@@ -119,10 +119,10 @@ class BriefDomain extends AbstractModel
 
     /**
      * @var string Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
      */
     public $Status;
 
@@ -133,54 +133,54 @@ offline: disabled
 
     /**
      * @var string Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
      */
     public $ServiceType;
 
     /**
-     * @var string Domain name creation time
+     * @var string Domain name creation time.
      */
     public $CreateTime;
 
     /**
-     * @var string Last modified time of domain name
+     * @var string Domain name update time.
      */
     public $UpdateTime;
 
     /**
-     * @var Origin Origin server configuration details
+     * @var Origin Origin server configuration details.
      */
     public $Origin;
 
     /**
      * @var string Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
      */
     public $Disable;
 
     /**
      * @var string Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
      */
     public $Area;
 
     /**
      * @var string Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
      */
     public $Readonly;
 
@@ -200,36 +200,36 @@ global: locked globally
      * @param string $Domain Acceleration domain name
      * @param string $Cname CNAME address of domain name
      * @param string $Status Acceleration service status
-rejected: the domain name is rejected due to expiration/deregistration of its ICP filing
-processing: deploying
-online: activated
-offline: disabled
+`rejected`: The domain name is rejected due to expiration/deregistration of its ICP filing
+`processing`: Deploying
+`online`: Activated
+`offline`: Disabled
      * @param integer $ProjectId Project ID, which can be viewed on the Tencent Cloud project management page
      * @param string $ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming VOD acceleration
-     * @param string $CreateTime Domain name creation time
-     * @param string $UpdateTime Last modified time of domain name
-     * @param Origin $Origin Origin server configuration details
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+     * @param string $CreateTime Domain name creation time.
+     * @param string $UpdateTime Domain name update time.
+     * @param Origin $Origin Origin server configuration details.
      * @param string $Disable Domain name block status
-normal: normal
-overdue: the domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
-malicious: the acceleration service has been forcibly disabled due to detection of malicious behavior.
-ddos: the acceleration service has been disabled due to large-scale DDoS attacks to the domain name
-idle: no operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
-unlicensed: the acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
-capping: the configured upper limit for bandwidth has been reached.
-readonly: the domain name has a special configuration and has been locked.
+`normal`: Normal
+`overdue`: The domain name has been disabled due to account arrears. The acceleration service can be resumed after the account is topped up.
+`malicious`: The acceleration service has been forcibly disabled due to detection of malicious behavior.
+`ddos`: The acceleration service has been disabled due to large-scale DDoS attacks to the domain name
+`idle`: No operations or data has been detected for more than 90 days. The domain name is determined to be inactive which automatically disables the acceleration service. You can restart the service.
+`unlicensed`: The acceleration service has been automatically disabled as the domain name has no ICP filing or its ICP filing is deregistered. Service can be resumed after an ICP filing is obtained.
+`capping`: The configured upper limit for bandwidth has been reached.
+`readonly`: The domain name has a special configuration and has been locked.
      * @param string $Area Acceleration region
-mainland: acceleration in Mainland China
-overseas: acceleration outside Mainland China
-global: global acceleration
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
      * @param string $Readonly Domain name lock status
-normal: not locked
-mainland: locked in Mainland China
-overseas: locked outside Mainland China
-global: locked globally
+`normal`: Not locked
+`mainland`: Locked in the Chinese mainland
+overseas: Locked outside the Chinese mainland
+global: Locked globally
      * @param string $Product Product of the domain name, either `cdn` or `ecdn`.
      * @param string $ParentHost Primary domain name
      */

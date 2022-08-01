@@ -18,36 +18,40 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Access authentication for QiNiu Cloud Kodo origin
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getAccessKey() Obtain 
- * @method void setAccessKey(string $AccessKey) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
+ * @method string getSwitch() Obtain Switch. Valid values: `on`, `off`.
+ * @method void setSwitch(string $Switch) Set Switch. Valid values: `on`, `off`.
+ * @method string getAccessKey() Obtain Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAccessKey(string $AccessKey) Set Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSecretKey() Obtain Key
+ * @method void setSecretKey(string $SecretKey) Set Key
  */
 class QnPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Switch. Valid values: `on`, `off`.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AccessKey;
 
     /**
-     * @var string 
+     * @var string Key
      */
     public $SecretKey;
 
     /**
-     * @param string $Switch 
-     * @param string $AccessKey 
-     * @param string $SecretKey 
+     * @param string $Switch Switch. Valid values: `on`, `off`.
+     * @param string $AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SecretKey Key
      */
     function __construct()
     {

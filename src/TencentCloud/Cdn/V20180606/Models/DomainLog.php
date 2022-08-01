@@ -27,11 +27,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getLogPath() Obtain Log package download link
  * @method void setLogPath(string $LogPath) Set Log package download link
  * @method string getArea() Obtain Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
  * @method void setArea(string $Area) Set Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
  * @method string getLogName() Obtain Log package filename
  * @method void setLogName(string $LogName) Set Log package filename
  */
@@ -54,8 +54,8 @@ class DomainLog extends AbstractModel
 
     /**
      * @var string Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
      */
     public $Area;
 
@@ -69,8 +69,8 @@ class DomainLog extends AbstractModel
      * @param string $EndTime End time of the log package
      * @param string $LogPath Log package download link
      * @param string $Area Acceleration region corresponding to the log package
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
      * @param string $LogName Log package filename
      */
     function __construct()

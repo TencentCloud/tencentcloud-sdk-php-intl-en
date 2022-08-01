@@ -21,121 +21,121 @@ use TencentCloud\Common\AbstractModel;
  * Path-based cache key configuration
  *
  * @method array getRulePaths() Obtain Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setRulePaths(array $RulePaths) Set Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleType() Obtain Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
- * @method string getFullUrlCache() Obtain Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
- * @method void setFullUrlCache(string $FullUrlCache) Set Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getFullUrlCache() Obtain Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreCase() Obtain Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIgnoreCase(string $IgnoreCase) Set Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method RuleQueryString getQueryString() Obtain Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQueryString(RuleQueryString $QueryString) Set Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleTag() Obtain Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleTag(string $RuleTag) Set Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class KeyRule extends AbstractModel
 {
     /**
      * @var array Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
+Note: this field may return `null`, indicating that no valid value can be obtained.
      */
     public $RulePaths;
 
     /**
      * @var string Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
     /**
-     * @var string Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
-Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @var string Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FullUrlCache;
 
     /**
      * @var string Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreCase;
 
     /**
      * @var RuleQueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $QueryString;
 
     /**
      * @var string Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleTag;
 
     /**
      * @param array $RulePaths Content for each CacheType:
-For `file`, enter the suffix, such as jpg, txt.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `index`, enter a backslash (/).
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $RuleType Rule types:
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-`index`: home page
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $FullUrlCache Whether full-path cache is enaled
-`on`: enables full-path cache (i.e., disables ignore query string)
-`off`: disables full-path cache (i.e., enables ignore query string)
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $RuleType Rule types:
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`index`: home page
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $FullUrlCache Whether to enable full-path cache
+`on`: Enable full-path cache (i.e., disable Ignore Query String).
+`off`: Disable full-path cache (i.e., enable Ignore Query String).
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param RuleQueryString $QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RuleTag Path cache key tag, the value "user" is passed.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -18,37 +18,37 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Custom HTTPS forwarding configuration
+ * Custom HTTPS configuration for origin-pull
  *
  * @method string getCustomTlsStatus() Obtain Custom TLS data switch
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCustomTlsStatus(string $CustomTlsStatus) Set Custom TLS data switch
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getTlsVersion() Obtain Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+ * @method array getTlsVersion() Obtain TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTlsVersion(array $TlsVersion) Set Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+ * @method void setTlsVersion(array $TlsVersion) Set TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCipher() Obtain Custom encryption suite
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCipher(string $Cipher) Set Custom encryption suite
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getVerifyOriginType() Obtain Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+ * @method string getVerifyOriginType() Obtain Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setVerifyOriginType(string $VerifyOriginType) Set Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+ * @method void setVerifyOriginType(string $VerifyOriginType) Set Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method ServerCert getCertInfo() Obtain Information of the origin-pull certificate
+ * @method ServerCert getCertInfo() Obtain Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCertInfo(ServerCert $CertInfo) Set Information of the origin-pull certificate
+ * @method void setCertInfo(ServerCert $CertInfo) Set Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method ClientCert getOriginCertInfo() Obtain Information of the origin server certificate
+ * @method ClientCert getOriginCertInfo() Obtain Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setOriginCertInfo(ClientCert $OriginCertInfo) Set Information of the origin server certificate
+ * @method void setOriginCertInfo(ClientCert $OriginCertInfo) Set Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class AdvanceHttps extends AbstractModel
@@ -60,7 +60,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CustomTlsStatus;
 
     /**
-     * @var array Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * @var array TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $TlsVersion;
@@ -72,22 +72,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Cipher;
 
     /**
-     * @var string Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * @var string Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $VerifyOriginType;
 
     /**
-     * @var ServerCert Information of the origin-pull certificate
+     * @var ServerCert Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CertInfo;
 
     /**
-     * @var ClientCert Information of the origin server certificate
+     * @var ClientCert Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $OriginCertInfo;
@@ -95,18 +95,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * @param string $CustomTlsStatus Custom TLS data switch
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $TlsVersion Specifies the TLS version. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
+     * @param array $TlsVersion TLS version settings. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Cipher Custom encryption suite
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $VerifyOriginType Origin authentication type
-`off`: disable authentication
-`oneWay`: authenticate the origin 
-`twoWay`: two-way authentication
+     * @param string $VerifyOriginType Origin-pull verification status
+`off`: Disables origin-pull verification
+`oneWay`: Only verify the origin
+`twoWay`: Enables two-way origin-pull verification
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ServerCert $CertInfo Information of the origin-pull certificate
+     * @param ServerCert $CertInfo Configuration information of the origin-pull certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param ClientCert $OriginCertInfo Information of the origin server certificate
+     * @param ClientCert $OriginCertInfo Configuration information of the origin server certificate
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

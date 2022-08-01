@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * Old configuration compatibility check
  *
  * @method integer getCode() Obtain Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCode(integer $Code) Set Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Compatibility extends AbstractModel
 {
     /**
      * @var integer Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Code;
 
     /**
      * @param integer $Code Compatibility flag status code.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

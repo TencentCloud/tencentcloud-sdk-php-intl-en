@@ -23,37 +23,37 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getCacheTime() Obtain Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getCompareMaxAge() Obtain Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCompareMaxAge(string $CompareMaxAge) Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreCacheControl() Obtain Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreSetCookie() Obtain Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
 `on`: Ignore; do not cache the header and body.
 `off`: Do not ignore; follow the custom cache rules of cache nodes.
@@ -71,32 +71,32 @@ class CacheConfigCache extends AbstractModel
      * @var string Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var integer Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheTime;
 
     /**
      * @var string Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CompareMaxAge;
 
     /**
      * @var string Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreCacheControl;
 
@@ -113,20 +113,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $Switch Cache configuration switch
 on: enable
 off: disable
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreCacheControl Force cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
 `on`: Ignore; do not cache the header and body.
 `off`: Do not ignore; follow the custom cache rules of cache nodes.

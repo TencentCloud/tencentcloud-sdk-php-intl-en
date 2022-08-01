@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * Single link downstream speed limit configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method array getCappingRules() Obtain Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCappingRules(array $CappingRules) Set Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DownstreamCapping extends AbstractModel
 {
     /**
      * @var string Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
      * @var array Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CappingRules;
 
     /**
      * @param string $Switch Downstream speed configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param array $CappingRules Downstream speed limiting rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

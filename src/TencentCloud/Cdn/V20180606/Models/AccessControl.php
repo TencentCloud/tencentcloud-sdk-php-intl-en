@@ -23,13 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Whether to enable request header and request URL access control. Valid values: on, off
  * @method void setSwitch(string $Switch) Set Whether to enable request header and request URL access control. Valid values: on, off
  * @method array getAccessControlRules() Obtain Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessControlRules(array $AccessControlRules) Set Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getReturnCode() Obtain Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setReturnCode(integer $ReturnCode) Set Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getReturnCode() Obtain Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setReturnCode(integer $ReturnCode) Set Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AccessControl extends AbstractModel
 {
@@ -40,22 +40,22 @@ class AccessControl extends AbstractModel
 
     /**
      * @var array Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AccessControlRules;
 
     /**
-     * @var integer Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ReturnCode;
 
     /**
      * @param string $Switch Whether to enable request header and request URL access control. Valid values: on, off
      * @param array $AccessControlRules Request header and request URL access rule
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $ReturnCode Returned status code
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ReturnCode Returns status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

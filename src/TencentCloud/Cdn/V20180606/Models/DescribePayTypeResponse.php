@@ -42,32 +42,32 @@ When you change a daily billing mode to another, and there is network usage on t
 `day`: Daily
 `month`: Monthly 
 `hour`: Hourly 
- * @method string getStatType() Obtain `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
- * @method void setStatType(string $StatType) Set `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
- * @method string getRegionType() Obtain Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
- * @method void setRegionType(string $RegionType) Set Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
+ * @method string getStatType() Obtain `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
+ * @method void setStatType(string $StatType) Set `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
+ * @method string getRegionType() Obtain Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
+ * @method void setRegionType(string $RegionType) Set Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
  * @method string getCurrentPayType() Obtain The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
  * @method void setCurrentPayType(string $CurrentPayType) Set The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -95,26 +95,26 @@ When you change a daily billing mode to another, and there is network usage on t
     public $BillingCycle;
 
     /**
-     * @var string `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
+     * @var string `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
      */
     public $StatType;
 
     /**
-     * @var string Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
+     * @var string Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
      */
     public $RegionType;
 
     /**
      * @var string The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
      */
@@ -137,18 +137,18 @@ When you change a daily billing mode to another, and there is network usage on t
 `day`: Daily
 `month`: Monthly 
 `hour`: Hourly 
-     * @param string $StatType `monthMax`: billed by the monthly average of daily peak traffic (monthly settlement)
-`day95`: billed by the daily 95th percentile bandwidth (monthly settlement)
-`month95`: billed by the monthly 95th percentile bandwidth (monthly settlement)
-`sum`: billed by the total traffic/total requests (daily or monthly settlement)
-`max`: billed by the peak bandwidth (daily settlement)
-     * @param string $RegionType Billing method outside Mainland China:
-`all`: unified billing for all regions
-`multiple`: separate billing for different regions
+     * @param string $StatType `monthMax`: Billed by the monthly average of daily peak traffic (monthly settlement)
+`day95`: Billed by the daily 95th percentile bandwidth (monthly settlement)
+`month95`: Billed by the monthly 95th percentile bandwidth (monthly settlement)
+`sum`: Billed by the total traffic/total requests (daily or monthly settlement)
+`max`: Billed by the peak bandwidth (daily settlement)
+     * @param string $RegionType Billing method for regions outside the Chinese mainland:
+`all`: Unified billing for all regions
+`multiple`: Region-specific billing
      * @param string $CurrentPayType The current billing mode in effect:
-`flux`: Bill by traffic
-`bandwidth`: Bill by bandwidth
-`request`: Bill by the number of requests
+`flux`: Billed by traffic
+`bandwidth`: Billed by bandwidth
+`request`: Billed by the number of requests
 `flux_sep`: Disused field
 `bandwidth_sep`: Disused field
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.

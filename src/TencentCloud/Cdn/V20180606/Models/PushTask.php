@@ -25,31 +25,31 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() Obtain Prefetched URL
  * @method void setUrl(string $Url) Set Prefetched URL
  * @method string getStatus() Obtain Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
  * @method void setStatus(string $Status) Set Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
  * @method integer getPercent() Obtain Prefetch progress in percentage
  * @method void setPercent(integer $Percent) Set Prefetch progress in percentage
  * @method string getCreateTime() Obtain Prefetch task submission time
  * @method void setCreateTime(string $CreateTime) Set Prefetch task submission time
  * @method string getArea() Obtain Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
  * @method void setArea(string $Area) Set Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
  * @method string getUpdateTime() Obtain Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class PushTask extends AbstractModel
 {
@@ -65,10 +65,10 @@ class PushTask extends AbstractModel
 
     /**
      * @var string Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public $Status;
 
@@ -84,15 +84,15 @@ class PushTask extends AbstractModel
 
     /**
      * @var string Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public $Area;
 
     /**
      * @var string Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UpdateTime;
 
@@ -100,18 +100,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $TaskId Prefetch task ID
      * @param string $Url Prefetched URL
      * @param string $Status Prefetch task status
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      * @param integer $Percent Prefetch progress in percentage
      * @param string $CreateTime Prefetch task submission time
      * @param string $Area Prefetch region
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Within the Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      * @param string $UpdateTime Prefetch task update time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

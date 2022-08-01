@@ -20,54 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Path cache/no cache configuration.
  *
- * @method string getSwitch() Obtain No cache configuration switch
-on: enable
-off: disable
+ * @method string getSwitch() Obtain No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
- * @method void setSwitch(string $Switch) Set No cache configuration switch
-on: enable
-off: disable
+ * @method void setSwitch(string $Switch) Set No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
  * @method string getRevalidate() Obtain Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRevalidate(string $Revalidate) Set Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheConfigNoCache extends AbstractModel
 {
     /**
-     * @var string No cache configuration switch
-on: enable
-off: disable
+     * @var string No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
      */
     public $Switch;
 
     /**
      * @var string Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Revalidate;
 
     /**
-     * @param string $Switch No cache configuration switch
-on: enable
-off: disable
+     * @param string $Switch No-cache configuration switch
+`on`: Enable
+`off`: Disable
 Note: this field may return null, indicating that no valid value is obtained.
      * @param string $Revalidate Always forwards to the origin server for verification
-on: enable
-off: disable
-This is disabled by default.
-Note: this field may return null, indicating that no valid value is obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -21,37 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * (Disused) Advanced cache validity configuration. You can use `RuleCache` instead.
  *
  * @method array getCacheRules() Obtain Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCacheRules(array $CacheRules) Set Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getIgnoreCacheControl() Obtain Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIgnoreSetCookie() Obtain Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getIgnoreSetCookie() Obtain Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AdvancedCache extends AbstractModel
 {
     /**
      * @var array Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CacheRules;
 
@@ -61,33 +61,33 @@ on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreCacheControl;
 
     /**
-     * @var string Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+     * @var string Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreSetCookie;
 
     /**
      * @param array $CacheRules Cache expiration rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $IgnoreCacheControl Forced cache configuration
 on: enabled
 off: disabled
 When this is enabled, if the origin server returns no-cache, no-store headers, node caching will still be performed according to the cache expiration rules.
 This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IgnoreSetCookie Whether to cache the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
-on: Enable; do not cache the header and body.
-off: Disable; follow the custom cache rules of cache nodes.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $IgnoreSetCookie Whether to ignore the header and body on cache nodes if the origin server returns the header `Set-Cookie`.
+`on`: Ignore; do not cache the header and body.
+`off`: Do not ignore; follow the custom cache rules of cache nodes.
 It is disabled by default.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

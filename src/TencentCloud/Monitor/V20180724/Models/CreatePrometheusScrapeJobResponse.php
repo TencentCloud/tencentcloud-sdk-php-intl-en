@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusScrapeJob response structure.
  *
- * @method string getJobId() Obtain 
- * @method void setJobId(string $JobId) Set 
+ * @method string getJobId() Obtain ID of a successfully created scrape task.
+ * @method void setJobId(string $JobId) Set ID of a successfully created scrape task.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreatePrometheusScrapeJobResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string ID of a successfully created scrape task.
      */
     public $JobId;
 
@@ -38,7 +38,7 @@ class CreatePrometheusScrapeJobResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $JobId 
+     * @param string $JobId ID of a successfully created scrape task.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

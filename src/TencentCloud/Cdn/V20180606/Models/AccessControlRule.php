@@ -22,64 +22,64 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleType() Obtain requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleContent() Obtain Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleContent(string $RuleContent) Set Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRegex() Obtain on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRegex(string $Regex) Set on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleHeader() Obtain This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleHeader(string $RuleHeader) Set This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AccessControlRule extends AbstractModel
 {
     /**
      * @var string requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
     /**
      * @var string Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleContent;
 
     /**
      * @var string on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Regex;
 
     /**
      * @var string This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleHeader;
 
     /**
      * @param string $RuleType requestHeader: access control over request header
 url: access control over access URL
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RuleContent Blocked content
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Regex on: regular match
 off: exact match
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RuleHeader This parameter is required only if `RuleType` is `requestHeader`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

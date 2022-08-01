@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusAgent response structure.
  *
- * @method string getAgentId() Obtain 
- * @method void setAgentId(string $AgentId) Set 
+ * @method string getAgentId() Obtain ID of a successfully created agent.
+ * @method void setAgentId(string $AgentId) Set ID of a successfully created agent.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreatePrometheusAgentResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string ID of a successfully created agent.
      */
     public $AgentId;
 
@@ -38,7 +38,7 @@ class CreatePrometheusAgentResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AgentId 
+     * @param string $AgentId ID of a successfully created agent.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

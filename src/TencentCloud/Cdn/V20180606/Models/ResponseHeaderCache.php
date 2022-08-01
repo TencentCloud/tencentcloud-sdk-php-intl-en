@@ -21,25 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Origin server header cache configuration. This is enabled by default and caches all the header information.
  *
  * @method string getSwitch() Obtain Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  */
 class ResponseHeaderCache extends AbstractModel
 {
     /**
      * @var string Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
      * @param string $Switch Origin server header cache switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

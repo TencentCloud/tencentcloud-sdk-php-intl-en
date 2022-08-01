@@ -38,6 +38,8 @@ They represent weighted round robin and least connections, respectively. Default
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method integer getSniSwitch() Obtain Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
  * @method void setSniSwitch(integer $SniSwitch) Set Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+ * @method string getTargetType() Obtain Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+ * @method void setTargetType(string $TargetType) Set Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
  * @method integer getKeepaliveEnable() Obtain Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
  * @method void setKeepaliveEnable(integer $KeepaliveEnable) Set Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
  * @method boolean getDeregisterTargetRst() Obtain Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
@@ -89,6 +91,11 @@ They represent weighted round robin and least connections, respectively. Default
     public $SniSwitch;
 
     /**
+     * @var string Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
+     */
+    public $TargetType;
+
+    /**
      * @var integer Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      */
     public $KeepaliveEnable;
@@ -113,6 +120,7 @@ They represent weighted round robin and least connections, respectively. Default
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
+     * @param string $TargetType Target backend type. `NODE`: A single node; `TARGETGROUP`: A target group.
      * @param integer $KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
      * @param string $SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
@@ -162,6 +170,10 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("SniSwitch",$param) and $param["SniSwitch"] !== null) {
             $this->SniSwitch = $param["SniSwitch"];
+        }
+
+        if (array_key_exists("TargetType",$param) and $param["TargetType"] !== null) {
+            $this->TargetType = $param["TargetType"];
         }
 
         if (array_key_exists("KeepaliveEnable",$param) and $param["KeepaliveEnable"] !== null) {

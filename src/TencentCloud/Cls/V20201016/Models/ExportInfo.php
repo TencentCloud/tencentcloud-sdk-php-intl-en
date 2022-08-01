@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFormat(string $Format) Set Log export format
  * @method integer getCount() Obtain Number of logs to be exported
  * @method void setCount(integer $Count) Set Number of logs to be exported
- * @method string getStatus() Obtain Log download status. Valid values: `Processing`: exporting; `Complete`: completed; `Failed`: failed; `Expired`: expired (3-day validity period).
- * @method void setStatus(string $Status) Set Log download status. Valid values: `Processing`: exporting; `Complete`: completed; `Failed`: failed; `Expired`: expired (3-day validity period).
+ * @method string getStatus() Obtain Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
+ * @method void setStatus(string $Status) Set Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
  * @method integer getFrom() Obtain Log export start time
  * @method void setFrom(integer $From) Set Log export start time
  * @method integer getTo() Obtain Log export end time
@@ -90,7 +90,7 @@ class ExportInfo extends AbstractModel
     public $Count;
 
     /**
-     * @var string Log download status. Valid values: `Processing`: exporting; `Complete`: completed; `Failed`: failed; `Expired`: expired (3-day validity period).
+     * @var string Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
      */
     public $Status;
 
@@ -123,7 +123,7 @@ class ExportInfo extends AbstractModel
      * @param string $Order Log export time sorting
      * @param string $Format Log export format
      * @param integer $Count Number of logs to be exported
-     * @param string $Status Log download status. Valid values: `Processing`: exporting; `Complete`: completed; `Failed`: failed; `Expired`: expired (3-day validity period).
+     * @param string $Status Log download status. Valid values: `Processing`, `Completed`, `Failed`, `Expired` (three-day validity period), and `Queuing`.
      * @param integer $From Log export start time
      * @param integer $To Log export end time
      * @param string $CosPath Log export path

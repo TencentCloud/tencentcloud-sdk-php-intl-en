@@ -23,43 +23,43 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFilterType() Obtain IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getFilters() Obtain IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilters(array $Filters) Set IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return `null`, indicating that no valid value is obtained.
+`all`: Effective for all files
+`file`: Effective for specified file suffixes
+`directory`: Effective for specified paths
+`path`: Effective for specified absolute paths
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return `null`, indicating that no valid value is obtained.
+`all`: Effective for all files
+`file`: Effective for specified file suffixes
+`directory`: Effective for specified paths
+`path`: Effective for specified absolute paths
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getRulePaths() Obtain Content for each RuleType:
 For `all`, enter an asterisk (*).
 For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:
 For `all`, enter an asterisk (*).
 For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class IpFilterPathRule extends AbstractModel
 {
@@ -67,7 +67,7 @@ class IpFilterPathRule extends AbstractModel
      * @var string IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FilterType;
 
@@ -75,17 +75,17 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @var array IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Filters;
 
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return `null`, indicating that no valid value is obtained.
+`all`: Effective for all files
+`file`: Effective for specified file suffixes
+`directory`: Effective for specified paths
+`path`: Effective for specified absolute paths
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
@@ -95,7 +95,7 @@ For `all`, enter an asterisk (*).
 For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RulePaths;
 
@@ -103,23 +103,23 @@ Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $FilterType IP blocklist/allowlist type
 `whitelist`: allowlist IPs
 `blacklist`: blocklist IPs
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $Filters IP blocklist/allowlist list
 Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
 Up to 50 allowlists or blocklists can be entered.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return `null`, indicating that no valid value is obtained.
+`all`: Effective for all files
+`file`: Effective for specified file suffixes
+`directory`: Effective for specified paths
+`path`: Effective for specified absolute paths
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $RulePaths Content for each RuleType:
 For `all`, enter an asterisk (*).
 For `file`, enter the suffix, such as jpg, txt.
 For `directory`, enter the path, such as /xxx/test/.
 For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

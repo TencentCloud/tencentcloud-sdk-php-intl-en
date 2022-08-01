@@ -21,89 +21,89 @@ use TencentCloud\Common\AbstractModel;
  * Advanced cache configuration rules
  *
  * @method string getCacheType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheType(string $CacheType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getCacheContents() Obtain Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheContents(array $CacheContents) Set Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getCacheTime() Obtain Cache expiration time
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AdvanceCacheRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheType;
 
     /**
      * @var array Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheContents;
 
     /**
      * @var integer Cache expiration time
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheTime;
 
     /**
      * @param string $CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `default`: the cache rules when the origin server has not returned max-age
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $CacheContents Content for each CacheType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `default`, enter "no max-age".
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $CacheTime Cache expiration time
 Unit: second. The maximum value is 365 days.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

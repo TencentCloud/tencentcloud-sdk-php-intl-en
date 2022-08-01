@@ -120,6 +120,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period
  * @method string getInstanceType() Obtain Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
  * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+ * @method array getCrossRegions() Obtain The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+ * @method void setCrossRegions(array $CrossRegions) Set The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+ * @method string getCrossBackupEnabled() Obtain Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+ * @method void setCrossBackupEnabled(string $CrossBackupEnabled) Set Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+ * @method integer getCrossBackupSaveDays() Obtain The retention period of cross-region backup. Default value: 7 days
+ * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) Set The retention period of cross-region backup. Default value: 7 days
+ * @method string getDnsPodDomain() Obtain 
+ * @method void setDnsPodDomain(string $DnsPodDomain) Set 
+ * @method integer getTgwWanVPort() Obtain 
+ * @method void setTgwWanVPort(integer $TgwWanVPort) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -346,6 +356,31 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $InstanceType;
 
     /**
+     * @var array The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+     */
+    public $CrossRegions;
+
+    /**
+     * @var string Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+     */
+    public $CrossBackupEnabled;
+
+    /**
+     * @var integer The retention period of cross-region backup. Default value: 7 days
+     */
+    public $CrossBackupSaveDays;
+
+    /**
+     * @var string 
+     */
+    public $DnsPodDomain;
+
+    /**
+     * @var integer 
+     */
+    public $TgwWanVPort;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -396,6 +431,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $BackupCycleType Backup cycle type. Valid values: `daily`, `weekly`, `monthly`.
      * @param integer $BackupSaveDays Data (log) backup retention period
      * @param string $InstanceType Instance type. Valid values: `HA` (high-availability), `RO` (read-only), `SI` (basic edition), `BI` (business intelligence service).
+     * @param array $CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
+     * @param string $CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
+     * @param integer $CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
+     * @param string $DnsPodDomain 
+     * @param integer $TgwWanVPort 
      */
     function __construct()
     {
@@ -585,6 +625,26 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("CrossRegions",$param) and $param["CrossRegions"] !== null) {
+            $this->CrossRegions = $param["CrossRegions"];
+        }
+
+        if (array_key_exists("CrossBackupEnabled",$param) and $param["CrossBackupEnabled"] !== null) {
+            $this->CrossBackupEnabled = $param["CrossBackupEnabled"];
+        }
+
+        if (array_key_exists("CrossBackupSaveDays",$param) and $param["CrossBackupSaveDays"] !== null) {
+            $this->CrossBackupSaveDays = $param["CrossBackupSaveDays"];
+        }
+
+        if (array_key_exists("DnsPodDomain",$param) and $param["DnsPodDomain"] !== null) {
+            $this->DnsPodDomain = $param["DnsPodDomain"];
+        }
+
+        if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
+            $this->TgwWanVPort = $param["TgwWanVPort"];
         }
     }
 }

@@ -44,6 +44,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Paging offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method string getTranscodeType() Obtain The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+ * @method void setTranscodeType(string $TranscodeType) Set The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
  */
 class DescribeTranscodeTemplatesRequest extends AbstractModel
 {
@@ -84,6 +94,15 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
+     */
+    public $TranscodeType;
+
+    /**
      * @param array $Definitions Unique ID filter of transcoding templates. Array length limit: 100.
      * @param string $Type Template type filter. Valid values:
 <li>Preset: Preset template;</li>
@@ -96,6 +115,11 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 <li>TEHD: TESHD template.</li>
      * @param integer $Offset Paging offset. Default value: 0.
      * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param string $TranscodeType The template type (replacing `TEHDType`). Valid values:
+<li>Common: Common transcoding template</li>
+<li>TEHD: TESHD template</li>
+<li>Enhance: Audio/Video enhancement template.</li>
+This parameter is left empty by default, which indicates to return all types of templates.
      */
     function __construct()
     {
@@ -132,6 +156,10 @@ class DescribeTranscodeTemplatesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TranscodeType",$param) and $param["TranscodeType"] !== null) {
+            $this->TranscodeType = $param["TranscodeType"];
         }
     }
 }

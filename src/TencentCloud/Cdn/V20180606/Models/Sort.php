@@ -28,8 +28,8 @@ Default value: createTime.
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
 Default value: createTime.
- * @method string getSequence() Obtain `asc` or `desc`. Default: `desc`.
- * @method void setSequence(string $Sequence) Set `asc` or `desc`. Default: `desc`.
+ * @method string getSequence() Obtain asc/desc. Default value: desc.
+ * @method void setSequence(string $Sequence) Set asc/desc. Default value: desc.
  */
 class Sort extends AbstractModel
 {
@@ -42,7 +42,7 @@ Default value: createTime.
     public $Key;
 
     /**
-     * @var string `asc` or `desc`. Default: `desc`.
+     * @var string asc/desc. Default value: desc.
      */
     public $Sequence;
 
@@ -51,7 +51,7 @@ Default value: createTime.
 `createTime`: domain name creation time.
 `certExpireTime`: certificate expiration time.
 Default value: createTime.
-     * @param string $Sequence `asc` or `desc`. Default: `desc`.
+     * @param string $Sequence asc/desc. Default value: desc.
      */
     function __construct()
     {

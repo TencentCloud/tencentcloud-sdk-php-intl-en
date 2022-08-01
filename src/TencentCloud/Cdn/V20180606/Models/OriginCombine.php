@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Merging pull requests configurations
+ * Merging pull requests configuration item
  *
  * @method string getSwitch() Obtain Whether to enable the merging pull requests feature. Valid values: `on` and `off`.
  * @method void setSwitch(string $Switch) Set Whether to enable the merging pull requests feature. Valid values: `on` and `off`.

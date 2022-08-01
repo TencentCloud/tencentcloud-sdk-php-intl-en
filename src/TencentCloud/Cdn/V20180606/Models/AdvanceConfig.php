@@ -18,44 +18,44 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Advanced configuration set
+ * Advanced configuration settings
  *
  * @method string getName() Obtain Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setName(string $Name) Set Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getValue() Obtain Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setValue(string $Value) Set Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AdvanceConfig extends AbstractModel
 {
     /**
      * @var string Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Name;
 
     /**
-     * @var string Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Name Advanced configuration name
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Value Whether advanced configuration is supported:
-`on`: support
-`off`: do not support
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Value Whether to support advanced configuration
+`on`: Supported
+`off`: Not supported
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

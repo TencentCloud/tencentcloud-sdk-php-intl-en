@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ParseNotification response structure.
  *
- * @method string getEventType() Obtain Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
- * @method void setEventType(string $EventType) Set Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+ * @method string getEventType() Obtain The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
+ * @method void setEventType(string $EventType) Set The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
  * @method WorkflowTask getWorkflowTaskEvent() Obtain Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWorkflowTaskEvent(WorkflowTask $WorkflowTaskEvent) Set Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
@@ -34,14 +38,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+ * @method ScheduleTask getScheduleTaskEvent() Obtain The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setScheduleTaskEvent(ScheduleTask $ScheduleTaskEvent) Set The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ParseNotificationResponse extends AbstractModel
 {
     /**
-     * @var string Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+     * @var string The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
      */
     public $EventType;
 
@@ -67,18 +77,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SessionContext;
 
     /**
+     * @var ScheduleTask The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ScheduleTaskEvent;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $EventType Supported event type. Valid values:
-<li>WorkflowTask: Video workflow processing task.</li>
+     * @param string $EventType The event type. Valid values:
+<li>WorkflowTask</li>
+<li>EditMediaTask</li>
+<li>ScheduleTask (scheme)</li>
      * @param WorkflowTask $WorkflowTaskEvent Information of a video processing task. This field has a value only when `TaskType` is `WorkflowTask`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param EditMediaTask $EditMediaTaskEvent Video editing task information. This field has a value only when `TaskType` is `EditMediaTask`.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @param ScheduleTask $ScheduleTaskEvent The information of a scheme. This parameter is valid only if `TaskType` is `ScheduleTask`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -114,6 +134,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
             $this->SessionContext = $param["SessionContext"];
+        }
+
+        if (array_key_exists("ScheduleTaskEvent",$param) and $param["ScheduleTaskEvent"] !== null) {
+            $this->ScheduleTaskEvent = new ScheduleTask();
+            $this->ScheduleTaskEvent->deserialize($param["ScheduleTaskEvent"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -18,48 +18,48 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `ImageOptimization` configuration
+ * Image optimization configuration
  *
  * @method WebpAdapter getWebpAdapter() Obtain `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setWebpAdapter(WebpAdapter $WebpAdapter) Set `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method TpgAdapter getTpgAdapter() Obtain `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTpgAdapter(TpgAdapter $TpgAdapter) Set `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method GuetzliAdapter getGuetzliAdapter() Obtain `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setGuetzliAdapter(GuetzliAdapter $GuetzliAdapter) Set `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ImageOptimization extends AbstractModel
 {
     /**
      * @var WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $WebpAdapter;
 
     /**
      * @var TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TpgAdapter;
 
     /**
      * @var GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $GuetzliAdapter;
 
     /**
      * @param WebpAdapter $WebpAdapter `WebpAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TpgAdapter $TpgAdapter `TpgAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param GuetzliAdapter $GuetzliAdapter `GuetzliAdapter` configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

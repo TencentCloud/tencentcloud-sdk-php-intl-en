@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeUrlViolations response structure.
  *
  * @method array getUrlRecordList() Obtain Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setUrlRecordList(array $UrlRecordList) Set Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getTotalCount() Obtain Total number of records, which is used for pagination.
  * @method void setTotalCount(integer $TotalCount) Set Total number of records, which is used for pagination.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -33,7 +33,7 @@ class DescribeUrlViolationsResponse extends AbstractModel
 {
     /**
      * @var array Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UrlRecordList;
 
@@ -49,7 +49,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $UrlRecordList Details of URLs in violation
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $TotalCount Total number of records, which is used for pagination.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

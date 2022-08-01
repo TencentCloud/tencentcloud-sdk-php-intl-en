@@ -21,109 +21,109 @@ use TencentCloud\Common\AbstractModel;
  * Cache key configuration (Ignore Query String configuration)
  *
  * @method string getFullUrlCache() Obtain Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
  * @method void setFullUrlCache(string $FullUrlCache) Set Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
- * @method string getIgnoreCase() Obtain Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIgnoreCase(string $IgnoreCase) Set Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
+ * @method string getIgnoreCase() Obtain Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setIgnoreCase(string $IgnoreCase) Set Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method QueryStringKey getQueryString() Obtain Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQueryString(QueryStringKey $QueryString) Set Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method CookieKey getCookie() Obtain Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCookie(CookieKey $Cookie) Set Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method HeaderKey getHeader() Obtain Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHeader(HeaderKey $Header) Set Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method CacheTagKey getCacheTag() Obtain Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheTag(CacheTagKey $CacheTag) Set Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method SchemeKey getScheme() Obtain Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setScheme(SchemeKey $Scheme) Set Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getKeyRules() Obtain Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setKeyRules(array $KeyRules) Set Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getKeyRules() Obtain Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setKeyRules(array $KeyRules) Set Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheKey extends AbstractModel
 {
     /**
      * @var string Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
      */
     public $FullUrlCache;
 
     /**
-     * @var string Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreCase;
 
     /**
      * @var QueryStringKey Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $QueryString;
 
     /**
      * @var CookieKey Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Cookie;
 
     /**
      * @var HeaderKey Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Header;
 
     /**
      * @var CacheTagKey Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheTag;
 
     /**
      * @var SchemeKey Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Scheme;
 
     /**
-     * @var array Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var array Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $KeyRules;
 
     /**
      * @param string $FullUrlCache Whether to enable full-path cache
-`on`: enables full-path cache (i.e., disables Ignore Query String)
-`off`: disables full-path cache (i.e., enables Ignore Query String)
-     * @param string $IgnoreCase Whether caches are case insensitive
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable full-path cache (i.e., disable Ignore Query String)
+`off`: Disable full-path cache (i.e., enable Ignore Query String)
+     * @param string $IgnoreCase Specifies whether the cache key is case sensitive
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param QueryStringKey $QueryString Request parameter contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CookieKey $Cookie Cookie contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param HeaderKey $Header Request header contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param CacheTagKey $CacheTag Custom string contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param SchemeKey $Scheme Request protocol contained in `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $KeyRules Path-based cache key configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $KeyRules Path-specific cache key configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

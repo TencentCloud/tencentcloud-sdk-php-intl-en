@@ -20,58 +20,58 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Details of the blocked URLs
  *
- * @method string getStatus() Obtain Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStatus() Obtain Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setStatus(string $Status) Set Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRealUrl() Obtain Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRealUrl(string $RealUrl) Set Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getCreateTime() Obtain Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain Update time
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getUpdateTime() Obtain Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class UrlRecord extends AbstractModel
 {
     /**
-     * @var string Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Status;
 
     /**
      * @var string Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RealUrl;
 
     /**
      * @var string Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UpdateTime;
 
     /**
-     * @param string $Status Status (disable: blocked; enable: unblocked)
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Status Status. `disable`: Blocked; `enable`: Unblocked.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RealUrl Corresponding URL
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CreateTime Creation time
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime Update time
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $UpdateTime Update time.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

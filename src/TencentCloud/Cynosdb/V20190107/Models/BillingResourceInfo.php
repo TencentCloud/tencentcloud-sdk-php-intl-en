@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
+ * @method string getDealName() Obtain Order ID
+ * @method void setDealName(string $DealName) Set Order ID
  */
 class BillingResourceInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class BillingResourceInfo extends AbstractModel
     public $InstanceIds;
 
     /**
+     * @var string Order ID
+     */
+    public $DealName;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $InstanceIds Instance ID list
+     * @param string $DealName Order ID
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class BillingResourceInfo extends AbstractModel
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
+            $this->DealName = $param["DealName"];
         }
     }
 }

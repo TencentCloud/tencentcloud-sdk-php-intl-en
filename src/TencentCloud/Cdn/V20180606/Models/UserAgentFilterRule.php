@@ -18,76 +18,76 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `UserAgent` blocklist/allowlist rule configuration
+ * `UserAgent` blacklist/whitelist rule configuration
  *
  * @method string getRuleType() Obtain Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getRulePaths() Obtain Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRulePaths(array $RulePaths) Set Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getUserAgents() Obtain `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setUserAgents(array $UserAgents) Set `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getFilterType() Obtain blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterType(string $FilterType) Set blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getFilterType() Obtain Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFilterType(string $FilterType) Set Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class UserAgentFilterRule extends AbstractModel
 {
     /**
      * @var string Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
     /**
      * @var array Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RulePaths;
 
     /**
      * @var array `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UserAgents;
 
     /**
-     * @var string blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FilterType;
 
     /**
      * @param string $RuleType Effective access path type
-all: all access paths are effective
-file: effective by file extension
-directory: effective by directory
-path: effective by full access path
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: All access paths are effective
+`file`: Effective by file extension
+`directory`: Effective by directory
+`path`: Effective by full access path
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $RulePaths Effective access paths
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $UserAgents `UserAgent` list
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $FilterType blocklist or allowlist. Valid values: blacklist, whitelist
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $FilterType Blocklist or allowlist. Valid values: `blacklist`, `whitelist`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

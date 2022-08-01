@@ -36,8 +36,8 @@ You must specify either a task ID or a starting time for your query.
 You must specify either a task ID or a starting time for your query.
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20
  * @method string getKeyword() Obtain You can filter the results by domain name or a complete URL beginning with `http(s)://`
  * @method void setKeyword(string $Keyword) Set You can filter the results by domain name or a complete URL beginning with `http(s)://`
  * @method string getStatus() Obtain Specifies a task state for your query:
@@ -88,7 +88,7 @@ You must specify either a task ID or a starting time for your query.
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 20
+     * @var integer Limit on paginated queries. Default value: 20
      */
     public $Limit;
 
@@ -122,7 +122,7 @@ You must specify either a task ID or a starting time for your query.
      * @param string $TaskId Specifies a task ID when you want to query by task ID.
 You must specify either a task ID or a starting time for your query.
      * @param integer $Offset Offset for paginated queries. Default value: 0
-     * @param integer $Limit Limit on paged queries. Default value: 20
+     * @param integer $Limit Limit on paginated queries. Default value: 20
      * @param string $Keyword You can filter the results by domain name or a complete URL beginning with `http(s)://`
      * @param string $Status Specifies a task state for your query:
 `fail`: purge failed

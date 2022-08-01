@@ -29,13 +29,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getAction() Obtain Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
  * @method void setAction(string $Action) Set Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
  * @method string getRedirectUrl() Obtain Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRedirectUrl(string $RedirectUrl) Set Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BotJavaScript extends AbstractModel
 {
@@ -61,13 +61,13 @@ class BotJavaScript extends AbstractModel
 
     /**
      * @var string Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RedirectUrl;
 
     /**
      * @var string Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
 
@@ -77,9 +77,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $RuleValue Rule value. Valid values: `html` and `htm`.
      * @param string $Action Action. Valid values: `monitor`, `intercept`, `redirect`, and `captcha`.
      * @param string $RedirectUrl Redirection target page
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

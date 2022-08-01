@@ -18,44 +18,56 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ *  Access authentication for Huawei Cloud OBS origin
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getAccessKey() Obtain 
- * @method void setAccessKey(string $AccessKey) Set 
- * @method string getSecretKey() Obtain 
- * @method void setSecretKey(string $SecretKey) Set 
- * @method string getBucket() Obtain bucketname
- * @method void setBucket(string $Bucket) Set bucketname
+ * @method string getSwitch() Obtain Whether to enable access authentication. Valid values: `on`, `off`.
+ * @method void setSwitch(string $Switch) Set Whether to enable access authentication. Valid values: `on`, `off`.
+ * @method string getAccessKey() Obtain Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAccessKey(string $AccessKey) Set Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getSecretKey() Obtain Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSecretKey(string $SecretKey) Set Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getBucket() Obtain BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setBucket(string $Bucket) Set BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class HwPrivateAccess extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable access authentication. Valid values: `on`, `off`.
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AccessKey;
 
     /**
-     * @var string 
+     * @var string Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SecretKey;
 
     /**
-     * @var string bucketname
+     * @var string BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Bucket;
 
     /**
-     * @param string $Switch 
-     * @param string $AccessKey 
-     * @param string $SecretKey 
-     * @param string $Bucket bucketname
+     * @param string $Switch Whether to enable access authentication. Valid values: `on`, `off`.
+     * @param string $AccessKey Access ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $SecretKey Key
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

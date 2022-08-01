@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * A part of `CacheKey`
  *
  * @method string getSwitch() Obtain Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SchemeKey extends AbstractModel
 {
     /**
      * @var string Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @param string $Switch Whether to use the scheme as part of the cache key. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

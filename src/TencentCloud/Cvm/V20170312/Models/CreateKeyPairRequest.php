@@ -30,6 +30,8 @@ You can query the project IDs in two ways:
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
+ * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a key pair.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a key pair.
  */
 class CreateKeyPairRequest extends AbstractModel
 {
@@ -47,11 +49,17 @@ You can query the project IDs in two ways:
     public $ProjectId;
 
     /**
+     * @var array Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $KeyName Name of the key pair, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      * @param integer $ProjectId The ID of the project to which the new key pair belongs.
 You can query the project IDs in two ways:
 <li>Query the project IDs in the project list.
 <li>Call `DescribeProject` and look for `projectId` in the response.
+     * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ You can query the project IDs in two ways:
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

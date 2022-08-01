@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Whether to enable offline cache
+ * Offline cache feature status switch.
  *
  * @method string getSwitch() Obtain Whether to enable offline cache. Valid values: `on` and `off`.
  * @method void setSwitch(string $Switch) Set Whether to enable offline cache. Valid values: `on` and `off`.

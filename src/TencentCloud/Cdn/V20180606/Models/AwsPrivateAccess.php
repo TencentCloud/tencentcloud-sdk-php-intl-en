@@ -23,13 +23,21 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSwitch() Obtain Switch, which can be set to on or off.
  * @method void setSwitch(string $Switch) Set Switch, which can be set to on or off.
  * @method string getAccessKey() Obtain Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAccessKey(string $AccessKey) Set Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getSecretKey() Obtain Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSecretKey(string $SecretKey) Set Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getRegion() Obtain Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRegion(string $Region) Set Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getBucket() Obtain BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setBucket(string $Bucket) Set BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AwsPrivateAccess extends AbstractModel
 {
@@ -40,22 +48,38 @@ class AwsPrivateAccess extends AbstractModel
 
     /**
      * @var string Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AccessKey;
 
     /**
      * @var string Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SecretKey;
 
     /**
+     * @var string Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Region;
+
+    /**
+     * @var string BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Bucket;
+
+    /**
      * @param string $Switch Switch, which can be set to on or off.
      * @param string $AccessKey Access ID.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $SecretKey Key.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Region Region.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Bucket BucketName
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -80,6 +104,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SecretKey",$param) and $param["SecretKey"] !== null) {
             $this->SecretKey = $param["SecretKey"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Bucket",$param) and $param["Bucket"] !== null) {
+            $this->Bucket = $param["Bucket"];
         }
     }
 }

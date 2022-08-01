@@ -21,77 +21,77 @@ use TencentCloud\Common\AbstractModel;
  * Timestamp hotlink protection configuration
  *
  * @method string getSwitch() Obtain Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
  * @method void setSwitch(string $Switch) Set Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
  * @method AuthenticationTypeA getTypeA() Obtain Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTypeA(AuthenticationTypeA $TypeA) Set Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method AuthenticationTypeB getTypeB() Obtain Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTypeB(AuthenticationTypeB $TypeB) Set Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method AuthenticationTypeC getTypeC() Obtain Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTypeC(AuthenticationTypeC $TypeC) Set Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method AuthenticationTypeD getTypeD() Obtain Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTypeD(AuthenticationTypeD $TypeD) Set Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Authentication extends AbstractModel
 {
     /**
      * @var string Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      */
     public $Switch;
 
     /**
      * @var AuthenticationTypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TypeA;
 
     /**
      * @var AuthenticationTypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TypeB;
 
     /**
      * @var AuthenticationTypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TypeC;
 
     /**
      * @var AuthenticationTypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TypeD;
 
     /**
      * @param string $Switch Hotlink protection configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 When this is enabled, one mode needs to be configured. Other modes need to be set to null.
      * @param AuthenticationTypeA $TypeA Timestamp hotlink protection mode A configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AuthenticationTypeB $TypeB Timestamp hotlink protection mode B configuration (mode B is being upgraded and is currently not supported)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AuthenticationTypeC $TypeC Timestamp hotlink protection mode C configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param AuthenticationTypeD $TypeD Timestamp hotlink protection mode D configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

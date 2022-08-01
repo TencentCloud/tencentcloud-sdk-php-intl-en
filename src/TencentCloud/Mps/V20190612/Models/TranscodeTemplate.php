@@ -72,6 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method string getUpdateTime() Obtain Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -154,6 +158,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param string $Definition Unique ID of a transcoding template.
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg.
      * @param string $Name Name of a transcoding template.
@@ -180,6 +190,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>PureAudio: Audio container format that can contain only audio stream.</li>
      * @param string $CreateTime Creation time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $UpdateTime Last modified time of a template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement configuration.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -247,6 +259,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

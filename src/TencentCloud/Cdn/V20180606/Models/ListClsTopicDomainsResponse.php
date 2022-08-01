@@ -33,9 +33,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getTopicName() Obtain Log topic name
  * @method void setTopicName(string $TopicName) Set Log topic name
  * @method string getUpdateTime() Obtain Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -73,7 +73,7 @@ class ListClsTopicDomainsResponse extends AbstractModel
 
     /**
      * @var string Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UpdateTime;
 
@@ -90,7 +90,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param array $DomainAreaConfigs Domain name region configuration, which may contain deleted domain names. If this is to be used in `ManageClsTopicDomains` API, you need to exclude deleted domain names by using the `ListCdnDomains` API.
      * @param string $TopicName Log topic name
      * @param string $UpdateTime Last modified time of log topic
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

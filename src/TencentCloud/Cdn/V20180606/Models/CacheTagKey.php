@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * A part of `CacheKey`
  *
  * @method string getSwitch() Obtain Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getValue() Obtain Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheTagKey extends AbstractModel
 {
     /**
      * @var string Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var string Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Switch Whether to use `CacheTag` as part of `CacheKey`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Value Value of custom `CacheTag`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

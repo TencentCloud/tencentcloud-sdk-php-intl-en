@@ -21,57 +21,57 @@ use TencentCloud\Common\AbstractModel;
  * A part of `CacheKey`
  *
  * @method string getSwitch() Obtain Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getReorder() Obtain Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setReorder(string $Reorder) Set Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getAction() Obtain Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAction(string $Action) Set Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getValue() Obtain Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setValue(string $Value) Set Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getValue() Obtain Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setValue(string $Value) Set Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class QueryStringKey extends AbstractModel
 {
     /**
      * @var string Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var string Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Reorder;
 
     /**
      * @var string Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Action;
 
     /**
-     * @var string Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Switch Whether to use `QueryString` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Reorder Whether to sort again
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $Value Array of included/excluded URL parameters (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Value Array of included/excluded query strings (separated by ';')
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

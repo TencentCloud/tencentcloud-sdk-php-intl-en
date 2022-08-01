@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SearchClsLog response structure.
  *
- * @method ClsSearchLogs getLogs() Obtain Query result
- * @method void setLogs(ClsSearchLogs $Logs) Set Query result
+ * @method ClsSearchLogs getLogs() Obtain Query results
+ * @method void setLogs(ClsSearchLogs $Logs) Set Query results
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SearchClsLogResponse extends AbstractModel
 {
     /**
-     * @var ClsSearchLogs Query result
+     * @var ClsSearchLogs Query results
      */
     public $Logs;
 
@@ -38,7 +38,7 @@ class SearchClsLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param ClsSearchLogs $Logs Query result
+     * @param ClsSearchLogs $Logs Query results
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

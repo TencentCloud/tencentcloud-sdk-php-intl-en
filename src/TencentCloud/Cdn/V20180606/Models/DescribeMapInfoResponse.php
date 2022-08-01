@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getMapInfoList() Obtain Array of mappings.
  * @method void setMapInfoList(array $MapInfoList) Set Array of mappings.
- * @method array getServerRegionRelation() Obtain The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setServerRegionRelation(array $ServerRegionRelation) Set The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getClientRegionRelation() Obtain The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setClientRegionRelation(array $ClientRegionRelation) Set The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getServerRegionRelation() Obtain Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setServerRegionRelation(array $ServerRegionRelation) Set Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getClientRegionRelation() Obtain Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setClientRegionRelation(array $ClientRegionRelation) Set Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -41,14 +41,14 @@ class DescribeMapInfoResponse extends AbstractModel
     public $MapInfoList;
 
     /**
-     * @var array The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ServerRegionRelation;
 
     /**
-     * @var array The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ClientRegionRelation;
 
@@ -59,10 +59,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $MapInfoList Array of mappings.
-     * @param array $ServerRegionRelation The relationship between server region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $ClientRegionRelation The relationship between client region ID and sub-region ID
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ServerRegionRelation Mapping relationship between server region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $ClientRegionRelation Mapping relationship between client region ID and sub-region ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

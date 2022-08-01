@@ -27,9 +27,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setRules(array $Rules) Set Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getAdvancedRules() Obtain Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAdvancedRules(array $AdvancedRules) Set Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ScdnConfig extends AbstractModel
 {
@@ -46,7 +46,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var array Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AdvancedRules;
 
@@ -55,7 +55,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $Rules Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AdvancedRules Advanced custom CC attack defense rule
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

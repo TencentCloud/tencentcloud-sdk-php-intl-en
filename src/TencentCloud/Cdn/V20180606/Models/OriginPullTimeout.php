@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Origin-pull timeout configuration
  *
  * @method integer getConnectTimeout() Obtain The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setConnectTimeout(integer $ConnectTimeout) Set The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getReceiveTimeout() Obtain The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setReceiveTimeout(integer $ReceiveTimeout) Set The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class OriginPullTimeout extends AbstractModel
 {
     /**
      * @var integer The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ConnectTimeout;
 
     /**
      * @var integer The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ReceiveTimeout;
 
     /**
      * @param integer $ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

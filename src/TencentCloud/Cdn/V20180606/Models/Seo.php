@@ -21,29 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * SEO configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain SEO configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set SEO configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Seo extends AbstractModel
 {
     /**
      * @var string SEO configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @param string $Switch SEO configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

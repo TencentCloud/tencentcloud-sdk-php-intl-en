@@ -51,9 +51,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `index`: homepage.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method RuleCacheConfig getCacheConfig() Obtain Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheConfig(RuleCacheConfig $CacheConfig) Set Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class RuleCache extends AbstractModel
 {
@@ -81,7 +81,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var RuleCacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheConfig;
 
@@ -101,7 +101,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `index`: homepage.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param RuleCacheConfig $CacheConfig Cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

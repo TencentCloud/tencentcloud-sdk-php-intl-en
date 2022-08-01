@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) Set Name of the database corresponding to the backup file
  * @method string getDownloadLink() Obtain Download address
  * @method void setDownloadLink(string $DownloadLink) Set Download address
+ * @method string getRegion() Obtain The code of the region where current instance resides
+ * @method void setRegion(string $Region) Set The code of the region where current instance resides
+ * @method array getCrossBackupAddr() Obtain The target region and download address of cross-region backup
+ * @method void setCrossBackupAddr(array $CrossBackupAddr) Set The target region and download address of cross-region backup
  */
 class BackupFile extends AbstractModel
 {
@@ -59,11 +63,23 @@ class BackupFile extends AbstractModel
     public $DownloadLink;
 
     /**
+     * @var string The code of the region where current instance resides
+     */
+    public $Region;
+
+    /**
+     * @var array The target region and download address of cross-region backup
+     */
+    public $CrossBackupAddr;
+
+    /**
      * @param integer $Id Unique ID of a backup file
      * @param string $FileName Backup file name
      * @param integer $Size File size in KB
      * @param array $DBs Name of the database corresponding to the backup file
      * @param string $DownloadLink Download address
+     * @param string $Region The code of the region where current instance resides
+     * @param array $CrossBackupAddr The target region and download address of cross-region backup
      */
     function __construct()
     {
@@ -96,6 +112,19 @@ class BackupFile extends AbstractModel
 
         if (array_key_exists("DownloadLink",$param) and $param["DownloadLink"] !== null) {
             $this->DownloadLink = $param["DownloadLink"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("CrossBackupAddr",$param) and $param["CrossBackupAddr"] !== null) {
+            $this->CrossBackupAddr = [];
+            foreach ($param["CrossBackupAddr"] as $key => $value){
+                $obj = new CrossBackupAddr();
+                $obj->deserialize($value);
+                array_push($this->CrossBackupAddr, $obj);
+            }
         }
     }
 }

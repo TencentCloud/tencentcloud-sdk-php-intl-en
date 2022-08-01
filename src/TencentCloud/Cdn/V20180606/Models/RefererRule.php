@@ -18,67 +18,67 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Referer blocklist/allowlist configuration rules, which is effective for specific resources.
+ * Referer blacklist/whitelist configuration rules, which is effective for specific resources.
  *
  * @method string getRuleType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
- * @method array getRulePaths() Obtain Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
- * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+ * @method array getRulePaths() Obtain Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+ * @method void setRulePaths(array $RulePaths) Set Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
  * @method string getRefererType() Obtain Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
  * @method void setRefererType(string $RefererType) Set Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
  * @method array getReferers() Obtain Referer content list
  * @method void setReferers(array $Referers) Set Referer content list
  * @method boolean getAllowEmpty() Obtain Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
  * @method void setAllowEmpty(boolean $AllowEmpty) Set Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
  */
 class RefererRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
      */
     public $RuleType;
 
     /**
-     * @var array Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+     * @var array Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
      */
     public $RulePaths;
 
     /**
      * @var string Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
      */
     public $RefererType;
 
@@ -89,29 +89,29 @@ blacklist: blocklist
 
     /**
      * @var boolean Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
      */
     public $AllowEmpty;
 
     /**
      * @param string $RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-     * @param array $RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+     * @param array $RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
      * @param string $RefererType Referer configuration types
-whitelist: allowlist
-blacklist: blocklist
+`whitelist`: Allowlist
+`blacklist`: Blocklist
      * @param array $Referers Referer content list
      * @param boolean $AllowEmpty Whether to allow empty referer
-true: allow empty referer
-false: do not allow empty referer
+`true`: Allow empty referer when `RefererType = whitelist`.
+`false`: Reject empty refer when `RefererType = blacklist`.
      */
     function __construct()
     {

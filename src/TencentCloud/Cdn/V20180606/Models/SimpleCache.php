@@ -24,133 +24,133 @@ Static acceleration type domain names .php, .jsp, .asp, and .aspx are not cached
 Note: this version does not support setting cache expiration rules if the origin server does not return max-age
  *
  * @method array getCacheRules() Obtain Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCacheRules(array $CacheRules) Set Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getFollowOrigin() Obtain Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFollowOrigin(string $FollowOrigin) Set Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreCacheControl() Obtain Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIgnoreCacheControl(string $IgnoreCacheControl) Set Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIgnoreSetCookie() Obtain Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIgnoreSetCookie(string $IgnoreSetCookie) Set Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getCompareMaxAge() Obtain Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCompareMaxAge(string $CompareMaxAge) Set Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method Revalidate getRevalidate() Obtain Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRevalidate(Revalidate $Revalidate) Set Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SimpleCache extends AbstractModel
 {
     /**
      * @var array Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CacheRules;
 
     /**
      * @var string Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FollowOrigin;
 
     /**
      * @var string Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreCacheControl;
 
     /**
      * @var string Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IgnoreSetCookie;
 
     /**
      * @var string Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CompareMaxAge;
 
     /**
      * @var Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Revalidate;
 
     /**
      * @param array $CacheRules Cache expiration time rules
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $FollowOrigin Follows origin server Cache-Control: max-age configurations
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 If this is enabled, resources that do not match CacheRules rules will be cached by the node according to the max-age value returned by the origin server. Resources that match CacheRules rules will be cached on the node according to the cache expiration time set in CacheRules.
 This conflicts with CompareMaxAge. The two cannot be enabled at the same time.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreCacheControl Forced cache
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
 This is disabled by default. If enabled, the `no-store` and `no-cache` resources returned from the origin server will be cached according to `CacheRules` rules.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IgnoreSetCookie Ignores the Set-Cookie header of the origin server
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CompareMaxAge Advanced cache expiration configuration. If this is enabled, the max-age value returned by the origin server will be compared with the cache expiration time set in CacheRules, and the smallest value will be cached on the node.
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Revalidate $Revalidate Always forwards to the origin server for verification
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

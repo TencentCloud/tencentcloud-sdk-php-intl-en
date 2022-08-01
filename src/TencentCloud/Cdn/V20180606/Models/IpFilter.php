@@ -21,93 +21,93 @@ use TencentCloud\Common\AbstractModel;
  * IP blocklist/allowlist configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method string getFilterType() Obtain IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterType(string $FilterType) Set IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFilters() Obtain IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilters(array $Filters) Set IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFilters() Obtain IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFilters(array $Filters) Set IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getFilterRules() Obtain IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFilterRules(array $FilterRules) Set IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getReturnCode() Obtain HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setReturnCode(integer $ReturnCode) Set HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class IpFilter extends AbstractModel
 {
     /**
      * @var string IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
      * @var string IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FilterType;
 
     /**
-     * @var array IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Filters;
 
     /**
      * @var array IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FilterRules;
 
     /**
      * @var integer HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ReturnCode;
 
     /**
      * @param string $Switch IP blocklist/allowlist configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param string $FilterType IP blocklist/allowlist type
-whitelist: allowlist
-blacklist: blocklist
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Filters IP blocklist/allowlist list
-Supports IPs in X.X.X.X format, or /8, /16, /24 format IP ranges.
-Up to 50 allowlists or blocklists can be entered
-Note: this field may return null, indicating that no valid values can be obtained.
+`whitelist`: IP allowlist
+`blacklist`: IP blocklist
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Filters IP blocklist/allowlist
+Supports IPs in X.X.X.X format, or IP ranges in /8, /16, /24 format.
+Up to 50 whitelists or blacklists can be entered
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $FilterRules IP blocklist/allowlist path-based configuration. This feature is only available to selected beta customers.
-Note: this field may return `null`, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $ReturnCode HTTP code returned when the IP allowlist/blocklist verification fails
 Valid values: 400-499
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -21,25 +21,37 @@ use TencentCloud\Common\AbstractModel;
  * Path cache configuration follows the origin server configuration.
  *
  * @method string getSwitch() Obtain Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
+ * @method HeuristicCache getHeuristicCache() Obtain Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setHeuristicCache(HeuristicCache $HeuristicCache) Set Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheConfigFollowOrigin extends AbstractModel
 {
     /**
      * @var string Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
+     * @var HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $HeuristicCache;
+
+    /**
      * @param string $Switch Follow origin server switch configuration
-on: enable
-off: disable
+`on`: Enable
+`off`: Disable
+     * @param HeuristicCache $HeuristicCache Heuristic cache configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -56,6 +68,11 @@ off: disable
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("HeuristicCache",$param) and $param["HeuristicCache"] !== null) {
+            $this->HeuristicCache = new HeuristicCache();
+            $this->HeuristicCache->deserialize($param["HeuristicCache"]);
         }
     }
 }

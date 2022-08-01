@@ -74,6 +74,12 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
 Note: This field may return null, indicating that no valid value was found.
+ * @method array getIPv6Addresses() Obtain IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIPv6Addresses(array $IPv6Addresses) Set IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ExistedInstance extends AbstractModel
 {
@@ -161,6 +167,13 @@ Note: This field may return null, indicating that no valid value was found.
     public $InstanceChargeType;
 
     /**
+     * @var array IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $IPv6Addresses;
+
+    /**
      * @param boolean $Usable Whether the instance supports being added to the cluster (TRUE: support; FALSE: not support).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UnusableReason Reason that the instance does not support being added.
@@ -188,6 +201,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid value was found.
      * @param string $InstanceChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
 Note: This field may return null, indicating that no valid value was found.
+     * @param array $IPv6Addresses IPv6 address of the instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -256,6 +272,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
             $this->InstanceChargeType = $param["InstanceChargeType"];
+        }
+
+        if (array_key_exists("IPv6Addresses",$param) and $param["IPv6Addresses"] !== null) {
+            $this->IPv6Addresses = $param["IPv6Addresses"];
         }
     }
 }

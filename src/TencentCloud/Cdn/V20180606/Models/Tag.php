@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Domain name tag configuration
  *
  * @method string getTagKey() Obtain Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTagKey(string $TagKey) Set Tag key
-Note: this field may return null, indicating that no valid value is obtained.
- * @method string getTagValue() Obtain Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
- * @method void setTagValue(string $TagValue) Set Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getTagValue() Obtain Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTagValue(string $TagValue) Set Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Tag extends AbstractModel
 {
     /**
      * @var string Tag key
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TagKey;
 
     /**
-     * @var string Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+     * @var string Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TagValue;
 
     /**
      * @param string $TagKey Tag key
-Note: this field may return null, indicating that no valid value is obtained.
-     * @param string $TagValue Tag value.
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $TagValue Tag value
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

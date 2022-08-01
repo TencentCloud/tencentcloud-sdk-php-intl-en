@@ -21,135 +21,137 @@ use TencentCloud\Common\AbstractModel;
  * Domain name HTTPS acceleration configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSwitch(string $Switch) Set HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getHttp2() Obtain HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHttp2(string $Http2) Set HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getOcspStapling() Obtain OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setOcspStapling(string $OcspStapling) Set OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getVerifyClient() Obtain Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setVerifyClient(string $VerifyClient) Set Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method ServerCert getCertInfo() Obtain Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCertInfo(ServerCert $CertInfo) Set Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method ClientCert getClientCertInfo() Obtain Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setClientCertInfo(ClientCert $ClientCertInfo) Set Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getSpdy() Obtain Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSpdy(string $Spdy) Set Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getSslStatus() Obtain HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSslStatus(string $SslStatus) Set HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method Hsts getHsts() Obtain HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHsts(Hsts $Hsts) Set HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getTlsVersion() Obtain TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTlsVersion(array $TlsVersion) Set TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Https extends AbstractModel
 {
     /**
      * @var string HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Switch;
 
     /**
      * @var string HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Http2;
 
     /**
      * @var string OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $OcspStapling;
 
     /**
      * @var string Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $VerifyClient;
 
     /**
      * @var ServerCert Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CertInfo;
 
     /**
      * @var ClientCert Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ClientCertInfo;
 
     /**
      * @var string Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Spdy;
 
@@ -159,59 +161,61 @@ closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SslStatus;
 
     /**
      * @var Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Hsts;
 
     /**
      * @var array TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TlsVersion;
 
     /**
      * @param string $Switch HTTPS configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Http2 HTTP2 configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $OcspStapling OCSP configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $VerifyClient Client certificate authentication feature
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
 This is disabled by default. The client certificate information is needed when enabled. This is still in beta and not generally available yet.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ServerCert $CertInfo Server certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ClientCert $ClientCertInfo Client certificate configuration information
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Spdy Spdy configuration switch
-on: enabled
-off: disabled
-This is disabled by default
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+It is disabled by default.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $SslStatus HTTPS certificate deployment status
 closed: already closed
 deploying: in deployment
 deployed: successfully deployed
 failed: deployment failed
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param Hsts $Hsts HSTS configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $TlsVersion TLS version settings, which only support certain advanced domain names. Valid values: `TLSv1`, `TLSV1.1`, `TLSV1.2`, and `TLSv1.3`. Only consecutive versions can be enabled at the same time.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

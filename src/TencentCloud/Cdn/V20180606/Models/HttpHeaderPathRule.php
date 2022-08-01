@@ -31,41 +31,41 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 `add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getHeaderName() Obtain HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHeaderName(string $HeaderName) Set HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getHeaderValue() Obtain HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setHeaderValue(string $HeaderValue) Set HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getRulePaths() Obtain Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRulePaths(array $RulePaths) Set Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getRulePaths() Obtain Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRulePaths(array $RulePaths) Set Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class HttpHeaderPathRule extends AbstractModel
 {
@@ -80,7 +80,7 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $HeaderName;
 
@@ -88,27 +88,27 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $HeaderValue;
 
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
     /**
-     * @var array Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RulePaths;
 
@@ -119,23 +119,23 @@ Note: this field may return null, indicating that no valid values can be obtaine
 `add`: adds a header parameter. By default, you can repeat the same action to add the same header parameter, which may affect browser response. Please consider the set operation first.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $HeaderName HTTP header name. Up to 100 characters can be set.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $HeaderValue HTTP header value. Up to 1000 characters can be set.
 Not required when Mode is del
 Required when Mode is add/set
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RuleType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $RulePaths Content for each RuleType:
-For `all`, enter an asterisk (*).
-For `file`, enter the suffix, such as jpg, txt.
-For `directory`, enter the path, such as /xxx/test/.
-For `path`, enter the corresponding absolute path, such as /xxx/test.html.
-Note: this field may return null, indicating that no valid values can be obtained.
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $RulePaths Content for each `RuleType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

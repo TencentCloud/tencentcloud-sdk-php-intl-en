@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Whether to forward to the origin server for verification
  *
  * @method string getSwitch() Obtain Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getPath() Obtain Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setPath(string $Path) Set Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Revalidate extends AbstractModel
 {
     /**
      * @var string Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var string Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Path;
 
     /**
      * @param string $Switch Whether to always forward to the origin server for verification. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Path Forwards to the origin server for verification only for specific request path
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

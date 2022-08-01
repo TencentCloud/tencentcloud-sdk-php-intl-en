@@ -64,44 +64,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAuthentication(Authentication $Authentication) Set Timestamp hotlink protection configuration
  * @method Seo getSeo() Obtain SEO configuration
  * @method void setSeo(Seo $Seo) Set SEO configuration
- * @method ForceRedirect getForceRedirect() Obtain Access protocol forced redirect configuration
- * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Access protocol forced redirect configuration
- * @method Referer getReferer() Obtain Referer hotlink protection configuration
- * @method void setReferer(Referer $Referer) Set Referer hotlink protection configuration
+ * @method ForceRedirect getForceRedirect() Obtain Protocol redirect configuration
+ * @method void setForceRedirect(ForceRedirect $ForceRedirect) Set Protocol redirect configuration
+ * @method Referer getReferer() Obtain Referer configuration
+ * @method void setReferer(Referer $Referer) Set Referer configuration
  * @method MaxAge getMaxAge() Obtain Browser cache configuration (This feature is in beta and not generally available yet.)
  * @method void setMaxAge(MaxAge $MaxAge) Set Browser cache configuration (This feature is in beta and not generally available yet.)
+ * @method SpecificConfig getSpecificConfig() Obtain Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
+ * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
  * @method string getServiceType() Obtain Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
  * @method void setServiceType(string $ServiceType) Set Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
- * @method SpecificConfig getSpecificConfig() Obtain Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
- * @method void setSpecificConfig(SpecificConfig $SpecificConfig) Set Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
  * @method string getArea() Obtain Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
  * @method void setArea(string $Area) Set Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
  * @method OriginPullTimeout getOriginPullTimeout() Obtain Origin-pull timeout configuration
  * @method void setOriginPullTimeout(OriginPullTimeout $OriginPullTimeout) Set Origin-pull timeout configuration
- * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Origin access authentication for S3 bucket
- * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Origin access authentication for S3 bucket
- * @method UserAgentFilter getUserAgentFilter() Obtain UA blocklist/allowlist Configuration
- * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blocklist/allowlist Configuration
+ * @method AwsPrivateAccess getAwsPrivateAccess() Obtain Access authentication for S3 origin
+ * @method void setAwsPrivateAccess(AwsPrivateAccess $AwsPrivateAccess) Set Access authentication for S3 origin
+ * @method UserAgentFilter getUserAgentFilter() Obtain UA blocklist/allowlist configuration
+ * @method void setUserAgentFilter(UserAgentFilter $UserAgentFilter) Set UA blocklist/allowlist configuration
  * @method AccessControl getAccessControl() Obtain Access control
  * @method void setAccessControl(AccessControl $AccessControl) Set Access control
- * @method UrlRedirect getUrlRedirect() Obtain Configuration of URL rewriting
- * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set Configuration of URL rewriting
+ * @method UrlRedirect getUrlRedirect() Obtain URL rewriting configuration
+ * @method void setUrlRedirect(UrlRedirect $UrlRedirect) Set URL rewriting configuration
  * @method array getAccessPort() Obtain Access port configuration
  * @method void setAccessPort(array $AccessPort) Set Access port configuration
  * @method AdvancedAuthentication getAdvancedAuthentication() Obtain Timestamp hotlink protection advanced configuration (allowlist feature)
@@ -114,16 +114,22 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
  * @method void setOfflineCache(OfflineCache $OfflineCache) Set Offline cache
  * @method OriginCombine getOriginCombine() Obtain Merging pull requests
  * @method void setOriginCombine(OriginCombine $OriginCombine) Set Merging pull requests
+ * @method PostSize getPostMaxSize() Obtain Post transport configuration
+ * @method void setPostMaxSize(PostSize $PostMaxSize) Set Post transport configuration
  * @method Quic getQuic() Obtain QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
  * @method void setQuic(Quic $Quic) Set QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
  * @method OssPrivateAccess getOssPrivateAccess() Obtain Access authentication for OSS origin
  * @method void setOssPrivateAccess(OssPrivateAccess $OssPrivateAccess) Set Access authentication for OSS origin
- * @method WebSocket getWebSocket() Obtain WebSocket configuration.
- * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration.
- * @method RemoteAuthentication getRemoteAuthentication() Obtain Configuration of remote authentication
- * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) Set Configuration of remote authentication
+ * @method WebSocket getWebSocket() Obtain WebSocket configuration
+ * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration
+ * @method RemoteAuthentication getRemoteAuthentication() Obtain Remote authentication configuration
+ * @method void setRemoteAuthentication(RemoteAuthentication $RemoteAuthentication) Set Remote authentication configuration
  * @method ShareCname getShareCname() Obtain Shared CNAME configuration (only available to beta users)
  * @method void setShareCname(ShareCname $ShareCname) Set Shared CNAME configuration (only available to beta users)
+ * @method HwPrivateAccess getHwPrivateAccess() Obtain Access authentication for Huawei Cloud OBS origin
+ * @method void setHwPrivateAccess(HwPrivateAccess $HwPrivateAccess) Set Access authentication for Huawei Cloud OBS origin
+ * @method QnPrivateAccess getQnPrivateAccess() Obtain Access authentication for QiNiu Cloud Kodo origin
+ * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) Set Access authentication for QiNiu Cloud Kodo origin
  */
 class UpdateDomainConfigRequest extends AbstractModel
 {
@@ -238,12 +244,12 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Seo;
 
     /**
-     * @var ForceRedirect Access protocol forced redirect configuration
+     * @var ForceRedirect Protocol redirect configuration
      */
     public $ForceRedirect;
 
     /**
-     * @var Referer Referer hotlink protection configuration
+     * @var Referer Referer configuration
      */
     public $Referer;
 
@@ -253,25 +259,25 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $MaxAge;
 
     /**
-     * @var string Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-     */
-    public $ServiceType;
-
-    /**
-     * @var SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+     * @var SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
      */
     public $SpecificConfig;
 
     /**
+     * @var string Domain name service type
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
+     */
+    public $ServiceType;
+
+    /**
      * @var string Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      */
     public $Area;
 
@@ -281,12 +287,12 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     public $OriginPullTimeout;
 
     /**
-     * @var AwsPrivateAccess Origin access authentication for S3 bucket
+     * @var AwsPrivateAccess Access authentication for S3 origin
      */
     public $AwsPrivateAccess;
 
     /**
-     * @var UserAgentFilter UA blocklist/allowlist Configuration
+     * @var UserAgentFilter UA blocklist/allowlist configuration
      */
     public $UserAgentFilter;
 
@@ -296,7 +302,7 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     public $AccessControl;
 
     /**
-     * @var UrlRedirect Configuration of URL rewriting
+     * @var UrlRedirect URL rewriting configuration
      */
     public $UrlRedirect;
 
@@ -331,6 +337,11 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     public $OriginCombine;
 
     /**
+     * @var PostSize Post transport configuration
+     */
+    public $PostMaxSize;
+
+    /**
      * @var Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      */
     public $Quic;
@@ -341,12 +352,12 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
     public $OssPrivateAccess;
 
     /**
-     * @var WebSocket WebSocket configuration.
+     * @var WebSocket WebSocket configuration
      */
     public $WebSocket;
 
     /**
-     * @var RemoteAuthentication Configuration of remote authentication
+     * @var RemoteAuthentication Remote authentication configuration
      */
     public $RemoteAuthentication;
 
@@ -354,6 +365,16 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
      * @var ShareCname Shared CNAME configuration (only available to beta users)
      */
     public $ShareCname;
+
+    /**
+     * @var HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     */
+    public $HwPrivateAccess;
+
+    /**
+     * @var QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
+     */
+    public $QnPrivateAccess;
 
     /**
      * @param string $Domain Domain name
@@ -378,36 +399,39 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
      * @param Https $Https HTTPS acceleration configuration
      * @param Authentication $Authentication Timestamp hotlink protection configuration
      * @param Seo $Seo SEO configuration
-     * @param ForceRedirect $ForceRedirect Access protocol forced redirect configuration
-     * @param Referer $Referer Referer hotlink protection configuration
+     * @param ForceRedirect $ForceRedirect Protocol redirect configuration
+     * @param Referer $Referer Referer configuration
      * @param MaxAge $MaxAge Browser cache configuration (This feature is in beta and not generally available yet.)
+     * @param SpecificConfig $SpecificConfig Specific-region special configuration
+Applicable to cases where the acceleration domain name configuration differs for regions in and outside the Chinese mainland.
      * @param string $ServiceType Domain name service type
-web: static acceleration
-download: download acceleration
-media: streaming media VOD acceleration
-     * @param SpecificConfig $SpecificConfig Specific region configuration
-Applicable to cases where the acceleration domain name configuration differs for regions in and outside mainland China.
+`web`: Static acceleration
+`download`: Download acceleration
+`media`: Streaming media VOD acceleration
      * @param string $Area Domain name acceleration region
-`mainland`: acceleration inside the Chinese mainland
-`overseas`: acceleration outside the Chinese mainland
-`global`: global acceleration
-When you change it to from `mainland`/`overseas` to `global`, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
+`mainland`: Acceleration inside the Chinese mainland
+`overseas`: Acceleration outside the Chinese mainland
+`global`: Acceleration over the globe
+After switching to global acceleration, configurations of the domain name will be deployed to the region inside or outside the Chinese mainland. The deployment will take some time as this domain name has special settings.
      * @param OriginPullTimeout $OriginPullTimeout Origin-pull timeout configuration
-     * @param AwsPrivateAccess $AwsPrivateAccess Origin access authentication for S3 bucket
-     * @param UserAgentFilter $UserAgentFilter UA blocklist/allowlist Configuration
+     * @param AwsPrivateAccess $AwsPrivateAccess Access authentication for S3 origin
+     * @param UserAgentFilter $UserAgentFilter UA blocklist/allowlist configuration
      * @param AccessControl $AccessControl Access control
-     * @param UrlRedirect $UrlRedirect Configuration of URL rewriting
+     * @param UrlRedirect $UrlRedirect URL rewriting configuration
      * @param array $AccessPort Access port configuration
      * @param AdvancedAuthentication $AdvancedAuthentication Timestamp hotlink protection advanced configuration (allowlist feature)
      * @param OriginAuthentication $OriginAuthentication Origin-pull authentication advanced configuration (allowlist feature)
      * @param Ipv6Access $Ipv6Access IPv6 access configuration
      * @param OfflineCache $OfflineCache Offline cache
      * @param OriginCombine $OriginCombine Merging pull requests
+     * @param PostSize $PostMaxSize Post transport configuration
      * @param Quic $Quic QUIC access, which is a paid service. You can check the product document and Billing Overview for more information.
      * @param OssPrivateAccess $OssPrivateAccess Access authentication for OSS origin
-     * @param WebSocket $WebSocket WebSocket configuration.
-     * @param RemoteAuthentication $RemoteAuthentication Configuration of remote authentication
+     * @param WebSocket $WebSocket WebSocket configuration
+     * @param RemoteAuthentication $RemoteAuthentication Remote authentication configuration
      * @param ShareCname $ShareCname Shared CNAME configuration (only available to beta users)
+     * @param HwPrivateAccess $HwPrivateAccess Access authentication for Huawei Cloud OBS origin
+     * @param QnPrivateAccess $QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
      */
     function __construct()
     {
@@ -545,13 +569,13 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
             $this->MaxAge->deserialize($param["MaxAge"]);
         }
 
-        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
-            $this->ServiceType = $param["ServiceType"];
-        }
-
         if (array_key_exists("SpecificConfig",$param) and $param["SpecificConfig"] !== null) {
             $this->SpecificConfig = new SpecificConfig();
             $this->SpecificConfig->deserialize($param["SpecificConfig"]);
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
 
         if (array_key_exists("Area",$param) and $param["Area"] !== null) {
@@ -612,6 +636,11 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
             $this->OriginCombine->deserialize($param["OriginCombine"]);
         }
 
+        if (array_key_exists("PostMaxSize",$param) and $param["PostMaxSize"] !== null) {
+            $this->PostMaxSize = new PostSize();
+            $this->PostMaxSize->deserialize($param["PostMaxSize"]);
+        }
+
         if (array_key_exists("Quic",$param) and $param["Quic"] !== null) {
             $this->Quic = new Quic();
             $this->Quic->deserialize($param["Quic"]);
@@ -635,6 +664,16 @@ When you change it to from `mainland`/`overseas` to `global`, configurations of 
         if (array_key_exists("ShareCname",$param) and $param["ShareCname"] !== null) {
             $this->ShareCname = new ShareCname();
             $this->ShareCname->deserialize($param["ShareCname"]);
+        }
+
+        if (array_key_exists("HwPrivateAccess",$param) and $param["HwPrivateAccess"] !== null) {
+            $this->HwPrivateAccess = new HwPrivateAccess();
+            $this->HwPrivateAccess->deserialize($param["HwPrivateAccess"]);
+        }
+
+        if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
+            $this->QnPrivateAccess = new QnPrivateAccess();
+            $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
         }
     }
 }

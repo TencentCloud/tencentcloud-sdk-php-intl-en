@@ -20,14 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Video stream configuration parameter
  *
- * @method string getCodec() Obtain Video stream codec. Valid values:
+ * @method string getCodec() Obtain The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
- * @method void setCodec(string $Codec) Set Video stream codec. Valid values:
+<li>av1: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
+ * @method void setCodec(string $Codec) Set The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>av1: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
  * @method integer getFps() Obtain Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
  * @method void setFps(integer $Fps) Set Video frame rate in Hz. Value range: [0, 100].
@@ -37,11 +41,13 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
  * @method void setBitrate(integer $Bitrate) Set Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.
  * @method string getResolutionAdaptive() Obtain Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
  * @method integer getWidth() Obtain Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
@@ -82,10 +88,12 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
     /**
-     * @var string Video stream codec. Valid values:
+     * @var string The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>av1: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
      */
     public $Codec;
 
@@ -103,8 +111,9 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 
     /**
      * @var string Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
      */
     public $ResolutionAdaptive;
 
@@ -151,17 +160,20 @@ Default value: 0. If this parameter is set to `1`, multiple streams with differe
     public $ContentAdaptStream;
 
     /**
-     * @param string $Codec Video stream codec. Valid values:
+     * @param string $Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
-Currently, a resolution within 640*480p must be specified for H.265.
+<li>av1: AOMedia Video 1</li>
+Note: You must specify a resolution (not higher than 640 x 480) if the H.265 codec is used.
+Note: You can only use the AOMedia Video 1 codec for MP4 files.
      * @param integer $Fps Video frame rate in Hz. Value range: [0, 100].
 If the value is 0, the frame rate will be the same as that of the source video.
      * @param integer $Bitrate Bitrate of a video stream in Kbps. Value range: 0 and [128, 35,000].
 If the value is 0, the bitrate of the video will be the same as that of the source video.
      * @param string $ResolutionAdaptive Resolution adaption. Valid values:
-<li>open: Enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
-<li>close: Disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
+<li>open: Enabled. When resolution adaption is enabled, `Width` indicates the long side of a video, while `Height` indicates the short side.</li>
+<li>close: Disabled. When resolution adaption is disabled, `Width` indicates the width of a video, while `Height` indicates the height.</li>
+Note: When resolution adaption is enabled, `Width` cannot be smaller than `Height`.
      * @param integer $Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
 <li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
 <li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>

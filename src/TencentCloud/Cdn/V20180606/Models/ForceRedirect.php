@@ -21,39 +21,39 @@ use TencentCloud\Common\AbstractModel;
  * Access protocol forced redirect configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRedirectType() Obtain Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRedirectType(string $RedirectType) Set Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getRedirectStatusCode() Obtain Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRedirectStatusCode(integer $RedirectStatusCode) Set Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getCarryHeaders() Obtain Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCarryHeaders() Obtain Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCarryHeaders(string $CarryHeaders) Set Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ForceRedirect extends AbstractModel
 {
     /**
      * @var string Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
@@ -61,37 +61,37 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @var string Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RedirectType;
 
     /**
      * @var integer Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RedirectStatusCode;
 
     /**
-     * @var string Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CarryHeaders;
 
     /**
      * @param string $Switch Access forced redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RedirectType Access forced redirect types
 http: forced HTTP redirect
 https: forced HTTPS redirect
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $RedirectStatusCode Status code returned for forced redirect 
 Supports 301, 302.
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $CarryHeaders Whether to return the added header in forced redirection.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CarryHeaders Whether to return the newly added header during force redirection
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -21,21 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * IPv6 activation configurations, which cannot be changed.
  *
  * @method string getSwitch() Obtain Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Ipv6 extends AbstractModel
 {
     /**
      * @var string Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @param string $Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

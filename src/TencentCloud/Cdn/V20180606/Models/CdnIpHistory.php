@@ -21,41 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * CDN node activation and deactivation history
  *
  * @method string getStatus() Obtain Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
  * @method void setStatus(string $Status) Set Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
  * @method string getDatetime() Obtain Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setDatetime(string $Datetime) Set Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CdnIpHistory extends AbstractModel
 {
     /**
      * @var string Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
      */
     public $Status;
 
     /**
      * @var string Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Datetime;
 
     /**
      * @param string $Status Operation type
-online: node is online
-offline: node is offline
+`online`: Nodes activated
+`offline`: Nodes deactivated
      * @param string $Datetime Operation time corresponding to operation type
-If this value is null, there are no status change records
-Note: this field may return null, indicating that no valid values can be obtained.
+If its value is `null`, it means there is no status change record.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -21,41 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Browser cache rule configuration, which is used to set the default value of `MaxAge` and is disabled by default.
  *
  * @method string getSwitch() Obtain Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getMaxAgeRules() Obtain MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class MaxAge extends AbstractModel
 {
     /**
      * @var string Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var array MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $MaxAgeRules;
 
     /**
      * @param string $Switch Browser cache configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $MaxAgeRules MaxAge rule
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

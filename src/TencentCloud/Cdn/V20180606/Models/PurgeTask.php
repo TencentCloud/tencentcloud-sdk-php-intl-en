@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getUrl() Obtain Purged URL
  * @method void setUrl(string $Url) Set Purged URL
  * @method string getStatus() Obtain Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
  * @method void setStatus(string $Status) Set Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
  * @method string getPurgeType() Obtain Purge type
 `url`: URL purge
 `path`: directory purge
@@ -40,10 +40,10 @@ use TencentCloud\Common\AbstractModel;
 `path`: directory purge
  * @method string getFlushType() Obtain Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
  * @method void setFlushType(string $FlushType) Set Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
  * @method string getCreateTime() Obtain Purge task submission time
  * @method void setCreateTime(string $CreateTime) Set Purge task submission time
  */
@@ -61,9 +61,9 @@ class PurgeTask extends AbstractModel
 
     /**
      * @var string Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
      */
     public $Status;
 
@@ -77,7 +77,7 @@ class PurgeTask extends AbstractModel
     /**
      * @var string Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
      */
     public $FlushType;
 
@@ -90,15 +90,15 @@ class PurgeTask extends AbstractModel
      * @param string $TaskId Purge task ID
      * @param string $Url Purged URL
      * @param string $Status Purge task status
-`fail`: purge failed
-`done`: purge succeeded
-`process`: purge in progress
+`fail`: Purge failed
+`done`: Purge succeeded
+`process`: Purge in progress
      * @param string $PurgeType Purge type
 `url`: URL purge
 `path`: directory purge
      * @param string $FlushType Purge method
 `flush`: purges updated resources; this type is available only for directory purges
-`delete`: purges all resources
+`delete`: Purge all resources
      * @param string $CreateTime Purge task submission time
      */
     function __construct()

@@ -23,17 +23,17 @@ use TencentCloud\Common\AbstractModel;
  * @method array getUrls() Obtain List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method void setUrls(array $Urls) Set List of URLs. The protocol header such as "http://" or "https://" needs to be included.
  * @method string getArea() Obtain Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
  * @method void setArea(string $Area) Set Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
- * @method boolean getUrlEncode() Obtain Whether to encode Chinese characters before purge.
- * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode Chinese characters before purge.
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
+ * @method boolean getUrlEncode() Obtain Whether to encode Chinese characters for purge
+ * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode Chinese characters for purge
  */
 class PurgeUrlsCacheRequest extends AbstractModel
 {
@@ -44,26 +44,26 @@ class PurgeUrlsCacheRequest extends AbstractModel
 
     /**
      * @var string Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
      */
     public $Area;
 
     /**
-     * @var boolean Whether to encode Chinese characters before purge.
+     * @var boolean Whether to encode Chinese characters for purge
      */
     public $UrlEncode;
 
     /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $Area Purging region
-The acceleration region of the acceleration domain name will be purged if this parameter is not passed in
-If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged
-If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged
-The specified purging region should match the domain name acceleration region
-     * @param boolean $UrlEncode Whether to encode Chinese characters before purge.
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified purging region should match the domain name acceleration region.
+     * @param boolean $UrlEncode Whether to encode Chinese characters for purge
      */
     function __construct()
     {

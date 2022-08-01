@@ -34,11 +34,13 @@ use TencentCloud\Common\AbstractModel;
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
  * @method void setNotifyType(string $NotifyType) Set The notification type. Valid values:
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
  * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
  * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
@@ -75,6 +77,7 @@ class TaskNotifyConfig extends AbstractModel
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
      */
     public $NotifyType;
@@ -94,6 +97,7 @@ Default value: `TDMQ-CMQ`.
 <li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
 <li>TDMQ-CMQ: Message queue</li>
 <li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
 Default value: `TDMQ-CMQ`.
      * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
      */

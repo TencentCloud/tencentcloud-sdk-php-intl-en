@@ -27,17 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getEnabled() Obtain Whether to enable publishing
  * @method void setEnabled(integer $Enabled) Set Whether to enable publishing
  * @method string getCreateTime() Obtain Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getChannel() Obtain Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setChannel(string $Channel) Set Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getDeleted() Obtain Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setDeleted(string $Deleted) Set Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getDeleted() Obtain Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDeleted(string $Deleted) Set Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -58,19 +58,19 @@ class TopicInfo extends AbstractModel
 
     /**
      * @var string Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CreateTime;
 
     /**
      * @var string Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Channel;
 
     /**
-     * @var string Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Deleted;
 
@@ -79,11 +79,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $TopicName Topic name
      * @param integer $Enabled Whether to enable publishing
      * @param string $CreateTime Creation time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Channel Either `cdn` or `ecdn`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Deleted Whether the log topic has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Deleted Whether the logset has been removed from CLS
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

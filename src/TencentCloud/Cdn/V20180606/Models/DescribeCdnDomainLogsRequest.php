@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTime(string $EndTime) Set End time, such as `2019-09-04 12:00:00`
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 100. Maximum value: 1,000
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 100. Maximum value: 1,000
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1,000
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1,000
  * @method string getArea() Obtain Specifies a region for the query.
 `mainland`: specifies to return the download link of logs on acceleration within Mainland China;
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
@@ -68,7 +68,7 @@ class DescribeCdnDomainLogsRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 100. Maximum value: 1,000
+     * @var integer Limit on paginated queries. Default value: 100. Maximum value: 1,000
      */
     public $Limit;
 
@@ -92,7 +92,7 @@ access: access logs
      * @param string $StartTime Starting time, such as `2019-09-04 00:00:00`
      * @param string $EndTime End time, such as `2019-09-04 12:00:00`
      * @param integer $Offset Offset for paginated queries. Default value: 0
-     * @param integer $Limit Limit on paged queries. Default value: 100. Maximum value: 1,000
+     * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1,000
      * @param string $Area Specifies a region for the query.
 `mainland`: specifies to return the download link of logs on acceleration within Mainland China;
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;

@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Specific configuration for domain names inside and outside mainland China by regions.
  *
  * @method MainlandConfig getMainland() Obtain Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMainland(MainlandConfig $Mainland) Set Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method OverseaConfig getOverseas() Obtain Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setOverseas(OverseaConfig $Overseas) Set Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SpecificConfig extends AbstractModel
 {
     /**
      * @var MainlandConfig Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Mainland;
 
     /**
      * @var OverseaConfig Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Overseas;
 
     /**
      * @param MainlandConfig $Mainland Specific configuration for domain name inside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param OverseaConfig $Overseas Specific configuration for domain name outside mainland China.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

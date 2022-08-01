@@ -32,20 +32,20 @@ no: non-Tencent Cloud CDN node
 unknown: unknown node location
  * @method void setLocation(string $Location) Set Node district/country
 unknown: unknown node location
- * @method array getHistory() Obtain Node activation and deactivation history
- * @method void setHistory(array $History) Set Node activation and deactivation history
+ * @method array getHistory() Obtain Activation and deactivation history of the node.
+ * @method void setHistory(array $History) Set Activation and deactivation history of the node.
  * @method string getArea() Obtain Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
  * @method void setArea(string $Area) Set Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
- * @method string getCity() Obtain City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
- * @method void setCity(string $City) Set City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
+ * @method string getCity() Obtain City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCity(string $City) Set City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CdnIp extends AbstractModel
 {
@@ -68,21 +68,21 @@ unknown: unknown node location
     public $Location;
 
     /**
-     * @var array Node activation and deactivation history
+     * @var array Activation and deactivation history of the node.
      */
     public $History;
 
     /**
      * @var string Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
      */
     public $Area;
 
     /**
-     * @var string City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+     * @var string City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $City;
 
@@ -93,13 +93,13 @@ yes: Tencent Cloud CDN node
 no: non-Tencent Cloud CDN node
      * @param string $Location Node district/country
 unknown: unknown node location
-     * @param array $History Node activation and deactivation history
+     * @param array $History Activation and deactivation history of the node.
      * @param string $Area Node region
-mainland: cache node in Mainland China
-overseas: cache node outside Mainland China
-unknown: service region unknown
-     * @param string $City City where the node resides
-Note: this field may return `null`, indicating that no valid value is obtained.
+`mainland`: Acceleration nodes inside the Chinese mainland
+`overseas`: Acceleration nodes outside the Chinese mainland
+`unknown`: Service region unknown
+     * @param string $City City where the nodes reside
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

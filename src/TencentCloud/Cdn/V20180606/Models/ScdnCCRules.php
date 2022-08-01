@@ -22,15 +22,15 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleType() Obtain Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
  * @method void setRuleType(string $RuleType) Set Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
  * @method array getRuleValue() Obtain Rule value (blocking condition)
  * @method void setRuleValue(array $RuleValue) Set Rule value (blocking condition)
@@ -66,9 +66,9 @@ class ScdnCCRules extends AbstractModel
     /**
      * @var string Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
      */
     public $RuleType;
@@ -122,9 +122,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * @param string $RuleType Rule types:
 `all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 `index`: effective for web homepages and root directories.
      * @param array $RuleValue Rule value (blocking condition)
      * @param integer $Qps IP access limit rule

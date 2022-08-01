@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Result of blocking/unblocking URLs
  *
  * @method array getSuccessUrls() Obtain List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSuccessUrls(array $SuccessUrls) Set List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getFailUrls() Obtain List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFailUrls(array $FailUrls) Set List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CacheOptResult extends AbstractModel
 {
     /**
      * @var array List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SuccessUrls;
 
     /**
      * @var array List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FailUrls;
 
     /**
      * @param array $SuccessUrls List of succeeded URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $FailUrls List of failed URLs
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

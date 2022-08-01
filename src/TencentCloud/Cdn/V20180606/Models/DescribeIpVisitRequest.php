@@ -34,10 +34,10 @@ According to the specified time granularity, forward rounding is applied; for ex
 Please note that if domain names are specified, this parameter will be ignored.
  * @method void setProject(integer $Project) Set Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
- * @method string getInterval() Obtain Time granularity, which can be:
+ * @method string getInterval() Obtain Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
- * @method void setInterval(string $Interval) Set Time granularity, which can be:
+ * @method void setInterval(string $Interval) Set Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
  */
@@ -67,7 +67,7 @@ Please note that if domain names are specified, this parameter will be ignored.
     public $Project;
 
     /**
-     * @var string Time granularity, which can be:
+     * @var string Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
      */
@@ -81,7 +81,7 @@ According to the specified time granularity, forward rounding is applied; for ex
      * @param array $Domains Specifies the list of domain names to be queried; up to 30 domain names can be queried at a time.
      * @param integer $Project Specifies the project ID to be queried, which can be viewed [here](https://console.cloud.tencent.com/project)
 Please note that if domain names are specified, this parameter will be ignored.
-     * @param string $Interval Time granularity, which can be:
+     * @param string $Interval Sampling interval in minutes. The available options vary for different query period. See below: 
 5min: 5 minutes. If the query period is within 24 hours, `5min` will be used by default.
 day: 1 day. If the query period is longer than 24 hours, `day` will be used by default.
      */

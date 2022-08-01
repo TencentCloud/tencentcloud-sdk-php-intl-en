@@ -21,25 +21,25 @@ use TencentCloud\Common\AbstractModel;
  * Video dragging configuration. This is disabled by default.
  *
  * @method string getSwitch() Obtain Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  */
 class VideoSeek extends AbstractModel
 {
     /**
      * @var string Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
      * @param string $Switch Video dragging switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     function __construct()
     {

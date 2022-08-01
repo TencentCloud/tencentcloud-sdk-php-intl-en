@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRedirectCode(integer $RedirectCode) Set Status code
 `403` is passed in when the action is `intercept`.
 `301` is passed in when the action is `redirect`.
- * @method string getRedirectUrl() Obtain Redirection URL
- * @method void setRedirectUrl(string $RedirectUrl) Set Redirection URL
+ * @method string getRedirectUrl() Obtain URL to be redirected
+ * @method void setRedirectUrl(string $RedirectUrl) Set URL to be redirected
  */
 class ScdnErrorPage extends AbstractModel
 {
@@ -39,7 +39,7 @@ class ScdnErrorPage extends AbstractModel
     public $RedirectCode;
 
     /**
-     * @var string Redirection URL
+     * @var string URL to be redirected
      */
     public $RedirectUrl;
 
@@ -47,7 +47,7 @@ class ScdnErrorPage extends AbstractModel
      * @param integer $RedirectCode Status code
 `403` is passed in when the action is `intercept`.
 `301` is passed in when the action is `redirect`.
-     * @param string $RedirectUrl Redirection URL
+     * @param string $RedirectUrl URL to be redirected
      */
     function __construct()
     {

@@ -60,6 +60,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBacktracking(integer $Backtracking) Set Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsGBK() Obtain Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsGBK(integer $IsGBK) Set Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getJsonStandard() Obtain Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setJsonStandard(integer $JsonStandard) Set Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -124,6 +132,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Backtracking;
 
     /**
+     * @var integer Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsGBK;
+
+    /**
+     * @var integer Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $JsonStandard;
+
+    /**
      * @param string $TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TimeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
@@ -144,6 +164,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Backtracking Size of the data to be rewound in incremental collection mode. Default value: -1 (full collection)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -201,6 +225,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Backtracking",$param) and $param["Backtracking"] !== null) {
             $this->Backtracking = $param["Backtracking"];
+        }
+
+        if (array_key_exists("IsGBK",$param) and $param["IsGBK"] !== null) {
+            $this->IsGBK = $param["IsGBK"];
+        }
+
+        if (array_key_exists("JsonStandard",$param) and $param["JsonStandard"] !== null) {
+            $this->JsonStandard = $param["JsonStandard"];
         }
     }
 }

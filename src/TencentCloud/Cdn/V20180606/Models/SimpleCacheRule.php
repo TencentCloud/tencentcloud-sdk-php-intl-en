@@ -21,29 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * Cache expiration rules configuration
  *
  * @method string getCacheType() Obtain Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
  * @method void setCacheType(string $CacheType) Set Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
- * @method array getCacheContents() Obtain Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
- * @method void setCacheContents(array $CacheContents) Set Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+ * @method array getCacheContents() Obtain Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
+ * @method void setCacheContents(array $CacheContents) Set Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
  * @method integer getCacheTime() Obtain Cache expiration time settings
 Unit: second. The maximum value is 365 days.
  * @method void setCacheTime(integer $CacheTime) Set Cache expiration time settings
@@ -53,21 +53,21 @@ class SimpleCacheRule extends AbstractModel
 {
     /**
      * @var string Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
      */
     public $CacheType;
 
     /**
-     * @var array Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+     * @var array Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      */
     public $CacheContents;
 
@@ -79,17 +79,17 @@ Unit: second. The maximum value is 365 days.
 
     /**
      * @param string $CacheType Rule types:
-`all`: effective for all files
-`file`: effective for specified file suffixes
-`directory`: effective for specified paths
-`path`: effective for specified absolute paths
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
 index: home page
-     * @param array $CacheContents Content for each CacheType:
-Enter `*` for `all`
-Enter an extension for `file`, such as `jpg` or `txt`
-Enter a path for `directory`, such as `/xxx/test`
-Enter an absolute path for `path`, such as `/xxx/test.html`
-Enter `/` for `index`
+     * @param array $CacheContents Content for each `CacheType`:
+For `all`, enter a wildcard `*`.
+For `file`, enter a suffix, e.g., `jpg` or `txt`.
+For `directory`, enter a path, e.g., `/xxx/test/`.
+For `path`, enter an absolute path, e.g., `/xxx/test.html`.
+For `index`, enter a forward slash `/`.
      * @param integer $CacheTime Cache expiration time settings
 Unit: second. The maximum value is 365 days.
      */

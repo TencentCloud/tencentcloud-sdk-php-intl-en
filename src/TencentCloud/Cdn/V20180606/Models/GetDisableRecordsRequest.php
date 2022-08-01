@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Specifies the URL to be queried
  * @method string getStartTime() Obtain Starting time, such as `2018-12-12 10:24:00`
  * @method void setStartTime(string $StartTime) Set Starting time, such as `2018-12-12 10:24:00`
- * @method string getEndTime() Obtain End time, such as 2018-12-14 10:24:00
- * @method void setEndTime(string $EndTime) Set End time, such as 2018-12-14 10:24:00
+ * @method string getEndTime() Obtain End time, such as `2018-12-14 10:24:00`
+ * @method void setEndTime(string $EndTime) Set End time, such as `2018-12-14 10:24:00`
  * @method string getStatus() Obtain Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
@@ -34,8 +34,8 @@ disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
+ * @method integer getLimit() Obtain Pagination limit. Default value: 20.
+ * @method void setLimit(integer $Limit) Set Pagination limit. Default value: 20.
  * @method string getTaskId() Obtain Task ID. The task ID and start time cannot be both left empty.
  * @method void setTaskId(string $TaskId) Set Task ID. The task ID and start time cannot be both left empty.
  */
@@ -52,7 +52,7 @@ class GetDisableRecordsRequest extends AbstractModel
     public $StartTime;
 
     /**
-     * @var string End time, such as 2018-12-14 10:24:00
+     * @var string End time, such as `2018-12-14 10:24:00`
      */
     public $EndTime;
 
@@ -69,7 +69,7 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 20
+     * @var integer Pagination limit. Default value: 20.
      */
     public $Limit;
 
@@ -81,12 +81,12 @@ enable: The URL is enabled (unblocked) and can be normally accessed
     /**
      * @param string $Url Specifies the URL to be queried
      * @param string $StartTime Starting time, such as `2018-12-12 10:24:00`
-     * @param string $EndTime End time, such as 2018-12-14 10:24:00
+     * @param string $EndTime End time, such as `2018-12-14 10:24:00`
      * @param string $Status Current URL status
 disable: The URL remains disabled, and accessing it will return an error 403
 enable: The URL is enabled (unblocked) and can be normally accessed
      * @param integer $Offset Offset for paginated queries. Default value: 0
-     * @param integer $Limit Limit on paged queries. Default value: 20
+     * @param integer $Limit Pagination limit. Default value: 20.
      * @param string $TaskId Task ID. The task ID and start time cannot be both left empty.
      */
     function __construct()

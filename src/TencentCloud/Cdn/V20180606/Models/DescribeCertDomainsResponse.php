@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeCertDomains response structure.
  *
  * @method array getDomains() Obtain List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setDomains(array $Domains) Set List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getCertifiedDomains() Obtain List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCertifiedDomains(array $CertifiedDomains) Set List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,13 +35,13 @@ class DescribeCertDomainsResponse extends AbstractModel
 {
     /**
      * @var array List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Domains;
 
     /**
      * @var array List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CertifiedDomains;
 
@@ -52,9 +52,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param array $Domains List of domain names connected to CDN
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $CertifiedDomains List of CDN domain names with certificates configured
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -21,33 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * A part of `CacheKey`
  *
  * @method string getSwitch() Obtain Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getValue() Obtain Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CookieKey extends AbstractModel
 {
     /**
      * @var string Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var string Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Value;
 
     /**
      * @param string $Switch Whether to use `Cookie` as part of `CacheKey`. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Value Used cookies (separated by ';')
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

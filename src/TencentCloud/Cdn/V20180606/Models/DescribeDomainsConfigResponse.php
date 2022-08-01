@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDomains() Obtain List of domain names
  * @method void setDomains(array $Domains) Set List of domain names
- * @method integer getTotalNumber() Obtain The number of domain names that matched the query conditions
+ * @method integer getTotalNumber() Obtain Number of domain names that match the specified query conditions
 Used for paginated queries
- * @method void setTotalNumber(integer $TotalNumber) Set The number of domain names that matched the query conditions
+ * @method void setTotalNumber(integer $TotalNumber) Set Number of domain names that match the specified query conditions
 Used for paginated queries
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -37,7 +37,7 @@ class DescribeDomainsConfigResponse extends AbstractModel
     public $Domains;
 
     /**
-     * @var integer The number of domain names that matched the query conditions
+     * @var integer Number of domain names that match the specified query conditions
 Used for paginated queries
      */
     public $TotalNumber;
@@ -49,7 +49,7 @@ Used for paginated queries
 
     /**
      * @param array $Domains List of domain names
-     * @param integer $TotalNumber The number of domain names that matched the query conditions
+     * @param integer $TotalNumber Number of domain names that match the specified query conditions
 Used for paginated queries
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

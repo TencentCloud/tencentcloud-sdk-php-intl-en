@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getAppId() Obtain Developer ID
  * @method void setAppId(integer $AppId) Set Developer ID
  * @method string getChannel() Obtain Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setChannel(string $Channel) Set Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getLogsetId() Obtain Logset ID
  * @method void setLogsetId(string $LogsetId) Set Logset ID
  * @method string getLogsetName() Obtain Logset name
@@ -34,18 +34,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setIsDefault(integer $IsDefault) Set Whether it is the default logset
  * @method integer getLogsetSavePeriod() Obtain Log retention period in days
  * @method void setLogsetSavePeriod(integer $LogsetSavePeriod) Set Log retention period in days
- * @method string getCreateTime() Obtain Creation date
- * @method void setCreateTime(string $CreateTime) Set Creation date
+ * @method string getCreateTime() Obtain Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getRegion() Obtain Region
  * @method void setRegion(string $Region) Set Region
  * @method string getDeleted() Obtain Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setDeleted(string $Deleted) Set Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRegionEn() Obtain Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRegionEn(string $RegionEn) Set Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class LogSetInfo extends AbstractModel
 {
@@ -56,7 +56,7 @@ class LogSetInfo extends AbstractModel
 
     /**
      * @var string Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Channel;
 
@@ -81,7 +81,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $LogsetSavePeriod;
 
     /**
-     * @var string Creation date
+     * @var string Creation time
      */
     public $CreateTime;
 
@@ -92,30 +92,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Deleted;
 
     /**
      * @var string Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RegionEn;
 
     /**
      * @param integer $AppId Developer ID
      * @param string $Channel Channel
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LogsetId Logset ID
      * @param string $LogsetName Logset name
      * @param integer $IsDefault Whether it is the default logset
      * @param integer $LogsetSavePeriod Log retention period in days
-     * @param string $CreateTime Creation date
+     * @param string $CreateTime Creation time
      * @param string $Region Region
      * @param string $Deleted Whether the logset has been removed from CLS
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RegionEn Whether English is used in this region
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

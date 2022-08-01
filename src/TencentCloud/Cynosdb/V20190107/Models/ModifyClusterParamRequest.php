@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getParamList() Obtain List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
- * @method void setParamList(array $ParamList) Set List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+ * @method array getParamList() Obtain List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
+ * @method void setParamList(array $ParamList) Set List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
  * @method string getIsInMaintainPeriod() Obtain Valid values: `yes` (execute during maintenance time), `no` (execute now)
  * @method void setIsInMaintainPeriod(string $IsInMaintainPeriod) Set Valid values: `yes` (execute during maintenance time), `no` (execute now)
  */
@@ -35,7 +35,7 @@ class ModifyClusterParamRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+     * @var array List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
      */
     public $ParamList;
 
@@ -46,7 +46,7 @@ class ModifyClusterParamRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param array $ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`.
+     * @param array $ParamList List of the parameters to be modified. Each element in the list is a combination of `ParamName`, `CurrentValue`, and `OldValue`. `ParamName` is the parameter name; `CurrentValue` is the current value; `OldValue` is the old value that doesn’t need to be verified.
      * @param string $IsInMaintainPeriod Valid values: `yes` (execute during maintenance time), `no` (execute now)
      */
     function __construct()

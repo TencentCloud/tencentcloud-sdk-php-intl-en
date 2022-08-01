@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IPv6 access configuration
  *
- * @method string getSwitch() Obtain Whether to enable the IPv6 access feature for a domain name. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Whether to enable the IPv6 access feature for a domain name. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Ipv6Access extends AbstractModel
 {
     /**
-     * @var string Whether to enable the IPv6 access feature for a domain name. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
-     * @param string $Switch Whether to enable the IPv6 access feature for a domain name. Valid values: `on` and `off`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable the IPv6 feature for a domain name. Values include `on` or `off`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

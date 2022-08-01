@@ -30,6 +30,16 @@ use TencentCloud\Common\AbstractModel;
 `delete`: purges all resources
  * @method boolean getUrlEncode() Obtain Whether to encode Chinese characters before purge.
  * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode Chinese characters before purge.
+ * @method string getArea() Obtain Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+ * @method void setArea(string $Area) Set Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
  */
 class PurgePathCacheRequest extends AbstractModel
 {
@@ -51,11 +61,25 @@ class PurgePathCacheRequest extends AbstractModel
     public $UrlEncode;
 
     /**
+     * @var string Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
+     */
+    public $Area;
+
+    /**
      * @param array $Paths List of directories. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $FlushType Purge type:
 `flush`: purges updated resources
 `delete`: purges all resources
      * @param boolean $UrlEncode Whether to encode Chinese characters before purge.
+     * @param string $Area Region to purge
+The acceleration region of the acceleration domain name will be purged if this parameter is not passed in.
+If `mainland` is passed in, only the content cached on nodes in the Chinese mainland will be purged.
+If `overseas` is passed in, only the content cached on nodes outside the Chinese mainland will be purged.
+The specified region to purge should match the domain name’s acceleration region.
      */
     function __construct()
     {
@@ -80,6 +104,10 @@ class PurgePathCacheRequest extends AbstractModel
 
         if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
             $this->UrlEncode = $param["UrlEncode"];
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

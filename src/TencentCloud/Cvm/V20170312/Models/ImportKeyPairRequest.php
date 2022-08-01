@@ -30,6 +30,8 @@ If you want to use the default project, specify 0 for the parameter.
 If you want to use the default project, specify 0 for the parameter.
  * @method string getPublicKey() Obtain Content of the public key in the key pair in the `OpenSSH RSA` format.
  * @method void setPublicKey(string $PublicKey) Set Content of the public key in the key pair in the `OpenSSH RSA` format.
+ * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a key pair.
+ * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a key pair.
  */
 class ImportKeyPairRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ If you want to use the default project, specify 0 for the parameter.
     public $PublicKey;
 
     /**
+     * @var array Tag description list. This parameter is used to bind a tag to a key pair.
+     */
+    public $TagSpecification;
+
+    /**
      * @param string $KeyName Key pair name, which can contain numbers, letters, and underscores, with a maximum length of 25 characters.
      * @param integer $ProjectId The project ID to which the key pair belongs after it is created. <br><br>You can obtain the project ID in the following ways: <br><li>Check the project list in the [Project management](https://console.cloud.tencent.com/project) page.<br><li>Call the `DescribeProject` API and view the `projectId` in the response.
 
 If you want to use the default project, specify 0 for the parameter.
      * @param string $PublicKey Content of the public key in the key pair in the `OpenSSH RSA` format.
+     * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a key pair.
      */
     function __construct()
     {
@@ -80,6 +88,15 @@ If you want to use the default project, specify 0 for the parameter.
 
         if (array_key_exists("PublicKey",$param) and $param["PublicKey"] !== null) {
             $this->PublicKey = $param["PublicKey"];
+        }
+
+        if (array_key_exists("TagSpecification",$param) and $param["TagSpecification"] !== null) {
+            $this->TagSpecification = [];
+            foreach ($param["TagSpecification"] as $key => $value){
+                $obj = new TagSpecification();
+                $obj->deserialize($value);
+                array_push($this->TagSpecification, $obj);
+            }
         }
     }
 }

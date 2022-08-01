@@ -21,25 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * 301/302 automatic origin-pull follow-redirect configuration. It is disabled by default.
  *
  * @method string getSwitch() Obtain Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
+ * @method RedirectConfig getRedirectConfig() Obtain 
+ * @method void setRedirectConfig(RedirectConfig $RedirectConfig) Set 
  */
 class FollowRedirect extends AbstractModel
 {
     /**
      * @var string Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
+     * @var RedirectConfig 
+     */
+    public $RedirectConfig;
+
+    /**
      * @param string $Switch Origin-pull follow-redirect switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
+     * @param RedirectConfig $RedirectConfig 
      */
     function __construct()
     {
@@ -56,6 +64,11 @@ off: disabled
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("RedirectConfig",$param) and $param["RedirectConfig"] !== null) {
+            $this->RedirectConfig = new RedirectConfig();
+            $this->RedirectConfig->deserialize($param["RedirectConfig"]);
         }
     }
 }

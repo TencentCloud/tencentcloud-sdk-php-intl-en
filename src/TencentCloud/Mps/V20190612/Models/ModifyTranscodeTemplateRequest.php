@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
  * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+ * @method EnhanceConfig getEnhanceConfig() Obtain Audio/Video enhancement settings.
+ * @method void setEnhanceConfig(EnhanceConfig $EnhanceConfig) Set Audio/Video enhancement settings.
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
@@ -99,6 +101,11 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var EnhanceConfig Audio/Video enhancement settings.
+     */
+    public $EnhanceConfig;
+
+    /**
      * @param integer $Definition Unique ID of a transcoding template.
      * @param string $Container Container format. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
      * @param string $Name Name of a transcoding template. Length limit: 64 characters.
@@ -112,6 +119,7 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter. To enable it, please contact your Tencent Cloud sales rep.
+     * @param EnhanceConfig $EnhanceConfig Audio/Video enhancement settings.
      */
     function __construct()
     {
@@ -163,6 +171,11 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("EnhanceConfig",$param) and $param["EnhanceConfig"] !== null) {
+            $this->EnhanceConfig = new EnhanceConfig();
+            $this->EnhanceConfig->deserialize($param["EnhanceConfig"]);
         }
     }
 }

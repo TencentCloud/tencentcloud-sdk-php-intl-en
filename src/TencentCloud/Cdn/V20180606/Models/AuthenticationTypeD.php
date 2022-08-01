@@ -21,14 +21,14 @@ use TencentCloud\Common\AbstractModel;
  * Timestamp hotlink protection mode D configuration
 The access URL format of timestamp hotlink protection mode D is as follows: http://DomainName/FileName?sign=md5hash&t=timestamp
 Here, timestamp is a decimal or hexadecimal timestamp in Unix format;
-md5hash: MD5 (custom key + file path + timestamp)
+`md5hash`: MD5 (custom key + file path + timestamp)
  *
  * @method string getSecretKey() Obtain The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSecretKey(string $SecretKey) Set The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getExpireTime() Obtain Signature expiration time
 Unit: second. The maximum value is 630720000.
  * @method void setExpireTime(integer $ExpireTime) Set Signature expiration time
@@ -37,10 +37,10 @@ Unit: second. The maximum value is 630720000.
 If it contains an asterisk (*), this indicates all files.
  * @method void setFileExtensions(array $FileExtensions) Set File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
- * @method string getFilterType() Obtain allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
- * @method void setFilterType(string $FilterType) Set allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+ * @method string getFilterType() Obtain `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
+ * @method void setFilterType(string $FilterType) Set `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
  * @method string getSignParam() Obtain Signature parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
  * @method void setSignParam(string $SignParam) Set Signature parameter name
@@ -50,24 +50,24 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
  * @method void setTimeParam(string $TimeParam) Set Timestamp parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
  * @method string getTimeFormat() Obtain Timestamp settings
-dec: decimal
-hex: hexadecimal
+`dec`: Decimal
+`hex`: Hexadecimal
  * @method void setTimeFormat(string $TimeFormat) Set Timestamp settings
-dec: decimal
-hex: hexadecimal
+`dec`: Decimal
+`hex`: Hexadecimal
  * @method string getBackupSecretKey() Obtain Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setBackupSecretKey(string $BackupSecretKey) Set Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class AuthenticationTypeD extends AbstractModel
 {
     /**
      * @var string The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SecretKey;
 
@@ -84,8 +84,8 @@ If it contains an asterisk (*), this indicates all files.
     public $FileExtensions;
 
     /**
-     * @var string allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+     * @var string `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
      */
     public $FilterType;
 
@@ -103,38 +103,38 @@ Only upper and lower-case letters, digits, and underscores (_) are allowed. It c
 
     /**
      * @var string Timestamp settings
-dec: decimal
-hex: hexadecimal
+`dec`: Decimal
+`hex`: Hexadecimal
      */
     public $TimeFormat;
 
     /**
      * @var string Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $BackupSecretKey;
 
     /**
      * @param string $SecretKey The key for signature calculation
-Only digits, upper and lower-case letters are allowed. Length limit: 6-32 characters.
-Note: this field may return null, indicating that no valid values can be obtained.
+6-32 characters. Only digits and letters are allowed. 
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ExpireTime Signature expiration time
 Unit: second. The maximum value is 630720000.
      * @param array $FileExtensions File extension list settings determining if authentication should be performed
 If it contains an asterisk (*), this indicates all files.
-     * @param string $FilterType allowlist: indicates that all file types apart from the FileExtensions list are authenticated
-blacklist: indicates that only the file types in the FileExtensions list are authenticated
+     * @param string $FilterType `whitelist`: All file types apart from the FileExtensions list are authenticated.
+`blacklist`: Only the file types in the FileExtensions list are authenticated.
      * @param string $SignParam Signature parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      * @param string $TimeParam Timestamp parameter name
 Only upper and lower-case letters, digits, and underscores (_) are allowed. It cannot start with a digit. Length limit: 1-100 characters.
      * @param string $TimeFormat Timestamp settings
-dec: decimal
-hex: hexadecimal
+`dec`: Decimal
+`hex`: Hexadecimal
      * @param string $BackupSecretKey Backup key, which is used to calculate a signature.
 6-32 characters. Only digits and letters are allowed. 
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

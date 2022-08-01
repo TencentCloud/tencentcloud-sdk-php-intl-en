@@ -21,41 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Status code redirect configuration, which is disabled by default.
  *
  * @method string getSwitch() Obtain Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getPageRules() Obtain Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setPageRules(array $PageRules) Set Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ErrorPage extends AbstractModel
 {
     /**
      * @var string Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
      * @var array Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $PageRules;
 
     /**
      * @param string $Switch Status code redirect configuration switch
-on: enabled
-off: disabled
-Note: this field may return null, indicating that no valid values can be obtained.
+`on`: Enable
+`off`: Disable
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $PageRules Status code redirect rules configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

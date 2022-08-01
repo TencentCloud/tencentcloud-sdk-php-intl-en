@@ -21,41 +21,41 @@ use TencentCloud\Common\AbstractModel;
  * Access limit configuration for a single IP of a single node. This is disabled by default. 
  *
  * @method string getSwitch() Obtain IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method integer getQps() Obtain Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQps(integer $Qps) Set Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class IpFreqLimit extends AbstractModel
 {
     /**
      * @var string IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
     /**
      * @var integer Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Qps;
 
     /**
      * @param string $Switch IP access limit configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param integer $Qps Sets the limited number of requests per second
 514 will be returned for requests that exceed the limit
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

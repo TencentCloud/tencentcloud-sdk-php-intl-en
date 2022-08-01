@@ -32,26 +32,26 @@ You must specify either a task ID or a starting time.
  * @method void setKeyword(string $Keyword) Set Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: 0
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: 0
- * @method integer getLimit() Obtain Limit on paged queries. Default value: 20
- * @method void setLimit(integer $Limit) Set Limit on paged queries. Default value: 20
+ * @method integer getLimit() Obtain Limit on paginated queries. Default value: 20
+ * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 20
  * @method string getArea() Obtain Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
  * @method void setArea(string $Area) Set Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
  * @method string getStatus() Obtain Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
  * @method void setStatus(string $Status) Set Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
  */
 class DescribePushTasksRequest extends AbstractModel
 {
@@ -82,24 +82,24 @@ You must specify either a task ID or a starting time.
     public $Offset;
 
     /**
-     * @var integer Limit on paged queries. Default value: 20
+     * @var integer Limit on paginated queries. Default value: 20
      */
     public $Limit;
 
     /**
      * @var string Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      */
     public $Area;
 
     /**
      * @var string Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     public $Status;
 
@@ -110,16 +110,16 @@ You must specify either a task ID or a starting time.
 You must specify either a task ID or a starting time.
      * @param string $Keyword Specifies a keyword for your query. Please enter a domain name or a complete URL beginning with `http(s)://`
      * @param integer $Offset Offset for paginated queries. Default value: 0
-     * @param integer $Limit Limit on paged queries. Default value: 20
+     * @param integer $Limit Limit on paginated queries. Default value: 20
      * @param string $Area Specifies a region for your query:
-`mainland`: within Mainland China
-`overseas`: outside Mainland China
-`global`: global
+`mainland`: Chinese mainland
+`overseas`: Outside the Chinese mainland
+`global`: Globe
      * @param string $Status Queries the status of a specified task
-`fail`: prefetch failed
-`done`: prefetch succeeded
-`process`: prefetch in progress
-`invalid`: invalid prefetch with 4XX/5XX status code returned from the origin server
+`fail`: Prefetch failed
+`done`: Prefetch succeeded
+`process`: Prefetch in progress
+`invalid`: Invalid prefetch with 4XX/5XX status code returned from the origin server
      */
     function __construct()
     {

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskSet(array $TaskSet) Set Task overview list.
  * @method string getScrollToken() Obtain Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
  * @method void setScrollToken(string $ScrollToken) Set Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
+ * @method integer getTotalCount() Obtain The total number of records that meet the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of records that meet the conditions.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class DescribeTasksResponse extends AbstractModel
     public $ScrollToken;
 
     /**
+     * @var integer The total number of records that meet the conditions.
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class DescribeTasksResponse extends AbstractModel
     /**
      * @param array $TaskSet Task overview list.
      * @param string $ScrollToken Scrolling identifier. If a request does not return all the data entries, this field indicates the ID of the next entry. If this field is an empty string, there is no more data.
+     * @param integer $TotalCount The total number of records that meet the conditions.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +81,10 @@ class DescribeTasksResponse extends AbstractModel
 
         if (array_key_exists("ScrollToken",$param) and $param["ScrollToken"] !== null) {
             $this->ScrollToken = $param["ScrollToken"];
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -22,10 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Analysis name
  * @method void setName(string $Name) Set Analysis name
- * @method string getType() Obtain Analysis type. Valid values: `query`, `field`
- * @method void setType(string $Type) Set Analysis type. Valid values: `query`, `field`
+ * @method string getType() Obtain Type of data being analyzed. Valid values: `query`; `field`; `original`
+ * @method void setType(string $Type) Set Type of data being analyzed. Valid values: `query`; `field`; `original`
  * @method string getContent() Obtain Analysis content
  * @method void setContent(string $Content) Set Analysis content
+ * @method array getConfigInfo() Obtain Configuration
+ * @method void setConfigInfo(array $ConfigInfo) Set Configuration
  */
 class AnalysisDimensional extends AbstractModel
 {
@@ -35,7 +37,7 @@ class AnalysisDimensional extends AbstractModel
     public $Name;
 
     /**
-     * @var string Analysis type. Valid values: `query`, `field`
+     * @var string Type of data being analyzed. Valid values: `query`; `field`; `original`
      */
     public $Type;
 
@@ -45,9 +47,15 @@ class AnalysisDimensional extends AbstractModel
     public $Content;
 
     /**
+     * @var array Configuration
+     */
+    public $ConfigInfo;
+
+    /**
      * @param string $Name Analysis name
-     * @param string $Type Analysis type. Valid values: `query`, `field`
+     * @param string $Type Type of data being analyzed. Valid values: `query`; `field`; `original`
      * @param string $Content Analysis content
+     * @param array $ConfigInfo Configuration
      */
     function __construct()
     {
@@ -72,6 +80,15 @@ class AnalysisDimensional extends AbstractModel
 
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = $param["Content"];
+        }
+
+        if (array_key_exists("ConfigInfo",$param) and $param["ConfigInfo"] !== null) {
+            $this->ConfigInfo = [];
+            foreach ($param["ConfigInfo"] as $key => $value){
+                $obj = new AlarmAnalysisConfig();
+                $obj->deserialize($value);
+                array_push($this->ConfigInfo, $obj);
+            }
         }
     }
 }

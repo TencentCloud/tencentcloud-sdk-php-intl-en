@@ -38,12 +38,14 @@ Notes:
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
- * @method string getContext() Obtain You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+ * @method string getContext() Obtain You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
- * @method void setContext(string $Context) Set You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+ * @method void setContext(string $Context) Set You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
  * @method string getSort() Obtain Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`
@@ -93,8 +95,9 @@ Notes:
     public $Limit;
 
     /**
-     * @var string You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+     * @var string You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      */
@@ -125,8 +128,9 @@ A statement is in the format of <a href="https://intl.cloud.tencent.com/document
 Notes:
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To limit the number of analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
-     * @param string $Context You can pass through the `Context` value (validity: 1 hour) returned by the last API to continue to get logs, which can get up to 10,000 raw logs.
+     * @param string $Context You can pass through the `Context` value (validity: an hour) returned by the API last time to continue to get logs (up to 10,000 raw logs).
 Notes:
+* Do not modify any other parameters while passing through the `Context` parameter.
 * This parameter is valid only when the query statement (`Query`) does not contain an SQL statement.
 * To continue to get analysis results, see <a href="https://intl.cloud.tencent.com/document/product/614/58977?from_cn_redirect=1" target="_blank">SQL LIMIT Syntax</a>.
      * @param string $Sort Time order of the logs returned. Valid values: `asc` (ascending); `desc`: (descending). Default value: `desc`

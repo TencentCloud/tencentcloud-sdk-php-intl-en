@@ -21,26 +21,26 @@ use TencentCloud\Common\AbstractModel;
  * Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
  *
  * @method string getSwitch() Obtain Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method void setSwitch(string $Switch) Set Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
  * @method string getOptimizationType() Obtain Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setOptimizationType(string $OptimizationType) Set Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class OriginPullOptimization extends AbstractModel
 {
     /**
      * @var string Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      */
     public $Switch;
 
@@ -48,18 +48,18 @@ off: disabled
      * @var string Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $OptimizationType;
 
     /**
      * @param string $Switch Cross-border origin-pull optimization configuration switch
-on: enabled
-off: disabled
+`on`: Enable
+`off`: Disable
      * @param string $OptimizationType Cross-border types
 OVToCN: origin-pull from outside mainland China to inside mainland China
 CNToOV: origin-pull from inside mainland China to outside mainland China
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

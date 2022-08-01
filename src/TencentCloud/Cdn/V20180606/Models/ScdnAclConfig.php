@@ -31,9 +31,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setErrorPage(ScdnErrorPage $ErrorPage) Set Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method array getAdvancedScriptData() Obtain ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAdvancedScriptData(array $AdvancedScriptData) Set ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ScdnAclConfig extends AbstractModel
 {
@@ -56,7 +56,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var array ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AdvancedScriptData;
 
@@ -67,7 +67,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param ScdnErrorPage $ErrorPage Error page configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AdvancedScriptData ACL rule group, which is required when the access control is on.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

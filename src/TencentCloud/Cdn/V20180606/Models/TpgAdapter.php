@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Image optimization - `TpgAdapter` configuration
  *
- * @method string getSwitch() Obtain Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSwitch(string $Switch) Set Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSwitch(string $Switch) Set Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class TpgAdapter extends AbstractModel
 {
     /**
-     * @var string Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
-     * @param string $Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Switch Switch. Valid values: `on`, `off`
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

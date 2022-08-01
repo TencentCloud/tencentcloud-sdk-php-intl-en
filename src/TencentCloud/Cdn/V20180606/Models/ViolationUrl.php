@@ -27,17 +27,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getDownloadUrl() Obtain Snapshot path. This is used to display a snapshot of the content in violation on the console.
  * @method void setDownloadUrl(string $DownloadUrl) Set Snapshot path. This is used to display a snapshot of the content in violation on the console.
  * @method string getUrlStatus() Obtain Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
  * @method void setUrlStatus(string $UrlStatus) Set Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method string getUpdateTime() Obtain Update time
@@ -62,11 +62,11 @@ class ViolationUrl extends AbstractModel
 
     /**
      * @var string Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
      */
     public $UrlStatus;
 
@@ -85,11 +85,11 @@ complain: appeal in process
      * @param string $RealUrl Origin access URL of the resource in violation
      * @param string $DownloadUrl Snapshot path. This is used to display a snapshot of the content in violation on the console.
      * @param string $UrlStatus Current status of the resources in violation
-forbid: blocked
-release: unblocked
-delay: processing delayed 
-reject: appeal dismissed. The status is still blocked.
-complain: appeal in process
+`forbid`: Blocked
+`release`: Unblocked
+`delay`: Processing delayed
+`reject`: Appeal dismissed. The status is still blocked.
+`complain`: Appeal in process
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Update time
      */

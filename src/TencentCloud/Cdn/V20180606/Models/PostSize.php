@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Maximum size of the file uploaded for streaming via a POST request
  *
- * @method string getSwitch() Obtain Limit the size of a POST request. The default value is 32 MB.
+ * @method string getSwitch() Obtain Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
- * @method void setSwitch(string $Switch) Set Limit the size of a POST request. The default value is 32 MB.
+ * @method void setSwitch(string $Switch) Set Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
  * @method integer getMaxSize() Obtain Maximum size. Value range: 1 MB to 200 MB.
@@ -32,7 +32,7 @@ on: Enable
 class PostSize extends AbstractModel
 {
     /**
-     * @var string Limit the size of a POST request. The default value is 32 MB.
+     * @var string Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
      */
@@ -44,7 +44,7 @@ on: Enable
     public $MaxSize;
 
     /**
-     * @param string $Switch Limit the size of a POST request. The default value is 32 MB.
+     * @param string $Switch Limit the size of POST requests. The default value is 32 MB.
 off: Disable
 on: Enable
      * @param integer $MaxSize Maximum size. Value range: 1 MB to 200 MB.

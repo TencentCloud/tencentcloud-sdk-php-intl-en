@@ -21,13 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DisableCaches response structure.
  *
  * @method CacheOptResult getCacheOptResult() Obtain Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCacheOptResult(CacheOptResult $CacheOptResult) Set Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getTaskId() Obtain Task ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTaskId(string $TaskId) Set Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getTaskId() Obtain Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTaskId(string $TaskId) Set Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,13 +35,13 @@ class DisableCachesResponse extends AbstractModel
 {
     /**
      * @var CacheOptResult Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $CacheOptResult;
 
     /**
-     * @var string Task ID.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TaskId;
 
@@ -52,9 +52,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param CacheOptResult $CacheOptResult Submission result
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $TaskId Task ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $TaskId Task ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

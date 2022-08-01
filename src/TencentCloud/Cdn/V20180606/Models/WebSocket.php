@@ -22,13 +22,13 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSwitch() Obtain Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
  * @method void setSwitch(string $Switch) Set Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
- * @method integer getTimeout() Obtain Sets the timeout period in seconds. Maximum value: 65.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
+ * @method integer getTimeout() Obtain Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTimeout(integer $Timeout) Set Sets the timeout period in seconds. Maximum value: 65.
+ * @method void setTimeout(integer $Timeout) Set Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class WebSocket extends AbstractModel
@@ -36,12 +36,12 @@ class WebSocket extends AbstractModel
     /**
      * @var string Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
      */
     public $Switch;
 
     /**
-     * @var integer Sets the timeout period in seconds. Maximum value: 65.
+     * @var integer Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Timeout;
@@ -49,8 +49,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     /**
      * @param string $Switch Whether to enable custom WebSocket timeout setting. When it’s `off`: WebSocket connection is supported, and the default timeout period is 15 seconds. To change the timeout period, please set it to `on`.
 
-* WebSocket is now only available for beta users. To use it, please submit a ticket.
-     * @param integer $Timeout Sets the timeout period in seconds. Maximum value: 65.
+* WebSocket is an ECDN feature. You can enable it in the ECDN domain name configuration.
+     * @param integer $Timeout Sets timeout period in seconds. Maximum value: 300
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -18,36 +18,36 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `UserAgent` blocklist/allowlist configuration
+ * `UserAgent` blacklist/whitelist configuration
  *
  * @method string getSwitch() Obtain Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setSwitch(string $Switch) Set Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFilterRules() Obtain UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFilterRules(array $FilterRules) Set UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFilterRules() Obtain UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFilterRules(array $FilterRules) Set UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class UserAgentFilter extends AbstractModel
 {
     /**
      * @var string Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Switch;
 
     /**
-     * @var array UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FilterRules;
 
     /**
      * @param string $Switch Switch. Valid values: on, off
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $FilterRules UA blocklist/allowlist effect rule list
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $FilterRules UA blacklist/whitelist effect rule list
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

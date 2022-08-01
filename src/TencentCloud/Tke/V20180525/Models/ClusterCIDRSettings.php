@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterCIDR(string $ClusterCIDR) Set CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
  * @method boolean getIgnoreClusterCIDRConflict() Obtain Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
  * @method void setIgnoreClusterCIDRConflict(boolean $IgnoreClusterCIDRConflict) Set Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
- * @method integer getMaxNodePodNum() Obtain Maximum number of pods on each node in the cluster
- * @method void setMaxNodePodNum(integer $MaxNodePodNum) Set Maximum number of pods on each node in the cluster
+ * @method integer getMaxNodePodNum() Obtain Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
+ * @method void setMaxNodePodNum(integer $MaxNodePodNum) Set Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
  * @method integer getMaxClusterServiceNum() Obtain The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
  * @method void setMaxClusterServiceNum(integer $MaxClusterServiceNum) Set The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
  * @method string getServiceCIDR() Obtain The CIDR block used to assign cluster service IP addresses. It must conflict with neither the VPC CIDR block nor with CIDR blocks of other clusters in the same VPC instance. The IP range must be within the private network IP range, such as 10.1.0.0/14, 192.168.0.1/18, and 172.16.0.0/16.
@@ -50,7 +50,7 @@ class ClusterCIDRSettings extends AbstractModel
     public $IgnoreClusterCIDRConflict;
 
     /**
-     * @var integer Maximum number of pods on each node in the cluster
+     * @var integer Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
      */
     public $MaxNodePodNum;
 
@@ -82,7 +82,7 @@ class ClusterCIDRSettings extends AbstractModel
     /**
      * @param string $ClusterCIDR CIDR used to assign container and service IPs for the cluster. It cannot conflict with the VPC's CIDR or the CIDRs of other clusters in the same VPC
      * @param boolean $IgnoreClusterCIDRConflict Whether to ignore ClusterCIDR conflict errors, which are not ignored by default
-     * @param integer $MaxNodePodNum Maximum number of pods on each node in the cluster
+     * @param integer $MaxNodePodNum Maximum number of Pods on each node. Value range: 16 to 256. When its power is not 2, it will round upward to the closest power of 2.
      * @param integer $MaxClusterServiceNum The maximum number of services in a cluster. The range is from 32 to 32768. When its power is not 2, it will round upward to the closest power of 2. Default value is 256.
      * @param string $ServiceCIDR The CIDR block used to assign cluster service IP addresses. It must conflict with neither the VPC CIDR block nor with CIDR blocks of other clusters in the same VPC instance. The IP range must be within the private network IP range, such as 10.1.0.0/14, 192.168.0.1/18, and 172.16.0.0/16.
      * @param array $EniSubnetIds Subnet ID of the ENI in VPC-CNI network mode

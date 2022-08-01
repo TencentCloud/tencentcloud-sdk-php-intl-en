@@ -18,18 +18,18 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * `HSTS` configuration.
+ * HSTS configuration.
  *
  * @method string getSwitch() Obtain Whether to enable. Valid values: on, off.
  * @method void setSwitch(string $Switch) Set Whether to enable. Valid values: on, off.
  * @method integer getMaxAge() Obtain `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMaxAge(integer $MaxAge) Set `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getIncludeSubDomains() Obtain Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIncludeSubDomains(string $IncludeSubDomains) Set Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Hsts extends AbstractModel
 {
@@ -40,22 +40,22 @@ class Hsts extends AbstractModel
 
     /**
      * @var integer `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $MaxAge;
 
     /**
      * @var string Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $IncludeSubDomains;
 
     /**
      * @param string $Switch Whether to enable. Valid values: on, off.
      * @param integer $MaxAge `MaxAge` value.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IncludeSubDomains Whether to include subdomain names. Valid values: on, off.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

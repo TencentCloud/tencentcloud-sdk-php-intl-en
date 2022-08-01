@@ -23,45 +23,45 @@ use TencentCloud\Common\AbstractModel;
 + Advanced cache expiration rules configuration
  *
  * @method SimpleCache getSimpleCache() Obtain Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSimpleCache(SimpleCache $SimpleCache) Set Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method AdvancedCache getAdvancedCache() Obtain (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAdvancedCache(AdvancedCache $AdvancedCache) Set (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getRuleCache() Obtain Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleCache(array $RuleCache) Set Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Cache extends AbstractModel
 {
     /**
      * @var SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $SimpleCache;
 
     /**
      * @var AdvancedCache (Disused) Advanced cache validity configuration
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AdvancedCache;
 
     /**
      * @var array Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleCache;
 
     /**
      * @param SimpleCache $SimpleCache Basic cache expiration time configuration
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AdvancedCache $AdvancedCache (Disused) Advanced cache validity configuration
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param AdvancedCache $AdvancedCache (Disused) Advanced cache validity configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $RuleCache Advanced path cache configuration
-Note: this field may return null, indicating that no valid value is obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

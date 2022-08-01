@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateExporterIntegration response structure.
  *
- * @method array getNames() Obtain 
- * @method void setNames(array $Names) Set 
+ * @method array getNames() Obtain The list of successfully created integrations.
+ * @method void setNames(array $Names) Set The list of successfully created integrations.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateExporterIntegrationResponse extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array The list of successfully created integrations.
      */
     public $Names;
 
@@ -38,7 +38,7 @@ class CreateExporterIntegrationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Names 
+     * @param array $Names The list of successfully created integrations.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

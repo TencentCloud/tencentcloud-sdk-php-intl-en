@@ -24,16 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLogsetId(string $LogsetId) Set ID of logset to be queried
  * @method string getTopicIds() Obtain List of IDs of log topics to be queried, separated by commas
  * @method void setTopicIds(string $TopicIds) Set List of IDs of log topics to be queried, separated by commas
- * @method string getStartTime() Obtain Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
- * @method void setStartTime(string $StartTime) Set Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
- * @method string getEndTime() Obtain End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
- * @method void setEndTime(string $EndTime) Set End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+ * @method string getStartTime() Obtain Query start time in the format of YYYY-mm-dd HH:MM:SS
+ * @method void setStartTime(string $StartTime) Set Query start time in the format of YYYY-mm-dd HH:MM:SS
+ * @method string getEndTime() Obtain Query end time in the format of YYYY-mm-dd HH:MM:SS
+ * @method void setEndTime(string $EndTime) Set Query end time in the format of YYYY-mm-dd HH:MM:SS
  * @method integer getLimit() Obtain Number of logs to be returned at a time. Maximum value: 100
  * @method void setLimit(integer $Limit) Set Number of logs to be returned at a time. Maximum value: 100
  * @method string getChannel() Obtain Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
  * @method void setChannel(string $Channel) Set Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
- * @method string getQuery() Obtain Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
- * @method void setQuery(string $Query) Set Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+ * @method string getQuery() Obtain Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
+ * @method void setQuery(string $Query) Set Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
  * @method string getContext() Obtain This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
  * @method void setContext(string $Context) Set This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
  * @method string getSort() Obtain Sorting by log time. Valid values: asc (ascending), desc (descending). Default value: desc
@@ -52,12 +52,12 @@ class SearchClsLogRequest extends AbstractModel
     public $TopicIds;
 
     /**
-     * @var string Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * @var string Query start time in the format of YYYY-mm-dd HH:MM:SS
      */
     public $StartTime;
 
     /**
-     * @var string End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * @var string Query end time in the format of YYYY-mm-dd HH:MM:SS
      */
     public $EndTime;
 
@@ -72,7 +72,7 @@ class SearchClsLogRequest extends AbstractModel
     public $Channel;
 
     /**
-     * @var string Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+     * @var string Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
      */
     public $Query;
 
@@ -89,11 +89,11 @@ class SearchClsLogRequest extends AbstractModel
     /**
      * @param string $LogsetId ID of logset to be queried
      * @param string $TopicIds List of IDs of log topics to be queried, separated by commas
-     * @param string $StartTime Start time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
-     * @param string $EndTime End time of log to be queried in the format of `YYYY-mm-dd HH:MM:SS`
+     * @param string $StartTime Query start time in the format of YYYY-mm-dd HH:MM:SS
+     * @param string $EndTime Query end time in the format of YYYY-mm-dd HH:MM:SS
      * @param integer $Limit Number of logs to be returned at a time. Maximum value: 100
      * @param string $Channel Specifies whether to access CDN or ECDN. Valid values: `cdn` (default) and `ecdn`.
-     * @param string $Query Content to be queried. For more information, please visit https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1
+     * @param string $Query Query statement. For more details, see [https://intl.cloud.tencent.com/document/product/614/16982?from_cn_redirect=1].
      * @param string $Context This field is used when loading more results. Pass through the last `context` value returned to get more log content. Up to 10,000 logs can be obtained through the cursor. Please narrow down the time range as much as possible.
      * @param string $Sort Sorting by log time. Valid values: asc (ascending), desc (descending). Default value: desc
      */

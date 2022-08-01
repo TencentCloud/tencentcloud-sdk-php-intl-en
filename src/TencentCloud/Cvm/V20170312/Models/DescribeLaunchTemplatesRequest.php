@@ -22,9 +22,9 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getLaunchTemplateIds() Obtain Instance launch template ID. ID of one or more instance launch templates. If not specified, all templates of the user will be displayed.
  * @method void setLaunchTemplateIds(array $LaunchTemplateIds) Set Instance launch template ID. ID of one or more instance launch templates. If not specified, all templates of the user will be displayed.
- * @method array getFilters() Obtain <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateNames</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+ * @method array getFilters() Obtain <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateName</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `LaunchTemplateIds` and `Filters` at the same time.
- * @method void setFilters(array $Filters) Set <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateNames</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+ * @method void setFilters(array $Filters) Set <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateName</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `LaunchTemplateIds` and `Filters` at the same time.
  * @method integer getOffset() Obtain The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
@@ -39,7 +39,7 @@ class DescribeLaunchTemplatesRequest extends AbstractModel
     public $LaunchTemplateIds;
 
     /**
-     * @var array <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateNames</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+     * @var array <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateName</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `LaunchTemplateIds` and `Filters` at the same time.
      */
     public $Filters;
@@ -56,7 +56,7 @@ The maximum number of `Filters` in each request is 10. The upper limit for `Filt
 
     /**
      * @param array $LaunchTemplateIds Instance launch template ID. ID of one or more instance launch templates. If not specified, all templates of the user will be displayed.
-     * @param array $Filters <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateNames</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
+     * @param array $Filters <p style="padding-left: 30px;">Filter by [<strong>LaunchTemplateName</strong>].</p><p style="padding-left: 30px;">Type: String</p><p style="padding-left: 30px;">Optional</p>
 The maximum number of `Filters` in each request is 10. The upper limit for `Filter.Values` is 5. This parameter cannot specify `LaunchTemplateIds` and `Filters` at the same time.
      * @param integer $Offset The offset. Default value: 0. For more information on `Offset`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).
      * @param integer $Limit The number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, see the relevant sections in API [Introduction](https://intl.cloud.tencent.com/document/api/213/15688?from_cn_redirect=1).

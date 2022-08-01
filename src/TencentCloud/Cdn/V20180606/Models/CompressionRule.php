@@ -21,109 +21,109 @@ use TencentCloud\Common\AbstractModel;
  * Intelligent compression rule configuration
  *
  * @method boolean getCompress() Obtain true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCompress(boolean $Compress) Set true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method integer getMinLength() Obtain The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMinLength(integer $MinLength) Set The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getMaxLength() Obtain The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMaxLength(integer $MaxLength) Set The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getMaxLength() Obtain The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMaxLength(integer $MaxLength) Set The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getAlgorithms() Obtain File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAlgorithms(array $Algorithms) Set File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getFileExtensions() Obtain Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setFileExtensions(array $FileExtensions) Set Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getFileExtensions() Obtain Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFileExtensions(array $FileExtensions) Set Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRuleType() Obtain Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleType(string $RuleType) Set Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getRulePaths() Obtain Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRulePaths(array $RulePaths) Set Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class CompressionRule extends AbstractModel
 {
     /**
      * @var boolean true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Compress;
 
     /**
      * @var integer The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $MinLength;
 
     /**
-     * @var integer The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $MaxLength;
 
     /**
      * @var array File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Algorithms;
 
     /**
-     * @var array Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $FileExtensions;
 
     /**
      * @var string Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
 If this field is specified, `FileExtensions` does not take effect.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RuleType;
 
@@ -134,40 +134,40 @@ For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $RulePaths;
 
     /**
      * @param boolean $Compress true: must be set as true, enables compression
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MinLength The minimum file size to trigger compression (in bytes)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $MaxLength The maximum file size to trigger compression (in bytes)
-The maximum value is 30 MB
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $Algorithms File compression algorithm
-gzip: specifies Gzip compression
-brotli: specifies Brotli compression
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $FileExtensions Compress according to the file suffix type
-Such as: jpg, txt
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $RuleType Rule types:
-`all`: effective for all files.
-`file`: effective for specified file suffixes.
-`directory`: effective for specified paths.
-`path`: effective for specified absolute paths.
-`contentType`: effective when the `ContentType` is specified
-If this field is specified, `FileExtensions` does not take effect.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MinLength The minimum file size to trigger compression (in bytes)
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $MaxLength The maximum file size to trigger compression (in bytes).
+The maximum value is 30 MB.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Algorithms File compression algorithm
+`gzip`: Gzip compression
+`brotli`: Brotli compression
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $FileExtensions Compress based on file suffix.
+File suffixes such as jpg and txt are supported.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $RuleType Rule types:
+`all`: Apply to all files.
+`file`: Apply to files with the specified suffixes.
+`directory`: Apply to specified paths.
+`path`: Apply to specified absolute paths.
+`contentType`: Apply when the `ContentType` is specified.
+If this field is specified, `FileExtensions` does not take effect.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $RulePaths Content for each `CacheType`:
 For `all`, enter a wildcard `*`.
 For `file`, enter a suffix, e.g., `jpg` or `txt`.
 For `directory`, enter a path, e.g., `/xxx/test/`.
 For `path`, enter an absolute path, e.g., `/xxx/test.html`.
 For `contentType`, enter `text/html`.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
