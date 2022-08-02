@@ -106,8 +106,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setClusterType(string $ClusterType) Set Instance type.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getFeatures() Obtain 
- * @method void setFeatures(array $Features) Set 
+ * @method array getFeatures() Obtain Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFeatures(array $Features) Set Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceDetail extends AbstractModel
 {
@@ -279,7 +281,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ClusterType;
 
     /**
-     * @var array 
+     * @var array Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Features;
 
@@ -327,7 +330,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ClusterType Instance type.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Features 
+     * @param array $Features Instance feature list.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

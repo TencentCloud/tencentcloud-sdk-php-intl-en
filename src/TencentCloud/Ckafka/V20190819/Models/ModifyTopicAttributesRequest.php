@@ -54,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQuotaProducerByteRate(integer $QuotaProducerByteRate) Set Production throttling in MB/sec.
  * @method integer getQuotaConsumerByteRate() Obtain Consumption throttling in MB/sec.
  * @method void setQuotaConsumerByteRate(integer $QuotaConsumerByteRate) Set Consumption throttling in MB/sec.
+ * @method integer getReplicaNum() Obtain The number of topic replicas.
+ * @method void setReplicaNum(integer $ReplicaNum) Set The number of topic replicas.
  */
 class ModifyTopicAttributesRequest extends AbstractModel
 {
@@ -143,6 +145,11 @@ class ModifyTopicAttributesRequest extends AbstractModel
     public $QuotaConsumerByteRate;
 
     /**
+     * @var integer The number of topic replicas.
+     */
+    public $ReplicaNum;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $TopicName Topic name.
      * @param string $Note Topic remarks string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`).
@@ -160,6 +167,7 @@ class ModifyTopicAttributesRequest extends AbstractModel
      * @param array $Tags Tag list.
      * @param integer $QuotaProducerByteRate Production throttling in MB/sec.
      * @param integer $QuotaConsumerByteRate Consumption throttling in MB/sec.
+     * @param integer $ReplicaNum The number of topic replicas.
      */
     function __construct()
     {
@@ -245,6 +253,10 @@ class ModifyTopicAttributesRequest extends AbstractModel
 
         if (array_key_exists("QuotaConsumerByteRate",$param) and $param["QuotaConsumerByteRate"] !== null) {
             $this->QuotaConsumerByteRate = $param["QuotaConsumerByteRate"];
+        }
+
+        if (array_key_exists("ReplicaNum",$param) and $param["ReplicaNum"] !== null) {
+            $this->ReplicaNum = $param["ReplicaNum"];
         }
     }
 }
