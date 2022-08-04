@@ -76,9 +76,11 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeOfflineLogRecordsResponse DescribeOfflineLogRecords(Models\DescribeOfflineLogRecordsRequest $req) This API is used to get all (up to 100) offline log records.
  * @method Models\DescribeOfflineLogsResponse DescribeOfflineLogs(Models\DescribeOfflineLogsRequest $req) This API is used to get the specified offline log.
  * @method Models\DescribeProjectLimitsResponse DescribeProjectLimits(Models\DescribeProjectLimitsRequest $req) This API is used to get the list of project reporting rates.
+ * @method Models\DescribeProjectsResponse DescribeProjects(Models\DescribeProjectsRequest $req) This API is used to get the list of projects (under teams created by an instance).
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) This API is used to get the list of PVs under a project.
  * @method Models\DescribeReleaseFileSignResponse DescribeReleaseFileSign(Models\DescribeReleaseFileSignRequest $req) This API is used to get the temporary key for uploaded file storage.
  * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) This API is used to get the list of sourcemap files of a project.
+ * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) This API is used to get the list of homepage scores.
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) This API is used to query region information.
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) This API is used to get the list of UVs under a project.
  * @method Models\DescribeWhitelistsResponse DescribeWhitelists(Models\DescribeWhitelistsRequest $req) This API is used to get the list of allowlists.

@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCostType(string $CostType) Set Duration calculation
  * @method string getEnv() Obtain Environment
  * @method void setEnv(string $Env) Set Environment
+ * @method string getPackageType() Obtain The obtained package.
+ * @method void setPackageType(string $PackageType) Set The obtained package.
  */
 class DescribeDataSetUrlStatisticsRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string The obtained package.
+     */
+    public $PackageType;
+
+    /**
      * @param integer $StartTime Start time
      * @param string $Type `allcount`: performance view; `data`: mini program; `component`: mini program-related components; `day`: 14-day data; `nettype`: network/platform view; `performance`: top underperformed pages view; `version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: version view; device view; ISP view; region view; browser view, and so on.
      * @param integer $EndTime End time
@@ -200,6 +207,7 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
      * @param string $Browser Browser
      * @param string $CostType Duration calculation
      * @param string $Env Environment
+     * @param string $PackageType The obtained package.
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class DescribeDataSetUrlStatisticsRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("PackageType",$param) and $param["PackageType"] !== null) {
+            $this->PackageType = $param["PackageType"];
         }
     }
 }

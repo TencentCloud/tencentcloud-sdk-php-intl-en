@@ -66,6 +66,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUrl(string $Url) Set Source
  * @method string getEnv() Obtain Environment
  * @method void setEnv(string $Env) Set Environment
+ * @method string getStatus() Obtain HTTP status code.
+ * @method void setStatus(string $Status) Set HTTP status code.
+ * @method string getRet() Obtain retcode
+ * @method void setRet(string $Ret) Set retcode
  */
 class DescribeDataFetchProjectRequest extends AbstractModel
 {
@@ -185,6 +189,16 @@ class DescribeDataFetchProjectRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string HTTP status code.
+     */
+    public $Status;
+
+    /**
+     * @var string retcode
+     */
+    public $Ret;
+
+    /**
      * @param integer $StartTime Start time
      * @param string $Type `allcount`: performance view; `day`: 14-day data; `condition`: condition list; `area`: request speed distribution; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      * @param integer $EndTime End time
@@ -208,6 +222,8 @@ class DescribeDataFetchProjectRequest extends AbstractModel
      * @param string $CostType Duration calculation method
      * @param string $Url Source
      * @param string $Env Environment
+     * @param string $Status HTTP status code.
+     * @param string $Ret retcode
      */
     function __construct()
     {
@@ -312,6 +328,14 @@ class DescribeDataFetchProjectRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Ret",$param) and $param["Ret"] !== null) {
+            $this->Ret = $param["Ret"];
         }
     }
 }

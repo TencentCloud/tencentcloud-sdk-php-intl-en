@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getAreaId() Obtain Region ID (at least greater than 0)
  * @method void setAreaId(integer $AreaId) Set Region ID (at least greater than 0)
- * @method integer getChargeType() Obtain Billing mode (1: trial; 2: prepaid; 3: postpaid)
- * @method void setChargeType(integer $ChargeType) Set Billing mode (1: trial; 2: prepaid; 3: postpaid)
+ * @method integer getChargeType() Obtain Billing type (1: Pay-as-you-go).
+ * @method void setChargeType(integer $ChargeType) Set Billing type (1: Pay-as-you-go).
  * @method integer getDataRetentionDays() Obtain Data retention period (at least greater than 0)
  * @method void setDataRetentionDays(integer $DataRetentionDays) Set Data retention period (at least greater than 0)
  * @method string getInstanceName() Obtain Instance name (up to 255 bytes)
@@ -47,7 +47,7 @@ class CreateTawInstanceRequest extends AbstractModel
     public $AreaId;
 
     /**
-     * @var integer Billing mode (1: trial; 2: prepaid; 3: postpaid)
+     * @var integer Billing type (1: Pay-as-you-go).
      */
     public $ChargeType;
 
@@ -88,7 +88,7 @@ class CreateTawInstanceRequest extends AbstractModel
 
     /**
      * @param integer $AreaId Region ID (at least greater than 0)
-     * @param integer $ChargeType Billing mode (1: trial; 2: prepaid; 3: postpaid)
+     * @param integer $ChargeType Billing type (1: Pay-as-you-go).
      * @param integer $DataRetentionDays Data retention period (at least greater than 0)
      * @param string $InstanceName Instance name (up to 255 bytes)
      * @param array $Tags Tag list
