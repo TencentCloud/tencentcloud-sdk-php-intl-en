@@ -80,8 +80,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setClientIpHeader(ClientIp $ClientIpHeader) Set Origin-pull client IP header configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method CachePrefresh getCachePrefresh() Obtain 
- * @method void setCachePrefresh(CachePrefresh $CachePrefresh) Set 
+ * @method CachePrefresh getCachePrefresh() Obtain Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCachePrefresh(CachePrefresh $CachePrefresh) Set Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -182,7 +184,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ClientIpHeader;
 
     /**
-     * @var CachePrefresh 
+     * @var CachePrefresh Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CachePrefresh;
 
@@ -222,7 +225,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param ClientIp $ClientIpHeader Origin-pull client IP header configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param CachePrefresh $CachePrefresh 
+     * @param CachePrefresh $CachePrefresh Cache prefresh configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

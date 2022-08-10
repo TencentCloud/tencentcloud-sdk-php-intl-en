@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTotal() Obtain Total number of level-defining policies
  * @method void setTotal(integer $Total) Set Total number of level-defining policies
- * @method array getLevelList() Obtain Details of level-defining policies
- * @method void setLevelList(array $LevelList) Set Details of level-defining policies
+ * @method array getLevelList() Obtain Total number of level-defining policies
+ * @method void setLevelList(array $LevelList) Set Total number of level-defining policies
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -35,7 +35,7 @@ class DescribeCCLevelListResponse extends AbstractModel
     public $Total;
 
     /**
-     * @var array Details of level-defining policies
+     * @var array Total number of level-defining policies
      */
     public $LevelList;
 
@@ -46,7 +46,7 @@ class DescribeCCLevelListResponse extends AbstractModel
 
     /**
      * @param integer $Total Total number of level-defining policies
-     * @param array $LevelList Details of level-defining policies
+     * @param array $LevelList Total number of level-defining policies
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

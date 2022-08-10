@@ -50,8 +50,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWebSocket(WebSocket $WebSocket) Set WebSocket configuration
  * @method ClientIp getClientIpHeader() Obtain Origin-pull client IP header configuration
  * @method void setClientIpHeader(ClientIp $ClientIpHeader) Set Origin-pull client IP header configuration
- * @method CachePrefresh getCachePrefresh() Obtain 
- * @method void setCachePrefresh(CachePrefresh $CachePrefresh) Set 
+ * @method CachePrefresh getCachePrefresh() Obtain Cache prefresh configuration
+ * @method void setCachePrefresh(CachePrefresh $CachePrefresh) Set Cache prefresh configuration
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -131,7 +131,7 @@ class ModifyZoneSettingRequest extends AbstractModel
     public $ClientIpHeader;
 
     /**
-     * @var CachePrefresh 
+     * @var CachePrefresh Cache prefresh configuration
      */
     public $CachePrefresh;
 
@@ -151,7 +151,7 @@ class ModifyZoneSettingRequest extends AbstractModel
      * @param SmartRouting $SmartRouting Smart acceleration configuration
      * @param WebSocket $WebSocket WebSocket configuration
      * @param ClientIp $ClientIpHeader Origin-pull client IP header configuration
-     * @param CachePrefresh $CachePrefresh 
+     * @param CachePrefresh $CachePrefresh Cache prefresh configuration
      */
     function __construct()
     {

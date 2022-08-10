@@ -42,7 +42,6 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) This API is used to create a domain name for IP scheduling and switching.
  * @method Models\CreateWaterPrintConfigResponse CreateWaterPrintConfig(Models\CreateWaterPrintConfigRequest $req) This API is used to add Anti-DDoS watermark configurations.
  * @method Models\CreateWaterPrintKeyResponse CreateWaterPrintKey(Models\CreateWaterPrintKeyRequest $req) This API is used to add Anti-DDoS watermark keys.
- * @method Models\DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpList(Models\DeleteBlackWhiteIpListRequest $req) This API is used to delete an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DeleteCCLevelPolicyResponse DeleteCCLevelPolicy(Models\DeleteCCLevelPolicyRequest $req) This API is used to delete a level-defining policy of CC attacks. 
  * @method Models\DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicy(Models\DeleteCCPrecisionPolicyRequest $req) This API is used to delete a CC precise protection policy.
  * @method Models\DeleteCCThresholdPolicyResponse DeleteCCThresholdPolicy(Models\DeleteCCThresholdPolicyRequest $req) This API is used to delete a CC cleansing threshold policy.
@@ -56,7 +55,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) This API is used to querying the status of Anti-DDoS IP.
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) This API is used to get the traffic flow data collected in the specified period.
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
- * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) This API is used to query the list of CC protection levels.
+ * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) Gets the list of CC protection levels
  * @method Models\DescribeCCLevelPolicyResponse DescribeCCLevelPolicy(Models\DescribeCCLevelPolicyRequest $req) This API is used the query a level-defining policy of CC attacks
  * @method Models\DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyList(Models\DescribeCCPrecisionPlyListRequest $req) This API is used to obtain a CC precise protection policy.
  * @method Models\DescribeCCThresholdListResponse DescribeCCThresholdList(Models\DescribeCCThresholdListRequest $req) This API is used to query the list of CC cleansing thresholds.

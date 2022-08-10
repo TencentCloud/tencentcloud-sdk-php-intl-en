@@ -28,14 +28,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCount(integer $TotalCount) Set Total number of records
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getQuota() Obtain Indicates the number of instances that can be created by the site when `ZoneId` is specified
+ * @method integer getQuota() Obtain Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setQuota(integer $Quota) Set Indicates the number of instances that can be created by the site when `ZoneId` is specified
+ * @method void setQuota(integer $Quota) Set Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getIpCount() Obtain 
- * @method void setIpCount(integer $IpCount) Set 
- * @method integer getDomainCount() Obtain 
- * @method void setDomainCount(integer $DomainCount) Set 
+ * @method integer getIpCount() Obtain When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setIpCount(integer $IpCount) Set When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDomainCount() Obtain When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDomainCount(integer $DomainCount) Set When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,18 +58,20 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TotalCount;
 
     /**
-     * @var integer Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * @var integer Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Quota;
 
     /**
-     * @var integer 
+     * @var integer When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $IpCount;
 
     /**
-     * @var integer 
+     * @var integer When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $DomainCount;
 
@@ -79,10 +85,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $TotalCount Total number of records
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $Quota Indicates the number of instances that can be created by the site when `ZoneId` is specified
+     * @param integer $Quota Disused
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $IpCount 
-     * @param integer $DomainCount 
+     * @param integer $IpCount When `PlatType` is `ip`, it indicates the number of proxies that schedule via Anycast IP.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $DomainCount When `PlatType` is `domain`, it indicates the number of proxies that schedule via CNAME.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

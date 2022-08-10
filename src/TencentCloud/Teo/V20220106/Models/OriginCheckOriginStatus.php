@@ -18,28 +18,32 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Origin health status
  *
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method array getHost() Obtain 
- * @method void setHost(array $Host) Set 
+ * @method string getStatus() Obtain `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+ * @method void setStatus(string $Status) Set `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+ * @method array getHost() Obtain List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHost(array $Host) Set List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OriginCheckOriginStatus extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
      */
     public $Status;
 
     /**
-     * @var array 
+     * @var array List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Host;
 
     /**
-     * @param string $Status 
-     * @param array $Host 
+     * @param string $Status `healthy`: Healthy; `unhealthy`: Unhealthy; `process`: Checking origin.
+     * @param array $Host List of unhealthy origin groups when `Status = unhealthy`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

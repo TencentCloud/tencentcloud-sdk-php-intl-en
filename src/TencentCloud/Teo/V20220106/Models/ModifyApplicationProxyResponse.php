@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyApplicationProxy response structure.
  *
- * @method string getProxyId() Obtain Layer-4 proxy ID
- * @method void setProxyId(string $ProxyId) Set Layer-4 proxy ID
+ * @method string getProxyId() Obtain ID of the proxy
+ * @method void setProxyId(string $ProxyId) Set ID of the proxy
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyApplicationProxyResponse extends AbstractModel
 {
     /**
-     * @var string Layer-4 proxy ID
+     * @var string ID of the proxy
      */
     public $ProxyId;
 
@@ -38,7 +38,7 @@ class ModifyApplicationProxyResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ProxyId Layer-4 proxy ID
+     * @param string $ProxyId ID of the proxy
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

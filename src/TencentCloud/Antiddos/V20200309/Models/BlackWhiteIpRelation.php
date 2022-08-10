@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDetailList(array $InstanceDetailList) Set Anti-DDoS instance configured
  * @method integer getMask() Obtain IP mask. `0` indicates a 32-bit IP.
  * @method void setMask(integer $Mask) Set IP mask. `0` indicates a 32-bit IP.
+ * @method string getModifyTime() Obtain Modification time
+ * @method void setModifyTime(string $ModifyTime) Set Modification time
  */
 class BlackWhiteIpRelation extends AbstractModel
 {
@@ -52,10 +54,16 @@ class BlackWhiteIpRelation extends AbstractModel
     public $Mask;
 
     /**
+     * @var string Modification time
+     */
+    public $ModifyTime;
+
+    /**
      * @param string $Ip IP address
      * @param string $Type IP type. Valid values: `black` (blocklisted IP), `white`(allowlisted IP).
      * @param array $InstanceDetailList Anti-DDoS instance configured
      * @param integer $Mask IP mask. `0` indicates a 32-bit IP.
+     * @param string $ModifyTime Modification time
      */
     function __construct()
     {
@@ -89,6 +97,10 @@ class BlackWhiteIpRelation extends AbstractModel
 
         if (array_key_exists("Mask",$param) and $param["Mask"] !== null) {
             $this->Mask = $param["Mask"];
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

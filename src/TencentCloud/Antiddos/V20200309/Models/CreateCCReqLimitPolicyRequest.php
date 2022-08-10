@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain name
  * @method CCReqLimitPolicyRecord getPolicy() Obtain Configuration field
  * @method void setPolicy(CCReqLimitPolicyRecord $Policy) Set Configuration field
+ * @method integer getIsGlobal() Obtain Whether it’s a global CC frequency limit
+ * @method void setIsGlobal(integer $IsGlobal) Set Whether it’s a global CC frequency limit
  */
 class CreateCCReqLimitPolicyRequest extends AbstractModel
 {
@@ -59,11 +61,17 @@ class CreateCCReqLimitPolicyRequest extends AbstractModel
     public $Policy;
 
     /**
+     * @var integer Whether it’s a global CC frequency limit
+     */
+    public $IsGlobal;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Ip IP address
      * @param string $Protocol Protocol. Valid values: `HTTP` and `HTTPS`.
      * @param string $Domain Domain name
      * @param CCReqLimitPolicyRecord $Policy Configuration field
+     * @param integer $IsGlobal Whether it’s a global CC frequency limit
      */
     function __construct()
     {
@@ -97,6 +105,10 @@ class CreateCCReqLimitPolicyRequest extends AbstractModel
         if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
             $this->Policy = new CCReqLimitPolicyRecord();
             $this->Policy->deserialize($param["Policy"]);
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
         }
     }
 }

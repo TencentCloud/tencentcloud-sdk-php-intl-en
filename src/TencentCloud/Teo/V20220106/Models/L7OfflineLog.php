@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setLogTime(integer $LogTime) Set Start time of the log packaging
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getDomain() Obtain Site name
+ * @method string getDomain() Obtain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setDomain(string $Domain) Set Site name
+ * @method void setDomain(string $Domain) Set Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getSize() Obtain Log size, in bytes
 Note: This field may return `null`, indicating that no valid value can be obtained.
@@ -50,7 +50,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $LogTime;
 
     /**
-     * @var string Site name
+     * @var string Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Domain;
@@ -76,7 +76,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     /**
      * @param integer $LogTime Start time of the log packaging
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Domain Site name
+     * @param string $Domain Subdomain name
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $Size Log size, in bytes
 Note: This field may return `null`, indicating that no valid value can be obtained.

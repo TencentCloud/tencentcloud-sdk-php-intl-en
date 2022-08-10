@@ -56,16 +56,16 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setCname(string $Cname) Set CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getDomainStatus() Obtain Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setDomainStatus(array $DomainStatus) Set Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getDomainStatus() Obtain Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDomainStatus(array $DomainStatus) Set Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DnsRecord extends AbstractModel
 {
@@ -144,11 +144,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Cname;
 
     /**
-     * @var array Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var array Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DomainStatus;
 
@@ -171,11 +171,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `pending`: Not activated
      * @param string $Cname CNAME address
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $DomainStatus Specifies whether to enable load balancing, layer-4 proxy, or security protection for the domain name.
-- `lb`: Load balancing.
-- `security`: Security protection.
-- `l4`: Layer-4 proxy.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $DomainStatus Which service is enabled for the domain name.
+- `lb`: Load balancing
+- `security`: Security acceleration
+- `l4`: L4 proxy
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

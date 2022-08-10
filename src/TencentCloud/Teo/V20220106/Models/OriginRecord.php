@@ -22,12 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRecord() Obtain Record value
  * @method void setRecord(string $Record) Set Record value
- * @method array getArea() Obtain Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
- * @method void setArea(array $Area) Set Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
- * @method integer getWeight() Obtain The weight of the origin group. It’s available when the `Type` is `weight`.
- * @method void setWeight(integer $Weight) Set The weight of the origin group. It’s available when the `Type` is `weight`.
+ * @method array getArea() Obtain A specific region when `Type=area`.
+The default region when `Type` is not specified.
+ * @method void setArea(array $Area) Set A specific region when `Type=area`.
+The default region when `Type` is not specified.
+ * @method integer getWeight() Obtain A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
+ * @method void setWeight(integer $Weight) Set A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
  * @method integer getPort() Obtain Port
  * @method void setPort(integer $Port) Set Port
  * @method string getRecordId() Obtain Record ID
@@ -44,6 +48,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setPrivateParameter(array $PrivateParameter) Set Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getProto() Obtain 
+ * @method void setProto(string $Proto) Set 
  */
 class OriginRecord extends AbstractModel
 {
@@ -53,13 +59,15 @@ class OriginRecord extends AbstractModel
     public $Record;
 
     /**
-     * @var array Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
+     * @var array A specific region when `Type=area`.
+The default region when `Type` is not specified.
      */
     public $Area;
 
     /**
-     * @var integer The weight of the origin group. It’s available when the `Type` is `weight`.
+     * @var integer A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
      */
     public $Weight;
 
@@ -88,10 +96,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $PrivateParameter;
 
     /**
+     * @var string 
+     */
+    public $Proto;
+
+    /**
      * @param string $Record Record value
-     * @param array $Area Region of the origin group. It’s available when the origin group `Type` is `area`. 
-If it’s left empty, it means to use the default region.
-     * @param integer $Weight The weight of the origin group. It’s available when the `Type` is `weight`.
+     * @param array $Area A specific region when `Type=area`.
+The default region when `Type` is not specified.
+     * @param integer $Weight A specific weight when `Type=weight`.
+The value range is [1-100].
+The total weight of multiple origins in an origin group should be 100.
      * @param integer $Port Port
      * @param string $RecordId Record ID
      * @param boolean $Private Specifies whether to run private origin authentication.
@@ -100,6 +115,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param array $PrivateParameter Private origin parameter.
 It is valid only when `Private=true`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Proto 
      */
     function __construct()
     {
@@ -145,6 +161,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->PrivateParameter, $obj);
             }
+        }
+
+        if (array_key_exists("Proto",$param) and $param["Proto"] !== null) {
+            $this->Proto = $param["Proto"];
         }
     }
 }

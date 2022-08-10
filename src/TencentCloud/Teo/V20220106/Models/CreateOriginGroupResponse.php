@@ -14,23 +14,31 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Antiddos\V20200309\Models;
+namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteBlackWhiteIpList response structure.
+ * CreateOriginGroup response structure.
  *
+ * @method string getOriginId() Obtain ID of the newly added origin group
+ * @method void setOriginId(string $OriginId) Set ID of the newly added origin group
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteBlackWhiteIpListResponse extends AbstractModel
+class CreateOriginGroupResponse extends AbstractModel
 {
+    /**
+     * @var string ID of the newly added origin group
+     */
+    public $OriginId;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param string $OriginId ID of the newly added origin group
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,10 @@ class DeleteBlackWhiteIpListResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("OriginId",$param) and $param["OriginId"] !== null) {
+            $this->OriginId = $param["OriginId"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

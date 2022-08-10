@@ -22,8 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getProxyId() Obtain Instance ID
  * @method void setProxyId(string $ProxyId) Set Instance ID
- * @method string getProxyName() Obtain Instance name
- * @method void setProxyName(string $ProxyName) Set Instance name
+ * @method string getProxyName() Obtain Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+ * @method void setProxyName(string $ProxyName) Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
  * @method string getPlatType() Obtain Proxy mode. Valid values:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -59,13 +63,17 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSessionPersistTime() Obtain Session persistence time
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence time
  * @method string getProxyType() Obtain Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
  * @method void setProxyType(string $ProxyType) Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
- * @method string getHostId() Obtain ID of the layer-7 domain name
- * @method void setHostId(string $HostId) Set ID of the layer-7 domain name
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+ * @method string getHostId() Obtain When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
+ * @method void setHostId(string $HostId) Set When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -77,7 +85,9 @@ class DescribeApplicationProxyDetailResponse extends AbstractModel
     public $ProxyId;
 
     /**
-     * @var string Instance name
+     * @var string Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public $ProxyName;
 
@@ -148,13 +158,15 @@ class DescribeApplicationProxyDetailResponse extends AbstractModel
 
     /**
      * @var string Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public $ProxyType;
 
     /**
-     * @var string ID of the layer-7 domain name
+     * @var string When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
      */
     public $HostId;
 
@@ -165,7 +177,9 @@ class DescribeApplicationProxyDetailResponse extends AbstractModel
 
     /**
      * @param string $ProxyId Instance ID
-     * @param string $ProxyName Instance name
+     * @param string $ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      * @param string $PlatType Proxy mode. Valid values:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -184,9 +198,11 @@ class DescribeApplicationProxyDetailResponse extends AbstractModel
      * @param string $ZoneName Site name
      * @param integer $SessionPersistTime Session persistence time
      * @param string $ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-     * @param string $HostId ID of the layer-7 domain name
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+     * @param string $HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name, such as test.123.com
+`HostId` indicates a unique ID of the domain name.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

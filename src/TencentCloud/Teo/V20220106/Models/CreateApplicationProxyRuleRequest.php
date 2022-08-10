@@ -32,26 +32,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPort(array $Port) Set Port. Valid values:
 `80`: Port 80
 `81-90`: Port range 81-90
- * @method string getOriginType() Obtain Origin server type. Valid values:
+ * @method string getOriginType() Obtain Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
- * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
+`origins`: Origin group
+ * @method void setOriginType(string $OriginType) Set Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
- * @method array getOriginValue() Obtain Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+`origins`: Origin group
+ * @method array getOriginValue() Obtain Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
- * @method void setOriginValue(array $OriginValue) Set Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+When `OriginType=origins`, it is an origin group ID.
+ * @method void setOriginValue(array $OriginValue) Set Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
  * @method string getForwardClientIp() Obtain Passes the client IP. When `Proto=TCP`, valid values:
 `TOA`: Pass the client IP via TOA
 `PPV1`: Pass the client IP via Proxy Protocol V1
@@ -96,20 +92,18 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $Port;
 
     /**
-     * @var string Origin server type. Valid values:
+     * @var string Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public $OriginType;
 
     /**
-     * @var array Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+     * @var array Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
      */
     public $OriginValue;
 
@@ -137,16 +131,14 @@ When `Proto=UDP`, valid values:
      * @param array $Port Port. Valid values:
 `80`: Port 80
 `81-90`: Port range 81-90
-     * @param string $OriginType Origin server type. Valid values:
+     * @param string $OriginType Origin type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
-     * @param array $OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
+`origins`: Origin group
+     * @param array $OriginValue Origin information:
+When `OriginType=custom`, it can include one or more origins in either of the following formats:
 IP:Port
 Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+When `OriginType=origins`, it is an origin group ID.
      * @param string $ForwardClientIp Passes the client IP. When `Proto=TCP`, valid values:
 `TOA`: Pass the client IP via TOA
 `PPV1`: Pass the client IP via Proxy Protocol V1

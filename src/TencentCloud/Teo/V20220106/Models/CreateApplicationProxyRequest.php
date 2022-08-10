@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneId(string $ZoneId) Set Site ID
  * @method string getZoneName() Obtain Site name
  * @method void setZoneName(string $ZoneName) Set Site name
- * @method string getProxyName() Obtain Layer-4 proxy name
- * @method void setProxyName(string $ProxyName) Set Layer-4 proxy name
+ * @method string getProxyName() Obtain Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+ * @method void setProxyName(string $ProxyName) Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
  * @method string getPlatType() Obtain Scheduling mode. Values:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -45,11 +49,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSessionPersistTime() Obtain Session persistence duration. Value range: 30-3600 (in seconds).
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence duration. Value range: 30-3600 (in seconds).
  * @method string getProxyType() Obtain Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
  * @method void setProxyType(string $ProxyType) Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
  */
 class CreateApplicationProxyRequest extends AbstractModel
 {
@@ -64,7 +68,9 @@ class CreateApplicationProxyRequest extends AbstractModel
     public $ZoneName;
 
     /**
-     * @var string Layer-4 proxy name
+     * @var string Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public $ProxyName;
 
@@ -107,15 +113,17 @@ class CreateApplicationProxyRequest extends AbstractModel
 
     /**
      * @var string Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public $ProxyType;
 
     /**
      * @param string $ZoneId Site ID
      * @param string $ZoneName Site name
-     * @param string $ProxyName Layer-4 proxy name
+     * @param string $ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      * @param string $PlatType Scheduling mode. Values:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -126,8 +134,8 @@ class CreateApplicationProxyRequest extends AbstractModel
      * @param array $Rule Rule details
      * @param integer $SessionPersistTime Session persistence duration. Value range: 30-3600 (in seconds).
      * @param string $ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     function __construct()
     {

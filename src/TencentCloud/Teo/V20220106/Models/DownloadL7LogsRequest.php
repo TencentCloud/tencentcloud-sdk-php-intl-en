@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPageSize(integer $PageSize) Set Number of entries per page
  * @method integer getPageNo() Obtain Current page
  * @method void setPageNo(integer $PageNo) Set Current page
- * @method array getZones() Obtain List of sites
- * @method void setZones(array $Zones) Set List of sites
- * @method array getDomains() Obtain List of domain names
- * @method void setDomains(array $Domains) Set List of domain names
+ * @method array getZones() Obtain Array of site names
+ * @method void setZones(array $Zones) Set Array of site names
+ * @method array getDomains() Obtain Array of subdomain names
+ * @method void setDomains(array $Domains) Set Array of subdomain names
  */
 class DownloadL7LogsRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class DownloadL7LogsRequest extends AbstractModel
     public $PageNo;
 
     /**
-     * @var array List of sites
+     * @var array Array of site names
      */
     public $Zones;
 
     /**
-     * @var array List of domain names
+     * @var array Array of subdomain names
      */
     public $Domains;
 
@@ -70,8 +70,8 @@ class DownloadL7LogsRequest extends AbstractModel
      * @param string $EndTime End time. It must conform to the RFC3339 standard.
      * @param integer $PageSize Number of entries per page
      * @param integer $PageNo Current page
-     * @param array $Zones List of sites
-     * @param array $Domains List of domain names
+     * @param array $Zones Array of site names
+     * @param array $Domains Array of subdomain names
      */
     function __construct()
     {

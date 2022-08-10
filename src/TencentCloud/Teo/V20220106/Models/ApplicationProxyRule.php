@@ -30,24 +30,24 @@ use TencentCloud\Common\AbstractModel;
 `81-90`: Port range 81-90
  * @method string getOriginType() Obtain Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
  * @method void setOriginType(string $OriginType) Set Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
- * @method array getOriginValue() Obtain Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
- * @method void setOriginValue(array $OriginValue) Set Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+`origins`: Origin group
+ * @method array getOriginValue() Obtain Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
+ * @method void setOriginValue(array $OriginValue) Set Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
  * @method string getRuleId() Obtain Rule ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setRuleId(string $RuleId) Set Rule ID
@@ -100,18 +100,18 @@ class ApplicationProxyRule extends AbstractModel
     /**
      * @var string Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
+`origins`: Origin group
      */
     public $OriginType;
 
     /**
-     * @var array Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+     * @var array Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
      */
     public $OriginValue;
 
@@ -155,14 +155,14 @@ When `Proto=UDP`, valid values:
 `81-90`: Port range 81-90
      * @param string $OriginType Origin server type. Valid values:
 `custom`: Specified origins
-`origins`: An origin group
-`load_balancing`: A load balancer
-     * @param array $OriginValue Origin server information.
-When `OriginType=custom`, this field value indicates multiple origin servers in either of the following formats:
-IP:Port
-Domain name:Port
-When `OriginType=origins`, it indicates the origin group ID.
- 
+`origins`: Origin group
+     * @param array $OriginValue Origin server information:
+When `OriginType=custom`, it indicates one or more origin servers. Example:
+OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+OriginValue=["test.com:80"]
+
+When `OriginType=origins`, it indicates an origin group ID. Example:
+OriginValue=["origin-xxx"]
      * @param string $RuleId Rule ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Status Status:

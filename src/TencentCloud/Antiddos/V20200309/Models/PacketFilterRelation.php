@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPacketFilterConfig(PacketFilterConfig $PacketFilterConfig) Set Feature filtering configuration
  * @method array getInstanceDetailList() Obtain Anti-DDoS instance configured
  * @method void setInstanceDetailList(array $InstanceDetailList) Set Anti-DDoS instance configured
+ * @method string getModifyTime() Obtain Modification time
+ * @method void setModifyTime(string $ModifyTime) Set Modification time
  */
 class PacketFilterRelation extends AbstractModel
 {
@@ -38,8 +40,14 @@ class PacketFilterRelation extends AbstractModel
     public $InstanceDetailList;
 
     /**
+     * @var string Modification time
+     */
+    public $ModifyTime;
+
+    /**
      * @param PacketFilterConfig $PacketFilterConfig Feature filtering configuration
      * @param array $InstanceDetailList Anti-DDoS instance configured
+     * @param string $ModifyTime Modification time
      */
     function __construct()
     {
@@ -66,6 +74,10 @@ class PacketFilterRelation extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->InstanceDetailList, $obj);
             }
+        }
+
+        if (array_key_exists("ModifyTime",$param) and $param["ModifyTime"] !== null) {
+            $this->ModifyTime = $param["ModifyTime"];
         }
     }
 }

@@ -20,12 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application proxy instance
  *
- * @method string getProxyId() Obtain Instance ID
+ * @method string getProxyId() Obtain ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setProxyId(string $ProxyId) Set Instance ID
+ * @method void setProxyId(string $ProxyId) Set ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getProxyName() Obtain Instance name
- * @method void setProxyName(string $ProxyName) Set Instance name
+ * @method string getProxyName() Obtain Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+ * @method void setProxyName(string $ProxyName) Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
  * @method string getPlatType() Obtain Scheduling mode:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -77,28 +81,34 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence duration
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getProxyType() Obtain Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProxyType(string $ProxyType) Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getHostId() Obtain ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setHostId(string $HostId) Set ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHostId() Obtain When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHostId(string $HostId) Set When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ApplicationProxy extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ProxyId;
 
     /**
-     * @var string Instance name
+     * @var string Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public $ProxyName;
 
@@ -177,22 +187,26 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * @var string Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProxyType;
 
     /**
-     * @var string ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HostId;
 
     /**
-     * @param string $ProxyId Instance ID
+     * @param string $ProxyId ID of the proxy
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $ProxyName Instance name
+     * @param string $ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      * @param string $PlatType Scheduling mode:
 `ip`: Anycast IP
 `domain`: CNAME
@@ -219,11 +233,13 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param integer $SessionPersistTime Session persistence duration
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $HostId ID of the layer-7 domain name
-Note: This field may return `null`, indicating that no valid value can be obtained.
+`hostname`: Create by subdomain name
+`instance`: Create by instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HostId When `ProxyType=hostname`:
+`ProxyName` indicates a specified domain name;
+`HostId` indicates a unique ID of the domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

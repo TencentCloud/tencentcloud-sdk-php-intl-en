@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain name
  * @method void setDomain(string $Domain) Set Domain name
- * @method string getProtocol() Obtain Protocol. Value: htttps
- * @method void setProtocol(string $Protocol) Set Protocol. Value: htttps
+ * @method string getProtocol() Obtain Protocol. Value: `https`.
+ * @method void setProtocol(string $Protocol) Set Protocol. Value: `https`.
  * @method integer getCCEnable() Obtain Status. Valid values: `0` (disabled), `1` (enabled).
  * @method void setCCEnable(integer $CCEnable) Set Status. Valid values: `0` (disabled), `1` (enabled).
  * @method integer getCCThreshold() Obtain CC protection threshold
@@ -37,7 +37,7 @@ class ListenerCcThreholdConfig extends AbstractModel
     public $Domain;
 
     /**
-     * @var string Protocol. Value: htttps
+     * @var string Protocol. Value: `https`.
      */
     public $Protocol;
 
@@ -53,7 +53,7 @@ class ListenerCcThreholdConfig extends AbstractModel
 
     /**
      * @param string $Domain Domain name
-     * @param string $Protocol Protocol. Value: htttps
+     * @param string $Protocol Protocol. Value: `https`.
      * @param integer $CCEnable Status. Valid values: `0` (disabled), `1` (enabled).
      * @param integer $CCThreshold CC protection threshold
      */

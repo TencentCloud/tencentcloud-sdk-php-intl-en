@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID
  * @method void setZoneId(string $ZoneId) Set Site ID
- * @method string getProxyId() Obtain Layer-4 proxy ID
- * @method void setProxyId(string $ProxyId) Set Layer-4 proxy ID
+ * @method string getProxyId() Obtain ID of the proxy
+ * @method void setProxyId(string $ProxyId) Set ID of the proxy
  * @method string getStatus() Obtain Status
 `offline`: Disabled
 `online`: Enabled
@@ -39,7 +39,7 @@ class ModifyApplicationProxyStatusRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer-4 proxy ID
+     * @var string ID of the proxy
      */
     public $ProxyId;
 
@@ -52,7 +52,7 @@ class ModifyApplicationProxyStatusRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Site ID
-     * @param string $ProxyId Layer-4 proxy ID
+     * @param string $ProxyId ID of the proxy
      * @param string $Status Status
 `offline`: Disabled
 `online`: Enabled

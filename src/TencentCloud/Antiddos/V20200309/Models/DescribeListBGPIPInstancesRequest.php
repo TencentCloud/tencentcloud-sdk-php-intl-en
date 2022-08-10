@@ -58,8 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterCname(string $FilterCname) Set Filters by the instance CNAME
  * @method array getFilterInstanceIdList() Obtain Filters by the instance ID
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) Set Filters by the instance ID
- * @method TagFilter getFilterTag() Obtain 
- * @method void setFilterTag(TagFilter $FilterTag) Set 
+ * @method TagFilter getFilterTag() Obtain Searches by tag
+ * @method void setFilterTag(TagFilter $FilterTag) Set Searches by tag
+ * @method array getFilterPackType() Obtain 
+ * @method void setFilterPackType(array $FilterPackType) Set 
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -135,9 +137,14 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterInstanceIdList;
 
     /**
-     * @var TagFilter 
+     * @var TagFilter Searches by tag
      */
     public $FilterTag;
+
+    /**
+     * @var array 
+     */
+    public $FilterPackType;
 
     /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
@@ -159,7 +166,8 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param string $FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
      * @param string $FilterCname Filters by the instance CNAME
      * @param array $FilterInstanceIdList Filters by the instance ID
-     * @param TagFilter $FilterTag 
+     * @param TagFilter $FilterTag Searches by tag
+     * @param array $FilterPackType 
      */
     function __construct()
     {
@@ -229,6 +237,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
             $this->FilterTag = new TagFilter();
             $this->FilterTag->deserialize($param["FilterTag"]);
+        }
+
+        if (array_key_exists("FilterPackType",$param) and $param["FilterPackType"] !== null) {
+            $this->FilterPackType = $param["FilterPackType"];
         }
     }
 }

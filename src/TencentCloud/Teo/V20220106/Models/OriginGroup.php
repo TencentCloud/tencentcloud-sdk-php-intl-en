@@ -24,8 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginId(string $OriginId) Set Origin group ID
  * @method string getOriginName() Obtain Origin group name
  * @method void setOriginName(string $OriginName) Set Origin group name
- * @method string getType() Obtain Origin server type
- * @method void setType(string $Type) Set Origin server type
+ * @method string getType() Obtain Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
+ * @method void setType(string $Type) Set Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
  * @method array getRecord() Obtain Record
  * @method void setRecord(array $Record) Set Record
  * @method string getUpdateTime() Obtain Update time
@@ -38,18 +42,30 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setOriginType(string $OriginType) Set Origin server type
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getApplicationProxyUsed() Obtain Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setApplicationProxyUsed(boolean $ApplicationProxyUsed) Set Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method boolean getLoadBalancingUsed() Obtain Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setLoadBalancingUsed(boolean $LoadBalancingUsed) Set Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method OriginCheckOriginStatus getStatus() Obtain 
- * @method void setStatus(OriginCheckOriginStatus $Status) Set 
- * @method string getLoadBalancingUsedType() Obtain 
- * @method void setLoadBalancingUsedType(string $LoadBalancingUsedType) Set 
+ * @method boolean getApplicationProxyUsed() Obtain Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setApplicationProxyUsed(boolean $ApplicationProxyUsed) Set Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getLoadBalancingUsed() Obtain Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancingUsed(boolean $LoadBalancingUsed) Set Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method OriginCheckOriginStatus getStatus() Obtain Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(OriginCheckOriginStatus $Status) Set Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getLoadBalancingUsedType() Obtain Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLoadBalancingUsedType(string $LoadBalancingUsedType) Set Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class OriginGroup extends AbstractModel
 {
@@ -64,7 +80,9 @@ class OriginGroup extends AbstractModel
     public $OriginName;
 
     /**
-     * @var string Origin server type
+     * @var string Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
      */
     public $Type;
 
@@ -95,43 +113,57 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $OriginType;
 
     /**
-     * @var boolean Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ApplicationProxyUsed;
 
     /**
-     * @var boolean Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var boolean Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancingUsed;
 
     /**
-     * @var OriginCheckOriginStatus 
+     * @var OriginCheckOriginStatus Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var string 
+     * @var string Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $LoadBalancingUsedType;
 
     /**
      * @param string $OriginId Origin group ID
      * @param string $OriginName Origin group name
-     * @param string $Type Origin server type
+     * @param string $Type Origin-pull configuration type
+`area`: Origin-pull by the client IP’s region specified by `Area` in `OriginRecord`.
+`weight`: Origin-pull by the weight specified by `Weight` in `OriginRecord`.
      * @param array $Record Record
      * @param string $UpdateTime Update time
      * @param string $ZoneId Site ID
      * @param string $ZoneName Site name
      * @param string $OriginType Origin server type
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $ApplicationProxyUsed Whether the origin group is used for layer-4 proxy
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param boolean $LoadBalancingUsed Whether the origin group is used for load balancing
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param OriginCheckOriginStatus $Status 
-     * @param string $LoadBalancingUsedType 
+     * @param boolean $ApplicationProxyUsed Whether the origin group uses layer-4 proxy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $LoadBalancingUsed Whether the origin group is used for load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OriginCheckOriginStatus $Status Origin status 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $LoadBalancingUsedType Proxy mode of the load balancing task associated with the origin group.
+`none`: This origin group is not used for load balancing.
+`dns_only`: Used for DNS-only load balancing 
+`proxied`: Used for proxied load balancing
+`both`: It’s used for both DNS-only and proxied load balancing.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

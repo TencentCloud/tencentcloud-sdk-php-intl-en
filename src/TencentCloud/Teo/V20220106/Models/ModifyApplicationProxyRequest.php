@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID
  * @method void setZoneId(string $ZoneId) Set Site ID
- * @method string getProxyId() Obtain Layer-4 proxy ID
- * @method void setProxyId(string $ProxyId) Set Layer-4 proxy ID
- * @method string getProxyName() Obtain Layer-4 proxy name
- * @method void setProxyName(string $ProxyName) Set Layer-4 proxy name
+ * @method string getProxyId() Obtain ID of the proxy
+ * @method void setProxyId(string $ProxyId) Set ID of the proxy
+ * @method string getProxyName() Obtain Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
+ * @method void setProxyName(string $ProxyName) Set Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
  * @method string getForwardClientIp() Obtain This parameter is disused.
  * @method void setForwardClientIp(string $ForwardClientIp) Set This parameter is disused.
  * @method boolean getSessionPersist() Obtain This parameter is disused.
@@ -33,11 +37,11 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getSessionPersistTime() Obtain Session persistence time. Value range: 30-3600 (in seconds).
  * @method void setSessionPersistTime(integer $SessionPersistTime) Set Session persistence time. Value range: 30-3600 (in seconds).
  * @method string getProxyType() Obtain Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
  * @method void setProxyType(string $ProxyType) Set Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
  */
 class ModifyApplicationProxyRequest extends AbstractModel
 {
@@ -47,12 +51,14 @@ class ModifyApplicationProxyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Layer-4 proxy ID
+     * @var string ID of the proxy
      */
     public $ProxyId;
 
     /**
-     * @var string Layer-4 proxy name
+     * @var string Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      */
     public $ProxyName;
 
@@ -73,21 +79,23 @@ class ModifyApplicationProxyRequest extends AbstractModel
 
     /**
      * @var string Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     public $ProxyType;
 
     /**
      * @param string $ZoneId Site ID
-     * @param string $ProxyId Layer-4 proxy ID
-     * @param string $ProxyName Layer-4 proxy name
+     * @param string $ProxyId ID of the proxy
+     * @param string $ProxyName Name of the proxy:
+Domain name or subdomain name when `ProxyType=hostname`
+Instance name when `ProxyType=instance`
      * @param string $ForwardClientIp This parameter is disused.
      * @param boolean $SessionPersist This parameter is disused.
      * @param integer $SessionPersistTime Session persistence time. Value range: 30-3600 (in seconds).
      * @param string $ProxyType Specifies how a layer-4 proxy is created.
-`hostname`: Subdomain name
-`instance`: Instance
+`hostname`: Create by subdomain name
+`instance`: Create by instance
      */
     function __construct()
     {

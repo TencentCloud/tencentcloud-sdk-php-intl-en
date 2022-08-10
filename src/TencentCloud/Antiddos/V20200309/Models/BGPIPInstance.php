@@ -102,8 +102,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setBGPIPChannelFlag(integer $BGPIPChannelFlag) Set Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getTagInfoList() Obtain 
- * @method void setTagInfoList(array $TagInfoList) Set 
+ * @method array getTagInfoList() Obtain Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTagInfoList(array $TagInfoList) Set Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method AnycastOutPackRelation getAnycastOutPackRelation() Obtain 
+ * @method void setAnycastOutPackRelation(AnycastOutPackRelation $AnycastOutPackRelation) Set 
+ * @method integer getInstanceVersion() Obtain 
+ * @method void setInstanceVersion(integer $InstanceVersion) Set 
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -229,9 +235,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $BGPIPChannelFlag;
 
     /**
-     * @var array 
+     * @var array Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $TagInfoList;
+
+    /**
+     * @var AnycastOutPackRelation 
+     */
+    public $AnycastOutPackRelation;
+
+    /**
+     * @var integer 
+     */
+    public $InstanceVersion;
 
     /**
      * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
@@ -275,7 +292,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $BGPIPChannelFlag Whether it’s an Anti-DDoS Advanced instance from Tencent Cloud channels. `1`: Yes; `0`: No.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $TagInfoList 
+     * @param array $TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AnycastOutPackRelation $AnycastOutPackRelation 
+     * @param integer $InstanceVersion 
      */
     function __construct()
     {
@@ -385,6 +405,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->TagInfoList, $obj);
             }
+        }
+
+        if (array_key_exists("AnycastOutPackRelation",$param) and $param["AnycastOutPackRelation"] !== null) {
+            $this->AnycastOutPackRelation = new AnycastOutPackRelation();
+            $this->AnycastOutPackRelation->deserialize($param["AnycastOutPackRelation"]);
+        }
+
+        if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
+            $this->InstanceVersion = $param["InstanceVersion"];
         }
     }
 }

@@ -18,28 +18,28 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Tag type
  *
- * @method string getTagKey() Obtain 
- * @method void setTagKey(string $TagKey) Set 
- * @method array getTagValue() Obtain 
- * @method void setTagValue(array $TagValue) Set 
+ * @method string getTagKey() Obtain Tag key
+ * @method void setTagKey(string $TagKey) Set Tag key
+ * @method array getTagValue() Obtain Tag value
+ * @method void setTagValue(array $TagValue) Set Tag value
  */
 class TagFilter extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Tag key
      */
     public $TagKey;
 
     /**
-     * @var array 
+     * @var array Tag value
      */
     public $TagValue;
 
     /**
-     * @param string $TagKey 
-     * @param array $TagValue 
+     * @param string $TagKey Tag key
+     * @param array $TagValue Tag value
      */
     function __construct()
     {

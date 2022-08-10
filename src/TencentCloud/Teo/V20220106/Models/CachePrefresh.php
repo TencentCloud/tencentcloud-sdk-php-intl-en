@@ -18,28 +18,32 @@ namespace TencentCloud\Teo\V20220106\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Cache prefresh
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method integer getPercent() Obtain 
- * @method void setPercent(integer $Percent) Set 
+ * @method string getSwitch() Obtain Configuration switch
+ * @method void setSwitch(string $Switch) Set Configuration switch
+ * @method integer getPercent() Obtain Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPercent(integer $Percent) Set Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CachePrefresh extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Configuration switch
      */
     public $Switch;
 
     /**
-     * @var integer 
+     * @var integer Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Percent;
 
     /**
-     * @param string $Switch 
-     * @param integer $Percent 
+     * @param string $Switch Configuration switch
+     * @param integer $Percent Cache prefresh percentage. Values: 1-99
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
