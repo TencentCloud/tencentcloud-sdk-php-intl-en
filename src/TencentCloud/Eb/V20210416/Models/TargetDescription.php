@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSCFParams(SCFParams $SCFParams) Set SCF parameter
  * @method CkafkaTargetParams getCkafkaTargetParams() Obtain CKafka parameters
  * @method void setCkafkaTargetParams(CkafkaTargetParams $CkafkaTargetParams) Set CKafka parameters
+ * @method ESTargetParams getESTargetParams() Obtain ElasticSearch parameters
+ * @method void setESTargetParams(ESTargetParams $ESTargetParams) Set ElasticSearch parameters
  */
 class TargetDescription extends AbstractModel
 {
@@ -45,9 +47,15 @@ class TargetDescription extends AbstractModel
     public $CkafkaTargetParams;
 
     /**
+     * @var ESTargetParams ElasticSearch parameters
+     */
+    public $ESTargetParams;
+
+    /**
      * @param string $ResourceDescription Six-Segment QCS resource description. For more information, see [Resource Description Method](https://intl.cloud.tencent.com/document/product/598/10606?from_cn_redirect=1)
      * @param SCFParams $SCFParams SCF parameter
      * @param CkafkaTargetParams $CkafkaTargetParams CKafka parameters
+     * @param ESTargetParams $ESTargetParams ElasticSearch parameters
      */
     function __construct()
     {
@@ -74,6 +82,11 @@ class TargetDescription extends AbstractModel
         if (array_key_exists("CkafkaTargetParams",$param) and $param["CkafkaTargetParams"] !== null) {
             $this->CkafkaTargetParams = new CkafkaTargetParams();
             $this->CkafkaTargetParams->deserialize($param["CkafkaTargetParams"]);
+        }
+
+        if (array_key_exists("ESTargetParams",$param) and $param["ESTargetParams"] !== null) {
+            $this->ESTargetParams = new ESTargetParams();
+            $this->ESTargetParams->deserialize($param["ESTargetParams"]);
         }
     }
 }

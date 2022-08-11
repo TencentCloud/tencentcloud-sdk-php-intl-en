@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setConnectionName(string $ConnectionName) Set Connector name
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
- * @method boolean getEnable() Obtain Switch
- * @method void setEnable(boolean $Enable) Set Switch
- * @method string getType() Obtain Type
- * @method void setType(string $Type) Set Type
+ * @method boolean getEnable() Obtain Whether to enable
+ * @method void setEnable(boolean $Enable) Set Whether to enable
+ * @method string getType() Obtain Type of the connector
+ * @method void setType(string $Type) Set Type of the connector
  */
 class CreateConnectionRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class CreateConnectionRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var boolean Switch
+     * @var boolean Whether to enable
      */
     public $Enable;
 
     /**
-     * @var string Type
+     * @var string Type of the connector
      */
     public $Type;
 
@@ -70,8 +70,8 @@ class CreateConnectionRequest extends AbstractModel
      * @param string $EventBusId Event bus ID
      * @param string $ConnectionName Connector name
      * @param string $Description Description
-     * @param boolean $Enable Switch
-     * @param string $Type Type
+     * @param boolean $Enable Whether to enable
+     * @param string $Type Type of the connector
      */
     function __construct()
     {

@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setInstanceIds(array $InstanceIds) Set IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getFlowId() Obtain Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFlowId(integer $FlowId) Set Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -46,6 +50,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $InstanceIds;
 
     /**
+     * @var integer Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FlowId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +65,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  The parameter can be used to either query order details or call the user account APIs to make another payment when this payment fails.
      * @param array $InstanceIds IDs of the instances you have purchased in this order. If no instance IDs are returned, you can query them with the `DescribeOrders` API. You can also use the `DescribeDBInstances` API to check whether an instance has been created successfully.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $FlowId Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -76,6 +88,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
             $this->InstanceIds = $param["InstanceIds"];
+        }
+
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

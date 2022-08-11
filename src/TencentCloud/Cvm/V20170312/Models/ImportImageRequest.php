@@ -38,6 +38,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setForce(boolean $Force) Set Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
  * @method array getTagSpecification() Obtain Tag description list. This parameter is used to bind a tag to a custom image.
  * @method void setTagSpecification(array $TagSpecification) Set Tag description list. This parameter is used to bind a tag to a custom image.
+ * @method string getLicenseType() Obtain The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+ * @method void setLicenseType(string $LicenseType) Set The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
  */
 class ImportImageRequest extends AbstractModel
 {
@@ -87,6 +95,14 @@ class ImportImageRequest extends AbstractModel
     public $TagSpecification;
 
     /**
+     * @var string The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
+     */
+    public $LicenseType;
+
+    /**
      * @param string $Architecture OS architecture of the image to be imported, `x86_64` or `i386`.
      * @param string $OsType OS type of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
      * @param string $OsVersion OS version of the image to be imported. You can call `DescribeImportImageOs` to obtain the list of supported operating systems.
@@ -96,6 +112,10 @@ class ImportImageRequest extends AbstractModel
      * @param boolean $DryRun Dry run to check the parameters without performing the operation
      * @param boolean $Force Whether to force import the image. For more information, see [Forcibly Import Image](https://intl.cloud.tencent.com/document/product/213/12849).
      * @param array $TagSpecification Tag description list. This parameter is used to bind a tag to a custom image.
+     * @param string $LicenseType The license type used to activate the OS after importing an image.
+Valid values:
+`TencentCloud`: Tencent Cloud official license
+`BYOL`: Bring Your Own License
      */
     function __construct()
     {
@@ -149,6 +169,10 @@ class ImportImageRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->TagSpecification, $obj);
             }
+        }
+
+        if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
+            $this->LicenseType = $param["LicenseType"];
         }
     }
 }

@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getEventBusId() Obtain Event bus ID
  * @method void setEventBusId(string $EventBusId) Set Event bus ID
- * @method string getDescription() Obtain Event bus description, which can contain up to 200 characters of any type
- * @method void setDescription(string $Description) Set Event bus description, which can contain up to 200 characters of any type
- * @method string getEventBusName() Obtain Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
- * @method void setEventBusName(string $EventBusName) Set Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+ * @method string getDescription() Obtain Event bus description, which can contain up to 200 characters of any type.
+ * @method void setDescription(string $Description) Set Event bus description, which can contain up to 200 characters of any type.
+ * @method string getEventBusName() Obtain Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
+ * @method void setEventBusName(string $EventBusName) Set Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
  */
 class UpdateEventBusRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class UpdateEventBusRequest extends AbstractModel
     public $EventBusId;
 
     /**
-     * @var string Event bus description, which can contain up to 200 characters of any type
+     * @var string Event bus description, which can contain up to 200 characters of any type.
      */
     public $Description;
 
     /**
-     * @var string Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+     * @var string Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      */
     public $EventBusName;
 
     /**
      * @param string $EventBusId Event bus ID
-     * @param string $Description Event bus description, which can contain up to 200 characters of any type
-     * @param string $EventBusName Event bus name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
+     * @param string $Description Event bus description, which can contain up to 200 characters of any type.
+     * @param string $EventBusName Event bus name: it can contain 2-60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter.
      */
     function __construct()
     {

@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Event bus description
  * @method string getClsTopicId() Obtain Log topic ID
  * @method void setClsTopicId(string $ClsTopicId) Set Log topic ID
- * @method string getAddTime() Obtain Creation time
- * @method void setAddTime(string $AddTime) Set Creation time
+ * @method string getAddTime() Obtain Creation time.
+ * @method void setAddTime(string $AddTime) Set Creation time.
  * @method string getClsLogsetId() Obtain Logset ID
  * @method void setClsLogsetId(string $ClsLogsetId) Set Logset ID
  * @method string getEventBusName() Obtain Event bus name
@@ -57,7 +57,7 @@ class GetEventBusResponse extends AbstractModel
     public $ClsTopicId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time.
      */
     public $AddTime;
 
@@ -90,7 +90,7 @@ class GetEventBusResponse extends AbstractModel
      * @param string $ModTime Update time
      * @param string $Description Event bus description
      * @param string $ClsTopicId Log topic ID
-     * @param string $AddTime Creation time
+     * @param string $AddTime Creation time.
      * @param string $ClsLogsetId Logset ID
      * @param string $EventBusName Event bus name
      * @param string $EventBusId Event bus ID

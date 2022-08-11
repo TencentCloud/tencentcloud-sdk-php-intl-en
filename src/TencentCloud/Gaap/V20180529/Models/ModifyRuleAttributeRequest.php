@@ -54,6 +54,8 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
  * @method void setServerNameIndicationSwitch(string $ServerNameIndicationSwitch) Set Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
  * @method string getServerNameIndication() Obtain Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
  * @method void setServerNameIndication(string $ServerNameIndication) Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+ * @method string getForcedRedirect() Obtain Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+ * @method void setForcedRedirect(string $ForcedRedirect) Set Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
  */
 class ModifyRuleAttributeRequest extends AbstractModel
 {
@@ -115,6 +117,11 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
     public $ServerNameIndication;
 
     /**
+     * @var string Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $RuleId Forwarding rule ID
      * @param string $Scheduler Scheduling policy:
@@ -132,6 +139,7 @@ If `ForwardProtocol=default`, the `ForwardProtocol` of the listener will be used
 If `ForwardHost=default`, the domain name configured with the forwarding rule will be used. For other cases, the value set in this field will be used.
      * @param string $ServerNameIndicationSwitch Specifies whether to enable Server Name Indication (SNI). Valid values: `ON` (enable) and `OFF` (disable).
      * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
+     * @param string $ForcedRedirect Enables HTTP-to-HTTPS force redirect for a forwarding rule. Enter a hostname and path of the current forwarding rule.
      */
     function __construct()
     {
@@ -185,6 +193,10 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

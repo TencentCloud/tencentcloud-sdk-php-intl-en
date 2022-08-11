@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagKeys(array $TagKeys) Set Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
  * @method array getProductVersions() Obtain Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
  * @method void setProductVersions(array $ProductVersions) Set Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+ * @method array getInstanceIds() Obtain The specified instances for batch query
+ * @method void setInstanceIds(array $InstanceIds) Set The specified instances for batch query
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $ProductVersions;
 
     /**
+     * @var array The specified instances for batch query
+     */
+    public $InstanceIds;
+
+    /**
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 1000.
      * @param integer $Offset Offset, which is an integral multiple of `Limit`.
      * @param string $InstanceId Instance ID, such as crs-6ubhgouj
@@ -224,6 +231,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $InstanceTags Filters resources by tag key and value. If this parameter is not specified or is an empty array, resources will not be filtered.
      * @param array $TagKeys Filters resources by tag key. If this parameter is not specified or is an empty array, resources will not be filtered.
      * @param array $ProductVersions Product editions to be filtered. Valid values: `local` (local disk edition), `cloud` (cloud disk edition), `cdc` (dedicated cluster edition). If this parameter is not passed in, the product will not be filtered by default.
+     * @param array $InstanceIds The specified instances for batch query
      */
     function __construct()
     {
@@ -341,6 +349,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("ProductVersions",$param) and $param["ProductVersions"] !== null) {
             $this->ProductVersions = $param["ProductVersions"];
+        }
+
+        if (array_key_exists("InstanceIds",$param) and $param["InstanceIds"] !== null) {
+            $this->InstanceIds = $param["InstanceIds"];
         }
     }
 }

@@ -62,6 +62,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setServerNameIndication(string $ServerNameIndication) Set Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getForcedRedirect() Obtain Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setForcedRedirect(string $ForcedRedirect) Set Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleInfo extends AbstractModel
 {
@@ -143,6 +147,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ServerNameIndication;
 
     /**
+     * @var string Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ForcedRedirect;
+
+    /**
      * @param string $RuleId Rule information
      * @param string $ListenerId Listener information
      * @param string $Domain Rule domain name
@@ -164,6 +174,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param string $ServerNameIndication Server Name Indication (SNI). This field is required when `ServerNameIndicationSwitch` is `ON`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ForcedRedirect Forces requests to redirect to HTTPS. When `https:` is passed in, all requests are redirected to HTTPS.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -238,6 +250,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("ServerNameIndication",$param) and $param["ServerNameIndication"] !== null) {
             $this->ServerNameIndication = $param["ServerNameIndication"];
+        }
+
+        if (array_key_exists("ForcedRedirect",$param) and $param["ForcedRedirect"] !== null) {
+            $this->ForcedRedirect = $param["ForcedRedirect"];
         }
     }
 }

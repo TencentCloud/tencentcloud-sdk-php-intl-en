@@ -152,6 +152,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setResourceTags(array $ResourceTags) Set Instance tag information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDbVersionId() Obtain Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDbVersionId(string $DbVersionId) Set Database version
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -426,6 +430,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ResourceTags;
 
     /**
+     * @var string Database version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbVersionId;
+
+    /**
      * @param string $InstanceId Instance ID, which uniquely identifies a TDSQL instance
      * @param string $InstanceName Customizable instance name
      * @param integer $AppId Application ID of instance
@@ -492,6 +502,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $ResourceTags Instance tag information
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DbVersionId Database version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -713,6 +725,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("DbVersionId",$param) and $param["DbVersionId"] !== null) {
+            $this->DbVersionId = $param["DbVersionId"];
         }
     }
 }
