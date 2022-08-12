@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ListEmailTemplates response structure.
+ * DescribeParamTemplates response structure.
  *
- * @method array getTemplatesMetadata() Obtain List of email templates.
- * @method void setTemplatesMetadata(array $TemplatesMetadata) Set List of email templates.
- * @method integer getTotalCount() Obtain Total number of templates
- * @method void setTotalCount(integer $TotalCount) Set Total number of templates
+ * @method integer getTotalCount() Obtain Number of parameter templates
+ * @method void setTotalCount(integer $TotalCount) Set Number of parameter templates
+ * @method array getItems() Obtain Parameter template information
+ * @method void setItems(array $Items) Set Parameter template information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ListEmailTemplatesResponse extends AbstractModel
+class DescribeParamTemplatesResponse extends AbstractModel
 {
     /**
-     * @var array List of email templates.
-     */
-    public $TemplatesMetadata;
-
-    /**
-     * @var integer Total number of templates
+     * @var integer Number of parameter templates
      */
     public $TotalCount;
+
+    /**
+     * @var array Parameter template information
+     */
+    public $Items;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class ListEmailTemplatesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $TemplatesMetadata List of email templates.
-     * @param integer $TotalCount Total number of templates
+     * @param integer $TotalCount Number of parameter templates
+     * @param array $Items Parameter template information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +62,17 @@ class ListEmailTemplatesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplatesMetadata",$param) and $param["TemplatesMetadata"] !== null) {
-            $this->TemplatesMetadata = [];
-            foreach ($param["TemplatesMetadata"] as $key => $value){
-                $obj = new TemplatesMetadata();
-                $obj->deserialize($value);
-                array_push($this->TemplatesMetadata, $obj);
-            }
-        }
-
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
+            $this->Items = [];
+            foreach ($param["Items"] as $key => $value){
+                $obj = new ParamTemplateListInfo();
+                $obj->deserialize($value);
+                array_push($this->Items, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

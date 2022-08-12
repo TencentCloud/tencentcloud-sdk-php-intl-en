@@ -32,12 +32,12 @@ Tencent Cloud team <noreply@mail.qcloud.com>
  * @method void setSubject(string $Subject) Set Email subject
  * @method integer getTaskType() Obtain Task type. `1`: immediate; `2`: scheduled; `3`: recurring
  * @method void setTaskType(integer $TaskType) Set Task type. `1`: immediate; `2`: scheduled; `3`: recurring
- * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+ * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
  * @method Template getTemplate() Obtain Template when emails are sent using a template
  * @method void setTemplate(Template $Template) Set Template when emails are sent using a template
- * @method Simple getSimple() Obtain Email content when emails are sent by calling the API. This parameter is currently unavailable.
- * @method void setSimple(Simple $Simple) Set Email content when emails are sent by calling the API. This parameter is currently unavailable.
+ * @method Simple getSimple() Obtain Disused
+ * @method void setSimple(Simple $Simple) Set Disused
  * @method array getAttachments() Obtain Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
  * @method void setAttachments(array $Attachments) Set Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
  * @method CycleEmailParam getCycleParam() Obtain Parameter required for a recurring sending task
@@ -74,7 +74,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $TaskType;
 
     /**
-     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public $ReplyToAddresses;
 
@@ -84,7 +84,7 @@ Tencent Cloud team <noreply@mail.qcloud.com>
     public $Template;
 
     /**
-     * @var Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * @var Simple Disused
      */
     public $Simple;
 
@@ -120,9 +120,9 @@ Tencent Cloud team <noreply@mail.qcloud.com>
      * @param integer $ReceiverId Recipient group ID
      * @param string $Subject Email subject
      * @param integer $TaskType Task type. `1`: immediate; `2`: scheduled; `3`: recurring
-     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will be sent to Tencent Cloud.
+     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      * @param Template $Template Template when emails are sent using a template
-     * @param Simple $Simple Email content when emails are sent by calling the API. This parameter is currently unavailable.
+     * @param Simple $Simple Disused
      * @param array $Attachments Attachment parameters to set when you need to send attachments. This parameter is currently unavailable.
      * @param CycleEmailParam $CycleParam Parameter required for a recurring sending task
      * @param TimedEmailParam $TimedParam Parameter required for a scheduled sending task

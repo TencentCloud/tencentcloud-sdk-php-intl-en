@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEmailIdentities() Obtain List of sender domains.
  * @method void setEmailIdentities(array $EmailIdentities) Set List of sender domains.
+ * @method integer getMaxReputationLevel() Obtain Maximum reputation level
+ * @method void setMaxReputationLevel(integer $MaxReputationLevel) Set Maximum reputation level
+ * @method integer getMaxDailyQuota() Obtain Maximum number of emails sent per domain name
+ * @method void setMaxDailyQuota(integer $MaxDailyQuota) Set Maximum number of emails sent per domain name
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +37,24 @@ class ListEmailIdentitiesResponse extends AbstractModel
     public $EmailIdentities;
 
     /**
+     * @var integer Maximum reputation level
+     */
+    public $MaxReputationLevel;
+
+    /**
+     * @var integer Maximum number of emails sent per domain name
+     */
+    public $MaxDailyQuota;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $EmailIdentities List of sender domains.
+     * @param integer $MaxReputationLevel Maximum reputation level
+     * @param integer $MaxDailyQuota Maximum number of emails sent per domain name
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +77,14 @@ class ListEmailIdentitiesResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->EmailIdentities, $obj);
             }
+        }
+
+        if (array_key_exists("MaxReputationLevel",$param) and $param["MaxReputationLevel"] !== null) {
+            $this->MaxReputationLevel = $param["MaxReputationLevel"];
+        }
+
+        if (array_key_exists("MaxDailyQuota",$param) and $param["MaxDailyQuota"] !== null) {
+            $this->MaxDailyQuota = $param["MaxDailyQuota"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

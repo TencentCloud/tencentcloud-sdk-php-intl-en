@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSendEmailStatus response structure.
  *
- * @method array getEmailStatusList() Obtain Email sending status list
- * @method void setEmailStatusList(array $EmailStatusList) Set Email sending status list
+ * @method array getEmailStatusList() Obtain Status of sent emails
+ * @method void setEmailStatusList(array $EmailStatusList) Set Status of sent emails
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class GetSendEmailStatusResponse extends AbstractModel
 {
     /**
-     * @var array Email sending status list
+     * @var array Status of sent emails
      */
     public $EmailStatusList;
 
@@ -38,7 +38,7 @@ class GetSendEmailStatusResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $EmailStatusList Email sending status list
+     * @param array $EmailStatusList Status of sent emails
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

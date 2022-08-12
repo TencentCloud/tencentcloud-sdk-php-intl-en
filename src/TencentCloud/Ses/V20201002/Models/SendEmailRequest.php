@@ -30,12 +30,12 @@ Sender <email address>
  * @method void setDestination(array $Destination) Set Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
  * @method string getSubject() Obtain Email subject.
  * @method void setSubject(string $Subject) Set Email subject.
- * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
- * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+ * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
+ * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
  * @method Template getTemplate() Obtain Template when sending emails using a template.
  * @method void setTemplate(Template $Template) Set Template when sending emails using a template.
- * @method Simple getSimple() Obtain Email content when sending emails by calling the API.
- * @method void setSimple(Simple $Simple) Set Email content when sending emails by calling the API.
+ * @method Simple getSimple() Obtain Disused
+ * @method void setSimple(Simple $Simple) Set Disused
  * @method array getAttachments() Obtain Email attachments
  * @method void setAttachments(array $Attachments) Set Email attachments
  * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
@@ -63,7 +63,7 @@ Sender <email address>
     public $Subject;
 
     /**
-     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+     * @var string Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      */
     public $ReplyToAddresses;
 
@@ -73,7 +73,7 @@ Sender <email address>
     public $Template;
 
     /**
-     * @var Simple Email content when sending emails by calling the API.
+     * @var Simple Disused
      */
     public $Simple;
 
@@ -98,9 +98,9 @@ To display the sender name, enter the address in the following format:
 Sender <email address>
      * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
-     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this field is left empty, reply emails will be sent to Tencent Cloud.
+     * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
      * @param Template $Template Template when sending emails using a template.
-     * @param Simple $Simple Email content when sending emails by calling the API.
+     * @param Simple $Simple Disused
      * @param array $Attachments Email attachments
      * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
      * @param integer $TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.

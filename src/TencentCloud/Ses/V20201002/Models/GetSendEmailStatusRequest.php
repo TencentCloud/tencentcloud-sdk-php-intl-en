@@ -20,50 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * GetSendEmailStatus request structure.
  *
- * @method string getRequestDate() Obtain Sent date. This parameter is required. You can only query the sending status for a single date at a time.
- * @method void setRequestDate(string $RequestDate) Set Sent date. This parameter is required. You can only query the sending status for a single date at a time.
- * @method integer getOffset() Obtain Offset. Default value: `0`
- * @method void setOffset(integer $Offset) Set Offset. Default value: `0`
- * @method integer getLimit() Obtain Maximum number of pulled entries. The maximum value is `100`.
- * @method void setLimit(integer $Limit) Set Maximum number of pulled entries. The maximum value is `100`.
- * @method string getMessageId() Obtain `MessageId` field returned by the `SendMail` API
- * @method void setMessageId(string $MessageId) Set `MessageId` field returned by the `SendMail` API
- * @method string getToEmailAddress() Obtain Recipient email address
- * @method void setToEmailAddress(string $ToEmailAddress) Set Recipient email address
+ * @method string getRequestDate() Obtain Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+ * @method void setRequestDate(string $RequestDate) Set Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+ * @method integer getOffset() Obtain Offset. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Offset. Default value: `0`.
+ * @method integer getLimit() Obtain Maximum number of pulled entries. Maximum value: `100`.
+ * @method void setLimit(integer $Limit) Set Maximum number of pulled entries. Maximum value: `100`.
+ * @method string getMessageId() Obtain The `MessageId` field returned by the `SendMail` API.
+ * @method void setMessageId(string $MessageId) Set The `MessageId` field returned by the `SendMail` API.
+ * @method string getToEmailAddress() Obtain Recipient email address.
+ * @method void setToEmailAddress(string $ToEmailAddress) Set Recipient email address.
  */
 class GetSendEmailStatusRequest extends AbstractModel
 {
     /**
-     * @var string Sent date. This parameter is required. You can only query the sending status for a single date at a time.
+     * @var string Date sent. This parameter is required. You can only query the sending status for a single date at a time.
      */
     public $RequestDate;
 
     /**
-     * @var integer Offset. Default value: `0`
+     * @var integer Offset. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Maximum number of pulled entries. The maximum value is `100`.
+     * @var integer Maximum number of pulled entries. Maximum value: `100`.
      */
     public $Limit;
 
     /**
-     * @var string `MessageId` field returned by the `SendMail` API
+     * @var string The `MessageId` field returned by the `SendMail` API.
      */
     public $MessageId;
 
     /**
-     * @var string Recipient email address
+     * @var string Recipient email address.
      */
     public $ToEmailAddress;
 
     /**
-     * @param string $RequestDate Sent date. This parameter is required. You can only query the sending status for a single date at a time.
-     * @param integer $Offset Offset. Default value: `0`
-     * @param integer $Limit Maximum number of pulled entries. The maximum value is `100`.
-     * @param string $MessageId `MessageId` field returned by the `SendMail` API
-     * @param string $ToEmailAddress Recipient email address
+     * @param string $RequestDate Date sent. This parameter is required. You can only query the sending status for a single date at a time.
+     * @param integer $Offset Offset. Default value: `0`.
+     * @param integer $Limit Maximum number of pulled entries. Maximum value: `100`.
+     * @param string $MessageId The `MessageId` field returned by the `SendMail` API.
+     * @param string $ToEmailAddress Recipient email address.
      */
     function __construct()
     {

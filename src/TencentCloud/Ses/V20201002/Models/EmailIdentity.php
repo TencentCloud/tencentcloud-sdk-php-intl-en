@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIdentityType(string $IdentityType) Set Verification type. The value is fixed to `DOMAIN`.
  * @method boolean getSendingEnabled() Obtain Verification passed or not.
  * @method void setSendingEnabled(boolean $SendingEnabled) Set Verification passed or not.
+ * @method integer getCurrentReputationLevel() Obtain Current reputation level
+ * @method void setCurrentReputationLevel(integer $CurrentReputationLevel) Set Current reputation level
+ * @method integer getDailyQuota() Obtain Maximum number of messages sent per day
+ * @method void setDailyQuota(integer $DailyQuota) Set Maximum number of messages sent per day
  */
 class EmailIdentity extends AbstractModel
 {
@@ -45,9 +49,21 @@ class EmailIdentity extends AbstractModel
     public $SendingEnabled;
 
     /**
+     * @var integer Current reputation level
+     */
+    public $CurrentReputationLevel;
+
+    /**
+     * @var integer Maximum number of messages sent per day
+     */
+    public $DailyQuota;
+
+    /**
      * @param string $IdentityName Sender domain.
      * @param string $IdentityType Verification type. The value is fixed to `DOMAIN`.
      * @param boolean $SendingEnabled Verification passed or not.
+     * @param integer $CurrentReputationLevel Current reputation level
+     * @param integer $DailyQuota Maximum number of messages sent per day
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class EmailIdentity extends AbstractModel
 
         if (array_key_exists("SendingEnabled",$param) and $param["SendingEnabled"] !== null) {
             $this->SendingEnabled = $param["SendingEnabled"];
+        }
+
+        if (array_key_exists("CurrentReputationLevel",$param) and $param["CurrentReputationLevel"] !== null) {
+            $this->CurrentReputationLevel = $param["CurrentReputationLevel"];
+        }
+
+        if (array_key_exists("DailyQuota",$param) and $param["DailyQuota"] !== null) {
+            $this->DailyQuota = $param["DailyQuota"];
         }
     }
 }

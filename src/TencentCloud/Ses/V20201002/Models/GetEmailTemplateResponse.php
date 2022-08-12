@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method TemplateContent getTemplateContent() Obtain Template content.
  * @method void setTemplateContent(TemplateContent $TemplateContent) Set Template content.
+ * @method integer getTemplateStatus() Obtain Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+ * @method void setTemplateStatus(integer $TemplateStatus) Set Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class GetEmailTemplateResponse extends AbstractModel
     public $TemplateContent;
 
     /**
+     * @var integer Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     */
+    public $TemplateStatus;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param TemplateContent $TemplateContent Template content.
+     * @param integer $TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -57,6 +65,10 @@ class GetEmailTemplateResponse extends AbstractModel
         if (array_key_exists("TemplateContent",$param) and $param["TemplateContent"] !== null) {
             $this->TemplateContent = new TemplateContent();
             $this->TemplateContent->deserialize($param["TemplateContent"]);
+        }
+
+        if (array_key_exists("TemplateStatus",$param) and $param["TemplateStatus"] !== null) {
+            $this->TemplateStatus = $param["TemplateStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

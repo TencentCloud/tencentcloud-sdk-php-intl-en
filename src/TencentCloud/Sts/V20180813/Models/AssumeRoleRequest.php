@@ -52,6 +52,8 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
  * @method array getTags() Obtain List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
  * @method void setTags(array $Tags) Set List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+ * @method string getSourceIdentity() Obtain UIN of the initiator
+ * @method void setSourceIdentity(string $SourceIdentity) Set UIN of the initiator
  */
 class AssumeRoleRequest extends AbstractModel
 {
@@ -96,6 +98,11 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
     public $Tags;
 
     /**
+     * @var string UIN of the initiator
+     */
+    public $SourceIdentity;
+
+    /**
      * @param string $RoleArn Resource descriptions of a role, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 General role:
 qcs::cam::uin/12345678:role/4611686018427397919, qcs::cam::uin/12345678:roleName/testRoleName
@@ -112,6 +119,7 @@ Note:
      * @param string $ExternalId External role ID, which can be obtained by clicking the role name in the [CAM console](https://console.cloud.tencent.com/cam/role).
 It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-]*
      * @param array $Tags List of session tags. Up to 50 tags are allowed. The tag keys can not duplicate.
+     * @param string $SourceIdentity UIN of the initiator
      */
     function __construct()
     {
@@ -153,6 +161,10 @@ It can contain 2-128 letters, digits, and symbols (=,.@:/-). Regex: [\w+=,.@:\/-
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SourceIdentity",$param) and $param["SourceIdentity"] !== null) {
+            $this->SourceIdentity = $param["SourceIdentity"];
         }
     }
 }
