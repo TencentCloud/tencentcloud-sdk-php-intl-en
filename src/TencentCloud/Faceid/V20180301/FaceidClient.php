@@ -30,6 +30,7 @@ The image and the data generated with the SDK must be stored in COS, and the reg
  * @method Models\GenerateReflectSequenceResponse GenerateReflectSequence(Models\GenerateReflectSequenceRequest $req) This API is used to generate an appropriate light sequence based on the information collected by the liveness comparison (reflection-based) SDK and pass the light sequence into the SDK to start the identity verification process.
 The data generated with the SDK must be stored in COS, and the region of the COS bucket must be same as that of requests made with this API. We recommend that you pass resources with upload link APIs.
  * @method Models\LivenessCompareResponse LivenessCompare(Models\LivenessCompareRequest $req) This API is used to pass in a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
+ * @method Models\VideoLivenessCompareResponse VideoLivenessCompare(Models\VideoLivenessCompareRequest $req) This API is used to pass in URLs of a video and a photo, determine whether the person in the video is real, and if yes, then determine whether the person in the video is the same as that in the photo.
  */
 
 class FaceidClient extends AbstractClient
