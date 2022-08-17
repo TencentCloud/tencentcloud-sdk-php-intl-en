@@ -126,10 +126,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setCrossBackupEnabled(string $CrossBackupEnabled) Set Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
  * @method integer getCrossBackupSaveDays() Obtain The retention period of cross-region backup. Default value: 7 days
  * @method void setCrossBackupSaveDays(integer $CrossBackupSaveDays) Set The retention period of cross-region backup. Default value: 7 days
- * @method string getDnsPodDomain() Obtain 
- * @method void setDnsPodDomain(string $DnsPodDomain) Set 
- * @method integer getTgwWanVPort() Obtain 
- * @method void setTgwWanVPort(integer $TgwWanVPort) Set 
+ * @method string getDnsPodDomain() Obtain Domain name of the public network address
+ * @method void setDnsPodDomain(string $DnsPodDomain) Set Domain name of the public network address
+ * @method integer getTgwWanVPort() Obtain Port number of the public network
+ * @method void setTgwWanVPort(integer $TgwWanVPort) Set Port number of the public network
+ * @method string getCollation() Obtain 
+ * @method void setCollation(string $Collation) Set 
+ * @method string getTimeZone() Obtain 
+ * @method void setTimeZone(string $TimeZone) Set 
  */
 class DBInstance extends AbstractModel
 {
@@ -371,14 +375,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $CrossBackupSaveDays;
 
     /**
-     * @var string 
+     * @var string Domain name of the public network address
      */
     public $DnsPodDomain;
 
     /**
-     * @var integer 
+     * @var integer Port number of the public network
      */
     public $TgwWanVPort;
+
+    /**
+     * @var string 
+     */
+    public $Collation;
+
+    /**
+     * @var string 
+     */
+    public $TimeZone;
 
     /**
      * @param string $InstanceId Instance ID
@@ -434,8 +448,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param array $CrossRegions The target region of cross-region backup. If this parameter left empty, it indicates that cross-region backup is disabled.
      * @param string $CrossBackupEnabled Cross-region backup status. Valid values: `enable` (enabled), `disable` (disabed)
      * @param integer $CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
-     * @param string $DnsPodDomain 
-     * @param integer $TgwWanVPort 
+     * @param string $DnsPodDomain Domain name of the public network address
+     * @param integer $TgwWanVPort Port number of the public network
+     * @param string $Collation 
+     * @param string $TimeZone 
      */
     function __construct()
     {
@@ -645,6 +661,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TgwWanVPort",$param) and $param["TgwWanVPort"] !== null) {
             $this->TgwWanVPort = $param["TgwWanVPort"];
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

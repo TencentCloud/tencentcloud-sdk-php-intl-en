@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemark(string $Remark) Set Remarks
  * @method string getDnsForwardStatus() Obtain Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
  * @method void setDnsForwardStatus(string $DnsForwardStatus) Set Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+ * @method string getCnameSpeedupStatus() Obtain Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+ * @method void setCnameSpeedupStatus(string $CnameSpeedupStatus) Set Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
  */
 class ModifyPrivateZoneRequest extends AbstractModel
 {
@@ -45,9 +47,15 @@ class ModifyPrivateZoneRequest extends AbstractModel
     public $DnsForwardStatus;
 
     /**
+     * @var string Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
+     */
+    public $CnameSpeedupStatus;
+
+    /**
      * @param string $ZoneId Private domain ID
      * @param string $Remark Remarks
      * @param string $DnsForwardStatus Whether to enable subdomain recursive DNS. Valid values: ENABLED, DISABLED
+     * @param string $CnameSpeedupStatus Whether to enable CNAME flattening. Valid values: `ENABLED` and `DISABLED`.
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class ModifyPrivateZoneRequest extends AbstractModel
 
         if (array_key_exists("DnsForwardStatus",$param) and $param["DnsForwardStatus"] !== null) {
             $this->DnsForwardStatus = $param["DnsForwardStatus"];
+        }
+
+        if (array_key_exists("CnameSpeedupStatus",$param) and $param["CnameSpeedupStatus"] !== null) {
+            $this->CnameSpeedupStatus = $param["CnameSpeedupStatus"];
         }
     }
 }
