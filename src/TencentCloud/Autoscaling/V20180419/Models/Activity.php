@@ -25,13 +25,15 @@ use TencentCloud\Common\AbstractModel;
  * @method string getActivityId() Obtain Scaling activity ID.
  * @method void setActivityId(string $ActivityId) Set Scaling activity ID.
  * @method string getActivityType() Obtain Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
  * @method void setActivityType(string $ActivityType) Set Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
  * @method string getStatusCode() Obtain Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running
@@ -66,6 +68,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleActionResultSet(array $LifecycleActionResultSet) Set Result of the lifecycle hook action in the scaling activity
  * @method array getDetailedStatusMessageSet() Obtain Detailed description of scaling activity status
  * @method void setDetailedStatusMessageSet(array $DetailedStatusMessageSet) Set Detailed description of scaling activity status
+ * @method array getInvocationResultSet() Obtain Result of the command execution
+ * @method void setInvocationResultSet(array $InvocationResultSet) Set Result of the command execution
  */
 class Activity extends AbstractModel
 {
@@ -81,9 +85,10 @@ class Activity extends AbstractModel
 
     /**
      * @var string Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
      */
     public $ActivityType;
 
@@ -149,12 +154,18 @@ class Activity extends AbstractModel
     public $DetailedStatusMessageSet;
 
     /**
+     * @var array Result of the command execution
+     */
+    public $InvocationResultSet;
+
+    /**
      * @param string $AutoScalingGroupId Auto scaling group ID.
      * @param string $ActivityId Scaling activity ID.
      * @param string $ActivityType Type of the scaling activity. Valid values:<br>
-<li>SCALE_OUT: scales out. <li>SCALE_IN: scales in. <li>ATTACH_INSTANCES: adds an instance. <li>REMOVE_INSTANCES: terminates an instance. <li>DETACH_INSTANCES: removes an instance. <li>TERMINATE_INSTANCES_UNEXPECTEDLY: terminates an instance in the CVM console. <li>REPLACE_UNHEALTHY_INSTANCE: replaces an unhealthy instance.
-<li>START_INSTANCES: starts an instance.
-<li>STOP_INSTANCES: stops an instance.
+<li>`SCALE_OUT`: Scale out. <li>`SCALE_IN`: Scale in. <li>`ATTACH_INSTANCES`: Add instances. <li>`REMOVE_INSTANCES`: Terminate instances. <li>`DETACH_INSTANCES`: Remove instances. <li>`TERMINATE_INSTANCES_UNEXPECTEDLY`: Terminate instances in the CVM console. <li>`REPLACE_UNHEALTHY_INSTANCE`: Replace an unhealthy instance.
+<li>`START_INSTANCES`: Starts up instances.
+<li>`STOP_INSTANCES`: Shut down instances.
+<li>`INVOKE_COMMAND`: Execute commands
      * @param string $StatusCode Scaling activity status. Value range:<br>
 <li>INIT: initializing
 <li>RUNNING: running
@@ -172,6 +183,7 @@ class Activity extends AbstractModel
      * @param string $StatusMessageSimplified Brief description of the scaling activity status.
      * @param array $LifecycleActionResultSet Result of the lifecycle hook action in the scaling activity
      * @param array $DetailedStatusMessageSet Detailed description of scaling activity status
+     * @param array $InvocationResultSet Result of the command execution
      */
     function __construct()
     {
@@ -254,6 +266,15 @@ class Activity extends AbstractModel
                 $obj = new DetailedStatusMessage();
                 $obj->deserialize($value);
                 array_push($this->DetailedStatusMessageSet, $obj);
+            }
+        }
+
+        if (array_key_exists("InvocationResultSet",$param) and $param["InvocationResultSet"] !== null) {
+            $this->InvocationResultSet = [];
+            foreach ($param["InvocationResultSet"] as $key => $value){
+                $obj = new InvocationResult();
+                $obj->deserialize($value);
+                array_push($this->InvocationResultSet, $obj);
             }
         }
     }

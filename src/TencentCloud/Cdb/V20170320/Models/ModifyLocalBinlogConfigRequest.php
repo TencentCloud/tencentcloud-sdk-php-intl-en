@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
- * @method integer getSaveHours() Obtain Retention period of local binlog. Value range: [120,168].
- * @method void setSaveHours(integer $SaveHours) Set Retention period of local binlog. Value range: [120,168].
+ * @method integer getSaveHours() Obtain Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
+ * @method void setSaveHours(integer $SaveHours) Set Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
  * @method integer getMaxUsage() Obtain Space utilization of local binlog. Value range: [30,50].
  * @method void setMaxUsage(integer $MaxUsage) Set Space utilization of local binlog. Value range: [30,50].
  */
@@ -35,7 +35,7 @@ class ModifyLocalBinlogConfigRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Retention period of local binlog. Value range: [120,168].
+     * @var integer Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
      */
     public $SaveHours;
 
@@ -46,7 +46,7 @@ class ModifyLocalBinlogConfigRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
-     * @param integer $SaveHours Retention period of local binlog. Value range: [120,168].
+     * @param integer $SaveHours Retention period of local binlog. Valid range: 72-168 hours. When there is disaster recovery instance, the valid range will be 120-168 hours.
      * @param integer $MaxUsage Space utilization of local binlog. Value range: [30,50].
      */
     function __construct()
