@@ -20,18 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The Watermark information.
  *
- * @method McuWaterMarkImage getWaterMarkImage() Obtain The information of the watermark image.
- * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) Set The information of the watermark image.
+ * @method integer getWaterMarkType() Obtain The watermark type. The default is 0, which indicates an image watermark.
+ * @method void setWaterMarkType(integer $WaterMarkType) Set The watermark type. The default is 0, which indicates an image watermark.
+ * @method McuWaterMarkImage getWaterMarkImage() Obtain The watermark image information. This parameter is required if `WaterMarkType` is 0.
+ * @method void setWaterMarkImage(McuWaterMarkImage $WaterMarkImage) Set The watermark image information. This parameter is required if `WaterMarkType` is 0.
  */
 class McuWaterMarkParams extends AbstractModel
 {
     /**
-     * @var McuWaterMarkImage The information of the watermark image.
+     * @var integer The watermark type. The default is 0, which indicates an image watermark.
+     */
+    public $WaterMarkType;
+
+    /**
+     * @var McuWaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
      */
     public $WaterMarkImage;
 
     /**
-     * @param McuWaterMarkImage $WaterMarkImage The information of the watermark image.
+     * @param integer $WaterMarkType The watermark type. The default is 0, which indicates an image watermark.
+     * @param McuWaterMarkImage $WaterMarkImage The watermark image information. This parameter is required if `WaterMarkType` is 0.
      */
     function __construct()
     {
@@ -46,6 +54,10 @@ class McuWaterMarkParams extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("WaterMarkType",$param) and $param["WaterMarkType"] !== null) {
+            $this->WaterMarkType = $param["WaterMarkType"];
+        }
+
         if (array_key_exists("WaterMarkImage",$param) and $param["WaterMarkImage"] !== null) {
             $this->WaterMarkImage = new McuWaterMarkImage();
             $this->WaterMarkImage->deserialize($param["WaterMarkImage"]);

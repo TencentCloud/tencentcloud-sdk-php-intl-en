@@ -42,6 +42,8 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
  * @method void setSampleRate(integer $SampleRate) Set Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
  * @method string getCodec() Obtain Format of returned audio. Valid values: WAV (default), MP3, and PCM.
  * @method void setCodec(string $Codec) Set Format of returned audio. Valid values: WAV (default), MP3, and PCM.
+ * @method boolean getEnableSubtitle() Obtain Whether to enable the timestamp feature. Default value: `false`.
+ * @method void setEnableSubtitle(boolean $EnableSubtitle) Set Whether to enable the timestamp feature. Default value: `false`.
  */
 class TextToVoiceRequest extends AbstractModel
 {
@@ -97,6 +99,11 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
     public $Codec;
 
     /**
+     * @var boolean Whether to enable the timestamp feature. Default value: `false`.
+     */
+    public $EnableSubtitle;
+
+    /**
      * @param string $Text The source text for synthesizing speech, which is encoded in UTF-8.
 It can contain up to 150 Chinese characters (a full-width punctuation as a Chinese character) or 500 letters ( a half-width punctuation as a letter).
      * @param string $SessionId The `SessionId` of a request, which will be returned as-is. We recommend that you pass characters like uuid to prevent repetition.
@@ -108,6 +115,7 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
      * @param integer $PrimaryLanguage Primary language type: <li>1 - Chinese (default)</li><li>2 - English</li>
      * @param integer $SampleRate Audio sample rate: <li>16000: 16k (default)</li><li>8000: 8k</li>
      * @param string $Codec Format of returned audio. Valid values: WAV (default), MP3, and PCM.
+     * @param boolean $EnableSubtitle Whether to enable the timestamp feature. Default value: `false`.
      */
     function __construct()
     {
@@ -160,6 +168,10 @@ It can contain up to 150 Chinese characters (a full-width punctuation as a Chine
 
         if (array_key_exists("Codec",$param) and $param["Codec"] !== null) {
             $this->Codec = $param["Codec"];
+        }
+
+        if (array_key_exists("EnableSubtitle",$param) and $param["EnableSubtitle"] !== null) {
+            $this->EnableSubtitle = $param["EnableSubtitle"];
         }
     }
 }

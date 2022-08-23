@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSdkAppId(integer $SdkAppId) Set The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
  * @method string getRoomId() Obtain The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
  * @method void setRoomId(string $RoomId) Set The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
- * @method string getUserId() Obtain The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
- * @method void setUserId(string $UserId) Set The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
- * @method string getUserSig() Obtain The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
- * @method void setUserSig(string $UserSig) Set The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+ * @method string getUserId() Obtain The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+ * @method void setUserId(string $UserId) Set The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+ * @method string getUserSig() Obtain The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
+ * @method void setUserSig(string $UserSig) Set The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
  * @method RecordParams getRecordParams() Obtain The on-cloud recording parameters.
  * @method void setRecordParams(RecordParams $RecordParams) Set The on-cloud recording parameters.
- * @method StorageParams getStorageParams() Obtain The cloud storage parameters.
- * @method void setStorageParams(StorageParams $StorageParams) Set The cloud storage parameters.
+ * @method StorageParams getStorageParams() Obtain The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
+ * @method void setStorageParams(StorageParams $StorageParams) Set The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
  * @method integer getRoomIdType() Obtain The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
 0: String
 1: 32-bit integer (default)
@@ -60,12 +60,12 @@ class CreateCloudRecordingRequest extends AbstractModel
     public $RoomId;
 
     /**
-     * @var string The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
+     * @var string The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
      */
     public $UserId;
 
     /**
-     * @var string The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+     * @var string The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
      */
     public $UserSig;
 
@@ -75,7 +75,7 @@ class CreateCloudRecordingRequest extends AbstractModel
     public $RecordParams;
 
     /**
-     * @var StorageParams The cloud storage parameters.
+     * @var StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
      */
     public $StorageParams;
 
@@ -109,10 +109,10 @@ class CreateCloudRecordingRequest extends AbstractModel
     /**
      * @param integer $SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
      * @param string $RoomId The [room ID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are recorded.
-     * @param string $UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include this user ID in the room ID.
-     * @param string $UserSig The signature (similar to login password) required for the recording robot to enter the room. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104). |
+     * @param string $UserId The [user ID](https://intl.cloud.tencent.com/document/product/647/37714) of the recording robot in the TRTC room, which cannot be the same as a user ID already in use. We recommend you include the room ID in the user ID.
+     * @param string $UserSig The signature (similar to a login password) required for the recording robot to enter the room. Each user ID corresponds to a signature. For information on how to calculate the signature, see [What is UserSig?](https://intl.cloud.tencent.com/document/product/647/38104).
      * @param RecordParams $RecordParams The on-cloud recording parameters.
-     * @param StorageParams $StorageParams The cloud storage parameters.
+     * @param StorageParams $StorageParams The cloud storage information of the recording file. Currently, you can only save recording files to Tencent Cloud VOD.
      * @param integer $RoomIdType The type of the TRTC room ID, which must be the same as the ID type of the room whose streams are recorded.
 0: String
 1: 32-bit integer (default)

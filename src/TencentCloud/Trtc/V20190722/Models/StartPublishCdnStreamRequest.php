@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) Set The information of a single stream relayed. When you relay a single stream, set `WithTranscoding` to 0.
  * @method array getPublishCdnParams() Obtain The CDN information.
  * @method void setPublishCdnParams(array $PublishCdnParams) Set The CDN information.
+ * @method McuSeiParams getSeiParams() Obtain The stream mixing SEI parameters.
+ * @method void setSeiParams(McuSeiParams $SeiParams) Set The stream mixing SEI parameters.
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $PublishCdnParams;
 
     /**
+     * @var McuSeiParams The stream mixing SEI parameters.
+     */
+    public $SeiParams;
+
+    /**
      * @param integer $SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      * @param string $RoomId The ID of the room whose streams are relayed (the main room).
      * @param integer $RoomIdType The type of the `RoomId` parameter, which must be the same as the ID type of the room whose streams are relayed. 0: integer; 1: string.
@@ -96,6 +103,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
      * @param McuVideoParams $VideoParams The video encoding parameters for relaying. If you do not pass this parameter, only audio will be relayed.
      * @param SingleSubscribeParams $SingleSubscribeParams The information of a single stream relayed. When you relay a single stream, set `WithTranscoding` to 0.
      * @param array $PublishCdnParams The CDN information.
+     * @param McuSeiParams $SeiParams The stream mixing SEI parameters.
      */
     function __construct()
     {
@@ -153,6 +161,11 @@ class StartPublishCdnStreamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PublishCdnParams, $obj);
             }
+        }
+
+        if (array_key_exists("SeiParams",$param) and $param["SeiParams"] !== null) {
+            $this->SeiParams = new McuSeiParams();
+            $this->SeiParams->deserialize($param["SeiParams"]);
         }
     }
 }

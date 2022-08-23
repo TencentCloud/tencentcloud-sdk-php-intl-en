@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setMaxNodePodNum(integer $MaxNodePodNum) Set Maximum number of Pods on the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method EdgeClusterAdvancedSettings getClusterAdvancedSettings() Obtain Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterAdvancedSettings(EdgeClusterAdvancedSettings $ClusterAdvancedSettings) Set Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EdgeCluster extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $MaxNodePodNum;
 
     /**
+     * @var EdgeClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterAdvancedSettings;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $VpcId VPC ID
@@ -115,6 +125,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $CreatedTime Cluster creation time
      * @param string $EdgeClusterVersion Edge cluster version
      * @param integer $MaxNodePodNum Maximum number of Pods on the node
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -172,6 +184,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("MaxNodePodNum",$param) and $param["MaxNodePodNum"] !== null) {
             $this->MaxNodePodNum = $param["MaxNodePodNum"];
+        }
+
+        if (array_key_exists("ClusterAdvancedSettings",$param) and $param["ClusterAdvancedSettings"] !== null) {
+            $this->ClusterAdvancedSettings = new EdgeClusterAdvancedSettings();
+            $this->ClusterAdvancedSettings->deserialize($param["ClusterAdvancedSettings"]);
         }
     }
 }

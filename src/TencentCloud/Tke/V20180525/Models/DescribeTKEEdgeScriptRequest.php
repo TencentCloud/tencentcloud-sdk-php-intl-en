@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeName(string $NodeName) Set Name of the name
  * @method string getConfig() Obtain Node configuration in JSON format 
  * @method void setConfig(string $Config) Set Node configuration in JSON format 
+ * @method string getScriptVersion() Obtain A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+ * @method void setScriptVersion(string $ScriptVersion) Set A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
  */
 class DescribeTKEEdgeScriptRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
     public $Config;
 
     /**
+     * @var string A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
+     */
+    public $ScriptVersion;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $Interface ENI
      * @param string $NodeName Name of the name
      * @param string $Config Node configuration in JSON format 
+     * @param string $ScriptVersion A legacy version of edgectl script can be downloaded. The latest version is downloaded by default. The version information can be checked in the script.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeTKEEdgeScriptRequest extends AbstractModel
 
         if (array_key_exists("Config",$param) and $param["Config"] !== null) {
             $this->Config = $param["Config"];
+        }
+
+        if (array_key_exists("ScriptVersion",$param) and $param["ScriptVersion"] !== null) {
+            $this->ScriptVersion = $param["ScriptVersion"];
         }
     }
 }

@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSingleSubscribeParams(SingleSubscribeParams $SingleSubscribeParams) Set Pass this parameter to change the single stream that is relayed. This parameter is valid only if streams are not transcoded. If you do not pass this parameter, no changes will be made.
  * @method array getPublishCdnParams() Obtain Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
  * @method void setPublishCdnParams(array $PublishCdnParams) Set Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
+ * @method McuSeiParams getSeiParams() Obtain The stream mixing SEI parameters.
+ * @method void setSeiParams(McuSeiParams $SeiParams) Set The stream mixing SEI parameters.
  */
 class UpdatePublishCdnStreamRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
     public $PublishCdnParams;
 
     /**
+     * @var McuSeiParams The stream mixing SEI parameters.
+     */
+    public $SeiParams;
+
+    /**
      * @param integer $SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      * @param string $TaskId The task ID.
      * @param integer $SequenceNumber The sequence of a request. This parameter ensures the requests to change the parameters of the same relaying task are in the correct order. It increases each time a new request is made.
@@ -88,6 +95,7 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
      * @param McuVideoParams $VideoParams Pass this parameter to change video parameters other than the codec, including the video layout, background image, background color, and watermark information. This parameter is valid only if streams are transcoded. If you do not pass it, no changes will be made.
      * @param SingleSubscribeParams $SingleSubscribeParams Pass this parameter to change the single stream that is relayed. This parameter is valid only if streams are not transcoded. If you do not pass this parameter, no changes will be made.
      * @param array $PublishCdnParams Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
+     * @param McuSeiParams $SeiParams The stream mixing SEI parameters.
      */
     function __construct()
     {
@@ -140,6 +148,11 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->PublishCdnParams, $obj);
             }
+        }
+
+        if (array_key_exists("SeiParams",$param) and $param["SeiParams"] !== null) {
+            $this->SeiParams = new McuSeiParams();
+            $this->SeiParams->deserialize($param["SeiParams"]);
         }
     }
 }

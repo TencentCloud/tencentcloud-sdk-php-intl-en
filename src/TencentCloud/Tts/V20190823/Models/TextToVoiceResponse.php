@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudio(string $Audio) Set Base64-encoded WAV/MP3 audio data
  * @method string getSessionId() Obtain The `SessionId` of a request
  * @method void setSessionId(string $SessionId) Set The `SessionId` of a request
+ * @method array getSubtitles() Obtain Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+ * @method void setSubtitles(array $Subtitles) Set Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +42,11 @@ class TextToVoiceResponse extends AbstractModel
     public $SessionId;
 
     /**
+     * @var array Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
+     */
+    public $Subtitles;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +54,7 @@ class TextToVoiceResponse extends AbstractModel
     /**
      * @param string $Audio Base64-encoded WAV/MP3 audio data
      * @param string $SessionId The `SessionId` of a request
+     * @param array $Subtitles Timestamp information. If the timestamp feature is not enabled, an empty array will be returned.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +76,15 @@ class TextToVoiceResponse extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Subtitles",$param) and $param["Subtitles"] !== null) {
+            $this->Subtitles = [];
+            foreach ($param["Subtitles"] as $key => $value){
+                $obj = new Subtitle();
+                $obj->deserialize($value);
+                array_push($this->Subtitles, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
