@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIngressEntries(array $IngressEntries) Set Inbound rules of the network ACL.
  * @method array getEgressEntries() Obtain Outbound rules of the network ACL.
  * @method void setEgressEntries(array $EgressEntries) Set Outbound rules of the network ACL.
+ * @method string getNetworkAclType() Obtain Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+ * @method void setNetworkAclType(string $NetworkAclType) Set Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+ * @method array getTagSet() Obtain Tag key-value pairs
+ * @method void setTagSet(array $TagSet) Set Tag key-value pairs
  */
 class NetworkAcl extends AbstractModel
 {
@@ -73,6 +77,16 @@ class NetworkAcl extends AbstractModel
     public $EgressEntries;
 
     /**
+     * @var string Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     */
+    public $NetworkAclType;
+
+    /**
+     * @var array Tag key-value pairs
+     */
+    public $TagSet;
+
+    /**
      * @param string $VpcId `ID` of the `VPC` instance.
      * @param string $NetworkAclId `ID` of the network ACL instance.
      * @param string $NetworkAclName Name of the network ACL. The maximum length is 60 bytes.
@@ -80,6 +94,8 @@ class NetworkAcl extends AbstractModel
      * @param array $SubnetSet Array of subnets associated with the network ACL.
      * @param array $IngressEntries Inbound rules of the network ACL.
      * @param array $EgressEntries Outbound rules of the network ACL.
+     * @param string $NetworkAclType Network ACL type. Valid values: `TRIPLE` and `QUINTUPLE`.
+     * @param array $TagSet Tag key-value pairs
      */
     function __construct()
     {
@@ -134,6 +150,19 @@ class NetworkAcl extends AbstractModel
                 $obj = new NetworkAclEntry();
                 $obj->deserialize($value);
                 array_push($this->EgressEntries, $obj);
+            }
+        }
+
+        if (array_key_exists("NetworkAclType",$param) and $param["NetworkAclType"] !== null) {
+            $this->NetworkAclType = $param["NetworkAclType"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
             }
         }
     }

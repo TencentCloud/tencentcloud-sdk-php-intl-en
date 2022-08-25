@@ -20,21 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Category information description
  *
- * @method integer getClassId() Obtain Category ID
- * @method void setClassId(integer $ClassId) Set Category ID
+ * @method integer getClassId() Obtain The category ID.
+ * @method void setClassId(integer $ClassId) Set The category ID.
  * @method integer getParentId() Obtain Parent category ID, which is -1 for a first-level category.
  * @method void setParentId(integer $ParentId) Set Parent category ID, which is -1 for a first-level category.
- * @method string getClassName() Obtain Category name
- * @method void setClassName(string $ClassName) Set Category name
+ * @method string getName() Obtain The category name.
+ * @method void setName(string $Name) Set The category name.
  * @method integer getLevel() Obtain Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
  * @method void setLevel(integer $Level) Set Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
- * @method array getSubClassIdSet() Obtain Set of IDs of the immediate subcategories in current category
- * @method void setSubClassIdSet(array $SubClassIdSet) Set Set of IDs of the immediate subcategories in current category
+ * @method array getSubClassIdSet() Obtain The IDs of the immediate subcategories of the current category.
+ * @method void setSubClassIdSet(array $SubClassIdSet) Set The IDs of the immediate subcategories of the current category.
+ * @method string getClassName() Obtain The category name. This parameter is not recommended. Please use `Name` instead.
+ * @method void setClassName(string $ClassName) Set The category name. This parameter is not recommended. Please use `Name` instead.
  */
 class MediaClassInfo extends AbstractModel
 {
     /**
-     * @var integer Category ID
+     * @var integer The category ID.
      */
     public $ClassId;
 
@@ -44,9 +46,9 @@ class MediaClassInfo extends AbstractModel
     public $ParentId;
 
     /**
-     * @var string Category name
+     * @var string The category name.
      */
-    public $ClassName;
+    public $Name;
 
     /**
      * @var integer Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
@@ -54,16 +56,22 @@ class MediaClassInfo extends AbstractModel
     public $Level;
 
     /**
-     * @var array Set of IDs of the immediate subcategories in current category
+     * @var array The IDs of the immediate subcategories of the current category.
      */
     public $SubClassIdSet;
 
     /**
-     * @param integer $ClassId Category ID
+     * @var string The category name. This parameter is not recommended. Please use `Name` instead.
+     */
+    public $ClassName;
+
+    /**
+     * @param integer $ClassId The category ID.
      * @param integer $ParentId Parent category ID, which is -1 for a first-level category.
-     * @param string $ClassName Category name
+     * @param string $Name The category name.
      * @param integer $Level Category level. 0 for first-level category, up to 3, i.e., up to 4 levels of categories are allowed.
-     * @param array $SubClassIdSet Set of IDs of the immediate subcategories in current category
+     * @param array $SubClassIdSet The IDs of the immediate subcategories of the current category.
+     * @param string $ClassName The category name. This parameter is not recommended. Please use `Name` instead.
      */
     function __construct()
     {
@@ -86,8 +94,8 @@ class MediaClassInfo extends AbstractModel
             $this->ParentId = $param["ParentId"];
         }
 
-        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
-            $this->ClassName = $param["ClassName"];
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("Level",$param) and $param["Level"] !== null) {
@@ -96,6 +104,10 @@ class MediaClassInfo extends AbstractModel
 
         if (array_key_exists("SubClassIdSet",$param) and $param["SubClassIdSet"] !== null) {
             $this->SubClassIdSet = $param["SubClassIdSet"];
+        }
+
+        if (array_key_exists("ClassName",$param) and $param["ClassName"] !== null) {
+            $this->ClassName = $param["ClassName"];
         }
     }
 }

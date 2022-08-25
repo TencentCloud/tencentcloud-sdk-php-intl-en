@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Player configuration name.
  * @method void setName(string $Name) Set Player configuration name.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getAudioVideoType() Obtain Type of audio/video played. Valid values:
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
@@ -58,8 +60,6 @@ use TencentCloud\Common\AbstractModel;
 <li>HTTPS.</li>
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class ModifySuperPlayerConfigRequest extends AbstractModel
 {
@@ -67,6 +67,11 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
      * @var string Player configuration name.
      */
     public $Name;
+
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
 
     /**
      * @var string Type of audio/video played. Valid values:
@@ -127,12 +132,8 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
     public $Comment;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
      * @param string $Name Player configuration name.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $AudioVideoType Type of audio/video played. Valid values:
 <li>AdaptiveDynamicStreaming</li>
 <li>Transcode</li>
@@ -151,7 +152,6 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
 <li>HTTP;</li>
 <li>HTTPS.</li>
      * @param string $Comment Template description. Length limit: 256 characters.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -168,6 +168,10 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
@@ -214,10 +218,6 @@ class ModifySuperPlayerConfigRequest extends AbstractModel
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

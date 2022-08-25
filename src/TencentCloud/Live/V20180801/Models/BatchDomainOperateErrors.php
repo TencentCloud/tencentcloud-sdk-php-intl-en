@@ -18,36 +18,36 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLiveDomainCert request structure.
+ * Error information for domains that a batch domain operation API fails to operate.
  *
- * @method string getDomainName() Obtain Playback domain name.
- * @method void setDomainName(string $DomainName) Set Playback domain name.
- * @method integer getCertId() Obtain Certificate ID.
- * @method void setCertId(integer $CertId) Set Certificate ID.
- * @method integer getStatus() Obtain Status. 0: off, 1: on.
- * @method void setStatus(integer $Status) Set Status. 0: off, 1: on.
+ * @method string getDomainName() Obtain The domain that the API failed to operate.
+ * @method void setDomainName(string $DomainName) Set The domain that the API failed to operate.
+ * @method string getCode() Obtain The API 3.0 error code.
+ * @method void setCode(string $Code) Set The API 3.0 error code.
+ * @method string getMessage() Obtain The API 3.0 error message.
+ * @method void setMessage(string $Message) Set The API 3.0 error message.
  */
-class ModifyLiveDomainCertRequest extends AbstractModel
+class BatchDomainOperateErrors extends AbstractModel
 {
     /**
-     * @var string Playback domain name.
+     * @var string The domain that the API failed to operate.
      */
     public $DomainName;
 
     /**
-     * @var integer Certificate ID.
+     * @var string The API 3.0 error code.
      */
-    public $CertId;
+    public $Code;
 
     /**
-     * @var integer Status. 0: off, 1: on.
+     * @var string The API 3.0 error message.
      */
-    public $Status;
+    public $Message;
 
     /**
-     * @param string $DomainName Playback domain name.
-     * @param integer $CertId Certificate ID.
-     * @param integer $Status Status. 0: off, 1: on.
+     * @param string $DomainName The domain that the API failed to operate.
+     * @param string $Code The API 3.0 error code.
+     * @param string $Message The API 3.0 error message.
      */
     function __construct()
     {
@@ -66,12 +66,12 @@ class ModifyLiveDomainCertRequest extends AbstractModel
             $this->DomainName = $param["DomainName"];
         }
 
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
         }
 
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
+        if (array_key_exists("Message",$param) and $param["Message"] !== null) {
+            $this->Message = $param["Message"];
         }
     }
 }

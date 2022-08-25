@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCashPayAmount(string $CashPayAmount) Set Cash amount
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+ * @method string getTransferPayAmount() Obtain Payment by commission credits
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
  */
 class BusinessSummaryTotal extends AbstractModel
 {
@@ -59,11 +61,17 @@ class BusinessSummaryTotal extends AbstractModel
     public $TotalCost;
 
     /**
+     * @var string Payment by commission credits
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $RealTotalCost Total cost
      * @param string $VoucherPayAmount Voucher amount
      * @param string $IncentivePayAmount Trial credit amount
      * @param string $CashPayAmount Cash amount
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     * @param string $TransferPayAmount Payment by commission credits
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class BusinessSummaryTotal extends AbstractModel
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

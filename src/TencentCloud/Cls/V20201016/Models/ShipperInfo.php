@@ -52,6 +52,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time of shipped log
  * @method void setCreateTime(string $CreateTime) Set Creation time of shipped log
+ * @method integer getFilenameMode() Obtain Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFilenameMode(integer $FilenameMode) Set Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ShipperInfo extends AbstractModel
 {
@@ -124,6 +128,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CreateTime;
 
     /**
+     * @var integer Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FilenameMode;
+
+    /**
      * @param string $ShipperId Shipping rule ID
      * @param string $TopicId Log topic ID
      * @param string $Bucket Bucket address shipped to
@@ -140,6 +150,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param ContentInfo $Content Format configuration of shipped log content
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of shipped log
+     * @param integer $FilenameMode Shipping file naming configuration. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -211,6 +223,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
+            $this->FilenameMode = $param["FilenameMode"];
         }
     }
 }

@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Player configuration type. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
+ * @method string getAudioVideoType() Obtain The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+ * @method void setAudioVideoType(string $AudioVideoType) Set The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
  * @method string getDrmSwitch() Obtain Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -38,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAdaptiveDynamicStreamingDefinition(integer $AdaptiveDynamicStreamingDefinition) Set ID of the unencrypted adaptive bitrate streaming template that allows output.
  * @method DrmStreamingsInfo getDrmStreamingsInfo() Obtain Content of the DRM-protected adaptive bitrate streaming template that allows output.
  * @method void setDrmStreamingsInfo(DrmStreamingsInfo $DrmStreamingsInfo) Set Content of the DRM-protected adaptive bitrate streaming template that allows output.
+ * @method integer getTranscodeDefinition() Obtain The ID of the transcoding template allowed.
+ * @method void setTranscodeDefinition(integer $TranscodeDefinition) Set The ID of the transcoding template allowed.
  * @method integer getImageSpriteDefinition() Obtain ID of the image sprite generating template that allows output.
  * @method void setImageSpriteDefinition(integer $ImageSpriteDefinition) Set ID of the image sprite generating template that allows output.
  * @method array getResolutionNameSet() Obtain Display name of player for substreams with different resolutions.
@@ -74,6 +84,14 @@ class PlayerConfig extends AbstractModel
     public $Type;
 
     /**
+     * @var string The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
+     */
+    public $AudioVideoType;
+
+    /**
      * @var string Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
@@ -89,6 +107,11 @@ class PlayerConfig extends AbstractModel
      * @var DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
      */
     public $DrmStreamingsInfo;
+
+    /**
+     * @var integer The ID of the transcoding template allowed.
+     */
+    public $TranscodeDefinition;
 
     /**
      * @var integer ID of the image sprite generating template that allows output.
@@ -133,11 +156,16 @@ class PlayerConfig extends AbstractModel
      * @param string $Type Player configuration type. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
+     * @param string $AudioVideoType The type of audio/video played. Valid values:
+<li>AdaptiveDynamicStreaming: Adaptive bitrate stream</li>
+<li>Transcode: Transcoded stream</li>
+<li>Original: The original stream</li>
      * @param string $DrmSwitch Switch of DRM-protected adaptive bitstream playback:
 <li>ON: enabled, indicating to play back only output adaptive bitstreams protected by DRM;</li>
 <li>OFF: disabled, indicating to play back unencrypted output adaptive bitstreams.</li>
      * @param integer $AdaptiveDynamicStreamingDefinition ID of the unencrypted adaptive bitrate streaming template that allows output.
      * @param DrmStreamingsInfo $DrmStreamingsInfo Content of the DRM-protected adaptive bitrate streaming template that allows output.
+     * @param integer $TranscodeDefinition The ID of the transcoding template allowed.
      * @param integer $ImageSpriteDefinition ID of the image sprite generating template that allows output.
      * @param array $ResolutionNameSet Display name of player for substreams with different resolutions.
      * @param string $CreateTime Creation time of player configuration in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
@@ -170,6 +198,10 @@ class PlayerConfig extends AbstractModel
             $this->Type = $param["Type"];
         }
 
+        if (array_key_exists("AudioVideoType",$param) and $param["AudioVideoType"] !== null) {
+            $this->AudioVideoType = $param["AudioVideoType"];
+        }
+
         if (array_key_exists("DrmSwitch",$param) and $param["DrmSwitch"] !== null) {
             $this->DrmSwitch = $param["DrmSwitch"];
         }
@@ -181,6 +213,10 @@ class PlayerConfig extends AbstractModel
         if (array_key_exists("DrmStreamingsInfo",$param) and $param["DrmStreamingsInfo"] !== null) {
             $this->DrmStreamingsInfo = new DrmStreamingsInfo();
             $this->DrmStreamingsInfo->deserialize($param["DrmStreamingsInfo"]);
+        }
+
+        if (array_key_exists("TranscodeDefinition",$param) and $param["TranscodeDefinition"] !== null) {
+            $this->TranscodeDefinition = $param["TranscodeDefinition"];
         }
 
         if (array_key_exists("ImageSpriteDefinition",$param) and $param["ImageSpriteDefinition"] !== null) {

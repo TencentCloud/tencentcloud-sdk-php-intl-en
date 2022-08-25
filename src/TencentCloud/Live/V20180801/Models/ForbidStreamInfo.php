@@ -26,6 +26,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreateTime(string $CreateTime) Set Creation time.
  * @method string getExpireTime() Obtain Forbidding expiration time.
  * @method void setExpireTime(string $ExpireTime) Set Forbidding expiration time.
+ * @method string getAppName() Obtain The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAppName(string $AppName) Set The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDomainName() Obtain The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDomainName(string $DomainName) Set The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ForbidStreamInfo extends AbstractModel
 {
@@ -45,9 +53,25 @@ class ForbidStreamInfo extends AbstractModel
     public $ExpireTime;
 
     /**
+     * @var string The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AppName;
+
+    /**
+     * @var string The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DomainName;
+
+    /**
      * @param string $StreamName Stream name.
      * @param string $CreateTime Creation time.
      * @param string $ExpireTime Forbidding expiration time.
+     * @param string $AppName The push path.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DomainName The push domain name.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -72,6 +96,14 @@ class ForbidStreamInfo extends AbstractModel
 
         if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
             $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("AppName",$param) and $param["AppName"] !== null) {
+            $this->AppName = $param["AppName"];
+        }
+
+        if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
+            $this->DomainName = $param["DomainName"];
         }
     }
 }

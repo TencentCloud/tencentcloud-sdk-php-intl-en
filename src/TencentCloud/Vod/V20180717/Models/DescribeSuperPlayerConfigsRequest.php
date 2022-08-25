@@ -20,6 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSuperPlayerConfigs request structure.
  *
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method array getNames() Obtain Player configuration name filter. Array length limit: 100.
  * @method void setNames(array $Names) Set Player configuration name filter. Array length limit: 100.
  * @method integer getOffset() Obtain Pagination offset. Default value: 0.
@@ -32,11 +34,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) Set Player configuration type filter. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  */
 class DescribeSuperPlayerConfigsRequest extends AbstractModel
 {
+    /**
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     */
+    public $SubAppId;
+
     /**
      * @var array Player configuration name filter. Array length limit: 100.
      */
@@ -60,18 +65,13 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
     public $Type;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
-     */
-    public $SubAppId;
-
-    /**
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param array $Names Player configuration name filter. Array length limit: 100.
      * @param integer $Offset Pagination offset. Default value: 0.
      * @param integer $Limit Number of entries to be returned. Default value: 10. Maximum value: 100.
      * @param string $Type Player configuration type filter. Valid values:
 <li>Preset: preset configuration;</li>
 <li>Custom: custom configuration.</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      */
     function __construct()
     {
@@ -86,6 +86,10 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
+        }
+
         if (array_key_exists("Names",$param) and $param["Names"] !== null) {
             $this->Names = $param["Names"];
         }
@@ -100,10 +104,6 @@ class DescribeSuperPlayerConfigsRequest extends AbstractModel
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {
             $this->Type = $param["Type"];
-        }
-
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
         }
     }
 }

@@ -40,6 +40,8 @@ Note: This field may return null, indicating that no valid value was found.
  * @method void setBillMonth(string $BillMonth) Set Billing month, e.g. `2019-08`
  * @method string getTotalCost() Obtain The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+ * @method string getTransferPayAmount() Obtain Payment by commission credits
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
  */
 class RegionSummaryOverviewItem extends AbstractModel
 {
@@ -90,6 +92,11 @@ Note: This field may return null, indicating that no valid value was found.
     public $TotalCost;
 
     /**
+     * @var string Payment by commission credits
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $RegionId Region ID
 Note: This field may return null, indicating that no valid value was found.
      * @param string $RegionName Region name
@@ -100,6 +107,7 @@ Note: This field may return null, indicating that no valid value was found.
      * @param string $VoucherPayAmount Voucher amount
      * @param string $BillMonth Billing month, e.g. `2019-08`
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
+     * @param string $TransferPayAmount Payment by commission credits
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

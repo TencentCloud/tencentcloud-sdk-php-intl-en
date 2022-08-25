@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getSubAppId() Obtain Subapplication ID.
  * @method void setSubAppId(integer $SubAppId) Set Subapplication ID.
- * @method string getName() Obtain Subapplication name.
- * @method void setName(string $Name) Set Subapplication name.
+ * @method string getSubAppIdName() Obtain The subapplication name.
+ * @method void setSubAppIdName(string $SubAppIdName) Set The subapplication name.
  * @method string getDescription() Obtain Subapplication overview.
  * @method void setDescription(string $Description) Set Subapplication overview.
  * @method string getCreateTime() Obtain Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Off: disabled</li>
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
+ * @method string getName() Obtain The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+ * @method void setName(string $Name) Set The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
  */
 class SubAppIdInfo extends AbstractModel
 {
@@ -47,9 +49,9 @@ class SubAppIdInfo extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var string Subapplication name.
+     * @var string The subapplication name.
      */
-    public $Name;
+    public $SubAppIdName;
 
     /**
      * @var string Subapplication overview.
@@ -71,8 +73,13 @@ class SubAppIdInfo extends AbstractModel
     public $Status;
 
     /**
+     * @var string The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
+     */
+    public $Name;
+
+    /**
      * @param integer $SubAppId Subapplication ID.
-     * @param string $Name Subapplication name.
+     * @param string $SubAppIdName The subapplication name.
      * @param string $Description Subapplication overview.
      * @param string $CreateTime Subapplication creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $Status Subapplication status. Valid values:
@@ -80,6 +87,7 @@ class SubAppIdInfo extends AbstractModel
 <li>Off: disabled</li>
 <li>Destroying: terminating</li>
 <li>Destroyed: terminated</li>
+     * @param string $Name The subapplication name. This parameter is not recommended. Please use `SubAppIdName` instead.
      */
     function __construct()
     {
@@ -98,8 +106,8 @@ class SubAppIdInfo extends AbstractModel
             $this->SubAppId = $param["SubAppId"];
         }
 
-        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
-            $this->Name = $param["Name"];
+        if (array_key_exists("SubAppIdName",$param) and $param["SubAppIdName"] !== null) {
+            $this->SubAppIdName = $param["SubAppIdName"];
         }
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
@@ -112,6 +120,10 @@ class SubAppIdInfo extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
     }
 }

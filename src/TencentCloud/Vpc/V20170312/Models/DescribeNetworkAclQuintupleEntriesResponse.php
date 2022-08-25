@@ -14,23 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindLiveDomainCert response structure.
+ * DescribeNetworkAclQuintupleEntries response structure.
  *
+ * @method array getNetworkAclQuintupleSet() Obtain The list of the network ACL quintuple entries
+ * @method void setNetworkAclQuintupleSet(array $NetworkAclQuintupleSet) Set The list of the network ACL quintuple entries
+ * @method integer getTotalCount() Obtain Number of eligible instances.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class BindLiveDomainCertResponse extends AbstractModel
+class DescribeNetworkAclQuintupleEntriesResponse extends AbstractModel
 {
+    /**
+     * @var array The list of the network ACL quintuple entries
+     */
+    public $NetworkAclQuintupleSet;
+
+    /**
+     * @var integer Number of eligible instances.
+     */
+    public $TotalCount;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $NetworkAclQuintupleSet The list of the network ACL quintuple entries
+     * @param integer $TotalCount Number of eligible instances.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,19 @@ class BindLiveDomainCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("NetworkAclQuintupleSet",$param) and $param["NetworkAclQuintupleSet"] !== null) {
+            $this->NetworkAclQuintupleSet = [];
+            foreach ($param["NetworkAclQuintupleSet"] as $key => $value){
+                $obj = new NetworkAclQuintupleEntry();
+                $obj->deserialize($value);
+                array_push($this->NetworkAclQuintupleSet, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

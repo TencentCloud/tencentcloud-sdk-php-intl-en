@@ -52,10 +52,10 @@ Notes:
 6. Use small video files, preferably not longer than one hour. Large files may take a long time to load or resume after pause. Relay may fail if the time consumed exceeds 15 seconds.
  * @method string getDomainName() Obtain The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
  * @method void setDomainName(string $DomainName) Set The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
  * @method string getAppName() Obtain The application to push to.
 The pulled stream is pushed to this application.
  * @method void setAppName(string $AppName) Set The application to push to.
@@ -178,6 +178,8 @@ Notes:
 You can specify only one backup source URL.
  * @method void setBackupSourceUrl(string $BackupSourceUrl) Set The URL of the backup source.
 You can specify only one backup source URL.
+ * @method array getWatermarkList() Obtain 
+ * @method void setWatermarkList(array $WatermarkList) Set 
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -207,7 +209,7 @@ Notes:
     /**
      * @var string The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
      */
     public $DomainName;
 
@@ -333,6 +335,11 @@ You can specify only one backup source URL.
     public $BackupSourceUrl;
 
     /**
+     * @var array 
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
@@ -350,7 +357,7 @@ Notes:
 6. Use small video files, preferably not longer than one hour. Large files may take a long time to load or resume after pause. Relay may fail if the time consumed exceeds 15 seconds.
      * @param string $DomainName The push domain name.
 The pulled stream is pushed to this domain.
-Use a push domain you have added in the CSS console.
+Note: If the destination is not a CSS address and its format is different from that of CSS addresses, pass the full address to `ToUrl`. For details, see the description of the `ToUrl` parameter.
      * @param string $AppName The application to push to.
 The pulled stream is pushed to this application.
      * @param string $StreamName The stream name.
@@ -412,6 +419,7 @@ Notes:
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      * @param string $BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+     * @param array $WatermarkList 
      */
     function __construct()
     {
@@ -496,6 +504,15 @@ You can specify only one backup source URL.
 
         if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
             $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

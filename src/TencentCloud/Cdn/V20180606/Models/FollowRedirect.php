@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Origin-pull follow-redirect switch
 `on`: Enable
 `off`: Disable
- * @method RedirectConfig getRedirectConfig() Obtain 
- * @method void setRedirectConfig(RedirectConfig $RedirectConfig) Set 
+ * @method RedirectConfig getRedirectConfig() Obtain Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRedirectConfig(RedirectConfig $RedirectConfig) Set Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class FollowRedirect extends AbstractModel
 {
@@ -39,7 +41,8 @@ class FollowRedirect extends AbstractModel
     public $Switch;
 
     /**
-     * @var RedirectConfig 
+     * @var RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RedirectConfig;
 
@@ -47,7 +50,8 @@ class FollowRedirect extends AbstractModel
      * @param string $Switch Origin-pull follow-redirect switch
 `on`: Enable
 `off`: Disable
-     * @param RedirectConfig $RedirectConfig 
+     * @param RedirectConfig $RedirectConfig Specifies a host header for 302 redirects. This feature is only available to beta users. To join the beta, please submit a ticket.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

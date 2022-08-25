@@ -59,6 +59,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\DescribeTopicSyncReplicaResponse DescribeTopicSyncReplica(Models\DescribeTopicSyncReplicaRequest $req) This API is used to get the details of a synced topic replica.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query user information.
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) This API is used to query messages based on a specified offset position.
+ * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) This API is used to query the message list based on an offset.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.

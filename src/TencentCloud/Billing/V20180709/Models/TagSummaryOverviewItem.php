@@ -36,6 +36,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTotalCost(string $TotalCost) Set The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCashPayAmount() Obtain Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCashPayAmount(string $CashPayAmount) Set Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIncentivePayAmount() Obtain Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIncentivePayAmount(string $IncentivePayAmount) Set Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVoucherPayAmount() Obtain Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVoucherPayAmount(string $VoucherPayAmount) Set Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTransferPayAmount() Obtain Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransferPayAmount(string $TransferPayAmount) Set Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TagSummaryOverviewItem extends AbstractModel
 {
@@ -64,6 +80,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TotalCost;
 
     /**
+     * @var string Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CashPayAmount;
+
+    /**
+     * @var string Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IncentivePayAmount;
+
+    /**
+     * @var string Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VoucherPayAmount;
+
+    /**
+     * @var string Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TransferPayAmount;
+
+    /**
      * @param string $TagValue Tag value
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RealTotalCost Actual cost
@@ -72,6 +112,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TotalCost The original cost in USD. This parameter has become valid since v3.0 bills took effect in May 2021, and before that `-` was returned for this parameter. If a customer uses a contract price different from the published price, `-` will also be returned for this parameter.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CashPayAmount Payment by cash credits
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IncentivePayAmount Payment by free credits
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VoucherPayAmount Payment by vouchers
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TransferPayAmount Payment by commission credits
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -100,6 +148,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TotalCost",$param) and $param["TotalCost"] !== null) {
             $this->TotalCost = $param["TotalCost"];
+        }
+
+        if (array_key_exists("CashPayAmount",$param) and $param["CashPayAmount"] !== null) {
+            $this->CashPayAmount = $param["CashPayAmount"];
+        }
+
+        if (array_key_exists("IncentivePayAmount",$param) and $param["IncentivePayAmount"] !== null) {
+            $this->IncentivePayAmount = $param["IncentivePayAmount"];
+        }
+
+        if (array_key_exists("VoucherPayAmount",$param) and $param["VoucherPayAmount"] !== null) {
+            $this->VoucherPayAmount = $param["VoucherPayAmount"];
+        }
+
+        if (array_key_exists("TransferPayAmount",$param) and $param["TransferPayAmount"] !== null) {
+            $this->TransferPayAmount = $param["TransferPayAmount"];
         }
     }
 }

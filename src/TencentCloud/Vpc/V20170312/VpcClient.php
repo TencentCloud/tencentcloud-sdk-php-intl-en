@@ -121,6 +121,7 @@ Before taking actions on a NAT gateway, ensure that it has been successfully cre
  * @method Models\CreateNetDetectResponse CreateNetDetect(Models\CreateNetDetectRequest $req) This API is used to create a network detection instance.
  * @method Models\CreateNetworkAclResponse CreateNetworkAcl(Models\CreateNetworkAclRequest $req) This API is used to create a <a href="https://intl.cloud.tencent.com/document/product/215/20088?from_cn_redirect=1">network ACL</a>.
 * The inbound and outbound rules for a new network ACL are "Deny All" by default. You need to call `ModifyNetworkAclEntries` to set rules for the new network ACL as needed.
+ * @method Models\CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntries(Models\CreateNetworkAclQuintupleEntriesRequest $req) This API is used to add one or more in/outbound rules of the network ACL quintuple.
  * @method Models\CreateNetworkInterfaceResponse CreateNetworkInterface(Models\CreateNetworkInterfaceRequest $req) This API is used to create an ENI.
 * You can specify private IP addresses and a primary IP when creating an ENI. The specified private IP must be in the same subnet as the ENI and is not occupied.
 * When creating an ENI, you can specify the number of private IP addresses that you want to apply for. The system will randomly generate private IP addresses.
@@ -219,6 +220,7 @@ When a NAT gateway is deleted, all routes containing this gateway are deleted au
  * @method Models\DeleteNatGatewaySourceIpTranslationNatRuleResponse DeleteNatGatewaySourceIpTranslationNatRule(Models\DeleteNatGatewaySourceIpTranslationNatRuleRequest $req) This API is used to delete a SNAT forwarding rule of a NAT gateway.
  * @method Models\DeleteNetDetectResponse DeleteNetDetect(Models\DeleteNetDetectRequest $req) This API (DeleteNetDetect) is used to delete a network detection instance.
  * @method Models\DeleteNetworkAclResponse DeleteNetworkAcl(Models\DeleteNetworkAclRequest $req) This API is used to delete a network ACL.
+ * @method Models\DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntries(Models\DeleteNetworkAclQuintupleEntriesRequest $req) This API is used to delete specified in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
  * @method Models\DeleteNetworkInterfaceResponse DeleteNetworkInterface(Models\DeleteNetworkInterfaceRequest $req) This API is used to delete an ENI.
 * An ENI cannot be deleted when it’s bound to a CVM.
  * After the deletion, all of its private IP addresses will be released.
@@ -279,7 +281,7 @@ A service provider can query all review requests created by any `APPID` under it
  * @method Models\DescribeHaVipsResponse DescribeHaVips(Models\DescribeHaVipsRequest $req) This API (DescribeHaVips) is used to query the list of highly available virtual IPs (HAVIP).
  * @method Models\DescribeIpGeolocationDatabaseUrlResponse DescribeIpGeolocationDatabaseUrl(Models\DescribeIpGeolocationDatabaseUrlRequest $req) This API is used to obtain the download link of an IP location database.
  * @method Models\DescribeIpGeolocationInfosResponse DescribeIpGeolocationInfos(Models\DescribeIpGeolocationInfosRequest $req) This API is used to query the location and network information of one or more IP addresses.
-This API is currently in beta test. To use it, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
+This API is only available for existing customers. For any questions, please [submit a ticket](https://console.cloud.tencent.com/workorder/category?level1_id=6&level2_id=660&source=0&data_title=%E5%BC%B9%E6%80%A7%E5%85%AC%E7%BD%91%20EIP&level3_id=662&queue=96&scene_code=16400&step=2).
  * @method Models\DescribeLocalGatewayResponse DescribeLocalGateway(Models\DescribeLocalGatewayRequest $req) This API is used to query local gateways of a CDC instance.
  * @method Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse DescribeNatGatewayDestinationIpPortTranslationNatRules(Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest $req) This API is used to query the array of objects of a NAT gateway's port forwarding rules.
  * @method Models\DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRoute(Models\DescribeNatGatewayDirectConnectGatewayRouteRequest $req) This API is used to query the routes between a NAT gateway and Direct Connect.
@@ -287,6 +289,7 @@ This API is currently in beta test. To use it, please [submit a ticket](https://
  * @method Models\DescribeNatGatewaysResponse DescribeNatGateways(Models\DescribeNatGatewaysRequest $req) This API is used to query NAT gateways.
  * @method Models\DescribeNetDetectStatesResponse DescribeNetDetectStates(Models\DescribeNetDetectStatesRequest $req) This API (DescribeNetDetectStates) is used to query the list of network detection verification results.
  * @method Models\DescribeNetDetectsResponse DescribeNetDetects(Models\DescribeNetDetectsRequest $req) This API (DescribeNetDetects) is used to query the list of network detection instances.
+ * @method Models\DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntries(Models\DescribeNetworkAclQuintupleEntriesRequest $req) This API is used to query the list of in/outbound network ACL quintuple entries.
  * @method Models\DescribeNetworkAclsResponse DescribeNetworkAcls(Models\DescribeNetworkAclsRequest $req) This API is used to query a list of network ACLs.
  * @method Models\DescribeNetworkInterfaceLimitResponse DescribeNetworkInterfaceLimit(Models\DescribeNetworkInterfaceLimitRequest $req) This API (DescribeNetworkInterfaceLimit) is used to query the ENI quota based on the ID of CVM instance or ENI. It returns the ENI quota to which the CVM instance can be bound and the IP address quota that can be allocated to the ENI.
  * @method Models\DescribeNetworkInterfacesResponse DescribeNetworkInterfaces(Models\DescribeNetworkInterfacesRequest $req) This API (DescribeNetworkInterfaces) is used to query the ENI list.
@@ -383,6 +386,7 @@ This API is completed asynchronously. If you need to query the execution result 
  * @method Models\ModifyNetworkAclEntriesResponse ModifyNetworkAclEntries(Models\ModifyNetworkAclEntriesRequest $req) This API is used to modify (add or delete) the inbound and outbound rules of a network ACL. In `NetworkAclEntrySet` parameters,
 * Passing in the new inbound/outbound rules will reset the original rules.
 * Passing in the inbound rules will only reset the original inbound rules and not affect the original outbound rules, and vice versa.
+ * @method Models\ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntries(Models\ModifyNetworkAclQuintupleEntriesRequest $req) This API is used to modify the in/outbound rules of the network ACL quintuple. In the `NetworkAclQuintupleEntrySet` parameters, `NetworkAclQuintupleEntryId` is required for `NetworkAclQuintupleEntry`.
  * @method Models\ModifyNetworkInterfaceAttributeResponse ModifyNetworkInterfaceAttribute(Models\ModifyNetworkInterfaceAttributeRequest $req) This API (ModifyNetworkInterfaceAttribute) is used to modify ENI attributes.
  * @method Models\ModifyPrivateIpAddressesAttributeResponse ModifyPrivateIpAddressesAttribute(Models\ModifyPrivateIpAddressesAttributeRequest $req) This API (ModifyPrivateIpAddressesAttribute) is used to modify the private IP attributes of an ENI.
  * @method Models\ModifyRouteTableAttributeResponse ModifyRouteTableAttribute(Models\ModifyRouteTableAttributeRequest $req) This API (ModifyRouteTableAttribute) is used to modify the attributes of a route table.

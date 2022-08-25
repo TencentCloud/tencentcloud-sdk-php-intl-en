@@ -29,8 +29,6 @@ Note: if you are to set the delay before stream push, set it at least 5 minutes 
  * @method Models\AddLiveDomainResponse AddLiveDomain(Models\AddLiveDomainRequest $req) This API is used to add a domain name. Only one domain name can be submitted at a time, and it must have an ICP filing.
  * @method Models\AddLiveWatermarkResponse AddLiveWatermark(Models\AddLiveWatermarkRequest $req) After a watermark is added and a watermark ID is successfully returned, you need to call the [CreateLiveWatermarkRule](https://intl.cloud.tencent.com/document/product/267/32629?from_cn_redirect=1) API to bind the watermark ID to a stream.
 After the number of watermarks exceeds the upper limit of 100, to add a new watermark, you must delete an old one first.
- * @method Models\BindLiveDomainCertResponse BindLiveDomainCert(Models\BindLiveDomainCertRequest $req) This API is used to bind a domain name certificate.
-Note: you need to call the `CreateLiveCert` API first to add a certificate. After getting the certificate ID, call this API for binding.
  * @method Models\CancelCommonMixStreamResponse CancelCommonMixStream(Models\CancelCommonMixStreamRequest $req) This API is used to cancel a stream mix. It can be used basically in the same way as `mix_streamv2.cancel_mix_stream`.
  * @method Models\CreateCommonMixStreamResponse CreateCommonMixStream(Models\CreateCommonMixStreamRequest $req) This API is used to create a general stream mix. It can be used basically in the same way as the legacy `mix_streamv2.start_mix_stream_advanced` API.
 Note: currently, up to 16 streams can be mixed.
@@ -40,7 +38,6 @@ Best practice: https://intl.cloud.tencent.com/document/product/267/45566?from_cn
  * @method Models\CreateLiveCallbackTemplateResponse CreateLiveCallbackTemplate(Models\CreateLiveCallbackTemplateRequest $req) After a callback template is created and a template ID is successfully returned, you need to call the [CreateLiveCallbackRule](https://intl.cloud.tencent.com/document/product/267/32638?from_cn_redirect=1) API and bind the template ID to the domain name/path.
 <br>Callback protocol document: [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
 Note: at least enter one callback URL.
- * @method Models\CreateLiveCertResponse CreateLiveCert(Models\CreateLiveCertRequest $req) This API is used to add a certificate.
  * @method Models\CreateLivePullStreamTaskResponse CreateLivePullStreamTask(Models\CreateLivePullStreamTaskRequest $req) This API is used to create a task to pull streams from video files or an external live streaming source and publish them to a specified destination URL.
 Notes:
 1. By default, you can have at most 20 stream pulling tasks at a time. You can submit a ticket to raise the limit.
@@ -91,7 +88,6 @@ Note: only one screencapturing template can be associated with one domain name.
 5. Do not create recording tasks and push streams at the same time. After creating a recording task, we recommend you wait at least three seconds before pushing streams.
  * @method Models\DeleteLiveCallbackRuleResponse DeleteLiveCallbackRule(Models\DeleteLiveCallbackRuleRequest $req) This API is used to delete a callback rule.
  * @method Models\DeleteLiveCallbackTemplateResponse DeleteLiveCallbackTemplate(Models\DeleteLiveCallbackTemplateRequest $req) This API deletes a callback template.
- * @method Models\DeleteLiveCertResponse DeleteLiveCert(Models\DeleteLiveCertRequest $req) This API is used to delete a certificate corresponding to the domain name.
  * @method Models\DeleteLiveDomainResponse DeleteLiveDomain(Models\DeleteLiveDomainRequest $req) This API is used to delete an added LVB domain name.
  * @method Models\DeleteLivePullStreamTaskResponse DeleteLivePullStreamTask(Models\DeleteLivePullStreamTaskRequest $req) This API is used to delete a task created by `CreateLivePullStreamTask`.
 Notes:
@@ -121,6 +117,7 @@ Note: data can be queried one hour after it is generated. For example, data betw
  * @method Models\DescribeLiveDelayInfoListResponse DescribeLiveDelayInfoList(Models\DescribeLiveDelayInfoListRequest $req) This API is used to get the list of delayed playbacks.
  * @method Models\DescribeLiveDomainResponse DescribeLiveDomain(Models\DescribeLiveDomainRequest $req) This API is used to query the LVB domain name information.
  * @method Models\DescribeLiveDomainCertResponse DescribeLiveDomainCert(Models\DescribeLiveDomainCertRequest $req) This API is used to get the domain name certificate information.
+ * @method Models\DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindings(Models\DescribeLiveDomainCertBindingsRequest $req) This API is used to query domains bound with certificates.
  * @method Models\DescribeLiveDomainRefererResponse DescribeLiveDomainReferer(Models\DescribeLiveDomainRefererRequest $req) This API is used to query referer allowlist/blocklist configuration of a live streaming domain name.
 Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
  * @method Models\DescribeLiveDomainsResponse DescribeLiveDomains(Models\DescribeLiveDomainsRequest $req) This API is used to query domain names by domain name status and type.
@@ -189,8 +186,8 @@ Note: to query by `AppName`, you need to submit a ticket first. After your appli
  * @method Models\ForbidLiveDomainResponse ForbidLiveDomain(Models\ForbidLiveDomainRequest $req) This API is used to disable an LVB domain name.
  * @method Models\ForbidLiveStreamResponse ForbidLiveStream(Models\ForbidLiveStreamRequest $req) This API is used to forbid the push of a specific stream. You can preset a time point to resume the stream.
  * @method Models\ModifyLiveCallbackTemplateResponse ModifyLiveCallbackTemplate(Models\ModifyLiveCallbackTemplateRequest $req) This API is used to modify a callback template.
- * @method Models\ModifyLiveCertResponse ModifyLiveCert(Models\ModifyLiveCertRequest $req) This API is used to modify a certificate.
- * @method Models\ModifyLiveDomainCertResponse ModifyLiveDomainCert(Models\ModifyLiveDomainCertRequest $req) This API is used to modify the domain name and certificate binding information.
+ * @method Models\ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindings(Models\ModifyLiveDomainCertBindingsRequest $req) This API is used to bind a certificate to multiple playback domains and update the HTTPS configuration of the domains.
+If a self-owned certificate is used, it will be automatically uploaded to Tencent Cloud’s SSL Certificate Service.
  * @method Models\ModifyLiveDomainRefererResponse ModifyLiveDomainReferer(Models\ModifyLiveDomainRefererRequest $req) This API is used to configure referer allowlist/blocklist of a live streaming domain name.
 Referer information is included in HTTP requests. After you enable referer configuration, live streams using RTMP or WebRTC for playback will not authenticate the referer and can be played back normally. To make the referer configuration effective, the HTTP-FLV or HLS protocol is recommended for playback.
  * @method Models\ModifyLivePlayAuthKeyResponse ModifyLivePlayAuthKey(Models\ModifyLivePlayAuthKeyRequest $req) This API is used to modify the playback authentication key.

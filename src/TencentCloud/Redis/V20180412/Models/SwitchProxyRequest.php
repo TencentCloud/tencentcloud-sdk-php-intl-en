@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Compression configuration of shipped log
+ * SwitchProxy request structure.
  *
- * @method string getFormat() Obtain Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
- * @method void setFormat(string $Format) Set Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+ * @method string getInstanceId() Obtain Instance ID
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getProxyID() Obtain Instance ProxyID
+ * @method void setProxyID(string $ProxyID) Set Instance ProxyID
  */
-class CompressInfo extends AbstractModel
+class SwitchProxyRequest extends AbstractModel
 {
     /**
-     * @var string Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+     * @var string Instance ID
      */
-    public $Format;
+    public $InstanceId;
 
     /**
-     * @param string $Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+     * @var string Instance ProxyID
+     */
+    public $ProxyID;
+
+    /**
+     * @param string $InstanceId Instance ID
+     * @param string $ProxyID Instance ProxyID
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class CompressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ProxyID",$param) and $param["ProxyID"] !== null) {
+            $this->ProxyID = $param["ProxyID"];
         }
     }
 }

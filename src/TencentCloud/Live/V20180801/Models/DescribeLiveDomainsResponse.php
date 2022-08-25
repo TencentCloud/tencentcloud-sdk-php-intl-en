@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCreateLimitCount(integer $CreateLimitCount) Set The number of domain names that can be added
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getPlayTypeCount() Obtain The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPlayTypeCount(array $PlayTypeCount) Set The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -50,6 +54,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CreateLimitCount;
 
     /**
+     * @var array The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PlayTypeCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -59,6 +69,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $DomainList List of domain name details.
      * @param integer $CreateLimitCount The number of domain names that can be added
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $PlayTypeCount The number of domains accelerated in the Chinese mainland, globally, and outside the Chinese mainland respectively.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -89,6 +101,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("CreateLimitCount",$param) and $param["CreateLimitCount"] !== null) {
             $this->CreateLimitCount = $param["CreateLimitCount"];
+        }
+
+        if (array_key_exists("PlayTypeCount",$param) and $param["PlayTypeCount"] !== null) {
+            $this->PlayTypeCount = $param["PlayTypeCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

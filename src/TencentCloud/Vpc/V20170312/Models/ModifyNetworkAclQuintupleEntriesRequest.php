@@ -18,16 +18,14 @@ namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyNetworkAclEntries request structure.
+ * ModifyNetworkAclQuintupleEntries request structure.
  *
  * @method string getNetworkAclId() Obtain Network ACL instance ID, such as `acl-12345678`.
  * @method void setNetworkAclId(string $NetworkAclId) Set Network ACL instance ID, such as `acl-12345678`.
- * @method NetworkAclEntrySet getNetworkAclEntrySet() Obtain Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
- * @method void setNetworkAclEntrySet(NetworkAclEntrySet $NetworkAclEntrySet) Set Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
- * @method NetworkAclQuintupleEntries getNetworkAclQuintupleSet() Obtain Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
- * @method void setNetworkAclQuintupleSet(NetworkAclQuintupleEntries $NetworkAclQuintupleSet) Set Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+ * @method NetworkAclQuintupleEntries getNetworkAclQuintupleSet() Obtain Network ACL quintuple rule set.
+ * @method void setNetworkAclQuintupleSet(NetworkAclQuintupleEntries $NetworkAclQuintupleSet) Set Network ACL quintuple rule set.
  */
-class ModifyNetworkAclEntriesRequest extends AbstractModel
+class ModifyNetworkAclQuintupleEntriesRequest extends AbstractModel
 {
     /**
      * @var string Network ACL instance ID, such as `acl-12345678`.
@@ -35,19 +33,13 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
     public $NetworkAclId;
 
     /**
-     * @var NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     */
-    public $NetworkAclEntrySet;
-
-    /**
-     * @var NetworkAclQuintupleEntries Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+     * @var NetworkAclQuintupleEntries Network ACL quintuple rule set.
      */
     public $NetworkAclQuintupleSet;
 
     /**
      * @param string $NetworkAclId Network ACL instance ID, such as `acl-12345678`.
-     * @param NetworkAclEntrySet $NetworkAclEntrySet Network ACL rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
-     * @param NetworkAclQuintupleEntries $NetworkAclQuintupleSet Network ACL quintuple rule set. `NetworkAclEntrySet` and `NetworkAclQuintupleSet` cannot be entered at the same time.
+     * @param NetworkAclQuintupleEntries $NetworkAclQuintupleSet Network ACL quintuple rule set.
      */
     function __construct()
     {
@@ -64,11 +56,6 @@ class ModifyNetworkAclEntriesRequest extends AbstractModel
         }
         if (array_key_exists("NetworkAclId",$param) and $param["NetworkAclId"] !== null) {
             $this->NetworkAclId = $param["NetworkAclId"];
-        }
-
-        if (array_key_exists("NetworkAclEntrySet",$param) and $param["NetworkAclEntrySet"] !== null) {
-            $this->NetworkAclEntrySet = new NetworkAclEntrySet();
-            $this->NetworkAclEntrySet->deserialize($param["NetworkAclEntrySet"]);
         }
 
         if (array_key_exists("NetworkAclQuintupleSet",$param) and $param["NetworkAclQuintupleSet"] !== null) {

@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Monitor\V20180724\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeMonitorTypes response structure.
+ * DescribeClientUploadAccelerationUsageData response structure.
  *
- * @method array getMonitorTypes() Obtain Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
- * @method void setMonitorTypes(array $MonitorTypes) Set Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
- * @method array getMonitorTypeInfos() Obtain Monitoring type details
- * @method void setMonitorTypeInfos(array $MonitorTypeInfos) Set Monitoring type details
+ * @method array getClientUploadAccelerationUsageDataSet() Obtain The usage of client upload acceleration.
+ * @method void setClientUploadAccelerationUsageDataSet(array $ClientUploadAccelerationUsageDataSet) Set The usage of client upload acceleration.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeMonitorTypesResponse extends AbstractModel
+class DescribeClientUploadAccelerationUsageDataResponse extends AbstractModel
 {
     /**
-     * @var array Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
+     * @var array The usage of client upload acceleration.
      */
-    public $MonitorTypes;
-
-    /**
-     * @var array Monitoring type details
-     */
-    public $MonitorTypeInfos;
+    public $ClientUploadAccelerationUsageDataSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeMonitorTypesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $MonitorTypes Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
-     * @param array $MonitorTypeInfos Monitoring type details
+     * @param array $ClientUploadAccelerationUsageDataSet The usage of client upload acceleration.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeMonitorTypesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("MonitorTypes",$param) and $param["MonitorTypes"] !== null) {
-            $this->MonitorTypes = $param["MonitorTypes"];
-        }
-
-        if (array_key_exists("MonitorTypeInfos",$param) and $param["MonitorTypeInfos"] !== null) {
-            $this->MonitorTypeInfos = [];
-            foreach ($param["MonitorTypeInfos"] as $key => $value){
-                $obj = new MonitorTypeInfo();
+        if (array_key_exists("ClientUploadAccelerationUsageDataSet",$param) and $param["ClientUploadAccelerationUsageDataSet"] !== null) {
+            $this->ClientUploadAccelerationUsageDataSet = [];
+            foreach ($param["ClientUploadAccelerationUsageDataSet"] as $key => $value){
+                $obj = new StatDataItem();
                 $obj->deserialize($value);
-                array_push($this->MonitorTypeInfos, $obj);
+                array_push($this->ClientUploadAccelerationUsageDataSet, $obj);
             }
         }
 

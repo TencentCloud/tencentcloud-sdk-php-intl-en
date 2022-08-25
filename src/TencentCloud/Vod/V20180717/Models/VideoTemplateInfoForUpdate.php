@@ -50,18 +50,18 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
  * @method void setResolutionAdaptive(string $ResolutionAdaptive) Set Resolution adaption. Valid values:
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
- * @method integer getWidth() Obtain Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
- * @method void setWidth(integer $Width) Set Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
- * @method integer getHeight() Obtain Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
- * @method void setHeight(integer $Height) Set Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+ * @method integer getWidth() Obtain The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
+ * @method void setWidth(integer $Width) Set The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
+ * @method integer getHeight() Obtain The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
+ * @method void setHeight(integer $Height) Set The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
 <li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
 <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
@@ -88,6 +88,12 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 When this parameter is set to 0 or left empty, `Gop` will be automatically set.
  * @method void setGop(integer $Gop) Set I-frame interval in frames. Valid values: 0 and 1-100000.
 When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+ * @method string getPreserveHDRSwitch() Obtain Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+ * @method void setPreserveHDRSwitch(string $PreserveHDRSwitch) Set Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -123,16 +129,16 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
     public $ResolutionAdaptive;
 
     /**
-     * @var integer Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
+     * @var integer The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
      */
     public $Width;
 
     /**
-     * @var integer Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+     * @var integer The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
      */
     public $Height;
 
@@ -162,6 +168,13 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     public $Gop;
 
     /**
+     * @var string Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+     */
+    public $PreserveHDRSwitch;
+
+    /**
      * @param string $Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -177,12 +190,12 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
      * @param string $ResolutionAdaptive Resolution adaption. Valid values:
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
-     * @param integer $Width Maximum value of the width (or long side) of a video stream in px. Value range: 0 and [128, 4,096].
-<li>If both `Width` and `Height` are 0, the resolution will be the same as that of the source video;</li>
-<li>If `Width` is 0, but `Height` is not 0, `Width` will be proportionally scaled;</li>
-<li>If `Width` is not 0, but `Height` is 0, `Height` will be proportionally scaled;</li>
-<li>If both `Width` and `Height` are not 0, the custom resolution will be used.</li>
-     * @param integer $Height Maximum value of the height (or short side) of a video stream in px. Value range: 0 and [128, 4,096].
+     * @param integer $Width The maximum video width (or long side) in pixels. Value range: 0 and [128, 8192].
+<li>If both `Width` and `Height` are 0, the output resolution will be the same as that of the source video.</li>
+<li>If `Width` is 0 and `Height` is not, the video width will be proportionally scaled.</li>
+<li>If `Width` is not 0 and `Height` is, the video height will be proportionally scaled.</li>
+<li>If neither `Width` nor `Height` is 0, the specified width and height will be used.</li>
+     * @param integer $Height The maximum video height (or short side) in pixels. Value range: 0 and [128, 8192].
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. Valid values:
 <li>stretch: stretches video image frame by frame to fill the screen. The video image may become "squashed" or "stretched" after transcoding.</li>
 <li>black: fills the uncovered area with black color, without changing the image's aspect ratio.</li>
@@ -196,6 +209,9 @@ If the value is 0, the bitrate of the video will be the same as that of the sour
 <li>We don’t recommend using this parameter unless you have special requirements.</li>
      * @param integer $Gop I-frame interval in frames. Valid values: 0 and 1-100000.
 When this parameter is set to 0 or left empty, `Gop` will be automatically set.
+     * @param string $PreserveHDRSwitch Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
+<li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
+<li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
      */
     function __construct()
     {
@@ -244,6 +260,10 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
 
         if (array_key_exists("Gop",$param) and $param["Gop"] !== null) {
             $this->Gop = $param["Gop"];
+        }
+
+        if (array_key_exists("PreserveHDRSwitch",$param) and $param["PreserveHDRSwitch"] !== null) {
+            $this->PreserveHDRSwitch = $param["PreserveHDRSwitch"];
         }
     }
 }

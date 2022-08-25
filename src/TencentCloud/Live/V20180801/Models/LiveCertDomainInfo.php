@@ -18,36 +18,40 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * BindLiveDomainCert request structure.
+ * The domains to bind to a certificate.
  *
- * @method integer getCertId() Obtain Certificate ID, which can be obtained through the `CreateLiveCert` API.
- * @method void setCertId(integer $CertId) Set Certificate ID, which can be obtained through the `CreateLiveCert` API.
- * @method string getDomainName() Obtain Playback domain name.
- * @method void setDomainName(string $DomainName) Set Playback domain name.
- * @method integer getStatus() Obtain HTTPS status. 0: disabled, 1: enabled.
- * @method void setStatus(integer $Status) Set HTTPS status. 0: disabled, 1: enabled.
+ * @method string getDomainName() Obtain The domain name.
+ * @method void setDomainName(string $DomainName) Set The domain name.
+ * @method integer getStatus() Obtain Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
+ * @method void setStatus(integer $Status) Set Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
  */
-class BindLiveDomainCertRequest extends AbstractModel
+class LiveCertDomainInfo extends AbstractModel
 {
     /**
-     * @var integer Certificate ID, which can be obtained through the `CreateLiveCert` API.
-     */
-    public $CertId;
-
-    /**
-     * @var string Playback domain name.
+     * @var string The domain name.
      */
     public $DomainName;
 
     /**
-     * @var integer HTTPS status. 0: disabled, 1: enabled.
+     * @var integer Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
      */
     public $Status;
 
     /**
-     * @param integer $CertId Certificate ID, which can be obtained through the `CreateLiveCert` API.
-     * @param string $DomainName Playback domain name.
-     * @param integer $Status HTTPS status. 0: disabled, 1: enabled.
+     * @param string $DomainName The domain name.
+     * @param integer $Status Whether to enable HTTPS for the domain.
+1: Enable
+0: Disable
+-1: Keep the current configuration
      */
     function __construct()
     {
@@ -62,10 +66,6 @@ class BindLiveDomainCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
-        }
-
         if (array_key_exists("DomainName",$param) and $param["DomainName"] !== null) {
             $this->DomainName = $param["DomainName"];
         }

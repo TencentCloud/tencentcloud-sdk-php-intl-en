@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Compression configuration of shipped log
+ * CreateNetworkAclQuintupleEntries response structure.
  *
- * @method string getFormat() Obtain Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
- * @method void setFormat(string $Format) Set Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CompressInfo extends AbstractModel
+class CreateNetworkAclQuintupleEntriesResponse extends AbstractModel
 {
     /**
-     * @var string Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $Format;
+    public $RequestId;
 
     /**
-     * @param string $Format Compression format. Valid values: `gzip`; `lzop`; `snappy`; `none` (no compression)
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class CompressInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
-            $this->Format = $param["Format"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Vpc\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteLiveCert request structure.
+ * DeleteNetworkAclQuintupleEntries response structure.
  *
- * @method integer getCertId() Obtain Certificate ID obtained through the `DescribeLiveCerts` API.
- * @method void setCertId(integer $CertId) Set Certificate ID obtained through the `DescribeLiveCerts` API.
+ * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteLiveCertRequest extends AbstractModel
+class DeleteNetworkAclQuintupleEntriesResponse extends AbstractModel
 {
     /**
-     * @var integer Certificate ID obtained through the `DescribeLiveCerts` API.
+     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
-    public $CertId;
+    public $RequestId;
 
     /**
-     * @param integer $CertId Certificate ID obtained through the `DescribeLiveCerts` API.
+     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteLiveCertRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }

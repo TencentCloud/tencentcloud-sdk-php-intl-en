@@ -18,19 +18,35 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteLiveCert response structure.
+ * DescribeLiveDomainCertBindings response structure.
  *
+ * @method array getLiveDomainCertBindings() Obtain The information of domains that meet the query criteria.
+ * @method void setLiveDomainCertBindings(array $LiveDomainCertBindings) Set The information of domains that meet the query criteria.
+ * @method integer getTotalNum() Obtain The number of records returned, which is needed for pagination.
+ * @method void setTotalNum(integer $TotalNum) Set The number of records returned, which is needed for pagination.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteLiveCertResponse extends AbstractModel
+class DescribeLiveDomainCertBindingsResponse extends AbstractModel
 {
+    /**
+     * @var array The information of domains that meet the query criteria.
+     */
+    public $LiveDomainCertBindings;
+
+    /**
+     * @var integer The number of records returned, which is needed for pagination.
+     */
+    public $TotalNum;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $LiveDomainCertBindings The information of domains that meet the query criteria.
+     * @param integer $TotalNum The number of records returned, which is needed for pagination.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,19 @@ class DeleteLiveCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("LiveDomainCertBindings",$param) and $param["LiveDomainCertBindings"] !== null) {
+            $this->LiveDomainCertBindings = [];
+            foreach ($param["LiveDomainCertBindings"] as $key => $value){
+                $obj = new LiveDomainCertBindings();
+                $obj->deserialize($value);
+                array_push($this->LiveDomainCertBindings, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalNum",$param) and $param["TotalNum"] !== null) {
+            $this->TotalNum = $param["TotalNum"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

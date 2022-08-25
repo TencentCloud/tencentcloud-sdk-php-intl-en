@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Live\V20180801\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateLiveCert response structure.
+ * FetchMessageListByOffset response structure.
  *
- * @method integer getCertId() Obtain Certificate ID
- * @method void setCertId(integer $CertId) Set Certificate ID
+ * @method array getResult() Obtain Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
+ * @method void setResult(array $Result) Set Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateLiveCertResponse extends AbstractModel
+class FetchMessageListByOffsetResponse extends AbstractModel
 {
     /**
-     * @var integer Certificate ID
+     * @var array Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
      */
-    public $CertId;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateLiveCertResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $CertId Certificate ID
+     * @param array $Result Returned result. Note: The returned list does not display the message content (key and value). To query the message content, call the `FetchMessageByOffset` API.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,13 @@ class CreateLiveCertResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("CertId",$param) and $param["CertId"] !== null) {
-            $this->CertId = $param["CertId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new ConsumerRecord();
+                $obj->deserialize($value);
+                array_push($this->Result, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

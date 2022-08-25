@@ -18,36 +18,36 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Host header for 302 redirects
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getFollowRedirectHost() Obtain 
- * @method void setFollowRedirectHost(string $FollowRedirectHost) Set 
- * @method string getFollowRedirectBackupHost() Obtain 
- * @method void setFollowRedirectBackupHost(string $FollowRedirectBackupHost) Set 
+ * @method string getSwitch() Obtain Configuration switch
+ * @method void setSwitch(string $Switch) Set Configuration switch
+ * @method string getFollowRedirectHost() Obtain The custom host header that is sent when the primary origin server follows 302 redirects
+ * @method void setFollowRedirectHost(string $FollowRedirectHost) Set The custom host header that is sent when the primary origin server follows 302 redirects
+ * @method string getFollowRedirectBackupHost() Obtain The custom host header that is sent when the secondary origin server follows 302 redirects
+ * @method void setFollowRedirectBackupHost(string $FollowRedirectBackupHost) Set The custom host header that is sent when the secondary origin server follows 302 redirects
  */
 class RedirectConfig extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Configuration switch
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string The custom host header that is sent when the primary origin server follows 302 redirects
      */
     public $FollowRedirectHost;
 
     /**
-     * @var string 
+     * @var string The custom host header that is sent when the secondary origin server follows 302 redirects
      */
     public $FollowRedirectBackupHost;
 
     /**
-     * @param string $Switch 
-     * @param string $FollowRedirectHost 
-     * @param string $FollowRedirectBackupHost 
+     * @param string $Switch Configuration switch
+     * @param string $FollowRedirectHost The custom host header that is sent when the primary origin server follows 302 redirects
+     * @param string $FollowRedirectBackupHost The custom host header that is sent when the secondary origin server follows 302 redirects
      */
     function __construct()
     {
