@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setEnableTag(boolean $EnableTag) Set Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
- * @method array getMetaFields() Obtain List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+ * @method array getMetaFields() Obtain List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+ * @method void setMetaFields(array $MetaFields) Set List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getTagJsonNotTiled() Obtain This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.
@@ -46,7 +46,7 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $EnableTag;
 
     /**
-     * @var array List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * @var array List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MetaFields;
@@ -66,7 +66,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     /**
      * @param boolean $EnableTag Whether to ship tag information
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $MetaFields List of metadata to ship. Only \_\_SOURCE\_\_, \_\_FILENAME\_\_, and \_\_TIMESTAMP\_\_ are supported.
+     * @param array $MetaFields List of metadata to ship. Supported metadata types: \_\_SOURCE\_\_, \_\_FILENAME\_\_, \_\_TIMESTAMP\_\_, \_\_HOSTNAME\_\_, and \_\_PKGID\_\_.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $TagJsonNotTiled This parameter is required if `EnableTag` is `true`, and is used to specify whether the tag information is JSON tiled. Valid values: `true` (not tiled); `false` (tiled)
 Note: This field may return `null`, indicating that no valid value was found.

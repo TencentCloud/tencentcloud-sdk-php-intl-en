@@ -40,6 +40,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setNetType(string $NetType) Set Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getUniqSubnetId() Obtain Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUniqSubnetId(string $UniqSubnetId) Set Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUniqVpcId() Obtain VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDescription() Obtain Description
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDescription(string $Description) Set Description
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAddr extends AbstractModel
 {
@@ -74,6 +86,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $NetType;
 
     /**
+     * @var string Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $UniqSubnetId;
+
+    /**
+     * @var string VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $UniqVpcId;
+
+    /**
+     * @var string Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Description;
+
+    /**
      * @param string $Vip Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Vport Private network port number
@@ -84,6 +114,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $NetType Network type. Valid values: `ro` (read-only), `rw` or `ha` (read-write)
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $UniqSubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $UniqVpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -116,6 +152,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("NetType",$param) and $param["NetType"] !== null) {
             $this->NetType = $param["NetType"];
+        }
+
+        if (array_key_exists("UniqSubnetId",$param) and $param["UniqSubnetId"] !== null) {
+            $this->UniqSubnetId = $param["UniqSubnetId"];
+        }
+
+        if (array_key_exists("UniqVpcId",$param) and $param["UniqVpcId"] !== null) {
+            $this->UniqVpcId = $param["UniqVpcId"];
+        }
+
+        if (array_key_exists("Description",$param) and $param["Description"] !== null) {
+            $this->Description = $param["Description"];
         }
     }
 }

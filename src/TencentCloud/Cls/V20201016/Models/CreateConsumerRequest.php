@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(ConsumerContent $Content) Set Metadata to ship if `NeedContent` is `true`
  * @method Ckafka getCkafka() Obtain CKafka information
  * @method void setCkafka(Ckafka $Ckafka) Set CKafka information
+ * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+ * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
  */
 class CreateConsumerRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateConsumerRequest extends AbstractModel
     public $Ckafka;
 
     /**
+     * @var integer Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+     */
+    public $Compression;
+
+    /**
      * @param string $TopicId Log topic ID to bind
      * @param boolean $NeedContent Whether to ship log metadata. Default value: `true`
      * @param ConsumerContent $Content Metadata to ship if `NeedContent` is `true`
      * @param Ckafka $Ckafka CKafka information
+     * @param integer $Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
      */
     function __construct()
     {
@@ -86,6 +94,10 @@ class CreateConsumerRequest extends AbstractModel
         if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
             $this->Ckafka = new Ckafka();
             $this->Ckafka->deserialize($param["Ckafka"]);
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

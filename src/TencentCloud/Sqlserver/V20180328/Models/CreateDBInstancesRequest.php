@@ -60,6 +60,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMultiZones(boolean $MultiZones) Set Whether to deploy across availability zones. Default value: false.
  * @method array getResourceTags() Obtain Tags associated with the instances to be created
  * @method void setResourceTags(array $ResourceTags) Set Tags associated with the instances to be created
+ * @method string getCollation() Obtain Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+ * @method void setCollation(string $Collation) Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+ * @method string getTimeZone() Obtain System time zone. Default value: `China Standard Time`.
+ * @method void setTimeZone(string $TimeZone) Set System time zone. Default value: `China Standard Time`.
  */
 class CreateDBInstancesRequest extends AbstractModel
 {
@@ -164,6 +168,16 @@ class CreateDBInstancesRequest extends AbstractModel
     public $ResourceTags;
 
     /**
+     * @var string Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     */
+    public $Collation;
+
+    /**
+     * @var string System time zone. Default value: `China Standard Time`.
+     */
+    public $TimeZone;
+
+    /**
      * @param string $Zone Instance AZ, such as ap-guangzhou-1 (Guangzhou Zone 1). Purchasable AZs for an instance can be obtained through the `DescribeZones` API
      * @param integer $Memory Instance memory size in GB
      * @param integer $Storage Instance storage capacity in GB
@@ -184,6 +198,8 @@ class CreateDBInstancesRequest extends AbstractModel
      * @param string $HAType The type of purchased high-availability instance. Valid values: DUAL (dual-server high availability), CLUSTER (cluster). Default value: DUAL.
      * @param boolean $MultiZones Whether to deploy across availability zones. Default value: false.
      * @param array $ResourceTags Tags associated with the instances to be created
+     * @param string $Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     * @param string $TimeZone System time zone. Default value: `China Standard Time`.
      */
     function __construct()
     {
@@ -281,6 +297,14 @@ class CreateDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ResourceTags, $obj);
             }
+        }
+
+        if (array_key_exists("Collation",$param) and $param["Collation"] !== null) {
+            $this->Collation = $param["Collation"];
+        }
+
+        if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
+            $this->TimeZone = $param["TimeZone"];
         }
     }
 }

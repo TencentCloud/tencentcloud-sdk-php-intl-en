@@ -30,6 +30,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method Ckafka getCkafka() Obtain CKafka information
  * @method void setCkafka(Ckafka $Ckafka) Set CKafka information
+ * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -57,6 +61,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Ckafka;
 
     /**
+     * @var integer Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Compression;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -67,6 +77,8 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param ConsumerContent $Content Metadata shipped if `NeedContent` is `true`
 Note: This field may return `null`, indicating that no valid value was found.
      * @param Ckafka $Ckafka CKafka information
+     * @param integer $Compression Compression mode. Valid values: `0` (no compression), `2` (snappy), `3` (LZ4).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -98,6 +110,10 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("Ckafka",$param) and $param["Ckafka"] !== null) {
             $this->Ckafka = new Ckafka();
             $this->Ckafka->deserialize($param["Ckafka"]);
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -130,10 +130,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setDnsPodDomain(string $DnsPodDomain) Set Domain name of the public network address
  * @method integer getTgwWanVPort() Obtain Port number of the public network
  * @method void setTgwWanVPort(integer $TgwWanVPort) Set Port number of the public network
- * @method string getCollation() Obtain 
- * @method void setCollation(string $Collation) Set 
- * @method string getTimeZone() Obtain 
- * @method void setTimeZone(string $TimeZone) Set 
+ * @method string getCollation() Obtain Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+ * @method void setCollation(string $Collation) Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+ * @method string getTimeZone() Obtain System time zone. Default value: `China Standard Time`.
+ * @method void setTimeZone(string $TimeZone) Set System time zone. Default value: `China Standard Time`.
  */
 class DBInstance extends AbstractModel
 {
@@ -385,12 +385,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TgwWanVPort;
 
     /**
-     * @var string 
+     * @var string Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      */
     public $Collation;
 
     /**
-     * @var string 
+     * @var string System time zone. Default value: `China Standard Time`.
      */
     public $TimeZone;
 
@@ -450,8 +450,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $CrossBackupSaveDays The retention period of cross-region backup. Default value: 7 days
      * @param string $DnsPodDomain Domain name of the public network address
      * @param integer $TgwWanVPort Port number of the public network
-     * @param string $Collation 
-     * @param string $TimeZone 
+     * @param string $Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
+     * @param string $TimeZone System time zone. Default value: `China Standard Time`.
      */
     function __construct()
     {
