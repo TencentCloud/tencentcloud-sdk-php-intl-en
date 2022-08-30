@@ -18,19 +18,19 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeTaskDetail request structure.
+ * SetDrmKeyProviderInfo request structure.
  *
- * @method string getTaskId() Obtain Video processing task ID.
- * @method void setTaskId(string $TaskId) Set Video processing task ID.
+ * @method SDMCDrmKeyProviderInfo getSDMCInfo() Obtain The DRM key information provided by SDMC.
+ * @method void setSDMCInfo(SDMCDrmKeyProviderInfo $SDMCInfo) Set The DRM key information provided by SDMC.
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  */
-class DescribeTaskDetailRequest extends AbstractModel
+class SetDrmKeyProviderInfoRequest extends AbstractModel
 {
     /**
-     * @var string Video processing task ID.
+     * @var SDMCDrmKeyProviderInfo The DRM key information provided by SDMC.
      */
-    public $TaskId;
+    public $SDMCInfo;
 
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -38,7 +38,7 @@ class DescribeTaskDetailRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @param string $TaskId Video processing task ID.
+     * @param SDMCDrmKeyProviderInfo $SDMCInfo The DRM key information provided by SDMC.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     function __construct()
@@ -54,8 +54,9 @@ class DescribeTaskDetailRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
-            $this->TaskId = $param["TaskId"];
+        if (array_key_exists("SDMCInfo",$param) and $param["SDMCInfo"] !== null) {
+            $this->SDMCInfo = new SDMCDrmKeyProviderInfo();
+            $this->SDMCInfo->deserialize($param["SDMCInfo"]);
         }
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {

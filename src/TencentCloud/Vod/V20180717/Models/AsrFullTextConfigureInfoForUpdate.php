@@ -26,10 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSwitch(string $Switch) Set Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
- * @method string getSubtitleFormat() Obtain Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
- * @method void setSubtitleFormat(string $SubtitleFormat) Set Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+ * @method SubtitleFormatsOperation getSubtitleFormatsOperation() Obtain The modification information of the subtitle format list.
+ * @method void setSubtitleFormatsOperation(SubtitleFormatsOperation $SubtitleFormatsOperation) Set The modification information of the subtitle format list.
+ * @method string getSubtitleFormat() Obtain The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
+ * @method void setSubtitleFormat(string $SubtitleFormat) Set The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
  */
 class AsrFullTextConfigureInfoForUpdate extends AbstractModel
 {
@@ -41,8 +47,15 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
     public $Switch;
 
     /**
-     * @var string Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * @var SubtitleFormatsOperation The modification information of the subtitle format list.
+     */
+    public $SubtitleFormatsOperation;
+
+    /**
+     * @var string The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
      */
     public $SubtitleFormat;
 
@@ -50,8 +63,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
      * @param string $Switch Switch of full speech recognition task. Valid values:
 <li>ON: enables intelligent full speech recognition task;</li>
 <li>OFF: disables intelligent full speech recognition task.</li>
-     * @param string $SubtitleFormat Format of generated subtitles file. If an empty string is entered, no subtitles files will be generated. Valid values:
-<li>vtt: generates a WebVTT subtitles file.</li>
+     * @param SubtitleFormatsOperation $SubtitleFormatsOperation The modification information of the subtitle format list.
+     * @param string $SubtitleFormat The format of the subtitle file generated. <font color='red'>If you pass in an empty string</font>, no subtitle files will be generated. Valid values:
+<li>vtt</li>
+<li>srt</li>
+<font color='red'>Note: This parameter has been deprecated. Please use `SubtitleFormatsOperation` instead.</font>
      */
     function __construct()
     {
@@ -68,6 +84,11 @@ class AsrFullTextConfigureInfoForUpdate extends AbstractModel
         }
         if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
             $this->Switch = $param["Switch"];
+        }
+
+        if (array_key_exists("SubtitleFormatsOperation",$param) and $param["SubtitleFormatsOperation"] !== null) {
+            $this->SubtitleFormatsOperation = new SubtitleFormatsOperation();
+            $this->SubtitleFormatsOperation->deserialize($param["SubtitleFormatsOperation"]);
         }
 
         if (array_key_exists("SubtitleFormat",$param) and $param["SubtitleFormat"] !== null) {

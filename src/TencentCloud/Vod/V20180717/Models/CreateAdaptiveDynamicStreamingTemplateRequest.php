@@ -44,6 +44,14 @@ If this parameter is an empty string, it indicates that the video is not protect
 <li>Widevine</li>
 <li>FairPlay</li>
 If this parameter is an empty string, it indicates that the video is not protected by DRM.
+ * @method string getDrmKeyProvider() Obtain The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -98,6 +106,14 @@ If this parameter is an empty string, it indicates that the video is not protect
     public $DrmType;
 
     /**
+     * @var string The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public $DrmKeyProvider;
+
+    /**
      * @var integer Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -131,6 +147,10 @@ Note: the frame rate of all substreams must be the same; otherwise, the frame ra
 <li>Widevine</li>
 <li>FairPlay</li>
 If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * @param string $DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding video from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
 <li>1: yes.</li>
@@ -177,6 +197,10 @@ Default value: no.
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
+        }
+
+        if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
+            $this->DrmKeyProvider = $param["DrmKeyProvider"];
         }
 
         if (array_key_exists("DisableHigherVideoBitrate",$param) and $param["DisableHigherVideoBitrate"] !== null) {

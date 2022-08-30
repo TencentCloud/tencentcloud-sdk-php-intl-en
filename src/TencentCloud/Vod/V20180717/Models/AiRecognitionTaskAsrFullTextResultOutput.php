@@ -26,10 +26,12 @@ use TencentCloud\Common\AbstractModel;
 <font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
  * @method string getSegmentSetFileUrl() Obtain URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
  * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
- * @method string getSegmentSetFileUrlExpireTime() Obtain Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
- * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
- * @method string getSubtitleUrl() Obtain Subtitles file URL.
- * @method void setSubtitleUrl(string $SubtitleUrl) Set Subtitles file URL.
+ * @method string getSegmentSetFileUrlExpireTime() Obtain The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+ * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+ * @method array getSubtitleSet() Obtain The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+ * @method void setSubtitleSet(array $SubtitleSet) Set The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+ * @method string getSubtitleUrl() Obtain The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+ * @method void setSubtitleUrl(string $SubtitleUrl) Set The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
  */
 class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 {
@@ -45,12 +47,17 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
     public $SegmentSetFileUrl;
 
     /**
-     * @var string Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
+     * @var string The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
      */
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @var string Subtitles file URL.
+     * @var array The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     */
+    public $SubtitleSet;
+
+    /**
+     * @var string The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     public $SubtitleUrl;
 
@@ -58,8 +65,9 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
      * @param array $SegmentSet List of full-text speech recognition segments
 <font color=red>Note</font>: this list displays up to the first 100 results. You can get all the results from the file whose URL is `SegmentSetFileUrl`.
      * @param string $SegmentSetFileUrl URL to the file of the list for full-text speech recognition segments. The file format is JSON, and the data structure is the same as `SegmentSet`. The file will be deleted upon the expiration time `SegmentSetFileUrlExpireTime`, instead of being stored permanently.
-     * @param string $SegmentSetFileUrlExpireTime Expiration time of the URL to the file of the list for full-text speech recognition segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732)
-     * @param string $SubtitleUrl Subtitles file URL.
+     * @param string $SegmentSetFileUrlExpireTime The expiration time of the URLs of full-text speech recognition segments in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
+     * @param array $SubtitleSet The subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
+     * @param string $SubtitleUrl The URLs of the subtitle files generated, whose format is determined by the `SubtitleFormats` parameter of [AsrFullTextConfigureInfo](https://intl.cloud.tencent.com/document/api/266/31773?from_cn_redirect=1#AsrFullTextConfigureInfo).
      */
     function __construct()
     {
@@ -89,6 +97,15 @@ class AiRecognitionTaskAsrFullTextResultOutput extends AbstractModel
 
         if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
             $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
+        }
+
+        if (array_key_exists("SubtitleSet",$param) and $param["SubtitleSet"] !== null) {
+            $this->SubtitleSet = [];
+            foreach ($param["SubtitleSet"] as $key => $value){
+                $obj = new AiRecognitionTaskAsrFullTextResultOutputSubtitleItem();
+                $obj->deserialize($value);
+                array_push($this->SubtitleSet, $obj);
+            }
         }
 
         if (array_key_exists("SubtitleUrl",$param) and $param["SubtitleUrl"] !== null) {

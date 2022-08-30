@@ -136,6 +136,16 @@ use TencentCloud\Common\AbstractModel;
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+ * @method array getTrtcSdkAppIds() Obtain The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+ * @method void setTrtcSdkAppIds(array $TrtcSdkAppIds) Set The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+ * @method array getTrtcRoomIds() Obtain The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+ * @method void setTrtcRoomIds(array $TrtcRoomIds) Set The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
  * @method string getText() Obtain (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
  * @method void setText(string $Text) Set (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
@@ -310,6 +320,19 @@ class SearchMediaRequest extends AbstractModel
     public $StorageClasses;
 
     /**
+     * @var array The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+     */
+    public $TrtcSdkAppIds;
+
+    /**
+     * @var array The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
+     */
+    public $TrtcRoomIds;
+
+    /**
      * @var string (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      */
@@ -410,6 +433,11 @@ End time in the creation time range.
 <li>STANDARD_IA</li>
 <li>ARCHIVE</li>
 <li>DEEP_ARCHIVE</li>
+     * @param array $TrtcSdkAppIds The TRTC application IDs. Any file that matches one of the application IDs will be returned.
+<li>Array length limit: 10</li>
+     * @param array $TrtcRoomIds The TRTC room IDs. Any file that matches one of the room IDs will be returned.
+<li>Element length limit: 64 characters.</li>
+<li>Array length limit: 10.</li>
      * @param string $Text (This is not recommended. `Names`, `NamePrefixes`, or `Descriptions` should be used instead)
 Search text, which fuzzily matches the media file name or description. The more matching items and the higher the match rate, the higher-ranked the result. It can contain up to 64 characters.
      * @param string $SourceType (This is not recommended. `SourceTypes` should be used instead)
@@ -519,6 +547,14 @@ End time in the creation time range.
 
         if (array_key_exists("StorageClasses",$param) and $param["StorageClasses"] !== null) {
             $this->StorageClasses = $param["StorageClasses"];
+        }
+
+        if (array_key_exists("TrtcSdkAppIds",$param) and $param["TrtcSdkAppIds"] !== null) {
+            $this->TrtcSdkAppIds = $param["TrtcSdkAppIds"];
+        }
+
+        if (array_key_exists("TrtcRoomIds",$param) and $param["TrtcRoomIds"] !== null) {
+            $this->TrtcRoomIds = $param["TrtcRoomIds"];
         }
 
         if (array_key_exists("Text",$param) and $param["Text"] !== null) {

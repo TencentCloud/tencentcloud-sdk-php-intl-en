@@ -46,6 +46,14 @@ If this parameter is an empty string, it indicates that the video is not protect
 <li>Widevine</li>
 <li>FairPlay</li>
 If this parameter is an empty string, it indicates that the video is not protected by DRM.
+ * @method string getDrmKeyProvider() Obtain The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+ * @method void setDrmKeyProvider(string $DrmKeyProvider) Set The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
  * @method array getStreamInfos() Obtain Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method void setStreamInfos(array $StreamInfos) Set Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
  * @method integer getDisableHigherVideoBitrate() Obtain Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
@@ -105,6 +113,14 @@ If this parameter is an empty string, it indicates that the video is not protect
     public $DrmType;
 
     /**
+     * @var string The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
+     */
+    public $DrmKeyProvider;
+
+    /**
      * @var array Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
      */
     public $StreamInfos;
@@ -147,6 +163,10 @@ If this parameter is an empty string, it indicates that the video is not protect
 <li>Widevine</li>
 <li>FairPlay</li>
 If this parameter is an empty string, it indicates that the video is not protected by DRM.
+     * @param string $DrmKeyProvider The provider of the DRM key. Valid values:
+<li>SDMC</li>
+<li>VOD</li>
+The default is `VOD`.
      * @param array $StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
      * @param integer $DisableHigherVideoBitrate Whether to prohibit transcoding from low bitrate to high bitrate. Valid values:
 <li>0: no,</li>
@@ -192,6 +212,10 @@ If this parameter is an empty string, it indicates that the video is not protect
 
         if (array_key_exists("DrmType",$param) and $param["DrmType"] !== null) {
             $this->DrmType = $param["DrmType"];
+        }
+
+        if (array_key_exists("DrmKeyProvider",$param) and $param["DrmKeyProvider"] !== null) {
+            $this->DrmKeyProvider = $param["DrmKeyProvider"];
         }
 
         if (array_key_exists("StreamInfos",$param) and $param["StreamInfos"] !== null) {

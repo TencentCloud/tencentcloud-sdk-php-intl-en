@@ -30,6 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEndTimeOffset(float $EndTimeOffset) Set End offset time of clipping in seconds. Default value: 0, which means to clip till the end of the video. A negative number indicates how many seconds from the end of the video clipping will end. For example, -10 means that clipping will end at the 10th second from the end.
  * @method integer getIsPersistence() Obtain Whether to store the video clip persistently. 0: no (default), 1: yes.
  * @method void setIsPersistence(integer $IsPersistence) Set Whether to store the video clip persistently. 0: no (default), 1: yes.
+ * @method string getExpireTime() Obtain The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+ * @method void setExpireTime(string $ExpireTime) Set The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+ * @method string getProcedure() Obtain The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+ * @method void setProcedure(string $Procedure) Set The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+ * @method integer getClassId() Obtain The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+ * @method void setClassId(integer $ClassId) Set The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+ * @method string getSourceContext() Obtain The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+ * @method void setSourceContext(string $SourceContext) Set The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+ * @method string getSessionContext() Obtain The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+ * @method void setSessionContext(string $SessionContext) Set The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
  */
 class SimpleHlsClipRequest extends AbstractModel
 {
@@ -59,11 +73,45 @@ class SimpleHlsClipRequest extends AbstractModel
     public $IsPersistence;
 
     /**
+     * @var string The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+     */
+    public $ExpireTime;
+
+    /**
+     * @var string The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+     */
+    public $Procedure;
+
+    /**
+     * @var integer The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     */
+    public $ClassId;
+
+    /**
+     * @var string The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public $SourceContext;
+
+    /**
+     * @var string The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
+     */
+    public $SessionContext;
+
+    /**
      * @param string $Url URL of the HLS video in VOD that needs to be clipped.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param float $StartTimeOffset Start offset time of clipping in seconds. Default value: 0, which means to clip from the beginning of the video. A negative number indicates how many seconds from the end of the video clipping will start at. For example, -10 means that clipping will start at the 10th second from the end.
      * @param float $EndTimeOffset End offset time of clipping in seconds. Default value: 0, which means to clip till the end of the video. A negative number indicates how many seconds from the end of the video clipping will end. For example, -10 means that clipping will end at the 10th second from the end.
      * @param integer $IsPersistence Whether to store the video clip persistently. 0: no (default), 1: yes.
+     * @param string $ExpireTime The expiration time of the video clip that is to be saved, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). `9999-12-31T23:59:59Z` is the default value, which means the video clip will never expire. After expiration, the media file and its related resources (such as transcoding results and image sprites) will be permanently deleted. This parameter is valid only if `IsPersistence` is 1.
+     * @param string $Procedure The task flow to execute on the video clipped for persistent storage. For details, see [Upload from Server](https://intl.cloud.tencent.com/document/product/266/33912). This parameter is valid only if `IsPersistence` is 1.
+     * @param integer $ClassId The ID of the media file’s category. You can use the [CreateClass](https://intl.cloud.tencent.com/document/product/266/7812?from_cn_redirect=1) API to create a category and get the category ID.
+<li>The default value is `0`, which means the “Other” category.</li>
+This parameter is valid only if `IsPersistence` is `1`.
+     * @param string $SourceContext The source context, which is used to pass through user request information. The [NewFileUpload](https://intl.cloud.tencent.com/document/product/266/7830?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 250 characters and is valid only if `IsPersistence` is `1`.
+     * @param string $SessionContext The session context, which is used to pass through user request information. If the `Procedure` parameter is specified, the [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters and is valid only if `IsPersistence` is `1`.
      */
     function __construct()
     {
@@ -96,6 +144,26 @@ class SimpleHlsClipRequest extends AbstractModel
 
         if (array_key_exists("IsPersistence",$param) and $param["IsPersistence"] !== null) {
             $this->IsPersistence = $param["IsPersistence"];
+        }
+
+        if (array_key_exists("ExpireTime",$param) and $param["ExpireTime"] !== null) {
+            $this->ExpireTime = $param["ExpireTime"];
+        }
+
+        if (array_key_exists("Procedure",$param) and $param["Procedure"] !== null) {
+            $this->Procedure = $param["Procedure"];
+        }
+
+        if (array_key_exists("ClassId",$param) and $param["ClassId"] !== null) {
+            $this->ClassId = $param["ClassId"];
+        }
+
+        if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
+            $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
+            $this->SessionContext = $param["SessionContext"];
         }
     }
 }

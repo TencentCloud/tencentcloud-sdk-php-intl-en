@@ -110,6 +110,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setWechatMiniProgramPublishCompleteEvent(WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent) Set Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method RemoveWatermarkTask getRemoveWatermarkCompleteEvent() Obtain Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRemoveWatermarkCompleteEvent(RemoveWatermarkTask $RemoveWatermarkCompleteEvent) Set Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method RestoreMediaTask getRestoreMediaCompleteEvent() Obtain Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
@@ -227,6 +231,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $WechatMiniProgramPublishCompleteEvent;
 
     /**
+     * @var RemoveWatermarkTask Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RemoveWatermarkCompleteEvent;
+
+    /**
      * @var RestoreMediaTask Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -278,6 +288,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param WechatMiniProgramPublishTask $WechatMiniProgramPublishCompleteEvent Release on WeChat Mini Program task completion event, which is valid if the event type is `WechatMiniProgramPublishComplete`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkTask $RemoveWatermarkCompleteEvent Watermark removal completion event. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RestoreMediaTask $RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -370,6 +382,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("WechatMiniProgramPublishCompleteEvent",$param) and $param["WechatMiniProgramPublishCompleteEvent"] !== null) {
             $this->WechatMiniProgramPublishCompleteEvent = new WechatMiniProgramPublishTask();
             $this->WechatMiniProgramPublishCompleteEvent->deserialize($param["WechatMiniProgramPublishCompleteEvent"]);
+        }
+
+        if (array_key_exists("RemoveWatermarkCompleteEvent",$param) and $param["RemoveWatermarkCompleteEvent"] !== null) {
+            $this->RemoveWatermarkCompleteEvent = new RemoveWatermarkTask();
+            $this->RemoveWatermarkCompleteEvent->deserialize($param["RemoveWatermarkCompleteEvent"]);
         }
 
         if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {

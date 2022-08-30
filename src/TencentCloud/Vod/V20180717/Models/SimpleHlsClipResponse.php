@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
  * @method string getFileId() Obtain Unique ID of a video clip for persistent storage.
  * @method void setFileId(string $FileId) Set Unique ID of a video clip for persistent storage.
+ * @method string getTaskId() Obtain The ID of the task flow to execute on the video clipped for persistent storage.
+ * @method void setTaskId(string $TaskId) Set The ID of the task flow to execute on the video clipped for persistent storage.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -47,6 +49,11 @@ class SimpleHlsClipResponse extends AbstractModel
     public $FileId;
 
     /**
+     * @var string The ID of the task flow to execute on the video clipped for persistent storage.
+     */
+    public $TaskId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +62,7 @@ class SimpleHlsClipResponse extends AbstractModel
      * @param string $Url Address of clipped video.
      * @param MediaMetaData $MetaData Metadata of clipped video. Currently, `Size`, `Rotate`, `VideoDuration`, and `AudioDuration` fields use default value with no actual data.
      * @param string $FileId Unique ID of a video clip for persistent storage.
+     * @param string $TaskId The ID of the task flow to execute on the video clipped for persistent storage.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -81,6 +89,10 @@ class SimpleHlsClipResponse extends AbstractModel
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

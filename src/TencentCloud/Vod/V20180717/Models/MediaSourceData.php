@@ -36,6 +36,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSourceContext(string $SourceContext) Set Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method TrtcRecordInfo getTrtcRecordInfo() Obtain The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTrtcRecordInfo(TrtcRecordInfo $TrtcRecordInfo) Set The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MediaSourceData extends AbstractModel
 {
@@ -56,6 +60,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SourceContext;
 
     /**
+     * @var TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TrtcRecordInfo;
+
+    /**
      * @param string $SourceType Source of a media file:
 <li>`Record`: recording, such as live or time-shift recording</li>
 <li>`Upload`: upload, such as pull for upload, upload from server, and UGC upload from client</li>
@@ -64,6 +74,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>`Unknown`: unknown source</li>
      * @param string $SourceContext Field passed through when a file is created.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param TrtcRecordInfo $TrtcRecordInfo The TRTC recording information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
             $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("TrtcRecordInfo",$param) and $param["TrtcRecordInfo"] !== null) {
+            $this->TrtcRecordInfo = new TrtcRecordInfo();
+            $this->TrtcRecordInfo->deserialize($param["TrtcRecordInfo"]);
         }
     }
 }

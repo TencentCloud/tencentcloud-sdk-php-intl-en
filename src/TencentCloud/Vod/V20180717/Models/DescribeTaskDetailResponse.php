@@ -26,32 +26,18 @@ use TencentCloud\Common\AbstractModel;
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -114,6 +100,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSnapshotByTimeOffsetTask(SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask) Set Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method RemoveWatermarkTask getRemoveWatermarkTask() Obtain The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -126,16 +116,9 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
      */
     public $TaskType;
 
@@ -235,6 +218,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SnapshotByTimeOffsetTask;
 
     /**
+     * @var RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RemoveWatermarkTask;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -246,16 +235,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file producing</li>
 <li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
-
-Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>RemoveWatermarkTask: Watermark removal</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -287,6 +269,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param RemoveWatermarkTask $RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -380,6 +364,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("SnapshotByTimeOffsetTask",$param) and $param["SnapshotByTimeOffsetTask"] !== null) {
             $this->SnapshotByTimeOffsetTask = new SnapshotByTimeOffsetTask2017();
             $this->SnapshotByTimeOffsetTask->deserialize($param["SnapshotByTimeOffsetTask"]);
+        }
+
+        if (array_key_exists("RemoveWatermarkTask",$param) and $param["RemoveWatermarkTask"] !== null) {
+            $this->RemoveWatermarkTask = new RemoveWatermarkTask();
+            $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
