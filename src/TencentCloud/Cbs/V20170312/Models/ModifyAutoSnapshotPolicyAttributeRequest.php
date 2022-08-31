@@ -22,16 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAutoSnapshotPolicyId() Obtain Scheduled snapshot policy ID.
  * @method void setAutoSnapshotPolicyId(string $AutoSnapshotPolicyId) Set Scheduled snapshot policy ID.
- * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
- * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
- * @method string getAutoSnapshotPolicyName() Obtain The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
- * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
  * @method boolean getIsActivated() Obtain Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
  * @method void setIsActivated(boolean $IsActivated) Set Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
  * @method boolean getIsPermanent() Obtain Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
  * @method void setIsPermanent(boolean $IsPermanent) Set Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
- * @method integer getRetentionDays() Obtain The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
- * @method void setRetentionDays(integer $RetentionDays) Set The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+ * @method string getAutoSnapshotPolicyName() Obtain The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+ * @method void setAutoSnapshotPolicyName(string $AutoSnapshotPolicyName) Set The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+ * @method array getPolicy() Obtain The policy for executing the scheduled snapshot.
+ * @method void setPolicy(array $Policy) Set The policy for executing the scheduled snapshot.
+ * @method integer getRetentionDays() Obtain Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
+ * @method void setRetentionDays(integer $RetentionDays) Set Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
  */
 class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
 {
@@ -39,16 +39,6 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
      * @var string Scheduled snapshot policy ID.
      */
     public $AutoSnapshotPolicyId;
-
-    /**
-     * @var array The policy for executing the scheduled snapshot.
-     */
-    public $Policy;
-
-    /**
-     * @var string The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
-     */
-    public $AutoSnapshotPolicyName;
 
     /**
      * @var boolean Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
@@ -61,17 +51,27 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
     public $IsPermanent;
 
     /**
-     * @var integer The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+     * @var string The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     */
+    public $AutoSnapshotPolicyName;
+
+    /**
+     * @var array The policy for executing the scheduled snapshot.
+     */
+    public $Policy;
+
+    /**
+     * @var integer Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
      */
     public $RetentionDays;
 
     /**
      * @param string $AutoSnapshotPolicyId Scheduled snapshot policy ID.
-     * @param array $Policy The policy for executing the scheduled snapshot.
-     * @param string $AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
      * @param boolean $IsActivated Whether or not the scheduled snapshot policy is activated. FALSE: Not activated. TRUE: Activated. The default value is TRUE.
      * @param boolean $IsPermanent Whether the snapshot created by this scheduled snapshot policy is retained permanently. FALSE: Not retained permanently. TRUE: Retained permanently. The default value is FALSE.
-     * @param integer $RetentionDays The number of days for which snapshots created by this policy are retained. This parameter cannot clash with `IsPermanent`, which is, if the scheduled snapshot policy is configured to retain permanently, `RetentionDays` must be 0.
+     * @param string $AutoSnapshotPolicyName The name of the scheduled snapshot policy to be created. If it is left empty, the default is 'Not named'. The maximum length cannot exceed 60 bytes.
+     * @param array $Policy The policy for executing the scheduled snapshot.
+     * @param integer $RetentionDays Number of days to retain the snapshots created according to this scheduled snapshot policy. If this parameter is specified, `IsPermanent` cannot be specified as `TRUE`; otherwise, they will conflict with each other.
      */
     function __construct()
     {
@@ -90,6 +90,18 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
             $this->AutoSnapshotPolicyId = $param["AutoSnapshotPolicyId"];
         }
 
+        if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
+            $this->IsActivated = $param["IsActivated"];
+        }
+
+        if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
+            $this->IsPermanent = $param["IsPermanent"];
+        }
+
+        if (array_key_exists("AutoSnapshotPolicyName",$param) and $param["AutoSnapshotPolicyName"] !== null) {
+            $this->AutoSnapshotPolicyName = $param["AutoSnapshotPolicyName"];
+        }
+
         if (array_key_exists("Policy",$param) and $param["Policy"] !== null) {
             $this->Policy = [];
             foreach ($param["Policy"] as $key => $value){
@@ -97,18 +109,6 @@ class ModifyAutoSnapshotPolicyAttributeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Policy, $obj);
             }
-        }
-
-        if (array_key_exists("AutoSnapshotPolicyName",$param) and $param["AutoSnapshotPolicyName"] !== null) {
-            $this->AutoSnapshotPolicyName = $param["AutoSnapshotPolicyName"];
-        }
-
-        if (array_key_exists("IsActivated",$param) and $param["IsActivated"] !== null) {
-            $this->IsActivated = $param["IsActivated"];
-        }
-
-        if (array_key_exists("IsPermanent",$param) and $param["IsPermanent"] !== null) {
-            $this->IsPermanent = $param["IsPermanent"];
         }
 
         if (array_key_exists("RetentionDays",$param) and $param["RetentionDays"] !== null) {

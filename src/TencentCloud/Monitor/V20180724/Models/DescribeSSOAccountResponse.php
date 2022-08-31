@@ -18,42 +18,22 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBasicAlarmList response structure.
+ * DescribeSSOAccount response structure.
  *
- * @method array getAlarms() Obtain Alarm list.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setAlarms(array $Alarms) Set Alarm list.
-Note: This field may return null, indicating that no valid value was found.
- * @method integer getTotal() Obtain Total number.
-Note: This field may return null, indicating that no valid value was found.
- * @method void setTotal(integer $Total) Set Total number.
-Note: This field may return null, indicating that no valid value was found.
- * @method string getWarning() Obtain Remarks
+ * @method array getAccountSet() Obtain List of authorized accounts
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarning(string $Warning) Set Remarks
+ * @method void setAccountSet(array $AccountSet) Set List of authorized accounts
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeBasicAlarmListResponse extends AbstractModel
+class DescribeSSOAccountResponse extends AbstractModel
 {
     /**
-     * @var array Alarm list.
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public $Alarms;
-
-    /**
-     * @var integer Total number.
-Note: This field may return null, indicating that no valid value was found.
-     */
-    public $Total;
-
-    /**
-     * @var string Remarks
+     * @var array List of authorized accounts
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Warning;
+    public $AccountSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -61,11 +41,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Alarms Alarm list.
-Note: This field may return null, indicating that no valid value was found.
-     * @param integer $Total Total number.
-Note: This field may return null, indicating that no valid value was found.
-     * @param string $Warning Remarks
+     * @param array $AccountSet List of authorized accounts
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -82,21 +58,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Alarms",$param) and $param["Alarms"] !== null) {
-            $this->Alarms = [];
-            foreach ($param["Alarms"] as $key => $value){
-                $obj = new DescribeBasicAlarmListAlarms();
+        if (array_key_exists("AccountSet",$param) and $param["AccountSet"] !== null) {
+            $this->AccountSet = [];
+            foreach ($param["AccountSet"] as $key => $value){
+                $obj = new GrafanaAccountInfo();
                 $obj->deserialize($value);
-                array_push($this->Alarms, $obj);
+                array_push($this->AccountSet, $obj);
             }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
-        if (array_key_exists("Warning",$param) and $param["Warning"] !== null) {
-            $this->Warning = $param["Warning"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

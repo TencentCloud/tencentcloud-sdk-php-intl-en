@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setQceNamespacesNew(array $QceNamespacesNew) Set Alarm policy type of Tencent Cloud service
  * @method array getCustomNamespacesNew() Obtain Other alarm policy type (not supported currently)
  * @method void setCustomNamespacesNew(array $CustomNamespacesNew) Set Other alarm policy type (not supported currently)
+ * @method array getCommonNamespaces() Obtain General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCommonNamespaces(array $CommonNamespaces) Set General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +58,12 @@ class DescribeAllNamespacesResponse extends AbstractModel
     public $CustomNamespacesNew;
 
     /**
+     * @var array General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CommonNamespaces;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +73,8 @@ class DescribeAllNamespacesResponse extends AbstractModel
      * @param CommonNamespace $CustomNamespaces Other alarm policy type (disused)
      * @param array $QceNamespacesNew Alarm policy type of Tencent Cloud service
      * @param array $CustomNamespacesNew Other alarm policy type (not supported currently)
+     * @param array $CommonNamespaces General alarm policy type, including TAPM, RUM, and CAT.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -103,6 +115,15 @@ class DescribeAllNamespacesResponse extends AbstractModel
                 $obj = new CommonNamespace();
                 $obj->deserialize($value);
                 array_push($this->CustomNamespacesNew, $obj);
+            }
+        }
+
+        if (array_key_exists("CommonNamespaces",$param) and $param["CommonNamespaces"] !== null) {
+            $this->CommonNamespaces = [];
+            foreach ($param["CommonNamespaces"] as $key => $value){
+                $obj = new CommonNamespaceNew();
+                $obj->deserialize($value);
+                array_push($this->CommonNamespaces, $obj);
             }
         }
 

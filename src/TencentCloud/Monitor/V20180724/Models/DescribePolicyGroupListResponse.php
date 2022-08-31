@@ -26,6 +26,10 @@ Note: This field may return null, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid value was found.
  * @method integer getTotal() Obtain Total number of policy groups.
  * @method void setTotal(integer $Total) Set Total number of policy groups.
+ * @method string getWarning() Obtain Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWarning(string $Warning) Set Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -43,6 +47,12 @@ Note: This field may return null, indicating that no valid value was found.
     public $Total;
 
     /**
+     * @var string Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Warning;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -51,6 +61,8 @@ Note: This field may return null, indicating that no valid value was found.
      * @param array $GroupList Policy group list.
 Note: This field may return null, indicating that no valid value was found.
      * @param integer $Total Total number of policy groups.
+     * @param string $Warning Remarks
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +89,10 @@ Note: This field may return null, indicating that no valid value was found.
 
         if (array_key_exists("Total",$param) and $param["Total"] !== null) {
             $this->Total = $param["Total"];
+        }
+
+        if (array_key_exists("Warning",$param) and $param["Warning"] !== null) {
+            $this->Warning = $param["Warning"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
