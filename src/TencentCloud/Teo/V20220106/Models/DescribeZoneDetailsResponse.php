@@ -50,18 +50,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `partial`: The site is connected via CNAME.
  * @method boolean getPaused() Obtain Indicates whether the site is disabled
  * @method void setPaused(boolean $Paused) Set Indicates whether the site is disabled
- * @method string getCreatedOn() Obtain Site creation date
- * @method void setCreatedOn(string $CreatedOn) Set Site creation date
- * @method string getModifiedOn() Obtain Site modification date
- * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
- * @method VanityNameServers getVanityNameServers() Obtain User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method array getVanityNameServersIps() Obtain User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setVanityNameServersIps(array $VanityNameServersIps) Set User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getCnameSpeedUp() Obtain Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
@@ -75,6 +63,28 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setCnameStatus(string $CnameStatus) Set Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
 - `pending`: The site is waiting for verification.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getTags() Obtain Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
+ * @method array getResources() Obtain Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResources(array $Resources) Set Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getModifiedOn() Obtain Site modification date
+ * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
+ * @method string getCreatedOn() Obtain Site creation date
+ * @method void setCreatedOn(string $CreatedOn) Set Site creation date
+ * @method VanityNameServers getVanityNameServers() Obtain User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getVanityNameServersIps() Obtain User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setVanityNameServersIps(array $VanityNameServersIps) Set User-defined name server IP information
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -125,28 +135,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Paused;
 
     /**
-     * @var string Site creation date
-     */
-    public $CreatedOn;
-
-    /**
-     * @var string Site modification date
-     */
-    public $ModifiedOn;
-
-    /**
-     * @var VanityNameServers User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public $VanityNameServers;
-
-    /**
-     * @var array User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     */
-    public $VanityNameServersIps;
-
-    /**
      * @var string Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
@@ -160,6 +148,45 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $CnameStatus;
+
+    /**
+     * @var array Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var string 
+     */
+    public $Area;
+
+    /**
+     * @var array Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Resources;
+
+    /**
+     * @var string Site modification date
+     */
+    public $ModifiedOn;
+
+    /**
+     * @var string Site creation date
+     */
+    public $CreatedOn;
+
+    /**
+     * @var VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $VanityNameServers;
+
+    /**
+     * @var array User-defined name server IP information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $VanityNameServersIps;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -182,18 +209,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
      * @param boolean $Paused Indicates whether the site is disabled
-     * @param string $CreatedOn Site creation date
-     * @param string $ModifiedOn Site modification date
-     * @param VanityNameServers $VanityNameServers User-defined name server information
-Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param array $VanityNameServersIps User-defined name server IP information
-Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CnameSpeedUp Specifies whether to enable CNAME acceleration
 - `enabled`: Enable
 - `disabled`: Disable
      * @param string $CnameStatus Ownership verification status of the site when it accesses via CNAME.
 - `finished`: The site is verified.
 - `pending`: The site is waiting for verification.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Tags Resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Area 
+     * @param array $Resources Billable resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ModifiedOn Site modification date
+     * @param string $CreatedOn Site creation date
+     * @param VanityNameServers $VanityNameServers User-defined name server information
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $VanityNameServersIps User-defined name server IP information
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -238,12 +270,42 @@ Note: This field may return `null`, indicating that no valid value can be obtain
             $this->Paused = $param["Paused"];
         }
 
-        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
-            $this->CreatedOn = $param["CreatedOn"];
+        if (array_key_exists("CnameSpeedUp",$param) and $param["CnameSpeedUp"] !== null) {
+            $this->CnameSpeedUp = $param["CnameSpeedUp"];
+        }
+
+        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
+            $this->CnameStatus = $param["CnameStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new Resource();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
+            }
         }
 
         if (array_key_exists("ModifiedOn",$param) and $param["ModifiedOn"] !== null) {
             $this->ModifiedOn = $param["ModifiedOn"];
+        }
+
+        if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
+            $this->CreatedOn = $param["CreatedOn"];
         }
 
         if (array_key_exists("VanityNameServers",$param) and $param["VanityNameServers"] !== null) {
@@ -258,14 +320,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->VanityNameServersIps, $obj);
             }
-        }
-
-        if (array_key_exists("CnameSpeedUp",$param) and $param["CnameSpeedUp"] !== null) {
-            $this->CnameSpeedUp = $param["CnameSpeedUp"];
-        }
-
-        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
-            $this->CnameStatus = $param["CnameStatus"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 - `partial`: Access via CNAME
  * @method boolean getJumpStart() Obtain Specifies whether to skip resolution record scanning
  * @method void setJumpStart(boolean $JumpStart) Set Specifies whether to skip resolution record scanning
+ * @method array getTags() Obtain Resource tag
+ * @method void setTags(array $Tags) Set Resource tag
  */
 class CreateZoneRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class CreateZoneRequest extends AbstractModel
     public $JumpStart;
 
     /**
+     * @var array Resource tag
+     */
+    public $Tags;
+
+    /**
      * @param string $Name Site name
      * @param string $Type Access mode. Valid values:
 - `full` (default): Access via NS
 - `partial`: Access via CNAME
      * @param boolean $JumpStart Specifies whether to skip resolution record scanning
+     * @param array $Tags Resource tag
      */
     function __construct()
     {
@@ -80,6 +88,15 @@ class CreateZoneRequest extends AbstractModel
 
         if (array_key_exists("JumpStart",$param) and $param["JumpStart"] !== null) {
             $this->JumpStart = $param["JumpStart"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

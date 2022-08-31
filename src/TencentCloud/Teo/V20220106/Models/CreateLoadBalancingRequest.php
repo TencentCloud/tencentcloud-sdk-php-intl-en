@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain Site ID
  * @method void setZoneId(string $ZoneId) Set Site ID
- * @method string getHost() Obtain Subdomain name. You can use @ to represent the root domain.
- * @method void setHost(string $Host) Set Subdomain name. You can use @ to represent the root domain.
+ * @method string getHost() Obtain Subdomain name
+ * @method void setHost(string $Host) Set Subdomain name
  * @method string getType() Obtain Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy
@@ -43,7 +43,7 @@ class CreateLoadBalancingRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Subdomain name. You can use @ to represent the root domain.
+     * @var string Subdomain name
      */
     public $Host;
 
@@ -66,7 +66,7 @@ class CreateLoadBalancingRequest extends AbstractModel
 
     /**
      * @param string $ZoneId Site ID
-     * @param string $Host Subdomain name. You can use @ to represent the root domain.
+     * @param string $Host Subdomain name
      * @param string $Type Proxy mode. Valid values:
 `dns_only`: Only DNS
 `proxied`: Enable proxy

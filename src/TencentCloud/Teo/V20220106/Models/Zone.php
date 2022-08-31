@@ -46,10 +46,14 @@ use TencentCloud\Common\AbstractModel;
 - `partial`: The site is connected via CNAME.
  * @method boolean getPaused() Obtain Indicates whether the site is disabled
  * @method void setPaused(boolean $Paused) Set Indicates whether the site is disabled
- * @method string getCreatedOn() Obtain Site creation date
- * @method void setCreatedOn(string $CreatedOn) Set Site creation date
- * @method string getModifiedOn() Obtain Site modification date
- * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
+ * @method string getCnameSpeedUp() Obtain Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCnameStatus() Obtain Ownership verification status of the site when it is connected to EdgeOne via CNAME.
 - `finished`: The site is verified.
 - `pending`: Verifying the ownership of the site.
@@ -58,6 +62,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `finished`: The site is verified.
 - `pending`: Verifying the ownership of the site.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getTags() Obtain Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTags(array $Tags) Set Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getResources() Obtain Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setResources(array $Resources) Set Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCreatedOn() Obtain Site creation date
+ * @method void setCreatedOn(string $CreatedOn) Set Site creation date
+ * @method string getModifiedOn() Obtain Site modification date
+ * @method void setModifiedOn(string $ModifiedOn) Set Site modification date
+ * @method string getArea() Obtain 
+ * @method void setArea(string $Area) Set 
  */
 class Zone extends AbstractModel
 {
@@ -103,6 +121,34 @@ class Zone extends AbstractModel
     public $Paused;
 
     /**
+     * @var string Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CnameSpeedUp;
+
+    /**
+     * @var string Ownership verification status of the site when it is connected to EdgeOne via CNAME.
+- `finished`: The site is verified.
+- `pending`: Verifying the ownership of the site.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $CnameStatus;
+
+    /**
+     * @var array Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var array Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Resources;
+
+    /**
      * @var string Site creation date
      */
     public $CreatedOn;
@@ -113,12 +159,9 @@ class Zone extends AbstractModel
     public $ModifiedOn;
 
     /**
-     * @var string Ownership verification status of the site when it is connected to EdgeOne via CNAME.
-- `finished`: The site is verified.
-- `pending`: Verifying the ownership of the site.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string 
      */
-    public $CnameStatus;
+    public $Area;
 
     /**
      * @param string $Id Site ID
@@ -134,12 +177,21 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 - `full`: The site is connected via name server.
 - `partial`: The site is connected via CNAME.
      * @param boolean $Paused Indicates whether the site is disabled
-     * @param string $CreatedOn Site creation date
-     * @param string $ModifiedOn Site modification date
+     * @param string $CnameSpeedUp Specifies whether to enable CNAME acceleration
+- `enabled`: Enable
+- `disabled`: Disable
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CnameStatus Ownership verification status of the site when it is connected to EdgeOne via CNAME.
 - `finished`: The site is verified.
 - `pending`: Verifying the ownership of the site.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Tags Resource tag
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $Resources Billable resource
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CreatedOn Site creation date
+     * @param string $ModifiedOn Site modification date
+     * @param string $Area 
      */
     function __construct()
     {
@@ -182,6 +234,32 @@ Note: This field may return `null`, indicating that no valid value can be obtain
             $this->Paused = $param["Paused"];
         }
 
+        if (array_key_exists("CnameSpeedUp",$param) and $param["CnameSpeedUp"] !== null) {
+            $this->CnameSpeedUp = $param["CnameSpeedUp"];
+        }
+
+        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
+            $this->CnameStatus = $param["CnameStatus"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("Resources",$param) and $param["Resources"] !== null) {
+            $this->Resources = [];
+            foreach ($param["Resources"] as $key => $value){
+                $obj = new Resource();
+                $obj->deserialize($value);
+                array_push($this->Resources, $obj);
+            }
+        }
+
         if (array_key_exists("CreatedOn",$param) and $param["CreatedOn"] !== null) {
             $this->CreatedOn = $param["CreatedOn"];
         }
@@ -190,8 +268,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
             $this->ModifiedOn = $param["ModifiedOn"];
         }
 
-        if (array_key_exists("CnameStatus",$param) and $param["CnameStatus"] !== null) {
-            $this->CnameStatus = $param["CnameStatus"];
+        if (array_key_exists("Area",$param) and $param["Area"] !== null) {
+            $this->Area = $param["Area"];
         }
     }
 }

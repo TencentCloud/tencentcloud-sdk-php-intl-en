@@ -23,9 +23,13 @@ use TencentCloud\Common\AbstractModel;
  * @method string getName() Obtain Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
  * @method void setName(string $Name) Set Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
  * @method array getValues() Obtain Filters by the field value
  * @method void setValues(array $Values) Set Filters by the field value
  * @method boolean getFuzzy() Obtain Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
@@ -37,6 +41,8 @@ class ZoneFilter extends AbstractModel
      * @var string Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
      */
     public $Name;
 
@@ -54,6 +60,8 @@ class ZoneFilter extends AbstractModel
      * @param string $Name Filters by the field name. Vaules:
 - `name`: Site name.
 - `status`: Site status.
+- `tagKey`: Tag key.
+- `tagValue`: Tag value.
      * @param array $Values Filters by the field value
      * @param boolean $Fuzzy Specifies whether to enable fuzzy query. It’s only available when filter name is `name`. If it’s enabled, the length of `Values` must be 1.
      */
