@@ -122,6 +122,24 @@ Notes:
 You can specify only one backup source URL.
  * @method void setBackupSourceUrl(string $BackupSourceUrl) Set The URL of the backup source.
 You can specify only one backup source URL.
+ * @method array getWatermarkList() Obtain The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+ * @method void setWatermarkList(array $WatermarkList) Set The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -237,6 +255,19 @@ You can specify only one backup source URL.
     public $BackupSourceUrl;
 
     /**
+     * @var array The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $TaskId The task ID.
      * @param string $Operator The operator.
      * @param array $SourceUrls The source URL(s).
@@ -288,6 +319,15 @@ Notes:
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      * @param string $BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
+     * @param array $WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG and JPG.
+4. If you change the watermark configuration of a task whose source is a list of video files, the new configuration will take effect for the next file in the list.
+5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
+6. If you want to stop using watermarks, pass in an empty array.
+7. Currently, animated watermarks are not supported.
      */
     function __construct()
     {
@@ -360,6 +400,15 @@ You can specify only one backup source URL.
 
         if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
             $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }

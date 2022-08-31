@@ -178,8 +178,16 @@ Notes:
 You can specify only one backup source URL.
  * @method void setBackupSourceUrl(string $BackupSourceUrl) Set The URL of the backup source.
 You can specify only one backup source URL.
- * @method array getWatermarkList() Obtain 
- * @method void setWatermarkList(array $WatermarkList) Set 
+ * @method array getWatermarkList() Obtain The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
+ * @method void setWatermarkList(array $WatermarkList) Set The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -335,7 +343,11 @@ You can specify only one backup source URL.
     public $BackupSourceUrl;
 
     /**
-     * @var array 
+     * @var array The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
      */
     public $WatermarkList;
 
@@ -419,7 +431,11 @@ Notes:
 3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      * @param string $BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
-     * @param array $WatermarkList 
+     * @param array $WatermarkList The information of watermarks to add.
+Notes:
+1. You can add up to four watermarks to different locations of the video.
+2. Make sure you use publicly accessible URLs for the watermark images.
+3. Supported image formats include PNG, JPG, and GIF.
      */
     function __construct()
     {

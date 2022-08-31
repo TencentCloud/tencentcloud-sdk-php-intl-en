@@ -18,85 +18,84 @@ namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Watermark information
-
+ * The watermark configuration for a relay task.
  *
- * @method integer getWatermarkId() Obtain Watermark ID.
- * @method void setWatermarkId(integer $WatermarkId) Set Watermark ID.
- * @method string getPictureUrl() Obtain Watermark image URL.
- * @method void setPictureUrl(string $PictureUrl) Set Watermark image URL.
- * @method integer getXPosition() Obtain Display position: X-axis offset.
- * @method void setXPosition(integer $XPosition) Set Display position: X-axis offset.
- * @method integer getYPosition() Obtain Display position: Y-axis offset.
- * @method void setYPosition(integer $YPosition) Set Display position: Y-axis offset.
- * @method string getWatermarkName() Obtain Watermark name.
- * @method void setWatermarkName(string $WatermarkName) Set Watermark name.
- * @method integer getStatus() Obtain Current status. 0: not used. 1: in use.
- * @method void setStatus(integer $Status) Set Current status. 0: not used. 1: in use.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method integer getWidth() Obtain Watermark width
- * @method void setWidth(integer $Width) Set Watermark width
- * @method integer getHeight() Obtain Watermark height
- * @method void setHeight(integer $Height) Set Watermark height
+ * @method string getPictureUrl() Obtain The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+ * @method void setPictureUrl(string $PictureUrl) Set The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+ * @method integer getXPosition() Obtain The horizontal offset (%) of the watermark. The default value is 0.
+ * @method void setXPosition(integer $XPosition) Set The horizontal offset (%) of the watermark. The default value is 0.
+ * @method integer getYPosition() Obtain The vertical offset (%) of the watermark. The default value is 0.
+ * @method void setYPosition(integer $YPosition) Set The vertical offset (%) of the watermark. The default value is 0.
+ * @method integer getWidth() Obtain The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+ * @method void setWidth(integer $Width) Set The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+ * @method integer getHeight() Obtain The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+ * @method void setHeight(integer $Height) Set The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+ * @method integer getLocation() Obtain The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+ * @method void setLocation(integer $Location) Set The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
  */
 class PullPushWatermarkInfo extends AbstractModel
 {
     /**
-     * @var integer Watermark ID.
-     */
-    public $WatermarkId;
-
-    /**
-     * @var string Watermark image URL.
+     * @var string The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
      */
     public $PictureUrl;
 
     /**
-     * @var integer Display position: X-axis offset.
+     * @var integer The horizontal offset (%) of the watermark. The default value is 0.
      */
     public $XPosition;
 
     /**
-     * @var integer Display position: Y-axis offset.
+     * @var integer The vertical offset (%) of the watermark. The default value is 0.
      */
     public $YPosition;
 
     /**
-     * @var string Watermark name.
-     */
-    public $WatermarkName;
-
-    /**
-     * @var integer Current status. 0: not used. 1: in use.
-     */
-    public $Status;
-
-    /**
-     * @var string Creation time.
-     */
-    public $CreateTime;
-
-    /**
-     * @var integer Watermark width
+     * @var integer The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
      */
     public $Width;
 
     /**
-     * @var integer Watermark height
+     * @var integer The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
      */
     public $Height;
 
     /**
-     * @param integer $WatermarkId Watermark ID.
-     * @param string $PictureUrl Watermark image URL.
-     * @param integer $XPosition Display position: X-axis offset.
-     * @param integer $YPosition Display position: Y-axis offset.
-     * @param string $WatermarkName Watermark name.
-     * @param integer $Status Current status. 0: not used. 1: in use.
-     * @param string $CreateTime Creation time.
-     * @param integer $Width Watermark width
-     * @param integer $Height Watermark height
+     * @var integer The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
+     */
+    public $Location;
+
+    /**
+     * @param string $PictureUrl The watermark image URL.
+Characters not allowed:
+;(){}$>`#"'|
+     * @param integer $XPosition The horizontal offset (%) of the watermark. The default value is 0.
+     * @param integer $YPosition The vertical offset (%) of the watermark. The default value is 0.
+     * @param integer $Width The watermark width as a percentage of the video width. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original width of the watermark image is used.
+     * @param integer $Height The watermark height as a percentage of the video height. To avoid distorted images, we recommend you specify only the width or height so that the other side can be scaled proportionally. By default, the original height of the watermark image is used.
+     * @param integer $Location The origin. The default value is 0.
+0: Top left corner
+1: Top right corner
+2: Bottom right corner
+3: Bottom left corner
      */
     function __construct()
     {
@@ -111,10 +110,6 @@ class PullPushWatermarkInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
-            $this->WatermarkId = $param["WatermarkId"];
-        }
-
         if (array_key_exists("PictureUrl",$param) and $param["PictureUrl"] !== null) {
             $this->PictureUrl = $param["PictureUrl"];
         }
@@ -127,24 +122,16 @@ class PullPushWatermarkInfo extends AbstractModel
             $this->YPosition = $param["YPosition"];
         }
 
-        if (array_key_exists("WatermarkName",$param) and $param["WatermarkName"] !== null) {
-            $this->WatermarkName = $param["WatermarkName"];
-        }
-
-        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
-            $this->Status = $param["Status"];
-        }
-
-        if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
-            $this->CreateTime = $param["CreateTime"];
-        }
-
         if (array_key_exists("Width",$param) and $param["Width"] !== null) {
             $this->Width = $param["Width"];
         }
 
         if (array_key_exists("Height",$param) and $param["Height"] !== null) {
             $this->Height = $param["Height"];
+        }
+
+        if (array_key_exists("Location",$param) and $param["Location"] !== null) {
+            $this->Location = $param["Location"];
         }
     }
 }

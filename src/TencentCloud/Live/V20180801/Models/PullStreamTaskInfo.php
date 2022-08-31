@@ -158,6 +158,22 @@ The latest pull information.
 The information includes the source URL, offset, and report time.
  * @method string getComment() Obtain The remarks for the task.
  * @method void setComment(string $Comment) Set The remarks for the task.
+ * @method string getBackupSourceType() Obtain The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupSourceType(string $BackupSourceType) Set The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBackupSourceUrl() Obtain The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupSourceUrl(string $BackupSourceUrl) Set The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getWatermarkList() Obtain The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWatermarkList(array $WatermarkList) Set The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -323,6 +339,26 @@ The information includes the source URL, offset, and report time.
     public $Comment;
 
     /**
+     * @var string The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackupSourceType;
+
+    /**
+     * @var string The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackupSourceUrl;
+
+    /**
+     * @var array The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WatermarkList;
+
+    /**
      * @param string $TaskId The task ID.
      * @param string $SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
@@ -392,6 +428,14 @@ pause: Paused
 The latest pull information.
 The information includes the source URL, offset, and report time.
      * @param string $Comment The remarks for the task.
+     * @param string $BackupSourceType The backup source type. Valid values:
+PullLivePushLive: Live streaming
+PullVodPushLive: Video files
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BackupSourceUrl The URL of the backup source.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -497,6 +541,23 @@ The information includes the source URL, offset, and report time.
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("BackupSourceType",$param) and $param["BackupSourceType"] !== null) {
+            $this->BackupSourceType = $param["BackupSourceType"];
+        }
+
+        if (array_key_exists("BackupSourceUrl",$param) and $param["BackupSourceUrl"] !== null) {
+            $this->BackupSourceUrl = $param["BackupSourceUrl"];
+        }
+
+        if (array_key_exists("WatermarkList",$param) and $param["WatermarkList"] !== null) {
+            $this->WatermarkList = [];
+            foreach ($param["WatermarkList"] as $key => $value){
+                $obj = new PullPushWatermarkInfo();
+                $obj->deserialize($value);
+                array_push($this->WatermarkList, $obj);
+            }
         }
     }
 }
