@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCredit(float $Credit) Set Credit granted to reseller’s customer
  * @method float getRemainingCredit() Obtain The remaining credit of reseller’s customer
  * @method void setRemainingCredit(float $RemainingCredit) Set The remaining credit of reseller’s customer
+ * @method integer getIdentifyType() Obtain 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+ * @method void setIdentifyType(integer $IdentifyType) Set 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+ * @method string getRemark() Obtain Customer remarks
+ * @method void setRemark(string $Remark) Set Customer remarks
+ * @method integer getForce() Obtain Forced status
+ * @method void setForce(integer $Force) Set Forced status
  */
 class QueryCustomersCreditData extends AbstractModel
 {
@@ -94,6 +100,21 @@ class QueryCustomersCreditData extends AbstractModel
     public $RemainingCredit;
 
     /**
+     * @var integer 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+     */
+    public $IdentifyType;
+
+    /**
+     * @var string Customer remarks
+     */
+    public $Remark;
+
+    /**
+     * @var integer Forced status
+     */
+    public $Force;
+
+    /**
      * @param string $Name Name
      * @param string $Type Type
      * @param string $Mobile Phone
@@ -104,6 +125,9 @@ class QueryCustomersCreditData extends AbstractModel
      * @param integer $ClientUin The UIN of reseller’s customer
      * @param float $Credit Credit granted to reseller’s customer
      * @param float $RemainingCredit The remaining credit of reseller’s customer
+     * @param integer $IdentifyType 0: Identity not verified; 1: Individual identity verified; 2: Enterprise identity verified.
+     * @param string $Remark Customer remarks
+     * @param integer $Force Forced status
      */
     function __construct()
     {
@@ -156,6 +180,18 @@ class QueryCustomersCreditData extends AbstractModel
 
         if (array_key_exists("RemainingCredit",$param) and $param["RemainingCredit"] !== null) {
             $this->RemainingCredit = $param["RemainingCredit"];
+        }
+
+        if (array_key_exists("IdentifyType",$param) and $param["IdentifyType"] !== null) {
+            $this->IdentifyType = $param["IdentifyType"];
+        }
+
+        if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
+            $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("Force",$param) and $param["Force"] !== null) {
+            $this->Force = $param["Force"];
         }
     }
 }

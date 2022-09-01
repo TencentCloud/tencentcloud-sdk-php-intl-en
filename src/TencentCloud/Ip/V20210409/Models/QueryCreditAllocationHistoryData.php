@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOperator(string $Operator) Set Operator
  * @method float getCredit() Obtain Allocated credit value
  * @method void setCredit(float $Credit) Set Allocated credit value
+ * @method float getAllocatedCredit() Obtain The allocated total credit
+ * @method void setAllocatedCredit(float $AllocatedCredit) Set The allocated total credit
  */
 class QueryCreditAllocationHistoryData extends AbstractModel
 {
@@ -45,9 +47,15 @@ class QueryCreditAllocationHistoryData extends AbstractModel
     public $Credit;
 
     /**
+     * @var float The allocated total credit
+     */
+    public $AllocatedCredit;
+
+    /**
      * @param string $AllocatedTime Allocation time
      * @param string $Operator Operator
      * @param float $Credit Allocated credit value
+     * @param float $AllocatedCredit The allocated total credit
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class QueryCreditAllocationHistoryData extends AbstractModel
 
         if (array_key_exists("Credit",$param) and $param["Credit"] !== null) {
             $this->Credit = $param["Credit"];
+        }
+
+        if (array_key_exists("AllocatedCredit",$param) and $param["AllocatedCredit"] !== null) {
+            $this->AllocatedCredit = $param["AllocatedCredit"];
         }
     }
 }

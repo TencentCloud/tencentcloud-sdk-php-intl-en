@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AllocateCustomerCredit response structure.
  *
+ * @method float getTotalCredit() Obtain The updated total credit
+ * @method void setTotalCredit(float $TotalCredit) Set The updated total credit
+ * @method float getRemainingCredit() Obtain The updated available credit
+ * @method void setRemainingCredit(float $RemainingCredit) Set The updated available credit
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class AllocateCustomerCreditResponse extends AbstractModel
 {
     /**
+     * @var float The updated total credit
+     */
+    public $TotalCredit;
+
+    /**
+     * @var float The updated available credit
+     */
+    public $RemainingCredit;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param float $TotalCredit The updated total credit
+     * @param float $RemainingCredit The updated available credit
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,14 @@ class AllocateCustomerCreditResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCredit",$param) and $param["TotalCredit"] !== null) {
+            $this->TotalCredit = $param["TotalCredit"];
+        }
+
+        if (array_key_exists("RemainingCredit",$param) and $param["RemainingCredit"] !== null) {
+            $this->RemainingCredit = $param["RemainingCredit"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }
