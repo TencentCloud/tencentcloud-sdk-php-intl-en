@@ -58,6 +58,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHealthCheckRemoteIp(string $HealthCheckRemoteIp) Set Peer IP address for the health check
  * @method string getHealthCheckStatus() Obtain Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
  * @method void setHealthCheckStatus(string $HealthCheckStatus) Set Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+ * @method integer getDpdEnable() Obtain Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDpdEnable(integer $DpdEnable) Set Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDpdTimeout() Obtain DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDpdTimeout(string $DpdTimeout) Set DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDpdAction() Obtain The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDpdAction(string $DpdAction) Set The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTagSet() Obtain Array of tag key-value pairs
+ * @method void setTagSet(array $TagSet) Set Array of tag key-value pairs
+ * @method string getNegotiationType() Obtain Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNegotiationType(string $NegotiationType) Set Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class VpnConnection extends AbstractModel
 {
@@ -157,6 +175,35 @@ class VpnConnection extends AbstractModel
     public $HealthCheckStatus;
 
     /**
+     * @var integer Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DpdEnable;
+
+    /**
+     * @var string DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DpdTimeout;
+
+    /**
+     * @var string The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DpdAction;
+
+    /**
+     * @var array Array of tag key-value pairs
+     */
+    public $TagSet;
+
+    /**
+     * @var string Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NegotiationType;
+
+    /**
      * @param string $VpnConnectionId Tunnel instance ID.
      * @param string $VpnConnectionName Tunnel name.
      * @param string $VpcId VPC instance ID.
@@ -176,6 +223,15 @@ class VpnConnection extends AbstractModel
      * @param string $HealthCheckLocalIp Local IP address for the health check
      * @param string $HealthCheckRemoteIp Peer IP address for the health check
      * @param string $HealthCheckStatus Tunnel health check status. Valid values: AVAILABLE: healthy; UNAVAILABLE: unhealthy. This parameter will be returned only after health check is enabled.
+     * @param integer $DpdEnable Whether to enable DPD. Values: `0` (Disable) and `1` (Enable)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DpdTimeout DPD timeout period. 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DpdAction The action to take in case of DPD timeout. Values: `clear` (Disconnect) and `restart` (retry). This parameter only takes effect when `DpdEnable` is set to `1`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $TagSet Array of tag key-value pairs
+     * @param string $NegotiationType Negotiation type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -271,6 +327,31 @@ class VpnConnection extends AbstractModel
 
         if (array_key_exists("HealthCheckStatus",$param) and $param["HealthCheckStatus"] !== null) {
             $this->HealthCheckStatus = $param["HealthCheckStatus"];
+        }
+
+        if (array_key_exists("DpdEnable",$param) and $param["DpdEnable"] !== null) {
+            $this->DpdEnable = $param["DpdEnable"];
+        }
+
+        if (array_key_exists("DpdTimeout",$param) and $param["DpdTimeout"] !== null) {
+            $this->DpdTimeout = $param["DpdTimeout"];
+        }
+
+        if (array_key_exists("DpdAction",$param) and $param["DpdAction"] !== null) {
+            $this->DpdAction = $param["DpdAction"];
+        }
+
+        if (array_key_exists("TagSet",$param) and $param["TagSet"] !== null) {
+            $this->TagSet = [];
+            foreach ($param["TagSet"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->TagSet, $obj);
+            }
+        }
+
+        if (array_key_exists("NegotiationType",$param) and $param["NegotiationType"] !== null) {
+            $this->NegotiationType = $param["NegotiationType"];
         }
     }
 }

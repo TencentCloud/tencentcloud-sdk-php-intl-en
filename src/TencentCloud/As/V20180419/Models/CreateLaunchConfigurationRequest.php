@@ -90,8 +90,10 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
  * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
- * @method string getHpcClusterId() Obtain 
- * @method void setHpcClusterId(string $HpcClusterId) Set 
+ * @method string getHpcClusterId() Obtain HPC ID<br>
+Note: This field is default to empty
+ * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
+Note: This field is default to empty
  */
 class CreateLaunchConfigurationRequest extends AbstractModel
 {
@@ -219,7 +221,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
     public $DiskTypePolicy;
 
     /**
-     * @var string 
+     * @var string HPC ID<br>
+Note: This field is default to empty
      */
     public $HpcClusterId;
 
@@ -259,7 +262,8 @@ If this field is configured in a launch configuration, the `InstanceName` of a C
      * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
-     * @param string $HpcClusterId 
+     * @param string $HpcClusterId HPC ID<br>
+Note: This field is default to empty
      */
     function __construct()
     {
