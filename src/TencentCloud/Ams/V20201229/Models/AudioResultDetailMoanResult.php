@@ -36,6 +36,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSubLabel(string $SubLabel) Set This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getSuggestion() Obtain This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+ * @method void setSuggestion(string $Suggestion) Set This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
  */
 class AudioResultDetailMoanResult extends AbstractModel
 {
@@ -72,6 +74,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SubLabel;
 
     /**
+     * @var string This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
+     */
+    public $Suggestion;
+
+    /**
      * @param string $Label This field is used to return the type of the content to be detected. It is fixed at **Moan** here to call the moan detection feature.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Score This field is used to return the confidence of moan detection. Value range: 0 (**the lowest confidence**)–100 (**the highest confidence**), where a higher value indicates that the audio is more likely to fall into the category of moan.
@@ -80,6 +87,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $SubLabelCode *This field is in beta test. Stay tuned*
      * @param string $SubLabel This field is used to return a subtag under the current tag (Lable).
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Suggestion This field returns the suggested action according to the check result. <br>Values: `Block`, `Review`, `Pass`.
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("Suggestion",$param) and $param["Suggestion"] !== null) {
+            $this->Suggestion = $param["Suggestion"];
         }
     }
 }
