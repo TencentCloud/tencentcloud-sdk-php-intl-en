@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDateOfExpiration(string $DateOfExpiration) Set Expiration date
  * @method string getIssuingCountry() Obtain Issuing country
  * @method void setIssuingCountry(string $IssuingCountry) Set Issuing country
- * @method string getNationality() Obtain Nationality
- * @method void setNationality(string $Nationality) Set Nationality
+ * @method string getNationality() Obtain Country/region code
+ * @method void setNationality(string $Nationality) Set Country/region code
  * @method array getWarn() Obtain Alarm code
 -9103 Alarm for spoofed card
 -9102 Alarm for photocopied card
@@ -102,7 +102,7 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $IssuingCountry;
 
     /**
-     * @var string Nationality
+     * @var string Country/region code
      */
     public $Nationality;
 
@@ -154,7 +154,7 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param string $Sex Gender (F: female, M: male)
      * @param string $DateOfExpiration Expiration date
      * @param string $IssuingCountry Issuing country
-     * @param string $Nationality Nationality
+     * @param string $Nationality Country/region code
      * @param array $Warn Alarm code
 -9103 Alarm for spoofed card
 -9102 Alarm for photocopied card

@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Recipient information.
  *
- * @method integer getStartTime() Obtain Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
- * @method void setStartTime(integer $StartTime) Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+ * @method integer getStartTime() Obtain Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+ * @method void setStartTime(integer $StartTime) Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
  * @method integer getEndTime() Obtain End time of the alarm period. The meaning is the same as that of StartTime.
  * @method void setEndTime(integer $EndTime) Set End time of the alarm period. The meaning is the same as that of StartTime.
  * @method array getNotifyWay() Obtain Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setId(integer $Id) Set ReceiverId
  * @method array getSendFor() Obtain Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
  * @method void setSendFor(array $SendFor) Set Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
- * @method array getUidList() Obtain Uid of the alarm call recipient.
- * @method void setUidList(array $UidList) Set Uid of the alarm call recipient.
+ * @method array getUidList() Obtain UID of the phone call alarm.
+ * @method void setUidList(array $UidList) Set UID of the phone call alarm.
  * @method integer getRoundNumber() Obtain Number of alarm call rounds.
  * @method void setRoundNumber(integer $RoundNumber) Set Number of alarm call rounds.
  * @method integer getPersonInterval() Obtain Alarm call intervals for individuals in seconds.
@@ -44,17 +44,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecoverNotify(array $RecoverNotify) Set Notification method when an alarm is recovered. Valid value: SMS.
  * @method integer getNeedSendNotice() Obtain Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
  * @method void setNeedSendNotice(integer $NeedSendNotice) Set Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
- * @method array getReceiverGroupList() Obtain Recipient group list. The list of recipient group IDs that is queried by a platform API.
- * @method void setReceiverGroupList(array $ReceiverGroupList) Set Recipient group list. The list of recipient group IDs that is queried by a platform API.
- * @method array getReceiverUserList() Obtain Recipient list. The list of recipient IDs that is queried by a platform API.
- * @method void setReceiverUserList(array $ReceiverUserList) Set Recipient list. The list of recipient IDs that is queried by a platform API.
+ * @method array getReceiverGroupList() Obtain Recipient group list. The list of recipient group IDs that is queried by API.
+ * @method void setReceiverGroupList(array $ReceiverGroupList) Set Recipient group list. The list of recipient group IDs that is queried by API.
+ * @method array getReceiverUserList() Obtain Recipient list. The list of recipient IDs that is queried by API.
+ * @method void setReceiverUserList(array $ReceiverUserList) Set Recipient list. The list of recipient IDs that is queried by API.
  * @method string getReceiveLanguage() Obtain Language of received alarms. Enumerated values: zh-CN and en-US.
  * @method void setReceiveLanguage(string $ReceiveLanguage) Set Language of received alarms. Enumerated values: zh-CN and en-US.
  */
 class ReceiverInfo extends AbstractModel
 {
     /**
-     * @var integer Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * @var integer Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      */
     public $StartTime;
 
@@ -84,7 +84,7 @@ class ReceiverInfo extends AbstractModel
     public $SendFor;
 
     /**
-     * @var array Uid of the alarm call recipient.
+     * @var array UID of the phone call alarm.
      */
     public $UidList;
 
@@ -114,12 +114,12 @@ class ReceiverInfo extends AbstractModel
     public $NeedSendNotice;
 
     /**
-     * @var array Recipient group list. The list of recipient group IDs that is queried by a platform API.
+     * @var array Recipient group list. The list of recipient group IDs that is queried by API.
      */
     public $ReceiverGroupList;
 
     /**
-     * @var array Recipient list. The list of recipient IDs that is queried by a platform API.
+     * @var array Recipient list. The list of recipient IDs that is queried by API.
      */
     public $ReceiverUserList;
 
@@ -129,20 +129,20 @@ class ReceiverInfo extends AbstractModel
     public $ReceiveLanguage;
 
     /**
-     * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      * @param integer $EndTime End time of the alarm period. The meaning is the same as that of StartTime.
      * @param array $NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".
      * @param string $ReceiverType Recipient type. Valid values: group and user.
      * @param integer $Id ReceiverId
      * @param array $SendFor Alarm call notification time. Valid values: OCCUR (indicating that a notice is sent when the alarm is triggered) and RECOVER (indicating that a notice is sent when the alarm is recovered).
-     * @param array $UidList Uid of the alarm call recipient.
+     * @param array $UidList UID of the phone call alarm.
      * @param integer $RoundNumber Number of alarm call rounds.
      * @param integer $PersonInterval Alarm call intervals for individuals in seconds.
      * @param integer $RoundInterval Intervals of alarm call rounds in seconds.
      * @param array $RecoverNotify Notification method when an alarm is recovered. Valid value: SMS.
      * @param integer $NeedSendNotice Whether to send an alarm call delivery notice. The value 0 indicates that no notice needs to be sent. The value 1 indicates that a notice needs to be sent.
-     * @param array $ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by a platform API.
-     * @param array $ReceiverUserList Recipient list. The list of recipient IDs that is queried by a platform API.
+     * @param array $ReceiverGroupList Recipient group list. The list of recipient group IDs that is queried by API.
+     * @param array $ReceiverUserList Recipient list. The list of recipient IDs that is queried by API.
      * @param string $ReceiveLanguage Language of received alarms. Enumerated values: zh-CN and en-US.
      */
     function __construct()

@@ -40,10 +40,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVerificationDetailList(array $VerificationDetailList) Set The details list of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getVideoUrl() Obtain 
- * @method void setVideoUrl(string $VideoUrl) Set 
- * @method string getVideoMd5() Obtain 
- * @method void setVideoMd5(string $VideoMd5) Set 
+ * @method string getVideoUrl() Obtain The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVideoUrl(string $VideoUrl) Set The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getVideoMd5() Obtain The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVideoMd5(string $VideoMd5) Set The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -80,12 +84,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VerificationDetailList;
 
     /**
-     * @var string 
+     * @var string The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoUrl;
 
     /**
-     * @var string 
+     * @var string The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VideoMd5;
 
@@ -105,8 +111,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $VerificationDetailList The details list of this verification process.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $VideoUrl 
-     * @param string $VideoMd5 
+     * @param string $VideoUrl The temporary URL of the video collected from the video stream. It is valid for 10 minutes. Download the video if needed.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $VideoMd5 The MD5 hash value of the video collected from the video stream. It can be used to check whether the video content is consistent with the file content.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -24,20 +24,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Starting offset of the page. Value: (number of pages – 1) * items per page.
  * @method integer getLimit() Obtain Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
  * @method void setLimit(integer $Limit) Set Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
- * @method string getFilterIp() Obtain IP filter
- * @method void setFilterIp(string $FilterIp) Set IP filter
+ * @method string getFilterIp() Obtain Filters by IP.
+ * @method void setFilterIp(string $FilterIp) Set Filters by IP.
  * @method string getFilterInstanceId() Obtain Anti-DDoS instance ID filter. For example, `bgp-00000001`.
  * @method void setFilterInstanceId(string $FilterInstanceId) Set Anti-DDoS instance ID filter. For example, `bgp-00000001`.
- * @method string getFilterRegion() Obtain Region filter. For example, `ap-guangzhou`.
- * @method void setFilterRegion(string $FilterRegion) Set Region filter. For example, `ap-guangzhou`.
- * @method string getFilterName() Obtain Name filter
- * @method void setFilterName(string $FilterName) Set Name filter
+ * @method string getFilterRegion() Obtain Filters by region. For example, `ap-guangzhou`.
+ * @method void setFilterRegion(string $FilterRegion) Set Filters by region. For example, `ap-guangzhou`.
+ * @method string getFilterName() Obtain Filters by name.
+ * @method void setFilterName(string $FilterName) Set Filters by name.
  * @method integer getFilterLine() Obtain Line filter. Valid values: 1: BGP; 2: Non-BGP.
  * @method void setFilterLine(integer $FilterLine) Set Line filter. Valid values: 1: BGP; 2: Non-BGP.
  * @method string getFilterStatus() Obtain Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
  * @method void setFilterStatus(string $FilterStatus) Set Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
- * @method string getFilterBoundStatus() Obtain Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
- * @method void setFilterBoundStatus(string $FilterBoundStatus) Set Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+ * @method string getFilterBoundStatus() Obtain Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+ * @method void setFilterBoundStatus(string $FilterBoundStatus) Set Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+ * @method array getFilterInstanceIdList() Obtain Array of instance IDs
+ * @method void setFilterInstanceIdList(array $FilterInstanceIdList) Set Array of instance IDs
+ * @method integer getFilterEnterpriseFlag() Obtain Filters by Enterprise edition
+ * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) Set Filters by Enterprise edition
+ * @method TagFilter getFilterTag() Obtain Filters by tag
+ * @method void setFilterTag(TagFilter $FilterTag) Set Filters by tag
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -52,7 +58,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string IP filter
+     * @var string Filters by IP.
      */
     public $FilterIp;
 
@@ -62,12 +68,12 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterInstanceId;
 
     /**
-     * @var string Region filter. For example, `ap-guangzhou`.
+     * @var string Filters by region. For example, `ap-guangzhou`.
      */
     public $FilterRegion;
 
     /**
-     * @var string Name filter
+     * @var string Filters by name.
      */
     public $FilterName;
 
@@ -82,20 +88,38 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterStatus;
 
     /**
-     * @var string Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     * @var string Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
      */
     public $FilterBoundStatus;
 
     /**
+     * @var array Array of instance IDs
+     */
+    public $FilterInstanceIdList;
+
+    /**
+     * @var integer Filters by Enterprise edition
+     */
+    public $FilterEnterpriseFlag;
+
+    /**
+     * @var TagFilter Filters by tag
+     */
+    public $FilterTag;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
-     * @param string $FilterIp IP filter
+     * @param string $FilterIp Filters by IP.
      * @param string $FilterInstanceId Anti-DDoS instance ID filter. For example, `bgp-00000001`.
-     * @param string $FilterRegion Region filter. For example, `ap-guangzhou`.
-     * @param string $FilterName Name filter
+     * @param string $FilterRegion Filters by region. For example, `ap-guangzhou`.
+     * @param string $FilterName Filters by name.
      * @param integer $FilterLine Line filter. Valid values: 1: BGP; 2: Non-BGP.
      * @param string $FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
-     * @param string $FilterBoundStatus Filters by binding status. `bounding`: the instance is bound; `failed`: the binding failed.
+     * @param string $FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
+     * @param array $FilterInstanceIdList Array of instance IDs
+     * @param integer $FilterEnterpriseFlag Filters by Enterprise edition
+     * @param TagFilter $FilterTag Filters by tag
      */
     function __construct()
     {
@@ -144,6 +168,19 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterBoundStatus",$param) and $param["FilterBoundStatus"] !== null) {
             $this->FilterBoundStatus = $param["FilterBoundStatus"];
+        }
+
+        if (array_key_exists("FilterInstanceIdList",$param) and $param["FilterInstanceIdList"] !== null) {
+            $this->FilterInstanceIdList = $param["FilterInstanceIdList"];
+        }
+
+        if (array_key_exists("FilterEnterpriseFlag",$param) and $param["FilterEnterpriseFlag"] !== null) {
+            $this->FilterEnterpriseFlag = $param["FilterEnterpriseFlag"];
+        }
+
+        if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
+            $this->FilterTag = new TagFilter();
+            $this->FilterTag->deserialize($param["FilterTag"]);
         }
     }
 }

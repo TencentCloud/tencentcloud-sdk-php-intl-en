@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaConfig request structure.
  *
- * @method string getInstanceId() Obtain None
- * @method void setInstanceId(string $InstanceId) Set None
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
 class DescribeGrafanaConfigRequest extends AbstractModel
 {
     /**
-     * @var string None
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId None
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {

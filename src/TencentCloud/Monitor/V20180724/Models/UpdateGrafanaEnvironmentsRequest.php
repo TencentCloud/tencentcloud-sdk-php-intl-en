@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaEnvironments request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getEnvs() Obtain Environment variable string
  * @method void setEnvs(string $Envs) Set Environment variable string
  */
 class UpdateGrafanaEnvironmentsRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateGrafanaEnvironmentsRequest extends AbstractModel
     public $Envs;
 
     /**
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      * @param string $Envs Environment variable string
      */
     function __construct()

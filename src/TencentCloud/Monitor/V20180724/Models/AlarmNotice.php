@@ -60,6 +60,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setPolicyIds(array $PolicyIds) Set List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAMPConsumerId() Obtain Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAMPConsumerId(string $AMPConsumerId) Set Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getCLSNotices() Obtain Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCLSNotices(array $CLSNotices) Set Channel to push alarm notifications to CLS.
@@ -128,6 +132,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $PolicyIds;
 
     /**
+     * @var string Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AMPConsumerId;
+
+    /**
      * @var array Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
@@ -154,6 +164,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $PolicyIds List of IDs of the alarm policies bound to alarm notification template
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AMPConsumerId Backend AMP consumer ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CLSNotices Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
@@ -218,6 +230,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
             $this->PolicyIds = $param["PolicyIds"];
+        }
+
+        if (array_key_exists("AMPConsumerId",$param) and $param["AMPConsumerId"] !== null) {
+            $this->AMPConsumerId = $param["AMPConsumerId"];
         }
 
         if (array_key_exists("CLSNotices",$param) and $param["CLSNotices"] !== null) {

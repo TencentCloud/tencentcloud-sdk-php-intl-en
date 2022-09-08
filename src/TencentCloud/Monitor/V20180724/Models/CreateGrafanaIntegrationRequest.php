@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaIntegration request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getKind() Obtain Type
  * @method void setKind(string $Kind) Set Type
  * @method string getContent() Obtain Configuration
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CreateGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -45,7 +45,7 @@ class CreateGrafanaIntegrationRequest extends AbstractModel
     public $Content;
 
     /**
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      * @param string $Kind Type
      * @param string $Content Configuration
      */

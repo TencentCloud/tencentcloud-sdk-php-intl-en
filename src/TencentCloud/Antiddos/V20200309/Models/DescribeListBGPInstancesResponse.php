@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeListBGPInstances response structure.
  *
- * @method integer getTotal() Obtain Total number of lists
- * @method void setTotal(integer $Total) Set Total number of lists
+ * @method integer getTotal() Obtain Total number of Anti-DDoS Pro instances
+ * @method void setTotal(integer $Total) Set Total number of Anti-DDoS Pro instances
  * @method array getInstanceList() Obtain List of Anti-DDoS Pro instances
  * @method void setInstanceList(array $InstanceList) Set List of Anti-DDoS Pro instances
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeListBGPInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of lists
+     * @var integer Total number of Anti-DDoS Pro instances
      */
     public $Total;
 
@@ -45,7 +45,7 @@ class DescribeListBGPInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Total Total number of lists
+     * @param integer $Total Total number of Anti-DDoS Pro instances
      * @param array $InstanceList List of Anti-DDoS Pro instances
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

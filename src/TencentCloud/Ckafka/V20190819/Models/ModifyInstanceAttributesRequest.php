@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublicNetwork(integer $PublicNetwork) Set Timestamp
  * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy configuration.
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy configuration.
+ * @method integer getMaxMessageByte() Obtain The size of a single message in bytes at the instance level.
+ * @method void setMaxMessageByte(integer $MaxMessageByte) Set The size of a single message in bytes at the instance level.
  */
 class ModifyInstanceAttributesRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $DynamicDiskConfig;
 
     /**
+     * @var integer The size of a single message in bytes at the instance level.
+     */
+    public $MaxMessageByte;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $MsgRetentionTime Maximum retention period in minutes for instance log, which can be up to 30 days. 0 indicates not to enable the log retention period policy
      * @param string $InstanceName Instance name string of up to 64 characters, which must begin with a letter and can contain letters, digits, and dashes (`-`)
@@ -88,6 +95,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param integer $RebalanceTime Modification of the rebalancing time after upgrade
      * @param integer $PublicNetwork Timestamp
      * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy configuration.
+     * @param integer $MaxMessageByte The size of a single message in bytes at the instance level.
      */
     function __construct()
     {
@@ -135,6 +143,10 @@ class ModifyInstanceAttributesRequest extends AbstractModel
         if (array_key_exists("DynamicDiskConfig",$param) and $param["DynamicDiskConfig"] !== null) {
             $this->DynamicDiskConfig = new DynamicDiskConfig();
             $this->DynamicDiskConfig->deserialize($param["DynamicDiskConfig"]);
+        }
+
+        if (array_key_exists("MaxMessageByte",$param) and $param["MaxMessageByte"] !== null) {
+            $this->MaxMessageByte = $param["MaxMessageByte"];
         }
     }
 }

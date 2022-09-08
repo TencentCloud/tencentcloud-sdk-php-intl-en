@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDNSConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method array getNameServers() Obtain Array of DNS servers
  * @method void setNameServers(array $NameServers) Set Array of DNS servers
  */
 class UpdateDNSConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateDNSConfigRequest extends AbstractModel
     public $NameServers;
 
     /**
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      * @param array $NameServers Array of DNS servers
      */
     function __construct()

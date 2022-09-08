@@ -24,22 +24,40 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProtectBandwidth(integer $ProtectBandwidth) Set Base protection bandwidth (in Gbps)
  * @method integer getProtectCountLimit() Obtain Number of protection chances
  * @method void setProtectCountLimit(integer $ProtectCountLimit) Set Number of protection chances
- * @method integer getProtectIPNumberLimit() Obtain Number of protection IPs
- * @method void setProtectIPNumberLimit(integer $ProtectIPNumberLimit) Set Number of protection IPs
- * @method integer getAutoRenewFlag() Obtain Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+ * @method integer getProtectIPNumberLimit() Obtain Number of protected IPs
+ * @method void setProtectIPNumberLimit(integer $ProtectIPNumberLimit) Set Number of protected IPs
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
  * @method integer getUnionPackFlag() Obtain Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUnionPackFlag(integer $UnionPackFlag) Set Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method integer getServiceBandWidth() Obtain 
- * @method void setServiceBandWidth(integer $ServiceBandWidth) Set 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getServiceBandWidth() Obtain Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setServiceBandWidth(integer $ServiceBandWidth) Set Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getBattleEditionFlag() Obtain Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBattleEditionFlag(integer $BattleEditionFlag) Set Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getChannelEditionFlag() Obtain Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setChannelEditionFlag(integer $ChannelEditionFlag) Set Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getEnterpriseFlag() Obtain Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnterpriseFlag(integer $EnterpriseFlag) Set Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getElasticLimit() Obtain Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setElasticLimit(integer $ElasticLimit) Set Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BGPInstanceSpecification extends AbstractModel
 {
@@ -54,40 +72,74 @@ class BGPInstanceSpecification extends AbstractModel
     public $ProtectCountLimit;
 
     /**
-     * @var integer Number of protection IPs
+     * @var integer Number of protected IPs
      */
     public $ProtectIPNumberLimit;
 
     /**
-     * @var integer Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * @var integer Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
      */
     public $AutoRenewFlag;
 
     /**
      * @var integer Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UnionPackFlag;
 
     /**
-     * @var integer 
+     * @var integer Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServiceBandWidth;
 
     /**
+     * @var integer Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BattleEditionFlag;
+
+    /**
+     * @var integer Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ChannelEditionFlag;
+
+    /**
+     * @var integer Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnterpriseFlag;
+
+    /**
+     * @var integer Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ElasticLimit;
+
+    /**
      * @param integer $ProtectBandwidth Base protection bandwidth (in Gbps)
      * @param integer $ProtectCountLimit Number of protection chances
-     * @param integer $ProtectIPNumberLimit Number of protection IPs
-     * @param integer $AutoRenewFlag Auto-renewal status. Valid values:
-`0`: disabled
-`1`: enabled
+     * @param integer $ProtectIPNumberLimit Number of protected IPs
+     * @param integer $AutoRenewFlag Auto-renewal status. Values:
+`0`: Disabled
+`1`: Enabled
 ]
      * @param integer $UnionPackFlag Protection type of Anti-DDoS Pro. Valid values: `0` (general protection) and `1` (Lighthouse-based protection).
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param integer $ServiceBandWidth 
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ServiceBandWidth Application bandwidth
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $BattleEditionFlag Whether it’s an Anti-DDoS Pro Premium edition. Values: `0` (General edition); `1` (Premium edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ChannelEditionFlag Whether it’s an Anti-DDoS Pro Standard edition. Values: `0` (General edition); `1` (Standard edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $EnterpriseFlag Whether it’s an Anti-DDoS Pro Enterprise edition. Values: `0` (General edition); `1` (Enterprise edition).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ElasticLimit Elastic bandwidth threshold of the Anti-DDoS Pro Enterprise edition.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -124,6 +176,22 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ServiceBandWidth",$param) and $param["ServiceBandWidth"] !== null) {
             $this->ServiceBandWidth = $param["ServiceBandWidth"];
+        }
+
+        if (array_key_exists("BattleEditionFlag",$param) and $param["BattleEditionFlag"] !== null) {
+            $this->BattleEditionFlag = $param["BattleEditionFlag"];
+        }
+
+        if (array_key_exists("ChannelEditionFlag",$param) and $param["ChannelEditionFlag"] !== null) {
+            $this->ChannelEditionFlag = $param["ChannelEditionFlag"];
+        }
+
+        if (array_key_exists("EnterpriseFlag",$param) and $param["EnterpriseFlag"] !== null) {
+            $this->EnterpriseFlag = $param["EnterpriseFlag"];
+        }
+
+        if (array_key_exists("ElasticLimit",$param) and $param["ElasticLimit"] !== null) {
+            $this->ElasticLimit = $param["ElasticLimit"];
         }
     }
 }

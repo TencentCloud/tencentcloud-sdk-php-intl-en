@@ -30,8 +30,9 @@ use TencentCloud\Common\AbstractModel;
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -46,8 +47,9 @@ use TencentCloud\Common\AbstractModel;
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -118,6 +120,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() Obtain The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EventContent extends AbstractModel
 {
@@ -135,8 +141,9 @@ class EventContent extends AbstractModel
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -243,6 +250,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RestoreMediaCompleteEvent;
 
     /**
+     * @var ReviewAudioVideoTask The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReviewAudioVideoCompleteEvent;
+
+    /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
      * @param string $EventType <b>Supported event types:</b>
 <li>NewFileUpload: Video uploaded.</li>
@@ -252,8 +265,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 <li>EditMediaComplete: Finished video editing.</li>
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
-<li>ComposeMediaComplete: Finished composition.</li>
+<li>ComposeMediaComplete: Finished producing the media file.</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
+<li>ReviewAudioVideoComplete: Finished moderation</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -292,6 +306,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RestoreMediaTask $RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -392,6 +408,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("RestoreMediaCompleteEvent",$param) and $param["RestoreMediaCompleteEvent"] !== null) {
             $this->RestoreMediaCompleteEvent = new RestoreMediaTask();
             $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
+        }
+
+        if (array_key_exists("ReviewAudioVideoCompleteEvent",$param) and $param["ReviewAudioVideoCompleteEvent"] !== null) {
+            $this->ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask();
+            $this->ReviewAudioVideoCompleteEvent->deserialize($param["ReviewAudioVideoCompleteEvent"]);
         }
     }
 }

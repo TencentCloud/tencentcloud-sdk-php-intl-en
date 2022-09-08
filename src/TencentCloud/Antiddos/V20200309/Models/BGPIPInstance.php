@@ -106,8 +106,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setTagInfoList(array $TagInfoList) Set Tag that the Anti-DDoS Advanced instance is associated with
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method AnycastOutPackRelation getAnycastOutPackRelation() Obtain 
- * @method void setAnycastOutPackRelation(AnycastOutPackRelation $AnycastOutPackRelation) Set 
+ * @method AnycastOutPackRelation getAnycastOutPackRelation() Obtain All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAnycastOutPackRelation(AnycastOutPackRelation $AnycastOutPackRelation) Set All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getInstanceVersion() Obtain 
  * @method void setInstanceVersion(integer $InstanceVersion) Set 
  */
@@ -241,7 +245,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $TagInfoList;
 
     /**
-     * @var AnycastOutPackRelation 
+     * @var AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AnycastOutPackRelation;
 
@@ -294,7 +300,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $TagInfoList Tag that the Anti-DDoS Advanced instance is associated with
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param AnycastOutPackRelation $AnycastOutPackRelation 
+     * @param AnycastOutPackRelation $AnycastOutPackRelation All-out package details of the instance
+When an all-out package is not used by the instance, this field is `null`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $InstanceVersion 
      */
     function __construct()

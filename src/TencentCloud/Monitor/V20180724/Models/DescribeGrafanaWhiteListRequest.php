@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaWhiteList request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  */
 class DescribeGrafanaWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      */
     function __construct()
     {

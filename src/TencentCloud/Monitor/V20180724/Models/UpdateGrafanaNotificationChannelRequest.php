@@ -22,14 +22,16 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getChannelId() Obtain Channel ID
  * @method void setChannelId(string $ChannelId) Set Channel ID
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getChannelName() Obtain Channel name
  * @method void setChannelName(string $ChannelName) Set Channel name
  * @method array getReceivers() Obtain Array of notification channel IDs
  * @method void setReceivers(array $Receivers) Set Array of notification channel IDs
  * @method array getExtraOrgIds() Obtain Array of extra organization IDs
  * @method void setExtraOrgIds(array $ExtraOrgIds) Set Array of extra organization IDs
+ * @method array getOrganizationIds() Obtain 
+ * @method void setOrganizationIds(array $OrganizationIds) Set 
  */
 class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 {
@@ -39,7 +41,7 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $ChannelId;
 
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -59,11 +61,17 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $ExtraOrgIds;
 
     /**
+     * @var array 
+     */
+    public $OrganizationIds;
+
+    /**
      * @param string $ChannelId Channel ID
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      * @param string $ChannelName Channel name
      * @param array $Receivers Array of notification channel IDs
      * @param array $ExtraOrgIds Array of extra organization IDs
+     * @param array $OrganizationIds 
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 
         if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {
             $this->ExtraOrgIds = $param["ExtraOrgIds"];
+        }
+
+        if (array_key_exists("OrganizationIds",$param) and $param["OrganizationIds"] !== null) {
+            $this->OrganizationIds = $param["OrganizationIds"];
         }
     }
 }

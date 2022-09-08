@@ -24,20 +24,22 @@ use TencentCloud\Common\AbstractModel;
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -104,6 +106,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ReviewAudioVideoTask getReviewAudioVideoTask() Obtain The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -114,11 +120,12 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
      */
     public $TaskType;
 
@@ -224,6 +231,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RemoveWatermarkTask;
 
     /**
+     * @var ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReviewAudioVideoTask;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -233,11 +246,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file producing</li>
+<li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
+<li> ReviewAudioVideo: Moderation</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -270,6 +284,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param SnapshotByTimeOffsetTask2017 $SnapshotByTimeOffsetTask Time point screencapturing task information. This field has a value only when `TaskType` is `SnapshotByTimeOffset`.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RemoveWatermarkTask $RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReviewAudioVideoTask $ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -369,6 +385,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("RemoveWatermarkTask",$param) and $param["RemoveWatermarkTask"] !== null) {
             $this->RemoveWatermarkTask = new RemoveWatermarkTask();
             $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
+        }
+
+        if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
+            $this->ReviewAudioVideoTask = new ReviewAudioVideoTask();
+            $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

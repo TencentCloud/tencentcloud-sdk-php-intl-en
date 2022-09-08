@@ -60,8 +60,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) Set Filters by the instance ID
  * @method TagFilter getFilterTag() Obtain Searches by tag
  * @method void setFilterTag(TagFilter $FilterTag) Set Searches by tag
- * @method array getFilterPackType() Obtain 
- * @method void setFilterPackType(array $FilterPackType) Set 
+ * @method array getFilterPackType() Obtain Filters by package type.
+ * @method void setFilterPackType(array $FilterPackType) Set Filters by package type.
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -142,7 +142,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterTag;
 
     /**
-     * @var array 
+     * @var array Filters by package type.
      */
     public $FilterPackType;
 
@@ -167,7 +167,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param string $FilterCname Filters by the instance CNAME
      * @param array $FilterInstanceIdList Filters by the instance ID
      * @param TagFilter $FilterTag Searches by tag
-     * @param array $FilterPackType 
+     * @param array $FilterPackType Filters by package type.
      */
     function __construct()
     {

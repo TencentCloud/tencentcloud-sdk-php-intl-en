@@ -18,94 +18,98 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Anti-DDoS Pro instance details
+ * Details of the Anti-DDoS Pro instance
  *
- * @method InstanceRelation getInstanceDetail() Obtain Anti-DDoS instance details
- * @method void setInstanceDetail(InstanceRelation $InstanceDetail) Set Anti-DDoS instance details
- * @method BGPInstanceSpecification getSpecificationLimit() Obtain Anti-DDoS instance specifications
- * @method void setSpecificationLimit(BGPInstanceSpecification $SpecificationLimit) Set Anti-DDoS instance specifications
- * @method BGPInstanceUsages getUsage() Obtain Anti-DDoS instance usage statistics
- * @method void setUsage(BGPInstanceUsages $Usage) Set Anti-DDoS instance usage statistics
- * @method RegionInfo getRegion() Obtain Region of the Anti-DDoS instance
- * @method void setRegion(RegionInfo $Region) Set Region of the Anti-DDoS instance
- * @method string getStatus() Obtain Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
- * @method void setStatus(string $Status) Set Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
- * @method string getCreatedTime() Obtain Purchase Time
- * @method void setCreatedTime(string $CreatedTime) Set Purchase Time
+ * @method InstanceRelation getInstanceDetail() Obtain Details of the Anti-DDoS Pro instance
+ * @method void setInstanceDetail(InstanceRelation $InstanceDetail) Set Details of the Anti-DDoS Pro instance
+ * @method BGPInstanceSpecification getSpecificationLimit() Obtain Specifications of the Anti-DDoS Pro instance
+ * @method void setSpecificationLimit(BGPInstanceSpecification $SpecificationLimit) Set Specifications of the Anti-DDoS Pro instance
+ * @method BGPInstanceUsages getUsage() Obtain Usage statistics of the Anti-DDoS Pro instance
+ * @method void setUsage(BGPInstanceUsages $Usage) Set Usage statistics of the Anti-DDoS Pro instance
+ * @method RegionInfo getRegion() Obtain Region of the Anti-DDoS Pro instance
+ * @method void setRegion(RegionInfo $Region) Set Region of the Anti-DDoS Pro instance
+ * @method string getStatus() Obtain Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+ * @method void setStatus(string $Status) Set Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+ * @method string getCreatedTime() Obtain Purchase time
+ * @method void setCreatedTime(string $CreatedTime) Set Purchase time
  * @method string getExpiredTime() Obtain Expiration time
  * @method void setExpiredTime(string $ExpiredTime) Set Expiration time
- * @method string getName() Obtain Name of the Anti-DDoS instance
- * @method void setName(string $Name) Set Name of the Anti-DDoS instance
- * @method PackInfo getPackInfo() Obtain Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+ * @method string getName() Obtain Name of the Anti-DDoS Pro instance
+ * @method void setName(string $Name) Set Name of the Anti-DDoS Pro instance
+ * @method PackInfo getPackInfo() Obtain Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setPackInfo(PackInfo $PackInfo) Set Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+ * @method void setPackInfo(PackInfo $PackInfo) Set Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getEipProductInfos() Obtain Details of the cloud product used by the EIP bound to the Anti-DDoS Pro instance
  * @method void setEipProductInfos(array $EipProductInfos) Set Details of the cloud product used by the EIP bound to the Anti-DDoS Pro instance
  * @method string getBoundStatus() Obtain Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
  * @method void setBoundStatus(string $BoundStatus) Set Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
  * @method string getDDoSLevel() Obtain Layer-4 protection level
  * @method void setDDoSLevel(string $DDoSLevel) Set Layer-4 protection level
- * @method integer getCCEnable() Obtain CC protection switch
- * @method void setCCEnable(integer $CCEnable) Set CC protection switch
+ * @method integer getCCEnable() Obtain Status of CC protection
+ * @method void setCCEnable(integer $CCEnable) Set Status of CC protection
+ * @method array getTagInfoList() Obtain Tags associated with the resource
+ * @method void setTagInfoList(array $TagInfoList) Set Tags associated with the resource
+ * @method integer getIpCountNewFlag() Obtain New edition of Anti-DDoS Pro
+ * @method void setIpCountNewFlag(integer $IpCountNewFlag) Set New edition of Anti-DDoS Pro
  */
 class BGPInstance extends AbstractModel
 {
     /**
-     * @var InstanceRelation Anti-DDoS instance details
+     * @var InstanceRelation Details of the Anti-DDoS Pro instance
      */
     public $InstanceDetail;
 
     /**
-     * @var BGPInstanceSpecification Anti-DDoS instance specifications
+     * @var BGPInstanceSpecification Specifications of the Anti-DDoS Pro instance
      */
     public $SpecificationLimit;
 
     /**
-     * @var BGPInstanceUsages Anti-DDoS instance usage statistics
+     * @var BGPInstanceUsages Usage statistics of the Anti-DDoS Pro instance
      */
     public $Usage;
 
     /**
-     * @var RegionInfo Region of the Anti-DDoS instance
+     * @var RegionInfo Region of the Anti-DDoS Pro instance
      */
     public $Region;
 
     /**
-     * @var string Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
+     * @var string Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
      */
     public $Status;
 
     /**
-     * @var string Purchase Time
+     * @var string Purchase time
      */
     public $CreatedTime;
 
@@ -115,13 +119,13 @@ class BGPInstance extends AbstractModel
     public $ExpiredTime;
 
     /**
-     * @var string Name of the Anti-DDoS instance
+     * @var string Name of the Anti-DDoS Pro instance
      */
     public $Name;
 
     /**
-     * @var PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * @var PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $PackInfo;
@@ -133,9 +137,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
     /**
      * @var string Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
      */
     public $BoundStatus;
@@ -146,36 +150,48 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $DDoSLevel;
 
     /**
-     * @var integer CC protection switch
+     * @var integer Status of CC protection
      */
     public $CCEnable;
 
     /**
-     * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
-     * @param BGPInstanceSpecification $SpecificationLimit Anti-DDoS instance specifications
-     * @param BGPInstanceUsages $Usage Anti-DDoS instance usage statistics
-     * @param RegionInfo $Region Region of the Anti-DDoS instance
-     * @param string $Status Status of the Anti-DDoS instance. Valid values:
-`idle`: running
-`attacking`: under attacks
-`blocking`: blocked
-`creating`: creating
-`deblocking`: unblocked
-`isolate`: isolated
-     * @param string $CreatedTime Purchase Time
+     * @var array Tags associated with the resource
+     */
+    public $TagInfoList;
+
+    /**
+     * @var integer New edition of Anti-DDoS Pro
+     */
+    public $IpCountNewFlag;
+
+    /**
+     * @param InstanceRelation $InstanceDetail Details of the Anti-DDoS Pro instance
+     * @param BGPInstanceSpecification $SpecificationLimit Specifications of the Anti-DDoS Pro instance
+     * @param BGPInstanceUsages $Usage Usage statistics of the Anti-DDoS Pro instance
+     * @param RegionInfo $Region Region of the Anti-DDoS Pro instance
+     * @param string $Status Status of the Anti-DDoS Pro instance. Valid values:
+`idle`: The instance is running normally.
+`attacking`: The instance is under attack.
+`blocking`: The instance is blocked.
+`creating`: The instance is being created.
+`deblocking`: Unblocking the instance
+`isolate`: The instance is being isolated.
+     * @param string $CreatedTime Purchase time
      * @param string $ExpiredTime Expiration time
-     * @param string $Name Name of the Anti-DDoS instance
-     * @param PackInfo $PackInfo Package details of the Anti-DDoS instance.
-Note: This field is `null` for an Anti-DDoS instance without using a package.
+     * @param string $Name Name of the Anti-DDoS Pro instance
+     * @param PackInfo $PackInfo Details of the package to which the Anti-DDoS Pro instance belongs.
+When the package provided is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $EipProductInfos Details of the cloud product used by the EIP bound to the Anti-DDoS Pro instance
      * @param string $BoundStatus Binding status of the Anti-DDoS Pro instance
-`idle`: the instance is bound.
- `bounding`: the instance is in binding.
-`failed`: the binding failed.
+`idle`: The instance is bound.
+ `bounding`: Binding the instance.
+`failed`: Failed to bind
 ]
      * @param string $DDoSLevel Layer-4 protection level
-     * @param integer $CCEnable CC protection switch
+     * @param integer $CCEnable Status of CC protection
+     * @param array $TagInfoList Tags associated with the resource
+     * @param integer $IpCountNewFlag New edition of Anti-DDoS Pro
      */
     function __construct()
     {
@@ -250,6 +266,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("CCEnable",$param) and $param["CCEnable"] !== null) {
             $this->CCEnable = $param["CCEnable"];
+        }
+
+        if (array_key_exists("TagInfoList",$param) and $param["TagInfoList"] !== null) {
+            $this->TagInfoList = [];
+            foreach ($param["TagInfoList"] as $key => $value){
+                $obj = new TagInfo();
+                $obj->deserialize($value);
+                array_push($this->TagInfoList, $obj);
+            }
+        }
+
+        if (array_key_exists("IpCountNewFlag",$param) and $param["IpCountNewFlag"] !== null) {
+            $this->IpCountNewFlag = $param["IpCountNewFlag"];
         }
     }
 }

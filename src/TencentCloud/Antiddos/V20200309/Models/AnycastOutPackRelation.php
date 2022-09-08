@@ -18,44 +18,60 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Details of the Anycast package
  *
- * @method integer getNormalBandwidth() Obtain 
- * @method void setNormalBandwidth(integer $NormalBandwidth) Set 
- * @method integer getForwardRulesLimit() Obtain 
- * @method void setForwardRulesLimit(integer $ForwardRulesLimit) Set 
- * @method integer getAutoRenewFlag() Obtain 
- * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set 
- * @method string getCurDeadline() Obtain 
- * @method void setCurDeadline(string $CurDeadline) Set 
+ * @method integer getNormalBandwidth() Obtain Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNormalBandwidth(integer $NormalBandwidth) Set Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getForwardRulesLimit() Obtain Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setForwardRulesLimit(integer $ForwardRulesLimit) Set Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoRenewFlag() Obtain Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCurDeadline() Obtain Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCurDeadline(string $CurDeadline) Set Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AnycastOutPackRelation extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NormalBandwidth;
 
     /**
-     * @var integer 
+     * @var integer Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ForwardRulesLimit;
 
     /**
-     * @var integer 
+     * @var integer Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AutoRenewFlag;
 
     /**
-     * @var string 
+     * @var string Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CurDeadline;
 
     /**
-     * @param integer $NormalBandwidth 
-     * @param integer $ForwardRulesLimit 
-     * @param integer $AutoRenewFlag 
-     * @param string $CurDeadline 
+     * @param integer $NormalBandwidth Application bandwidth (in Mbps).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ForwardRulesLimit Number of forwarding rules
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoRenewFlag Auto-renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CurDeadline Expiration date
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

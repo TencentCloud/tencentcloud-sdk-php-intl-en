@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReceiverGroupList(array $ReceiverGroupList) Set List of alarm recipient group IDs.
  * @method array getReceiverUserList() Obtain List of alarm recipient IDs.
  * @method void setReceiverUserList(array $ReceiverUserList) Set List of alarm recipient IDs.
- * @method integer getStartTime() Obtain Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
- * @method void setStartTime(integer $StartTime) Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+ * @method integer getStartTime() Obtain Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
+ * @method void setStartTime(integer $StartTime) Set Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
  * @method integer getEndTime() Obtain End time of the alarm period. The meaning is the same as that of StartTime.
  * @method void setEndTime(integer $EndTime) Set End time of the alarm period. The meaning is the same as that of StartTime.
  * @method string getReceiverType() Obtain Recipient type. Valid values: group and user.
@@ -66,7 +66,7 @@ class DescribePolicyGroupInfoReceiverInfo extends AbstractModel
     public $ReceiverUserList;
 
     /**
-     * @var integer Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * @var integer Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      */
     public $StartTime;
 
@@ -130,7 +130,7 @@ Note: This field may return null, indicating that no valid value was found.
     /**
      * @param array $ReceiverGroupList List of alarm recipient group IDs.
      * @param array $ReceiverUserList List of alarm recipient IDs.
-     * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates '10:0:0'.
+     * @param integer $StartTime Start time of the alarm period. Value range: [0,86400). Convert the Unix timestamp to Beijing time and then remove the date. For example, 7200 indicates “10:0:0”.
      * @param integer $EndTime End time of the alarm period. The meaning is the same as that of StartTime.
      * @param string $ReceiverType Recipient type. Valid values: group and user.
      * @param array $NotifyWay Alarm notification method. Valid values: "SMS", "SITE", "EMAIL", "CALL", and "WECHAT".

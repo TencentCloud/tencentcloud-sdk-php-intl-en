@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaNotificationChannels request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method string getInstanceId() Obtain Instance ID.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of items to be queried
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string Instance ID.
      */
     public $InstanceId;
 
@@ -66,7 +66,7 @@ class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
     public $ChannelState;
 
     /**
-     * @param string $InstanceId Instance name
+     * @param string $InstanceId Instance ID.
      * @param integer $Offset Offset
      * @param integer $Limit Number of items to be queried
      * @param string $ChannelName Channel name
