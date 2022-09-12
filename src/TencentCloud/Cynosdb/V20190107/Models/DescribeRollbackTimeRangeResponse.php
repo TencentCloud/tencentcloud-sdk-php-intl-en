@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeRollbackTimeRange response structure.
  *
- * @method string getTimeRangeStart() Obtain Start time point of valid rollback time range
- * @method void setTimeRangeStart(string $TimeRangeStart) Set Start time point of valid rollback time range
- * @method string getTimeRangeEnd() Obtain End time point of valid rollback time range
- * @method void setTimeRangeEnd(string $TimeRangeEnd) Set End time point of valid rollback time range
+ * @method string getTimeRangeStart() Obtain Start time of valid rollback time range (disused)
+ * @method void setTimeRangeStart(string $TimeRangeStart) Set Start time of valid rollback time range (disused)
+ * @method string getTimeRangeEnd() Obtain End time of valid rollback time range (disused)
+ * @method void setTimeRangeEnd(string $TimeRangeEnd) Set End time of valid rollback time range (disused)
+ * @method array getRollbackTimeRanges() Obtain Time range available for rollback
+ * @method void setRollbackTimeRanges(array $RollbackTimeRanges) Set Time range available for rollback
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeRollbackTimeRangeResponse extends AbstractModel
 {
     /**
-     * @var string Start time point of valid rollback time range
+     * @var string Start time of valid rollback time range (disused)
      */
     public $TimeRangeStart;
 
     /**
-     * @var string End time point of valid rollback time range
+     * @var string End time of valid rollback time range (disused)
      */
     public $TimeRangeEnd;
+
+    /**
+     * @var array Time range available for rollback
+     */
+    public $RollbackTimeRanges;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +52,9 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $TimeRangeStart Start time point of valid rollback time range
-     * @param string $TimeRangeEnd End time point of valid rollback time range
+     * @param string $TimeRangeStart Start time of valid rollback time range (disused)
+     * @param string $TimeRangeEnd End time of valid rollback time range (disused)
+     * @param array $RollbackTimeRanges Time range available for rollback
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +76,15 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 
         if (array_key_exists("TimeRangeEnd",$param) and $param["TimeRangeEnd"] !== null) {
             $this->TimeRangeEnd = $param["TimeRangeEnd"];
+        }
+
+        if (array_key_exists("RollbackTimeRanges",$param) and $param["RollbackTimeRanges"] !== null) {
+            $this->RollbackTimeRanges = [];
+            foreach ($param["RollbackTimeRanges"] as $key => $value){
+                $obj = new RollbackTimeRange();
+                $obj->deserialize($value);
+                array_push($this->RollbackTimeRanges, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

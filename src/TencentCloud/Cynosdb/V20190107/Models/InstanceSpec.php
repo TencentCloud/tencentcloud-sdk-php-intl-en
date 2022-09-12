@@ -28,6 +28,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum instance storage capacity GB
  * @method integer getMinStorageSize() Obtain Minimum instance storage capacity GB
  * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum instance storage capacity GB
+ * @method boolean getHasStock() Obtain Whether there is an inventory.
+ * @method void setHasStock(boolean $HasStock) Set Whether there is an inventory.
+ * @method string getMachineType() Obtain Machine type
+ * @method void setMachineType(string $MachineType) Set Machine type
+ * @method integer getMaxIops() Obtain Maximum IOPS
+ * @method void setMaxIops(integer $MaxIops) Set Maximum IOPS
+ * @method integer getMaxIoBandWidth() Obtain Maximum bandwidth
+ * @method void setMaxIoBandWidth(integer $MaxIoBandWidth) Set Maximum bandwidth
+ * @method array getZoneStockInfos() Obtain Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneStockInfos(array $ZoneStockInfos) Set Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceSpec extends AbstractModel
 {
@@ -52,10 +64,42 @@ class InstanceSpec extends AbstractModel
     public $MinStorageSize;
 
     /**
+     * @var boolean Whether there is an inventory.
+     */
+    public $HasStock;
+
+    /**
+     * @var string Machine type
+     */
+    public $MachineType;
+
+    /**
+     * @var integer Maximum IOPS
+     */
+    public $MaxIops;
+
+    /**
+     * @var integer Maximum bandwidth
+     */
+    public $MaxIoBandWidth;
+
+    /**
+     * @var array Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneStockInfos;
+
+    /**
      * @param integer $Cpu Number of instance CPU cores
      * @param integer $Memory Instance memory in GB
      * @param integer $MaxStorageSize Maximum instance storage capacity GB
      * @param integer $MinStorageSize Minimum instance storage capacity GB
+     * @param boolean $HasStock Whether there is an inventory.
+     * @param string $MachineType Machine type
+     * @param integer $MaxIops Maximum IOPS
+     * @param integer $MaxIoBandWidth Maximum bandwidth
+     * @param array $ZoneStockInfos Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +128,31 @@ class InstanceSpec extends AbstractModel
 
         if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
             $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("HasStock",$param) and $param["HasStock"] !== null) {
+            $this->HasStock = $param["HasStock"];
+        }
+
+        if (array_key_exists("MachineType",$param) and $param["MachineType"] !== null) {
+            $this->MachineType = $param["MachineType"];
+        }
+
+        if (array_key_exists("MaxIops",$param) and $param["MaxIops"] !== null) {
+            $this->MaxIops = $param["MaxIops"];
+        }
+
+        if (array_key_exists("MaxIoBandWidth",$param) and $param["MaxIoBandWidth"] !== null) {
+            $this->MaxIoBandWidth = $param["MaxIoBandWidth"];
+        }
+
+        if (array_key_exists("ZoneStockInfos",$param) and $param["ZoneStockInfos"] !== null) {
+            $this->ZoneStockInfos = [];
+            foreach ($param["ZoneStockInfos"] as $key => $value){
+                $obj = new ZoneStockInfo();
+                $obj->deserialize($value);
+                array_push($this->ZoneStockInfos, $obj);
+            }
         }
     }
 }

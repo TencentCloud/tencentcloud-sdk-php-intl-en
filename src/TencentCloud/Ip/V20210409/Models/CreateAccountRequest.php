@@ -38,10 +38,10 @@ A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spac
 A global mobile number within 1-32 digits is allowed, such as 18888888888.
  * @method void setPhoneNum(string $PhoneNum) Set Customer mobile number, which should be valid and correct.
 A global mobile number within 1-32 digits is allowed, such as 18888888888.
- * @method string getCountryCode() Obtain Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
- * @method void setCountryCode(string $CountryCode) Set Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
- * @method string getArea() Obtain ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
- * @method void setArea(string $Area) Set ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+ * @method string getCountryCode() Obtain Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+ * @method void setCountryCode(string $CountryCode) Set Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+ * @method string getArea() Obtain Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
+ * @method void setArea(string $Area) Set Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
  * @method string getExtended() Obtain Expanded field, which is left empty by default.
  * @method void setExtended(string $Extended) Set Expanded field, which is left empty by default.
  */
@@ -77,12 +77,12 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     public $PhoneNum;
 
     /**
-     * @var string Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
+     * @var string Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
      */
     public $CountryCode;
 
     /**
-     * @var string ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+     * @var string Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
      */
     public $Area;
 
@@ -101,8 +101,8 @@ A password must contain numbers, letters, and special symbols [!@#$%^&*()]. Spac
      * @param string $ConfirmPassword Confirm the password. It must be the same as the `Password` field.
      * @param string $PhoneNum Customer mobile number, which should be valid and correct.
 A global mobile number within 1-32 digits is allowed, such as 18888888888.
-     * @param string $CountryCode Country code, which can be obtained via the `GetCountryCodes` API, such as 852.
-     * @param string $Area ISO2 standard country code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field.
+     * @param string $CountryCode Customer’s country/region code, which can be obtained via the `GetCountryCodes` API, such as “852”.
+     * @param string $Area Customer’s ISO2 standard country/region code, which can be obtained via the `GetCountryCodes` API. It should correspond to the `CountryCode` field, such as `HK`.
      * @param string $Extended Expanded field, which is left empty by default.
      */
     function __construct()
