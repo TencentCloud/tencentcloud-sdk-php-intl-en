@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneList(array $ZoneList) Set List of availability zones
  * @method array getHealthStatus() Obtain Health status filter list
  * @method void setHealthStatus(array $HealthStatus) Set Health status filter list
+ * @method array getVpcIds() Obtain VPC IDs
+ * @method void setVpcIds(array $VpcIds) Set VPC IDs
  */
 class DescribeInstancesRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class DescribeInstancesRequest extends AbstractModel
     public $HealthStatus;
 
     /**
+     * @var array VPC IDs
+     */
+    public $VpcIds;
+
+    /**
      * @param string $Zone AZ of the cluster instance. If this is not passed in, all AZs are used by default
      * @param array $InstanceIds List of cluster instance IDs
      * @param array $InstanceNames List of cluster instance names
@@ -112,6 +119,7 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $IpList VPC VIP list
      * @param array $ZoneList List of availability zones
      * @param array $HealthStatus Health status filter list
+     * @param array $VpcIds VPC IDs
      */
     function __construct()
     {
@@ -173,6 +181,10 @@ class DescribeInstancesRequest extends AbstractModel
 
         if (array_key_exists("HealthStatus",$param) and $param["HealthStatus"] !== null) {
             $this->HealthStatus = $param["HealthStatus"];
+        }
+
+        if (array_key_exists("VpcIds",$param) and $param["VpcIds"] !== null) {
+            $this->VpcIds = $param["VpcIds"];
         }
     }
 }

@@ -96,6 +96,10 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
  * @method void setWebNodeTypeInfo(WebNodeTypeInfo $WebNodeTypeInfo) Set Visual node configuration
  * @method string getProtocol() Obtain Valid values: `https`, `http` (default)
  * @method void setProtocol(string $Protocol) Set Valid values: `https`, `http` (default)
+ * @method OperationDuration getOperationDuration() Obtain The maintenance time slot
+ * @method void setOperationDuration(OperationDuration $OperationDuration) Set The maintenance time slot
+ * @method boolean getEnableHybridStorage() Obtain Whether to enable the storage-computing separation feature.
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether to enable the storage-computing separation feature.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -258,6 +262,16 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     public $Protocol;
 
     /**
+     * @var OperationDuration The maintenance time slot
+     */
+    public $OperationDuration;
+
+    /**
+     * @var boolean Whether to enable the storage-computing separation feature.
+     */
+    public $EnableHybridStorage;
+
+    /**
      * @param string $Zone Availability Zone
      * @param string $EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      * @param string $VpcId VPC ID
@@ -296,6 +310,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
      * @param integer $SceneType Scenario template type. 0: not enabled; 1: general; 2: log; 3: search
      * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
      * @param string $Protocol Valid values: `https`, `http` (default)
+     * @param OperationDuration $OperationDuration The maintenance time slot
+     * @param boolean $EnableHybridStorage Whether to enable the storage-computing separation feature.
      */
     function __construct()
     {
@@ -444,6 +460,15 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
 
         if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
             $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
+            $this->EnableHybridStorage = $param["EnableHybridStorage"];
         }
     }
 }

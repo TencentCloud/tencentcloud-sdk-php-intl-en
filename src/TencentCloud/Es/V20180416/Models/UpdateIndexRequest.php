@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUsername(string $Username) Set Username for cluster access
  * @method string getPassword() Obtain Password for cluster access
  * @method void setPassword(string $Password) Set Password for cluster access
+ * @method boolean getRolloverBackingIndex() Obtain Whether to roll over the backup index
+ * @method void setRolloverBackingIndex(boolean $RolloverBackingIndex) Set Whether to roll over the backup index
  */
 class UpdateIndexRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class UpdateIndexRequest extends AbstractModel
     public $Password;
 
     /**
+     * @var boolean Whether to roll over the backup index
+     */
+    public $RolloverBackingIndex;
+
+    /**
      * @param string $InstanceId ES cluster ID
      * @param string $IndexType Type of the index to update. `auto`: Automated; `normal`: General.
      * @param string $IndexName Name of the index to update
      * @param string $UpdateMetaJson JSON-formatted index metadata to update, such as `mappings` and `settings`.
      * @param string $Username Username for cluster access
      * @param string $Password Password for cluster access
+     * @param boolean $RolloverBackingIndex Whether to roll over the backup index
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class UpdateIndexRequest extends AbstractModel
 
         if (array_key_exists("Password",$param) and $param["Password"] !== null) {
             $this->Password = $param["Password"];
+        }
+
+        if (array_key_exists("RolloverBackingIndex",$param) and $param["RolloverBackingIndex"] !== null) {
+            $this->RolloverBackingIndex = $param["RolloverBackingIndex"];
         }
     }
 }

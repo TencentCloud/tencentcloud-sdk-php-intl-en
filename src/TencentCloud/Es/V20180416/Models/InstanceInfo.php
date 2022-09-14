@@ -248,6 +248,22 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEsConfigSets(array $EsConfigSets) Set Configuration set info of the cluster.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method OperationDuration getOperationDuration() Obtain The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOperationDuration(OperationDuration $OperationDuration) Set The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getOptionalWebServiceInfos() Obtain Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOptionalWebServiceInfos(array $OptionalWebServiceInfos) Set Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getAutoIndexEnabled() Obtain Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoIndexEnabled(boolean $AutoIndexEnabled) Set Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getEnableHybridStorage() Obtain Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -666,6 +682,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EsConfigSets;
 
     /**
+     * @var OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OperationDuration;
+
+    /**
+     * @var array Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OptionalWebServiceInfos;
+
+    /**
+     * @var boolean Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoIndexEnabled;
+
+    /**
+     * @var boolean Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EnableHybridStorage;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -779,6 +819,14 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param string $EsPrivateDomain Private domain of the HTTPS cluster
 Note: This field may return `null`, indicating that no valid value was found.
      * @param array $EsConfigSets Configuration set info of the cluster.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OperationDuration $OperationDuration The maintenance time slot of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $OptionalWebServiceInfos Web node list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $AutoIndexEnabled Autonomous index option
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $EnableHybridStorage Whether the storage-computing separation feature is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -1119,6 +1167,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->EsConfigSets, $obj);
             }
+        }
+
+        if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
+            $this->OperationDuration = new OperationDuration();
+            $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("OptionalWebServiceInfos",$param) and $param["OptionalWebServiceInfos"] !== null) {
+            $this->OptionalWebServiceInfos = [];
+            foreach ($param["OptionalWebServiceInfos"] as $key => $value){
+                $obj = new OptionalWebServiceInfo();
+                $obj->deserialize($value);
+                array_push($this->OptionalWebServiceInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("AutoIndexEnabled",$param) and $param["AutoIndexEnabled"] !== null) {
+            $this->AutoIndexEnabled = $param["AutoIndexEnabled"];
+        }
+
+        if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
+            $this->EnableHybridStorage = $param["EnableHybridStorage"];
         }
     }
 }
