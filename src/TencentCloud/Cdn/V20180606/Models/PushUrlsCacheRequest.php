@@ -56,6 +56,10 @@ This feature is in beta test.
  * @method void setDisableRange(boolean $DisableRange) Set Specifies whether to disable Range GETs.
 Notes:
 This feature is in beta test.
+ * @method array getHeaders() Obtain 
+ * @method void setHeaders(array $Headers) Set 
+ * @method boolean getUrlEncode() Obtain Whether to encode the URL
+ * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode the URL
  */
 class PushUrlsCacheRequest extends AbstractModel
 {
@@ -102,6 +106,16 @@ This feature is in beta test.
     public $DisableRange;
 
     /**
+     * @var array 
+     */
+    public $Headers;
+
+    /**
+     * @var boolean Whether to encode the URL
+     */
+    public $UrlEncode;
+
+    /**
      * @param array $Urls List of URLs. The protocol header such as "http://" or "https://" needs to be included.
      * @param string $UserAgent Specifies the User-Agent header of an HTTP prefetch request when it is forwarded to the origin server
 Default value: `TencentCdn`
@@ -120,6 +134,8 @@ Notes:
      * @param boolean $DisableRange Specifies whether to disable Range GETs.
 Notes:
 This feature is in beta test.
+     * @param array $Headers 
+     * @param boolean $UrlEncode Whether to encode the URL
      */
     function __construct()
     {
@@ -156,6 +172,19 @@ This feature is in beta test.
 
         if (array_key_exists("DisableRange",$param) and $param["DisableRange"] !== null) {
             $this->DisableRange = $param["DisableRange"];
+        }
+
+        if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
+            $this->Headers = [];
+            foreach ($param["Headers"] as $key => $value){
+                $obj = new HTTPHeader();
+                $obj->deserialize($value);
+                array_push($this->Headers, $obj);
+            }
+        }
+
+        if (array_key_exists("UrlEncode",$param) and $param["UrlEncode"] !== null) {
+            $this->UrlEncode = $param["UrlEncode"];
         }
     }
 }

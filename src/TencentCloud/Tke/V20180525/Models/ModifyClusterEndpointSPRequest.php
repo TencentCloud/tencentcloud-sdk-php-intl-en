@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method array getSecurityPolicies() Obtain Security policy opens single IP or CIDR block to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
  * @method void setSecurityPolicies(array $SecurityPolicies) Set Security policy opens single IP or CIDR block to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
+ * @method string getSecurityGroup() Obtain Modify public network security group
+ * @method void setSecurityGroup(string $SecurityGroup) Set Modify public network security group
  */
 class ModifyClusterEndpointSPRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ModifyClusterEndpointSPRequest extends AbstractModel
     public $SecurityPolicies;
 
     /**
+     * @var string Modify public network security group
+     */
+    public $SecurityGroup;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param array $SecurityPolicies Security policy opens single IP or CIDR block to the Internet (for example: '192.168.1.0/24', with 'reject all' as the default).
+     * @param string $SecurityGroup Modify public network security group
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ModifyClusterEndpointSPRequest extends AbstractModel
 
         if (array_key_exists("SecurityPolicies",$param) and $param["SecurityPolicies"] !== null) {
             $this->SecurityPolicies = $param["SecurityPolicies"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
     }
 }

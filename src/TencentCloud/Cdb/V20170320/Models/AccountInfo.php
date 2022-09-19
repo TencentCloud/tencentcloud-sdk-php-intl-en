@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModifyTime(string $ModifyTime) Set Account information modification time
  * @method string getModifyPasswordTime() Obtain Password modification time
  * @method void setModifyPasswordTime(string $ModifyPasswordTime) Set Password modification time
- * @method string getCreateTime() Obtain This parameter is no longer supported.
- * @method void setCreateTime(string $CreateTime) Set This parameter is no longer supported.
+ * @method string getCreateTime() Obtain This parameter is deprecated.
+ * @method void setCreateTime(string $CreateTime) Set This parameter is deprecated.
  * @method integer getMaxUserConnections() Obtain The maximum number of instance connections supported by an account
  * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections supported by an account
  */
@@ -63,7 +63,7 @@ class AccountInfo extends AbstractModel
     public $ModifyPasswordTime;
 
     /**
-     * @var string This parameter is no longer supported.
+     * @var string This parameter is deprecated.
      */
     public $CreateTime;
 
@@ -78,7 +78,7 @@ class AccountInfo extends AbstractModel
      * @param string $User Account name
      * @param string $ModifyTime Account information modification time
      * @param string $ModifyPasswordTime Password modification time
-     * @param string $CreateTime This parameter is no longer supported.
+     * @param string $CreateTime This parameter is deprecated.
      * @param integer $MaxUserConnections The maximum number of instance connections supported by an account
      */
     function __construct()

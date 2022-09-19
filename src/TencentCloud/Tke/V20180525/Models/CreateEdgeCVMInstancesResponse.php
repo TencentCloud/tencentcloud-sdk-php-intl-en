@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccounts response structure.
+ * CreateEdgeCVMInstances response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task request ID, which can be used to query the execution result of an async task
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID, which can be used to query the execution result of an async task
+ * @method array getCvmIdSet() Obtain List of CVM IDs
+ * @method void setCvmIdSet(array $CvmIdSet) Set List of CVM IDs
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAccountsResponse extends AbstractModel
+class CreateEdgeCVMInstancesResponse extends AbstractModel
 {
     /**
-     * @var string Async task request ID, which can be used to query the execution result of an async task
+     * @var array List of CVM IDs
      */
-    public $AsyncRequestId;
+    public $CvmIdSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
+     * @param array $CvmIdSet List of CVM IDs
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("CvmIdSet",$param) and $param["CvmIdSet"] !== null) {
+            $this->CvmIdSet = $param["CvmIdSet"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -82,6 +82,10 @@ Note: this field may return null, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setQGPUShareEnable(boolean $QGPUShareEnable) Set Whether to enable qGPU Sharing
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRuntimeVersion() Obtain Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setRuntimeVersion(string $RuntimeVersion) Set Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Cluster extends AbstractModel
 {
@@ -205,6 +209,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $QGPUShareEnable;
 
     /**
+     * @var string Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $RuntimeVersion;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $ClusterDescription Cluster description
@@ -236,6 +246,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: this field may return null, indicating that no valid value is obtained.
      * @param boolean $QGPUShareEnable Whether to enable qGPU Sharing
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RuntimeVersion Runtime version
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -342,6 +354,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("QGPUShareEnable",$param) and $param["QGPUShareEnable"] !== null) {
             $this->QGPUShareEnable = $param["QGPUShareEnable"];
+        }
+
+        if (array_key_exists("RuntimeVersion",$param) and $param["RuntimeVersion"] !== null) {
+            $this->RuntimeVersion = $param["RuntimeVersion"];
         }
     }
 }

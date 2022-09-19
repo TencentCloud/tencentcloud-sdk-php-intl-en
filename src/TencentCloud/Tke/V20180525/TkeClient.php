@@ -37,6 +37,7 @@ use TencentCloud\Tke\V20180525\Models as Models;
  * @method Models\CreateClusterNodePoolFromExistingAsgResponse CreateClusterNodePoolFromExistingAsg(Models\CreateClusterNodePoolFromExistingAsgRequest $req) This API is used to upgrade a scaling group to a node pool.
  * @method Models\CreateClusterRouteTableResponse CreateClusterRouteTable(Models\CreateClusterRouteTableRequest $req) This API is used to create a cluster route table.
  * @method Models\CreateECMInstancesResponse CreateECMInstances(Models\CreateECMInstancesRequest $req) This API is used to create an ECM instance.
+ * @method Models\CreateEdgeCVMInstancesResponse CreateEdgeCVMInstances(Models\CreateEdgeCVMInstancesRequest $req) This API is used to create CVM instances in the specified TKE edge cluster.
  * @method Models\CreateEdgeLogConfigResponse CreateEdgeLogConfig(Models\CreateEdgeLogConfigRequest $req) This API is used to create log collection configuration for a TKE Edge cluster.
  * @method Models\CreatePrometheusAlertRuleResponse CreatePrometheusAlertRule(Models\CreatePrometheusAlertRuleRequest $req) This API is used to create an alarm rule.
  * @method Models\CreateTKEEdgeClusterResponse CreateTKEEdgeCluster(Models\CreateTKEEdgeClusterRequest $req) This API is used to create a TKE Edge cluster.

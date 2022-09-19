@@ -18,19 +18,26 @@ namespace TencentCloud\Cdb\V20170320\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccounts response structure.
+ * DescribeDBPrice response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task request ID, which can be used to query the execution result of an async task
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID, which can be used to query the execution result of an async task
+ * @method integer getPrice() Obtain Price of the instance in 0.01 CNY.
+ * @method void setPrice(integer $Price) Set Price of the instance in 0.01 CNY.
+ * @method integer getOriginalPrice() Obtain Original price of the instance in 0.01 CNY
+ * @method void setOriginalPrice(integer $OriginalPrice) Set Original price of the instance in 0.01 CNY
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAccountsResponse extends AbstractModel
+class DescribeDBPriceResponse extends AbstractModel
 {
     /**
-     * @var string Async task request ID, which can be used to query the execution result of an async task
+     * @var integer Price of the instance in 0.01 CNY.
      */
-    public $AsyncRequestId;
+    public $Price;
+
+    /**
+     * @var integer Original price of the instance in 0.01 CNY
+     */
+    public $OriginalPrice;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class CreateAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
+     * @param integer $Price Price of the instance in 0.01 CNY.
+     * @param integer $OriginalPrice Original price of the instance in 0.01 CNY
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +62,12 @@ class CreateAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = $param["Price"];
+        }
+
+        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
+            $this->OriginalPrice = $param["OriginalPrice"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

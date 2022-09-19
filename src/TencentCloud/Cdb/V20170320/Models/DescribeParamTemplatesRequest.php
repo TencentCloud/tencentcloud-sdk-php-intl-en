@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getEngineVersions() Obtain Engine version. If it is left empty, all parameter templates will be queried.
  * @method void setEngineVersions(array $EngineVersions) Set Engine version. If it is left empty, all parameter templates will be queried.
+ * @method array getEngineTypes() Obtain Engine type. If it is left empty, all engine types will be queried.
+ * @method void setEngineTypes(array $EngineTypes) Set Engine type. If it is left empty, all engine types will be queried.
+ * @method array getTemplateNames() Obtain Template name. If it is left empty, all template names will be queried.
+ * @method void setTemplateNames(array $TemplateNames) Set Template name. If it is left empty, all template names will be queried.
+ * @method array getTemplateIds() Obtain Template ID. If it is left empty, all template IDs will be queried.
+ * @method void setTemplateIds(array $TemplateIds) Set Template ID. If it is left empty, all template IDs will be queried.
  */
 class DescribeParamTemplatesRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeParamTemplatesRequest extends AbstractModel
     public $EngineVersions;
 
     /**
+     * @var array Engine type. If it is left empty, all engine types will be queried.
+     */
+    public $EngineTypes;
+
+    /**
+     * @var array Template name. If it is left empty, all template names will be queried.
+     */
+    public $TemplateNames;
+
+    /**
+     * @var array Template ID. If it is left empty, all template IDs will be queried.
+     */
+    public $TemplateIds;
+
+    /**
      * @param array $EngineVersions Engine version. If it is left empty, all parameter templates will be queried.
+     * @param array $EngineTypes Engine type. If it is left empty, all engine types will be queried.
+     * @param array $TemplateNames Template name. If it is left empty, all template names will be queried.
+     * @param array $TemplateIds Template ID. If it is left empty, all template IDs will be queried.
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeParamTemplatesRequest extends AbstractModel
         }
         if (array_key_exists("EngineVersions",$param) and $param["EngineVersions"] !== null) {
             $this->EngineVersions = $param["EngineVersions"];
+        }
+
+        if (array_key_exists("EngineTypes",$param) and $param["EngineTypes"] !== null) {
+            $this->EngineTypes = $param["EngineTypes"];
+        }
+
+        if (array_key_exists("TemplateNames",$param) and $param["TemplateNames"] !== null) {
+            $this->TemplateNames = $param["TemplateNames"];
+        }
+
+        if (array_key_exists("TemplateIds",$param) and $param["TemplateIds"] !== null) {
+            $this->TemplateIds = $param["TemplateIds"];
         }
     }
 }

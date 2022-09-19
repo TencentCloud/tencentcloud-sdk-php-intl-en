@@ -50,6 +50,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setConfigure(array $Configure) Set Layer-7 rule configuration for CC frequency limiting
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSwitch() Obtain Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSwitch(string $Switch) Set Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AdvancedCCRules extends AbstractModel
 {
@@ -101,6 +105,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Configure;
 
     /**
+     * @var string Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Switch;
+
+    /**
      * @param string $RuleName Rule name
      * @param integer $DetectionTime Detection duration
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -116,6 +126,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $Configure Layer-7 rule configuration for CC frequency limiting
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Switch Whether to enable the rule. Values: `on` (enable), `off` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -165,6 +177,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Configure, $obj);
             }
+        }
+
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }

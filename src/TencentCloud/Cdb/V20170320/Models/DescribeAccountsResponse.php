@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible accounts.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible accounts.
- * @method array getItems() Obtain Details of eligible accounts.
- * @method void setItems(array $Items) Set Details of eligible accounts.
- * @method integer getMaxUserConnections() Obtain The maximum number of instance connections (set by the MySQL parameter `max_connections`)
- * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+ * @method integer getTotalCount() Obtain Number of eligible accounts
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible accounts
+ * @method array getItems() Obtain Details of eligible accounts
+ * @method void setItems(array $Items) Set Details of eligible accounts
+ * @method integer getMaxUserConnections() Obtain The maximum number of instance connections
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set The maximum number of instance connections
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAccountsResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible accounts.
+     * @var integer Number of eligible accounts
      */
     public $TotalCount;
 
     /**
-     * @var array Details of eligible accounts.
+     * @var array Details of eligible accounts
      */
     public $Items;
 
     /**
-     * @var integer The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     * @var integer The maximum number of instance connections
      */
     public $MaxUserConnections;
 
@@ -52,9 +52,9 @@ class DescribeAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible accounts.
-     * @param array $Items Details of eligible accounts.
-     * @param integer $MaxUserConnections The maximum number of instance connections (set by the MySQL parameter `max_connections`)
+     * @param integer $TotalCount Number of eligible accounts
+     * @param array $Items Details of eligible accounts
+     * @param integer $MaxUserConnections The maximum number of instance connections
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

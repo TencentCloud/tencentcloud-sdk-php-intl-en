@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccounts request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method array getAccounts() Obtain TencentDB account.
- * @method void setAccounts(array $Accounts) Set TencentDB account.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method array getAccounts() Obtain List of TencentDB accounts
+ * @method void setAccounts(array $Accounts) Set List of TencentDB accounts
  * @method string getPassword() Obtain Password of the new account
  * @method void setPassword(string $Password) Set Password of the new account
  * @method string getDescription() Obtain Remarks
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateAccountsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var array TencentDB account.
+     * @var array List of TencentDB accounts
      */
     public $Accounts;
 
@@ -59,8 +59,8 @@ class CreateAccountsRequest extends AbstractModel
     public $MaxUserConnections;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param array $Accounts TencentDB account.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param array $Accounts List of TencentDB accounts
      * @param string $Password Password of the new account
      * @param string $Description Remarks
      * @param integer $MaxUserConnections Maximum connections of the new account. Default value: `10240`. Maximum value: `10240`.

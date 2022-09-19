@@ -38,6 +38,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxNodePodNum(integer $MaxNodePodNum) Set Maximum number of Pods on the node
  * @method EdgeClusterPublicLB getPublicLB() Obtain Public LB of the TKE Edge cluster
  * @method void setPublicLB(EdgeClusterPublicLB $PublicLB) Set Public LB of the TKE Edge cluster
+ * @method string getClusterLevel() Obtain Cluster specification level
+ * @method void setClusterLevel(string $ClusterLevel) Set Cluster specification level
+ * @method boolean getAutoUpgradeClusterLevel() Obtain Whether auto upgrade is supported
+ * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set Whether auto upgrade is supported
+ * @method string getChargeType() Obtain Cluster billing mode
+ * @method void setChargeType(string $ChargeType) Set Cluster billing mode
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -87,6 +93,21 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $PublicLB;
 
     /**
+     * @var string Cluster specification level
+     */
+    public $ClusterLevel;
+
+    /**
+     * @var boolean Whether auto upgrade is supported
+     */
+    public $AutoUpgradeClusterLevel;
+
+    /**
+     * @var string Cluster billing mode
+     */
+    public $ChargeType;
+
+    /**
      * @param string $K8SVersion 
      * @param string $VpcId VPC ID
      * @param string $ClusterName Cluster name
@@ -96,6 +117,9 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings Cluster advanced settings
      * @param integer $MaxNodePodNum Maximum number of Pods on the node
      * @param EdgeClusterPublicLB $PublicLB Public LB of the TKE Edge cluster
+     * @param string $ClusterLevel Cluster specification level
+     * @param boolean $AutoUpgradeClusterLevel Whether auto upgrade is supported
+     * @param string $ChargeType Cluster billing mode
      */
     function __construct()
     {
@@ -146,6 +170,18 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
         if (array_key_exists("PublicLB",$param) and $param["PublicLB"] !== null) {
             $this->PublicLB = new EdgeClusterPublicLB();
             $this->PublicLB->deserialize($param["PublicLB"]);
+        }
+
+        if (array_key_exists("ClusterLevel",$param) and $param["ClusterLevel"] !== null) {
+            $this->ClusterLevel = $param["ClusterLevel"];
+        }
+
+        if (array_key_exists("AutoUpgradeClusterLevel",$param) and $param["AutoUpgradeClusterLevel"] !== null) {
+            $this->AutoUpgradeClusterLevel = $param["AutoUpgradeClusterLevel"];
+        }
+
+        if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
+            $this->ChargeType = $param["ChargeType"];
         }
     }
 }

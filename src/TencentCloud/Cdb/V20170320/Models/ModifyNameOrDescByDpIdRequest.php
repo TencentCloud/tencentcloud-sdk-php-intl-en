@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyNameOrDescByDpId request structure.
  *
- * @method string getDeployGroupId() Obtain ID of a placement group.
- * @method void setDeployGroupId(string $DeployGroupId) Set ID of a placement group.
- * @method string getDeployGroupName() Obtain Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
- * @method void setDeployGroupName(string $DeployGroupName) Set Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
- * @method string getDescription() Obtain Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
- * @method void setDescription(string $Description) Set Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+ * @method string getDeployGroupId() Obtain Placement group ID
+ * @method void setDeployGroupId(string $DeployGroupId) Set Placement group ID
+ * @method string getDeployGroupName() Obtain Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+ * @method void setDeployGroupName(string $DeployGroupName) Set Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+ * @method string getDescription() Obtain Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
+ * @method void setDescription(string $Description) Set Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
  */
 class ModifyNameOrDescByDpIdRequest extends AbstractModel
 {
     /**
-     * @var string ID of a placement group.
+     * @var string Placement group ID
      */
     public $DeployGroupId;
 
     /**
-     * @var string Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
+     * @var string Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
      */
     public $DeployGroupName;
 
     /**
-     * @var string Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+     * @var string Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
      */
     public $Description;
 
     /**
-     * @param string $DeployGroupId ID of a placement group.
-     * @param string $DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description cannot both be empty.
-     * @param string $Description Description of a placement group, which can contain up to 200 characters. The placement group name and description cannot both be empty.
+     * @param string $DeployGroupId Placement group ID
+     * @param string $DeployGroupName Name of a placement group, which can contain up to 60 characters. The placement group name and description can’t be empty.
+     * @param string $Description Description of a placement group, which can contain up to 200 characters. The placement group name and description can’t be empty.
      */
     function __construct()
     {

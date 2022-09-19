@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAccounts request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
- * @method integer getOffset() Obtain Record offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Record offset. Default value: 0.
- * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
- * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
- * @method string getAccountRegexp() Obtain Regular expression for matching account names, which complies with the rules at MySQL official website.
- * @method void setAccountRegexp(string $AccountRegexp) Set Regular expression for matching account names, which complies with the rules at MySQL official website.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method integer getOffset() Obtain Record offset. Default value: `0`.
+ * @method void setOffset(integer $Offset) Set Record offset. Default value: `0`.
+ * @method integer getLimit() Obtain Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
+ * @method string getAccountRegexp() Obtain Regex for matching account names, which complies with the rules at MySQL's official website
+ * @method void setAccountRegexp(string $AccountRegexp) Set Regex for matching account names, which complies with the rules at MySQL's official website
  */
 class DescribeAccountsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
+     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     public $InstanceId;
 
     /**
-     * @var integer Record offset. Default value: 0.
+     * @var integer Record offset. Default value: `0`.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
+     * @var integer Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
      */
     public $Limit;
 
     /**
-     * @var string Regular expression for matching account names, which complies with the rules at MySQL official website.
+     * @var string Regex for matching account names, which complies with the rules at MySQL's official website
      */
     public $AccountRegexp;
 
     /**
-     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed on the TencentDB Console page.
-     * @param integer $Offset Record offset. Default value: 0.
-     * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Default value: 20.
-     * @param string $AccountRegexp Regular expression for matching account names, which complies with the rules at MySQL official website.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param integer $Offset Record offset. Default value: `0`.
+     * @param integer $Limit Number of results to be returned for a single request. Value range: 1-100. Default value: `20`.
+     * @param string $AccountRegexp Regex for matching account names, which complies with the rules at MySQL's official website
      */
     function __construct()
     {

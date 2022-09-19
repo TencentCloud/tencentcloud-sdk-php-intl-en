@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAccounts response structure.
+ * InquiryPriceRunInstances response structure.
  *
- * @method string getAsyncRequestId() Obtain Async task request ID, which can be used to query the execution result of an async task
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async task request ID, which can be used to query the execution result of an async task
+ * @method Price getPrice() Obtain Price of the instance with the specified configurations.
+ * @method void setPrice(Price $Price) Set Price of the instance with the specified configurations.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAccountsResponse extends AbstractModel
+class InquiryPriceRunInstancesResponse extends AbstractModel
 {
     /**
-     * @var string Async task request ID, which can be used to query the execution result of an async task
+     * @var Price Price of the instance with the specified configurations.
      */
-    public $AsyncRequestId;
+    public $Price;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateAccountsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async task request ID, which can be used to query the execution result of an async task
+     * @param Price $Price Price of the instance with the specified configurations.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,9 @@ class CreateAccountsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
+            $this->Price = new Price();
+            $this->Price->deserialize($param["Price"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

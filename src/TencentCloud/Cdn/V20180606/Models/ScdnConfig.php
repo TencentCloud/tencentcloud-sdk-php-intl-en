@@ -30,6 +30,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAdvancedRules(array $AdvancedRules) Set Advanced custom CC attack defense rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getGlobalAdvancedRules() Obtain Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setGlobalAdvancedRules(array $GlobalAdvancedRules) Set Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ScdnConfig extends AbstractModel
 {
@@ -51,11 +55,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AdvancedRules;
 
     /**
+     * @var array Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $GlobalAdvancedRules;
+
+    /**
      * @param string $Switch Valid values: `on` and `off`.
      * @param array $Rules Custom CC attack defense rule
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $AdvancedRules Advanced custom CC attack defense rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $GlobalAdvancedRules Global advanced CC protection rules
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -89,6 +101,15 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj = new AdvancedCCRules();
                 $obj->deserialize($value);
                 array_push($this->AdvancedRules, $obj);
+            }
+        }
+
+        if (array_key_exists("GlobalAdvancedRules",$param) and $param["GlobalAdvancedRules"] !== null) {
+            $this->GlobalAdvancedRules = [];
+            foreach ($param["GlobalAdvancedRules"] as $key => $value){
+                $obj = new AdvancedCCRules();
+                $obj->deserialize($value);
+                array_push($this->GlobalAdvancedRules, $obj);
             }
         }
     }

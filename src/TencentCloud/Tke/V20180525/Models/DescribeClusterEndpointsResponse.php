@@ -34,6 +34,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setClusterExternalACL(array $ClusterExternalACL) Set Public network access ACL of cluster APIServer
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getClusterExternalDomain() Obtain Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterExternalDomain(string $ClusterExternalDomain) Set Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getClusterIntranetDomain() Obtain Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setClusterIntranetDomain(string $ClusterIntranetDomain) Set Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getSecurityGroup() Obtain Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSecurityGroup(string $SecurityGroup) Set Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -67,6 +79,24 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ClusterExternalACL;
 
     /**
+     * @var string Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterExternalDomain;
+
+    /**
+     * @var string Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ClusterIntranetDomain;
+
+    /**
+     * @var string Public network security group
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SecurityGroup;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -78,6 +108,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param string $ClusterDomain Domain name of cluster APIServer
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $ClusterExternalACL Public network access ACL of cluster APIServer
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ClusterExternalDomain Public network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ClusterIntranetDomain Private network domain name
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $SecurityGroup Public network security group
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -112,6 +148,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ClusterExternalACL",$param) and $param["ClusterExternalACL"] !== null) {
             $this->ClusterExternalACL = $param["ClusterExternalACL"];
+        }
+
+        if (array_key_exists("ClusterExternalDomain",$param) and $param["ClusterExternalDomain"] !== null) {
+            $this->ClusterExternalDomain = $param["ClusterExternalDomain"];
+        }
+
+        if (array_key_exists("ClusterIntranetDomain",$param) and $param["ClusterIntranetDomain"] !== null) {
+            $this->ClusterIntranetDomain = $param["ClusterIntranetDomain"];
+        }
+
+        if (array_key_exists("SecurityGroup",$param) and $param["SecurityGroup"] !== null) {
+            $this->SecurityGroup = $param["SecurityGroup"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
