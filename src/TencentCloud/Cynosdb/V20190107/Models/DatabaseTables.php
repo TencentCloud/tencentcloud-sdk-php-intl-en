@@ -14,35 +14,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cls\V20201016\Models;
+namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * JSON type description
+ * Database table information
  *
- * @method boolean getEnableTag() Obtain Enablement flag
- * @method void setEnableTag(boolean $EnableTag) Set Enablement flag
- * @method array getMetaFields() Obtain List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+ * @method string getDatabase() Obtain Database name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMetaFields(array $MetaFields) Set List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+ * @method void setDatabase(string $Database) Set Database name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTables() Obtain Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTables(array $Tables) Set Table name list
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class JsonInfo extends AbstractModel
+class DatabaseTables extends AbstractModel
 {
     /**
-     * @var boolean Enablement flag
-     */
-    public $EnableTag;
-
-    /**
-     * @var array List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @var string Database name
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $MetaFields;
+    public $Database;
 
     /**
-     * @param boolean $EnableTag Enablement flag
-     * @param array $MetaFields List of metadata. Supported metadata types: __SOURCE__, __FILENAME__, __TIMESTAMP__, __HOSTNAME__.
+     * @var array Table name list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tables;
+
+    /**
+     * @param string $Database Database name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tables Table name list
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -58,12 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("EnableTag",$param) and $param["EnableTag"] !== null) {
-            $this->EnableTag = $param["EnableTag"];
+        if (array_key_exists("Database",$param) and $param["Database"] !== null) {
+            $this->Database = $param["Database"];
         }
 
-        if (array_key_exists("MetaFields",$param) and $param["MetaFields"] !== null) {
-            $this->MetaFields = $param["MetaFields"];
+        if (array_key_exists("Tables",$param) and $param["Tables"] !== null) {
+            $this->Tables = $param["Tables"];
         }
     }
 }

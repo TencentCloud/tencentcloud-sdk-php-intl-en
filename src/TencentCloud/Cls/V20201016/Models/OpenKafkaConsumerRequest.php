@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFromTopicId() Obtain `TopicId` created by the CLS console
  * @method void setFromTopicId(string $FromTopicId) Set `TopicId` created by the CLS console
+ * @method integer getCompression() Obtain Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+ * @method void setCompression(integer $Compression) Set Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
  */
 class OpenKafkaConsumerRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class OpenKafkaConsumerRequest extends AbstractModel
     public $FromTopicId;
 
     /**
+     * @var integer Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
+     */
+    public $Compression;
+
+    /**
      * @param string $FromTopicId `TopicId` created by the CLS console
+     * @param integer $Compression Compression mode. Valid values: `0` (no compression); `2` (snappy); `3` (LZ4)
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class OpenKafkaConsumerRequest extends AbstractModel
         }
         if (array_key_exists("FromTopicId",$param) and $param["FromTopicId"] !== null) {
             $this->FromTopicId = $param["FromTopicId"];
+        }
+
+        if (array_key_exists("Compression",$param) and $param["Compression"] !== null) {
+            $this->Compression = $param["Compression"];
         }
     }
 }

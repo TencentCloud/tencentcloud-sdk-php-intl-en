@@ -42,6 +42,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(CompressInfo $Compress) Set Compression configuration of shipped log
  * @method ContentInfo getContent() Obtain Format configuration of shipped log content
  * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
+ * @method integer getFilenameMode() Obtain Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+ * @method void setFilenameMode(integer $FilenameMode) Set Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
  */
 class ModifyShipperRequest extends AbstractModel
 {
@@ -101,6 +103,11 @@ class ModifyShipperRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var integer Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
+     */
+    public $FilenameMode;
+
+    /**
      * @param string $ShipperId Shipping rule ID
      * @param string $Bucket New destination bucket in shipping rule
      * @param string $Prefix New destination directory prefix in shipping rule
@@ -112,6 +119,7 @@ class ModifyShipperRequest extends AbstractModel
      * @param string $Partition Partition rule of shipped log, which can be represented in `strftime` time format
      * @param CompressInfo $Compress Compression configuration of shipped log
      * @param ContentInfo $Content Format configuration of shipped log content
+     * @param integer $FilenameMode Naming a shipping file. Valid values: `0` (by random number), `1` (by shipping time). Default value: `0`.
      */
     function __construct()
     {
@@ -175,6 +183,10 @@ class ModifyShipperRequest extends AbstractModel
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = new ContentInfo();
             $this->Content->deserialize($param["Content"]);
+        }
+
+        if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
+            $this->FilenameMode = $param["FilenameMode"];
         }
     }
 }

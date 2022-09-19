@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoSplit(boolean $AutoSplit) Set Whether to enable automatic split
  * @method integer getMaxSplitPartitions() Obtain Maximum number of partitions to split into for this topic if automatic split is enabled
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled
- * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
- * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+ * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+ * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
  */
 class ModifyTopicRequest extends AbstractModel
 {
@@ -68,7 +68,7 @@ class ModifyTopicRequest extends AbstractModel
     public $MaxSplitPartitions;
 
     /**
-     * @var integer Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * @var integer Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     public $Period;
 
@@ -79,7 +79,7 @@ class ModifyTopicRequest extends AbstractModel
      * @param boolean $Status Whether to start collection for this log topic
      * @param boolean $AutoSplit Whether to enable automatic split
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled
-     * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * @param integer $Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     function __construct()
     {

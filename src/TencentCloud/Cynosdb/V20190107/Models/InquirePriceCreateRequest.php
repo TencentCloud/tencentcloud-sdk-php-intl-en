@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain AZ
  * @method void setZone(string $Zone) Set AZ
- * @method integer getGoodsNum() Obtain Purchase quantity
- * @method void setGoodsNum(integer $GoodsNum) Set Purchase quantity
+ * @method integer getGoodsNum() Obtain Number of compute node to purchase
+ * @method void setGoodsNum(integer $GoodsNum) Set Number of compute node to purchase
  * @method string getInstancePayMode() Obtain Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
  * @method void setInstancePayMode(string $InstancePayMode) Set Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
  * @method string getStoragePayMode() Obtain Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
@@ -49,7 +49,7 @@ class InquirePriceCreateRequest extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer Purchase quantity
+     * @var integer Number of compute node to purchase
      */
     public $GoodsNum;
 
@@ -95,7 +95,7 @@ class InquirePriceCreateRequest extends AbstractModel
 
     /**
      * @param string $Zone AZ
-     * @param integer $GoodsNum Purchase quantity
+     * @param integer $GoodsNum Number of compute node to purchase
      * @param string $InstancePayMode Instance type for purchase. Valid values: `PREPAID`, `POSTPAID`, `SERVERLESS`.
      * @param string $StoragePayMode Storage type for purchase. Valid values: `PREPAID`, `POSTPAID`.
      * @param integer $Cpu Number of CPU cores, which is required when `InstancePayMode` is `PREPAID` or `POSTPAID`.

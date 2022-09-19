@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCompress(CompressInfo $Compress) Set Compression configuration of shipped log
  * @method ContentInfo getContent() Obtain Format configuration of shipped log content
  * @method void setContent(ContentInfo $Content) Set Format configuration of shipped log content
+ * @method integer getFilenameMode() Obtain Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+ * @method void setFilenameMode(integer $FilenameMode) Set Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
  */
 class CreateShipperRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class CreateShipperRequest extends AbstractModel
     public $Content;
 
     /**
+     * @var integer Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
+     */
+    public $FilenameMode;
+
+    /**
      * @param string $TopicId ID of the log topic to which the shipping rule to be created belongs
      * @param string $Bucket Destination bucket in the shipping rule to be created
      * @param string $Prefix Prefix of the shipping directory in the shipping rule to be created
@@ -104,6 +111,7 @@ class CreateShipperRequest extends AbstractModel
      * @param string $Partition Rules for partitioning logs to be shipped. `strftime` can be used to define the presentation of time format.
      * @param CompressInfo $Compress Compression configuration of shipped log
      * @param ContentInfo $Content Format configuration of shipped log content
+     * @param integer $FilenameMode Naming a shipping file. Valid values: `0` (by random number); `1` (by shipping time). Default value: `0`.
      */
     function __construct()
     {
@@ -163,6 +171,10 @@ class CreateShipperRequest extends AbstractModel
         if (array_key_exists("Content",$param) and $param["Content"] !== null) {
             $this->Content = new ContentInfo();
             $this->Content->deserialize($param["Content"]);
+        }
+
+        if (array_key_exists("FilenameMode",$param) and $param["FilenameMode"] !== null) {
+            $this->FilenameMode = $param["FilenameMode"];
         }
     }
 }

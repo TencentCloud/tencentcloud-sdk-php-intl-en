@@ -132,6 +132,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setTxhBackupExpireDay(integer $TxhBackupExpireDay) Set The number of days after which the table Txh backup files will be expire and deleted.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method SyncTableInfo getSyncTableInfo() Obtain Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSyncTableInfo(SyncTableInfo $SyncTableInfo) Set Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TableInfoNew extends AbstractModel
 {
@@ -304,6 +308,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TxhBackupExpireDay;
 
     /**
+     * @var SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SyncTableInfo;
+
+    /**
      * @param string $TableName Table name
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TableInstanceId Table instance ID
@@ -360,6 +370,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $TxhBackupExpireDay The number of days after which the table Txh backup files will be expire and deleted.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param SyncTableInfo $SyncTableInfo Cached information of the table
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -490,6 +502,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TxhBackupExpireDay",$param) and $param["TxhBackupExpireDay"] !== null) {
             $this->TxhBackupExpireDay = $param["TxhBackupExpireDay"];
+        }
+
+        if (array_key_exists("SyncTableInfo",$param) and $param["SyncTableInfo"] !== null) {
+            $this->SyncTableInfo = new SyncTableInfo();
+            $this->SyncTableInfo->deserialize($param["SyncTableInfo"]);
         }
     }
 }
