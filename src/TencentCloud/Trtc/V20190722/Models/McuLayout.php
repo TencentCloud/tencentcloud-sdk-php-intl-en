@@ -52,6 +52,8 @@ White: 0xFFFFFF
 Grey: 0x999999
  * @method string getBackgroundImageUrl() Obtain The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
  * @method void setBackgroundImageUrl(string $BackgroundImageUrl) Set The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+ * @method McuCustomCrop getCustomCrop() Obtain Custom cropping.
+ * @method void setCustomCrop(McuCustomCrop $CustomCrop) Set Custom cropping.
  */
 class McuLayout extends AbstractModel
 {
@@ -108,6 +110,11 @@ Grey: 0x999999
     public $BackgroundImageUrl;
 
     /**
+     * @var McuCustomCrop Custom cropping.
+     */
+    public $CustomCrop;
+
+    /**
      * @param UserMediaStream $UserMediaStream The information of the stream that is displayed. If you do not pass this parameter, TRTC will display the videos of anchors in the room according to their room entry sequence.
      * @param integer $ImageWidth The video width (pixels). If you do not pass this parameter, 0 will be used.
      * @param integer $ImageHeight The video height (pixels). If you do not pass this parameter, 0 will be used.
@@ -124,6 +131,7 @@ Black: 0x000000
 White: 0xFFFFFF
 Grey: 0x999999
      * @param string $BackgroundImageUrl The URL of the background image for the video. This parameter allows you to specify an image to display when the user’s camera is turned off or before the user enters the room. If the dimensions of the image specified are different from those of the video window, the image will be stretched to fit the space. This parameter has a higher priority than `BackGroundColor`.
+     * @param McuCustomCrop $CustomCrop Custom cropping.
      */
     function __construct()
     {
@@ -173,6 +181,11 @@ Grey: 0x999999
 
         if (array_key_exists("BackgroundImageUrl",$param) and $param["BackgroundImageUrl"] !== null) {
             $this->BackgroundImageUrl = $param["BackgroundImageUrl"];
+        }
+
+        if (array_key_exists("CustomCrop",$param) and $param["CustomCrop"] !== null) {
+            $this->CustomCrop = new McuCustomCrop();
+            $this->CustomCrop->deserialize($param["CustomCrop"]);
         }
     }
 }

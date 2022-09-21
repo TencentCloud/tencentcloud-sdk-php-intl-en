@@ -36,6 +36,8 @@ The default value is `0`, which means others.
  * @method void setSessionContext(string $SessionContext) Set The task flow context, which is passed through after the task is completed.
  * @method string getSourceContext() Obtain The upload context, which is passed through after upload is completed.
  * @method void setSourceContext(string $SourceContext) Set The upload context, which is passed through after upload is completed.
+ * @method integer getMediaType() Obtain The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+ * @method void setMediaType(integer $MediaType) Set The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
  */
 class TencentVod extends AbstractModel
 {
@@ -76,6 +78,11 @@ The default value is `0`, which means others.
     public $SourceContext;
 
     /**
+     * @var integer The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
+     */
+    public $MediaType;
+
+    /**
      * @param string $Procedure The operation to perform on the media uploaded. The value of this parameter is the name of a task flow template. You can create a custom task flow template in Tencent Cloud VOD.
      * @param integer $ExpireTime The expiration time of the media file, which is a time period (seconds) from the current time. For example, `86400` means to save the media file for one day. To save the file permanently, set this parameter to `0`.
      * @param string $StorageRegion The storage region. Set this parameter if you have special requirements on the storage region.
@@ -84,6 +91,7 @@ The default value is `0`, which means others.
      * @param integer $SubAppId The VOD subapplication ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.
      * @param string $SessionContext The task flow context, which is passed through after the task is completed.
      * @param string $SourceContext The upload context, which is passed through after upload is completed.
+     * @param integer $MediaType The format of recording files saved to VOD. 0 (default): MP4; 1: HLS.
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ The default value is `0`, which means others.
 
         if (array_key_exists("SourceContext",$param) and $param["SourceContext"] !== null) {
             $this->SourceContext = $param["SourceContext"];
+        }
+
+        if (array_key_exists("MediaType",$param) and $param["MediaType"] !== null) {
+            $this->MediaType = $param["MediaType"];
         }
     }
 }

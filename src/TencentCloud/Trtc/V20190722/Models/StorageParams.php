@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The storage parameters.
  *
- * @method CloudStorage getCloudStorage() Obtain The cloud storage information.
- * @method void setCloudStorage(CloudStorage $CloudStorage) Set The cloud storage information.
+ * @method CloudStorage getCloudStorage() Obtain The third-party cloud storage information (not supported currently).
+ * @method void setCloudStorage(CloudStorage $CloudStorage) Set The third-party cloud storage information (not supported currently).
  * @method CloudVod getCloudVod() Obtain The VOD information.
  * @method void setCloudVod(CloudVod $CloudVod) Set The VOD information.
  */
 class StorageParams extends AbstractModel
 {
     /**
-     * @var CloudStorage The cloud storage information.
+     * @var CloudStorage The third-party cloud storage information (not supported currently).
      */
     public $CloudStorage;
 
@@ -38,7 +38,7 @@ class StorageParams extends AbstractModel
     public $CloudVod;
 
     /**
-     * @param CloudStorage $CloudStorage The cloud storage information.
+     * @param CloudStorage $CloudStorage The third-party cloud storage information (not supported currently).
      * @param CloudVod $CloudVod The VOD information.
      */
     function __construct()

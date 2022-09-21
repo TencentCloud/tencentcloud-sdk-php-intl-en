@@ -38,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
 2: Video streams only
  * @method SubscribeStreamUserIds getSubscribeStreamUserIds() Obtain The allowlist/blocklist for stream subscription.
  * @method void setSubscribeStreamUserIds(SubscribeStreamUserIds $SubscribeStreamUserIds) Set The allowlist/blocklist for stream subscription.
- * @method integer getOutputFormat() Obtain The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
- * @method void setOutputFormat(integer $OutputFormat) Set The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+ * @method integer getOutputFormat() Obtain The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+ * @method void setOutputFormat(integer $OutputFormat) Set The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+ * @method integer getAvMerge() Obtain Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+ * @method void setAvMerge(integer $AvMerge) Set Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
  */
 class RecordParams extends AbstractModel
 {
@@ -69,9 +71,14 @@ class RecordParams extends AbstractModel
     public $SubscribeStreamUserIds;
 
     /**
-     * @var integer The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+     * @var integer The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
      */
     public $OutputFormat;
+
+    /**
+     * @var integer Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
+     */
+    public $AvMerge;
 
     /**
      * @param integer $RecordMode The recording mode.
@@ -83,7 +90,8 @@ class RecordParams extends AbstractModel
 1: Audio streams only
 2: Video streams only
      * @param SubscribeStreamUserIds $SubscribeStreamUserIds The allowlist/blocklist for stream subscription.
-     * @param integer $OutputFormat The format of recording files. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if recording files are saved to VOD.
+     * @param integer $OutputFormat The output format. 0 (default): HLS; 1: HLS + MP4 (recorded in HLS and converted to MP4). This parameter is invalid if you save recording files to VOD. To specify the format of files saved to VOD, use `MediaType` of `TencentVod`.
+     * @param integer $AvMerge Whether to merge the audio and video of a user in the single-stream recording mode. 0 (default): Do not mix the audio and video; 1: Mix the audio and video into one TS file. You don’t need to specify this parameter for mixed-stream recording, which merges audios and videos by default.
      */
     function __construct()
     {
@@ -117,6 +125,10 @@ class RecordParams extends AbstractModel
 
         if (array_key_exists("OutputFormat",$param) and $param["OutputFormat"] !== null) {
             $this->OutputFormat = $param["OutputFormat"];
+        }
+
+        if (array_key_exists("AvMerge",$param) and $param["AvMerge"] !== null) {
+            $this->AvMerge = $param["AvMerge"];
         }
     }
 }
