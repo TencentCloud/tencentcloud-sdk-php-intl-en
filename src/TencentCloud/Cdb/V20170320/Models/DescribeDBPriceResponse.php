@@ -20,24 +20,31 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDBPrice response structure.
  *
- * @method integer getPrice() Obtain Price of the instance in 0.01 CNY.
- * @method void setPrice(integer $Price) Set Price of the instance in 0.01 CNY.
- * @method integer getOriginalPrice() Obtain Original price of the instance in 0.01 CNY
- * @method void setOriginalPrice(integer $OriginalPrice) Set Original price of the instance in 0.01 CNY
+ * @method integer getPrice() Obtain Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+ * @method void setPrice(integer $Price) Set Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+ * @method integer getOriginalPrice() Obtain Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+ * @method void setOriginalPrice(integer $OriginalPrice) Set Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+ * @method string getCurrency() Obtain Currency: `CNY`, `USD`.
+ * @method void setCurrency(string $Currency) Set Currency: `CNY`, `USD`.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeDBPriceResponse extends AbstractModel
 {
     /**
-     * @var integer Price of the instance in 0.01 CNY.
+     * @var integer Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
      */
     public $Price;
 
     /**
-     * @var integer Original price of the instance in 0.01 CNY
+     * @var integer Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
      */
     public $OriginalPrice;
+
+    /**
+     * @var string Currency: `CNY`, `USD`.
+     */
+    public $Currency;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +52,9 @@ class DescribeDBPriceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $Price Price of the instance in 0.01 CNY.
-     * @param integer $OriginalPrice Original price of the instance in 0.01 CNY
+     * @param integer $Price Instance price. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * @param integer $OriginalPrice Original price of the instance. If `Currency` is set to `CNY`, the unit will be 0.01 CNY. If `Currency` is set to `USD`, the unit will be US Cent.
+     * @param string $Currency Currency: `CNY`, `USD`.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +76,10 @@ class DescribeDBPriceResponse extends AbstractModel
 
         if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
             $this->OriginalPrice = $param["OriginalPrice"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

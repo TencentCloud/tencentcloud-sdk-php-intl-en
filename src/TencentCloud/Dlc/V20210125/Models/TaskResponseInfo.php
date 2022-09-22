@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task instance
+ * The task instance.
  *
  * @method string getDatabaseName() Obtain Database name of the task
  * @method void setDatabaseName(string $DatabaseName) Set Database name of the task
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataAmount(integer $DataAmount) Set Data volume of the task
  * @method string getId() Obtain Task ID
  * @method void setId(string $Id) Set Task ID
- * @method integer getUsedTime() Obtain Computing time in ms
- * @method void setUsedTime(integer $UsedTime) Set Computing time in ms
+ * @method integer getUsedTime() Obtain The compute time in ms.
+ * @method void setUsedTime(integer $UsedTime) Set The compute time in ms.
  * @method string getOutputPath() Obtain Task output path
  * @method void setOutputPath(string $OutputPath) Set Task output path
  * @method string getCreateTime() Obtain Task creation time
@@ -110,6 +110,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUiUrl(string $UiUrl) Set Spark UI URL
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalTime() Obtain The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalTime(integer $TotalTime) Set The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCmdArgs() Obtain The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCmdArgs(string $CmdArgs) Set The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskResponseInfo extends AbstractModel
 {
@@ -129,7 +137,7 @@ class TaskResponseInfo extends AbstractModel
     public $Id;
 
     /**
-     * @var integer Computing time in ms
+     * @var integer The compute time in ms.
      */
     public $UsedTime;
 
@@ -279,10 +287,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UiUrl;
 
     /**
+     * @var integer The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TotalTime;
+
+    /**
+     * @var string The program entry parameter for running a task under a Spark job.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CmdArgs;
+
+    /**
      * @param string $DatabaseName Database name of the task
      * @param integer $DataAmount Data volume of the task
      * @param string $Id Task ID
-     * @param integer $UsedTime Computing time in ms
+     * @param integer $UsedTime The compute time in ms.
      * @param string $OutputPath Task output path
      * @param string $CreateTime Task creation time
      * @param integer $State Task status. Valid values: `0` (initial), `1` (executing), `2` (executed successfully), `-1` (failed to execute), `-3` (canceled).
@@ -323,6 +343,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SparkJobFile JAR file of the Spark application entry
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UiUrl Spark UI URL
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalTime The task time in ms.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CmdArgs The program entry parameter for running a task under a Spark job.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -456,6 +480,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UiUrl",$param) and $param["UiUrl"] !== null) {
             $this->UiUrl = $param["UiUrl"];
+        }
+
+        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
+            $this->TotalTime = $param["TotalTime"];
+        }
+
+        if (array_key_exists("CmdArgs",$param) and $param["CmdArgs"] !== null) {
+            $this->CmdArgs = $param["CmdArgs"];
         }
     }
 }

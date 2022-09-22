@@ -124,6 +124,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTagList(array $TagList) Set List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getEngineType() Obtain Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEngineType(string $EngineType) Set Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxDelayTime() Obtain Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxDelayTime(integer $MaxDelayTime) Set Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -352,6 +360,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $TagList;
 
     /**
+     * @var string Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EngineType;
+
+    /**
+     * @var integer Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxDelayTime;
+
+    /**
      * @param integer $WanStatus Public network access status. Value range: 0 (not enabled), 1 (enabled), 2 (disabled)
      * @param string $Zone AZ information
      * @param integer $InitFlag Initialization flag. Value range: 0 (not initialized), 1 (initialized)
@@ -404,6 +424,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $InstanceNodes Number of nodes
      * @param array $TagList List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $EngineType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxDelayTime Maximum delay threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -606,6 +630,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->TagList, $obj);
             }
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
+        }
+
+        if (array_key_exists("MaxDelayTime",$param) and $param["MaxDelayTime"] !== null) {
+            $this->MaxDelayTime = $param["MaxDelayTime"];
         }
     }
 }

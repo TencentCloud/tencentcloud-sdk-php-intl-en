@@ -20,24 +20,38 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBinlogBackupOverview response structure.
  *
- * @method integer getBinlogBackupVolume() Obtain Total capacity of log backups in bytes.
- * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) Set Total capacity of log backups in bytes.
- * @method integer getBinlogBackupCount() Obtain Total number of log backups.
- * @method void setBinlogBackupCount(integer $BinlogBackupCount) Set Total number of log backups.
+ * @method integer getBinlogBackupVolume() Obtain Total capacity of log backups in bytes (including remote log backups)
+ * @method void setBinlogBackupVolume(integer $BinlogBackupVolume) Set Total capacity of log backups in bytes (including remote log backups)
+ * @method integer getBinlogBackupCount() Obtain Total number of log backups (include remote log backups)
+ * @method void setBinlogBackupCount(integer $BinlogBackupCount) Set Total number of log backups (include remote log backups)
+ * @method integer getRemoteBinlogVolume() Obtain Capacity of remote log backups in bytes
+ * @method void setRemoteBinlogVolume(integer $RemoteBinlogVolume) Set Capacity of remote log backups in bytes
+ * @method integer getRemoteBinlogCount() Obtain Number of remote backups
+ * @method void setRemoteBinlogCount(integer $RemoteBinlogCount) Set Number of remote backups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeBinlogBackupOverviewResponse extends AbstractModel
 {
     /**
-     * @var integer Total capacity of log backups in bytes.
+     * @var integer Total capacity of log backups in bytes (including remote log backups)
      */
     public $BinlogBackupVolume;
 
     /**
-     * @var integer Total number of log backups.
+     * @var integer Total number of log backups (include remote log backups)
      */
     public $BinlogBackupCount;
+
+    /**
+     * @var integer Capacity of remote log backups in bytes
+     */
+    public $RemoteBinlogVolume;
+
+    /**
+     * @var integer Number of remote backups
+     */
+    public $RemoteBinlogCount;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +59,10 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $BinlogBackupVolume Total capacity of log backups in bytes.
-     * @param integer $BinlogBackupCount Total number of log backups.
+     * @param integer $BinlogBackupVolume Total capacity of log backups in bytes (including remote log backups)
+     * @param integer $BinlogBackupCount Total number of log backups (include remote log backups)
+     * @param integer $RemoteBinlogVolume Capacity of remote log backups in bytes
+     * @param integer $RemoteBinlogCount Number of remote backups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -68,6 +84,14 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("BinlogBackupCount",$param) and $param["BinlogBackupCount"] !== null) {
             $this->BinlogBackupCount = $param["BinlogBackupCount"];
+        }
+
+        if (array_key_exists("RemoteBinlogVolume",$param) and $param["RemoteBinlogVolume"] !== null) {
+            $this->RemoteBinlogVolume = $param["RemoteBinlogVolume"];
+        }
+
+        if (array_key_exists("RemoteBinlogCount",$param) and $param["RemoteBinlogCount"] !== null) {
+            $this->RemoteBinlogCount = $param["RemoteBinlogCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

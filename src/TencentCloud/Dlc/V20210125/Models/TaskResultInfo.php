@@ -18,7 +18,7 @@ namespace TencentCloud\Dlc\V20210125\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Task result information
+ * The task result information.
  *
  * @method string getTaskId() Obtain Unique task ID
  * @method void setTaskId(string $TaskId) Set Unique task ID
@@ -38,8 +38,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setState(integer $State) Set Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
  * @method integer getDataAmount() Obtain Amount of the data scanned in bytes
  * @method void setDataAmount(integer $DataAmount) Set Amount of the data scanned in bytes
- * @method integer getUsedTime() Obtain Task execution time in seconds
- * @method void setUsedTime(integer $UsedTime) Set Task execution time in seconds
+ * @method integer getUsedTime() Obtain The compute time in ms.
+ * @method void setUsedTime(integer $UsedTime) Set The compute time in ms.
  * @method string getOutputPath() Obtain Address of the COS bucket for storing the task result
  * @method void setOutputPath(string $OutputPath) Set Address of the COS bucket for storing the task result
  * @method string getCreateTime() Obtain Task creation timestamp
@@ -64,6 +64,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setProgressDetail(string $ProgressDetail) Set Task progress details
  * @method string getDisplayFormat() Obtain Console display format. Valid values: `table`, `text`.
  * @method void setDisplayFormat(string $DisplayFormat) Set Console display format. Valid values: `table`, `text`.
+ * @method integer getTotalTime() Obtain The task time in ms.
+ * @method void setTotalTime(integer $TotalTime) Set The task time in ms.
  */
 class TaskResultInfo extends AbstractModel
 {
@@ -105,7 +107,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DataAmount;
 
     /**
-     * @var integer Task execution time in seconds
+     * @var integer The compute time in ms.
      */
     public $UsedTime;
 
@@ -162,6 +164,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DisplayFormat;
 
     /**
+     * @var integer The task time in ms.
+     */
+    public $TotalTime;
+
+    /**
      * @param string $TaskId Unique task ID
      * @param string $DatasourceConnectionName Name of the default selected data source when the current job is executed
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -171,7 +178,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $SQLType Type of the executed task. Valid values: `DDL`, `DML`, `DQL`.
      * @param integer $State Current status of the task. `0`: initial; `1`: task running; `2`: task execution succeeded; `-1`: task execution failed; `-3`: task terminated manually by the user. The task execution result will be returned only if task execution succeeds.
      * @param integer $DataAmount Amount of the data scanned in bytes
-     * @param integer $UsedTime Task execution time in seconds
+     * @param integer $UsedTime The compute time in ms.
      * @param string $OutputPath Address of the COS bucket for storing the task result
      * @param string $CreateTime Task creation timestamp
      * @param string $OutputMessage Task execution information. `success` will be returned if the task succeeds; otherwise, the failure cause will be returned.
@@ -184,6 +191,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Percentage Task progress (%)
      * @param string $ProgressDetail Task progress details
      * @param string $DisplayFormat Console display format. Valid values: `table`, `text`.
+     * @param integer $TotalTime The task time in ms.
      */
     function __construct()
     {
@@ -273,6 +281,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DisplayFormat",$param) and $param["DisplayFormat"] !== null) {
             $this->DisplayFormat = $param["DisplayFormat"];
+        }
+
+        if (array_key_exists("TotalTime",$param) and $param["TotalTime"] !== null) {
+            $this->TotalTime = $param["TotalTime"];
         }
     }
 }

@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTaskList(array $TaskList) Set List of task objects.
  * @method integer getTotalCount() Obtain Total number of instances
  * @method void setTotalCount(integer $TotalCount) Set Total number of instances
+ * @method TasksOverview getTasksOverview() Obtain The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTasksOverview(TasksOverview $TasksOverview) Set The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -40,6 +44,12 @@ class DescribeTasksResponse extends AbstractModel
     public $TotalCount;
 
     /**
+     * @var TasksOverview The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TasksOverview;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -47,6 +57,8 @@ class DescribeTasksResponse extends AbstractModel
     /**
      * @param array $TaskList List of task objects.
      * @param integer $TotalCount Total number of instances
+     * @param TasksOverview $TasksOverview The task overview.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -73,6 +85,11 @@ class DescribeTasksResponse extends AbstractModel
 
         if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
             $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TasksOverview",$param) and $param["TasksOverview"] !== null) {
+            $this->TasksOverview = new TasksOverview();
+            $this->TasksOverview->deserialize($param["TasksOverview"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

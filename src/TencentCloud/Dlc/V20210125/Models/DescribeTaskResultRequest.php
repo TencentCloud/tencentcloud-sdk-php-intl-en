@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskId() Obtain Unique task ID
  * @method void setTaskId(string $TaskId) Set Unique task ID
- * @method string getNextToken() Obtain Pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. 1,000 rows of data are returned each time.
- * @method void setNextToken(string $NextToken) Set Pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. 1,000 rows of data are returned each time.
+ * @method string getNextToken() Obtain The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
+ * @method void setNextToken(string $NextToken) Set The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
  * @method integer getMaxResults() Obtain Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
  * @method void setMaxResults(integer $MaxResults) Set Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
  */
@@ -35,7 +35,7 @@ class DescribeTaskResultRequest extends AbstractModel
     public $TaskId;
 
     /**
-     * @var string Pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. 1,000 rows of data are returned each time.
+     * @var string The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
      */
     public $NextToken;
 
@@ -46,7 +46,7 @@ class DescribeTaskResultRequest extends AbstractModel
 
     /**
      * @param string $TaskId Unique task ID
-     * @param string $NextToken Pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. 1,000 rows of data are returned each time.
+     * @param string $NextToken The pagination information returned by the last response. This parameter can be omitted for the first response, where the data will be returned from the beginning. The data with a volume set by the `MaxResults` field is returned each time.
      * @param integer $MaxResults Maximum number of returned rows. Value range: 0–1,000. Default value: 1,000.
      */
     function __construct()
