@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAccount request structure.
  *
- * @method string getAccountType() Obtain Account type of a new customer. Valid value: `business`.
- * @method void setAccountType(string $AccountType) Set Account type of a new customer. Valid value: `business`.
+ * @method string getAccountType() Obtain Account type of a new customer. Valid values: `personal`, `company`.
+ * @method void setAccountType(string $AccountType) Set Account type of a new customer. Valid values: `personal`, `company`.
  * @method string getMail() Obtain Registered email address, which should be valid and correct.
 For example, account@qq.com.
  * @method void setMail(string $Mail) Set Registered email address, which should be valid and correct.
@@ -48,7 +48,7 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
 class CreateAccountRequest extends AbstractModel
 {
     /**
-     * @var string Account type of a new customer. Valid value: `business`.
+     * @var string Account type of a new customer. Valid values: `personal`, `company`.
      */
     public $AccountType;
 
@@ -92,7 +92,7 @@ A global mobile number within 1-32 digits is allowed, such as 18888888888.
     public $Extended;
 
     /**
-     * @param string $AccountType Account type of a new customer. Valid value: `business`.
+     * @param string $AccountType Account type of a new customer. Valid values: `personal`, `company`.
      * @param string $Mail Registered email address, which should be valid and correct.
 For example, account@qq.com.
      * @param string $Password Account password

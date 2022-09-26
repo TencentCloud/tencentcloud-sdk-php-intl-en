@@ -128,8 +128,18 @@ If `konajdk` is selected, the value can be:
 - TENCENTOS
  * @method EnablePrometheusConf getEnablePrometheusConf() Obtain Specifies whether to enable Prometheus metric
  * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) Set Specifies whether to enable Prometheus metric
- * @method integer getEnableTracing() Obtain `1`: Enable APM collection; `0`: Disable APM collection
- * @method void setEnableTracing(integer $EnableTracing) Set `1`: Enable APM collection; `0`: Disable APM collection
+ * @method integer getEnableTracing() Obtain `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+ * @method void setEnableTracing(integer $EnableTracing) Set `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+ * @method integer getEnableMetrics() Obtain 
+ * @method void setEnableMetrics(integer $EnableMetrics) Set 
+ * @method string getTcrInstanceId() Obtain 
+ * @method void setTcrInstanceId(string $TcrInstanceId) Set 
+ * @method string getRepoServer() Obtain 
+ * @method void setRepoServer(string $RepoServer) Set 
+ * @method integer getRepoType() Obtain 
+ * @method void setRepoType(integer $RepoType) Set 
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -348,9 +358,30 @@ If `konajdk` is selected, the value can be:
     public $EnablePrometheusConf;
 
     /**
-     * @var integer `1`: Enable APM collection; `0`: Disable APM collection
+     * @var integer `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
      */
     public $EnableTracing;
+
+    /**
+     * @var integer 
+     */
+    public $EnableMetrics;
+
+    /**
+     * @var string 
+     */
+    public $TcrInstanceId;
+
+    /**
+     * @var string 
+     */
+    public $RepoServer;
+
+    /**
+     * @var integer 
+     */
+    public $RepoType;
 
     /**
      * @param string $ApplicationId Application ID
@@ -407,7 +438,12 @@ If `konajdk` is selected, the value can be:
 - ALPINE
 - TENCENTOS
      * @param EnablePrometheusConf $EnablePrometheusConf Specifies whether to enable Prometheus metric
-     * @param integer $EnableTracing `1`: Enable APM collection; `0`: Disable APM collection
+     * @param integer $EnableTracing `1`: Enable APM tracing (Skywalking)
+`0`: Disable APM tracing
+     * @param integer $EnableMetrics 
+     * @param string $TcrInstanceId 
+     * @param string $RepoServer 
+     * @param integer $RepoType 
      */
     function __construct()
     {
@@ -622,6 +658,22 @@ If `konajdk` is selected, the value can be:
 
         if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
             $this->EnableTracing = $param["EnableTracing"];
+        }
+
+        if (array_key_exists("EnableMetrics",$param) and $param["EnableMetrics"] !== null) {
+            $this->EnableMetrics = $param["EnableMetrics"];
+        }
+
+        if (array_key_exists("TcrInstanceId",$param) and $param["TcrInstanceId"] !== null) {
+            $this->TcrInstanceId = $param["TcrInstanceId"];
+        }
+
+        if (array_key_exists("RepoServer",$param) and $param["RepoServer"] !== null) {
+            $this->RepoServer = $param["RepoServer"];
+        }
+
+        if (array_key_exists("RepoType",$param) and $param["RepoType"] !== null) {
+            $this->RepoType = $param["RepoType"];
         }
     }
 }

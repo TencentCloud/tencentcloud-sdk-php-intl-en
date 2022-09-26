@@ -18,14 +18,14 @@ namespace TencentCloud\Tem\V20210701\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteApplication response structure.
+ * DestroyEnvironment response structure.
  *
  * @method boolean getResult() Obtain Returned result.
  * @method void setResult(boolean $Result) Set Returned result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteApplicationResponse extends AbstractModel
+class DestroyEnvironmentResponse extends AbstractModel
 {
     /**
      * @var boolean Returned result.

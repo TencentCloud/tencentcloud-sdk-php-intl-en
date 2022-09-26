@@ -112,8 +112,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setAnycastOutPackRelation(AnycastOutPackRelation $AnycastOutPackRelation) Set All-out package details of the instance
 When an all-out package is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getInstanceVersion() Obtain 
- * @method void setInstanceVersion(integer $InstanceVersion) Set 
+ * @method integer getInstanceVersion() Obtain Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setInstanceVersion(integer $InstanceVersion) Set Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -252,7 +254,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AnycastOutPackRelation;
 
     /**
-     * @var integer 
+     * @var integer Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $InstanceVersion;
 
@@ -303,7 +306,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param AnycastOutPackRelation $AnycastOutPackRelation All-out package details of the instance
 When an all-out package is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $InstanceVersion 
+     * @param integer $InstanceVersion Edition of the instance
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

@@ -22,14 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method integer getLimit() Obtain Backup file list offset
- * @method void setLimit(integer $Limit) Set Backup file list offset
- * @method integer getOffset() Obtain Backup file list start
- * @method void setOffset(integer $Offset) Set Backup file list start
+ * @method integer getLimit() Obtain The number of results to be returned. Value range: (0,100]
+ * @method void setLimit(integer $Limit) Set The number of results to be returned. Value range: (0,100]
+ * @method integer getOffset() Obtain Record offset. Value range: [0,INF)
+ * @method void setOffset(integer $Offset) Set Record offset. Value range: [0,INF)
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
+ * @method array getBackupIds() Obtain Backup ID
+ * @method void setBackupIds(array $BackupIds) Set Backup ID
+ * @method string getBackupType() Obtain Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+ * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+ * @method string getBackupMethod() Obtain Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+ * @method void setBackupMethod(string $BackupMethod) Set Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+ * @method string getSnapShotType() Obtain 
+ * @method void setSnapShotType(string $SnapShotType) Set 
+ * @method string getStartTime() Obtain Backup start time
+ * @method void setStartTime(string $StartTime) Set Backup start time
+ * @method string getEndTime() Obtain Backup end time
+ * @method void setEndTime(string $EndTime) Set Backup end time
+ * @method array getFileNames() Obtain 
+ * @method void setFileNames(array $FileNames) Set 
+ * @method array getBackupNames() Obtain Backup alias, which supports fuzzy query.
+ * @method void setBackupNames(array $BackupNames) Set Backup alias, which supports fuzzy query.
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -39,12 +55,12 @@ class DescribeBackupListRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var integer Backup file list offset
+     * @var integer The number of results to be returned. Value range: (0,100]
      */
     public $Limit;
 
     /**
-     * @var integer Backup file list start
+     * @var integer Record offset. Value range: [0,INF)
      */
     public $Offset;
 
@@ -55,11 +71,59 @@ class DescribeBackupListRequest extends AbstractModel
     public $DbType;
 
     /**
+     * @var array Backup ID
+     */
+    public $BackupIds;
+
+    /**
+     * @var string Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     */
+    public $BackupType;
+
+    /**
+     * @var string Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     */
+    public $BackupMethod;
+
+    /**
+     * @var string 
+     */
+    public $SnapShotType;
+
+    /**
+     * @var string Backup start time
+     */
+    public $StartTime;
+
+    /**
+     * @var string Backup end time
+     */
+    public $EndTime;
+
+    /**
+     * @var array 
+     */
+    public $FileNames;
+
+    /**
+     * @var array Backup alias, which supports fuzzy query.
+     */
+    public $BackupNames;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param integer $Limit Backup file list offset
-     * @param integer $Offset Backup file list start
+     * @param integer $Limit The number of results to be returned. Value range: (0,100]
+     * @param integer $Offset Record offset. Value range: [0,INF)
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
+     * @param array $BackupIds Backup ID
+     * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+     * @param string $BackupMethod Back mode. Valid values: `auto` (automatic backup), `manual` (manual backup)
+     * @param string $SnapShotType 
+     * @param string $StartTime Backup start time
+     * @param string $EndTime Backup end time
+     * @param array $FileNames 
+     * @param array $BackupNames Backup alias, which supports fuzzy query.
      */
     function __construct()
     {
@@ -88,6 +152,38 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("BackupIds",$param) and $param["BackupIds"] !== null) {
+            $this->BackupIds = $param["BackupIds"];
+        }
+
+        if (array_key_exists("BackupType",$param) and $param["BackupType"] !== null) {
+            $this->BackupType = $param["BackupType"];
+        }
+
+        if (array_key_exists("BackupMethod",$param) and $param["BackupMethod"] !== null) {
+            $this->BackupMethod = $param["BackupMethod"];
+        }
+
+        if (array_key_exists("SnapShotType",$param) and $param["SnapShotType"] !== null) {
+            $this->SnapShotType = $param["SnapShotType"];
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("FileNames",$param) and $param["FileNames"] !== null) {
+            $this->FileNames = $param["FileNames"];
+        }
+
+        if (array_key_exists("BackupNames",$param) and $param["BackupNames"] !== null) {
+            $this->BackupNames = $param["BackupNames"];
         }
     }
 }

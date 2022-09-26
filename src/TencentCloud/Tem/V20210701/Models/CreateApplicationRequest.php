@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setApplicationName(string $ApplicationName) Set Application name
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
- * @method integer getUseDefaultImageService() Obtain Whether to use the default image service. 1: yes; 0: no
- * @method void setUseDefaultImageService(integer $UseDefaultImageService) Set Whether to use the default image service. 1: yes; 0: no
- * @method integer getRepoType() Obtain Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
- * @method void setRepoType(integer $RepoType) Set Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
- * @method string getInstanceId() Obtain Instance ID of Enterprise Edition image service
- * @method void setInstanceId(string $InstanceId) Set Instance ID of Enterprise Edition image service
+ * @method integer getUseDefaultImageService() Obtain Whether to use the default image service. `1`: yes; `0`: no
+ * @method void setUseDefaultImageService(integer $UseDefaultImageService) Set Whether to use the default image service. `1`: yes; `0`: no
+ * @method integer getRepoType() Obtain Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+ * @method void setRepoType(integer $RepoType) Set Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+ * @method string getInstanceId() Obtain TCR Enterprise instance ID
+ * @method void setInstanceId(string $InstanceId) Set TCR Enterprise instance ID
  * @method string getRepoServer() Obtain Address of the bound image server
  * @method void setRepoServer(string $RepoServer) Set Address of the bound image server
  * @method string getRepoName() Obtain Name of the bound image repository
@@ -52,8 +52,10 @@ use TencentCloud\Common\AbstractModel;
 - IMAGE
 - JAR
 - WAR
- * @method integer getEnableTracing() Obtain Whether to enable the call chain feature
- * @method void setEnableTracing(integer $EnableTracing) Set Whether to enable the call chain feature
+ * @method integer getEnableTracing() Obtain Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+ * @method void setEnableTracing(integer $EnableTracing) Set Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+ * @method UseDefaultRepoParameters getUseDefaultImageServiceParameters() Obtain Parameters of the default image service
+ * @method void setUseDefaultImageServiceParameters(UseDefaultRepoParameters $UseDefaultImageServiceParameters) Set Parameters of the default image service
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -68,17 +70,17 @@ class CreateApplicationRequest extends AbstractModel
     public $Description;
 
     /**
-     * @var integer Whether to use the default image service. 1: yes; 0: no
+     * @var integer Whether to use the default image service. `1`: yes; `0`: no
      */
     public $UseDefaultImageService;
 
     /**
-     * @var integer Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
+     * @var integer Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
      */
     public $RepoType;
 
     /**
-     * @var string Instance ID of Enterprise Edition image service
+     * @var string TCR Enterprise instance ID
      */
     public $InstanceId;
 
@@ -118,16 +120,21 @@ class CreateApplicationRequest extends AbstractModel
     public $DeployMode;
 
     /**
-     * @var integer Whether to enable the call chain feature
+     * @var integer Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
      */
     public $EnableTracing;
 
     /**
+     * @var UseDefaultRepoParameters Parameters of the default image service
+     */
+    public $UseDefaultImageServiceParameters;
+
+    /**
      * @param string $ApplicationName Application name
      * @param string $Description Description
-     * @param integer $UseDefaultImageService Whether to use the default image service. 1: yes; 0: no
-     * @param integer $RepoType Type of the bound repository. 0: Personal Edition; 1: Enterprise Edition
-     * @param string $InstanceId Instance ID of Enterprise Edition image service
+     * @param integer $UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
+     * @param integer $RepoType Type of the bound repository. `0`: TCR Personal; `1`: TCR Enterprise
+     * @param string $InstanceId TCR Enterprise instance ID
      * @param string $RepoServer Address of the bound image server
      * @param string $RepoName Name of the bound image repository
      * @param integer $SourceChannel Source channel
@@ -139,7 +146,8 @@ class CreateApplicationRequest extends AbstractModel
 - IMAGE
 - JAR
 - WAR
-     * @param integer $EnableTracing Whether to enable the call chain feature
+     * @param integer $EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
+     * @param UseDefaultRepoParameters $UseDefaultImageServiceParameters Parameters of the default image service
      */
     function __construct()
     {
@@ -200,6 +208,11 @@ class CreateApplicationRequest extends AbstractModel
 
         if (array_key_exists("EnableTracing",$param) and $param["EnableTracing"] !== null) {
             $this->EnableTracing = $param["EnableTracing"];
+        }
+
+        if (array_key_exists("UseDefaultImageServiceParameters",$param) and $param["UseDefaultImageServiceParameters"] !== null) {
+            $this->UseDefaultImageServiceParameters = new UseDefaultRepoParameters();
+            $this->UseDefaultImageServiceParameters->deserialize($param["UseDefaultImageServiceParameters"]);
         }
     }
 }

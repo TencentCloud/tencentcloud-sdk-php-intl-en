@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPort(integer $Port) Set 8000
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getBackup() Obtain Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setBackup(integer $Backup) Set Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class L4RuleSource extends AbstractModel
 {
@@ -48,10 +52,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Port;
 
     /**
+     * @var integer Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Backup;
+
+    /**
      * @param string $Source IP or domain name for forwarding.
      * @param integer $Weight Weight. Value range: [0,100].
      * @param integer $Port 8000
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Backup Secondary origin server. `1`: secondary origin server; `0`: general origin server.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -76,6 +88,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Port",$param) and $param["Port"] !== null) {
             $this->Port = $param["Port"];
+        }
+
+        if (array_key_exists("Backup",$param) and $param["Backup"] !== null) {
+            $this->Backup = $param["Backup"];
         }
     }
 }

@@ -28,9 +28,9 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\CreateEnvironmentResponse CreateEnvironment(Models\CreateEnvironmentRequest $req) This API is used to create an environment.
  * @method Models\CreateResourceResponse CreateResource(Models\CreateResourceRequest $req) This API is used to bind a cloud resource.
  * @method Models\DeleteApplicationResponse DeleteApplication(Models\DeleteApplicationRequest $req) This API is used to delete an application.
-  - Stop the application if it’s running
-  - Delete resources associated with this application
-  - Delele the application
+  - Stop running the current application
+  - Delete resources related to the application
+  - Delete the application
  * @method Models\DeleteIngressResponse DeleteIngress(Models\DeleteIngressRequest $req) This API is used to delete an ingress rule.
  * @method Models\DeployApplicationResponse DeployApplication(Models\DeployApplicationRequest $req) This API is used to deploy an application.
  * @method Models\DescribeApplicationPodsResponse DescribeApplicationPods(Models\DescribeApplicationPodsRequest $req) This API is used to get the list of application pods.
@@ -39,6 +39,7 @@ use TencentCloud\Tem\V20210701\Models as Models;
  * @method Models\DescribeIngressResponse DescribeIngress(Models\DescribeIngressRequest $req) This API is used to query an ingress rule.
  * @method Models\DescribeIngressesResponse DescribeIngresses(Models\DescribeIngressesRequest $req) This API is used to query the list of ingress rules.
  * @method Models\DescribeRelatedIngressesResponse DescribeRelatedIngresses(Models\DescribeRelatedIngressesRequest $req) This API is used to query the list of ingress rules associated with the application.
+ * @method Models\DestroyEnvironmentResponse DestroyEnvironment(Models\DestroyEnvironmentRequest $req) This API is used to terminate a namespace.
  * @method Models\GenerateApplicationPackageDownloadUrlResponse GenerateApplicationPackageDownloadUrl(Models\GenerateApplicationPackageDownloadUrlRequest $req) This API is used to generate the pre-signed download URL for the specified application package.
  * @method Models\ModifyApplicationInfoResponse ModifyApplicationInfo(Models\ModifyApplicationInfoRequest $req) This API is used to modify the basic information of an application.
  * @method Models\ModifyEnvironmentResponse ModifyEnvironment(Models\ModifyEnvironmentRequest $req) This API is used to edit an environment.

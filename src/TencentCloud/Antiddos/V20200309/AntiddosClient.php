@@ -37,6 +37,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\CreateDefaultAlarmThresholdResponse CreateDefaultAlarmThreshold(Models\CreateDefaultAlarmThresholdRequest $req) This API is used to set the default alarm threshold of an IP.
  * @method Models\CreateIPAlarmThresholdConfigResponse CreateIPAlarmThresholdConfig(Models\CreateIPAlarmThresholdConfigRequest $req) This API is used to set the default alarm threshold of an IP.
  * @method Models\CreateL7RuleCertsResponse CreateL7RuleCerts(Models\CreateL7RuleCertsRequest $req) This API is used to configure certificates with layer-7 forwarding rules in a batch for SSL testing.
+ * @method Models\CreateNewL7RulesResponse CreateNewL7Rules(Models\CreateNewL7RulesRequest $req) This API is used to add layer-7 forwarding rules.
  * @method Models\CreatePacketFilterConfigResponse CreatePacketFilterConfig(Models\CreatePacketFilterConfigRequest $req) This API is used to add Anti-DDoS feature filtering rules.
  * @method Models\CreateProtocolBlockConfigResponse CreateProtocolBlockConfig(Models\CreateProtocolBlockConfigRequest $req) This API is used to set Anti-DDoS protocol blocking configurations.
  * @method Models\CreateSchedulingDomainResponse CreateSchedulingDomain(Models\CreateSchedulingDomainRequest $req) This API is used to create a domain name for IP scheduling and switching.
@@ -53,6 +54,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DeleteWaterPrintConfigResponse DeleteWaterPrintConfig(Models\DeleteWaterPrintConfigRequest $req) This API is used to delete Anti-DDoS watermark configurations.
  * @method Models\DeleteWaterPrintKeyResponse DeleteWaterPrintKey(Models\DeleteWaterPrintKeyRequest $req) This API is used to delete Anti-DDoS watermark keys.
  * @method Models\DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatus(Models\DescribeBasicDeviceStatusRequest $req) This API is used to querying the status of Anti-DDoS IP.
+ * @method Models\DescribeBgpBizTrendResponse DescribeBgpBizTrend(Models\DescribeBgpBizTrendRequest $req) This API is used to obtain Anti-DDoS Pro traffic data.
  * @method Models\DescribeBizTrendResponse DescribeBizTrend(Models\DescribeBizTrendRequest $req) This API is used to get the traffic flow data collected in the specified period.
  * @method Models\DescribeBlackWhiteIpListResponse DescribeBlackWhiteIpList(Models\DescribeBlackWhiteIpListRequest $req) This API is used to get an Anti-DDoS IP blocklist/allowlist.
  * @method Models\DescribeCCLevelListResponse DescribeCCLevelList(Models\DescribeCCLevelListRequest $req) Gets the list of CC protection levels
@@ -80,6 +82,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeListProtocolBlockConfigResponse DescribeListProtocolBlockConfig(Models\DescribeListProtocolBlockConfigRequest $req) This API is used to get a list of Anti-DDoS protocol blocking configurations.
  * @method Models\DescribeListSchedulingDomainResponse DescribeListSchedulingDomain(Models\DescribeListSchedulingDomainRequest $req) This API is used to get a list of intelligent scheduling domain names.
  * @method Models\DescribeListWaterPrintConfigResponse DescribeListWaterPrintConfig(Models\DescribeListWaterPrintConfigRequest $req) This API is used to get a list of Anti-DDoS watermark configurations.
+ * @method Models\DescribeNewL7RulesResponse DescribeNewL7Rules(Models\DescribeNewL7RulesRequest $req) This API is used to obtain layer-7 forwarding rules.
  * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) This API is used to obtain the list of DDoS attacks.
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) This API is used to unbind an Anti-DDoS EIP.
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) This API is used to modify a CC precise protection policy.

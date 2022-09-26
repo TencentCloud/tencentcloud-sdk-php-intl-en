@@ -14,23 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tem\V20210701\Models;
+namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteApplication response structure.
+ * DescribeNewL7Rules response structure.
  *
- * @method boolean getResult() Obtain Returned result.
- * @method void setResult(boolean $Result) Set Returned result.
+ * @method array getRules() Obtain List of forwarding rules
+ * @method void setRules(array $Rules) Set List of forwarding rules
+ * @method array getHealths() Obtain List of health check settings
+ * @method void setHealths(array $Healths) Set List of health check settings
+ * @method integer getTotal() Obtain Total number of rules
+ * @method void setTotal(integer $Total) Set Total number of rules
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DeleteApplicationResponse extends AbstractModel
+class DescribeNewL7RulesResponse extends AbstractModel
 {
     /**
-     * @var boolean Returned result.
+     * @var array List of forwarding rules
      */
-    public $Result;
+    public $Rules;
+
+    /**
+     * @var array List of health check settings
+     */
+    public $Healths;
+
+    /**
+     * @var integer Total number of rules
+     */
+    public $Total;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +52,9 @@ class DeleteApplicationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Result Returned result.
+     * @param array $Rules List of forwarding rules
+     * @param array $Healths List of health check settings
+     * @param integer $Total Total number of rules
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +70,26 @@ class DeleteApplicationResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
-            $this->Result = $param["Result"];
+        if (array_key_exists("Rules",$param) and $param["Rules"] !== null) {
+            $this->Rules = [];
+            foreach ($param["Rules"] as $key => $value){
+                $obj = new NewL7RuleEntry();
+                $obj->deserialize($value);
+                array_push($this->Rules, $obj);
+            }
+        }
+
+        if (array_key_exists("Healths",$param) and $param["Healths"] !== null) {
+            $this->Healths = [];
+            foreach ($param["Healths"] as $key => $value){
+                $obj = new L7RuleHealth();
+                $obj->deserialize($value);
+                array_push($this->Healths, $obj);
+            }
+        }
+
+        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
+            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

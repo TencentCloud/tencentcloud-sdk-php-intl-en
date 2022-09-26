@@ -48,6 +48,10 @@ Note: only the above values are supported for the time being. Entering other val
  * @method void setHardwareResourceType(string $HardwareResourceType) Set Resource type. Valid values: all, host, pod. Default value: all
  * @method array getSearchFields() Obtain Searchable field
  * @method void setSearchFields(array $SearchFields) Set Searchable field
+ * @method string getOrderField() Obtain None
+ * @method void setOrderField(string $OrderField) Set None
+ * @method integer getAsc() Obtain None
+ * @method void setAsc(integer $Asc) Set None
  */
 class DescribeClusterNodesRequest extends AbstractModel
 {
@@ -90,6 +94,16 @@ Note: only the above values are supported for the time being. Entering other val
     public $SearchFields;
 
     /**
+     * @var string None
+     */
+    public $OrderField;
+
+    /**
+     * @var integer None
+     */
+    public $Asc;
+
+    /**
      * @param string $InstanceId Cluster instance ID in the format of emr-xxxxxxxx
      * @param string $NodeFlag Node flag. Valid values:
 <li>all: gets the information of nodes in all types except TencentDB information.</li>
@@ -104,6 +118,8 @@ Note: only the above values are supported for the time being. Entering other val
      * @param integer $Limit Number of returned results per page. Default value: 100. Maximum value: 100
      * @param string $HardwareResourceType Resource type. Valid values: all, host, pod. Default value: all
      * @param array $SearchFields Searchable field
+     * @param string $OrderField None
+     * @param integer $Asc None
      */
     function __construct()
     {
@@ -145,6 +161,14 @@ Note: only the above values are supported for the time being. Entering other val
                 $obj->deserialize($value);
                 array_push($this->SearchFields, $obj);
             }
+        }
+
+        if (array_key_exists("OrderField",$param) and $param["OrderField"] !== null) {
+            $this->OrderField = $param["OrderField"];
+        }
+
+        if (array_key_exists("Asc",$param) and $param["Asc"] !== null) {
+            $this->Asc = $param["Asc"];
         }
     }
 }

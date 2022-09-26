@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Description
  * @method integer getSourceChannel() Obtain Source channel
  * @method void setSourceChannel(integer $SourceChannel) Set Source channel
- * @method integer getEnableTracing() Obtain Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
- * @method void setEnableTracing(integer $EnableTracing) Set Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+ * @method integer getEnableTracing() Obtain (Disused) Whether to enable the call chain. 
+ * @method void setEnableTracing(integer $EnableTracing) Set (Disused) Whether to enable the call chain. 
  */
 class ModifyApplicationInfoRequest extends AbstractModel
 {
@@ -47,7 +47,7 @@ class ModifyApplicationInfoRequest extends AbstractModel
     public $SourceChannel;
 
     /**
-     * @var integer Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+     * @var integer (Disused) Whether to enable the call chain. 
      */
     public $EnableTracing;
 
@@ -55,7 +55,7 @@ class ModifyApplicationInfoRequest extends AbstractModel
      * @param string $ApplicationId Application ID
      * @param string $Description Description
      * @param integer $SourceChannel Source channel
-     * @param integer $EnableTracing Whether to enable the call chain. Valid values: `0`: disable; `1`: enable
+     * @param integer $EnableTracing (Disused) Whether to enable the call chain. 
      */
     function __construct()
     {

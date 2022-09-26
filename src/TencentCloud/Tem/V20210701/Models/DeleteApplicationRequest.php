@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteApplication request structure.
  *
- * @method string getApplicationId() Obtain Service ID
- * @method void setApplicationId(string $ApplicationId) Set Service ID
+ * @method string getApplicationId() Obtain Application ID.
+ * @method void setApplicationId(string $ApplicationId) Set Application ID.
  * @method string getEnvironmentId() Obtain Environment ID
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment ID
- * @method integer getSourceChannel() Obtain Retain as default
- * @method void setSourceChannel(integer $SourceChannel) Set Retain as default
+ * @method integer getSourceChannel() Obtain Source channel. Please keep the default value.
+ * @method void setSourceChannel(integer $SourceChannel) Set Source channel. Please keep the default value.
  * @method boolean getDeleteApplicationIfNoRunningVersion() Obtain Whether to delete this application automatically when there is no running version.
  * @method void setDeleteApplicationIfNoRunningVersion(boolean $DeleteApplicationIfNoRunningVersion) Set Whether to delete this application automatically when there is no running version.
  */
 class DeleteApplicationRequest extends AbstractModel
 {
     /**
-     * @var string Service ID
+     * @var string Application ID.
      */
     public $ApplicationId;
 
@@ -42,7 +42,7 @@ class DeleteApplicationRequest extends AbstractModel
     public $EnvironmentId;
 
     /**
-     * @var integer Retain as default
+     * @var integer Source channel. Please keep the default value.
      */
     public $SourceChannel;
 
@@ -52,9 +52,9 @@ class DeleteApplicationRequest extends AbstractModel
     public $DeleteApplicationIfNoRunningVersion;
 
     /**
-     * @param string $ApplicationId Service ID
+     * @param string $ApplicationId Application ID.
      * @param string $EnvironmentId Environment ID
-     * @param integer $SourceChannel Retain as default
+     * @param integer $SourceChannel Source channel. Please keep the default value.
      * @param boolean $DeleteApplicationIfNoRunningVersion Whether to delete this application automatically when there is no running version.
      */
     function __construct()

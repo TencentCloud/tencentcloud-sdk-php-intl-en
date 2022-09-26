@@ -20,54 +20,64 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Backup file information
  *
- * @method integer getSnapshotId() Obtain Snapshot file ID used for rollback
- * @method void setSnapshotId(integer $SnapshotId) Set Snapshot file ID used for rollback
- * @method string getFileName() Obtain Snapshot file name
- * @method void setFileName(string $FileName) Set Snapshot file name
- * @method integer getFileSize() Obtain Snapshot file size
- * @method void setFileSize(integer $FileSize) Set Snapshot file size
- * @method string getStartTime() Obtain Snapshot backup start time
- * @method void setStartTime(string $StartTime) Set Snapshot backup start time
- * @method string getFinishTime() Obtain Snapshot backup end time
- * @method void setFinishTime(string $FinishTime) Set Snapshot backup end time
- * @method string getBackupType() Obtain Backup type. snapshot: snapshot backup; timepoint: time point backup
- * @method void setBackupType(string $BackupType) Set Backup type. snapshot: snapshot backup; timepoint: time point backup
+ * @method integer getSnapshotId() Obtain Snapshot file ID, which is deprecated. You need to use `BackupId`.
+ * @method void setSnapshotId(integer $SnapshotId) Set Snapshot file ID, which is deprecated. You need to use `BackupId`.
+ * @method string getFileName() Obtain Backup file name
+ * @method void setFileName(string $FileName) Set Backup file name
+ * @method integer getFileSize() Obtain Backup file size
+ * @method void setFileSize(integer $FileSize) Set Backup file size
+ * @method string getStartTime() Obtain Backup start time
+ * @method void setStartTime(string $StartTime) Set Backup start time
+ * @method string getFinishTime() Obtain Backup end time
+ * @method void setFinishTime(string $FinishTime) Set Backup end time
+ * @method string getBackupType() Obtain Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
+ * @method void setBackupType(string $BackupType) Set Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
  * @method string getBackupMethod() Obtain Back mode. auto: auto backup; manual: manual backup
  * @method void setBackupMethod(string $BackupMethod) Set Back mode. auto: auto backup; manual: manual backup
  * @method string getBackupStatus() Obtain Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
  * @method void setBackupStatus(string $BackupStatus) Set Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
  * @method string getSnapshotTime() Obtain Backup file time
  * @method void setSnapshotTime(string $SnapshotTime) Set Backup file time
+ * @method integer getBackupId() Obtain Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupId(integer $BackupId) Set Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSnapShotType() Obtain 
+ * @method void setSnapShotType(string $SnapShotType) Set 
+ * @method string getBackupName() Obtain Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBackupName(string $BackupName) Set Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BackupFileInfo extends AbstractModel
 {
     /**
-     * @var integer Snapshot file ID used for rollback
+     * @var integer Snapshot file ID, which is deprecated. You need to use `BackupId`.
      */
     public $SnapshotId;
 
     /**
-     * @var string Snapshot file name
+     * @var string Backup file name
      */
     public $FileName;
 
     /**
-     * @var integer Snapshot file size
+     * @var integer Backup file size
      */
     public $FileSize;
 
     /**
-     * @var string Snapshot backup start time
+     * @var string Backup start time
      */
     public $StartTime;
 
     /**
-     * @var string Snapshot backup end time
+     * @var string Backup end time
      */
     public $FinishTime;
 
     /**
-     * @var string Backup type. snapshot: snapshot backup; timepoint: time point backup
+     * @var string Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      */
     public $BackupType;
 
@@ -87,15 +97,37 @@ class BackupFileInfo extends AbstractModel
     public $SnapshotTime;
 
     /**
-     * @param integer $SnapshotId Snapshot file ID used for rollback
-     * @param string $FileName Snapshot file name
-     * @param integer $FileSize Snapshot file size
-     * @param string $StartTime Snapshot backup start time
-     * @param string $FinishTime Snapshot backup end time
-     * @param string $BackupType Backup type. snapshot: snapshot backup; timepoint: time point backup
+     * @var integer Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackupId;
+
+    /**
+     * @var string 
+     */
+    public $SnapShotType;
+
+    /**
+     * @var string Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BackupName;
+
+    /**
+     * @param integer $SnapshotId Snapshot file ID, which is deprecated. You need to use `BackupId`.
+     * @param string $FileName Backup file name
+     * @param integer $FileSize Backup file size
+     * @param string $StartTime Backup start time
+     * @param string $FinishTime Backup end time
+     * @param string $BackupType Backup type. Valid values: `snapshot` (snapshot backup), `logic` (logic backup).
      * @param string $BackupMethod Back mode. auto: auto backup; manual: manual backup
      * @param string $BackupStatus Backup file status. success: backup succeeded; fail: backup failed; creating: creating backup file; deleting: deleting backup file
      * @param string $SnapshotTime Backup file time
+     * @param integer $BackupId Backup ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SnapShotType 
+     * @param string $BackupName Backup file alias
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -144,6 +176,18 @@ class BackupFileInfo extends AbstractModel
 
         if (array_key_exists("SnapshotTime",$param) and $param["SnapshotTime"] !== null) {
             $this->SnapshotTime = $param["SnapshotTime"];
+        }
+
+        if (array_key_exists("BackupId",$param) and $param["BackupId"] !== null) {
+            $this->BackupId = $param["BackupId"];
+        }
+
+        if (array_key_exists("SnapShotType",$param) and $param["SnapShotType"] !== null) {
+            $this->SnapShotType = $param["SnapShotType"];
+        }
+
+        if (array_key_exists("BackupName",$param) and $param["BackupName"] !== null) {
+            $this->BackupName = $param["BackupName"];
         }
     }
 }

@@ -196,6 +196,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setClients(string $Clients) Set Client
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getCurrentTime() Obtain The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCurrentTime(string $CurrentTime) Set The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsFederation() Obtain Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsFederation(integer $IsFederation) Set Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDeviceName() Obtain Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDeviceName(string $DeviceName) Set Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getServiceClient() Obtain Service
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setServiceClient(string $ServiceClient) Set Service
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -464,6 +480,30 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Clients;
 
     /**
+     * @var string The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CurrentTime;
+
+    /**
+     * @var integer Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsFederation;
+
+    /**
+     * @var string Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DeviceName;
+
+    /**
+     * @var string Service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ServiceClient;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -552,6 +592,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Clients Client
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $CurrentTime The current system time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DeviceName Device name
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -752,6 +800,22 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("Clients",$param) and $param["Clients"] !== null) {
             $this->Clients = $param["Clients"];
+        }
+
+        if (array_key_exists("CurrentTime",$param) and $param["CurrentTime"] !== null) {
+            $this->CurrentTime = $param["CurrentTime"];
+        }
+
+        if (array_key_exists("IsFederation",$param) and $param["IsFederation"] !== null) {
+            $this->IsFederation = $param["IsFederation"];
+        }
+
+        if (array_key_exists("DeviceName",$param) and $param["DeviceName"] !== null) {
+            $this->DeviceName = $param["DeviceName"];
+        }
+
+        if (array_key_exists("ServiceClient",$param) and $param["ServiceClient"] !== null) {
+            $this->ServiceClient = $param["ServiceClient"];
         }
     }
 }

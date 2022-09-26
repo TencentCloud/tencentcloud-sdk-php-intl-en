@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateApplication response structure.
  *
- * @method string getResult() Obtain Service code
- * @method void setResult(string $Result) Set Service code
+ * @method string getResult() Obtain ID of the created application
+ * @method void setResult(string $Result) Set ID of the created application
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateApplicationResponse extends AbstractModel
 {
     /**
-     * @var string Service code
+     * @var string ID of the created application
      */
     public $Result;
 
@@ -38,7 +38,7 @@ class CreateApplicationResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $Result Service code
+     * @param string $Result ID of the created application
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
