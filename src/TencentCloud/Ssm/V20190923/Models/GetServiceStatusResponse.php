@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setServiceEnabled(boolean $ServiceEnabled) Set `true`: The service is activated; `false`: The service is not activated.
  * @method integer getInvalidType() Obtain Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
  * @method void setInvalidType(integer $InvalidType) Set Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
- * @method boolean getAccessKeyEscrowEnabled() Obtain `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
- * @method void setAccessKeyEscrowEnabled(boolean $AccessKeyEscrowEnabled) Set `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+ * @method boolean getAccessKeyEscrowEnabled() Obtain `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
+ * @method void setAccessKeyEscrowEnabled(boolean $AccessKeyEscrowEnabled) Set `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -44,8 +44,8 @@ class GetServiceStatusResponse extends AbstractModel
     public $InvalidType;
 
     /**
-     * @var boolean `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     * @var boolean `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
      */
     public $AccessKeyEscrowEnabled;
 
@@ -57,8 +57,8 @@ class GetServiceStatusResponse extends AbstractModel
     /**
      * @param boolean $ServiceEnabled `true`: The service is activated; `false`: The service is not activated.
      * @param integer $InvalidType Invalid service type. `0`: not purchased; `1`: normal; `2`: suspended due to arrears; `3`: resource released
-     * @param boolean $AccessKeyEscrowEnabled `true`: allow SSM to manage Tencent Cloud API key secrets.
-`false`: forbid SSM to manage Tencent Cloud API key secrets.
+     * @param boolean $AccessKeyEscrowEnabled `true`: Allow SSM to manage Tencent Cloud API key secrets.
+`false`: Forbid SSM to manage Tencent Cloud API key secrets.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

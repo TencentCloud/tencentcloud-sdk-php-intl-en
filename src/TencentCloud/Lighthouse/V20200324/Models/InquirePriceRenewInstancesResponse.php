@@ -23,9 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method Price getPrice() Obtain Price query information.
  * @method void setPrice(Price $Price) Set Price query information.
  * @method array getDataDiskPriceSet() Obtain List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDataDiskPriceSet(array $DataDiskPriceSet) Set List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -38,7 +38,7 @@ class InquirePriceRenewInstancesResponse extends AbstractModel
 
     /**
      * @var array List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DataDiskPriceSet;
 
@@ -50,7 +50,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param Price $Price Price query information.
      * @param array $DataDiskPriceSet List of data disk price information.
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

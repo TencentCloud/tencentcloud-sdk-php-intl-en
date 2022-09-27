@@ -38,8 +38,28 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskSize(integer $DiskSize) Set Disk size
  * @method string getRenewFlag() Obtain Renewal flag
  * @method void setRenewFlag(string $RenewFlag) Set Renewal flag
- * @method string getDiskState() Obtain Disk status
- * @method void setDiskState(string $DiskState) Set Disk status
+ * @method string getDiskState() Obtain Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
+ * @method void setDiskState(string $DiskState) Set Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
  * @method boolean getAttached() Obtain Whether the disk is attached to an instance
  * @method void setAttached(boolean $Attached) Set Whether the disk is attached to an instance
  * @method boolean getDeleteWithInstance() Obtain Whether to release the disk along with the instance
@@ -50,16 +70,26 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLatestOperationState(string $LatestOperationState) Set Last operation status
  * @method string getLatestOperationRequestId() Obtain Last request ID
  * @method void setLatestOperationRequestId(string $LatestOperationRequestId) Set Last request ID
- * @method string getCreatedTime() Obtain Creation time
- * @method void setCreatedTime(string $CreatedTime) Set Creation time
- * @method string getExpiredTime() Obtain Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getIsolatedTime() Obtain Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsolatedTime(string $IsolatedTime) Set Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCreatedTime() Obtain Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+ * @method void setCreatedTime(string $CreatedTime) Set Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+ * @method string getExpiredTime() Obtain Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExpiredTime(string $ExpiredTime) Set Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsolatedTime() Obtain Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsolatedTime(string $IsolatedTime) Set Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskBackupCount() Obtain Total disk backups
+ * @method void setDiskBackupCount(integer $DiskBackupCount) Set Total disk backups
+ * @method integer getDiskBackupQuota() Obtain Disk backup quota
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Disk backup quota
  */
 class Disk extends AbstractModel
 {
@@ -109,7 +139,17 @@ class Disk extends AbstractModel
     public $RenewFlag;
 
     /**
-     * @var string Disk status
+     * @var string Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
      */
     public $DiskState;
 
@@ -139,21 +179,34 @@ class Disk extends AbstractModel
     public $LatestOperationRequestId;
 
     /**
-     * @var string Creation time
+     * @var string Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
      */
     public $CreatedTime;
 
     /**
-     * @var string Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpiredTime;
 
     /**
-     * @var string Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolatedTime;
+
+    /**
+     * @var integer Total disk backups
+     */
+    public $DiskBackupCount;
+
+    /**
+     * @var integer Disk backup quota
+     */
+    public $DiskBackupQuota;
 
     /**
      * @param string $DiskId Disk ID
@@ -165,17 +218,32 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $DiskChargeType Disk payment type
      * @param integer $DiskSize Disk size
      * @param string $RenewFlag Renewal flag
-     * @param string $DiskState Disk status
+     * @param string $DiskState Disk status. Values: 
+<li>`PENDING`: Creating</li>
+<li>`UNATTACHED`: Not attached</li>
+<li>`ATTACHING`: Attaching</li>
+<li>`ATTACHED`: Attached</li>
+<li>`DETACHING`: Detaching</li>
+<li>`SHUTDOWN`: Isolated</li>
+<li>`CREATED_FAILED`: Failed to create</li>
+<li>`TERMINATING`: Terminating</li>
+<li>`DELETING`: Deleting</li>
+<li>`FREEZING`: Freezing</li>
      * @param boolean $Attached Whether the disk is attached to an instance
      * @param boolean $DeleteWithInstance Whether to release the disk along with the instance
      * @param string $LatestOperation Last operation
      * @param string $LatestOperationState Last operation status
      * @param string $LatestOperationRequestId Last request ID
-     * @param string $CreatedTime Creation time
-     * @param string $ExpiredTime Expiration date
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $IsolatedTime Isolation time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CreatedTime Creation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+     * @param string $ExpiredTime Expiration time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsolatedTime Isolation time according to ISO 8601 standard. UTC time is used. 
+Format: YYYY-MM-DDThh:mm:ssZ.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskBackupCount Total disk backups
+     * @param integer $DiskBackupQuota Disk backup quota
      */
     function __construct()
     {
@@ -260,6 +328,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsolatedTime",$param) and $param["IsolatedTime"] !== null) {
             $this->IsolatedTime = $param["IsolatedTime"];
+        }
+
+        if (array_key_exists("DiskBackupCount",$param) and $param["DiskBackupCount"] !== null) {
+            $this->DiskBackupCount = $param["DiskBackupCount"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

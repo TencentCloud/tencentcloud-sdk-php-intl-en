@@ -18,7 +18,7 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Container environment variables
+ * Container environment variable
  *
  * @method string getKey() Obtain Environment variable key
  * @method void setKey(string $Key) Set Environment variable key

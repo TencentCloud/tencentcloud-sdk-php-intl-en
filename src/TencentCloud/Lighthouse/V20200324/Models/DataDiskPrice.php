@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskId(string $DiskId) Set Cloud disk ID.
  * @method float getOriginalDiskPrice() Obtain Cloud disk unit price.
  * @method void setOriginalDiskPrice(float $OriginalDiskPrice) Set Cloud disk unit price.
- * @method float getOriginalPrice() Obtain Total cloud disk price.
- * @method void setOriginalPrice(float $OriginalPrice) Set Total cloud disk price.
+ * @method float getOriginalPrice() Obtain Total price of cloud disk
+ * @method void setOriginalPrice(float $OriginalPrice) Set Total price of cloud disk
  * @method float getDiscount() Obtain Discount.
  * @method void setDiscount(float $Discount) Set Discount.
  * @method float getDiscountPrice() Obtain Discounted total price.
@@ -44,7 +44,7 @@ class DataDiskPrice extends AbstractModel
     public $OriginalDiskPrice;
 
     /**
-     * @var float Total cloud disk price.
+     * @var float Total price of cloud disk
      */
     public $OriginalPrice;
 
@@ -61,7 +61,7 @@ class DataDiskPrice extends AbstractModel
     /**
      * @param string $DiskId Cloud disk ID.
      * @param float $OriginalDiskPrice Cloud disk unit price.
-     * @param float $OriginalPrice Total cloud disk price.
+     * @param float $OriginalPrice Total price of cloud disk
      * @param float $Discount Discount.
      * @param float $DiscountPrice Discounted total price.
      */

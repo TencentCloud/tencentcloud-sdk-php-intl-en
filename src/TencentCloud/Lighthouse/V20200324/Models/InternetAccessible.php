@@ -18,7 +18,7 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Public network accessibility of the instance created by the launch configuration, public network usage billing mode of the instance, maximum bandwidth, etc.
+ * This describes the internet accessibility of the instance created by a launch configuration and declares the internet usage billing method of the instance and the maximum bandwidth
  *
  * @method string getInternetChargeType() Obtain Network billing mode. Valid values:
 <li>Bill by traffic package: TRAFFIC_POSTPAID_BY_HOUR</li>

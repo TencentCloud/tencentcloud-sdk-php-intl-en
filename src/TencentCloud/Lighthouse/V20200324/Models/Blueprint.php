@@ -58,6 +58,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setImageId(string $ImageId) Set ID of the Lighthouse image shared from a CVM image
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getCommunityUrl() Obtain URL of official website of the open-source project
+ * @method void setCommunityUrl(string $CommunityUrl) Set URL of official website of the open-source project
+ * @method string getGuideUrl() Obtain Guide documentation URL
+ * @method void setGuideUrl(string $GuideUrl) Set Guide documentation URL
+ * @method array getSceneIdSet() Obtain Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setSceneIdSet(array $SceneIdSet) Set Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class Blueprint extends AbstractModel
 {
@@ -145,6 +153,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ImageId;
 
     /**
+     * @var string URL of official website of the open-source project
+     */
+    public $CommunityUrl;
+
+    /**
+     * @var string Guide documentation URL
+     */
+    public $GuideUrl;
+
+    /**
+     * @var array Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $SceneIdSet;
+
+    /**
      * @param string $BlueprintId Image ID, which is the unique identifier of `Blueprint`.
      * @param string $DisplayTitle Image title to be displayed.
      * @param string $DisplayVersion Image version to be displayed.
@@ -164,6 +188,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $RequiredMemorySize Memory size required by image in GB.
      * @param string $ImageId ID of the Lighthouse image shared from a CVM image
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $CommunityUrl URL of official website of the open-source project
+     * @param string $GuideUrl Guide documentation URL
+     * @param array $SceneIdSet Array of IDs of scenes associated with an image
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -240,6 +268,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
             $this->ImageId = $param["ImageId"];
+        }
+
+        if (array_key_exists("CommunityUrl",$param) and $param["CommunityUrl"] !== null) {
+            $this->CommunityUrl = $param["CommunityUrl"];
+        }
+
+        if (array_key_exists("GuideUrl",$param) and $param["GuideUrl"] !== null) {
+            $this->GuideUrl = $param["GuideUrl"];
+        }
+
+        if (array_key_exists("SceneIdSet",$param) and $param["SceneIdSet"] !== null) {
+            $this->SceneIdSet = $param["SceneIdSet"];
         }
     }
 }

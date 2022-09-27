@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Parameter settings for purchasing the monthly subscribed cloud disk.
  * @method integer getDiskCount() Obtain Number of cloud disks. Default value: 1.
  * @method void setDiskCount(integer $DiskCount) Set Number of cloud disks. Default value: 1.
+ * @method integer getDiskBackupQuota() Obtain Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
  */
 class InquirePriceCreateDisksRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class InquirePriceCreateDisksRequest extends AbstractModel
     public $DiskCount;
 
     /**
+     * @var integer Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     */
+    public $DiskBackupQuota;
+
+    /**
      * @param integer $DiskSize Cloud disk size in GB.
      * @param string $DiskType Cloud disk media type. Valid values: "CLOUD_PREMIUM" (premium cloud storage), "CLOUD_SSD" (SSD cloud disk).
      * @param DiskChargePrepaid $DiskChargePrepaid Parameter settings for purchasing the monthly subscribed cloud disk.
      * @param integer $DiskCount Number of cloud disks. Default value: 1.
+     * @param integer $DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
      */
     function __construct()
     {
@@ -85,6 +93,10 @@ class InquirePriceCreateDisksRequest extends AbstractModel
 
         if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
             $this->DiskCount = $param["DiskCount"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

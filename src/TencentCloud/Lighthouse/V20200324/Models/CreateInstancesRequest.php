@@ -20,16 +20,16 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstances request structure.
  *
- * @method string getBundleId() Obtain ID of the Lighthouse package
- * @method void setBundleId(string $BundleId) Set ID of the Lighthouse package
- * @method string getBlueprintId() Obtain ID of the Lighthouse image
- * @method void setBlueprintId(string $BlueprintId) Set ID of the Lighthouse image
+ * @method string getBundleId() Obtain Bundle ID.
+ * @method void setBundleId(string $BundleId) Set Bundle ID.
+ * @method string getBlueprintId() Obtain Image ID
+ * @method void setBlueprintId(string $BlueprintId) Set Image ID
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
- * @method string getInstanceName() Obtain The display name of the Lighthouse instance
- * @method void setInstanceName(string $InstanceName) Set The display name of the Lighthouse instance
- * @method integer getInstanceCount() Obtain Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
- * @method void setInstanceCount(integer $InstanceCount) Set Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+ * @method string getInstanceName() Obtain Instance display name.
+ * @method void setInstanceName(string $InstanceName) Set Instance display name.
+ * @method integer getInstanceCount() Obtain Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
  * @method array getZones() Obtain List of availability zones. A random AZ is selected by default.
  * @method void setZones(array $Zones) Set List of availability zones. A random AZ is selected by default.
  * @method boolean getDryRun() Obtain Whether the request is a dry run only.
@@ -48,16 +48,18 @@ If the dry run succeeds, the RequestId will be returned.
  * @method void setLoginConfiguration(LoginConfiguration $LoginConfiguration) Set Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
  * @method array getContainers() Obtain Configuration of the containers to create
  * @method void setContainers(array $Containers) Set Configuration of the containers to create
+ * @method boolean getAutoVoucher() Obtain Whether to use the vouchers automatically. It defaults to No.
+ * @method void setAutoVoucher(boolean $AutoVoucher) Set Whether to use the vouchers automatically. It defaults to No.
  */
 class CreateInstancesRequest extends AbstractModel
 {
     /**
-     * @var string ID of the Lighthouse package
+     * @var string Bundle ID.
      */
     public $BundleId;
 
     /**
-     * @var string ID of the Lighthouse image
+     * @var string Image ID
      */
     public $BlueprintId;
 
@@ -67,12 +69,12 @@ class CreateInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
-     * @var string The display name of the Lighthouse instance
+     * @var string Instance display name.
      */
     public $InstanceName;
 
     /**
-     * @var integer Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * @var integer Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      */
     public $InstanceCount;
 
@@ -106,11 +108,16 @@ If the dry run succeeds, the RequestId will be returned.
     public $Containers;
 
     /**
-     * @param string $BundleId ID of the Lighthouse package
-     * @param string $BlueprintId ID of the Lighthouse image
+     * @var boolean Whether to use the vouchers automatically. It defaults to No.
+     */
+    public $AutoVoucher;
+
+    /**
+     * @param string $BundleId Bundle ID.
+     * @param string $BlueprintId Image ID
      * @param InstanceChargePrepaid $InstanceChargePrepaid Monthly subscription information for the instance, including the purchase period, setting of auto-renewal, etc.
-     * @param string $InstanceName The display name of the Lighthouse instance
-     * @param integer $InstanceCount Number of the Lighthouse instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
+     * @param string $InstanceName Instance display name.
+     * @param integer $InstanceCount Number of the instances to purchase. For monthly subscribed instances, the value can be 1 to 30. The default value is `1`. Note that this number can not exceed the remaining quota under the current account.
      * @param array $Zones List of availability zones. A random AZ is selected by default.
      * @param boolean $DryRun Whether the request is a dry run only.
 `true`: dry run only. The request will not create instance(s). A dry run can check whether all the required parameters are specified, whether the request format is right, whether the request exceeds service limits, and whether the specified CVMs are available.
@@ -120,6 +127,7 @@ If the dry run succeeds, the RequestId will be returned.
      * @param string $ClientToken A unique string supplied by the client to ensure that the request is idempotent. Its maximum length is 64 ASCII characters. If this parameter is not specified, the idem-potency of the request cannot be guaranteed.
      * @param LoginConfiguration $LoginConfiguration Login password of the instance. It’s only available for Windows instances. If it’s not specified, it means that the user choose to set the login password after the instance creation.
      * @param array $Containers Configuration of the containers to create
+     * @param boolean $AutoVoucher Whether to use the vouchers automatically. It defaults to No.
      */
     function __construct()
     {
@@ -179,6 +187,10 @@ If the dry run succeeds, the RequestId will be returned.
                 $obj->deserialize($value);
                 array_push($this->Containers, $obj);
             }
+        }
+
+        if (array_key_exists("AutoVoucher",$param) and $param["AutoVoucher"] !== null) {
+            $this->AutoVoucher = $param["AutoVoucher"];
         }
     }
 }

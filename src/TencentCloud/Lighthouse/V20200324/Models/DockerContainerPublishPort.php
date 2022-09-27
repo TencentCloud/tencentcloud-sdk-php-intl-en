@@ -25,13 +25,13 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getContainerPort() Obtain Container port
  * @method void setContainerPort(integer $ContainerPort) Set Container port
  * @method string getIp() Obtain External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIp(string $Ip) Set External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProtocol() Obtain The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProtocol(string $Protocol) Set The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DockerContainerPublishPort extends AbstractModel
 {
@@ -47,13 +47,13 @@ class DockerContainerPublishPort extends AbstractModel
 
     /**
      * @var string External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Ip;
 
     /**
      * @var string The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Protocol;
 
@@ -61,9 +61,9 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $HostPort Host port
      * @param integer $ContainerPort Container port
      * @param string $Ip External IP. It defaults to 0.0.0.0.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Protocol The protocol defaults to `tcp`. Valid values: `tcp`, `udp` and `sctp`.
-Note: This field may return `null`, indicating that no valid value was found.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

@@ -34,6 +34,8 @@ If this parameter is left empty, the CMK created by Secrets Manager by default w
 You can also specify a custom KMS CMK created in the same region for encryption.
  * @method array getTags() Obtain List of tags.
  * @method void setTags(array $Tags) Set List of tags.
+ * @method string getSSHKeyName() Obtain Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+ * @method void setSSHKeyName(string $SSHKeyName) Set Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
  */
 class CreateSSHKeyPairSecretRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ You can also specify a custom KMS CMK created in the same region for encryption.
     public $Tags;
 
     /**
+     * @var string Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
+     */
+    public $SSHKeyName;
+
+    /**
      * @param string $SecretName Secret name, which must be unique in the same region. It can contain 128 bytes of letters, digits, hyphens and underscores and must begin with a letter or digit.
      * @param integer $ProjectId ID of the project to which the created SSH key belongs.
      * @param string $Description Description, such as what it is used for. It contains up to 2,048 bytes.
@@ -72,6 +79,7 @@ You can also specify a custom KMS CMK created in the same region for encryption.
 If this parameter is left empty, the CMK created by Secrets Manager by default will be used for encryption.
 You can also specify a custom KMS CMK created in the same region for encryption.
      * @param array $Tags List of tags.
+     * @param string $SSHKeyName Name of the SSH key pair, which only contains digits, letters and underscores and must start with a digit or letter. The maximum length is 25 characters.
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ You can also specify a custom KMS CMK created in the same region for encryption.
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("SSHKeyName",$param) and $param["SSHKeyName"] !== null) {
+            $this->SSHKeyName = $param["SSHKeyName"];
         }
     }
 }

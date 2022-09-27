@@ -22,58 +22,62 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getDiskIds() Obtain List of cloud disk IDs.
  * @method void setDiskIds(array $DiskIds) Set List of cloud disk IDs.
- * @method array getFilters() Obtain Filter list.
+ * @method array getFilters() Obtain Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
- * @method void setFilters(array $Filters) Set Filter list.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
  * @method integer getOffset() Obtain Offset. Default value: 0.
@@ -91,32 +95,34 @@ class DescribeDisksRequest extends AbstractModel
     public $DiskIds;
 
     /**
-     * @var array Filter list.
+     * @var array Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
      */
     public $Filters;
 
@@ -142,32 +148,34 @@ Each request can contain up to 10 filters, each of which can have 5 values. You 
 
     /**
      * @param array $DiskIds List of cloud disk IDs.
-     * @param array $Filters Filter list.
+     * @param array $Filters Filter list
 disk-id
 Filter by **cloud disk ID**.
 Type: String
-Required: no
+Required: No
 instance-id
 Filter by **instance ID**.
 Type: String
-Required: no
+Required: No
 disk-name
 Filter by **cloud disk name**.
 Type: String
-Required: no
+Required: No
 zone
 Filter by **availability zone**.
 Type: String
-Required: no
+Required: No
 disk-usage
 Filter by **cloud disk type**.
 Type: String
-Required: no
+Required: No
+Values: `SYSTEM_DISK` and `DATA_DISK`
 disk-state
 Filter by **cloud disk status**.
 Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 5 values. You cannot specify both `DiskIds` and `Filters` at the same time.
+Required: No
+Values: See `DiskState` in [Disk](https://intl.cloud.tencent.com/document/api/1207/47576?from_cn_redirect=1#Disk)
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. `DiskIds` and `Filters` cannot be specified at the same time.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
      * @param integer $Offset Offset. Default value: 0.
      * @param string $OrderField The field by which the cloud disks are sorted. Valid values: "CREATED_TIME" (creation time), "EXPIRED_TIME" (expiration time), "DISK_SIZE" (size of cloud disks). Default value: "CREATED_TIME".

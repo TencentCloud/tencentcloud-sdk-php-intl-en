@@ -22,31 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID list. Each request can contain up to 100 instances at a time.
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list. Each request can contain up to 100 instances at a time.
- * @method array getFilters() Obtain Filter list
-<li>instance-name</li>Filter by the instance name
+ * @method array getFilters() Obtain Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
-Type: String
-Required: no
-<li>zone</li>Filter by the availability zone
-Type: String
-Required: no
-<li>instance-state</li>Filter by **instance status**.
-Type: String
-Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
- * @method void setFilters(array $Filters) Set Filter list
-<li>instance-name</li>Filter by the instance name
-Type: String
-Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
-Type: String
-Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -55,7 +38,24 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
+ * @method void setFilters(array $Filters) Set Filter list.
+<li>instance-name</li>Filter by **instance name**.
+Type: String
+Required: no
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
+Type: String
+Required: no
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
+Type: String
+Required: no
+<li>zone</li>Filter by the availability zone
+Type: String
+Required: no
+<li>instance-state</li>Filter by **instance status**.
+Type: String
+Required: no
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
  * @method integer getOffset() Obtain Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
@@ -69,14 +69,14 @@ class DescribeInstancesRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array Filter list
-<li>instance-name</li>Filter by the instance name
+     * @var array Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -85,7 +85,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
      */
     public $Filters;
 
@@ -101,14 +101,14 @@ Each request can contain up to 10 filters, each of which can have 100 values. Yo
 
     /**
      * @param array $InstanceIds Instance ID list. Each request can contain up to 100 instances at a time.
-     * @param array $Filters Filter list
-<li>instance-name</li>Filter by the instance name
+     * @param array $Filters Filter list.
+<li>instance-name</li>Filter by **instance name**.
 Type: String
 Required: no
-<li>private-ip-address</li>Filter by the private IP of instance primary ENI
+<li>private-ip-address</li>Filter by **private IP of instance primary ENI**.
 Type: String
 Required: no
-<li>public-ip-address</li>Filter by the public IP of instance primary ENI
+<li>public-ip-address</li>Filter by **public IP of instance primary ENI**.
 Type: String
 Required: no
 <li>zone</li>Filter by the availability zone
@@ -117,7 +117,7 @@ Required: no
 <li>instance-state</li>Filter by **instance status**.
 Type: String
 Required: no
-Each request can contain up to 10 filters, each of which can have 100 values. You cannot specify both `InstanceIds` and `Filters` at the same time.
+Each request can contain up to 10 `Filters` and 100 `Filter.Values`. You cannot specify both `InstanceIds` and `Filters` at the same time.
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      */

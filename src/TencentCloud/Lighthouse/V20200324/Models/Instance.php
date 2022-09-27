@@ -57,9 +57,9 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
  * @method LoginSettings getLoginSettings() Obtain Instance login settings.
  * @method void setLoginSettings(LoginSettings $LoginSettings) Set Instance login settings.
  * @method string getInstanceState() Obtain Instance status. Valid values: 
-<li>PENDING: creating</li><li>LAUNCH_FAILED: creation failed</li><li>RUNNING: running</li><li>STOPPED: shut down</li><li>STARTING: starting</li><li>STOPPING: shutting down</li><li>REBOOTING: rebooting</li><li>SHUTDOWN: shut down and to be terminated</li><li>TERMINATING: terminating</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
  * @method void setInstanceState(string $InstanceState) Set Instance status. Valid values: 
-<li>PENDING: creating</li><li>LAUNCH_FAILED: creation failed</li><li>RUNNING: running</li><li>STOPPED: shut down</li><li>STARTING: starting</li><li>STOPPING: shutting down</li><li>REBOOTING: rebooting</li><li>SHUTDOWN: shut down and to be terminated</li><li>TERMINATING: terminating</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
  * @method string getUuid() Obtain Globally unique ID of instance.
  * @method void setUuid(string $Uuid) Set Globally unique ID of instance.
  * @method string getLatestOperation() Obtain Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
@@ -106,6 +106,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setZone(string $Zone) Set AZ.
  * @method array getTags() Obtain The list of tags associated with the instance
  * @method void setTags(array $Tags) Set The list of tags associated with the instance
+ * @method string getInstanceRestrictState() Obtain Obtain instance status
+<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+ * @method void setInstanceRestrictState(string $InstanceRestrictState) Set Obtain instance status
+<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
  */
 class Instance extends AbstractModel
 {
@@ -181,7 +185,7 @@ NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
 
     /**
      * @var string Instance status. Valid values: 
-<li>PENDING: creating</li><li>LAUNCH_FAILED: creation failed</li><li>RUNNING: running</li><li>STOPPED: shut down</li><li>STARTING: starting</li><li>STOPPING: shutting down</li><li>REBOOTING: rebooting</li><li>SHUTDOWN: shut down and to be terminated</li><li>TERMINATING: terminating</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
      */
     public $InstanceState;
 
@@ -257,6 +261,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var string Obtain instance status
+<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
+     */
+    public $InstanceRestrictState;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $BundleId Package ID.
      * @param string $BlueprintId Image ID.
@@ -276,7 +286,7 @@ NOTIFY_AND_MANUAL_RENEW: notify upon expiration but do not renew automatically
 NOTIFY_AND_AUTO_RENEW: notify upon expiration and renew automatically.
      * @param LoginSettings $LoginSettings Instance login settings.
      * @param string $InstanceState Instance status. Valid values: 
-<li>PENDING: creating</li><li>LAUNCH_FAILED: creation failed</li><li>RUNNING: running</li><li>STOPPED: shut down</li><li>STARTING: starting</li><li>STOPPING: shutting down</li><li>REBOOTING: rebooting</li><li>SHUTDOWN: shut down and to be terminated</li><li>TERMINATING: terminating</li>
+<li>PENDING: Creating</li><li>LAUNCH_FAILED: Failed to create</li><li>RUNNING: Running</li><li>STOPPED: Shut down</li><li>STARTING: Starting up</li><li>STOPPING: Shutting down</li><li>REBOOTING: Restarting</li><li>SHUTDOWN: Shutdown and to be terminated</li><li>TERMINATING: Terminating</li><li>DELETING: Deleting</li><li>FREEZING: Frozen</li><li>ENTER_RESCUE_MODE: Entering the rescue mode</li><li>RESCUE_MODE: Rescue mode</li><li>EXIT_RESCUE_MODE: Exiting from the rescue mode</li>
      * @param string $Uuid Globally unique ID of instance.
      * @param string $LatestOperation Last instance operation, such as `StopInstances` and `ResetInstance`. Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $LatestOperationState Last instance operation status. Valid values: 
@@ -300,6 +310,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $OsName OS name.
      * @param string $Zone AZ.
      * @param array $Tags The list of tags associated with the instance
+     * @param string $InstanceRestrictState Obtain instance status
+<li>NORMAL: The instance is normal</li><li>NETWORK_RESTRICT: The instance is blocked from the network.</li>
      */
     function __construct()
     {
@@ -424,6 +436,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceRestrictState",$param) and $param["InstanceRestrictState"] !== null) {
+            $this->InstanceRestrictState = $param["InstanceRestrictState"];
         }
     }
 }

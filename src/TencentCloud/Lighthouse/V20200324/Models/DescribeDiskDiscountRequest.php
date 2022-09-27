@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiskType(string $DiskType) Set Cloud disk type. Valid values: "CLOUD_PREMIUM".
  * @method integer getDiskSize() Obtain Cloud disk size.
  * @method void setDiskSize(integer $DiskSize) Set Cloud disk size.
+ * @method integer getDiskBackupQuota() Obtain Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
  */
 class DescribeDiskDiscountRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DescribeDiskDiscountRequest extends AbstractModel
     public $DiskSize;
 
     /**
+     * @var integer Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
+     */
+    public $DiskBackupQuota;
+
+    /**
      * @param string $DiskType Cloud disk type. Valid values: "CLOUD_PREMIUM".
      * @param integer $DiskSize Cloud disk size.
+     * @param integer $DiskBackupQuota Specify the quota of disk backups. No quota if it’s left empty. Only one quota is allowed.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeDiskDiscountRequest extends AbstractModel
 
         if (array_key_exists("DiskSize",$param) and $param["DiskSize"] !== null) {
             $this->DiskSize = $param["DiskSize"];
+        }
+
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

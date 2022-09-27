@@ -18,7 +18,7 @@ namespace TencentCloud\Lighthouse\V20200324\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Information of the block device where the OS is installed, namely, the system disk.
+ * Information on the block device where the operating system is installed, namely the system disk.
  *
  * @method string getDiskType() Obtain System disk type.
 Valid values: 
