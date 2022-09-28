@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAreaName(string $AreaName) Set Region name
  * @method string getAreaKey() Obtain Region key
  * @method void setAreaKey(string $AreaKey) Set Region key
+ * @method string getAreaRegionID() Obtain Region ID.
+ * @method void setAreaRegionID(string $AreaRegionID) Set Region ID.
+ * @method string getAreaRegionCode() Obtain Region code, such as “ap-xxx” (xxx is the region name).
+ * @method void setAreaRegionCode(string $AreaRegionCode) Set Region code, such as “ap-xxx” (xxx is the region name).
+ * @method string getAreaAbbr() Obtain Region abbreviation.
+ * @method void setAreaAbbr(string $AreaAbbr) Set Region abbreviation.
  */
 class RumAreaInfo extends AbstractModel
 {
@@ -52,10 +58,28 @@ class RumAreaInfo extends AbstractModel
     public $AreaKey;
 
     /**
+     * @var string Region ID.
+     */
+    public $AreaRegionID;
+
+    /**
+     * @var string Region code, such as “ap-xxx” (xxx is the region name).
+     */
+    public $AreaRegionCode;
+
+    /**
+     * @var string Region abbreviation.
+     */
+    public $AreaAbbr;
+
+    /**
      * @param integer $AreaId Region ID
      * @param integer $AreaStatus Region status (1: valid; 2: invalid)
      * @param string $AreaName Region name
      * @param string $AreaKey Region key
+     * @param string $AreaRegionID Region ID.
+     * @param string $AreaRegionCode Region code, such as “ap-xxx” (xxx is the region name).
+     * @param string $AreaAbbr Region abbreviation.
      */
     function __construct()
     {
@@ -84,6 +108,18 @@ class RumAreaInfo extends AbstractModel
 
         if (array_key_exists("AreaKey",$param) and $param["AreaKey"] !== null) {
             $this->AreaKey = $param["AreaKey"];
+        }
+
+        if (array_key_exists("AreaRegionID",$param) and $param["AreaRegionID"] !== null) {
+            $this->AreaRegionID = $param["AreaRegionID"];
+        }
+
+        if (array_key_exists("AreaRegionCode",$param) and $param["AreaRegionCode"] !== null) {
+            $this->AreaRegionCode = $param["AreaRegionCode"];
+        }
+
+        if (array_key_exists("AreaAbbr",$param) and $param["AreaAbbr"] !== null) {
+            $this->AreaAbbr = $param["AreaAbbr"];
         }
     }
 }

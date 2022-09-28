@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnable(boolean $Enable) Set Switch.
  * @method string getDescription() Obtain Rule description, which can contain up to 200 characters of any type.
  * @method void setDescription(string $Description) Set Rule description, which can contain up to 200 characters of any type.
+ * @method string getEventPattern() Obtain See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+ * @method void setEventPattern(string $EventPattern) Set See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
  * @method string getRuleName() Obtain Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
  * @method void setRuleName(string $RuleName) Set Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
  */
@@ -54,6 +56,11 @@ class UpdateRuleRequest extends AbstractModel
     public $Description;
 
     /**
+     * @var string See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
+     */
+    public $EventPattern;
+
+    /**
      * @var string Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
      */
     public $RuleName;
@@ -63,6 +70,7 @@ class UpdateRuleRequest extends AbstractModel
      * @param string $EventBusId Event bus ID
      * @param boolean $Enable Switch.
      * @param string $Description Rule description, which can contain up to 200 characters of any type.
+     * @param string $EventPattern See [CKafka Target](https://intl.cloud.tencent.com/document/product/1359/56084?from_cn_redirect=1)
      * @param string $RuleName Event rule name, which can contain 2–60 letters, digits, underscores, and hyphens and must start with a letter and end with a digit or letter
      */
     function __construct()
@@ -92,6 +100,10 @@ class UpdateRuleRequest extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("EventPattern",$param) and $param["EventPattern"] !== null) {
+            $this->EventPattern = $param["EventPattern"];
         }
 
         if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {

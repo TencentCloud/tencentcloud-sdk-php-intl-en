@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * TextTranslate request structure.
  *
- * @method string getSourceText() Obtain The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
- * @method void setSourceText(string $SourceText) Set The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+ * @method string getSourceText() Obtain The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+ * @method void setSourceText(string $SourceText) Set The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
  * @method string getSource() Obtain Supported source languages:
 auto: Automatic language detection
 zh: Simplified Chinese
@@ -110,7 +110,7 @@ hi: Hindi
 class TextTranslateRequest extends AbstractModel
 {
     /**
-     * @var string The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+     * @var string The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
      */
     public $SourceText;
 
@@ -173,7 +173,7 @@ hi: Hindi
     public $UntranslatedText;
 
     /**
-     * @param string $SourceText The pure texts to be translated. It must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
+     * @param string $SourceText The texts to be translated, which must be encoded in UTF-8 and can contain up to 2,000 characters in a request. For non-pure texts such as those with HTML tags, the translation may fail.
      * @param string $Source Supported source languages:
 auto: Automatic language detection
 zh: Simplified Chinese

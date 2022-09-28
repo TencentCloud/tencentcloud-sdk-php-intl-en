@@ -27,6 +27,7 @@ use TencentCloud\Iotcloud\V20210408\Models as Models;
  * @method Models\CreatePrivateCAResponse CreatePrivateCA(Models\CreatePrivateCARequest $req) This API is used to create a private CA certificate.
  * @method Models\CreateProductResponse CreateProduct(Models\CreateProductRequest $req) This API is used to create a new IoT communication product. 
  * @method Models\DeleteDeviceResponse DeleteDevice(Models\DeleteDeviceRequest $req) This API is used to delete an IoT Hub device. 
+ * @method Models\DeleteDeviceShadowResponse DeleteDeviceShadow(Models\DeleteDeviceShadowRequest $req) This API is used to delete a device shadow. 
  * @method Models\DeletePrivateCAResponse DeletePrivateCA(Models\DeletePrivateCARequest $req) This API is used to delete a private CA certificate.
  * @method Models\DeleteProductResponse DeleteProduct(Models\DeleteProductRequest $req) This API is used to delete an IoT Hub product.
  * @method Models\DescribeDeviceResponse DescribeDevice(Models\DescribeDeviceRequest $req) This API is used to query device details.
