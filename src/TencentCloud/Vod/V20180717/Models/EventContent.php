@@ -31,8 +31,10 @@ use TencentCloud\Common\AbstractModel;
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -48,8 +50,10 @@ use TencentCloud\Common\AbstractModel;
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -120,9 +124,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setRestoreMediaCompleteEvent(RestoreMediaTask $RestoreMediaCompleteEvent) Set Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkCompleteEvent() Obtain The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExtractTraceWatermarkCompleteEvent(ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent) Set The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ReviewAudioVideoTask getReviewAudioVideoCompleteEvent() Obtain The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EventContent extends AbstractModel
@@ -142,8 +154,10 @@ class EventContent extends AbstractModel
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -250,10 +264,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RestoreMediaCompleteEvent;
 
     /**
+     * @var ExtractTraceWatermarkTask The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExtractTraceWatermarkCompleteEvent;
+
+    /**
      * @var ReviewAudioVideoTask The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReviewAudioVideoCompleteEvent;
+
+    /**
+     * @var ReduceMediaBitrateTask The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReduceMediaBitrateCompleteEvent;
 
     /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
@@ -266,8 +292,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMediaComplete: Finished video splitting.</li>
 <li>WechatPublishComplete: Published to WeChat.</li>
 <li>ComposeMediaComplete: Finished producing the media file.</li>
+<li>WechatMiniProgramPublishComplete: Finished publishing on WeChat Mini Program</li>
 <li>FastClipMediaComplete: Finished quick clipping.</li>
-<li>ReviewAudioVideoComplete: Finished moderation</li>
+<li>ReviewAudioVideoComplete: Finished moderation.</li>
+<li>ExtractTraceWatermarkComplete: Finished digital watermark extraction.</li>
 <b>v2017 task types:</b>
 <li>TranscodeComplete: Finished video transcoding.</li>
 <li>ConcatComplete: Finished video splicing.</li>
@@ -306,7 +334,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param RestoreMediaTask $RestoreMediaCompleteEvent Callback for video retrieval. This parameter is valid when the event type is `RestoreMediaComplete`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkCompleteEvent The callback for the completion of digital watermark extraction. This parameter is valid only if `EventType` is `ExtractTraceWatermarkComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -410,9 +442,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->RestoreMediaCompleteEvent->deserialize($param["RestoreMediaCompleteEvent"]);
         }
 
+        if (array_key_exists("ExtractTraceWatermarkCompleteEvent",$param) and $param["ExtractTraceWatermarkCompleteEvent"] !== null) {
+            $this->ExtractTraceWatermarkCompleteEvent = new ExtractTraceWatermarkTask();
+            $this->ExtractTraceWatermarkCompleteEvent->deserialize($param["ExtractTraceWatermarkCompleteEvent"]);
+        }
+
         if (array_key_exists("ReviewAudioVideoCompleteEvent",$param) and $param["ReviewAudioVideoCompleteEvent"] !== null) {
             $this->ReviewAudioVideoCompleteEvent = new ReviewAudioVideoTask();
             $this->ReviewAudioVideoCompleteEvent->deserialize($param["ReviewAudioVideoCompleteEvent"]);
+        }
+
+        if (array_key_exists("ReduceMediaBitrateCompleteEvent",$param) and $param["ReduceMediaBitrateCompleteEvent"] !== null) {
+            $this->ReduceMediaBitrateCompleteEvent = new ReduceMediaBitrateTask();
+            $this->ReduceMediaBitrateCompleteEvent->deserialize($param["ReduceMediaBitrateCompleteEvent"]);
         }
     }
 }

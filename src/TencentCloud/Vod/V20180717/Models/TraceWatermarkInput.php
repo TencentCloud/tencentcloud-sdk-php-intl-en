@@ -20,18 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The information of a digital watermark.
  *
- * @method integer getDefinition() Obtain The watermark template ID.
- * @method void setDefinition(integer $Definition) Set The watermark template ID.
+ * @method string getSwitch() Obtain Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method void setSwitch(string $Switch) Set Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+ * @method integer getDefinition() Obtain This parameter has been deprecated.
+ * @method void setDefinition(integer $Definition) Set This parameter has been deprecated.
  */
 class TraceWatermarkInput extends AbstractModel
 {
     /**
-     * @var integer The watermark template ID.
+     * @var string Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     */
+    public $Switch;
+
+    /**
+     * @var integer This parameter has been deprecated.
      */
     public $Definition;
 
     /**
-     * @param integer $Definition The watermark template ID.
+     * @param string $Switch Whether to use digital watermarks. This parameter is required. Valid values:
+<li>ON</li>
+<li>OFF</li>
+     * @param integer $Definition This parameter has been deprecated.
      */
     function __construct()
     {
@@ -46,6 +62,10 @@ class TraceWatermarkInput extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
+        }
+
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
         }

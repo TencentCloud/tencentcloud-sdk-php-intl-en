@@ -26,20 +26,24 @@ use TencentCloud\Common\AbstractModel;
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -106,9 +110,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemoveWatermarkTask(RemoveWatermarkTask $RemoveWatermarkTask) Set The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ExtractTraceWatermarkTask getExtractTraceWatermarkTask() Obtain The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExtractTraceWatermarkTask(ExtractTraceWatermarkTask $ExtractTraceWatermarkTask) Set The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method ReviewAudioVideoTask getReviewAudioVideoTask() Obtain The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -122,10 +134,12 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public $TaskType;
 
@@ -231,10 +245,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RemoveWatermarkTask;
 
     /**
+     * @var ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExtractTraceWatermarkTask;
+
+    /**
      * @var ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReviewAudioVideoTask;
+
+    /**
+     * @var ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReduceMediaBitrateTask;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -248,10 +274,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>SplitMedia: Video splitting</li>
 <li>ComposeMedia: Media file production</li>
 <li>WechatPublish: WeChat publishing</li>
+<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
 <li>PullUpload: Pulling media files for upload</li>
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
+<li> ReduceMediaBitrate: Bitrate reduction</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -285,7 +313,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param RemoveWatermarkTask $RemoveWatermarkTask The information of a watermark removal task. This parameter is valid only if `TaskType` is `RemoveWatermark`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ExtractTraceWatermarkTask $ExtractTraceWatermarkTask The information of a digital watermark extraction task. This parameter is valid only if `TaskType` is `ExtractTraceWatermark`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -387,9 +419,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->RemoveWatermarkTask->deserialize($param["RemoveWatermarkTask"]);
         }
 
+        if (array_key_exists("ExtractTraceWatermarkTask",$param) and $param["ExtractTraceWatermarkTask"] !== null) {
+            $this->ExtractTraceWatermarkTask = new ExtractTraceWatermarkTask();
+            $this->ExtractTraceWatermarkTask->deserialize($param["ExtractTraceWatermarkTask"]);
+        }
+
         if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
             $this->ReviewAudioVideoTask = new ReviewAudioVideoTask();
             $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
+        }
+
+        if (array_key_exists("ReduceMediaBitrateTask",$param) and $param["ReduceMediaBitrateTask"] !== null) {
+            $this->ReduceMediaBitrateTask = new ReduceMediaBitrateTask();
+            $this->ReduceMediaBitrateTask->deserialize($param["ReduceMediaBitrateTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

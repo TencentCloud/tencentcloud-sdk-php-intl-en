@@ -64,6 +64,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudioStreamSet(array $AudioStreamSet) Set Audio stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDigitalWatermarkType() Obtain The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+ * @method void setDigitalWatermarkType(string $DigitalWatermarkType) Set The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
  */
 class MediaTranscodeItem extends AbstractModel
 {
@@ -134,6 +140,13 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioStreamSet;
 
     /**
+     * @var string The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
+     */
+    public $DigitalWatermarkType;
+
+    /**
      * @param string $Url Address of output video file.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Definition Transcoding specification ID. For more information, please see [Transcoding Parameter Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
@@ -156,6 +169,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AudioStreamSet Audio stream information.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DigitalWatermarkType The watermark type. Valid values:
+<li>Trace: Digital watermark</li>
+<li>None: Regular watermark</li>
      */
     function __construct()
     {
@@ -222,6 +238,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->AudioStreamSet, $obj);
             }
+        }
+
+        if (array_key_exists("DigitalWatermarkType",$param) and $param["DigitalWatermarkType"] !== null) {
+            $this->DigitalWatermarkType = $param["DigitalWatermarkType"];
         }
     }
 }
