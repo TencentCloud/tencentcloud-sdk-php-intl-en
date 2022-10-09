@@ -22,6 +22,20 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
+ * @method integer getCosAppId() Obtain The COS application ID.
+**Please note that this parameter is required now**.
+ * @method void setCosAppId(integer $CosAppId) Set The COS application ID.
+**Please note that this parameter is required now**.
+ * @method string getCosBucket() Obtain The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+ * @method void setCosBucket(string $CosBucket) Set The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+ * @method string getCosRegion() Obtain The COS region.
+**Please note that this parameter is required now**.
+ * @method void setCosRegion(string $CosRegion) Set The COS region.
+**Please note that this parameter is required now**.
  * @method string getTemplateName() Obtain Template name.
 Maximum length: 255 bytes.
  * @method void setTemplateName(string $TemplateName) Set Template name.
@@ -44,14 +58,6 @@ Value range: 5-300s.
  * @method void setPornFlag(integer $PornFlag) Set Whether to enable porn detection. Default value: 0.
 0: do not enable.
 1: enable.
- * @method integer getCosAppId() Obtain COS application ID.
- * @method void setCosAppId(integer $CosAppId) Set COS application ID.
- * @method string getCosBucket() Obtain COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
- * @method void setCosBucket(string $CosBucket) Set COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
- * @method string getCosRegion() Obtain COS region.
- * @method void setCosRegion(string $CosRegion) Set COS region.
  * @method string getCosPrefix() Obtain COS bucket folder prefix.
  * @method void setCosPrefix(string $CosPrefix) Set COS bucket folder prefix.
  * @method string getCosFileName() Obtain COS filename.
@@ -63,6 +69,25 @@ class ModifyLiveSnapshotTemplateRequest extends AbstractModel
      * @var integer Template ID.
      */
     public $TemplateId;
+
+    /**
+     * @var integer The COS application ID.
+**Please note that this parameter is required now**.
+     */
+    public $CosAppId;
+
+    /**
+     * @var string The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+     */
+    public $CosBucket;
+
+    /**
+     * @var string The COS region.
+**Please note that this parameter is required now**.
+     */
+    public $CosRegion;
 
     /**
      * @var string Template name.
@@ -100,22 +125,6 @@ Value range: 5-300s.
     public $PornFlag;
 
     /**
-     * @var integer COS application ID.
-     */
-    public $CosAppId;
-
-    /**
-     * @var string COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-     */
-    public $CosBucket;
-
-    /**
-     * @var string COS region.
-     */
-    public $CosRegion;
-
-    /**
      * @var string COS bucket folder prefix.
      */
     public $CosPrefix;
@@ -127,6 +136,13 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
 
     /**
      * @param integer $TemplateId Template ID.
+     * @param integer $CosAppId The COS application ID.
+**Please note that this parameter is required now**.
+     * @param string $CosBucket The COS bucket name.
+Note: Do not include the `-[appid]` part in the value of `CosBucket`.
+**Please note that this parameter is required now**.
+     * @param string $CosRegion The COS region.
+**Please note that this parameter is required now**.
      * @param string $TemplateName Template name.
 Maximum length: 255 bytes.
      * @param string $Description Description.
@@ -138,10 +154,6 @@ Value range: 5-300s.
      * @param integer $PornFlag Whether to enable porn detection. Default value: 0.
 0: do not enable.
 1: enable.
-     * @param integer $CosAppId COS application ID.
-     * @param string $CosBucket COS bucket name.
-Note: the value of `CosBucket` cannot contain `-[appid]`.
-     * @param string $CosRegion COS region.
      * @param string $CosPrefix COS bucket folder prefix.
      * @param string $CosFileName COS filename.
      */
@@ -160,6 +172,18 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
         }
         if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
             $this->TemplateId = $param["TemplateId"];
+        }
+
+        if (array_key_exists("CosAppId",$param) and $param["CosAppId"] !== null) {
+            $this->CosAppId = $param["CosAppId"];
+        }
+
+        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
+            $this->CosBucket = $param["CosBucket"];
+        }
+
+        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
+            $this->CosRegion = $param["CosRegion"];
         }
 
         if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
@@ -184,18 +208,6 @@ Note: the value of `CosBucket` cannot contain `-[appid]`.
 
         if (array_key_exists("PornFlag",$param) and $param["PornFlag"] !== null) {
             $this->PornFlag = $param["PornFlag"];
-        }
-
-        if (array_key_exists("CosAppId",$param) and $param["CosAppId"] !== null) {
-            $this->CosAppId = $param["CosAppId"];
-        }
-
-        if (array_key_exists("CosBucket",$param) and $param["CosBucket"] !== null) {
-            $this->CosBucket = $param["CosBucket"];
-        }
-
-        if (array_key_exists("CosRegion",$param) and $param["CosRegion"] !== null) {
-            $this->CosRegion = $param["CosRegion"];
         }
 
         if (array_key_exists("CosPrefix",$param) and $param["CosPrefix"] !== null) {

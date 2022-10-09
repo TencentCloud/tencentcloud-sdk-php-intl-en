@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubscriptionName(string $SubscriptionName) Set Subscriber name
  * @method integer getReceiverQueueSize() Obtain Default value: 1000. Messages received by the consumer will first be stored in the `receiverQueueSize` queue to tune the message receiving rate.
  * @method void setReceiverQueueSize(integer $ReceiverQueueSize) Set Default value: 1000. Messages received by the consumer will first be stored in the `receiverQueueSize` queue to tune the message receiving rate.
- * @method string getSubInitialPosition() Obtain Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
- * @method void setSubInitialPosition(string $SubInitialPosition) Set Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+ * @method string getSubInitialPosition() Obtain A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
+ * @method void setSubInitialPosition(string $SubInitialPosition) Set A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
  * @method integer getMaxNumMessages() Obtain This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
  * @method void setMaxNumMessages(integer $MaxNumMessages) Set This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
  * @method integer getMaxNumBytes() Obtain This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
@@ -53,7 +53,7 @@ class ReceiveMessageRequest extends AbstractModel
     public $ReceiverQueueSize;
 
     /**
-     * @var string Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+     * @var string A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
      */
     public $SubInitialPosition;
 
@@ -76,7 +76,7 @@ class ReceiveMessageRequest extends AbstractModel
      * @param string $Topic Name of the topic which receives the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
      * @param string $SubscriptionName Subscriber name
      * @param integer $ReceiverQueueSize Default value: 1000. Messages received by the consumer will first be stored in the `receiverQueueSize` queue to tune the message receiving rate.
-     * @param string $SubInitialPosition Default value: Latest. It is used to determine the position where the consumer initially receives messages. Valid values: Earliest, Latest.
+     * @param string $SubInitialPosition A parameter used to determine the position where the consumer initially receives messages. Valid values: `Earliest` (default), `Latest`.
      * @param integer $MaxNumMessages This parameter is used to specify the maximum number of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
      * @param integer $MaxNumBytes This parameter is used to specify the maximum body size (in bytes) of received messages in a batch for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.
      * @param integer $Timeout This parameter is used to specify the maximum wait timeout (in milliseconds) for receiving a batch of messages for `BatchReceivePolicy`. The default value is 0, indicating that `BatchReceivePolicy` is disabled.

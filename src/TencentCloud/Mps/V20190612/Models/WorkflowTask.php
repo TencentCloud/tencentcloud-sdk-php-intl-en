@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
- * @method integer getErrCode() Obtain Disused. Please use `ErrCode` of each specific task.
- * @method void setErrCode(integer $ErrCode) Set Disused. Please use `ErrCode` of each specific task.
- * @method string getMessage() Obtain Disused. Please use `Message` of each specific task.
- * @method void setMessage(string $Message) Set Disused. Please use `Message` of each specific task.
+ * @method integer getErrCode() Obtain If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+ * @method void setErrCode(integer $ErrCode) Set If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+ * @method string getMessage() Obtain Except those for source errors, error messages vary with task type.
+ * @method void setMessage(string $Message) Set Except those for source errors, error messages vary with task type.
  * @method MediaInputInfo getInputInfo() Obtain The information of the file processed.
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setInputInfo(MediaInputInfo $InputInfo) Set The information of the file processed.
@@ -64,12 +64,12 @@ class WorkflowTask extends AbstractModel
     public $Status;
 
     /**
-     * @var integer Disused. Please use `ErrCode` of each specific task.
+     * @var integer If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
      */
     public $ErrCode;
 
     /**
-     * @var string Disused. Please use `Message` of each specific task.
+     * @var string Except those for source errors, error messages vary with task type.
      */
     public $Message;
 
@@ -110,8 +110,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: Processing;</li>
 <li>FINISH: Completed.</li>
-     * @param integer $ErrCode Disused. Please use `ErrCode` of each specific task.
-     * @param string $Message Disused. Please use `Message` of each specific task.
+     * @param integer $ErrCode If the value returned is not 0, there was a source error. If 0 is returned, refer to the error codes of the corresponding task type.
+     * @param string $Message Except those for source errors, error messages vary with task type.
      * @param MediaInputInfo $InputInfo The information of the file processed.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param MediaMetaData $MetaData Metadata of a source video.

@@ -94,6 +94,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) Set Added or modified configuration set information
  * @method OperationDurationUpdated getOperationDuration() Obtain The maintenance time slot
  * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) Set The maintenance time slot
+ * @method string getKibanaAlteringPublicAccess() Obtain Whether to enable the option for sending alerting messages over the public network.
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set Whether to enable the option for sending alerting messages over the public network.
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -259,6 +261,11 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $OperationDuration;
 
     /**
+     * @var string Whether to enable the option for sending alerting messages over the public network.
+     */
+    public $KibanaAlteringPublicAccess;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name, which can contain 1 to 50 English letters, Chinese characters, digits, dashes (-), or underscores (_)
      * @param integer $NodeNum This parameter has been disused. Please use `NodeInfoList`
@@ -296,6 +303,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param string $CerebroPrivateAccess Cerebro private network access status
      * @param EsConfigSetInfo $EsConfigSet Added or modified configuration set information
      * @param OperationDurationUpdated $OperationDuration The maintenance time slot
+     * @param string $KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
      */
     function __construct()
     {
@@ -448,6 +456,10 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
         if (array_key_exists("OperationDuration",$param) and $param["OperationDuration"] !== null) {
             $this->OperationDuration = new OperationDurationUpdated();
             $this->OperationDuration->deserialize($param["OperationDuration"]);
+        }
+
+        if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
+            $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
         }
     }
 }

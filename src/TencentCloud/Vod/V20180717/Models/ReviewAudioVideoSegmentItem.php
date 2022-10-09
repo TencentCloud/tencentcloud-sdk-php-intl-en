@@ -77,7 +77,9 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 <li>ASR</li>
 <li>Voice</li>
  * @method array getAreaCoordSet() Obtain The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
  * @method void setAreaCoordSet(array $AreaCoordSet) Set The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
  * @method string getText() Obtain The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
  * @method void setText(string $Text) Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
  * @method array getKeywordSet() Obtain The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
@@ -143,6 +145,7 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
     /**
      * @var array The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
      */
     public $AreaCoordSet;
 
@@ -186,6 +189,7 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 <li>ASR</li>
 <li>Voice</li>
      * @param array $AreaCoordSet The pixel coordinates ([x1, y1, x2, y2]) of the top-left corner and bottom-right corner of the suspicious text. This parameter is valid only if `Form` is `OCR`.
+<font color=red>Note</font>: This parameter is not supported currently.
      * @param string $Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
      * @param array $KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
      */

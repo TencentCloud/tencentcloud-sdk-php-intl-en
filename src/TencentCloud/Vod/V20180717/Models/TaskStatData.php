@@ -22,22 +22,28 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTaskType() Obtain The task type.
 <li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
 <li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
 <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  * @method void setTaskType(string $TaskType) Set The task type.
 <li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
 <li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
 <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
  * @method array getSummary() Obtain Task statistics overview (usage unit: second).
  * @method void setSummary(array $Summary) Set Task statistics overview (usage unit: second).
  * @method array getDetails() Obtain The detailed statistics of different tasks.
@@ -150,13 +156,16 @@ class TaskStatData extends AbstractModel
     /**
      * @var string The task type.
 <li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
 <li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
 <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      */
     public $TaskType;
 
@@ -224,13 +233,16 @@ Watermark removal:
     /**
      * @param string $TaskType The task type.
 <li>Transcoding: General transcoding</li>
-<li>Transcoding-TESHD: TESHD transcoding</li>
+<li>Transcoding-TESHD: Top Speed Codec transcoding</li>
 <li>Editing: Video editing</li>
-<li>Editing-TESHD: TESHD editing</li>
+<li>Editing-TESHD: Top Speed Codec editing</li>
 <li>AdaptiveBitrateStreaming: Adaptive bitrate streaming</li>
 <li>ContentAudit: Content moderation</li>
+<li> ContentRecognition: Content recognition</li>
 <li>RemoveWatermark: Watermark removal</li>
-<li>Transcode: Transcoding, including general transcoding, TESHD transcoding, and video editing. This value is not recommended.</li>
+<li> ExtractTraceWatermark: Digital watermark extraction</li>
+<li> AddTraceWatermark: Digital watermarking</li>
+<li>Transcode: Transcoding, including general transcoding, Top Speed Codec transcoding, and video editing. This value is not recommended.</li>
      * @param array $Summary Task statistics overview (usage unit: second).
      * @param array $Details The detailed statistics of different tasks.
 Transcoding:

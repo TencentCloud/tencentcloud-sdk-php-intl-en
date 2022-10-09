@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getContainer() Obtain Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
  * @method void setContainer(string $Container) Set Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+ * @method string getType() Obtain The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+ * @method void setType(string $Type) Set The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
  */
 class EditMediaOutputConfig extends AbstractModel
 {
@@ -31,7 +33,13 @@ class EditMediaOutputConfig extends AbstractModel
     public $Container;
 
     /**
+     * @var string The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
+     */
+    public $Type;
+
+    /**
      * @param string $Container Format. Valid values: `mp4` (default), `hls`, `mov`, `flv`, `avi`
+     * @param string $Type The editing mode. Valid values are `normal` and `fast`. The default is `normal`, which indicates precise editing.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class EditMediaOutputConfig extends AbstractModel
         }
         if (array_key_exists("Container",$param) and $param["Container"] !== null) {
             $this->Container = $param["Container"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
         }
     }
 }

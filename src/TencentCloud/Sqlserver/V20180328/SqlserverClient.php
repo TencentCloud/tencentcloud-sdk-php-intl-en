@@ -24,15 +24,19 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
 
 /**
  * @method Models\CloneDBResponse CloneDB(Models\CloneDBRequest $req) This API is used to clone and rename databases of an instance. The clones are still in the instance from which they are cloned.
+ * @method Models\CloseInterCommunicationResponse CloseInterCommunication(Models\CloseInterCommunicationRequest $req) This API is used to disable instance interconnection.
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create an instance account.
  * @method Models\CreateBackupResponse CreateBackup(Models\CreateBackupRequest $req) This API is used to create a backup.
  * @method Models\CreateBackupMigrationResponse CreateBackupMigration(Models\CreateBackupMigrationRequest $req) This API is used to create a backup import task.
+ * @method Models\CreateBusinessDBInstancesResponse CreateBusinessDBInstances(Models\CreateBusinessDBInstancesRequest $req) This API is used to create a business intelligence service instance.
+ * @method Models\CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFile(Models\CreateBusinessIntelligenceFileRequest $req) This API is used to add a business intelligence service file.
  * @method Models\CreateDBResponse CreateDB(Models\CreateDBRequest $req) This API is used to create a database.
  * @method Models\CreateDBInstancesResponse CreateDBInstances(Models\CreateDBInstancesRequest $req) This API is used to create an instance.
  * @method Models\CreateIncrementalMigrationResponse CreateIncrementalMigration(Models\CreateIncrementalMigrationRequest $req) This API is used to create an incremental backup import task.
  * @method Models\CreateMigrationResponse CreateMigration(Models\CreateMigrationRequest $req) This API is used to create a migration task.
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) This API is used to delete an instance account.
  * @method Models\DeleteBackupMigrationResponse DeleteBackupMigration(Models\DeleteBackupMigrationRequest $req) This API is used to delete a backup import task.
+ * @method Models\DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFile(Models\DeleteBusinessIntelligenceFileRequest $req) This API is used to delete a business intelligence service file.
  * @method Models\DeleteDBResponse DeleteDB(Models\DeleteDBRequest $req) This API is used to drop a database.
  * @method Models\DeleteIncrementalMigrationResponse DeleteIncrementalMigration(Models\DeleteIncrementalMigrationRequest $req) This API is used to delete an incremental backup import task.
  * @method Models\DeleteMigrationResponse DeleteMigration(Models\DeleteMigrationRequest $req) This API is used to delete a migration task.
@@ -42,7 +46,9 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
  * @method Models\DescribeBackupMigrationResponse DescribeBackupMigration(Models\DescribeBackupMigrationRequest $req) This API is used to create an incremental backup import task.
  * @method Models\DescribeBackupUploadSizeResponse DescribeBackupUploadSize(Models\DescribeBackupUploadSizeRequest $req) This API is used to query the size of uploaded backup files. It is valid if the backup file type is `COS_UPLOAD` (the file is stored in COS).
  * @method Models\DescribeBackupsResponse DescribeBackups(Models\DescribeBackupsRequest $req) This API is used to query the list of backups.
+ * @method Models\DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFile(Models\DescribeBusinessIntelligenceFileRequest $req) This API is used to query the files required by business intelligence service.
  * @method Models\DescribeDBCharsetsResponse DescribeDBCharsets(Models\DescribeDBCharsetsRequest $req) This API is used to query the database character sets supported by an instance.
+ * @method Models\DescribeDBInstanceInterResponse DescribeDBInstanceInter(Models\DescribeDBInstanceInterRequest $req) This API is used to query the information of the interconnected instances.
  * @method Models\DescribeDBInstancesResponse DescribeDBInstances(Models\DescribeDBInstancesRequest $req) This API is used to query the list of instances.
  * @method Models\DescribeDBsResponse DescribeDBs(Models\DescribeDBsRequest $req) This API is used to query the list of databases
  * @method Models\DescribeDBsNormalResponse DescribeDBsNormal(Models\DescribeDBsNormalRequest $req) This API is used to query database configurations. It does not return information of the accounts that have permissions to operate the database.
@@ -78,6 +84,7 @@ use TencentCloud\Sqlserver\V20180328\Models as Models;
 <b>Note</b>: if <b>the instance needs to be restarted</b> for the modified parameter to take effect, <b>it will be restarted</b> immediately or during the maintenance time according to the `WaitSwitch` parameter.
 Before you modify a parameter, you can use the `DescribeInstanceParams` API to query whether the instance needs to be restarted.
  * @method Models\ModifyMigrationResponse ModifyMigration(Models\ModifyMigrationRequest $req) This API is used to modify an existing migration task.
+ * @method Models\OpenInterCommunicationResponse OpenInterCommunication(Models\OpenInterCommunicationRequest $req) This API is used to enable instance interconnection, which can interconnect business intelligence services.
  * @method Models\RecycleDBInstanceResponse RecycleDBInstance(Models\RecycleDBInstanceRequest $req) This API is used to return a deactivated SQL Server instance.
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) This API is used to reset the account password of an instance.
  * @method Models\RestartDBInstanceResponse RestartDBInstance(Models\RestartDBInstanceRequest $req) This API is used to restart a database instance.

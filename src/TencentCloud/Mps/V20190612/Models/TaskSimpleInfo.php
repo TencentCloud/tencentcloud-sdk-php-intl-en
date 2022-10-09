@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginProcessTime(string $BeginProcessTime) Set Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been started yet, this field will be `0000-00-00T00:00:00Z`.
  * @method string getFinishTime() Obtain End time of a task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
  * @method void setFinishTime(string $FinishTime) Set End time of a task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
+ * @method array getSubTaskTypes() Obtain The subtask type.
+ * @method void setSubTaskTypes(array $SubTaskTypes) Set The subtask type.
  */
 class TaskSimpleInfo extends AbstractModel
 {
@@ -65,6 +67,11 @@ class TaskSimpleInfo extends AbstractModel
     public $FinishTime;
 
     /**
+     * @var array The subtask type.
+     */
+    public $SubTaskTypes;
+
+    /**
      * @param string $TaskId Task ID.
      * @param string $TaskType Task type. Valid values:
 <li> WorkflowTask: Workflow processing task;</li>
@@ -72,6 +79,7 @@ class TaskSimpleInfo extends AbstractModel
      * @param string $CreateTime Creation time of a task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F).
      * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been started yet, this field will be `0000-00-00T00:00:00Z`.
      * @param string $FinishTime End time of a task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#iso-.E6.97.A5.E6.9C.9F.E6.A0.BC.E5.BC.8F). If the task has not been completed yet, this field will be `0000-00-00T00:00:00Z`.
+     * @param array $SubTaskTypes The subtask type.
      */
     function __construct()
     {
@@ -104,6 +112,10 @@ class TaskSimpleInfo extends AbstractModel
 
         if (array_key_exists("FinishTime",$param) and $param["FinishTime"] !== null) {
             $this->FinishTime = $param["FinishTime"];
+        }
+
+        if (array_key_exists("SubTaskTypes",$param) and $param["SubTaskTypes"] !== null) {
+            $this->SubTaskTypes = $param["SubTaskTypes"];
         }
     }
 }

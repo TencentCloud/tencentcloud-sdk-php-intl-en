@@ -72,6 +72,7 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\DescribeRocketMQGroupsResponse DescribeRocketMQGroups(Models\DescribeRocketMQGroupsRequest $req) This API is used to get the list of RocketMQ consumer groups.
  * @method Models\DescribeRocketMQNamespacesResponse DescribeRocketMQNamespaces(Models\DescribeRocketMQNamespacesRequest $req) This API is used to get the list of RocketMQ namespaces.
  * @method Models\DescribeRocketMQTopicsResponse DescribeRocketMQTopics(Models\DescribeRocketMQTopicsRequest $req) This API is used to get the list of RocketMQ topics.
+ * @method Models\DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstances(Models\DescribeRocketMQVipInstancesRequest $req) This API is used to query the list of the purchased TDMQ for RocketMQ exclusive instances.
  * @method Models\DescribeRolesResponse DescribeRoles(Models\DescribeRolesRequest $req) This API is used to get the list of roles.
  * @method Models\DescribeSubscriptionsResponse DescribeSubscriptions(Models\DescribeSubscriptionsRequest $req) This API is used to query the list of subscribers under the specified environment and topic.
  * @method Models\DescribeTopicsResponse DescribeTopics(Models\DescribeTopicsRequest $req) This API is used to get the list of topics under an environment.
@@ -88,11 +89,11 @@ use TencentCloud\Tdmq\V20200217\Models as Models;
  * @method Models\ModifyRoleResponse ModifyRole(Models\ModifyRoleRequest $req) This API is used to modify a role.
  * @method Models\ModifyTopicResponse ModifyTopic(Models\ModifyTopicRequest $req) This API is used to modify the topic remarks and number of partitions.
  * @method Models\PublishCmqMsgResponse PublishCmqMsg(Models\PublishCmqMsgRequest $req) This API is used to send a CMQ topic message.
- * @method Models\ReceiveMessageResponse ReceiveMessage(Models\ReceiveMessageRequest $req) This API is used to receive messages sent to a specified topic. If this API is called when there are no messages in the topic, the `ReceiveTimeout` exception will be reported.
+ * @method Models\ReceiveMessageResponse ReceiveMessage(Models\ReceiveMessageRequest $req) Currently, the `ReceiveMessage` API only supports partitioned topics. It is used to receive messages sent to a specified partitioned topic. If it is called when there are no messages in the partitioned topic, the `ReceiveTimeout` exception will be reported.
 
 Instructions on how to use `BatchReceivePolicy`:
 
-`BatchReceive` has the three parameters:
+`BatchReceive` has three parameters:
 
 ● `MaxNumMessages`: The maximum number of messages returned by `Receive` when `BatchReceive` is used.
 ● `MaxNumBytes`: The maximum size (in bytes) of the message returned by `Receive` when `BatchReceive` is used.

@@ -54,6 +54,18 @@ Default value: 0.
 0: LVB.
 1: LVB on Mini Program.
 Default value: 0.
+ * @method string getVerifyOwnerType() Obtain The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+ * @method void setVerifyOwnerType(string $VerifyOwnerType) Set The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
  */
 class AddLiveDomainRequest extends AbstractModel
 {
@@ -95,6 +107,16 @@ Default value: 0.
     public $IsMiniProgramLive;
 
     /**
+     * @var string The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
+     */
+    public $VerifyOwnerType;
+
+    /**
      * @param string $DomainName Domain name.
      * @param integer $DomainType Domain name type.
 0: push domain name.
@@ -112,6 +134,12 @@ Default value: 0.
 0: LVB.
 1: LVB on Mini Program.
 Default value: 0.
+     * @param string $VerifyOwnerType The domain verification type.
+Valid values (the value of this parameter must be the same as `VerifyType` of the `AuthenticateDomainOwner` API):
+dnsCheck: Check immediately whether the verification DNS record has been added successfully. If so, record this verification result.
+fileCheck: Check immediately whether the verification HTML file has been uploaded successfully. If so, record this verification result.
+dbCheck: Check whether the domain has already been verified.
+If you do not pass a value, `dbCheck` will be used.
      */
     function __construct()
     {
@@ -144,6 +172,10 @@ Default value: 0.
 
         if (array_key_exists("IsMiniProgramLive",$param) and $param["IsMiniProgramLive"] !== null) {
             $this->IsMiniProgramLive = $param["IsMiniProgramLive"];
+        }
+
+        if (array_key_exists("VerifyOwnerType",$param) and $param["VerifyOwnerType"] !== null) {
+            $this->VerifyOwnerType = $param["VerifyOwnerType"];
         }
     }
 }

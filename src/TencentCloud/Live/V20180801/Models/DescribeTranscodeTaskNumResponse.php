@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Live\V20180801\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstances response structure.
+ * DescribeTranscodeTaskNum response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible instances.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
- * @method array getItems() Obtain List of instance details
- * @method void setItems(array $Items) Set List of instance details
+ * @method array getDataInfoList() Obtain The number of tasks.
+ * @method void setDataInfoList(array $DataInfoList) Set The number of tasks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class DescribeTranscodeTaskNumResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible instances.
+     * @var array The number of tasks.
      */
-    public $TotalCount;
-
-    /**
-     * @var array List of instance details
-     */
-    public $Items;
+    public $DataInfoList;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible instances.
-     * @param array $Items List of instance details
+     * @param array $DataInfoList The number of tasks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new InstanceInfo();
+        if (array_key_exists("DataInfoList",$param) and $param["DataInfoList"] !== null) {
+            $this->DataInfoList = [];
+            foreach ($param["DataInfoList"] as $key => $value){
+                $obj = new TranscodeTaskNum();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->DataInfoList, $obj);
             }
         }
 

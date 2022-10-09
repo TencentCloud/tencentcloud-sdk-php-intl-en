@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setParamList(array $ParamList) Set List of parameters.
  * @method string getTemplateType() Obtain Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
  * @method void setTemplateType(string $TemplateType) Set Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+ * @method string getEngineType() Obtain Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+ * @method void setEngineType(string $EngineType) Set Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
  */
 class CreateParamTemplateRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class CreateParamTemplateRequest extends AbstractModel
     public $TemplateType;
 
     /**
+     * @var string Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
+     */
+    public $EngineType;
+
+    /**
      * @param string $Name Parameter template name.
      * @param string $Description Parameter template description.
      * @param string $EngineVersion MySQL version number.
      * @param integer $TemplateId Source parameter template ID.
      * @param array $ParamList List of parameters.
      * @param string $TemplateType Type of the default parameter template. Valid values: `HIGH_STABILITY` (high-stability template), `HIGH_PERFORMANCE` (high-performance template).
+     * @param string $EngineType Instance engine type. Valid values: `InnoDB` (default), `RocksDB`.
      */
     function __construct()
     {
@@ -113,6 +121,10 @@ class CreateParamTemplateRequest extends AbstractModel
 
         if (array_key_exists("TemplateType",$param) and $param["TemplateType"] !== null) {
             $this->TemplateType = $param["TemplateType"];
+        }
+
+        if (array_key_exists("EngineType",$param) and $param["EngineType"] !== null) {
+            $this->EngineType = $param["EngineType"];
         }
     }
 }

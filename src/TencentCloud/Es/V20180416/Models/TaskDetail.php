@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFinishTime(string $FinishTime) Set Task completion time
  * @method array getSubTasks() Obtain Subtask
  * @method void setSubTasks(array $SubTasks) Set Subtask
+ * @method integer getElapsedTime() Obtain The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setElapsedTime(integer $ElapsedTime) Set The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TaskDetail extends AbstractModel
 {
@@ -52,10 +56,18 @@ class TaskDetail extends AbstractModel
     public $SubTasks;
 
     /**
+     * @var integer The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ElapsedTime;
+
+    /**
      * @param string $Name Task name
      * @param float $Progress Task progress
      * @param string $FinishTime Task completion time
      * @param array $SubTasks Subtask
+     * @param integer $ElapsedTime The task time.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class TaskDetail extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->SubTasks, $obj);
             }
+        }
+
+        if (array_key_exists("ElapsedTime",$param) and $param["ElapsedTime"] !== null) {
+            $this->ElapsedTime = $param["ElapsedTime"];
         }
     }
 }

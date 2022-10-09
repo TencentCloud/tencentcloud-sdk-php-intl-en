@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstances response structure.
+ * OpenInterCommunication response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible instances.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
- * @method array getItems() Obtain List of instance details
- * @method void setItems(array $Items) Set List of instance details
+ * @method array getInterInstanceFlowSet() Obtain IDs of instance and async task
+ * @method void setInterInstanceFlowSet(array $InterInstanceFlowSet) Set IDs of instance and async task
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class OpenInterCommunicationResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible instances.
+     * @var array IDs of instance and async task
      */
-    public $TotalCount;
-
-    /**
-     * @var array List of instance details
-     */
-    public $Items;
+    public $InterInstanceFlowSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible instances.
-     * @param array $Items List of instance details
+     * @param array $InterInstanceFlowSet IDs of instance and async task
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,16 +54,12 @@ class DescribeDBInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new InstanceInfo();
+        if (array_key_exists("InterInstanceFlowSet",$param) and $param["InterInstanceFlowSet"] !== null) {
+            $this->InterInstanceFlowSet = [];
+            foreach ($param["InterInstanceFlowSet"] as $key => $value){
+                $obj = new InterInstanceFlow();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->InterInstanceFlowSet, $obj);
             }
         }
 

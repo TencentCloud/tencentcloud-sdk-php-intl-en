@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPayload(string $Payload) Set Content of the message to be sent
  * @method string getStringToken() Obtain Token used for authentication, which is optional and will be automatically obtained by the system.
  * @method void setStringToken(string $StringToken) Set Token used for authentication, which is optional and will be automatically obtained by the system.
- * @method string getProducerName() Obtain Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
- * @method void setProducerName(string $ProducerName) Set Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+ * @method string getProducerName() Obtain Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
+ * @method void setProducerName(string $ProducerName) Set Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
  * @method integer getSendTimeout() Obtain Message sending timeout period, which is 30s by default.
  * @method void setSendTimeout(integer $SendTimeout) Set Message sending timeout period, which is 30s by default.
  * @method integer getMaxPendingMessages() Obtain Maximum number of produced messages which can be cached in the memory. Default value: 1000
@@ -51,7 +53,8 @@ class SendMessagesRequest extends AbstractModel
     public $StringToken;
 
     /**
-     * @var string Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+     * @var string Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
      */
     public $ProducerName;
 
@@ -69,7 +72,8 @@ class SendMessagesRequest extends AbstractModel
      * @param string $Topic Name of the topic to which to send the message. It is better to be the full path of the topic, such as `tenant/namespace/topic`. If it is not specified, `public/default` will be used by default.
      * @param string $Payload Content of the message to be sent
      * @param string $StringToken Token used for authentication, which is optional and will be automatically obtained by the system.
-     * @param string $ProducerName Producer name, which must be globally unique. If it is not configured, the system will randomly generate one.
+     * @param string $ProducerName Producer name, which is randomly generated and must be globally unique. If you set the producer name manually, the producer may fail to be created, causing message sending failure.
+This parameter is used only when a specific producer is allowed to produce messages. It won’t be used in most cases.
      * @param integer $SendTimeout Message sending timeout period, which is 30s by default.
      * @param integer $MaxPendingMessages Maximum number of produced messages which can be cached in the memory. Default value: 1000
      */

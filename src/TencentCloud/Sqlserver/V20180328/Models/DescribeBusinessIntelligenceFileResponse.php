@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Sqlserver\V20180328\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeDBInstances response structure.
+ * DescribeBusinessIntelligenceFile response structure.
  *
- * @method integer getTotalCount() Obtain Number of eligible instances.
- * @method void setTotalCount(integer $TotalCount) Set Number of eligible instances.
- * @method array getItems() Obtain List of instance details
- * @method void setItems(array $Items) Set List of instance details
+ * @method integer getTotalCount() Obtain Total number of file deployment tasks
+ * @method void setTotalCount(integer $TotalCount) Set Total number of file deployment tasks
+ * @method array getBackupMigrationSet() Obtain File deployment task set
+ * @method void setBackupMigrationSet(array $BackupMigrationSet) Set File deployment task set
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeDBInstancesResponse extends AbstractModel
+class DescribeBusinessIntelligenceFileResponse extends AbstractModel
 {
     /**
-     * @var integer Number of eligible instances.
+     * @var integer Total number of file deployment tasks
      */
     public $TotalCount;
 
     /**
-     * @var array List of instance details
+     * @var array File deployment task set
      */
-    public $Items;
+    public $BackupMigrationSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DescribeDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Number of eligible instances.
-     * @param array $Items List of instance details
+     * @param integer $TotalCount Total number of file deployment tasks
+     * @param array $BackupMigrationSet File deployment task set
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +66,12 @@ class DescribeDBInstancesResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Items",$param) and $param["Items"] !== null) {
-            $this->Items = [];
-            foreach ($param["Items"] as $key => $value){
-                $obj = new InstanceInfo();
+        if (array_key_exists("BackupMigrationSet",$param) and $param["BackupMigrationSet"] !== null) {
+            $this->BackupMigrationSet = [];
+            foreach ($param["BackupMigrationSet"] as $key => $value){
+                $obj = new BusinessIntelligenceFile();
                 $obj->deserialize($value);
-                array_push($this->Items, $obj);
+                array_push($this->BackupMigrationSet, $obj);
             }
         }
 
