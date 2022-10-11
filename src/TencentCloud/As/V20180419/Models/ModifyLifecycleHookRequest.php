@@ -44,6 +44,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set The scenario where the lifecycle hook is applied. `EXTENSION`: The lifecycle hook will be triggered when `AttachInstances`, `DetachInstances` or `RemoveInstances` is called. `NORMAL`: The lifecycle hook is not triggered by the above APIs.
  * @method NotificationTarget getNotificationTarget() Obtain Information of the notification target.
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Information of the notification target.
+ * @method LifecycleCommand getLifecycleCommand() Obtain Remote command execution object.
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) Set Remote command execution object.
  */
 class ModifyLifecycleHookRequest extends AbstractModel
 {
@@ -92,6 +94,11 @@ class ModifyLifecycleHookRequest extends AbstractModel
     public $NotificationTarget;
 
     /**
+     * @var LifecycleCommand Remote command execution object.
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $LifecycleHookId Lifecycle hook ID.
      * @param string $LifecycleHookName Lifecycle hook name.
      * @param string $LifecycleTransition The time when the lifecycle hook is applied. Valid values:
@@ -104,6 +111,7 @@ class ModifyLifecycleHookRequest extends AbstractModel
      * @param string $NotificationMetadata Additional information sent by AS to the notification target.
      * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: The lifecycle hook will be triggered when `AttachInstances`, `DetachInstances` or `RemoveInstances` is called. `NORMAL`: The lifecycle hook is not triggered by the above APIs.
      * @param NotificationTarget $NotificationTarget Information of the notification target.
+     * @param LifecycleCommand $LifecycleCommand Remote command execution object.
      */
     function __construct()
     {
@@ -149,6 +157,11 @@ class ModifyLifecycleHookRequest extends AbstractModel
         if (array_key_exists("NotificationTarget",$param) and $param["NotificationTarget"] !== null) {
             $this->NotificationTarget = new NotificationTarget();
             $this->NotificationTarget->deserialize($param["NotificationTarget"]);
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

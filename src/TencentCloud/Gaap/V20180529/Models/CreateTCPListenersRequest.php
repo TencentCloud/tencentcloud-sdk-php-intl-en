@@ -24,12 +24,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerName(string $ListenerName) Set Listener name.
  * @method array getPorts() Obtain List of listener ports.
  * @method void setPorts(array $Ports) Set List of listener ports.
- * @method string getScheduler() Obtain Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) Set Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
  * @method integer getHealthCheck() Obtain Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
  * @method void setHealthCheck(integer $HealthCheck) Set Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
- * @method string getRealServerType() Obtain The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
- * @method void setRealServerType(string $RealServerType) Set The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+ * @method string getRealServerType() Obtain The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
+ * @method void setRealServerType(string $RealServerType) Set The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
  * @method string getProxyId() Obtain Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
  * @method void setProxyId(string $ProxyId) Set Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
  * @method string getGroupId() Obtain Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
@@ -62,7 +62,7 @@ class CreateTCPListenersRequest extends AbstractModel
     public $Ports;
 
     /**
-     * @var string Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public $Scheduler;
 
@@ -72,7 +72,7 @@ class CreateTCPListenersRequest extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var string The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+     * @var string The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      */
     public $RealServerType;
 
@@ -124,9 +124,9 @@ class CreateTCPListenersRequest extends AbstractModel
     /**
      * @param string $ListenerName Listener name.
      * @param array $Ports List of listener ports.
-     * @param string $Scheduler Origin server scheduling policy of listeners, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      * @param integer $HealthCheck Whether origin server has the health check enabled. 1: enabled; 0: disabled. UDP listeners do not support health check.
-     * @param string $RealServerType The origin server type of listeners, supporting IP or DOMAIN type. The DOMAIN origin servers do not support the weighted round robin.
+     * @param string $RealServerType The origin server type. Values: `IP` (IP address); `DOMAIN` (domain name).
      * @param string $ProxyId Connection ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
      * @param string $GroupId Connection group ID; Either `ProxyId` or `GroupId` must be set, but you cannot set both.
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds). Value range: [5, 300].

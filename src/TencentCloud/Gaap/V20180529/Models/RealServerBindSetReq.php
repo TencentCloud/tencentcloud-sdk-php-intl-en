@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRealServerIP(string $RealServerIP) Set Origin server IP
  * @method integer getRealServerWeight() Obtain Origin server weight
  * @method void setRealServerWeight(integer $RealServerWeight) Set Origin server weight
- * @method string getRealServerFailoverRole() Obtain Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
- * @method void setRealServerFailoverRole(string $RealServerFailoverRole) Set Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+ * @method string getRealServerFailoverRole() Obtain Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+ * @method void setRealServerFailoverRole(string $RealServerFailoverRole) Set Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
  */
 class RealServerBindSetReq extends AbstractModel
 {
@@ -54,7 +54,7 @@ class RealServerBindSetReq extends AbstractModel
     public $RealServerWeight;
 
     /**
-     * @var string Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     * @var string Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
      */
     public $RealServerFailoverRole;
 
@@ -63,7 +63,7 @@ class RealServerBindSetReq extends AbstractModel
      * @param integer $RealServerPort Origin server port
      * @param string $RealServerIP Origin server IP
      * @param integer $RealServerWeight Origin server weight
-     * @param string $RealServerFailoverRole Origin server role: master (primary origin server); slave (secondary origin server). This parameter is applicable when the primary/secondary origin server mode is enabled for a TCP listener.
+     * @param string $RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AddRealServers response structure.
  *
- * @method array getRealServerSet() Obtain Origin server information list
- * @method void setRealServerSet(array $RealServerSet) Set Origin server information list
+ * @method array getRealServerSet() Obtain An information list of origin server
+ * @method void setRealServerSet(array $RealServerSet) Set An information list of origin server
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class AddRealServersResponse extends AbstractModel
 {
     /**
-     * @var array Origin server information list
+     * @var array An information list of origin server
      */
     public $RealServerSet;
 
@@ -38,7 +38,7 @@ class AddRealServersResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $RealServerSet Origin server information list
+     * @param array $RealServerSet An information list of origin server
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

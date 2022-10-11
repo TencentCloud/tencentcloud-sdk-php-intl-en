@@ -70,6 +70,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPolyClientCertificateAliasInfo(array $PolyClientCertificateAliasInfo) Set Alias information of multiple client CA certificates.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getHttp3Supported() Obtain Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttp3Supported(integer $Http3Supported) Set Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HTTPSListener extends AbstractModel
 {
@@ -151,6 +161,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $PolyClientCertificateAliasInfo;
 
     /**
+     * @var integer Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Http3Supported;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -175,6 +194,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ClientCertificateAlias Client CA certificate alias
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $PolyClientCertificateAliasInfo Alias information of multiple client CA certificates.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Http3Supported Whether to support HTTP3. Values:
+`0`: Do not support HTTP3 access;
+`1`: Support HTTP3 access.
+If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -245,6 +269,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->PolyClientCertificateAliasInfo, $obj);
             }
+        }
+
+        if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
+            $this->Http3Supported = $param["Http3Supported"];
         }
     }
 }

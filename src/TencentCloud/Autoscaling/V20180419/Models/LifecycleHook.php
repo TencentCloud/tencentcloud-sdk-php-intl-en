@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
  * @method string getLifecycleTransitionType() Obtain Applicable scenario of the lifecycle hook
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set Applicable scenario of the lifecycle hook
+ * @method LifecycleCommand getLifecycleCommand() Obtain Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) Set Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LifecycleHook extends AbstractModel
 {
@@ -94,6 +98,12 @@ class LifecycleHook extends AbstractModel
     public $LifecycleTransitionType;
 
     /**
+     * @var LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleHookName Lifecycle hook name
      * @param string $AutoScalingGroupId Auto scaling group ID
@@ -104,6 +114,8 @@ class LifecycleHook extends AbstractModel
      * @param string $CreatedTime Creation time
      * @param NotificationTarget $NotificationTarget Notification target
      * @param string $LifecycleTransitionType Applicable scenario of the lifecycle hook
+     * @param LifecycleCommand $LifecycleCommand Remote command execution object.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -157,6 +169,11 @@ class LifecycleHook extends AbstractModel
 
         if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
             $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

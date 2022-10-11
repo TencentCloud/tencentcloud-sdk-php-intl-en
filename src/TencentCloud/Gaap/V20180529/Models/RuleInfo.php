@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set Rule path
  * @method string getRealServerType() Obtain Origin server type
  * @method void setRealServerType(string $RealServerType) Set Origin server type
- * @method string getScheduler() Obtain Forwarding policy of the origin server
- * @method void setScheduler(string $Scheduler) Set Forwarding policy of the origin server
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
  * @method integer getHealthCheck() Obtain Whether health check is enabled. 1: enabled, 0: disabled
  * @method void setHealthCheck(integer $HealthCheck) Set Whether health check is enabled. 1: enabled, 0: disabled
  * @method integer getRuleStatus() Obtain Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
@@ -95,7 +95,7 @@ class RuleInfo extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string Forwarding policy of the origin server
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public $Scheduler;
 
@@ -158,7 +158,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Domain Rule domain name
      * @param string $Path Rule path
      * @param string $RealServerType Origin server type
-     * @param string $Scheduler Forwarding policy of the origin server
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      * @param integer $HealthCheck Whether health check is enabled. 1: enabled, 0: disabled
      * @param integer $RuleStatus Rule status. 0: running, 1: creating, 2: terminating, 3: binding/unbinding origin server, 4: updating configuration
      * @param RuleCheckParams $CheckParams Health check parameters

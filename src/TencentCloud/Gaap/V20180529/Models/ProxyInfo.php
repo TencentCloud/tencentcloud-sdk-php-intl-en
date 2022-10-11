@@ -36,8 +36,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region.
  * @method integer getBandwidth() Obtain Bandwidth. Unit: Mbps.
  * @method void setBandwidth(integer $Bandwidth) Set Bandwidth. Unit: Mbps.
- * @method integer getConcurrent() Obtain Concurrence. Unit: requests/second.
- * @method void setConcurrent(integer $Concurrent) Set Concurrence. Unit: requests/second.
+ * @method integer getConcurrent() Obtain Concurrence. Unit: 10K requests/second.
+ * @method void setConcurrent(integer $Concurrent) Set Concurrence. Unit: 10K requests/second.
  * @method string getStatus() Obtain Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -156,6 +156,32 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setInBanBlacklist(integer $InBanBlacklist) Set Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getFeatureBitmap() Obtain Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setFeatureBitmap(integer $FeatureBitmap) Set Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ProxyInfo extends AbstractModel
 {
@@ -196,7 +222,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Bandwidth;
 
     /**
-     * @var integer Concurrence. Unit: requests/second.
+     * @var integer Concurrence. Unit: 10K requests/second.
      */
     public $Concurrent;
 
@@ -364,6 +390,23 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $InBanBlacklist;
 
     /**
+     * @var integer Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param string $InstanceId Connection instance ID; It's an old parameter, please switch to ProxyId.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $CreateTime Creation time in the format of UNIX timestamp, indicating the number of seconds that have elapsed since January 1, 1970 (midnight in UTC/GMT).
@@ -372,7 +415,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $AccessRegion Access region.
      * @param string $RealServerRegion Origin server region.
      * @param integer $Bandwidth Bandwidth. Unit: Mbps.
-     * @param integer $Concurrent Concurrence. Unit: requests/second.
+     * @param integer $Concurrent Concurrence. Unit: 10K requests/second.
      * @param string $Status Connection status. Valid values:
 `RUNNING`: Running
 `CREATING`: Creating
@@ -431,6 +474,19 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 `1`: enable HTTP3.
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param integer $InBanBlacklist Indicates whether the origin server IP or domain name is in the blocklist. Valid values: `0` (no) and `1` (yes).
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return `null`, indicating that no valid value can be obtained.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -592,6 +648,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("InBanBlacklist",$param) and $param["InBanBlacklist"] !== null) {
             $this->InBanBlacklist = $param["InBanBlacklist"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

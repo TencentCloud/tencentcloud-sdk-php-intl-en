@@ -30,12 +30,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDefaultResult(string $DefaultResult) Set Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
  * @method integer getHeartbeatTimeout() Obtain The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
  * @method void setHeartbeatTimeout(integer $HeartbeatTimeout) Set The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
- * @method string getNotificationMetadata() Obtain Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
- * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
- * @method NotificationTarget getNotificationTarget() Obtain Notification target
- * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification target
+ * @method string getNotificationMetadata() Obtain Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+ * @method void setNotificationMetadata(string $NotificationMetadata) Set Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+ * @method NotificationTarget getNotificationTarget() Obtain Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+ * @method void setNotificationTarget(NotificationTarget $NotificationTarget) Set Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
  * @method string getLifecycleTransitionType() Obtain The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
  * @method void setLifecycleTransitionType(string $LifecycleTransitionType) Set The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+ * @method LifecycleCommand getLifecycleCommand() Obtain Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+ * @method void setLifecycleCommand(LifecycleCommand $LifecycleCommand) Set Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
  */
 class UpgradeLifecycleHookRequest extends AbstractModel
 {
@@ -65,12 +67,12 @@ class UpgradeLifecycleHookRequest extends AbstractModel
     public $HeartbeatTimeout;
 
     /**
-     * @var string Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
+     * @var string Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
      */
     public $NotificationMetadata;
 
     /**
-     * @var NotificationTarget Notification target
+     * @var NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      */
     public $NotificationTarget;
 
@@ -80,14 +82,20 @@ class UpgradeLifecycleHookRequest extends AbstractModel
     public $LifecycleTransitionType;
 
     /**
+     * @var LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
+     */
+    public $LifecycleCommand;
+
+    /**
      * @param string $LifecycleHookId Lifecycle hook ID
      * @param string $LifecycleHookName Lifecycle hook name
      * @param string $LifecycleTransition Scenario for the lifecycle hook. Value range: "INSTANCE_LAUNCHING", "INSTANCE_TERMINATING"
      * @param string $DefaultResult Defines the action to be taken by the auto scaling group upon lifecycle hook timeout. Value range: "CONTINUE", "ABANDON". Default value: "CONTINUE"
      * @param integer $HeartbeatTimeout The maximum length of time (in seconds) that can elapse before the lifecycle hook times out. Value range: 30-7200. Default value: 300
-     * @param string $NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is left empty by default.
-     * @param NotificationTarget $NotificationTarget Notification target
+     * @param string $NotificationMetadata Additional information of a notification that Auto Scaling sends to targets. This parameter is set when you configure a notification (default value: "").
+     * @param NotificationTarget $NotificationTarget Notification result. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      * @param string $LifecycleTransitionType The scenario where the lifecycle hook is applied. `EXTENSION`: the lifecycle hook will be triggered when AttachInstances, DetachInstances or RemoveInstaces is called. `NORMAL`: the lifecycle hook is not triggered by the above APIs. 
+     * @param LifecycleCommand $LifecycleCommand Remote command execution object. `NotificationTarget` and `LifecycleCommand` cannot be specified at the same time.
      */
     function __construct()
     {
@@ -133,6 +141,11 @@ class UpgradeLifecycleHookRequest extends AbstractModel
 
         if (array_key_exists("LifecycleTransitionType",$param) and $param["LifecycleTransitionType"] !== null) {
             $this->LifecycleTransitionType = $param["LifecycleTransitionType"];
+        }
+
+        if (array_key_exists("LifecycleCommand",$param) and $param["LifecycleCommand"] !== null) {
+            $this->LifecycleCommand = new LifecycleCommand();
+            $this->LifecycleCommand->deserialize($param["LifecycleCommand"]);
         }
     }
 }

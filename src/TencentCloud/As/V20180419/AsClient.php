@@ -43,9 +43,11 @@ Note: for a scaling group that is created based on a monthly-subscribed instance
 
 * You can create up to 20 launch configurations for each project. For more information, see [Usage Limits](https://intl.cloud.tencent.com/document/product/377/3120?from_cn_redirect=1).
 
- * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) This API (CreateLifeCycleHook) is used to create a lifecycle hook.
+ * @method Models\CreateLifecycleHookResponse CreateLifecycleHook(Models\CreateLifecycleHookRequest $req) This API is used to create a lifecycle hook.
 
-* You can configure message notifications in the following format for lifecycle hooks, which will be sent to your CMQ queue by AS:
+* You can configure notifications or automation commands (TAT) for the lifecycle hook.
+
+If you configured a notification, Auto Scaling will notify the TDMQ queue of the following information:
 
 ```
 {

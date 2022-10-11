@@ -42,6 +42,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getDownIPList() Obtain If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
  * @method void setDownIPList(array $DownIPList) Set If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
+ * @method string getRealServerFailoverRole() Obtain Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+ * @method void setRealServerFailoverRole(string $RealServerFailoverRole) Set Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
  */
 class BindRealServer extends AbstractModel
 {
@@ -81,6 +83,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DownIPList;
 
     /**
+     * @var string Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
+     */
+    public $RealServerFailoverRole;
+
+    /**
      * @param string $RealServerId Origin server ID
      * @param string $RealServerIP Origin server IP or domain name
      * @param integer $RealServerWeight Origin server weight
@@ -92,6 +99,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $RealServerPort Origin server port number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $DownIPList If the origin server is a domain name, the domain name will be resolved to one or multiple IPs. This field indicates the exceptional IP list.
+     * @param string $RealServerFailoverRole Role of the origin server. Values: `master` (primary origin server); `slave` (secondary origin server). This parameter only takes effect when origin failover is enabled for the listener.
      */
     function __construct()
     {
@@ -128,6 +136,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("DownIPList",$param) and $param["DownIPList"] !== null) {
             $this->DownIPList = $param["DownIPList"];
+        }
+
+        if (array_key_exists("RealServerFailoverRole",$param) and $param["RealServerFailoverRole"] !== null) {
+            $this->RealServerFailoverRole = $param["RealServerFailoverRole"];
         }
     }
 }

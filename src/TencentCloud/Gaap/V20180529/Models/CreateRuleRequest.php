@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPath(string $Path) Set Path of the forwarding rule
  * @method string getRealServerType() Obtain The origin server type of the forwarding rule, which supports IP and DOMAIN types.
  * @method void setRealServerType(string $RealServerType) Set The origin server type of the forwarding rule, which supports IP and DOMAIN types.
- * @method string getScheduler() Obtain Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
- * @method void setScheduler(string $Scheduler) Set Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
  * @method integer getHealthCheck() Obtain Whether the health check is enabled for rules. 1: enabled; 0: disabled.
  * @method void setHealthCheck(integer $HealthCheck) Set Whether the health check is enabled for rules. 1: enabled; 0: disabled.
  * @method RuleCheckParams getCheckParams() Obtain Parameters related to origin server health check
@@ -70,7 +70,7 @@ class CreateRuleRequest extends AbstractModel
     public $RealServerType;
 
     /**
-     * @var string Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public $Scheduler;
 
@@ -115,7 +115,7 @@ If this field is not passed in, it indicates that the ForwardProtocol of the cor
      * @param string $Domain Domain name of the forwarding rule
      * @param string $Path Path of the forwarding rule
      * @param string $RealServerType The origin server type of the forwarding rule, which supports IP and DOMAIN types.
-     * @param string $Scheduler Forwarding rules of origin server, which supports round robin (rr), weighted round robin (wrr), and least connections (lc).
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      * @param integer $HealthCheck Whether the health check is enabled for rules. 1: enabled; 0: disabled.
      * @param RuleCheckParams $CheckParams Parameters related to origin server health check
      * @param string $ForwardProtocol Protocol types of the forwarding from acceleration connection to origin server, which supports HTTP or HTTPS.

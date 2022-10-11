@@ -24,14 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setListenerId(string $ListenerId) Set Listener ID
  * @method string getRuleId() Obtain Forwarding rule ID
  * @method void setRuleId(string $RuleId) Set Forwarding rule ID
- * @method string getScheduler() Obtain Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
- * @method void setScheduler(string $Scheduler) Set Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
  * @method integer getHealthCheck() Obtain Whether to enable the origin server health check:
 1: enable;
 0: disable.
@@ -70,10 +64,7 @@ class ModifyRuleAttributeRequest extends AbstractModel
     public $RuleId;
 
     /**
-     * @var string Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public $Scheduler;
 
@@ -124,10 +115,7 @@ If `ForwardHost=default`, the domain name configured with the forwarding rule wi
     /**
      * @param string $ListenerId Listener ID
      * @param string $RuleId Forwarding rule ID
-     * @param string $Scheduler Scheduling policy:
-rr: round robin;
-wrr: weighted round robin;
-lc: least connections.
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      * @param integer $HealthCheck Whether to enable the origin server health check:
 1: enable;
 0: disable.

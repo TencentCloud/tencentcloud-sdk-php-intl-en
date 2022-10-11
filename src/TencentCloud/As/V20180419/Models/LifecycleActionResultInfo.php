@@ -24,12 +24,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLifecycleHookId(string $LifecycleHookId) Set ID of the lifecycle hook
  * @method string getInstanceId() Obtain ID of the instance
  * @method void setInstanceId(string $InstanceId) Set ID of the instance
- * @method string getNotificationResult() Obtain Whether the notification is sent to CMQ successfully
- * @method void setNotificationResult(string $NotificationResult) Set Whether the notification is sent to CMQ successfully
+ * @method string getInvocationId() Obtain Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+ * @method void setInvocationId(string $InvocationId) Set Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+ * @method string getInvokeCommandResult() Obtain Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+ * @method void setInvokeCommandResult(string $InvokeCommandResult) Set Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+ * @method string getNotificationResult() Obtain Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
+ * @method void setNotificationResult(string $NotificationResult) Set Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
  * @method string getLifecycleActionResult() Obtain Result of the lifecyle hook action. Values: CONTINUE, ABANDON
  * @method void setLifecycleActionResult(string $LifecycleActionResult) Set Result of the lifecyle hook action. Values: CONTINUE, ABANDON
- * @method string getResultReason() Obtain Cause of the result
- * @method void setResultReason(string $ResultReason) Set Cause of the result
+ * @method string getResultReason() Obtain Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
+ * @method void setResultReason(string $ResultReason) Set Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
  */
 class LifecycleActionResultInfo extends AbstractModel
 {
@@ -44,7 +76,23 @@ class LifecycleActionResultInfo extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Whether the notification is sent to CMQ successfully
+     * @var string Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+     */
+    public $InvocationId;
+
+    /**
+     * @var string Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+     */
+    public $InvokeCommandResult;
+
+    /**
+     * @var string Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
      */
     public $NotificationResult;
 
@@ -54,16 +102,40 @@ class LifecycleActionResultInfo extends AbstractModel
     public $LifecycleActionResult;
 
     /**
-     * @var string Cause of the result
+     * @var string Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
      */
     public $ResultReason;
 
     /**
      * @param string $LifecycleHookId ID of the lifecycle hook
      * @param string $InstanceId ID of the instance
-     * @param string $NotificationResult Whether the notification is sent to CMQ successfully
+     * @param string $InvocationId Execution task ID. You can query the result by using the [DescribeInvocations](https://intl.cloud.tencent.com/document/api/1340/52679?from_cn_redirect=1) API of TAT. 
+     * @param string $InvokeCommandResult Result of command invocation,
+<li>`SUCCESSFUL`: Successful command invocation. It does mean that the task is successfully. You can query the task result with the `InvocationId.</li>
+<li>`FAILED`: Failed to invoke the command</li>
+<li>`NONE`</li>
+     * @param string $NotificationResult Notification result, which indicates whether it is successful to notify CMQ/TDMQ.<br>
+<li>SUCCESSFUL: It is successful to notify CMQ/TDMQ.</li>
+<li>FAILED: It is failed to notify CMQ/TDMQ.</li>
+<li>NONE</li>
      * @param string $LifecycleActionResult Result of the lifecyle hook action. Values: CONTINUE, ABANDON
-     * @param string $ResultReason Cause of the result
+     * @param string $ResultReason Reason of the result <br>
+<li>`HEARTBEAT_TIMEOUT`: Heartbeat timed out. The setting of `DefaultResult` is used.</li>
+<li>`NOTIFICATION_FAILURE`: Failed to send the notification. The setting of `DefaultResult` is used.</li>
+<li>`CALL_INTERFACE`: Calls the `CompleteLifecycleAction` to set the result</li>
+<li>ANOTHER_ACTION_ABANDON: It has been set to `ABANDON` by another operation.</li>
+<li>COMMAND_CALL_FAILURE: Failed to call the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_FINISH: Command completed</li>
+<li>COMMAND_CALL_FAILURE: Failed to execute the command. The DefaultResult is applied.</li>
+<li>COMMAND_EXEC_RESULT_CHECK_FAILURE: Failed to check the command result. The DefaultResult is applied.</li>
      */
     function __construct()
     {
@@ -84,6 +156,14 @@ class LifecycleActionResultInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("InvocationId",$param) and $param["InvocationId"] !== null) {
+            $this->InvocationId = $param["InvocationId"];
+        }
+
+        if (array_key_exists("InvokeCommandResult",$param) and $param["InvokeCommandResult"] !== null) {
+            $this->InvokeCommandResult = $param["InvokeCommandResult"];
         }
 
         if (array_key_exists("NotificationResult",$param) and $param["NotificationResult"] !== null) {

@@ -38,7 +38,7 @@ This API only supports connections of version 3.0.
  * @method Models\CreateDomainErrorPageInfoResponse CreateDomainErrorPageInfo(Models\CreateDomainErrorPageInfoRequest $req) This API is used to customize the error code of an error response to the specified domain name.
  * @method Models\CreateHTTPListenerResponse CreateHTTPListener(Models\CreateHTTPListenerRequest $req) This API (CreateHTTPListener) is used to create an HTTP listener in the connection instance.
  * @method Models\CreateHTTPSListenerResponse CreateHTTPSListener(Models\CreateHTTPSListenerRequest $req) This API (CreateHTTPListener) is used to create an HTTPS listener in the connection instance.
- * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) This API (CreateProxy) is used to create an acceleration connection with specified configuration.
+ * @method Models\CreateProxyResponse CreateProxy(Models\CreateProxyRequest $req) This API is used to create/replicate an acceleration connection with the specified configuration. To replicate a connection, the basic configuration parameters need to be set for the new connection, and `ClonedProxyId` is needed to identify the replicated connection.
  * @method Models\CreateProxyGroupResponse CreateProxyGroup(Models\CreateProxyGroupRequest $req) This API (CreateProxyGroup) is used to create a connection group.
  * @method Models\CreateProxyGroupDomainResponse CreateProxyGroupDomain(Models\CreateProxyGroupDomainRequest $req) This API (CreateProxyGroupDomain) is used to create the connection group domain name, and enable the domain name resolution.
  * @method Models\CreateRuleResponse CreateRule(Models\CreateRuleRequest $req) This API (CreateRule) is used to create the forwarding rules of HTTP/HTTPS listeners.

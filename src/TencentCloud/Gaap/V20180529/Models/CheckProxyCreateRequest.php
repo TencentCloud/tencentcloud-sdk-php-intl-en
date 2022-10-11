@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
  * @method string getPackageType() Obtain Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
  * @method void setPackageType(string $PackageType) Set Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
- * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
- * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+ * @method integer getHttp3Supported() Obtain (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+ * @method void setHttp3Supported(integer $Http3Supported) Set (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
  */
 class CheckProxyCreateRequest extends AbstractModel
 {
@@ -82,7 +82,7 @@ class CheckProxyCreateRequest extends AbstractModel
     public $PackageType;
 
     /**
-     * @var integer Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+     * @var integer (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     public $Http3Supported;
 
@@ -95,7 +95,7 @@ class CheckProxyCreateRequest extends AbstractModel
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
      * @param string $PackageType Package type of connection groups. Valid values: `Thunder` (general connection group), `Accelerator` (game accelerator connection group), and `CrossBorder` (cross-border connection group).
-     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values: `0` (disable HTTP3); `1` (enable HTTP3). Note: If HTTP3 is enabled for a connection, TCP/UDP access will not be allowed. After the connection is created, you cannot change your HTTP3 setting.
+     * @param integer $Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     function __construct()
     {

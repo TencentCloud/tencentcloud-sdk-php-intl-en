@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getAccessRegion() Obtain Acceleration region.
  * @method void setAccessRegion(string $AccessRegion) Set Acceleration region.
- * @method integer getBandwidth() Obtain Connection bandwidth upper limit in Mbps.
- * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth upper limit in Mbps.
- * @method integer getConcurrent() Obtain Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
- * @method void setConcurrent(integer $Concurrent) Set Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+ * @method integer getBandwidth() Obtain Connection bandwidth cap. Unit: Mbps.
+ * @method void setBandwidth(integer $Bandwidth) Set Connection bandwidth cap. Unit: Mbps.
+ * @method integer getConcurrent() Obtain Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
+ * @method void setConcurrent(integer $Concurrent) Set Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
  * @method string getNetworkType() Obtain Network type. Valid values: `normal` (default), `cn2`
  * @method void setNetworkType(string $NetworkType) Set Network type. Valid values: `normal` (default), `cn2`
  */
@@ -37,12 +37,12 @@ class AccessConfiguration extends AbstractModel
     public $AccessRegion;
 
     /**
-     * @var integer Connection bandwidth upper limit in Mbps.
+     * @var integer Connection bandwidth cap. Unit: Mbps.
      */
     public $Bandwidth;
 
     /**
-     * @var integer Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+     * @var integer Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      */
     public $Concurrent;
 
@@ -53,8 +53,8 @@ class AccessConfiguration extends AbstractModel
 
     /**
      * @param string $AccessRegion Acceleration region.
-     * @param integer $Bandwidth Connection bandwidth upper limit in Mbps.
-     * @param integer $Concurrent Concurrent connection upper limit in 10,000 connections, which indicates the allowed number of concurrently online connections.
+     * @param integer $Bandwidth Connection bandwidth cap. Unit: Mbps.
+     * @param integer $Concurrent Connection concurrence cap, which indicates the maximum number of simultaneous online connections. Unit: 10,000 connections.
      * @param string $NetworkType Network type. Valid values: `normal` (default), `cn2`
      */
     function __construct()

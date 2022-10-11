@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateProxyGroup response structure.
  *
- * @method string getGroupId() Obtain Connection Group ID
- * @method void setGroupId(string $GroupId) Set Connection Group ID
+ * @method string getGroupId() Obtain ID of the connection group
+ * @method void setGroupId(string $GroupId) Set ID of the connection group
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateProxyGroupResponse extends AbstractModel
 {
     /**
-     * @var string Connection Group ID
+     * @var string ID of the connection group
      */
     public $GroupId;
 
@@ -38,7 +38,7 @@ class CreateProxyGroupResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $GroupId Connection Group ID
+     * @param string $GroupId ID of the connection group
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

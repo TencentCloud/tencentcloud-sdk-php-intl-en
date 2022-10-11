@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID corresponding to origin server
  * @method array getRealServerIP() Obtain IP or domain name corresponding to origin server
  * @method void setRealServerIP(array $RealServerIP) Set IP or domain name corresponding to origin server
- * @method string getRealServerName() Obtain Origin server name
- * @method void setRealServerName(string $RealServerName) Set Origin server name
- * @method array getTagSet() Obtain Tag list
- * @method void setTagSet(array $TagSet) Set Tag list
+ * @method string getRealServerName() Obtain Name of the origin server
+ * @method void setRealServerName(string $RealServerName) Set Name of the origin server
+ * @method array getTagSet() Obtain List of tags
+ * @method void setTagSet(array $TagSet) Set List of tags
  */
 class AddRealServersRequest extends AbstractModel
 {
@@ -42,20 +42,20 @@ class AddRealServersRequest extends AbstractModel
     public $RealServerIP;
 
     /**
-     * @var string Origin server name
+     * @var string Name of the origin server
      */
     public $RealServerName;
 
     /**
-     * @var array Tag list
+     * @var array List of tags
      */
     public $TagSet;
 
     /**
      * @param integer $ProjectId Project ID corresponding to origin server
      * @param array $RealServerIP IP or domain name corresponding to origin server
-     * @param string $RealServerName Origin server name
-     * @param array $TagSet Tag list
+     * @param string $RealServerName Name of the origin server
+     * @param array $TagSet List of tags
      */
     function __construct()
     {

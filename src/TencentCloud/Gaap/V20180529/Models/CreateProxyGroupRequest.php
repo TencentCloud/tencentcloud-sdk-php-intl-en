@@ -26,24 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupName(string $GroupName) Set Alias of connection group
  * @method string getRealServerRegion() Obtain Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
  * @method void setRealServerRegion(string $RealServerRegion) Set Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
- * @method array getTagSet() Obtain Tag list
- * @method void setTagSet(array $TagSet) Set Tag list
+ * @method array getTagSet() Obtain List of tags
+ * @method void setTagSet(array $TagSet) Set List of tags
  * @method array getAccessRegionSet() Obtain List of acceleration regions, including their names, bandwidth, and concurrence configuration.
  * @method void setAccessRegionSet(array $AccessRegionSet) Set List of acceleration regions, including their names, bandwidth, and concurrence configuration.
  * @method string getIPAddressVersion() Obtain IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method void setIPAddressVersion(string $IPAddressVersion) Set IP version. Valid values: `IPv4` (default), `IPv6`.
  * @method string getPackageType() Obtain Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
  * @method void setPackageType(string $PackageType) Set Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
- * @method integer getHttp3Supported() Obtain Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
- * @method void setHttp3Supported(integer $Http3Supported) Set Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+ * @method integer getHttp3Supported() Obtain (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
+ * @method void setHttp3Supported(integer $Http3Supported) Set (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
  */
 class CreateProxyGroupRequest extends AbstractModel
 {
@@ -63,7 +55,7 @@ class CreateProxyGroupRequest extends AbstractModel
     public $RealServerRegion;
 
     /**
-     * @var array Tag list
+     * @var array List of tags
      */
     public $TagSet;
 
@@ -83,11 +75,7 @@ class CreateProxyGroupRequest extends AbstractModel
     public $PackageType;
 
     /**
-     * @var integer Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+     * @var integer (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     public $Http3Supported;
 
@@ -95,15 +83,11 @@ After the connection is created, you cannot change your HTTP3 setting.
      * @param integer $ProjectId Project ID of connection group
      * @param string $GroupName Alias of connection group
      * @param string $RealServerRegion Origin server region; Reference API: DescribeDestRegions; It returnes the `RegionId` of the parameter `RegionDetail`.
-     * @param array $TagSet Tag list
+     * @param array $TagSet List of tags
      * @param array $AccessRegionSet List of acceleration regions, including their names, bandwidth, and concurrence configuration.
      * @param string $IPAddressVersion IP version. Valid values: `IPv4` (default), `IPv6`.
      * @param string $PackageType Package type of connection group. Valid values: `Thunder` (default) and `Accelerator`.
-     * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
-`0`: disable HTTP3;
-`1`: enable HTTP3.
-Note that if HTTP3 is enabled for a connection, TCP/UDP access will not be allowed.
-After the connection is created, you cannot change your HTTP3 setting.
+     * @param integer $Http3Supported (Disused) HTTP3.0 is supported by default when `IPAddressVersion` is `IPv4`.
      */
     function __construct()
     {

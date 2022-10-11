@@ -46,14 +46,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Terminating
 `3`: Adjusting origin server
 `4`: Adjusting configuration
- * @method string getScheduler() Obtain Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
- * @method void setScheduler(string $Scheduler) Set Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+ * @method string getScheduler() Obtain The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
+ * @method void setScheduler(string $Scheduler) Set The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
  * @method integer getConnectTimeout() Obtain Response timeout of origin server health check (unit: seconds).
  * @method void setConnectTimeout(integer $ConnectTimeout) Set Response timeout of origin server health check (unit: seconds).
  * @method integer getDelayLoop() Obtain Time interval of origin server health check (unit: seconds).
@@ -141,10 +135,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ListenerStatus;
 
     /**
-     * @var string Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+     * @var string The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      */
     public $Scheduler;
 
@@ -227,10 +218,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `2`: Terminating
 `3`: Adjusting origin server
 `4`: Adjusting configuration
-     * @param string $Scheduler Origin server access policy of listeners:
-`rr`: Round robin
-`wrr`: Weighted round robin
-`lc`: Least connection
+     * @param string $Scheduler The strategy used by the listener to access the origin server. Values: `rr` (round-robin), `wrr` (weighted round-robin), `lc` (the least-connections strategy), `lrtt` (the least-response-time strategy).
      * @param integer $ConnectTimeout Response timeout of origin server health check (unit: seconds).
      * @param integer $DelayLoop Time interval of origin server health check (unit: seconds).
      * @param integer $HealthCheck Whether to enable the listener health check:

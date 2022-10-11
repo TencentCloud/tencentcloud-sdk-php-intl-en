@@ -88,6 +88,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `0`: Disable
 `1`: Enable
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getFeatureBitmap() Obtain Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFeatureBitmap(integer $FeatureBitmap) Set Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyGroupDetail extends AbstractModel
 {
@@ -202,6 +228,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Http3Supported;
 
     /**
+     * @var integer Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $FeatureBitmap;
+
+    /**
      * @param integer $CreateTime Creation time
      * @param integer $ProjectId Project ID
      * @param integer $ProxyNum Number of connections in connection group
@@ -235,6 +278,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Http3Supported Specifies whether to enable HTTP3. Valid values:
 `0`: Disable
 `1`: Enable
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $FeatureBitmap Feature bitmap. Valid values:
+`0`: Feature not supported
+`1`: Feature supported
+Each bit in the bitmap represents a feature:
+1st bit: Layer-4 acceleration;
+2nd bit: Layer-7 acceleration;
+3rd bit: HTTP3 access;
+4th bit: IPv6;
+5th bit: Dedicated BGP access;
+6th bit: Non-BGP access;
+7th bit: QoS acceleration.
+Note: This field may return null, indicating that no valid values can be obtained.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -330,6 +386,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("FeatureBitmap",$param) and $param["FeatureBitmap"] !== null) {
+            $this->FeatureBitmap = $param["FeatureBitmap"];
         }
     }
 }

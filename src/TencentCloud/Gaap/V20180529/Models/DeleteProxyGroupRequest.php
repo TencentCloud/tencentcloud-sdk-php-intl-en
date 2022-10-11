@@ -23,12 +23,12 @@ use TencentCloud\Common\AbstractModel;
  * @method string getGroupId() Obtain ID of the connection group to be deleted.
  * @method void setGroupId(string $GroupId) Set ID of the connection group to be deleted.
  * @method integer getForce() Obtain Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
  * @method void setForce(integer $Force) Set Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
  */
 class DeleteProxyGroupRequest extends AbstractModel
@@ -40,8 +40,8 @@ class DeleteProxyGroupRequest extends AbstractModel
 
     /**
      * @var integer Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      */
     public $Force;
@@ -49,8 +49,8 @@ Default value: 0. If there is a connection or listener/rule bound to an origin s
     /**
      * @param string $GroupId ID of the connection group to be deleted.
      * @param integer $Force Whether to enable forced deletion. Valid values:
-0: no;
-1: yes.
+`0`: No;
+`1`: Yes.
 Default value: 0. If there is a connection or listener/rule bound to an origin server in the connection group and `Force` is 0, the operation will return a failure.
      */
     function __construct()
