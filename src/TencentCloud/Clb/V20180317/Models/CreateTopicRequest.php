@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTopicType(string $TopicType) Set Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
  * @method integer getPeriod() Obtain Logset retention period (in days). Default: 30 days.
  * @method void setPeriod(integer $Period) Set Logset retention period (in days). Default: 30 days.
+ * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+ * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class CreateTopicRequest extends AbstractModel
     public $Period;
 
     /**
+     * @var string Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
+     */
+    public $StorageType;
+
+    /**
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount The number of topic partitions, which changes as partitions are split or merged. Each log topic can have up to 50 partitions. If this parameter is not passed in, 1 partition will be created by default and up to 10 partitions are allowed to be created.
      * @param string $TopicType Log type. Valid values: ACCESS (access logs; default value) and HEALTH (health check logs).
      * @param integer $Period Logset retention period (in days). Default: 30 days.
+     * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class CreateTopicRequest extends AbstractModel
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("StorageType",$param) and $param["StorageType"] !== null) {
+            $this->StorageType = $param["StorageType"];
         }
     }
 }

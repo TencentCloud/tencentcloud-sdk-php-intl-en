@@ -68,6 +68,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJsonStandard(integer $JsonStandard) Set Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProtocol() Obtain Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProtocol(string $Protocol) Set Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAddress() Obtain Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAddress(string $Address) Set Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getParseProtocol() Obtain `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParseProtocol(string $ParseProtocol) Set `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ExtractRuleInfo extends AbstractModel
 {
@@ -144,6 +166,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JsonStandard;
 
     /**
+     * @var string Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Protocol;
+
+    /**
+     * @var string Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Address;
+
+    /**
+     * @var string `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ParseProtocol;
+
+    /**
      * @param string $TimeKey Time field key name. `time_key` and `time_format` must appear in pairs
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $TimeFormat Time field format. For more information, please see the output parameters of the time format description of the `strftime` function in C language
@@ -167,6 +212,17 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param integer $IsGBK Whether to be encoded in GBK format. Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Protocol Syslog protocol. Valid values: `tcp`, `udp`.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
+This field can be used when you create/modify collection rule configurations.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
+This field can be used when you create/modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -233,6 +289,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("JsonStandard",$param) and $param["JsonStandard"] !== null) {
             $this->JsonStandard = $param["JsonStandard"];
+        }
+
+        if (array_key_exists("Protocol",$param) and $param["Protocol"] !== null) {
+            $this->Protocol = $param["Protocol"];
+        }
+
+        if (array_key_exists("Address",$param) and $param["Address"] !== null) {
+            $this->Address = $param["Address"];
+        }
+
+        if (array_key_exists("ParseProtocol",$param) and $param["ParseProtocol"] !== null) {
+            $this->ParseProtocol = $param["ParseProtocol"];
         }
     }
 }
