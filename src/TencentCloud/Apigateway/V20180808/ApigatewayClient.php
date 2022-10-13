@@ -109,6 +109,7 @@ In API Gateway, a usage plan can be bound to multiple key pairs. You can use thi
  * @method Models\DisableApiKeyResponse DisableApiKey(Models\DisableApiKeyRequest $req) This API is used to disable an API key.
  * @method Models\EnableApiKeyResponse EnableApiKey(Models\EnableApiKeyRequest $req) This API is used to enable a disabled API key.
  * @method Models\GenerateApiDocumentResponse GenerateApiDocument(Models\GenerateApiDocumentRequest $req) This API is used to automatically generate API documents and SDKs. One document and one SDK will be generated for each environment under each service, respectively.
+ * @method Models\ImportOpenApiResponse ImportOpenApi(Models\ImportOpenApiRequest $req) This API is used to import an OpenAPI to API gateway. 
  * @method Models\ModifyAPIDocResponse ModifyAPIDoc(Models\ModifyAPIDocRequest $req) This API is used to modify an API document.
  * @method Models\ModifyApiResponse ModifyApi(Models\ModifyApiRequest $req) This API is used to modify an API. You can call this API to edit/modify a configured API. The modified API takes effect only after its service is published to the corresponding environment again.
  * @method Models\ModifyApiAppResponse ModifyApiApp(Models\ModifyApiAppRequest $req) This API is used to modify a created API.

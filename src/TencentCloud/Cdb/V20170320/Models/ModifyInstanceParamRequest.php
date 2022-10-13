@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateId(integer $TemplateId) Set Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
  * @method integer getWaitSwitch() Obtain When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
  * @method void setWaitSwitch(integer $WaitSwitch) Set When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+ * @method boolean getNotSyncRo() Obtain Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+ * @method void setNotSyncRo(boolean $NotSyncRo) Set Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+ * @method boolean getNotSyncDr() Obtain Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+ * @method void setNotSyncDr(boolean $NotSyncDr) Set Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
  */
 class ModifyInstanceParamRequest extends AbstractModel
 {
@@ -52,10 +56,22 @@ class ModifyInstanceParamRequest extends AbstractModel
     public $WaitSwitch;
 
     /**
+     * @var boolean Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public $NotSyncRo;
+
+    /**
+     * @var boolean Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     */
+    public $NotSyncDr;
+
+    /**
      * @param array $InstanceIds List of short instance IDs.
      * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value).
      * @param integer $TemplateId Template ID. At least one of `ParamList` and `TemplateId` must be passed in.
      * @param integer $WaitSwitch When to perform the parameter adjustment task. Default value: 0. Valid values: 0 - execute immediately, 1 - execute during window. When its value is 1, only one instance ID can be passed in (i.e., only one `InstanceIds` can be passed in).
+     * @param boolean $NotSyncRo Whether to sync the parameters to read-only instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
+     * @param boolean $NotSyncDr Whether to sync the parameters to disaster recovery instance of the source instance. Valid values: `true` (not sync), `false` (sync). Default value: `false`.
      */
     function __construct()
     {
@@ -89,6 +105,14 @@ class ModifyInstanceParamRequest extends AbstractModel
 
         if (array_key_exists("WaitSwitch",$param) and $param["WaitSwitch"] !== null) {
             $this->WaitSwitch = $param["WaitSwitch"];
+        }
+
+        if (array_key_exists("NotSyncRo",$param) and $param["NotSyncRo"] !== null) {
+            $this->NotSyncRo = $param["NotSyncRo"];
+        }
+
+        if (array_key_exists("NotSyncDr",$param) and $param["NotSyncDr"] !== null) {
+            $this->NotSyncDr = $param["NotSyncDr"];
         }
     }
 }
