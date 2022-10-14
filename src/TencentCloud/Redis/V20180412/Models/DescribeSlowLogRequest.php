@@ -22,16 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getBeginTime() Obtain Start time
- * @method void setBeginTime(string $BeginTime) Set Start time
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
- * @method integer getMinQueryTime() Obtain Slow log threshold in microseconds
- * @method void setMinQueryTime(integer $MinQueryTime) Set Slow log threshold in microseconds
- * @method integer getLimit() Obtain Number of entries per page
- * @method void setLimit(integer $Limit) Set Number of entries per page
- * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`
- * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`
+ * @method string getBeginTime() Obtain The start time
+ * @method void setBeginTime(string $BeginTime) Set The start time
+ * @method string getEndTime() Obtain The end time
+ * @method void setEndTime(string $EndTime) Set The end time
+ * @method integer getMinQueryTime() Obtain The average execution time threshold of slow query in microseconds
+ * @method void setMinQueryTime(integer $MinQueryTime) Set The average execution time threshold of slow query in microseconds
+ * @method integer getLimit() Obtain Number of slow queries displayed per page. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set Number of slow queries displayed per page. Default value: `20`.
+ * @method integer getOffset() Obtain Slow query offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Slow query offset, which is an integral multiple of `Limit`.
+ * @method string getRole() Obtain Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+ * @method void setRole(string $Role) Set Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
  */
 class DescribeSlowLogRequest extends AbstractModel
 {
@@ -41,37 +43,43 @@ class DescribeSlowLogRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string Start time
+     * @var string The start time
      */
     public $BeginTime;
 
     /**
-     * @var string End time
+     * @var string The end time
      */
     public $EndTime;
 
     /**
-     * @var integer Slow log threshold in microseconds
+     * @var integer The average execution time threshold of slow query in microseconds
      */
     public $MinQueryTime;
 
     /**
-     * @var integer Number of entries per page
+     * @var integer Number of slow queries displayed per page. Default value: `20`.
      */
     public $Limit;
 
     /**
-     * @var integer Offset, which is an integral multiple of `Limit`
+     * @var integer Slow query offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
     /**
+     * @var string Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
+     */
+    public $Role;
+
+    /**
      * @param string $InstanceId Instance ID
-     * @param string $BeginTime Start time
-     * @param string $EndTime End time
-     * @param integer $MinQueryTime Slow log threshold in microseconds
-     * @param integer $Limit Number of entries per page
-     * @param integer $Offset Offset, which is an integral multiple of `Limit`
+     * @param string $BeginTime The start time
+     * @param string $EndTime The end time
+     * @param integer $MinQueryTime The average execution time threshold of slow query in microseconds
+     * @param integer $Limit Number of slow queries displayed per page. Default value: `20`.
+     * @param integer $Offset Slow query offset, which is an integral multiple of `Limit`.
+     * @param string $Role Node role. <ul><li>`Master`: Master node</li><li>`Slave`: Replica node</li></ul>
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class DescribeSlowLogRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
     }
 }

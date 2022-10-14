@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateDisks response structure.
  *
- * @method array getDiskIdSet() Obtain List of created cloud disk IDs. 
- * @method void setDiskIdSet(array $DiskIdSet) Set List of created cloud disk IDs. 
+ * @method array getDiskIdSet() Obtain List of IDs of the created cloud disks.
+ * @method void setDiskIdSet(array $DiskIdSet) Set List of IDs of the created cloud disks.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateDisksResponse extends AbstractModel
 {
     /**
-     * @var array List of created cloud disk IDs. 
+     * @var array List of IDs of the created cloud disks.
      */
     public $DiskIdSet;
 
@@ -38,7 +38,7 @@ class CreateDisksResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DiskIdSet List of created cloud disk IDs. 
+     * @param array $DiskIdSet List of IDs of the created cloud disks.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

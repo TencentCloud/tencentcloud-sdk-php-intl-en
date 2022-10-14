@@ -14,30 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSlowLog response structure.
+ * InquirePriceModifyDiskBackupQuota response structure.
  *
- * @method integer getTotalCount() Obtain Total number of slow queries
- * @method void setTotalCount(integer $TotalCount) Set Total number of slow queries
- * @method array getInstanceSlowlogDetail() Obtain Slow query details
- * @method void setInstanceSlowlogDetail(array $InstanceSlowlogDetail) Set Slow query details
+ * @method Price getDiskPrice() Obtain Price of the cloud disk after its backup point quota is modified.
+ * @method void setDiskPrice(Price $DiskPrice) Set Price of the cloud disk after its backup point quota is modified.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSlowLogResponse extends AbstractModel
+class InquirePriceModifyDiskBackupQuotaResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of slow queries
+     * @var Price Price of the cloud disk after its backup point quota is modified.
      */
-    public $TotalCount;
-
-    /**
-     * @var array Slow query details
-     */
-    public $InstanceSlowlogDetail;
+    public $DiskPrice;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeSlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of slow queries
-     * @param array $InstanceSlowlogDetail Slow query details
+     * @param Price $DiskPrice Price of the cloud disk after its backup point quota is modified.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,9 @@ class DescribeSlowLogResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("InstanceSlowlogDetail",$param) and $param["InstanceSlowlogDetail"] !== null) {
-            $this->InstanceSlowlogDetail = [];
-            foreach ($param["InstanceSlowlogDetail"] as $key => $value){
-                $obj = new InstanceSlowlogDetail();
-                $obj->deserialize($value);
-                array_push($this->InstanceSlowlogDetail, $obj);
-            }
+        if (array_key_exists("DiskPrice",$param) and $param["DiskPrice"] !== null) {
+            $this->DiskPrice = new Price();
+            $this->DiskPrice->deserialize($param["DiskPrice"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

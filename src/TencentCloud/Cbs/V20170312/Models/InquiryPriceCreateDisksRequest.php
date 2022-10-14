@@ -20,37 +20,54 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDisks request structure.
  *
- * @method string getDiskType() Obtain Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
- * @method void setDiskType(string $DiskType) Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
- * @method integer getDiskSize() Obtain Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
- * @method void setDiskSize(integer $DiskSize) Set Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
- * @method string getDiskChargeType() Obtain Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
- * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+ * @method string getDiskChargeType() Obtain Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+ * @method void setDiskChargeType(string $DiskChargeType) Set Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+ * @method string getDiskType() Obtain Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+ * @method void setDiskType(string $DiskType) Set Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+ * @method integer getDiskSize() Obtain Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+ * @method void setDiskSize(integer $DiskSize) Set Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+ * @method integer getProjectId() Obtain ID of the project to which the cloud disk belongs.
+ * @method void setProjectId(integer $ProjectId) Set ID of the project to which the cloud disk belongs.
+ * @method integer getDiskCount() Obtain Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+ * @method void setDiskCount(integer $DiskCount) Set Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+ * @method integer getThroughputPerformance() Obtain Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+ * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
  * @method DiskChargePrepaid getDiskChargePrepaid() Obtain Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
  * @method void setDiskChargePrepaid(DiskChargePrepaid $DiskChargePrepaid) Set Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
- * @method integer getDiskCount() Obtain Quantity of cloud disks purchased. If left empty, default is 1.
- * @method void setDiskCount(integer $DiskCount) Set Quantity of cloud disks purchased. If left empty, default is 1.
- * @method integer getProjectId() Obtain ID of project the cloud disk belongs to.
- * @method void setProjectId(integer $ProjectId) Set ID of project the cloud disk belongs to.
- * @method integer getThroughputPerformance() Obtain Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
- * @method void setThroughputPerformance(integer $ThroughputPerformance) Set Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
+ * @method integer getDiskBackupQuota() Obtain Specifies the cloud disk backup point quota.
+ * @method void setDiskBackupQuota(integer $DiskBackupQuota) Set Specifies the cloud disk backup point quota.
  */
 class InquiryPriceCreateDisksRequest extends AbstractModel
 {
     /**
-     * @var string Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
+     * @var string Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+     */
+    public $DiskChargeType;
+
+    /**
+     * @var string Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
      */
     public $DiskType;
 
     /**
-     * @var integer Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * @var integer Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
      */
     public $DiskSize;
 
     /**
-     * @var string Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+     * @var integer ID of the project to which the cloud disk belongs.
      */
-    public $DiskChargeType;
+    public $ProjectId;
+
+    /**
+     * @var integer Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+     */
+    public $DiskCount;
+
+    /**
+     * @var integer Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
+     */
+    public $ThroughputPerformance;
 
     /**
      * @var DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
@@ -58,28 +75,19 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
     public $DiskChargePrepaid;
 
     /**
-     * @var integer Quantity of cloud disks purchased. If left empty, default is 1.
+     * @var integer Specifies the cloud disk backup point quota.
      */
-    public $DiskCount;
+    public $DiskBackupQuota;
 
     /**
-     * @var integer ID of project the cloud disk belongs to.
-     */
-    public $ProjectId;
-
-    /**
-     * @var integer Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
-     */
-    public $ThroughputPerformance;
-
-    /**
-     * @param string $DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD cloud disk<br><li>CLOUD_PREMIUM: Premium Cloud Storage<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: Tremendous SSD.
-     * @param integer $DiskSize Cloud disk size (in GB). For the value range of the cloud disk sizes, see cloud disk [Product Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
-     * @param string $DiskChargeType Cloud disk billing method. <br><li>POSTPAID_BY_HOUR: Pay-as-you-go on an hourly basis
+     * @param string $DiskChargeType Cloud disk billing mode. <br><li>POSTPAID_BY_HOUR: Hourly pay-as-you-go.
+     * @param string $DiskType Cloud disk media type. Valid values: <br><li>CLOUD_BASIC: HDD Cloud Storage<br><li>CLOUD_PREMIUM: Premium Cloud Disk<br><li>CLOUD_SSD: SSD<br><li>CLOUD_HSSD: Enhanced SSD<br><li>CLOUD_TSSD: ulTra SSD.
+     * @param integer $DiskSize Cloud disk size in GB. For the value range, see [Cloud Disk Types](https://intl.cloud.tencent.com/document/product/362/2353?from_cn_redirect=1).
+     * @param integer $ProjectId ID of the project to which the cloud disk belongs.
+     * @param integer $DiskCount Number of cloud disks to be purchased. If it is not specified, `1` will be used by default.
+     * @param integer $ThroughputPerformance Extra performance in MB/s purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and ulTra SSD (CLOUD_TSSD).
      * @param DiskChargePrepaid $DiskChargePrepaid Relevant parameter settings for the prepaid mode (i.e., monthly subscription). The monthly subscription cloud disk purchase attributes such as usage period and whether or not auto-renewal is set up can be specified using this parameter. <br>This parameter is required when creating a prepaid cloud disk. This parameter is not required when creating an hourly postpaid cloud disk.
-     * @param integer $DiskCount Quantity of cloud disks purchased. If left empty, default is 1.
-     * @param integer $ProjectId ID of project the cloud disk belongs to.
-     * @param integer $ThroughputPerformance Extra performance (in MB/sec) purchased for a cloud disk.<br>This parameter is only valid for Enhanced SSD (CLOUD_HSSD) and Tremendous SSD (CLOUD_TSSD).
+     * @param integer $DiskBackupQuota Specifies the cloud disk backup point quota.
      */
     function __construct()
     {
@@ -94,6 +102,10 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
+            $this->DiskChargeType = $param["DiskChargeType"];
+        }
+
         if (array_key_exists("DiskType",$param) and $param["DiskType"] !== null) {
             $this->DiskType = $param["DiskType"];
         }
@@ -102,8 +114,16 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
             $this->DiskSize = $param["DiskSize"];
         }
 
-        if (array_key_exists("DiskChargeType",$param) and $param["DiskChargeType"] !== null) {
-            $this->DiskChargeType = $param["DiskChargeType"];
+        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
+            $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
+            $this->DiskCount = $param["DiskCount"];
+        }
+
+        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
+            $this->ThroughputPerformance = $param["ThroughputPerformance"];
         }
 
         if (array_key_exists("DiskChargePrepaid",$param) and $param["DiskChargePrepaid"] !== null) {
@@ -111,16 +131,8 @@ class InquiryPriceCreateDisksRequest extends AbstractModel
             $this->DiskChargePrepaid->deserialize($param["DiskChargePrepaid"]);
         }
 
-        if (array_key_exists("DiskCount",$param) and $param["DiskCount"] !== null) {
-            $this->DiskCount = $param["DiskCount"];
-        }
-
-        if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
-            $this->ProjectId = $param["ProjectId"];
-        }
-
-        if (array_key_exists("ThroughputPerformance",$param) and $param["ThroughputPerformance"] !== null) {
-            $this->ThroughputPerformance = $param["ThroughputPerformance"];
+        if (array_key_exists("DiskBackupQuota",$param) and $param["DiskBackupQuota"] !== null) {
+            $this->DiskBackupQuota = $param["DiskBackupQuota"];
         }
     }
 }

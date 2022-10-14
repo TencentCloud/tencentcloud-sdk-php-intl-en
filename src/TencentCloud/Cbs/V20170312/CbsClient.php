@@ -23,6 +23,11 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cbs\V20170312\Models as Models;
 
 /**
+ * @method Models\ApplyDiskBackupResponse ApplyDiskBackup(Models\ApplyDiskBackupRequest $req) This API is used to roll back a backup point to the original cloud disk.
+
+* Only rollback to the original cloud disk is supported. For a data disk backup point, if you want to copy the backup point data to another cloud disk, use the `CreateSnapshot` API to convert the backup point into a snapshot, use the `CreateDisks` API to create an elastic cloud disk, and then copy the snapshot data to it.
+* Only backup points in `NORMAL` status can be rolled back. To query the status of a backup point, call the `DescribeDiskBackups` API and see the `BackupState` field in the response.
+* For an elastic cloud disk, it must be in unattached status. To query the status of the cloud disk, call the `DescribeDisks` API and see the `Attached` field in the response. For a non-elastic cloud disk purchased together with an instance, the instance must be in shutdown status, which can be queried through the `DescribeInstancesStatus` API.
  * @method Models\ApplySnapshotResponse ApplySnapshot(Models\ApplySnapshotRequest $req) This API (ApplySnapshot) is used to roll back a snapshot to the original cloud disk.
 
 * The snapshot can only be rolled back to the original cloud disk. For data disk snapshots, if you need to copy the snapshot data to other cloud disks, use the API [CreateDisks](https://intl.cloud.tencent.com/document/product/362/16312?from_cn_redirect=1) to create an elastic cloud disk and then copy the snapshot data to the created cloud disk. 
@@ -44,17 +49,19 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 
 * For the limits on the number of scheduled snapshot policies that can be created in each region, see [Scheduled Snapshots](https://intl.cloud.tencent.com/document/product/362/8191?from_cn_redirect=1).
 * The quantity and capacity of the snapshots that can be created in each region are limited. For more information, see the **Snapshots** page on the Tencent Cloud Console. If the number of snapshots exceeds the quota, the creation of the scheduled snapshots will fail.
- * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) This API is used to create one or more cloud disks.
+ * @method Models\CreateDisksResponse CreateDisks(Models\CreateDisksRequest $req) This API is used to create cloud disks.
 
 * This API supports creating a cloud disk with a data disk snapshot so that the snapshot data can be copied to the purchased cloud disk.
-* This API is an async API. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its state is 'UNATTACHED' or 'ATTACHED', it means that the cloud disk has been created successfully.
- * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) This API (CreateSnapshot) is used to create a snapshot of a specified cloud disk.
+* This API is async. A cloud disk ID list will be returned when a request is made successfully, but it does not mean that the creation has been completed. You can call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API to query cloud disks by `DiskId`. If a new cloud disk can be found and its status is `UNATTACHED` or `ATTACHED`, the cloud disk has been created successfully.
+ * @method Models\CreateSnapshotResponse CreateSnapshot(Models\CreateSnapshotRequest $req) This API is used to create a snapshot for the specified cloud disk.
 
-* Snapshots can only be created for cloud disks with the snapshot capability. To check whether a cloud disk has the snapshot capability, see the SnapshotAbility field returned by the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-* For the number of snapshots that can be created, please see [Product Usage Restriction](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* You can only create snapshots for cloud disks with the snapshot capability. To check whether a cloud disk is snapshot-enabled, call the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API and see the `SnapshotAbility` field in the response.
+* For the maximum number of snapshots that can be created, see [Use Limits](https://intl.cloud.tencent.com/doc/product/362/5145?from_cn_redirect=1).
+* Currently, you can convert backup points into general snapshots. After the conversion, snapshot usage fees may be charged, backup points will not be retained, and the occupied backup point quota will be released.
  * @method Models\DeleteAutoSnapshotPoliciesResponse DeleteAutoSnapshotPolicies(Models\DeleteAutoSnapshotPoliciesRequest $req) This API (DeleteAutoSnapshotPolicies) is used to delete scheduled snapshot policies.
 
 * Batch operations are supported. If one of the scheduled snapshot policies in a batch cannot be deleted, the operation is not performed and a specific error code is returned.
+ * @method Models\DeleteDiskBackupsResponse DeleteDiskBackups(Models\DeleteDiskBackupsRequest $req) This API is used to delete the backup points of the specified cloud disk in batches.
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) This API is used to delete snapshots.
 
 * Only snapshots in the `NORMAL` state can be deleted. To query the state of a snapshot, you can call the [DescribeSnapshots](https://intl.cloud.tencent.com/document/product/362/15647?from_cn_redirect=1) API and check the `SnapshotState` field in the response.
@@ -65,6 +72,10 @@ use TencentCloud\Cbs\V20170312\Models as Models;
 * If the parameter is empty, a certain number (specified by `Limit`; the default is 20) of the scheduled snapshot policy lists are returned to the current user.
 
  * @method Models\DescribeDiskAssociatedAutoSnapshotPolicyResponse DescribeDiskAssociatedAutoSnapshotPolicy(Models\DescribeDiskAssociatedAutoSnapshotPolicyRequest $req) This API (DescribeDiskAssociatedAutoSnapshotPolicy) is used to query the scheduled snapshot policy bound to a cloud disk.
+ * @method Models\DescribeDiskBackupsResponse DescribeDiskBackups(Models\DescribeDiskBackupsRequest $req) This API is used to query the details of backup points.
+
+You can filter results by backup point ID. You can also look for certain backup points by specifying the ID or type of the cloud disk for which the backup points are created. The relationship between different filters is logical `AND`. For more information on filters, see `Filter`.
+If the parameter is empty, a certain number (as specified by `Limit` and 20 by default) of backup points will be returned.
  * @method Models\DescribeDiskConfigQuotaResponse DescribeDiskConfigQuota(Models\DescribeDiskConfigQuotaRequest $req) This API (DescribeDiskConfigQuota) is used to query the cloud disk quota.
  * @method Models\DescribeDiskOperationLogsResponse DescribeDiskOperationLogs(Models\DescribeDiskOperationLogsRequest $req) This API (DescribeDiskOperationLogs) is used to query a list of cloud disk operation logs.
 
@@ -96,10 +107,11 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
 2. For a cloud disk created from the scratch, all data are cleared. Please check and back up the necessary data before the reinitialization;
 3. Currently, you can only re-initialize a cloud disk when it’s not attached to a resource and not shared by others;
 4. For a cloud disk created from a snapshot, if the snapshot has been deleted, it cannot be reinitialized.
+ * @method Models\InquirePriceModifyDiskBackupQuotaResponse InquirePriceModifyDiskBackupQuota(Models\InquirePriceModifyDiskBackupQuotaRequest $req) This API is used to query the price of a cloud disk after its backup point quota is modified.
  * @method Models\InquirePriceModifyDiskExtraPerformanceResponse InquirePriceModifyDiskExtraPerformance(Models\InquirePriceModifyDiskExtraPerformanceRequest $req) This API is used to query the price for adjusting the cloud disk’s extra performance.
- * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) This API (InquiryPriceCreateDisks) is used to inquire the price for cloud disk creation.
+ * @method Models\InquiryPriceCreateDisksResponse InquiryPriceCreateDisks(Models\InquiryPriceCreateDisksRequest $req) This API is used to query the price of creating cloud disks.
 
-* It supports inquiring the price for the creation of multiple cloud disks. The total price for the creation is returned.
+* You can query the price of creating multiple cloud disks in a single request. In this case, the price returned will be the total price.
  * @method Models\InquiryPriceResizeDiskResponse InquiryPriceResizeDisk(Models\InquiryPriceResizeDiskRequest $req) This API is used to query the price for expanding cloud disks.
  * @method Models\ModifyAutoSnapshotPolicyAttributeResponse ModifyAutoSnapshotPolicyAttribute(Models\ModifyAutoSnapshotPolicyAttributeRequest $req) This API (ModifyAutoSnapshotPolicyAttribute) is used to modify the attributes of an automatic snapshot policy.
 
@@ -108,6 +120,7 @@ You can filter according to the snapshot ID. The snapshot ID format is as follow
  * @method Models\ModifyDiskAttributesResponse ModifyDiskAttributes(Models\ModifyDiskAttributesRequest $req) * Only the project ID of elastic cloud disk can be modified. The project ID of the cloud disk created with the CVM is linked with the CVM. The project ID can be can be queried in the Portable field in the output parameters through the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
 * "Cloud disk name" is only used by users for their management. Tencent Cloud does not use the name as the basis for ticket submission or cloud disk management.
 * Batch operations are supported. If multiple cloud disk IDs are specified, all the specified cloud disks must have the same attribute. If there is a cloud disk that does not allow this operation, the operation is not performed and a specific error code is returned.
+ * @method Models\ModifyDiskBackupQuotaResponse ModifyDiskBackupQuota(Models\ModifyDiskBackupQuotaRequest $req) This API is used to modify the cloud disk backup point quota.
  * @method Models\ModifyDiskExtraPerformanceResponse ModifyDiskExtraPerformance(Models\ModifyDiskExtraPerformanceRequest $req) This API is used to adjust the cloud disk’s extra performance.
 
 * Currently, only Tremendous SSD (CLOUD_TSSD) and Enhanced SSD (CLOUD_HSSD) support extra performance adjustment.

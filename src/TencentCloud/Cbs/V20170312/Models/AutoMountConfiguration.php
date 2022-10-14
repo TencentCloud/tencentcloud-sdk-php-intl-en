@@ -18,14 +18,14 @@ namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Describes how a newly purchased cloud disk is initialized and mounted to a CVM
+ * Describes how a newly purchased cloud disk is initialized and attached to a CVM instance.
  *
  * @method array getInstanceId() Obtain ID of the instance to which the cloud disk is attached.
  * @method void setInstanceId(array $InstanceId) Set ID of the instance to which the cloud disk is attached.
- * @method array getMountPoint() Obtain Path to the mount point in the CVM
- * @method void setMountPoint(array $MountPoint) Set Path to the mount point in the CVM
- * @method string getFileSystemType() Obtain File system type. Supported: ext4 and xfs.
- * @method void setFileSystemType(string $FileSystemType) Set File system type. Supported: ext4 and xfs.
+ * @method array getMountPoint() Obtain Mount point in the instance.
+ * @method void setMountPoint(array $MountPoint) Set Mount point in the instance.
+ * @method string getFileSystemType() Obtain File system type. Valid values: `ext4`, `xfs`.
+ * @method void setFileSystemType(string $FileSystemType) Set File system type. Valid values: `ext4`, `xfs`.
  */
 class AutoMountConfiguration extends AbstractModel
 {
@@ -35,19 +35,19 @@ class AutoMountConfiguration extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var array Path to the mount point in the CVM
+     * @var array Mount point in the instance.
      */
     public $MountPoint;
 
     /**
-     * @var string File system type. Supported: ext4 and xfs.
+     * @var string File system type. Valid values: `ext4`, `xfs`.
      */
     public $FileSystemType;
 
     /**
      * @param array $InstanceId ID of the instance to which the cloud disk is attached.
-     * @param array $MountPoint Path to the mount point in the CVM
-     * @param string $FileSystemType File system type. Supported: ext4 and xfs.
+     * @param array $MountPoint Mount point in the instance.
+     * @param string $FileSystemType File system type. Valid values: `ext4`, `xfs`.
      */
     function __construct()
     {

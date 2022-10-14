@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyInstanceParams response structure.
  *
- * @method boolean getChanged() Obtain Whether a modification is successfully made.
- * @method void setChanged(boolean $Changed) Set Whether a modification is successfully made.
- * @method integer getTaskId() Obtain Task ID
- * @method void setTaskId(integer $TaskId) Set Task ID
+ * @method boolean getChanged() Obtain Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+ * @method void setChanged(boolean $Changed) Set Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+ * @method integer getTaskId() Obtain ID of the task
+ * @method void setTaskId(integer $TaskId) Set ID of the task
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ModifyInstanceParamsResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether a modification is successfully made.
+     * @var boolean Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
      */
     public $Changed;
 
     /**
-     * @var integer Task ID
+     * @var integer ID of the task
      */
     public $TaskId;
 
@@ -45,8 +45,8 @@ class ModifyInstanceParamsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $Changed Whether a modification is successfully made.
-     * @param integer $TaskId Task ID
+     * @param boolean $Changed Whether the parameter is modified successfully. <br><li>`True`: Yes<br><li>`False`: No<br>
+     * @param integer $TaskId ID of the task
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

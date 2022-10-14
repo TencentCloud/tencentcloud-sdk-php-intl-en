@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Instance parameter
  *
- * @method string getKey() Obtain Sets a parameter name
- * @method void setKey(string $Key) Set Sets a parameter name
- * @method string getValue() Obtain Sets a parameter value
- * @method void setValue(string $Value) Set Sets a parameter value
+ * @method string getKey() Obtain Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+ * @method void setKey(string $Key) Set Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+ * @method string getValue() Obtain Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+ * @method void setValue(string $Value) Set Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
  */
 class InstanceParam extends AbstractModel
 {
     /**
-     * @var string Sets a parameter name
+     * @var string Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public $Key;
 
     /**
-     * @var string Sets a parameter value
+     * @var string Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     public $Value;
 
     /**
-     * @param string $Key Sets a parameter name
-     * @param string $Value Sets a parameter value
+     * @param string $Key Parameter name, such as “timeout”. For supported custom parameters, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
+     * @param string $Value Current parameter value. For example, if you set the current value of “timeout” to 120 (in seconds), the client connections that remain idle longer than 120 seconds will be closed. For more information on parameter values, see <a href="https://www.tencentcloud.com/document/product/239/39796">Setting Instance Parameters</a>
      */
     function __construct()
     {

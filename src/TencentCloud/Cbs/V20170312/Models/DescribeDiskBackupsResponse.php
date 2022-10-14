@@ -14,30 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Redis\V20180412\Models;
+namespace TencentCloud\Cbs\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeSlowLog response structure.
+ * DescribeDiskBackups response structure.
  *
- * @method integer getTotalCount() Obtain Total number of slow queries
- * @method void setTotalCount(integer $TotalCount) Set Total number of slow queries
- * @method array getInstanceSlowlogDetail() Obtain Slow query details
- * @method void setInstanceSlowlogDetail(array $InstanceSlowlogDetail) Set Slow query details
+ * @method integer getTotalCount() Obtain Number of eligible cloud disk backup points.
+ * @method void setTotalCount(integer $TotalCount) Set Number of eligible cloud disk backup points.
+ * @method array getDiskBackupSet() Obtain List of details of cloud disk backup points.
+ * @method void setDiskBackupSet(array $DiskBackupSet) Set List of details of cloud disk backup points.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeSlowLogResponse extends AbstractModel
+class DescribeDiskBackupsResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of slow queries
+     * @var integer Number of eligible cloud disk backup points.
      */
     public $TotalCount;
 
     /**
-     * @var array Slow query details
+     * @var array List of details of cloud disk backup points.
      */
-    public $InstanceSlowlogDetail;
+    public $DiskBackupSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +45,8 @@ class DescribeSlowLogResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of slow queries
-     * @param array $InstanceSlowlogDetail Slow query details
+     * @param integer $TotalCount Number of eligible cloud disk backup points.
+     * @param array $DiskBackupSet List of details of cloud disk backup points.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +66,12 @@ class DescribeSlowLogResponse extends AbstractModel
             $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("InstanceSlowlogDetail",$param) and $param["InstanceSlowlogDetail"] !== null) {
-            $this->InstanceSlowlogDetail = [];
-            foreach ($param["InstanceSlowlogDetail"] as $key => $value){
-                $obj = new InstanceSlowlogDetail();
+        if (array_key_exists("DiskBackupSet",$param) and $param["DiskBackupSet"] !== null) {
+            $this->DiskBackupSet = [];
+            foreach ($param["DiskBackupSet"] as $key => $value){
+                $obj = new DiskBackup();
                 $obj->deserialize($value);
-                array_push($this->InstanceSlowlogDetail, $obj);
+                array_push($this->DiskBackupSet, $obj);
             }
         }
 

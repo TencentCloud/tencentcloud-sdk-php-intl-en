@@ -20,34 +20,50 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSnapshot request structure.
  *
- * @method string getDiskId() Obtain ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
- * @method void setDiskId(string $DiskId) Set ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
- * @method string getSnapshotName() Obtain Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
- * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
- * @method string getDeadline() Obtain Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
- * @method void setDeadline(string $Deadline) Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+ * @method string getDiskId() Obtain ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+ * @method void setDiskId(string $DiskId) Set ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+ * @method string getSnapshotName() Obtain Snapshot name. If it is not specified, "Unnamed" will be used by default.
+ * @method void setSnapshotName(string $SnapshotName) Set Snapshot name. If it is not specified, "Unnamed" will be used by default.
+ * @method string getDeadline() Obtain Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+ * @method void setDeadline(string $Deadline) Set Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+ * @method string getDiskBackupId() Obtain ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+ * @method void setDiskBackupId(string $DiskBackupId) Set ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+ * @method array getTags() Obtain Tags bound to the snapshot.
+ * @method void setTags(array $Tags) Set Tags bound to the snapshot.
  */
 class CreateSnapshotRequest extends AbstractModel
 {
     /**
-     * @var string ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
+     * @var string ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
      */
     public $DiskId;
 
     /**
-     * @var string Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
+     * @var string Snapshot name. If it is not specified, "Unnamed" will be used by default.
      */
     public $SnapshotName;
 
     /**
-     * @var string Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+     * @var string Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
      */
     public $Deadline;
 
     /**
-     * @param string $DiskId ID of the cloud disk, for which a snapshot needs to be created. It can be queried via the API [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1).
-     * @param string $SnapshotName Snapshot name. If it is left empty, the new snapshot name is "Not named" by default.
-     * @param string $Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, eg. 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires
+     * @var string ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     */
+    public $DiskBackupId;
+
+    /**
+     * @var array Tags bound to the snapshot.
+     */
+    public $Tags;
+
+    /**
+     * @param string $DiskId ID of the cloud disk for which to create a snapshot, which can be queried through the [DescribeDisks](https://intl.cloud.tencent.com/document/product/362/16315?from_cn_redirect=1) API.
+     * @param string $SnapshotName Snapshot name. If it is not specified, "Unnamed" will be used by default.
+     * @param string $Deadline Expiration time of the snapshot. It must be in UTC ISO-8601 format, such as 2022-01-08T09:47:55+00:00. The snapshot will be automatically deleted when it expires.
+     * @param string $DiskBackupId ID of the cloud disk backup point. When this parameter is specified, the snapshot will be created from the backup point.
+     * @param array $Tags Tags bound to the snapshot.
      */
     function __construct()
     {
@@ -72,6 +88,19 @@ class CreateSnapshotRequest extends AbstractModel
 
         if (array_key_exists("Deadline",$param) and $param["Deadline"] !== null) {
             $this->Deadline = $param["Deadline"];
+        }
+
+        if (array_key_exists("DiskBackupId",$param) and $param["DiskBackupId"] !== null) {
+            $this->DiskBackupId = $param["DiskBackupId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }
