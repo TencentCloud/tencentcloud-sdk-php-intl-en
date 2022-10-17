@@ -290,9 +290,9 @@ There are two ways to create a task flow template:
  * @method Models\RemoveWatermarkResponse RemoveWatermark(Models\RemoveWatermarkRequest $req) This API is used to remove watermarks from a video.
  * @method Models\ResetProcedureTemplateResponse ResetProcedureTemplate(Models\ResetProcedureTemplateRequest $req) This API is used to reset a custom task flow template.  
  * @method Models\RestoreMediaResponse RestoreMedia(Models\RestoreMediaRequest $req) This API is used to restore files from ARCHIVE or DEEP ARCHIVE. Files stored in ARCHIVE or DEEP ARCHIVE must be restored before they can be accessed. Restored files are available for a limited period of time.
- * @method Models\ReviewAudioVideoResponse ReviewAudioVideo(Models\ReviewAudioVideoRequest $req) This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, and speech.
+ * @method Models\ReviewAudioVideoResponse ReviewAudioVideo(Models\ReviewAudioVideoRequest $req) This API is used to start a moderation task on a file stored in VOD to detect non-compliant content in images, text, speech, and voice.
 
-If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
+If event notifications are used, the event type is [ReviewAudioVideoComplete](https://intl.cloud.tencent.com/document/product/266/81258?from_cn_redirect=1).
 
  * @method Models\SearchMediaResponse SearchMedia(Models\SearchMediaRequest $req) This API is used to search for media files by specific criteria. You can sort the results and specify the information to return.
 - Specify a list of file IDs (`FileIds`). Any file that matches one of the IDs will be returned.

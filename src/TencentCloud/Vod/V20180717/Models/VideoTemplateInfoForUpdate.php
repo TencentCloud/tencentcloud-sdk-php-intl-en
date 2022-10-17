@@ -94,6 +94,14 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
  * @method void setPreserveHDRSwitch(string $PreserveHDRSwitch) Set Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
 <li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
 <li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+ * @method string getCodecTag() Obtain The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+ * @method void setCodecTag(string $CodecTag) Set The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
  */
 class VideoTemplateInfoForUpdate extends AbstractModel
 {
@@ -175,6 +183,14 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
     public $PreserveHDRSwitch;
 
     /**
+     * @var string The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
+     */
+    public $CodecTag;
+
+    /**
      * @param string $Codec The video codec. Valid values:
 <li>libx264: H.264</li>
 <li>libx265: H.265</li>
@@ -212,6 +228,10 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
      * @param string $PreserveHDRSwitch Whether to output an HDR (high dynamic range) video if the source video is HDR. Valid values:
 <li>ON: If the source video is HDR, output an HDR video; if not, output an SDR (standard dynamic range) video.</li>
 <li>OFF: Output an SDR video regardless of whether the source video is HDR.</li>
+     * @param string $CodecTag The codec tag. This parameter is valid only if the H.265 codec is used. Valid values:
+<li>hvc1</li>
+<li>hev1</li>
+Default value: hvc1.
      */
     function __construct()
     {
@@ -264,6 +284,10 @@ When this parameter is set to 0 or left empty, `Gop` will be automatically set.
 
         if (array_key_exists("PreserveHDRSwitch",$param) and $param["PreserveHDRSwitch"] !== null) {
             $this->PreserveHDRSwitch = $param["PreserveHDRSwitch"];
+        }
+
+        if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
+            $this->CodecTag = $param["CodecTag"];
         }
     }
 }

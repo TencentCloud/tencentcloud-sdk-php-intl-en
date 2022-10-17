@@ -40,6 +40,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFps(integer $Fps) Set Frame rate in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getCodecTag() Obtain The codec tag. This parameter is valid only if `Codec` is `hevc`.
+ * @method void setCodecTag(string $CodecTag) Set The codec tag. This parameter is valid only if `Codec` is `hevc`.
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -74,6 +76,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Fps;
 
     /**
+     * @var string The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     */
+    public $CodecTag;
+
+    /**
      * @param integer $Bitrate Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Height of video stream in px.
@@ -84,6 +91,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Fps Frame rate in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
      */
     function __construct()
     {
@@ -116,6 +124,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Fps",$param) and $param["Fps"] !== null) {
             $this->Fps = $param["Fps"];
+        }
+
+        if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
+            $this->CodecTag = $param["CodecTag"];
         }
     }
 }
