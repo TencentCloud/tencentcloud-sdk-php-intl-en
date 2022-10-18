@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIsExtranet(boolean $IsExtranet) Set Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
  * @method string getDomain() Obtain The domain name
  * @method void setDomain(string $Domain) Set The domain name
- * @method string getSecurityGroup() Obtain The security group in use. Required only for public network access.
- * @method void setSecurityGroup(string $SecurityGroup) Set The security group in use. Required only for public network access.
+ * @method string getSecurityGroup() Obtain The security group in use, which must be passed in when public access is enabled.
+ * @method void setSecurityGroup(string $SecurityGroup) Set The security group in use, which must be passed in when public access is enabled.
  * @method string getExtensiveParameters() Obtain The LB parameter. Required only for public network access.
  * @method void setExtensiveParameters(string $ExtensiveParameters) Set The LB parameter. Required only for public network access.
  */
@@ -56,7 +56,7 @@ class CreateClusterEndpointRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var string The security group in use. Required only for public network access.
+     * @var string The security group in use, which must be passed in when public access is enabled.
      */
     public $SecurityGroup;
 
@@ -70,7 +70,7 @@ class CreateClusterEndpointRequest extends AbstractModel
      * @param string $SubnetId The ID of the subnet where the cluster's port is located (only needs to be entered when the non-public network access is enabled, and must be within the subnet of the cluster's VPC). 
      * @param boolean $IsExtranet Whether public network access is enabled or not (True = public network access, FALSE = private network access, with the default value as FALSE).
      * @param string $Domain The domain name
-     * @param string $SecurityGroup The security group in use. Required only for public network access.
+     * @param string $SecurityGroup The security group in use, which must be passed in when public access is enabled.
      * @param string $ExtensiveParameters The LB parameter. Required only for public network access.
      */
     function __construct()

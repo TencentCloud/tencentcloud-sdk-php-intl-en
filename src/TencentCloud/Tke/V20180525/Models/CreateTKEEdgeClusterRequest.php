@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoUpgradeClusterLevel(boolean $AutoUpgradeClusterLevel) Set Whether auto upgrade is supported
  * @method string getChargeType() Obtain Cluster billing mode
  * @method void setChargeType(string $ChargeType) Set Cluster billing mode
+ * @method string getEdgeVersion() Obtain Edge cluster version. It is the set of versions of all cluster components.
+ * @method void setEdgeVersion(string $EdgeVersion) Set Edge cluster version. It is the set of versions of all cluster components.
+ * @method string getRegistryPrefix() Obtain Prefix of the image registry of an edge component
+ * @method void setRegistryPrefix(string $RegistryPrefix) Set Prefix of the image registry of an edge component
  */
 class CreateTKEEdgeClusterRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
     public $ChargeType;
 
     /**
+     * @var string Edge cluster version. It is the set of versions of all cluster components.
+     */
+    public $EdgeVersion;
+
+    /**
+     * @var string Prefix of the image registry of an edge component
+     */
+    public $RegistryPrefix;
+
+    /**
      * @param string $K8SVersion 
      * @param string $VpcId VPC ID
      * @param string $ClusterName Cluster name
@@ -120,6 +134,8 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
      * @param string $ClusterLevel Cluster specification level
      * @param boolean $AutoUpgradeClusterLevel Whether auto upgrade is supported
      * @param string $ChargeType Cluster billing mode
+     * @param string $EdgeVersion Edge cluster version. It is the set of versions of all cluster components.
+     * @param string $RegistryPrefix Prefix of the image registry of an edge component
      */
     function __construct()
     {
@@ -182,6 +198,14 @@ class CreateTKEEdgeClusterRequest extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
+        }
+
+        if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
+            $this->EdgeVersion = $param["EdgeVersion"];
+        }
+
+        if (array_key_exists("RegistryPrefix",$param) and $param["RegistryPrefix"] !== null) {
+            $this->RegistryPrefix = $param["RegistryPrefix"];
         }
     }
 }

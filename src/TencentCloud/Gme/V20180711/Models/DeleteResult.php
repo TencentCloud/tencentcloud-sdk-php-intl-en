@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeAvailableTKEEdgeVersion request structure.
+ * Result of the operation to delete a room or remove members
  *
- * @method string getClusterId() Obtain You can enter the `ClusterId` to query the current and latest versions of all cluster components.
- * @method void setClusterId(string $ClusterId) Set You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+ * @method integer getCode() Obtain Status code. `0`: Succeeded. Others: Failed\
+ * @method void setCode(integer $Code) Set Status code. `0`: Succeeded. Others: Failed\
+ * @method string getErrorMsg() Obtain Description
+ * @method void setErrorMsg(string $ErrorMsg) Set Description
  */
-class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel
+class DeleteResult extends AbstractModel
 {
     /**
-     * @var string You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+     * @var integer Status code. `0`: Succeeded. Others: Failed\
      */
-    public $ClusterId;
+    public $Code;
 
     /**
-     * @param string $ClusterId You can enter the `ClusterId` to query the current and latest versions of all cluster components.
+     * @var string Description
+     */
+    public $ErrorMsg;
+
+    /**
+     * @param integer $Code Status code. `0`: Succeeded. Others: Failed\
+     * @param string $ErrorMsg Description
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DescribeAvailableTKEEdgeVersionRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
+        if (array_key_exists("Code",$param) and $param["Code"] !== null) {
+            $this->Code = $param["Code"];
+        }
+
+        if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
+            $this->ErrorMsg = $param["ErrorMsg"];
         }
     }
 }

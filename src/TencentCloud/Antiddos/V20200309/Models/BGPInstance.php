@@ -74,6 +74,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setTagInfoList(array $TagInfoList) Set Tags associated with the resource
  * @method integer getIpCountNewFlag() Obtain New edition of Anti-DDoS Pro
  * @method void setIpCountNewFlag(integer $IpCountNewFlag) Set New edition of Anti-DDoS Pro
+ * @method integer getVitalityVersion() Obtain The version of attack defense package
+ * @method void setVitalityVersion(integer $VitalityVersion) Set The version of attack defense package
  */
 class BGPInstance extends AbstractModel
 {
@@ -165,6 +167,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IpCountNewFlag;
 
     /**
+     * @var integer The version of attack defense package
+     */
+    public $VitalityVersion;
+
+    /**
      * @param InstanceRelation $InstanceDetail Details of the Anti-DDoS Pro instance
      * @param BGPInstanceSpecification $SpecificationLimit Specifications of the Anti-DDoS Pro instance
      * @param BGPInstanceUsages $Usage Usage statistics of the Anti-DDoS Pro instance
@@ -192,6 +199,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param integer $CCEnable Status of CC protection
      * @param array $TagInfoList Tags associated with the resource
      * @param integer $IpCountNewFlag New edition of Anti-DDoS Pro
+     * @param integer $VitalityVersion The version of attack defense package
      */
     function __construct()
     {
@@ -279,6 +287,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("IpCountNewFlag",$param) and $param["IpCountNewFlag"] !== null) {
             $this->IpCountNewFlag = $param["IpCountNewFlag"];
+        }
+
+        if (array_key_exists("VitalityVersion",$param) and $param["VitalityVersion"] !== null) {
+            $this->VitalityVersion = $param["VitalityVersion"];
         }
     }
 }

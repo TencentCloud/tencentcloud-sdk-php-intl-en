@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getVersions() Obtain Version list
  * @method void setVersions(array $Versions) Set Version list
+ * @method string getEdgeVersionLatest() Obtain Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setEdgeVersionLatest(string $EdgeVersionLatest) Set Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getEdgeVersionCurrent() Obtain Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setEdgeVersionCurrent(string $EdgeVersionCurrent) Set Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +41,28 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
     public $Versions;
 
     /**
+     * @var string Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $EdgeVersionLatest;
+
+    /**
+     * @var string Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $EdgeVersionCurrent;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param array $Versions Version list
+     * @param string $EdgeVersionLatest Latest version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $EdgeVersionCurrent Current version of the edge cluster
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +80,14 @@ class DescribeAvailableTKEEdgeVersionResponse extends AbstractModel
         }
         if (array_key_exists("Versions",$param) and $param["Versions"] !== null) {
             $this->Versions = $param["Versions"];
+        }
+
+        if (array_key_exists("EdgeVersionLatest",$param) and $param["EdgeVersionLatest"] !== null) {
+            $this->EdgeVersionLatest = $param["EdgeVersionLatest"];
+        }
+
+        if (array_key_exists("EdgeVersionCurrent",$param) and $param["EdgeVersionCurrent"] !== null) {
+            $this->EdgeVersionCurrent = $param["EdgeVersionCurrent"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
