@@ -27,6 +27,7 @@ use TencentCloud\Ciam\V20220331\Models as Models;
  * @method Models\CreateFileExportUserJobResponse CreateFileExportUserJob(Models\CreateFileExportUserJobRequest $req) This API is used to create a file for user export task.
  * @method Models\CreateUserResponse CreateUser(Models\CreateUserRequest $req) This API is used to create a user.
  * @method Models\DeleteUsersResponse DeleteUsers(Models\DeleteUsersRequest $req) This API is used to delete users in batches.
+ * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query the user information with multiple conditions.
  * @method Models\DescribeUserByIdResponse DescribeUserById(Models\DescribeUserByIdRequest $req) This API is used to query a user by ID.
  * @method Models\LinkAccountResponse LinkAccount(Models\LinkAccountRequest $req) This API is used to merge accounts.
  * @method Models\ListJobsResponse ListJobs(Models\ListJobsRequest $req) This API is used to query the details of a task.

@@ -112,6 +112,16 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setProductId(string $ProductId) Set Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method float getValueMax() Obtain Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setValueMax(float $ValueMax) Set Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getValueMin() Obtain Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setValueMin(float $ValueMin) Set Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AlarmHierarchicalValue getHierarchicalValue() Obtain 
+ * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) Set 
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -218,6 +228,23 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ProductId;
 
     /**
+     * @var float Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ValueMax;
+
+    /**
+     * @var float Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ValueMin;
+
+    /**
+     * @var AlarmHierarchicalValue 
+     */
+    public $HierarchicalValue;
+
+    /**
      * @param string $MetricName Metric name or event name. The supported metrics can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1) and the supported events via [DescribeAlarmEvents](https://intl.cloud.tencent.com/document/product/248/51284?from_cn_redirect=1).
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param integer $Period Statistical period in seconds. The valid values can be queried via [DescribeAlarmMetrics](https://intl.cloud.tencent.com/document/product/248/51283?from_cn_redirect=1).
@@ -264,6 +291,11 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $ProductId Integration center product ID.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param float $ValueMax Maximum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $ValueMin Minimum value
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AlarmHierarchicalValue $HierarchicalValue 
      */
     function __construct()
     {
@@ -333,6 +365,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
             $this->ProductId = $param["ProductId"];
+        }
+
+        if (array_key_exists("ValueMax",$param) and $param["ValueMax"] !== null) {
+            $this->ValueMax = $param["ValueMax"];
+        }
+
+        if (array_key_exists("ValueMin",$param) and $param["ValueMin"] !== null) {
+            $this->ValueMin = $param["ValueMin"];
+        }
+
+        if (array_key_exists("HierarchicalValue",$param) and $param["HierarchicalValue"] !== null) {
+            $this->HierarchicalValue = new AlarmHierarchicalValue();
+            $this->HierarchicalValue->deserialize($param["HierarchicalValue"]);
         }
     }
 }

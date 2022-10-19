@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLNotices(array $URLNotices) Set Callback notifications (up to 3)
  * @method array getCLSNotices() Obtain The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
  * @method void setCLSNotices(array $CLSNotices) Set The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+ * @method array getTags() Obtain Tags bound to a template
+ * @method void setTags(array $Tags) Set Tags bound to a template
  */
 class CreateAlarmNoticeRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class CreateAlarmNoticeRequest extends AbstractModel
     public $CLSNotices;
 
     /**
+     * @var array Tags bound to a template
+     */
+    public $Tags;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param string $Name Notification template name, which can contain up to 60 characters
      * @param string $NoticeType Notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
@@ -80,6 +87,7 @@ class CreateAlarmNoticeRequest extends AbstractModel
      * @param array $UserNotices User notifications (up to 5)
      * @param array $URLNotices Callback notifications (up to 3)
      * @param array $CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     * @param array $Tags Tags bound to a template
      */
     function __construct()
     {
@@ -134,6 +142,15 @@ class CreateAlarmNoticeRequest extends AbstractModel
                 $obj = new CLSNotice();
                 $obj->deserialize($value);
                 array_push($this->CLSNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -80,6 +80,12 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
  * @method void setTriggerTasks(array $TriggerTasks) Set Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
  * @method array getOneClickPolicyType() Obtain Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
  * @method void setOneClickPolicyType(array $OneClickPolicyType) Set Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+ * @method integer getNotBindAll() Obtain Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+ * @method void setNotBindAll(integer $NotBindAll) Set Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+ * @method integer getNotInstanceGroup() Obtain Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+ * @method void setNotInstanceGroup(integer $NotInstanceGroup) Set Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+ * @method array getTags() Obtain Filter policies by tag
+ * @method void setTags(array $Tags) Set Filter policies by tag
  */
 class DescribeAlarmPoliciesRequest extends AbstractModel
 {
@@ -198,6 +204,21 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
     public $OneClickPolicyType;
 
     /**
+     * @var integer Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     */
+    public $NotBindAll;
+
+    /**
+     * @var integer Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     */
+    public $NotInstanceGroup;
+
+    /**
+     * @var array Filter policies by tag
+     */
+    public $Tags;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param integer $PageNumber Page number starting from 1. Default value: 1
      * @param integer $PageSize Number of entries per page. Value range: 1–100. Default value: 20
@@ -228,6 +249,9 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
      * @param integer $NeedCorrespondence Whether the relationship between a policy and the input parameter filter dimension is required. `1`: Yes. `0`: No. Default value: `0`.
      * @param array $TriggerTasks Filter alarm policy by triggered task (such as auto scaling task). Up to 10 tasks can be specified.
      * @param array $OneClickPolicyType Filter by quick alarm policy. If this parameter is left empty, all policies are displayed. `ONECLICK`: Display quick alarm policies; `NOT_ONECLICK`: Display non-quick alarm policies.
+     * @param integer $NotBindAll Whether the returned result filters policies associated with all objects. Valid values: `1` (Yes), `0` (No).
+     * @param integer $NotInstanceGroup Whether the returned result filters policies associated with instance groups. Valid values: `1` (Yes), `0` (No).
+     * @param array $Tags Filter policies by tag
      */
     function __construct()
     {
@@ -329,6 +353,23 @@ It can be queried with the API [DescribeAlarmNotices](https://intl.cloud.tencent
 
         if (array_key_exists("OneClickPolicyType",$param) and $param["OneClickPolicyType"] !== null) {
             $this->OneClickPolicyType = $param["OneClickPolicyType"];
+        }
+
+        if (array_key_exists("NotBindAll",$param) and $param["NotBindAll"] !== null) {
+            $this->NotBindAll = $param["NotBindAll"];
+        }
+
+        if (array_key_exists("NotInstanceGroup",$param) and $param["NotInstanceGroup"] !== null) {
+            $this->NotInstanceGroup = $param["NotInstanceGroup"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -24,8 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserStoreId(string $UserStoreId) Set User directory ID
  * @method string getUserId() Obtain User ID
  * @method void setUserId(string $UserId) Set User ID
- * @method boolean getOriginal() Obtain 
- * @method void setOriginal(boolean $Original) Set 
+ * @method boolean getOriginal() Obtain Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
+ * @method void setOriginal(boolean $Original) Set Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
  */
 class DescribeUserByIdRequest extends AbstractModel
 {
@@ -40,14 +46,20 @@ class DescribeUserByIdRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
      */
     public $Original;
 
     /**
      * @param string $UserStoreId User directory ID
      * @param string $UserId User ID
-     * @param boolean $Original 
+     * @param boolean $Original Whether the content is passed through
+
+<li> **false** </li>Default. The returned information is desensitized.
+<li> **true** </li>Return the original content.
      */
     function __construct()
     {

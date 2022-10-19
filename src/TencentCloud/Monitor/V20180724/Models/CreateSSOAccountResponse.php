@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSSOAccount response structure.
  *
- * @method string getUserId() Obtain 
- * @method void setUserId(string $UserId) Set 
+ * @method string getUserId() Obtain The added user UIN
+ * @method void setUserId(string $UserId) Set The added user UIN
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateSSOAccountResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The added user UIN
      */
     public $UserId;
 
@@ -38,7 +38,7 @@ class CreateSSOAccountResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $UserId 
+     * @param string $UserId The added user UIN
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

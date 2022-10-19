@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination offset starting from 0. Default value: 0.
  * @method string getUpdateTimeOrder() Obtain Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
  * @method void setUpdateTimeOrder(string $UpdateTimeOrder) Set Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
+ * @method string getPolicyCountOrder() Obtain Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+ * @method void setPolicyCountOrder(string $PolicyCountOrder) Set Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
  */
 class DescribeConditionsTemplateListRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
     public $UpdateTimeOrder;
 
     /**
+     * @var string Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
+     */
+    public $PolicyCountOrder;
+
+    /**
      * @param string $Module The value is fixed to `monitor`.
      * @param string $ViewName View name, which can be obtained via [DescribeAllNamespaces](https://intl.cloud.tencent.com/document/product/248/48683?from_cn_redirect=1). For the monitoring of Tencent Cloud services, the value of this parameter is `QceNamespacesNew.N.Id` of the output parameter of `DescribeAllNamespaces`, for example, `cvm_device`.
      * @param string $GroupName Filter by trigger condition template name.
@@ -80,6 +87,7 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
      * @param integer $Limit Pagination parameter, which specifies the number of returned results per page. Value range: 1-100. Default value: 20.
      * @param integer $Offset Pagination offset starting from 0. Default value: 0.
      * @param string $UpdateTimeOrder Sorting method by update time. `asc`: Ascending order; `desc`: Descending order.
+     * @param string $PolicyCountOrder Sorting order based on the number of associated policies. Valid values: `asc` (ascending order), `desc` (descending order).
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeConditionsTemplateListRequest extends AbstractModel
 
         if (array_key_exists("UpdateTimeOrder",$param) and $param["UpdateTimeOrder"] !== null) {
             $this->UpdateTimeOrder = $param["UpdateTimeOrder"];
+        }
+
+        if (array_key_exists("PolicyCountOrder",$param) and $param["PolicyCountOrder"] !== null) {
+            $this->PolicyCountOrder = $param["PolicyCountOrder"];
         }
     }
 }

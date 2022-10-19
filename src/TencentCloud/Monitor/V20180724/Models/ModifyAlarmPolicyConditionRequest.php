@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AlarmPolicyFilter $Filter) Set Global filter.
  * @method array getGroupBy() Obtain Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+ * @method LogAlarmReq getLogAlarmReqInfo() Obtain Log alarm creation request parameters
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) Set Log alarm creation request parameters
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $GroupBy;
 
     /**
+     * @var LogAlarmReq Log alarm creation request parameters
+     */
+    public $LogAlarmReqInfo;
+
+    /**
      * @param string $Module Module name, which is fixed at "monitor"
      * @param string $PolicyId Alarm policy ID
      * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
@@ -80,6 +87,7 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyEventCondition $EventCondition Event trigger condition
      * @param AlarmPolicyFilter $Filter Global filter.
      * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     * @param LogAlarmReq $LogAlarmReqInfo Log alarm creation request parameters
      */
     function __construct()
     {
@@ -123,6 +131,11 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
+            $this->LogAlarmReqInfo = new LogAlarmReq();
+            $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
         }
     }
 }

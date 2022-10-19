@@ -192,6 +192,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setGrafanaInstanceId(string $GrafanaInstanceId) Set ID of the bound Grafana instance
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAlertRuleLimit() Obtain The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAlertRuleLimit(integer $AlertRuleLimit) Set The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRecordingRuleLimit() Obtain The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRecordingRuleLimit(integer $RecordingRuleLimit) Set The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -390,6 +398,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $GrafanaInstanceId;
 
     /**
+     * @var integer The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AlertRuleLimit;
+
+    /**
+     * @var integer The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RecordingRuleLimit;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param integer $InstanceChargeType Instance billing mode. Valid values:
@@ -475,6 +495,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param PrometheusInstanceGrantInfo $Grant Instance authorization information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $GrafanaInstanceId ID of the bound Grafana instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AlertRuleLimit The alert rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RecordingRuleLimit The recording rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -602,6 +626,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("GrafanaInstanceId",$param) and $param["GrafanaInstanceId"] !== null) {
             $this->GrafanaInstanceId = $param["GrafanaInstanceId"];
+        }
+
+        if (array_key_exists("AlertRuleLimit",$param) and $param["AlertRuleLimit"] !== null) {
+            $this->AlertRuleLimit = $param["AlertRuleLimit"];
+        }
+
+        if (array_key_exists("RecordingRuleLimit",$param) and $param["RecordingRuleLimit"] !== null) {
+            $this->RecordingRuleLimit = $param["RecordingRuleLimit"];
         }
     }
 }

@@ -32,10 +32,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCalcValue(string $CalcValue) Set Detection value.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getContinueTime() Obtain Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setContinueTime(string $ContinueTime) Set Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getContinueTime() Obtain Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setContinueTime(string $ContinueTime) Set Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMetricID() Obtain Metric ID.
  * @method void setMetricID(integer $MetricID) Set Metric ID.
  * @method string getMetricDisplayName() Obtain Displayed metric name.
@@ -46,6 +46,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setRuleID(integer $RuleID) Set Rule ID.
  * @method string getUnit() Obtain Metric unit.
  * @method void setUnit(string $Unit) Set Metric unit.
+ * @method integer getIsAdvanced() Obtain Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+ * @method void setIsAdvanced(integer $IsAdvanced) Set Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+ * @method integer getIsOpen() Obtain Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+ * @method void setIsOpen(integer $IsOpen) Set Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+ * @method string getProductId() Obtain Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProductId(string $ProductId) Set Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Condition extends AbstractModel
 {
@@ -72,8 +80,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $CalcValue;
 
     /**
-     * @var string Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @var string Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ContinueTime;
 
@@ -103,19 +111,39 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Unit;
 
     /**
+     * @var integer Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+     */
+    public $IsAdvanced;
+
+    /**
+     * @var integer Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+     */
+    public $IsOpen;
+
+    /**
+     * @var string Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProductId;
+
+    /**
      * @param integer $AlarmNotifyPeriod Alarm notification frequency.
      * @param integer $AlarmNotifyType Predefined repeated notification policy. `0`: One-time alarm; `1`: exponential alarm; `2`: consecutive alarm.
      * @param string $CalcType Detection method.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $CalcValue Detection value.
 Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $ContinueTime Duration.
-Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ContinueTime Duration in seconds.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MetricID Metric ID.
      * @param string $MetricDisplayName Displayed metric name.
      * @param integer $Period Statistical period.
      * @param integer $RuleID Rule ID.
      * @param string $Unit Metric unit.
+     * @param integer $IsAdvanced Whether it is an advanced metric. Valid values: `0` (no), `1` (yes).
+     * @param integer $IsOpen Whether the advance metric feature is enabled. Valid values: `0` (no), `1` (yes).
+     * @param string $ProductId Product ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -168,6 +196,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Unit",$param) and $param["Unit"] !== null) {
             $this->Unit = $param["Unit"];
+        }
+
+        if (array_key_exists("IsAdvanced",$param) and $param["IsAdvanced"] !== null) {
+            $this->IsAdvanced = $param["IsAdvanced"];
+        }
+
+        if (array_key_exists("IsOpen",$param) and $param["IsOpen"] !== null) {
+            $this->IsOpen = $param["IsOpen"];
+        }
+
+        if (array_key_exists("ProductId",$param) and $param["ProductId"] !== null) {
+            $this->ProductId = $param["ProductId"];
         }
     }
 }

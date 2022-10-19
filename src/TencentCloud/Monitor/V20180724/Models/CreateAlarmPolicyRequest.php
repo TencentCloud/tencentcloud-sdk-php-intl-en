@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilter(AlarmPolicyFilter $Filter) Set Global filter.
  * @method array getGroupBy() Obtain Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+ * @method array getTags() Obtain Tags bound to a template
+ * @method void setTags(array $Tags) Set Tags bound to a template
+ * @method LogAlarmReq getLogAlarmReqInfo() Obtain Log alarm information
+ * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) Set Log alarm information
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -122,6 +126,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $GroupBy;
 
     /**
+     * @var array Tags bound to a template
+     */
+    public $Tags;
+
+    /**
+     * @var LogAlarmReq Log alarm information
+     */
+    public $LogAlarmReqInfo;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param string $PolicyName Policy name, which can contain up to 20 characters
      * @param string $MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
@@ -136,6 +150,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param array $TriggerTasks Triggered task list
      * @param AlarmPolicyFilter $Filter Global filter.
      * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
+     * @param array $Tags Tags bound to a template
+     * @param LogAlarmReq $LogAlarmReqInfo Log alarm information
      */
     function __construct()
     {
@@ -212,6 +228,20 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("GroupBy",$param) and $param["GroupBy"] !== null) {
             $this->GroupBy = $param["GroupBy"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
+            $this->LogAlarmReqInfo = new LogAlarmReq();
+            $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
         }
     }
 }

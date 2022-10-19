@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InstallPlugins response structure.
  *
- * @method array getPluginIds() Obtain 
- * @method void setPluginIds(array $PluginIds) Set 
+ * @method array getPluginIds() Obtain ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPluginIds(array $PluginIds) Set ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class InstallPluginsResponse extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PluginIds;
 
@@ -38,7 +41,8 @@ class InstallPluginsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $PluginIds 
+     * @param array $PluginIds ID of the installed plugin
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SignUpCfsService response structure.
  *
- * @method string getCfsServiceStatus() Obtain Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
- * @method void setCfsServiceStatus(string $CfsServiceStatus) Set Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+ * @method string getCfsServiceStatus() Obtain Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
+ * @method void setCfsServiceStatus(string $CfsServiceStatus) Set Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SignUpCfsServiceResponse extends AbstractModel
 {
     /**
-     * @var string Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+     * @var string Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
      */
     public $CfsServiceStatus;
 
@@ -38,7 +38,7 @@ class SignUpCfsServiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $CfsServiceStatus Current status of the CFS service for this user. Valid values: none (not activated), creating (activating), created (activated)
+     * @param string $CfsServiceStatus Current status of the CFS service for this user. Valid values: `creating` (activating); `created` (activated)
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

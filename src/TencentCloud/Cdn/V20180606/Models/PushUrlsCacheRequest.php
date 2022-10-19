@@ -56,8 +56,8 @@ This feature is in beta test.
  * @method void setDisableRange(boolean $DisableRange) Set Specifies whether to disable Range GETs.
 Notes:
 This feature is in beta test.
- * @method array getHeaders() Obtain 
- * @method void setHeaders(array $Headers) Set 
+ * @method array getHeaders() Obtain Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
+ * @method void setHeaders(array $Headers) Set Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
  * @method boolean getUrlEncode() Obtain Whether to encode the URL
  * @method void setUrlEncode(boolean $UrlEncode) Set Whether to encode the URL
  */
@@ -106,7 +106,7 @@ This feature is in beta test.
     public $DisableRange;
 
     /**
-     * @var array 
+     * @var array Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
      */
     public $Headers;
 
@@ -134,7 +134,7 @@ Notes:
      * @param boolean $DisableRange Specifies whether to disable Range GETs.
 Notes:
 This feature is in beta test.
-     * @param array $Headers 
+     * @param array $Headers Custom HTTP request headers (Up to 20). `Name`: Up to 128 characters. `Value`: Up to 1024 characters.
      * @param boolean $UrlEncode Whether to encode the URL
      */
     function __construct()

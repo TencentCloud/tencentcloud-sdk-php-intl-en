@@ -158,6 +158,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setAdvancedMetricNumber(integer $AdvancedMetricNumber) Set The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getIsBindAll() Obtain Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsBindAll(integer $IsBindAll) Set Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmPolicy extends AbstractModel
 {
@@ -363,6 +371,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $AdvancedMetricNumber;
 
     /**
+     * @var integer Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsBindAll;
+
+    /**
+     * @var array Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $PolicyId Alarm policy ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $PolicyName Alarm policy name
@@ -432,6 +452,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $AdvancedMetricNumber The number of advanced metrics.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $IsBindAll Whether the policy is associated with all objects
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Policy tag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -594,6 +618,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AdvancedMetricNumber",$param) and $param["AdvancedMetricNumber"] !== null) {
             $this->AdvancedMetricNumber = $param["AdvancedMetricNumber"];
+        }
+
+        if (array_key_exists("IsBindAll",$param) and $param["IsBindAll"] !== null) {
+            $this->IsBindAll = $param["IsBindAll"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

@@ -156,6 +156,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLockTime(integer $LockTime) Set Lock time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexedAttribute1() Obtain Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) Set Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexedAttribute2() Obtain Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) Set Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexedAttribute3() Obtain Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) Set Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexedAttribute4() Obtain Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) Set Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getIndexedAttribute5() Obtain Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) Set Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
  */
 class User extends AbstractModel
 {
@@ -372,6 +392,36 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $LockTime;
 
     /**
+     * @var string Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexedAttribute1;
+
+    /**
+     * @var string Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexedAttribute2;
+
+    /**
+     * @var string Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexedAttribute3;
+
+    /**
+     * @var string Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexedAttribute4;
+
+    /**
+     * @var string Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexedAttribute5;
+
+    /**
      * @param string $UserId User ID
      * @param string $UserName Username
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -440,6 +490,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $LockTime Lock time
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexedAttribute1 Index field 1
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexedAttribute2 Index field 2
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexedAttribute3 Index field 3
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexedAttribute4 Index field 4
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $IndexedAttribute5 Index field 5
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -601,6 +661,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LockTime",$param) and $param["LockTime"] !== null) {
             $this->LockTime = $param["LockTime"];
+        }
+
+        if (array_key_exists("IndexedAttribute1",$param) and $param["IndexedAttribute1"] !== null) {
+            $this->IndexedAttribute1 = $param["IndexedAttribute1"];
+        }
+
+        if (array_key_exists("IndexedAttribute2",$param) and $param["IndexedAttribute2"] !== null) {
+            $this->IndexedAttribute2 = $param["IndexedAttribute2"];
+        }
+
+        if (array_key_exists("IndexedAttribute3",$param) and $param["IndexedAttribute3"] !== null) {
+            $this->IndexedAttribute3 = $param["IndexedAttribute3"];
+        }
+
+        if (array_key_exists("IndexedAttribute4",$param) and $param["IndexedAttribute4"] !== null) {
+            $this->IndexedAttribute4 = $param["IndexedAttribute4"];
+        }
+
+        if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
+            $this->IndexedAttribute5 = $param["IndexedAttribute5"];
         }
     }
 }

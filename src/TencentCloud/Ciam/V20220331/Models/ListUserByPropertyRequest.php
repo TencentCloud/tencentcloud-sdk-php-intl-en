@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 <li> **email** </li>  Email
  * @method string getPropertyValue() Obtain Attribute value
  * @method void setPropertyValue(string $PropertyValue) Set Attribute value
- * @method boolean getOriginal() Obtain 
- * @method void setOriginal(boolean $Original) Set 
+ * @method boolean getOriginal() Obtain Whether the content is passed through
+ * @method void setOriginal(boolean $Original) Set Whether the content is passed through
  */
 class ListUserByPropertyRequest extends AbstractModel
 {
@@ -56,7 +56,7 @@ class ListUserByPropertyRequest extends AbstractModel
     public $PropertyValue;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the content is passed through
      */
     public $Original;
 
@@ -67,7 +67,7 @@ class ListUserByPropertyRequest extends AbstractModel
 <li> **phoneNumber** </li>	  Mobile number
 <li> **email** </li>  Email
      * @param string $PropertyValue Attribute value
-     * @param boolean $Original 
+     * @param boolean $Original Whether the content is passed through
      */
     function __construct()
     {

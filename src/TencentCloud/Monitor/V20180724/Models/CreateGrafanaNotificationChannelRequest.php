@@ -24,14 +24,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
  * @method string getChannelName() Obtain Channel name
  * @method void setChannelName(string $ChannelName) Set Channel name
- * @method integer getOrgId() Obtain Organization ID
- * @method void setOrgId(integer $OrgId) Set Organization ID
+ * @method integer getOrgId() Obtain Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method void setOrgId(integer $OrgId) Set Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
  * @method array getReceivers() Obtain Array of notification channel IDs
  * @method void setReceivers(array $Receivers) Set Array of notification channel IDs
- * @method array getExtraOrgIds() Obtain Array of extra organization IDs
- * @method void setExtraOrgIds(array $ExtraOrgIds) Set Array of extra organization IDs
- * @method array getOrganizationIds() Obtain 
- * @method void setOrganizationIds(array $OrganizationIds) Set 
+ * @method array getExtraOrgIds() Obtain Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method void setExtraOrgIds(array $ExtraOrgIds) Set Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method array getOrganizationIds() Obtain Array of all valid organization IDs. Default value: `1`.
+ * @method void setOrganizationIds(array $OrganizationIds) Set Array of all valid organization IDs. Default value: `1`.
  */
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
@@ -46,7 +46,7 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $ChannelName;
 
     /**
-     * @var integer Organization ID
+     * @var integer Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public $OrgId;
 
@@ -56,22 +56,22 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array Array of extra organization IDs
+     * @var array Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public $ExtraOrgIds;
 
     /**
-     * @var array 
+     * @var array Array of all valid organization IDs. Default value: `1`.
      */
     public $OrganizationIds;
 
     /**
      * @param string $InstanceId Instance ID.
      * @param string $ChannelName Channel name
-     * @param integer $OrgId Organization ID
+     * @param integer $OrgId Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
      * @param array $Receivers Array of notification channel IDs
-     * @param array $ExtraOrgIds Array of extra organization IDs
-     * @param array $OrganizationIds 
+     * @param array $ExtraOrgIds Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param array $OrganizationIds Array of all valid organization IDs. Default value: `1`.
      */
     function __construct()
     {

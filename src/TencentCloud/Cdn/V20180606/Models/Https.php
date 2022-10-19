@@ -28,16 +28,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getHttp2() Obtain HTTP2 configuration switch
+ * @method string getHttp2() Obtain Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setHttp2(string $Http2) Set HTTP2 configuration switch
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setHttp2(string $Http2) Set Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getOcspStapling() Obtain OCSP configuration switch
 `on`: Enable
 `off`: Disable
@@ -108,11 +106,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Switch;
 
     /**
-     * @var string HTTP2 configuration switch
+     * @var string Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Http2;
 
@@ -182,11 +179,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 `on`: Enable
 `off`: Disable
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Http2 HTTP2 configuration switch
+     * @param string $Http2 Whether to enable HTTP2
 `on`: Enable
 `off`: Disable
-Enabling HTTPS acceleration for the first time will enable HTTP2 configuration by default.
-Note: This field may return `null`, indicating that no valid value can be obtained.
+Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $OcspStapling OCSP configuration switch
 `on`: Enable
 `off`: Disable

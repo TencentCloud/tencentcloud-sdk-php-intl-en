@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getUserId() Obtain Filter by account UIN
+ * @method void setUserId(string $UserId) Set Filter by account UIN
  */
 class DescribeSSOAccountRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeSSOAccountRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string Filter by account UIN
+     */
+    public $UserId;
+
+    /**
      * @param string $InstanceId Instance ID
+     * @param string $UserId Filter by account UIN
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeSSOAccountRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("UserId",$param) and $param["UserId"] !== null) {
+            $this->UserId = $param["UserId"];
         }
     }
 }

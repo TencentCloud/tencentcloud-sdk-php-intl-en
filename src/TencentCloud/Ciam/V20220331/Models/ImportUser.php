@@ -78,6 +78,16 @@ If `IdentityVerificationMethod` is `nameIdCardAndPhone`, `Name`, `PhoneNumber`, 
  * @method void setSalt(Salt $Salt) Set Password salt
  * @method string getPasswordEncryptTypeEnum() Obtain Password encryption method. Valid values: `SHA1`, `BCRYPT`.
  * @method void setPasswordEncryptTypeEnum(string $PasswordEncryptTypeEnum) Set Password encryption method. Valid values: `SHA1`, `BCRYPT`.
+ * @method string getIndexedAttribute1() Obtain Index field 1
+ * @method void setIndexedAttribute1(string $IndexedAttribute1) Set Index field 1
+ * @method string getIndexedAttribute2() Obtain Index field 2
+ * @method void setIndexedAttribute2(string $IndexedAttribute2) Set Index field 2
+ * @method string getIndexedAttribute3() Obtain Index field 3
+ * @method void setIndexedAttribute3(string $IndexedAttribute3) Set Index field 3
+ * @method string getIndexedAttribute4() Obtain Index field 4
+ * @method void setIndexedAttribute4(string $IndexedAttribute4) Set Index field 4
+ * @method string getIndexedAttribute5() Obtain Index field 5
+ * @method void setIndexedAttribute5(string $IndexedAttribute5) Set Index field 5
  */
 class ImportUser extends AbstractModel
 {
@@ -212,6 +222,31 @@ class ImportUser extends AbstractModel
     public $PasswordEncryptTypeEnum;
 
     /**
+     * @var string Index field 1
+     */
+    public $IndexedAttribute1;
+
+    /**
+     * @var string Index field 2
+     */
+    public $IndexedAttribute2;
+
+    /**
+     * @var string Index field 3
+     */
+    public $IndexedAttribute3;
+
+    /**
+     * @var string Index field 4
+     */
+    public $IndexedAttribute4;
+
+    /**
+     * @var string Index field 5
+     */
+    public $IndexedAttribute5;
+
+    /**
      * @param string $UserName Username
      * @param string $PhoneNumber Mobile number
      * @param string $Email Email address
@@ -238,6 +273,11 @@ class ImportUser extends AbstractModel
      * @param array $CustomizationAttributes Custom attribute
      * @param Salt $Salt Password salt
      * @param string $PasswordEncryptTypeEnum Password encryption method. Valid values: `SHA1`, `BCRYPT`.
+     * @param string $IndexedAttribute1 Index field 1
+     * @param string $IndexedAttribute2 Index field 2
+     * @param string $IndexedAttribute3 Index field 3
+     * @param string $IndexedAttribute4 Index field 4
+     * @param string $IndexedAttribute5 Index field 5
      */
     function __construct()
     {
@@ -360,6 +400,26 @@ class ImportUser extends AbstractModel
 
         if (array_key_exists("PasswordEncryptTypeEnum",$param) and $param["PasswordEncryptTypeEnum"] !== null) {
             $this->PasswordEncryptTypeEnum = $param["PasswordEncryptTypeEnum"];
+        }
+
+        if (array_key_exists("IndexedAttribute1",$param) and $param["IndexedAttribute1"] !== null) {
+            $this->IndexedAttribute1 = $param["IndexedAttribute1"];
+        }
+
+        if (array_key_exists("IndexedAttribute2",$param) and $param["IndexedAttribute2"] !== null) {
+            $this->IndexedAttribute2 = $param["IndexedAttribute2"];
+        }
+
+        if (array_key_exists("IndexedAttribute3",$param) and $param["IndexedAttribute3"] !== null) {
+            $this->IndexedAttribute3 = $param["IndexedAttribute3"];
+        }
+
+        if (array_key_exists("IndexedAttribute4",$param) and $param["IndexedAttribute4"] !== null) {
+            $this->IndexedAttribute4 = $param["IndexedAttribute4"];
+        }
+
+        if (array_key_exists("IndexedAttribute5",$param) and $param["IndexedAttribute5"] !== null) {
+            $this->IndexedAttribute5 = $param["IndexedAttribute5"];
         }
     }
 }

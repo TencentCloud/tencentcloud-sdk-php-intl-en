@@ -68,6 +68,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setCLSNotices(array $CLSNotices) Set Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmNotice extends AbstractModel
 {
@@ -144,6 +148,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $CLSNotices;
 
     /**
+     * @var array Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $Id Alarm notification template ID
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Name Alarm notification template name
@@ -168,6 +178,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CLSNotices Channel to push alarm notifications to CLS.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Tags Tags bound to a notification template
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -242,6 +254,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
                 $obj = new CLSNotice();
                 $obj->deserialize($value);
                 array_push($this->CLSNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
             }
         }
     }

@@ -31,11 +31,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setBpsThreshold(integer $BpsThreshold) Set The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCounterMeasure() Obtain Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCounterMeasure(string $CounterMeasure) Set Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getLastTriggerTime() Obtain The last time when the usage upper limit in the Chinese mainland was reached
@@ -88,7 +86,6 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @var string Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
@@ -141,7 +138,6 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param integer $BpsThreshold The upper limit of bandwidth usage (in bps) or traffic usage (in bytes).
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CounterMeasure Action taken when threshold is reached
-`RESOLVE_DNS_TO_ORIGIN`: Requests will be forwarded to the origin server. This is only supported for domain names of external origin.
 `RETURN_404`: A 404 error will be returned for all requests.
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LastTriggerTime The last time when the usage upper limit in the Chinese mainland was reached

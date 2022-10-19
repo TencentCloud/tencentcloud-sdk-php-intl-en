@@ -18,28 +18,28 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * HTTP request header
  *
- * @method string getName() Obtain 
- * @method void setName(string $Name) Set 
- * @method string getValue() Obtain 
- * @method void setValue(string $Value) Set 
+ * @method string getName() Obtain Request header name
+ * @method void setName(string $Name) Set Request header name
+ * @method string getValue() Obtain Request header value
+ * @method void setValue(string $Value) Set Request header value
  */
 class HTTPHeader extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Request header name
      */
     public $Name;
 
     /**
-     * @var string 
+     * @var string Request header value
      */
     public $Value;
 
     /**
-     * @param string $Name 
-     * @param string $Value 
+     * @param string $Name Request header name
+     * @param string $Value Request header value
      */
     function __construct()
     {

@@ -24,12 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUserStoreId(string $UserStoreId) Set User directory ID
  * @method string getFormat() Obtain Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
  * @method void setFormat(string $Format) Set Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
  * @method array getFilters() Obtain Valid values of `Key`: `condition`, `userGroupId`.
@@ -53,7 +51,6 @@ class CreateFileExportUserJobRequest extends AbstractModel
     /**
      * @var string Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      */
@@ -76,7 +73,6 @@ class CreateFileExportUserJobRequest extends AbstractModel
      * @param string $UserStoreId User directory ID
      * @param string $Format Exported data type
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
      * @param array $Filters Valid values of `Key`: `condition`, `userGroupId`.

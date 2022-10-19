@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setChannelName(string $ChannelName) Set Channel name
  * @method array getReceivers() Obtain Array of notification channel IDs
  * @method void setReceivers(array $Receivers) Set Array of notification channel IDs
- * @method array getExtraOrgIds() Obtain Array of extra organization IDs
- * @method void setExtraOrgIds(array $ExtraOrgIds) Set Array of extra organization IDs
- * @method array getOrganizationIds() Obtain 
- * @method void setOrganizationIds(array $OrganizationIds) Set 
+ * @method array getExtraOrgIds() Obtain This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method void setExtraOrgIds(array $ExtraOrgIds) Set This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method array getOrganizationIds() Obtain Array of valid organization IDs
+ * @method void setOrganizationIds(array $OrganizationIds) Set Array of valid organization IDs
  */
 class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 {
@@ -56,12 +56,12 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $Receivers;
 
     /**
-     * @var array Array of extra organization IDs
+     * @var array This parameter has been deprecated. Please use `OrganizationIds` instead.
      */
     public $ExtraOrgIds;
 
     /**
-     * @var array 
+     * @var array Array of valid organization IDs
      */
     public $OrganizationIds;
 
@@ -70,8 +70,8 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
      * @param string $InstanceId Instance ID.
      * @param string $ChannelName Channel name
      * @param array $Receivers Array of notification channel IDs
-     * @param array $ExtraOrgIds Array of extra organization IDs
-     * @param array $OrganizationIds 
+     * @param array $ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param array $OrganizationIds Array of valid organization IDs
      */
     function __construct()
     {

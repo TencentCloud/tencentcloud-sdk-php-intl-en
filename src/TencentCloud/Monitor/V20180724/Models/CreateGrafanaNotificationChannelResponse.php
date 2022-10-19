@@ -20,15 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaNotificationChannel response structure.
  *
- * @method string getChannelId() Obtain 
- * @method void setChannelId(string $ChannelId) Set 
+ * @method string getChannelId() Obtain Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setChannelId(string $ChannelId) Set Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class CreateGrafanaNotificationChannelResponse extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ChannelId;
 
@@ -38,7 +41,8 @@ class CreateGrafanaNotificationChannelResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $ChannelId 
+     * @param string $ChannelId Channel ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleId(string $RuleId) Set Rule ID
  * @method integer getRuleState() Obtain Rule status code
  * @method void setRuleState(integer $RuleState) Set Rule status code
- * @method string getName() Obtain Rule name
- * @method void setName(string $Name) Set Rule name
+ * @method string getName() Obtain Group name
+ * @method void setName(string $Name) Set Group name
  * @method string getGroup() Obtain Rule group
  * @method void setGroup(string $Group) Set Rule group
  * @method integer getTotal() Obtain Number of rules
@@ -34,6 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) Set Rule creation time
  * @method string getUpdatedAt() Obtain Rule update time
  * @method void setUpdatedAt(string $UpdatedAt) Set Rule update time
+ * @method string getRuleName() Obtain Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRuleName(string $RuleName) Set Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RecordingRuleSet extends AbstractModel
 {
@@ -48,7 +52,7 @@ class RecordingRuleSet extends AbstractModel
     public $RuleState;
 
     /**
-     * @var string Rule name
+     * @var string Group name
      */
     public $Name;
 
@@ -73,13 +77,21 @@ class RecordingRuleSet extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var string Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RuleName;
+
+    /**
      * @param string $RuleId Rule ID
      * @param integer $RuleState Rule status code
-     * @param string $Name Rule name
+     * @param string $Name Group name
      * @param string $Group Rule group
      * @param integer $Total Number of rules
      * @param string $CreatedAt Rule creation time
      * @param string $UpdatedAt Rule update time
+     * @param string $RuleName Rule name
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ class RecordingRuleSet extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("RuleName",$param) and $param["RuleName"] !== null) {
+            $this->RuleName = $param["RuleName"];
         }
     }
 }

@@ -30,6 +30,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedAt(string $CreatedAt) Set Creation time
  * @method string getUpdatedAt() Obtain Update time
  * @method void setUpdatedAt(string $UpdatedAt) Set Update time
+ * @method string getOrgId() Obtain Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method void setOrgId(string $OrgId) Set Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+ * @method array getExtraOrgIds() Obtain Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExtraOrgIds(array $ExtraOrgIds) Set Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOrgIds() Obtain Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOrgIds(string $OrgIds) Set Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOrganizationIds() Obtain All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOrganizationIds(string $OrganizationIds) Set All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GrafanaNotificationChannel extends AbstractModel
 {
@@ -59,11 +73,41 @@ class GrafanaNotificationChannel extends AbstractModel
     public $UpdatedAt;
 
     /**
+     * @var string Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     */
+    public $OrgId;
+
+    /**
+     * @var array Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExtraOrgIds;
+
+    /**
+     * @var string Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OrgIds;
+
+    /**
+     * @var string All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OrganizationIds;
+
+    /**
      * @param string $ChannelId Channel ID
      * @param string $ChannelName Channel name
      * @param array $Receivers Array of notification channel template IDs
      * @param string $CreatedAt Creation time
      * @param string $UpdatedAt Update time
+     * @param string $OrgId Default valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+     * @param array $ExtraOrgIds Extra valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OrgIds Valid organization. This parameter has been deprecated. Please use `OrganizationIds` instead.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OrganizationIds All valid organizations in an alert channel
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +140,22 @@ class GrafanaNotificationChannel extends AbstractModel
 
         if (array_key_exists("UpdatedAt",$param) and $param["UpdatedAt"] !== null) {
             $this->UpdatedAt = $param["UpdatedAt"];
+        }
+
+        if (array_key_exists("OrgId",$param) and $param["OrgId"] !== null) {
+            $this->OrgId = $param["OrgId"];
+        }
+
+        if (array_key_exists("ExtraOrgIds",$param) and $param["ExtraOrgIds"] !== null) {
+            $this->ExtraOrgIds = $param["ExtraOrgIds"];
+        }
+
+        if (array_key_exists("OrgIds",$param) and $param["OrgIds"] !== null) {
+            $this->OrgIds = $param["OrgIds"];
+        }
+
+        if (array_key_exists("OrganizationIds",$param) and $param["OrganizationIds"] !== null) {
+            $this->OrganizationIds = $param["OrganizationIds"];
         }
     }
 }

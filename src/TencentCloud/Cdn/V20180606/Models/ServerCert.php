@@ -21,7 +21,6 @@ use TencentCloud\Common\AbstractModel;
  * HTTPS acceleration server certificate configuration:
 + Supports deployment with certificates that are being hosted by the SSL Certificate Services
 + Supports uploading certificates of PEM format for deployment
-Note: when uploading certificates of PEM format, the Base64 encoding is required.
  *
  * @method string getCertId() Obtain Server certificate ID, which is auto-generated when the certificate is being managed by the SSL Certificate Service
 Note: This field may return `null`, indicating that no valid values can be obtained.

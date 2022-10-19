@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
- * @method boolean getOriginal() Obtain 
- * @method void setOriginal(boolean $Original) Set 
+ * @method boolean getOriginal() Obtain Whether the content is passed through
+ * @method void setOriginal(boolean $Original) Set Whether the content is passed through
  */
 class ListUserRequest extends AbstractModel
 {
@@ -56,7 +56,7 @@ class ListUserRequest extends AbstractModel
     public $Filters;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the content is passed through
      */
     public $Original;
 
@@ -67,7 +67,7 @@ class ListUserRequest extends AbstractModel
 
 <li> **condition** </li>	Values = Query condition, which can be user ID, username, mobile number, or email address.
 <li> **userGroupId** </li>	Values = User group ID
-     * @param boolean $Original 
+     * @param boolean $Original Whether the content is passed through
      */
     function __construct()
     {

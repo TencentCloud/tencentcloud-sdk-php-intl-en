@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setContent(string $Content) Set Integration content
  * @method string getDescription() Obtain Integration description
  * @method void setDescription(string $Description) Set Integration description
+ * @method string getGrafanaURL() Obtain Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGrafanaURL(string $GrafanaURL) Set Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GrafanaIntegrationConfig extends AbstractModel
 {
@@ -52,10 +56,18 @@ class GrafanaIntegrationConfig extends AbstractModel
     public $Description;
 
     /**
+     * @var string Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GrafanaURL;
+
+    /**
      * @param string $IntegrationId Integration ID
      * @param string $Kind Integration type
      * @param string $Content Integration content
      * @param string $Description Integration description
+     * @param string $GrafanaURL Grafana redirection address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class GrafanaIntegrationConfig extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("GrafanaURL",$param) and $param["GrafanaURL"] !== null) {
+            $this->GrafanaURL = $param["GrafanaURL"];
         }
     }
 }

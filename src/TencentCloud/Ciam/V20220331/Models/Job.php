@@ -46,16 +46,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCreatedDate(integer $CreatedDate) Set Task creation time
  * @method string getFormat() Obtain Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setFormat(string $Format) Set Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getLocation() Obtain Task result download address
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setLocation(string $Location) Set Task result download address
@@ -102,10 +100,9 @@ class Job extends AbstractModel
     /**
      * @var string Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $Format;
 
@@ -142,10 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $CreatedDate Task creation time
      * @param string $Format Data type of the task
 
-<li> **JSON** </li>  JSON
 <li> **NDJSON** </li>  New-line Delimited JSON
 <li> **CSV** </li>  Comma-Separated Values
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Location Task result download address
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $ErrorDetails Failure details

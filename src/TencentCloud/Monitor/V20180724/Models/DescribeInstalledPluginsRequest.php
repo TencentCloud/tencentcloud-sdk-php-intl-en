@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getPluginId() Obtain Filter by plugin ID
+ * @method void setPluginId(string $PluginId) Set Filter by plugin ID
  */
 class DescribeInstalledPluginsRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DescribeInstalledPluginsRequest extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string Filter by plugin ID
+     */
+    public $PluginId;
+
+    /**
      * @param string $InstanceId Instance ID
+     * @param string $PluginId Filter by plugin ID
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DescribeInstalledPluginsRequest extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("PluginId",$param) and $param["PluginId"] !== null) {
+            $this->PluginId = $param["PluginId"];
         }
     }
 }
