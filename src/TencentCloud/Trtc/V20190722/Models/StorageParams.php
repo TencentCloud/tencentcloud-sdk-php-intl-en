@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The storage parameters.
  *
- * @method CloudStorage getCloudStorage() Obtain The third-party cloud storage information (not supported currently).
- * @method void setCloudStorage(CloudStorage $CloudStorage) Set The third-party cloud storage information (not supported currently).
- * @method CloudVod getCloudVod() Obtain The VOD information.
- * @method void setCloudVod(CloudVod $CloudVod) Set The VOD information.
+ * @method CloudStorage getCloudStorage() Obtain The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+ * @method void setCloudStorage(CloudStorage $CloudStorage) Set The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+ * @method CloudVod getCloudVod() Obtain The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
+ * @method void setCloudVod(CloudVod $CloudVod) Set The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
  */
 class StorageParams extends AbstractModel
 {
     /**
-     * @var CloudStorage The third-party cloud storage information (not supported currently).
+     * @var CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
      */
     public $CloudStorage;
 
     /**
-     * @var CloudVod The VOD information.
+     * @var CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
      */
     public $CloudVod;
 
     /**
-     * @param CloudStorage $CloudStorage The third-party cloud storage information (not supported currently).
-     * @param CloudVod $CloudVod The VOD information.
+     * @param CloudStorage $CloudStorage The account information for third-party cloud storage. This parameter is not available currently. Please use `CloudVod` instead to save files to Tencent Cloud VOD.
+     * @param CloudVod $CloudVod The account information for saving files to Tencent Cloud VOD. This parameter is required. Currently, you can only save files to Tencent Cloud VOD.
      */
     function __construct()
     {

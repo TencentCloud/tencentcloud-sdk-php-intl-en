@@ -38,8 +38,8 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
 <li>vtt</li>
  * @method string getContent() Obtain Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
  * @method void setContent(string $Content) Set Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
- * @method string getId() Obtain Subtitle ID. Its length cannot exceed 16 characters. Uppercase and lowercase letters, numbers, underscores (_), and hyphens (-) are supported. It cannot be the same as the IDs of the existing subtitles in the media file.
- * @method void setId(string $Id) Set Subtitle ID. Its length cannot exceed 16 characters. Uppercase and lowercase letters, numbers, underscores (_), and hyphens (-) are supported. It cannot be the same as the IDs of the existing subtitles in the media file.
+ * @method string getId() Obtain The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
+ * @method void setId(string $Id) Set The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
  */
 class MediaSubtitleInput extends AbstractModel
 {
@@ -69,7 +69,7 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
     public $Content;
 
     /**
-     * @var string Subtitle ID. Its length cannot exceed 16 characters. Uppercase and lowercase letters, numbers, underscores (_), and hyphens (-) are supported. It cannot be the same as the IDs of the existing subtitles in the media file.
+     * @var string The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
      */
     public $Id;
 
@@ -83,7 +83,7 @@ For other valid values, see [RFC 5646](https://tools.ietf.org/html/rfc5646).
      * @param string $Format Subtitle format. Valid value:
 <li>vtt</li>
      * @param string $Content Subtitle content, which is [Base64-encoded](https://tools.ietf.org/html/rfc4648) strings
-     * @param string $Id Subtitle ID. Its length cannot exceed 16 characters. Uppercase and lowercase letters, numbers, underscores (_), and hyphens (-) are supported. It cannot be the same as the IDs of the existing subtitles in the media file.
+     * @param string $Id The subtitle ID. It can be up to 16 characters long, can contain letters, numbers, underscores (_), and hyphens (-), and cannot be identical to an existing subtitle ID.
      */
     function __construct()
     {

@@ -18,7 +18,7 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * IPv6 access configuration
+ * The IPv6 access configuration.
  *
  * @method string getSwitch() Obtain Whether to enable IPv6 access. Values:
 <li>`on`: Enable IPv6 access.</li>

@@ -19,25 +19,25 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Key-value pair filters for conditional filtering queries and fuzzy queries, such as filtering ID, name, and status.
-If there are multiple filters, they’re combined with `AND`.
-Values of the same Filter are combined with `OR`.
+If more than one filter exists, the logical relationship between these filters is `AND`.
+If one filter has multiple values, the logical relationship between these values is `OR`.
  *
- * @method string getName() Obtain The name of the field to filter.
- * @method void setName(string $Name) Set The name of the field to filter.
- * @method array getValues() Obtain Values of the filtered field.
- * @method void setValues(array $Values) Set Values of the filtered field.
+ * @method string getName() Obtain Field to be filtered.
+ * @method void setName(string $Name) Set Field to be filtered.
+ * @method array getValues() Obtain Value of the filtered field.
+ * @method void setValues(array $Values) Set Value of the filtered field.
  * @method boolean getFuzzy() Obtain Whether to enable fuzzy query.
  * @method void setFuzzy(boolean $Fuzzy) Set Whether to enable fuzzy query.
  */
 class AdvancedFilter extends AbstractModel
 {
     /**
-     * @var string The name of the field to filter.
+     * @var string Field to be filtered.
      */
     public $Name;
 
     /**
-     * @var array Values of the filtered field.
+     * @var array Value of the filtered field.
      */
     public $Values;
 
@@ -47,8 +47,8 @@ class AdvancedFilter extends AbstractModel
     public $Fuzzy;
 
     /**
-     * @param string $Name The name of the field to filter.
-     * @param array $Values Values of the filtered field.
+     * @param string $Name Field to be filtered.
+     * @param array $Values Value of the filtered field.
      * @param boolean $Fuzzy Whether to enable fuzzy query.
      */
     function __construct()

@@ -19,18 +19,18 @@ use TencentCloud\Common\AbstractModel;
 
 /**
  * Key-value pair filters for conditional filtering queries, such as filtering ID, name, and status.
-If there are multiple filters, they’re combined with `AND`.
-Values of the same Filter are combined with `OR`.
+If more than one filter exists, the logical relationship between these filters is `AND`.
+If multiple values exist in one filter, the logical relationship between these values under the same filter is `OR`.
  *
- * @method string getName() Obtain The name of the field to filter.
- * @method void setName(string $Name) Set The name of the field to filter.
+ * @method string getName() Obtain Fields to be filtered.
+ * @method void setName(string $Name) Set Fields to be filtered.
  * @method array getValues() Obtain Value of the filtered field.
  * @method void setValues(array $Values) Set Value of the filtered field.
  */
 class Filter extends AbstractModel
 {
     /**
-     * @var string The name of the field to filter.
+     * @var string Fields to be filtered.
      */
     public $Name;
 
@@ -40,7 +40,7 @@ class Filter extends AbstractModel
     public $Values;
 
     /**
-     * @param string $Name The name of the field to filter.
+     * @param string $Name Fields to be filtered.
      * @param array $Values Value of the filtered field.
      */
     function __construct()
