@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOriginalPrice() Obtain Total cost before discount.
  * @method void setOriginalPrice(integer $OriginalPrice) Set Total cost before discount.
- * @method integer getPrice() Obtain Actual amount payable
- * @method void setPrice(integer $Price) Set Actual amount payable
- * @method string getCurrency() Obtain Currency, such as USD for US dollar.
- * @method void setCurrency(string $Currency) Set Currency, such as USD for US dollar.
+ * @method integer getPrice() Obtain Discounted total amount
+ * @method void setPrice(integer $Price) Set Discounted total amount
+ * @method string getCurrency() Obtain Currency, such as USD.
+ * @method void setCurrency(string $Currency) Set Currency, such as USD.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -37,12 +37,12 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
     public $OriginalPrice;
 
     /**
-     * @var integer Actual amount payable
+     * @var integer Discounted total amount
      */
     public $Price;
 
     /**
-     * @var string Currency, such as USD for US dollar.
+     * @var string Currency, such as USD.
      */
     public $Currency;
 
@@ -53,8 +53,8 @@ class InquiryPriceUpgradeDBInstanceResponse extends AbstractModel
 
     /**
      * @param integer $OriginalPrice Total cost before discount.
-     * @param integer $Price Actual amount payable
-     * @param string $Currency Currency, such as USD for US dollar.
+     * @param integer $Price Discounted total amount
+     * @param string $Currency Currency, such as USD.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

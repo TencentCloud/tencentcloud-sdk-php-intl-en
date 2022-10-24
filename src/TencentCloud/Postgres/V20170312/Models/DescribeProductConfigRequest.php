@@ -22,6 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain AZ name
  * @method void setZone(string $Zone) Set AZ name
+ * @method string getDBEngine() Obtain Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+ * @method void setDBEngine(string $DBEngine) Set Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
  */
 class DescribeProductConfigRequest extends AbstractModel
 {
@@ -31,7 +39,19 @@ class DescribeProductConfigRequest extends AbstractModel
     public $Zone;
 
     /**
+     * @var string Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
+     */
+    public $DBEngine;
+
+    /**
      * @param string $Zone AZ name
+     * @param string $DBEngine Database engines. Valid values:
+1. `postgresql` (TencentDB for PostgreSQL)
+2. `mssql_compatible` (MSSQL compatible-TencentDB for PostgreSQL)
+Default value: `postgresql`
      */
     function __construct()
     {
@@ -48,6 +68,10 @@ class DescribeProductConfigRequest extends AbstractModel
         }
         if (array_key_exists("Zone",$param) and $param["Zone"] !== null) {
             $this->Zone = $param["Zone"];
+        }
+
+        if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {
+            $this->DBEngine = $param["DBEngine"];
         }
     }
 }

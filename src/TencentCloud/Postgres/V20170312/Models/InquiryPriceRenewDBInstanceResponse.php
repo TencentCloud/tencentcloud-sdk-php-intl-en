@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginalPrice(integer $OriginalPrice) Set Total cost before discount; for example, 24650 indicates 246.5 CNY
  * @method integer getPrice() Obtain Actual amount payable; for example, 24650 indicates 246.5 CNY
  * @method void setPrice(integer $Price) Set Actual amount payable; for example, 24650 indicates 246.5 CNY
- * @method string getCurrency() Obtain Currency, such as USD for US dollar.
- * @method void setCurrency(string $Currency) Set Currency, such as USD for US dollar.
+ * @method string getCurrency() Obtain Currency, such as USD.
+ * @method void setCurrency(string $Currency) Set Currency, such as USD.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -42,7 +42,7 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
     public $Price;
 
     /**
-     * @var string Currency, such as USD for US dollar.
+     * @var string Currency, such as USD.
      */
     public $Currency;
 
@@ -54,7 +54,7 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
     /**
      * @param integer $OriginalPrice Total cost before discount; for example, 24650 indicates 246.5 CNY
      * @param integer $Price Actual amount payable; for example, 24650 indicates 246.5 CNY
-     * @param string $Currency Currency, such as USD for US dollar.
+     * @param string $Currency Currency, such as USD.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

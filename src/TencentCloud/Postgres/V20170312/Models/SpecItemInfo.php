@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinStorage(integer $MinStorage) Set Minimum storage capacity in GB supported by this specification
  * @method integer getQps() Obtain Estimated QPS for this specification
  * @method void setQps(integer $Qps) Set Estimated QPS for this specification
- * @method integer getPid() Obtain Billing ID for this specification
- * @method void setPid(integer $Pid) Set Billing ID for this specification
+ * @method integer getPid() Obtain (Disused)
+ * @method void setPid(integer $Pid) Set (Disused)
  * @method string getType() Obtain Machine type
  * @method void setType(string $Type) Set Machine type
  * @method string getMajorVersion() Obtain PostgreSQL major version number
@@ -96,7 +96,7 @@ class SpecItemInfo extends AbstractModel
     public $Qps;
 
     /**
-     * @var integer Billing ID for this specification
+     * @var integer (Disused)
      */
     public $Pid;
 
@@ -132,7 +132,7 @@ Note: This field may return `null`, indicating that no valid value was found.
      * @param integer $MaxStorage Maximum storage capacity in GB supported by this specification
      * @param integer $MinStorage Minimum storage capacity in GB supported by this specification
      * @param integer $Qps Estimated QPS for this specification
-     * @param integer $Pid Billing ID for this specification
+     * @param integer $Pid (Disused)
      * @param string $Type Machine type
      * @param string $MajorVersion PostgreSQL major version number
 Note: this field may return `null`, indicating that no valid values can be obtained.

@@ -114,6 +114,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setIsSupportTDE(integer $IsSupportTDE) Set Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDBEngine() Obtain 
+ * @method void setDBEngine(string $DBEngine) Set 
+ * @method string getDBEngineConfig() Obtain Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDBEngineConfig(string $DBEngineConfig) Set Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -313,6 +319,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $IsSupportTDE;
 
     /**
+     * @var string 
+     */
+    public $DBEngine;
+
+    /**
+     * @var string Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DBEngineConfig;
+
+    /**
      * @param string $Region Instance region such as ap-guangzhou, which corresponds to the `Region` field of `RegionSet`
      * @param string $Zone Instance AZ such as ap-guangzhou-3, which corresponds to the `Zone` field of `ZoneSet`
      * @param integer $ProjectId Project ID
@@ -360,6 +377,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $IsSupportTDE Whether the instance supports TDE data encryption. Valid values: 0 (no), 1 (yes)
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DBEngine 
+     * @param string $DBEngineConfig Configuration information of database engine
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -540,6 +560,14 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("IsSupportTDE",$param) and $param["IsSupportTDE"] !== null) {
             $this->IsSupportTDE = $param["IsSupportTDE"];
+        }
+
+        if (array_key_exists("DBEngine",$param) and $param["DBEngine"] !== null) {
+            $this->DBEngine = $param["DBEngine"];
+        }
+
+        if (array_key_exists("DBEngineConfig",$param) and $param["DBEngineConfig"] !== null) {
+            $this->DBEngineConfig = $param["DBEngineConfig"];
         }
     }
 }

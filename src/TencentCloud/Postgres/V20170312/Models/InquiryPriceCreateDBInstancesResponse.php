@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquiryPriceCreateDBInstances response structure.
  *
- * @method integer getOriginalPrice() Obtain Original price in 0.01 CNY.
- * @method void setOriginalPrice(integer $OriginalPrice) Set Original price in 0.01 CNY.
- * @method integer getPrice() Obtain Discounted price in 0.01 CNY.
- * @method void setPrice(integer $Price) Set Discounted price in 0.01 CNY.
- * @method string getCurrency() Obtain Currency, such as USD for US dollar.
- * @method void setCurrency(string $Currency) Set Currency, such as USD for US dollar.
+ * @method integer getOriginalPrice() Obtain Published price in US Cent
+ * @method void setOriginalPrice(integer $OriginalPrice) Set Published price in US Cent
+ * @method integer getPrice() Obtain Discounted total amount in US Cent
+ * @method void setPrice(integer $Price) Set Discounted total amount in US Cent
+ * @method string getCurrency() Obtain Currency, such as USD.
+ * @method void setCurrency(string $Currency) Set Currency, such as USD.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class InquiryPriceCreateDBInstancesResponse extends AbstractModel
 {
     /**
-     * @var integer Original price in 0.01 CNY.
+     * @var integer Published price in US Cent
      */
     public $OriginalPrice;
 
     /**
-     * @var integer Discounted price in 0.01 CNY.
+     * @var integer Discounted total amount in US Cent
      */
     public $Price;
 
     /**
-     * @var string Currency, such as USD for US dollar.
+     * @var string Currency, such as USD.
      */
     public $Currency;
 
@@ -52,9 +52,9 @@ class InquiryPriceCreateDBInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice Original price in 0.01 CNY.
-     * @param integer $Price Discounted price in 0.01 CNY.
-     * @param string $Currency Currency, such as USD for US dollar.
+     * @param integer $OriginalPrice Published price in US Cent
+     * @param integer $Price Discounted total amount in US Cent
+     * @param string $Currency Currency, such as USD.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

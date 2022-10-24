@@ -35,9 +35,9 @@ use TencentCloud\Common\AbstractModel;
  * @method string getBackupOriginGroupId() Obtain The ID of the secondary origin group (only available when `Type=proxied`). If not specified, it indicates that secondary origins are not used.
  * @method void setBackupOriginGroupId(string $BackupOriginGroupId) Set The ID of the secondary origin group (only available when `Type=proxied`). If not specified, it indicates that secondary origins are not used.
  * @method integer getTTL() Obtain When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
  * @method void setTTL(integer $TTL) Set When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
  * @method string getOriginType() Obtain 
  * @method void setOriginType(string $OriginType) Set 
  * @method array getAdvancedOriginGroups() Obtain 
@@ -74,7 +74,7 @@ class CreateLoadBalancingRequest extends AbstractModel
 
     /**
      * @var integer When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
      */
     public $TTL;
 
@@ -97,7 +97,7 @@ Value range: 60-86400 (in seconds). If it’s not specified, the default value 6
      * @param string $OriginGroupId The ID of the primary origin group.
      * @param string $BackupOriginGroupId The ID of the secondary origin group (only available when `Type=proxied`). If not specified, it indicates that secondary origins are not used.
      * @param integer $TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
-Value range: 60-86400 (in seconds). If it’s not specified, the default value 600 will be used.
+Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
      * @param string $OriginType 
      * @param array $AdvancedOriginGroups 
      */

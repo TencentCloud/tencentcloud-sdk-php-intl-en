@@ -28,6 +28,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setBillId(string $BillId) Set Bill ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDBInstanceId() Obtain ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDBInstanceId(string $DBInstanceId) Set ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -46,6 +50,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $BillId;
 
     /**
+     * @var string ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DBInstanceId;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +65,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $BillId Bill ID.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DBInstanceId ID of the cloned instance, which will be returned only when the instance is pay-as-you-go.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -76,6 +88,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("BillId",$param) and $param["BillId"] !== null) {
             $this->BillId = $param["BillId"];
+        }
+
+        if (array_key_exists("DBInstanceId",$param) and $param["DBInstanceId"] !== null) {
+            $this->DBInstanceId = $param["DBInstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

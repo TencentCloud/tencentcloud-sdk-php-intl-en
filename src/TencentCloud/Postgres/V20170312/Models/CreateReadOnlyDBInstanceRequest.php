@@ -22,8 +22,6 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSpecCode() Obtain Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
  * @method void setSpecCode(string $SpecCode) Set Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
- * @method string getDBVersion() Obtain PostgreSQL kernel version, which must be the same as that of the primary instance
- * @method void setDBVersion(string $DBVersion) Set PostgreSQL kernel version, which must be the same as that of the primary instance
  * @method integer getStorage() Obtain Instance storage capacity in GB
  * @method void setStorage(integer $Storage) Set Instance storage capacity in GB
  * @method integer getInstanceCount() Obtain Number of instances purchased at a time. Value range: 1–100.
@@ -36,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
- * @method string getInstanceChargeType() Obtain Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
- * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+ * @method string getDBVersion() Obtain (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+ * @method void setDBVersion(string $DBVersion) Set (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+ * @method string getInstanceChargeType() Obtain Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
+ * @method void setInstanceChargeType(string $InstanceChargeType) Set Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
  * @method integer getAutoVoucher() Obtain Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
  * @method void setAutoVoucher(integer $AutoVoucher) Set Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
  * @method array getVoucherIds() Obtain Voucher ID list. Currently, you can specify only one voucher.
@@ -67,11 +67,6 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
      * @var string Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
      */
     public $SpecCode;
-
-    /**
-     * @var string PostgreSQL kernel version, which must be the same as that of the primary instance
-     */
-    public $DBVersion;
 
     /**
      * @var integer Instance storage capacity in GB
@@ -104,7 +99,12 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
     public $ProjectId;
 
     /**
-     * @var string Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * @var string (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     */
+    public $DBVersion;
+
+    /**
+     * @var string Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
      */
     public $InstanceChargeType;
 
@@ -165,14 +165,14 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
     /**
      * @param string $SpecCode Purchasable specification ID, which can be obtained through the `SpecCode` field in the returned value of the `DescribeProductConfig` API.
-     * @param string $DBVersion PostgreSQL kernel version, which must be the same as that of the primary instance
      * @param integer $Storage Instance storage capacity in GB
      * @param integer $InstanceCount Number of instances purchased at a time. Value range: 1–100.
      * @param integer $Period Valid period in months of purchased instances. Valid values: `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11`, `12`, `24`, `36`. This parameter is set to `1` when the pay-as-you-go billing mode is used.
      * @param string $MasterDBInstanceId ID of the primary instance to which the read-only replica belongs
      * @param string $Zone Availability zone ID, which can be obtained through the `Zone` field in the returned value of the `DescribeZones` API.
      * @param integer $ProjectId Project ID
-     * @param string $InstanceChargeType Instance billing mode. Valid values: `PREPAID` (monthly subscription), `POSTPAID_BY_HOUR` (pay-as-you-go).
+     * @param string $DBVersion (Disused) You don’t need to specify a version, as the kernel version is as the same as that of the instance.
+     * @param string $InstanceChargeType Instance billing mode. Valid value: `POSTPAID_BY_HOUR` (pay-as-you-go). If the source instance is pay-as-you-go, so is the read-only instance.
      * @param integer $AutoVoucher Whether to automatically use vouchers. Valid values: `1` (yes), `0` (no). Default value: `0`.
      * @param array $VoucherIds Voucher ID list. Currently, you can specify only one voucher.
      * @param integer $AutoRenewFlag Renewal flag. Valid values: `0` (manual renewal), `1` (auto-renewal). Default value: `0`.
@@ -202,10 +202,6 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
             $this->SpecCode = $param["SpecCode"];
         }
 
-        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
-            $this->DBVersion = $param["DBVersion"];
-        }
-
         if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
             $this->Storage = $param["Storage"];
         }
@@ -228,6 +224,10 @@ class CreateReadOnlyDBInstanceRequest extends AbstractModel
 
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("DBVersion",$param) and $param["DBVersion"] !== null) {
+            $this->DBVersion = $param["DBVersion"];
         }
 
         if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
