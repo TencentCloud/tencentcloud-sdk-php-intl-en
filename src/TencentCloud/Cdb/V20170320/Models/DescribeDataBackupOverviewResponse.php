@@ -32,10 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualBackupVolume(integer $ManualBackupVolume) Set Total capacity of manual backups in the current region.
  * @method integer getManualBackupCount() Obtain Total number of manual backups in the current region.
  * @method void setManualBackupCount(integer $ManualBackupCount) Set Total number of manual backups in the current region.
- * @method integer getRemoteBackupVolume() Obtain Total capacity of remote backups in the current region
- * @method void setRemoteBackupVolume(integer $RemoteBackupVolume) Set Total capacity of remote backups in the current region
- * @method integer getRemoteBackupCount() Obtain Total number of remote backups in the current region
- * @method void setRemoteBackupCount(integer $RemoteBackupCount) Set Total number of remote backups in the current region
+ * @method integer getRemoteBackupVolume() Obtain Total capacity of remote backups
+ * @method void setRemoteBackupVolume(integer $RemoteBackupVolume) Set Total capacity of remote backups
+ * @method integer getRemoteBackupCount() Obtain Total number of remote backups
+ * @method void setRemoteBackupCount(integer $RemoteBackupCount) Set Total number of remote backups
+ * @method integer getDataBackupArchiveVolume() Obtain Total capacity of archive backups in the current region
+ * @method void setDataBackupArchiveVolume(integer $DataBackupArchiveVolume) Set Total capacity of archive backups in the current region
+ * @method integer getDataBackupArchiveCount() Obtain Total number of archive backups in the current region
+ * @method void setDataBackupArchiveCount(integer $DataBackupArchiveCount) Set Total number of archive backups in the current region
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -72,14 +76,24 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
     public $ManualBackupCount;
 
     /**
-     * @var integer Total capacity of remote backups in the current region
+     * @var integer Total capacity of remote backups
      */
     public $RemoteBackupVolume;
 
     /**
-     * @var integer Total number of remote backups in the current region
+     * @var integer Total number of remote backups
      */
     public $RemoteBackupCount;
+
+    /**
+     * @var integer Total capacity of archive backups in the current region
+     */
+    public $DataBackupArchiveVolume;
+
+    /**
+     * @var integer Total number of archive backups in the current region
+     */
+    public $DataBackupArchiveCount;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -93,8 +107,10 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
      * @param integer $AutoBackupCount Total number of automatic backups in the current region.
      * @param integer $ManualBackupVolume Total capacity of manual backups in the current region.
      * @param integer $ManualBackupCount Total number of manual backups in the current region.
-     * @param integer $RemoteBackupVolume Total capacity of remote backups in the current region
-     * @param integer $RemoteBackupCount Total number of remote backups in the current region
+     * @param integer $RemoteBackupVolume Total capacity of remote backups
+     * @param integer $RemoteBackupCount Total number of remote backups
+     * @param integer $DataBackupArchiveVolume Total capacity of archive backups in the current region
+     * @param integer $DataBackupArchiveCount Total number of archive backups in the current region
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -140,6 +156,14 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("RemoteBackupCount",$param) and $param["RemoteBackupCount"] !== null) {
             $this->RemoteBackupCount = $param["RemoteBackupCount"];
+        }
+
+        if (array_key_exists("DataBackupArchiveVolume",$param) and $param["DataBackupArchiveVolume"] !== null) {
+            $this->DataBackupArchiveVolume = $param["DataBackupArchiveVolume"];
+        }
+
+        if (array_key_exists("DataBackupArchiveCount",$param) and $param["DataBackupArchiveCount"] !== null) {
+            $this->DataBackupArchiveCount = $param["DataBackupArchiveCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

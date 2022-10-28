@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setManualBackupName(string $ManualBackupName) Set Manual backup alias
  * @method string getSaveMode() Obtain Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
  * @method void setSaveMode(string $SaveMode) Set Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+ * @method string getRegion() Obtain The region where local backup resides
+ * @method void setRegion(string $Region) Set The region where local backup resides
+ * @method array getRemoteInfo() Obtain Detailed information of remote backups
+ * @method void setRemoteInfo(array $RemoteInfo) Set Detailed information of remote backups
+ * @method integer getCosStorageType() Obtain Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+ * @method void setCosStorageType(integer $CosStorageType) Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  */
 class BackupInfo extends AbstractModel
 {
@@ -129,6 +137,26 @@ class BackupInfo extends AbstractModel
     public $SaveMode;
 
     /**
+     * @var string The region where local backup resides
+     */
+    public $Region;
+
+    /**
+     * @var array Detailed information of remote backups
+     */
+    public $RemoteInfo;
+
+    /**
+     * @var integer Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public $CosStorageType;
+
+    /**
+     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
@@ -144,6 +172,10 @@ class BackupInfo extends AbstractModel
      * @param string $Way Backup mode. Valid values: `manual` (manual backup), `automatic` (automatic backup).
      * @param string $ManualBackupName Manual backup alias
      * @param string $SaveMode Backup retention type. Valid values: `save_mode_regular` (non-archive backup), save_mode_period`(archive backup).
+     * @param string $Region The region where local backup resides
+     * @param array $RemoteInfo Detailed information of remote backups
+     * @param integer $CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     function __construct()
     {
@@ -216,6 +248,27 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("SaveMode",$param) and $param["SaveMode"] !== null) {
             $this->SaveMode = $param["SaveMode"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("RemoteInfo",$param) and $param["RemoteInfo"] !== null) {
+            $this->RemoteInfo = [];
+            foreach ($param["RemoteInfo"] as $key => $value){
+                $obj = new RemoteBackupInfo();
+                $obj->deserialize($value);
+                array_push($this->RemoteInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("CosStorageType",$param) and $param["CosStorageType"] !== null) {
+            $this->CosStorageType = $param["CosStorageType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

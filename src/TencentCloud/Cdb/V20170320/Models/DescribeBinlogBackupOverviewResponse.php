@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRemoteBinlogVolume(integer $RemoteBinlogVolume) Set Capacity of remote log backups in bytes
  * @method integer getRemoteBinlogCount() Obtain Number of remote backups
  * @method void setRemoteBinlogCount(integer $RemoteBinlogCount) Set Number of remote backups
+ * @method integer getBinlogArchiveVolume() Obtain Capacity of archive log backups in bytes
+ * @method void setBinlogArchiveVolume(integer $BinlogArchiveVolume) Set Capacity of archive log backups in bytes
+ * @method integer getBinlogArchiveCount() Obtain Number of archived log backups
+ * @method void setBinlogArchiveCount(integer $BinlogArchiveCount) Set Number of archived log backups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +58,16 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $RemoteBinlogCount;
 
     /**
+     * @var integer Capacity of archive log backups in bytes
+     */
+    public $BinlogArchiveVolume;
+
+    /**
+     * @var integer Number of archived log backups
+     */
+    public $BinlogArchiveCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +77,8 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @param integer $BinlogBackupCount Total number of log backups (include remote log backups)
      * @param integer $RemoteBinlogVolume Capacity of remote log backups in bytes
      * @param integer $RemoteBinlogCount Number of remote backups
+     * @param integer $BinlogArchiveVolume Capacity of archive log backups in bytes
+     * @param integer $BinlogArchiveCount Number of archived log backups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +108,14 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("RemoteBinlogCount",$param) and $param["RemoteBinlogCount"] !== null) {
             $this->RemoteBinlogCount = $param["RemoteBinlogCount"];
+        }
+
+        if (array_key_exists("BinlogArchiveVolume",$param) and $param["BinlogArchiveVolume"] !== null) {
+            $this->BinlogArchiveVolume = $param["BinlogArchiveVolume"];
+        }
+
+        if (array_key_exists("BinlogArchiveCount",$param) and $param["BinlogArchiveCount"] !== null) {
+            $this->BinlogArchiveCount = $param["BinlogArchiveCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

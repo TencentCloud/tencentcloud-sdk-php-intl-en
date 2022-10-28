@@ -28,6 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBillingVolume(integer $BillingVolume) Set Paid capacity of backups of a user in the current region, i.e., capacity that exceeds the free tier.
  * @method integer getFreeVolume() Obtain Backup capacity in the free tier of a user in the current region.
  * @method void setFreeVolume(integer $FreeVolume) Set Backup capacity in the free tier of a user in the current region.
+ * @method integer getRemoteBackupVolume() Obtain Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setRemoteBackupVolume(integer $RemoteBackupVolume) Set Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getBackupArchiveVolume() Obtain Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBackupArchiveVolume(integer $BackupArchiveVolume) Set Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -54,6 +62,18 @@ class DescribeBackupOverviewResponse extends AbstractModel
     public $FreeVolume;
 
     /**
+     * @var integer Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $RemoteBackupVolume;
+
+    /**
+     * @var integer Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BackupArchiveVolume;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -63,6 +83,10 @@ class DescribeBackupOverviewResponse extends AbstractModel
      * @param integer $BackupVolume Total capacity of backups of a user in the current region.
      * @param integer $BillingVolume Paid capacity of backups of a user in the current region, i.e., capacity that exceeds the free tier.
      * @param integer $FreeVolume Backup capacity in the free tier of a user in the current region.
+     * @param integer $RemoteBackupVolume Total capacity of backups of a user in the current region
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -92,6 +116,14 @@ class DescribeBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("FreeVolume",$param) and $param["FreeVolume"] !== null) {
             $this->FreeVolume = $param["FreeVolume"];
+        }
+
+        if (array_key_exists("RemoteBackupVolume",$param) and $param["RemoteBackupVolume"] !== null) {
+            $this->RemoteBackupVolume = $param["RemoteBackupVolume"];
+        }
+
+        if (array_key_exists("BackupArchiveVolume",$param) and $param["BackupArchiveVolume"] !== null) {
+            $this->BackupArchiveVolume = $param["BackupArchiveVolume"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

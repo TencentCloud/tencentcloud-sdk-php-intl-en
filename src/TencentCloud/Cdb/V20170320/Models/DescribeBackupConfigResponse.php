@@ -42,6 +42,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupPeriodSaveCount(integer $BackupPeriodSaveCount) Set Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
  * @method string getStartBackupPeriodSaveDate() Obtain The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
  * @method void setStartBackupPeriodSaveDate(string $StartBackupPeriodSaveDate) Set The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+ * @method string getEnableBackupArchive() Obtain Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method void setEnableBackupArchive(string $EnableBackupArchive) Set Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method integer getBackupArchiveDays() Obtain The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+ * @method void setBackupArchiveDays(integer $BackupArchiveDays) Set The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+ * @method string getEnableBinlogArchive() Obtain Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method void setEnableBinlogArchive(string $EnableBinlogArchive) Set Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method integer getBinlogArchiveDays() Obtain The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+ * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) Set The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -103,6 +111,26 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $StartBackupPeriodSaveDate;
 
     /**
+     * @var string Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public $EnableBackupArchive;
+
+    /**
+     * @var integer The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public $BackupArchiveDays;
+
+    /**
+     * @var string Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public $EnableBinlogArchive;
+
+    /**
+     * @var integer The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     */
+    public $BinlogArchiveDays;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -119,6 +147,10 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param string $BackupPeriodSaveInterval Archive backup retention period. Valid values: `weekly` (a week), `monthly` (a month), `quarterly` (a quarter), `yearly` (a year). Default value: `monthly`.
      * @param integer $BackupPeriodSaveCount Number of archive backups. Minimum value: `1`, Maximum value: Number of non-archive backups in archive backup retention period. Default value: `1`.
      * @param string $StartBackupPeriodSaveDate The start time in the format: yyyy-mm-dd HH:MM:SS, which is used to enable archive backup retention policy.
+     * @param string $EnableBackupArchive Whether to enable the archive backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param integer $BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     * @param string $EnableBinlogArchive Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param integer $BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -177,6 +209,22 @@ class DescribeBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("StartBackupPeriodSaveDate",$param) and $param["StartBackupPeriodSaveDate"] !== null) {
             $this->StartBackupPeriodSaveDate = $param["StartBackupPeriodSaveDate"];
+        }
+
+        if (array_key_exists("EnableBackupArchive",$param) and $param["EnableBackupArchive"] !== null) {
+            $this->EnableBackupArchive = $param["EnableBackupArchive"];
+        }
+
+        if (array_key_exists("BackupArchiveDays",$param) and $param["BackupArchiveDays"] !== null) {
+            $this->BackupArchiveDays = $param["BackupArchiveDays"];
+        }
+
+        if (array_key_exists("EnableBinlogArchive",$param) and $param["EnableBinlogArchive"] !== null) {
+            $this->EnableBinlogArchive = $param["EnableBinlogArchive"];
+        }
+
+        if (array_key_exists("BinlogArchiveDays",$param) and $param["BinlogArchiveDays"] !== null) {
+            $this->BinlogArchiveDays = $param["BinlogArchiveDays"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,6 +36,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogStartTime(string $BinlogStartTime) Set Binlog file start file
  * @method string getBinlogFinishTime() Obtain Binlog file end time
  * @method void setBinlogFinishTime(string $BinlogFinishTime) Set Binlog file end time
+ * @method string getRegion() Obtain The region where the binlog file resides
+ * @method void setRegion(string $Region) Set The region where the binlog file resides
+ * @method string getStatus() Obtain Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+ * @method void setStatus(string $Status) Set Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+ * @method array getRemoteInfo() Obtain The detailed information of remote binlog backups
+ * @method void setRemoteInfo(array $RemoteInfo) Set The detailed information of remote binlog backups
+ * @method integer getCosStorageType() Obtain Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+ * @method void setCosStorageType(integer $CosStorageType) Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+ * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  */
 class BinlogInfo extends AbstractModel
 {
@@ -80,6 +90,31 @@ class BinlogInfo extends AbstractModel
     public $BinlogFinishTime;
 
     /**
+     * @var string The region where the binlog file resides
+     */
+    public $Region;
+
+    /**
+     * @var string Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     */
+    public $Status;
+
+    /**
+     * @var array The detailed information of remote binlog backups
+     */
+    public $RemoteInfo;
+
+    /**
+     * @var integer Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     */
+    public $CosStorageType;
+
+    /**
+     * @var string Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $Name Binlog backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date File stored time in the format of 2016-03-17 02:10:37
@@ -88,6 +123,11 @@ class BinlogInfo extends AbstractModel
      * @param string $Type Log type. Value range: binlog
      * @param string $BinlogStartTime Binlog file start file
      * @param string $BinlogFinishTime Binlog file end time
+     * @param string $Region The region where the binlog file resides
+     * @param string $Status Backup task status. Valid values: `SUCCESS` (backup succeeded), `FAILED` (backup failed), `RUNNING` (backup is in progress).
+     * @param array $RemoteInfo The detailed information of remote binlog backups
+     * @param integer $CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
+     * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
      */
     function __construct()
     {
@@ -132,6 +172,31 @@ class BinlogInfo extends AbstractModel
 
         if (array_key_exists("BinlogFinishTime",$param) and $param["BinlogFinishTime"] !== null) {
             $this->BinlogFinishTime = $param["BinlogFinishTime"];
+        }
+
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("RemoteInfo",$param) and $param["RemoteInfo"] !== null) {
+            $this->RemoteInfo = [];
+            foreach ($param["RemoteInfo"] as $key => $value){
+                $obj = new RemoteBackupInfo();
+                $obj->deserialize($value);
+                array_push($this->RemoteInfo, $obj);
+            }
+        }
+
+        if (array_key_exists("CosStorageType",$param) and $param["CosStorageType"] !== null) {
+            $this->CosStorageType = $param["CosStorageType"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }
