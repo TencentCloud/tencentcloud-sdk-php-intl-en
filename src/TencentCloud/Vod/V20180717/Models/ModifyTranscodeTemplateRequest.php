@@ -48,6 +48,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
  * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
+ * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+ * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
  */
 class ModifyTranscodeTemplateRequest extends AbstractModel
 {
@@ -106,6 +112,13 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var string The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition Unique ID of transcoding template.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Container Container. Valid values: mp4; flv; hls; mp3; flac; ogg; m4a. Among them, mp3, flac, ogg, and m4a are for audio files.
@@ -120,6 +133,9 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter.
+     * @param string $SegmentType The segment type. This parameter is valid only if `Container` is `hls`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
      */
     function __construct()
     {
@@ -175,6 +191,10 @@ class ModifyTranscodeTemplateRequest extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

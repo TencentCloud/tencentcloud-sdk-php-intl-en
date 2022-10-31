@@ -90,6 +90,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSessionPersist(integer $SessionPersist) Set Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyId() Obtain Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setProxyId(string $ProxyId) Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getGroupId() Obtain Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setGroupId(string $GroupId) Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class TCPListener extends AbstractModel
 {
@@ -205,6 +213,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SessionPersist;
 
     /**
+     * @var string Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ProxyId;
+
+    /**
+     * @var string Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -240,6 +260,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $SessionPersist Specifies whether to enable session persistence. Values: `0` (disable), `1` (enable)
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -333,6 +357,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

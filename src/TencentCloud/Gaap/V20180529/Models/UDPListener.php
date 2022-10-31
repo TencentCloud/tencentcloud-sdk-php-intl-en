@@ -102,6 +102,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRecvContext(string $RecvContext) Set The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyId() Obtain Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setProxyId(string $ProxyId) Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getGroupId() Obtain Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setGroupId(string $GroupId) Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class UDPListener extends AbstractModel
 {
@@ -239,6 +247,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RecvContext;
 
     /**
+     * @var string Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ProxyId;
+
+    /**
+     * @var string Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -280,6 +300,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RecvContext The UDP message received by the health probe port. This parameter is used only when `CheckType = PORT`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -389,6 +413,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RecvContext",$param) and $param["RecvContext"] !== null) {
             $this->RecvContext = $param["RecvContext"];
+        }
+
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

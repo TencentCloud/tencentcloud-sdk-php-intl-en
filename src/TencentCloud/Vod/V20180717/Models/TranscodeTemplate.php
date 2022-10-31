@@ -72,6 +72,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Container` is `hls`
+ * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Container` is `hls`
  */
 class TranscodeTemplate extends AbstractModel
 {
@@ -154,6 +156,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $UpdateTime;
 
     /**
+     * @var string The segment type. This parameter is valid only if `Container` is `hls`
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Definition Unique ID of transcoding template.
      * @param string $Container Container. Valid values: mp4, flv, hls, mp3, flac, ogg.
      * @param string $Name Transcoding template name.
@@ -180,6 +187,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>PureAudio: audio container that can contain only audio stream.</li>
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $SegmentType The segment type. This parameter is valid only if `Container` is `hls`
      */
     function __construct()
     {
@@ -247,6 +255,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

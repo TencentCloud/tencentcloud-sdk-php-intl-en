@@ -18,32 +18,32 @@ namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Details about a CDH instance
+ * CDH instance details
  *
- * @method Placement getPlacement() Obtain Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
- * @method void setPlacement(Placement $Placement) Set Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+ * @method Placement getPlacement() Obtain CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
+ * @method void setPlacement(Placement $Placement) Set CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method string getHostId() Obtain CDH instance ID
  * @method void setHostId(string $HostId) Set CDH instance ID
  * @method string getHostType() Obtain CDH instance type
  * @method void setHostType(string $HostType) Set CDH instance type
  * @method string getHostName() Obtain CDH instance name
  * @method void setHostName(string $HostName) Set CDH instance name
- * @method string getHostChargeType() Obtain Billing method of the CDH instance
- * @method void setHostChargeType(string $HostChargeType) Set Billing method of the CDH instance
- * @method string getRenewFlag() Obtain Auto renewal flag of the CDH instance
- * @method void setRenewFlag(string $RenewFlag) Set Auto renewal flag of the CDH instance
- * @method string getCreatedTime() Obtain Creation time of the CDH instance
- * @method void setCreatedTime(string $CreatedTime) Set Creation time of the CDH instance
- * @method string getExpiredTime() Obtain Expiration time of the CDH instance
- * @method void setExpiredTime(string $ExpiredTime) Set Expiration time of the CDH instance
- * @method array getInstanceIds() Obtain List of IDs of CVM instances created on the CDH
- * @method void setInstanceIds(array $InstanceIds) Set List of IDs of CVM instances created on the CDH
- * @method string getHostState() Obtain CDH instance state
- * @method void setHostState(string $HostState) Set CDH instance state
+ * @method string getHostChargeType() Obtain CDH instance billing mode
+ * @method void setHostChargeType(string $HostChargeType) Set CDH instance billing mode
+ * @method string getRenewFlag() Obtain CDH instance renewal flag
+ * @method void setRenewFlag(string $RenewFlag) Set CDH instance renewal flag
+ * @method string getCreatedTime() Obtain CDH instance creation time
+ * @method void setCreatedTime(string $CreatedTime) Set CDH instance creation time
+ * @method string getExpiredTime() Obtain CDH instance expiry time
+ * @method void setExpiredTime(string $ExpiredTime) Set CDH instance expiry time
+ * @method array getInstanceIds() Obtain List of IDs of CVMs created on a CDH instance
+ * @method void setInstanceIds(array $InstanceIds) Set List of IDs of CVMs created on a CDH instance
+ * @method string getHostState() Obtain CDH instance status
+ * @method void setHostState(string $HostState) Set CDH instance status
  * @method string getHostIp() Obtain CDH instance IP
  * @method void setHostIp(string $HostIp) Set CDH instance IP
- * @method HostResource getHostResource() Obtain Resource information of the CDH instance
- * @method void setHostResource(HostResource $HostResource) Set Resource information of the CDH instance
+ * @method HostResource getHostResource() Obtain CDH instance resource information
+ * @method void setHostResource(HostResource $HostResource) Set CDH instance resource information
  * @method string getCageId() Obtain Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
 Note: This field may return null, indicating that no valid value is found.
  * @method void setCageId(string $CageId) Set Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
@@ -52,7 +52,7 @@ Note: This field may return null, indicating that no valid value is found.
 class HostItem extends AbstractModel
 {
     /**
-     * @var Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+     * @var Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      */
     public $Placement;
 
@@ -72,32 +72,32 @@ class HostItem extends AbstractModel
     public $HostName;
 
     /**
-     * @var string Billing method of the CDH instance
+     * @var string CDH instance billing mode
      */
     public $HostChargeType;
 
     /**
-     * @var string Auto renewal flag of the CDH instance
+     * @var string CDH instance renewal flag
      */
     public $RenewFlag;
 
     /**
-     * @var string Creation time of the CDH instance
+     * @var string CDH instance creation time
      */
     public $CreatedTime;
 
     /**
-     * @var string Expiration time of the CDH instance
+     * @var string CDH instance expiry time
      */
     public $ExpiredTime;
 
     /**
-     * @var array List of IDs of CVM instances created on the CDH
+     * @var array List of IDs of CVMs created on a CDH instance
      */
     public $InstanceIds;
 
     /**
-     * @var string CDH instance state
+     * @var string CDH instance status
      */
     public $HostState;
 
@@ -107,7 +107,7 @@ class HostItem extends AbstractModel
     public $HostIp;
 
     /**
-     * @var HostResource Resource information of the CDH instance
+     * @var HostResource CDH instance resource information
      */
     public $HostResource;
 
@@ -118,18 +118,18 @@ Note: This field may return null, indicating that no valid value is found.
     public $CageId;
 
     /**
-     * @param Placement $Placement Location of the CDH instance. You can use this parameter to specify the attributes of the instance, such as its availability zone and project.
+     * @param Placement $Placement CDH instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param string $HostId CDH instance ID
      * @param string $HostType CDH instance type
      * @param string $HostName CDH instance name
-     * @param string $HostChargeType Billing method of the CDH instance
-     * @param string $RenewFlag Auto renewal flag of the CDH instance
-     * @param string $CreatedTime Creation time of the CDH instance
-     * @param string $ExpiredTime Expiration time of the CDH instance
-     * @param array $InstanceIds List of IDs of CVM instances created on the CDH
-     * @param string $HostState CDH instance state
+     * @param string $HostChargeType CDH instance billing mode
+     * @param string $RenewFlag CDH instance renewal flag
+     * @param string $CreatedTime CDH instance creation time
+     * @param string $ExpiredTime CDH instance expiry time
+     * @param array $InstanceIds List of IDs of CVMs created on a CDH instance
+     * @param string $HostState CDH instance status
      * @param string $HostIp CDH instance IP
-     * @param HostResource $HostResource Resource information of the CDH instance
+     * @param HostResource $HostResource CDH instance resource information
      * @param string $CageId Cage ID of the CDH instance. This parameter is only valid for CDH instances in the cages of finance availability zones.
 Note: This field may return null, indicating that no valid value is found.
      */

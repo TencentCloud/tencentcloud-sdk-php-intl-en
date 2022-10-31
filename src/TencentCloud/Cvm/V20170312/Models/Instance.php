@@ -112,6 +112,8 @@ Note: this field may return null, indicating that no valid value was found.
 Note: this field may return null, indicating that no valid value was found.
  * @method string getLicenseType() Obtain Instance OS license type. Default value: `TencentCloud`
  * @method void setLicenseType(string $LicenseType) Set Instance OS license type. Default value: `TencentCloud`
+ * @method boolean getDisableApiTermination() Obtain Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
  */
 class Instance extends AbstractModel
 {
@@ -306,6 +308,11 @@ Note: this field may return null, indicating that no valid value was found.
     public $LicenseType;
 
     /**
+     * @var boolean Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
+     */
+    public $DisableApiTermination;
+
+    /**
      * @param Placement $Placement Location of the instance
      * @param string $InstanceId Instance `ID`
      * @param string $InstanceType Instance model
@@ -352,6 +359,7 @@ Note: this field may return null, indicating that no valid value was found.
      * @param GPUInfo $GPUInfo GPU information. This field is only returned for GPU instances.
 Note: this field may return null, indicating that no valid value was found.
      * @param string $LicenseType Instance OS license type. Default value: `TencentCloud`
+     * @param boolean $DisableApiTermination Whether the termination protection is enabled. Values: <br><li>`TRUE`: Enable instance protection, which means that this instance can not be deleted by an API action.<br><li>`FALSE`: Do not enable the instance protection.<br><br>Default value: `FALSE`.
      */
     function __construct()
     {
@@ -524,6 +532,10 @@ Note: this field may return null, indicating that no valid value was found.
 
         if (array_key_exists("LicenseType",$param) and $param["LicenseType"] !== null) {
             $this->LicenseType = $param["LicenseType"];
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
         }
     }
 }

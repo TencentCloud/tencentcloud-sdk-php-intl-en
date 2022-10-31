@@ -70,6 +70,14 @@ Default value: no.
 Default value: no.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+ * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
  */
 class CreateAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -135,6 +143,14 @@ Default value: no.
     public $Comment;
 
     /**
+     * @var string The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
+     */
+    public $SegmentType;
+
+    /**
      * @param string $Format The adaptive bitrate streaming format. Valid values:
 <li>HLS</li>
 <li>MPEG-DASH</li>
@@ -160,6 +176,10 @@ Default value: no.
 <li>1: yes.</li>
 Default value: no.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+Default: ts
      */
     function __construct()
     {
@@ -213,6 +233,10 @@ Default value: no.
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

@@ -72,6 +72,8 @@ The default is `VOD`.
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setUpdateTime(string $UpdateTime) Set Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Format` is `HLS`.
+ * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Format` is `HLS`.
  */
 class AdaptiveDynamicStreamingTemplate extends AbstractModel
 {
@@ -150,6 +152,11 @@ The default is `VOD`.
     public $UpdateTime;
 
     /**
+     * @var string The segment type. This parameter is valid only if `Format` is `HLS`.
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition Unique ID of a transcoding to adaptive bitrate streaming template.
      * @param string $Type Template type. Valid values:
 <li>Preset: preset template;</li>
@@ -176,6 +183,7 @@ The default is `VOD`.
 <li>1: yes.</li>
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     * @param string $SegmentType The segment type. This parameter is valid only if `Format` is `HLS`.
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ The default is `VOD`.
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }

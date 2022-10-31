@@ -80,6 +80,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `1`: Support HTTP3 access.
 If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyId() Obtain Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyId(string $ProxyId) Set Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getGroupId() Obtain Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setGroupId(string $GroupId) Set Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class HTTPSListener extends AbstractModel
 {
@@ -170,6 +178,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Http3Supported;
 
     /**
+     * @var string Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProxyId;
+
+    /**
+     * @var string Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $GroupId;
+
+    /**
      * @param string $ListenerId Listener ID
      * @param string $ListenerName Listener name
      * @param integer $Port Listener port
@@ -200,6 +220,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `1`: Support HTTP3 access.
 If HTTP3 is supported for a connection, the listener will use the port that is originally accessed to UDP, and a UDP listener with the same port cannot be created.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyId Connection ID of the listener. A null value is returned if the listener is associated with the connection group.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $GroupId Connection group ID of the listener. A null value is returned if the listener is associated with a specific connection.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -273,6 +297,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Http3Supported",$param) and $param["Http3Supported"] !== null) {
             $this->Http3Supported = $param["Http3Supported"];
+        }
+
+        if (array_key_exists("ProxyId",$param) and $param["ProxyId"] !== null) {
+            $this->ProxyId = $param["ProxyId"];
+        }
+
+        if (array_key_exists("GroupId",$param) and $param["GroupId"] !== null) {
+            $this->GroupId = $param["GroupId"];
         }
     }
 }

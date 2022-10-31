@@ -50,6 +50,12 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
 Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getSegmentType() Obtain The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+ * @method void setSegmentType(string $SegmentType) Set The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
  */
 class ModifyAdaptiveDynamicStreamingTemplateRequest extends AbstractModel
 {
@@ -101,6 +107,13 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
     public $Comment;
 
     /**
+     * @var string The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
+     */
+    public $SegmentType;
+
+    /**
      * @param integer $Definition Unique ID of adaptive bitrate streaming template.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Template name. Length limit: 64 characters.
@@ -116,6 +129,9 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
      * @param array $StreamInfos Parameter information of input stream for adaptive bitrate streaming. Up to 10 streams can be input.
 Note: the frame rate of all streams must be the same; otherwise, the frame rate of the first stream will be used as the output frame rate.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $SegmentType The segment type. This parameter is valid only if `Format` is `HLS`. Valid values:
+<li>ts: TS segment</li>
+<li>fmp4: fMP4 segment</li>
      */
     function __construct()
     {
@@ -165,6 +181,10 @@ Note: the frame rate of all streams must be the same; otherwise, the frame rate 
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
         }
     }
 }
