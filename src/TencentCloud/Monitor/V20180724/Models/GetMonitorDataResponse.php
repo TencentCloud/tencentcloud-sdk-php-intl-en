@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStartTime(string $StartTime) Set Start time
  * @method string getEndTime() Obtain End time
  * @method void setEndTime(string $EndTime) Set End time
+ * @method string getMsg() Obtain Returned message
+ * @method void setMsg(string $Msg) Set Returned message
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -61,6 +63,11 @@ class GetMonitorDataResponse extends AbstractModel
     public $EndTime;
 
     /**
+     * @var string Returned message
+     */
+    public $Msg;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -71,6 +78,7 @@ class GetMonitorDataResponse extends AbstractModel
      * @param array $DataPoints Array of data points
      * @param string $StartTime Start time
      * @param string $EndTime End time
+     * @param string $Msg Returned message
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -109,6 +117,10 @@ class GetMonitorDataResponse extends AbstractModel
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
+            $this->Msg = $param["Msg"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

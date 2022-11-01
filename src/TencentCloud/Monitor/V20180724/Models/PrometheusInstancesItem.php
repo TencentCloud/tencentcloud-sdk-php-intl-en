@@ -200,6 +200,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRecordingRuleLimit(integer $RecordingRuleLimit) Set The recording rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMigrationType() Obtain Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMigrationType(integer $MigrationType) Set Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PrometheusInstancesItem extends AbstractModel
 {
@@ -410,6 +414,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RecordingRuleLimit;
 
     /**
+     * @var integer Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MigrationType;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $InstanceName Instance name.
      * @param integer $InstanceChargeType Instance billing mode. Valid values:
@@ -499,6 +509,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AlertRuleLimit The alert rule limit
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RecordingRuleLimit The recording rule limit
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MigrationType Migration status. 0: Not migrating; 1: Migrating from source instance; 2: Migrating to target instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -634,6 +646,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("RecordingRuleLimit",$param) and $param["RecordingRuleLimit"] !== null) {
             $this->RecordingRuleLimit = $param["RecordingRuleLimit"];
+        }
+
+        if (array_key_exists("MigrationType",$param) and $param["MigrationType"] !== null) {
+            $this->MigrationType = $param["MigrationType"];
         }
     }
 }
