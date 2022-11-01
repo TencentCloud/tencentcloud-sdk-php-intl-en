@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method boolean getUpgradeProxyAndRedisServer() Obtain Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
- * @method void setUpgradeProxyAndRedisServer(boolean $UpgradeProxyAndRedisServer) Set Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+ * @method boolean getUpgradeProxyAndRedisServer() Obtain Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
+ * @method void setUpgradeProxyAndRedisServer(boolean $UpgradeProxyAndRedisServer) Set Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
  */
 class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
 {
@@ -33,13 +35,15 @@ class UpgradeVersionToMultiAvailabilityZonesRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var boolean Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     * @var boolean Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
      */
     public $UpgradeProxyAndRedisServer;
 
     /**
      * @param string $InstanceId Instance ID
-     * @param boolean $UpgradeProxyAndRedisServer Whether to upgrade the proxy and Redis kernel. After the upgrade, the "Read Local Nodes Only" feature can be supported.
+     * @param boolean $UpgradeProxyAndRedisServer Whether to support “Reading Local Nodes Only” feature after upgrading to multi-AZ deployment.
+ul><li>`true`: The “Read Local Nodes Only” feature is supported. During the upgrade, you need to upgrade the proxy version and Redis kernel minor version simultaneously, which will involve data migration and may take hours to complete. </li><li>`false`: The “Read Local Nodes Only” feature is not supported. Upgrading to multi-AZ deployment will involve metadata migration only without affecting the service, which generally take less than three minutes to complete.</li></ul>
      */
     function __construct()
     {

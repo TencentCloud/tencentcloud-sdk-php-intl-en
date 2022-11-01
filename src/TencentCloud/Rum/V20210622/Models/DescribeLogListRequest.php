@@ -20,47 +20,47 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLogList request structure.
  *
- * @method string getSort() Obtain Sorting order. Valid values: desc, asc
- * @method void setSort(string $Sort) Set Sorting order. Valid values: desc, asc
- * @method string getActionType() Obtain searchlog  histogram
- * @method void setActionType(string $ActionType) Set searchlog  histogram
- * @method integer getID() Obtain Project ID
- * @method void setID(integer $ID) Set Project ID
- * @method string getStartTime() Obtain Start time
- * @method void setStartTime(string $StartTime) Set Start time
- * @method integer getLimit() Obtain Number of raw logs returned in a single query. Maximum value: 100
- * @method void setLimit(integer $Limit) Set Number of raw logs returned in a single query. Maximum value: 100
+ * @method string getSort() Obtain Sorting order (required). Valid values: `desc`, `asc`.
+ * @method void setSort(string $Sort) Set Sorting order (required). Valid values: `desc`, `asc`.
+ * @method string getActionType() Obtain This parameter is required. Valid values: `searchlog`, `histogram`.
+ * @method void setActionType(string $ActionType) Set This parameter is required. Valid values: `searchlog`, `histogram`.
+ * @method integer getID() Obtain Project ID (required)
+ * @method void setID(integer $ID) Set Project ID (required)
+ * @method string getStartTime() Obtain Start time (required)
+ * @method void setStartTime(string $StartTime) Set Start time (required)
+ * @method integer getLimit() Obtain The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
  * @method string getContext() Obtain Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
  * @method void setContext(string $Context) Set Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
- * @method string getQuery() Obtain Query statement, which can contain up to 4,096 characters.
- * @method void setQuery(string $Query) Set Query statement, which can contain up to 4,096 characters.
- * @method string getEndTime() Obtain End time
- * @method void setEndTime(string $EndTime) Set End time
+ * @method string getQuery() Obtain Query statement, which is required and can contain up to 4,096 characters.
+ * @method void setQuery(string $Query) Set Query statement, which is required and can contain up to 4,096 characters.
+ * @method string getEndTime() Obtain End time (required)
+ * @method void setEndTime(string $EndTime) Set End time (required)
  */
 class DescribeLogListRequest extends AbstractModel
 {
     /**
-     * @var string Sorting order. Valid values: desc, asc
+     * @var string Sorting order (required). Valid values: `desc`, `asc`.
      */
     public $Sort;
 
     /**
-     * @var string searchlog  histogram
+     * @var string This parameter is required. Valid values: `searchlog`, `histogram`.
      */
     public $ActionType;
 
     /**
-     * @var integer Project ID
+     * @var integer Project ID (required)
      */
     public $ID;
 
     /**
-     * @var string Start time
+     * @var string Start time (required)
      */
     public $StartTime;
 
     /**
-     * @var integer Number of raw logs returned in a single query. Maximum value: 100
+     * @var integer The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
      */
     public $Limit;
 
@@ -70,24 +70,24 @@ class DescribeLogListRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string Query statement, which can contain up to 4,096 characters.
+     * @var string Query statement, which is required and can contain up to 4,096 characters.
      */
     public $Query;
 
     /**
-     * @var string End time
+     * @var string End time (required)
      */
     public $EndTime;
 
     /**
-     * @param string $Sort Sorting order. Valid values: desc, asc
-     * @param string $ActionType searchlog  histogram
-     * @param integer $ID Project ID
-     * @param string $StartTime Start time
-     * @param integer $Limit Number of raw logs returned in a single query. Maximum value: 100
+     * @param string $Sort Sorting order (required). Valid values: `desc`, `asc`.
+     * @param string $ActionType This parameter is required. Valid values: `searchlog`, `histogram`.
+     * @param integer $ID Project ID (required)
+     * @param string $StartTime Start time (required)
+     * @param integer $Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
      * @param string $Context Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
-     * @param string $Query Query statement, which can contain up to 4,096 characters.
-     * @param string $EndTime End time
+     * @param string $Query Query statement, which is required and can contain up to 4,096 characters.
+     * @param string $EndTime End time (required)
      */
     function __construct()
     {

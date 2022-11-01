@@ -18,26 +18,19 @@ namespace TencentCloud\Redis\V20180412\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstances response structure.
+ * CloseSSL response structure.
  *
- * @method integer getTotalCount() Obtain Total number of instances
- * @method void setTotalCount(integer $TotalCount) Set Total number of instances
- * @method array getInstanceSet() Obtain List of instance details
- * @method void setInstanceSet(array $InstanceSet) Set List of instance details
+ * @method integer getTaskId() Obtain Task ID
+ * @method void setTaskId(integer $TaskId) Set Task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeInstancesResponse extends AbstractModel
+class CloseSSLResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of instances
+     * @var integer Task ID
      */
-    public $TotalCount;
-
-    /**
-     * @var array List of instance details
-     */
-    public $InstanceSet;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +38,7 @@ class DescribeInstancesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of instances
-     * @param array $InstanceSet List of instance details
+     * @param integer $TaskId Task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +54,8 @@ class DescribeInstancesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("InstanceSet",$param) and $param["InstanceSet"] !== null) {
-            $this->InstanceSet = [];
-            foreach ($param["InstanceSet"] as $key => $value){
-                $obj = new InstanceSet();
-                $obj->deserialize($value);
-                array_push($this->InstanceSet, $obj);
-            }
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

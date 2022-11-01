@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DisassociateSecurityGroups request structure.
  *
- * @method string getProduct() Obtain Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
- * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
- * @method string getSecurityGroupId() Obtain Security group ID.
- * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID.
+ * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
+ * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
+ * @method string getSecurityGroupId() Obtain Security group ID
+ * @method void setSecurityGroupId(string $SecurityGroupId) Set Security group ID
  * @method array getInstanceIds() Obtain List of instance IDs, which is an array of one or more instance IDs.
  * @method void setInstanceIds(array $InstanceIds) Set List of instance IDs, which is an array of one or more instance IDs.
  */
 class DisassociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * @var string Database engine name, which is `redis` for this API.
      */
     public $Product;
 
     /**
-     * @var string Security group ID.
+     * @var string Security group ID
      */
     public $SecurityGroupId;
 
@@ -45,8 +45,8 @@ class DisassociateSecurityGroupsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
-     * @param string $SecurityGroupId Security group ID.
+     * @param string $Product Database engine name, which is `redis` for this API.
+     * @param string $SecurityGroupId Security group ID
      * @param array $InstanceIds List of instance IDs, which is an array of one or more instance IDs.
      */
     function __construct()

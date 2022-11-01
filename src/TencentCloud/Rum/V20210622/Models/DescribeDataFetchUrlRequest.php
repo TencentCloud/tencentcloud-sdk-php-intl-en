@@ -70,6 +70,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set HTTP status code.
  * @method string getRet() Obtain retcode
  * @method void setRet(string $Ret) Set retcode
+ * @method string getNetStatus() Obtain Network status
+ * @method void setNetStatus(string $NetStatus) Set Network status
  */
 class DescribeDataFetchUrlRequest extends AbstractModel
 {
@@ -199,6 +201,11 @@ class DescribeDataFetchUrlRequest extends AbstractModel
     public $Ret;
 
     /**
+     * @var string Network status
+     */
+    public $NetStatus;
+
+    /**
      * @param integer $StartTime Start time
      * @param string $Type `allcount`: performance view; `day`: 14-day data; `count40x`: HTTP status codes 40X view; `count50x`: HTTP status codes 50X view; `count5xand4x`: HTTP status codes 40X∑50X view; `top`: top resources view; `nettype`/`version`/`platform`/`isp`/`region`/`device`/`browser`/`ext1`/`ext2`/`ext3`/`ret`/`status`/`from`/`url`/`env`: network/platform view; version view; device view; ISP view; region view; browser view; custom view, and so on.
      * @param integer $EndTime End time
@@ -224,6 +231,7 @@ class DescribeDataFetchUrlRequest extends AbstractModel
      * @param string $Env Environment
      * @param string $Status HTTP status code.
      * @param string $Ret retcode
+     * @param string $NetStatus Network status
      */
     function __construct()
     {
@@ -336,6 +344,10 @@ class DescribeDataFetchUrlRequest extends AbstractModel
 
         if (array_key_exists("Ret",$param) and $param["Ret"] !== null) {
             $this->Ret = $param["Ret"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
         }
     }
 }

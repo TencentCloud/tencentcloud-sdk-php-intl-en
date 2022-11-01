@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * AssociateSecurityGroups request structure.
  *
- * @method string getProduct() Obtain Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
- * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+ * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
+ * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
  * @method string getSecurityGroupId() Obtain ID of the security group to be associated in the format of sg-efil73jd.
  * @method void setSecurityGroupId(string $SecurityGroupId) Set ID of the security group to be associated in the format of sg-efil73jd.
  * @method array getInstanceIds() Obtain ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class AssociateSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * @var string Database engine name, which is `redis` for this API.
      */
     public $Product;
 
@@ -45,7 +45,7 @@ class AssociateSecurityGroupsRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb, etc.
+     * @param string $Product Database engine name, which is `redis` for this API.
      * @param string $SecurityGroupId ID of the security group to be associated in the format of sg-efil73jd.
      * @param array $InstanceIds ID(s) of the instance(s) to be associated in the format of ins-lesecurk. You can specify multiple instances.
      */

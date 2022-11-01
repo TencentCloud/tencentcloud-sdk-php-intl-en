@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSearchWord(string $SearchWord) Set Filter by `topicName`. Fuzzy search is supported
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, 0 will be used by default
  * @method void setOffset(integer $Offset) Set Offset. If this parameter is left empty, 0 will be used by default
- * @method integer getLimit() Obtain Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
- * @method void setLimit(integer $Limit) Set Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+ * @method integer getLimit() Obtain The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
+ * @method void setLimit(integer $Limit) Set The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
  * @method string getAclRuleName() Obtain Name of the preset ACL rule.
  * @method void setAclRuleName(string $AclRuleName) Set Name of the preset ACL rule.
  */
@@ -49,7 +49,7 @@ class DescribeTopicRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * @var integer The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
      */
     public $Limit;
 
@@ -62,7 +62,7 @@ class DescribeTopicRequest extends AbstractModel
      * @param string $InstanceId Instance ID
      * @param string $SearchWord Filter by `topicName`. Fuzzy search is supported
      * @param integer $Offset Offset. If this parameter is left empty, 0 will be used by default
-     * @param integer $Limit Number of results to be returned. If this parameter is left empty, 10 will be used by default. The maximum value is 20
+     * @param integer $Limit The number of results to be returned, which defaults to 20 if left empty. The maximum value is 50.
      * @param string $AclRuleName Name of the preset ACL rule.
      */
     function __construct()

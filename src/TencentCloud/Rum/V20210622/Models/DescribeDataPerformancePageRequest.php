@@ -64,6 +64,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCostType(string $CostType) Set Duration calculation method
  * @method string getEnv() Obtain Environment variable
  * @method void setEnv(string $Env) Set Environment variable
+ * @method string getNetStatus() Obtain Network status
+ * @method void setNetStatus(string $NetStatus) Set Network status
  */
 class DescribeDataPerformancePageRequest extends AbstractModel
 {
@@ -178,6 +180,11 @@ class DescribeDataPerformancePageRequest extends AbstractModel
     public $Env;
 
     /**
+     * @var string Network status
+     */
+    public $NetStatus;
+
+    /**
      * @param integer $ID Project ID
      * @param integer $StartTime Start time
      * @param integer $EndTime End time
@@ -200,6 +207,7 @@ class DescribeDataPerformancePageRequest extends AbstractModel
      * @param string $From Source page
      * @param string $CostType Duration calculation method
      * @param string $Env Environment variable
+     * @param string $NetStatus Network status
      */
     function __construct()
     {
@@ -300,6 +308,10 @@ class DescribeDataPerformancePageRequest extends AbstractModel
 
         if (array_key_exists("Env",$param) and $param["Env"] !== null) {
             $this->Env = $param["Env"];
+        }
+
+        if (array_key_exists("NetStatus",$param) and $param["NetStatus"] !== null) {
+            $this->NetStatus = $param["NetStatus"];
         }
     }
 }

@@ -49,7 +49,7 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribeDataResponse DescribeData(Models\DescribeDataRequest $req) This API is used to query the forwarding monitor.
  * @method Models\DescribeDataCustomUrlResponse DescribeDataCustomUrl(Models\DescribeDataCustomUrlRequest $req) This API is used to get the DescribeDataCustomUrl information.
  * @method Models\DescribeDataEventUrlResponse DescribeDataEventUrl(Models\DescribeDataEventUrlRequest $req) This API is used to get the DescribeDataEventUrl information.
- * @method Models\DescribeDataFetchProjectResponse DescribeDataFetchProject(Models\DescribeDataFetchProjectRequest $req) This API is used to get the DescribeDataFetchProject information.
+ * @method Models\DescribeDataFetchProjectResponse DescribeDataFetchProject(Models\DescribeDataFetchProjectRequest $req) This API is used to get the `DescribeDataFetchProject` information and has been deprecated. Use `DescribeDataFetchUrl` instead.
  * @method Models\DescribeDataFetchUrlResponse DescribeDataFetchUrl(Models\DescribeDataFetchUrlRequest $req) This API is used to get the DescribeDataFetchUrl information.
  * @method Models\DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfo(Models\DescribeDataFetchUrlInfoRequest $req) This API is used to get the DescribeDataFetchUrlInfo information.
  * @method Models\DescribeDataLogUrlInfoResponse DescribeDataLogUrlInfo(Models\DescribeDataLogUrlInfoRequest $req) This API is used to get the loginfo information.

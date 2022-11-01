@@ -20,36 +20,36 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeProjectSecurityGroups request structure.
  *
- * @method string getProduct() Obtain Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
- * @method void setProduct(string $Product) Set Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
- * @method integer getProjectId() Obtain Project ID.
- * @method void setProjectId(integer $ProjectId) Set Project ID.
- * @method integer getOffset() Obtain Offset.
- * @method void setOffset(integer $Offset) Set Offset.
- * @method integer getLimit() Obtain Number of results to be pulled. Default value: 20
- * @method void setLimit(integer $Limit) Set Number of results to be pulled. Default value: 20
+ * @method string getProduct() Obtain Database engine name, which is `redis` for this API.
+ * @method void setProduct(string $Product) Set Database engine name, which is `redis` for this API.
+ * @method integer getProjectId() Obtain Project ID
+ * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getOffset() Obtain Offset, which is an integral multiple of `Limit`.
+ * @method void setOffset(integer $Offset) Set Offset, which is an integral multiple of `Limit`.
+ * @method integer getLimit() Obtain The number of security groups to be pulled. Default value: `20`.
+ * @method void setLimit(integer $Limit) Set The number of security groups to be pulled. Default value: `20`.
  * @method string getSearchKey() Obtain Search criteria. You can enter a security group ID or name.
  * @method void setSearchKey(string $SearchKey) Set Search criteria. You can enter a security group ID or name.
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
     /**
-     * @var string Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
+     * @var string Database engine name, which is `redis` for this API.
      */
     public $Product;
 
     /**
-     * @var integer Project ID.
+     * @var integer Project ID
      */
     public $ProjectId;
 
     /**
-     * @var integer Offset.
+     * @var integer Offset, which is an integral multiple of `Limit`.
      */
     public $Offset;
 
     /**
-     * @var integer Number of results to be pulled. Default value: 20
+     * @var integer The number of security groups to be pulled. Default value: `20`.
      */
     public $Limit;
 
@@ -59,10 +59,10 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $SearchKey;
 
     /**
-     * @param string $Product Database engine name: mariadb, cdb, cynosdb, dcdb, redis, mongodb.
-     * @param integer $ProjectId Project ID.
-     * @param integer $Offset Offset.
-     * @param integer $Limit Number of results to be pulled. Default value: 20
+     * @param string $Product Database engine name, which is `redis` for this API.
+     * @param integer $ProjectId Project ID
+     * @param integer $Offset Offset, which is an integral multiple of `Limit`.
+     * @param integer $Limit The number of security groups to be pulled. Default value: `20`.
      * @param string $SearchKey Search criteria. You can enter a security group ID or name.
      */
     function __construct()
