@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishCdnParams(array $PublishCdnParams) Set The CDN information.
  * @method McuSeiParams getSeiParams() Obtain The stream mixing SEI parameters.
  * @method void setSeiParams(McuSeiParams $SeiParams) Set The stream mixing SEI parameters.
+ * @method array getFeedBackRoomParams() Obtain The information of the room to which streams are relayed.
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) Set The information of the room to which streams are relayed.
  */
 class StartPublishCdnStreamRequest extends AbstractModel
 {
@@ -94,6 +96,11 @@ class StartPublishCdnStreamRequest extends AbstractModel
     public $SeiParams;
 
     /**
+     * @var array The information of the room to which streams are relayed.
+     */
+    public $FeedBackRoomParams;
+
+    /**
      * @param integer $SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      * @param string $RoomId The ID of the room whose streams are relayed (the main room).
      * @param integer $RoomIdType The type of the `RoomId` parameter, which must be the same as the ID type of the room whose streams are relayed. 0: integer; 1: string.
@@ -104,6 +111,7 @@ class StartPublishCdnStreamRequest extends AbstractModel
      * @param SingleSubscribeParams $SingleSubscribeParams The information of a single stream relayed. When you relay a single stream, set `WithTranscoding` to 0.
      * @param array $PublishCdnParams The CDN information.
      * @param McuSeiParams $SeiParams The stream mixing SEI parameters.
+     * @param array $FeedBackRoomParams The information of the room to which streams are relayed.
      */
     function __construct()
     {
@@ -166,6 +174,15 @@ class StartPublishCdnStreamRequest extends AbstractModel
         if (array_key_exists("SeiParams",$param) and $param["SeiParams"] !== null) {
             $this->SeiParams = new McuSeiParams();
             $this->SeiParams->deserialize($param["SeiParams"]);
+        }
+
+        if (array_key_exists("FeedBackRoomParams",$param) and $param["FeedBackRoomParams"] !== null) {
+            $this->FeedBackRoomParams = [];
+            foreach ($param["FeedBackRoomParams"] as $key => $value){
+                $obj = new McuFeedBackRoomParams();
+                $obj->deserialize($value);
+                array_push($this->FeedBackRoomParams, $obj);
+            }
         }
     }
 }

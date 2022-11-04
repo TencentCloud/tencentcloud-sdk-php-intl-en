@@ -108,6 +108,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setIsMultiZoneCluster(boolean $IsMultiZoneCluster) Set Whether it is a multi-AZ cluster
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getIsHandsCluster() Obtain Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+ * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
  */
 class EmrListInstance extends AbstractModel
 {
@@ -264,6 +268,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $IsMultiZoneCluster;
 
     /**
+     * @var boolean Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
+     */
+    public $IsHandsCluster;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $StatusDesc Status description
 Note: This field may return `null`, indicating that no valid value can be obtained.
@@ -308,6 +318,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param boolean $IsMultiZoneCluster Whether it is a multi-AZ cluster
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $IsHandsCluster Whether it is a manually deployed cluster
+Note: This field may return null, indicating that no valid value can be obtained. 
      */
     function __construct()
     {
@@ -433,6 +445,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("IsMultiZoneCluster",$param) and $param["IsMultiZoneCluster"] !== null) {
             $this->IsMultiZoneCluster = $param["IsMultiZoneCluster"];
+        }
+
+        if (array_key_exists("IsHandsCluster",$param) and $param["IsHandsCluster"] !== null) {
+            $this->IsHandsCluster = $param["IsHandsCluster"];
         }
     }
 }

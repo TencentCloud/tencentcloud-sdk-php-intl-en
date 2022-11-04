@@ -52,6 +52,7 @@ If a recording file is being uploaded to VOD, the response parameter `StorageFil
      - Screen sharing: This is designed for video conferencing and online education. The shared screen (or camera image of the anchor) is always displayed as the large main image, which occupies the left half of the screen, and the images of other users occupy the right half in up to two columns of up to eight small images each. Up to 1 large image and 15 small images can be displayed. If the upstream aspect ratio does not match the output, the large image on the left will be scaled and displayed in whole, while the small images on the right will be cropped.
 4. Publish audio/video streams to up to 10 CDNs at a time. You can use `PublishCdnParams.PublishCdnUrl` to specify the URLs of the CDNs to publish to. To publish to Tencent Cloud’s CDN, set `PublishCdnParams.IsTencentCdn` to 1.
 5. Configure a server-side callback to have Tencent Cloud send relay status updates to your server in the form of HTTP/HTTPS POST requests. To use the callback for relay events, please contact Technical Support.
+6. The API supports four regions: Guangzhou, Shanghai, Beijing, and Hong Kong. If you relay to regions outside the Chinese mainland, select Hong Kong.
 Notes:
 1. **Because On-Cloud MixTranscoding is a paid feature, calling this API will incur MixTranscoding fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/47631?lang=en&pg=).**
 2. **Relaying to third-party CDNs will incur relaying fees. For details, see [Billing of MixTranscoding and Relay to CDN](https://intl.cloud.tencent.com/document/product/647/47631?lang=en&pg=).**
@@ -65,6 +66,7 @@ Others:
 6. You can create a relay task before anchors enter a room, in which case you need to manually call `StopPublishCdnStream` to stop the task. If you don’t, after all the users whose streams are mixed leave the room, the TRTC backend will wait for the timeout period (`AgentParams.MaxIdleTime`) to elapse before stopping the relaying task.
  * @method Models\StopPublishCdnStreamResponse StopPublishCdnStream(Models\StopPublishCdnStreamRequest $req) This API is used to stop a relaying task.
  * @method Models\UpdatePublishCdnStreamResponse UpdatePublishCdnStream(Models\UpdatePublishCdnStreamRequest $req) This API is used to change the parameters of a relaying task.
+Note: If `WithTranscoding` is not changed, you can pass in only the parameters you want to update. If `WithTranscoding` is changed, you need to pass in all the parameters.
  */
 
 class TrtcClient extends AbstractClient

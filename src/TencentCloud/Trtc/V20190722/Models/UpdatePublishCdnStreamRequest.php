@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPublishCdnParams(array $PublishCdnParams) Set Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
  * @method McuSeiParams getSeiParams() Obtain The stream mixing SEI parameters.
  * @method void setSeiParams(McuSeiParams $SeiParams) Set The stream mixing SEI parameters.
+ * @method array getFeedBackRoomParams() Obtain The information of the room to which streams are relayed.
+ * @method void setFeedBackRoomParams(array $FeedBackRoomParams) Set The information of the room to which streams are relayed.
  */
 class UpdatePublishCdnStreamRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
     public $SeiParams;
 
     /**
+     * @var array The information of the room to which streams are relayed.
+     */
+    public $FeedBackRoomParams;
+
+    /**
      * @param integer $SdkAppId The [SDKAppID](https://intl.cloud.tencent.com/document/product/647/37714) of the TRTC room whose streams are relayed.
      * @param string $TaskId The task ID.
      * @param integer $SequenceNumber The sequence of a request. This parameter ensures the requests to change the parameters of the same relaying task are in the correct order. It increases each time a new request is made.
@@ -96,6 +103,7 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
      * @param SingleSubscribeParams $SingleSubscribeParams Pass this parameter to change the single stream that is relayed. This parameter is valid only if streams are not transcoded. If you do not pass this parameter, no changes will be made.
      * @param array $PublishCdnParams Pass this parameter to change the CDNs to relay to. If you do not pass this parameter, no changes will be made.
      * @param McuSeiParams $SeiParams The stream mixing SEI parameters.
+     * @param array $FeedBackRoomParams The information of the room to which streams are relayed.
      */
     function __construct()
     {
@@ -153,6 +161,15 @@ class UpdatePublishCdnStreamRequest extends AbstractModel
         if (array_key_exists("SeiParams",$param) and $param["SeiParams"] !== null) {
             $this->SeiParams = new McuSeiParams();
             $this->SeiParams->deserialize($param["SeiParams"]);
+        }
+
+        if (array_key_exists("FeedBackRoomParams",$param) and $param["FeedBackRoomParams"] !== null) {
+            $this->FeedBackRoomParams = [];
+            foreach ($param["FeedBackRoomParams"] as $key => $value){
+                $obj = new McuFeedBackRoomParams();
+                $obj->deserialize($value);
+                array_push($this->FeedBackRoomParams, $obj);
+            }
         }
     }
 }

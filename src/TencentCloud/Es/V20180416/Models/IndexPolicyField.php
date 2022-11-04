@@ -44,6 +44,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setFrozenMinAge(string $FrozenMinAge) Set Min age before data transitions to the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getColdAction() Obtain /
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setColdAction(string $ColdAction) Set /
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class IndexPolicyField extends AbstractModel
 {
@@ -84,6 +88,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $FrozenMinAge;
 
     /**
+     * @var string /
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $ColdAction;
+
+    /**
      * @param string $WarmEnable Whether to enable the warm phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $WarmMinAge Min age before data transitions to the warm phase
@@ -96,6 +106,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $FrozenMinAge Min age before data transitions to the frozen phase
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ColdAction /
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -132,6 +144,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("FrozenMinAge",$param) and $param["FrozenMinAge"] !== null) {
             $this->FrozenMinAge = $param["FrozenMinAge"];
+        }
+
+        if (array_key_exists("ColdAction",$param) and $param["ColdAction"] !== null) {
+            $this->ColdAction = $param["ColdAction"];
         }
     }
 }

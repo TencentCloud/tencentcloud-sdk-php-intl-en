@@ -200,9 +200,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCurrentTime(string $CurrentTime) Set The current system time.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getIsFederation() Obtain Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+ * @method integer getIsFederation() Obtain Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setIsFederation(integer $IsFederation) Set Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+ * @method void setIsFederation(integer $IsFederation) Set Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDeviceName() Obtain Device name
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -486,7 +486,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CurrentTime;
 
     /**
-     * @var integer Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * @var integer Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsFederation;
@@ -594,7 +594,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $CurrentTime The current system time.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $IsFederation Whether the hardware node is used in a federation. Valid values: `0` (no), `1` (yes).
+     * @param integer $IsFederation Whether it is used in a federation. Valid values: `0` (no), `1` (yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeviceName Device name
 Note: This field may return null, indicating that no valid values can be obtained.

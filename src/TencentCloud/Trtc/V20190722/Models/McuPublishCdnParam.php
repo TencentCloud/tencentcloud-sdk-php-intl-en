@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPublishCdnUrl() Obtain The URLs of the CDNs to relay to.
  * @method void setPublishCdnUrl(string $PublishCdnUrl) Set The URLs of the CDNs to relay to.
- * @method integer getIsTencentCdn() Obtain Whether to relay to Tencent Cloud’s CDN. 0 (default): Third-party CDN; 1: Tencent Cloud’s CDN. Note: Relaying to a third-party CDN will incur fees. If you are relaying to Tencent Cloud’s CDN, to avoid incurring fees, be sure to set this parameter to `1`. For details, see the API document.
- * @method void setIsTencentCdn(integer $IsTencentCdn) Set Whether to relay to Tencent Cloud’s CDN. 0 (default): Third-party CDN; 1: Tencent Cloud’s CDN. Note: Relaying to a third-party CDN will incur fees. If you are relaying to Tencent Cloud’s CDN, to avoid incurring fees, be sure to set this parameter to `1`. For details, see the API document.
+ * @method integer getIsTencentCdn() Obtain Whether to relay to Tencent Cloud’s CDN. 0: Third-party CDN; 1 (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
+ * @method void setIsTencentCdn(integer $IsTencentCdn) Set Whether to relay to Tencent Cloud’s CDN. 0: Third-party CDN; 1 (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
  */
 class McuPublishCdnParam extends AbstractModel
 {
@@ -33,13 +33,13 @@ class McuPublishCdnParam extends AbstractModel
     public $PublishCdnUrl;
 
     /**
-     * @var integer Whether to relay to Tencent Cloud’s CDN. 0 (default): Third-party CDN; 1: Tencent Cloud’s CDN. Note: Relaying to a third-party CDN will incur fees. If you are relaying to Tencent Cloud’s CDN, to avoid incurring fees, be sure to set this parameter to `1`. For details, see the API document.
+     * @var integer Whether to relay to Tencent Cloud’s CDN. 0: Third-party CDN; 1 (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
      */
     public $IsTencentCdn;
 
     /**
      * @param string $PublishCdnUrl The URLs of the CDNs to relay to.
-     * @param integer $IsTencentCdn Whether to relay to Tencent Cloud’s CDN. 0 (default): Third-party CDN; 1: Tencent Cloud’s CDN. Note: Relaying to a third-party CDN will incur fees. If you are relaying to Tencent Cloud’s CDN, to avoid incurring fees, be sure to set this parameter to `1`. For details, see the API document.
+     * @param integer $IsTencentCdn Whether to relay to Tencent Cloud’s CDN. 0: Third-party CDN; 1 (default): Tencent Cloud’s CDN. Relaying to a third-party CDN will incur fees. To avoid unexpected charges, we recommend you pass in a specific value. For details, see the API document.
      */
     function __construct()
     {

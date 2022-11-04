@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMetric(string $Metric) Set Table name
  * @method array getDataSet() Obtain Table data
  * @method void setDataSet(array $DataSet) Set Table data
+ * @method integer getMetricCount() Obtain The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setMetricCount(integer $MetricCount) Set The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class MetricData extends AbstractModel
 {
@@ -45,9 +49,17 @@ class MetricData extends AbstractModel
     public $DataSet;
 
     /**
+     * @var integer The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $MetricCount;
+
+    /**
      * @param string $Resource Resource description
      * @param string $Metric Table name
      * @param array $DataSet Table data
+     * @param integer $MetricCount The total number of requests within the query scope.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -77,6 +89,10 @@ class MetricData extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataSet, $obj);
             }
+        }
+
+        if (array_key_exists("MetricCount",$param) and $param["MetricCount"] !== null) {
+            $this->MetricCount = $param["MetricCount"];
         }
     }
 }

@@ -92,6 +92,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 
  * @method Models\DescribeLoadBalancersDetailResponse DescribeLoadBalancersDetail(Models\DescribeLoadBalancersDetailRequest $req) This API is used to query CLB instance details, including listener, rules, and target real servers.
  * @method Models\DescribeQuotaResponse DescribeQuota(Models\DescribeQuotaRequest $req) This API is used to query various quotas in the current region.
+ * @method Models\DescribeResourcesResponse DescribeResources(Models\DescribeResourcesRequest $req) This API is used to query the list of AZs and resources supported for the user in the current region.
  * @method Models\DescribeRewriteResponse DescribeRewrite(Models\DescribeRewriteRequest $req) This API (DescribeRewrite) is used to query the redirection relationship between the forwarding rules of a CLB instance by instance ID. If no listener ID or forwarding rule ID is specified, all redirection relationships in the instance will be returned.
  * @method Models\DescribeTargetGroupInstancesResponse DescribeTargetGroupInstances(Models\DescribeTargetGroupInstancesRequest $req) This API is used to get the information of servers bound to a target group.
  * @method Models\DescribeTargetGroupListResponse DescribeTargetGroupList(Models\DescribeTargetGroupListRequest $req) This API is used to get the target group list.
@@ -135,6 +136,7 @@ This is an async API. After it is returned successfully, you can call the Descri
 This API supports replacing server certificates and client certificates.
 The new certificate to be used can be specified by passing in the certificate ID. If no certificate ID is specified, relevant information such as certificate content must be passed in to create a new certificate and bind it to the CLB.
 Note: This API can only be called in the Guangzhou region; for other regions, an error will occur due to domain name resolution problems.
+ * @method Models\SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancer(Models\SetCustomizedConfigForLoadBalancerRequest $req) This API is used to create or manage a user-defined CLB configuration template.
  * @method Models\SetLoadBalancerClsLogResponse SetLoadBalancerClsLog(Models\SetLoadBalancerClsLogRequest $req) This API is used to add, delete, and update the CLS topic of a CLB instance.
  * @method Models\SetLoadBalancerSecurityGroupsResponse SetLoadBalancerSecurityGroups(Models\SetLoadBalancerSecurityGroupsRequest $req) This API (SetLoadBalancerSecurityGroups) is used to bind/unbind security groups for a public network CLB instance. You can use the DescribeLoadBalancers API to query the security groups bound to a CLB instance. This API uses `set` semantics.
 During a binding operation, the input parameters need to be all security groups to be bound to the CLB instance (including those already bound ones and new ones).

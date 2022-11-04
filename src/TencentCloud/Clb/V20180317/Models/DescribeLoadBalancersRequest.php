@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeLoadBalancers request structure.
  *
- * @method array getLoadBalancerIds() Obtain CLB instance ID
- * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance ID
+ * @method array getLoadBalancerIds() Obtain CLB instance IDs. There can be up to 20 IDs.
+ * @method void setLoadBalancerIds(array $LoadBalancerIds) Set CLB instance IDs. There can be up to 20 IDs.
  * @method string getLoadBalancerType() Obtain CLB instance network type:
 OPEN: public network; INTERNAL: private network.
  * @method void setLoadBalancerType(string $LoadBalancerType) Set CLB instance network type:
@@ -68,7 +68,7 @@ Basic network does not support queries by VpcId.
 class DescribeLoadBalancersRequest extends AbstractModel
 {
     /**
-     * @var array CLB instance ID
+     * @var array CLB instance IDs. There can be up to 20 IDs.
      */
     public $LoadBalancerIds;
 
@@ -166,7 +166,7 @@ Basic network does not support queries by VpcId.
     public $Filters;
 
     /**
-     * @param array $LoadBalancerIds CLB instance ID
+     * @param array $LoadBalancerIds CLB instance IDs. There can be up to 20 IDs.
      * @param string $LoadBalancerType CLB instance network type:
 OPEN: public network; INTERNAL: private network.
      * @param integer $Forward CLB instance type. 1: generic CLB instance; 0: classic CLB instance

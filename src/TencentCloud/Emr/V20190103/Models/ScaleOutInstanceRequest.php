@@ -86,6 +86,8 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
  * @method void setSubnetId(string $SubnetId) Set Subnet, which defaults to the subnet used when the cluster is created.
  * @method string getScaleOutServiceConfAssign() Obtain Pre-defined configuration set
  * @method void setScaleOutServiceConfAssign(string $ScaleOutServiceConfAssign) Set Pre-defined configuration set
+ * @method integer getAutoRenew() Obtain Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+ * @method void setAutoRenew(integer $AutoRenew) Set Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
  */
 class ScaleOutInstanceRequest extends AbstractModel
 {
@@ -223,6 +225,11 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
     public $ScaleOutServiceConfAssign;
 
     /**
+     * @var integer Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
+     */
+    public $AutoRenew;
+
+    /**
      * @param string $TimeUnit Time unit of scale-out. Valid values:
 <li>s: Second. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
 <li>m: Month. When `PayMode` is 1, `TimeUnit` can only be `m`.</li>
@@ -256,6 +263,7 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
      * @param integer $ZoneId AZ, which defaults to the primary AZ of the cluster.
      * @param string $SubnetId Subnet, which defaults to the subnet used when the cluster is created.
      * @param string $ScaleOutServiceConfAssign Pre-defined configuration set
+     * @param integer $AutoRenew Whether to enable auto-renewal. Valid values: `0` (no), `1` (yes).
      */
     function __construct()
     {
@@ -380,6 +388,10 @@ When `HardwareResourceType` is `pod`, this parameter does not take effect.
 
         if (array_key_exists("ScaleOutServiceConfAssign",$param) and $param["ScaleOutServiceConfAssign"] !== null) {
             $this->ScaleOutServiceConfAssign = $param["ScaleOutServiceConfAssign"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
         }
     }
 }

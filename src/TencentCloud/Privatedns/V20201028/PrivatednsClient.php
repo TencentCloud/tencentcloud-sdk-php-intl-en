@@ -36,6 +36,7 @@ use TencentCloud\Privatedns\V20201028\Models as Models;
  * @method Models\ModifyPrivateZoneResponse ModifyPrivateZone(Models\ModifyPrivateZoneRequest $req) This API is used to modify a private domain.
  * @method Models\ModifyPrivateZoneRecordResponse ModifyPrivateZoneRecord(Models\ModifyPrivateZoneRecordRequest $req) This API is used to modify a DNS record for a private domain.
  * @method Models\ModifyPrivateZoneVpcResponse ModifyPrivateZoneVpc(Models\ModifyPrivateZoneVpcRequest $req) This API is used to modify the VPC associated with a private domain.
+ * @method Models\ModifyRecordsStatusResponse ModifyRecordsStatus(Models\ModifyRecordsStatusRequest $req) This API is used to modify the DNS record status.
  * @method Models\SubscribePrivateZoneServiceResponse SubscribePrivateZoneService(Models\SubscribePrivateZoneServiceRequest $req) This API is used to activate the Private DNS service.
  */
 

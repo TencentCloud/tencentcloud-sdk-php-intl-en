@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMemSize(integer $MemSize) Set Memory size in GB
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getDiskEnhance() Obtain /
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDiskEnhance(integer $DiskEnhance) Set /
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeInfo extends AbstractModel
 {
@@ -112,6 +116,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $MemSize;
 
     /**
+     * @var integer /
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DiskEnhance;
+
+    /**
      * @param integer $NodeNum Number of nodes
      * @param string $NodeType Node specification <li>ES.S1.SMALL2: 1-core 2 GB </li><li>ES.S1.MEDIUM4: 2-core 4 GB </li><li>ES.S1.MEDIUM8: 2-core 8 GB </li><li>ES.S1.LARGE16: 4-core 16 GB </li><li>ES.S1.2XLARGE32: 8-core 32 GB </li><li>ES.S1.4XLARGE32: 16-core 32 GB </li><li>ES.S1.4XLARGE64: 16-core 64 GB </li>
      * @param string $Type Node type<li>`hotData`: hot data node</li>
@@ -127,6 +137,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $CpuNum CPU number
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $MemSize Memory size in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $DiskEnhance /
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -181,6 +193,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("MemSize",$param) and $param["MemSize"] !== null) {
             $this->MemSize = $param["MemSize"];
+        }
+
+        if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
+            $this->DiskEnhance = $param["DiskEnhance"];
         }
     }
 }

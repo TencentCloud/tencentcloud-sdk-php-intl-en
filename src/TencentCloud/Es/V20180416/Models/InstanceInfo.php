@@ -36,8 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVpcUid(string $VpcUid) Set UID of the VPC where the instance resides
  * @method string getSubnetUid() Obtain UID of the subnet where the instance resides
  * @method void setSubnetUid(string $SubnetUid) Set UID of the subnet where the instance resides
- * @method integer getStatus() Obtain Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
- * @method void setStatus(integer $Status) Set Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+ * @method integer getStatus() Obtain Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
+ * @method void setStatus(integer $Status) Set Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
  * @method string getRenewFlag() Obtain This parameter is not used on the global website
  * @method void setRenewFlag(string $RenewFlag) Set This parameter is not used on the global website
  * @method string getChargeType() Obtain Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
@@ -264,6 +264,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether the storage-computing separation feature is enabled.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method float getProcessPercent() Obtain The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProcessPercent(float $ProcessPercent) Set The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getKibanaAlteringPublicAccess() Obtain The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceInfo extends AbstractModel
 {
@@ -308,7 +316,7 @@ class InstanceInfo extends AbstractModel
     public $SubnetUid;
 
     /**
-     * @var integer Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+     * @var integer Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
      */
     public $Status;
 
@@ -706,6 +714,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EnableHybridStorage;
 
     /**
+     * @var float The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProcessPercent;
+
+    /**
+     * @var string The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $KibanaAlteringPublicAccess;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region
@@ -714,7 +734,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Uin User UIN
      * @param string $VpcUid UID of the VPC where the instance resides
      * @param string $SubnetUid UID of the subnet where the instance resides
-     * @param integer $Status Instance status. 0: processing; 1: normal; -1: stopped; -2: terminating; -3: terminated
+     * @param integer $Status Instance status. `0`: Processing; `1`: Normal; `-1`: `Stopped`; `-2`: Being terminated; `-3`: Terminated; `2`: Initializing during the cluster creation.
      * @param string $RenewFlag This parameter is not used on the global website
      * @param string $ChargeType Instance billing method. Valid values: POSTPAID_BY_HOUR (pay-as-you-go hourly); CDHPAID (billed based on CDH, i.e., only CDH is billed but not the instances on CDH)
      * @param integer $ChargePeriod This parameter is not used on the global website
@@ -827,6 +847,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param boolean $AutoIndexEnabled Autonomous index option
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $EnableHybridStorage Whether the storage-computing separation feature is enabled.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param float $ProcessPercent The process progress
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $KibanaAlteringPublicAccess The alerting policy of Kibana over the public network. <li>`OPEN`: Enable the policy;</li><li>`CLOSE`: Disable the policy.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -1189,6 +1213,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("EnableHybridStorage",$param) and $param["EnableHybridStorage"] !== null) {
             $this->EnableHybridStorage = $param["EnableHybridStorage"];
+        }
+
+        if (array_key_exists("ProcessPercent",$param) and $param["ProcessPercent"] !== null) {
+            $this->ProcessPercent = $param["ProcessPercent"];
+        }
+
+        if (array_key_exists("KibanaAlteringPublicAccess",$param) and $param["KibanaAlteringPublicAccess"] !== null) {
+            $this->KibanaAlteringPublicAccess = $param["KibanaAlteringPublicAccess"];
         }
     }
 }
