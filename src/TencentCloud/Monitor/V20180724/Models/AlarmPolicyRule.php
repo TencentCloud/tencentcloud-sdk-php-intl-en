@@ -120,8 +120,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setValueMin(float $ValueMin) Set Minimum value
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method AlarmHierarchicalValue getHierarchicalValue() Obtain 
- * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) Set 
+ * @method AlarmHierarchicalValue getHierarchicalValue() Obtain The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHierarchicalValue(AlarmHierarchicalValue $HierarchicalValue) Set The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AlarmPolicyRule extends AbstractModel
 {
@@ -240,7 +242,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ValueMin;
 
     /**
-     * @var AlarmHierarchicalValue 
+     * @var AlarmHierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HierarchicalValue;
 
@@ -295,7 +298,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param float $ValueMin Minimum value
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param AlarmHierarchicalValue $HierarchicalValue 
+     * @param AlarmHierarchicalValue $HierarchicalValue The configuration of alarm level threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

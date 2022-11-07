@@ -52,6 +52,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTags(array $Tags) Set Tags bound to a template
  * @method LogAlarmReq getLogAlarmReqInfo() Obtain Log alarm information
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) Set Log alarm information
+ * @method array getHierarchicalNotices() Obtain Notification rules for different alarm levels
+ * @method void setHierarchicalNotices(array $HierarchicalNotices) Set Notification rules for different alarm levels
+ * @method integer getMigrateFlag() Obtain A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+ * @method void setMigrateFlag(integer $MigrateFlag) Set A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -136,6 +140,16 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $LogAlarmReqInfo;
 
     /**
+     * @var array Notification rules for different alarm levels
+     */
+    public $HierarchicalNotices;
+
+    /**
+     * @var integer A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+     */
+    public $MigrateFlag;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param string $PolicyName Policy name, which can contain up to 20 characters
      * @param string $MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
@@ -152,6 +166,8 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
      * @param array $Tags Tags bound to a template
      * @param LogAlarmReq $LogAlarmReqInfo Log alarm information
+     * @param array $HierarchicalNotices Notification rules for different alarm levels
+     * @param integer $MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
      */
     function __construct()
     {
@@ -242,6 +258,19 @@ class CreateAlarmPolicyRequest extends AbstractModel
         if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
             $this->LogAlarmReqInfo = new LogAlarmReq();
             $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
+        }
+
+        if (array_key_exists("HierarchicalNotices",$param) and $param["HierarchicalNotices"] !== null) {
+            $this->HierarchicalNotices = [];
+            foreach ($param["HierarchicalNotices"] as $key => $value){
+                $obj = new AlarmHierarchicalNotice();
+                $obj->deserialize($value);
+                array_push($this->HierarchicalNotices, $obj);
+            }
+        }
+
+        if (array_key_exists("MigrateFlag",$param) and $param["MigrateFlag"] !== null) {
+            $this->MigrateFlag = $param["MigrateFlag"];
         }
     }
 }

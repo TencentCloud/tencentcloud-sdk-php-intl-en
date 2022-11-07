@@ -18,47 +18,35 @@ namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The configuration of alarm level threshold
+ * Notification template ID and the list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
  *
- * @method string getRemind() Obtain Threshold for the `Remind` level
+ * @method string getNoticeId() Obtain Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRemind(string $Remind) Set Threshold for the `Remind` level
+ * @method void setNoticeId(string $NoticeId) Set Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getWarn() Obtain Threshold for the `Warn` level
+ * @method array getClassification() Obtain The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setWarn(string $Warn) Set Threshold for the `Warn` level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSerious() Obtain Threshold for the `Serious` level
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSerious(string $Serious) Set Threshold for the `Serious` level
+ * @method void setClassification(array $Classification) Set The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
-class AlarmHierarchicalValue extends AbstractModel
+class AlarmHierarchicalNotice extends AbstractModel
 {
     /**
-     * @var string Threshold for the `Remind` level
+     * @var string Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Remind;
+    public $NoticeId;
 
     /**
-     * @var string Threshold for the `Warn` level
+     * @var array The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Warn;
+    public $Classification;
 
     /**
-     * @var string Threshold for the `Serious` level
+     * @param string $NoticeId Notification template ID
 Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $Serious;
-
-    /**
-     * @param string $Remind Threshold for the `Remind` level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Warn Threshold for the `Warn` level
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Serious Threshold for the `Serious` level
+     * @param array $Classification The list of alarm notification levels. The values `Remind` and `Serious` indicate that the notification template only sends alarms at the `Remind` and `Serious` levels.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -74,16 +62,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Remind",$param) and $param["Remind"] !== null) {
-            $this->Remind = $param["Remind"];
+        if (array_key_exists("NoticeId",$param) and $param["NoticeId"] !== null) {
+            $this->NoticeId = $param["NoticeId"];
         }
 
-        if (array_key_exists("Warn",$param) and $param["Warn"] !== null) {
-            $this->Warn = $param["Warn"];
-        }
-
-        if (array_key_exists("Serious",$param) and $param["Serious"] !== null) {
-            $this->Serious = $param["Serious"];
+        if (array_key_exists("Classification",$param) and $param["Classification"] !== null) {
+            $this->Classification = $param["Classification"];
         }
     }
 }
