@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExactMatch(boolean $ExactMatch) Set Whether to use exact match
  * @method string getName() Obtain Search field
  * @method void setName(string $Name) Set Search field
+ * @method string getOperator() Obtain Operator
+ * @method void setOperator(string $Operator) Set Operator
  */
 class QueryFilter extends AbstractModel
 {
@@ -52,10 +54,16 @@ class QueryFilter extends AbstractModel
     public $Name;
 
     /**
+     * @var string Operator
+     */
+    public $Operator;
+
+    /**
      * @param array $Names Search field. Valid values: "InstanceId", "ProjectId", "InstanceName", "Vip"
      * @param array $Values Search string
      * @param boolean $ExactMatch Whether to use exact match
      * @param string $Name Search field
+     * @param string $Operator Operator
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class QueryFilter extends AbstractModel
 
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
         }
     }
 }

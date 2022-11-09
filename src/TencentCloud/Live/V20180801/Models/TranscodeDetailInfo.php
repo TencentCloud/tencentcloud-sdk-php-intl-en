@@ -44,12 +44,18 @@ topspeed_H264: top speed codec - H264,
 topspeed_H265: top speed codec - H265.
  * @method integer getBitrate() Obtain Bitrate.
  * @method void setBitrate(integer $Bitrate) Set Bitrate.
- * @method string getType() Obtain Type. Valid values: Transcode, MixStream, WaterMark.
- * @method void setType(string $Type) Set Type. Valid values: Transcode, MixStream, WaterMark.
+ * @method string getType() Obtain The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
+ * @method void setType(string $Type) Set The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
  * @method string getPushDomain() Obtain Push domain name.
  * @method void setPushDomain(string $PushDomain) Set Push domain name.
  * @method string getResolution() Obtain Resolution.
  * @method void setResolution(string $Resolution) Set Resolution.
+ * @method string getMainlandOrOversea() Obtain The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+ * @method void setMainlandOrOversea(string $MainlandOrOversea) Set The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
  */
 class TranscodeDetailInfo extends AbstractModel
 {
@@ -90,7 +96,7 @@ topspeed_H265: top speed codec - H265.
     public $Bitrate;
 
     /**
-     * @var string Type. Valid values: Transcode, MixStream, WaterMark.
+     * @var string The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
      */
     public $Type;
 
@@ -105,6 +111,13 @@ topspeed_H265: top speed codec - H265.
     public $Resolution;
 
     /**
+     * @var string The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
+     */
+    public $MainlandOrOversea;
+
+    /**
      * @param string $StreamName Stream name.
      * @param string $StartTime Start time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
      * @param string $EndTime End time (Beijing time) in the format of `yyyy-mm-dd HH:MM`.
@@ -117,9 +130,12 @@ liveprocessor_H265: LVB transcoding - H265,
 topspeed_H264: top speed codec - H264,
 topspeed_H265: top speed codec - H265.
      * @param integer $Bitrate Bitrate.
-     * @param string $Type Type. Valid values: Transcode, MixStream, WaterMark.
+     * @param string $Type The task type. Valid values: Transcode, MixStream, WaterMark, Webrtc.
      * @param string $PushDomain Push domain name.
      * @param string $Resolution Resolution.
+     * @param string $MainlandOrOversea The region. Valid values:
+`Mainland`: Inside the Chinese mainland.
+`Overseas`: Outside the Chinese mainland.
      */
     function __construct()
     {
@@ -168,6 +184,10 @@ topspeed_H265: top speed codec - H265.
 
         if (array_key_exists("Resolution",$param) and $param["Resolution"] !== null) {
             $this->Resolution = $param["Resolution"];
+        }
+
+        if (array_key_exists("MainlandOrOversea",$param) and $param["MainlandOrOversea"] !== null) {
+            $this->MainlandOrOversea = $param["MainlandOrOversea"];
         }
     }
 }

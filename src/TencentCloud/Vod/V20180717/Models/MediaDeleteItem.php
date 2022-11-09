@@ -21,14 +21,16 @@ use TencentCloud\Common\AbstractModel;
  * Content to be deleted when a VOD video is deleted
 
  *
- * @method string getType() Obtain Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
- * @method void setType(string $Type) Set Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+ * @method string getType() Obtain The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
+ * @method void setType(string $Type) Set The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
  * @method integer getDefinition() Obtain ID of the template for which to delete the videos of the type specified by the `Type` parameter. For the template definition, please see [Transcoding Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
 Default value: 0, which indicates to delete all videos of the type specified by the `Type` parameter.
  * @method void setDefinition(integer $Definition) Set ID of the template for which to delete the videos of the type specified by the `Type` parameter. For the template definition, please see [Transcoding Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
@@ -37,10 +39,11 @@ Default value: 0, which indicates to delete all videos of the type specified by 
 class MediaDeleteItem extends AbstractModel
 {
     /**
-     * @var string Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+     * @var string The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
      */
     public $Type;
 
@@ -51,10 +54,11 @@ Default value: 0, which indicates to delete all videos of the type specified by 
     public $Definition;
 
     /**
-     * @param string $Type Type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
-<li>`OriginalFiles`: original files. You cannot initiate transcoding, publishing on WeChat, or other video processing operations after deleting the original files.</li>
-<li>`TranscodeFiles`: transcoded files</li>
-<li>`WechatPublishFiles`: files for publishing on WeChat</li>
+     * @param string $Type The type of files to delete. If this parameter is left empty, it will be invalid. Valid values:
+<li>`OriginalFiles`: The original file. After deleting an original file, you can no longer perform operations such as transcoding or WeChat publishing on the file ID.</li>
+<li>`TranscodeFiles`: Transcoding outputs</li>
+<li>`AdaptiveDynamicStreamingFiles`: Adaptive bitrate outputs</li>
+<li>`WechatPublishFiles`: The file for WeChat publishing</li>
      * @param integer $Definition ID of the template for which to delete the videos of the type specified by the `Type` parameter. For the template definition, please see [Transcoding Template](https://intl.cloud.tencent.com/document/product/266/33478?from_cn_redirect=1#.3Cspan-id-.3D-.22zm.22-.3E.3C.2Fspan.3E.E8.BD.AC.E7.A0.81.E6.A8.A1.E6.9D.BF).
 Default value: 0, which indicates to delete all videos of the type specified by the `Type` parameter.
      */

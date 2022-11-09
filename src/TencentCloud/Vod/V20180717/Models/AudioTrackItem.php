@@ -32,6 +32,12 @@ Note: when a download URL of other media files is used as the material source an
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
  * @method float getDuration() Obtain Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
  * @method void setDuration(float $Duration) Set Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+ * @method float getTargetDuration() Obtain The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+ * @method void setTargetDuration(float $TargetDuration) Set The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
  * @method array getAudioOperations() Obtain Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudioOperations(array $AudioOperations) Set Operation on audio segment, such as volume adjustment.
@@ -58,6 +64,13 @@ Note: when a download URL of other media files is used as the material source an
     public $Duration;
 
     /**
+     * @var float The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
+     */
+    public $TargetDuration;
+
+    /**
      * @var array Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -70,6 +83,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of audio segment in material file in seconds. Default value: 0, which means to start capturing from the beginning position of the material.
      * @param float $Duration Audio segment duration in seconds. By default, the length of the material will be used, which means that the entire material will be captured.
+     * @param float $TargetDuration The target audio duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final audio duration the same as the value of `TargetDuration`.</li>
      * @param array $AudioOperations Operation on audio segment, such as volume adjustment.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -96,6 +112,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Duration",$param) and $param["Duration"] !== null) {
             $this->Duration = $param["Duration"];
+        }
+
+        if (array_key_exists("TargetDuration",$param) and $param["TargetDuration"] !== null) {
+            $this->TargetDuration = $param["TargetDuration"];
         }
 
         if (array_key_exists("AudioOperations",$param) and $param["AudioOperations"] !== null) {

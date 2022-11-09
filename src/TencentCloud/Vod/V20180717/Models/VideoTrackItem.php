@@ -32,6 +32,12 @@ Note: when a download URL of other media files is used as the material source an
  * @method void setSourceMediaStartTime(float $SourceMediaStartTime) Set Start time of video segment in material file in seconds. Default value: 0.
  * @method float getDuration() Obtain Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
  * @method void setDuration(float $Duration) Set Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+ * @method float getTargetDuration() Obtain The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+ * @method void setTargetDuration(float $TargetDuration) Set The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
  * @method string getCoordinateOrigin() Obtain Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
@@ -78,13 +84,13 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
- * @method array getImageOperations() Obtain Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setImageOperations(array $ImageOperations) Set Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
  * @method array getAudioOperations() Obtain Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudioOperations(array $AudioOperations) Set Operation on audio such as muting.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getImageOperations() Obtain Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+ * @method void setImageOperations(array $ImageOperations) Set Operation on video image such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
  */
 class VideoTrackItem extends AbstractModel
@@ -106,6 +112,13 @@ Note: when a download URL of other media files is used as the material source an
      * @var float Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
      */
     public $Duration;
+
+    /**
+     * @var float The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
+     */
+    public $TargetDuration;
 
     /**
      * @var string Video origin position. Valid values:
@@ -151,16 +164,16 @@ Default value: 0 px.
     public $Height;
 
     /**
-     * @var array Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
-     */
-    public $ImageOperations;
-
-    /**
      * @var array Operation on audio such as muting.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     public $AudioOperations;
+
+    /**
+     * @var array Operation on video image such as image rotation.
+Note: this field may return null, indicating that no valid values can be obtained.
+     */
+    public $ImageOperations;
 
     /**
      * @param string $SourceMedia Source of media material for video segment, which can be:
@@ -169,6 +182,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: when a download URL of other media files is used as the material source and access control (such as hotlink protection) is enabled, the URL needs to carry access control parameters (such as hotlink protection signature).
      * @param float $SourceMediaStartTime Start time of video segment in material file in seconds. Default value: 0.
      * @param float $Duration Video segment duration in seconds. By default, the length of the video material will be used, which means that the entire material will be captured. If the source file is an image, `Duration` needs to be greater than 0.
+     * @param float $TargetDuration The target video duration, in seconds.
+<li>If `TargetDuration` is empty or `0`, the target duration is the same as `Duration`.</li>
+<li>If `TargetDuration` is a value greater than 0, the playback speed will be changed to make the final video duration the same as the value of `TargetDuration`.</li>
      * @param string $CoordinateOrigin Video origin position. Valid values:
 <li> Center: the origin of coordinates is the center position, such as the center of canvas.</li>
 Default value: Center.
@@ -192,9 +208,9 @@ Default value: 0 px.
 <li>If both `Width` and `Height` are empty, then they will be the `Width` and `Height` of the video material, respectively.</li>
 <li>If `Width` is empty, but `Height` is not empty, `Width` will be proportionally scaled.</li>
 <li>If `Width` is not empty, but `Height` is empty, `Height` will be proportionally scaled.</li>
-     * @param array $ImageOperations Operation on video image such as image rotation.
-Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $AudioOperations Operation on audio such as muting.
+Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $ImageOperations Operation on video image such as image rotation.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -222,6 +238,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Duration = $param["Duration"];
         }
 
+        if (array_key_exists("TargetDuration",$param) and $param["TargetDuration"] !== null) {
+            $this->TargetDuration = $param["TargetDuration"];
+        }
+
         if (array_key_exists("CoordinateOrigin",$param) and $param["CoordinateOrigin"] !== null) {
             $this->CoordinateOrigin = $param["CoordinateOrigin"];
         }
@@ -242,21 +262,21 @@ Note: this field may return null, indicating that no valid values can be obtaine
             $this->Height = $param["Height"];
         }
 
-        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
-            $this->ImageOperations = [];
-            foreach ($param["ImageOperations"] as $key => $value){
-                $obj = new ImageTransform();
-                $obj->deserialize($value);
-                array_push($this->ImageOperations, $obj);
-            }
-        }
-
         if (array_key_exists("AudioOperations",$param) and $param["AudioOperations"] !== null) {
             $this->AudioOperations = [];
             foreach ($param["AudioOperations"] as $key => $value){
                 $obj = new AudioTransform();
                 $obj->deserialize($value);
                 array_push($this->AudioOperations, $obj);
+            }
+        }
+
+        if (array_key_exists("ImageOperations",$param) and $param["ImageOperations"] !== null) {
+            $this->ImageOperations = [];
+            foreach ($param["ImageOperations"] as $key => $value){
+                $obj = new ImageTransform();
+                $obj->deserialize($value);
+                array_push($this->ImageOperations, $obj);
             }
         }
     }

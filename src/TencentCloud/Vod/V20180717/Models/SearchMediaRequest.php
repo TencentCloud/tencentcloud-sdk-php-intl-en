@@ -72,10 +72,6 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 10</li>
  * @method void setStreamIds(array $StreamIds) Set The live stream code array. A media file will be returned if it matches any element in the array.
 <li>Array length limit: 10</li>
- * @method array getVids() Obtain Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
- * @method void setVids(array $Vids) Set Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
  * @method TimeRange getCreateTime() Obtain Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
  * @method void setCreateTime(TimeRange $CreateTime) Set Matches files created within the time period.
@@ -158,10 +154,6 @@ Media file source. For valid values, please see [SourceType](https://intl.cloud.
 The live stream code.
  * @method void setStreamId(string $StreamId) Set (Not recommended. Consider using `StreamIds` instead.)
 The live stream code.
- * @method string getVid() Obtain (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
- * @method void setVid(string $Vid) Set (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
  * @method string getStartTime() Obtain (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -182,6 +174,10 @@ End time in the creation time range.
 <li>Before the end time.</li>
 <li>If `CreateTime.Before` also exists, it will be used first.</li>
 <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+ * @method array getVids() Obtain This parameter is invalid now.
+ * @method void setVids(array $Vids) Set This parameter is invalid now.
+ * @method string getVid() Obtain This parameter is invalid now.
+ * @method void setVid(string $Vid) Set This parameter is invalid now.
  */
 class SearchMediaRequest extends AbstractModel
 {
@@ -250,12 +246,6 @@ class SearchMediaRequest extends AbstractModel
 <li>Array length limit: 10</li>
      */
     public $StreamIds;
-
-    /**
-     * @var array Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
-     */
-    public $Vids;
 
     /**
      * @var TimeRange Matches files created within the time period.
@@ -351,12 +341,6 @@ The live stream code.
     public $StreamId;
 
     /**
-     * @var string (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
-     */
-    public $Vid;
-
-    /**
      * @var string (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -373,6 +357,16 @@ End time in the creation time range.
 <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
      */
     public $EndTime;
+
+    /**
+     * @var array This parameter is invalid now.
+     */
+    public $Vids;
+
+    /**
+     * @var string This parameter is invalid now.
+     */
+    public $Vid;
 
     /**
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -401,8 +395,6 @@ End time in the creation time range.
 <li>Array length limit: 10.</li>
      * @param array $StreamIds The live stream code array. A media file will be returned if it matches any element in the array.
 <li>Array length limit: 10</li>
-     * @param array $Vids Unique ID of LVB recording file. Any element in the set can be matched.
-<li>Array length limit: 10.</li>
      * @param TimeRange $CreateTime Matches files created within the time period.
 <li>Includes specified start and end points in time.</li>
      * @param TimeRange $ExpireTime Files whose expiration time points are within the specified time range will be returned. Expired files will not be returned.
@@ -444,8 +436,6 @@ Search text, which fuzzily matches the media file name or description. The more 
 Media file source. For valid values, please see [SourceType](https://intl.cloud.tencent.com/document/product/266/31773?from_cn_redirect=1#MediaSourceData).
      * @param string $StreamId (Not recommended. Consider using `StreamIds` instead.)
 The live stream code.
-     * @param string $Vid (This is not recommended. `Vids` should be used instead)
-Unique ID of LVB recording file.
      * @param string $StartTime (This is not recommended. `CreateTime` should be used instead)
 Start time in the creation time range.
 <li>After or at the start time.</li>
@@ -456,6 +446,8 @@ End time in the creation time range.
 <li>Before the end time.</li>
 <li>If `CreateTime.Before` also exists, it will be used first.</li>
 <li>In ISO 8601 format. For more information, please see [ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).</li>
+     * @param array $Vids This parameter is invalid now.
+     * @param string $Vid This parameter is invalid now.
      */
     function __construct()
     {
@@ -508,10 +500,6 @@ End time in the creation time range.
 
         if (array_key_exists("StreamIds",$param) and $param["StreamIds"] !== null) {
             $this->StreamIds = $param["StreamIds"];
-        }
-
-        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
-            $this->Vids = $param["Vids"];
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
@@ -569,16 +557,20 @@ End time in the creation time range.
             $this->StreamId = $param["StreamId"];
         }
 
-        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
-            $this->Vid = $param["Vid"];
-        }
-
         if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
             $this->StartTime = $param["StartTime"];
         }
 
         if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
             $this->EndTime = $param["EndTime"];
+        }
+
+        if (array_key_exists("Vids",$param) and $param["Vids"] !== null) {
+            $this->Vids = $param["Vids"];
+        }
+
+        if (array_key_exists("Vid",$param) and $param["Vid"] !== null) {
+            $this->Vid = $param["Vid"];
         }
     }
 }
