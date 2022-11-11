@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getMixLayoutMode() Obtain The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
  * @method void setMixLayoutMode(integer $MixLayoutMode) Set The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
- * @method integer getPureAudioHoldPlaceMode() Obtain Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
- * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) Set Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+ * @method integer getPureAudioHoldPlaceMode() Obtain Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
+ * @method void setPureAudioHoldPlaceMode(integer $PureAudioHoldPlaceMode) Set Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
  * @method array getMixLayoutList() Obtain The details of a custom layout.
  * @method void setMixLayoutList(array $MixLayoutList) Set The details of a custom layout.
  * @method MaxVideoUser getMaxVideoUser() Obtain The information of the large video in screen sharing or floating layout mode.
@@ -37,7 +37,7 @@ class McuLayoutParams extends AbstractModel
     public $MixLayoutMode;
 
     /**
-     * @var integer Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+     * @var integer Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
      */
     public $PureAudioHoldPlaceMode;
 
@@ -53,7 +53,7 @@ class McuLayoutParams extends AbstractModel
 
     /**
      * @param integer $MixLayoutMode The layout mode. Valid values: 1 (floating), 2 (screen sharing), 3 (grid), 4 (custom). Floating, screen sharing, and grid are dynamic layouts. Custom layouts are static layouts.
-     * @param integer $PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: Yes; 1: No. This parameter is valid only if dynamic layouts are used. If you do not pass this parameter, 0 will be used.
+     * @param integer $PureAudioHoldPlaceMode Whether to display users who publish only audio. 0: No; 1: Yes. This parameter is valid only if a dynamic layout is used. If you do not pass this parameter, 0 will be used.
      * @param array $MixLayoutList The details of a custom layout.
      * @param MaxVideoUser $MaxVideoUser The information of the large video in screen sharing or floating layout mode.
      */

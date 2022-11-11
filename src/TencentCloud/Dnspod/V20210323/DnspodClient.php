@@ -32,6 +32,7 @@ use TencentCloud\Dnspod\V20210323\Models as Models;
  * @method Models\DeleteRecordResponse DeleteRecord(Models\DeleteRecordRequest $req) This API is used to delete a record.
  * @method Models\DescribeDomainResponse DescribeDomain(Models\DescribeDomainRequest $req) This API is used to get the information of a domain.
  * @method Models\DescribeRecordResponse DescribeRecord(Models\DescribeRecordRequest $req) This API is used to get the information of a record.
+ * @method Models\DescribeRecordListResponse DescribeRecordList(Models\DescribeRecordListRequest $req) This API is used to get DNS records of a domain.
  * @method Models\ModifyDomainRemarkResponse ModifyDomainRemark(Models\ModifyDomainRemarkRequest $req) This API is used to set the remarks of a domain.
  * @method Models\ModifyDomainStatusResponse ModifyDomainStatus(Models\ModifyDomainStatusRequest $req) This API is used to modify the status of a domain.
  * @method Models\ModifyRecordResponse ModifyRecord(Models\ModifyRecordRequest $req) This API is used to modify a record.
