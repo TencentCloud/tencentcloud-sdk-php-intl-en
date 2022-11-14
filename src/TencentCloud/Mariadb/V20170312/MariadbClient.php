@@ -47,6 +47,7 @@ If no filter is specified, 20 instances will be returned by default. Up to 100 i
  * @method Models\DescribeDcnDetailResponse DescribeDcnDetail(Models\DescribeDcnDetailRequest $req) This API is used to query the disaster recovery details of an instance.
  * @method Models\DescribeFileDownloadUrlResponse DescribeFileDownloadUrl(Models\DescribeFileDownloadUrlRequest $req) This API is used to get the download URL of a specific backup or log file of a database.
  * @method Models\DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfo(Models\DescribeInstanceNodeInfoRequest $req) This API is used to query the information of primary and replica nodes of an instance.
+ * @method Models\DescribeLogFileRetentionPeriodResponse DescribeLogFileRetentionPeriod(Models\DescribeLogFileRetentionPeriodRequest $req) This API is used to view the configured number of days for retention of database backup logs.
  * @method Models\DescribeOrdersResponse DescribeOrders(Models\DescribeOrdersRequest $req) This API is used to query TencentDB order information. You can pass in an order ID to query the TencentDB instance associated with the order and the corresponding task process ID.
  * @method Models\DescribeProjectSecurityGroupsResponse DescribeProjectSecurityGroups(Models\DescribeProjectSecurityGroupsRequest $req) This API is used to query the security group details of a project.
  * @method Models\DestroyDBInstanceResponse DestroyDBInstance(Models\DestroyDBInstanceRequest $req) This API is used to terminate an isolated monthly subscribed instance.
@@ -65,6 +66,9 @@ Note: accounts with the same username but different hosts are different accounts
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) This API is used to modify the project to which TencentDB instances belong.
  * @method Models\ModifyDBParametersResponse ModifyDBParameters(Models\ModifyDBParametersRequest $req) This API is used to modify database parameters.
  * @method Models\ModifyDBSyncModeResponse ModifyDBSyncMode(Models\ModifyDBSyncModeRequest $req) This API is used to modify the sync mode of a TencentDB instance.
+ * @method Models\ModifyInstanceNetworkResponse ModifyInstanceNetwork(Models\ModifyInstanceNetworkRequest $req) This API is used to modify instance network.
+ * @method Models\ModifyInstanceVipResponse ModifyInstanceVip(Models\ModifyInstanceVipRequest $req) This API is used to modify instance VIP.
+ * @method Models\ModifyInstanceVportResponse ModifyInstanceVport(Models\ModifyInstanceVportRequest $req) This API is used to modify instance Vport.
  * @method Models\ModifySyncTaskAttributeResponse ModifySyncTaskAttribute(Models\ModifySyncTaskAttributeRequest $req) This API is used to modify sync task attributes (currently, only the task name can be modified).
  * @method Models\ResetAccountPasswordResponse ResetAccountPassword(Models\ResetAccountPasswordRequest $req) This API is used to reset the password of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
