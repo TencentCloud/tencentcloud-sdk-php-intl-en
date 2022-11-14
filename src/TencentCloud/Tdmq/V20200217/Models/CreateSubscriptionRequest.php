@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnvironmentId(string $EnvironmentId) Set Environment (namespace) name.
  * @method string getTopicName() Obtain Topic name.
  * @method void setTopicName(string $TopicName) Set Topic name.
- * @method string getSubscriptionName() Obtain Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
- * @method void setSubscriptionName(string $SubscriptionName) Set Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+ * @method string getSubscriptionName() Obtain Subscriber name, which can contain up to 128 characters.
+ * @method void setSubscriptionName(string $SubscriptionName) Set Subscriber name, which can contain up to 128 characters.
  * @method boolean getIsIdempotent() Obtain Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
  * @method void setIsIdempotent(boolean $IsIdempotent) Set Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
  * @method string getRemark() Obtain Remarks (up to 128 characters).
@@ -50,7 +50,7 @@ class CreateSubscriptionRequest extends AbstractModel
     public $TopicName;
 
     /**
-     * @var string Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+     * @var string Subscriber name, which can contain up to 128 characters.
      */
     public $SubscriptionName;
 
@@ -82,7 +82,7 @@ class CreateSubscriptionRequest extends AbstractModel
     /**
      * @param string $EnvironmentId Environment (namespace) name.
      * @param string $TopicName Topic name.
-     * @param string $SubscriptionName Subscriber name, which can contain up to 150 letters, digits, hyphens, and underscores.
+     * @param string $SubscriptionName Subscriber name, which can contain up to 128 characters.
      * @param boolean $IsIdempotent Whether the creation is idempotent; if not, you cannot create subscriptions with the same name.
      * @param string $Remark Remarks (up to 128 characters).
      * @param string $ClusterId Pulsar cluster ID

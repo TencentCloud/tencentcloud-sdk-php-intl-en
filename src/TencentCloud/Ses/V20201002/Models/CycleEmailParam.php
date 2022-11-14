@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBeginTime(string $BeginTime) Set Start time of the task
  * @method integer getIntervalTime() Obtain Task recurrence in hours
  * @method void setIntervalTime(integer $IntervalTime) Set Task recurrence in hours
+ * @method integer getTermCycle() Obtain Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+ * @method void setTermCycle(integer $TermCycle) Set Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
  */
 class CycleEmailParam extends AbstractModel
 {
@@ -38,8 +40,14 @@ class CycleEmailParam extends AbstractModel
     public $IntervalTime;
 
     /**
+     * @var integer Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
+     */
+    public $TermCycle;
+
+    /**
      * @param string $BeginTime Start time of the task
      * @param integer $IntervalTime Task recurrence in hours
+     * @param integer $TermCycle Specifies whether to end the cycle. This parameter is used to update the task. Valid values: 0: No; 1: Yes.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class CycleEmailParam extends AbstractModel
 
         if (array_key_exists("IntervalTime",$param) and $param["IntervalTime"] !== null) {
             $this->IntervalTime = $param["IntervalTime"];
+        }
+
+        if (array_key_exists("TermCycle",$param) and $param["TermCycle"] !== null) {
+            $this->TermCycle = $param["TermCycle"];
         }
     }
 }

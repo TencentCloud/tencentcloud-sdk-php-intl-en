@@ -36,18 +36,20 @@ use TencentCloud\Common\AbstractModel;
 1005: Internal system exception.
 1006: You have sent too many emails to the same address in a short period.
 1007: The email address is in the blocklist.
+1008: The sender domain is rejected by the recipient.
 1009: Internal system exception.
 1010: The daily email sending limit is exceeded.
 1011: You have no permission to send custom content. Use a template.
+1013: The sender domain is unsubscribed from by the recipient.
 2001: No results were found.
 3007: The template ID is invalid or the template is unavailable.
-3008: Template status exception.
+3008: The sender domain is temporarily blocked by the recipient domain.
 3009: You have no permission to use this template.
 3010: The format of the `TemplateData` field is incorrect. 
 3014: The email cannot be sent because the sender domain is not verified.
 3020: The recipient email address is in the blocklist.
 3024: Failed to precheck the email address format.
-3030: Email sending is restricted temporarily due to high bounce rate.
+3030: Email sending is restricted temporarily due to a high bounce rate.
 3033: The account has insufficient balance or overdue payment.
  * @method void setSendStatus(integer $SendStatus) Set Tencent Cloud processing status
 0: Successful.
@@ -59,18 +61,20 @@ use TencentCloud\Common\AbstractModel;
 1005: Internal system exception.
 1006: You have sent too many emails to the same address in a short period.
 1007: The email address is in the blocklist.
+1008: The sender domain is rejected by the recipient.
 1009: Internal system exception.
 1010: The daily email sending limit is exceeded.
 1011: You have no permission to send custom content. Use a template.
+1013: The sender domain is unsubscribed from by the recipient.
 2001: No results were found.
 3007: The template ID is invalid or the template is unavailable.
-3008: Template status exception.
+3008: The sender domain is temporarily blocked by the recipient domain.
 3009: You have no permission to use this template.
 3010: The format of the `TemplateData` field is incorrect. 
 3014: The email cannot be sent because the sender domain is not verified.
 3020: The recipient email address is in the blocklist.
 3024: Failed to precheck the email address format.
-3030: Email sending is restricted temporarily due to high bounce rate.
+3030: Email sending is restricted temporarily due to a high bounce rate.
 3033: The account has insufficient balance or overdue payment.
  * @method integer getDeliverStatus() Obtain Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.
@@ -127,18 +131,20 @@ class SendEmailStatus extends AbstractModel
 1005: Internal system exception.
 1006: You have sent too many emails to the same address in a short period.
 1007: The email address is in the blocklist.
+1008: The sender domain is rejected by the recipient.
 1009: Internal system exception.
 1010: The daily email sending limit is exceeded.
 1011: You have no permission to send custom content. Use a template.
+1013: The sender domain is unsubscribed from by the recipient.
 2001: No results were found.
 3007: The template ID is invalid or the template is unavailable.
-3008: Template status exception.
+3008: The sender domain is temporarily blocked by the recipient domain.
 3009: You have no permission to use this template.
 3010: The format of the `TemplateData` field is incorrect. 
 3014: The email cannot be sent because the sender domain is not verified.
 3020: The recipient email address is in the blocklist.
 3024: Failed to precheck the email address format.
-3030: Email sending is restricted temporarily due to high bounce rate.
+3030: Email sending is restricted temporarily due to a high bounce rate.
 3033: The account has insufficient balance or overdue payment.
      */
     public $SendStatus;
@@ -202,18 +208,20 @@ class SendEmailStatus extends AbstractModel
 1005: Internal system exception.
 1006: You have sent too many emails to the same address in a short period.
 1007: The email address is in the blocklist.
+1008: The sender domain is rejected by the recipient.
 1009: Internal system exception.
 1010: The daily email sending limit is exceeded.
 1011: You have no permission to send custom content. Use a template.
+1013: The sender domain is unsubscribed from by the recipient.
 2001: No results were found.
 3007: The template ID is invalid or the template is unavailable.
-3008: Template status exception.
+3008: The sender domain is temporarily blocked by the recipient domain.
 3009: You have no permission to use this template.
 3010: The format of the `TemplateData` field is incorrect. 
 3014: The email cannot be sent because the sender domain is not verified.
 3020: The recipient email address is in the blocklist.
 3024: Failed to precheck the email address format.
-3030: Email sending is restricted temporarily due to high bounce rate.
+3030: Email sending is restricted temporarily due to a high bounce rate.
 3033: The account has insufficient balance or overdue payment.
      * @param integer $DeliverStatus Recipient processing status
 0: Tencent Cloud has accepted the request and added it to the send queue.

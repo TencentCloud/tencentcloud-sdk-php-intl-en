@@ -32,12 +32,12 @@ Sender <email address>
  * @method void setSubject(string $Subject) Set Email subject.
  * @method string getReplyToAddresses() Obtain Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
  * @method void setReplyToAddresses(string $ReplyToAddresses) Set Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
- * @method Template getTemplate() Obtain Template when sending emails using a template.
- * @method void setTemplate(Template $Template) Set Template when sending emails using a template.
+ * @method Template getTemplate() Obtain Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
+ * @method void setTemplate(Template $Template) Set Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
  * @method Simple getSimple() Obtain Disused
  * @method void setSimple(Simple $Simple) Set Disused
- * @method array getAttachments() Obtain Email attachments
- * @method void setAttachments(array $Attachments) Set Email attachments
+ * @method array getAttachments() Obtain Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
+ * @method void setAttachments(array $Attachments) Set Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
  * @method string getUnsubscribe() Obtain Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  * @method void setUnsubscribe(string $Unsubscribe) Set Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
  * @method integer getTriggerType() Obtain Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
@@ -68,7 +68,7 @@ Sender <email address>
     public $ReplyToAddresses;
 
     /**
-     * @var Template Template when sending emails using a template.
+     * @var Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      */
     public $Template;
 
@@ -78,7 +78,7 @@ Sender <email address>
     public $Simple;
 
     /**
-     * @var array Email attachments
+     * @var array Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
      */
     public $Attachments;
 
@@ -99,9 +99,9 @@ Sender <email address>
      * @param array $Destination Recipient email addresses. You can send an email to up to 50 recipients at a time. Note: the email content will display all recipient addresses. To send one-to-one emails to several recipients, please call the API multiple times to send the emails.
      * @param string $Subject Email subject.
      * @param string $ReplyToAddresses Reply-to address. You can enter a valid personal email address that can receive emails. If this parameter is left empty, reply emails will fail to be sent.
-     * @param Template $Template Template when sending emails using a template.
+     * @param Template $Template Template parameters for template-based sending. As `Simple` has been disused, `Template` is required.
      * @param Simple $Simple Disused
-     * @param array $Attachments Email attachments
+     * @param array $Attachments Parameters for the attachments to be sent. The TencentCloud API supports a request packet of up to 8 MB in size, and the size of the attachment content will increase by 1.5 times after Base64 encoding. Therefore, you need to keep the total size of all attachments below 4 MB. If the entire request exceeds 8 MB, the API will return an error.
      * @param string $Unsubscribe Unsubscribe option. `1`: provides an unsubscribe link; `0`: does not provide an unsubscribe link
      * @param integer $TriggerType Email triggering type. `0` (default): non-trigger-based, suitable for marketing emails and non-immediate emails; `1`: trigger-based, suitable for immediate emails such as emails containing verification codes. If the size of an email exceeds a specified value, the system will automatically choose the non-trigger-based type.
      */
