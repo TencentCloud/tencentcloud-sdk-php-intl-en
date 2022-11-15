@@ -14,37 +14,37 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Ses\V20201002\Models;
+namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * GetEmailTemplate response structure.
+ * QueryPartnerCredit response structure.
  *
- * @method TemplateContent getTemplateContent() Obtain Template content.
- * @method void setTemplateContent(TemplateContent $TemplateContent) Set Template content.
- * @method integer getTemplateStatus() Obtain Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
- * @method void setTemplateStatus(integer $TemplateStatus) Set Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
- * @method string getTemplateName() Obtain Template name
- * @method void setTemplateName(string $TemplateName) Set Template name
+ * @method float getAllocatedCredit() Obtain Allocated credit
+ * @method void setAllocatedCredit(float $AllocatedCredit) Set Allocated credit
+ * @method float getTotalCredit() Obtain Total credit
+ * @method void setTotalCredit(float $TotalCredit) Set Total credit
+ * @method float getRemainingCredit() Obtain Remaining credit
+ * @method void setRemainingCredit(float $RemainingCredit) Set Remaining credit
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class GetEmailTemplateResponse extends AbstractModel
+class QueryPartnerCreditResponse extends AbstractModel
 {
     /**
-     * @var TemplateContent Template content.
+     * @var float Allocated credit
      */
-    public $TemplateContent;
+    public $AllocatedCredit;
 
     /**
-     * @var integer Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
+     * @var float Total credit
      */
-    public $TemplateStatus;
+    public $TotalCredit;
 
     /**
-     * @var string Template name
+     * @var float Remaining credit
      */
-    public $TemplateName;
+    public $RemainingCredit;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +52,9 @@ class GetEmailTemplateResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param TemplateContent $TemplateContent Template content.
-     * @param integer $TemplateStatus Template status. Valid values: `0` (approved); `1` (pending approval); `2` (rejected).
-     * @param string $TemplateName Template name
+     * @param float $AllocatedCredit Allocated credit
+     * @param float $TotalCredit Total credit
+     * @param float $RemainingCredit Remaining credit
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,17 +70,16 @@ class GetEmailTemplateResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TemplateContent",$param) and $param["TemplateContent"] !== null) {
-            $this->TemplateContent = new TemplateContent();
-            $this->TemplateContent->deserialize($param["TemplateContent"]);
+        if (array_key_exists("AllocatedCredit",$param) and $param["AllocatedCredit"] !== null) {
+            $this->AllocatedCredit = $param["AllocatedCredit"];
         }
 
-        if (array_key_exists("TemplateStatus",$param) and $param["TemplateStatus"] !== null) {
-            $this->TemplateStatus = $param["TemplateStatus"];
+        if (array_key_exists("TotalCredit",$param) and $param["TotalCredit"] !== null) {
+            $this->TotalCredit = $param["TotalCredit"];
         }
 
-        if (array_key_exists("TemplateName",$param) and $param["TemplateName"] !== null) {
-            $this->TemplateName = $param["TemplateName"];
+        if (array_key_exists("RemainingCredit",$param) and $param["RemainingCredit"] !== null) {
+            $this->RemainingCredit = $param["RemainingCredit"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
