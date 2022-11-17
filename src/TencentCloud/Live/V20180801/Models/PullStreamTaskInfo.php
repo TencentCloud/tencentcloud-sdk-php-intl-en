@@ -25,9 +25,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceType() Obtain The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
  * @method void setSourceType(string $SourceType) Set The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
  * @method array getSourceUrls() Obtain The source URL(s).
 If `SourceType` is `PullLiveToLive`, there can be only one source URL.
 If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
@@ -174,6 +176,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setWatermarkList(array $WatermarkList) Set The information of watermarks to add.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getVodLocalMode() Obtain Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVodLocalMode(integer $VodLocalMode) Set Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class PullStreamTaskInfo extends AbstractModel
 {
@@ -186,6 +196,7 @@ class PullStreamTaskInfo extends AbstractModel
      * @var string The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      */
     public $SourceType;
 
@@ -359,10 +370,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $WatermarkList;
 
     /**
+     * @var integer Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VodLocalMode;
+
+    /**
      * @param string $TaskId The task ID.
      * @param string $SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      * @param array $SourceUrls The source URL(s).
 If `SourceType` is `PullLiveToLive`, there can be only one source URL.
 If `SourceType` is `PullVodToLive`, there can be at most 10 source URLs.
@@ -435,6 +455,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $BackupSourceUrl The URL of the backup source.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $WatermarkList The information of watermarks to add.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -558,6 +582,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->WatermarkList, $obj);
             }
+        }
+
+        if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
+            $this->VodLocalMode = $param["VodLocalMode"];
         }
     }
 }

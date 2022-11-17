@@ -23,9 +23,11 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSourceType() Obtain The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
  * @method void setSourceType(string $SourceType) Set The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
  * @method array getSourceUrls() Obtain The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
@@ -188,6 +190,14 @@ Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
 3. Supported image formats include PNG, JPG, and GIF.
+ * @method integer getVodLocalMode() Obtain Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+ * @method void setVodLocalMode(integer $VodLocalMode) Set Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
  */
 class CreateLivePullStreamTaskRequest extends AbstractModel
 {
@@ -195,6 +205,7 @@ class CreateLivePullStreamTaskRequest extends AbstractModel
      * @var string The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      */
     public $SourceType;
 
@@ -352,9 +363,18 @@ Notes:
     public $WatermarkList;
 
     /**
+     * @var integer Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public $VodLocalMode;
+
+    /**
      * @param string $SourceType The source type. Valid values:
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
+PullPicPushLive: Images
      * @param array $SourceUrls The source URL(s).
 If `SourceType` is `PullLivePushLive`, you can specify only one source URL.
 If `SourceType` is `PullVodPushLive`, you can specify at most 30 source URLs.
@@ -436,6 +456,10 @@ Notes:
 1. You can add up to four watermarks to different locations of the video.
 2. Make sure you use publicly accessible URLs for the watermark images.
 3. Supported image formats include PNG, JPG, and GIF.
+     * @param integer $VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
      */
     function __construct()
     {
@@ -529,6 +553,10 @@ Notes:
                 $obj->deserialize($value);
                 array_push($this->WatermarkList, $obj);
             }
+        }
+
+        if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
+            $this->VodLocalMode = $param["VodLocalMode"];
         }
     }
 }

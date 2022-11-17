@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setErrCode(integer $ErrCode) Set Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
+ * @method integer getProgress() Obtain The progress of the adaptive bitrate task. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The progress of the adaptive bitrate task. Value range: 0-100.
  * @method AdaptiveDynamicStreamingTaskInput getInput() Obtain Input of adaptive bitrate streaming task.
  * @method void setInput(AdaptiveDynamicStreamingTaskInput $Input) Set Input of adaptive bitrate streaming task.
  * @method AdaptiveDynamicStreamingInfoItem getOutput() Obtain Output of adaptive bitrate streaming task.
@@ -56,6 +58,11 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
     public $Message;
 
     /**
+     * @var integer The progress of the adaptive bitrate task. Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @var AdaptiveDynamicStreamingTaskInput Input of adaptive bitrate streaming task.
      */
     public $Input;
@@ -70,6 +77,7 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
      * @param string $Message Error message.
+     * @param integer $Progress The progress of the adaptive bitrate task. Value range: 0-100.
      * @param AdaptiveDynamicStreamingTaskInput $Input Input of adaptive bitrate streaming task.
      * @param AdaptiveDynamicStreamingInfoItem $Output Output of adaptive bitrate streaming task.
      */
@@ -100,6 +108,10 @@ class MediaProcessTaskAdaptiveDynamicStreamingResult extends AbstractModel
 
         if (array_key_exists("Message",$param) and $param["Message"] !== null) {
             $this->Message = $param["Message"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
 
         if (array_key_exists("Input",$param) and $param["Input"] !== null) {

@@ -109,15 +109,17 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
  * @method void setBackupSourceType(string $BackupSourceType) Set The backup source type.
 PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
  * @method string getBackupSourceUrl() Obtain The URL of the backup source.
 You can specify only one backup source URL.
  * @method void setBackupSourceUrl(string $BackupSourceUrl) Set The URL of the backup source.
@@ -140,6 +142,14 @@ Notes:
 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
 6. If you want to stop using watermarks, pass in an empty array.
 7. Currently, animated watermarks are not supported.
+ * @method integer getVodLocalMode() Obtain Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+ * @method void setVodLocalMode(integer $VodLocalMode) Set Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
  */
 class ModifyLivePullStreamTaskRequest extends AbstractModel
 {
@@ -243,8 +253,9 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      */
     public $BackupSourceType;
 
@@ -266,6 +277,14 @@ Notes:
 7. Currently, animated watermarks are not supported.
      */
     public $WatermarkList;
+
+    /**
+     * @var integer Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
+     */
+    public $VodLocalMode;
 
     /**
      * @param string $TaskId The task ID.
@@ -315,8 +334,9 @@ PullLivePushLive: Live streaming
 PullVodPushLive: Video files
 Notes:
 1. Backup sources are supported only if the primary source type is live streaming.
-2. When pull from the primary source is interrupted, the system will pull from the backup source.
-3. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
+2. Leaving this parameter empty will reset the backup source.
+3. When pull from the primary source is interrupted, the system will pull from the backup source.
+4. If the backup source is a video file, each time the video is finished, the system will check if the primary source is recovered and will switch back if it is.
      * @param string $BackupSourceUrl The URL of the backup source.
 You can specify only one backup source URL.
      * @param array $WatermarkList The information of watermarks to add.
@@ -328,6 +348,10 @@ Notes:
 5. If you change the watermark configuration of a task whose source is a live stream, the new configuration will take effect immediately.
 6. If you want to stop using watermarks, pass in an empty array.
 7. Currently, animated watermarks are not supported.
+     * @param integer $VodLocalMode Whether to use local mode when the source type is video files. The default is `0`.
+0: Do not use local mode
+1: Use local mode
+Note: If you enable local mode, MP4 files will be downloaded to local storage, and the local files will be used for push. This ensures more reliable push. Pushing a local file will incur additional fees.
      */
     function __construct()
     {
@@ -409,6 +433,10 @@ Notes:
                 $obj->deserialize($value);
                 array_push($this->WatermarkList, $obj);
             }
+        }
+
+        if (array_key_exists("VodLocalMode",$param) and $param["VodLocalMode"] !== null) {
+            $this->VodLocalMode = $param["VodLocalMode"];
         }
     }
 }
