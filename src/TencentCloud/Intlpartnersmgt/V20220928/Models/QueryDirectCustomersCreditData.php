@@ -18,7 +18,7 @@ namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * A customer’s credit information
+ * The credit information of direct customers
  *
  * @method integer getUin() Obtain User UIN
  * @method void setUin(integer $Uin) Set User UIN

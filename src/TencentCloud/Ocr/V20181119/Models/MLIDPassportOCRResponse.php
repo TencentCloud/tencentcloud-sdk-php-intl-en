@@ -34,13 +34,13 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIssuingCountry(string $IssuingCountry) Set Issuing country
  * @method string getNationality() Obtain Country/region code
  * @method void setNationality(string $Nationality) Set Country/region code
- * @method array getWarn() Obtain Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+ * @method array getWarn() Obtain Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
- * @method void setWarn(array $Warn) Set Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+ * @method void setWarn(array $Warn) Set Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
  * @method string getImage() Obtain Identity photo
  * @method void setImage(string $Image) Set Identity photo
@@ -107,9 +107,9 @@ class MLIDPassportOCRResponse extends AbstractModel
     public $Nationality;
 
     /**
-     * @var array Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * @var array Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
      */
     public $Warn;
@@ -155,9 +155,9 @@ class MLIDPassportOCRResponse extends AbstractModel
      * @param string $DateOfExpiration Expiration date
      * @param string $IssuingCountry Issuing country
      * @param string $Nationality Country/region code
-     * @param array $Warn Alarm code
--9103 Alarm for spoofed card
--9102 Alarm for photocopied card
+     * @param array $Warn Alarm codes
+-9103 Alarm for spoofed document
+-9102 Alarm for photocopied document (including black & white and color ones)
 -9106 Alarm for covered card
      * @param string $Image Identity photo
      * @param string $AdvancedInfo Extended field:

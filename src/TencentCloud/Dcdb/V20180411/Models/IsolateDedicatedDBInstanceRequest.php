@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Mariadb\V20170312\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogFileRetentionPeriod request structure.
+ * IsolateDedicatedDBInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID in the format of `tdsql-ow728lmc`
- * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `tdsql-ow728lmc`
+ * @method string getInstanceId() Obtain Instance ID in the format of `dcdbt-ow728lmc`
+ * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `dcdbt-ow728lmc`
  */
-class DescribeLogFileRetentionPeriodRequest extends AbstractModel
+class IsolateDedicatedDBInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID in the format of `tdsql-ow728lmc`
+     * @var string Instance ID in the format of `dcdbt-ow728lmc`
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID in the format of `tdsql-ow728lmc`
+     * @param string $InstanceId Instance ID in the format of `dcdbt-ow728lmc`
      */
     function __construct()
     {

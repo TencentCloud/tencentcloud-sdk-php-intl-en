@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryDirectCustomersCredit response structure.
+ * TerminateDedicatedDBInstance response structure.
  *
- * @method array getData() Obtain Direct customer information list
- * @method void setData(array $Data) Set Direct customer information list
+ * @method integer getFlowId() Obtain Async task ID
+ * @method void setFlowId(integer $FlowId) Set Async task ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class QueryDirectCustomersCreditResponse extends AbstractModel
+class TerminateDedicatedDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array Direct customer information list
+     * @var integer Async task ID
      */
-    public $Data;
+    public $FlowId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class QueryDirectCustomersCreditResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Direct customer information list
+     * @param integer $FlowId Async task ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,13 +54,8 @@ class QueryDirectCustomersCreditResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new QueryDirectCustomersCreditData();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

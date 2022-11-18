@@ -14,23 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
+namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * QueryDirectCustomersCredit response structure.
+ * IsolateDBInstance response structure.
  *
- * @method array getData() Obtain Direct customer information list
- * @method void setData(array $Data) Set Direct customer information list
+ * @method array getSuccessInstanceIds() Obtain IDs of isolated instances
+ * @method void setSuccessInstanceIds(array $SuccessInstanceIds) Set IDs of isolated instances
+ * @method array getFailedInstanceIds() Obtain IDs of instances failed to be isolated
+ * @method void setFailedInstanceIds(array $FailedInstanceIds) Set IDs of instances failed to be isolated
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class QueryDirectCustomersCreditResponse extends AbstractModel
+class IsolateDBInstanceResponse extends AbstractModel
 {
     /**
-     * @var array Direct customer information list
+     * @var array IDs of isolated instances
      */
-    public $Data;
+    public $SuccessInstanceIds;
+
+    /**
+     * @var array IDs of instances failed to be isolated
+     */
+    public $FailedInstanceIds;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +45,8 @@ class QueryDirectCustomersCreditResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Direct customer information list
+     * @param array $SuccessInstanceIds IDs of isolated instances
+     * @param array $FailedInstanceIds IDs of instances failed to be isolated
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,13 +62,12 @@ class QueryDirectCustomersCreditResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new QueryDirectCustomersCreditData();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("SuccessInstanceIds",$param) and $param["SuccessInstanceIds"] !== null) {
+            $this->SuccessInstanceIds = $param["SuccessInstanceIds"];
+        }
+
+        if (array_key_exists("FailedInstanceIds",$param) and $param["FailedInstanceIds"] !== null) {
+            $this->FailedInstanceIds = $param["FailedInstanceIds"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

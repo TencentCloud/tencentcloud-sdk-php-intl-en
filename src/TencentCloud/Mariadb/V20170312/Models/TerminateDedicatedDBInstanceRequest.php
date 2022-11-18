@@ -18,16 +18,12 @@ namespace TencentCloud\Mariadb\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLogFileRetentionPeriod response structure.
+ * TerminateDedicatedDBInstance request structure.
  *
  * @method string getInstanceId() Obtain Instance ID in the format of `tdsql-ow728lmc`
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of `tdsql-ow728lmc`
- * @method integer getDays() Obtain Backup log retention days
- * @method void setDays(integer $Days) Set Backup log retention days
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeLogFileRetentionPeriodResponse extends AbstractModel
+class TerminateDedicatedDBInstanceRequest extends AbstractModel
 {
     /**
      * @var string Instance ID in the format of `tdsql-ow728lmc`
@@ -35,19 +31,7 @@ class DescribeLogFileRetentionPeriodResponse extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var integer Backup log retention days
-     */
-    public $Days;
-
-    /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public $RequestId;
-
-    /**
      * @param string $InstanceId Instance ID in the format of `tdsql-ow728lmc`
-     * @param integer $Days Backup log retention days
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -64,14 +48,6 @@ class DescribeLogFileRetentionPeriodResponse extends AbstractModel
         }
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("Days",$param) and $param["Days"] !== null) {
-            $this->Days = $param["Days"];
-        }
-
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
         }
     }
 }
