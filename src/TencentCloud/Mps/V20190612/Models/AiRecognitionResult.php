@@ -20,22 +20,20 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Intelligent recognition result.
  *
- * @method string getType() Obtain Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
- * @method void setType(string $Type) Set Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+ * @method string getType() Obtain The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
+ * @method void setType(string $Type) Set The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
  * @method AiRecognitionTaskFaceResult getFaceTask() Obtain Face recognition result, which is valid when `Type` is 
  `FaceRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -66,18 +64,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setOcrFullTextTask(AiRecognitionTaskOcrFullTextResult $OcrFullTextTask) Set Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method AiRecognitionTaskTransTextResult getTransTextTask() Obtain The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTransTextTask(AiRecognitionTaskTransTextResult $TransTextTask) Set The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiRecognitionResult extends AbstractModel
 {
     /**
-     * @var string Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+     * @var string The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
      */
     public $Type;
 
@@ -117,14 +120,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OcrFullTextTask;
 
     /**
-     * @param string $Type Task type. Valid values:
-<li>FaceRecognition: Face recognition,</li>
-<li>AsrWordsRecognition: Speech keyword recognition,</li>
-<li>OcrWordsRecognition: Text keyword recognition,</li>
-<li>AsrFullTextRecognition: Full speech recognition,</li>
-<li>OcrFullTextRecognition: Full text recognition,</li>
-<li>HeadTailRecognition: Video opening and ending credits recognition,</li>
-<li>ObjectRecognition: Object recognition.</li>
+     * @var AiRecognitionTaskTransTextResult The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TransTextTask;
+
+    /**
+     * @param string $Type The task type. Valid values:
+<li>FaceRecognition: Face recognition</li>
+<li>AsrWordsRecognition: Speech keyword recognition</li>
+<li>OcrWordsRecognition: Text keyword recognition</li>
+<li>AsrFullTextRecognition: Full speech recognition</li>
+<li>OcrFullTextRecognition: Full text recognition</li>
+<li>TransTextRecognition: Speech translation</li>
      * @param AiRecognitionTaskFaceResult $FaceTask Face recognition result, which is valid when `Type` is 
  `FaceRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -139,6 +148,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiRecognitionTaskOcrFullTextResult $OcrFullTextTask Full text recognition result, which is valid when `Type` is
  `OcrFullTextRecognition`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param AiRecognitionTaskTransTextResult $TransTextTask The translation result. This parameter is valid only if `Type` is
+ `TransTextRecognition`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -181,6 +193,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("OcrFullTextTask",$param) and $param["OcrFullTextTask"] !== null) {
             $this->OcrFullTextTask = new AiRecognitionTaskOcrFullTextResult();
             $this->OcrFullTextTask->deserialize($param["OcrFullTextTask"]);
+        }
+
+        if (array_key_exists("TransTextTask",$param) and $param["TransTextTask"] !== null) {
+            $this->TransTextTask = new AiRecognitionTaskTransTextResult();
+            $this->TransTextTask->deserialize($param["TransTextTask"]);
         }
     }
 }

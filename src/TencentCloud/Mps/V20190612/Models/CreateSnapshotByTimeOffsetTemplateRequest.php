@@ -34,8 +34,8 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
- * @method string getFormat() Obtain Image format. Valid values: jpg; png. Default value: jpg.
- * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png. Default value: jpg.
+ * @method string getFormat() Obtain The image format. Valid values: jpg (default), png, webp.
+ * @method void setFormat(string $Format) Set The image format. Valid values: jpg (default), png, webp.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
@@ -77,7 +77,7 @@ Default value: open.
     public $ResolutionAdaptive;
 
     /**
-     * @var string Image format. Valid values: jpg; png. Default value: jpg.
+     * @var string The image format. Valid values: jpg (default), png, webp.
      */
     public $Format;
 
@@ -104,7 +104,7 @@ Default value: black.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
-     * @param string $Format Image format. Valid values: jpg; png. Default value: jpg.
+     * @param string $Format The image format. Valid values: jpg (default), png, webp.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>

@@ -62,6 +62,8 @@ Default value: black.
 Default value: black.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getFormat() Obtain The image format. Valid values: jpg, png, webp.
+ * @method void setFormat(string $Format) Set The image format. Valid values: jpg, png, webp.
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -131,6 +133,11 @@ Default value: black.
     public $Comment;
 
     /**
+     * @var string The image format. Valid values: jpg, png, webp.
+     */
+    public $Format;
+
+    /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
      * @param integer $Width Subimage width of an image sprite in px. Value range: [128, 4,096].
@@ -152,6 +159,7 @@ Default value: open.
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $Format The image format. Valid values: jpg, png, webp.
      */
     function __construct()
     {
@@ -208,6 +216,10 @@ Default value: black.
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

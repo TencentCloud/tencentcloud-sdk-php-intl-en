@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAudioTemplate(AudioTemplateInfoForUpdate $AudioTemplate) Set Audio stream configuration parameter.
  * @method TEHDConfigForUpdate getTEHDConfig() Obtain TESHD transcoding parameter.
  * @method void setTEHDConfig(TEHDConfigForUpdate $TEHDConfig) Set TESHD transcoding parameter.
+ * @method SubtitleTemplate getSubtitleTemplate() Obtain The subtitle settings.
+ * @method void setSubtitleTemplate(SubtitleTemplate $SubtitleTemplate) Set The subtitle settings.
  */
 class OverrideTranscodeParameter extends AbstractModel
 {
@@ -78,6 +80,11 @@ class OverrideTranscodeParameter extends AbstractModel
     public $TEHDConfig;
 
     /**
+     * @var SubtitleTemplate The subtitle settings.
+     */
+    public $SubtitleTemplate;
+
+    /**
      * @param string $Container Container format. Valid values: mp4, flv, hls, mp3, flac, ogg, and m4a; mp3, flac, ogg, and m4a are formats of audio files.
      * @param integer $RemoveVideo Whether to remove video data. Valid values:
 <li>0: retain</li>
@@ -88,6 +95,7 @@ class OverrideTranscodeParameter extends AbstractModel
      * @param VideoTemplateInfoForUpdate $VideoTemplate Video stream configuration parameter.
      * @param AudioTemplateInfoForUpdate $AudioTemplate Audio stream configuration parameter.
      * @param TEHDConfigForUpdate $TEHDConfig TESHD transcoding parameter.
+     * @param SubtitleTemplate $SubtitleTemplate The subtitle settings.
      */
     function __construct()
     {
@@ -127,6 +135,11 @@ class OverrideTranscodeParameter extends AbstractModel
         if (array_key_exists("TEHDConfig",$param) and $param["TEHDConfig"] !== null) {
             $this->TEHDConfig = new TEHDConfigForUpdate();
             $this->TEHDConfig->deserialize($param["TEHDConfig"]);
+        }
+
+        if (array_key_exists("SubtitleTemplate",$param) and $param["SubtitleTemplate"] !== null) {
+            $this->SubtitleTemplate = new SubtitleTemplate();
+            $this->SubtitleTemplate->deserialize($param["SubtitleTemplate"]);
         }
     }
 }

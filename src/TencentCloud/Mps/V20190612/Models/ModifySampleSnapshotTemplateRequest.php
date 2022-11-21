@@ -48,8 +48,8 @@ Default value: open.
  * @method void setSampleInterval(integer $SampleInterval) Set Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
- * @method string getFormat() Obtain Image format. Valid values: jpg; png.
- * @method void setFormat(string $Format) Set Image format. Valid values: jpg; png.
+ * @method string getFormat() Obtain The image format. Valid values: jpg, png, webp.
+ * @method void setFormat(string $Format) Set The image format. Valid values: jpg, png, webp.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method string getFillType() Obtain Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
@@ -110,7 +110,7 @@ Default value: open.
     public $SampleInterval;
 
     /**
-     * @var string Image format. Valid values: jpg; png.
+     * @var string The image format. Valid values: jpg, png, webp.
      */
     public $Format;
 
@@ -144,7 +144,7 @@ Default value: open.
      * @param integer $SampleInterval Sampling interval.
 <li>If `SampleType` is `Percent`, sampling will be performed at an interval of the specified percentage.</li>
 <li>If `SampleType` is `Time`, sampling will be performed at the specified time interval in seconds.</li>
-     * @param string $Format Image format. Valid values: jpg; png.
+     * @param string $Format The image format. Valid values: jpg, png, webp.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param string $FillType Fill type. "Fill" refers to the way of processing a screenshot when its aspect ratio is different from that of the source video. The following fill types are supported:
 <li> stretch: stretch. The screenshot will be stretched frame by frame to match the aspect ratio of the source video, which may make the screenshot "shorter" or "longer";</li>

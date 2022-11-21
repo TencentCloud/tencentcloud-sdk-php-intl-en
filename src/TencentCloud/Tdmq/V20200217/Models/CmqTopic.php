@@ -84,6 +84,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setStatus(integer $Status) Set Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getBrokerType() Obtain Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBrokerType(integer $BrokerType) Set Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CmqTopic extends AbstractModel
 {
@@ -180,6 +184,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $Status;
 
     /**
+     * @var integer Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BrokerType;
+
+    /**
      * @param string $TopicId Topic ID.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $TopicName Topic name.
@@ -212,6 +222,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Status Cluster status. 0: creating; 1: normal; 2: terminating; 3: deleted; 4. isolated; 5. creation failed; 6: deletion failed
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $BrokerType Valid values: `0` (Pulsar), `1` (RocketMQ).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -289,6 +301,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("BrokerType",$param) and $param["BrokerType"] !== null) {
+            $this->BrokerType = $param["BrokerType"];
         }
     }
 }

@@ -43,13 +43,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method integer getScheduleId() Obtain The scheme ID.
-Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
-2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
-3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
  * @method void setScheduleId(integer $ScheduleId) Set The scheme ID.
-Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
-2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
-3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -110,9 +116,12 @@ class ProcessMediaRequest extends AbstractModel
 
     /**
      * @var integer The scheme ID.
-Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
-2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
-3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
      */
     public $ScheduleId;
 
@@ -129,9 +138,12 @@ Notes: 1. If output information is not specified for a scheme, the request param
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last three days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or an empty string is entered, no deduplication will be performed.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param integer $ScheduleId The scheme ID.
-Notes: 1. If output information is not specified for a scheme, the request parameters `OutputStorage` and `OutputDir` will be used.
-2. If a notification is not configured for a scheme, the request parameter `TaskNotifyConfig` will be used.
-3. The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+Note 1: About `OutputStorage` and `OutputDir`
+<li>If an output storage and directory are specified for a subtask of the scheme, those output settings will be applied.</li>
+<li>If an output storage and directory are not specified for the subtasks of a scheme, the output parameters passed in the `ProcessMedia` API will be applied.</li>
+Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
+
+Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
      */
     function __construct()
     {

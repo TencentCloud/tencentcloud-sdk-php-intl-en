@@ -74,6 +74,8 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
 <li>2: Dual</li>
 <li>6: Stereo</li>
 When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+ * @method array getStreamSelects() Obtain The audio tracks to retain. All audio tracks are retained by default.
+ * @method void setStreamSelects(array $StreamSelects) Set The audio tracks to retain. All audio tracks are retained by default.
  */
 class AudioTemplateInfoForUpdate extends AbstractModel
 {
@@ -121,6 +123,11 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
     public $AudioChannel;
 
     /**
+     * @var array The audio tracks to retain. All audio tracks are retained by default.
+     */
+    public $StreamSelects;
+
+    /**
      * @param string $Codec Audio stream codec.
 When the outer `Container` parameter is `mp3`, the valid value is:
 <li>libmp3lame.</li>
@@ -148,6 +155,7 @@ In Hz.
 <li>2: Dual</li>
 <li>6: Stereo</li>
 When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound channel cannot be set to stereo.
+     * @param array $StreamSelects The audio tracks to retain. All audio tracks are retained by default.
      */
     function __construct()
     {
@@ -176,6 +184,10 @@ When the media is packaged in audio format (FLAC, OGG, MP3, M4A), the sound chan
 
         if (array_key_exists("AudioChannel",$param) and $param["AudioChannel"] !== null) {
             $this->AudioChannel = $param["AudioChannel"];
+        }
+
+        if (array_key_exists("StreamSelects",$param) and $param["StreamSelects"] !== null) {
+            $this->StreamSelects = $param["StreamSelects"];
         }
     }
 }
