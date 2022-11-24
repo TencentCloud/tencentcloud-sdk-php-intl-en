@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNodeNames(array $NodeNames) Set Node name list
  * @method boolean getForceRestart() Obtain Whether to force restart
  * @method void setForceRestart(boolean $ForceRestart) Set Whether to force restart
+ * @method string getRestartMode() Obtain The restart mode. Valid values: `in-place` (default), `blue-green`.
+ * @method void setRestartMode(string $RestartMode) Set The restart mode. Valid values: `in-place` (default), `blue-green`.
+ * @method boolean getIsOffline() Obtain The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+ * @method void setIsOffline(boolean $IsOffline) Set The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
  */
 class RestartNodesRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class RestartNodesRequest extends AbstractModel
     public $ForceRestart;
 
     /**
+     * @var string The restart mode. Valid values: `in-place` (default), `blue-green`.
+     */
+    public $RestartMode;
+
+    /**
+     * @var boolean The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
+     */
+    public $IsOffline;
+
+    /**
      * @param string $InstanceId Cluster instance ID
      * @param array $NodeNames Node name list
      * @param boolean $ForceRestart Whether to force restart
+     * @param string $RestartMode The restart mode. Valid values: `in-place` (default), `blue-green`.
+     * @param boolean $IsOffline The node status, applicable in the blue/green mode. The blue/green restart is risky if the node is offline.
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class RestartNodesRequest extends AbstractModel
 
         if (array_key_exists("ForceRestart",$param) and $param["ForceRestart"] !== null) {
             $this->ForceRestart = $param["ForceRestart"];
+        }
+
+        if (array_key_exists("RestartMode",$param) and $param["RestartMode"] !== null) {
+            $this->RestartMode = $param["RestartMode"];
+        }
+
+        if (array_key_exists("IsOffline",$param) and $param["IsOffline"] !== null) {
+            $this->IsOffline = $param["IsOffline"];
         }
     }
 }

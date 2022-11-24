@@ -40,6 +40,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setSupportNamespaceEndpoint(boolean $SupportNamespaceEndpoint) Set Whether the namespace access point is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getVpcs() Obtain VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVpcs(array $Vpcs) Set VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsVip() Obtain Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsVip(boolean $IsVip) Set Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -86,6 +94,18 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $SupportNamespaceEndpoint;
 
     /**
+     * @var array VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Vpcs;
+
+    /**
+     * @var boolean Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsVip;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region information
@@ -96,6 +116,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $VpcEndPoint VPC access address
      * @param boolean $SupportNamespaceEndpoint Whether the namespace access point is supported.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $Vpcs VPC Information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsVip Whether it is an exclusive instance
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -140,6 +164,19 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SupportNamespaceEndpoint",$param) and $param["SupportNamespaceEndpoint"] !== null) {
             $this->SupportNamespaceEndpoint = $param["SupportNamespaceEndpoint"];
+        }
+
+        if (array_key_exists("Vpcs",$param) and $param["Vpcs"] !== null) {
+            $this->Vpcs = [];
+            foreach ($param["Vpcs"] as $key => $value){
+                $obj = new VpcConfig();
+                $obj->deserialize($value);
+                array_push($this->Vpcs, $obj);
+            }
+        }
+
+        if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
+            $this->IsVip = $param["IsVip"];
         }
     }
 }
