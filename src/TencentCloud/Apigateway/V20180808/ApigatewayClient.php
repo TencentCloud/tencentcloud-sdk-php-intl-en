@@ -82,6 +82,7 @@ To make authentication and throttling for a service take effect, you need to bin
  * @method Models\DescribeLogSearchResponse DescribeLogSearch(Models\DescribeLogSearchRequest $req) This API is used to search for logs.
  * @method Models\DescribePluginResponse DescribePlugin(Models\DescribePluginRequest $req) This API is used to query the plugin details by plugin ID.
  * @method Models\DescribePluginApisResponse DescribePluginApis(Models\DescribePluginApisRequest $req) This API is used to query APIs bound with a specified plugin.
+ * @method Models\DescribePluginsByApiResponse DescribePluginsByApi(Models\DescribePluginsByApiRequest $req) This API is used to query all plug-ins bound with the API.
  * @method Models\DescribeServiceResponse DescribeService(Models\DescribeServiceRequest $req) This API is used to query the details of a service, such as its description, domain name, protocol, creation time, and releases.
  * @method Models\DescribeServiceEnvironmentListResponse DescribeServiceEnvironmentList(Models\DescribeServiceEnvironmentListRequest $req) This API is used to query the list of environments under a service. All environments and their statuses under the queried service will be returned.
  * @method Models\DescribeServiceEnvironmentReleaseHistoryResponse DescribeServiceEnvironmentReleaseHistory(Models\DescribeServiceEnvironmentReleaseHistoryRequest $req) This API is used to query the release history in a service environment.
