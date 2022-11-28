@@ -64,6 +64,14 @@ Default value: black.
 Default value: black.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
+ * @method string getFormat() Obtain The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+ * @method void setFormat(string $Format) Set The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
  */
 class ModifyImageSpriteTemplateRequest extends AbstractModel
 {
@@ -138,6 +146,14 @@ Default value: black.
     public $Comment;
 
     /**
+     * @var string The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+     */
+    public $Format;
+
+    /**
      * @param integer $Definition Unique ID of an image sprite generating template.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $Name Name of an image sprite generating template. Length limit: 64 characters.
@@ -160,6 +176,10 @@ Default value: open.
 <li>black: fill with black. This option retains the aspect ratio of the source video for the screenshot and fills the unmatched area with black color blocks.</li>
 Default value: black.
      * @param string $Comment Template description. Length limit: 256 characters.
+     * @param string $Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
      */
     function __construct()
     {
@@ -220,6 +240,10 @@ Default value: black.
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
             $this->Comment = $param["Comment"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

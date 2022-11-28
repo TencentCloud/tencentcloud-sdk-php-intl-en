@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be present at the same time.
  * @method void setClearKeyFrameDescs(integer $ClearKeyFrameDescs) Set The value `1` indicates to delete all timestamps in the video. Other values are meaningless.
 In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be present at the same time.
- * @method array getAddTags() Obtain Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
- * @method void setAddTags(array $AddTags) Set Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+ * @method array getAddTags() Obtain The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
+ * @method void setAddTags(array $AddTags) Set The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
  * @method array getDeleteTags() Obtain Set of tags to be deleted. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
  * @method void setDeleteTags(array $DeleteTags) Set Set of tags to be deleted. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
  * @method integer getClearTags() Obtain The value `1` indicates to delete all tags of the media file. Other values are meaningless.
@@ -113,7 +113,7 @@ In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be prese
     public $ClearKeyFrameDescs;
 
     /**
-     * @var array Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+     * @var array The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
      */
     public $AddTags;
 
@@ -156,7 +156,7 @@ In the same request, `ClearTags` and `AddTags` cannot be present at the same tim
      * @param array $DeleteKeyFrameDescs Time offset of the set of video timestamps to be deleted in seconds. In the same request, the time offset parameters of `AddKeyFrameDescs` must be different from those of `DeleteKeyFrameDescs`.
      * @param integer $ClearKeyFrameDescs The value `1` indicates to delete all timestamps in the video. Other values are meaningless.
 In the same request, `ClearKeyFrameDescs` and `AddKeyFrameDescs` cannot be present at the same time.
-     * @param array $AddTags Set of tags to be added. Up to 16 tags can be added to one media file, and one tag can contain up to 16 characters. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
+     * @param array $AddTags The tags to add. Each file can have up to 16 tags. A tag can contain at most 32 characters. You cannot include the same tag in `AddTags` and `DeleteTags` at the same time.
      * @param array $DeleteTags Set of tags to be deleted. In the same request, the parameters of `AddTags` must be different from those of `DeleteTags`.
      * @param integer $ClearTags The value `1` indicates to delete all tags of the media file. Other values are meaningless.
 In the same request, `ClearTags` and `AddTags` cannot be present at the same time.

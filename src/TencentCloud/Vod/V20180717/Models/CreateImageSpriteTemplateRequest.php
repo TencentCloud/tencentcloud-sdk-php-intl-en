@@ -82,6 +82,16 @@ Default value: open.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+ * @method string getFormat() Obtain The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+ * @method void setFormat(string $Format) Set The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
  */
 class CreateImageSpriteTemplateRequest extends AbstractModel
 {
@@ -161,6 +171,15 @@ Default value: open.
     public $ResolutionAdaptive;
 
     /**
+     * @var string The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
+     */
+    public $Format;
+
+    /**
      * @param string $SampleType Sampling type. Valid values:
 <li>Percent: by percent.</li>
 <li>Time: by time interval.</li>
@@ -192,6 +211,11 @@ Default value: 0.
 <li>open: enabled. In this case, `Width` represents the long side of a video, while `Height` the short side;</li>
 <li>close: disabled. In this case, `Width` represents the width of a video, while `Height` the height.</li>
 Default value: open.
+     * @param string $Format The image format. Valid values:
+<li> jpg</li>
+<li> png</li>
+<li> webp</li>
+Default: jpg
      */
     function __construct()
     {
@@ -248,6 +272,10 @@ Default value: open.
 
         if (array_key_exists("ResolutionAdaptive",$param) and $param["ResolutionAdaptive"] !== null) {
             $this->ResolutionAdaptive = $param["ResolutionAdaptive"];
+        }
+
+        if (array_key_exists("Format",$param) and $param["Format"] !== null) {
+            $this->Format = $param["Format"];
         }
     }
 }

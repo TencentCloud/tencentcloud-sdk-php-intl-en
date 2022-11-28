@@ -28,8 +28,8 @@ For more information about supported extensions, see [Media types](https://intl.
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method string getMediaName() Obtain Media name.
  * @method void setMediaName(string $MediaName) Set Media name.
- * @method string getCoverUrl() Obtain URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
- * @method void setCoverUrl(string $CoverUrl) Set URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+ * @method string getCoverUrl() Obtain The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
+ * @method void setCoverUrl(string $CoverUrl) Set The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
  * @method string getProcedure() Obtain Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
  * @method void setProcedure(string $Procedure) Set Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
  * @method string getExpireTime() Obtain Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -70,7 +70,7 @@ For more information about supported extensions, see [Media types](https://intl.
     public $MediaName;
 
     /**
-     * @var string URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+     * @var string The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
      */
     public $CoverUrl;
 
@@ -121,7 +121,7 @@ For more information about supported extensions, see [Media types](https://intl.
 For more information about supported extensions, see [Media types](https://intl.cloud.tencent.com/document/product/266/9760#media-types). Please make sure the URL is accessible.
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      * @param string $MediaName Media name.
-     * @param string $CoverUrl URL of video cover to be pulled. Only gif, jpeg, and png formats are supported.
+     * @param string $CoverUrl The URL of the video to pull. Supported formats include GIF, JPEG (JPG), and PNG.
      * @param string $Procedure Subsequent task for media. For more information, please see [Specifying Task Flow After Upload](https://intl.cloud.tencent.com/document/product/266/9759?from_cn_redirect=1).
      * @param string $ExpireTime Expiration time of media file in ISO 8601 format. For more information, please see [Notes on ISO Date Format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $StorageRegion Specifies upload region. This is only applicable to users that have special requirements for the upload region:
