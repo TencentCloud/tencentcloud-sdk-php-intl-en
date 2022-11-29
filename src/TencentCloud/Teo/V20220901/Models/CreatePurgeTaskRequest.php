@@ -22,34 +22,40 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain ID of the site.
  * @method void setZoneId(string $ZoneId) Set ID of the site.
- * @method string getType() Obtain Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
- * @method void setType(string $Type) Set Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+ * @method string getType() Obtain Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
+ * @method void setType(string $Type) Set Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
  * @method array getTargets() Obtain Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
  * @method void setTargets(array $Targets) Set Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
  * @method boolean getEncodeUrl() Obtain Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
  * @method void setEncodeUrl(boolean $EncodeUrl) Set Specifies whether to transcode non-ASCII URLs according to RFC3986.
@@ -63,24 +69,27 @@ class CreatePurgeTaskRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * @var string Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
      */
     public $Type;
 
     /**
      * @var array Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
      */
     public $Targets;
 
@@ -92,20 +101,23 @@ Note that if it’s enabled, the purging is based on the converted URLs.
 
     /**
      * @param string $ZoneId ID of the site.
-     * @param string $Type Purging mode. Values:
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * @param string $Type Mode of cache purging. Values:
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li>
      * @param array $Targets Target resource to be purged, which depends on the `Type` field.
 1. When `Type = purge_host`:
-Hostnames are purged, such as www.example.com and foo.bar.example.com.
+Enter the hostname, such as www.example.com and foo.bar.example.com.
 2. When `Type = purge_prefix`:
-Prefixes are purged, such as http://www.example.com/example.
+Enter the prefix, such as http://www.example.com/example.
 3. When `Type = purge_url`:
-URLs are purged, such as https://www.example.com/example.jpg.
-4. When `Type = purge_all`: All types of resources are purged.
-`Targets` is not a required field.
+Enter the URL, such as https://www.example.com/example.jpg.
+4. When `Type = purge_all`:
+This field can be left empty.
+5. When `Type = purge_cache_tag`:
+Enter the cache tag, such as tag1.
      * @param boolean $EncodeUrl Specifies whether to transcode non-ASCII URLs according to RFC3986.
 Note that if it’s enabled, the purging is based on the converted URLs.
      */

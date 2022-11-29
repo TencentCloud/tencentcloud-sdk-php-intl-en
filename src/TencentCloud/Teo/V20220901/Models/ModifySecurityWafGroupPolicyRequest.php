@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifySecurityWafGroupPolicy request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain The subdomain name.
- * @method void setEntity(string $Entity) Set The subdomain name.
+ * @method string getZoneId() Obtain The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setZoneId(string $ZoneId) Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getEntity() Obtain The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
+ * @method void setEntity(string $Entity) Set The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
  * @method string getSwitch() Obtain Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>If not specified, it defaults to the setting that was last configured.
@@ -54,16 +54,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAiRule(AiRule $AiRule) Set The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
  * @method array getWafGroups() Obtain The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
  * @method void setWafGroups(array $WafGroups) Set The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
+ * @method string getTemplateId() Obtain The template ID. You must specify either this field or "ZoneId+Entity".
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or "ZoneId+Entity".
  */
 class ModifySecurityWafGroupPolicyRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $ZoneId;
 
     /**
-     * @var string The subdomain name.
+     * @var string The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
      */
     public $Entity;
 
@@ -107,8 +109,13 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
     public $WafGroups;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Entity The subdomain name.
+     * @var string The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $Entity The subdomain name. You must specify either "ZoneId+Entity" or "TemplateId". 
      * @param string $Switch Switch. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>If not specified, it defaults to the setting that was last configured.
@@ -124,6 +131,7 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
      * @param WafRule $WafRules The settings of the managed rule. If not specified, it defaults to the settings that were last configured.
      * @param AiRule $AiRule The settings of the AI rule engine. If not specified, it defaults to the settings that were last configured.
      * @param array $WafGroups The settings of the managed rule group. If not specified, it defaults to the settings that were last configured.
+     * @param string $TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
      */
     function __construct()
     {
@@ -175,6 +183,10 @@ class ModifySecurityWafGroupPolicyRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->WafGroups, $obj);
             }
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

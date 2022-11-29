@@ -18,28 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Module settings of the exception rule
  *
- * @method string getModule() Obtain 
- * @method void setModule(string $Module) Set 
- * @method array getInclude() Obtain 
- * @method void setInclude(array $Include) Set 
+ * @method string getModule() Obtain The module. Values:
+<li>`waf`: Managed rules</li>
+ * @method void setModule(string $Module) Set The module. Values:
+<li>`waf`: Managed rules</li>
+ * @method array getInclude() Obtain List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setInclude(array $Include) Set List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class PartialModule extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The module. Values:
+<li>`waf`: Managed rules</li>
      */
     public $Module;
 
     /**
-     * @var array 
+     * @var array List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Include;
 
     /**
-     * @param string $Module 
-     * @param array $Include 
+     * @param string $Module The module. Values:
+<li>`waf`: Managed rules</li>
+     * @param array $Include List of managed rule IDs to be skipped.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

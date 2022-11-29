@@ -28,14 +28,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
- * @method AscriptionInfo getAscription() Obtain The site ownership information.
- * @method void setAscription(AscriptionInfo $Ascription) Set The site ownership information.
+ * @method AscriptionInfo getAscription() Obtain Details of the DNS record.
+ * @method void setAscription(AscriptionInfo $Ascription) Set Details of the DNS record.
  * @method array getOriginalNameServers() Obtain The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOriginalNameServers(array $OriginalNameServers) Set The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method FileAscriptionInfo getFileAscription() Obtain 
- * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set 
+ * @method FileAscriptionInfo getFileAscription() Obtain Details of the verification file.
+ * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set Details of the verification file.
  */
 class Identification extends AbstractModel
 {
@@ -52,7 +52,7 @@ class Identification extends AbstractModel
     public $Status;
 
     /**
-     * @var AscriptionInfo The site ownership information.
+     * @var AscriptionInfo Details of the DNS record.
      */
     public $Ascription;
 
@@ -63,7 +63,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OriginalNameServers;
 
     /**
-     * @var FileAscriptionInfo 
+     * @var FileAscriptionInfo Details of the verification file.
      */
     public $FileAscription;
 
@@ -72,10 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Status The verification status. Values:
 <li>`pending`: The verification is ongoing.</li>
 <li>`finished`: The verification completed.</li>
-     * @param AscriptionInfo $Ascription The site ownership information.
+     * @param AscriptionInfo $Ascription Details of the DNS record.
      * @param array $OriginalNameServers The NS record of the domain name.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param FileAscriptionInfo $FileAscription 
+     * @param FileAscriptionInfo $FileAscription Details of the verification file.
      */
     function __construct()
     {

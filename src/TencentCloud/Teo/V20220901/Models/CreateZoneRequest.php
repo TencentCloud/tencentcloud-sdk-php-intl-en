@@ -32,6 +32,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning the existing DNS records of the site. Default value: false.
  * @method array getTags() Obtain The resource tag.
  * @method void setTags(array $Tags) Set The resource tag.
+ * @method boolean getAllowDuplicates() Obtain Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+ * @method void setAllowDuplicates(boolean $AllowDuplicates) Set Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+ * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+ * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
  */
 class CreateZoneRequest extends AbstractModel
 {
@@ -58,12 +66,28 @@ class CreateZoneRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var boolean Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     */
+    public $AllowDuplicates;
+
+    /**
+     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneName The site name.
      * @param string $Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
      * @param boolean $JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
      * @param array $Tags The resource tag.
+     * @param boolean $AllowDuplicates Whether to allow duplicate sites. Values:
+<li>`true`: Duplicate sites are allowed.</li>
+<li>`false`: Duplicate sites are not allowed.</li>If it is left empty, the default value `false` is used.
+     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
      */
     function __construct()
     {
@@ -97,6 +121,14 @@ class CreateZoneRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AllowDuplicates",$param) and $param["AllowDuplicates"] !== null) {
+            $this->AllowDuplicates = $param["AllowDuplicates"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

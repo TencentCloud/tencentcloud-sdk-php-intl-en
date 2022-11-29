@@ -18,36 +18,36 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Advanced origin-pull configuration
  *
- * @method array getOriginGroupConditions() Obtain 
- * @method void setOriginGroupConditions(array $OriginGroupConditions) Set 
- * @method string getOriginGroupId() Obtain 
- * @method void setOriginGroupId(string $OriginGroupId) Set 
- * @method string getBackupOriginGroupId() Obtain 
- * @method void setBackupOriginGroupId(string $BackupOriginGroupId) Set 
+ * @method array getOriginGroupConditions() Obtain Matching condition. The "Target" field must be unique.
+ * @method void setOriginGroupConditions(array $OriginGroupConditions) Set Matching condition. The "Target" field must be unique.
+ * @method string getOriginGroupId() Obtain ID of the primary origin server.
+ * @method void setOriginGroupId(string $OriginGroupId) Set ID of the primary origin server.
+ * @method string getBackupOriginGroupId() Obtain ID of the secondary origin server.
+ * @method void setBackupOriginGroupId(string $BackupOriginGroupId) Set ID of the secondary origin server.
  */
 class AdvancedOriginGroup extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Matching condition. The "Target" field must be unique.
      */
     public $OriginGroupConditions;
 
     /**
-     * @var string 
+     * @var string ID of the primary origin server.
      */
     public $OriginGroupId;
 
     /**
-     * @var string 
+     * @var string ID of the secondary origin server.
      */
     public $BackupOriginGroupId;
 
     /**
-     * @param array $OriginGroupConditions 
-     * @param string $OriginGroupId 
-     * @param string $BackupOriginGroupId 
+     * @param array $OriginGroupConditions Matching condition. The "Target" field must be unique.
+     * @param string $OriginGroupId ID of the primary origin server.
+     * @param string $BackupOriginGroupId ID of the secondary origin server.
      */
     function __construct()
     {

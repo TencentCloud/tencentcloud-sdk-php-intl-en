@@ -34,8 +34,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
- * @method string getAction() Obtain 
- * @method void setAction(string $Action) Set 
+ * @method string getAction() Obtain The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
+ * @method void setAction(string $Action) Set The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
  * @method RateLimitTemplateDetail getRateLimitTemplateDetail() Obtain The settings of the rate limiting template. It is only used as an output parameter.
  * @method void setRateLimitTemplateDetail(RateLimitTemplateDetail $RateLimitTemplateDetail) Set The settings of the rate limiting template. It is only used as an output parameter.
  */
@@ -53,7 +57,9 @@ class RateLimitTemplate extends AbstractModel
     public $Mode;
 
     /**
-     * @var string 
+     * @var string The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
      */
     public $Action;
 
@@ -70,7 +76,9 @@ class RateLimitTemplate extends AbstractModel
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-     * @param string $Action 
+     * @param string $Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>If it is left empty, the default value `alg` is used.
      * @param RateLimitTemplateDetail $RateLimitTemplateDetail The settings of the rate limiting template. It is only used as an output parameter.
      */
     function __construct()

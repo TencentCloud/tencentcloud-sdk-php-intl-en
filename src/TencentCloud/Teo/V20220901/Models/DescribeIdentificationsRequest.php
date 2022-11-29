@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeIdentifications request structure.
  *
  * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No
+<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
  * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No
+<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
  * @method integer getOffset() Obtain The page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
  * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
@@ -33,7 +33,7 @@ class DescribeIdentificationsRequest extends AbstractModel
 {
     /**
      * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No
+<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
      */
     public $Filters;
 
@@ -49,7 +49,7 @@ class DescribeIdentificationsRequest extends AbstractModel
 
     /**
      * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No
+<li>`zone-name`: <br>Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li>
      * @param integer $Offset The page offset. Default value: 0
      * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
      */

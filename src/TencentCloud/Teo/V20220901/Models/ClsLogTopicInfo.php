@@ -58,8 +58,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setArea(string $Area) Set Acceleration region. Values:
 <li>`mainland`: Chinese mainland;</li>
 <li>`overseas`: Global (outside the Chinese mainland).</li>
- * @method string getLogSetType() Obtain 
- * @method void setLogSetType(string $LogSetType) Set 
+ * @method string getLogSetType() Obtain Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
+ * @method void setLogSetType(string $LogSetType) Set Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
  */
 class ClsLogTopicInfo extends AbstractModel
 {
@@ -135,7 +139,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Area;
 
     /**
-     * @var string 
+     * @var string Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
      */
     public $LogSetType;
 
@@ -159,7 +165,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Area Acceleration region. Values:
 <li>`mainland`: Chinese mainland;</li>
 <li>`overseas`: Global (outside the Chinese mainland).</li>
-     * @param string $LogSetType 
+     * @param string $LogSetType Type of the shipping task. Values:
+<li>`cls`: Ship logs to CLS.</li>
+<li>`custom_endpoint`: Ship logs to custom APIs.</li>
      */
     function __construct()
     {

@@ -20,14 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeBotManagedRules request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain The subdomain name.
- * @method void setEntity(string $Entity) Set The subdomain name.
  * @method integer getOffset() Obtain The page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
  * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
+ * @method string getZoneId() Obtain The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setZoneId(string $ZoneId) Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
  * @method string getRuleType() Obtain The rule type. Values:
 <li>`idcid`</li>
 <li>`sipbot`</li>
@@ -36,19 +36,11 @@ use TencentCloud\Common\AbstractModel;
 <li>`idcid`</li>
 <li>`sipbot`</li>
 <li>`uabot`</li>If no value or 0 is passed, all rule types will be selected.
+ * @method string getTemplateId() Obtain The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
  */
 class DescribeBotManagedRulesRequest extends AbstractModel
 {
-    /**
-     * @var string The site ID.
-     */
-    public $ZoneId;
-
-    /**
-     * @var string The subdomain name.
-     */
-    public $Entity;
-
     /**
      * @var integer The page offset. Default value: 0
      */
@@ -60,6 +52,16 @@ class DescribeBotManagedRulesRequest extends AbstractModel
     public $Limit;
 
     /**
+     * @var string The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public $ZoneId;
+
+    /**
+     * @var string The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public $Entity;
+
+    /**
      * @var string The rule type. Values:
 <li>`idcid`</li>
 <li>`sipbot`</li>
@@ -68,14 +70,20 @@ class DescribeBotManagedRulesRequest extends AbstractModel
     public $RuleType;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Entity The subdomain name.
+     * @var string The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     */
+    public $TemplateId;
+
+    /**
      * @param integer $Offset The page offset. Default value: 0
      * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @param string $ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      * @param string $RuleType The rule type. Values:
 <li>`idcid`</li>
 <li>`sipbot`</li>
 <li>`uabot`</li>If no value or 0 is passed, all rule types will be selected.
+     * @param string $TemplateId The template ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     function __construct()
     {
@@ -90,14 +98,6 @@ class DescribeBotManagedRulesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
-            $this->ZoneId = $param["ZoneId"];
-        }
-
-        if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
-            $this->Entity = $param["Entity"];
-        }
-
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
         }
@@ -106,8 +106,20 @@ class DescribeBotManagedRulesRequest extends AbstractModel
             $this->Limit = $param["Limit"];
         }
 
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
+        }
+
+        if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
+            $this->Entity = $param["Entity"];
+        }
+
         if (array_key_exists("RuleType",$param) and $param["RuleType"] !== null) {
             $this->RuleType = $param["RuleType"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

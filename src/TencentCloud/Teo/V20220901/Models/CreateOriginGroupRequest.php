@@ -42,8 +42,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
  * @method array getOriginRecords() Obtain Details of the origin record.
  * @method void setOriginRecords(array $OriginRecords) Set Details of the origin record.
- * @method string getHostHeader() Obtain 
- * @method void setHostHeader(string $HostHeader) Set 
+ * @method string getHostHeader() Obtain The origin domain. This field can be specified only when `OriginType=self`.
+ * @method void setHostHeader(string $HostHeader) Set The origin domain. This field can be specified only when `OriginType=self`.
  */
 class CreateOriginGroupRequest extends AbstractModel
 {
@@ -79,7 +79,7 @@ class CreateOriginGroupRequest extends AbstractModel
     public $OriginRecords;
 
     /**
-     * @var string 
+     * @var string The origin domain. This field can be specified only when `OriginType=self`.
      */
     public $HostHeader;
 
@@ -95,7 +95,7 @@ class CreateOriginGroupRequest extends AbstractModel
 <li>`weight`: Configure by weight.</li>
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
      * @param array $OriginRecords Details of the origin record.
-     * @param string $HostHeader 
+     * @param string $HostHeader The origin domain. This field can be specified only when `OriginType=self`.
      */
     function __construct()
     {

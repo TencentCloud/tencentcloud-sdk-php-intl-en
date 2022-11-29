@@ -30,30 +30,24 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProto(string $Proto) Set The protocol. Values:
 <li>`TCP`: TCP protocol</li>
 <li>`UDP`: UDP protocol</li>
- * @method array getPort() Obtain The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
- * @method void setPort(array $Port) Set The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+ * @method array getPort() Obtain The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+ * @method void setPort(array $Port) Set The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
  * @method string getOriginType() Obtain The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
  * @method void setOriginType(string $OriginType) Set The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
  * @method array getOriginValue() Obtain Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method void setOriginValue(array $OriginValue) Set Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
  * @method string getForwardClientIp() Obtain Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
 <li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
@@ -70,6 +64,12 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
 <li>`true`: Enable.</li>
 <li>`false`: Disable.</li>Default value: false.
+ * @method string getOriginPort() Obtain The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+ * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
  */
 class CreateApplicationProxyRuleRequest extends AbstractModel
 {
@@ -91,26 +91,23 @@ class CreateApplicationProxyRuleRequest extends AbstractModel
     public $Proto;
 
     /**
-     * @var array The origin type. Values:
-<li>`custom`: Specified origins</li>
-<li>`origins`: Origin group</li>
+     * @var array The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public $Port;
 
     /**
      * @var string The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
+<li>`custom`: Specified origins</li>
+<li>`origins`: Origin group</li>
      */
     public $OriginType;
 
     /**
      * @var array Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      */
     public $OriginValue;
 
@@ -131,23 +128,27 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
     public $SessionPersist;
 
     /**
+     * @var string The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public $OriginPort;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $ProxyId The proxy ID.
      * @param string $Proto The protocol. Values:
 <li>`TCP`: TCP protocol</li>
 <li>`UDP`: UDP protocol</li>
-     * @param array $Port The origin type. Values:
+     * @param array $Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+     * @param string $OriginType The origin type. Values:
 <li>`custom`: Specified origins</li>
 <li>`origins`: Origin group</li>
-     * @param string $OriginType The origin type. Values:
-`custom`: Origin server, which is formatted as "IP:Port" or "Domain name:Port"
-`origins`: Origin group
      * @param array $OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
      * @param string $ForwardClientIp Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
 <li>`PPV1`: Pass the client IP via Proxy Protocol V1 (available only when `Proto=TCP`).</li>
@@ -156,6 +157,9 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
      * @param boolean $SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable.</li>
 <li>`false`: Disable.</li>Default value: false.
+     * @param string $OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
      */
     function __construct()
     {
@@ -200,6 +204,10 @@ OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]。
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
+            $this->OriginPort = $param["OriginPort"];
         }
     }
 }

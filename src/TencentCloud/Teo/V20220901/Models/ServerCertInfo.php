@@ -29,15 +29,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setAlias(string $Alias) Set Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getType() Obtain Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setType(string $Type) Set Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getExpireTime() Obtain Time when the certificate expires.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExpireTime(string $ExpireTime) Set Time when the certificate expires.
@@ -50,6 +50,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSignAlgo(string $SignAlgo) Set Signature algorithm.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCommonName() Obtain Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setCommonName(string $CommonName) Set Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ServerCertInfo extends AbstractModel
 {
@@ -67,10 +71,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Type;
 
@@ -93,21 +97,29 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SignAlgo;
 
     /**
+     * @var string Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $CommonName;
+
+    /**
      * @param string $CertId ID of the server certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Alias Alias of the certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Type Type of the certificate. Values:
-<li>`default`: Default certificate;</lil>
-<li>`upload`: Custom certificate;</li>
-<li>`managed`: Tencent Cloud-managed certificate.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`default`: Default certificate</lil>
+<li>`upload`: Specified certificate</li>
+<li>`managed`: Tencent Cloud-managed certificate</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $ExpireTime Time when the certificate expires.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DeployTime Time when the certificate is deployed.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SignAlgo Signature algorithm.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CommonName Domain name of the certificate.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -144,6 +156,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SignAlgo",$param) and $param["SignAlgo"] !== null) {
             $this->SignAlgo = $param["SignAlgo"];
+        }
+
+        if (array_key_exists("CommonName",$param) and $param["CommonName"] !== null) {
+            $this->CommonName = $param["CommonName"];
         }
     }
 }

@@ -21,29 +21,21 @@ use TencentCloud\Common\AbstractModel;
  * The settings of the exception rule
  *
  * @method string getRuleName() Obtain The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleName(string $RuleName) Set The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAction() Obtain The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAction(string $Action) Set The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRuleStatus() Obtain The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRuleStatus(string $RuleStatus) Set The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRuleID() Obtain The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRuleID() Obtain The rule ID, which is automatically created and only used as an output parameter.
+ * @method void setRuleID(integer $RuleID) Set The rule ID, which is automatically created and only used as an output parameter.
+ * @method string getUpdateTime() Obtain The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setUpdateTime(string $UpdateTime) Set The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method array getExceptUserRuleConditions() Obtain The matching condition.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptUserRuleConditions(array $ExceptUserRuleConditions) Set The matching condition.
@@ -52,22 +44,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setExceptUserRuleScope(ExceptUserRuleScope $ExceptUserRuleScope) Set The scope to which the exception rule applies.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getRulePriority() Obtain The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRulePriority(integer $RulePriority) Set The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRulePriority() Obtain The rule priority. Value range: 0-100. If it is null, it defaults to 0.
+ * @method void setRulePriority(integer $RulePriority) Set The rule priority. Value range: 0-100. If it is null, it defaults to 0.
  */
 class ExceptUserRule extends AbstractModel
 {
     /**
      * @var string The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleName;
 
     /**
      * @var string The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Action;
 
@@ -75,19 +63,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @var string The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RuleStatus;
 
     /**
-     * @var integer The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The rule ID, which is automatically created and only used as an output parameter.
      */
     public $RuleID;
 
     /**
-     * @var string The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $UpdateTime;
 
@@ -104,30 +90,24 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ExceptUserRuleScope;
 
     /**
-     * @var integer The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The rule priority. Value range: 0-100. If it is null, it defaults to 0.
      */
     public $RulePriority;
 
     /**
      * @param string $RuleName The rule name.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Action The rule action. It only supports the value `skip`, which indicates skipping all managed rules.
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RuleStatus The rule status. Values:
 <li>`on`: Enabled</li>
 <li>`off`: Disabled</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RuleID The rule ID, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $UpdateTime The update time, which is only used as an output parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RuleID The rule ID, which is automatically created and only used as an output parameter.
+     * @param string $UpdateTime The update time. If it is null, the current date and time is recorded.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $ExceptUserRuleConditions The matching condition.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ExceptUserRuleScope $ExceptUserRuleScope The scope to which the exception rule applies.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $RulePriority The rule priority. Value range: 0-100.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RulePriority The rule priority. Value range: 0-100. If it is null, it defaults to 0.
      */
     function __construct()
     {

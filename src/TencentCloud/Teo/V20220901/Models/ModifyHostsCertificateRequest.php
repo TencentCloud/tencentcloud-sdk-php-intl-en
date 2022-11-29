@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHosts(array $Hosts) Set List of domain names that the certificate will be attached to.
  * @method array getServerCertInfo() Obtain Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
  * @method void setServerCertInfo(array $ServerCertInfo) Set Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+ * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+ * @method void setApplyType(string $ApplyType) Set Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
  */
 class ModifyHostsCertificateRequest extends AbstractModel
 {
@@ -45,9 +51,19 @@ class ModifyHostsCertificateRequest extends AbstractModel
     public $ServerCertInfo;
 
     /**
+     * @var string Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
+     */
+    public $ApplyType;
+
+    /**
      * @param string $ZoneId ID of the site.
      * @param array $Hosts List of domain names that the certificate will be attached to.
      * @param array $ServerCertInfo Certificate information. Note that only `CertId` is required. If it is not specified, the default certificate will be used.
+     * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne</li>
+<li>`none`: Not managed by EdgeOne</li>If it is left empty, the default value `apply` is used.
      */
     function __construct()
     {
@@ -77,6 +93,10 @@ class ModifyHostsCertificateRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ServerCertInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
+            $this->ApplyType = $param["ApplyType"];
         }
     }
 }

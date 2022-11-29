@@ -40,36 +40,46 @@ use TencentCloud\Common\AbstractModel;
 <li>`h`: Settled by hour;</li>
 <li>`M`: Settled by minute;</li>
 <li>`s`: Settled by second.</li>
- * @method string getPlanType() Obtain Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
- * @method void setPlanType(string $PlanType) Set Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+ * @method string getPlanType() Obtain The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
+ * @method void setPlanType(string $PlanType) Set The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
  * @method float getPrice() Obtain Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
  * @method void setPrice(float $Price) Set Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
  * @method integer getRequest() Obtain Quota on security acceleration requests
  * @method void setRequest(integer $Request) Set Quota on security acceleration requests
  * @method integer getSiteNumber() Obtain Number of sites to be bound to the plan
  * @method void setSiteNumber(integer $SiteNumber) Set Number of sites to be bound to the plan
- * @method string getArea() Obtain Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
- * @method void setArea(string $Area) Set Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+ * @method string getArea() Obtain The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
+ * @method void setArea(string $Area) Set The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
  */
 class PlanInfo extends AbstractModel
 {
@@ -96,15 +106,19 @@ class PlanInfo extends AbstractModel
     public $Frequency;
 
     /**
-     * @var string Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+     * @var string The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
      */
     public $PlanType;
 
@@ -124,9 +138,10 @@ class PlanInfo extends AbstractModel
     public $SiteNumber;
 
     /**
-     * @var string Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+     * @var string The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
      */
     public $Area;
 
@@ -141,21 +156,26 @@ class PlanInfo extends AbstractModel
 <li>`h`: Settled by hour;</li>
 <li>`M`: Settled by minute;</li>
 <li>`s`: Settled by second.</li>
-     * @param string $PlanType Plan option. Values:
-<li>`sta`: Standard plan that supports content delivery network outside Chinese mainland;</li>
-<li>`sta_with_bot`: Standard plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`sta_cm`: Standard plan that supports content delivery network inside Chinese mainland;</li>
-<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside Chinese mainland and bot management;</li>
-<li>`ent`: Enterprise plan that supports content delivery network outside Chinese mainland;</li>
-<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside Chinese mainland and bot management;</li>
-<li>`ent_cm`: Enterprise plan that supports content delivery network inside Chinese mainland;</li>
-<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside Chinese mainland and bot management.</li>
+     * @param string $PlanType The plan option. Values:
+<li>`sta`: Standard plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`sta_with_bot`: Standard plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`sta_cm`: Standard plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`sta_cm_with_bot`: Standard plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`sta`: Standard plan that supports content delivery network over the globe.</li>
+<li>`sta_global_with_bot`: Standard plan that supports content delivery network over the globe and bot management.</li>
+<li>`ent`: Enterprise plan that supports content delivery network outside the Chinese mainland.</li>
+<li>`ent_with_bot`: Enterprise plan that supports content delivery network outside the Chinese mainland and bot management.</li>
+<li>`ent_cm`: Enterprise plan that supports content delivery network inside the Chinese mainland.</li>
+<li>`ent_cm_with_bot`: Enterprise plan that supports content delivery network inside the Chinese mainland and bot management.</li>
+<li>`ent_global`: Enterprise plan that supports content delivery network over the globe.</li>
+<li>`ent_global_with_bot`: Enterprise plan that supports content delivery network over the globe and bot management.</li>
      * @param float $Price Plan price (in CNY fen/US cent). The price unit depends on the settlement currency.
      * @param integer $Request Quota on security acceleration requests
      * @param integer $SiteNumber Number of sites to be bound to the plan
-     * @param string $Area Acceleration region. Values:
-<li>`mainland`: Chinese mainland;</li>
-<li>`overseas`: Global (Chinese mainland not included).</li>
+     * @param string $Area The acceleration region. Values:
+<li>`mainland`: Chinese mainland</li>
+<li>`overseas`: Global (Chinese mainland not included)</li>
+<li>`global`: Global (Chinese mainland included)</li>
      */
     function __construct()
     {

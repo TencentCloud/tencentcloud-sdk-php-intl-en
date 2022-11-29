@@ -18,36 +18,48 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Origin-pull condition
  *
- * @method string getTarget() Obtain 
- * @method void setTarget(string $Target) Set 
- * @method string getOperator() Obtain 
- * @method void setOperator(string $Operator) Set 
- * @method array getValues() Obtain 
- * @method void setValues(array $Values) Set 
+ * @method string getTarget() Obtain Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
+ * @method void setTarget(string $Target) Set Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
+ * @method string getOperator() Obtain The operator. Values:
+<li>`equal`: Equals</li>
+ * @method void setOperator(string $Operator) Set The operator. Values:
+<li>`equal`: Equals</li>
+ * @method array getValues() Obtain Values of the match type.
+ * @method void setValues(array $Values) Set Values of the match type.
  */
 class OriginGroupCondition extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
      */
     public $Target;
 
     /**
-     * @var string 
+     * @var string The operator. Values:
+<li>`equal`: Equals</li>
      */
     public $Operator;
 
     /**
-     * @var array 
+     * @var array Values of the match type.
      */
     public $Values;
 
     /**
-     * @param string $Target 
-     * @param string $Operator 
-     * @param array $Values 
+     * @param string $Target Match type. Values:
+<li>`url`: Partial URL path under the current site, such as "/example" and "/example/foo.jpg". You can use an asterisk (*) to indicate all values and a question mark (?) to indicate any single character.
+</li>
+     * @param string $Operator The operator. Values:
+<li>`equal`: Equals</li>
+     * @param array $Values Values of the match type.
      */
     function __construct()
     {

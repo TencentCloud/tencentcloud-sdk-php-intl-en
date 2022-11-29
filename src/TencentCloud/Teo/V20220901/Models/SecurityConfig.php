@@ -52,6 +52,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDropPageConfig(DropPageConfig $DropPageConfig) Set The settings of the custom block page. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method TemplateConfig getTemplateConfig() Obtain Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setTemplateConfig(TemplateConfig $TemplateConfig) Set Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SecurityConfig extends AbstractModel
 {
@@ -104,6 +108,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DropPageConfig;
 
     /**
+     * @var TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $TemplateConfig;
+
+    /**
      * @param WafConfig $WafConfig The settings of the managed rule. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param RateLimitConfig $RateLimitConfig The settings of the rate limiting rule. If it is null, the settings that were last configured will be used.
@@ -120,6 +130,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param DropPageConfig $DropPageConfig The settings of the custom block page. If it is null, the settings that were last configured will be used.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param TemplateConfig $TemplateConfig Security template settings
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -172,6 +184,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("DropPageConfig",$param) and $param["DropPageConfig"] !== null) {
             $this->DropPageConfig = new DropPageConfig();
             $this->DropPageConfig->deserialize($param["DropPageConfig"]);
+        }
+
+        if (array_key_exists("TemplateConfig",$param) and $param["TemplateConfig"] !== null) {
+            $this->TemplateConfig = new TemplateConfig();
+            $this->TemplateConfig->deserialize($param["TemplateConfig"]);
         }
     }
 }

@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZoneId() Obtain The site ID.
  * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain The subdomain name/layer-4 proxy.
- * @method void setEntity(string $Entity) Set The subdomain name/layer-4 proxy.
+ * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+ * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+ * @method string getTemplateId() Obtain The template ID. You must specify either this field or "Entity".
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or "Entity".
  */
 class DescribeSecurityPolicyRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DescribeSecurityPolicyRequest extends AbstractModel
     public $ZoneId;
 
     /**
-     * @var string The subdomain name/layer-4 proxy.
+     * @var string The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
      */
     public $Entity;
 
     /**
+     * @var string The template ID. You must specify either this field or "Entity".
+     */
+    public $TemplateId;
+
+    /**
      * @param string $ZoneId The site ID.
-     * @param string $Entity The subdomain name/layer-4 proxy.
+     * @param string $Entity The subdomain name/L4 proxy. You must specify either "Entity" or "TemplateId".
+     * @param string $TemplateId The template ID. You must specify either this field or "Entity".
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSecurityPolicyRequest extends AbstractModel
 
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

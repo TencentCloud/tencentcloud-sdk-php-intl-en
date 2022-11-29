@@ -27,9 +27,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set Limit on paginated queries. Default value: 100. Maximum value: 1000.
  * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
  * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
  */
 class DescribeHostsSettingRequest extends AbstractModel
 {
@@ -50,7 +50,7 @@ class DescribeHostsSettingRequest extends AbstractModel
 
     /**
      * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
      */
     public $Filters;
 
@@ -59,7 +59,7 @@ class DescribeHostsSettingRequest extends AbstractModel
      * @param integer $Offset Offset for paginated queries. Default value: 0. Minimum value: 0.
      * @param integer $Limit Limit on paginated queries. Default value: 100. Maximum value: 1000.
      * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No
+<li>`host`:<br>   Filter by <strong>domain name </strong><br>   Type: String<br>   Required: No</li>
      */
     function __construct()
     {

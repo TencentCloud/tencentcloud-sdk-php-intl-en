@@ -100,8 +100,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration item.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ClientIpCountry getClientIpCountry() Obtain 
- * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set 
+ * @method ClientIpCountry getClientIpCountry() Obtain Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DetailHost extends AbstractModel
 {
@@ -234,7 +236,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Ipv6;
 
     /**
-     * @var ClientIpCountry 
+     * @var ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ClientIpCountry;
 
@@ -279,7 +282,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Ipv6 $Ipv6 The IPv6 access configuration item.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ClientIpCountry $ClientIpCountry 
+     * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

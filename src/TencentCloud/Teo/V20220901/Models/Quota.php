@@ -26,16 +26,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDaily(integer $Daily) Set Daily submission quota limit.
  * @method integer getDailyAvailable() Obtain Remaining daily submission quota.
  * @method void setDailyAvailable(integer $DailyAvailable) Set Remaining daily submission quota.
- * @method string getType() Obtain Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
- * @method void setType(string $Type) Set Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+ * @method string getType() Obtain Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
+ * @method void setType(string $Type) Set Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
  */
 class Quota extends AbstractModel
 {
@@ -55,11 +57,12 @@ class Quota extends AbstractModel
     public $DailyAvailable;
 
     /**
-     * @var string Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * @var string Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
      */
     public $Type;
 
@@ -67,11 +70,12 @@ class Quota extends AbstractModel
      * @param integer $Batch 
      * @param integer $Daily Daily submission quota limit.
      * @param integer $DailyAvailable Remaining daily submission quota.
-     * @param string $Type Quota type. Values:
-<li>`purge_prefix`: Purge prefixes;</li>
-<li>`purge_url`: Purge URLs;</li>
-<li>`purge_host`: Purge hostnames;</li>
-<li>`purge_all`: Purge all caches.</li>
+     * @param string $Type Type of cache purging/pre-warming. Values:
+<li>`purge_prefix`: Purge by prefix</li>
+<li>`purge_url`: Purge by URL</li>
+<li>`purge_host`: Purge by hostname</li>
+<li>`purge_all`: Purge all caches</li>
+<li>`purge_cache_tag`: Purge by cache tag</li><li>`prefetch_url`: Pre-warm by URL</li>
      */
     function __construct()
     {

@@ -56,6 +56,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set Rule description.
  * @method string getRuleTypeName() Obtain The rule type.
  * @method void setRuleTypeName(string $RuleTypeName) Set The rule type.
+ * @method string getAttackContent() Obtain The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAttackContent(string $AttackContent) Set The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SecRuleRelatedInfo extends AbstractModel
 {
@@ -102,6 +106,12 @@ class SecRuleRelatedInfo extends AbstractModel
     public $RuleTypeName;
 
     /**
+     * @var string The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AttackContent;
+
+    /**
      * @param integer $RuleId The rule ID.
      * @param string $Action Action. Values:
 <li>`trans`: Allow;</li>
@@ -120,6 +130,8 @@ class SecRuleRelatedInfo extends AbstractModel
 <li>`normal`: Moderate.</li>
      * @param string $Description Rule description.
      * @param string $RuleTypeName The rule type.
+     * @param string $AttackContent The attack content.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -156,6 +168,10 @@ class SecRuleRelatedInfo extends AbstractModel
 
         if (array_key_exists("RuleTypeName",$param) and $param["RuleTypeName"] !== null) {
             $this->RuleTypeName = $param["RuleTypeName"];
+        }
+
+        if (array_key_exists("AttackContent",$param) and $param["AttackContent"] !== null) {
+            $this->AttackContent = $param["AttackContent"];
         }
     }
 }

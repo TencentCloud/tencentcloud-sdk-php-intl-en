@@ -48,10 +48,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupOriginGroupId(string $BackupOriginGroupId) Set The ID of the secondary origin group. If not specified, it indicates that secondary origins are not used.
  * @method string getUpdateTime() Obtain The update time.
  * @method void setUpdateTime(string $UpdateTime) Set The update time.
- * @method string getOriginType() Obtain 
- * @method void setOriginType(string $OriginType) Set 
- * @method array getAdvancedOriginGroups() Obtain 
- * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) Set 
+ * @method string getOriginType() Obtain The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+ * @method void setOriginType(string $OriginType) Set The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+ * @method array getAdvancedOriginGroups() Obtain Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) Set Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class LoadBalancing extends AbstractModel
 {
@@ -110,12 +116,15 @@ class LoadBalancing extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
      */
     public $OriginType;
 
     /**
-     * @var array 
+     * @var array Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $AdvancedOriginGroups;
 
@@ -134,8 +143,11 @@ class LoadBalancing extends AbstractModel
      * @param string $OriginGroupId The ID of the primary origin group.
      * @param string $BackupOriginGroupId The ID of the secondary origin group. If not specified, it indicates that secondary origins are not used.
      * @param string $UpdateTime The update time.
-     * @param string $OriginType 
-     * @param array $AdvancedOriginGroups 
+     * @param string $OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull</li>
+     * @param array $AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

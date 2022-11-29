@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getReason() Obtain Failure reason.
  * @method void setReason(string $Reason) Set Failure reason.
- * @method array getTargets() Obtain List of resources failed to be processed.
- * @method void setTargets(array $Targets) Set List of resources failed to be processed.
+ * @method array getTargets() Obtain List of resources failed to be processed. 
+ * @method void setTargets(array $Targets) Set List of resources failed to be processed. 
  */
 class FailReason extends AbstractModel
 {
@@ -33,13 +33,13 @@ class FailReason extends AbstractModel
     public $Reason;
 
     /**
-     * @var array List of resources failed to be processed.
+     * @var array List of resources failed to be processed. 
      */
     public $Targets;
 
     /**
      * @param string $Reason Failure reason.
-     * @param array $Targets List of resources failed to be processed.
+     * @param array $Targets List of resources failed to be processed. 
      */
     function __construct()
     {

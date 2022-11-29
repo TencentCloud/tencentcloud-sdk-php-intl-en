@@ -46,12 +46,12 @@ use TencentCloud\Common\AbstractModel;
 <li>`partial`: Access through a CNAME record.</li>
  * @method boolean getPaused() Obtain Whether the site is disabled.
  * @method void setPaused(boolean $Paused) Set Whether the site is disabled.
- * @method string getCnameSpeedUp() Obtain Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
- * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+ * @method string getCnameSpeedUp() Obtain Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
+ * @method void setCnameSpeedUp(string $CnameSpeedUp) Set Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
  * @method string getCnameStatus() Obtain CNAME record access status. Values:
 <li>`finished`: The site is verified.</li>
 <li>`pending`: The site is being verified.</li>
@@ -81,6 +81,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method array getVanityNameServersIps() Obtain The custom name server IP information.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVanityNameServersIps(array $VanityNameServersIps) Set The custom name server IP information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getActiveStatus() Obtain Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+ * @method void setActiveStatus(string $ActiveStatus) Set Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+ * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Zone extends AbstractModel
@@ -127,9 +139,9 @@ class Zone extends AbstractModel
     public $Paused;
 
     /**
-     * @var string Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+     * @var string Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
      */
     public $CnameSpeedUp;
 
@@ -181,6 +193,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VanityNameServersIps;
 
     /**
+     * @var string Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+     */
+    public $ActiveStatus;
+
+    /**
+     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $ZoneName The site name.
      * @param array $OriginalNameServers List of name servers used by the site
@@ -194,9 +220,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>
      * @param boolean $Paused Whether the site is disabled.
-     * @param string $CnameSpeedUp Whether CNAME flattening is enabled. Valid values:
-<li>`enabled`: Enabled.</li>
-<li>`disabled`: Disabled.</li>
+     * @param string $CnameSpeedUp Whether CNAME acceleration is enabled. Values:
+<li>`enabled`: Enabled</li>
+<li>`disabled`: Disabled</li>
      * @param string $CnameStatus CNAME record access status. Values:
 <li>`finished`: The site is verified.</li>
 <li>`pending`: The site is being verified.</li>
@@ -211,6 +237,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param VanityNameServers $VanityNameServers The custom name server information.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $VanityNameServersIps The custom name server IP information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ActiveStatus Status of the proxy. Values:
+<li>`active`: Enabled</li>
+<li>`inactive`: Not activated</li>
+<li>`paused`: Disabled</li>
+     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -304,6 +336,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->VanityNameServersIps, $obj);
             }
+        }
+
+        if (array_key_exists("ActiveStatus",$param) and $param["ActiveStatus"] !== null) {
+            $this->ActiveStatus = $param["ActiveStatus"];
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

@@ -27,7 +27,7 @@ use TencentCloud\Common\AbstractModel;
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMode(string $Mode) Set The mode. Values:
 <li>`sup_loose`: Super loose</li>
 <li>`loose`: Loose</li>
@@ -35,17 +35,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getID() Obtain The unique ID.
  * @method void setID(integer $ID) Set The unique ID.
- * @method string getAction() Obtain The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAction(string $Action) Set The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getPunishTime() Obtain The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPunishTime(integer $PunishTime) Set The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAction() Obtain The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAction(string $Action) Set The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getPunishTime() Obtain The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPunishTime(integer $PunishTime) Set The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method integer getThreshold() Obtain The request threshold. Value range: 0-4294967294.
  * @method void setThreshold(integer $Threshold) Set The request threshold. Value range: 0-4294967294.
  * @method integer getPeriod() Obtain The statistical period. Value range: 0-120 seconds.
@@ -61,7 +65,7 @@ class RateLimitTemplateDetail extends AbstractModel
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Mode;
 
@@ -71,14 +75,16 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ID;
 
     /**
-     * @var string The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var string The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Action;
 
     /**
-     * @var integer The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $PunishTime;
 
@@ -100,12 +106,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`normal`: Moderate</li>
 <li>`strict`: Strict</li>
 <li>`close`: Off</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $ID The unique ID.
-     * @param string $Action The action, which will be triggered when the specified threshold reaches.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $PunishTime The amount of time taken to perform the action. Value range: 0-172800 seconds.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Action The action. Values:
+<li>`alg`: JavaScript challenge</li>
+<li>`monitor`: Observe</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $PunishTime The blocking duration, in seconds. Value range: 0-172800.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $Threshold The request threshold. Value range: 0-4294967294.
      * @param integer $Period The statistical period. Value range: 0-120 seconds.
      */

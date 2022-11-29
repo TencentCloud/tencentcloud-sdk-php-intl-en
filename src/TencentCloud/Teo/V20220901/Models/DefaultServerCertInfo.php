@@ -55,19 +55,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setSubjectAltName(array $SubjectAltName) Set Domain names added to the SAN certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatus() Obtain Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setStatus(string $Status) Set Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getMessage() Obtain Failure description
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMessage(string $Message) Set Failure description
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSignAlgo() Obtain 
- * @method void setSignAlgo(string $SignAlgo) Set 
+ * @method string getSignAlgo() Obtain Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSignAlgo(string $SignAlgo) Set Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class DefaultServerCertInfo extends AbstractModel
 {
@@ -118,9 +122,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Status;
 
@@ -131,7 +136,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Message;
 
     /**
-     * @var string 
+     * @var string Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SignAlgo;
 
@@ -154,12 +160,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param array $SubjectAltName Domain names added to the SAN certificate.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Status Deployment status. Values:
-<li>`processing`: Deployment in progress;</li>
-<li>`deployed`: Deployed.</li>
-Note: This field may return null, indicating that no valid values can be obtained.
+<li>`processing`: Deployment in progress</li>
+<li>`deployed`: Deployed</li>
+<li>`failed`: Deployment failed</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Message Failure description
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SignAlgo 
+     * @param string $SignAlgo Certificate algorithm.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

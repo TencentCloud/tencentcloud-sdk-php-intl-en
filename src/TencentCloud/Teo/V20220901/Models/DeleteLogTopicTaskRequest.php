@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getTopicId() Obtain ID of the shipping task to be deleted.
  * @method void setTopicId(string $TopicId) Set ID of the shipping task to be deleted.
- * @method string getLogSetRegion() Obtain Region of the logset.
- * @method void setLogSetRegion(string $LogSetRegion) Set Region of the logset.
+ * @method string getLogSetRegion() Obtain Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
+ * @method void setLogSetRegion(string $LogSetRegion) Set Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
  */
 class DeleteLogTopicTaskRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class DeleteLogTopicTaskRequest extends AbstractModel
     public $TopicId;
 
     /**
-     * @var string Region of the logset.
+     * @var string Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
      */
     public $LogSetRegion;
 
     /**
      * @param string $TopicId ID of the shipping task to be deleted.
-     * @param string $LogSetRegion Region of the logset.
+     * @param string $LogSetRegion Region of the logset to be shipped. This field is only required when you configure CLS shipping tasks.
      */
     function __construct()
     {

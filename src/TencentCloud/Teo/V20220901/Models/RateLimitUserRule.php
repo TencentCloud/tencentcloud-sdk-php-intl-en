@@ -45,13 +45,11 @@ use TencentCloud\Common\AbstractModel;
 <li>`minutes`: Minute</li>
 <li>`hour`: Hour</li>
  * @method string getRuleStatus() Obtain The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
  * @method void setRuleStatus(string $RuleStatus) Set The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
  * @method array getAclConditions() Obtain The rule details.
  * @method void setAclConditions(array $AclConditions) Set The rule details.
  * @method integer getRulePriority() Obtain The rule weight. Value range: 0-100.
@@ -61,17 +59,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getFreqFields() Obtain The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setFreqFields(array $FreqFields) Set The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getUpdateTime() Obtain Update time
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getFreqScope() Obtain The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+ * @method void setFreqScope(array $FreqScope) Set The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
  */
 class RateLimitUserRule extends AbstractModel
 {
@@ -113,9 +117,8 @@ class RateLimitUserRule extends AbstractModel
 
     /**
      * @var string The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
      */
     public $RuleStatus;
 
@@ -137,7 +140,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var array The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      */
@@ -148,6 +150,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
+
+    /**
+     * @var array The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
+     */
+    public $FreqScope;
 
     /**
      * @param integer $Threshold The request threshold. Value range: 0-4294967294.
@@ -163,19 +173,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`minutes`: Minute</li>
 <li>`hour`: Hour</li>
      * @param string $RuleStatus The rule status. Values:
-<li>`on`: Enable</li>
-<li>`off`: Disable</li>
-<li>Default value: on</li>
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>Default value: on
      * @param array $AclConditions The rule details.
      * @param integer $RulePriority The rule weight. Value range: 0-100.
      * @param integer $RuleID The rule ID, which is only used as an output parameter.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $FreqFields The filter. Values:
-<li>`host`: Domain name</li>
 <li>`sip`: Client IP</li>
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $UpdateTime Update time
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $FreqScope The statistical dimension. Values:
+<li>`source_to_eo`: Responses from the origin server to EdgeOne</li>
+<li>`client_to_eo`: Requests from the client to EdgeOne</li>
+Note: A null value indicates responses from the origin server to EdgeOne are recorded.
      */
     function __construct()
     {
@@ -241,6 +253,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("FreqScope",$param) and $param["FreqScope"] !== null) {
+            $this->FreqScope = $param["FreqScope"];
         }
     }
 }

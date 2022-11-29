@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
  * @method VanityNameServers getVanityNameServers() Obtain The custom name servers. If this field is not specified, the default name servers will be used.
  * @method void setVanityNameServers(VanityNameServers $VanityNameServers) Set The custom name servers. If this field is not specified, the default name servers will be used.
+ * @method string getAliasZoneName() Obtain The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+ * @method void setAliasZoneName(string $AliasZoneName) Set The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
  */
 class ModifyZoneRequest extends AbstractModel
 {
@@ -51,11 +53,17 @@ class ModifyZoneRequest extends AbstractModel
     public $VanityNameServers;
 
     /**
+     * @var string The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
+     */
+    public $AliasZoneName;
+
+    /**
      * @param string $ZoneId The site ID.
      * @param string $Type The site access method. Values:
 <li>`full`: Access through a name server.</li>
 <li>`partial`: Access through a CNAME record.</li>The original configuration will apply if this field is not specified.
      * @param VanityNameServers $VanityNameServers The custom name servers. If this field is not specified, the default name servers will be used.
+     * @param string $AliasZoneName The site alias. It can be up to 20 characters consisting of digits, letters, hyphens (-) and underscores (_).
      */
     function __construct()
     {
@@ -81,6 +89,10 @@ class ModifyZoneRequest extends AbstractModel
         if (array_key_exists("VanityNameServers",$param) and $param["VanityNameServers"] !== null) {
             $this->VanityNameServers = new VanityNameServers();
             $this->VanityNameServers->deserialize($param["VanityNameServers"]);
+        }
+
+        if (array_key_exists("AliasZoneName",$param) and $param["AliasZoneName"] !== null) {
+            $this->AliasZoneName = $param["AliasZoneName"];
         }
     }
 }

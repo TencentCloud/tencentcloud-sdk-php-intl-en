@@ -18,28 +18,40 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Location information of the client IP carried in origin-pull. It is formatted as a two-letter ISO-3166-1 country/region code.
  *
- * @method string getSwitch() Obtain 
- * @method void setSwitch(string $Switch) Set 
- * @method string getHeaderName() Obtain 
- * @method void setHeaderName(string $HeaderName) Set 
+ * @method string getSwitch() Obtain Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+ * @method string getHeaderName() Obtain Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
+ * @method void setHeaderName(string $HeaderName) Set Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
  */
 class ClientIpCountry extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
     public $Switch;
 
     /**
-     * @var string 
+     * @var string Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
      */
     public $HeaderName;
 
     /**
-     * @param string $Switch 
-     * @param string $HeaderName 
+     * @param string $Switch Whether to enable configuration. Values:
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+     * @param string $HeaderName Header name of ClientIpCountry. This field is valid only when `Switch=on`.
+If it is left empty, the default value `EO-Client-IPCountry` will be used.
      */
     function __construct()
     {

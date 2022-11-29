@@ -38,10 +38,16 @@ use TencentCloud\Common\AbstractModel;
 Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
  * @method void setTTL(integer $TTL) Set When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
 Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
- * @method string getOriginType() Obtain 
- * @method void setOriginType(string $OriginType) Set 
- * @method array getAdvancedOriginGroups() Obtain 
- * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) Set 
+ * @method string getOriginType() Obtain The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+ * @method void setOriginType(string $OriginType) Set The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+ * @method array getAdvancedOriginGroups() Obtain Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
+ * @method void setAdvancedOriginGroups(array $AdvancedOriginGroups) Set Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
  */
 class ModifyLoadBalancingRequest extends AbstractModel
 {
@@ -79,12 +85,15 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
     public $TTL;
 
     /**
-     * @var string 
+     * @var string The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
      */
     public $OriginType;
 
     /**
-     * @var array 
+     * @var array Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
      */
     public $AdvancedOriginGroups;
 
@@ -98,8 +107,11 @@ Value range: 60-86400 (in seconds). If it's not specified, the default value 600
      * @param string $BackupOriginGroupId The ID of the secondary origin group (only available when `Type=proxied`). If not specified, it indicates that secondary origins are not used.
      * @param integer $TTL When `Type=dns_only`, it indicates the amount of time that DNS records remain in the cache of a DNS server.
 Value range: 60-86400 (in seconds). If it's not specified, the default value 600 will be used.
-     * @param string $OriginType 
-     * @param array $AdvancedOriginGroups 
+     * @param string $OriginType The origin-pull type. Values:
+<li>`normal`: Primary/Secondary origin-pull</li>
+<li>`advanced`: Advanced origin-pull (only used when `Type=proxied`)</li>If it is left empty, primary/secondary origin-pull is applied.
+     * @param array $AdvancedOriginGroups Advanced origin-pull configuration. This field is valid when `OriginType=advanced`.
+If it is left empty, this configuration is not used.
      */
     function __construct()
     {

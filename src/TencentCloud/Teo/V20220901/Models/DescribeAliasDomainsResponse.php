@@ -18,32 +18,26 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBillingData response structure.
+ * DescribeAliasDomains response structure.
  *
- * @method array getData() Obtain Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setData(array $Data) Set Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInterval() Obtain Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInterval(string $Interval) Set Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total eligible alias domain names.
+ * @method void setTotalCount(integer $TotalCount) Set Total eligible alias domain names.
+ * @method array getAliasDomains() Obtain Information of the eligible alias domain names.
+ * @method void setAliasDomains(array $AliasDomains) Set Information of the eligible alias domain names.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeBillingDataResponse extends AbstractModel
+class DescribeAliasDomainsResponse extends AbstractModel
 {
     /**
-     * @var array Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var integer Total eligible alias domain names.
      */
-    public $Data;
+    public $TotalCount;
 
     /**
-     * @var string Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Information of the eligible alias domain names.
      */
-    public $Interval;
+    public $AliasDomains;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -51,10 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Data Data of the sampling point
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Interval Time granularity of sampling
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total eligible alias domain names.
+     * @param array $AliasDomains Information of the eligible alias domain names.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,17 +62,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new DnsData();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Interval",$param) and $param["Interval"] !== null) {
-            $this->Interval = $param["Interval"];
+        if (array_key_exists("AliasDomains",$param) and $param["AliasDomains"] !== null) {
+            $this->AliasDomains = [];
+            foreach ($param["AliasDomains"] as $key => $value){
+                $obj = new AliasDomain();
+                $obj->deserialize($value);
+                array_push($this->AliasDomains, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

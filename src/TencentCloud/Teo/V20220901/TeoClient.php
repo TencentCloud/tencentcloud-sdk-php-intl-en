@@ -23,7 +23,9 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Teo\V20220901\Models as Models;
 
 /**
+ * @method Models\BindZoneToPlanResponse BindZoneToPlan(Models\BindZoneToPlanRequest $req) This API is used to bind a site to a plan.
  * @method Models\CheckCertificateResponse CheckCertificate(Models\CheckCertificateRequest $req) This API is used to verify a certificate.
+ * @method Models\CreateAliasDomainResponse CreateAliasDomain(Models\CreateAliasDomainRequest $req) This API is used to create an alias domain name.
  * @method Models\CreateApplicationProxyResponse CreateApplicationProxy(Models\CreateApplicationProxyRequest $req) This API is used to create an application proxy.
  * @method Models\CreateApplicationProxyRuleResponse CreateApplicationProxyRule(Models\CreateApplicationProxyRuleRequest $req) This API is used to create an application proxy rule.
  * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) Creates a credential for COS origin-pull.
@@ -42,6 +44,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\CreateSecurityDropPageResponse CreateSecurityDropPage(Models\CreateSecurityDropPageRequest $req) This API is used to create a custom block page.
  * @method Models\CreateSpeedTestingResponse CreateSpeedTesting(Models\CreateSpeedTestingRequest $req) This API is used to create a site testing task for a specified domain name.
  * @method Models\CreateZoneResponse CreateZone(Models\CreateZoneRequest $req) This API is used to access a new site.
+ * @method Models\DeleteAliasDomainResponse DeleteAliasDomain(Models\DeleteAliasDomainRequest $req) This API is used to delete an alias domain name.
  * @method Models\DeleteApplicationProxyResponse DeleteApplicationProxy(Models\DeleteApplicationProxyRequest $req) This API is used to delete an application proxy.
  * @method Models\DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(Models\DeleteApplicationProxyRuleRequest $req) This API is used to delete an application proxy rule.
  * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) This API is used to delete DNS records in batches.
@@ -51,9 +54,9 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DeleteRulesResponse DeleteRules(Models\DeleteRulesRequest $req) This API is used to batch delete rules from the rule engine.
  * @method Models\DeleteZoneResponse DeleteZone(Models\DeleteZoneRequest $req) This API is used to delete a site.
  * @method Models\DescribeAddableEntityListResponse DescribeAddableEntityList(Models\DescribeAddableEntityListRequest $req) This API is used to query available shipping entities.
+ * @method Models\DescribeAliasDomainsResponse DescribeAliasDomains(Models\DescribeAliasDomainsRequest $req) This API is used to query the information of alias domain names.
  * @method Models\DescribeApplicationProxiesResponse DescribeApplicationProxies(Models\DescribeApplicationProxiesRequest $req) This API is used to query the list of application proxies.
  * @method Models\DescribeAvailablePlansResponse DescribeAvailablePlans(Models\DescribeAvailablePlansRequest $req) This API is used to query plan options available for purchase.
- * @method Models\DescribeBillingDataResponse DescribeBillingData(Models\DescribeBillingDataRequest $req) This API is used to get the billing data.
  * @method Models\DescribeBotClientIpListResponse DescribeBotClientIpList(Models\DescribeBotClientIpListRequest $req) This API is used to query the list of bot attackers.
  * @method Models\DescribeBotDataResponse DescribeBotData(Models\DescribeBotDataRequest $req) This API is used to query the bot attack data recorded over time.
  * @method Models\DescribeBotHitRuleDetailResponse DescribeBotHitRuleDetail(Models\DescribeBotHitRuleDetailRequest $req) This API is used to query the details of a hit bot security rule.
@@ -88,7 +91,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeRulesResponse DescribeRules(Models\DescribeRulesRequest $req) This API is used to query the rules in the rule engine.
  * @method Models\DescribeRulesSettingResponse DescribeRulesSetting(Models\DescribeRulesSettingRequest $req) This API is used to return the list of the settings of the rule engine that can be used for request match and their detailed recommended configuration information.
  * @method Models\DescribeSecurityGroupManagedRulesResponse DescribeSecurityGroupManagedRules(Models\DescribeSecurityGroupManagedRulesRequest $req) This API is used to obtain a managed rule group.
- * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) This API is used to query the security protection configuration.
+ * @method Models\DescribeSecurityPolicyResponse DescribeSecurityPolicy(Models\DescribeSecurityPolicyRequest $req) This API is used to query the security protection configuration. You must either specify "ZoneId+Entity" or "TemplateId".
  * @method Models\DescribeSecurityPolicyListResponse DescribeSecurityPolicyList(Models\DescribeSecurityPolicyListRequest $req) This API is used to query all protected subdomain names.
  * @method Models\DescribeSecurityPolicyRegionsResponse DescribeSecurityPolicyRegions(Models\DescribeSecurityPolicyRegionsRequest $req) This API is used to query information of all regions.
  * @method Models\DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRules(Models\DescribeSecurityPortraitRulesRequest $req) This API is used to query user profiling rules.
@@ -118,6 +121,8 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\IdentifyZoneResponse IdentifyZone(Models\IdentifyZoneRequest $req) This API is used to verify ownership of the site.
  * @method Models\ModifyAlarmConfigResponse ModifyAlarmConfig(Models\ModifyAlarmConfigRequest $req) This API is used to modify alarm configuration.
  * @method Models\ModifyAlarmDefaultThresholdResponse ModifyAlarmDefaultThreshold(Models\ModifyAlarmDefaultThresholdRequest $req) This API is used to modify the default alarm threshold.
+ * @method Models\ModifyAliasDomainResponse ModifyAliasDomain(Models\ModifyAliasDomainRequest $req) This API is used to modify an alias domain name.
+ * @method Models\ModifyAliasDomainStatusResponse ModifyAliasDomainStatus(Models\ModifyAliasDomainStatusRequest $req) This API is used to modify the status of an alias domain name.
  * @method Models\ModifyApplicationProxyResponse ModifyApplicationProxy(Models\ModifyApplicationProxyRequest $req) This API is used to modify an application proxy.
  * @method Models\ModifyApplicationProxyRuleResponse ModifyApplicationProxyRule(Models\ModifyApplicationProxyRuleRequest $req) This API is used to modify an application proxy rule.
  * @method Models\ModifyApplicationProxyRuleStatusResponse ModifyApplicationProxyRuleStatus(Models\ModifyApplicationProxyRuleStatusRequest $req) This API is used to modify the status of an application proxy rule.
@@ -140,6 +145,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\ModifyZoneCnameSpeedUpResponse ModifyZoneCnameSpeedUp(Models\ModifyZoneCnameSpeedUpRequest $req) This API is used to modify the CNAME acceleration status.
  * @method Models\ModifyZoneSettingResponse ModifyZoneSetting(Models\ModifyZoneSettingRequest $req) This API is used to modify the site configuration.
  * @method Models\ModifyZoneStatusResponse ModifyZoneStatus(Models\ModifyZoneStatusRequest $req) This API is used to change the site status.
+ * @method Models\ReclaimAliasDomainResponse ReclaimAliasDomain(Models\ReclaimAliasDomainRequest $req) To reclaim a site and its associated alias domain names, specify the "ZoneId" field; to reclaim an alias domain name that is already added, specify the "ZoneName" filed.
  * @method Models\ReclaimZoneResponse ReclaimZone(Models\ReclaimZoneRequest $req) This API is used to reclaim a site from other users after its ownership is verified.
  * @method Models\SwitchLogTopicTaskResponse SwitchLogTopicTask(Models\SwitchLogTopicTaskRequest $req) This API is used to enable or disable a shipping task.
  */

@@ -32,12 +32,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginType(string $OriginType) Set The origin type. Values:
 <li>`custom`: Specified origins</li>
 <li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
- * @method array getPort() Obtain The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
- * @method void setPort(array $Port) Set The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+ * @method array getPort() Obtain The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
+ * @method void setPort(array $Port) Set The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
  * @method string getProto() Obtain The protocol. Values:
 <li>`TCP`: TCP protocol</li>
 <li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
@@ -45,18 +45,14 @@ Port range, such as 81-90. The original configuration will apply if this field i
 <li>`TCP`: TCP protocol</li>
 <li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
  * @method array getOriginValue() Obtain Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
  * @method void setOriginValue(array $OriginValue) Set Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
  * @method string getForwardClientIp() Obtain Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
@@ -70,10 +66,16 @@ The original configuration will apply if this field is not specified.
 <li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
  * @method boolean getSessionPersist() Obtain Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
  * @method void setSessionPersist(boolean $SessionPersist) Set Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+ * @method string getOriginPort() Obtain The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+ * @method void setOriginPort(string $OriginPort) Set The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
  */
 class ModifyApplicationProxyRuleRequest extends AbstractModel
 {
@@ -100,9 +102,9 @@ class ModifyApplicationProxyRuleRequest extends AbstractModel
     public $OriginType;
 
     /**
-     * @var array The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+     * @var array The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      */
     public $Port;
 
@@ -115,11 +117,9 @@ Port range, such as 81-90. The original configuration will apply if this field i
 
     /**
      * @var array Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
      */
     public $OriginValue;
@@ -136,9 +136,16 @@ The original configuration will apply if this field is not specified.
     /**
      * @var boolean Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
      */
     public $SessionPersist;
+
+    /**
+     * @var string The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
+     */
+    public $OriginPort;
 
     /**
      * @param string $ZoneId The site ID.
@@ -147,18 +154,16 @@ The original configuration will apply if this field is not specified.
      * @param string $OriginType The origin type. Values:
 <li>`custom`: Specified origins</li>
 <li>`origins`: Origin group</li></li>The original configuration will apply if this field is not specified.
-     * @param array $Port The port, which can be specified in the following formats:
-Single port, such as 80.
-Port range, such as 81-90. The original configuration will apply if this field is not specified.
+     * @param array $Port The access port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-90</li>
      * @param string $Proto The protocol. Values:
 <li>`TCP`: TCP protocol</li>
 <li>`UDP`: UDP protocol</li>The original configuration will apply if this field is not specified.
      * @param array $OriginValue Origin server information:
-When `OriginType=custom`, it indicates one or more origin servers. Example:
-OriginValue=["8.8.8.8:80","9.9.9.9:80"]
-OriginValue=["test.com:80"];
-When `OriginType=origins`, it indicates an origin group ID. Example:
-OriginValue=["origin-537f5b41-162a-11ed-abaa-525400c5da15"]
+<li>When `OriginType=custom`, it indicates one or more origin servers, such as ["8.8.8.8","9.9.9.9"] or ["test.com"].</li>
+<li>When `OriginType=origins`, it indicates an origin group ID, such as ["origin-537f5b41-162a-11ed-abaa-525400c5da15"].</li>
+
 The original configuration will apply if this field is not specified.
      * @param string $ForwardClientIp Passes the client IP. Values:
 <li>`TOA`: Pass the client IP via TOA (available only when `Proto=TCP`).</li>
@@ -167,7 +172,10 @@ The original configuration will apply if this field is not specified.
 <li>`OFF`: Not pass the client IP.</li>If not specified, this field uses the default value OFF.
      * @param boolean $SessionPersist Whether to enable session persistence. Values:
 <li>`true`: Enable</li>
-<li>`false`: Disable</li>The original configuration will apply if this field is not specified.
+<li>`false`: Disable</li>If it is left empty, the default value `false` is used.
+     * @param string $OriginPort The origin port, which can be:
+<li>A single port, such as 80</li>
+<li>A port range, such as 81-82</li>
      */
     function __construct()
     {
@@ -216,6 +224,10 @@ The original configuration will apply if this field is not specified.
 
         if (array_key_exists("SessionPersist",$param) and $param["SessionPersist"] !== null) {
             $this->SessionPersist = $param["SessionPersist"];
+        }
+
+        if (array_key_exists("OriginPort",$param) and $param["OriginPort"] !== null) {
+            $this->OriginPort = $param["OriginPort"];
         }
     }
 }

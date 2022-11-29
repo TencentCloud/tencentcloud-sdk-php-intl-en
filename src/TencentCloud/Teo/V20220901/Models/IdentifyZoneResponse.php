@@ -20,22 +20,22 @@ use TencentCloud\Common\AbstractModel;
 /**
  * IdentifyZone response structure.
  *
- * @method AscriptionInfo getAscription() Obtain The site ownership information.
- * @method void setAscription(AscriptionInfo $Ascription) Set The site ownership information.
- * @method FileAscriptionInfo getFileAscription() Obtain 
- * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set 
+ * @method AscriptionInfo getAscription() Obtain Details of the DNS record.
+ * @method void setAscription(AscriptionInfo $Ascription) Set Details of the DNS record.
+ * @method FileAscriptionInfo getFileAscription() Obtain Details of the verification file.
+ * @method void setFileAscription(FileAscriptionInfo $FileAscription) Set Details of the verification file.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class IdentifyZoneResponse extends AbstractModel
 {
     /**
-     * @var AscriptionInfo The site ownership information.
+     * @var AscriptionInfo Details of the DNS record.
      */
     public $Ascription;
 
     /**
-     * @var FileAscriptionInfo 
+     * @var FileAscriptionInfo Details of the verification file.
      */
     public $FileAscription;
 
@@ -45,8 +45,8 @@ class IdentifyZoneResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param AscriptionInfo $Ascription The site ownership information.
-     * @param FileAscriptionInfo $FileAscription 
+     * @param AscriptionInfo $Ascription Details of the DNS record.
+     * @param FileAscriptionInfo $FileAscription Details of the verification file.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

@@ -23,23 +23,23 @@ use TencentCloud\Common\AbstractModel;
  * @method string getKey() Obtain The key of QueryCondition.
  * @method void setKey(string $Key) Set The key of QueryCondition.
  * @method string getOperator() Obtain The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
  * @method void setOperator(string $Operator) Set The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
  * @method array getValue() Obtain The value of QueryCondition.
  * @method void setValue(array $Value) Set The value of QueryCondition.
  */
@@ -52,14 +52,14 @@ class QueryCondition extends AbstractModel
 
     /**
      * @var string The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
      */
     public $Operator;
 
@@ -71,14 +71,14 @@ class QueryCondition extends AbstractModel
     /**
      * @param string $Key The key of QueryCondition.
      * @param string $Operator The conditional operator. Values:
-<li>`equals`: Equal to;</li>
-<li>`notEquals`: Not equal to;</li>
-<li>`include`: Contain;</li>
-<li>`notInclude`: Not contain;</li>
-<li>`startWith`: Start with;</li>
-<li>`notStartWith`: Not start with;</li>
-<li>`endWith`: End with;</li>
-<li>`notEndWith`: Not end with.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`include`: Contains</li>
+<li>`notInclude`: Does not contain</li>
+<li>`startWith`: Starts with</li>
+<li>`notStartWith`: Does not start with</li>
+<li>`endWith`: Ends with</li>
+<li>`notEndWith`: Does not end with</li>
      * @param array $Value The value of QueryCondition.
      */
     function __construct()

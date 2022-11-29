@@ -25,9 +25,29 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
  * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
  * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+ * @method string getOrder() Obtain The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+ * @method void setOrder(string $Order) Set The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+ * @method string getDirection() Obtain The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+ * @method void setDirection(string $Direction) Set The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
  */
 class DescribeZonesRequest extends AbstractModel
 {
@@ -43,15 +63,43 @@ class DescribeZonesRequest extends AbstractModel
 
     /**
      * @var array Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
      */
     public $Filters;
+
+    /**
+     * @var string The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+     */
+    public $Order;
+
+    /**
+     * @var string The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
+     */
+    public $Direction;
 
     /**
      * @param integer $Offset The page offset. Default value: 0
      * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
      * @param array $Filters Filter criteria. Each filter criteria can have up to 20 entries.
-<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No<li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No<li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No<li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No<li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No<li>`Fuzzy`:<br>   Filter by <strong>values in fuzzy query</strong> (only `zone-name` allowed). Values limit: 1<br>   Type: Boolean<br>   Required: No<br>   Default value: false
+<li>`zone-name`:<br>   Filter by <strong>site name</strong><br>   Type: String<br>   Required: No</li><li>`zone-id`:<br>   Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li><li>`status`:<br>   Filter by <strong>site status</strong><br>   Type: String<br>   Required: No</li><li>`tag-key`:<br>   Filter by <strong>tag key</strong><br>   Type: String<br>   Required: No</li><li>`tag-value`:<br>   Filter by <strong>tag value</strong><br>   Type: String<br>   Required: No</li>Only `zone-name` supports fuzzy query.
+     * @param string $Order The sorting field. Values:
+<li>`type`: Access mode</li>
+<li>`area`: Acceleration region</li>
+<li>`create-time`: Creation date</li>
+<li>`zone-name`: Site name</li>
+<li>`use-time`: Last used date</li>
+<li>`active-status`: Activation status</li>If it is left empty, the default value `create-time` is used.
+     * @param string $Direction The sorting direction. Values:
+<li>`asc`: From smallest to largest</li>
+<li>`desc`: From largest to smallest</li>If it is left empty, the default value `desc` is used.
      */
     function __construct()
     {
@@ -81,6 +129,14 @@ class DescribeZonesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Filters, $obj);
             }
+        }
+
+        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
+            $this->Order = $param["Order"];
+        }
+
+        if (array_key_exists("Direction",$param) and $param["Direction"] !== null) {
+            $this->Direction = $param["Direction"];
         }
     }
 }

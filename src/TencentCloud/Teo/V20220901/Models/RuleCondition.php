@@ -21,89 +21,145 @@ use TencentCloud\Common\AbstractModel;
  * Rule engine condition parameters
  *
  * @method string getOperator() Obtain Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
  * @method void setOperator(string $Operator) Set Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
  * @method string getTarget() Obtain Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
  * @method void setTarget(string $Target) Set Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
- * @method array getValues() Obtain Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
- * @method void setValues(array $Values) Set Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
+ * @method array getValues() Obtain The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+ * @method void setValues(array $Values) Set The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+ * @method boolean getIgnoreCase() Obtain Whether the parameter value is case insensitive. Default value: false.
+ * @method void setIgnoreCase(boolean $IgnoreCase) Set Whether the parameter value is case insensitive. Default value: false.
+ * @method string getName() Obtain The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+ * @method void setName(string $Name) Set The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+ * @method boolean getIgnoreNameCase() Obtain 
+ * @method void setIgnoreNameCase(boolean $IgnoreNameCase) Set 
  */
 class RuleCondition extends AbstractModel
 {
     /**
      * @var string Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
      */
     public $Operator;
 
     /**
      * @var string Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
      */
     public $Target;
 
     /**
-     * @var array Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+     * @var array The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
      */
     public $Values;
 
     /**
+     * @var boolean Whether the parameter value is case insensitive. Default value: false.
+     */
+    public $IgnoreCase;
+
+    /**
+     * @var string The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     */
+    public $Name;
+
+    /**
+     * @var boolean 
+     */
+    public $IgnoreNameCase;
+
+    /**
      * @param string $Operator Operator. Valid values:
-<li>equal: Equal to.</li>
-<li>notequal: Not equal to.</li>
+<li>`equals`: Equals</li>
+<li>`notEquals`: Does not equal</li>
+<li>`exist`: Exists</li>
+<li>`notexist`: Does not exist</li>
      * @param string $Target Match type. Valid values:
-<li>`host`: All</li>
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
-<li>`host`: HOST: .</li>
-<li>`full_url`: The full URL of the current site. It must contain the HTTP protocol, host, and path.</li>
-<li>`url`: The URL path of the current site.</li>
-     * @param array $Values Parameter values of the match type. Each match type has the following valid values:
-<li>`Target=extension`:  The extension of the file, such as `jpg` and `txt`.</li>
-<li>`Target=filename`: The file name without the extension.</li>
-<li>`Target=host`: Values can be `all` 
-or a host, such as `www.maxx55.com`.</li>
-<li>`Target=url`: A URL request path under the current site, such as `/example`.</li>
-<li>`Target=full_url`: A complete URL request under the current site. It must contain the protocol, host, and path, such as `https://www.maxx55.cn/example`.</li>
+<li>`host`: Host</li>
+<li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
+<li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
+<li>`query_string`: Query string in the URL</li>
+<li>`request_header`: HTTP request header</li>
+     * @param array $Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
+<li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
+<li>When `Target=filename`, enter the file name, such as "foo" in "foo.jpg".</li>
+<li>When `Target=all`, it indicates any site request.</li>
+<li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
+<li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
+<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
+<li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
+<li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @param boolean $IgnoreCase Whether the parameter value is case insensitive. Default value: false.
+     * @param string $Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
+<li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
+<li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
+     * @param boolean $IgnoreNameCase 
      */
     function __construct()
     {
@@ -128,6 +184,18 @@ or a host, such as `www.maxx55.com`.</li>
 
         if (array_key_exists("Values",$param) and $param["Values"] !== null) {
             $this->Values = $param["Values"];
+        }
+
+        if (array_key_exists("IgnoreCase",$param) and $param["IgnoreCase"] !== null) {
+            $this->IgnoreCase = $param["IgnoreCase"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("IgnoreNameCase",$param) and $param["IgnoreNameCase"] !== null) {
+            $this->IgnoreNameCase = $param["IgnoreNameCase"];
         }
     }
 }

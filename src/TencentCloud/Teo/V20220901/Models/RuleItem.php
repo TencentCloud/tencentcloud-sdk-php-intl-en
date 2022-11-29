@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRules(array $Rules) Set The rule content.
  * @method integer getRulePriority() Obtain The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
  * @method void setRulePriority(integer $RulePriority) Set The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+ * @method array getTags() Obtain Tag of the rule.
+ * @method void setTags(array $Tags) Set Tag of the rule.
  */
 class RuleItem extends AbstractModel
 {
@@ -65,6 +67,11 @@ class RuleItem extends AbstractModel
     public $RulePriority;
 
     /**
+     * @var array Tag of the rule.
+     */
+    public $Tags;
+
+    /**
      * @param string $RuleId The rule ID.
      * @param string $RuleName The rule name. It is a string that can contain 1–255 characters.
      * @param string $Status Rule status. Values:
@@ -72,6 +79,7 @@ class RuleItem extends AbstractModel
 <li>`disable`: Disabled</li>
      * @param array $Rules The rule content.
      * @param integer $RulePriority The rule priority. The greater the value, the higher the priority. The minimum value is `1`.
+     * @param array $Tags Tag of the rule.
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class RuleItem extends AbstractModel
 
         if (array_key_exists("RulePriority",$param) and $param["RulePriority"] !== null) {
             $this->RulePriority = $param["RulePriority"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }

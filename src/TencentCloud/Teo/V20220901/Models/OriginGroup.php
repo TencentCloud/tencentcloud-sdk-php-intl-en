@@ -48,8 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOriginRecords(array $OriginRecords) Set The origin record information.
  * @method string getUpdateTime() Obtain The update time of the origin group.
  * @method void setUpdateTime(string $UpdateTime) Set The update time of the origin group.
- * @method string getHostHeader() Obtain 
- * @method void setHostHeader(string $HostHeader) Set 
+ * @method string getHostHeader() Obtain The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setHostHeader(string $HostHeader) Set The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class OriginGroup extends AbstractModel
 {
@@ -100,7 +102,8 @@ class OriginGroup extends AbstractModel
     public $UpdateTime;
 
     /**
-     * @var string 
+     * @var string The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $HostHeader;
 
@@ -119,7 +122,8 @@ class OriginGroup extends AbstractModel
 <li>`proto`: Configure by HTTP protocol.</li>When `OriginType=third_party/cos`, leave this field empty.
      * @param array $OriginRecords The origin record information.
      * @param string $UpdateTime The update time of the origin group.
-     * @param string $HostHeader 
+     * @param string $HostHeader The origin domain when `OriginType=self`.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

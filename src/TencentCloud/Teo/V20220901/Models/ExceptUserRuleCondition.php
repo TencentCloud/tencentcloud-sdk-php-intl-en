@@ -32,7 +32,6 @@ use TencentCloud\Common\AbstractModel;
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMatchFrom(string $MatchFrom) Set The field to match. Values:
 <li>`host`: Request domain name</li>
 <li>`sip`: Client IP</li>
@@ -45,9 +44,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getMatchParam() Obtain The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
- * @method void setMatchParam(string $MatchParam) Set The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+ * @method string getMatchParam() Obtain The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
+ * @method void setMatchParam(string $MatchParam) Set The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
  * @method string getOperator() Obtain The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -65,7 +63,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOperator(string $Operator) Set The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -83,11 +80,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getMatchContent() Obtain The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setMatchContent(string $MatchContent) Set The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ExceptUserRuleCondition extends AbstractModel
 {
@@ -104,12 +98,11 @@ class ExceptUserRuleCondition extends AbstractModel
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MatchFrom;
 
     /**
-     * @var string The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * @var string The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
      */
     public $MatchParam;
 
@@ -131,13 +124,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Operator;
 
     /**
      * @var string The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MatchContent;
 
@@ -154,8 +145,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`method`: Request method</li>
 <li>`header`: Request header</li>
 <li>`sip_proto`: Network layer protocol</li>
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $MatchParam The parameter of the field. When `MatchFrom = header`, the key contained in the header can be passed.
+     * @param string $MatchParam The parameter of the field. Only when `MatchFrom = header`, the key contained in the header can be passed.
      * @param string $Operator The logical operator. Values:
 <li>`equal`: String equals</li>
 <li>`not_equal`: Value not equals</li>
@@ -173,9 +163,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>`match_prefix`: Prefix matches</li>
 <li>`match_suffix`: Suffix matches</li>
 <li>`wildcard`: Wildcard</li>
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $MatchContent The value of the parameter.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

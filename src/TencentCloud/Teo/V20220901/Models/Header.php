@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * HTTP header, used as input for the CreatePrefetchTask API
  *
- * @method string getName() Obtain HTTP header name
- * @method void setName(string $Name) Set HTTP header name
+ * @method string getName() Obtain HTTP header name.
+ * @method void setName(string $Name) Set HTTP header name.
  * @method string getValue() Obtain HTTP header value
  * @method void setValue(string $Value) Set HTTP header value
  */
 class Header extends AbstractModel
 {
     /**
-     * @var string HTTP header name
+     * @var string HTTP header name.
      */
     public $Name;
 
@@ -38,7 +38,7 @@ class Header extends AbstractModel
     public $Value;
 
     /**
-     * @param string $Name HTTP header name
+     * @param string $Name HTTP header name.
      * @param string $Value HTTP header value
      */
     function __construct()

@@ -40,6 +40,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRuleID(integer $RuleID) Set The rule ID, which is only used as an output parameter.
  * @method string getUpdateTime() Obtain The update time, which is only used as an output parameter.
  * @method void setUpdateTime(string $UpdateTime) Set The update time, which is only used as an output parameter.
+ * @method string getStatus() Obtain The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(string $Status) Set The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IpTableRule extends AbstractModel
 {
@@ -74,6 +82,14 @@ class IpTableRule extends AbstractModel
     public $UpdateTime;
 
     /**
+     * @var string The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Status;
+
+    /**
      * @param string $Action The action. Values:
 <li>`drop`: Block</li>
 <li>`trans`: Allow</li>
@@ -84,6 +100,10 @@ class IpTableRule extends AbstractModel
      * @param string $MatchContent The matching content.
      * @param integer $RuleID The rule ID, which is only used as an output parameter.
      * @param string $UpdateTime The update time, which is only used as an output parameter.
+     * @param string $Status The rule status. A null value indicates that the rule is enabled. Values:
+<li>`on`: Enabled</li>
+<li>`off`: Disabled</li>
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -116,6 +136,10 @@ class IpTableRule extends AbstractModel
 
         if (array_key_exists("UpdateTime",$param) and $param["UpdateTime"] !== null) {
             $this->UpdateTime = $param["UpdateTime"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
         }
     }
 }

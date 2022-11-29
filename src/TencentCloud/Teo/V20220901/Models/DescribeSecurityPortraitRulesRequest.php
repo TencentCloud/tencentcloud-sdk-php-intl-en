@@ -20,26 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityPortraitRules request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain Subdomain name/Application name
- * @method void setEntity(string $Entity) Set Subdomain name/Application name
+ * @method string getZoneId() Obtain The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setZoneId(string $ZoneId) Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getTemplateId() Obtain The template ID. You must specify either this field or "ZoneId+Entity". 
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or "ZoneId+Entity". 
  */
 class DescribeSecurityPortraitRulesRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $ZoneId;
 
     /**
-     * @var string Subdomain name/Application name
+     * @var string The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $Entity;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Entity Subdomain name/Application name
+     * @var string The template ID. You must specify either this field or "ZoneId+Entity". 
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $TemplateId The template ID. You must specify either this field or "ZoneId+Entity". 
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DescribeSecurityPortraitRulesRequest extends AbstractModel
 
         if (array_key_exists("Entity",$param) and $param["Entity"] !== null) {
             $this->Entity = $param["Entity"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

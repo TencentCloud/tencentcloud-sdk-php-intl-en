@@ -48,6 +48,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDescription(string $Description) Set The rule description.
  * @method string getDomain() Obtain The subdomain name.
  * @method void setDomain(string $Domain) Set The subdomain name.
+ * @method string getBotLabel() Obtain The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+ * @method void setBotLabel(string $BotLabel) Set The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
  */
 class SecHitRuleInfo extends AbstractModel
 {
@@ -94,6 +106,16 @@ class SecHitRuleInfo extends AbstractModel
     public $Domain;
 
     /**
+     * @var string The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
+     */
+    public $BotLabel;
+
+    /**
      * @param integer $RuleId The rule ID.
      * @param string $RuleTypeName The rule type.
      * @param string $Action Action. Values:
@@ -108,6 +130,12 @@ class SecHitRuleInfo extends AbstractModel
      * @param integer $RequestNum The number of requests.
      * @param string $Description The rule description.
      * @param string $Domain The subdomain name.
+     * @param string $BotLabel The bot tag. Values:
+<li>`evil_bot`: Malicious bot</li>
+<li>`suspect_bot`: Suspected bot</li>
+<li>`good_bot`: Good bot</li>
+<li>`normal`: Normal request</li>
+<li>`none`: Uncategorized</li>
      */
     function __construct()
     {
@@ -148,6 +176,10 @@ class SecHitRuleInfo extends AbstractModel
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {
             $this->Domain = $param["Domain"];
+        }
+
+        if (array_key_exists("BotLabel",$param) and $param["BotLabel"] !== null) {
+            $this->BotLabel = $param["BotLabel"];
         }
     }
 }

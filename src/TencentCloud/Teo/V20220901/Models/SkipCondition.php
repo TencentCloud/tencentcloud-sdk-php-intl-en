@@ -18,60 +18,136 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Exception rule conditions, used to filter requests by specific fields
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method string getSelector() Obtain 
- * @method void setSelector(string $Selector) Set 
- * @method string getMatchFromType() Obtain 
- * @method void setMatchFromType(string $MatchFromType) Set 
- * @method array getMatchFrom() Obtain 
- * @method void setMatchFrom(array $MatchFrom) Set 
- * @method string getMatchContentType() Obtain 
- * @method void setMatchContentType(string $MatchContentType) Set 
- * @method array getMatchContent() Obtain 
- * @method void setMatchContent(array $MatchContent) Set 
+ * @method string getType() Obtain The field type. Values:
+<li>`header_fields`: HTTP request header</li>
+<li>`cookie`: HTTP request cookie</li>
+<li>`query_string`: Query string in the HTTP request URL</li>
+<li>`uri`: HTTP request URI</li>
+<li>`body_raw`: HTTP request body</li>
+<li>`body_json`: JSON HTTP request body</li>
+ * @method void setType(string $Type) Set The field type. Values:
+<li>`header_fields`: HTTP request header</li>
+<li>`cookie`: HTTP request cookie</li>
+<li>`query_string`: Query string in the HTTP request URL</li>
+<li>`uri`: HTTP request URI</li>
+<li>`body_raw`: HTTP request body</li>
+<li>`body_json`: JSON HTTP request body</li>
+ * @method string getSelector() Obtain The specific field. Values:
+<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
+<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
+<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
+<li>`upload_filename`: File path segment</li>
+<li>`keys`: All keys</li>
+<li>`values`: Values of all keys</li>
+<li>`key_value`: Key and its value</li>
+ * @method void setSelector(string $Selector) Set The specific field. Values:
+<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
+<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
+<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
+<li>`upload_filename`: File path segment</li>
+<li>`keys`: All keys</li>
+<li>`values`: Values of all keys</li>
+<li>`key_value`: Key and its value</li>
+ * @method string getMatchFromType() Obtain The match method used to match the key. Values:
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+ * @method void setMatchFromType(string $MatchFromType) Set The match method used to match the key. Values:
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+ * @method array getMatchFrom() Obtain The value that matches the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMatchFrom(array $MatchFrom) Set The value that matches the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getMatchContentType() Obtain The match method used to match the content.
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+ * @method void setMatchContentType(string $MatchContentType) Set The match method used to match the content.
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+ * @method array getMatchContent() Obtain The value that matches the content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMatchContent(array $MatchContent) Set The value that matches the content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class SkipCondition extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The field type. Values:
+<li>`header_fields`: HTTP request header</li>
+<li>`cookie`: HTTP request cookie</li>
+<li>`query_string`: Query string in the HTTP request URL</li>
+<li>`uri`: HTTP request URI</li>
+<li>`body_raw`: HTTP request body</li>
+<li>`body_json`: JSON HTTP request body</li>
      */
     public $Type;
 
     /**
-     * @var string 
+     * @var string The specific field. Values:
+<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
+<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
+<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
+<li>`upload_filename`: File path segment</li>
+<li>`keys`: All keys</li>
+<li>`values`: Values of all keys</li>
+<li>`key_value`: Key and its value</li>
      */
     public $Selector;
 
     /**
-     * @var string 
+     * @var string The match method used to match the key. Values:
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
      */
     public $MatchFromType;
 
     /**
-     * @var array 
+     * @var array The value that matches the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $MatchFrom;
 
     /**
-     * @var string 
+     * @var string The match method used to match the content.
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
      */
     public $MatchContentType;
 
     /**
-     * @var array 
+     * @var array The value that matches the content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $MatchContent;
 
     /**
-     * @param string $Type 
-     * @param string $Selector 
-     * @param string $MatchFromType 
-     * @param array $MatchFrom 
-     * @param string $MatchContentType 
-     * @param array $MatchContent 
+     * @param string $Type The field type. Values:
+<li>`header_fields`: HTTP request header</li>
+<li>`cookie`: HTTP request cookie</li>
+<li>`query_string`: Query string in the HTTP request URL</li>
+<li>`uri`: HTTP request URI</li>
+<li>`body_raw`: HTTP request body</li>
+<li>`body_json`: JSON HTTP request body</li>
+     * @param string $Selector The specific field. Values:
+<li>`args`: Query parameter in the URI, such as "?name1=jack&age=12"</li>
+<li>`path`: Partial path in the URI, such as "/path/to/resource.jpg"</li>
+<li>`full`: Full path in the URI, such as "example.com/path/to/resource.jpg?name1=jack&age=12"</li>
+<li>`upload_filename`: File path segment</li>
+<li>`keys`: All keys</li>
+<li>`values`: Values of all keys</li>
+<li>`key_value`: Key and its value</li>
+     * @param string $MatchFromType The match method used to match the key. Values:
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * @param array $MatchFrom The value that matches the key.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $MatchContentType The match method used to match the content.
+<li>`equal`: Exact match</li>
+<li>`wildcard`: Wildcard match (only asterisks)</li>
+     * @param array $MatchContent The value that matches the content.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

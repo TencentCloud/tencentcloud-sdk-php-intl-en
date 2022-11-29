@@ -21,9 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * DescribeDefaultCertificates request structure.
  *
  * @method array getFilters() Obtain Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
  * @method void setFilters(array $Filters) Set Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
  * @method integer getOffset() Obtain Offset for paginated queries. Default value: `0`
  * @method void setOffset(integer $Offset) Set Offset for paginated queries. Default value: `0`
  * @method integer getLimit() Obtain Limit on paginated queries. Default value: `20`. Maximum value: `100`.
@@ -33,7 +33,7 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
 {
     /**
      * @var array Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      */
     public $Filters;
 
@@ -49,7 +49,7 @@ class DescribeDefaultCertificatesRequest extends AbstractModel
 
     /**
      * @param array $Filters Filter criteria. Each filter criteria can have up to 5 entries.
-<li>`zone-id`: <br>Filter by <strong>site ID</strong>. Format: zone-xxx
+<li>`zone-id`: <br>Filter by <strong>site ID</strong>, such as zone-xxx<br>   Type: String<br>   Required: No</li>
      * @param integer $Offset Offset for paginated queries. Default value: `0`
      * @param integer $Limit Limit on paginated queries. Default value: `20`. Maximum value: `100`.
      */

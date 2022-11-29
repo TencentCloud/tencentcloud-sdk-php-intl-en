@@ -56,6 +56,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCertInfo(array $CertInfo) Set The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getApplyType() Obtain Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setApplyType(string $ApplyType) Set Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class Https extends AbstractModel
 {
@@ -98,6 +106,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CertInfo;
 
     /**
+     * @var string Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ApplyType;
+
+    /**
      * @param string $Http2 Whether to enable HTTP2. Values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
@@ -116,6 +132,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $CertInfo The certificate configuration.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ApplyType Whether the certificate is managed by EdgeOne. Values:
+<li>`apply`: Managed by EdgeOne.</li>
+<li>`none`: Not managed by EdgeOne.</li>If it is left empty, the default value `none` is used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -154,6 +174,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->CertInfo, $obj);
             }
+        }
+
+        if (array_key_exists("ApplyType",$param) and $param["ApplyType"] !== null) {
+            $this->ApplyType = $param["ApplyType"];
         }
     }
 }

@@ -20,46 +20,74 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The scope to which the exception rule applies
  *
- * @method string getType() Obtain 
- * @method void setType(string $Type) Set 
- * @method array getModules() Obtain The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setModules(array $Modules) Set The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getPartialModules() Obtain 
- * @method void setPartialModules(array $PartialModules) Set 
- * @method array getSkipConditions() Obtain 
- * @method void setSkipConditions(array $SkipConditions) Set 
+ * @method string getType() Obtain Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+ * @method void setType(string $Type) Set Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+ * @method array getModules() Obtain The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setModules(array $Modules) Set The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getPartialModules() Obtain Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setPartialModules(array $PartialModules) Set Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method array getSkipConditions() Obtain Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setSkipConditions(array $SkipConditions) Set Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ExceptUserRuleScope extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
      */
     public $Type;
 
     /**
-     * @var array The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $Modules;
 
     /**
-     * @var array 
+     * @var array Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $PartialModules;
 
     /**
-     * @var array 
+     * @var array Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $SkipConditions;
 
     /**
-     * @param string $Type 
-     * @param array $Modules The module that applies. Only WAF managed rules are supported currently.
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $PartialModules 
-     * @param array $SkipConditions 
+     * @param string $Type Exception mode. Values:
+<li>`complete`: Skip the exception rule for full requests.</li>
+<li>`partial`: Skip the exception rule for partial requests.</li>
+     * @param array $Modules The module to be activated. Values:
+<li>`waf`: Managed rules</li>
+<li>`cc`: Rate limiting rules</li>
+<li>`bot`: bot protection</li>
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $PartialModules Module settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param array $SkipConditions Condition settings of the exception rule. If it is null, the settings that were last configured will be used.
+Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
     {

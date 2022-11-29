@@ -20,24 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSecurityGroupManagedRules request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain The subdomain name/layer-4 proxy.
- * @method void setEntity(string $Entity) Set The subdomain name/layer-4 proxy.
+ * @method string getZoneId() Obtain The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setZoneId(string $ZoneId) Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
  * @method integer getOffset() Obtain The page offset. Default value: 0
  * @method void setOffset(integer $Offset) Set The page offset. Default value: 0
  * @method integer getLimit() Obtain The paginated query limit. Default value: 20. Maximum value: 1000.
  * @method void setLimit(integer $Limit) Set The paginated query limit. Default value: 20. Maximum value: 1000.
+ * @method string getTemplateId() Obtain The template ID. You must specify either this field or ZoneId+Entity".
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or ZoneId+Entity".
  */
 class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $ZoneId;
 
     /**
-     * @var string The subdomain name/layer-4 proxy.
+     * @var string The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $Entity;
 
@@ -52,10 +54,16 @@ class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Entity The subdomain name/layer-4 proxy.
+     * @var string The template ID. You must specify either this field or ZoneId+Entity".
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      * @param integer $Offset The page offset. Default value: 0
      * @param integer $Limit The paginated query limit. Default value: 20. Maximum value: 1000.
+     * @param string $TemplateId The template ID. You must specify either this field or ZoneId+Entity".
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class DescribeSecurityGroupManagedRulesRequest extends AbstractModel
 
         if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
             $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

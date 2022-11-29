@@ -86,8 +86,10 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
  * @method void setIpv6(Ipv6 $Ipv6) Set The IPv6 access configuration.
 The original configuration will apply if this field is not specified.
- * @method ClientIpCountry getClientIpCountry() Obtain 
- * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set 
+ * @method ClientIpCountry getClientIpCountry() Obtain Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
+ * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -193,7 +195,8 @@ The original configuration will apply if this field is not specified.
     public $Ipv6;
 
     /**
-     * @var ClientIpCountry 
+     * @var ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
      */
     public $ClientIpCountry;
 
@@ -231,7 +234,8 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
      * @param Ipv6 $Ipv6 The IPv6 access configuration.
 The original configuration will apply if this field is not specified.
-     * @param ClientIpCountry $ClientIpCountry 
+     * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
      */
     function __construct()
     {

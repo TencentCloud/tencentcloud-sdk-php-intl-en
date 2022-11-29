@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(string $Status) Set Rule status. Values:
 <li>`enable`: Enabled</li>
 <li>`disable`: Disabled</li>
+ * @method array getTags() Obtain Tag of the rule.
+ * @method void setTags(array $Tags) Set Tag of the rule.
  */
 class ModifyRuleRequest extends AbstractModel
 {
@@ -65,6 +67,11 @@ class ModifyRuleRequest extends AbstractModel
     public $Status;
 
     /**
+     * @var array Tag of the rule.
+     */
+    public $Tags;
+
+    /**
      * @param string $ZoneId ID of the site
      * @param string $RuleName The rule name. It is a string that can contain 1–255 characters.
      * @param array $Rules The rule content.
@@ -72,6 +79,7 @@ class ModifyRuleRequest extends AbstractModel
      * @param string $Status Rule status. Values:
 <li>`enable`: Enabled</li>
 <li>`disable`: Disabled</li>
+     * @param array $Tags Tag of the rule.
      */
     function __construct()
     {
@@ -109,6 +117,10 @@ class ModifyRuleRequest extends AbstractModel
 
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = $param["Tags"];
         }
     }
 }
