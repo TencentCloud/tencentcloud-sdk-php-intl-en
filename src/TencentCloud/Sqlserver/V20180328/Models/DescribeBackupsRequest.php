@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupName(string $BackupName) Set Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
  * @method integer getStrategy() Obtain Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
  * @method void setStrategy(integer $Strategy) Set Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
- * @method integer getBackupWay() Obtain Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
- * @method void setBackupWay(integer $BackupWay) Set Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+ * @method integer getBackupWay() Obtain Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
+ * @method void setBackupWay(integer $BackupWay) Set Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
  * @method integer getBackupId() Obtain Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
  * @method void setBackupId(integer $BackupId) Set Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
  * @method string getDatabaseName() Obtain Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
@@ -85,7 +85,7 @@ class DescribeBackupsRequest extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     * @var integer Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
      */
     public $BackupWay;
 
@@ -122,7 +122,7 @@ class DescribeBackupsRequest extends AbstractModel
      * @param integer $Offset Page number. Default value: 0
      * @param string $BackupName Filter by backup name. If this parameter is left empty, backup name will not be used in filtering.
      * @param integer $Strategy Filter by backup policy. Valid values: 0 (instance backup), 1 (multi-database backup). If this parameter is left empty, backup policy will not be used in filtering.
-     * @param integer $BackupWay Filter by backup mode. Valid values: 0 (automatic backup on a regular basis), 1 (manual backup performed by the user at any time). If this parameter is left empty, backup mode will not be used in filtering.
+     * @param integer $BackupWay Filter by backup mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup). Default value: `2`.
      * @param integer $BackupId Filter by backup ID. If this parameter is left empty, backup ID will not be used in filtering.
      * @param string $DatabaseName Filter backups by the database name. If the parameter is left empty, this filter criteria will not take effect.
      * @param integer $Group Whether to group backup files by backup task. Valid value: `0` (no), `1` (yes). Default value: `0`. This parameter is valid only for unarchived backup files.

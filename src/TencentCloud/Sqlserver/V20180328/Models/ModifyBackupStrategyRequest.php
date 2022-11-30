@@ -34,6 +34,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBackupCycle(array $BackupCycle) Set The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
  * @method integer getBackupSaveDays() Obtain Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
  * @method void setBackupSaveDays(integer $BackupSaveDays) Set Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+ * @method string getRegularBackupEnable() Obtain Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+ * @method void setRegularBackupEnable(string $RegularBackupEnable) Set Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+ * @method integer getRegularBackupSaveDays() Obtain Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+ * @method void setRegularBackupSaveDays(integer $RegularBackupSaveDays) Set Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+ * @method string getRegularBackupStrategy() Obtain Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+ * @method void setRegularBackupStrategy(string $RegularBackupStrategy) Set Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+ * @method integer getRegularBackupCounts() Obtain The number of retained archive backups. Default value: `1`.
+ * @method void setRegularBackupCounts(integer $RegularBackupCounts) Set The number of retained archive backups. Default value: `1`.
+ * @method string getRegularBackupStartTime() Obtain Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+ * @method void setRegularBackupStartTime(string $RegularBackupStartTime) Set Archive backup start date in YYYY-MM-DD format, which is the current time by default.
  */
 class ModifyBackupStrategyRequest extends AbstractModel
 {
@@ -73,6 +83,31 @@ class ModifyBackupStrategyRequest extends AbstractModel
     public $BackupSaveDays;
 
     /**
+     * @var string Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+     */
+    public $RegularBackupEnable;
+
+    /**
+     * @var integer Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     */
+    public $RegularBackupSaveDays;
+
+    /**
+     * @var string Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+     */
+    public $RegularBackupStrategy;
+
+    /**
+     * @var integer The number of retained archive backups. Default value: `1`.
+     */
+    public $RegularBackupCounts;
+
+    /**
+     * @var string Archive backup start date in YYYY-MM-DD format, which is the current time by default.
+     */
+    public $RegularBackupStartTime;
+
+    /**
      * @param string $InstanceId Instance ID.
      * @param string $BackupType Backup type. Valid values: `weekly` (when length(BackupDay) <=7 && length(BackupDay) >=2), `daily` (when length(BackupDay)=1). Default value: `daily`.
      * @param integer $BackupTime Backup time. Value range: an integer from 0 to 23.
@@ -80,6 +115,11 @@ class ModifyBackupStrategyRequest extends AbstractModel
      * @param string $BackupModel Backup mode. Valid values: `master_pkg` (archive the backup files of the primary node), `master_no_pkg` (do not archive the backup files of the primary node), `slave_pkg` (archive the backup files of the replica node), `slave_no_pkg` (do not archive the backup files of the replica node). Backup files of the replica node are supported only when Always On disaster recovery is enabled.
      * @param array $BackupCycle The days of the week on which backup will be performed when “BackupType” is `weekly`. If data backup retention period is less than 7 days, the values will be 1-7, indicating that backup will be performed everyday by default; if data backup retention period is greater than or equal to 7 days, the values will be at least any two days, indicating that backup will be performed at least twice in a week by default.
      * @param integer $BackupSaveDays Data (log) backup retention period. Value range: 3-1830 days, default value: 7 days.
+     * @param string $RegularBackupEnable Archive backup status. Valid values: `enable` (enabled); `disable` (disabled). Default value: `disable`.
+     * @param integer $RegularBackupSaveDays Archive backup retention days. Value range: 90–3650 days. Default value: 365 days.
+     * @param string $RegularBackupStrategy Archive backup policy. Valid values: `years` (yearly); `quarters (quarterly); `months` (monthly); Default value: `months`.
+     * @param integer $RegularBackupCounts The number of retained archive backups. Default value: `1`.
+     * @param string $RegularBackupStartTime Archive backup start date in YYYY-MM-DD format, which is the current time by default.
      */
     function __construct()
     {
@@ -120,6 +160,26 @@ class ModifyBackupStrategyRequest extends AbstractModel
 
         if (array_key_exists("BackupSaveDays",$param) and $param["BackupSaveDays"] !== null) {
             $this->BackupSaveDays = $param["BackupSaveDays"];
+        }
+
+        if (array_key_exists("RegularBackupEnable",$param) and $param["RegularBackupEnable"] !== null) {
+            $this->RegularBackupEnable = $param["RegularBackupEnable"];
+        }
+
+        if (array_key_exists("RegularBackupSaveDays",$param) and $param["RegularBackupSaveDays"] !== null) {
+            $this->RegularBackupSaveDays = $param["RegularBackupSaveDays"];
+        }
+
+        if (array_key_exists("RegularBackupStrategy",$param) and $param["RegularBackupStrategy"] !== null) {
+            $this->RegularBackupStrategy = $param["RegularBackupStrategy"];
+        }
+
+        if (array_key_exists("RegularBackupCounts",$param) and $param["RegularBackupCounts"] !== null) {
+            $this->RegularBackupCounts = $param["RegularBackupCounts"];
+        }
+
+        if (array_key_exists("RegularBackupStartTime",$param) and $param["RegularBackupStartTime"] !== null) {
+            $this->RegularBackupStartTime = $param["RegularBackupStartTime"];
         }
     }
 }

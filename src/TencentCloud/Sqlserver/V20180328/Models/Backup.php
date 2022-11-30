@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDBs(array $DBs) Set List of databases for multi-database backup
  * @method integer getStrategy() Obtain Backup policy (0: instance backup, 1: multi-database backup)
  * @method void setStrategy(integer $Strategy) Set Backup policy (0: instance backup, 1: multi-database backup)
- * @method integer getBackupWay() Obtain Backup mode. 0: scheduled, 1: manual
- * @method void setBackupWay(integer $BackupWay) Set Backup mode. 0: scheduled, 1: manual
+ * @method integer getBackupWay() Obtain Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
+ * @method void setBackupWay(integer $BackupWay) Set Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
  * @method string getBackupName() Obtain Backup task name (customizable)
  * @method void setBackupName(string $BackupName) Set Backup task name (customizable)
  * @method string getGroupId() Obtain Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
@@ -108,7 +108,7 @@ class Backup extends AbstractModel
     public $Strategy;
 
     /**
-     * @var integer Backup mode. 0: scheduled, 1: manual
+     * @var integer Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
      */
     public $BackupWay;
 
@@ -153,7 +153,7 @@ class Backup extends AbstractModel
      * @param integer $Status Backup file status (0: creating, 1: succeeded, 2: failed)
      * @param array $DBs List of databases for multi-database backup
      * @param integer $Strategy Backup policy (0: instance backup, 1: multi-database backup)
-     * @param integer $BackupWay Backup mode. 0: scheduled, 1: manual
+     * @param integer $BackupWay Backup Mode. Valid values: `0` (scheduled backup); `1` (manual backup); `2` (archive backup).
      * @param string $BackupName Backup task name (customizable)
      * @param string $GroupId Group ID of unarchived backup files, which can be used as a request parameter in the `DescribeBackupFiles` API to get details of unarchived backup files in the specified group. This parameter is invalid for archived backup files.
      * @param string $BackupFormat Backup file format. Valid values:`pkg` (archive file), `single` (unarchived files).

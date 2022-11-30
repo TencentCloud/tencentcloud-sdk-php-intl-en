@@ -21,21 +21,33 @@ use TencentCloud\Common\AbstractModel;
  * Proxy node information
  *
  * @method string getNodeId() Obtain Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNodeId(string $NodeId) Set Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getZoneId() Obtain AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneId(integer $ZoneId) Set AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProxyNodes extends AbstractModel
 {
     /**
      * @var string Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NodeId;
 
     /**
+     * @var integer AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ZoneId;
+
+    /**
      * @param string $NodeId Node ID
-Note: This field may return `null`, indicating that no valid values can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ZoneId AZ ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -52,6 +64,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         }
         if (array_key_exists("NodeId",$param) and $param["NodeId"] !== null) {
             $this->NodeId = $param["NodeId"];
+        }
+
+        if (array_key_exists("ZoneId",$param) and $param["ZoneId"] !== null) {
+            $this->ZoneId = $param["ZoneId"];
         }
     }
 }

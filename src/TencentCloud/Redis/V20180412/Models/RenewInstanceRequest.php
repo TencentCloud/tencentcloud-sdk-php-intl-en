@@ -20,15 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * RenewInstance request structure.
  *
- * @method integer getPeriod() Obtain Length of purchase in months
- * @method void setPeriod(integer $Period) Set Length of purchase in months
+ * @method integer getPeriod() Obtain Validity period in months
+ * @method void setPeriod(integer $Period) Set Validity period in months
  * @method string getInstanceId() Obtain Instance ID
  * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getModifyPayMode() Obtain The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+ * @method void setModifyPayMode(string $ModifyPayMode) Set The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
  */
 class RenewInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer Length of purchase in months
+     * @var integer Validity period in months
      */
     public $Period;
 
@@ -38,8 +40,14 @@ class RenewInstanceRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @param integer $Period Length of purchase in months
+     * @var string The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
+     */
+    public $ModifyPayMode;
+
+    /**
+     * @param integer $Period Validity period in months
      * @param string $InstanceId Instance ID
+     * @param string $ModifyPayMode The parameter used to determine whether to modify the billing mode. <ul><li>If you want to change the billing mode from pay-as-you-go to monthly subscription, specify this parameter as <b>prepaid</b>. </li><li>If the current instance is monthly subscribed, this parameter is not required. </li></ul>
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class RenewInstanceRequest extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("ModifyPayMode",$param) and $param["ModifyPayMode"] !== null) {
+            $this->ModifyPayMode = $param["ModifyPayMode"];
         }
     }
 }
