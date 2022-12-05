@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDropOther(integer $DropOther) Set Other protocol blocking. Valid values: `0` (disabled), `1`(enabled).
  * @method integer getCheckExceptNullConnect() Obtain Null connection protection. Valid values: `0` (disabled), `1` (enabled).
  * @method void setCheckExceptNullConnect(integer $CheckExceptNullConnect) Set Null connection protection. Valid values: `0` (disabled), `1` (enabled).
+ * @method integer getPingOfDeath() Obtain PoD protection. Values: `0` (disable), `1` (enable).
+ * @method void setPingOfDeath(integer $PingOfDeath) Set PoD protection. Values: `0` (disable), `1` (enable).
+ * @method integer getTearDrop() Obtain Teardrop protection. Values: `0` (disable), `1` (enable).
+ * @method void setTearDrop(integer $TearDrop) Set Teardrop protection. Values: `0` (disable), `1` (enable).
  */
 class ProtocolBlockConfig extends AbstractModel
 {
@@ -59,11 +63,23 @@ class ProtocolBlockConfig extends AbstractModel
     public $CheckExceptNullConnect;
 
     /**
+     * @var integer PoD protection. Values: `0` (disable), `1` (enable).
+     */
+    public $PingOfDeath;
+
+    /**
+     * @var integer Teardrop protection. Values: `0` (disable), `1` (enable).
+     */
+    public $TearDrop;
+
+    /**
      * @param integer $DropTcp TCP blocking. Valid values: `0` (disabled), `1`(enabled).
      * @param integer $DropUdp UDP blocking. Valid values: `0` (disabled), `1`(enabled).
      * @param integer $DropIcmp ICMP blocking. Valid values: `0` (disabled), `1`(enabled).
      * @param integer $DropOther Other protocol blocking. Valid values: `0` (disabled), `1`(enabled).
      * @param integer $CheckExceptNullConnect Null connection protection. Valid values: `0` (disabled), `1` (enabled).
+     * @param integer $PingOfDeath PoD protection. Values: `0` (disable), `1` (enable).
+     * @param integer $TearDrop Teardrop protection. Values: `0` (disable), `1` (enable).
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class ProtocolBlockConfig extends AbstractModel
 
         if (array_key_exists("CheckExceptNullConnect",$param) and $param["CheckExceptNullConnect"] !== null) {
             $this->CheckExceptNullConnect = $param["CheckExceptNullConnect"];
+        }
+
+        if (array_key_exists("PingOfDeath",$param) and $param["PingOfDeath"] !== null) {
+            $this->PingOfDeath = $param["PingOfDeath"];
+        }
+
+        if (array_key_exists("TearDrop",$param) and $param["TearDrop"] !== null) {
+            $this->TearDrop = $param["TearDrop"];
         }
     }
 }

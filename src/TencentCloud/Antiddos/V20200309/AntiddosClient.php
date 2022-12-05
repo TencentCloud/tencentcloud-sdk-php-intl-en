@@ -85,6 +85,7 @@ use TencentCloud\Antiddos\V20200309\Models as Models;
  * @method Models\DescribeNewL7RulesResponse DescribeNewL7Rules(Models\DescribeNewL7RulesRequest $req) This API is used to obtain layer-7 forwarding rules.
  * @method Models\DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealth(Models\DescribeNewL7RulesErrHealthRequest $req) This API is used to getting the exception results of the health check on layer-7 forwarding rules.
  * @method Models\DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventList(Models\DescribeOverviewDDoSEventListRequest $req) This API is used to obtain the list of DDoS attacks.
+ * @method Models\DescribePendingRiskInfoResponse DescribePendingRiskInfo(Models\DescribePendingRiskInfoRequest $req) This API is used to query the information of pending risks at the account level.
  * @method Models\DisassociateDDoSEipAddressResponse DisassociateDDoSEipAddress(Models\DisassociateDDoSEipAddressRequest $req) This API is used to unbind an Anti-DDoS EIP.
  * @method Models\ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicy(Models\ModifyCCPrecisionPolicyRequest $req) This API is used to modify a CC precise protection policy.
  * @method Models\ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpList(Models\ModifyCcBlackWhiteIpListRequest $req) This API is used to modify a layer-4 access control list.

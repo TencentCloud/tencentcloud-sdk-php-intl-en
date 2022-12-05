@@ -20,8 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeCdnDomainLogs response structure.
  *
- * @method array getDomainLogs() Obtain Download link of the log package
- * @method void setDomainLogs(array $DomainLogs) Set Download link of the log package
+ * @method array getDomainLogs() Obtain Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
+ * @method void setDomainLogs(array $DomainLogs) Set Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
  * @method integer getTotalCount() Obtain Total number of entries obtained
  * @method void setTotalCount(integer $TotalCount) Set Total number of entries obtained
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -30,7 +32,8 @@ use TencentCloud\Common\AbstractModel;
 class DescribeCdnDomainLogsResponse extends AbstractModel
 {
     /**
-     * @var array Download link of the log package
+     * @var array Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
      */
     public $DomainLogs;
 
@@ -45,7 +48,8 @@ class DescribeCdnDomainLogsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $DomainLogs Download link of the log package
+     * @param array $DomainLogs Download link of the log package.
+You can open the link to download a .gz log package that contains all log files without extension.
      * @param integer $TotalCount Total number of entries obtained
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

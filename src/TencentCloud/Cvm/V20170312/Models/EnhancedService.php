@@ -24,8 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) Set Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
  * @method RunMonitorServiceEnabled getMonitorService() Obtain Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) Set Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
- * @method RunAutomationServiceEnabled getAutomationService() Obtain Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
- * @method void setAutomationService(RunAutomationServiceEnabled $AutomationService) Set Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+ * @method RunAutomationServiceEnabled getAutomationService() Obtain Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
+ * @method void setAutomationService(RunAutomationServiceEnabled $AutomationService) Set Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
  */
 class EnhancedService extends AbstractModel
 {
@@ -40,14 +40,14 @@ class EnhancedService extends AbstractModel
     public $MonitorService;
 
     /**
-     * @var RunAutomationServiceEnabled Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     * @var RunAutomationServiceEnabled Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
      */
     public $AutomationService;
 
     /**
      * @param RunSecurityServiceEnabled $SecurityService Enables cloud security service. If this parameter is not specified, the cloud security service will be enabled by default.
      * @param RunMonitorServiceEnabled $MonitorService Enables cloud monitor service. If this parameter is not specified, the cloud monitor service will be enabled by default.
-     * @param RunAutomationServiceEnabled $AutomationService Enables the TAT service. If this parameter is not specified, the TAT service will not be enabled.
+     * @param RunAutomationServiceEnabled $AutomationService Whether to enable the TAT service. If this parameter is not specified, the TAT service is enabled for public images and disabled for other images by default.
      */
     function __construct()
     {

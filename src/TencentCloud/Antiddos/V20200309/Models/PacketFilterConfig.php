@@ -136,6 +136,8 @@ When the `MatchType` is `pcre`, enter a regular expression.
 ]
  * @method string getId() Obtain A rule ID is generated after a feature filtering configuration is added successfully. Leave this field empty when adding a new feature filtering configuration.
  * @method void setId(string $Id) Set A rule ID is generated after a feature filtering configuration is added successfully. Leave this field empty when adding a new feature filtering configuration.
+ * @method integer getPktLenGT() Obtain Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+ * @method void setPktLenGT(integer $PktLenGT) Set Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
  */
 class PacketFilterConfig extends AbstractModel
 {
@@ -286,6 +288,11 @@ When the `MatchType` is `pcre`, enter a regular expression.
     public $Id;
 
     /**
+     * @var integer Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
+     */
+    public $PktLenGT;
+
+    /**
      * @param string $Protocol Protocol. Valid values: `tcp`, `udp`, `icmp`, `all`.
      * @param integer $SportStart Start source port. Value range: 0–65535.
      * @param integer $SportEnd End source port. Value range: 0–65535. The value also should be greater than or equal to that of the start source port.
@@ -344,6 +351,7 @@ When the `MatchType` is `pcre`, enter a regular expression.
 `1`: excluded
 ]
      * @param string $Id A rule ID is generated after a feature filtering configuration is added successfully. Leave this field empty when adding a new feature filtering configuration.
+     * @param integer $PktLenGT Byte threshold of the packet. Packets larger than the specified size are not returned. It must be an integer larger than 1.
      */
     function __construct()
     {
@@ -444,6 +452,10 @@ When the `MatchType` is `pcre`, enter a regular expression.
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
+        }
+
+        if (array_key_exists("PktLenGT",$param) and $param["PktLenGT"] !== null) {
+            $this->PktLenGT = $param["PktLenGT"];
         }
     }
 }

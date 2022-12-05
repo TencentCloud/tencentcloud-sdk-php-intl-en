@@ -14,32 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Cvm\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeInstanceAllNamespaces request structure.
+ * 
  *
- * @method integer getLimit() Obtain Number of entries per page
- * @method void setLimit(integer $Limit) Set Number of entries per page
- * @method integer getOffset() Obtain Start position offset
- * @method void setOffset(integer $Offset) Set Start position offset
+ * @method string getImageId() Obtain 
+ * @method void setImageId(string $ImageId) Set 
+ * @method string getRegion() Obtain 
+ * @method void setRegion(string $Region) Set 
  */
-class DescribeInstanceAllNamespacesRequest extends AbstractModel
+class SyncImage extends AbstractModel
 {
     /**
-     * @var integer Number of entries per page
+     * @var string 
      */
-    public $Limit;
+    public $ImageId;
 
     /**
-     * @var integer Start position offset
+     * @var string 
      */
-    public $Offset;
+    public $Region;
 
     /**
-     * @param integer $Limit Number of entries per page
-     * @param integer $Offset Start position offset
+     * @param string $ImageId 
+     * @param string $Region 
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class DescribeInstanceAllNamespacesRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
-            $this->Limit = $param["Limit"];
+        if (array_key_exists("ImageId",$param) and $param["ImageId"] !== null) {
+            $this->ImageId = $param["ImageId"];
         }
 
-        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
-            $this->Offset = $param["Offset"];
+        if (array_key_exists("Region",$param) and $param["Region"] !== null) {
+            $this->Region = $param["Region"];
         }
     }
 }

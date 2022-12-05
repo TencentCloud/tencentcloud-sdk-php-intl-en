@@ -32,6 +32,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setMaxAgeRules(array $MaxAgeRules) Set MaxAge rule
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method MaxAgeCodeRule getMaxAgeCodeRule() Obtain MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setMaxAgeCodeRule(MaxAgeCodeRule $MaxAgeCodeRule) Set MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class MaxAge extends AbstractModel
 {
@@ -50,11 +54,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $MaxAgeRules;
 
     /**
+     * @var MaxAgeCodeRule MaxAge status code
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $MaxAgeCodeRule;
+
+    /**
      * @param string $Switch Browser cache configuration switch
 `on`: Enable
 `off`: Disable
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param array $MaxAgeRules MaxAge rule
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param MaxAgeCodeRule $MaxAgeCodeRule MaxAge status code
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -81,6 +93,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
                 $obj->deserialize($value);
                 array_push($this->MaxAgeRules, $obj);
             }
+        }
+
+        if (array_key_exists("MaxAgeCodeRule",$param) and $param["MaxAgeCodeRule"] !== null) {
+            $this->MaxAgeCodeRule = new MaxAgeCodeRule();
+            $this->MaxAgeCodeRule->deserialize($param["MaxAgeCodeRule"]);
         }
     }
 }

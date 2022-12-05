@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Page number. Default value: 1.
  * @method string getDigest() Obtain Image digest specified for search
  * @method void setDigest(string $Digest) Set Image digest specified for search
+ * @method boolean getExactMatch() Obtain Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+ * @method void setExactMatch(boolean $ExactMatch) Set Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
  */
 class DescribeImagesRequest extends AbstractModel
 {
@@ -73,6 +75,11 @@ class DescribeImagesRequest extends AbstractModel
     public $Digest;
 
     /**
+     * @var boolean Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
+     */
+    public $ExactMatch;
+
+    /**
      * @param string $RegistryId Instance ID
      * @param string $NamespaceName Namespace name
      * @param string $RepositoryName Image repository name
@@ -80,6 +87,7 @@ class DescribeImagesRequest extends AbstractModel
      * @param integer $Limit Number of entries per page, which is used for pagination. Default value: 20.
      * @param integer $Offset Page number. Default value: 1.
      * @param string $Digest Image digest specified for search
+     * @param boolean $ExactMatch Whether to use exact matching. Valid values: `true` (exact matching), `null` (fuzzy matching).
      */
     function __construct()
     {
@@ -120,6 +128,10 @@ class DescribeImagesRequest extends AbstractModel
 
         if (array_key_exists("Digest",$param) and $param["Digest"] !== null) {
             $this->Digest = $param["Digest"];
+        }
+
+        if (array_key_exists("ExactMatch",$param) and $param["ExactMatch"] !== null) {
+            $this->ExactMatch = $param["ExactMatch"];
         }
     }
 }

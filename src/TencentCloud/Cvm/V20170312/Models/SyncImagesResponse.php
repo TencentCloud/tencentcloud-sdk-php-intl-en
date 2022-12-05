@@ -20,17 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * SyncImages response structure.
  *
+ * @method array getImageSet() Obtain 
+ * @method void setImageSet(array $ImageSet) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class SyncImagesResponse extends AbstractModel
 {
     /**
+     * @var array 
+     */
+    public $ImageSet;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $ImageSet 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +54,15 @@ class SyncImagesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("ImageSet",$param) and $param["ImageSet"] !== null) {
+            $this->ImageSet = [];
+            foreach ($param["ImageSet"] as $key => $value){
+                $obj = new SyncImage();
+                $obj->deserialize($value);
+                array_push($this->ImageSet, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

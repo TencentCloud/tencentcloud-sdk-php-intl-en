@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) Set Array of instance IDs
  * @method integer getFilterEnterpriseFlag() Obtain Filters by Enterprise edition
  * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) Set Filters by Enterprise edition
+ * @method integer getFilterLightFlag() Obtain Whether it’s a Lighthouse edition
+ * @method void setFilterLightFlag(integer $FilterLightFlag) Set Whether it’s a Lighthouse edition
+ * @method integer getFilterChannelFlag() Obtain Whether it’s a Channel edition
+ * @method void setFilterChannelFlag(integer $FilterChannelFlag) Set Whether it’s a Channel edition
  * @method TagFilter getFilterTag() Obtain Filters by tag
  * @method void setFilterTag(TagFilter $FilterTag) Set Filters by tag
  */
@@ -103,6 +107,16 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterEnterpriseFlag;
 
     /**
+     * @var integer Whether it’s a Lighthouse edition
+     */
+    public $FilterLightFlag;
+
+    /**
+     * @var integer Whether it’s a Channel edition
+     */
+    public $FilterChannelFlag;
+
+    /**
      * @var TagFilter Filters by tag
      */
     public $FilterTag;
@@ -119,6 +133,8 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
      * @param array $FilterInstanceIdList Array of instance IDs
      * @param integer $FilterEnterpriseFlag Filters by Enterprise edition
+     * @param integer $FilterLightFlag Whether it’s a Lighthouse edition
+     * @param integer $FilterChannelFlag Whether it’s a Channel edition
      * @param TagFilter $FilterTag Filters by tag
      */
     function __construct()
@@ -176,6 +192,14 @@ class DescribeListBGPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterEnterpriseFlag",$param) and $param["FilterEnterpriseFlag"] !== null) {
             $this->FilterEnterpriseFlag = $param["FilterEnterpriseFlag"];
+        }
+
+        if (array_key_exists("FilterLightFlag",$param) and $param["FilterLightFlag"] !== null) {
+            $this->FilterLightFlag = $param["FilterLightFlag"];
+        }
+
+        if (array_key_exists("FilterChannelFlag",$param) and $param["FilterChannelFlag"] !== null) {
+            $this->FilterChannelFlag = $param["FilterChannelFlag"];
         }
 
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {

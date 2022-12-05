@@ -40,10 +40,10 @@ Default value: `mainland`.
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
- * @method string getLogType() Obtain The type of log to be downloaded.
-access: access logs
- * @method void setLogType(string $LogType) Set The type of log to be downloaded.
-access: access logs
+ * @method string getLogType() Obtain Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
+ * @method void setLogType(string $LogType) Set Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
  */
 class DescribeCdnDomainLogsRequest extends AbstractModel
 {
@@ -82,8 +82,8 @@ Default value: `mainland`.
     public $Area;
 
     /**
-     * @var string The type of log to be downloaded.
-access: access logs
+     * @var string Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
      */
     public $LogType;
 
@@ -98,8 +98,8 @@ access: access logs
 `overseas`: specifies to return the download link of logs on acceleration outside Mainland China;
 `global`: specifies to return a download link of logs on acceleration within Mainland China and a link of logs on acceleration outside Mainland China.
 Default value: `mainland`.
-     * @param string $LogType The type of log to be downloaded.
-access: access logs
+     * @param string $LogType Specifies the type of logs to download (only access logs supported).
+`access`: Access logs.
      */
     function __construct()
     {

@@ -64,7 +64,7 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\DescribeImagesResponse DescribeImages(Models\DescribeImagesRequest $req) This API is used to query the list of image tags or the information of the specified container image.
  * @method Models\DescribeImmutableTagRulesResponse DescribeImmutableTagRules(Models\DescribeImmutableTagRulesRequest $req) This API is used to list the tag immutability rule.
  * @method Models\DescribeInstanceAllResponse DescribeInstanceAll(Models\DescribeInstanceAllRequest $req) This API is used to query the information of all instances.
- * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) This API is used to query the list of all instance namespaces.
+ * @method Models\DescribeInstanceAllNamespacesResponse DescribeInstanceAllNamespaces(Models\DescribeInstanceAllNamespacesRequest $req) This API is used to query the list of all namespaces in an instance.
  * @method Models\DescribeInstanceCustomizedDomainResponse DescribeInstanceCustomizedDomain(Models\DescribeInstanceCustomizedDomainRequest $req) This API is used to query the list of custom domain names of an instance.
  * @method Models\DescribeInstanceStatusResponse DescribeInstanceStatus(Models\DescribeInstanceStatusRequest $req) This API is used to query the current status and process information of an instance.
  * @method Models\DescribeInstanceTokenResponse DescribeInstanceToken(Models\DescribeInstanceTokenRequest $req) This API is used to query the information of long-term access credentials.

@@ -54,6 +54,46 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceDetailList(array $InstanceDetailList) Set Anti-DDoS instance configured
  * @method array getListenerCcThresholdList() Obtain Domain name and protocol protection thresholds
  * @method void setListenerCcThresholdList(array $ListenerCcThresholdList) Set Domain name and protocol protection thresholds
+ * @method integer getSynFloodThreshold() Obtain SYN traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSynFloodThreshold(integer $SynFloodThreshold) Set SYN traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSynFloodPktThreshold() Obtain SYN packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSynFloodPktThreshold(integer $SynFloodPktThreshold) Set SYN packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getUdpFloodThreshold() Obtain UDP traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUdpFloodThreshold(integer $UdpFloodThreshold) Set UDP traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getUdpFloodPktThreshold() Obtain UDP packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUdpFloodPktThreshold(integer $UdpFloodPktThreshold) Set UDP packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAckFloodThreshold() Obtain ACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAckFloodThreshold(integer $AckFloodThreshold) Set ACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAckFloodPktThreshold() Obtain ACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAckFloodPktThreshold(integer $AckFloodPktThreshold) Set ACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSynAckFloodThreshold() Obtain SYNACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSynAckFloodThreshold(integer $SynAckFloodThreshold) Set SYNACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getSynAckFloodPktThreshold() Obtain SYNACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSynAckFloodPktThreshold(integer $SynAckFloodPktThreshold) Set SYNACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRstFloodThreshold() Obtain RST traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRstFloodThreshold(integer $RstFloodThreshold) Set RST traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRstFloodPktThreshold() Obtain RST packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRstFloodPktThreshold(integer $RstFloodPktThreshold) Set RST packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ProtectThresholdRelation extends AbstractModel
 {
@@ -103,6 +143,66 @@ class ProtectThresholdRelation extends AbstractModel
     public $ListenerCcThresholdList;
 
     /**
+     * @var integer SYN traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SynFloodThreshold;
+
+    /**
+     * @var integer SYN packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SynFloodPktThreshold;
+
+    /**
+     * @var integer UDP traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $UdpFloodThreshold;
+
+    /**
+     * @var integer UDP packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $UdpFloodPktThreshold;
+
+    /**
+     * @var integer ACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AckFloodThreshold;
+
+    /**
+     * @var integer ACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AckFloodPktThreshold;
+
+    /**
+     * @var integer SYNACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SynAckFloodThreshold;
+
+    /**
+     * @var integer SYNACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SynAckFloodPktThreshold;
+
+    /**
+     * @var integer RST traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RstFloodThreshold;
+
+    /**
+     * @var integer RST packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RstFloodPktThreshold;
+
+    /**
      * @param string $DDoSLevel DDoS protection level:
 `low`: loose protection
 `middle`: medium protection
@@ -120,6 +220,26 @@ class ProtectThresholdRelation extends AbstractModel
      * @param integer $CCThreshold CC cleansing threshold (in QPS)
      * @param array $InstanceDetailList Anti-DDoS instance configured
      * @param array $ListenerCcThresholdList Domain name and protocol protection thresholds
+     * @param integer $SynFloodThreshold SYN traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SynFloodPktThreshold SYN packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $UdpFloodThreshold UDP traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $UdpFloodPktThreshold UDP packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AckFloodThreshold ACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AckFloodPktThreshold ACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SynAckFloodThreshold SYNACK traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $SynAckFloodPktThreshold SYNACK packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RstFloodThreshold RST traffic threshold
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RstFloodPktThreshold RST packet threshold
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -170,6 +290,46 @@ class ProtectThresholdRelation extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->ListenerCcThresholdList, $obj);
             }
+        }
+
+        if (array_key_exists("SynFloodThreshold",$param) and $param["SynFloodThreshold"] !== null) {
+            $this->SynFloodThreshold = $param["SynFloodThreshold"];
+        }
+
+        if (array_key_exists("SynFloodPktThreshold",$param) and $param["SynFloodPktThreshold"] !== null) {
+            $this->SynFloodPktThreshold = $param["SynFloodPktThreshold"];
+        }
+
+        if (array_key_exists("UdpFloodThreshold",$param) and $param["UdpFloodThreshold"] !== null) {
+            $this->UdpFloodThreshold = $param["UdpFloodThreshold"];
+        }
+
+        if (array_key_exists("UdpFloodPktThreshold",$param) and $param["UdpFloodPktThreshold"] !== null) {
+            $this->UdpFloodPktThreshold = $param["UdpFloodPktThreshold"];
+        }
+
+        if (array_key_exists("AckFloodThreshold",$param) and $param["AckFloodThreshold"] !== null) {
+            $this->AckFloodThreshold = $param["AckFloodThreshold"];
+        }
+
+        if (array_key_exists("AckFloodPktThreshold",$param) and $param["AckFloodPktThreshold"] !== null) {
+            $this->AckFloodPktThreshold = $param["AckFloodPktThreshold"];
+        }
+
+        if (array_key_exists("SynAckFloodThreshold",$param) and $param["SynAckFloodThreshold"] !== null) {
+            $this->SynAckFloodThreshold = $param["SynAckFloodThreshold"];
+        }
+
+        if (array_key_exists("SynAckFloodPktThreshold",$param) and $param["SynAckFloodPktThreshold"] !== null) {
+            $this->SynAckFloodPktThreshold = $param["SynAckFloodPktThreshold"];
+        }
+
+        if (array_key_exists("RstFloodThreshold",$param) and $param["RstFloodThreshold"] !== null) {
+            $this->RstFloodThreshold = $param["RstFloodThreshold"];
+        }
+
+        if (array_key_exists("RstFloodPktThreshold",$param) and $param["RstFloodPktThreshold"] !== null) {
+            $this->RstFloodPktThreshold = $param["RstFloodPktThreshold"];
         }
     }
 }

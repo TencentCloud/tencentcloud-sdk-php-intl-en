@@ -32,6 +32,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setGuetzliAdapter(GuetzliAdapter $GuetzliAdapter) Set `GuetzliAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method AvifAdapter getAvifAdapter() Obtain AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setAvifAdapter(AvifAdapter $AvifAdapter) Set AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class ImageOptimization extends AbstractModel
 {
@@ -54,11 +58,19 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $GuetzliAdapter;
 
     /**
+     * @var AvifAdapter AVIF adapter configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $AvifAdapter;
+
+    /**
      * @param WebpAdapter $WebpAdapter `WebpAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param TpgAdapter $TpgAdapter `TpgAdapter` configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param GuetzliAdapter $GuetzliAdapter `GuetzliAdapter` configuration
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param AvifAdapter $AvifAdapter AVIF adapter configuration
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -87,6 +99,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("GuetzliAdapter",$param) and $param["GuetzliAdapter"] !== null) {
             $this->GuetzliAdapter = new GuetzliAdapter();
             $this->GuetzliAdapter->deserialize($param["GuetzliAdapter"]);
+        }
+
+        if (array_key_exists("AvifAdapter",$param) and $param["AvifAdapter"] !== null) {
+            $this->AvifAdapter = new AvifAdapter();
+            $this->AvifAdapter->deserialize($param["AvifAdapter"]);
         }
     }
 }
