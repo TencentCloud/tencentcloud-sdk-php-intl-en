@@ -18,7 +18,7 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned result of speech detection
+ * Result of voice moderation
  *
  * @method string getDataId() Obtain Data ID
  * @method void setDataId(string $DataId) Set Data ID

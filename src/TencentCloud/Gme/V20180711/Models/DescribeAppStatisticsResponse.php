@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAppStatistics response structure.
  *
- * @method DescribeAppStatisticsResp getData() Obtain App usage statistics
- * @method void setData(DescribeAppStatisticsResp $Data) Set App usage statistics
+ * @method DescribeAppStatisticsResp getData() Obtain Application usage statistics
+ * @method void setData(DescribeAppStatisticsResp $Data) Set Application usage statistics
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAppStatisticsResponse extends AbstractModel
 {
     /**
-     * @var DescribeAppStatisticsResp App usage statistics
+     * @var DescribeAppStatisticsResp Application usage statistics
      */
     public $Data;
 
@@ -38,7 +38,7 @@ class DescribeAppStatisticsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param DescribeAppStatisticsResp $Data App usage statistics
+     * @param DescribeAppStatisticsResp $Data Application usage statistics
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

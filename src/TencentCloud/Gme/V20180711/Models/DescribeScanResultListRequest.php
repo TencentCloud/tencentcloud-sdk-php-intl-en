@@ -20,17 +20,17 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanResultList request structure.
  *
- * @method integer getBizId() Obtain Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
- * @method void setBizId(integer $BizId) Set Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+ * @method integer getBizId() Obtain Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
+ * @method void setBizId(integer $BizId) Set Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
  * @method array getTaskIdList() Obtain List of IDs of the tasks to be queried. Up to 100 entries can be added in the ID list.
  * @method void setTaskIdList(array $TaskIdList) Set List of IDs of the tasks to be queried. Up to 100 entries can be added in the ID list.
- * @method integer getLimit() Obtain Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
- * @method void setLimit(integer $Limit) Set Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+ * @method integer getLimit() Obtain Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
+ * @method void setLimit(integer $Limit) Set Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
  */
 class DescribeScanResultListRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+     * @var integer Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
      */
     public $BizId;
 
@@ -40,14 +40,14 @@ class DescribeScanResultListRequest extends AbstractModel
     public $TaskIdList;
 
     /**
-     * @var integer Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+     * @var integer Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
      */
     public $Limit;
 
     /**
-     * @param integer $BizId Application ID, which is the `AppID` obtained when you create an application in the [console](https://console.cloud.tencent.com/gamegme)
+     * @param integer $BizId Application ID, which is obtained when you create an application in the [GME console](https://console.cloud.tencent.com/gamegme).
      * @param array $TaskIdList List of IDs of the tasks to be queried. Up to 100 entries can be added in the ID list.
-     * @param integer $Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned
+     * @param integer $Limit Number of task results to be returned. Default value: 10. Maximum value: 500. This parameter will be ignored for large file tasks where all results will be returned.
      */
     function __construct()
     {

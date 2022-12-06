@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Output parameters of `ModifyAppStatus`
  *
- * @method integer getBizId() Obtain GME app ID
- * @method void setBizId(integer $BizId) Set GME app ID
- * @method string getStatus() Obtain App status. Valid values: `open`, `close`
- * @method void setStatus(string $Status) Set App status. Valid values: `open`, `close`
+ * @method integer getBizId() Obtain GME application ID
+ * @method void setBizId(integer $BizId) Set GME application ID
+ * @method string getStatus() Obtain Application status. Valid values: `open`, `close`.
+ * @method void setStatus(string $Status) Set Application status. Valid values: `open`, `close`.
  */
 class ModifyAppStatusResp extends AbstractModel
 {
     /**
-     * @var integer GME app ID
+     * @var integer GME application ID
      */
     public $BizId;
 
     /**
-     * @var string App status. Valid values: `open`, `close`
+     * @var string Application status. Valid values: `open`, `close`.
      */
     public $Status;
 
     /**
-     * @param integer $BizId GME app ID
-     * @param string $Status App status. Valid values: `open`, `close`
+     * @param integer $BizId GME application ID
+     * @param string $Status Application status. Valid values: `open`, `close`.
      */
     function __construct()
     {

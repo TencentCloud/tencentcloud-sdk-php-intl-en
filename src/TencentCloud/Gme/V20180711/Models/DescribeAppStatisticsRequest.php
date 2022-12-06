@@ -22,12 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() Obtain GME application ID
  * @method void setBizId(integer $BizId) Set GME application ID
- * @method string getStartDate() Obtain Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setStartDate(string $StartDate) Set Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method string getEndDate() Obtain Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setEndDate(string $EndDate) Set Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
- * @method array getServices() Obtain List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
- * @method void setServices(array $Services) Set List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+ * @method string getStartDate() Obtain Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method void setStartDate(string $StartDate) Set Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method string getEndDate() Obtain Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method void setEndDate(string $EndDate) Set Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method array getServices() Obtain List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
+ * @method void setServices(array $Services) Set List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
  */
 class DescribeAppStatisticsRequest extends AbstractModel
 {
@@ -37,25 +37,25 @@ class DescribeAppStatisticsRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var string Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+     * @var string Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public $StartDate;
 
     /**
-     * @var string Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
+     * @var string Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public $EndDate;
 
     /**
-     * @var array List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+     * @var array List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
      */
     public $Services;
 
     /**
      * @param integer $BizId GME application ID
-     * @param string $StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param string $EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param array $Services List of services to be queried. Valid values: RealTimeSpeech, VoiceMessage, VoiceFilter
+     * @param string $StartDate Data start date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+     * @param string $EndDate Data end date (GMT+8) in the format of yyyy-mm-dd, such as 2018-07-13.
+     * @param array $Services List of services to be queried. Valid values: `RealTimeSpeech`, `VoiceMessage`, `VoiceFilter`, `SpeechToText`.
      */
     function __construct()
     {

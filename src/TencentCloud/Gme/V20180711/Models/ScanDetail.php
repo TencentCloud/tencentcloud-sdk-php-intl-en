@@ -18,28 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech detection details
+ * Voice detection details
  *
- * @method string getLabel() Obtain Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
- * @method void setLabel(string $Label) Set Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
- * @method string getRate() Obtain Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
- * @method void setRate(string $Rate) Set Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+ * @method string getLabel() Obtain Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+ * @method void setLabel(string $Label) Set Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+ * @method string getRate() Obtain Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
+ * @method void setRate(string $Rate) Set Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
  * @method string getKeyWord() Obtain Non-compliant keyword
  * @method void setKeyWord(string $KeyWord) Set Non-compliant keyword
- * @method integer getStartTime() Obtain Start time offset in milliseconds from 0 of keyword in audio
- * @method void setStartTime(integer $StartTime) Set Start time offset in milliseconds from 0 of keyword in audio
- * @method integer getEndTime() Obtain End time offset in milliseconds from 0 of keyword in audio
- * @method void setEndTime(integer $EndTime) Set End time offset in milliseconds from 0 of keyword in audio
+ * @method integer getStartTime() Obtain Start time offset of keyword from 0 in audio (in milliseconds)
+ * @method void setStartTime(integer $StartTime) Set Start time offset of keyword from 0 in audio (in milliseconds)
+ * @method integer getEndTime() Obtain End time offset of keyword from 0 in audio (in milliseconds)
+ * @method void setEndTime(integer $EndTime) Set End time offset of keyword from 0 in audio (in milliseconds)
  */
 class ScanDetail extends AbstractModel
 {
     /**
-     * @var string Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
+     * @var string Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
      */
     public $Label;
 
     /**
-     * @var string Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+     * @var string Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
      */
     public $Rate;
 
@@ -49,21 +49,21 @@ class ScanDetail extends AbstractModel
     public $KeyWord;
 
     /**
-     * @var integer Start time offset in milliseconds from 0 of keyword in audio
+     * @var integer Start time offset of keyword from 0 in audio (in milliseconds)
      */
     public $StartTime;
 
     /**
-     * @var integer End time offset in milliseconds from 0 of keyword in audio
+     * @var integer End time offset of keyword from 0 in audio (in milliseconds)
      */
     public $EndTime;
 
     /**
-     * @param string $Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>
-     * @param string $Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant
+     * @param string $Label Violation scenario. For more information, please see the definition of <a href="https://intl.cloud.tencent.com/document/product/607/37622?from_cn_redirect=1#Label_Value">Label</a>.
+     * @param string $Rate Confidence score in scenario. Value range: [0.00,100.00]. The higher the score, the more likely the content is non-compliant.
      * @param string $KeyWord Non-compliant keyword
-     * @param integer $StartTime Start time offset in milliseconds from 0 of keyword in audio
-     * @param integer $EndTime End time offset in milliseconds from 0 of keyword in audio
+     * @param integer $StartTime Start time offset of keyword from 0 in audio (in milliseconds)
+     * @param integer $EndTime End time offset of keyword from 0 in audio (in milliseconds)
      */
     function __construct()
     {

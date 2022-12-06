@@ -18,16 +18,16 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech detection task list
+ * Voice detection task list
  *
  * @method string getDataId() Obtain Unique data ID
  * @method void setDataId(string $DataId) Set Unique data ID
- * @method string getUrl() Obtain URL-encoded data file URL, which is a pull address if the detected speech is a stream
- * @method void setUrl(string $Url) Set URL-encoded data file URL, which is a pull address if the detected speech is a stream
- * @method string getRoomId() Obtain GME voice chat room ID, which is entered during speech detection by GME voice chat
- * @method void setRoomId(string $RoomId) Set GME voice chat room ID, which is entered during speech detection by GME voice chat
- * @method string getOpenId() Obtain GME voice chat user ID, which is entered during speech detection by GME voice chat
- * @method void setOpenId(string $OpenId) Set GME voice chat user ID, which is entered during speech detection by GME voice chat
+ * @method string getUrl() Obtain URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+ * @method void setUrl(string $Url) Set URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+ * @method string getRoomId() Obtain GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+ * @method void setRoomId(string $RoomId) Set GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+ * @method string getOpenId() Obtain GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
+ * @method void setOpenId(string $OpenId) Set GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
  */
 class Task extends AbstractModel
 {
@@ -37,25 +37,25 @@ class Task extends AbstractModel
     public $DataId;
 
     /**
-     * @var string URL-encoded data file URL, which is a pull address if the detected speech is a stream
+     * @var string URL-encoded data file URL, which is a pull address if the detected voice is a stream.
      */
     public $Url;
 
     /**
-     * @var string GME voice chat room ID, which is entered during speech detection by GME voice chat
+     * @var string GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
      */
     public $RoomId;
 
     /**
-     * @var string GME voice chat user ID, which is entered during speech detection by GME voice chat
+     * @var string GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
      */
     public $OpenId;
 
     /**
      * @param string $DataId Unique data ID
-     * @param string $Url URL-encoded data file URL, which is a pull address if the detected speech is a stream
-     * @param string $RoomId GME voice chat room ID, which is entered during speech detection by GME voice chat
-     * @param string $OpenId GME voice chat user ID, which is entered during speech detection by GME voice chat
+     * @param string $Url URL-encoded data file URL, which is a pull address if the detected voice is a stream.
+     * @param string $RoomId GME Voice Chat room ID, which is entered during voice analysis by GME Voice Chat.
+     * @param string $OpenId GME Voice Chat user ID, which is entered during voice analysis by GME Voice Chat.
      */
     function __construct()
     {

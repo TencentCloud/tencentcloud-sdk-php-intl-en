@@ -18,28 +18,28 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Configuration information of voice messaging and speech-to-text
+ * Configuration information of Voice Message Service
  *
- * @method string getStatus() Obtain Voice messaging and speech-to-text status. Valid values: open, close
- * @method void setStatus(string $Status) Set Voice messaging and speech-to-text status. Valid values: open, close
- * @method string getLanguage() Obtain Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
- * @method void setLanguage(string $Language) Set Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+ * @method string getStatus() Obtain Voice Message Service status. Valid values: `open`, `close`.
+ * @method void setStatus(string $Status) Set Voice Message Service status. Valid values: `open`, `close`.
+ * @method string getLanguage() Obtain Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
+ * @method void setLanguage(string $Language) Set Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
  */
 class VoiceMessageConf extends AbstractModel
 {
     /**
-     * @var string Voice messaging and speech-to-text status. Valid values: open, close
+     * @var string Voice Message Service status. Valid values: `open`, `close`.
      */
     public $Status;
 
     /**
-     * @var string Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+     * @var string Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
      */
     public $Language;
 
     /**
-     * @param string $Status Voice messaging and speech-to-text status. Valid values: open, close
-     * @param string $Language Language supported for voice messaging and speech-to-text. Valid values: all (all languages), cnen (Chinese and English). Default value: cnen
+     * @param string $Status Voice Message Service status. Valid values: `open`, `close`.
+     * @param string $Language Language supported for Voice Message Service. Valid values: `all` (all languages), `cnen` (Chinese and English). Default value: `cnen`.
      */
     function __construct()
     {

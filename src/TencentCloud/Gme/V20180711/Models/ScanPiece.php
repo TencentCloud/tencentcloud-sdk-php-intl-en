@@ -18,50 +18,50 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Speech detection result, which will be returned if `Code` is 0
+ * Voice detection result, which will be returned if `Code` is 0.
  *
- * @method string getDumpUrl() Obtain Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDumpUrl(string $DumpUrl) Set Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getDumpUrl() Obtain Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDumpUrl(string $DumpUrl) Set Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method boolean getHitFlag() Obtain Whether non-compliant information is detected
  * @method void setHitFlag(boolean $HitFlag) Set Whether non-compliant information is detected
  * @method string getMainType() Obtain Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setMainType(string $MainType) Set Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getScanDetail() Obtain Speech detection details
- * @method void setScanDetail(array $ScanDetail) Set Speech detection details
- * @method string getRoomId() Obtain GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRoomId(string $RoomId) Set GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method string getOpenId() Obtain GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOpenId(string $OpenId) Set GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method array getScanDetail() Obtain Voice detection details
+ * @method void setScanDetail(array $ScanDetail) Set Voice detection details
+ * @method string getRoomId() Obtain GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRoomId(string $RoomId) Set GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getOpenId() Obtain GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOpenId(string $OpenId) Set GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getInfo() Obtain Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setInfo(string $Info) Set Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getOffset() Obtain Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setOffset(integer $Offset) Set Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getDuration() Obtain Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setDuration(integer $Duration) Set Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getPieceStartTime() Obtain Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setPieceStartTime(integer $PieceStartTime) Set Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getOffset() Obtain Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOffset(integer $Offset) Set Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getDuration() Obtain Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDuration(integer $Duration) Set Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getPieceStartTime() Obtain Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setPieceStartTime(integer $PieceStartTime) Set Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ScanPiece extends AbstractModel
 {
     /**
-     * @var string Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $DumpUrl;
 
@@ -72,70 +72,70 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $MainType;
 
     /**
-     * @var array Speech detection details
+     * @var array Voice detection details
      */
     public $ScanDetail;
 
     /**
-     * @var string GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $RoomId;
 
     /**
-     * @var string GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $OpenId;
 
     /**
      * @var string Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Info;
 
     /**
-     * @var integer Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Offset;
 
     /**
-     * @var integer Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Duration;
 
     /**
-     * @var integer Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $PieceStartTime;
 
     /**
-     * @param string $DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $DumpUrl Audio retention address, which will be returned for stream detection. The audio will be retained for 30 minutes.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param boolean $HitFlag Whether non-compliant information is detected
      * @param string $MainType Main non-compliant content type
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $ScanDetail Speech detection details
-     * @param string $RoomId GME voice chat room ID, which is the `RoomId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param string $OpenId GME voice chat user ID, which is the `OpenId` passed through when the task was submitted
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ScanDetail Voice detection details
+     * @param string $RoomId GME Voice Chat room ID, which is the `RoomId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $OpenId GME Voice Chat user ID, which is the `OpenId` passed through when the task was submitted.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $Info Remarks
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Offset Offset time in milliseconds of segment in stream during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Duration Segment duration during stream detection
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $PieceStartTime Segment detection start time
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Offset Offset time of multipart in stream during stream detection (in milliseconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $Duration Multipart duration during stream detection
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $PieceStartTime Multipart detection start time
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

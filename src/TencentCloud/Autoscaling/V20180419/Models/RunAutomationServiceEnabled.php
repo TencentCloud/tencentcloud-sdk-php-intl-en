@@ -14,39 +14,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Gme\V20180711\Models;
+namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Tag list
+ * Status of TAT service.
  *
- * @method string getTagKey() Obtain Tag key
+ * @method boolean getEnabled() Obtain Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTagKey(string $TagKey) Set Tag key
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method string getTagValue() Obtain Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained.
- * @method void setTagValue(string $TagValue) Set Tag value
+ * @method void setEnabled(boolean $Enabled) Set Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
  */
-class Tag extends AbstractModel
+class RunAutomationServiceEnabled extends AbstractModel
 {
     /**
-     * @var string Tag key
+     * @var boolean Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
-    public $TagKey;
+    public $Enabled;
 
     /**
-     * @var string Tag value
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey Tag key
-Note: This field may return `null`, indicating that no valid values can be obtained.
-     * @param string $TagValue Tag value
+     * @param boolean $Enabled Whether to enable [TencentCloud Automation Tools](https://intl.cloud.tencent.com/document/product/1340?from_cn_redirect=1). Valid values:<br><li>`TRUE`: Enable<br><li>`FALSE`: Not enable.
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -62,12 +50,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
+            $this->Enabled = $param["Enabled"];
         }
     }
 }

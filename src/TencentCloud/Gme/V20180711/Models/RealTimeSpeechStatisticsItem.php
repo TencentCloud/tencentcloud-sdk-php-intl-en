@@ -18,60 +18,60 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Voice chat usage statistics
+ * Voice Chat usage statistics
  *
- * @method integer getMainLandDau() Obtain DAU in Mainland China
- * @method void setMainLandDau(integer $MainLandDau) Set DAU in Mainland China
- * @method integer getMainLandPcu() Obtain PCU in Mainland China
- * @method void setMainLandPcu(integer $MainLandPcu) Set PCU in Mainland China
- * @method integer getMainLandDuration() Obtain Total duration of use in Mainland China in minutes
- * @method void setMainLandDuration(integer $MainLandDuration) Set Total duration of use in Mainland China in minutes
- * @method integer getOverseaDau() Obtain DAU outside Mainland China
- * @method void setOverseaDau(integer $OverseaDau) Set DAU outside Mainland China
- * @method integer getOverseaPcu() Obtain PCU outside Mainland China
- * @method void setOverseaPcu(integer $OverseaPcu) Set PCU outside Mainland China
- * @method integer getOverseaDuration() Obtain Total duration of use outside Mainland China in minutes
- * @method void setOverseaDuration(integer $OverseaDuration) Set Total duration of use outside Mainland China in minutes
+ * @method integer getMainLandDau() Obtain DAUs in the Chinese mainland
+ * @method void setMainLandDau(integer $MainLandDau) Set DAUs in the Chinese mainland
+ * @method integer getMainLandPcu() Obtain PCUs in the Chinese mainland
+ * @method void setMainLandPcu(integer $MainLandPcu) Set PCUs in the Chinese mainland
+ * @method integer getMainLandDuration() Obtain Total duration of use in the Chinese mainland (in minutes)
+ * @method void setMainLandDuration(integer $MainLandDuration) Set Total duration of use in the Chinese mainland (in minutes)
+ * @method integer getOverseaDau() Obtain DAUs outside the Chinese mainland
+ * @method void setOverseaDau(integer $OverseaDau) Set DAUs outside the Chinese mainland
+ * @method integer getOverseaPcu() Obtain PCUs outside the Chinese mainland
+ * @method void setOverseaPcu(integer $OverseaPcu) Set PCUs outside the Chinese mainland
+ * @method integer getOverseaDuration() Obtain Total duration of use outside the Chinese mainland (in minutes)
+ * @method void setOverseaDuration(integer $OverseaDuration) Set Total duration of use outside the Chinese mainland (in minutes)
  */
 class RealTimeSpeechStatisticsItem extends AbstractModel
 {
     /**
-     * @var integer DAU in Mainland China
+     * @var integer DAUs in the Chinese mainland
      */
     public $MainLandDau;
 
     /**
-     * @var integer PCU in Mainland China
+     * @var integer PCUs in the Chinese mainland
      */
     public $MainLandPcu;
 
     /**
-     * @var integer Total duration of use in Mainland China in minutes
+     * @var integer Total duration of use in the Chinese mainland (in minutes)
      */
     public $MainLandDuration;
 
     /**
-     * @var integer DAU outside Mainland China
+     * @var integer DAUs outside the Chinese mainland
      */
     public $OverseaDau;
 
     /**
-     * @var integer PCU outside Mainland China
+     * @var integer PCUs outside the Chinese mainland
      */
     public $OverseaPcu;
 
     /**
-     * @var integer Total duration of use outside Mainland China in minutes
+     * @var integer Total duration of use outside the Chinese mainland (in minutes)
      */
     public $OverseaDuration;
 
     /**
-     * @param integer $MainLandDau DAU in Mainland China
-     * @param integer $MainLandPcu PCU in Mainland China
-     * @param integer $MainLandDuration Total duration of use in Mainland China in minutes
-     * @param integer $OverseaDau DAU outside Mainland China
-     * @param integer $OverseaPcu PCU outside Mainland China
-     * @param integer $OverseaDuration Total duration of use outside Mainland China in minutes
+     * @param integer $MainLandDau DAUs in the Chinese mainland
+     * @param integer $MainLandPcu PCUs in the Chinese mainland
+     * @param integer $MainLandDuration Total duration of use in the Chinese mainland (in minutes)
+     * @param integer $OverseaDau DAUs outside the Chinese mainland
+     * @param integer $OverseaPcu PCUs outside the Chinese mainland
+     * @param integer $OverseaDuration Total duration of use outside the Chinese mainland (in minutes)
      */
     function __construct()
     {

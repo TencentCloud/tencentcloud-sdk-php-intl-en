@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() Obtain Application ID
  * @method void setBizId(integer $BizId) Set Application ID
- * @method string getStartDate() Obtain Data start date in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setStartDate(string $StartDate) Set Data start date in the format of yyyy-mm-dd, such as 2018-07-13
- * @method string getEndDate() Obtain Data end date in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setEndDate(string $EndDate) Set Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+ * @method string getStartDate() Obtain Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method void setStartDate(string $StartDate) Set Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method string getEndDate() Obtain Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
+ * @method void setEndDate(string $EndDate) Set Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
  */
 class DescribeApplicationDataRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeApplicationDataRequest extends AbstractModel
     public $BizId;
 
     /**
-     * @var string Data start date in the format of yyyy-mm-dd, such as 2018-07-13
+     * @var string Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public $StartDate;
 
     /**
-     * @var string Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+     * @var string Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     public $EndDate;
 
     /**
      * @param integer $BizId Application ID
-     * @param string $StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param string $EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13
+     * @param string $StartDate Data start date in the format of yyyy-mm-dd, such as 2018-07-13.
+     * @param string $EndDate Data end date in the format of yyyy-mm-dd, such as 2018-07-13.
      */
     function __construct()
     {

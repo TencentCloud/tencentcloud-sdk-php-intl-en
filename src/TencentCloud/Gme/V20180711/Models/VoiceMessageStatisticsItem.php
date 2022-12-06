@@ -18,20 +18,20 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Voice messaging usage statistics
+ * Voice Message Service usage statistics
  *
- * @method integer getDau() Obtain DAU of voice messaging and speech-to-text
- * @method void setDau(integer $Dau) Set DAU of voice messaging and speech-to-text
+ * @method integer getDau() Obtain DAUs of Voice Message Service
+ * @method void setDau(integer $Dau) Set DAUs of Voice Message Service
  */
 class VoiceMessageStatisticsItem extends AbstractModel
 {
     /**
-     * @var integer DAU of voice messaging and speech-to-text
+     * @var integer DAUs of Voice Message Service
      */
     public $Dau;
 
     /**
-     * @param integer $Dau DAU of voice messaging and speech-to-text
+     * @param integer $Dau DAUs of Voice Message Service
      */
     function __construct()
     {

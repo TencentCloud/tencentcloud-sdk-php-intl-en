@@ -22,30 +22,30 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getBizId() Obtain Application ID
  * @method void setBizId(integer $BizId) Set Application ID
- * @method integer getDauDataNum() Obtain DAU data
- * @method void setDauDataNum(integer $DauDataNum) Set DAU data
- * @method array getDauDataMainland() Obtain DAU in Chinese mainland
- * @method void setDauDataMainland(array $DauDataMainland) Set DAU in Chinese mainland
- * @method array getDauDataOversea() Obtain DAU outside Chinese mainland
- * @method void setDauDataOversea(array $DauDataOversea) Set DAU outside Chinese mainland
- * @method array getDauDataSum() Obtain Total DAU
- * @method void setDauDataSum(array $DauDataSum) Set Total DAU
- * @method integer getDurationDataNum() Obtain Number of voice chat metrics
- * @method void setDurationDataNum(integer $DurationDataNum) Set Number of voice chat metrics
- * @method array getDurationDataMainland() Obtain Duration of voice chat in Chinese mainland in minutes
- * @method void setDurationDataMainland(array $DurationDataMainland) Set Duration of voice chat in Chinese mainland in minutes
- * @method array getDurationDataOversea() Obtain Duration of voice chat outside Chinese mainland in minutes
- * @method void setDurationDataOversea(array $DurationDataOversea) Set Duration of voice chat outside Chinese mainland in minutes
- * @method array getDurationDataSum() Obtain Total duration of voice chat in minutes
- * @method void setDurationDataSum(array $DurationDataSum) Set Total duration of voice chat in minutes
- * @method integer getPcuDataNum() Obtain PCU data
- * @method void setPcuDataNum(integer $PcuDataNum) Set PCU data
- * @method array getPcuDataMainland() Obtain PCU in Chinese mainland
- * @method void setPcuDataMainland(array $PcuDataMainland) Set PCU in Chinese mainland
- * @method array getPcuDataOversea() Obtain PCU outside Chinese mainland
- * @method void setPcuDataOversea(array $PcuDataOversea) Set PCU outside Chinese mainland
- * @method array getPcuDataSum() Obtain Total PCU
- * @method void setPcuDataSum(array $PcuDataSum) Set Total PCU
+ * @method integer getDauDataNum() Obtain Number of DAU metrics
+ * @method void setDauDataNum(integer $DauDataNum) Set Number of DAU metrics
+ * @method array getDauDataMainland() Obtain DAUs in the Chinese mainland
+ * @method void setDauDataMainland(array $DauDataMainland) Set DAUs in the Chinese mainland
+ * @method array getDauDataOversea() Obtain DAUs outside the Chinese mainland
+ * @method void setDauDataOversea(array $DauDataOversea) Set DAUs outside the Chinese mainland
+ * @method array getDauDataSum() Obtain Total DAUs
+ * @method void setDauDataSum(array $DauDataSum) Set Total DAUs
+ * @method integer getDurationDataNum() Obtain Number of Voice Chat metrics
+ * @method void setDurationDataNum(integer $DurationDataNum) Set Number of Voice Chat metrics
+ * @method array getDurationDataMainland() Obtain Duration of Voice Chat in the Chinese mainland (in minutes)
+ * @method void setDurationDataMainland(array $DurationDataMainland) Set Duration of Voice Chat in the Chinese mainland (in minutes)
+ * @method array getDurationDataOversea() Obtain Duration of Voice Chat outside the Chinese mainland (in minutes)
+ * @method void setDurationDataOversea(array $DurationDataOversea) Set Duration of Voice Chat outside the Chinese mainland (in minutes)
+ * @method array getDurationDataSum() Obtain Total duration of Voice Chat (in minutes)
+ * @method void setDurationDataSum(array $DurationDataSum) Set Total duration of Voice Chat (in minutes)
+ * @method integer getPcuDataNum() Obtain Number of PCU metrics
+ * @method void setPcuDataNum(integer $PcuDataNum) Set Number of PCU metrics
+ * @method array getPcuDataMainland() Obtain PCUs in the Chinese mainland
+ * @method void setPcuDataMainland(array $PcuDataMainland) Set PCUs in the Chinese mainland
+ * @method array getPcuDataOversea() Obtain PCUs outside the Chinese mainland
+ * @method void setPcuDataOversea(array $PcuDataOversea) Set PCUs outside the Chinese mainland
+ * @method array getPcuDataSum() Obtain Total PCUs
+ * @method void setPcuDataSum(array $PcuDataSum) Set Total PCUs
  */
 class ApplicationDataStatistics extends AbstractModel
 {
@@ -55,79 +55,79 @@ class ApplicationDataStatistics extends AbstractModel
     public $BizId;
 
     /**
-     * @var integer DAU data
+     * @var integer Number of DAU metrics
      */
     public $DauDataNum;
 
     /**
-     * @var array DAU in Chinese mainland
+     * @var array DAUs in the Chinese mainland
      */
     public $DauDataMainland;
 
     /**
-     * @var array DAU outside Chinese mainland
+     * @var array DAUs outside the Chinese mainland
      */
     public $DauDataOversea;
 
     /**
-     * @var array Total DAU
+     * @var array Total DAUs
      */
     public $DauDataSum;
 
     /**
-     * @var integer Number of voice chat metrics
+     * @var integer Number of Voice Chat metrics
      */
     public $DurationDataNum;
 
     /**
-     * @var array Duration of voice chat in Chinese mainland in minutes
+     * @var array Duration of Voice Chat in the Chinese mainland (in minutes)
      */
     public $DurationDataMainland;
 
     /**
-     * @var array Duration of voice chat outside Chinese mainland in minutes
+     * @var array Duration of Voice Chat outside the Chinese mainland (in minutes)
      */
     public $DurationDataOversea;
 
     /**
-     * @var array Total duration of voice chat in minutes
+     * @var array Total duration of Voice Chat (in minutes)
      */
     public $DurationDataSum;
 
     /**
-     * @var integer PCU data
+     * @var integer Number of PCU metrics
      */
     public $PcuDataNum;
 
     /**
-     * @var array PCU in Chinese mainland
+     * @var array PCUs in the Chinese mainland
      */
     public $PcuDataMainland;
 
     /**
-     * @var array PCU outside Chinese mainland
+     * @var array PCUs outside the Chinese mainland
      */
     public $PcuDataOversea;
 
     /**
-     * @var array Total PCU
+     * @var array Total PCUs
      */
     public $PcuDataSum;
 
     /**
      * @param integer $BizId Application ID
-     * @param integer $DauDataNum DAU data
-     * @param array $DauDataMainland DAU in Chinese mainland
-     * @param array $DauDataOversea DAU outside Chinese mainland
-     * @param array $DauDataSum Total DAU
-     * @param integer $DurationDataNum Number of voice chat metrics
-     * @param array $DurationDataMainland Duration of voice chat in Chinese mainland in minutes
-     * @param array $DurationDataOversea Duration of voice chat outside Chinese mainland in minutes
-     * @param array $DurationDataSum Total duration of voice chat in minutes
-     * @param integer $PcuDataNum PCU data
-     * @param array $PcuDataMainland PCU in Chinese mainland
-     * @param array $PcuDataOversea PCU outside Chinese mainland
-     * @param array $PcuDataSum Total PCU
+     * @param integer $DauDataNum Number of DAU metrics
+     * @param array $DauDataMainland DAUs in the Chinese mainland
+     * @param array $DauDataOversea DAUs outside the Chinese mainland
+     * @param array $DauDataSum Total DAUs
+     * @param integer $DurationDataNum Number of Voice Chat metrics
+     * @param array $DurationDataMainland Duration of Voice Chat in the Chinese mainland (in minutes)
+     * @param array $DurationDataOversea Duration of Voice Chat outside the Chinese mainland (in minutes)
+     * @param array $DurationDataSum Total duration of Voice Chat (in minutes)
+     * @param integer $PcuDataNum Number of PCU metrics
+     * @param array $PcuDataMainland PCUs in the Chinese mainland
+     * @param array $PcuDataOversea PCUs outside the Chinese mainland
+     * @param array $PcuDataSum Total PCUs
      */
     function __construct()
     {

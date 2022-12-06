@@ -20,66 +20,66 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScanVoice request structure.
  *
- * @method integer getBizId() Obtain Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
- * @method void setBizId(integer $BizId) Set Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
- * @method array getScenes() Obtain Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
- * @method void setScenes(array $Scenes) Set Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
- * @method boolean getLive() Obtain Whether it is a live stream. false: audio file detection, true: audio stream detection.
- * @method void setLive(boolean $Live) Set Whether it is a live stream. false: audio file detection, true: audio stream detection.
- * @method array getTasks() Obtain Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
- * @method void setTasks(array $Tasks) Set Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
- * @method string getCallback() Obtain Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
- * @method void setCallback(string $Callback) Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
- * @method string getLang() Obtain The language. `jp` represents Japanese
- * @method void setLang(string $Lang) Set The language. `jp` represents Japanese
+ * @method integer getBizId() Obtain Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+ * @method void setBizId(integer $BizId) Set Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+ * @method array getScenes() Obtain Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+ * @method void setScenes(array $Scenes) Set Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+ * @method boolean getLive() Obtain Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+ * @method void setLive(boolean $Live) Set Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+ * @method array getTasks() Obtain Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+ * @method void setTasks(array $Tasks) Set Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+ * @method string getCallback() Obtain Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+ * @method void setCallback(string $Callback) Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+ * @method string getLang() Obtain Language. `jp`: Japanese
+ * @method void setLang(string $Lang) Set Language. `jp`: Japanese
  */
 class ScanVoiceRequest extends AbstractModel
 {
     /**
-     * @var integer Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
+     * @var integer Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
      */
     public $BizId;
 
     /**
-     * @var array Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
+     * @var array Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
      */
     public $Scenes;
 
     /**
-     * @var boolean Whether it is a live stream. false: audio file detection, true: audio stream detection.
+     * @var boolean Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
      */
     public $Live;
 
     /**
-     * @var array Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
+     * @var array Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
      */
     public $Tasks;
 
     /**
-     * @var string Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
+     * @var string Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
      */
     public $Callback;
 
     /**
-     * @var string The language. `jp` represents Japanese
+     * @var string Language. `jp`: Japanese
      */
     public $Lang;
 
     /**
-     * @param integer $BizId Application ID, which is the `AppID` obtained when you create an application in [Console > Service Management](https://console.cloud.tencent.com/gamegme)
-     * @param array $Scenes Speech detection scenario. The value of this parameter is currently required to be `default`. Preset scenarios: abusive, pornographic, advertising, and other prohibited scenarios. For specific values, please see the <a href="#Label_Value">Label description</a> above.
-     * @param boolean $Live Whether it is a live stream. false: audio file detection, true: audio stream detection.
-     * @param array $Tasks Speech detection task list. Up to 100 tasks can be added in the list. The structure contains:
-<li>DataId: unique data ID</li>
-<li>Url: URL-encoded data file URL, which is a pull address if the detected speech is a stream</li>
-     * @param string $Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">callback description</a> above. (Note: if this field is empty, the detection result can only be obtained by calling the `DescribeScanResultList` API.)
-     * @param string $Lang The language. `jp` represents Japanese
+     * @param integer $BizId Application ID, which is obtained when you create an application in the [GME console - Service Management](https://console.cloud.tencent.com/gamegme).
+     * @param array $Scenes Voice detection scenario. It must be `default`. See the <a href="#Label_Value">Label description</a> as the result.
+     * @param boolean $Live Whether it is a live stream. Values: `false` (voice file), `true` (live stream).
+     * @param array $Tasks Voice detection task list. Up to 100 tasks can be added in the list. 
+<li>`DataId`: Unique data ID</li>
+<li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
+     * @param string $Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
+     * @param string $Lang Language. `jp`: Japanese
      */
     function __construct()
     {

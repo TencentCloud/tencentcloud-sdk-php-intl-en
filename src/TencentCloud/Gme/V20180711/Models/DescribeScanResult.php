@@ -18,7 +18,7 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Returned speech detection result
+ * Returned voice detection result
  *
  * @method integer getCode() Obtain Business return code
  * @method void setCode(integer $Code) Set Business return code
@@ -31,29 +31,29 @@ use TencentCloud\Common\AbstractModel;
  * @method boolean getLive() Obtain Whether it is a stream
  * @method void setLive(boolean $Live) Set Whether it is a stream
  * @method string getMsg() Obtain Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setMsg(string $Msg) Set Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method array getScanPiece() Obtain Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setScanPiece(array $ScanPiece) Set Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method integer getScanStartTime() Obtain Detection task submission timestamp
  * @method void setScanStartTime(integer $ScanStartTime) Set Detection task submission timestamp
- * @method array getScenes() Obtain Speech detection scenario, which corresponds to the `Scene` at the time of request
- * @method void setScenes(array $Scenes) Set Speech detection scenario, which corresponds to the `Scene` at the time of request
- * @method string getTaskId() Obtain Speech detection task ID, which is assigned by the backend
- * @method void setTaskId(string $TaskId) Set Speech detection task ID, which is assigned by the backend
+ * @method array getScenes() Obtain Voice detection scenario, which corresponds to the `Scene` at the time of request
+ * @method void setScenes(array $Scenes) Set Voice detection scenario, which corresponds to the `Scene` at the time of request
+ * @method string getTaskId() Obtain Voice detection task ID, which is assigned by the backend
+ * @method void setTaskId(string $TaskId) Set Voice detection task ID, which is assigned by the backend
  * @method string getUrl() Obtain File or stream address
  * @method void setUrl(string $Url) Set File or stream address
- * @method string getStatus() Obtain Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
- * @method void setStatus(string $Status) Set Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+ * @method string getStatus() Obtain Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
+ * @method void setStatus(string $Status) Set Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
  * @method integer getBizId() Obtain ID of the application submitted for detection
  * @method void setBizId(integer $BizId) Set ID of the application submitted for detection
  */
@@ -86,13 +86,13 @@ class DescribeScanResult extends AbstractModel
 
     /**
      * @var string Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Msg;
 
     /**
      * @var array Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $ScanPiece;
 
@@ -102,12 +102,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $ScanStartTime;
 
     /**
-     * @var array Speech detection scenario, which corresponds to the `Scene` at the time of request
+     * @var array Voice detection scenario, which corresponds to the `Scene` at the time of request
      */
     public $Scenes;
 
     /**
-     * @var string Speech detection task ID, which is assigned by the backend
+     * @var string Voice detection task ID, which is assigned by the backend
      */
     public $TaskId;
 
@@ -117,10 +117,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Url;
 
     /**
-     * @var string Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+     * @var string Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
      */
     public $Status;
 
@@ -136,17 +136,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param boolean $HitFlag Whether non-compliant information is detected
      * @param boolean $Live Whether it is a stream
      * @param string $Msg Business return description
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param array $ScanPiece Detection result, which will be returned if `Code` is 0
-Note: this field may return null, indicating that no valid values can be obtained.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ScanStartTime Detection task submission timestamp
-     * @param array $Scenes Speech detection scenario, which corresponds to the `Scene` at the time of request
-     * @param string $TaskId Speech detection task ID, which is assigned by the backend
+     * @param array $Scenes Voice detection scenario, which corresponds to the `Scene` at the time of request
+     * @param string $TaskId Voice detection task ID, which is assigned by the backend
      * @param string $Url File or stream address
-     * @param string $Status Detection task execution result task. Valid values:
-<li>Start: task started</li>
-<li>Success: task ended successfully</li>
-<li>Error: exceptional</li>
+     * @param string $Status Detection task execution result status. Valid values:
+<li>Start: Task started</li>
+<li>Success: Task ended successfully</li>
+<li>Error: An exception occurs</li>
      * @param integer $BizId ID of the application submitted for detection
      */
     function __construct()

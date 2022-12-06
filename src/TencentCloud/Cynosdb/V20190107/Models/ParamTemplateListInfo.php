@@ -28,6 +28,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTemplateDescription(string $TemplateDescription) Set Parameter template description
  * @method string getEngineVersion() Obtain Engine version
  * @method void setEngineVersion(string $EngineVersion) Set Engine version
+ * @method string getDbMode() Obtain Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+ * @method void setDbMode(string $DbMode) Set Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+ * @method array getParamInfoSet() Obtain Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setParamInfoSet(array $ParamInfoSet) Set Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamTemplateListInfo extends AbstractModel
 {
@@ -52,10 +58,24 @@ class ParamTemplateListInfo extends AbstractModel
     public $EngineVersion;
 
     /**
+     * @var string Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     */
+    public $DbMode;
+
+    /**
+     * @var array Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ParamInfoSet;
+
+    /**
      * @param integer $Id Parameter template ID
      * @param string $TemplateName Parameter template name
      * @param string $TemplateDescription Parameter template description
      * @param string $EngineVersion Engine version
+     * @param string $DbMode Database Type. Valid values: `NORMAL`, `SERVERLESS`.
+     * @param array $ParamInfoSet Parameter template details
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +104,19 @@ class ParamTemplateListInfo extends AbstractModel
 
         if (array_key_exists("EngineVersion",$param) and $param["EngineVersion"] !== null) {
             $this->EngineVersion = $param["EngineVersion"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("ParamInfoSet",$param) and $param["ParamInfoSet"] !== null) {
+            $this->ParamInfoSet = [];
+            foreach ($param["ParamInfoSet"] as $key => $value){
+                $obj = new TemplateParamInfo();
+                $obj->deserialize($value);
+                array_push($this->ParamInfoSet, $obj);
+            }
         }
     }
 }

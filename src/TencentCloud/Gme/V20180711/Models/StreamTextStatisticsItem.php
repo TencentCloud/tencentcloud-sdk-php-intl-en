@@ -18,28 +18,24 @@ namespace TencentCloud\Gme\V20180711\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Usage data unit
+ * Stream-to-Text usage statistics
  *
- * @method string getStatDate() Obtain Date in the format of yyyy-mm-dd, such as 2018-07-13
- * @method void setStatDate(string $StatDate) Set Date in the format of yyyy-mm-dd, such as 2018-07-13
- * @method integer getData() Obtain Statistical value
- * @method void setData(integer $Data) Set Statistical value
+ * @method float getData() Obtain Usage of the service (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setData(float $Data) Set Usage of the service (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
-class StatisticsItem extends AbstractModel
+class StreamTextStatisticsItem extends AbstractModel
 {
     /**
-     * @var string Date in the format of yyyy-mm-dd, such as 2018-07-13
-     */
-    public $StatDate;
-
-    /**
-     * @var integer Statistical value
+     * @var float Usage of the service (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Data;
 
     /**
-     * @param string $StatDate Date in the format of yyyy-mm-dd, such as 2018-07-13
-     * @param integer $Data Statistical value
+     * @param float $Data Usage of the service (in seconds)
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -54,10 +50,6 @@ class StatisticsItem extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("StatDate",$param) and $param["StatDate"] !== null) {
-            $this->StatDate = $param["StatDate"];
-        }
-
         if (array_key_exists("Data",$param) and $param["Data"] !== null) {
             $this->Data = $param["Data"];
         }

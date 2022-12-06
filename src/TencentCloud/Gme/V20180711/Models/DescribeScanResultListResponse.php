@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeScanResultList response structure.
  *
- * @method array getData() Obtain Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setData(array $Data) Set Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getData() Obtain Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setData(array $Data) Set Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeScanResultListResponse extends AbstractModel
 {
     /**
-     * @var array Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $Data;
 
@@ -41,8 +41,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param array $Data Result of the speech detection task to be queried
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $Data Result of the voice detection task to be queried
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

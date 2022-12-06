@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ScanVoice response structure.
  *
- * @method array getData() Obtain Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
- * @method void setData(array $Data) Set Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+ * @method array getData() Obtain Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
+ * @method void setData(array $Data) Set Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class ScanVoiceResponse extends AbstractModel
 {
     /**
-     * @var array Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+     * @var array Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
      */
     public $Data;
 
@@ -41,8 +41,8 @@ class ScanVoiceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Data Speech detection return. The `Data` field is a JSON array where each element contains: <li>DataId: corresponding `DataId` in request.</li>
-<li>TaskID: detection task ID, which is used to poll the speech detection result.</li>
+     * @param array $Data Voice moderation result. <li>`DataId`: Corresponding `DataId` in request.</li>
+<li>`TaskID`: Moderation task ID, which is used to poll the voice detection result.</li>
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

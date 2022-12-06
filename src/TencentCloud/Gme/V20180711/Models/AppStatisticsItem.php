@@ -20,54 +20,102 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Application usage statistics
  *
- * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() Obtain Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) Set Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() Obtain Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem $VoiceMessageStatisticsItem) Set Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() Obtain Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem $VoiceFilterStatisticsItem) Set Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDate() Obtain Statistical period
- * @method void setDate(string $Date) Set Statistical period
+ * @method RealTimeSpeechStatisticsItem getRealtimeSpeechStatisticsItem() Obtain Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRealtimeSpeechStatisticsItem(RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem) Set Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method VoiceMessageStatisticsItem getVoiceMessageStatisticsItem() Obtain Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVoiceMessageStatisticsItem(VoiceMessageStatisticsItem $VoiceMessageStatisticsItem) Set Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method VoiceFilterStatisticsItem getVoiceFilterStatisticsItem() Obtain Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setVoiceFilterStatisticsItem(VoiceFilterStatisticsItem $VoiceFilterStatisticsItem) Set Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDate() Obtain Reference period
+ * @method void setDate(string $Date) Set Reference period
+ * @method AudioTextStatisticsItem getAudioTextStatisticsItem() Obtain Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAudioTextStatisticsItem(AudioTextStatisticsItem $AudioTextStatisticsItem) Set Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method StreamTextStatisticsItem getStreamTextStatisticsItem() Obtain Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setStreamTextStatisticsItem(StreamTextStatisticsItem $StreamTextStatisticsItem) Set Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method OverseaTextStatisticsItem getOverseaTextStatisticsItem() Obtain Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setOverseaTextStatisticsItem(OverseaTextStatisticsItem $OverseaTextStatisticsItem) Set Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method RealtimeTextStatisticsItem getRealtimeTextStatisticsItem() Obtain Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setRealtimeTextStatisticsItem(RealtimeTextStatisticsItem $RealtimeTextStatisticsItem) Set Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class AppStatisticsItem extends AbstractModel
 {
     /**
-     * @var RealTimeSpeechStatisticsItem Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var RealTimeSpeechStatisticsItem Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $RealtimeSpeechStatisticsItem;
 
     /**
-     * @var VoiceMessageStatisticsItem Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VoiceMessageStatisticsItem Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $VoiceMessageStatisticsItem;
 
     /**
-     * @var VoiceFilterStatisticsItem Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var VoiceFilterStatisticsItem Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $VoiceFilterStatisticsItem;
 
     /**
-     * @var string Statistical period
+     * @var string Reference period
      */
     public $Date;
 
     /**
-     * @param RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem Voice chat statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceMessageStatisticsItem $VoiceMessageStatisticsItem Voice messaging statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param VoiceFilterStatisticsItem $VoiceFilterStatisticsItem Phrase filtering statistics
-Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Date Statistical period
+     * @var AudioTextStatisticsItem Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AudioTextStatisticsItem;
+
+    /**
+     * @var StreamTextStatisticsItem Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $StreamTextStatisticsItem;
+
+    /**
+     * @var OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $OverseaTextStatisticsItem;
+
+    /**
+     * @var RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $RealtimeTextStatisticsItem;
+
+    /**
+     * @param RealTimeSpeechStatisticsItem $RealtimeSpeechStatisticsItem Voice Chat statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param VoiceMessageStatisticsItem $VoiceMessageStatisticsItem Voice Message statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param VoiceFilterStatisticsItem $VoiceFilterStatisticsItem Phrase Filtering statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Date Reference period
+     * @param AudioTextStatisticsItem $AudioTextStatisticsItem Recording-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param StreamTextStatisticsItem $StreamTextStatisticsItem Stream-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param OverseaTextStatisticsItem $OverseaTextStatisticsItem Usage statistics of Voice-to-Text of outside-MLC requests
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param RealtimeTextStatisticsItem $RealtimeTextStatisticsItem Real-time Voice-to-Text usage statistics
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -99,6 +147,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Date",$param) and $param["Date"] !== null) {
             $this->Date = $param["Date"];
+        }
+
+        if (array_key_exists("AudioTextStatisticsItem",$param) and $param["AudioTextStatisticsItem"] !== null) {
+            $this->AudioTextStatisticsItem = new AudioTextStatisticsItem();
+            $this->AudioTextStatisticsItem->deserialize($param["AudioTextStatisticsItem"]);
+        }
+
+        if (array_key_exists("StreamTextStatisticsItem",$param) and $param["StreamTextStatisticsItem"] !== null) {
+            $this->StreamTextStatisticsItem = new StreamTextStatisticsItem();
+            $this->StreamTextStatisticsItem->deserialize($param["StreamTextStatisticsItem"]);
+        }
+
+        if (array_key_exists("OverseaTextStatisticsItem",$param) and $param["OverseaTextStatisticsItem"] !== null) {
+            $this->OverseaTextStatisticsItem = new OverseaTextStatisticsItem();
+            $this->OverseaTextStatisticsItem->deserialize($param["OverseaTextStatisticsItem"]);
+        }
+
+        if (array_key_exists("RealtimeTextStatisticsItem",$param) and $param["RealtimeTextStatisticsItem"] !== null) {
+            $this->RealtimeTextStatisticsItem = new RealtimeTextStatisticsItem();
+            $this->RealtimeTextStatisticsItem->deserialize($param["RealtimeTextStatisticsItem"]);
         }
     }
 }
