@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
 <li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
  * @method string getCallback() Obtain Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
  * @method void setCallback(string $Callback) Set Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
- * @method string getLang() Obtain Language. `jp`: Japanese
- * @method void setLang(string $Lang) Set Language. `jp`: Japanese
+ * @method string getLang() Obtain Language. Chinese will be used if it is left empty.
+ * @method void setLang(string $Lang) Set Language. Chinese will be used if it is left empty.
  */
 class ScanVoiceRequest extends AbstractModel
 {
@@ -67,7 +67,7 @@ class ScanVoiceRequest extends AbstractModel
     public $Callback;
 
     /**
-     * @var string Language. `jp`: Japanese
+     * @var string Language. Chinese will be used if it is left empty.
      */
     public $Lang;
 
@@ -79,7 +79,7 @@ class ScanVoiceRequest extends AbstractModel
 <li>`DataId`: Unique data ID</li>
 <li>`Url`: URL-encoded data file URL, which is a pull address if the detected voice is a stream</li>
      * @param string $Callback Async callback address for detection result. For more information, please see the <a href="#Callback_Declare">Callback description</a> above. (Note: If this field is empty, the detection result can only be queried by calling the `DescribeScanResultList` API.)
-     * @param string $Lang Language. `jp`: Japanese
+     * @param string $Lang Language. Chinese will be used if it is left empty.
      */
     function __construct()
     {
