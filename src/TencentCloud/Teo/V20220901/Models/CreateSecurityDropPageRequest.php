@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateSecurityDropPage request structure.
  *
- * @method string getZoneId() Obtain The site ID.
- * @method void setZoneId(string $ZoneId) Set The site ID.
- * @method string getEntity() Obtain The subdomain name.
- * @method void setEntity(string $Entity) Set The subdomain name.
+ * @method string getZoneId() Obtain The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setZoneId(string $ZoneId) Set The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method string getEntity() Obtain The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
+ * @method void setEntity(string $Entity) Set The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
  * @method string getName() Obtain Name of the block page file.
  * @method void setName(string $Name) Set Name of the block page file.
  * @method string getContent() Obtain The block page content, which is passed after being URL-encoded.
@@ -40,16 +40,18 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) Set The module that applies on the block page. Values:
 <li>`waf`: Managed rules</li>
 <li>`rate`: Custom rules</li>
+ * @method string getTemplateId() Obtain The template ID. You must specify either this field or "ZoneId+Entity".
+ * @method void setTemplateId(string $TemplateId) Set The template ID. You must specify either this field or "ZoneId+Entity".
  */
 class CreateSecurityDropPageRequest extends AbstractModel
 {
     /**
-     * @var string The site ID.
+     * @var string The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $ZoneId;
 
     /**
-     * @var string The subdomain name.
+     * @var string The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      */
     public $Entity;
 
@@ -78,8 +80,13 @@ class CreateSecurityDropPageRequest extends AbstractModel
     public $Module;
 
     /**
-     * @param string $ZoneId The site ID.
-     * @param string $Entity The subdomain name.
+     * @var string The template ID. You must specify either this field or "ZoneId+Entity".
+     */
+    public $TemplateId;
+
+    /**
+     * @param string $ZoneId The site ID. You must specify either "ZoneId+Entity" or "TemplateId".
+     * @param string $Entity The subdomain name/L4 proxy. You must specify either "ZoneId+Entity" or "TemplateId".
      * @param string $Name Name of the block page file.
      * @param string $Content The block page content, which is passed after being URL-encoded.
      * @param string $Type How to build the block page. Values:
@@ -88,6 +95,7 @@ class CreateSecurityDropPageRequest extends AbstractModel
      * @param string $Module The module that applies on the block page. Values:
 <li>`waf`: Managed rules</li>
 <li>`rate`: Custom rules</li>
+     * @param string $TemplateId The template ID. You must specify either this field or "ZoneId+Entity".
      */
     function __construct()
     {
@@ -124,6 +132,10 @@ class CreateSecurityDropPageRequest extends AbstractModel
 
         if (array_key_exists("Module",$param) and $param["Module"] !== null) {
             $this->Module = $param["Module"];
+        }
+
+        if (array_key_exists("TemplateId",$param) and $param["TemplateId"] !== null) {
+            $this->TemplateId = $param["TemplateId"];
         }
     }
 }

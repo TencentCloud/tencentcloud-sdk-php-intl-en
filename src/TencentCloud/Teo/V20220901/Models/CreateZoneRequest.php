@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZoneName(string $ZoneName) Set The site name.
  * @method string getType() Obtain The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
  * @method void setType(string $Type) Set The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
  * @method boolean getJumpStart() Obtain Whether to skip scanning the existing DNS records of the site. Default value: false.
  * @method void setJumpStart(boolean $JumpStart) Set Whether to skip scanning the existing DNS records of the site. Default value: false.
  * @method array getTags() Obtain The resource tag.
@@ -51,7 +51,7 @@ class CreateZoneRequest extends AbstractModel
     /**
      * @var string The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
      */
     public $Type;
 
@@ -81,7 +81,7 @@ class CreateZoneRequest extends AbstractModel
      * @param string $ZoneName The site name.
      * @param string $Type The access mode. Values:
 <li>`full`: Access through a name server.</li>
-<li>`partial`: Access through a CNAME record.</li>This field will be set to the default value `full` if not specified.
+<li>`partial`: Access through a CNAME record. Note that you should verify your site with the IdentifyZone API before starting site access.</li>If it is left empty, the default value `full` is used.
      * @param boolean $JumpStart Whether to skip scanning the existing DNS records of the site. Default value: false.
      * @param array $Tags The resource tag.
      * @param boolean $AllowDuplicates Whether to allow duplicate sites. Values:

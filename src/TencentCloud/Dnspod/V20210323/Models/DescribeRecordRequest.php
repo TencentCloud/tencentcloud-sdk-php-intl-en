@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain
  * @method void setDomain(string $Domain) Set Domain
- * @method integer getRecordId() Obtain Record ID.
- * @method void setRecordId(integer $RecordId) Set Record ID.
- * @method integer getDomainId() Obtain Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
- * @method void setDomainId(integer $DomainId) Set Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+ * @method integer getRecordId() Obtain The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+ * @method void setRecordId(integer $RecordId) Set The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+ * @method integer getDomainId() Obtain The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+ * @method void setDomainId(integer $DomainId) Set The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
  */
 class DescribeRecordRequest extends AbstractModel
 {
@@ -35,19 +35,19 @@ class DescribeRecordRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer Record ID.
+     * @var integer The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
      */
     public $RecordId;
 
     /**
-     * @var integer Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+     * @var integer The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     public $DomainId;
 
     /**
      * @param string $Domain Domain
-     * @param integer $RecordId Record ID.
-     * @param integer $DomainId Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+     * @param integer $RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+     * @param integer $DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     function __construct()
     {

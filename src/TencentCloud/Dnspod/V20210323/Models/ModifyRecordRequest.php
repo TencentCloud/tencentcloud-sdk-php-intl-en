@@ -28,10 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setRecordLine(string $RecordLine) Set Record split zone, which is obtained through the record split zone API.
  * @method string getValue() Obtain Record value, such as `IP : 200.200.200.200`, `CNAME : cname.dnspod.com`, and `MX : mail.dnspod.com`.
  * @method void setValue(string $Value) Set Record value, such as `IP : 200.200.200.200`, `CNAME : cname.dnspod.com`, and `MX : mail.dnspod.com`.
- * @method integer getRecordId() Obtain Record ID.
- * @method void setRecordId(integer $RecordId) Set Record ID.
- * @method integer getDomainId() Obtain Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
- * @method void setDomainId(integer $DomainId) Set Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+ * @method integer getRecordId() Obtain The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+ * @method void setRecordId(integer $RecordId) Set The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+ * @method integer getDomainId() Obtain The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+ * @method void setDomainId(integer $DomainId) Set The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
  * @method string getSubDomain() Obtain Host record such as `www`. If it is not passed in, it will be `@` by default.
  * @method void setSubDomain(string $SubDomain) Set Host record such as `www`. If it is not passed in, it will be `@` by default.
  * @method string getRecordLineId() Obtain Split zone ID, which is obtained through the record split zone API. The value is a string such as `10=1`. The `RecordLineId` parameter has a higher priority than `RecordLine`. If both of them are passed in, `RecordLineId` will be used first.
@@ -68,12 +68,12 @@ class ModifyRecordRequest extends AbstractModel
     public $Value;
 
     /**
-     * @var integer Record ID.
+     * @var integer The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
      */
     public $RecordId;
 
     /**
-     * @var integer Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+     * @var integer The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     public $DomainId;
 
@@ -112,8 +112,8 @@ class ModifyRecordRequest extends AbstractModel
      * @param string $RecordType Record type, which is obtained through the record type API. The value contains uppercase letters, such as `A`.
      * @param string $RecordLine Record split zone, which is obtained through the record split zone API.
      * @param string $Value Record value, such as `IP : 200.200.200.200`, `CNAME : cname.dnspod.com`, and `MX : mail.dnspod.com`.
-     * @param integer $RecordId Record ID.
-     * @param integer $DomainId Domain ID. The `DomainId` parameter has a higher priority than `Domain`. If `DomainId` is passed in, `Domain` will be ignored.
+     * @param integer $RecordId The record ID. You can view all DNS records and their IDs via the `DescribeRecordList` API.
+     * @param integer $DomainId The domain ID. `DomainId` takes priority over `Domain`. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      * @param string $SubDomain Host record such as `www`. If it is not passed in, it will be `@` by default.
      * @param string $RecordLineId Split zone ID, which is obtained through the record split zone API. The value is a string such as `10=1`. The `RecordLineId` parameter has a higher priority than `RecordLine`. If both of them are passed in, `RecordLineId` will be used first.
      * @param integer $MX MX priority, which is required for an MX record and will take effect if the record type is MX. Value range: 1–20.

@@ -30,21 +30,21 @@ use TencentCloud\Common\AbstractModel;
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
- * @method string getTarget() Obtain Match type. Valid values:
+ * @method string getTarget() Obtain The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
- * @method void setTarget(string $Target) Set Match type. Valid values:
+ * @method void setTarget(string $Target) Set The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
  * @method array getValues() Obtain The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
 <li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
@@ -52,7 +52,7 @@ use TencentCloud\Common\AbstractModel;
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -62,7 +62,7 @@ use TencentCloud\Common\AbstractModel;
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -74,8 +74,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setName(string $Name) Set The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
 <li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
- * @method boolean getIgnoreNameCase() Obtain 
- * @method void setIgnoreNameCase(boolean $IgnoreNameCase) Set 
+ * @method boolean getIgnoreNameCase() Obtain Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIgnoreNameCase(boolean $IgnoreNameCase) Set Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RuleCondition extends AbstractModel
 {
@@ -89,13 +91,13 @@ class RuleCondition extends AbstractModel
     public $Operator;
 
     /**
-     * @var string Match type. Valid values:
+     * @var string The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
      */
     public $Target;
@@ -107,7 +109,7 @@ class RuleCondition extends AbstractModel
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -127,7 +129,8 @@ class RuleCondition extends AbstractModel
     public $Name;
 
     /**
-     * @var boolean 
+     * @var boolean Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IgnoreNameCase;
 
@@ -137,13 +140,13 @@ class RuleCondition extends AbstractModel
 <li>`notEquals`: Does not equal</li>
 <li>`exist`: Exists</li>
 <li>`notexist`: Does not exist</li>
-     * @param string $Target Match type. Valid values:
+     * @param string $Target The match type. Values:
 <li>`filename`: File name</li>
 <li>`extension`: File extension</li>
 <li>`host`: Host</li>
 <li>`full_url`: Full URL, which indicates the complete URL path under the current site and must contain the HTTP protocol, host, and path.</li>
 <li>`url`: Partial URL under the current site</li><li>`client_country`: Country/Region of the client</li>
-<li>`query_string`: Query string in the URL</li>
+<li>`query_string`: Query string in the request URL</li>
 <li>`request_header`: HTTP request header</li>
      * @param array $Values The parameter value of the match type. It can be an empty string only when `Target=query string/request header` and `Operator=exist/notexist`.
 <li>When `Target=extension`, enter the file extension, such as "jpg" and "txt".</li>
@@ -151,7 +154,7 @@ class RuleCondition extends AbstractModel
 <li>When `Target=all`, it indicates any site request.</li>
 <li>When `Target=host`, enter the host under the current site, such as "www.maxx55.com".</li>
 <li>When `Target=url`, enter the partial URL path under the current site, such as "/example".</li>
-<li>When `Target=full_url`, enter the complete URL  under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
+<li>When `Target=full_url`, enter the complete URL under the current site. It must contain the HTTP protocol, host, and path, such as "https://www.maxx55.cn/example".</li>
 <li>When `Target=client_country`, enter the ISO-3166 country/region code.</li>
 <li>When `Target=query_string`, enter the value of the query string, such as "cn" and "1" in "lang=cn&version=1".</li>
 <li>When `Target=request_header`, enter the HTTP request header value, such as "zh-CN,zh;q=0.9" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
@@ -159,7 +162,8 @@ class RuleCondition extends AbstractModel
      * @param string $Name The parameter name of the match type. This field is required only when `Target=query_string/request_header`.
 <li>`query_string`: Name of the query string, such as "lang" and "version" in "lang=cn&version=1".</li>
 <li>`request_header`: Name of the HTTP request header, such as "Accept-Language" in the "Accept-Language:zh-CN,zh;q=0.9" header.</li>
-     * @param boolean $IgnoreNameCase 
+     * @param boolean $IgnoreNameCase Whether the parameter name is case insensitive. Default value: `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

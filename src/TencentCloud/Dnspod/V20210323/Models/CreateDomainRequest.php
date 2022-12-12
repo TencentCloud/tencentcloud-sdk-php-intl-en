@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain Domain
  * @method void setDomain(string $Domain) Set Domain
- * @method integer getGroupId() Obtain Domain group ID
- * @method void setGroupId(integer $GroupId) Set Domain group ID
+ * @method integer getGroupId() Obtain The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
+ * @method void setGroupId(integer $GroupId) Set The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
  * @method string getIsMark() Obtain Whether the domain is starred. Valid values: yes, no.
  * @method void setIsMark(string $IsMark) Set Whether the domain is starred. Valid values: yes, no.
  */
@@ -35,7 +35,7 @@ class CreateDomainRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer Domain group ID
+     * @var integer The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
      */
     public $GroupId;
 
@@ -46,7 +46,7 @@ class CreateDomainRequest extends AbstractModel
 
     /**
      * @param string $Domain Domain
-     * @param integer $GroupId Domain group ID
+     * @param integer $GroupId The group ID of the domain. You can view the group information of this domain via the `DescribeDomainGroupList` API.
      * @param string $IsMark Whether the domain is starred. Valid values: yes, no.
      */
     function __construct()

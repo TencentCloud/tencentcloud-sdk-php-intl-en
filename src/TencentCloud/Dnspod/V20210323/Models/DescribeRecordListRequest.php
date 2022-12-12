@@ -22,18 +22,18 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getDomain() Obtain The domain for which DNS records are to be obtained.
  * @method void setDomain(string $Domain) Set The domain for which DNS records are to be obtained.
- * @method integer getDomainId() Obtain The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
- * @method void setDomainId(integer $DomainId) Set The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+ * @method integer getDomainId() Obtain The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
+ * @method void setDomainId(integer $DomainId) Set The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
  * @method string getSubdomain() Obtain The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
  * @method void setSubdomain(string $Subdomain) Set The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
  * @method string getRecordType() Obtain The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
  * @method void setRecordType(string $RecordType) Set The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
- * @method string getRecordLine() Obtain The split zone name.
- * @method void setRecordLine(string $RecordLine) Set The split zone name.
- * @method string getRecordLineId() Obtain The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
- * @method void setRecordLineId(string $RecordLineId) Set The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
- * @method integer getGroupId() Obtain The group ID.
- * @method void setGroupId(integer $GroupId) Set The group ID.
+ * @method string getRecordLine() Obtain The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+ * @method void setRecordLine(string $RecordLine) Set The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+ * @method string getRecordLineId() Obtain The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+ * @method void setRecordLineId(string $RecordLineId) Set The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+ * @method integer getGroupId() Obtain The group ID passed in to get DNS records in the group.
+ * @method void setGroupId(integer $GroupId) Set The group ID passed in to get DNS records in the group.
  * @method string getKeyword() Obtain The keyword for searching for DNS records. Host headers and record values are supported.
  * @method void setKeyword(string $Keyword) Set The keyword for searching for DNS records. Host headers and record values are supported.
  * @method string getSortField() Obtain The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
@@ -53,7 +53,7 @@ class DescribeRecordListRequest extends AbstractModel
     public $Domain;
 
     /**
-     * @var integer The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+     * @var integer The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      */
     public $DomainId;
 
@@ -68,17 +68,17 @@ class DescribeRecordListRequest extends AbstractModel
     public $RecordType;
 
     /**
-     * @var string The split zone name.
+     * @var string The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public $RecordLine;
 
     /**
-     * @var string The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
+     * @var string The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
      */
     public $RecordLineId;
 
     /**
-     * @var integer The group ID.
+     * @var integer The group ID passed in to get DNS records in the group.
      */
     public $GroupId;
 
@@ -109,12 +109,12 @@ class DescribeRecordListRequest extends AbstractModel
 
     /**
      * @param string $Domain The domain for which DNS records are to be obtained.
-     * @param integer $DomainId The ID of the domain for which DNS records are to be obtained. If `DomainId` is passed in, the system will omit the parameter `Domain`.
+     * @param integer $DomainId The ID of the domain whose DNS records are requested. If `DomainId` is passed in, `Domain` is ignored. You can view all `Domain` and `DomainId` values via the `DescribeDomainList` API.
      * @param string $Subdomain The host header of a DNS record. If this parameter is passed in, only the DNS record corresponding to this host header will be returned.
      * @param string $RecordType The type of DNS record, such as A, CNAME, NS, AAAA, explicit URL, implicit URL, CAA, or SPF record.
-     * @param string $RecordLine The split zone name.
-     * @param string $RecordLineId The split zone ID. If `RecordLineId` is passed in, the system will omit the parameter `RecordLine`.
-     * @param integer $GroupId The group ID.
+     * @param string $RecordLine The name of the split zone for which DNS records are requested. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+     * @param string $RecordLineId The ID of the split zone for which DNS records are requested. If `RecordLineId` is passed in, `RecordLine` is ignored. You can view split zones allowed by this domain via the `DescribeRecordLineList` API.
+     * @param integer $GroupId The group ID passed in to get DNS records in the group.
      * @param string $Keyword The keyword for searching for DNS records. Host headers and record values are supported.
      * @param string $SortField The sorting field. Available values: `name`, `line`, `type`, `value`, `weight`, `mx`, and `ttl,updated_on`.
      * @param string $SortType The sorting type. Valid values: `ASC` (ascending, default), `DESC` (descending).
