@@ -65,6 +65,7 @@ In the `FirewallRules` parameter:
  * @method Models\DeleteKeyPairsResponse DeleteKeyPairs(Models\DeleteKeyPairsRequest $req) This API is used to delete a key pair.
  * @method Models\DeleteSnapshotsResponse DeleteSnapshots(Models\DeleteSnapshotsRequest $req) This API is used to delete a snapshot.
 The snapshot must be in `NORMAL` status. To query the status of a snapshot, you can call the `DescribeSnapshots` API and see the `SnapshotState` field in the response.
+ * @method Models\DescribeAllScenesResponse DescribeAllScenes(Models\DescribeAllScenesRequest $req) This API is used to query the list of scenes in all regions.
  * @method Models\DescribeBlueprintInstancesResponse DescribeBlueprintInstances(Models\DescribeBlueprintInstancesRequest $req) This API is used to query the information of an image instance.
  * @method Models\DescribeBlueprintsResponse DescribeBlueprints(Models\DescribeBlueprintsRequest $req) This API is used to query the information of an image.
  * @method Models\DescribeBundleDiscountResponse DescribeBundleDiscount(Models\DescribeBundleDiscountRequest $req) This API is used to query the discount information of a package.
@@ -107,6 +108,7 @@ https://img.qcloud.com/qcloud/app/active_vnc/index.html?InstanceVncUrl=wss%3A%2F
  * @method Models\DescribeModifyInstanceBundlesResponse DescribeModifyInstanceBundles(Models\DescribeModifyInstanceBundlesRequest $req) This API is used to query the list of package options of an instance.
  * @method Models\DescribeRegionsResponse DescribeRegions(Models\DescribeRegionsRequest $req) This API is used to query the information of regions.
  * @method Models\DescribeResetInstanceBlueprintsResponse DescribeResetInstanceBlueprints(Models\DescribeResetInstanceBlueprintsRequest $req) This API is used to query the image information of a reset instance.
+ * @method Models\DescribeScenesResponse DescribeScenes(Models\DescribeScenesRequest $req) This API is used to query the list of scenes.
  * @method Models\DescribeSnapshotsResponse DescribeSnapshots(Models\DescribeSnapshotsRequest $req) This API is used to query the list of snapshots.
  * @method Models\DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActions(Models\DescribeSnapshotsDeniedActionsRequest $req) This API is used to query the list of operation limits of one or more snapshots.
  * @method Models\DescribeZonesResponse DescribeZones(Models\DescribeZonesRequest $req) This API is used to query the list of AZs in a region.

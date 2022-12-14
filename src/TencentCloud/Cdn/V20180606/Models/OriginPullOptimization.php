@@ -18,7 +18,7 @@ namespace TencentCloud\Cdn\V20180606\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Cross-border origin-pull optimization configuration. This is disabled by default. (This feature is in beta and not generally available yet.)
+ * (Disused) Cross-border origin-pull optimization
  *
  * @method string getSwitch() Obtain Cross-border origin-pull optimization configuration switch
 `on`: Enable

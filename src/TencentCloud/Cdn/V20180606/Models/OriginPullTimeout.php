@@ -24,9 +24,9 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setConnectTimeout(integer $ConnectTimeout) Set The origin-pull connection timeout (in seconds). Valid range: 5-60.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method integer getReceiveTimeout() Obtain The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+ * @method integer getReceiveTimeout() Obtain The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setReceiveTimeout(integer $ReceiveTimeout) Set The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+ * @method void setReceiveTimeout(integer $ReceiveTimeout) Set The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class OriginPullTimeout extends AbstractModel
@@ -38,7 +38,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ConnectTimeout;
 
     /**
-     * @var integer The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * @var integer The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     public $ReceiveTimeout;
@@ -46,7 +46,7 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     /**
      * @param integer $ConnectTimeout The origin-pull connection timeout (in seconds). Valid range: 5-60.
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param integer $ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-60.
+     * @param integer $ReceiveTimeout The origin-pull receipt timeout (in seconds). Valid range: 10-300.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()

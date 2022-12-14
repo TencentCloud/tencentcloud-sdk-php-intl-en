@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(float $Discount) Set Discount.
  * @method float getDiscountPrice() Obtain Discounted total price.
  * @method void setDiscountPrice(float $DiscountPrice) Set Discounted total price.
+ * @method string getInstanceId() Obtain ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setInstanceId(string $InstanceId) Set ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class DataDiskPrice extends AbstractModel
 {
@@ -59,11 +63,19 @@ class DataDiskPrice extends AbstractModel
     public $DiscountPrice;
 
     /**
+     * @var string ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $InstanceId;
+
+    /**
      * @param string $DiskId Cloud disk ID.
      * @param float $OriginalDiskPrice Cloud disk unit price.
      * @param float $OriginalPrice Total price of cloud disk
      * @param float $Discount Discount.
      * @param float $DiscountPrice Discounted total price.
+     * @param string $InstanceId ID of the instance to which the data disk is mounted.
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class DataDiskPrice extends AbstractModel
 
         if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
             $this->DiscountPrice = $param["DiscountPrice"];
+        }
+
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
     }
 }

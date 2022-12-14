@@ -26,22 +26,22 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100.
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100.
- * @method array getFilters() Obtain Filter list
+ * @method array getFilters() Obtain Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
- * @method void setFilters(array $Filters) Set Filter list
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
+ * @method void setFilters(array $Filters) Set Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
  */
 class DescribeKeyPairsRequest extends AbstractModel
 {
@@ -61,14 +61,14 @@ class DescribeKeyPairsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Filter list
+     * @var array Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
      */
     public $Filters;
 
@@ -76,14 +76,14 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and 
      * @param array $KeyIds Key pair ID list.
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100.
-     * @param array $Filters Filter list
+     * @param array $Filters Filter list.
 <li>key-id</li>Filter by **key pair ID**.
 Type: String
 Required: no
-<li>key-name</li>Filter by **key pair name**.
+<li>key-name</li>Filter by the **key pair name**. Fuzzy match is supported.
 Type: String
 Required: no
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `KeyIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters` and up to 5 `Filter.Values` for each filter. `KeyIds` and `Filters` cannot be specified at the same time.
      */
     function __construct()
     {

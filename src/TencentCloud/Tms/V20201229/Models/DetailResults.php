@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setSuggestion(string $Suggestion) Set Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
 Note: This field may return `null`, indicating that no valid value can be found.
- * @method array getKeywords() Obtain This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setKeywords(array $Keywords) Set This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method array getKeywords() Obtain Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setKeywords(array $Keywords) Set Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getScore() Obtain This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setScore(integer $Score) Set This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
@@ -50,6 +50,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setSubLabel(string $SubLabel) Set The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method array getTags() Obtain Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DetailResults extends AbstractModel
 {
@@ -65,8 +69,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Suggestion;
 
     /**
-     * @var array This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var array Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Keywords;
 
@@ -101,11 +105,17 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $SubLabel;
 
     /**
+     * @var array Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
      * @param string $Label Result of the moderation. <br>`Normal`: normal content; `Porn`: pornographic content; `Abuse`: abusive content; **Ad**: advertising content; `Custom`: custom violating content
      * @param string $Suggestion Recommended follow-up action. <br>`Block`: block it automatically; `Review`: review the content again in human; **Pass**: pass
 Note: This field may return `null`, indicating that no valid value can be found.
-     * @param array $Keywords This field returns the matched keywords. This parameter can include multiple returned values, which means multiple keywords are matched. If no keyword is returned but there is a `Score`, it means that the result of `Label` is determined by a semantic model.
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param array $Keywords Returns the information of keywords hit in the text. When no value is returned and `Score` is not empty, it means the `Label` is determined by the semantic-based detection model.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Score This field indicates the convincing level of the `Label`, ranging from `0` (lowest) to `100` (highest). 
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param integer $LibType It indicates the library type corresponding with the keyword. Valid values: `1` (blocklist/allowlist library) and `2` (custom keyword library). If no custom keyword library is configured, the default value is 1.
@@ -116,6 +126,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $SubLabel The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param array $Tags Returns the keywords, label, sub-label and the score.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -160,6 +172,15 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

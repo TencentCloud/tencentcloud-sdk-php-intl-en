@@ -52,6 +52,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setSubLabel(string $SubLabel) Set The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method string getContextText() Obtain Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setContextText(string $ContextText) Set Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -114,6 +118,12 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $SubLabel;
 
     /**
+     * @var string Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ContextText;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -135,6 +145,8 @@ Note: This field may return `null`, indicating that no valid value can be found.
 Note: This field may return `null`, indicating that no valid value can be found.
      * @param string $SubLabel The field returns the second-level labels under the current label.
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param string $ContextText Returns the context text.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -198,6 +210,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
 
         if (array_key_exists("SubLabel",$param) and $param["SubLabel"] !== null) {
             $this->SubLabel = $param["SubLabel"];
+        }
+
+        if (array_key_exists("ContextText",$param) and $param["ContextText"] !== null) {
+            $this->ContextText = $param["ContextText"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

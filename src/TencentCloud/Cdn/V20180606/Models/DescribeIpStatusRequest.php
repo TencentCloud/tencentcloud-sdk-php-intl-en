@@ -40,6 +40,10 @@ If this parameter is left empty, edge server information will be returned by def
 `global`: Global nodes
  * @method boolean getSegment() Obtain Whether to return a value as an IP range
  * @method void setSegment(boolean $Segment) Set Whether to return a value as an IP range
+ * @method boolean getShowIpv6() Obtain 
+ * @method void setShowIpv6(boolean $ShowIpv6) Set 
+ * @method boolean getAbbreviationIpv6() Obtain Whether to abbreviate the IPv6 address.
+ * @method void setAbbreviationIpv6(boolean $AbbreviationIpv6) Set Whether to abbreviate the IPv6 address.
  */
 class DescribeIpStatusRequest extends AbstractModel
 {
@@ -70,6 +74,16 @@ If this parameter is left empty, edge server information will be returned by def
     public $Segment;
 
     /**
+     * @var boolean 
+     */
+    public $ShowIpv6;
+
+    /**
+     * @var boolean Whether to abbreviate the IPv6 address.
+     */
+    public $AbbreviationIpv6;
+
+    /**
      * @param string $Domain Acceleration domain name
      * @param string $Layer Node type.
 `edge`: Edge server
@@ -80,6 +94,8 @@ If this parameter is left empty, edge server information will be returned by def
 `overseas`: Nodes outside the Chinese mainland
 `global`: Global nodes
      * @param boolean $Segment Whether to return a value as an IP range
+     * @param boolean $ShowIpv6 
+     * @param boolean $AbbreviationIpv6 Whether to abbreviate the IPv6 address.
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ If this parameter is left empty, edge server information will be returned by def
 
         if (array_key_exists("Segment",$param) and $param["Segment"] !== null) {
             $this->Segment = $param["Segment"];
+        }
+
+        if (array_key_exists("ShowIpv6",$param) and $param["ShowIpv6"] !== null) {
+            $this->ShowIpv6 = $param["ShowIpv6"];
+        }
+
+        if (array_key_exists("AbbreviationIpv6",$param) and $param["AbbreviationIpv6"] !== null) {
+            $this->AbbreviationIpv6 = $param["AbbreviationIpv6"];
         }
     }
 }

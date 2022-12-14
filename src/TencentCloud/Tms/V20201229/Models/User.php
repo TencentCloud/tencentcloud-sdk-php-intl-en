@@ -50,6 +50,12 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
 Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it takes more than 3 seconds to download, the "download timeout" is returned.
  * @method string getDesc() Obtain This field indicates the profile information of service subscribers. It can contain up to 5,000 characters, including Chinese characters, letters and special symbols.
  * @method void setDesc(string $Desc) Set This field indicates the profile information of service subscribers. It can contain up to 5,000 characters, including Chinese characters, letters and special symbols.
+ * @method string getRoomId() Obtain Room ID of the group chat.
+ * @method void setRoomId(string $RoomId) Set Room ID of the group chat.
+ * @method string getReceiverId() Obtain Receiver ID.
+ * @method void setReceiverId(string $ReceiverId) Set Receiver ID.
+ * @method integer getSendTime() Obtain Generation time of the message, in ms.
+ * @method void setSendTime(integer $SendTime) Set Generation time of the message, in ms.
  */
 class User extends AbstractModel
 {
@@ -105,6 +111,21 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
     public $Desc;
 
     /**
+     * @var string Room ID of the group chat.
+     */
+    public $RoomId;
+
+    /**
+     * @var string Receiver ID.
+     */
+    public $ReceiverId;
+
+    /**
+     * @var integer Generation time of the message, in ms.
+     */
+    public $SendTime;
+
+    /**
      * @param string $UserId This field indicates the service subscriber ID. This ID can be used to optimize the moderation result judgment based on the account's violation records, which is helpful for auxiliary judgment when there is a risk of suspected violations.
      * @param string $Nickname This field indicates the account nickname information of the service subscriber.
      * @param integer $AccountType This field indicates the account type corresponding to the service subscriber ID.<br>
@@ -120,6 +141,9 @@ Note: Please keep the format of mobile phone number uniform. For example, unifor
      * @param string $HeadUrl This field indicates the URL of the service subscriber's profile photos formatted with .png, .jpg, .jpeg, .bmp, .gif and .webp.
 Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it takes more than 3 seconds to download, the "download timeout" is returned.
      * @param string $Desc This field indicates the profile information of service subscribers. It can contain up to 5,000 characters, including Chinese characters, letters and special symbols.
+     * @param string $RoomId Room ID of the group chat.
+     * @param string $ReceiverId Receiver ID.
+     * @param integer $SendTime Generation time of the message, in ms.
      */
     function __construct()
     {
@@ -168,6 +192,18 @@ Note: Up to 5 MB is supported, and the minimum resolution is 256 x 256. When it 
 
         if (array_key_exists("Desc",$param) and $param["Desc"] !== null) {
             $this->Desc = $param["Desc"];
+        }
+
+        if (array_key_exists("RoomId",$param) and $param["RoomId"] !== null) {
+            $this->RoomId = $param["RoomId"];
+        }
+
+        if (array_key_exists("ReceiverId",$param) and $param["ReceiverId"] !== null) {
+            $this->ReceiverId = $param["ReceiverId"];
+        }
+
+        if (array_key_exists("SendTime",$param) and $param["SendTime"] !== null) {
+            $this->SendTime = $param["SendTime"];
         }
     }
 }

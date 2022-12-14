@@ -56,8 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setVideoSeek(VideoSeek $VideoSeek) Set Video dragging configuration
  * @method Cache getCache() Obtain Cache expiration time configuration
  * @method void setCache(Cache $Cache) Set Cache expiration time configuration
- * @method OriginPullOptimization getOriginPullOptimization() Obtain Cross-border linkage optimization configuration
- * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) Set Cross-border linkage optimization configuration
+ * @method OriginPullOptimization getOriginPullOptimization() Obtain (Disused) Cross-border linkage optimization\
+ * @method void setOriginPullOptimization(OriginPullOptimization $OriginPullOptimization) Set (Disused) Cross-border linkage optimization\
  * @method Https getHttps() Obtain HTTPS acceleration configuration
  * @method void setHttps(Https $Https) Set HTTPS acceleration configuration
  * @method Authentication getAuthentication() Obtain Timestamp hotlink protection configuration
@@ -224,7 +224,7 @@ class UpdateDomainConfigRequest extends AbstractModel
     public $Cache;
 
     /**
-     * @var OriginPullOptimization Cross-border linkage optimization configuration
+     * @var OriginPullOptimization (Disused) Cross-border linkage optimization\
      */
     public $OriginPullOptimization;
 
@@ -395,7 +395,7 @@ After switching to global acceleration, configurations of the domain name will b
      * @param ResponseHeaderCache $ResponseHeaderCache Header cache configuration
      * @param VideoSeek $VideoSeek Video dragging configuration
      * @param Cache $Cache Cache expiration time configuration
-     * @param OriginPullOptimization $OriginPullOptimization Cross-border linkage optimization configuration
+     * @param OriginPullOptimization $OriginPullOptimization (Disused) Cross-border linkage optimization\
      * @param Https $Https HTTPS acceleration configuration
      * @param Authentication $Authentication Timestamp hotlink protection configuration
      * @param Seo $Seo SEO configuration

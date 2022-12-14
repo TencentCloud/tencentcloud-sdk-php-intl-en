@@ -20,19 +20,19 @@ use TencentCloud\Common\AbstractModel;
 /**
  * InquirePriceRenewInstances request structure.
  *
- * @method array getInstanceIds() Obtain Instance to be renewed.
- * @method void setInstanceIds(array $InstanceIds) Set Instance to be renewed.
+ * @method array getInstanceIds() Obtain IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
+ * @method void setInstanceIds(array $InstanceIds) Set IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
  * @method InstanceChargePrepaid getInstanceChargePrepaid() Obtain Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
  * @method void setInstanceChargePrepaid(InstanceChargePrepaid $InstanceChargePrepaid) Set Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
- * @method boolean getRenewDataDisk() Obtain Whether to renew the data disk
- * @method void setRenewDataDisk(boolean $RenewDataDisk) Set Whether to renew the data disk
- * @method boolean getAlignInstanceExpiredTime() Obtain Whether the data disk has the same expiration time as the instance
- * @method void setAlignInstanceExpiredTime(boolean $AlignInstanceExpiredTime) Set Whether the data disk has the same expiration time as the instance
+ * @method boolean getRenewDataDisk() Obtain Whether to renew the data disk. Default: `false`.
+ * @method void setRenewDataDisk(boolean $RenewDataDisk) Set Whether to renew the data disk. Default: `false`.
+ * @method boolean getAlignInstanceExpiredTime() Obtain Whether to align the data disk expiration with the instance expiration time. Default: `false`.
+ * @method void setAlignInstanceExpiredTime(boolean $AlignInstanceExpiredTime) Set Whether to align the data disk expiration with the instance expiration time. Default: `false`.
  */
 class InquirePriceRenewInstancesRequest extends AbstractModel
 {
     /**
-     * @var array Instance to be renewed.
+     * @var array IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      */
     public $InstanceIds;
 
@@ -42,20 +42,20 @@ class InquirePriceRenewInstancesRequest extends AbstractModel
     public $InstanceChargePrepaid;
 
     /**
-     * @var boolean Whether to renew the data disk
+     * @var boolean Whether to renew the data disk. Default: `false`.
      */
     public $RenewDataDisk;
 
     /**
-     * @var boolean Whether the data disk has the same expiration time as the instance
+     * @var boolean Whether to align the data disk expiration with the instance expiration time. Default: `false`.
      */
     public $AlignInstanceExpiredTime;
 
     /**
-     * @param array $InstanceIds Instance to be renewed.
+     * @param array $InstanceIds IDs of the instances to be renewed. Each request can contain up to 50 instances at a time. You can get an instance ID from the `InstanceId` returned by the [DescribeInstances](https://intl.cloud.tencent.com/document/api/1207/47573?from_cn_redirect=1) API.
      * @param InstanceChargePrepaid $InstanceChargePrepaid Prepaid mode, i.e., monthly subscription. This parameter can specify the purchase period and other attributes such as auto-renewal. It is required for prepaid instances.
-     * @param boolean $RenewDataDisk Whether to renew the data disk
-     * @param boolean $AlignInstanceExpiredTime Whether the data disk has the same expiration time as the instance
+     * @param boolean $RenewDataDisk Whether to renew the data disk. Default: `false`.
+     * @param boolean $AlignInstanceExpiredTime Whether to align the data disk expiration with the instance expiration time. Default: `false`.
      */
     function __construct()
     {

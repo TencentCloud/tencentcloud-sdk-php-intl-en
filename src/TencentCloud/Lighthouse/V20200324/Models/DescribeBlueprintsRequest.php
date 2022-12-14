@@ -27,51 +27,51 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getLimit() Obtain Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method void setLimit(integer $Limit) Set Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
  * @method array getFilters() Obtain Filter list
-<li>blueprint-id</li>Filter by **image ID**.
+<li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
-<li>blueprint-type</li>Filter by **image type**.
+<li>blueprint-type</li>Filter by the **image type**.
 Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image operating system**.
+<li>platform-type</li>Filter by the **image operating system**.
 Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
-<li>blueprint-name</li>Filter by **image name**.
+<li>blueprint-name</li>Filter by the **image name**.
 Type: String
 Required: no
-<li>blueprint-state</li>Filter by **image status**.
+<li>blueprint-state</li>Filter by the **image status**.
 Type: String
 Required: no
-<li>scene-id</li>Filter by **scene ID**.
+<li>scene-id</li>Filter by the **scene ID**.
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
  * @method void setFilters(array $Filters) Set Filter list
-<li>blueprint-id</li>Filter by **image ID**.
+<li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
-<li>blueprint-type</li>Filter by **image type**.
+<li>blueprint-type</li>Filter by the **image type**.
 Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image operating system**.
+<li>platform-type</li>Filter by the **image operating system**.
 Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
-<li>blueprint-name</li>Filter by **image name**.
+<li>blueprint-name</li>Filter by the **image name**.
 Type: String
 Required: no
-<li>blueprint-state</li>Filter by **image status**.
+<li>blueprint-state</li>Filter by the **image status**.
 Type: String
 Required: no
-<li>scene-id</li>Filter by **scene ID**.
+<li>scene-id</li>Filter by the **scene ID**.
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
  */
 class DescribeBlueprintsRequest extends AbstractModel
 {
@@ -92,28 +92,28 @@ class DescribeBlueprintsRequest extends AbstractModel
 
     /**
      * @var array Filter list
-<li>blueprint-id</li>Filter by **image ID**.
+<li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
-<li>blueprint-type</li>Filter by **image type**.
+<li>blueprint-type</li>Filter by the **image type**.
 Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image operating system**.
+<li>platform-type</li>Filter by the **image operating system**.
 Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
-<li>blueprint-name</li>Filter by **image name**.
+<li>blueprint-name</li>Filter by the **image name**.
 Type: String
 Required: no
-<li>blueprint-state</li>Filter by **image status**.
+<li>blueprint-state</li>Filter by the **image status**.
 Type: String
 Required: no
-<li>scene-id</li>Filter by **scene ID**.
+<li>scene-id</li>Filter by the **scene ID**.
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
      */
     public $Filters;
 
@@ -122,28 +122,28 @@ Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds
      * @param integer $Offset Offset. Default value: 0. For more information on `Offset`, please see the relevant section in [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param integer $Limit Number of returned results. Default value: 20. Maximum value: 100. For more information on `Limit`, please see the relevant section in the API [Overview](https://intl.cloud.tencent.com/document/product/1207/47578?from_cn_redirect=1).
      * @param array $Filters Filter list
-<li>blueprint-id</li>Filter by **image ID**.
+<li>blueprint-id</li>Filter by the **image ID**.
 Type: String
 Required: no
-<li>blueprint-type</li>Filter by **image type**.
+<li>blueprint-type</li>Filter by the **image type**.
 Valid values: `APP_OS` (application image); `PURE_OS` (system image); `PRIVATE` (custom image) and `SHARED` (shared image)
 Type: String
 Required: no
-<li>platform-type</li>Filter by **image operating system**.
+<li>platform-type</li>Filter by the **image operating system**.
 Valid values: `LINUX_UNIX` (Linux or Unix), `WINDOWS` (Windows)
 Type: String
 Required: no
-<li>blueprint-name</li>Filter by **image name**.
+<li>blueprint-name</li>Filter by the **image name**.
 Type: String
 Required: no
-<li>blueprint-state</li>Filter by **image status**.
+<li>blueprint-state</li>Filter by the **image status**.
 Type: String
 Required: no
-<li>scene-id</li>Filter by **scene ID**.
+<li>scene-id</li>Filter by the **scene ID**.
 Type: String
 Required: no
 
-Each request can contain up to 10 `Filters` and 5 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
+Each request can contain up to 10 `Filters`, each of which can contain up to 00 `Filter.Values`. `BlueprintIds` and `Filters` cannot be specified at the same time.
      */
     function __construct()
     {
