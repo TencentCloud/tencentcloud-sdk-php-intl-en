@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Login settings
  *
- * @method string getPassword() Obtain Password
- * @method void setPassword(string $Password) Set Password
- * @method string getPublicKeyId() Obtain Public Key
- * @method void setPublicKeyId(string $PublicKeyId) Set Public Key
+ * @method string getPassword() Obtain The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+ * @method void setPassword(string $Password) Set The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+ * @method string getPublicKeyId() Obtain The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
+ * @method void setPublicKeyId(string $PublicKeyId) Set The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
  */
 class LoginSettings extends AbstractModel
 {
     /**
-     * @var string Password
+     * @var string The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
      */
     public $Password;
 
     /**
-     * @var string Public Key
+     * @var string The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
      */
     public $PublicKeyId;
 
     /**
-     * @param string $Password Password
-     * @param string $PublicKeyId Public Key
+     * @param string $Password The login password of the instance, which contains 8 to 16 uppercase letters, lowercase letters, digits, and special characters (only !@%^*) and cannot start with a special character.
+     * @param string $PublicKeyId The key ID. After an instance is associated with a key, you can access it with the private key in the key pair. You can call [DescribeKeyPairs](https://intl.cloud.tencent.com/document/api/213/15699?from_cn_redirect=1) to obtain `PublicKeyId`.
      */
     function __construct()
     {

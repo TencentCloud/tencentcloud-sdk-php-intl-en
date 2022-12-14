@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1000 characters.
  * @method string getSessionId() Obtain ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or set to an empty string, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or set to an empty string, no deduplication will be performed.
+ * @method integer getProgress() Obtain The progress of a video splitting task. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The progress of a video splitting task. Value range: 0-100.
  */
 class SplitMediaTask extends AbstractModel
 {
@@ -86,6 +88,11 @@ class SplitMediaTask extends AbstractModel
     public $SessionId;
 
     /**
+     * @var integer The progress of a video splitting task. Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @param string $TaskId Task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing</li>
@@ -96,6 +103,7 @@ class SplitMediaTask extends AbstractModel
      * @param array $FileInfoSet List of video splitting task details.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1000 characters.
      * @param string $SessionId ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or set to an empty string, no deduplication will be performed.
+     * @param integer $Progress The progress of a video splitting task. Value range: 0-100.
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ class SplitMediaTask extends AbstractModel
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

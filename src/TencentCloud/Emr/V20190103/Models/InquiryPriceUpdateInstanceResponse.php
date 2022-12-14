@@ -38,6 +38,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setTimeSpan(integer $TimeSpan) Set Duration of scaling.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getPriceDetail() Obtain Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPriceDetail(array $PriceDetail) Set Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -69,6 +73,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $TimeSpan;
 
     /**
+     * @var array Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PriceDetail;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -83,6 +93,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $TimeSpan Duration of scaling.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $PriceDetail Pricing details
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -112,6 +124,15 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TimeSpan",$param) and $param["TimeSpan"] !== null) {
             $this->TimeSpan = $param["TimeSpan"];
+        }
+
+        if (array_key_exists("PriceDetail",$param) and $param["PriceDetail"] !== null) {
+            $this->PriceDetail = [];
+            foreach ($param["PriceDetail"] as $key => $value){
+                $obj = new PriceDetail();
+                $obj->deserialize($value);
+                array_push($this->PriceDetail, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

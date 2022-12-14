@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setErrorMsg(string $ErrorMsg) Set Verification error information. If it is not null, the verification fails and thus the configuration fails.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getData() Obtain The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setData(string $Data) Set The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -43,6 +47,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $ErrorMsg;
 
     /**
+     * @var string The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Data;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -51,6 +61,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param boolean $IsDraft `true`: Draft, indicating the resource pool is not refreshed.
      * @param string $ErrorMsg Verification error information. If it is not null, the verification fails and thus the configuration fails.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Data The response data.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -72,6 +84,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("ErrorMsg",$param) and $param["ErrorMsg"] !== null) {
             $this->ErrorMsg = $param["ErrorMsg"];
+        }
+
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = $param["Data"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

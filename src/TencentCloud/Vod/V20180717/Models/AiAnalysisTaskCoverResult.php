@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setOutput(AiAnalysisTaskCoverOutput $Output) Set Output of intelligent cover generating task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getProgress() Obtain The progress of an intelligent thumbnail generation task. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The progress of an intelligent thumbnail generation task. Value range: 0-100.
  */
 class AiAnalysisTaskCoverResult extends AbstractModel
 {
@@ -69,6 +71,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Output;
 
     /**
+     * @var integer The progress of an intelligent thumbnail generation task. Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -76,6 +83,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param AiAnalysisTaskCoverInput $Input Input of intelligent cover generating task.
      * @param AiAnalysisTaskCoverOutput $Output Output of intelligent cover generating task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Progress The progress of an intelligent thumbnail generation task. Value range: 0-100.
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiAnalysisTaskCoverOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

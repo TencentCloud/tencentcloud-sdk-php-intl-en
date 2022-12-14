@@ -20,48 +20,32 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateInstance request structure.
  *
- * @method integer getProductId() Obtain Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1</li>
-<li>2: EMR v2.0.1</li>
-<li>4: EMR v2.1.0</li>
-<li>7: EMR v3.0.0</li>
-<li>9: EMR v2.2.0</li>
-<li>11: ClickHouse v1.0.0</li>
-<li>13: Druid v1.0.0</li>
-<li>15: EMR v2.2.1</li>
+ * @method integer getProductId() Obtain The product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>16: EMR v2.3.0</li>
-<li>17: ClickHouse v1.1.0</li>
-<li>19: EMR v2.4.0</li>
 <li>20: EMR v2.5.0</li>
-<li>22: ClickHouse v1.2.0</li>
-<li>24: EMR TianQiong v1.0.0</li>
 <li>25: EMR v3.1.0</li>
-<li>26: Doris v1.0.0</li>
 <li>27: Kafka v1.0.0</li>
-<li>28: EMR v3.2.0</li>
-<li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
- * @method void setProductId(integer $ProductId) Set Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1</li>
-<li>2: EMR v2.0.1</li>
-<li>4: EMR v2.1.0</li>
-<li>7: EMR v3.0.0</li>
-<li>9: EMR v2.2.0</li>
-<li>11: ClickHouse v1.0.0</li>
-<li>13: Druid v1.0.0</li>
-<li>15: EMR v2.2.1</li>
+<li>33: EMR v3.2.1</li>
+<li>34: EMR v3.3.0</li>
+<li>36: StarRocks v1.0.0</li>
+<li>37: EMR v3.4.0</li>
+<li>38: EMR v2.7.0</li>
+<li>39: StarRocks v1.1.0</li>
+<li>41: Druid v1.1.0</li>
+ * @method void setProductId(integer $ProductId) Set The product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>16: EMR v2.3.0</li>
-<li>17: ClickHouse v1.1.0</li>
-<li>19: EMR v2.4.0</li>
 <li>20: EMR v2.5.0</li>
-<li>22: ClickHouse v1.2.0</li>
-<li>24: EMR TianQiong v1.0.0</li>
 <li>25: EMR v3.1.0</li>
-<li>26: Doris v1.0.0</li>
 <li>27: Kafka v1.0.0</li>
-<li>28: EMR v3.2.0</li>
-<li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
+<li>33: EMR v3.2.1</li>
+<li>34: EMR v3.3.0</li>
+<li>36: StarRocks v1.0.0</li>
+<li>37: EMR v3.4.0</li>
+<li>38: EMR v2.7.0</li>
+<li>39: StarRocks v1.1.0</li>
+<li>41: Druid v1.1.0</li>
  * @method array getSoftware() Obtain List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
  * @method void setSoftware(array $Software) Set List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
@@ -176,27 +160,19 @@ Hadoop-Hbase
 class CreateInstanceRequest extends AbstractModel
 {
     /**
-     * @var integer Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1</li>
-<li>2: EMR v2.0.1</li>
-<li>4: EMR v2.1.0</li>
-<li>7: EMR v3.0.0</li>
-<li>9: EMR v2.2.0</li>
-<li>11: ClickHouse v1.0.0</li>
-<li>13: Druid v1.0.0</li>
-<li>15: EMR v2.2.1</li>
+     * @var integer The product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>16: EMR v2.3.0</li>
-<li>17: ClickHouse v1.1.0</li>
-<li>19: EMR v2.4.0</li>
 <li>20: EMR v2.5.0</li>
-<li>22: ClickHouse v1.2.0</li>
-<li>24: EMR TianQiong v1.0.0</li>
 <li>25: EMR v3.1.0</li>
-<li>26: Doris v1.0.0</li>
 <li>27: Kafka v1.0.0</li>
-<li>28: EMR v3.2.0</li>
-<li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
+<li>33: EMR v3.2.1</li>
+<li>34: EMR v3.3.0</li>
+<li>36: StarRocks v1.0.0</li>
+<li>37: EMR v3.4.0</li>
+<li>38: EMR v2.7.0</li>
+<li>39: StarRocks v1.1.0</li>
+<li>41: Druid v1.1.0</li>
      */
     public $ProductId;
 
@@ -380,27 +356,19 @@ Hadoop-Hbase
     public $MultiZoneSettings;
 
     /**
-     * @param integer $ProductId Product ID. Different product IDs represent different EMR product versions. Valid values:
-<li>1: EMR v1.3.1</li>
-<li>2: EMR v2.0.1</li>
-<li>4: EMR v2.1.0</li>
-<li>7: EMR v3.0.0</li>
-<li>9: EMR v2.2.0</li>
-<li>11: ClickHouse v1.0.0</li>
-<li>13: Druid v1.0.0</li>
-<li>15: EMR v2.2.1</li>
+     * @param integer $ProductId The product ID. Different product IDs represent different EMR product versions. Valid values:
 <li>16: EMR v2.3.0</li>
-<li>17: ClickHouse v1.1.0</li>
-<li>19: EMR v2.4.0</li>
 <li>20: EMR v2.5.0</li>
-<li>22: ClickHouse v1.2.0</li>
-<li>24: EMR TianQiong v1.0.0</li>
 <li>25: EMR v3.1.0</li>
-<li>26: Doris v1.0.0</li>
 <li>27: Kafka v1.0.0</li>
-<li>28: EMR v3.2.0</li>
-<li>29: EMR v2.5.1</li>
 <li>30: EMR v2.6.0</li>
+<li>33: EMR v3.2.1</li>
+<li>34: EMR v3.3.0</li>
+<li>36: StarRocks v1.0.0</li>
+<li>37: EMR v3.4.0</li>
+<li>38: EMR v2.7.0</li>
+<li>39: StarRocks v1.1.0</li>
+<li>41: Druid v1.1.0</li>
      * @param array $Software List of deployed components. The list of component options varies by EMR product ID (i.e., `ProductId`; for specific meanings, please see the `ProductId` input parameter). For more information, please see [Component Version](https://intl.cloud.tencent.com/document/product/589/20279?from_cn_redirect=1).
 Enter an instance value: `hive` or `flink`.
      * @param integer $SupportHA Whether to enable high node availability. Valid values:

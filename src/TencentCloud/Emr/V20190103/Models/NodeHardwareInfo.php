@@ -212,6 +212,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServiceClient(string $ServiceClient) Set Service
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getDisableApiTermination() Obtain Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDisableApiTermination(boolean $DisableApiTermination) Set Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTradeVersion() Obtain The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTradeVersion(integer $TradeVersion) Set The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NodeHardwareInfo extends AbstractModel
 {
@@ -504,6 +512,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ServiceClient;
 
     /**
+     * @var boolean Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DisableApiTermination;
+
+    /**
+     * @var integer The billing version. Valid values: `0` (original billing) and `1` (new billing)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TradeVersion;
+
+    /**
      * @param integer $AppId User `APPID`
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SerialNo Serial number
@@ -599,6 +619,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $DeviceName Device name
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ServiceClient Service
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $DisableApiTermination Enabling instance protection for this instance. Valid values: `true` (enable) and `false` (disable).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TradeVersion The billing version. Valid values: `0` (original billing) and `1` (new billing)
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -816,6 +840,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ServiceClient",$param) and $param["ServiceClient"] !== null) {
             $this->ServiceClient = $param["ServiceClient"];
+        }
+
+        if (array_key_exists("DisableApiTermination",$param) and $param["DisableApiTermination"] !== null) {
+            $this->DisableApiTermination = $param["DisableApiTermination"];
+        }
+
+        if (array_key_exists("TradeVersion",$param) and $param["TradeVersion"] !== null) {
+            $this->TradeVersion = $param["TradeVersion"];
         }
     }
 }

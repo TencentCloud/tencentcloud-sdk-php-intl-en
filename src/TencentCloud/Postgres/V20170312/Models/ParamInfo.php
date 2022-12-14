@@ -38,10 +38,10 @@ For an `integer` or `real` parameter, the `Min` field represents the minimum val
 For a `bool` parameter, the valid values include `true` and `false`; 
 For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getUnit() Obtain Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUnit(string $Unit) Set Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDefaultValue() Obtain Default value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setDefaultValue(string $DefaultValue) Set Default value of the parameter, which is returned as a string
@@ -50,13 +50,13 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setCurrentValue(string $CurrentValue) Set Current value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method array getEnumValue() Obtain Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setEnumValue(array $EnumValue) Set Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method float getMax() Obtain The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setMax(float $Max) Set The maximum value of the `integer` or `real` parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getEnumValue() Obtain Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEnumValue(array $EnumValue) Set Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method float getMin() Obtain The minimum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -94,6 +94,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLastModifyTime(string $LastModifyTime) Set The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getStandbyRelated() Obtain Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStandbyRelated(integer $StandbyRelated) Set Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getVersionRelationSet() Obtain Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVersionRelationSet(array $VersionRelationSet) Set Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSpecRelationSet() Obtain Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSpecRelationSet(array $SpecRelationSet) Set Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamInfo extends AbstractModel
 {
@@ -119,8 +131,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ParamValueType;
 
     /**
-     * @var string Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var string Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Unit;
 
@@ -137,16 +149,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CurrentValue;
 
     /**
-     * @var array Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
-     */
-    public $EnumValue;
-
-    /**
      * @var float The maximum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Max;
+
+    /**
+     * @var array Value range of the enum parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EnumValue;
 
     /**
      * @var float The minimum value of the `integer` or `real` parameter
@@ -203,6 +215,24 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LastModifyTime;
 
     /**
+     * @var integer Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StandbyRelated;
+
+    /**
+     * @var array Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $VersionRelationSet;
+
+    /**
+     * @var array Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SpecRelationSet;
+
+    /**
      * @param integer $ID Parameter ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Name Parameter name
@@ -212,15 +242,15 @@ For an `integer` or `real` parameter, the `Min` field represents the minimum val
 For a `bool` parameter, the valid values include `true` and `false`; 
 For an `enum` or `mutil_enum` parameter, the `EnumValue` field represents the valid values.
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param string $Unit Value unit of the parameter. If the parameter has no unit, this field will return an empty string.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Unit Unit of the parameter value. If the parameter has no unit, this field will return null.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DefaultValue Default value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CurrentValue Current value of the parameter, which is returned as a string
 Note: this field may return `null`, indicating that no valid values can be obtained.
-     * @param array $EnumValue Value range of the enum parameter
-Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param float $Max The maximum value of the `integer` or `real` parameter
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $EnumValue Value range of the enum parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param float $Min The minimum value of the `integer` or `real` parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
@@ -240,6 +270,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LastModifyTime The last modified time of the parameter
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $StandbyRelated Primary-standby constraint. Valid values: `0` (no constraint), `1` (The parameter value of the standby server must be greater than that of the primary server), `2` (The parameter value of the primary server must be greater than that of the standby server.)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $VersionRelationSet Associated parameter version information, which refers to the detailed parameter information of the kernel version.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SpecRelationSet Associated parameter specification information, which refers to the detailed parameter information of the specifications.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -278,12 +314,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
             $this->CurrentValue = $param["CurrentValue"];
         }
 
-        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
-            $this->EnumValue = $param["EnumValue"];
-        }
-
         if (array_key_exists("Max",$param) and $param["Max"] !== null) {
             $this->Max = $param["Max"];
+        }
+
+        if (array_key_exists("EnumValue",$param) and $param["EnumValue"] !== null) {
+            $this->EnumValue = $param["EnumValue"];
         }
 
         if (array_key_exists("Min",$param) and $param["Min"] !== null) {
@@ -320,6 +356,28 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LastModifyTime",$param) and $param["LastModifyTime"] !== null) {
             $this->LastModifyTime = $param["LastModifyTime"];
+        }
+
+        if (array_key_exists("StandbyRelated",$param) and $param["StandbyRelated"] !== null) {
+            $this->StandbyRelated = $param["StandbyRelated"];
+        }
+
+        if (array_key_exists("VersionRelationSet",$param) and $param["VersionRelationSet"] !== null) {
+            $this->VersionRelationSet = [];
+            foreach ($param["VersionRelationSet"] as $key => $value){
+                $obj = new ParamVersionRelation();
+                $obj->deserialize($value);
+                array_push($this->VersionRelationSet, $obj);
+            }
+        }
+
+        if (array_key_exists("SpecRelationSet",$param) and $param["SpecRelationSet"] !== null) {
+            $this->SpecRelationSet = [];
+            foreach ($param["SpecRelationSet"] as $key => $value){
+                $obj = new ParamSpecRelation();
+                $obj->deserialize($value);
+                array_push($this->SpecRelationSet, $obj);
+            }
         }
     }
 }

@@ -38,6 +38,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getProtocolType() Obtain Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProtocolType(string $ProtocolType) Set Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstanceNetInfo extends AbstractModel
 {
@@ -79,6 +83,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $SubnetId;
 
     /**
+     * @var string Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProtocolType;
+
+    /**
      * @param string $Address DNS domain name
      * @param string $Ip Ip
      * @param integer $Port Connection port address
@@ -88,6 +98,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $SubnetId Subnet ID
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ProtocolType Database connection protocol type. Valid values: `postgresql`, `mssql` (MSSQL-compatible)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -128,6 +140,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
             $this->SubnetId = $param["SubnetId"];
+        }
+
+        if (array_key_exists("ProtocolType",$param) and $param["ProtocolType"] !== null) {
+            $this->ProtocolType = $param["ProtocolType"];
         }
     }
 }

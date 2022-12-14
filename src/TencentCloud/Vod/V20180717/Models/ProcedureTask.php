@@ -96,6 +96,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getOperator() Obtain The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+ * @method void setOperator(string $Operator) Set The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+ * @method string getOperationType() Obtain The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+ * @method void setOperationType(string $OperationType) Set The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
  */
 class ProcedureTask extends AbstractModel
 {
@@ -202,6 +210,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
+     * @var string The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+     */
+    public $Operator;
+
+    /**
+     * @var string The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
+     */
+    public $OperationType;
+
+    /**
      * @param string $TaskId Video processing task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
@@ -240,6 +260,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Operator The operator. Valid values:
+<li>`SYSTEM`: The task is triggered by the system.</li>
+     * @param string $OperationType The operation type. Valid values:
+<li>`TSC`: TSC-based smart bitrate reduction</li>
      */
     function __construct()
     {
@@ -337,6 +361,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Operator",$param) and $param["Operator"] !== null) {
+            $this->Operator = $param["Operator"];
+        }
+
+        if (array_key_exists("OperationType",$param) and $param["OperationType"] !== null) {
+            $this->OperationType = $param["OperationType"];
         }
     }
 }

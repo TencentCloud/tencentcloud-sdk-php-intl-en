@@ -31,7 +31,6 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
 <li>Procedure: Video processing</li>
 <li>EditMedia: Video editing</li>
@@ -43,7 +42,6 @@ use TencentCloud\Common\AbstractModel;
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -118,10 +116,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReviewAudioVideoTask(ReviewAudioVideoTask $ReviewAudioVideoTask) Set The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateTask() Obtain This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+ * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain 
+ * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set 
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -139,7 +139,6 @@ class DescribeTaskDetailResponse extends AbstractModel
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
      */
     public $TaskType;
 
@@ -257,10 +256,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReviewAudioVideoTask;
 
     /**
-     * @var ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * @var ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReduceMediaBitrateTask;
+
+    /**
+     * @var DescribeFileAttributesTask 
+     */
+    public $DescribeFileAttributesTask;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -279,7 +283,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <li>FastClipMedia: Quick clipping</li>
 <li>RemoveWatermarkTask: Watermark removal</li>
 <li> ReviewAudioVideo: Moderation</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -317,8 +320,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoTask The information of a moderation task. This parameter is valid only if `TaskType` is `ReviewAudioVideo`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask The information of a bitrate reduction task. This parameter is valid only if `TaskType` is `ReduceMediaBitrate`.
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DescribeFileAttributesTask $DescribeFileAttributesTask 
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -432,6 +436,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ReduceMediaBitrateTask",$param) and $param["ReduceMediaBitrateTask"] !== null) {
             $this->ReduceMediaBitrateTask = new ReduceMediaBitrateTask();
             $this->ReduceMediaBitrateTask->deserialize($param["ReduceMediaBitrateTask"]);
+        }
+
+        if (array_key_exists("DescribeFileAttributesTask",$param) and $param["DescribeFileAttributesTask"] !== null) {
+            $this->DescribeFileAttributesTask = new DescribeFileAttributesTask();
+            $this->DescribeFileAttributesTask->deserialize($param["DescribeFileAttributesTask"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -51,6 +51,7 @@ The output file is in MP4 or MP3 format. In the callback for media composition, 
 * There can be up to 4 levels of categories.
 * One category can have up to 500 subcategories under it.
  * @method Models\CreateContentReviewTemplateResponse CreateContentReviewTemplate(Models\CreateContentReviewTemplateRequest $req) This API is used to create custom intelligent video content recognition templates. Up to 50 templates can be created.
+ * @method Models\CreateImageProcessingTemplateResponse CreateImageProcessingTemplate(Models\CreateImageProcessingTemplateRequest $req) This API is used to create a custom image processing template. You can create up to 16 templates, and each template can contain up to three operations, for example, cropping, scaling, and cropping again.
  * @method Models\CreateImageSpriteTemplateResponse CreateImageSpriteTemplate(Models\CreateImageSpriteTemplateRequest $req) This API is used to create a custom image sprite generating template. Up to 16 templates can be created.
  * @method Models\CreatePersonSampleResponse CreatePersonSample(Models\CreatePersonSampleRequest $req) This API is used to create samples for using facial features positioning and other technologies to perform video processing operations such as content recognition and inappropriate information recognition.
  * @method Models\CreateProcedureTemplateResponse CreateProcedureTemplate(Models\CreateProcedureTemplateRequest $req) This API is used to create a custom task flow template. Up to 50 templates can be created.
@@ -76,6 +77,7 @@ Note: templates with an ID below 10000 are preset and cannot be deleted.
  * @method Models\DeleteClassResponse DeleteClass(Models\DeleteClassRequest $req) * A category can be deleted only if it has no subcategories and associated media files;
 * Otherwise, [delete the media files](https://intl.cloud.tencent.com/document/product/266/31764?from_cn_redirect=1) and subcategories first before deleting the category.
  * @method Models\DeleteContentReviewTemplateResponse DeleteContentReviewTemplate(Models\DeleteContentReviewTemplateRequest $req) This API is used to delete custom intelligent video content recognition templates.
+ * @method Models\DeleteImageProcessingTemplateResponse DeleteImageProcessingTemplate(Models\DeleteImageProcessingTemplateRequest $req) This API is used to delete an image processing template.
  * @method Models\DeleteImageSpriteTemplateResponse DeleteImageSpriteTemplate(Models\DeleteImageSpriteTemplateRequest $req) This API is used to delete an image sprite generating template.
  * @method Models\DeleteMediaResponse DeleteMedia(Models\DeleteMediaRequest $req) * This API is used to delete a media file and its processed files, such as the transcoded video files, image sprites, screenshots, and videos for publishing on WeChat.
 * You can delete the original files, transcoded video files, and videos for publishing on WeChat, etc. of videos with specified IDs.
@@ -125,6 +127,7 @@ This API is used to delete a player configuration.
     2. Other files (MP4 files for example): VOD does not count playback times when the playback request carries the `range` parameter and the `start` parameter in `range` is not `0`. In other cases, VOD counts playback times.
 * Statistics on playback devices: VOD counts playback times on mobile clients when the playback request carries the `UserAgent` parameter which includes an identifier such as `Android` or `iPhone`. In other cases, VOD counts playback times on PC clients.
  * @method Models\DescribeDrmKeyProviderInfoResponse DescribeDrmKeyProviderInfo(Models\DescribeDrmKeyProviderInfoRequest $req) This API is used to query DRM key information.
+ * @method Models\DescribeImageProcessingTemplatesResponse DescribeImageProcessingTemplates(Models\DescribeImageProcessingTemplatesRequest $req) This API is used to query image processing templates. You can specify the filters as well as the offset to start returning records from.
  * @method Models\DescribeImageReviewUsageDataResponse DescribeImageReviewUsageData(Models\DescribeImageReviewUsageDataRequest $req) This API is used to query your daily usage of the image recognition feature in a specified time period.
    1. You can query statistics from the last 365 days.
    2. The maximum query period is 90 days.
@@ -260,17 +263,11 @@ This API is used to modify a player configuration.
 5. Image sprite generating
 6. Taking a screenshot to use as the thumbnail
 7. Adaptive bitrate streaming and encryption
-8. Intelligent recognition of pornographic, terrorism, and politically sensitive content
-9. Intelligent content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
-10. Recognition of opening and closing credits, faces, full text, text keywords, full speech, speech keywords, and objects
+8. Detecting pornographic, terrorist, and politically sensitive content
+9. Content analysis for labeling, categorization, thumbnail generation, or frame-specific labeling
+10. Recognition of opening and closing segments, faces, full text, text keywords, full speech, speech keywords, and objects
 
 If event notifications are used, the event type is [ProcedureStateChanged](https://intl.cloud.tencent.com/document/product/266/9636?from_cn_redirect=1).
-
-A digital watermark has the following restrictions:
-<li>Digital watermarks can only be image watermarks.</li>
-<li>Digital watermarks must be looped.</li>
-<li>If you use digital watermarks, the output video must be in HLS format.</li>
-<li>Digital watermarks can only be displayed in the upper half of a video.</li>
  * @method Models\ProcessMediaByProcedureResponse ProcessMediaByProcedure(Models\ProcessMediaByProcedureRequest $req) This API is used to initiate a processing task for a VOD video with a task flow template.
 There are two ways to create a task flow template:
 1. Create and modify a task flow template in the console;

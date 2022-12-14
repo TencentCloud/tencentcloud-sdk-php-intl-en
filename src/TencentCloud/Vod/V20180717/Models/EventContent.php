@@ -132,10 +132,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReviewAudioVideoCompleteEvent(ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent) Set The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+ * @method ReduceMediaBitrateTask getReduceMediaBitrateCompleteEvent() Obtain This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+ * @method void setReduceMediaBitrateCompleteEvent(ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent) Set This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method DescribeFileAttributesTask getDescribeFileAttributesCompleteEvent() Obtain 
+ * @method void setDescribeFileAttributesCompleteEvent(DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent) Set 
  */
 class EventContent extends AbstractModel
 {
@@ -276,10 +278,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReviewAudioVideoCompleteEvent;
 
     /**
-     * @var ReduceMediaBitrateTask The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * @var ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ReduceMediaBitrateCompleteEvent;
+
+    /**
+     * @var DescribeFileAttributesTask 
+     */
+    public $DescribeFileAttributesCompleteEvent;
 
     /**
      * @param string $EventHandle Event handler. The caller must call `ConfirmEvents` to confirm that the message has been received, and the confirmation is valid for 30 seconds. After the confirmation expires, the event can be obtained again.
@@ -338,8 +345,9 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReviewAudioVideoTask $ReviewAudioVideoCompleteEvent The callback for the completion of the moderation task. This parameter is valid only if `EventType` is `ReviewAudioVideoComplete`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent The callback for the completion of bitrate reduction. This parameter is valid only if `EventType` is `ReduceMediaBitrateComplete`.
+     * @param ReduceMediaBitrateTask $ReduceMediaBitrateCompleteEvent This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param DescribeFileAttributesTask $DescribeFileAttributesCompleteEvent 
      */
     function __construct()
     {
@@ -455,6 +463,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("ReduceMediaBitrateCompleteEvent",$param) and $param["ReduceMediaBitrateCompleteEvent"] !== null) {
             $this->ReduceMediaBitrateCompleteEvent = new ReduceMediaBitrateTask();
             $this->ReduceMediaBitrateCompleteEvent->deserialize($param["ReduceMediaBitrateCompleteEvent"]);
+        }
+
+        if (array_key_exists("DescribeFileAttributesCompleteEvent",$param) and $param["DescribeFileAttributesCompleteEvent"] !== null) {
+            $this->DescribeFileAttributesCompleteEvent = new DescribeFileAttributesTask();
+            $this->DescribeFileAttributesCompleteEvent->deserialize($param["DescribeFileAttributesCompleteEvent"]);
         }
     }
 }

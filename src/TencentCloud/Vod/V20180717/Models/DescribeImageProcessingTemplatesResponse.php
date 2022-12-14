@@ -14,37 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Postgres\V20170312\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceRenewDBInstance response structure.
+ * DescribeImageProcessingTemplates response structure.
  *
- * @method integer getOriginalPrice() Obtain Published price in cents. For example, 24650 indicates 246.5 USD.
- * @method void setOriginalPrice(integer $OriginalPrice) Set Published price in cents. For example, 24650 indicates 246.5 USD.
- * @method integer getPrice() Obtain Discounted total amount. For example, 24650 indicates 246.5 USD.
- * @method void setPrice(integer $Price) Set Discounted total amount. For example, 24650 indicates 246.5 USD.
- * @method string getCurrency() Obtain Currency, such as USD.
- * @method void setCurrency(string $Currency) Set Currency, such as USD.
+ * @method integer getTotalCount() Obtain The total number of records that meet the conditions.
+ * @method void setTotalCount(integer $TotalCount) Set The total number of records that meet the conditions.
+ * @method array getImageProcessingTemplateSet() Obtain The information of the queried image processing templates.
+ * @method void setImageProcessingTemplateSet(array $ImageProcessingTemplateSet) Set The information of the queried image processing templates.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquiryPriceRenewDBInstanceResponse extends AbstractModel
+class DescribeImageProcessingTemplatesResponse extends AbstractModel
 {
     /**
-     * @var integer Published price in cents. For example, 24650 indicates 246.5 USD.
+     * @var integer The total number of records that meet the conditions.
      */
-    public $OriginalPrice;
+    public $TotalCount;
 
     /**
-     * @var integer Discounted total amount. For example, 24650 indicates 246.5 USD.
+     * @var array The information of the queried image processing templates.
      */
-    public $Price;
-
-    /**
-     * @var string Currency, such as USD.
-     */
-    public $Currency;
+    public $ImageProcessingTemplateSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -52,9 +45,8 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $OriginalPrice Published price in cents. For example, 24650 indicates 246.5 USD.
-     * @param integer $Price Discounted total amount. For example, 24650 indicates 246.5 USD.
-     * @param string $Currency Currency, such as USD.
+     * @param integer $TotalCount The total number of records that meet the conditions.
+     * @param array $ImageProcessingTemplateSet The information of the queried image processing templates.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -70,16 +62,17 @@ class InquiryPriceRenewDBInstanceResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("OriginalPrice",$param) and $param["OriginalPrice"] !== null) {
-            $this->OriginalPrice = $param["OriginalPrice"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("Price",$param) and $param["Price"] !== null) {
-            $this->Price = $param["Price"];
-        }
-
-        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
-            $this->Currency = $param["Currency"];
+        if (array_key_exists("ImageProcessingTemplateSet",$param) and $param["ImageProcessingTemplateSet"] !== null) {
+            $this->ImageProcessingTemplateSet = [];
+            foreach ($param["ImageProcessingTemplateSet"] as $key => $value){
+                $obj = new ImageProcessingTemplate();
+                $obj->deserialize($value);
+                array_push($this->ImageProcessingTemplateSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

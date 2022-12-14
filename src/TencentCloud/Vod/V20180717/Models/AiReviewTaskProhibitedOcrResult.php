@@ -34,6 +34,8 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return `null`, indicating that no valid value can be found.
  * @method void setOutput(AiReviewProhibitedOcrTaskOutput $Output) Set Output for OCR-based recognition of banned content
 Note: This field may return `null`, indicating that no valid value can be found.
+ * @method integer getProgress() Obtain The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The progress of an OCR-based moderation task (banned content). Value range: 0-100.
  */
 class AiReviewTaskProhibitedOcrResult extends AbstractModel
 {
@@ -69,6 +71,11 @@ Note: This field may return `null`, indicating that no valid value can be found.
     public $Output;
 
     /**
+     * @var integer The progress of an OCR-based moderation task (banned content). Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @param string $Status Task status. Valid values: PROCESSING, SUCCESS, FAIL.
      * @param string $ErrCodeExt Error code. An empty string indicates the task is successful; other values indicate failure. For details, see [Video Processing Error Codes](https://intl.cloud.tencent.com/zh/document/product/266/39145).
      * @param integer $ErrCode Error code. 0 indicates the task is successful; other values indicate failure. You’re not recommended to use this parameter, but to use the new parameter `ErrCodeExt`.
@@ -76,6 +83,7 @@ Note: This field may return `null`, indicating that no valid value can be found.
      * @param AiReviewProhibitedOcrTaskInput $Input Input for OCR-based recognition of banned content
      * @param AiReviewProhibitedOcrTaskOutput $Output Output for OCR-based recognition of banned content
 Note: This field may return `null`, indicating that no valid value can be found.
+     * @param integer $Progress The progress of an OCR-based moderation task (banned content). Value range: 0-100.
      */
     function __construct()
     {
@@ -114,6 +122,10 @@ Note: This field may return `null`, indicating that no valid value can be found.
         if (array_key_exists("Output",$param) and $param["Output"] !== null) {
             $this->Output = new AiReviewProhibitedOcrTaskOutput();
             $this->Output->deserialize($param["Output"]);
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

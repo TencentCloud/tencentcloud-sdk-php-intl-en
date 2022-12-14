@@ -54,6 +54,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
  * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+ * @method integer getProgress() Obtain The progress of a pull and upload task. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The progress of a pull and upload task. Value range: 0-100.
  */
 class PullUploadTask extends AbstractModel
 {
@@ -119,6 +121,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
+     * @var integer The progress of a pull and upload task. Value range: 0-100.
+     */
+    public $Progress;
+
+    /**
      * @param string $TaskId Pull for upload task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
@@ -136,6 +143,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
      * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
+     * @param integer $Progress The progress of a pull and upload task. Value range: 0-100.
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SessionId",$param) and $param["SessionId"] !== null) {
             $this->SessionId = $param["SessionId"];
+        }
+
+        if (array_key_exists("Progress",$param) and $param["Progress"] !== null) {
+            $this->Progress = $param["Progress"];
         }
     }
 }

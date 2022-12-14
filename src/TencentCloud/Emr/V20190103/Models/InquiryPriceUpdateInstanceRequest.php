@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPlacement(Placement $Placement) Set Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
  * @method string getCurrency() Obtain Currency.
  * @method void setCurrency(string $Currency) Set Currency.
+ * @method array getResourceIdList() Obtain The resource ID list for batch configuration change.
+ * @method void setResourceIdList(array $ResourceIdList) Set The resource ID list for batch configuration change.
  */
 class InquiryPriceUpdateInstanceRequest extends AbstractModel
 {
@@ -75,6 +77,11 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
     public $Currency;
 
     /**
+     * @var array The resource ID list for batch configuration change.
+     */
+    public $ResourceIdList;
+
+    /**
      * @param string $TimeUnit Time unit of scaling. Valid values:
 <li>s: seconds. When `PayMode` is 0, `TimeUnit` can only be `s`.</li>
      * @param integer $TimeSpan Duration of scaling, which needs to be used together with `TimeUnit`.
@@ -84,6 +91,7 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
 <li>0: pay-as-you-go.</li>
      * @param Placement $Placement Instance location. This parameter is used to specify the AZ, project, and other attributes of the instance.
      * @param string $Currency Currency.
+     * @param array $ResourceIdList The resource ID list for batch configuration change.
      */
     function __construct()
     {
@@ -122,6 +130,10 @@ class InquiryPriceUpdateInstanceRequest extends AbstractModel
 
         if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
             $this->Currency = $param["Currency"];
+        }
+
+        if (array_key_exists("ResourceIdList",$param) and $param["ResourceIdList"] !== null) {
+            $this->ResourceIdList = $param["ResourceIdList"];
         }
     }
 }
