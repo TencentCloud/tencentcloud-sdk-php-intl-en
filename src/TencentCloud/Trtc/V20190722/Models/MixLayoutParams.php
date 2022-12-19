@@ -67,10 +67,14 @@ This parameter specifies the type of the stream displayed in the big window. If 
  * @method void setPlaceHolderMode(integer $PlaceHolderMode) Set `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
  * @method integer getBackgroundImageRenderMode() Obtain The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
  * @method void setBackgroundImageRenderMode(integer $BackgroundImageRenderMode) Set The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
- * @method string getDefaultSubBackgroundImage() Obtain The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
- * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) Set The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+ * @method string getDefaultSubBackgroundImage() Obtain The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+ * @method void setDefaultSubBackgroundImage(string $DefaultSubBackgroundImage) Set The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
  * @method array getWaterMarkList() Obtain The watermark layout. Up to 25 watermarks are supported.
  * @method void setWaterMarkList(array $WaterMarkList) Set The watermark layout. Up to 25 watermarks are supported.
+ * @method integer getRenderMode() Obtain The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+ * @method void setRenderMode(integer $RenderMode) Set The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+ * @method integer getMaxResolutionUserAlign() Obtain This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+ * @method void setMaxResolutionUserAlign(integer $MaxResolutionUserAlign) Set This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
  */
 class MixLayoutParams extends AbstractModel
 {
@@ -130,7 +134,7 @@ This parameter specifies the type of the stream displayed in the big window. If 
     public $BackgroundImageRenderMode;
 
     /**
-     * @var string The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * @var string The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      */
     public $DefaultSubBackgroundImage;
 
@@ -138,6 +142,16 @@ This parameter specifies the type of the stream displayed in the big window. If 
      * @var array The watermark layout. Up to 25 watermarks are supported.
      */
     public $WaterMarkList;
+
+    /**
+     * @var integer The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+     */
+    public $RenderMode;
+
+    /**
+     * @var integer This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
+     */
+    public $MaxResolutionUserAlign;
 
     /**
      * @param integer $MixLayoutMode Layout mode:
@@ -163,8 +177,10 @@ This parameter specifies the type of the stream displayed in the big window. If 
      * @param string $BackgroundImageUrl The download URL of the background image for the canvas, which must be in JPG or PNG format and cannot be larger than 5 MB.
      * @param integer $PlaceHolderMode `1` means to use placeholders, and `0` (default) means to not use placeholders. If this parameter is set to `1`, when a user is not publishing video, a placeholder image will be displayed in the window reserved for the user.
      * @param integer $BackgroundImageRenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is defined the same as `RenderMode` in `MixLayoufList`.
-     * @param string $DefaultSubBackgroundImage The download URL of the default background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
+     * @param string $DefaultSubBackgroundImage The URL of the background image for a window. The image must be in JPG or PNG format and cannot be larger than 5 MB. If the image’s aspect ratio is different from that of the window, the image will be rendered according to the value of `RenderMode`.
      * @param array $WaterMarkList The watermark layout. Up to 25 watermarks are supported.
+     * @param integer $RenderMode The render mode to use when the aspect ratio of a video is different from that of the window. This parameter is invalid if a custom layout is used. It is defined the same as `RenderMode` in `MixLayoufList`.
+     * @param integer $MaxResolutionUserAlign This parameter is valid only if the screen sharing layout is used. If you set it to `1`, the large video window will appear on the right and the small window on the left. The default value is `0`.
      */
     function __construct()
     {
@@ -227,6 +243,14 @@ This parameter specifies the type of the stream displayed in the big window. If 
                 $obj->deserialize($value);
                 array_push($this->WaterMarkList, $obj);
             }
+        }
+
+        if (array_key_exists("RenderMode",$param) and $param["RenderMode"] !== null) {
+            $this->RenderMode = $param["RenderMode"];
+        }
+
+        if (array_key_exists("MaxResolutionUserAlign",$param) and $param["MaxResolutionUserAlign"] !== null) {
+            $this->MaxResolutionUserAlign = $param["MaxResolutionUserAlign"];
         }
     }
 }

@@ -28,7 +28,7 @@ For tasks in incremental migration mode, you need to call this API before migrat
 If the task status queried through the `DescribeMigrationJobs` API is ready (`Status` = `readyComplete), you can call this API to complete the migration task.
 
  * @method Models\ConfigureSyncJobResponse ConfigureSyncJob(Models\ConfigureSyncJobRequest $req) This API is used to configure a sync task.
- * @method Models\CreateCheckSyncJobResponse CreateCheckSyncJob(Models\CreateCheckSyncJobRequest $req) This API is used to verify a sync task by checking required parameters and peripheral information.
+ * @method Models\CreateCheckSyncJobResponse CreateCheckSyncJob(Models\CreateCheckSyncJobRequest $req) This API is used to verify a sync task by checking required parameters and peripheral configuration.
  * @method Models\CreateCompareTaskResponse CreateCompareTask(Models\CreateCompareTaskRequest $req) This API is used to create a data consistency check task. After the task is successfully created, its ID will be returned in the format of `dts-8yv4w2i1-cmp-37skmii9`, and you can call `StartCompare` to start it.
  * @method Models\CreateMigrateCheckJobResponse CreateMigrateCheckJob(Models\CreateMigrateCheckJobRequest $req) This API is used to verify a migration task.
 Before migration, you should call this API to create a check task. Migration will start only if the check succeeds. You can view the check result through the `DescribeMigrationCheckJob` API.
@@ -36,7 +36,7 @@ After successful check, if the migration task needs to be modified, a new check 
 
  * @method Models\CreateMigrationServiceResponse CreateMigrationService(Models\CreateMigrationServiceRequest $req) This API is used to purchase migration tasks. After the tasks are purchased successfully, a randomly generated list of task IDs will be returned. You can also call the `DescribeMigrationJobs` API to query the IDs of the successfully purchased tasks. Note that once a task is purchased successfully, the types and regions of the source and target databases cannot be changed.
  * @method Models\CreateSyncJobResponse CreateSyncJob(Models\CreateSyncJobRequest $req) This API is used to create a sync task.
- * @method Models\DeleteCompareTaskResponse DeleteCompareTask(Models\DeleteCompareTaskRequest $req) This API is used to delete a data consistency check task.
+ * @method Models\DeleteCompareTaskResponse DeleteCompareTask(Models\DeleteCompareTaskRequest $req) This API is used to delete a data consistency check task, which can be called when the task status is `success`, `failed`, or `canceled`.
  * @method Models\DescribeCheckSyncJobResultResponse DescribeCheckSyncJobResult(Models\DescribeCheckSyncJobResultRequest $req) This API is used to query the result of a sync check task.
  * @method Models\DescribeCompareReportResponse DescribeCompareReport(Models\DescribeCompareReportRequest $req) This API is used to query the details of a data consistency check task.
  * @method Models\DescribeCompareTasksResponse DescribeCompareTasks(Models\DescribeCompareTasksRequest $req) This API is used to query the list of data consistency check tasks under the current task.
@@ -44,7 +44,7 @@ After successful check, if the migration task needs to be modified, a new check 
  * @method Models\DescribeMigrationCheckJobResponse DescribeMigrationCheckJob(Models\DescribeMigrationCheckJobRequest $req) This API is used to get the check result and query the check status and progress after a check is created. 
 If the check succeeds, you can call the `StartMigrateJob` API to start migration.
 If the check fails, the cause can be queried. Modify the migration configuration or adjust relevant parameters of the source/target instances through the `ModifyMigrationJob` API based on the error message.
- * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) This API is used to query the details of a data migration task.
+ * @method Models\DescribeMigrationDetailResponse DescribeMigrationDetail(Models\DescribeMigrationDetailRequest $req) This API is used to query the details of a migration task.
  * @method Models\DescribeMigrationJobsResponse DescribeMigrationJobs(Models\DescribeMigrationJobsRequest $req) This API is used to query the list of data migration tasks.
  * @method Models\DescribeSyncJobsResponse DescribeSyncJobs(Models\DescribeSyncJobsRequest $req) This API is used to query the information of a sync task.
  * @method Models\DestroyMigrateJobResponse DestroyMigrateJob(Models\DestroyMigrateJobRequest $req) This API is used to delete a data migration task. For a billed task, you must first call the `IsolateMigrateJob` API to isolate it and make sure that it is in **Isolated** status before calling this API to delete it. For a free task, you can directly call the `IsolateMigrateJob` API to delete it.
@@ -59,7 +59,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
  * @method Models\RecoverMigrateJobResponse RecoverMigrateJob(Models\RecoverMigrateJobRequest $req) This API is used to recover a data migration task in **Isolated** status. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
  * @method Models\RecoverSyncJobResponse RecoverSyncJob(Models\RecoverSyncJobRequest $req) This API is used to recover a sync task in **Isolated** status. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
  * @method Models\ResizeSyncJobResponse ResizeSyncJob(Models\ResizeSyncJobRequest $req) This API is used to adjust the specification of a pay-as-you-go sync task. After this API is called, the backend needs to take about 3-5 minutes to implement the adjustment. You can call the `DescribeSyncJobs` API to query the latest task status.
- * @method Models\ResumeMigrateJobResponse ResumeMigrateJob(Models\ResumeMigrateJobRequest $req) This API is used to retry a failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
+ * @method Models\ResumeMigrateJobResponse ResumeMigrateJob(Models\ResumeMigrateJobRequest $req) This API is used to retry an abnormal or failed Redis data migration task. Note that this operation will skip the check stage and directly start the task, just like by calling `StartMigrationJob`. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
  * @method Models\ResumeSyncJobResponse ResumeSyncJob(Models\ResumeSyncJobRequest $req) This API is used to retry a sync task after certain resolvable errors are reported. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
  * @method Models\StartCompareResponse StartCompare(Models\StartCompareRequest $req) This API is used to start a data consistency check task after creating it by calling the `CreateCompareTask` API. After calling this API, you can call the `DescribeCompareTasks` API to query the latest task status.
  * @method Models\StartMigrateJobResponse StartMigrateJob(Models\StartMigrateJobRequest $req) This API (`StartMigrationJob`) is used to start a migration task. After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
@@ -67,7 +67,7 @@ If the check fails, the cause can be queried. Modify the migration configuration
  * @method Models\StopCompareResponse StopCompare(Models\StopCompareRequest $req) This API is used to stop a data consistency check task.
  * @method Models\StopMigrateJobResponse StopMigrateJob(Models\StopMigrateJobRequest $req) This API is used to stop a data migration task.
 After calling this API, you can call the `DescribeMigrationJobs` API to query the latest task status.
- * @method Models\StopSyncJobResponse StopSyncJob(Models\StopSyncJobRequest $req) This API is used to stop a sync task.
+ * @method Models\StopSyncJobResponse StopSyncJob(Models\StopSyncJobRequest $req) This API is used to stop a sync task. After calling this API, you can call the `DescribeSyncJobs` API to query the latest task status.
  */
 
 class DtsClient extends AbstractClient

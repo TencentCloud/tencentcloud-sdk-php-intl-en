@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getConfigId() Obtain Collection rule configuration ID
  * @method void setConfigId(string $ConfigId) Set Collection rule configuration ID
+ * @method string getName() Obtain Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setName(string $Name) Set Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getLogFormat() Obtain Log formatting method
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLogFormat(string $LogFormat) Set Log formatting method
@@ -61,6 +65,12 @@ class ConfigInfo extends AbstractModel
      * @var string Collection rule configuration ID
      */
     public $ConfigId;
+
+    /**
+     * @var string Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Name;
 
     /**
      * @var string Log formatting method
@@ -116,6 +126,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param string $ConfigId Collection rule configuration ID
+     * @param string $Name Name of the collection rule configuration
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $LogFormat Log formatting method
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $Path Log collection path
@@ -148,6 +160,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
         }
         if (array_key_exists("ConfigId",$param) and $param["ConfigId"] !== null) {
             $this->ConfigId = $param["ConfigId"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
         }
 
         if (array_key_exists("LogFormat",$param) and $param["LogFormat"] !== null) {

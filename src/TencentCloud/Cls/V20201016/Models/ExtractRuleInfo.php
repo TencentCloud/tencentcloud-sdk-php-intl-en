@@ -69,26 +69,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setJsonStandard(integer $JsonStandard) Set Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProtocol() Obtain Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProtocol(string $Protocol) Set Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAddress() Obtain Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAddress(string $Address) Set Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getParseProtocol() Obtain `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+ * @method string getParseProtocol() Obtain `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setParseProtocol(string $ParseProtocol) Set `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+ * @method void setParseProtocol(string $ParseProtocol) Set `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ExtractRuleInfo extends AbstractModel
@@ -167,23 +167,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @var string Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Protocol;
 
     /**
      * @var string Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Address;
 
     /**
-     * @var string `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * @var string `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ParseProtocol;
@@ -214,15 +214,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $JsonStandard Whether to be formatted as JSON (standard). Valid values: `0` (No) and `1` (Yes).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Protocol Syslog protocol. Valid values: `tcp`, `udp`.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Address Listening address and port specified by the syslog collection. Format: [ip]:[port]. Example: 127.0.0.1:9000.
-This field can be used when you create/modify collection rule configurations.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ParseProtocol `rfc3164`: Resolve logs by using the RFC3164 protocol during the syslog collection.
-`rfc5424`: Resolve logs by using the RFC5424 protocol during the syslog collection.
-`auto`: Automatically match either the RFC3164 or RFC5424 protocol.
-This field can be used when you create/modify collection rule configurations.
+     * @param string $ParseProtocol `rfc3164`: Resolve logs by using the RFC 3164 protocol during the syslog collection.
+`rfc5424`: Resolve logs by using the RFC 5424 protocol during the syslog collection.
+`auto`: Automatically match either the RFC 3164 or RFC 5424 protocol.
+This field can be used when you create or modify collection rule configurations.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -28,9 +28,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCount(integer $Count) Set Number of items
  * @method integer getFlowId() Obtain ID of the associated process, which can be used to query the process execution status.
  * @method void setFlowId(integer $FlowId) Set ID of the associated process, which can be used to query the process execution status.
- * @method array getInstanceIds() Obtain This field is populated only for orders that create instances, indicating the ID of the created instance.
+ * @method array getInstanceIds() Obtain The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setInstanceIds(array $InstanceIds) Set This field is populated only for orders that create instances, indicating the ID of the created instance.
+ * @method void setInstanceIds(array $InstanceIds) Set The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPayMode() Obtain Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
  * @method void setPayMode(integer $PayMode) Set Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
@@ -58,7 +58,7 @@ class Deal extends AbstractModel
     public $FlowId;
 
     /**
-     * @var array This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * @var array The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceIds;
@@ -73,7 +73,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $OwnerUin Account
      * @param integer $Count Number of items
      * @param integer $FlowId ID of the associated process, which can be used to query the process execution status.
-     * @param array $InstanceIds This field is populated only for orders that create instances, indicating the ID of the created instance.
+     * @param array $InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $PayMode Payment mode. Valid values: 0 (postpaid), 1 (prepaid)
      */

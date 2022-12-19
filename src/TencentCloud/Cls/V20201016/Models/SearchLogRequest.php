@@ -62,6 +62,16 @@ The two response methods differ slightly in terms of encoding format. You are ad
  * @method void setUseNewAnalysis(boolean $UseNewAnalysis) Set If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
 If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
 The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+ * @method float getSamplingRate() Obtain Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+ * @method void setSamplingRate(float $SamplingRate) Set Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
  */
 class SearchLogRequest extends AbstractModel
 {
@@ -119,6 +129,15 @@ The two response methods differ slightly in terms of encoding format. You are ad
     public $UseNewAnalysis;
 
     /**
+     * @var float Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
+     */
+    public $SamplingRate;
+
+    /**
      * @param string $TopicId ID of the log topic to be searched
      * @param integer $From Start time of the log to be searched, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be searched, which is a Unix timestamp in milliseconds
@@ -140,6 +159,11 @@ Notes:
      * @param boolean $UseNewAnalysis If the value is `true`, the new response method will be used, and the output parameters `AnalysisRecords` and `Columns` will be valid.
 If the value is `false`, the old response method will be used, and the output parameters `AnalysisResults` and `ColNames` will be valid.
 The two response methods differ slightly in terms of encoding format. You are advised to use the new method (`true`).
+     * @param float $SamplingRate Indicates whether to sample raw logs before statistical analysis (`Query` includes SQL statements).
+`0`: Auto-sample.
+`0–1`: Sample by the specified sample rate, such as `0.02`.
+`1`: Precise analysis without sampling.
+Default value: `1`
      */
     function __construct()
     {
@@ -184,6 +208,10 @@ The two response methods differ slightly in terms of encoding format. You are ad
 
         if (array_key_exists("UseNewAnalysis",$param) and $param["UseNewAnalysis"] !== null) {
             $this->UseNewAnalysis = $param["UseNewAnalysis"];
+        }
+
+        if (array_key_exists("SamplingRate",$param) and $param["SamplingRate"] !== null) {
+            $this->SamplingRate = $param["SamplingRate"];
         }
     }
 }

@@ -108,6 +108,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTmpToken(string $TmpToken) Set Temporary token, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRoleExternalId() Obtain External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRoleExternalId(string $RoleExternalId) Set External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Endpoint extends AbstractModel
 {
@@ -244,6 +248,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TmpToken;
 
     /**
+     * @var string External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RoleExternalId;
+
+    /**
      * @param string $Region Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
@@ -287,6 +297,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $TmpSecretKey Key of the temporary key, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TmpToken Temporary token, which is required if the operation is performed across accounts.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RoleExternalId External role ID
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -388,6 +400,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("TmpToken",$param) and $param["TmpToken"] !== null) {
             $this->TmpToken = $param["TmpToken"];
+        }
+
+        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
+            $this->RoleExternalId = $param["RoleExternalId"];
         }
     }
 }

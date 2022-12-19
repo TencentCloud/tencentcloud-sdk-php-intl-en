@@ -31,6 +31,7 @@ use TencentCloud\Dcdb\V20180411\Models as Models;
  * @method Models\CopyAccountPrivilegesResponse CopyAccountPrivileges(Models\CopyAccountPrivilegesRequest $req) This API is used to copy the permissions of a TencentDB account.
 Note: Accounts with the same username but different hosts are different accounts. Permissions can only be copied between accounts with the same `Readonly` attribute.
  * @method Models\CreateAccountResponse CreateAccount(Models\CreateAccountRequest $req) This API is used to create a TencentDB account. Multiple accounts can be created for one instance. Accounts with the same username but different hosts are different accounts.
+ * @method Models\CreateDCDBInstanceResponse CreateDCDBInstance(Models\CreateDCDBInstanceRequest $req) This API is used to create a monthly subscribed TencentDB instance by passing in information such as instance specifications, database version number, and purchased duration.
  * @method Models\CreateHourDCDBInstanceResponse CreateHourDCDBInstance(Models\CreateHourDCDBInstanceRequest $req) This API is used to create pay-as-you-go TDSQL for MySQL instances.
  * @method Models\DeleteAccountResponse DeleteAccount(Models\DeleteAccountRequest $req) This API is used to delete a TencentDB account, which is uniquely identified by username and host.
  * @method Models\DescribeAccountPrivilegesResponse DescribeAccountPrivileges(Models\DescribeAccountPrivilegesRequest $req) This API is used to query the permissions of a TencentDB account.
@@ -61,6 +62,7 @@ Note: accounts with the same username but different hosts are different accounts
  * @method Models\InitDCDBInstancesResponse InitDCDBInstances(Models\InitDCDBInstancesRequest $req) This API is used to initialize instances, including setting the default character set and table name case sensitivity.
  * @method Models\IsolateDedicatedDBInstanceResponse IsolateDedicatedDBInstance(Models\IsolateDedicatedDBInstanceRequest $req) This API is used to isolate a dedicated TencentDB instance.
  * @method Models\IsolateHourDCDBInstanceResponse IsolateHourDCDBInstance(Models\IsolateHourDCDBInstanceRequest $req) This API is used to isolate pay-as-you-go TDSQL for MySQL instances.
+ * @method Models\KillSessionResponse KillSession(Models\KillSessionRequest $req) This API is used to kill the specified session.
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to modify instance name.

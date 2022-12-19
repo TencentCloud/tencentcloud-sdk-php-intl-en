@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPartitionCount(integer $PartitionCount) Set Number of topic partitions
  * @method boolean getIndex() Obtain Whether index is enabled
  * @method void setIndex(boolean $Index) Set Whether index is enabled
+ * @method string getAssumerName() Obtain Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAssumerName(string $AssumerName) Set Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
  * @method boolean getStatus() Obtain Whether collection is enabled in the log topic
@@ -54,6 +58,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getSubAssumerName() Obtain Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubAssumerName(string $SubAssumerName) Set Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDescribes() Obtain Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDescribes(string $Describes) Set Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class TopicInfo extends AbstractModel
 {
@@ -81,6 +93,12 @@ class TopicInfo extends AbstractModel
      * @var boolean Whether index is enabled
      */
     public $Index;
+
+    /**
+     * @var string Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AssumerName;
 
     /**
      * @var string Creation time
@@ -123,11 +141,25 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $Period;
 
     /**
+     * @var string Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubAssumerName;
+
+    /**
+     * @var string Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Describes;
+
+    /**
      * @param string $LogsetId Logset ID
      * @param string $TopicId Log topic ID
      * @param string $TopicName Log topic name
      * @param integer $PartitionCount Number of topic partitions
      * @param boolean $Index Whether index is enabled
+     * @param string $AssumerName Cloud product identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product, such as `CDN` or `TKE`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
      * @param boolean $Status Whether collection is enabled in the log topic
      * @param array $Tags Information of tags bound to log topic
@@ -140,6 +172,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
 Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $SubAssumerName Cloud product sub-identifier. If the log topic is created by another cloud product, this field returns the name of the cloud product and its log type, such as `TKE-Audit` or `TKE-Event`. Some products only return the cloud product identifier (`AssumerName`), without this field.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Describes Log topic description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -174,6 +210,10 @@ Note: This field may return `null`, indicating that no valid value was found.
             $this->Index = $param["Index"];
         }
 
+        if (array_key_exists("AssumerName",$param) and $param["AssumerName"] !== null) {
+            $this->AssumerName = $param["AssumerName"];
+        }
+
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
         }
@@ -205,6 +245,14 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("Period",$param) and $param["Period"] !== null) {
             $this->Period = $param["Period"];
+        }
+
+        if (array_key_exists("SubAssumerName",$param) and $param["SubAssumerName"] !== null) {
+            $this->SubAssumerName = $param["SubAssumerName"];
+        }
+
+        if (array_key_exists("Describes",$param) and $param["Describes"] !== null) {
+            $this->Describes = $param["Describes"];
         }
     }
 }

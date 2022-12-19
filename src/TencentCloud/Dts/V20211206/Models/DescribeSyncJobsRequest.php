@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSyncJobs request structure.
  *
- * @method string getJobId() Obtain Sync task ID
- * @method void setJobId(string $JobId) Set Sync task ID
+ * @method string getJobId() Obtain Sync task ID, such as `sync-werwfs23`.
+ * @method void setJobId(string $JobId) Set Sync task ID, such as `sync-werwfs23`.
  * @method string getJobName() Obtain Sync task name
  * @method void setJobName(string $JobName) Set Sync task name
  * @method string getOrder() Obtain Sort by field, such as `CreateTime`.
@@ -46,7 +46,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribeSyncJobsRequest extends AbstractModel
 {
     /**
-     * @var string Sync task ID
+     * @var string Sync task ID, such as `sync-werwfs23`.
      */
     public $JobId;
 
@@ -101,7 +101,7 @@ class DescribeSyncJobsRequest extends AbstractModel
     public $TagFilters;
 
     /**
-     * @param string $JobId Sync task ID
+     * @param string $JobId Sync task ID, such as `sync-werwfs23`.
      * @param string $JobName Sync task name
      * @param string $Order Sort by field, such as `CreateTime`.
      * @param string $OrderSeq Sorting order. Valid values: `ASC`, `DESC`. Default value: `DESC` by `CreateTime`.

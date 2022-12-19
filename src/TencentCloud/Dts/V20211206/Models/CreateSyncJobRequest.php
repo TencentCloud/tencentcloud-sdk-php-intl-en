@@ -32,16 +32,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
  * @method string getSpecification() Obtain Sync task specification, such as `Standard`.
  * @method void setSpecification(string $Specification) Set Sync task specification, such as `Standard`.
- * @method array getTags() Obtain Tag
- * @method void setTags(array $Tags) Set Tag
- * @method integer getCount() Obtain Number of sync tasks
- * @method void setCount(integer $Count) Set Number of sync tasks
- * @method integer getAutoRenew() Obtain Auto-renewal flag
- * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag
- * @method string getInstanceClass() Obtain Sync link specification
- * @method void setInstanceClass(string $InstanceClass) Set Sync link specification
- * @method string getJobName() Obtain Sync link name
- * @method void setJobName(string $JobName) Set Sync link name
+ * @method array getTags() Obtain Tag information
+ * @method void setTags(array $Tags) Set Tag information
+ * @method integer getCount() Obtain The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+ * @method void setCount(integer $Count) Set The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+ * @method integer getAutoRenew() Obtain Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+ * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+ * @method string getInstanceClass() Obtain Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+ * @method void setInstanceClass(string $InstanceClass) Set Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+ * @method string getJobName() Obtain Sync task name
+ * @method void setJobName(string $JobName) Set Sync task name
  * @method string getExistedJobId() Obtain ID of the existing task used to create a similar task
  * @method void setExistedJobId(string $ExistedJobId) Set ID of the existing task used to create a similar task
  */
@@ -78,27 +78,27 @@ class CreateSyncJobRequest extends AbstractModel
     public $Specification;
 
     /**
-     * @var array Tag
+     * @var array Tag information
      */
     public $Tags;
 
     /**
-     * @var integer Number of sync tasks
+     * @var integer The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
      */
     public $Count;
 
     /**
-     * @var integer Auto-renewal flag
+     * @var integer Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
      */
     public $AutoRenew;
 
     /**
-     * @var string Sync link specification
+     * @var string Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
      */
     public $InstanceClass;
 
     /**
-     * @var string Sync link name
+     * @var string Sync task name
      */
     public $JobName;
 
@@ -114,11 +114,11 @@ class CreateSyncJobRequest extends AbstractModel
      * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
      * @param string $Specification Sync task specification, such as `Standard`.
-     * @param array $Tags Tag
-     * @param integer $Count Number of sync tasks
-     * @param integer $AutoRenew Auto-renewal flag
-     * @param string $InstanceClass Sync link specification
-     * @param string $JobName Sync link name
+     * @param array $Tags Tag information
+     * @param integer $Count The number of sync tasks purchased at a time. Value range: [1, 10]. Default value: `1`.
+     * @param integer $AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled). Default value: `0`.
+     * @param string $InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`. Default value: `medium`.
+     * @param string $JobName Sync task name
      * @param string $ExistedJobId ID of the existing task used to create a similar task
      */
     function __construct()

@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSrcRegion(string $SrcRegion) Set Source instance region, such as `ap-guangzhou`.
  * @method string getDstRegion() Obtain Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
  * @method void setDstRegion(string $DstRegion) Set Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
- * @method string getInstanceClass() Obtain Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
- * @method void setInstanceClass(string $InstanceClass) Set Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+ * @method string getInstanceClass() Obtain Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+ * @method void setInstanceClass(string $InstanceClass) Set Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
  * @method integer getCount() Obtain Quantity. Value range: [1,15]. Default value: `1`.
  * @method void setCount(integer $Count) Set Quantity. Value range: [1,15]. Default value: `1`.
  * @method string getJobName() Obtain Migration task name, which can contain up to 128 characters.
@@ -60,7 +60,7 @@ class CreateMigrationServiceRequest extends AbstractModel
     public $DstRegion;
 
     /**
-     * @var string Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+     * @var string Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
      */
     public $InstanceClass;
 
@@ -84,7 +84,7 @@ class CreateMigrationServiceRequest extends AbstractModel
      * @param string $DstDatabaseType Target database type. Valid values: `mysql`, `redis`, `percona`, `mongodb`, `postgresql`, `sqlserver`, `mariadb`.
      * @param string $SrcRegion Source instance region, such as `ap-guangzhou`.
      * @param string $DstRegion Target instance region, such as `ap-guangzhou`. Note that it must be the same as the API request region.
-     * @param string $InstanceClass Instance specification. Valid values: `micro`, `small`, `medium`, `large`, `xlarge`, `2xlarge`.
+     * @param string $InstanceClass Instance specification. Valid values: `small`, `medium`, `large`, `xlarge`, `2xlarge`.
      * @param integer $Count Quantity. Value range: [1,15]. Default value: `1`.
      * @param string $JobName Migration task name, which can contain up to 128 characters.
      * @param array $Tags Tag information

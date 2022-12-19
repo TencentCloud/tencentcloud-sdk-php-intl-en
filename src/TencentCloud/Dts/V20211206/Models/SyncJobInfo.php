@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Sync task information
  *
- * @method string getJobId() Obtain Sync task ID
+ * @method string getJobId() Obtain Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setJobId(string $JobId) Set Sync task ID
+ * @method void setJobId(string $JobId) Set Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getJobName() Obtain Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setJobName(string $JobName) Set Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getPayMode() Obtain Billing mode
+ * @method string getPayMode() Obtain Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPayMode(string $PayMode) Set Billing mode
+ * @method void setPayMode(string $PayMode) Set Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRunMode() Obtain Running mode
+ * @method string getRunMode() Obtain Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRunMode(string $RunMode) Set Running mode
+ * @method void setRunMode(string $RunMode) Set Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpectRunTime() Obtain Expected execution time
+ * @method string getExpectRunTime() Obtain Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpectRunTime(string $ExpectRunTime) Set Expected execution time
+ * @method void setExpectRunTime(string $ExpectRunTime) Set Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getAllActions() Obtain All supported operations
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -60,71 +60,87 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSpecification(string $Specification) Set Task specification
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getExpireTime() Obtain Expiration time
+ * @method string getExpireTime() Obtain Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setExpireTime(string $ExpireTime) Set Expiration time
+ * @method void setExpireTime(string $ExpireTime) Set Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcRegion() Obtain Source database region
+ * @method string getSrcRegion() Obtain Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcRegion(string $SrcRegion) Set Source database region
+ * @method void setSrcRegion(string $SrcRegion) Set Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcDatabaseType() Obtain Source database type
+ * @method string getSrcDatabaseType() Obtain Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type
+ * @method void setSrcDatabaseType(string $SrcDatabaseType) Set Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getSrcAccessType() Obtain Source database access type
+ * @method string getSrcAccessType() Obtain Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcAccessType(string $SrcAccessType) Set Source database access type
+ * @method void setSrcAccessType(string $SrcAccessType) Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method Endpoint getSrcInfo() Obtain Source database information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDstRegion() Obtain Target database region
+ * @method string getDstRegion() Obtain Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDstRegion(string $DstRegion) Set Target database region
+ * @method void setDstRegion(string $DstRegion) Set Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDstDatabaseType() Obtain Target database type
+ * @method string getDstDatabaseType() Obtain Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type
+ * @method void setDstDatabaseType(string $DstDatabaseType) Set Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDstAccessType() Obtain Target database access type
+ * @method string getDstAccessType() Obtain Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDstAccessType(string $DstAccessType) Set Target database access type
+ * @method void setDstAccessType(string $DstAccessType) Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method Endpoint getDstInfo() Obtain Target database information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstInfo(Endpoint $DstInfo) Set Target database information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getCreateTime() Obtain Creation time
+ * @method string getCreateTime() Obtain Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method void setCreateTime(string $CreateTime) Set Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStartTime() Obtain Start time
+ * @method string getStartTime() Obtain Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStartTime(string $StartTime) Set Start time
+ * @method void setStartTime(string $StartTime) Set Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getEndTime() Obtain End time
+ * @method string getStatus() Obtain Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setEndTime(string $EndTime) Set End time
+ * @method void setStatus(string $Status) Set Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getStatus() Obtain Task status
+ * @method string getEndTime() Obtain End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(string $Status) Set Task status
+ * @method void setEndTime(string $EndTime) Set End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getTags() Obtain Tag
+ * @method array getTags() Obtain Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTags(array $Tags) Set Tag
+ * @method void setTags(array $Tags) Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method SyncDetailInfo getDetail() Obtain Step information of the sync task
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDetail(SyncDetailInfo $Detail) Set Step information of the sync task
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTradeStatus() Obtain Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTradeStatus(string $TradeStatus) Set Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getInstanceClass() Obtain Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceClass(string $InstanceClass) Set Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoRenew() Obtain Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoRenew(integer $AutoRenew) Set Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOfflineTime() Obtain Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOfflineTime(string $OfflineTime) Set Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SyncJobInfo extends AbstractModel
 {
     /**
-     * @var string Sync task ID
+     * @var string Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $JobId;
@@ -136,19 +152,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $JobName;
 
     /**
-     * @var string Billing mode
+     * @var string Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PayMode;
 
     /**
-     * @var string Running mode
+     * @var string Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RunMode;
 
     /**
-     * @var string Expected execution time
+     * @var string Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpectRunTime;
@@ -184,25 +200,25 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Specification;
 
     /**
-     * @var string Expiration time
+     * @var string Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ExpireTime;
 
     /**
-     * @var string Source database region
+     * @var string Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcRegion;
 
     /**
-     * @var string Source database type
+     * @var string Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcDatabaseType;
 
     /**
-     * @var string Source database access type
+     * @var string Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcAccessType;
@@ -214,19 +230,19 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SrcInfo;
 
     /**
-     * @var string Target database region
+     * @var string Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstRegion;
 
     /**
-     * @var string Target database type
+     * @var string Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstDatabaseType;
 
     /**
-     * @var string Target database access type
+     * @var string Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstAccessType;
@@ -238,31 +254,31 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DstInfo;
 
     /**
-     * @var string Creation time
+     * @var string Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var string Start time
+     * @var string Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StartTime;
 
     /**
-     * @var string End time
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $EndTime;
-
-    /**
-     * @var string Task status
+     * @var string Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var array Tag
+     * @var string End time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EndTime;
+
+    /**
+     * @var array Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tags;
@@ -274,15 +290,39 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Detail;
 
     /**
-     * @param string $JobId Sync task ID
+     * @var string Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TradeStatus;
+
+    /**
+     * @var string Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $InstanceClass;
+
+    /**
+     * @var integer Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoRenew;
+
+    /**
+     * @var string Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OfflineTime;
+
+    /**
+     * @param string $JobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobName Sync task name
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $PayMode Billing mode
+     * @param string $PayMode Billing mode. Valid values: `PostPay` (pay-as-you-go); `PrePay` (monthly subscription).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RunMode Running mode
+     * @param string $RunMode Running mode. Valid values: `Immediate`, `Timed`. Default value: `Immediate`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpectRunTime Expected execution time
+     * @param string $ExpectRunTime Expected execution time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AllActions All supported operations
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -294,35 +334,43 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Specification Task specification
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $ExpireTime Expiration time
+     * @param string $ExpireTime Expiration time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcRegion Source database region
+     * @param string $SrcRegion Source database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcDatabaseType Source database type
+     * @param string $SrcDatabaseType Source database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $SrcAccessType Source database access type
+     * @param string $SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Endpoint $SrcInfo Source database information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DstRegion Target database region
+     * @param string $DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DstDatabaseType Target database type
+     * @param string $DstDatabaseType Target database type, such as `mysql`, `cynosdbmysql`, `tdapg`, `tdpg`, and `tdsqlmysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DstAccessType Target database access type
+     * @param string $DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param Endpoint $DstInfo Target database information
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $CreateTime Creation time
+     * @param string $CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $StartTime Start time
+     * @param string $StartTime Start time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $EndTime End time
+     * @param string $Status Task status. Valid values: `UnInitialized`, `Initialized`, `Checking`, `CheckPass`, `CheckNotPass`, `ReadyRunning`, `Running`, `Pausing`, `Paused`, `Stopping`, `Stopped`, `ResumableErr`, `Resuming`, `Failed`, `Released`, `Resetting`, `Unknown`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Status Task status
+     * @param string $EndTime End time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $Tags Tag
+     * @param array $Tags Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param SyncDetailInfo $Detail Step information of the sync task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TradeStatus Billing status. Valid values: `Normal`, `Resizing`, `Renewing`, `Isolating`, `Isolated`, `Offlining`, `Offlined`, `NotBilled`, `Recovering`, `PostPay2Prepaying`, `PrePay2Postpaying`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $InstanceClass Sync link specification, such as `micro`, `small`, `medium`, and `large`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -426,12 +474,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->StartTime = $param["StartTime"];
         }
 
-        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
-            $this->EndTime = $param["EndTime"];
-        }
-
         if (array_key_exists("Status",$param) and $param["Status"] !== null) {
             $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("EndTime",$param) and $param["EndTime"] !== null) {
+            $this->EndTime = $param["EndTime"];
         }
 
         if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
@@ -446,6 +494,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("Detail",$param) and $param["Detail"] !== null) {
             $this->Detail = new SyncDetailInfo();
             $this->Detail->deserialize($param["Detail"]);
+        }
+
+        if (array_key_exists("TradeStatus",$param) and $param["TradeStatus"] !== null) {
+            $this->TradeStatus = $param["TradeStatus"];
+        }
+
+        if (array_key_exists("InstanceClass",$param) and $param["InstanceClass"] !== null) {
+            $this->InstanceClass = $param["InstanceClass"];
+        }
+
+        if (array_key_exists("AutoRenew",$param) and $param["AutoRenew"] !== null) {
+            $this->AutoRenew = $param["AutoRenew"];
+        }
+
+        if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
+            $this->OfflineTime = $param["OfflineTime"];
         }
     }
 }

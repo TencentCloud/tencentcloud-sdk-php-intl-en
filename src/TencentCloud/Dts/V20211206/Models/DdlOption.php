@@ -20,33 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DDL statement sync processing during data sync
  *
- * @method string getDdlObject() Obtain DDL type, such as database, table, and view.
+ * @method string getDdlObject() Obtain DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDdlObject(string $DdlObject) Set DDL type, such as database, table, and view.
+ * @method void setDdlObject(string $DdlObject) Set DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getDdlValue() Obtain Specific DDL value, such as `Create` or `Drop`.
+ * @method array getDdlValue() Obtain DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDdlValue(array $DdlValue) Set Specific DDL value, such as `Create` or `Drop`.
+ * @method void setDdlValue(array $DdlValue) Set DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DdlOption extends AbstractModel
 {
     /**
-     * @var string DDL type, such as database, table, and view.
+     * @var string DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DdlObject;
 
     /**
-     * @var array Specific DDL value, such as `Create` or `Drop`.
+     * @var array DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DdlValue;
 
     /**
-     * @param string $DdlObject DDL type, such as database, table, and view.
+     * @param string $DdlObject DDL type, such as database, table, view, and index.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $DdlValue Specific DDL value, such as `Create` or `Drop`.
+     * @param array $DdlValue DDL value. Valid values: [Create,Drop,Alter] for database <br>[Create,Drop,Alter,Truncate,Rename] for table <br/>[Create,Drop] for view <br/>[Create,Drop] for index
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

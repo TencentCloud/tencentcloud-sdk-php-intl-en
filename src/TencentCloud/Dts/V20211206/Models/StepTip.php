@@ -36,6 +36,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setHelpDoc(string $HelpDoc) Set Help document
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSkipInfo() Obtain Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSkipInfo(string $SkipInfo) Set Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class StepTip extends AbstractModel
 {
@@ -64,6 +68,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $HelpDoc;
 
     /**
+     * @var string Whether the current step is skipped
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SkipInfo;
+
+    /**
      * @param string $Code Error code
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Message Error message
@@ -71,6 +81,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $Solution Solution
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $HelpDoc Help document
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SkipInfo Whether the current step is skipped
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -100,6 +112,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("HelpDoc",$param) and $param["HelpDoc"] !== null) {
             $this->HelpDoc = $param["HelpDoc"];
+        }
+
+        if (array_key_exists("SkipInfo",$param) and $param["SkipInfo"] !== null) {
+            $this->SkipInfo = $param["SkipInfo"];
         }
     }
 }

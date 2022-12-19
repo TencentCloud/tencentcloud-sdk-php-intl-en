@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTo(integer $To) Set End time of the log to be queried, which is a Unix timestamp in milliseconds
  * @method string getQuery() Obtain Query statement
  * @method void setQuery(string $Query) Set Query statement
- * @method integer getInterval() Obtain Time interval in milliseconds
- * @method void setInterval(integer $Interval) Set Time interval in milliseconds
+ * @method integer getInterval() Obtain Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
+ * @method void setInterval(integer $Interval) Set Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
  */
 class DescribeLogHistogramRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class DescribeLogHistogramRequest extends AbstractModel
     public $Query;
 
     /**
-     * @var integer Time interval in milliseconds
+     * @var integer Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
      */
     public $Interval;
 
@@ -63,7 +63,7 @@ class DescribeLogHistogramRequest extends AbstractModel
      * @param integer $From Start time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param integer $To End time of the log to be queried, which is a Unix timestamp in milliseconds
      * @param string $Query Query statement
-     * @param integer $Interval Time interval in milliseconds
+     * @param integer $Interval Interval in milliseconds. Condition: (To – From) / Interval ≤ 200
      */
     function __construct()
     {

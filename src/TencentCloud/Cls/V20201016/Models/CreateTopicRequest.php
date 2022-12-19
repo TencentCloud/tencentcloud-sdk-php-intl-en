@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMaxSplitPartitions(integer $MaxSplitPartitions) Set Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
  * @method string getStorageType() Obtain Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
  * @method void setStorageType(string $StorageType) Set Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
- * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
- * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+ * @method integer getPeriod() Obtain Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
+ * @method void setPeriod(integer $Period) Set Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
  */
 class CreateTopicRequest extends AbstractModel
 {
@@ -75,7 +75,7 @@ class CreateTopicRequest extends AbstractModel
     public $StorageType;
 
     /**
-     * @var integer Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * @var integer Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     public $Period;
 
@@ -87,7 +87,7 @@ class CreateTopicRequest extends AbstractModel
      * @param boolean $AutoSplit Whether to enable automatic split. Default value: true
      * @param integer $MaxSplitPartitions Maximum number of partitions to split into for this topic if automatic split is enabled. Default value: 50
      * @param string $StorageType Log topic storage type. Valid values: `hot` (STANDARD storage); `cold` (IA storage). Default value: `hot`.
-     * @param integer $Period Lifecycle in days. Value range: 1-3600 (3640 indicates permanent retention)
+     * @param integer $Period Lifecycle in days. Value range: 1–3600 (STANDARD storage); 7–3600 (IA storage). `3640` indicates permanent retention.
      */
     function __construct()
     {
