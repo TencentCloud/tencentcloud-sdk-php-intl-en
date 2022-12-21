@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodEndTime(string $PeriodEndTime) Set Expiration time of the instance in the format of 2006-01-02 15:04:05
  * @method integer getInstanceType() Obtain Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
  * @method void setInstanceType(integer $InstanceType) Set Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+ * @method integer getEncryptStatus() Obtain Whether KMS is enabled.
+ * @method void setEncryptStatus(integer $EncryptStatus) Set Whether KMS is enabled.
  */
 class DcnDetailItem extends AbstractModel
 {
@@ -150,6 +152,11 @@ class DcnDetailItem extends AbstractModel
     public $InstanceType;
 
     /**
+     * @var integer Whether KMS is enabled.
+     */
+    public $EncryptStatus;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $Region Region where the instance resides
@@ -168,6 +175,7 @@ class DcnDetailItem extends AbstractModel
      * @param string $CreateTime Creation time of the instance in the format of 2006-01-02 15:04:05
      * @param string $PeriodEndTime Expiration time of the instance in the format of 2006-01-02 15:04:05
      * @param integer $InstanceType Instance type. Valid values: `1` (dedicated primary instance), `2` (non-dedicated primary instance), `3` (non-dedicated disaster recovery instance), and `4` (dedicated disaster recovery instance).
+     * @param integer $EncryptStatus Whether KMS is enabled.
      */
     function __construct()
     {
@@ -252,6 +260,10 @@ class DcnDetailItem extends AbstractModel
 
         if (array_key_exists("InstanceType",$param) and $param["InstanceType"] !== null) {
             $this->InstanceType = $param["InstanceType"];
+        }
+
+        if (array_key_exists("EncryptStatus",$param) and $param["EncryptStatus"] !== null) {
+            $this->EncryptStatus = $param["EncryptStatus"];
         }
     }
 }

@@ -29,9 +29,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getFlowId() Obtain The associated process ID, which can be used to query the process execution status.
  * @method void setFlowId(integer $FlowId) Set The associated process ID, which can be used to query the process execution status.
  * @method array getInstanceIds() Obtain The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setInstanceIds(array $InstanceIds) Set The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getPayMode() Obtain Billing mode. Valid values: `0` (postpaid), `1` (prepaid).
  * @method void setPayMode(integer $PayMode) Set Billing mode. Valid values: `0` (postpaid), `1` (prepaid).
  */
@@ -59,7 +59,7 @@ class Deal extends AbstractModel
 
     /**
      * @var array The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $InstanceIds;
 
@@ -74,7 +74,7 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $Count Number of items
      * @param integer $FlowId The associated process ID, which can be used to query the process execution status.
      * @param array $InstanceIds The ID of the created instance, which is required only for the order that creates an instance.
-Note: This field may return null, indicating that no valid value can be obtained.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $PayMode Billing mode. Valid values: `0` (postpaid), `1` (prepaid).
      */
     function __construct()

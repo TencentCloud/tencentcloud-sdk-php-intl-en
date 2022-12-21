@@ -45,6 +45,7 @@ Note: Accounts with the same username but different hosts are considered as diff
  * @method Models\DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfo(Models\DescribeDCDBInstanceNodeInfoRequest $req) This API is used to query the information of instance nodes.
  * @method Models\DescribeDCDBInstancesResponse DescribeDCDBInstances(Models\DescribeDCDBInstancesRequest $req) This API is used to query the list of TencentDB instances. It supports filtering instances by project ID, instance ID, private network address, and instance name.
 If no filter is specified, 10 instances will be returned by default. Up to 100 instances can be returned for a single request.
+ * @method Models\DescribeDCDBPriceResponse DescribeDCDBPrice(Models\DescribeDCDBPriceRequest $req) This API is used to query the price of an instance before you purchase it.
  * @method Models\DescribeDCDBShardsResponse DescribeDCDBShards(Models\DescribeDCDBShardsRequest $req) This API is used to query the information of shards of a TencentDB instance.
  * @method Models\DescribeDatabaseObjectsResponse DescribeDatabaseObjects(Models\DescribeDatabaseObjectsRequest $req) This API is used to query the list of database objects in a TencentDB instance, including tables, stored procedures, views, and functions.
  * @method Models\DescribeDatabaseTableResponse DescribeDatabaseTable(Models\DescribeDatabaseTableRequest $req) This API is used to query the table information of a TencentDB instance.
@@ -65,6 +66,12 @@ Note: accounts with the same username but different hosts are different accounts
  * @method Models\KillSessionResponse KillSession(Models\KillSessionRequest $req) This API is used to kill the specified session.
  * @method Models\ModifyAccountDescriptionResponse ModifyAccountDescription(Models\ModifyAccountDescriptionRequest $req) This API is used to modify the remarks of a TencentDB account.
 Note: accounts with the same username but different hosts are different accounts.
+ * @method Models\ModifyAccountPrivilegesResponse ModifyAccountPrivileges(Models\ModifyAccountPrivilegesRequest $req) This API is used to modify the permissions of a TencentDB instance account.
+
+**Notes**
+- Only the SELECT permission (that is, set the permission parameter to `["SELECT"]`) of the system database `mysql` can be granted.
+- An error will be reported if read-write permissions are granted to a read-only account.
+- If the parameter is not passed in, no change will be made to the granted table permissions. To clear the granted table permissions, set `Privileges` to an empty array.
  * @method Models\ModifyDBInstanceNameResponse ModifyDBInstanceName(Models\ModifyDBInstanceNameRequest $req) This API is used to modify instance name.
  * @method Models\ModifyDBInstanceSecurityGroupsResponse ModifyDBInstanceSecurityGroups(Models\ModifyDBInstanceSecurityGroupsRequest $req) This API is used to modify the security groups associated with TencentDB.
  * @method Models\ModifyDBInstancesProjectResponse ModifyDBInstancesProject(Models\ModifyDBInstancesProjectRequest $req) This API is used to modify the project to which TencentDB instances belong.

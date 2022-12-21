@@ -14,20 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Instance weight
+ * TencentDB account information
  *
-
+ * @method string getUser() Obtain Account name
+ * @method void setUser(string $User) Set Account name
+ * @method string getHost() Obtain Host address
+ * @method void setHost(string $Host) Set Host address
  */
-class RoWeight extends AbstractModel
+class Account extends AbstractModel
 {
-
+    /**
+     * @var string Account name
+     */
+    public $User;
 
     /**
+     * @var string Host address
+     */
+    public $Host;
 
+    /**
+     * @param string $User Account name
+     * @param string $Host Host address
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class RoWeight extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("User",$param) and $param["User"] !== null) {
+            $this->User = $param["User"];
+        }
 
+        if (array_key_exists("Host",$param) and $param["Host"] !== null) {
+            $this->Host = $param["Host"];
+        }
     }
 }

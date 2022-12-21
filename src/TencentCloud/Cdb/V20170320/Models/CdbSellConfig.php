@@ -36,9 +36,9 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInfo(string $Info) Set Application scenario description
  * @method integer getStatus() Obtain Status. The value `0` indicates that this specification is available.
  * @method void setStatus(integer $Status) Set Status. The value `0` indicates that this specification is available.
- * @method string getDeviceType() Obtain Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+ * @method string getDeviceType() Obtain Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDeviceType(string $DeviceType) Set Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+ * @method void setDeviceType(string $DeviceType) Set Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getEngineType() Obtain Engine type description. Valid values: `Innodb`, `RocksDB`.
  * @method void setEngineType(string $EngineType) Set Engine type description. Valid values: `Innodb`, `RocksDB`.
@@ -88,7 +88,7 @@ class CdbSellConfig extends AbstractModel
     public $Status;
 
     /**
-     * @var string Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+     * @var string Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DeviceType;
@@ -112,7 +112,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Iops IO operations per second
      * @param string $Info Application scenario description
      * @param integer $Status Status. The value `0` indicates that this specification is available.
-     * @param string $DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance).
+     * @param string $DeviceType Instance type. Valid values: `UNIVERSAL` (general instance), `EXCLUSIVE` (dedicated instance), `BASIC` (basic instance), `BASIC_V2` (basic v2 instance).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EngineType Engine type description. Valid values: `Innodb`, `RocksDB`.
      * @param integer $Id Purchasable specifications ID

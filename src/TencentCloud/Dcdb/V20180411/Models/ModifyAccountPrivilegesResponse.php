@@ -14,26 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cdb\V20170320\Models;
+namespace TencentCloud\Dcdb\V20180411\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ApplyCDBProxy response structure.
+ * ModifyAccountPrivileges response structure.
  *
- * @method string getAsyncRequestId() Obtain Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
- * @method void setAsyncRequestId(string $AsyncRequestId) Set Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+ * @method integer getFlowId() Obtain Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
+ * @method void setFlowId(integer $FlowId) Set Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ApplyCDBProxyResponse extends AbstractModel
+class ModifyAccountPrivilegesResponse extends AbstractModel
 {
     /**
-     * @var string Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @var integer Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
      */
-    public $AsyncRequestId;
+    public $FlowId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -41,8 +38,7 @@ Note: this field may return `null`, indicating that no valid value can be found.
     public $RequestId;
 
     /**
-     * @param string $AsyncRequestId Async request ID
-Note: this field may return `null`, indicating that no valid value can be found.
+     * @param integer $FlowId Async task ID, which can be used in the [DescribeFlow](https://www.tencentcloud.com/document/product/237/16177) API to query the async task result.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -58,8 +54,8 @@ Note: this field may return `null`, indicating that no valid value can be found.
         if ($param === null) {
             return;
         }
-        if (array_key_exists("AsyncRequestId",$param) and $param["AsyncRequestId"] !== null) {
-            $this->AsyncRequestId = $param["AsyncRequestId"];
+        if (array_key_exists("FlowId",$param) and $param["FlowId"] !== null) {
+            $this->FlowId = $param["FlowId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -58,6 +58,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCosStorageType(integer $CosStorageType) Set Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
  * @method string getInstanceId() Obtain Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
  * @method void setInstanceId(string $InstanceId) Set Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+ * @method string getEncryptionFlag() Obtain Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptionFlag(string $EncryptionFlag) Set Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BackupInfo extends AbstractModel
 {
@@ -157,6 +161,12 @@ class BackupInfo extends AbstractModel
     public $InstanceId;
 
     /**
+     * @var string Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptionFlag;
+
+    /**
      * @param string $Name Backup filename
      * @param integer $Size Backup file size in bytes
      * @param string $Date Backup snapshot time in the format of yyyy-MM-dd HH:mm:ss, such as 2016-03-17 02:10:37
@@ -176,6 +186,8 @@ class BackupInfo extends AbstractModel
      * @param array $RemoteInfo Detailed information of remote backups
      * @param integer $CosStorageType Storage method. Valid values: `0` (regular storage), `1`(archive storage). Default value: `0`.
      * @param string $InstanceId Instance ID in the format of cdb-c1nl9rpv. It is the same as the instance ID displayed in the TencentDB console.
+     * @param string $EncryptionFlag Whether the backup file is encrypted. Valid values: `on` (encrypted), `off` (unencrypted).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -269,6 +281,10 @@ class BackupInfo extends AbstractModel
 
         if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
             $this->InstanceId = $param["InstanceId"];
+        }
+
+        if (array_key_exists("EncryptionFlag",$param) and $param["EncryptionFlag"] !== null) {
+            $this->EncryptionFlag = $param["EncryptionFlag"];
         }
     }
 }

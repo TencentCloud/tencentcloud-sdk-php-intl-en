@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getInstanceIds() Obtain Instance ID list
  * @method void setInstanceIds(array $InstanceIds) Set Instance ID list
- * @method array getParamList() Obtain List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
- * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+ * @method array getParamList() Obtain List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
+ * @method void setParamList(array $ParamList) Set List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
  */
 class ModifyInstancePasswordComplexityRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyInstancePasswordComplexityRequest extends AbstractModel
     public $InstanceIds;
 
     /**
-     * @var array List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+     * @var array List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
      */
     public $ParamList;
 
     /**
      * @param array $InstanceIds Instance ID list
-     * @param array $ParamList List of parameters to be modified. Every element is a pair of `Name` (parameter name) and `CurrentValue` (new value).
+     * @param array $ParamList List of parameters to be modified. Every element is a combination of `Name` (parameter name) and `CurrentValue` (new value). Valid values for `Name` of version 8.0: `validate_password.policy`, `validate_password.lengt`, `validate_password.mixed_case_coun`, `validate_password.number_coun`, `validate_password.special_char_count`. Valid values for `Name` of version 5.6 and 5.7: `validate_password_polic`, `validate_password_lengt` `validate_password_mixed_case_coun`, `validate_password_number_coun`, `validate_password_special_char_coun`.
      */
     function __construct()
     {
