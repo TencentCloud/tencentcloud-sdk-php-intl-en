@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set Number of results per page. Value range: 1-100. Default value: 20
  * @method integer getOffset() Obtain Page number. Default value: 0
  * @method void setOffset(integer $Offset) Set Page number. Default value: 0
+ * @method string getName() Obtain Account ID
+ * @method void setName(string $Name) Set Account ID
+ * @method string getOrderBy() Obtain Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+ * @method void setOrderBy(string $OrderBy) Set Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+ * @method string getOrderByType() Obtain Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+ * @method void setOrderByType(string $OrderByType) Set Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeAccountsRequest extends AbstractModel
     public $Offset;
 
     /**
+     * @var string Account ID
+     */
+    public $Name;
+
+    /**
+     * @var string Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+     */
+    public $OrderBy;
+
+    /**
+     * @var string Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
+     */
+    public $OrderByType;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $Limit Number of results per page. Value range: 1-100. Default value: 20
      * @param integer $Offset Page number. Default value: 0
+     * @param string $Name Account ID
+     * @param string $OrderBy Sorting by `createTime`, `updateTime`, or `passTime`. Default value: `createTime` (desc).
+     * @param string $OrderByType Sorting rule. Valid values: `desc` (descending order), `asc` (ascending order). Default value: `desc`.
      */
     function __construct()
     {
@@ -72,6 +96,18 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
             $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("Name",$param) and $param["Name"] !== null) {
+            $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("OrderBy",$param) and $param["OrderBy"] !== null) {
+            $this->OrderBy = $param["OrderBy"];
+        }
+
+        if (array_key_exists("OrderByType",$param) and $param["OrderByType"] !== null) {
+            $this->OrderByType = $param["OrderByType"];
         }
     }
 }

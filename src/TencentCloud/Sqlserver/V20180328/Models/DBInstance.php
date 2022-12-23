@@ -134,6 +134,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
  * @method void setCollation(string $Collation) Set Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
  * @method string getTimeZone() Obtain System time zone. Default value: `China Standard Time`.
  * @method void setTimeZone(string $TimeZone) Set System time zone. Default value: `China Standard Time`.
+ * @method boolean getIsDrZone() Obtain Whether the instance is deployed across AZs
+ * @method void setIsDrZone(boolean $IsDrZone) Set Whether the instance is deployed across AZs
+ * @method SlaveZones getSlaveZones() Obtain Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveZones(SlaveZones $SlaveZones) Set Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DBInstance extends AbstractModel
 {
@@ -395,6 +401,17 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $TimeZone;
 
     /**
+     * @var boolean Whether the instance is deployed across AZs
+     */
+    public $IsDrZone;
+
+    /**
+     * @var SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SlaveZones;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $Name Instance name
      * @param integer $ProjectId Project ID of instance
@@ -452,6 +469,9 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $TgwWanVPort Port number of the public network
      * @param string $Collation Collation of system character sets. Default value: `Chinese_PRC_CI_AS`.
      * @param string $TimeZone System time zone. Default value: `China Standard Time`.
+     * @param boolean $IsDrZone Whether the instance is deployed across AZs
+     * @param SlaveZones $SlaveZones Replica AZ information
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -669,6 +689,15 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("TimeZone",$param) and $param["TimeZone"] !== null) {
             $this->TimeZone = $param["TimeZone"];
+        }
+
+        if (array_key_exists("IsDrZone",$param) and $param["IsDrZone"] !== null) {
+            $this->IsDrZone = $param["IsDrZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = new SlaveZones();
+            $this->SlaveZones->deserialize($param["SlaveZones"]);
         }
     }
 }
