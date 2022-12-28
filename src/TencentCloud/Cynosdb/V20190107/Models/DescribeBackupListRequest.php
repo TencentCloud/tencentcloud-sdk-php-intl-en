@@ -46,6 +46,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileNames(array $FileNames) Set 
  * @method array getBackupNames() Obtain Backup alias, which supports fuzzy query.
  * @method void setBackupNames(array $BackupNames) Set Backup alias, which supports fuzzy query.
+ * @method array getSnapshotIdList() Obtain ID list of the snapshot backup
+ * @method void setSnapshotIdList(array $SnapshotIdList) Set ID list of the snapshot backup
  */
 class DescribeBackupListRequest extends AbstractModel
 {
@@ -111,6 +113,11 @@ class DescribeBackupListRequest extends AbstractModel
     public $BackupNames;
 
     /**
+     * @var array ID list of the snapshot backup
+     */
+    public $SnapshotIdList;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Limit The number of results to be returned. Value range: (0,100]
      * @param integer $Offset Record offset. Value range: [0,INF)
@@ -124,6 +131,7 @@ class DescribeBackupListRequest extends AbstractModel
      * @param string $EndTime Backup end time
      * @param array $FileNames 
      * @param array $BackupNames Backup alias, which supports fuzzy query.
+     * @param array $SnapshotIdList ID list of the snapshot backup
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ class DescribeBackupListRequest extends AbstractModel
 
         if (array_key_exists("BackupNames",$param) and $param["BackupNames"] !== null) {
             $this->BackupNames = $param["BackupNames"];
+        }
+
+        if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
+            $this->SnapshotIdList = $param["SnapshotIdList"];
         }
     }
 }

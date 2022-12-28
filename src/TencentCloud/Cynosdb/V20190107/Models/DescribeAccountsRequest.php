@@ -26,8 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAccountNames(array $AccountNames) Set List of accounts to be filtered
  * @method string getDbType() Obtain Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
  * @method void setDbType(string $DbType) Set Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
+ * @method array getHosts() Obtain List of accounts to be filtered
+ * @method void setHosts(array $Hosts) Set List of accounts to be filtered
+ * @method integer getLimit() Obtain Maximum entries returned per page
+ * @method void setLimit(integer $Limit) Set Maximum entries returned per page
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
  */
 class DescribeAccountsRequest extends AbstractModel
 {
@@ -44,14 +52,34 @@ class DescribeAccountsRequest extends AbstractModel
     /**
      * @var string Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
      */
     public $DbType;
+
+    /**
+     * @var array List of accounts to be filtered
+     */
+    public $Hosts;
+
+    /**
+     * @var integer Maximum entries returned per page
+     */
+    public $Limit;
+
+    /**
+     * @var integer Offset
+     */
+    public $Offset;
 
     /**
      * @param string $ClusterId Cluster ID
      * @param array $AccountNames List of accounts to be filtered
      * @param string $DbType Database type. Valid values: 
 <li> MYSQL </li>
+This parameter has been disused.
+     * @param array $Hosts List of accounts to be filtered
+     * @param integer $Limit Maximum entries returned per page
+     * @param integer $Offset Offset
      */
     function __construct()
     {
@@ -76,6 +104,18 @@ class DescribeAccountsRequest extends AbstractModel
 
         if (array_key_exists("DbType",$param) and $param["DbType"] !== null) {
             $this->DbType = $param["DbType"];
+        }
+
+        if (array_key_exists("Hosts",$param) and $param["Hosts"] !== null) {
+            $this->Hosts = $param["Hosts"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
         }
     }
 }

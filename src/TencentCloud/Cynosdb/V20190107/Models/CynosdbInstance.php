@@ -110,6 +110,24 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method integer getStoragePayMode() Obtain Storage billing mode
  * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode
+ * @method string getPhysicalZone() Obtain Physical zone
+ * @method void setPhysicalZone(string $PhysicalZone) Set Physical zone
+ * @method string getBusinessType() Obtain Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBusinessType(string $BusinessType) Set Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method array getTasks() Obtain Task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTasks(array $Tasks) Set Task
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsFreeze() Obtain Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CynosdbInstance extends AbstractModel
 {
@@ -327,6 +345,35 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $StoragePayMode;
 
     /**
+     * @var string Physical zone
+     */
+    public $PhysicalZone;
+
+    /**
+     * @var string Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BusinessType;
+
+    /**
+     * @var array Task
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tasks;
+
+    /**
+     * @var string Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsFreeze;
+
+    /**
+     * @var array The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ResourceTags;
+
+    /**
      * @param string $Uin User `Uin`
      * @param integer $AppId User `AppId`
      * @param string $ClusterId Cluster ID
@@ -372,6 +419,15 @@ pause
      * @param string $StorageId Prepaid storage ID
 Note: this field may return `null`, indicating that no valid value can be obtained.
      * @param integer $StoragePayMode Storage billing mode
+     * @param string $PhysicalZone Physical zone
+     * @param string $BusinessType Business type
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param array $Tasks Task
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceTags The resource tag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -552,6 +608,36 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
             $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
+            $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("IsFreeze",$param) and $param["IsFreeze"] !== null) {
+            $this->IsFreeze = $param["IsFreeze"];
+        }
+
+        if (array_key_exists("ResourceTags",$param) and $param["ResourceTags"] !== null) {
+            $this->ResourceTags = [];
+            foreach ($param["ResourceTags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->ResourceTags, $obj);
+            }
         }
     }
 }

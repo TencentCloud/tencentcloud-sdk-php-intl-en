@@ -18,26 +18,22 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProjectSecurityGroups response structure.
+ * SearchClusterTables response structure.
  *
- * @method array getGroups() Obtain Security group details
- * @method void setGroups(array $Groups) Set Security group details
- * @method integer getTotal() Obtain The total number of groups
- * @method void setTotal(integer $Total) Set The total number of groups
+ * @method array getTables() Obtain Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTables(array $Tables) Set Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProjectSecurityGroupsResponse extends AbstractModel
+class SearchClusterTablesResponse extends AbstractModel
 {
     /**
-     * @var array Security group details
+     * @var array Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $Groups;
-
-    /**
-     * @var integer The total number of groups
-     */
-    public $Total;
+    public $Tables;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +41,8 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param array $Groups Security group details
-     * @param integer $Total The total number of groups
+     * @param array $Tables Data table list
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +58,13 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
+        if (array_key_exists("Tables",$param) and $param["Tables"] !== null) {
+            $this->Tables = [];
+            foreach ($param["Tables"] as $key => $value){
+                $obj = new DatabaseTables();
                 $obj->deserialize($value);
-                array_push($this->Groups, $obj);
+                array_push($this->Tables, $obj);
             }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

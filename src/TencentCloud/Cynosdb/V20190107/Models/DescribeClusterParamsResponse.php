@@ -23,7 +23,9 @@ use TencentCloud\Common\AbstractModel;
  * @method integer getTotalCount() Obtain Number of parameters
  * @method void setTotalCount(integer $TotalCount) Set Number of parameters
  * @method array getItems() Obtain Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setItems(array $Items) Set Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -36,6 +38,7 @@ class DescribeClusterParamsResponse extends AbstractModel
 
     /**
      * @var array Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Items;
 
@@ -47,6 +50,7 @@ class DescribeClusterParamsResponse extends AbstractModel
     /**
      * @param integer $TotalCount Number of parameters
      * @param array $Items Instance parameter list
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

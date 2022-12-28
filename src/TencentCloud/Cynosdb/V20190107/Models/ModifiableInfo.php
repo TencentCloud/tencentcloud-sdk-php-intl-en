@@ -18,28 +18,16 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeClusterParams request structure.
+ * Details of whether the parameter can be modified
  *
- * @method string getClusterId() Obtain Cluster ID
- * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getParamName() Obtain Parameter name
- * @method void setParamName(string $ParamName) Set Parameter name
+
  */
-class DescribeClusterParamsRequest extends AbstractModel
+class ModifiableInfo extends AbstractModel
 {
-    /**
-     * @var string Cluster ID
-     */
-    public $ClusterId;
+
 
     /**
-     * @var string Parameter name
-     */
-    public $ParamName;
 
-    /**
-     * @param string $ClusterId Cluster ID
-     * @param string $ParamName Parameter name
      */
     function __construct()
     {
@@ -54,12 +42,6 @@ class DescribeClusterParamsRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
-            $this->ClusterId = $param["ClusterId"];
-        }
 
-        if (array_key_exists("ParamName",$param) and $param["ParamName"] !== null) {
-            $this->ParamName = $param["ParamName"];
-        }
     }
 }

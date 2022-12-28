@@ -18,35 +18,19 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProjectSecurityGroups response structure.
+ * ResetAccountPassword response structure.
  *
- * @method array getGroups() Obtain Security group details
- * @method void setGroups(array $Groups) Set Security group details
- * @method integer getTotal() Obtain The total number of groups
- * @method void setTotal(integer $Total) Set The total number of groups
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeProjectSecurityGroupsResponse extends AbstractModel
+class ResetAccountPasswordResponse extends AbstractModel
 {
-    /**
-     * @var array Security group details
-     */
-    public $Groups;
-
-    /**
-     * @var integer The total number of groups
-     */
-    public $Total;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param array $Groups Security group details
-     * @param integer $Total The total number of groups
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,19 +46,6 @@ class DescribeProjectSecurityGroupsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("Groups",$param) and $param["Groups"] !== null) {
-            $this->Groups = [];
-            foreach ($param["Groups"] as $key => $value){
-                $obj = new SecurityGroup();
-                $obj->deserialize($value);
-                array_push($this->Groups, $obj);
-            }
-        }
-
-        if (array_key_exists("Total",$param) and $param["Total"] !== null) {
-            $this->Total = $param["Total"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

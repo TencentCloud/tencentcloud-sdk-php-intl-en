@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDbType(string $DbType) Set This parameter has been disused.
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method string getUpgradeMode() Obtain Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+ * @method void setUpgradeMode(string $UpgradeMode) Set Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
  */
 class UpgradeInstanceRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class UpgradeInstanceRequest extends AbstractModel
     public $DealMode;
 
     /**
+     * @var string Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
+     */
+    public $UpgradeMode;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param integer $Cpu Database CPU
      * @param integer $Memory Database memory in GB
@@ -88,6 +95,7 @@ class UpgradeInstanceRequest extends AbstractModel
      * @param integer $AutoVoucher Whether to automatically select a voucher. 1: yes; 0: no. Default value: 0
      * @param string $DbType This parameter has been disused.
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param string $UpgradeMode Valid values: `NormalUpgrade` (Normal mode), `FastUpgrade` (QuickChange). If the system detects that the configuration modification process will cause a momentary disconnection, the process will be terminated.
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class UpgradeInstanceRequest extends AbstractModel
 
         if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
             $this->DealMode = $param["DealMode"];
+        }
+
+        if (array_key_exists("UpgradeMode",$param) and $param["UpgradeMode"] !== null) {
+            $this->UpgradeMode = $param["UpgradeMode"];
         }
     }
 }

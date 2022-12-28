@@ -44,6 +44,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method void setMatchValue(string $MatchValue) Set Match values, which will be separated by semicolon when match type is `multiVal`.
  * @method string getDescription() Obtain Parameter description
  * @method void setDescription(string $Description) Set Parameter description
+ * @method integer getIsGlobal() Obtain Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsGlobal(integer $IsGlobal) Set Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method ModifiableInfo getModifiableInfo() Obtain Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setModifiableInfo(ModifiableInfo $ModifiableInfo) Set Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsFunc() Obtain Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsFunc(boolean $IsFunc) Set Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getFunc() Obtain Function
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setFunc(string $Func) Set Function
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ParamInfo extends AbstractModel
 {
@@ -104,6 +120,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Description;
 
     /**
+     * @var integer Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsGlobal;
+
+    /**
+     * @var ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ModifiableInfo;
+
+    /**
+     * @var boolean Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsFunc;
+
+    /**
+     * @var string Function
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Func;
+
+    /**
      * @param string $CurrentValue Current value
      * @param string $Default Default value
      * @param array $EnumValue List of valid values when parameter type is `enum`, `string` or `bool`.
@@ -116,6 +156,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $MatchType Match type. Regex can be used when parameter type is `string`. Valid value: `multiVal`.
      * @param string $MatchValue Match values, which will be separated by semicolon when match type is `multiVal`.
      * @param string $Description Parameter description
+     * @param integer $IsGlobal Whether it is global parameter
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param ModifiableInfo $ModifiableInfo Whether the parameter can be modified
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsFunc Whether it is a function
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Func Function
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -172,6 +220,23 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("IsGlobal",$param) and $param["IsGlobal"] !== null) {
+            $this->IsGlobal = $param["IsGlobal"];
+        }
+
+        if (array_key_exists("ModifiableInfo",$param) and $param["ModifiableInfo"] !== null) {
+            $this->ModifiableInfo = new ModifiableInfo();
+            $this->ModifiableInfo->deserialize($param["ModifiableInfo"]);
+        }
+
+        if (array_key_exists("IsFunc",$param) and $param["IsFunc"] !== null) {
+            $this->IsFunc = $param["IsFunc"];
+        }
+
+        if (array_key_exists("Func",$param) and $param["Func"] !== null) {
+            $this->Func = $param["Func"];
         }
     }
 }

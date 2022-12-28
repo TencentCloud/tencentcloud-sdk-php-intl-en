@@ -30,6 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUpdateTime(string $UpdateTime) Set Update time
  * @method string getHost() Obtain Host
  * @method void setHost(string $Host) Set Host
+ * @method integer getMaxUserConnections() Obtain The max connections
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set The max connections
  */
 class Account extends AbstractModel
 {
@@ -59,11 +61,17 @@ class Account extends AbstractModel
     public $Host;
 
     /**
+     * @var integer The max connections
+     */
+    public $MaxUserConnections;
+
+    /**
      * @param string $AccountName Database account name
      * @param string $Description Database account description
      * @param string $CreateTime Creation time
      * @param string $UpdateTime Update time
      * @param string $Host Host
+     * @param integer $MaxUserConnections The max connections
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class Account extends AbstractModel
 
         if (array_key_exists("Host",$param) and $param["Host"] !== null) {
             $this->Host = $param["Host"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

@@ -21,7 +21,11 @@ use TencentCloud\Common\AbstractModel;
  * DescribeAccounts response structure.
  *
  * @method array getAccountSet() Obtain Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccountSet(array $AccountSet) Set Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain Total number of accounts
+ * @method void setTotalCount(integer $TotalCount) Set Total number of accounts
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -29,8 +33,14 @@ class DescribeAccountsResponse extends AbstractModel
 {
     /**
      * @var array Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AccountSet;
+
+    /**
+     * @var integer Total number of accounts
+     */
+    public $TotalCount;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -39,6 +49,8 @@ class DescribeAccountsResponse extends AbstractModel
 
     /**
      * @param array $AccountSet Database account list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount Total number of accounts
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -61,6 +73,10 @@ class DescribeAccountsResponse extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->AccountSet, $obj);
             }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

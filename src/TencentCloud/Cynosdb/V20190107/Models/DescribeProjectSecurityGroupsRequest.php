@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getProjectId() Obtain Project ID
  * @method void setProjectId(integer $ProjectId) Set Project ID
+ * @method integer getLimit() Obtain Maximum entries returned per page
+ * @method void setLimit(integer $Limit) Set Maximum entries returned per page
+ * @method integer getOffset() Obtain Offset
+ * @method void setOffset(integer $Offset) Set Offset
+ * @method string getSearchKey() Obtain Search by keyword
+ * @method void setSearchKey(string $SearchKey) Set Search by keyword
  */
 class DescribeProjectSecurityGroupsRequest extends AbstractModel
 {
@@ -31,7 +37,25 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
     public $ProjectId;
 
     /**
+     * @var integer Maximum entries returned per page
+     */
+    public $Limit;
+
+    /**
+     * @var integer Offset
+     */
+    public $Offset;
+
+    /**
+     * @var string Search by keyword
+     */
+    public $SearchKey;
+
+    /**
      * @param integer $ProjectId Project ID
+     * @param integer $Limit Maximum entries returned per page
+     * @param integer $Offset Offset
+     * @param string $SearchKey Search by keyword
      */
     function __construct()
     {
@@ -48,6 +72,18 @@ class DescribeProjectSecurityGroupsRequest extends AbstractModel
         }
         if (array_key_exists("ProjectId",$param) and $param["ProjectId"] !== null) {
             $this->ProjectId = $param["ProjectId"];
+        }
+
+        if (array_key_exists("Limit",$param) and $param["Limit"] !== null) {
+            $this->Limit = $param["Limit"];
+        }
+
+        if (array_key_exists("Offset",$param) and $param["Offset"] !== null) {
+            $this->Offset = $param["Offset"];
+        }
+
+        if (array_key_exists("SearchKey",$param) and $param["SearchKey"] !== null) {
+            $this->SearchKey = $param["SearchKey"];
         }
     }
 }

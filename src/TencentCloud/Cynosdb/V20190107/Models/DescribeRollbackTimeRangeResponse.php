@@ -21,9 +21,13 @@ use TencentCloud\Common\AbstractModel;
  * DescribeRollbackTimeRange response structure.
  *
  * @method string getTimeRangeStart() Obtain Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTimeRangeStart(string $TimeRangeStart) Set Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTimeRangeEnd() Obtain End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTimeRangeEnd(string $TimeRangeEnd) Set End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getRollbackTimeRanges() Obtain Time range available for rollback
  * @method void setRollbackTimeRanges(array $RollbackTimeRanges) Set Time range available for rollback
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -33,11 +37,13 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 {
     /**
      * @var string Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimeRangeStart;
 
     /**
      * @var string End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TimeRangeEnd;
 
@@ -53,7 +59,9 @@ class DescribeRollbackTimeRangeResponse extends AbstractModel
 
     /**
      * @param string $TimeRangeStart Start time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TimeRangeEnd End time of valid rollback time range (disused)
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $RollbackTimeRanges Time range available for rollback
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */

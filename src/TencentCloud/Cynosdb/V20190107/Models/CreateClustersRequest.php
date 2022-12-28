@@ -134,14 +134,16 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
  * @method void setSecurityGroupIds(array $SecurityGroupIds) Set Array of security group IDs
  * @method array getAlarmPolicyIds() Obtain Array of alarm policy IDs
  * @method void setAlarmPolicyIds(array $AlarmPolicyIds) Set Array of alarm policy IDs
- * @method array getClusterParams() Obtain Array of parameters
- * @method void setClusterParams(array $ClusterParams) Set Array of parameters
+ * @method array getClusterParams() Obtain Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
+ * @method void setClusterParams(array $ClusterParams) Set Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method integer getParamTemplateId() Obtain Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
  * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
  * @method string getSlaveZone() Obtain Multi-AZ address
  * @method void setSlaveZone(string $SlaveZone) Set Multi-AZ address
+ * @method array getInstanceInitInfos() Obtain 
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) Set 
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -347,7 +349,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     public $AlarmPolicyIds;
 
     /**
-     * @var array Array of parameters
+     * @var array Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      */
     public $ClusterParams;
 
@@ -365,6 +367,11 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
      * @var string Multi-AZ address
      */
     public $SlaveZone;
+
+    /**
+     * @var array 
+     */
+    public $InstanceInitInfos;
 
     /**
      * @param string $Zone AZ
@@ -424,10 +431,11 @@ If `DbType` is `MYSQL` and the billing mode of cluster compute is pay-as-you-go 
 Clusters with storage billed in monthly subscription can’t be cloned or rolled back.
      * @param array $SecurityGroupIds Array of security group IDs
      * @param array $AlarmPolicyIds Array of alarm policy IDs
-     * @param array $ClusterParams Array of parameters
+     * @param array $ClusterParams Array of parameters. Valid values: `character_set_server` (utf8｜latin1｜gbk｜utf8mb4), `lower_case_table_names`. 0: case-sensitive; 1: case-insensitive).
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      * @param integer $ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
      * @param string $SlaveZone Multi-AZ address
+     * @param array $InstanceInitInfos 
      */
     function __construct()
     {
@@ -610,6 +618,15 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
 
         if (array_key_exists("SlaveZone",$param) and $param["SlaveZone"] !== null) {
             $this->SlaveZone = $param["SlaveZone"];
+        }
+
+        if (array_key_exists("InstanceInitInfos",$param) and $param["InstanceInitInfos"] !== null) {
+            $this->InstanceInitInfos = [];
+            foreach ($param["InstanceInitInfos"] as $key => $value){
+                $obj = new InstanceInitInfo();
+                $obj->deserialize($value);
+                array_push($this->InstanceInitInfos, $obj);
+            }
         }
     }
 }
