@@ -18,92 +18,108 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * The information of a task to get file attributes.
  *
- * @method string getTaskId() Obtain 
- * @method void setTaskId(string $TaskId) Set 
- * @method string getStatus() Obtain 
- * @method void setStatus(string $Status) Set 
- * @method integer getErrCode() Obtain 
- * @method void setErrCode(integer $ErrCode) Set 
- * @method string getErrCodeExt() Obtain 
- * @method void setErrCodeExt(string $ErrCodeExt) Set 
- * @method string getMessage() Obtain 
- * @method void setMessage(string $Message) Set 
- * @method integer getProgress() Obtain 
- * @method void setProgress(integer $Progress) Set 
- * @method string getFileId() Obtain 
- * @method void setFileId(string $FileId) Set 
- * @method DescribeFileAttributesTaskOutput getOutput() Obtain 
- * @method void setOutput(DescribeFileAttributesTaskOutput $Output) Set 
- * @method string getSessionId() Obtain 
- * @method void setSessionId(string $SessionId) Set 
- * @method string getSessionContext() Obtain 
- * @method void setSessionContext(string $SessionContext) Set 
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
+ * @method string getStatus() Obtain The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+ * @method void setStatus(string $Status) Set The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+ * @method integer getErrCode() Obtain The error code. `0` indicates the task is successful. Other values indicate that the task failed.
+<li>`40000`: Invalid input parameter.</li>
+<li>`60000`: Source file error (e.g., video data is corrupted).</li>
+<li>`70000`: Internal server error. Please try again.</li>
+ * @method void setErrCode(integer $ErrCode) Set The error code. `0` indicates the task is successful. Other values indicate that the task failed.
+<li>`40000`: Invalid input parameter.</li>
+<li>`60000`: Source file error (e.g., video data is corrupted).</li>
+<li>`70000`: Internal server error. Please try again.</li>
+ * @method string getErrCodeExt() Obtain The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+ * @method void setErrCodeExt(string $ErrCodeExt) Set The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+ * @method string getMessage() Obtain The error message.
+ * @method void setMessage(string $Message) Set The error message.
+ * @method integer getProgress() Obtain The task progress. Value range: 0-100.
+ * @method void setProgress(integer $Progress) Set The task progress. Value range: 0-100.
+ * @method string getFileId() Obtain The file ID
+ * @method void setFileId(string $FileId) Set The file ID
+ * @method DescribeFileAttributesTaskOutput getOutput() Obtain The output of the task to get file attributes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutput(DescribeFileAttributesTaskOutput $Output) Set The output of the task to get file attributes.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSessionId() Obtain The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+ * @method void setSessionId(string $SessionId) Set The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+ * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
  */
 class DescribeFileAttributesTask extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string The task ID.
      */
     public $TaskId;
 
     /**
-     * @var string 
+     * @var string The task status. Valid values: PROCESSING, SUCCESS, FAIL.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer The error code. `0` indicates the task is successful. Other values indicate that the task failed.
+<li>`40000`: Invalid input parameter.</li>
+<li>`60000`: Source file error (e.g., video data is corrupted).</li>
+<li>`70000`: Internal server error. Please try again.</li>
      */
     public $ErrCode;
 
     /**
-     * @var string 
+     * @var string The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
      */
     public $ErrCodeExt;
 
     /**
-     * @var string 
+     * @var string The error message.
      */
     public $Message;
 
     /**
-     * @var integer 
+     * @var integer The task progress. Value range: 0-100.
      */
     public $Progress;
 
     /**
-     * @var string 
+     * @var string The file ID
      */
     public $FileId;
 
     /**
-     * @var DescribeFileAttributesTaskOutput 
+     * @var DescribeFileAttributesTaskOutput The output of the task to get file attributes.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Output;
 
     /**
-     * @var string 
+     * @var string The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
      */
     public $SessionId;
 
     /**
-     * @var string 
+     * @var string The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public $SessionContext;
 
     /**
-     * @param string $TaskId 
-     * @param string $Status 
-     * @param integer $ErrCode 
-     * @param string $ErrCodeExt 
-     * @param string $Message 
-     * @param integer $Progress 
-     * @param string $FileId 
-     * @param DescribeFileAttributesTaskOutput $Output 
-     * @param string $SessionId 
-     * @param string $SessionContext 
+     * @param string $TaskId The task ID.
+     * @param string $Status The task status. Valid values: PROCESSING, SUCCESS, FAIL.
+     * @param integer $ErrCode The error code. `0` indicates the task is successful. Other values indicate that the task failed.
+<li>`40000`: Invalid input parameter.</li>
+<li>`60000`: Source file error (e.g., video data is corrupted).</li>
+<li>`70000`: Internal server error. Please try again.</li>
+     * @param string $ErrCodeExt The error code. An empty string indicates the task is successful; other values indicate that the task failed. For details, see [Video processing error codes](https://intl.cloud.tencent.com/document/product/266/39145?lang=en&pg=#video-processing).
+     * @param string $Message The error message.
+     * @param integer $Progress The task progress. Value range: 0-100.
+     * @param string $FileId The file ID
+     * @param DescribeFileAttributesTaskOutput $Output The output of the task to get file attributes.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SessionId The session ID, which is used for de-duplication. If there was a request with the same session ID in the last seven days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
+     * @param string $SessionContext The source context, which is used to pass through user request information. The `ProcedureStateChanged` callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     function __construct()
     {

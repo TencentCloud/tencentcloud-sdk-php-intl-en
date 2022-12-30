@@ -14,24 +14,32 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteDnsRecords response structure.
+ * VPC parameters
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getVpcId() Obtain The VPC ID.
+ * @method void setVpcId(string $VpcId) Set The VPC ID.
+ * @method string getSubnetId() Obtain The subnet ID.
+ * @method void setSubnetId(string $SubnetId) Set The subnet ID.
  */
-class DeleteDnsRecordsResponse extends AbstractModel
+class VirtualPrivateCloud extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string The VPC ID.
      */
-    public $RequestId;
+    public $VpcId;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string The subnet ID.
+     */
+    public $SubnetId;
+
+    /**
+     * @param string $VpcId The VPC ID.
+     * @param string $SubnetId The subnet ID.
      */
     function __construct()
     {
@@ -46,8 +54,12 @@ class DeleteDnsRecordsResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("VpcId",$param) and $param["VpcId"] !== null) {
+            $this->VpcId = $param["VpcId"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

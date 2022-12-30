@@ -18,19 +18,39 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLoadBalancingStatus response structure.
+ * DescribeTimingL4AccessData response structure.
  *
+ * @method integer getTotalCount() Obtain Total number of query results.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of query results.
+ * @method array getTimingDataRecords() Obtain Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTimingDataRecords(array $TimingDataRecords) Set Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyLoadBalancingStatusResponse extends AbstractModel
+class DescribeTimingL4AccessDataResponse extends AbstractModel
 {
+    /**
+     * @var integer Total number of query results.
+     */
+    public $TotalCount;
+
+    /**
+     * @var array Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TimingDataRecords;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount Total number of query results.
+     * @param array $TimingDataRecords Number of L4 connections over time
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +66,19 @@ class ModifyLoadBalancingStatusResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TimingDataRecords",$param) and $param["TimingDataRecords"] !== null) {
+            $this->TimingDataRecords = [];
+            foreach ($param["TimingDataRecords"] as $key => $value){
+                $obj = new TimingDataRecord();
+                $obj->deserialize($value);
+                array_push($this->TimingDataRecords, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

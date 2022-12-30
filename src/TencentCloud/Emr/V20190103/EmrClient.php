@@ -25,6 +25,7 @@ use TencentCloud\Emr\V20190103\Models as Models;
 /**
  * @method Models\AddUsersForUserManagerResponse AddUsersForUserManager(Models\AddUsersForUserManagerRequest $req) This API is available for clusters with OpenLDAP components configured.
 This API is used to add user lists (user management).
+ * @method Models\CreateClusterResponse CreateCluster(Models\CreateClusterRequest $req) This API is used to create an EMR cluster instance.
  * @method Models\CreateInstanceResponse CreateInstance(Models\CreateInstanceRequest $req) This API is used to create an EMR cluster instance.
  * @method Models\DescribeClusterNodesResponse DescribeClusterNodes(Models\DescribeClusterNodesRequest $req) This API is used to query the information of nodes in a cluster.
  * @method Models\DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStatics(Models\DescribeEmrApplicationStaticsRequest $req)  This API is used to query the Yarn application statistics.
@@ -39,6 +40,7 @@ This API is used to export users in batches. For a Kerberos cluster, set `NeedKe
  * @method Models\InquiryPriceUpdateInstanceResponse InquiryPriceUpdateInstance(Models\InquiryPriceUpdateInstanceRequest $req) This API is used to query price of scaling.
  * @method Models\ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfig(Models\ModifyResourceScheduleConfigRequest $req) This API is used to modify the resource configuration of YARN Resource Scheduling.
  * @method Models\ModifyResourceSchedulerResponse ModifyResourceScheduler(Models\ModifyResourceSchedulerRequest $req) This API is used to modify the YARN resource scheduler (the change will take effect after you click Apply).
+ * @method Models\ScaleOutClusterResponse ScaleOutCluster(Models\ScaleOutClusterRequest $req) This API is used to scale out a cluster.
  * @method Models\ScaleOutInstanceResponse ScaleOutInstance(Models\ScaleOutInstanceRequest $req) This API is used to scale out instances.
  * @method Models\TerminateInstanceResponse TerminateInstance(Models\TerminateInstanceRequest $req) This API is used to terminate EMR instances. It is only supported in the official paid edition of EMR.
  * @method Models\TerminateTasksResponse TerminateTasks(Models\TerminateTasksRequest $req) This API is used to terminate a task node.

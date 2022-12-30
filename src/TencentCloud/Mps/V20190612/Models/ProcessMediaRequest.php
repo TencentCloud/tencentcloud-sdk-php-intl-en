@@ -56,6 +56,12 @@ Note 1: About `OutputStorage` and `OutputDir`
 Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
 
 Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+ * @method string getTaskType() Obtain The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+ * @method void setTaskType(string $TaskType) Set The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
  */
 class ProcessMediaRequest extends AbstractModel
 {
@@ -126,6 +132,13 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
     public $ScheduleId;
 
     /**
+     * @var string The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
+     */
+    public $TaskType;
+
+    /**
      * @param MediaInputInfo $InputInfo The information of the file to process.
      * @param TaskOutputStorage $OutputStorage The storage location of the media processing output file. If this parameter is left empty, the storage location in `InputInfo` will be inherited.
      * @param string $OutputDir The directory to save the media processing output file, such as `/movie/201907/`. If this parameter is left empty, the file will be saved to the directory in `InputInfo`.
@@ -144,6 +157,9 @@ Note 1: About `OutputStorage` and `OutputDir`
 Note 2: If `TaskNotifyConfig` is specified, the specified settings will be used instead of the default callback settings of the scheme.
 
 Note 3: The trigger configured for a scheme is for automatically starting a scheme. It stops working when you manually call this API to start a scheme.
+     * @param string $TaskType The task type.
+<li> `Online` (default): A task that is executed immediately.</li>
+<li> `Offline`: A task that is executed when the system is idle (within three days by default).</li>
      */
     function __construct()
     {
@@ -211,6 +227,10 @@ Note 3: The trigger configured for a scheme is for automatically starting a sche
 
         if (array_key_exists("ScheduleId",$param) and $param["ScheduleId"] !== null) {
             $this->ScheduleId = $param["ScheduleId"];
+        }
+
+        if (array_key_exists("TaskType",$param) and $param["TaskType"] !== null) {
+            $this->TaskType = $param["TaskType"];
         }
     }
 }

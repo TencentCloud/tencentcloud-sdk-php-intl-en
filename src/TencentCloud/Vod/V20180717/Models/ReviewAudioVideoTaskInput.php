@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getFileId() Obtain The ID of the media file.
  * @method void setFileId(string $FileId) Set The ID of the media file.
+ * @method integer getDefinition() Obtain The moderation template ID.
+ * @method void setDefinition(integer $Definition) Set The moderation template ID.
  */
 class ReviewAudioVideoTaskInput extends AbstractModel
 {
@@ -31,7 +33,13 @@ class ReviewAudioVideoTaskInput extends AbstractModel
     public $FileId;
 
     /**
+     * @var integer The moderation template ID.
+     */
+    public $Definition;
+
+    /**
      * @param string $FileId The ID of the media file.
+     * @param integer $Definition The moderation template ID.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class ReviewAudioVideoTaskInput extends AbstractModel
         }
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
+            $this->Definition = $param["Definition"];
         }
     }
 }

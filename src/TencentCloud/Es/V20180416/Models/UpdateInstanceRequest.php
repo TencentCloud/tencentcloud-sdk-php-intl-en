@@ -32,8 +32,8 @@ Number of nodes (2-50)
  * @method void setEsConfig(string $EsConfig) Set ES configuration item (JSON string)
  * @method string getPassword() Obtain Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
  * @method void setPassword(string $Password) Set Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
- * @method EsAcl getEsAcl() Obtain Access control list
- * @method void setEsAcl(EsAcl $EsAcl) Set Access control list
+ * @method EsAcl getEsAcl() Obtain The policy for visual component (Kibana and Cerebro) access over public network.
+ * @method void setEsAcl(EsAcl $EsAcl) Set The policy for visual component (Kibana and Cerebro) access over public network.
  * @method integer getDiskSize() Obtain This parameter has been disused. Please use `NodeInfoList`
 Disk size in GB
  * @method void setDiskSize(integer $DiskSize) Set This parameter has been disused. Please use `NodeInfoList`
@@ -60,14 +60,26 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setCosBackup(CosBackup $CosBackup) Set Auto-backup to COS
  * @method array getNodeInfoList() Obtain Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
  * @method void setNodeInfoList(array $NodeInfoList) Set Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
- * @method string getPublicAccess() Obtain Public network access status
- * @method void setPublicAccess(string $PublicAccess) Set Public network access status
+ * @method string getPublicAccess() Obtain The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method void setPublicAccess(string $PublicAccess) Set The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
  * @method EsPublicAcl getEsPublicAcl() Obtain Public network ACL
  * @method void setEsPublicAcl(EsPublicAcl $EsPublicAcl) Set Public network ACL
- * @method string getKibanaPublicAccess() Obtain Public network access status of Kibana
- * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set Public network access status of Kibana
- * @method string getKibanaPrivateAccess() Obtain Private network access status of Kibana
- * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set Private network access status of Kibana
+ * @method string getKibanaPublicAccess() Obtain The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method void setKibanaPublicAccess(string $KibanaPublicAccess) Set The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method string getKibanaPrivateAccess() Obtain The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method void setKibanaPrivateAccess(string $KibanaPrivateAccess) Set The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
  * @method integer getBasicSecurityType() Obtain Enables or disables user authentication for ES Basic Edition v6.8 and above
  * @method void setBasicSecurityType(integer $BasicSecurityType) Set Enables or disables user authentication for ES Basic Edition v6.8 and above
  * @method integer getKibanaPrivatePort() Obtain Kibana private port
@@ -86,16 +98,28 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
  * @method void setSwitchPrivateLink(string $SwitchPrivateLink) Set Whether to switch to the new network architecture
  * @method boolean getEnableCerebro() Obtain Whether to enable Cerebro
  * @method void setEnableCerebro(boolean $EnableCerebro) Set Whether to enable Cerebro
- * @method string getCerebroPublicAccess() Obtain Cerebro public network access status
- * @method void setCerebroPublicAccess(string $CerebroPublicAccess) Set Cerebro public network access status
- * @method string getCerebroPrivateAccess() Obtain Cerebro private network access status
- * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) Set Cerebro private network access status
+ * @method string getCerebroPublicAccess() Obtain The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method void setCerebroPublicAccess(string $CerebroPublicAccess) Set The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method string getCerebroPrivateAccess() Obtain The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+ * @method void setCerebroPrivateAccess(string $CerebroPrivateAccess) Set The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
  * @method EsConfigSetInfo getEsConfigSet() Obtain Added or modified configuration set information
  * @method void setEsConfigSet(EsConfigSetInfo $EsConfigSet) Set Added or modified configuration set information
  * @method OperationDurationUpdated getOperationDuration() Obtain The maintenance time slot
  * @method void setOperationDuration(OperationDurationUpdated $OperationDuration) Set The maintenance time slot
  * @method string getKibanaAlteringPublicAccess() Obtain Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
  * @method void setKibanaAlteringPublicAccess(string $KibanaAlteringPublicAccess) Set Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
  */
 class UpdateInstanceRequest extends AbstractModel
 {
@@ -126,7 +150,7 @@ Number of nodes (2-50)
     public $Password;
 
     /**
-     * @var EsAcl Access control list
+     * @var EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
      */
     public $EsAcl;
 
@@ -176,7 +200,9 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $NodeInfoList;
 
     /**
-     * @var string Public network access status
+     * @var string The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $PublicAccess;
 
@@ -186,12 +212,16 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $EsPublicAcl;
 
     /**
-     * @var string Public network access status of Kibana
+     * @var string The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $KibanaPublicAccess;
 
     /**
-     * @var string Private network access status of Kibana
+     * @var string The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $KibanaPrivateAccess;
 
@@ -241,12 +271,16 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
     public $EnableCerebro;
 
     /**
-     * @var string Cerebro public network access status
+     * @var string The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $CerebroPublicAccess;
 
     /**
-     * @var string Cerebro private network access status
+     * @var string The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $CerebroPrivateAccess;
 
@@ -262,6 +296,8 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 
     /**
      * @var string Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     public $KibanaAlteringPublicAccess;
 
@@ -272,7 +308,7 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
 Number of nodes (2-50)
      * @param string $EsConfig ES configuration item (JSON string)
      * @param string $Password Password of the default user 'elastic', which must contain 8 to 16 characters, including at least two of the following three types of characters: [a-z,A-Z], [0-9] and [-!@#$%&^*+=_:;,.?]
-     * @param EsAcl $EsAcl Access control list
+     * @param EsAcl $EsAcl The policy for visual component (Kibana and Cerebro) access over public network.
      * @param integer $DiskSize This parameter has been disused. Please use `NodeInfoList`
 Disk size in GB
      * @param string $NodeType This parameter has been disused. Please use `NodeInfoList`
@@ -286,10 +322,16 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param boolean $ForceRestart Whether to force restart during configuration update <li>true: Yes </li><li>false: No </li>This needs to be set only for EsConfig. Default value: false
      * @param CosBackup $CosBackup Auto-backup to COS
      * @param array $NodeInfoList Node information list. You can pass in only the nodes to be updated and their corresponding specification information. Supported operations include: <li>modifying the number of nodes in the same type </li><li>modifying the specification and disk size of nodes in the same type </li><li>adding a node type (you must also specify the node type, quantity, specification, disk, etc.) </li>The above operations can only be performed one at a time, and the disk type cannot be modified
-     * @param string $PublicAccess Public network access status
+     * @param string $PublicAccess The status of ES cluster access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      * @param EsPublicAcl $EsPublicAcl Public network ACL
-     * @param string $KibanaPublicAccess Public network access status of Kibana
-     * @param string $KibanaPrivateAccess Private network access status of Kibana
+     * @param string $KibanaPublicAccess The status of Kibana access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param string $KibanaPrivateAccess The status of Kibana access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      * @param integer $BasicSecurityType Enables or disables user authentication for ES Basic Edition v6.8 and above
      * @param integer $KibanaPrivatePort Kibana private port
      * @param integer $ScaleType 0: scaling in blue/green deployment mode without cluster restart (default); 1: scaling by unmounting disk with rolling cluster restart
@@ -299,11 +341,17 @@ Dedicated primary node disk size in GB. This is 50 GB by default and currently c
      * @param WebNodeTypeInfo $WebNodeTypeInfo Visual node configuration
      * @param string $SwitchPrivateLink Whether to switch to the new network architecture
      * @param boolean $EnableCerebro Whether to enable Cerebro
-     * @param string $CerebroPublicAccess Cerebro public network access status
-     * @param string $CerebroPrivateAccess Cerebro private network access status
+     * @param string $CerebroPublicAccess The status of Cerebro access over public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
+     * @param string $CerebroPrivateAccess The status of Cerebro access over private network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      * @param EsConfigSetInfo $EsConfigSet Added or modified configuration set information
      * @param OperationDurationUpdated $OperationDuration The maintenance time slot
      * @param string $KibanaAlteringPublicAccess Whether to enable the option for sending alerting messages over the public network.
+`OPEN`: Enabled.
+`CLOSE`: Disabled.
      */
     function __construct()
     {

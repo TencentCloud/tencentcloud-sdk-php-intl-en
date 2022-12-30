@@ -34,6 +34,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setDefaultCache(string $DefaultCache) Set Specifies whether to enable cache when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getDefaultCacheStrategy() Obtain Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setDefaultCacheStrategy(string $DefaultCacheStrategy) Set Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
  */
 class FollowOrigin extends AbstractModel
 {
@@ -57,12 +61,20 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $DefaultCache;
 
     /**
+     * @var string Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $DefaultCacheStrategy;
+
+    /**
      * @param string $Switch Whether to enable the configuration of following the origin server. Valid values:
 <li>`on`: Enable</li>
 <li>`off`: Disable</li>
      * @param integer $DefaultCacheTime Sets the default cache time when the origin server does not return the Cache-Control header.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $DefaultCache Specifies whether to enable cache when the origin server does not return the Cache-Control header.
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $DefaultCacheStrategy Specifies whether to use the default caching policy when Cache-Control is not returned from the origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
     function __construct()
@@ -88,6 +100,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("DefaultCache",$param) and $param["DefaultCache"] !== null) {
             $this->DefaultCache = $param["DefaultCache"];
+        }
+
+        if (array_key_exists("DefaultCacheStrategy",$param) and $param["DefaultCacheStrategy"] !== null) {
+            $this->DefaultCacheStrategy = $param["DefaultCacheStrategy"];
         }
     }
 }

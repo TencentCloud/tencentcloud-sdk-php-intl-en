@@ -25,19 +25,19 @@ use TencentCloud\Common\AbstractModel;
  * @method string getEndTime() Obtain The end time.
  * @method void setEndTime(string $EndTime) Set The end time.
  * @method string getMetricName() Obtain The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
  * @method void setMetricName(string $MetricName) Set The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
  * @method array getZoneIds() Obtain List of site IDs to be queried. All sites will be selected if this field is not specified.
  * @method void setZoneIds(array $ZoneIds) Set List of site IDs to be queried. All sites will be selected if this field is not specified.
  * @method array getPolicyIds() Obtain The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
@@ -83,12 +83,12 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
 
     /**
      * @var string The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
      */
     public $MetricName;
 
@@ -139,12 +139,12 @@ class DescribeDDoSAttackTopDataRequest extends AbstractModel
      * @param string $StartTime The start time.
      * @param string $EndTime The end time.
      * @param string $MetricName The statistical metric. Values:
-<li>`ddos_attackFlux_protocol`: Top-ranked protocols by DDoS attack traffic.</li>
-<li>`ddos_attackPackageNum_protocol`: Top-ranked protocols by DDoS attack packets.</li>
-<li>`ddos_attackNum_attackType`: Top-ranked attack types by DDoS attacks.</li>
-<li>`ddos_attackNum_sregion`: Top-ranked attack source regions by DDoS attacks.</li>
-<li>`ddos_attackFlux_sip`: Top-ranked attacker IPs by DDoS attack traffic.</li>
-<li>`ddos_attackFlux_sregion`: Top-ranked attack source regions by DDoS attack traffic.</li>
+<li>`ddos_attackFlux_protocol`: Rank protocols by the attack traffic.</li>
+<li>`ddos_attackPackageNum_protocol`: Rank protocols by the number of attack packets.</li>
+<li>`ddos_attackNum_attackType`: Rank attack types by the number of attacks.</li>
+<li>`ddos_attackNum_sregion`: Rank attacker regions by the number of attacks.</li>
+<li>`ddos_attackFlux_sip`: Rank attacker IPs by the number of attacks.</li>
+<li>`ddos_attackFlux_sregion`: Rank attacker regions by the number of attacks.</li>
      * @param array $ZoneIds List of site IDs to be queried. All sites will be selected if this field is not specified.
      * @param array $PolicyIds The list of DDoS policy IDs to be specified. All policies will be selected if this field is not specified.
      * @param string $AttackType The attack type. Values:

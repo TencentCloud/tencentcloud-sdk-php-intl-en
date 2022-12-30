@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Pagination start value. Default value: 0
  * @method integer getLimit() Obtain Number of entries per page. Default value: 20
  * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: 20
- * @method integer getOrderByKey() Obtain Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
- * @method void setOrderByKey(integer $OrderByKey) Set Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+ * @method integer getOrderByKey() Obtain The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
+ * @method void setOrderByKey(integer $OrderByKey) Set The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
  * @method integer getOrderByType() Obtain Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
  * @method void setOrderByType(integer $OrderByType) Set Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
  * @method array getTagList() Obtain Node tag information list
@@ -40,8 +40,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setIpList(array $IpList) Set VPC VIP list
  * @method array getZoneList() Obtain List of availability zones
  * @method void setZoneList(array $ZoneList) Set List of availability zones
- * @method array getHealthStatus() Obtain Health status filter list
- * @method void setHealthStatus(array $HealthStatus) Set Health status filter list
+ * @method array getHealthStatus() Obtain The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
+ * @method void setHealthStatus(array $HealthStatus) Set The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
  * @method array getVpcIds() Obtain VPC IDs
  * @method void setVpcIds(array $VpcIds) Set VPC IDs
  */
@@ -73,7 +73,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var integer Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+     * @var integer The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
      */
     public $OrderByKey;
 
@@ -98,7 +98,7 @@ class DescribeInstancesRequest extends AbstractModel
     public $ZoneList;
 
     /**
-     * @var array Health status filter list
+     * @var array The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
      */
     public $HealthStatus;
 
@@ -113,12 +113,12 @@ class DescribeInstancesRequest extends AbstractModel
      * @param array $InstanceNames List of cluster instance names
      * @param integer $Offset Pagination start value. Default value: 0
      * @param integer $Limit Number of entries per page. Default value: 20
-     * @param integer $OrderByKey Sort by field <li>1: instance ID </li><li>2: instance name </li><li>3: AZ </li><li>4: creation time </li>If `orderKey` is not passed in, sort by creation time in descending order
+     * @param integer $OrderByKey The sorting field. <li>1: Instance ID </li><li>2: Instance name </li><li>3: AZ </li><li>4: Creation time </li>If `OrderByKey` is not passed in, sorting is performed by creation time in descending order.
      * @param integer $OrderByType Sorting order <li>0: ascending </li><li>1: descending </li>If orderByKey is passed in but orderByType is not, ascending order is used by default
      * @param array $TagList Node tag information list
      * @param array $IpList VPC VIP list
      * @param array $ZoneList List of availability zones
-     * @param array $HealthStatus Health status filter list
+     * @param array $HealthStatus The health status filter. Valid values: `0` (green), `1` (yellow), `2` (red), `-1` (unknown).
      * @param array $VpcIds VPC IDs
      */
     function __construct()

@@ -48,6 +48,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setIsVip(boolean $IsVip) Set Whether it is an exclusive instance
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getRocketMQFlag() Obtain TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRocketMQFlag(boolean $RocketMQFlag) Set TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain 
+ * @method void setStatus(integer $Status) Set 
+ * @method integer getIsolateTime() Obtain 
+ * @method void setIsolateTime(integer $IsolateTime) Set 
+ * @method string getHttpPublicEndpoint() Obtain 
+ * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) Set 
+ * @method string getHttpVpcEndpoint() Obtain 
+ * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) Set 
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -106,6 +118,32 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $IsVip;
 
     /**
+     * @var boolean TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RocketMQFlag;
+
+    /**
+     * @var integer 
+     */
+    public $Status;
+
+    /**
+     * @var integer 
+     */
+    public $IsolateTime;
+
+    /**
+     * @var string 
+     */
+    public $HttpPublicEndpoint;
+
+    /**
+     * @var string 
+     */
+    public $HttpVpcEndpoint;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region information
@@ -120,6 +158,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsVip Whether it is an exclusive instance
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $RocketMQFlag TDMQ for RocketMQ cluster type flag
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status 
+     * @param integer $IsolateTime 
+     * @param string $HttpPublicEndpoint 
+     * @param string $HttpVpcEndpoint 
      */
     function __construct()
     {
@@ -177,6 +221,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("IsVip",$param) and $param["IsVip"] !== null) {
             $this->IsVip = $param["IsVip"];
+        }
+
+        if (array_key_exists("RocketMQFlag",$param) and $param["RocketMQFlag"] !== null) {
+            $this->RocketMQFlag = $param["RocketMQFlag"];
+        }
+
+        if (array_key_exists("Status",$param) and $param["Status"] !== null) {
+            $this->Status = $param["Status"];
+        }
+
+        if (array_key_exists("IsolateTime",$param) and $param["IsolateTime"] !== null) {
+            $this->IsolateTime = $param["IsolateTime"];
+        }
+
+        if (array_key_exists("HttpPublicEndpoint",$param) and $param["HttpPublicEndpoint"] !== null) {
+            $this->HttpPublicEndpoint = $param["HttpPublicEndpoint"];
+        }
+
+        if (array_key_exists("HttpVpcEndpoint",$param) and $param["HttpVpcEndpoint"] !== null) {
+            $this->HttpVpcEndpoint = $param["HttpVpcEndpoint"];
         }
     }
 }

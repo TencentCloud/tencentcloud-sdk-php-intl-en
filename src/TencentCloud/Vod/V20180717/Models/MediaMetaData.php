@@ -64,6 +64,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAudioDuration(float $AudioDuration) Set Audio duration in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getMd5() Obtain The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+ * @method void setMd5(string $Md5) Set The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
  */
 class MediaMetaData extends AbstractModel
 {
@@ -134,6 +138,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $AudioDuration;
 
     /**
+     * @var string The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
+     */
+    public $Md5;
+
+    /**
      * @param integer $Size Size of uploaded media file in bytes (which is the sum of size of m3u8 and ts files if the video is in HLS format).
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Container Container, such as m4a and mp4.
@@ -156,6 +166,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param float $AudioDuration Audio duration in seconds.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $Md5 The MD5 hash of the file.
+<li><font color=red>Note</font>: To get the MD5 hash of a file, call the `DescribeFileAttributes` API. The information will be returned after the task is completed.</li>
      */
     function __construct()
     {
@@ -222,6 +234,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AudioDuration",$param) and $param["AudioDuration"] !== null) {
             $this->AudioDuration = $param["AudioDuration"];
+        }
+
+        if (array_key_exists("Md5",$param) and $param["Md5"] !== null) {
+            $this->Md5 = $param["Md5"];
         }
     }
 }

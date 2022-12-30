@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getMsg() Obtain Message
  * @method void setMsg(string $Msg) Set Message
+ * @method integer getID() Obtain Allowlist ID
+ * @method void setID(integer $ID) Set Allowlist ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -33,12 +35,18 @@ class CreateWhitelistResponse extends AbstractModel
     public $Msg;
 
     /**
+     * @var integer Allowlist ID
+     */
+    public $ID;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
      * @param string $Msg Message
+     * @param integer $ID Allowlist ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -56,6 +64,10 @@ class CreateWhitelistResponse extends AbstractModel
         }
         if (array_key_exists("Msg",$param) and $param["Msg"] !== null) {
             $this->Msg = $param["Msg"];
+        }
+
+        if (array_key_exists("ID",$param) and $param["ID"] !== null) {
+            $this->ID = $param["ID"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

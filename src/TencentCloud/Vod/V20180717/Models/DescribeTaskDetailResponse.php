@@ -21,27 +21,29 @@ use TencentCloud\Common\AbstractModel;
  * DescribeTaskDetail response structure.
  *
  * @method string getTaskType() Obtain The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
  * @method string getStatus() Obtain Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -120,8 +122,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setReduceMediaBitrateTask(ReduceMediaBitrateTask $ReduceMediaBitrateTask) Set This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain 
- * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set 
+ * @method DescribeFileAttributesTask getDescribeFileAttributesTask() Obtain The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDescribeFileAttributesTask(DescribeFileAttributesTask $DescribeFileAttributesTask) Set The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -129,16 +133,17 @@ class DescribeTaskDetailResponse extends AbstractModel
 {
     /**
      * @var string The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
      */
     public $TaskType;
 
@@ -262,7 +267,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ReduceMediaBitrateTask;
 
     /**
-     * @var DescribeFileAttributesTask 
+     * @var DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DescribeFileAttributesTask;
 
@@ -273,16 +279,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li>SplitMedia: Video splitting</li>
-<li>ComposeMedia: Media file production</li>
-<li>WechatPublish: WeChat publishing</li>
-<li>WechatMiniProgramPublish: Publishing videos on WeChat Mini Program</li>
-<li>PullUpload: Pulling media files for upload</li>
-<li>FastClipMedia: Quick clipping</li>
-<li>RemoveWatermarkTask: Watermark removal</li>
-<li> ReviewAudioVideo: Moderation</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`SplitMedia`: Video splitting</li>
+<li>`ComposeMedia`: Media file production</li>
+<li>`WechatPublish`: WeChat publishing</li>
+<li>`WechatMiniProgramPublish`: Publishing videos on WeChat Mini Program</li>
+<li>`PullUpload`: Pulling media files for upload</li>
+<li>`FastClipMedia`: Quick clipping</li>
+<li>`RemoveWatermarkTask`: Watermark removal</li>
+<li>`DescribeFileAttributesTask`: Getting file attributes</li>
+<li> `ReviewAudioVideo`: Moderation</li>
      * @param string $Status Task status. Valid values:
 <li>WAITING: waiting;</li>
 <li>PROCESSING: processing;</li>
@@ -322,7 +329,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param ReduceMediaBitrateTask $ReduceMediaBitrateTask This parameter is invalid now.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param DescribeFileAttributesTask $DescribeFileAttributesTask 
+     * @param DescribeFileAttributesTask $DescribeFileAttributesTask The information of a task to get file attributes. This parameter is valid only if `TaskType` is `DescribeFileAttributes`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

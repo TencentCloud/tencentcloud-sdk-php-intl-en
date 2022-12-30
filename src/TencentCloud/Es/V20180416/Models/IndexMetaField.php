@@ -72,6 +72,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setAppId(integer $AppId) Set Cluster APP ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getIndexDocs() Obtain The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIndexDocs(integer $IndexDocs) Set The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class IndexMetaField extends AbstractModel
 {
@@ -154,6 +158,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $AppId;
 
     /**
+     * @var integer The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IndexDocs;
+
+    /**
      * @param string $IndexType Index type
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $IndexName Index name
@@ -180,6 +190,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $AppId Cluster APP ID
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $IndexDocs The number of index docs.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -252,6 +264,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
             $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("IndexDocs",$param) and $param["IndexDocs"] !== null) {
+            $this->IndexDocs = $param["IndexDocs"];
         }
     }
 }

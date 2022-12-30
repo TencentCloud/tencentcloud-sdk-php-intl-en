@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateLoadBalancing response structure.
+ * DescribeFileAttributes response structure.
  *
- * @method string getLoadBalancingId() Obtain The load balancer ID.
- * @method void setLoadBalancingId(string $LoadBalancingId) Set The load balancer ID.
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateLoadBalancingResponse extends AbstractModel
+class DescribeFileAttributesResponse extends AbstractModel
 {
     /**
-     * @var string The load balancer ID.
+     * @var string The task ID.
      */
-    public $LoadBalancingId;
+    public $TaskId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateLoadBalancingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $LoadBalancingId The load balancer ID.
+     * @param string $TaskId The task ID.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,8 @@ class CreateLoadBalancingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancingId",$param) and $param["LoadBalancingId"] !== null) {
-            $this->LoadBalancingId = $param["LoadBalancingId"];
+        if (array_key_exists("TaskId",$param) and $param["TaskId"] !== null) {
+            $this->TaskId = $param["TaskId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

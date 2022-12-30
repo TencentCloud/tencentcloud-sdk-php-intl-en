@@ -30,9 +30,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\CreateApplicationProxyRuleResponse CreateApplicationProxyRule(Models\CreateApplicationProxyRuleRequest $req) This API is used to create an application proxy rule.
  * @method Models\CreateCredentialResponse CreateCredential(Models\CreateCredentialRequest $req) Creates a credential for COS origin-pull.
  * @method Models\CreateCustomErrorPageResponse CreateCustomErrorPage(Models\CreateCustomErrorPageRequest $req) This API is used to create a custom error page.
- * @method Models\CreateDnsRecordResponse CreateDnsRecord(Models\CreateDnsRecordRequest $req) This API is used to create a DNS record.
  * @method Models\CreateIpTableListResponse CreateIpTableList(Models\CreateIpTableListRequest $req) This API is used to create an IP blocklist/allowlist.
- * @method Models\CreateLoadBalancingResponse CreateLoadBalancing(Models\CreateLoadBalancingRequest $req) This API is used to create a CLB instance.
  * @method Models\CreateLogSetResponse CreateLogSet(Models\CreateLogSetRequest $req) This API is used to create a CLS logset.
  * @method Models\CreateLogTopicTaskResponse CreateLogTopicTask(Models\CreateLogTopicTaskRequest $req) This API is used to create a shipping task.
  * @method Models\CreateOriginGroupResponse CreateOriginGroup(Models\CreateOriginGroupRequest $req) This API is used to create an origin group.
@@ -47,8 +45,6 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DeleteAliasDomainResponse DeleteAliasDomain(Models\DeleteAliasDomainRequest $req) This API is used to delete an alias domain name.
  * @method Models\DeleteApplicationProxyResponse DeleteApplicationProxy(Models\DeleteApplicationProxyRequest $req) This API is used to delete an application proxy.
  * @method Models\DeleteApplicationProxyRuleResponse DeleteApplicationProxyRule(Models\DeleteApplicationProxyRuleRequest $req) This API is used to delete an application proxy rule.
- * @method Models\DeleteDnsRecordsResponse DeleteDnsRecords(Models\DeleteDnsRecordsRequest $req) This API is used to delete DNS records in batches.
- * @method Models\DeleteLoadBalancingResponse DeleteLoadBalancing(Models\DeleteLoadBalancingRequest $req) This API is used to delete a CLB instance.
  * @method Models\DeleteLogTopicTaskResponse DeleteLogTopicTask(Models\DeleteLogTopicTaskRequest $req) This API is used to delete a shipping task.
  * @method Models\DeleteOriginGroupResponse DeleteOriginGroup(Models\DeleteOriginGroupRequest $req) This API is used to delete an origin group.
  * @method Models\DeleteRulesResponse DeleteRules(Models\DeleteRulesRequest $req) This API is used to batch delete rules from the rule engine.
@@ -74,12 +70,11 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeDDoSMajorAttackEventResponse DescribeDDoSMajorAttackEvent(Models\DescribeDDoSMajorAttackEventRequest $req) This API is used to query the list of large attack events.
  * @method Models\DescribeDDoSPolicyResponse DescribeDDoSPolicy(Models\DescribeDDoSPolicyRequest $req) This API is used to query the DDoS protection configuration.
  * @method Models\DescribeDefaultCertificatesResponse DescribeDefaultCertificates(Models\DescribeDefaultCertificatesRequest $req) This API is used to query a list of default certificates.
+ * @method Models\DescribeDistributionL4AccessDataResponse DescribeDistributionL4AccessData(Models\DescribeDistributionL4AccessDataRequest $req) This API is used to query the data of L4 connection duration over time.
  * @method Models\DescribeDnsDataResponse DescribeDnsData(Models\DescribeDnsDataRequest $req) This API is used to get DNS requests.
- * @method Models\DescribeDnsRecordsResponse DescribeDnsRecords(Models\DescribeDnsRecordsRequest $req) This API is used to query DNS records. Paging, sorting and filtering are supported.
  * @method Models\DescribeDnssecResponse DescribeDnssec(Models\DescribeDnssecRequest $req) This API is used to query DNSSEC information.
  * @method Models\DescribeHostsSettingResponse DescribeHostsSetting(Models\DescribeHostsSettingRequest $req) This API is used to query detailed domain name configuration.
  * @method Models\DescribeIdentificationsResponse DescribeIdentifications(Models\DescribeIdentificationsRequest $req) This API is used to query the verification information of a site.
- * @method Models\DescribeLoadBalancingResponse DescribeLoadBalancing(Models\DescribeLoadBalancingRequest $req) This API is used to obtain a list of CLB instances.
  * @method Models\DescribeLogSetsResponse DescribeLogSets(Models\DescribeLogSetsRequest $req) This API is used to get a list of logsets.
  * @method Models\DescribeLogTopicTaskDetailResponse DescribeLogTopicTaskDetail(Models\DescribeLogTopicTaskDetailRequest $req) This API is used to get the details of a shipping task.
  * @method Models\DescribeLogTopicTasksResponse DescribeLogTopicTasks(Models\DescribeLogTopicTasksRequest $req) This API is used to get a list of shipping tasks.
@@ -100,6 +95,7 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\DescribeSpeedTestingDetailsResponse DescribeSpeedTestingDetails(Models\DescribeSpeedTestingDetailsRequest $req) This API is used to query the site’s load speed across regions.
  * @method Models\DescribeSpeedTestingMetricDataResponse DescribeSpeedTestingMetricData(Models\DescribeSpeedTestingMetricDataRequest $req) This API is used to query the result of a site test.
  * @method Models\DescribeSpeedTestingQuotaResponse DescribeSpeedTestingQuota(Models\DescribeSpeedTestingQuotaRequest $req) This API is used to query the quota limit on site tests.
+ * @method Models\DescribeTimingL4AccessDataResponse DescribeTimingL4AccessData(Models\DescribeTimingL4AccessDataRequest $req) This API is used to query the number of L4 connections over time.
  * @method Models\DescribeTimingL4DataResponse DescribeTimingL4Data(Models\DescribeTimingL4DataRequest $req) This API is used to query the list of L4 traffic data recorded over time.
  * @method Models\DescribeTimingL7AnalysisDataResponse DescribeTimingL7AnalysisData(Models\DescribeTimingL7AnalysisDataRequest $req) This API is used to query the L7 data recorded over time.
  * @method Models\DescribeTimingL7CacheDataResponse DescribeTimingL7CacheData(Models\DescribeTimingL7CacheDataRequest $req) This API is used to query the time-series L7 cached data.
@@ -130,11 +126,8 @@ use TencentCloud\Teo\V20220901\Models as Models;
  * @method Models\ModifyDDoSPolicyResponse ModifyDDoSPolicy(Models\ModifyDDoSPolicyRequest $req) This API is used to modify DDoS mitigation configuration.
  * @method Models\ModifyDDoSPolicyHostResponse ModifyDDoSPolicyHost(Models\ModifyDDoSPolicyHostRequest $req) This API is used to enable high availability for domain names.
  * @method Models\ModifyDefaultCertificateResponse ModifyDefaultCertificate(Models\ModifyDefaultCertificateRequest $req) This example shows you how to modify the status of a default certificate.
- * @method Models\ModifyDnsRecordResponse ModifyDnsRecord(Models\ModifyDnsRecordRequest $req) This API is used to modify DNS records.
  * @method Models\ModifyDnssecResponse ModifyDnssec(Models\ModifyDnssecRequest $req) This API is used to modify the DNSSEC status of a site.
  * @method Models\ModifyHostsCertificateResponse ModifyHostsCertificate(Models\ModifyHostsCertificateRequest $req) This API is used to modify the certificate of a domain name.
- * @method Models\ModifyLoadBalancingResponse ModifyLoadBalancing(Models\ModifyLoadBalancingRequest $req) This API is used to modify a CLB instance.
- * @method Models\ModifyLoadBalancingStatusResponse ModifyLoadBalancingStatus(Models\ModifyLoadBalancingStatusRequest $req) This API is used to modify the status of a CLB instance.
  * @method Models\ModifyLogTopicTaskResponse ModifyLogTopicTask(Models\ModifyLogTopicTaskRequest $req) This API is used to modify a shipping task.
  * @method Models\ModifyOriginGroupResponse ModifyOriginGroup(Models\ModifyOriginGroupRequest $req) This API is used to modify an origin group.
  * @method Models\ModifyRuleResponse ModifyRule(Models\ModifyRuleRequest $req) This API is used to modify a rule in the rule engine.

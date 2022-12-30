@@ -31,17 +31,17 @@ use TencentCloud\Common\AbstractModel;
  * @method string getNotifyMode() Obtain Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
  * @method void setNotifyMode(string $NotifyMode) Set Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
  * @method string getNotifyType() Obtain The notification type. Valid values:
-<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>TDMQ-CMQ: Message queue</li>
-<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
-Default value: `TDMQ-CMQ`.
+<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>`TDMQ-CMQ`: Message queue</li>
+<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
  * @method void setNotifyType(string $NotifyType) Set The notification type. Valid values:
-<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>TDMQ-CMQ: Message queue</li>
-<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
-Default value: `TDMQ-CMQ`.
+<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>`TDMQ-CMQ`: Message queue</li>
+<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
  * @method string getNotifyUrl() Obtain HTTP callback URL, required if `NotifyType` is set to `URL`
  * @method void setNotifyUrl(string $NotifyUrl) Set HTTP callback URL, required if `NotifyType` is set to `URL`
  */
@@ -74,11 +74,11 @@ class TaskNotifyConfig extends AbstractModel
 
     /**
      * @var string The notification type. Valid values:
-<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>TDMQ-CMQ: Message queue</li>
-<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
-Default value: `TDMQ-CMQ`.
+<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>`TDMQ-CMQ`: Message queue</li>
+<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      */
     public $NotifyType;
 
@@ -94,11 +94,11 @@ Default value: `TDMQ-CMQ`.
      * @param string $QueueName The CMQ or TDMQ-CMQ queue to receive notifications. This parameter is valid when `CmqModel` is `Queue`.
      * @param string $NotifyMode Workflow notification method. Valid values: Finish, Change. If this parameter is left empty, `Finish` will be used.
      * @param string $NotifyType The notification type. Valid values:
-<li>CMQ: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
-<li>TDMQ-CMQ: Message queue</li>
-<li>URL: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
-<li>SCF: We do not recommend this notification type, which you need to configure in the SCF console.</li>
-Default value: `TDMQ-CMQ`.
+<li>`CMQ`: This value is no longer used. Please use `TDMQ-CMQ` instead.</li>
+<li>`TDMQ-CMQ`: Message queue</li>
+<li>`URL`: If `NotifyType` is set to `URL`, HTTP callbacks are sent to the URL specified by `NotifyUrl`. HTTP and JSON are used for the callbacks. The packet contains the response parameters of the `ParseNotification` API.</li>
+<li>`SCF`: This notification type is not recommended. You need to configure it in the SCF console.</li>
+<font color="red">Note: If you do not pass this parameter or pass in an empty string, `CMQ` will be used. To use a different notification type, specify this parameter accordingly.</font>
      * @param string $NotifyUrl HTTP callback URL, required if `NotifyType` is set to `URL`
      */
     function __construct()

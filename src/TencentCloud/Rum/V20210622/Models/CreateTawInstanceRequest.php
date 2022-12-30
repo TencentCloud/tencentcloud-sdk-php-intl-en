@@ -38,6 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodRetain(string $PeriodRetain) Set Billing for data storage
  * @method string getBuyingChannel() Obtain Instance purchase channel. Valid value: `cdn`.
  * @method void setBuyingChannel(string $BuyingChannel) Set Instance purchase channel. Valid value: `cdn`.
+ * @method integer getResourcePackageType() Obtain 
+ * @method void setResourcePackageType(integer $ResourcePackageType) Set 
+ * @method integer getResourcePackageNum() Obtain 
+ * @method void setResourcePackageNum(integer $ResourcePackageNum) Set 
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -87,6 +91,16 @@ class CreateTawInstanceRequest extends AbstractModel
     public $BuyingChannel;
 
     /**
+     * @var integer 
+     */
+    public $ResourcePackageType;
+
+    /**
+     * @var integer 
+     */
+    public $ResourcePackageNum;
+
+    /**
      * @param integer $AreaId Region ID (at least greater than 0)
      * @param integer $ChargeType Billing type (1: Pay-as-you-go).
      * @param integer $DataRetentionDays Data retention period (at least greater than 0)
@@ -96,6 +110,8 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $CountNum Number of data entries reported per day
      * @param string $PeriodRetain Billing for data storage
      * @param string $BuyingChannel Instance purchase channel. Valid value: `cdn`.
+     * @param integer $ResourcePackageType 
+     * @param integer $ResourcePackageNum 
      */
     function __construct()
     {
@@ -149,6 +165,14 @@ class CreateTawInstanceRequest extends AbstractModel
 
         if (array_key_exists("BuyingChannel",$param) and $param["BuyingChannel"] !== null) {
             $this->BuyingChannel = $param["BuyingChannel"];
+        }
+
+        if (array_key_exists("ResourcePackageType",$param) and $param["ResourcePackageType"] !== null) {
+            $this->ResourcePackageType = $param["ResourcePackageType"];
+        }
+
+        if (array_key_exists("ResourcePackageNum",$param) and $param["ResourcePackageNum"] !== null) {
+            $this->ResourcePackageNum = $param["ResourcePackageNum"];
         }
     }
 }

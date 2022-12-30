@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setLimit(integer $Limit) Set The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
  * @method string getContext() Obtain Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
  * @method void setContext(string $Context) Set Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
- * @method string getQuery() Obtain Query statement, which is required and can contain up to 4,096 characters.
- * @method void setQuery(string $Query) Set Query statement, which is required and can contain up to 4,096 characters.
+ * @method string getQuery() Obtain Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
+ * @method void setQuery(string $Query) Set Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
  * @method string getEndTime() Obtain End time (required)
  * @method void setEndTime(string $EndTime) Set End time (required)
  */
@@ -70,7 +70,7 @@ class DescribeLogListRequest extends AbstractModel
     public $Context;
 
     /**
-     * @var string Query statement, which is required and can contain up to 4,096 characters.
+     * @var string Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
      */
     public $Query;
 
@@ -86,7 +86,7 @@ class DescribeLogListRequest extends AbstractModel
      * @param string $StartTime Start time (required)
      * @param integer $Limit The number of raw logs returned for a single query. This parameter is required. Maximum value: 100.
      * @param string $Context Context, which is used to load more logs. Pass through the last `Context` value returned to get more log content (up to 10,000 raw logs). It will expire after 1 hour
-     * @param string $Query Query statement, which is required and can contain up to 4,096 characters.
+     * @param string $Query Query statement, which is required and can contain up to 4,096 characters, such as "id:120001 AND type:\"log\"".
      * @param string $EndTime End time (required)
      */
     function __construct()

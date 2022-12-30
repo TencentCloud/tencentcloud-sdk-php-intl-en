@@ -84,6 +84,12 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
  * @method void setText(string $Text) Set The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
  * @method array getKeywordSet() Obtain The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
  * @method void setKeywordSet(array $KeywordSet) Set The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+ * @method string getUrl() Obtain The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+ * @method void setUrl(string $Url) Set The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+ * @method string getPicUrlExpireTime() Obtain The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+ * @method void setPicUrlExpireTime(string $PicUrlExpireTime) Set The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  */
 class ReviewAudioVideoSegmentItem extends AbstractModel
 {
@@ -160,6 +166,17 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
     public $KeywordSet;
 
     /**
+     * @var string The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+     */
+    public $Url;
+
+    /**
+     * @var string The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
+     */
+    public $PicUrlExpireTime;
+
+    /**
      * @param float $StartTimeOffset The start time offset (seconds) of the segment.
      * @param float $EndTimeOffset The end time offset (seconds) of the segment.
      * @param float $Confidence The confidence score of the segment.
@@ -192,6 +209,9 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 <font color=red>Note</font>: This parameter is not supported currently.
      * @param string $Text The content of the suspicious text detected. This parameter is valid only if `Form` is `OCR` or `ASR`.
      * @param array $KeywordSet The keywords that match the suspicious text. This parameter is valid only if `Form` is `OCR` or `ASR`.
+     * @param string $Url The URL of a suspected image (which will be deleted
+ after `PicUrlExpireTime`).
+     * @param string $PicUrlExpireTime The expiration time of the suspected image URL in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     function __construct()
     {
@@ -244,6 +264,14 @@ Valid values when `Form` is `Voice` and `Label` is `Porn`:
 
         if (array_key_exists("KeywordSet",$param) and $param["KeywordSet"] !== null) {
             $this->KeywordSet = $param["KeywordSet"];
+        }
+
+        if (array_key_exists("Url",$param) and $param["Url"] !== null) {
+            $this->Url = $param["Url"];
+        }
+
+        if (array_key_exists("PicUrlExpireTime",$param) and $param["PicUrlExpireTime"] !== null) {
+            $this->PicUrlExpireTime = $param["PicUrlExpireTime"];
         }
     }
 }

@@ -14,30 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Teo\V20220901\Models;
+namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeLoadBalancing response structure.
+ * CreateCluster response structure.
  *
- * @method integer getTotalCount() Obtain Total number of records.
- * @method void setTotalCount(integer $TotalCount) Set Total number of records.
- * @method array getData() Obtain Load balancer information.
- * @method void setData(array $Data) Set Load balancer information.
+ * @method string getInstanceId() Obtain The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class DescribeLoadBalancingResponse extends AbstractModel
+class CreateClusterResponse extends AbstractModel
 {
     /**
-     * @var integer Total number of records.
+     * @var string The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $TotalCount;
-
-    /**
-     * @var array Load balancer information.
-     */
-    public $Data;
+    public $InstanceId;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -45,8 +41,8 @@ class DescribeLoadBalancingResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TotalCount Total number of records.
-     * @param array $Data Load balancer information.
+     * @param string $InstanceId The instance ID.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -62,17 +58,8 @@ class DescribeLoadBalancingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
-            $this->TotalCount = $param["TotalCount"];
-        }
-
-        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
-            $this->Data = [];
-            foreach ($param["Data"] as $key => $value){
-                $obj = new LoadBalancing();
-                $obj->deserialize($value);
-                array_push($this->Data, $obj);
-            }
+        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
+            $this->InstanceId = $param["InstanceId"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

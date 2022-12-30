@@ -18,19 +18,39 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * ModifyLoadBalancing response structure.
+ * DescribeDistributionL4AccessData response structure.
  *
+ * @method integer getTotalCount() Obtain Total number of query results.
+ * @method void setTotalCount(integer $TotalCount) Set Total number of query results.
+ * @method array getTopDataRecords() Obtain Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTopDataRecords(array $TopDataRecords) Set Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class ModifyLoadBalancingResponse extends AbstractModel
+class DescribeDistributionL4AccessDataResponse extends AbstractModel
 {
+    /**
+     * @var integer Total number of query results.
+     */
+    public $TotalCount;
+
+    /**
+     * @var array Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $TopDataRecords;
+
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param integer $TotalCount Total number of query results.
+     * @param array $TopDataRecords Distribution of connection duration
+Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +66,19 @@ class ModifyLoadBalancingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
+        if (array_key_exists("TopDataRecords",$param) and $param["TopDataRecords"] !== null) {
+            $this->TopDataRecords = [];
+            foreach ($param["TopDataRecords"] as $key => $value){
+                $obj = new TopDataRecord();
+                $obj->deserialize($value);
+                array_push($this->TopDataRecords, $obj);
+            }
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

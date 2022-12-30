@@ -90,6 +90,10 @@ The original configuration will apply if this field is not specified.
 The original configuration will apply if this field is not specified.
  * @method void setClientIpCountry(ClientIpCountry $ClientIpCountry) Set Whether to carry the location information of the client IP during origin-pull.
 The original configuration will apply if this field is not specified.
+ * @method Grpc getGrpc() Obtain Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+ * @method void setGrpc(Grpc $Grpc) Set Configuration of gRPC support
+The original configuration will apply if this field is not specified.
  */
 class ModifyZoneSettingRequest extends AbstractModel
 {
@@ -201,6 +205,12 @@ The original configuration will apply if this field is not specified.
     public $ClientIpCountry;
 
     /**
+     * @var Grpc Configuration of gRPC support
+The original configuration will apply if this field is not specified.
+     */
+    public $Grpc;
+
+    /**
      * @param string $ZoneId The site ID to be modified.
      * @param CacheConfig $CacheConfig Cache expiration time configuration
 The original configuration will apply if this field is not specified.
@@ -235,6 +245,8 @@ The original configuration will apply if this field is not specified.
      * @param Ipv6 $Ipv6 The IPv6 access configuration.
 The original configuration will apply if this field is not specified.
      * @param ClientIpCountry $ClientIpCountry Whether to carry the location information of the client IP during origin-pull.
+The original configuration will apply if this field is not specified.
+     * @param Grpc $Grpc Configuration of gRPC support
 The original configuration will apply if this field is not specified.
      */
     function __construct()
@@ -337,6 +349,11 @@ The original configuration will apply if this field is not specified.
         if (array_key_exists("ClientIpCountry",$param) and $param["ClientIpCountry"] !== null) {
             $this->ClientIpCountry = new ClientIpCountry();
             $this->ClientIpCountry->deserialize($param["ClientIpCountry"]);
+        }
+
+        if (array_key_exists("Grpc",$param) and $param["Grpc"] !== null) {
+            $this->Grpc = new Grpc();
+            $this->Grpc->deserialize($param["Grpc"]);
         }
     }
 }

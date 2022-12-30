@@ -50,18 +50,20 @@ use TencentCloud\Common\AbstractModel;
 <li>`5min`: 5 minute;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
- * @method array getFilters() Obtain The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`ruleId`: Filter by rule ID;</li>
-<li>`proxyId`: Filter by connection ID.</li>
- * @method void setFilters(array $Filters) Set The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`ruleId`: Filter by rule ID;</li>
-<li>`proxyId`: Filter by connection ID.</li>
- * @method string getArea() Obtain Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
- * @method void setArea(string $Area) Set Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+ * @method array getFilters() Obtain Filter conditions. See below for details: 
+<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+ * @method void setFilters(array $Filters) Set Filter conditions. See below for details: 
+<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+ * @method string getArea() Obtain Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
+ * @method void setArea(string $Area) Set Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
  */
 class DescribeTimingL4DataRequest extends AbstractModel
 {
@@ -105,16 +107,17 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $Interval;
 
     /**
-     * @var array The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`ruleId`: Filter by rule ID;</li>
-<li>`proxyId`: Filter by connection ID.</li>
+     * @var array Filter conditions. See below for details: 
+<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
      */
     public $Filters;
 
     /**
-     * @var string Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+     * @var string Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
      */
     public $Area;
 
@@ -134,12 +137,13 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>`5min`: 5 minute;</li>
 <li>`hour`: 1 hour;</li>
 <li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-     * @param array $Filters The key of the parameter QueryCondition, which is used to specify a filter. Values:
-<li>`ruleId`: Filter by rule ID;</li>
-<li>`proxyId`: Filter by connection ID.</li>
-     * @param string $Area Data storage region. Values:
-<li>`overseas`: Global (outside the Chinese mainland);</li>
-<li>`mainland`: Chinese mainland.</li>If this field is not specified, the data storage region will be determined based on the user’s location.
+     * @param array $Filters Filter conditions. See below for details: 
+<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+     * @param string $Area Geolocation scope. Values:
+<li>`overseas`: Regions outside the Chinese mainland</li>
+<li>`mainland`: Chinese mainland</li>
+<li>`global`: Global</li>If this field is not specified, the default value `global` is used.
      */
     function __construct()
     {

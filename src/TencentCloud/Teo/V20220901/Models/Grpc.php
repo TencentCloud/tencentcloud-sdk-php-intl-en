@@ -18,20 +18,28 @@ namespace TencentCloud\Teo\V20220901\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteLoadBalancing response structure.
+ * Configuration of gRPC support
  *
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+ * @method string getSwitch() Obtain Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
+ * @method void setSwitch(string $Switch) Set Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
  */
-class DeleteLoadBalancingResponse extends AbstractModel
+class Grpc extends AbstractModel
 {
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @var string Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
-    public $RequestId;
+    public $Switch;
 
     /**
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
+     * @param string $Switch Whether to enable gRPC support
+<li>`on`: Enable</li>
+<li>`off`: Disable</li>
      */
     function __construct()
     {
@@ -46,8 +54,8 @@ class DeleteLoadBalancingResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("Switch",$param) and $param["Switch"] !== null) {
+            $this->Switch = $param["Switch"];
         }
     }
 }
