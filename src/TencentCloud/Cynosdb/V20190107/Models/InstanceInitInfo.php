@@ -18,44 +18,44 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Instance initialization configuration information
  *
- * @method integer getCpu() Obtain 
- * @method void setCpu(integer $Cpu) Set 
- * @method integer getMemory() Obtain 
- * @method void setMemory(integer $Memory) Set 
- * @method string getInstanceType() Obtain 
- * @method void setInstanceType(string $InstanceType) Set 
- * @method integer getInstanceCount() Obtain 
- * @method void setInstanceCount(integer $InstanceCount) Set 
+ * @method integer getCpu() Obtain Instance CPU
+ * @method void setCpu(integer $Cpu) Set Instance CPU
+ * @method integer getMemory() Obtain Instance memory
+ * @method void setMemory(integer $Memory) Set Instance memory
+ * @method string getInstanceType() Obtain Instance type. Valid values:`rw`, `ro`.
+ * @method void setInstanceType(string $InstanceType) Set Instance type. Valid values:`rw`, `ro`.
+ * @method integer getInstanceCount() Obtain Number of the instances. Value range: 1-15.
+ * @method void setInstanceCount(integer $InstanceCount) Set Number of the instances. Value range: 1-15.
  */
 class InstanceInitInfo extends AbstractModel
 {
     /**
-     * @var integer 
+     * @var integer Instance CPU
      */
     public $Cpu;
 
     /**
-     * @var integer 
+     * @var integer Instance memory
      */
     public $Memory;
 
     /**
-     * @var string 
+     * @var string Instance type. Valid values:`rw`, `ro`.
      */
     public $InstanceType;
 
     /**
-     * @var integer 
+     * @var integer Number of the instances. Value range: 1-15.
      */
     public $InstanceCount;
 
     /**
-     * @param integer $Cpu 
-     * @param integer $Memory 
-     * @param string $InstanceType 
-     * @param integer $InstanceCount 
+     * @param integer $Cpu Instance CPU
+     * @param integer $Memory Instance memory
+     * @param string $InstanceType Instance type. Valid values:`rw`, `ro`.
+     * @param integer $InstanceCount Number of the instances. Value range: 1-15.
      */
     function __construct()
     {

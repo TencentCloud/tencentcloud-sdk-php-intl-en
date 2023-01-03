@@ -142,8 +142,8 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
  * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
  * @method string getSlaveZone() Obtain Multi-AZ address
  * @method void setSlaveZone(string $SlaveZone) Set Multi-AZ address
- * @method array getInstanceInitInfos() Obtain 
- * @method void setInstanceInitInfos(array $InstanceInitInfos) Set 
+ * @method array getInstanceInitInfos() Obtain Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
+ * @method void setInstanceInitInfos(array $InstanceInitInfos) Set Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
  */
 class CreateClustersRequest extends AbstractModel
 {
@@ -369,7 +369,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
     public $SlaveZone;
 
     /**
-     * @var array 
+     * @var array Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
      */
     public $InstanceInitInfos;
 
@@ -435,7 +435,7 @@ Clusters with storage billed in monthly subscription can’t be cloned or rolled
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
      * @param integer $ParamTemplateId Parameter template ID, which can be obtained by querying parameter template information “DescribeParamTemplates”
      * @param string $SlaveZone Multi-AZ address
-     * @param array $InstanceInitInfos 
+     * @param array $InstanceInitInfos Instance initialization configuration information, which is used to select instances with different specifications when purchasing a cluster.
      */
     function __construct()
     {
