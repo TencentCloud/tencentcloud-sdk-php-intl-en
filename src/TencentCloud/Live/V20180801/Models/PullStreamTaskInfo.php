@@ -74,16 +74,32 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
- * @method string getRegion() Obtain The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
- * @method void setRegion(string $Region) Set The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+ * @method string getRegion() Obtain The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
+ * @method void setRegion(string $Region) Set The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
  * @method integer getVodLoopTimes() Obtain The number of times to loop video files.
 -1: Loop indefinitely
 0: Do not loop
@@ -251,11 +267,19 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
     public $EndTime;
 
     /**
-     * @var string The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+     * @var string The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
      */
     public $Region;
 
@@ -405,11 +429,19 @@ Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.c
 It must be in UTC format.
 Example: 2019-01-08T10:00:00Z.
 Note: Beijing time is 8 hours ahead of UTC. The [ISO 8601 format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format) is used.
-     * @param string $Region The region of the source (please choose the nearest region).
-ap-beijing: North China (Beijing)
-ap-shanghai: East China (Shanghai)
-ap-guangzhou: South China (Guangzhou)
-ap-mumbai: India
+     * @param string $Region The region where the task was created.
+`ap-beijing`: North China (Beijing)
+`ap-shanghai`: East China (Shanghai)
+`ap-guangzhou`: South China (Guangzhou)
+`ap-mumbai`: India
+`ap-hongkong`: Hong Kong
+`eu-frankfurt`: Germany
+`ap-seoul`: Korea
+`ap-bangkok`: Thailand
+`ap-singapore`: Singapore
+`na-siliconvalley`: Western US
+`na-ashburn`: Eastern US
+`ap-tokyo`: Japan
      * @param integer $VodLoopTimes The number of times to loop video files.
 -1: Loop indefinitely
 0: Do not loop

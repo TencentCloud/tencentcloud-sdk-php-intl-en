@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBinlogArchiveVolume(integer $BinlogArchiveVolume) Set Capacity of archive log backups in bytes
  * @method integer getBinlogArchiveCount() Obtain Number of archived log backups
  * @method void setBinlogArchiveCount(integer $BinlogArchiveCount) Set Number of archived log backups
+ * @method integer getBinlogStandbyVolume() Obtain Log backup capacity of standard storage in bytes
+ * @method void setBinlogStandbyVolume(integer $BinlogStandbyVolume) Set Log backup capacity of standard storage in bytes
+ * @method integer getBinlogStandbyCount() Obtain Number of log backups of standard storage
+ * @method void setBinlogStandbyCount(integer $BinlogStandbyCount) Set Number of log backups of standard storage
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -68,6 +72,16 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
     public $BinlogArchiveCount;
 
     /**
+     * @var integer Log backup capacity of standard storage in bytes
+     */
+    public $BinlogStandbyVolume;
+
+    /**
+     * @var integer Number of log backups of standard storage
+     */
+    public $BinlogStandbyCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -79,6 +93,8 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
      * @param integer $RemoteBinlogCount Number of remote backups
      * @param integer $BinlogArchiveVolume Capacity of archive log backups in bytes
      * @param integer $BinlogArchiveCount Number of archived log backups
+     * @param integer $BinlogStandbyVolume Log backup capacity of standard storage in bytes
+     * @param integer $BinlogStandbyCount Number of log backups of standard storage
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -116,6 +132,14 @@ class DescribeBinlogBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("BinlogArchiveCount",$param) and $param["BinlogArchiveCount"] !== null) {
             $this->BinlogArchiveCount = $param["BinlogArchiveCount"];
+        }
+
+        if (array_key_exists("BinlogStandbyVolume",$param) and $param["BinlogStandbyVolume"] !== null) {
+            $this->BinlogStandbyVolume = $param["BinlogStandbyVolume"];
+        }
+
+        if (array_key_exists("BinlogStandbyCount",$param) and $param["BinlogStandbyCount"] !== null) {
+            $this->BinlogStandbyCount = $param["BinlogStandbyCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

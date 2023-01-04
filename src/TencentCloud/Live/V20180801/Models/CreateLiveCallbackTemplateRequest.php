@@ -58,6 +58,8 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method string getStreamMixNotifyUrl() Obtain Disused
  * @method void setStreamMixNotifyUrl(string $StreamMixNotifyUrl) Set Disused
+ * @method string getPushExceptionNotifyUrl() Obtain The push error callback URL.
+ * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) Set The push error callback URL.
  */
 class CreateLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -117,6 +119,11 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
     public $StreamMixNotifyUrl;
 
     /**
+     * @var string The push error callback URL.
+     */
+    public $PushExceptionNotifyUrl;
+
+    /**
      * @param string $TemplateName Template name.
 Maximum length: 255 bytes.
 Only letters, digits, underscores, and hyphens can be contained.
@@ -136,6 +143,7 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
      * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
      * @param string $StreamMixNotifyUrl Disused
+     * @param string $PushExceptionNotifyUrl The push error callback URL.
      */
     function __construct()
     {
@@ -184,6 +192,10 @@ Protocol document: [Event Message Notification](https://intl.cloud.tencent.com/d
 
         if (array_key_exists("StreamMixNotifyUrl",$param) and $param["StreamMixNotifyUrl"] !== null) {
             $this->StreamMixNotifyUrl = $param["StreamMixNotifyUrl"];
+        }
+
+        if (array_key_exists("PushExceptionNotifyUrl",$param) and $param["PushExceptionNotifyUrl"] !== null) {
+            $this->PushExceptionNotifyUrl = $param["PushExceptionNotifyUrl"];
         }
     }
 }

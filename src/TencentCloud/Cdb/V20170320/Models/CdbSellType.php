@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Purchasable instance type
  *
- * @method string getTypeName() Obtain Name of the purchasable instance
- * @method void setTypeName(string $TypeName) Set Name of the purchasable instance
+ * @method string getTypeName() Obtain Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
+ * @method void setTypeName(string $TypeName) Set Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
  * @method array getEngineVersion() Obtain Engine version number
  * @method void setEngineVersion(array $EngineVersion) Set Engine version number
  * @method array getConfigIds() Obtain Purchasable specifications ID
@@ -30,7 +30,7 @@ use TencentCloud\Common\AbstractModel;
 class CdbSellType extends AbstractModel
 {
     /**
-     * @var string Name of the purchasable instance
+     * @var string Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
      */
     public $TypeName;
 
@@ -45,7 +45,7 @@ class CdbSellType extends AbstractModel
     public $ConfigIds;
 
     /**
-     * @param string $TypeName Name of the purchasable instance
+     * @param string $TypeName Name of the purchasable instance. Valid values: `Z3` (High-availability instance. `DeviceType`:`UNIVERSAL`, `EXCLUSIVE`; `CVM` (basic instance. `DeviceType`: `BASIC`); `TKE` (basic v2 instance. `DeviceType`: `BASIC_V2`).
      * @param array $EngineVersion Engine version number
      * @param array $ConfigIds Purchasable specifications ID
      */

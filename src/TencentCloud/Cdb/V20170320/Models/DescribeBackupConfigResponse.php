@@ -50,6 +50,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableBinlogArchive(string $EnableBinlogArchive) Set Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
  * @method integer getBinlogArchiveDays() Obtain The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
  * @method void setBinlogArchiveDays(integer $BinlogArchiveDays) Set The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+ * @method string getEnableBackupStandby() Obtain Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method void setEnableBackupStandby(string $EnableBackupStandby) Set Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method integer getBackupStandbyDays() Obtain The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+ * @method void setBackupStandbyDays(integer $BackupStandbyDays) Set The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+ * @method string getEnableBinlogStandby() Obtain Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method void setEnableBinlogStandby(string $EnableBinlogStandby) Set Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+ * @method integer getBinlogStandbyDays() Obtain The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+ * @method void setBinlogStandbyDays(integer $BinlogStandbyDays) Set The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -131,6 +139,26 @@ class DescribeBackupConfigResponse extends AbstractModel
     public $BinlogArchiveDays;
 
     /**
+     * @var string Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public $EnableBackupStandby;
+
+    /**
+     * @var integer The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public $BackupStandbyDays;
+
+    /**
+     * @var string Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     */
+    public $EnableBinlogStandby;
+
+    /**
+     * @var integer The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     */
+    public $BinlogStandbyDays;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -151,6 +179,10 @@ class DescribeBackupConfigResponse extends AbstractModel
      * @param integer $BackupArchiveDays The period (in days) of how long a data backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
      * @param string $EnableBinlogArchive Whether to enable the archive backup of logs. Valid values: `off` (disable), `on` (enable). Default value: `off`.
      * @param integer $BinlogArchiveDays The period (in days) of how long a log backup is retained before being archived, which falls between 180 days and the number of days from the time it is created until it expires.
+     * @param string $EnableBackupStandby Whether to enable the standard storage policy for data backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param integer $BackupStandbyDays The period (in days) of how long a data backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
+     * @param string $EnableBinlogStandby Whether to enable the standard storage policy for log backup. Valid values: `off` (disable), `on` (enable). Default value: `off`.
+     * @param integer $BinlogStandbyDays The period (in days) of how long a log backup is retained before switching to standard storage, which falls between 30 days and the number of days from the time it is created until it expires. If the archive backup is enabled, this period cannot be greater than archive backup period.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -225,6 +257,22 @@ class DescribeBackupConfigResponse extends AbstractModel
 
         if (array_key_exists("BinlogArchiveDays",$param) and $param["BinlogArchiveDays"] !== null) {
             $this->BinlogArchiveDays = $param["BinlogArchiveDays"];
+        }
+
+        if (array_key_exists("EnableBackupStandby",$param) and $param["EnableBackupStandby"] !== null) {
+            $this->EnableBackupStandby = $param["EnableBackupStandby"];
+        }
+
+        if (array_key_exists("BackupStandbyDays",$param) and $param["BackupStandbyDays"] !== null) {
+            $this->BackupStandbyDays = $param["BackupStandbyDays"];
+        }
+
+        if (array_key_exists("EnableBinlogStandby",$param) and $param["EnableBinlogStandby"] !== null) {
+            $this->EnableBinlogStandby = $param["EnableBinlogStandby"];
+        }
+
+        if (array_key_exists("BinlogStandbyDays",$param) and $param["BinlogStandbyDays"] !== null) {
+            $this->BinlogStandbyDays = $param["BinlogStandbyDays"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

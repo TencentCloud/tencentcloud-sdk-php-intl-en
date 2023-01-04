@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDataBackupArchiveVolume(integer $DataBackupArchiveVolume) Set Total capacity of archive backups in the current region
  * @method integer getDataBackupArchiveCount() Obtain Total number of archive backups in the current region
  * @method void setDataBackupArchiveCount(integer $DataBackupArchiveCount) Set Total number of archive backups in the current region
+ * @method integer getDataBackupStandbyVolume() Obtain Total backup capacity of standard storage in current region
+ * @method void setDataBackupStandbyVolume(integer $DataBackupStandbyVolume) Set Total backup capacity of standard storage in current region
+ * @method integer getDataBackupStandbyCount() Obtain Total number of standard storage backups in current region
+ * @method void setDataBackupStandbyCount(integer $DataBackupStandbyCount) Set Total number of standard storage backups in current region
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -96,6 +100,16 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
     public $DataBackupArchiveCount;
 
     /**
+     * @var integer Total backup capacity of standard storage in current region
+     */
+    public $DataBackupStandbyVolume;
+
+    /**
+     * @var integer Total number of standard storage backups in current region
+     */
+    public $DataBackupStandbyCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -111,6 +125,8 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
      * @param integer $RemoteBackupCount Total number of remote backups
      * @param integer $DataBackupArchiveVolume Total capacity of archive backups in the current region
      * @param integer $DataBackupArchiveCount Total number of archive backups in the current region
+     * @param integer $DataBackupStandbyVolume Total backup capacity of standard storage in current region
+     * @param integer $DataBackupStandbyCount Total number of standard storage backups in current region
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -164,6 +180,14 @@ class DescribeDataBackupOverviewResponse extends AbstractModel
 
         if (array_key_exists("DataBackupArchiveCount",$param) and $param["DataBackupArchiveCount"] !== null) {
             $this->DataBackupArchiveCount = $param["DataBackupArchiveCount"];
+        }
+
+        if (array_key_exists("DataBackupStandbyVolume",$param) and $param["DataBackupStandbyVolume"] !== null) {
+            $this->DataBackupStandbyVolume = $param["DataBackupStandbyVolume"];
+        }
+
+        if (array_key_exists("DataBackupStandbyCount",$param) and $param["DataBackupStandbyCount"] !== null) {
+            $this->DataBackupStandbyCount = $param["DataBackupStandbyCount"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

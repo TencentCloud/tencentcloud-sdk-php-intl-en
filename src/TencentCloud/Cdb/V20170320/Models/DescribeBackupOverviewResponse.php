@@ -36,6 +36,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 Note: This field may return null, indicating that no valid value can be obtained.
  * @method void setBackupArchiveVolume(integer $BackupArchiveVolume) Set Archive backup capacity, which includes data backups and log backups.
 Note: This field may return null, indicating that no valid value can be obtained.
+ * @method integer getBackupStandbyVolume() Obtain Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setBackupStandbyVolume(integer $BackupStandbyVolume) Set Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -74,6 +78,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $BackupArchiveVolume;
 
     /**
+     * @var integer Backup capacity of standard storage, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $BackupStandbyVolume;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -86,6 +96,8 @@ Note: This field may return null, indicating that no valid value can be obtained
      * @param integer $RemoteBackupVolume Total capacity of backups of a user in the current region
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param integer $BackupArchiveVolume Archive backup capacity, which includes data backups and log backups.
+Note: This field may return null, indicating that no valid value can be obtained.
+     * @param integer $BackupStandbyVolume Backup capacity of standard storage, which includes data backups and log backups.
 Note: This field may return null, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -124,6 +136,10 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("BackupArchiveVolume",$param) and $param["BackupArchiveVolume"] !== null) {
             $this->BackupArchiveVolume = $param["BackupArchiveVolume"];
+        }
+
+        if (array_key_exists("BackupStandbyVolume",$param) and $param["BackupStandbyVolume"] !== null) {
+            $this->BackupStandbyVolume = $param["BackupStandbyVolume"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

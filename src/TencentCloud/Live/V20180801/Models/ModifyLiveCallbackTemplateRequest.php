@@ -40,6 +40,8 @@ use TencentCloud\Common\AbstractModel;
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
  * @method void setCallbackKey(string $CallbackKey) Set Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+ * @method string getPushExceptionNotifyUrl() Obtain The push error callback URL.
+ * @method void setPushExceptionNotifyUrl(string $PushExceptionNotifyUrl) Set The push error callback URL.
  */
 class ModifyLiveCallbackTemplateRequest extends AbstractModel
 {
@@ -90,6 +92,11 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
     public $CallbackKey;
 
     /**
+     * @var string The push error callback URL.
+     */
+    public $PushExceptionNotifyUrl;
+
+    /**
      * @param integer $TemplateId Template ID returned by the `DescribeLiveCallbackTemplates` API.
      * @param string $TemplateName Template name.
      * @param string $Description Description.
@@ -100,6 +107,7 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
      * @param string $PornCensorshipNotifyUrl Porn detection callback URL.
      * @param string $CallbackKey Callback key. The callback URL is public. For the callback signature, please see the event message notification document.
 [Event Message Notification](https://intl.cloud.tencent.com/document/product/267/32744?from_cn_redirect=1).
+     * @param string $PushExceptionNotifyUrl The push error callback URL.
      */
     function __construct()
     {
@@ -148,6 +156,10 @@ class ModifyLiveCallbackTemplateRequest extends AbstractModel
 
         if (array_key_exists("CallbackKey",$param) and $param["CallbackKey"] !== null) {
             $this->CallbackKey = $param["CallbackKey"];
+        }
+
+        if (array_key_exists("PushExceptionNotifyUrl",$param) and $param["PushExceptionNotifyUrl"] !== null) {
+            $this->PushExceptionNotifyUrl = $param["PushExceptionNotifyUrl"];
         }
     }
 }
