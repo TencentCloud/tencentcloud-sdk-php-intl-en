@@ -14,31 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tke\V20180525\Models;
+namespace TencentCloud\Cls\V20201016\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusterNodePoolFromExistingAsg response structure.
+ * AddMachineGroupInfo response structure.
  *
- * @method string getNodePoolId() Obtain Node pool ID
- * @method void setNodePoolId(string $NodePoolId) Set Node pool ID
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel
+class AddMachineGroupInfoResponse extends AbstractModel
 {
-    /**
-     * @var string Node pool ID
-     */
-    public $NodePoolId;
-
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
-     * @param string $NodePoolId Node pool ID
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,10 +46,6 @@ class CreateClusterNodePoolFromExistingAsgResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("NodePoolId",$param) and $param["NodePoolId"] !== null) {
-            $this->NodePoolId = $param["NodePoolId"];
-        }
-
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

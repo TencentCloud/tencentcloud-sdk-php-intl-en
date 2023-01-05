@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Cam\V20190116\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack request structure.
+ * CreateAccessKey request structure.
  *
- * @method integer getTrackId() Obtain Tracking set ID
- * @method void setTrackId(integer $TrackId) Set Tracking set ID
+ * @method integer getTargetUin() Obtain UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
+ * @method void setTargetUin(integer $TargetUin) Set UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class CreateAccessKeyRequest extends AbstractModel
 {
     /**
-     * @var integer Tracking set ID
+     * @var integer UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
      */
-    public $TrackId;
+    public $TargetUin;
 
     /**
-     * @param integer $TrackId Tracking set ID
+     * @param integer $TargetUin UIN of the specified user. If this parameter is left empty, the access key will be created for the current user by default.
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("TargetUin",$param) and $param["TargetUin"] !== null) {
+            $this->TargetUin = $param["TargetUin"];
         }
     }
 }

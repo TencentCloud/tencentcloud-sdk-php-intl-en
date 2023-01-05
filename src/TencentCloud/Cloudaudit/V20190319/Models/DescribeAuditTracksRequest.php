@@ -20,14 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditTracks request structure.
  *
-
+ * @method integer getPageNumber() Obtain Page number
+ * @method void setPageNumber(integer $PageNumber) Set Page number
+ * @method integer getPageSize() Obtain The number of tracking sets per page
+ * @method void setPageSize(integer $PageSize) Set The number of tracking sets per page
  */
 class DescribeAuditTracksRequest extends AbstractModel
 {
-
+    /**
+     * @var integer Page number
+     */
+    public $PageNumber;
 
     /**
+     * @var integer The number of tracking sets per page
+     */
+    public $PageSize;
 
+    /**
+     * @param integer $PageNumber Page number
+     * @param integer $PageSize The number of tracking sets per page
      */
     function __construct()
     {
@@ -42,6 +54,12 @@ class DescribeAuditTracksRequest extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("PageNumber",$param) and $param["PageNumber"] !== null) {
+            $this->PageNumber = $param["PageNumber"];
+        }
 
+        if (array_key_exists("PageSize",$param) and $param["PageSize"] !== null) {
+            $this->PageSize = $param["PageSize"];
+        }
     }
 }

@@ -48,6 +48,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setClusterAdvancedSettings(EdgeClusterAdvancedSettings $ClusterAdvancedSettings) Set Cluster advanced settings
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getLevel() Obtain TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setLevel(string $Level) Set TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EdgeCluster extends AbstractModel
 {
@@ -114,6 +118,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ClusterAdvancedSettings;
 
     /**
+     * @var string TKE edge cluster level
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Level;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $VpcId VPC ID
@@ -127,6 +137,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
      * @param integer $MaxNodePodNum Maximum number of Pods on the node
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param EdgeClusterAdvancedSettings $ClusterAdvancedSettings Cluster advanced settings
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Level TKE edge cluster level
 Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -189,6 +201,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
         if (array_key_exists("ClusterAdvancedSettings",$param) and $param["ClusterAdvancedSettings"] !== null) {
             $this->ClusterAdvancedSettings = new EdgeClusterAdvancedSettings();
             $this->ClusterAdvancedSettings->deserialize($param["ClusterAdvancedSettings"]);
+        }
+
+        if (array_key_exists("Level",$param) and $param["Level"] !== null) {
+            $this->Level = $param["Level"];
         }
     }
 }

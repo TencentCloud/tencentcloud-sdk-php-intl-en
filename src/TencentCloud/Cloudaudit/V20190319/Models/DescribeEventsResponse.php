@@ -20,25 +20,25 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeEvents response structure.
  *
- * @method boolean getListOver() Obtain Whether the logset ends.
- * @method void setListOver(boolean $ListOver) Set Whether the logset ends.
+ * @method boolean getListOver() Obtain Whether the log list has come to an end. `true`: Yes. Pagination is not required.
+ * @method void setListOver(boolean $ListOver) Set Whether the log list has come to an end. `true`: Yes. Pagination is not required.
  * @method integer getNextToken() Obtain Credential for viewing more logs.
  * @method void setNextToken(integer $NextToken) Set Credential for viewing more logs.
  * @method array getEvents() Obtain Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
  * @method void setEvents(array $Events) Set Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
- * @method integer getTotalCount() Obtain Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
- * @method void setTotalCount(integer $TotalCount) Set Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTotalCount(integer $TotalCount) Set This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeEventsResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether the logset ends.
+     * @var boolean Whether the log list has come to an end. `true`: Yes. Pagination is not required.
      */
     public $ListOver;
 
@@ -54,8 +54,8 @@ Note: `null` may be returned for this field, indicating that no valid values can
     public $Events;
 
     /**
-     * @var integer Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @var integer This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TotalCount;
 
@@ -65,12 +65,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $RequestId;
 
     /**
-     * @param boolean $ListOver Whether the logset ends.
+     * @param boolean $ListOver Whether the log list has come to an end. `true`: Yes. Pagination is not required.
      * @param integer $NextToken Credential for viewing more logs.
      * @param array $Events Logset.
 Note: `null` may be returned for this field, indicating that no valid values can be obtained.
-     * @param integer $TotalCount Total number of events.
-Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $TotalCount This parameter has been deprecated. Please use `ListOver` and `NextToken` for pagination, and read data of the next page when the value of `ListOver` is `false`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()

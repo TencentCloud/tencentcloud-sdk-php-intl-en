@@ -14,23 +14,26 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateAuditTrack response structure.
+ * DescribePrometheusZones response structure.
  *
- * @method integer getTrackId() Obtain Tracking set ID
- * @method void setTrackId(integer $TrackId) Set Tracking set ID
+ * @method array getZoneSet() Obtain Region list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setZoneSet(array $ZoneSet) Set Region list
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateAuditTrackResponse extends AbstractModel
+class DescribePrometheusZonesResponse extends AbstractModel
 {
     /**
-     * @var integer Tracking set ID
+     * @var array Region list
+Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $TrackId;
+    public $ZoneSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +41,8 @@ class CreateAuditTrackResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param integer $TrackId Tracking set ID
+     * @param array $ZoneSet Region list
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +58,13 @@ class CreateAuditTrackResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("ZoneSet",$param) and $param["ZoneSet"] !== null) {
+            $this->ZoneSet = [];
+            foreach ($param["ZoneSet"] as $key => $value){
+                $obj = new PrometheusZoneItem();
+                $obj->deserialize($value);
+                array_push($this->ZoneSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

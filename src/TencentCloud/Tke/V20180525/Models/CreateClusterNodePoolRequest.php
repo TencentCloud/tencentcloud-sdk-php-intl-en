@@ -22,10 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getAutoScalingGroupPara() Obtain AS group parameters
- * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) Set AS group parameters
- * @method string getLaunchConfigurePara() Obtain Running parameters
- * @method void setLaunchConfigurePara(string $LaunchConfigurePara) Set Running parameters
+ * @method string getAutoScalingGroupPara() Obtain AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+ * @method void setAutoScalingGroupPara(string $AutoScalingGroupPara) Set AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+ * @method string getLaunchConfigurePara() Obtain Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
+ * @method void setLaunchConfigurePara(string $LaunchConfigurePara) Set Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
  * @method InstanceAdvancedSettings getInstanceAdvancedSettings() Obtain Sample parameters
  * @method void setInstanceAdvancedSettings(InstanceAdvancedSettings $InstanceAdvancedSettings) Set Sample parameters
  * @method boolean getEnableAutoscale() Obtain Indicates whether to enable auto scaling
@@ -57,12 +57,12 @@ class CreateClusterNodePoolRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string AS group parameters
+     * @var string AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
      */
     public $AutoScalingGroupPara;
 
     /**
-     * @var string Running parameters
+     * @var string Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
      */
     public $LaunchConfigurePara;
 
@@ -123,8 +123,8 @@ class CreateClusterNodePoolRequest extends AbstractModel
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $AutoScalingGroupPara AS group parameters
-     * @param string $LaunchConfigurePara Running parameters
+     * @param string $AutoScalingGroupPara AS group parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20440?from_cn_redirect=1
+     * @param string $LaunchConfigurePara Running parameters. For details, see https://intl.cloud.tencent.com/document/product/377/20447?from_cn_redirect=1
      * @param InstanceAdvancedSettings $InstanceAdvancedSettings Sample parameters
      * @param boolean $EnableAutoscale Indicates whether to enable auto scaling
      * @param string $Name Node pool name

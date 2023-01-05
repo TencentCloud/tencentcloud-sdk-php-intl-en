@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setNextToken(integer $NextToken) Set Credential for viewing more logs.
  * @method integer getMaxResults() Obtain Max number of returned logs (up to 50).
  * @method void setMaxResults(integer $MaxResults) Set Max number of returned logs (up to 50).
- * @method array getLookupAttributes() Obtain Search criterion. Valid values: RequestId, EventName, ActionType (write/read), PrincipalId (sub-account), ResourceType, ResourceName, AccessKeyId, SensitiveAction, ApiErrorCode, and CamErrorCode.
- * @method void setLookupAttributes(array $LookupAttributes) Set Search criterion. Valid values: RequestId, EventName, ActionType (write/read), PrincipalId (sub-account), ResourceType, ResourceName, AccessKeyId, SensitiveAction, ApiErrorCode, and CamErrorCode.
+ * @method array getLookupAttributes() Obtain Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
+ * @method void setLookupAttributes(array $LookupAttributes) Set Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
  * @method integer getIsReturnLocation() Obtain Whether to return the IP location. `1`: yes, `0`: no.
  * @method void setIsReturnLocation(integer $IsReturnLocation) Set Whether to return the IP location. `1`: yes, `0`: no.
  */
@@ -56,7 +56,7 @@ class DescribeEventsRequest extends AbstractModel
     public $MaxResults;
 
     /**
-     * @var array Search criterion. Valid values: RequestId, EventName, ActionType (write/read), PrincipalId (sub-account), ResourceType, ResourceName, AccessKeyId, SensitiveAction, ApiErrorCode, and CamErrorCode.
+     * @var array Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
      */
     public $LookupAttributes;
 
@@ -70,7 +70,7 @@ class DescribeEventsRequest extends AbstractModel
      * @param integer $EndTime End timestamp in seconds (the time range for query is less than 30 days).
      * @param integer $NextToken Credential for viewing more logs.
      * @param integer $MaxResults Max number of returned logs (up to 50).
-     * @param array $LookupAttributes Search criterion. Valid values: RequestId, EventName, ActionType (write/read), PrincipalId (sub-account), ResourceType, ResourceName, AccessKeyId, SensitiveAction, ApiErrorCode, and CamErrorCode.
+     * @param array $LookupAttributes Search condition. Valid values: `RequestId`, `EventName`, `ActionType` (write/read), `PrincipalId` (sub-account), `ResourceType`, `ResourceName`, `AccessKeyId`, `SensitiveAction`, `ApiErrorCode`, `CamErrorCode`, and `Tags` (Format of AttributeValue: [{"key":"*","value":"*"}])
      * @param integer $IsReturnLocation Whether to return the IP location. `1`: yes, `0`: no.
      */
     function __construct()

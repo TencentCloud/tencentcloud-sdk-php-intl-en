@@ -40,6 +40,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOsName(string $OsName) Set Operating system name
  * @method string getOsCustomizeType() Obtain Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
  * @method void setOsCustomizeType(string $OsCustomizeType) Set Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+ * @method GPUArgs getGPUArgs() Obtain GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+ * @method void setGPUArgs(GPUArgs $GPUArgs) Set GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+ * @method string getUserScript() Obtain Base64-encoded custom script
+ * @method void setUserScript(string $UserScript) Set Base64-encoded custom script
+ * @method boolean getIgnoreExistedNode() Obtain Ignore existing nodes when update `Label` and `Taint`
+ * @method void setIgnoreExistedNode(boolean $IgnoreExistedNode) Set Ignore existing nodes when update `Label` and `Taint`
  * @method InstanceExtraArgs getExtraArgs() Obtain Node custom parameter
  * @method void setExtraArgs(InstanceExtraArgs $ExtraArgs) Set Node custom parameter
  * @method array getTags() Obtain Resource tag
@@ -48,6 +54,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUnschedulable(integer $Unschedulable) Set Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
  * @method boolean getDeletionProtection() Obtain Whether Deletion Protection is enabled
  * @method void setDeletionProtection(boolean $DeletionProtection) Set Whether Deletion Protection is enabled
+ * @method string getDockerGraphPath() Obtain Specified value of dockerd --graph. Default value: /var/lib/docker
+ * @method void setDockerGraphPath(string $DockerGraphPath) Set Specified value of dockerd --graph. Default value: /var/lib/docker
  */
 class ModifyClusterNodePoolRequest extends AbstractModel
 {
@@ -102,6 +110,21 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $OsCustomizeType;
 
     /**
+     * @var GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+     */
+    public $GPUArgs;
+
+    /**
+     * @var string Base64-encoded custom script
+     */
+    public $UserScript;
+
+    /**
+     * @var boolean Ignore existing nodes when update `Label` and `Taint`
+     */
+    public $IgnoreExistedNode;
+
+    /**
      * @var InstanceExtraArgs Node custom parameter
      */
     public $ExtraArgs;
@@ -122,6 +145,11 @@ class ModifyClusterNodePoolRequest extends AbstractModel
     public $DeletionProtection;
 
     /**
+     * @var string Specified value of dockerd --graph. Default value: /var/lib/docker
+     */
+    public $DockerGraphPath;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NodePoolId Node pool ID
      * @param string $Name Name
@@ -132,10 +160,14 @@ class ModifyClusterNodePoolRequest extends AbstractModel
      * @param boolean $EnableAutoscale Indicates whether auto scaling is enabled.
      * @param string $OsName Operating system name
      * @param string $OsCustomizeType Image tag, `DOCKER_CUSTOMIZE` (container customized tag), `GENERAL` (general tag, default value)
+     * @param GPUArgs $GPUArgs GPU driver version, CUDA version, cuDNN version and wether to enable MIG
+     * @param string $UserScript Base64-encoded custom script
+     * @param boolean $IgnoreExistedNode Ignore existing nodes when update `Label` and `Taint`
      * @param InstanceExtraArgs $ExtraArgs Node custom parameter
      * @param array $Tags Resource tag
      * @param integer $Unschedulable Sets whether the added node is schedulable. 0 (default): schedulable; other values: unschedulable. After node initialization is completed, you can run `kubectl uncordon nodename` to enable this node for scheduling.
      * @param boolean $DeletionProtection Whether Deletion Protection is enabled
+     * @param string $DockerGraphPath Specified value of dockerd --graph. Default value: /var/lib/docker
      */
     function __construct()
     {
@@ -200,6 +232,19 @@ class ModifyClusterNodePoolRequest extends AbstractModel
             $this->OsCustomizeType = $param["OsCustomizeType"];
         }
 
+        if (array_key_exists("GPUArgs",$param) and $param["GPUArgs"] !== null) {
+            $this->GPUArgs = new GPUArgs();
+            $this->GPUArgs->deserialize($param["GPUArgs"]);
+        }
+
+        if (array_key_exists("UserScript",$param) and $param["UserScript"] !== null) {
+            $this->UserScript = $param["UserScript"];
+        }
+
+        if (array_key_exists("IgnoreExistedNode",$param) and $param["IgnoreExistedNode"] !== null) {
+            $this->IgnoreExistedNode = $param["IgnoreExistedNode"];
+        }
+
         if (array_key_exists("ExtraArgs",$param) and $param["ExtraArgs"] !== null) {
             $this->ExtraArgs = new InstanceExtraArgs();
             $this->ExtraArgs->deserialize($param["ExtraArgs"]);
@@ -220,6 +265,10 @@ class ModifyClusterNodePoolRequest extends AbstractModel
 
         if (array_key_exists("DeletionProtection",$param) and $param["DeletionProtection"] !== null) {
             $this->DeletionProtection = $param["DeletionProtection"];
+        }
+
+        if (array_key_exists("DockerGraphPath",$param) and $param["DockerGraphPath"] !== null) {
+            $this->DockerGraphPath = $param["DockerGraphPath"];
         }
     }
 }

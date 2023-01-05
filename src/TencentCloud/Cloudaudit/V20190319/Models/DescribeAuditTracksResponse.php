@@ -20,17 +20,33 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeAuditTracks response structure.
  *
+ * @method array getTracks() Obtain Tracking set list
+ * @method void setTracks(array $Tracks) Set Tracking set list
+ * @method integer getTotalCount() Obtain Total number of tracking sets
+ * @method void setTotalCount(integer $TotalCount) Set Total number of tracking sets
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
 class DescribeAuditTracksResponse extends AbstractModel
 {
     /**
+     * @var array Tracking set list
+     */
+    public $Tracks;
+
+    /**
+     * @var integer Total number of tracking sets
+     */
+    public $TotalCount;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
 
     /**
+     * @param array $Tracks Tracking set list
+     * @param integer $TotalCount Total number of tracking sets
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -46,6 +62,19 @@ class DescribeAuditTracksResponse extends AbstractModel
         if ($param === null) {
             return;
         }
+        if (array_key_exists("Tracks",$param) and $param["Tracks"] !== null) {
+            $this->Tracks = [];
+            foreach ($param["Tracks"] as $key => $value){
+                $obj = new Tracks();
+                $obj->deserialize($value);
+                array_push($this->Tracks, $obj);
+            }
+        }
+
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
+        }
+
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
             $this->RequestId = $param["RequestId"];
         }

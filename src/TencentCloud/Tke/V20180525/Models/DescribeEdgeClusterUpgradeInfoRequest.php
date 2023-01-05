@@ -18,14 +18,14 @@ namespace TencentCloud\Tke\V20180525\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateClusterNodePoolFromExistingAsg request structure.
+ * DescribeEdgeClusterUpgradeInfo request structure.
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method string getAutoscalingGroupId() Obtain Scaling group ID
- * @method void setAutoscalingGroupId(string $AutoscalingGroupId) Set Scaling group ID
+ * @method string getEdgeVersion() Obtain Target TKEEdge version
+ * @method void setEdgeVersion(string $EdgeVersion) Set Target TKEEdge version
  */
-class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel
+class DescribeEdgeClusterUpgradeInfoRequest extends AbstractModel
 {
     /**
      * @var string Cluster ID
@@ -33,13 +33,13 @@ class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var string Scaling group ID
+     * @var string Target TKEEdge version
      */
-    public $AutoscalingGroupId;
+    public $EdgeVersion;
 
     /**
      * @param string $ClusterId Cluster ID
-     * @param string $AutoscalingGroupId Scaling group ID
+     * @param string $EdgeVersion Target TKEEdge version
      */
     function __construct()
     {
@@ -58,8 +58,8 @@ class CreateClusterNodePoolFromExistingAsgRequest extends AbstractModel
             $this->ClusterId = $param["ClusterId"];
         }
 
-        if (array_key_exists("AutoscalingGroupId",$param) and $param["AutoscalingGroupId"] !== null) {
-            $this->AutoscalingGroupId = $param["AutoscalingGroupId"];
+        if (array_key_exists("EdgeVersion",$param) and $param["EdgeVersion"] !== null) {
+            $this->EdgeVersion = $param["EdgeVersion"];
         }
     }
 }

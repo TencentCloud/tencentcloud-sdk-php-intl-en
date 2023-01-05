@@ -22,14 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getType() Obtain Field type. Valid values: `long`, `text`, `double`
  * @method void setType(string $Type) Set Field type. Valid values: `long`, `text`, `double`
- * @method string getTokenizer() Obtain Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
- * @method void setTokenizer(string $Tokenizer) Set Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+ * @method string getTokenizer() Obtain Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
+ * @method void setTokenizer(string $Tokenizer) Set Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
  * @method boolean getSqlFlag() Obtain Whether the analysis feature is enabled for the field
  * @method void setSqlFlag(boolean $SqlFlag) Set Whether the analysis feature is enabled for the field
  * @method boolean getContainZH() Obtain Whether Chinese characters are contained
@@ -45,10 +45,10 @@ class ValueInfo extends AbstractModel
     public $Type;
 
     /**
-     * @var string Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+     * @var string Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      */
     public $Tokenizer;
 
@@ -65,10 +65,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
     /**
      * @param string $Type Field type. Valid values: `long`, `text`, `double`
-     * @param string $Tokenizer Separator of fields. Each character represents a separator;
-Supports only English punctuation marks and (\n\t\r);
-`long` and `double` fields need to be null;
-We recommend you use (@&?|#()='",;:<>[]{}/ \n\t\r\\) as separators for `text` fields;
+     * @param string $Tokenizer Separator of fields. Each character represents a separator.
+Only symbols, \n\t\r, and escape character \ are supported.
+`long` and `double` fields need to be null.
+Note: \n\t\r can be directly enclosed in double quotes as the input parameter without escaping.
      * @param boolean $SqlFlag Whether the analysis feature is enabled for the field
      * @param boolean $ContainZH Whether Chinese characters are contained
 Note: this field may return `null`, indicating that no valid values can be obtained.

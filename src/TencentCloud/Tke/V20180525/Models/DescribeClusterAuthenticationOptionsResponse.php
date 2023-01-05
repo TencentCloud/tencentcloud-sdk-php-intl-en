@@ -28,6 +28,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setLatestOperationState(string $LatestOperationState) Set Result of the last modification. Values: `Updating`, `Success`, `Failed` or `TimeOut`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method OIDCConfigAuthenticationOptions getOIDCConfig() Obtain OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setOIDCConfig(OIDCConfigAuthenticationOptions $OIDCConfig) Set OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -46,6 +50,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $LatestOperationState;
 
     /**
+     * @var OIDCConfigAuthenticationOptions OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $OIDCConfig;
+
+    /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     public $RequestId;
@@ -55,6 +65,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $LatestOperationState Result of the last modification. Values: `Updating`, `Success`, `Failed` or `TimeOut`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param OIDCConfigAuthenticationOptions $OIDCConfig OIDC authentication configurations
+Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -77,6 +89,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("LatestOperationState",$param) and $param["LatestOperationState"] !== null) {
             $this->LatestOperationState = $param["LatestOperationState"];
+        }
+
+        if (array_key_exists("OIDCConfig",$param) and $param["OIDCConfig"] !== null) {
+            $this->OIDCConfig = new OIDCConfigAuthenticationOptions();
+            $this->OIDCConfig->deserialize($param["OIDCConfig"]);
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -14,24 +14,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Cloudaudit\V20190319\Models;
+namespace TencentCloud\Monitor\V20180724\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DeleteAuditTrack request structure.
+ * DescribePrometheusZones request structure.
  *
- * @method integer getTrackId() Obtain Tracking set ID
- * @method void setTrackId(integer $TrackId) Set Tracking set ID
+ * @method integer getRegionId() Obtain Region ID
+ * @method void setRegionId(integer $RegionId) Set Region ID
  */
-class DeleteAuditTrackRequest extends AbstractModel
+class DescribePrometheusZonesRequest extends AbstractModel
 {
     /**
-     * @var integer Tracking set ID
+     * @var integer Region ID
      */
-    public $TrackId;
+    public $RegionId;
 
     /**
-     * @param integer $TrackId Tracking set ID
+     * @param integer $RegionId Region ID
      */
     function __construct()
     {
@@ -46,8 +46,8 @@ class DeleteAuditTrackRequest extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TrackId",$param) and $param["TrackId"] !== null) {
-            $this->TrackId = $param["TrackId"];
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

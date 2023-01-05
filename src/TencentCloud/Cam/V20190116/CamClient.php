@@ -29,6 +29,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) This API (AttachRolePolicy) is used to associate a policy with a role.
  * @method Models\AttachUserPolicyResponse AttachUserPolicy(Models\AttachUserPolicyRequest $req) This API (AttachUserPolicy) is used to associates a policy with a user.
  * @method Models\ConsumeCustomMFATokenResponse ConsumeCustomMFAToken(Models\ConsumeCustomMFATokenRequest $req) This API is used to verify a custom multi-factor Token.
+ * @method Models\CreateAccessKeyResponse CreateAccessKey(Models\CreateAccessKeyRequest $req) This API is used to create an access key for a CAM user.
  * @method Models\CreateGroupResponse CreateGroup(Models\CreateGroupRequest $req) This API is used to create a user group.
  * @method Models\CreateOIDCConfigResponse CreateOIDCConfig(Models\CreateOIDCConfigRequest $req) This API is used to create role OIDC configurations.
  * @method Models\CreatePolicyResponse CreatePolicy(Models\CreatePolicyRequest $req) This API (CreatePolicy) is used to create a policy.
@@ -38,6 +39,8 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\CreateServiceLinkedRoleResponse CreateServiceLinkedRole(Models\CreateServiceLinkedRoleRequest $req) This API is used to create a service-linked role.
  * @method Models\CreateUserOIDCConfigResponse CreateUserOIDCConfig(Models\CreateUserOIDCConfigRequest $req) This API is used to create a user OIDC configuration. Only one user OIDC IdP can be created, and the user SAML SSO IdP will be automatically disabled after it is created.
  * @method Models\CreateUserSAMLConfigResponse CreateUserSAMLConfig(Models\CreateUserSAMLConfigRequest $req) This API is used to create user SAML configurations.
+ * @method Models\DeleteAccessKeyResponse DeleteAccessKey(Models\DeleteAccessKeyRequest $req) This API is used to delete an access key for a CAM user.
+Calling this API is a high-risk operation because the key cannot be recovered once deleted and Tencent Cloud will deny all requests that use this key. Proceed with caution.
  * @method Models\DeleteGroupResponse DeleteGroup(Models\DeleteGroupRequest $req) This API is used to delete a user group.
  * @method Models\DeleteOIDCConfigResponse DeleteOIDCConfig(Models\DeleteOIDCConfigRequest $req) This API is used to delete OIDC IdPs.
  * @method Models\DeletePolicyResponse DeletePolicy(Models\DeletePolicyRequest $req) This API (DeletePolicy) is used to delete a policy.
@@ -91,6 +94,7 @@ use TencentCloud\Cam\V20190116\Models as Models;
  * @method Models\SetMfaFlagResponse SetMfaFlag(Models\SetMfaFlagRequest $req) This API is used to set account verification for login and sensitive operations for sub-users.
  * @method Models\TagRoleResponse TagRole(Models\TagRoleRequest $req) This API is used to bind tags to a role.
  * @method Models\UntagRoleResponse UntagRole(Models\UntagRoleRequest $req) This API is used to unbind tags from a role.
+ * @method Models\UpdateAccessKeyResponse UpdateAccessKey(Models\UpdateAccessKeyRequest $req) This API is used to update an access key for a CAM user.
  * @method Models\UpdateAssumeRolePolicyResponse UpdateAssumeRolePolicy(Models\UpdateAssumeRolePolicyRequest $req) This API (UpdateAssumeRolePolicy) is used to modify the trust policy of a role.
  * @method Models\UpdateGroupResponse UpdateGroup(Models\UpdateGroupRequest $req) This API is used to update a user group.
  * @method Models\UpdateOIDCConfigResponse UpdateOIDCConfig(Models\UpdateOIDCConfigRequest $req) This API is used to modify role OIDC configurations.
