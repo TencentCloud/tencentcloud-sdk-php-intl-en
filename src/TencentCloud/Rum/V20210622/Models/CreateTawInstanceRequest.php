@@ -38,10 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPeriodRetain(string $PeriodRetain) Set Billing for data storage
  * @method string getBuyingChannel() Obtain Instance purchase channel. Valid value: `cdn`.
  * @method void setBuyingChannel(string $BuyingChannel) Set Instance purchase channel. Valid value: `cdn`.
- * @method integer getResourcePackageType() Obtain 
- * @method void setResourcePackageType(integer $ResourcePackageType) Set 
- * @method integer getResourcePackageNum() Obtain 
- * @method void setResourcePackageNum(integer $ResourcePackageNum) Set 
+ * @method integer getResourcePackageType() Obtain Type of prepaid resource pack (only required for prepaid mode)
+ * @method void setResourcePackageType(integer $ResourcePackageType) Set Type of prepaid resource pack (only required for prepaid mode)
+ * @method integer getResourcePackageNum() Obtain The number of prepaid resource packs (only required for prepaid mode)
+ * @method void setResourcePackageNum(integer $ResourcePackageNum) Set The number of prepaid resource packs (only required for prepaid mode)
  */
 class CreateTawInstanceRequest extends AbstractModel
 {
@@ -91,12 +91,12 @@ class CreateTawInstanceRequest extends AbstractModel
     public $BuyingChannel;
 
     /**
-     * @var integer 
+     * @var integer Type of prepaid resource pack (only required for prepaid mode)
      */
     public $ResourcePackageType;
 
     /**
-     * @var integer 
+     * @var integer The number of prepaid resource packs (only required for prepaid mode)
      */
     public $ResourcePackageNum;
 
@@ -110,8 +110,8 @@ class CreateTawInstanceRequest extends AbstractModel
      * @param string $CountNum Number of data entries reported per day
      * @param string $PeriodRetain Billing for data storage
      * @param string $BuyingChannel Instance purchase channel. Valid value: `cdn`.
-     * @param integer $ResourcePackageType 
-     * @param integer $ResourcePackageNum 
+     * @param integer $ResourcePackageType Type of prepaid resource pack (only required for prepaid mode)
+     * @param integer $ResourcePackageNum The number of prepaid resource packs (only required for prepaid mode)
      */
     function __construct()
     {

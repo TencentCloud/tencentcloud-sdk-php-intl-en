@@ -28,6 +28,7 @@ use TencentCloud\Ckafka\V20190819\Models as Models;
  * @method Models\BatchModifyTopicAttributesResponse BatchModifyTopicAttributes(Models\BatchModifyTopicAttributesRequest $req) This API is used to batch set topic attributes.
  * @method Models\CreateAclResponse CreateAcl(Models\CreateAclRequest $req) This API is used to add an ACL policy.
  * @method Models\CreateConsumerResponse CreateConsumer(Models\CreateConsumerRequest $req) This API is used to create a consumer group.
+ * @method Models\CreateInstancePostResponse CreateInstancePost(Models\CreateInstancePostRequest $req) This API is used to create a pay-as-you-go instance.
  * @method Models\CreatePartitionResponse CreatePartition(Models\CreatePartitionRequest $req) This API is used to add a partition in a topic.
  * @method Models\CreateTopicResponse CreateTopic(Models\CreateTopicRequest $req) This API is used to create a CKafka topic.
  * @method Models\CreateTopicIpWhiteListResponse CreateTopicIpWhiteList(Models\CreateTopicIpWhiteListRequest $req) This API is used to create a topic IP allowlist.
@@ -61,6 +62,7 @@ This API is used to get the list of topics in a CKafka instance of a user.
  * @method Models\DescribeUserResponse DescribeUser(Models\DescribeUserRequest $req) This API is used to query user information.
  * @method Models\FetchMessageByOffsetResponse FetchMessageByOffset(Models\FetchMessageByOffsetRequest $req) This API is used to query messages based on a specified offset position.
  * @method Models\FetchMessageListByOffsetResponse FetchMessageListByOffset(Models\FetchMessageListByOffsetRequest $req) This API is used to query the message list based on an offset.
+ * @method Models\InquireCkafkaPriceResponse InquireCkafkaPrice(Models\InquireCkafkaPriceRequest $req) This API is used to purchase a CKafka instance or query the instance renewal price.
  * @method Models\ModifyGroupOffsetsResponse ModifyGroupOffsets(Models\ModifyGroupOffsetsRequest $req) This API is used to set the consumer group (Groups) offset.
  * @method Models\ModifyInstanceAttributesResponse ModifyInstanceAttributes(Models\ModifyInstanceAttributesRequest $req) This API is used to set instance attributes.
  * @method Models\ModifyInstancePreResponse ModifyInstancePre(Models\ModifyInstancePreRequest $req) This API is used to change the configurations of a prepaid instance, such as disk capacity and bandwidth.

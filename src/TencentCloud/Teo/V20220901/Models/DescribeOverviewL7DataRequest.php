@@ -34,36 +34,38 @@ use TencentCloud\Common\AbstractModel;
 <li>`l7Flow_request`: Access requests;</li>
 <li>`l7Flow_outBandwidth`: Access bandwidth.</li>
 <li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+ * @method void setZoneIds(array $ZoneIds) Set List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
  * @method array getDomains() Obtain List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method void setDomains(array $Domains) Set List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
  * @method string getProtocol() Obtain The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
  * @method void setProtocol(string $Protocol) Set The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
- * @method string getInterval() Obtain The query time granularity. Values:
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+ * @method string getInterval() Obtain The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
- * @method void setInterval(string $Interval) Set The query time granularity. Values:
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+ * @method void setInterval(string $Interval) Set The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
- * @method array getFilters() Obtain Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
- * @method void setFilters(array $Filters) Set Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+ * @method array getFilters() Obtain Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
+ * @method void setFilters(array $Filters) Set Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -95,7 +97,8 @@ class DescribeOverviewL7DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
      */
     public $ZoneIds;
 
@@ -109,23 +112,23 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
      */
     public $Protocol;
 
     /**
-     * @var string The query time granularity. Values:
+     * @var string The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public $Interval;
 
     /**
-     * @var array Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+     * @var array Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
      */
     public $Filters;
 
@@ -145,21 +148,22 @@ class DescribeOverviewL7DataRequest extends AbstractModel
 <li>`l7Flow_request`: Access requests;</li>
 <li>`l7Flow_outBandwidth`: Access bandwidth.</li>
 <li>`l7Flow_hit_outFlux`: Cache hit traffic.</li>
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds List of sites
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
      * @param array $Domains List of subdomain names to be queried. All subdomain names will be selected if this field is not specified.
      * @param string $Protocol The protocol type. Values:
 <li>`http`: HTTP protocol;</li>
 <li>`https`: HTTPS protocol;</li>
 <li>`http2`: HTTP2 protocol;</li>
-<li>`all`: All protocol types.</li>This field will be set to the default value `all` if not specified.
-     * @param string $Interval The query time granularity. Values:
+<li>`all`:   All protocols. </li>If it's not specified, `all` is used. This parameter is not yet available now.
+     * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-     * @param array $Filters Filter conditions. See below for details: 
-<li>`tagKey`:<br>   Filter by the <strong>tag key</strong><br>   Type: String<br>   Required: No</li>
-<li>`tagValue`<br>   Filter by the <strong>tag value</strong><br>   Type: String<br>   Required: No</li>
+<li>`day`: One day</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * @param array $Filters Filters
+<li>tagKey<br>   Filter by the specified <strong>tag key</strong></li>
+<li>tagValue<br>   Filter by the specified <strong>tag value</strong></li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>

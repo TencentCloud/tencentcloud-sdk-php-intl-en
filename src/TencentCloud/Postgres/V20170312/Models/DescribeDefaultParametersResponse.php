@@ -14,33 +14,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTawInstance response structure.
+ * DescribeDefaultParameters response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getDealName() Obtain ID of prepaid order
+ * @method integer getTotalCount() Obtain Number of parameters
+ * @method void setTotalCount(integer $TotalCount) Set Number of parameters
+ * @method array getParamInfoSet() Obtain Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealName(string $DealName) Set ID of prepaid order
+ * @method void setParamInfoSet(array $ParamInfoSet) Set Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateTawInstanceResponse extends AbstractModel
+class DescribeDefaultParametersResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var integer Number of parameters
      */
-    public $InstanceId;
+    public $TotalCount;
 
     /**
-     * @var string ID of prepaid order
+     * @var array Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $DealName;
+    public $ParamInfoSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,8 +48,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $DealName ID of prepaid order
+     * @param integer $TotalCount Number of parameters
+     * @param array $ParamInfoSet Parameter information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
@@ -66,12 +66,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists("ParamInfoSet",$param) and $param["ParamInfoSet"] !== null) {
+            $this->ParamInfoSet = [];
+            foreach ($param["ParamInfoSet"] as $key => $value){
+                $obj = new ParamInfo();
+                $obj->deserialize($value);
+                array_push($this->ParamInfoSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

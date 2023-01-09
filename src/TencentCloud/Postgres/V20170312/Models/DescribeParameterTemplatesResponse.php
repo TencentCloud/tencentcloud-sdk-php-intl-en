@@ -14,33 +14,30 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Postgres\V20170312\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTawInstance response structure.
+ * DescribeParameterTemplates response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getDealName() Obtain ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealName(string $DealName) Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getTotalCount() Obtain The total number of eligible parameter templates
+ * @method void setTotalCount(integer $TotalCount) Set The total number of eligible parameter templates
+ * @method array getParameterTemplateSet() Obtain Parameter template list
+ * @method void setParameterTemplateSet(array $ParameterTemplateSet) Set Parameter template list
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateTawInstanceResponse extends AbstractModel
+class DescribeParameterTemplatesResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var integer The total number of eligible parameter templates
      */
-    public $InstanceId;
+    public $TotalCount;
 
     /**
-     * @var string ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @var array Parameter template list
      */
-    public $DealName;
+    public $ParameterTemplateSet;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +45,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $TotalCount The total number of eligible parameter templates
+     * @param array $ParameterTemplateSet Parameter template list
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +62,17 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
+        if (array_key_exists("TotalCount",$param) and $param["TotalCount"] !== null) {
+            $this->TotalCount = $param["TotalCount"];
         }
 
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists("ParameterTemplateSet",$param) and $param["ParameterTemplateSet"] !== null) {
+            $this->ParameterTemplateSet = [];
+            foreach ($param["ParameterTemplateSet"] as $key => $value){
+                $obj = new ParameterTemplate();
+                $obj->deserialize($value);
+                array_push($this->ParameterTemplateSet, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

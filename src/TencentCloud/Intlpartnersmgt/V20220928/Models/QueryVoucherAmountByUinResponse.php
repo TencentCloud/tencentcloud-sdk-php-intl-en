@@ -14,33 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Rum\V20210622\Models;
+namespace TencentCloud\Intlpartnersmgt\V20220928\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateTawInstance response structure.
+ * QueryVoucherAmountByUin response structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getDealName() Obtain ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDealName(string $DealName) Set ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getData() Obtain Customer voucher quota information
+ * @method void setData(array $Data) Set Customer voucher quota information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateTawInstanceResponse extends AbstractModel
+class QueryVoucherAmountByUinResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var array Customer voucher quota information
      */
-    public $InstanceId;
-
-    /**
-     * @var string ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $DealName;
+    public $Data;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -48,9 +38,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RequestId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $DealName ID of prepaid order
-Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Data Customer voucher quota information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -66,12 +54,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if ($param === null) {
             return;
         }
-        if (array_key_exists("InstanceId",$param) and $param["InstanceId"] !== null) {
-            $this->InstanceId = $param["InstanceId"];
-        }
-
-        if (array_key_exists("DealName",$param) and $param["DealName"] !== null) {
-            $this->DealName = $param["DealName"];
+        if (array_key_exists("Data",$param) and $param["Data"] !== null) {
+            $this->Data = [];
+            foreach ($param["Data"] as $key => $value){
+                $obj = new QueryVoucherAmountByUinItem();
+                $obj->deserialize($value);
+                array_push($this->Data, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

@@ -36,26 +36,30 @@ use TencentCloud\Common\AbstractModel;
 <li>`l4Flow_inFlux`: Inbound traffic;</li>
 <li>`l4Flow_outFlux`: Outbound traffic;</li>
 <li>`l4Flow_outPkt`: Outbound packets.</li>
- * @method array getZoneIds() Obtain List of sites to be queried. All sites will be selected if this field is not specified.
- * @method void setZoneIds(array $ZoneIds) Set List of sites to be queried. All sites will be selected if this field is not specified.
+ * @method array getZoneIds() Obtain List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
+ * @method void setZoneIds(array $ZoneIds) Set List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
  * @method array getProxyIds() Obtain List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
  * @method void setProxyIds(array $ProxyIds) Set List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
- * @method string getInterval() Obtain The query time granularity. Values:
+ * @method string getInterval() Obtain The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
- * @method void setInterval(string $Interval) Set The query time granularity. Values:
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+ * @method void setInterval(string $Interval) Set The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
- * @method array getFilters() Obtain Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
- * @method void setFilters(array $Filters) Set Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+ * @method array getFilters() Obtain Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
+ * @method void setFilters(array $Filters) Set Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
  * @method string getArea() Obtain Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
@@ -88,7 +92,9 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $MetricNames;
 
     /**
-     * @var array List of sites to be queried. All sites will be selected if this field is not specified.
+     * @var array List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
      */
     public $ZoneIds;
 
@@ -98,18 +104,18 @@ class DescribeTimingL4DataRequest extends AbstractModel
     public $ProxyIds;
 
     /**
-     * @var string The query time granularity. Values:
+     * @var string The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
      */
     public $Interval;
 
     /**
-     * @var array Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+     * @var array Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
      */
     public $Filters;
 
@@ -130,16 +136,18 @@ class DescribeTimingL4DataRequest extends AbstractModel
 <li>`l4Flow_inFlux`: Inbound traffic;</li>
 <li>`l4Flow_outFlux`: Outbound traffic;</li>
 <li>`l4Flow_outPkt`: Outbound packets.</li>
-     * @param array $ZoneIds List of sites to be queried. All sites will be selected if this field is not specified.
+     * @param array $ZoneIds List of sites
+If it's not specified, all sites are selected by default, and the query period must be within the last 30 days. 
+Enter the IDs of sites to query. The maximum query period is determined by the <a href="https://intl.cloud.tencent.com/document/product/1552/77380?from_cn_redirect=1#edgeone-.E5.A5.97.E9.A4.90">max data query period</a> of the bound plan. 
      * @param array $ProxyIds List of L4 proxy IDs. All L4 proxies will be selected if this field is not specified.
-     * @param string $Interval The query time granularity. Values:
+     * @param string $Interval The query granularity. Values:
 <li>`min`: 1 minute;</li>
-<li>`5min`: 5 minute;</li>
+<li>`5min`: 5 minutes;</li>
 <li>`hour`: 1 hour;</li>
-<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the interval between the start time and end time as follows: 1-minute granularity applies for a 1-hour interval, 5-minute granularity for a 2-day interval, 1-hour granularity for a 7-day interval, and 1-day granularity for an interval of over 7 days.
-     * @param array $Filters Filter conditions. See below for details: 
-<li>`ruleId`:<br>   Filter by the <strong>forwarding rule ID</strong><br>   Type: String<br>   Required: No</li>
-<li>`proxyId`:<br>   Filter by the <strong>L4 proxy ID</strong><br>   Type: String<br>   Required: No</li>
+<li>`day`: 1 day.</li>If this field is not specified, the granularity will be determined based on the query period. <br>Period <= 1 hour: `min`; <br>1 hour < Period <= 2 days: `5min`; <br>2 days < period <= 7 days: `hour`; <br>Period > 7 days: `day`.
+     * @param array $Filters Filters
+<li>ruleId<br>   Filter by the specified <strong>forwarding rule ID</strong></li>
+<li>proxyId<br>   Filter by the specified <strong>L4 agent ID</strong></li>
      * @param string $Area Geolocation scope. Values:
 <li>`overseas`: Regions outside the Chinese mainland</li>
 <li>`mainland`: Chinese mainland</li>
