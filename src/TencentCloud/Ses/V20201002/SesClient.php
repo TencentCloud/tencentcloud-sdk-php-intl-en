@@ -48,6 +48,7 @@ Default API request rate limit: 1 request/sec.
  * @method Models\ListSendTasksResponse ListSendTasks(Models\ListSendTasksRequest $req) This API is used to query batch email sending tasks (including immediate, scheduled, and recurring tasks) by page. You can query task data including the number of emails requested to be sent, the number of sent emails, the number of cached emails, and task status.
  * @method Models\SendEmailResponse SendEmail(Models\SendEmailRequest $req) This API is used to send an HTML or TEXT email triggered for authentication or transaction. By default, you can send emails using a template only.
  * @method Models\UpdateEmailIdentityResponse UpdateEmailIdentity(Models\UpdateEmailIdentityRequest $req) This API is used to verify whether your DNS configuration is correct.
+ * @method Models\UpdateEmailSmtpPassWordResponse UpdateEmailSmtpPassWord(Models\UpdateEmailSmtpPassWordRequest $req) This API is used to set the SMTP password. Initially, no SMTP password is set for your email address, so emails cannot be sent over SMTP. To send emails over SMTP, you must set the SMTP password. The set password can be changed subsequently.
  * @method Models\UpdateEmailTemplateResponse UpdateEmailTemplate(Models\UpdateEmailTemplateRequest $req) This API is used to update an email template. An updated template must be approved again before it can be used.
  */
 
