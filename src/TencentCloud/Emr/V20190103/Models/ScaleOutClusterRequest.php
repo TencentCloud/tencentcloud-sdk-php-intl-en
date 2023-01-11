@@ -21,11 +21,9 @@ use TencentCloud\Common\AbstractModel;
  * ScaleOutCluster request structure.
  *
  * @method string getInstanceChargeType() Obtain The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
  * @method string getInstanceId() Obtain The cluster instance ID.
@@ -75,7 +73,6 @@ class ScaleOutClusterRequest extends AbstractModel
 {
     /**
      * @var string The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
      */
@@ -176,7 +173,6 @@ You can call the [DescribeDisasterRecoverGroups](https://intl.cloud.tencent.com/
 
     /**
      * @param string $InstanceChargeType The node billing mode. Valid values:
-<li>`PREPAID`：The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
 <li>`SPOTPAID`: The spot instance mode (for task nodes only).</li>
      * @param string $InstanceId The cluster instance ID.

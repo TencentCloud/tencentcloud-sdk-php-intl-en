@@ -52,6 +52,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDescription(string $Description) Set Description
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWanIP() Obtain Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWanIP(string $WanIP) Set Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getWanStatus() Obtain Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setWanStatus(string $WanStatus) Set Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NetAddr extends AbstractModel
 {
@@ -104,6 +112,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Description;
 
     /**
+     * @var string Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanIP;
+
+    /**
+     * @var string Public network status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $WanStatus;
+
+    /**
      * @param string $Vip Private network IP
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Vport Private network port number
@@ -119,6 +139,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $UniqVpcId VPC ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Description Description
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WanIP Public IP
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $WanStatus Public network status
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -164,6 +188,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("WanIP",$param) and $param["WanIP"] !== null) {
+            $this->WanIP = $param["WanIP"];
+        }
+
+        if (array_key_exists("WanStatus",$param) and $param["WanStatus"] !== null) {
+            $this->WanStatus = $param["WanStatus"];
         }
     }
 }

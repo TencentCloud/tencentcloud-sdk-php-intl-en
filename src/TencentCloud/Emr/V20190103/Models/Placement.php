@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getZone() Obtain The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
  * @method void setZone(string $Zone) Set The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
- * @method integer getProjectId() Obtain The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
- * @method void setProjectId(integer $ProjectId) Set The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+ * @method integer getProjectId() Obtain Project ID of the instance. If no ID is passed in, the default project ID is used.
+ * @method void setProjectId(integer $ProjectId) Set Project ID of the instance. If no ID is passed in, the default project ID is used.
  */
 class Placement extends AbstractModel
 {
@@ -33,13 +33,13 @@ class Placement extends AbstractModel
     public $Zone;
 
     /**
-     * @var integer The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+     * @var integer Project ID of the instance. If no ID is passed in, the default project ID is used.
      */
     public $ProjectId;
 
     /**
      * @param string $Zone The ID of the availability zone where the instance resides, such as `ap-guangzhou-1`. You can call the [DescribeZones](https://intl.cloud.tencent.com/document/product/213/15707?from_cn_redirect=1) API and obtain this ID from the `Zone` field in the response.
-     * @param integer $ProjectId The ID of the project to which the instance belongs. You can call the [DescribeProject](https://intl.cloud.tencent.com/document/api/651/78725?from_cn_redirect=1) and obtain this ID from the `projectId` field in the response. If this is left empty, the ID of the default project is used.
+     * @param integer $ProjectId Project ID of the instance. If no ID is passed in, the default project ID is used.
      */
     function __construct()
     {

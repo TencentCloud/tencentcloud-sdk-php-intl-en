@@ -54,62 +54,146 @@ deleted
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method integer getInstanceNum() Obtain Number of instances
  * @method void setInstanceNum(integer $InstanceNum) Set Number of instances
- * @method string getUin() Obtain User `uin`
- * @method void setUin(string $Uin) Set User `uin`
+ * @method string getUin() Obtain User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUin(string $Uin) Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDbType() Obtain Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDbType(string $DbType) Set Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getAppId() Obtain User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAppId(integer $AppId) Set User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStatusDesc() Obtain Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStatusDesc(string $StatusDesc) Set Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCreateTime(string $CreateTime) Set Cluster creation time
- * @method integer getPayMode() Obtain Billing mode. 0: pay-as-you-go; 1: monthly subscription
- * @method void setPayMode(integer $PayMode) Set Billing mode. 0: pay-as-you-go; 1: monthly subscription
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getPayMode() Obtain Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPayMode(integer $PayMode) Set Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getPeriodEndTime() Obtain End time
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setPeriodEndTime(string $PeriodEndTime) Set End time
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVip() Obtain Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVip(string $Vip) Set Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getVport() Obtain Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVport(integer $Vport) Set Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getProjectID() Obtain Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProjectID(integer $ProjectID) Set Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getVpcId() Obtain VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVpcId(string $VpcId) Set VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getSubnetId() Obtain Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSubnetId(string $SubnetId) Set Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCynosVersion() Obtain TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setCynosVersion(string $CynosVersion) Set TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getStorageLimit() Obtain Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStorageLimit(integer $StorageLimit) Set Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getRenewFlag() Obtain Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRenewFlag(integer $RenewFlag) Set Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getProcessingTask() Obtain Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcessingTask(string $ProcessingTask) Set Task in progress
- * @method array getTasks() Obtain Array of tasks in cluster
- * @method void setTasks(array $Tasks) Set Array of tasks in cluster
- * @method array getResourceTags() Obtain Array of tags bound to cluster
- * @method void setResourceTags(array $ResourceTags) Set Array of tags bound to cluster
- * @method string getDbMode() Obtain Database type (`NORMAL` or `SERVERLESS`)
- * @method void setDbMode(string $DbMode) Set Database type (`NORMAL` or `SERVERLESS`)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTasks() Obtain Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTasks(array $Tasks) Set Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getResourceTags() Obtain Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setResourceTags(array $ResourceTags) Set Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbMode() Obtain Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDbMode(string $DbMode) Set Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getServerlessStatus() Obtain Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setServerlessStatus(string $ServerlessStatus) Set Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
- * @method integer getStorage() Obtain Prepaid cluster storage
- * @method void setStorage(integer $Storage) Set Prepaid cluster storage
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStorage() Obtain Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorage(integer $Storage) Set Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getStorageId() Obtain Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setStorageId(string $StorageId) Set Cluster storage ID used in prepaid storage modification
- * @method integer getStoragePayMode() Obtain Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
- * @method void setStoragePayMode(integer $StoragePayMode) Set Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
- * @method integer getMinStorageSize() Obtain The minimum storage corresponding to the compute specifications of the cluster
- * @method void setMinStorageSize(integer $MinStorageSize) Set The minimum storage corresponding to the compute specifications of the cluster
- * @method integer getMaxStorageSize() Obtain The maximum storage corresponding to the compute specifications of the cluster
- * @method void setMaxStorageSize(integer $MaxStorageSize) Set The maximum storage corresponding to the compute specifications of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStoragePayMode() Obtain Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMinStorageSize() Obtain The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMinStorageSize(integer $MinStorageSize) Set The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxStorageSize() Obtain The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method array getNetAddrs() Obtain Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setNetAddrs(array $NetAddrs) Set Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPhysicalZone() Obtain Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPhysicalZone(string $PhysicalZone) Set Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMasterZone() Obtain Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMasterZone(string $MasterZone) Set Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHasSlaveZone() Obtain Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHasSlaveZone(string $HasSlaveZone) Set Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSlaveZones() Obtain Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveZones(array $SlaveZones) Set Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessType() Obtain Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBusinessType(string $BusinessType) Set Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsFreeze() Obtain Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getOrderSource() Obtain Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOrderSource(string $OrderSource) Set Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Ability getAbility() Obtain Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAbility(Ability $Ability) Set Capability
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CynosdbCluster extends AbstractModel
 {
@@ -163,136 +247,210 @@ deleted
     public $InstanceNum;
 
     /**
-     * @var string User `uin`
+     * @var string User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Uin;
 
     /**
      * @var string Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DbType;
 
     /**
      * @var integer User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AppId;
 
     /**
      * @var string Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StatusDesc;
 
     /**
      * @var string Cluster creation time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CreateTime;
 
     /**
-     * @var integer Billing mode. 0: pay-as-you-go; 1: monthly subscription
+     * @var integer Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PayMode;
 
     /**
      * @var string End time
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PeriodEndTime;
 
     /**
      * @var string Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vip;
 
     /**
      * @var integer Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Vport;
 
     /**
      * @var integer Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProjectID;
 
     /**
      * @var string VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $VpcId;
 
     /**
      * @var string Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubnetId;
 
     /**
      * @var string TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $CynosVersion;
 
     /**
      * @var integer Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StorageLimit;
 
     /**
      * @var integer Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RenewFlag;
 
     /**
      * @var string Task in progress
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ProcessingTask;
 
     /**
-     * @var array Array of tasks in cluster
+     * @var array Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Tasks;
 
     /**
-     * @var array Array of tags bound to cluster
+     * @var array Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ResourceTags;
 
     /**
-     * @var string Database type (`NORMAL` or `SERVERLESS`)
+     * @var string Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DbMode;
 
     /**
      * @var string Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $ServerlessStatus;
 
     /**
-     * @var integer Prepaid cluster storage
+     * @var integer Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Storage;
 
     /**
      * @var string Cluster storage ID used in prepaid storage modification
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StorageId;
 
     /**
-     * @var integer Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
+     * @var integer Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $StoragePayMode;
 
     /**
-     * @var integer The minimum storage corresponding to the compute specifications of the cluster
+     * @var integer The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MinStorageSize;
 
     /**
-     * @var integer The maximum storage corresponding to the compute specifications of the cluster
+     * @var integer The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MaxStorageSize;
 
     /**
      * @var array Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $NetAddrs;
+
+    /**
+     * @var string Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PhysicalZone;
+
+    /**
+     * @var string Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MasterZone;
+
+    /**
+     * @var string Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HasSlaveZone;
+
+    /**
+     * @var array Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BusinessType;
+
+    /**
+     * @var string Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsFreeze;
+
+    /**
+     * @var string Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OrderSource;
+
+    /**
+     * @var Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Ability;
 
     /**
      * @param string $Status Cluster status. Valid values are as follows:
@@ -312,34 +470,76 @@ deleted
      * @param string $DbVersion Database version
      * @param string $ClusterId Cluster ID
      * @param integer $InstanceNum Number of instances
-     * @param string $Uin User `uin`
+     * @param string $Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbType Engine type
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $AppId User `appid`
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StatusDesc Cluster status description
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Cluster creation time
-     * @param integer $PayMode Billing mode. 0: pay-as-you-go; 1: monthly subscription
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $PayMode Billing mode. `0`: Pay-as-you-go; `1`: Monthly subscription.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $PeriodEndTime End time
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Vip Cluster read-write VIP
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Vport Cluster read-write vport
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $ProjectID Project ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VpcId VPC ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SubnetId Subnet ID
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CynosVersion TDSQL-C kernel version
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $StorageLimit Storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $RenewFlag Renewal flag
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ProcessingTask Task in progress
-     * @param array $Tasks Array of tasks in cluster
-     * @param array $ResourceTags Array of tags bound to cluster
-     * @param string $DbMode Database type (`NORMAL` or `SERVERLESS`)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tasks Array of tasks in the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $ResourceTags Array of tags bound to the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbMode Database type. Valid values: `NORMAL`, `SERVERLESS`.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $ServerlessStatus Serverless cluster status when the database type is `SERVERLESS`. Valid values:
-resume
-pause
-     * @param integer $Storage Prepaid cluster storage
+`resume`
+`pause`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Storage Prepaid cluster storage capacity
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $StorageId Cluster storage ID used in prepaid storage modification
-     * @param integer $StoragePayMode Billing mode of cluster storage. Valid values: `0` (postpaid), `1` (prepaid)
-     * @param integer $MinStorageSize The minimum storage corresponding to the compute specifications of the cluster
-     * @param integer $MaxStorageSize The maximum storage corresponding to the compute specifications of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StoragePayMode Billing mode of cluster storage. Valid values: `0` (pay-as-you-go), `1` (monthly subscription).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MinStorageSize The minimum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxStorageSize The maximum storage corresponding to the compute specification of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $NetAddrs Network information of the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SlaveZones Secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $OrderSource Order source
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Ability $Ability Capability
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -503,6 +703,39 @@ pause
                 $obj->deserialize($value);
                 array_push($this->NetAddrs, $obj);
             }
+        }
+
+        if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
+            $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("HasSlaveZone",$param) and $param["HasSlaveZone"] !== null) {
+            $this->HasSlaveZone = $param["HasSlaveZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
+        if (array_key_exists("IsFreeze",$param) and $param["IsFreeze"] !== null) {
+            $this->IsFreeze = $param["IsFreeze"];
+        }
+
+        if (array_key_exists("OrderSource",$param) and $param["OrderSource"] !== null) {
+            $this->OrderSource = $param["OrderSource"];
+        }
+
+        if (array_key_exists("Ability",$param) and $param["Ability"] !== null) {
+            $this->Ability = new Ability();
+            $this->Ability->deserialize($param["Ability"]);
         }
     }
 }

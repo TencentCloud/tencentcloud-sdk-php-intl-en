@@ -112,6 +112,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return null, indicating that no valid value can be obtained. 
  * @method void setIsHandsCluster(boolean $IsHandsCluster) Set Whether it is a manually deployed cluster
 Note: This field may return null, indicating that no valid value can be obtained. 
+ * @method array getOutSideSoftInfo() Obtain Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setOutSideSoftInfo(array $OutSideSoftInfo) Set Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class EmrListInstance extends AbstractModel
 {
@@ -274,6 +278,12 @@ Note: This field may return null, indicating that no valid value can be obtained
     public $IsHandsCluster;
 
     /**
+     * @var array Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $OutSideSoftInfo;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $StatusDesc Status description
 Note: This field may return `null`, indicating that no valid value can be obtained.
@@ -320,6 +330,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param boolean $IsHandsCluster Whether it is a manually deployed cluster
 Note: This field may return null, indicating that no valid value can be obtained. 
+     * @param array $OutSideSoftInfo Client component information.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -449,6 +461,15 @@ Note: This field may return null, indicating that no valid value can be obtained
 
         if (array_key_exists("IsHandsCluster",$param) and $param["IsHandsCluster"] !== null) {
             $this->IsHandsCluster = $param["IsHandsCluster"];
+        }
+
+        if (array_key_exists("OutSideSoftInfo",$param) and $param["OutSideSoftInfo"] !== null) {
+            $this->OutSideSoftInfo = [];
+            foreach ($param["OutSideSoftInfo"] as $key => $value){
+                $obj = new SoftDependInfo();
+                $obj->deserialize($value);
+                array_push($this->OutSideSoftInfo, $obj);
+            }
         }
     }
 }

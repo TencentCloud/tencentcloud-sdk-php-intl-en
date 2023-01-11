@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceMemory(integer $InstanceMemory) Set Memory
  * @method integer getInstanceStorage() Obtain Disk
  * @method void setInstanceStorage(integer $InstanceStorage) Set Disk
+ * @method string getInstanceRole() Obtain Instance role
+ * @method void setInstanceRole(string $InstanceRole) Set Instance role
  */
 class ClusterInstanceDetail extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ClusterInstanceDetail extends AbstractModel
     public $InstanceStorage;
 
     /**
+     * @var string Instance role
+     */
+    public $InstanceRole;
+
+    /**
      * @param string $InstanceId Instance ID
      * @param string $InstanceName Instance name
      * @param string $InstanceType Engine type
@@ -88,6 +95,7 @@ class ClusterInstanceDetail extends AbstractModel
      * @param integer $InstanceCpu Number of CPU cores
      * @param integer $InstanceMemory Memory
      * @param integer $InstanceStorage Disk
+     * @param string $InstanceRole Instance role
      */
     function __construct()
     {
@@ -132,6 +140,10 @@ class ClusterInstanceDetail extends AbstractModel
 
         if (array_key_exists("InstanceStorage",$param) and $param["InstanceStorage"] !== null) {
             $this->InstanceStorage = $param["InstanceStorage"];
+        }
+
+        if (array_key_exists("InstanceRole",$param) and $param["InstanceRole"] !== null) {
+            $this->InstanceRole = $param["InstanceRole"];
         }
     }
 }

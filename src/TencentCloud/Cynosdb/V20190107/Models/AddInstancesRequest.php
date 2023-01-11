@@ -48,6 +48,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOrderSource(string $OrderSource) Set Order source. String length range: [0,64).
  * @method integer getDealMode() Obtain Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
  * @method void setDealMode(integer $DealMode) Set Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+ * @method integer getParamTemplateId() Obtain Parameter template ID
+ * @method void setParamTemplateId(integer $ParamTemplateId) Set Parameter template ID
+ * @method array getInstanceParams() Obtain Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+ * @method void setInstanceParams(array $InstanceParams) Set Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
  */
 class AddInstancesRequest extends AbstractModel
 {
@@ -118,6 +122,16 @@ class AddInstancesRequest extends AbstractModel
     public $DealMode;
 
     /**
+     * @var integer Parameter template ID
+     */
+    public $ParamTemplateId;
+
+    /**
+     * @var array Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
+     */
+    public $InstanceParams;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param integer $Cpu Number of CPU cores
      * @param integer $Memory Memory in GB
@@ -132,6 +146,8 @@ class AddInstancesRequest extends AbstractModel
 <li> MYSQL </li>
      * @param string $OrderSource Order source. String length range: [0,64).
      * @param integer $DealMode Transaction mode. Valid values: `0` (place and pay for an order), `1` (place an order)
+     * @param integer $ParamTemplateId Parameter template ID
+     * @param array $InstanceParams Parameter list, which is valid only if `InstanceParams` is passed in to `ParamTemplateId`.
      */
     function __construct()
     {
@@ -196,6 +212,19 @@ class AddInstancesRequest extends AbstractModel
 
         if (array_key_exists("DealMode",$param) and $param["DealMode"] !== null) {
             $this->DealMode = $param["DealMode"];
+        }
+
+        if (array_key_exists("ParamTemplateId",$param) and $param["ParamTemplateId"] !== null) {
+            $this->ParamTemplateId = $param["ParamTemplateId"];
+        }
+
+        if (array_key_exists("InstanceParams",$param) and $param["InstanceParams"] !== null) {
+            $this->InstanceParams = [];
+            foreach ($param["InstanceParams"] as $key => $value){
+                $obj = new ModifyParamItem();
+                $obj->deserialize($value);
+                array_push($this->InstanceParams, $obj);
+            }
         }
     }
 }

@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setZone(string $Zone) Set AZ
  * @method boolean getHasStock() Obtain Whether there is an inventory.
  * @method void setHasStock(boolean $HasStock) Set Whether there is an inventory.
+ * @method integer getStockCount() Obtain Quantity in stock
+ * @method void setStockCount(integer $StockCount) Set Quantity in stock
  */
 class ZoneStockInfo extends AbstractModel
 {
@@ -38,8 +40,14 @@ class ZoneStockInfo extends AbstractModel
     public $HasStock;
 
     /**
+     * @var integer Quantity in stock
+     */
+    public $StockCount;
+
+    /**
      * @param string $Zone AZ
      * @param boolean $HasStock Whether there is an inventory.
+     * @param integer $StockCount Quantity in stock
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class ZoneStockInfo extends AbstractModel
 
         if (array_key_exists("HasStock",$param) and $param["HasStock"] !== null) {
             $this->HasStock = $param["HasStock"];
+        }
+
+        if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
+            $this->StockCount = $param["StockCount"];
         }
     }
 }

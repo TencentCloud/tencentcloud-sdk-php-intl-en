@@ -40,6 +40,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setZoneStockInfos(array $ZoneStockInfos) Set Inventory information in a region
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStockCount() Obtain Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStockCount(integer $StockCount) Set Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class InstanceSpec extends AbstractModel
 {
@@ -90,6 +94,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $ZoneStockInfos;
 
     /**
+     * @var integer Quantity in stock
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StockCount;
+
+    /**
      * @param integer $Cpu Number of instance CPU cores
      * @param integer $Memory Instance memory in GB
      * @param integer $MaxStorageSize Maximum instance storage capacity GB
@@ -99,6 +109,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $MaxIops Maximum IOPS
      * @param integer $MaxIoBandWidth Maximum bandwidth
      * @param array $ZoneStockInfos Inventory information in a region
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StockCount Quantity in stock
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -153,6 +165,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->ZoneStockInfos, $obj);
             }
+        }
+
+        if (array_key_exists("StockCount",$param) and $param["StockCount"] !== null) {
+            $this->StockCount = $param["StockCount"];
         }
     }
 }

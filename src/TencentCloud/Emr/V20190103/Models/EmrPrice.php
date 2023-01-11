@@ -18,84 +18,72 @@ namespace TencentCloud\Emr\V20190103\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * InquiryPriceScaleOutInstance response structure.
+ * EMR inquiry description
  *
- * @method string getOriginalCost() Obtain Original price.
+ * @method string getOriginalCost() Obtain The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setOriginalCost(string $OriginalCost) Set Original price.
+ * @method void setOriginalCost(string $OriginalCost) Set The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getDiscountCost() Obtain Discounted price.
+ * @method string getDiscountCost() Obtain The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDiscountCost(string $DiscountCost) Set Discounted price.
+ * @method void setDiscountCost(string $DiscountCost) Set The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getUnit() Obtain Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+ * @method string getUnit() Obtain The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setUnit(string $Unit) Set Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+ * @method void setUnit(string $Unit) Set The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method PriceResource getPriceSpec() Obtain Node spec queried for price.
+ * @method PriceResource getPriceSpec() Obtain The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setPriceSpec(PriceResource $PriceSpec) Set Node spec queried for price.
+ * @method void setPriceSpec(PriceResource $PriceSpec) Set The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method array getMultipleEmrPrice() Obtain The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+ * @method boolean getSupportSpotPaid() Obtain Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setMultipleEmrPrice(array $MultipleEmrPrice) Set The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+ * @method void setSupportSpotPaid(boolean $SupportSpotPaid) Set Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
- * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class InquiryPriceScaleOutInstanceResponse extends AbstractModel
+class EmrPrice extends AbstractModel
 {
     /**
-     * @var string Original price.
+     * @var string The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $OriginalCost;
 
     /**
-     * @var string Discounted price.
+     * @var string The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DiscountCost;
 
     /**
-     * @var string Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * @var string The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Unit;
 
     /**
-     * @var PriceResource Node spec queried for price.
+     * @var PriceResource The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $PriceSpec;
 
     /**
-     * @var array The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * @var boolean Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $MultipleEmrPrice;
+    public $SupportSpotPaid;
 
     /**
-     * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
-     */
-    public $RequestId;
-
-    /**
-     * @param string $OriginalCost Original price.
+     * @param string $OriginalCost The published price.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $DiscountCost Discounted price.
+     * @param string $DiscountCost The discounted price.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $Unit Time unit of scale-out. Valid value:
-<li>s: Second.</li>
+     * @param string $Unit The unit of the billable item.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param PriceResource $PriceSpec Node spec queried for price.
+     * @param PriceResource $PriceSpec The queried spec.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param array $MultipleEmrPrice The inquiry results corresponding to the specs specified by the input parameter `MultipleResources`, with the result of the first spec returned by other output parameters.
+     * @param boolean $SupportSpotPaid Whether spot instances are supported.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
     {
@@ -127,17 +115,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->PriceSpec->deserialize($param["PriceSpec"]);
         }
 
-        if (array_key_exists("MultipleEmrPrice",$param) and $param["MultipleEmrPrice"] !== null) {
-            $this->MultipleEmrPrice = [];
-            foreach ($param["MultipleEmrPrice"] as $key => $value){
-                $obj = new EmrPrice();
-                $obj->deserialize($value);
-                array_push($this->MultipleEmrPrice, $obj);
-            }
-        }
-
-        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
-            $this->RequestId = $param["RequestId"];
+        if (array_key_exists("SupportSpotPaid",$param) and $param["SupportSpotPaid"] !== null) {
+            $this->SupportSpotPaid = $param["SupportSpotPaid"];
         }
     }
 }

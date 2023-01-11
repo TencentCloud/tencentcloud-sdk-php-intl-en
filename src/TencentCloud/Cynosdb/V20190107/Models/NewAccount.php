@@ -18,26 +18,28 @@ namespace TencentCloud\Cynosdb\V20190107\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Newly created account
+ * The newly created x08 account
  *
- * @method string getAccountName() Obtain Account name
- * @method void setAccountName(string $AccountName) Set Account name
- * @method string getAccountPassword() Obtain Password
- * @method void setAccountPassword(string $AccountPassword) Set Password
+ * @method string getAccountName() Obtain Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+ * @method void setAccountName(string $AccountName) Set Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+ * @method string getAccountPassword() Obtain Password, which can contain 8-64 characters.
+ * @method void setAccountPassword(string $AccountPassword) Set Password, which can contain 8-64 characters.
  * @method string getHost() Obtain Host
  * @method void setHost(string $Host) Set Host
  * @method string getDescription() Obtain Description
  * @method void setDescription(string $Description) Set Description
+ * @method integer getMaxUserConnections() Obtain Maximum number of user connections, which cannot be above 10,240.
+ * @method void setMaxUserConnections(integer $MaxUserConnections) Set Maximum number of user connections, which cannot be above 10,240.
  */
 class NewAccount extends AbstractModel
 {
     /**
-     * @var string Account name
+     * @var string Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
      */
     public $AccountName;
 
     /**
-     * @var string Password
+     * @var string Password, which can contain 8-64 characters.
      */
     public $AccountPassword;
 
@@ -52,10 +54,16 @@ class NewAccount extends AbstractModel
     public $Description;
 
     /**
-     * @param string $AccountName Account name
-     * @param string $AccountPassword Password
+     * @var integer Maximum number of user connections, which cannot be above 10,240.
+     */
+    public $MaxUserConnections;
+
+    /**
+     * @param string $AccountName Account name, which can contain 1-16 letters, digits, and underscores. It must begin with a letter and end with a letter or digit.
+     * @param string $AccountPassword Password, which can contain 8-64 characters.
      * @param string $Host Host
      * @param string $Description Description
+     * @param integer $MaxUserConnections Maximum number of user connections, which cannot be above 10,240.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class NewAccount extends AbstractModel
 
         if (array_key_exists("Description",$param) and $param["Description"] !== null) {
             $this->Description = $param["Description"];
+        }
+
+        if (array_key_exists("MaxUserConnections",$param) and $param["MaxUserConnections"] !== null) {
+            $this->MaxUserConnections = $param["MaxUserConnections"];
         }
     }
 }

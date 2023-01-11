@@ -22,8 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getClusterId() Obtain Cluster ID
  * @method void setClusterId(string $ClusterId) Set Cluster ID
- * @method array getSnapshotIdList() Obtain Backup file ID
- * @method void setSnapshotIdList(array $SnapshotIdList) Set Backup file ID
+ * @method array getSnapshotIdList() Obtain Backup file ID. This field is used by legacy versions and thus not recommended.
+ * @method void setSnapshotIdList(array $SnapshotIdList) Set Backup file ID. This field is used by legacy versions and thus not recommended.
+ * @method array getBackupIds() Obtain Backup file ID. This field is recommended.
+ * @method void setBackupIds(array $BackupIds) Set Backup file ID. This field is recommended.
  */
 class DeleteBackupRequest extends AbstractModel
 {
@@ -33,13 +35,19 @@ class DeleteBackupRequest extends AbstractModel
     public $ClusterId;
 
     /**
-     * @var array Backup file ID
+     * @var array Backup file ID. This field is used by legacy versions and thus not recommended.
      */
     public $SnapshotIdList;
 
     /**
+     * @var array Backup file ID. This field is recommended.
+     */
+    public $BackupIds;
+
+    /**
      * @param string $ClusterId Cluster ID
-     * @param array $SnapshotIdList Backup file ID
+     * @param array $SnapshotIdList Backup file ID. This field is used by legacy versions and thus not recommended.
+     * @param array $BackupIds Backup file ID. This field is recommended.
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class DeleteBackupRequest extends AbstractModel
 
         if (array_key_exists("SnapshotIdList",$param) and $param["SnapshotIdList"] !== null) {
             $this->SnapshotIdList = $param["SnapshotIdList"];
+        }
+
+        if (array_key_exists("BackupIds",$param) and $param["BackupIds"] !== null) {
+            $this->BackupIds = $param["BackupIds"];
         }
     }
 }

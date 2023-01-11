@@ -32,8 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDynamicRetentionConfig(DynamicRetentionTime $DynamicRetentionConfig) Set Dynamic message retention policy configuration
  * @method integer getRebalanceTime() Obtain Modification of the rebalancing time after upgrade
  * @method void setRebalanceTime(integer $RebalanceTime) Set Modification of the rebalancing time after upgrade
- * @method integer getPublicNetwork() Obtain Timestamp
- * @method void setPublicNetwork(integer $PublicNetwork) Set Timestamp
+ * @method integer getPublicNetwork() Obtain Public network bandwidth
+ * @method void setPublicNetwork(integer $PublicNetwork) Set Public network bandwidth
  * @method DynamicDiskConfig getDynamicDiskConfig() Obtain Dynamic disk expansion policy configuration.
  * @method void setDynamicDiskConfig(DynamicDiskConfig $DynamicDiskConfig) Set Dynamic disk expansion policy configuration.
  * @method integer getMaxMessageByte() Obtain The size of a single message in bytes at the instance level.
@@ -72,7 +72,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
     public $RebalanceTime;
 
     /**
-     * @var integer Timestamp
+     * @var integer Public network bandwidth
      */
     public $PublicNetwork;
 
@@ -93,7 +93,7 @@ class ModifyInstanceAttributesRequest extends AbstractModel
      * @param ModifyInstanceAttributesConfig $Config Instance configuration
      * @param DynamicRetentionTime $DynamicRetentionConfig Dynamic message retention policy configuration
      * @param integer $RebalanceTime Modification of the rebalancing time after upgrade
-     * @param integer $PublicNetwork Timestamp
+     * @param integer $PublicNetwork Public network bandwidth
      * @param DynamicDiskConfig $DynamicDiskConfig Dynamic disk expansion policy configuration.
      * @param integer $MaxMessageByte The size of a single message in bytes at the instance level.
      */

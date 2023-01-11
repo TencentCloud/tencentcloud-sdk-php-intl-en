@@ -76,6 +76,94 @@ resume
 resuming
 pause
 pausing
+ * @method string getLogBin() Obtain Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLogBin(string $LogBin) Set Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPitrType() Obtain PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPitrType(string $PitrType) Set PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getPhysicalZone() Obtain Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPhysicalZone(string $PhysicalZone) Set Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getStorageId() Obtain Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorageId(string $StorageId) Set Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStorage() Obtain Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorage(integer $Storage) Set Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMaxStorageSize() Obtain Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMaxStorageSize(integer $MaxStorageSize) Set Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getMinStorageSize() Obtain Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMinStorageSize(integer $MinStorageSize) Set Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStoragePayMode() Obtain Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStoragePayMode(integer $StoragePayMode) Set Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getDbMode() Obtain Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDbMode(string $DbMode) Set Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getStorageLimit() Obtain Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStorageLimit(integer $StorageLimit) Set Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method Ability getAbility() Obtain Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAbility(Ability $Ability) Set Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCynosVersion() Obtain TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCynosVersion(string $CynosVersion) Set TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBusinessType() Obtain Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setBusinessType(string $BusinessType) Set Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHasSlaveZone() Obtain Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHasSlaveZone(string $HasSlaveZone) Set Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsFreeze() Obtain Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsFreeze(string $IsFreeze) Set Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTasks() Obtain Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTasks(array $Tasks) Set Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getMasterZone() Obtain Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMasterZone(string $MasterZone) Set Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getSlaveZones() Obtain Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSlaveZones(array $SlaveZones) Set Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getProxyStatus() Obtain Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setProxyStatus(string $ProxyStatus) Set Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsSkipTrade() Obtain Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsSkipTrade(string $IsSkipTrade) Set Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getIsOpenPasswordComplexity() Obtain Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsOpenPasswordComplexity(string $IsOpenPasswordComplexity) Set Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getNetworkStatus() Obtain Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setNetworkStatus(string $NetworkStatus) Set Network type
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class CynosdbClusterDetail extends AbstractModel
 {
@@ -204,6 +292,138 @@ pausing
     public $ServerlessStatus;
 
     /**
+     * @var string Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LogBin;
+
+    /**
+     * @var string PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PitrType;
+
+    /**
+     * @var string Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PhysicalZone;
+
+    /**
+     * @var string Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StorageId;
+
+    /**
+     * @var integer Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Storage;
+
+    /**
+     * @var integer Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MaxStorageSize;
+
+    /**
+     * @var integer Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MinStorageSize;
+
+    /**
+     * @var integer Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StoragePayMode;
+
+    /**
+     * @var string Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DbMode;
+
+    /**
+     * @var integer Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $StorageLimit;
+
+    /**
+     * @var Ability Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Ability;
+
+    /**
+     * @var string TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CynosVersion;
+
+    /**
+     * @var string Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $BusinessType;
+
+    /**
+     * @var string Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HasSlaveZone;
+
+    /**
+     * @var string Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsFreeze;
+
+    /**
+     * @var array Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Tasks;
+
+    /**
+     * @var string Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $MasterZone;
+
+    /**
+     * @var array Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SlaveZones;
+
+    /**
+     * @var string Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ProxyStatus;
+
+    /**
+     * @var string Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsSkipTrade;
+
+    /**
+     * @var string Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsOpenPasswordComplexity;
+
+    /**
+     * @var string Network type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $NetworkStatus;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $ClusterName Cluster name
      * @param string $Region Region
@@ -232,6 +452,50 @@ resume
 resuming
 pause
 pausing
+     * @param string $LogBin Binlog switch. Valid values: `ON`, `OFF`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PitrType PITR type. Valid values: `normal`, `redo_pitr`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $PhysicalZone Physical AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $StorageId Storage ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $Storage Storage capacity in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MaxStorageSize Maximum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $MinStorageSize Minimum storage specification in GB
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StoragePayMode Storage billing mode. Valid values: `1` (monthly subscription), `0` (pay-as-you-go).
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $DbMode Database type. Valid values: `normal`, `serverless`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $StorageLimit Maximum storage space
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param Ability $Ability Features supported by the cluster
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CynosVersion TDSQL-C version
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BusinessType Business type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HasSlaveZone Whether there is a secondary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsFreeze Whether to freeze
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tasks Task list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $MasterZone Primary AZ
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $SlaveZones Secondary AZ list
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ProxyStatus Proxy status
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsSkipTrade Whether to skip the transaction
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $IsOpenPasswordComplexity Whether to enable password complexity
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $NetworkStatus Network type
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -355,6 +619,100 @@ pausing
 
         if (array_key_exists("ServerlessStatus",$param) and $param["ServerlessStatus"] !== null) {
             $this->ServerlessStatus = $param["ServerlessStatus"];
+        }
+
+        if (array_key_exists("LogBin",$param) and $param["LogBin"] !== null) {
+            $this->LogBin = $param["LogBin"];
+        }
+
+        if (array_key_exists("PitrType",$param) and $param["PitrType"] !== null) {
+            $this->PitrType = $param["PitrType"];
+        }
+
+        if (array_key_exists("PhysicalZone",$param) and $param["PhysicalZone"] !== null) {
+            $this->PhysicalZone = $param["PhysicalZone"];
+        }
+
+        if (array_key_exists("StorageId",$param) and $param["StorageId"] !== null) {
+            $this->StorageId = $param["StorageId"];
+        }
+
+        if (array_key_exists("Storage",$param) and $param["Storage"] !== null) {
+            $this->Storage = $param["Storage"];
+        }
+
+        if (array_key_exists("MaxStorageSize",$param) and $param["MaxStorageSize"] !== null) {
+            $this->MaxStorageSize = $param["MaxStorageSize"];
+        }
+
+        if (array_key_exists("MinStorageSize",$param) and $param["MinStorageSize"] !== null) {
+            $this->MinStorageSize = $param["MinStorageSize"];
+        }
+
+        if (array_key_exists("StoragePayMode",$param) and $param["StoragePayMode"] !== null) {
+            $this->StoragePayMode = $param["StoragePayMode"];
+        }
+
+        if (array_key_exists("DbMode",$param) and $param["DbMode"] !== null) {
+            $this->DbMode = $param["DbMode"];
+        }
+
+        if (array_key_exists("StorageLimit",$param) and $param["StorageLimit"] !== null) {
+            $this->StorageLimit = $param["StorageLimit"];
+        }
+
+        if (array_key_exists("Ability",$param) and $param["Ability"] !== null) {
+            $this->Ability = new Ability();
+            $this->Ability->deserialize($param["Ability"]);
+        }
+
+        if (array_key_exists("CynosVersion",$param) and $param["CynosVersion"] !== null) {
+            $this->CynosVersion = $param["CynosVersion"];
+        }
+
+        if (array_key_exists("BusinessType",$param) and $param["BusinessType"] !== null) {
+            $this->BusinessType = $param["BusinessType"];
+        }
+
+        if (array_key_exists("HasSlaveZone",$param) and $param["HasSlaveZone"] !== null) {
+            $this->HasSlaveZone = $param["HasSlaveZone"];
+        }
+
+        if (array_key_exists("IsFreeze",$param) and $param["IsFreeze"] !== null) {
+            $this->IsFreeze = $param["IsFreeze"];
+        }
+
+        if (array_key_exists("Tasks",$param) and $param["Tasks"] !== null) {
+            $this->Tasks = [];
+            foreach ($param["Tasks"] as $key => $value){
+                $obj = new ObjectTask();
+                $obj->deserialize($value);
+                array_push($this->Tasks, $obj);
+            }
+        }
+
+        if (array_key_exists("MasterZone",$param) and $param["MasterZone"] !== null) {
+            $this->MasterZone = $param["MasterZone"];
+        }
+
+        if (array_key_exists("SlaveZones",$param) and $param["SlaveZones"] !== null) {
+            $this->SlaveZones = $param["SlaveZones"];
+        }
+
+        if (array_key_exists("ProxyStatus",$param) and $param["ProxyStatus"] !== null) {
+            $this->ProxyStatus = $param["ProxyStatus"];
+        }
+
+        if (array_key_exists("IsSkipTrade",$param) and $param["IsSkipTrade"] !== null) {
+            $this->IsSkipTrade = $param["IsSkipTrade"];
+        }
+
+        if (array_key_exists("IsOpenPasswordComplexity",$param) and $param["IsOpenPasswordComplexity"] !== null) {
+            $this->IsOpenPasswordComplexity = $param["IsOpenPasswordComplexity"];
+        }
+
+        if (array_key_exists("NetworkStatus",$param) and $param["NetworkStatus"] !== null) {
+            $this->NetworkStatus = $param["NetworkStatus"];
         }
     }
 }

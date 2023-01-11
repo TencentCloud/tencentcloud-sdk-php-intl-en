@@ -35,10 +35,8 @@ use TencentCloud\Common\AbstractModel;
 <li>Length limit: 6–36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
  * @method string getInstanceChargeType() Obtain The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
  * @method void setInstanceChargeType(string $InstanceChargeType) Set The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
  * @method LoginSettings getLoginSettings() Obtain The instance login setting. This parameter allows you to set a login password or key for your purchased node.
 <li>If a key is set, the password will be used for login to the native component WebUI only.</li>
@@ -122,7 +120,6 @@ class CreateClusterRequest extends AbstractModel
 
     /**
      * @var string The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
      */
     public $InstanceChargeType;
@@ -229,7 +226,6 @@ If `MetaType` is `USER_CUSTOM_META`, `MetaDataJdbcUrl`, `MetaDataUser`, and `Met
 <li>Length limit: 6–36 characters.</li>
 <li>Can contain only Chinese characters, letters, digits, hyphens (-), and underscores (_).</li>
      * @param string $InstanceChargeType The instance billing mode. Valid values:
-<li>`PREPAID`: The prepaid mode, namely monthly subscription.</li>
 <li>`POSTPAID_BY_HOUR`: The postpaid mode by hour.</li>
      * @param LoginSettings $LoginSettings The instance login setting. This parameter allows you to set a login password or key for your purchased node.
 <li>If a key is set, the password will be used for login to the native component WebUI only.</li>
