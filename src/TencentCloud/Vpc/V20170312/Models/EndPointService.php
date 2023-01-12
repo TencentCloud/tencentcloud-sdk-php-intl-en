@@ -44,6 +44,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time
  * @method void setCreateTime(string $CreateTime) Set Creation time
+ * @method string getServiceType() Obtain Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+ * @method void setServiceType(string $ServiceType) Set Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
  */
 class EndPointService extends AbstractModel
 {
@@ -100,6 +102,11 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $CreateTime;
 
     /**
+     * @var string Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
+     */
+    public $ServiceType;
+
+    /**
      * @param string $EndPointServiceId Endpoint service ID
      * @param string $VpcId VPC ID
      * @param string $ServiceOwner APP ID
@@ -112,6 +119,7 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param array $EndPointSet Array of endpoints
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time
+     * @param string $ServiceType Mounted PaaS service type. Values: `CLB`, `CDB`, `CRS`
      */
     function __construct()
     {
@@ -169,6 +177,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {
             $this->CreateTime = $param["CreateTime"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

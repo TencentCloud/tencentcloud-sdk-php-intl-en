@@ -26,6 +26,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Page offset
  * @method integer getSourceChannel() Obtain Source
  * @method void setSourceChannel(integer $SourceChannel) Set Source
+ * @method array getFilters() Obtain Filters for query 
+ * @method void setFilters(array $Filters) Set Filters for query 
+ * @method SortType getSortInfo() Obtain Sorting field
+ * @method void setSortInfo(SortType $SortInfo) Set Sorting field
+ * @method string getEnvironmentId() Obtain Environment ID
+ * @method void setEnvironmentId(string $EnvironmentId) Set Environment ID
  */
 class DescribeEnvironmentsRequest extends AbstractModel
 {
@@ -45,9 +51,27 @@ class DescribeEnvironmentsRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var array Filters for query 
+     */
+    public $Filters;
+
+    /**
+     * @var SortType Sorting field
+     */
+    public $SortInfo;
+
+    /**
+     * @var string Environment ID
+     */
+    public $EnvironmentId;
+
+    /**
      * @param integer $Limit Pagination limit
      * @param integer $Offset Page offset
      * @param integer $SourceChannel Source
+     * @param array $Filters Filters for query 
+     * @param SortType $SortInfo Sorting field
+     * @param string $EnvironmentId Environment ID
      */
     function __construct()
     {
@@ -72,6 +96,24 @@ class DescribeEnvironmentsRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = [];
+            foreach ($param["Filters"] as $key => $value){
+                $obj = new QueryFilter();
+                $obj->deserialize($value);
+                array_push($this->Filters, $obj);
+            }
+        }
+
+        if (array_key_exists("SortInfo",$param) and $param["SortInfo"] !== null) {
+            $this->SortInfo = new SortType();
+            $this->SortInfo->deserialize($param["SortInfo"]);
+        }
+
+        if (array_key_exists("EnvironmentId",$param) and $param["EnvironmentId"] !== null) {
+            $this->EnvironmentId = $param["EnvironmentId"];
         }
     }
 }

@@ -50,6 +50,30 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setContainerState(string $ContainerState) Set Container status
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method NodeInfo getNodeInfo() Obtain Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setNodeInfo(NodeInfo $NodeInfo) Set Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getStartTime() Obtain Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setStartTime(string $StartTime) Set Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method boolean getUnhealthy() Obtain Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method void setUnhealthy(boolean $Unhealthy) Set Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method string getUnhealthyWarningMsg() Obtain Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setUnhealthyWarningMsg(string $UnhealthyWarningMsg) Set Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getVersionId() Obtain Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setVersionId(string $VersionId) Set Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getApplicationName() Obtain Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setApplicationName(string $ApplicationName) Set Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
  */
 class RunVersionPod extends AbstractModel
 {
@@ -109,6 +133,42 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ContainerState;
 
     /**
+     * @var NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $NodeInfo;
+
+    /**
+     * @var string Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $StartTime;
+
+    /**
+     * @var boolean Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $Unhealthy;
+
+    /**
+     * @var string Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $UnhealthyWarningMsg;
+
+    /**
+     * @var string Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $VersionId;
+
+    /**
+     * @var string Application name
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ApplicationName;
+
+    /**
      * @param string $Webshell Shell address
      * @param string $PodId Pod ID
      * @param string $Status Status
@@ -123,6 +183,18 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param boolean $Ready Whether the pod is ready
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param string $ContainerState Container status
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param NodeInfo $NodeInfo Information of the node whether the instance locates
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $StartTime Start time
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param boolean $Unhealthy Whether the status is unhealthy or healthy
+Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param string $UnhealthyWarningMsg Warning message when the result is unhealthy
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $VersionId Version ID
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $ApplicationName Application name
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -176,6 +248,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ContainerState",$param) and $param["ContainerState"] !== null) {
             $this->ContainerState = $param["ContainerState"];
+        }
+
+        if (array_key_exists("NodeInfo",$param) and $param["NodeInfo"] !== null) {
+            $this->NodeInfo = new NodeInfo();
+            $this->NodeInfo->deserialize($param["NodeInfo"]);
+        }
+
+        if (array_key_exists("StartTime",$param) and $param["StartTime"] !== null) {
+            $this->StartTime = $param["StartTime"];
+        }
+
+        if (array_key_exists("Unhealthy",$param) and $param["Unhealthy"] !== null) {
+            $this->Unhealthy = $param["Unhealthy"];
+        }
+
+        if (array_key_exists("UnhealthyWarningMsg",$param) and $param["UnhealthyWarningMsg"] !== null) {
+            $this->UnhealthyWarningMsg = $param["UnhealthyWarningMsg"];
+        }
+
+        if (array_key_exists("VersionId",$param) and $param["VersionId"] !== null) {
+            $this->VersionId = $param["VersionId"];
+        }
+
+        if (array_key_exists("ApplicationName",$param) and $param["ApplicationName"] !== null) {
+            $this->ApplicationName = $param["ApplicationName"];
         }
     }
 }

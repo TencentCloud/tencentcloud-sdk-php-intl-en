@@ -56,6 +56,38 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) Set Whether to enable TSW
  * @method integer getLocked() Obtain Whether the environment is locked. `1`: locked; `0`: not locked
  * @method void setLocked(integer $Locked) Set Whether the environment is locked. `1`: locked; `0`: not locked
+ * @method string getAppId() Obtain User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAppId(string $AppId) Set User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getUin() Obtain User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setUin(string $Uin) Set User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getSubAccountUin() Obtain The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubAccountUin(string $SubAccountUin) Set The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getClusterId() Obtain Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setClusterId(string $ClusterId) Set Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTags() Obtain Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method void setTags(array $Tags) Set Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getHasAuthority() Obtain Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHasAuthority(boolean $HasAuthority) Set Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEnvType() Obtain Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setEnvType(string $EnvType) Set Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getRegionId() Obtain Region code
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setRegionId(string $RegionId) Set Region code
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class TemNamespaceInfo extends AbstractModel
 {
@@ -146,6 +178,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Locked;
 
     /**
+     * @var string User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AppId;
+
+    /**
+     * @var string User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Uin;
+
+    /**
+     * @var string The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $SubAccountUin;
+
+    /**
+     * @var string Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ClusterId;
+
+    /**
+     * @var array Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Tags;
+
+    /**
+     * @var boolean Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HasAuthority;
+
+    /**
+     * @var string Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $EnvType;
+
+    /**
+     * @var string Region code
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $RegionId;
+
+    /**
      * @param string $EnvironmentId Environment ID
      * @param string $Channel Channel
      * @param string $EnvironmentName Environment name
@@ -164,6 +244,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
      * @param string $ClusterStatus Environment cluster status
      * @param boolean $EnableTswTraceService Whether to enable TSW
      * @param integer $Locked Whether the environment is locked. `1`: locked; `0`: not locked
+     * @param string $AppId User AppId
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Uin User UIN
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $SubAccountUin The UIN of sub-account
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $ClusterId Application ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Tags Tag.
+Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $HasAuthority Whether it’s authorized to access the resource
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EnvType Environment type. Values: `test`, `pre`, `prod`
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $RegionId Region code
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -244,6 +340,43 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Locked",$param) and $param["Locked"] !== null) {
             $this->Locked = $param["Locked"];
+        }
+
+        if (array_key_exists("AppId",$param) and $param["AppId"] !== null) {
+            $this->AppId = $param["AppId"];
+        }
+
+        if (array_key_exists("Uin",$param) and $param["Uin"] !== null) {
+            $this->Uin = $param["Uin"];
+        }
+
+        if (array_key_exists("SubAccountUin",$param) and $param["SubAccountUin"] !== null) {
+            $this->SubAccountUin = $param["SubAccountUin"];
+        }
+
+        if (array_key_exists("ClusterId",$param) and $param["ClusterId"] !== null) {
+            $this->ClusterId = $param["ClusterId"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("HasAuthority",$param) and $param["HasAuthority"] !== null) {
+            $this->HasAuthority = $param["HasAuthority"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("RegionId",$param) and $param["RegionId"] !== null) {
+            $this->RegionId = $param["RegionId"];
         }
     }
 }

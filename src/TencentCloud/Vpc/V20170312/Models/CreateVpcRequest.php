@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getVpcName() Obtain The VPC name. The maximum length is 60 bytes.
  * @method void setVpcName(string $VpcName) Set The VPC name. The maximum length is 60 bytes.
- * @method string getCidrBlock() Obtain VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
- * @method void setCidrBlock(string $CidrBlock) Set VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+ * @method string getCidrBlock() Obtain VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
+ * @method void setCidrBlock(string $CidrBlock) Set VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
  * @method string getEnableMulticast() Obtain Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
  * @method void setEnableMulticast(string $EnableMulticast) Set Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
  * @method array getDnsServers() Obtain DNS address. A maximum of 4 addresses is supported.
@@ -41,7 +41,7 @@ class CreateVpcRequest extends AbstractModel
     public $VpcName;
 
     /**
-     * @var string VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+     * @var string VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
      */
     public $CidrBlock;
 
@@ -67,7 +67,7 @@ class CreateVpcRequest extends AbstractModel
 
     /**
      * @param string $VpcName The VPC name. The maximum length is 60 bytes.
-     * @param string $CidrBlock VPC CIDR blocks, which must fall within the following three private network IP ranges: 10.0.0.0/16, 172.16.0.0/16 and 192.168.0.0/16.
+     * @param string $CidrBlock VPC CIDR block, which must fall within the following three private network IP ranges: 10.0.0.0/12, 172.16.0.0/12, and 192.168.0.0/16.
      * @param string $EnableMulticast Whether multicast is enabled. `true`: Enabled. `false`: Not enabled.
      * @param array $DnsServers DNS address. A maximum of 4 addresses is supported.
      * @param string $DomainName Domain name of DHCP

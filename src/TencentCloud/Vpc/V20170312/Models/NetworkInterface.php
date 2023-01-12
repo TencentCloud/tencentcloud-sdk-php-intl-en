@@ -76,6 +76,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setAttachType(integer $AttachType) Set ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getResourceId() Obtain The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setResourceId(string $ResourceId) Set The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getQosLevel() Obtain Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setQosLevel(string $QosLevel) Set Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class NetworkInterface extends AbstractModel
 {
@@ -184,6 +200,22 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $AttachType;
 
     /**
+     * @var string The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ResourceId;
+
+    /**
+     * @var string Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $QosLevel;
+
+    /**
      * @param string $NetworkInterfaceId The ID of the ENI instance, such as `eni-f1xjkw1b`.
      * @param string $NetworkInterfaceName ENI Name
      * @param string $NetworkInterfaceDescription ENI description.
@@ -212,6 +244,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $AttachType ENI type. Valid values: `0` (standard); `1` (extension). Default value: `0`.
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ResourceId The ID of resource to retain the ENI primary IP. It’s used as the request parameters for deleting an ENI.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $QosLevel Service level
+<li>`DEFAULT`: Default level</lil>
+<li>`PT`: Gold</li>
+<li>`AU`: Silver</li>
+<li>`AG`: Bronze</li>
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -316,6 +356,14 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("AttachType",$param) and $param["AttachType"] !== null) {
             $this->AttachType = $param["AttachType"];
+        }
+
+        if (array_key_exists("ResourceId",$param) and $param["ResourceId"] !== null) {
+            $this->ResourceId = $param["ResourceId"];
+        }
+
+        if (array_key_exists("QosLevel",$param) and $param["QosLevel"] !== null) {
+            $this->QosLevel = $param["QosLevel"];
         }
     }
 }

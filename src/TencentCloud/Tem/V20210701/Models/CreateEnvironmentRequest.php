@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSourceChannel(integer $SourceChannel) Set Source channel
  * @method boolean getEnableTswTraceService() Obtain Whether to enable the TSW service
  * @method void setEnableTswTraceService(boolean $EnableTswTraceService) Set Whether to enable the TSW service
+ * @method array getTags() Obtain Tag
+ * @method void setTags(array $Tags) Set Tag
+ * @method string getEnvType() Obtain Environment type. Values: `test`, `pre`, `prod`
+ * @method void setEnvType(string $EnvType) Set Environment type. Values: `test`, `pre`, `prod`
+ * @method string getCreateRegion() Obtain The region to create the environment
+ * @method void setCreateRegion(string $CreateRegion) Set The region to create the environment
  */
 class CreateEnvironmentRequest extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CreateEnvironmentRequest extends AbstractModel
     public $EnableTswTraceService;
 
     /**
+     * @var array Tag
+     */
+    public $Tags;
+
+    /**
+     * @var string Environment type. Values: `test`, `pre`, `prod`
+     */
+    public $EnvType;
+
+    /**
+     * @var string The region to create the environment
+     */
+    public $CreateRegion;
+
+    /**
      * @param string $EnvironmentName Environment name
      * @param string $Vpc VPC name
      * @param array $SubnetIds List of subnets
@@ -80,6 +101,9 @@ class CreateEnvironmentRequest extends AbstractModel
      * @param string $K8sVersion Kubernetes version
      * @param integer $SourceChannel Source channel
      * @param boolean $EnableTswTraceService Whether to enable the TSW service
+     * @param array $Tags Tag
+     * @param string $EnvType Environment type. Values: `test`, `pre`, `prod`
+     * @param string $CreateRegion The region to create the environment
      */
     function __construct()
     {
@@ -120,6 +144,23 @@ class CreateEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("EnableTswTraceService",$param) and $param["EnableTswTraceService"] !== null) {
             $this->EnableTswTraceService = $param["EnableTswTraceService"];
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
+        }
+
+        if (array_key_exists("CreateRegion",$param) and $param["CreateRegion"] !== null) {
+            $this->CreateRegion = $param["CreateRegion"];
         }
     }
 }

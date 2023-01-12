@@ -28,8 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAutoAcceptFlag(boolean $AutoAcceptFlag) Set Whether to automatically accept
  * @method string getServiceInstanceId() Obtain Real server ID, such as `lb-xxx`.
  * @method void setServiceInstanceId(string $ServiceInstanceId) Set Real server ID, such as `lb-xxx`.
- * @method boolean getIsPassService() Obtain Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
- * @method void setIsPassService(boolean $IsPassService) Set Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+ * @method boolean getIsPassService() Obtain (Disused) Whether it’s a PaaS service
+ * @method void setIsPassService(boolean $IsPassService) Set (Disused) Whether it’s a PaaS service
+ * @method string getServiceType() Obtain Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+ * @method void setServiceType(string $ServiceType) Set Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
  */
 class CreateVpcEndPointServiceRequest extends AbstractModel
 {
@@ -54,16 +56,22 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
     public $ServiceInstanceId;
 
     /**
-     * @var boolean Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+     * @var boolean (Disused) Whether it’s a PaaS service
      */
     public $IsPassService;
+
+    /**
+     * @var string Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
+     */
+    public $ServiceType;
 
     /**
      * @param string $VpcId VPC instance ID
      * @param string $EndPointServiceName Endpoint service name
      * @param boolean $AutoAcceptFlag Whether to automatically accept
      * @param string $ServiceInstanceId Real server ID, such as `lb-xxx`.
-     * @param boolean $IsPassService Whether it is of the type `PassService`. Valid values: true: yes; false: no. Default value: false
+     * @param boolean $IsPassService (Disused) Whether it’s a PaaS service
+     * @param string $ServiceType Mounted PaaS service type. Values: `CLB` (default), `CDB`, `CRS`
      */
     function __construct()
     {
@@ -96,6 +104,10 @@ class CreateVpcEndPointServiceRequest extends AbstractModel
 
         if (array_key_exists("IsPassService",$param) and $param["IsPassService"] !== null) {
             $this->IsPassService = $param["IsPassService"];
+        }
+
+        if (array_key_exists("ServiceType",$param) and $param["ServiceType"] !== null) {
+            $this->ServiceType = $param["ServiceType"];
         }
     }
 }

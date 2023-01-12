@@ -126,20 +126,22 @@ If `openjdk` is selected, the value can be:
 If `konajdk` is selected, the value can be: 
 - ALPINE
 - TENCENTOS
- * @method EnablePrometheusConf getEnablePrometheusConf() Obtain Specifies whether to enable Prometheus metric
- * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) Set Specifies whether to enable Prometheus metric
- * @method integer getEnableTracing() Obtain `1`: Enable APM tracing (Skywalking)
+ * @method EnablePrometheusConf getEnablePrometheusConf() Obtain Configuration of metrics of this application
+ * @method void setEnablePrometheusConf(EnablePrometheusConf $EnablePrometheusConf) Set Configuration of metrics of this application
+ * @method integer getEnableTracing() Obtain `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
- * @method void setEnableTracing(integer $EnableTracing) Set `1`: Enable APM tracing (Skywalking)
+ * @method void setEnableTracing(integer $EnableTracing) Set `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
- * @method integer getEnableMetrics() Obtain 
- * @method void setEnableMetrics(integer $EnableMetrics) Set 
- * @method string getTcrInstanceId() Obtain 
- * @method void setTcrInstanceId(string $TcrInstanceId) Set 
- * @method string getRepoServer() Obtain 
- * @method void setRepoServer(string $RepoServer) Set 
- * @method integer getRepoType() Obtain 
- * @method void setRepoType(integer $RepoType) Set 
+ * @method integer getEnableMetrics() Obtain `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+ * @method void setEnableMetrics(integer $EnableMetrics) Set `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+ * @method string getTcrInstanceId() Obtain ID of the TCR instance used for image deployment
+ * @method void setTcrInstanceId(string $TcrInstanceId) Set ID of the TCR instance used for image deployment
+ * @method string getRepoServer() Obtain Image server address for image deployment
+ * @method void setRepoServer(string $RepoServer) Set Image server address for image deployment
+ * @method integer getRepoType() Obtain Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
+ * @method void setRepoType(integer $RepoType) Set Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
  */
 class DeployApplicationRequest extends AbstractModel
 {
@@ -353,33 +355,34 @@ If `konajdk` is selected, the value can be:
     public $OsFlavour;
 
     /**
-     * @var EnablePrometheusConf Specifies whether to enable Prometheus metric
+     * @var EnablePrometheusConf Configuration of metrics of this application
      */
     public $EnablePrometheusConf;
 
     /**
-     * @var integer `1`: Enable APM tracing (Skywalking)
+     * @var integer `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
      */
     public $EnableTracing;
 
     /**
-     * @var integer 
+     * @var integer `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
      */
     public $EnableMetrics;
 
     /**
-     * @var string 
+     * @var string ID of the TCR instance used for image deployment
      */
     public $TcrInstanceId;
 
     /**
-     * @var string 
+     * @var string Image server address for image deployment
      */
     public $RepoServer;
 
     /**
-     * @var integer 
+     * @var integer Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
      */
     public $RepoType;
 
@@ -437,13 +440,14 @@ If `openjdk` is selected, the value can be:
 If `konajdk` is selected, the value can be: 
 - ALPINE
 - TENCENTOS
-     * @param EnablePrometheusConf $EnablePrometheusConf Specifies whether to enable Prometheus metric
-     * @param integer $EnableTracing `1`: Enable APM tracing (Skywalking)
+     * @param EnablePrometheusConf $EnablePrometheusConf Configuration of metrics of this application
+     * @param integer $EnableTracing `1`: Automatically enable APM tracing (Skywalking)
 `0`: Disable APM tracing
-     * @param integer $EnableMetrics 
-     * @param string $TcrInstanceId 
-     * @param string $RepoServer 
-     * @param integer $RepoType 
+     * @param integer $EnableMetrics `1`: Automatically enable metrics collection (open-telemetry)
+`0`: Disable metrics collection
+     * @param string $TcrInstanceId ID of the TCR instance used for image deployment
+     * @param string $RepoServer Image server address for image deployment
+     * @param integer $RepoType Type of the repository. `0`: TCR Personal; `1`: TCR Enterprise; `2`: Public repository; `3`: TEM hosted repository; `4`: Demo repository
      */
     function __construct()
     {

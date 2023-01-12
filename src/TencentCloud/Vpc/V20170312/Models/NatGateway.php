@@ -72,6 +72,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
  * @method void setExclusiveGatewayBandwidth(integer $ExclusiveGatewayBandwidth) Set Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getRestrictState() Obtain Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRestrictState(string $RestrictState) Set Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NatGateway extends AbstractModel
 {
@@ -174,6 +178,12 @@ Note: This field may return `null`, indicating that no valid values can be obtai
     public $ExclusiveGatewayBandwidth;
 
     /**
+     * @var string Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RestrictState;
+
+    /**
      * @param string $NatGatewayId NAT gateway ID.
      * @param string $NatGatewayName NAT gateway name.
      * @param string $CreatedTime NAT gateway creation time.
@@ -200,6 +210,8 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 Note: This field may return `null`, indicating that no valid values can be obtained.
      * @param integer $ExclusiveGatewayBandwidth Bandwidth of the gateway cluster where the dedicated NAT Gateway resides. Unit: Mbps. This field does not exist when the `IsExclusive` field is set to `false`.
 Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $RestrictState Whether the NAT gateway is blocked. Values: `NORMAL`, `RESTRICTED`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -304,6 +316,10 @@ Note: This field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ExclusiveGatewayBandwidth",$param) and $param["ExclusiveGatewayBandwidth"] !== null) {
             $this->ExclusiveGatewayBandwidth = $param["ExclusiveGatewayBandwidth"];
+        }
+
+        if (array_key_exists("RestrictState",$param) and $param["RestrictState"] !== null) {
+            $this->RestrictState = $param["RestrictState"];
         }
     }
 }

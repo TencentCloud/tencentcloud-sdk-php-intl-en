@@ -66,6 +66,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUnderDeploying(boolean $UnderDeploying) Set Whether the application is being deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getBatchDeployStatus() Obtain Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setBatchDeployStatus(string $BatchDeployStatus) Set Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getZones() Obtain Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setZones(array $Zones) Set Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method array getNodeInfos() Obtain Node information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setNodeInfos(array $NodeInfos) Set Node information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method DescribeRunPodPage getPodList() Obtain Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setPodList(DescribeRunPodPage $PodList) Set Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method WorkloadInfo getWorkloadInfo() Obtain Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setWorkloadInfo(WorkloadInfo $WorkloadInfo) Set Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getCreateDate() Obtain Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setCreateDate(string $CreateDate) Set Creation time
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class ServiceVersionBrief extends AbstractModel
 {
@@ -149,6 +173,42 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $UnderDeploying;
 
     /**
+     * @var string Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $BatchDeployStatus;
+
+    /**
+     * @var array Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Zones;
+
+    /**
+     * @var array Node information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $NodeInfos;
+
+    /**
+     * @var DescribeRunPodPage Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $PodList;
+
+    /**
+     * @var WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $WorkloadInfo;
+
+    /**
+     * @var string Creation time
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $CreateDate;
+
+    /**
      * @param string $VersionName Version name
      * @param string $Status Status of version
      * @param integer $EnableEs (Disused) Whether to enable elastic scaling
@@ -172,6 +232,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $UnderDeploying Whether the application is being deployed
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $BatchDeployStatus Status of batch deployment
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $Zones Availability zones
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param array $NodeInfos Node information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param DescribeRunPodPage $PodList Pod information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param WorkloadInfo $WorkloadInfo Workload information
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $CreateDate Creation time
+Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
     {
@@ -241,6 +313,37 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("UnderDeploying",$param) and $param["UnderDeploying"] !== null) {
             $this->UnderDeploying = $param["UnderDeploying"];
+        }
+
+        if (array_key_exists("BatchDeployStatus",$param) and $param["BatchDeployStatus"] !== null) {
+            $this->BatchDeployStatus = $param["BatchDeployStatus"];
+        }
+
+        if (array_key_exists("Zones",$param) and $param["Zones"] !== null) {
+            $this->Zones = $param["Zones"];
+        }
+
+        if (array_key_exists("NodeInfos",$param) and $param["NodeInfos"] !== null) {
+            $this->NodeInfos = [];
+            foreach ($param["NodeInfos"] as $key => $value){
+                $obj = new NodeInfo();
+                $obj->deserialize($value);
+                array_push($this->NodeInfos, $obj);
+            }
+        }
+
+        if (array_key_exists("PodList",$param) and $param["PodList"] !== null) {
+            $this->PodList = new DescribeRunPodPage();
+            $this->PodList->deserialize($param["PodList"]);
+        }
+
+        if (array_key_exists("WorkloadInfo",$param) and $param["WorkloadInfo"] !== null) {
+            $this->WorkloadInfo = new WorkloadInfo();
+            $this->WorkloadInfo->deserialize($param["WorkloadInfo"]);
+        }
+
+        if (array_key_exists("CreateDate",$param) and $param["CreateDate"] !== null) {
+            $this->CreateDate = $param["CreateDate"];
         }
     }
 }

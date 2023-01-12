@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSubnetIds(array $SubnetIds) Set Subnets
  * @method integer getSourceChannel() Obtain Source channel
  * @method void setSourceChannel(integer $SourceChannel) Set Source channel
+ * @method string getEnvType() Obtain Environment type. Values: `test`, `pre`, `prod`
+ * @method void setEnvType(string $EnvType) Set Environment type. Values: `test`, `pre`, `prod`
  */
 class ModifyEnvironmentRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyEnvironmentRequest extends AbstractModel
     public $SourceChannel;
 
     /**
+     * @var string Environment type. Values: `test`, `pre`, `prod`
+     */
+    public $EnvType;
+
+    /**
      * @param string $EnvironmentId Environment ID
      * @param string $EnvironmentName Environment name
      * @param string $Description Environment description
      * @param string $Vpc VPC name
      * @param array $SubnetIds Subnets
      * @param integer $SourceChannel Source channel
+     * @param string $EnvType Environment type. Values: `test`, `pre`, `prod`
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyEnvironmentRequest extends AbstractModel
 
         if (array_key_exists("SourceChannel",$param) and $param["SourceChannel"] !== null) {
             $this->SourceChannel = $param["SourceChannel"];
+        }
+
+        if (array_key_exists("EnvType",$param) and $param["EnvType"] !== null) {
+            $this->EnvType = $param["EnvType"];
         }
     }
 }

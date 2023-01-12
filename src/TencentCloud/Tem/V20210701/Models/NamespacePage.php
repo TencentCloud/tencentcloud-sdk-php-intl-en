@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSize(integer $Size) Set Number of records per page
  * @method integer getPages() Obtain Total number of pages
  * @method void setPages(integer $Pages) Set Total number of pages
+ * @method integer getCurrent() Obtain Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCurrent(integer $Current) Set Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NamespacePage extends AbstractModel
 {
@@ -52,10 +56,18 @@ class NamespacePage extends AbstractModel
     public $Pages;
 
     /**
+     * @var integer Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Current;
+
+    /**
      * @param array $Records Details of the returned records
      * @param integer $Total Total number of returned records
      * @param integer $Size Number of records per page
      * @param integer $Pages Total number of pages
+     * @param integer $Current Current entry
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -89,6 +101,10 @@ class NamespacePage extends AbstractModel
 
         if (array_key_exists("Pages",$param) and $param["Pages"] !== null) {
             $this->Pages = $param["Pages"];
+        }
+
+        if (array_key_exists("Current",$param) and $param["Current"] !== null) {
+            $this->Current = $param["Current"];
         }
     }
 }

@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setEnableTracing(integer $EnableTracing) Set Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
  * @method UseDefaultRepoParameters getUseDefaultImageServiceParameters() Obtain Parameters of the default image service
  * @method void setUseDefaultImageServiceParameters(UseDefaultRepoParameters $UseDefaultImageServiceParameters) Set Parameters of the default image service
+ * @method array getTags() Obtain Tag
+ * @method void setTags(array $Tags) Set Tag
  */
 class CreateApplicationRequest extends AbstractModel
 {
@@ -130,6 +132,11 @@ class CreateApplicationRequest extends AbstractModel
     public $UseDefaultImageServiceParameters;
 
     /**
+     * @var array Tag
+     */
+    public $Tags;
+
+    /**
      * @param string $ApplicationName Application name
      * @param string $Description Description
      * @param integer $UseDefaultImageService Whether to use the default image service. `1`: yes; `0`: no
@@ -148,6 +155,7 @@ class CreateApplicationRequest extends AbstractModel
 - WAR
      * @param integer $EnableTracing Whether to enable APM tracing for the Java application. `1`: Enable, `0`: Disable
      * @param UseDefaultRepoParameters $UseDefaultImageServiceParameters Parameters of the default image service
+     * @param array $Tags Tag
      */
     function __construct()
     {
@@ -213,6 +221,15 @@ class CreateApplicationRequest extends AbstractModel
         if (array_key_exists("UseDefaultImageServiceParameters",$param) and $param["UseDefaultImageServiceParameters"] !== null) {
             $this->UseDefaultImageServiceParameters = new UseDefaultRepoParameters();
             $this->UseDefaultImageServiceParameters->deserialize($param["UseDefaultImageServiceParameters"]);
+        }
+
+        if (array_key_exists("Tags",$param) and $param["Tags"] !== null) {
+            $this->Tags = [];
+            foreach ($param["Tags"] as $key => $value){
+                $obj = new Tag();
+                $obj->deserialize($value);
+                array_push($this->Tags, $obj);
+            }
         }
     }
 }

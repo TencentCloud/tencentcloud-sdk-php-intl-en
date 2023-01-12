@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of the bandwidth package.
  * @method string getBandwidthPackageName() Obtain The name of the bandwidth package.
  * @method void setBandwidthPackageName(string $BandwidthPackageName) Set The name of the bandwidth package.
- * @method string getChargeType() Obtain The billing mode of the bandwidth package.
- * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package.
- * @method boolean getMigrateOnRefund() Obtain When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
- * @method void setMigrateOnRefund(boolean $MigrateOnRefund) Set When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+ * @method string getChargeType() Obtain The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
+ * @method void setChargeType(string $ChargeType) Set The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
  */
 class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 {
@@ -42,20 +42,16 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
     public $BandwidthPackageName;
 
     /**
-     * @var string The billing mode of the bandwidth package.
+     * @var string The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
      */
     public $ChargeType;
 
     /**
-     * @var boolean When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
-     */
-    public $MigrateOnRefund;
-
-    /**
      * @param string $BandwidthPackageId The unique ID of the bandwidth package.
      * @param string $BandwidthPackageName The name of the bandwidth package.
-     * @param string $ChargeType The billing mode of the bandwidth package.
-     * @param boolean $MigrateOnRefund When a monthly-subscribed bandwidth package is returned, whether to convert it to a pay-as-you-go bandwidth packages. Default value: `No`
+     * @param string $ChargeType The billing mode of the bandwidth package. Values: 
+`TOP5_POSTPAID_BY_MONTH`: Bill by the top 5 bandwidth value of the current month in a postpaid manner
      */
     function __construct()
     {
@@ -80,10 +76,6 @@ class ModifyBandwidthPackageAttributeRequest extends AbstractModel
 
         if (array_key_exists("ChargeType",$param) and $param["ChargeType"] !== null) {
             $this->ChargeType = $param["ChargeType"];
-        }
-
-        if (array_key_exists("MigrateOnRefund",$param) and $param["MigrateOnRefund"] !== null) {
-            $this->MigrateOnRefund = $param["MigrateOnRefund"];
         }
     }
 }

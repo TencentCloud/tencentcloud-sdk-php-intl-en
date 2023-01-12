@@ -24,12 +24,44 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMinReplicas(integer $MinReplicas) Set (Optional) Minimum number of instances
  * @method integer getMaxReplicas() Obtain (Optional) Maximum number of instances
  * @method void setMaxReplicas(integer $MaxReplicas) Set (Optional) Maximum number of instances
- * @method string getMetrics() Obtain Metrics (CPU or memory)
- * @method void setMetrics(string $Metrics) Set Metrics (CPU or memory)
- * @method integer getThreshold() Obtain Threshold (percentage)
- * @method void setThreshold(integer $Threshold) Set Threshold (percentage)
+ * @method string getMetrics() Obtain Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+ * @method void setMetrics(string $Metrics) Set Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+ * @method integer getThreshold() Obtain The value of threshold (integer)
+ * @method void setThreshold(integer $Threshold) Set The value of threshold (integer)
  * @method boolean getEnabled() Obtain Whether it is enabled
  * @method void setEnabled(boolean $Enabled) Set Whether it is enabled
+ * @method float getDoubleThreshold() Obtain The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setDoubleThreshold(float $DoubleThreshold) Set The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class HorizontalAutoscaler extends AbstractModel
 {
@@ -44,12 +76,26 @@ class HorizontalAutoscaler extends AbstractModel
     public $MaxReplicas;
 
     /**
-     * @var string Metrics (CPU or memory)
+     * @var string Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
      */
     public $Metrics;
 
     /**
-     * @var integer Threshold (percentage)
+     * @var integer The value of threshold (integer)
      */
     public $Threshold;
 
@@ -59,11 +105,33 @@ class HorizontalAutoscaler extends AbstractModel
     public $Enabled;
 
     /**
+     * @var float The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $DoubleThreshold;
+
+    /**
      * @param integer $MinReplicas (Optional) Minimum number of instances
      * @param integer $MaxReplicas (Optional) Maximum number of instances
-     * @param string $Metrics Metrics (CPU or memory)
-     * @param integer $Threshold Threshold (percentage)
+     * @param string $Metrics Metric measurement
+`CPU`: CPU utilization (%)
+`MEMORY`: Memory utilization (%)
+`CPU_CORE_USED`: CPU usage (core)
+`MEMORY_SIZE_USED`: Memory usage (MiB)
+`NETWORK_BANDWIDTH_RECEIVE`: Network bandwidth in (Mbps)
+`NETWORK_BANDWIDTH_TRANSMIT`: Network bandwidth out (Mbps)
+`NETWORK_TRAFFIC_RECEIVE`: Network traffic in (MiB/s)
+`NETWORK_TRAFFIC_TRANSMIT`: Network traffic  out (MiB/s)
+`NETWORK_PACKETS_RECEIVE`: Network packets in (packets/sec)
+`NETWORK_PACKETS_TRANSMIT`: Network packets out (packets/sec)
+`FS_IOPS_WRITE`: Disk writes (count/sec)
+`FS_IOPS_READ`: Disk reads (count/sec)
+`FS_SIZE_WRITE`: Disk write size (MiB/s)
+`FS_SIZE_READ`: Disk read size (MiB/s)
+     * @param integer $Threshold The value of threshold (integer)
      * @param boolean $Enabled Whether it is enabled
+     * @param float $DoubleThreshold The value of threshold (demical)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -96,6 +164,10 @@ class HorizontalAutoscaler extends AbstractModel
 
         if (array_key_exists("Enabled",$param) and $param["Enabled"] !== null) {
             $this->Enabled = $param["Enabled"];
+        }
+
+        if (array_key_exists("DoubleThreshold",$param) and $param["DoubleThreshold"] !== null) {
+            $this->DoubleThreshold = $param["DoubleThreshold"];
         }
     }
 }

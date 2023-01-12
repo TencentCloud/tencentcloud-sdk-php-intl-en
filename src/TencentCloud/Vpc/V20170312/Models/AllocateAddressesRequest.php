@@ -80,6 +80,8 @@ Whether the Anycast EIP can be bound to CLB instances.
  * @method void setBandwidthPackageId(string $BandwidthPackageId) Set The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
  * @method string getAddressName() Obtain EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
  * @method void setAddressName(string $AddressName) Set EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+ * @method string getEgress() Obtain Network egress. It defaults to `center_egress1`.
+ * @method void setEgress(string $Egress) Set Network egress. It defaults to `center_egress1`.
  */
 class AllocateAddressesRequest extends AbstractModel
 {
@@ -158,6 +160,11 @@ Whether the Anycast EIP can be bound to CLB instances.
     public $AddressName;
 
     /**
+     * @var string Network egress. It defaults to `center_egress1`.
+     */
+    public $Egress;
+
+    /**
      * @param integer $AddressCount The number of EIPs. Default: 1.
      * @param string $InternetServiceProvider The EIP line type. Default: BGP.
 <ul style="margin:0"><li>For a user who has activated the static single-line IP allowlist, possible values are:<ul><li>CMCC: China Mobile</li>
@@ -188,6 +195,7 @@ Whether the Anycast EIP can be bound to CLB instances.
      * @param array $Tags List of tags to be bound.
      * @param string $BandwidthPackageId The unique ID of a BGP bandwidth package. If you configure this parameter and set InternetChargeType as BANDWIDTH_PACKAGE, the new EIP is added to this package and billed by the bandwidth package mode.
      * @param string $AddressName EIP name, which is the custom EIP name given by the user when applying for the EIP. Default: not named
+     * @param string $Egress Network egress. It defaults to `center_egress1`.
      */
     function __construct()
     {
@@ -250,6 +258,10 @@ Whether the Anycast EIP can be bound to CLB instances.
 
         if (array_key_exists("AddressName",$param) and $param["AddressName"] !== null) {
             $this->AddressName = $param["AddressName"];
+        }
+
+        if (array_key_exists("Egress",$param) and $param["Egress"] !== null) {
+            $this->Egress = $param["Egress"];
         }
     }
 }

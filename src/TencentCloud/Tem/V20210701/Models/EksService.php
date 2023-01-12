@@ -64,6 +64,26 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setPortMappings(array $PortMappings) Set Port mapping
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method array getServicePortMappingList() Obtain Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setServicePortMappingList(array $ServicePortMappingList) Set Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getFlushAll() Obtain Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setFlushAll(boolean $FlushAll) Set Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method integer getEnableRegistryNextDeploy() Obtain `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setEnableRegistryNextDeploy(integer $EnableRegistryNextDeploy) Set `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getApplicationId() Obtain The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setApplicationId(string $ApplicationId) Set The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getAllIpDone() Obtain Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAllIpDone(boolean $AllIpDone) Set Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EksService extends AbstractModel
 {
@@ -134,6 +154,36 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $PortMappings;
 
     /**
+     * @var array Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ServicePortMappingList;
+
+    /**
+     * @var boolean Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $FlushAll;
+
+    /**
+     * @var integer `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $EnableRegistryNextDeploy;
+
+    /**
+     * @var string The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ApplicationId;
+
+    /**
+     * @var boolean Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AllIpDone;
+
+    /**
      * @param string $Name Service name
      * @param array $Ports Available ports
      * @param string $Yaml Yaml contents
@@ -156,6 +206,16 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param array $PortMappings Port mapping
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param array $ServicePortMappingList Details of each type of access configuration
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $FlushAll Flush all types
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param integer $EnableRegistryNextDeploy `0`: Do not inject. `1`: Inject registry information automatically for the next deployment
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $ApplicationId The application ID returned.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $AllIpDone Whether all the application IPs are ready
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -217,6 +277,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->PortMappings, $obj);
             }
+        }
+
+        if (array_key_exists("ServicePortMappingList",$param) and $param["ServicePortMappingList"] !== null) {
+            $this->ServicePortMappingList = [];
+            foreach ($param["ServicePortMappingList"] as $key => $value){
+                $obj = new ServicePortMapping();
+                $obj->deserialize($value);
+                array_push($this->ServicePortMappingList, $obj);
+            }
+        }
+
+        if (array_key_exists("FlushAll",$param) and $param["FlushAll"] !== null) {
+            $this->FlushAll = $param["FlushAll"];
+        }
+
+        if (array_key_exists("EnableRegistryNextDeploy",$param) and $param["EnableRegistryNextDeploy"] !== null) {
+            $this->EnableRegistryNextDeploy = $param["EnableRegistryNextDeploy"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
+        }
+
+        if (array_key_exists("AllIpDone",$param) and $param["AllIpDone"] !== null) {
+            $this->AllIpDone = $param["AllIpDone"];
         }
     }
 }
