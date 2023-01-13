@@ -80,6 +80,8 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
  * @method void setDiskTypePolicy(string $DiskTypePolicy) Set Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
  */
 class UpgradeLaunchConfigurationRequest extends AbstractModel
 {
@@ -198,6 +200,11 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
     public $DiskTypePolicy;
 
     /**
+     * @var IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
+     */
+    public $IPv6InternetAccessible;
+
+    /**
      * @param string $LaunchConfigurationId Launch configuration ID.
      * @param string $ImageId [Image](https://intl.cloud.tencent.com/document/product/213/4940?from_cn_redirect=1) ID in the format of `img-xxx`. There are three types of images: <br/><li>Public images </li><li>Custom images </li><li>Shared images </li><br/>You can obtain the image IDs in the [CVM console](https://console.cloud.tencent.com/cvm/image?rid=1&imageType=PUBLIC_IMAGE).</li><li>You can also use the [DescribeImages](https://intl.cloud.tencent.com/document/api/213/15715?from_cn_redirect=1) and look for `ImageId` in the response.</li>
      * @param array $InstanceTypes List of instance models. Different instance models specify different resource specifications. Up to 5 instance models can be supported.
@@ -228,6 +235,7 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
      * @param string $DiskTypePolicy Selection policy of cloud disks. Default value: ORIGINAL. Valid values:
 <br><li>ORIGINAL: uses the configured cloud disk type
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type
+     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration. If the IPv6 address is available in the new instance, public network bandwidth can be allocated to the IPv6 address. This parameter is invalid if `Ipv6AddressCount` of the scaling group associated with the launch configuration is 0.
      */
     function __construct()
     {
@@ -342,6 +350,11 @@ If a model in InstanceTypes does not exist or has been discontinued, a verificat
 
         if (array_key_exists("DiskTypePolicy",$param) and $param["DiskTypePolicy"] !== null) {
             $this->DiskTypePolicy = $param["DiskTypePolicy"];
+        }
+
+        if (array_key_exists("IPv6InternetAccessible",$param) and $param["IPv6InternetAccessible"] !== null) {
+            $this->IPv6InternetAccessible = new IPv6InternetAccessible();
+            $this->IPv6InternetAccessible->deserialize($param["IPv6InternetAccessible"]);
         }
     }
 }

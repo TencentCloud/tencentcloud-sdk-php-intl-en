@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getOffset() Obtain Pagination offset, starting from 0
  * @method void setOffset(integer $Offset) Set Pagination offset, starting from 0
- * @method integer getLimit() Obtain Number of certificates on each page. The default value is 20.
- * @method void setLimit(integer $Limit) Set Number of certificates on each page. The default value is 20.
+ * @method integer getLimit() Obtain Number of entries per page. Default value: `20`. Maximum value: `1000`.
+ * @method void setLimit(integer $Limit) Set Number of entries per page. Default value: `20`. Maximum value: `1000`.
  * @method string getSearchKey() Obtain Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
  * @method void setSearchKey(string $SearchKey) Set Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
  * @method string getCertificateType() Obtain Certificate type. `CA`: client certificate; `SVR`: server certificate
@@ -32,10 +32,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setProjectId(integer $ProjectId) Set Project ID
  * @method string getExpirationSort() Obtain Sorting by expiration time. `DESC`: descending; `ASC`: ascending
  * @method void setExpirationSort(string $ExpirationSort) Set Sorting by expiration time. `DESC`: descending; `ASC`: ascending
- * @method array getCertificateStatus() Obtain Certificate status
- * @method void setCertificateStatus(array $CertificateStatus) Set Certificate status
+ * @method array getCertificateStatus() Obtain Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
+ * @method void setCertificateStatus(array $CertificateStatus) Set Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
  * @method integer getDeployable() Obtain Whether the certificate can be deployed. `1`: yes; `0`: no
  * @method void setDeployable(integer $Deployable) Set Whether the certificate can be deployed. `1`: yes; `0`: no
+ * @method integer getUpload() Obtain Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+ * @method void setUpload(integer $Upload) Set Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+ * @method integer getRenew() Obtain Whether to filter renewable certificates. `1`: Yes; `0`: No.
+ * @method void setRenew(integer $Renew) Set Whether to filter renewable certificates. `1`: Yes; `0`: No.
+ * @method string getFilterSource() Obtain Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+ * @method void setFilterSource(string $FilterSource) Set Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+ * @method integer getIsSM() Obtain Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+ * @method void setIsSM(integer $IsSM) Set Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+ * @method integer getFilterExpiring() Obtain Whether to filter expiring certificates. `1`: Yes; `0`: No.
+ * @method void setFilterExpiring(integer $FilterExpiring) Set Whether to filter expiring certificates. `1`: Yes; `0`: No.
  */
 class DescribeCertificatesRequest extends AbstractModel
 {
@@ -45,7 +55,7 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Offset;
 
     /**
-     * @var integer Number of certificates on each page. The default value is 20.
+     * @var integer Number of entries per page. Default value: `20`. Maximum value: `1000`.
      */
     public $Limit;
 
@@ -70,7 +80,7 @@ class DescribeCertificatesRequest extends AbstractModel
     public $ExpirationSort;
 
     /**
-     * @var array Certificate status
+     * @var array Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
      */
     public $CertificateStatus;
 
@@ -80,14 +90,44 @@ class DescribeCertificatesRequest extends AbstractModel
     public $Deployable;
 
     /**
+     * @var integer Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+     */
+    public $Upload;
+
+    /**
+     * @var integer Whether to filter renewable certificates. `1`: Yes; `0`: No.
+     */
+    public $Renew;
+
+    /**
+     * @var string Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+     */
+    public $FilterSource;
+
+    /**
+     * @var integer Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+     */
+    public $IsSM;
+
+    /**
+     * @var integer Whether to filter expiring certificates. `1`: Yes; `0`: No.
+     */
+    public $FilterExpiring;
+
+    /**
      * @param integer $Offset Pagination offset, starting from 0
-     * @param integer $Limit Number of certificates on each page. The default value is 20.
+     * @param integer $Limit Number of entries per page. Default value: `20`. Maximum value: `1000`.
      * @param string $SearchKey Keyword for search, which can be a certificate ID, alias, or domain name, for example, a8xHcaIs
      * @param string $CertificateType Certificate type. `CA`: client certificate; `SVR`: server certificate
      * @param integer $ProjectId Project ID
      * @param string $ExpirationSort Sorting by expiration time. `DESC`: descending; `ASC`: ascending
-     * @param array $CertificateStatus Certificate status
+     * @param array $CertificateStatus Certificate status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate.
      * @param integer $Deployable Whether the certificate can be deployed. `1`: yes; `0`: no
+     * @param integer $Upload Whether to filter uploaded hosted certificates. `1`: Yes; `0`: No.
+     * @param integer $Renew Whether to filter renewable certificates. `1`: Yes; `0`: No.
+     * @param string $FilterSource Filter by source. `upload`: Uploaded certificate; `buy`: Tencent Cloud certificate. If this parameter is left empty, all certificates will be queried.
+     * @param integer $IsSM Whether to filter Chinese SM certificates. `1`: Yes; `0`: No.
+     * @param integer $FilterExpiring Whether to filter expiring certificates. `1`: Yes; `0`: No.
      */
     function __construct()
     {
@@ -132,6 +172,26 @@ class DescribeCertificatesRequest extends AbstractModel
 
         if (array_key_exists("Deployable",$param) and $param["Deployable"] !== null) {
             $this->Deployable = $param["Deployable"];
+        }
+
+        if (array_key_exists("Upload",$param) and $param["Upload"] !== null) {
+            $this->Upload = $param["Upload"];
+        }
+
+        if (array_key_exists("Renew",$param) and $param["Renew"] !== null) {
+            $this->Renew = $param["Renew"];
+        }
+
+        if (array_key_exists("FilterSource",$param) and $param["FilterSource"] !== null) {
+            $this->FilterSource = $param["FilterSource"];
+        }
+
+        if (array_key_exists("IsSM",$param) and $param["IsSM"] !== null) {
+            $this->IsSM = $param["IsSM"];
+        }
+
+        if (array_key_exists("FilterExpiring",$param) and $param["FilterExpiring"] !== null) {
+            $this->FilterExpiring = $param["FilterExpiring"];
         }
     }
 }

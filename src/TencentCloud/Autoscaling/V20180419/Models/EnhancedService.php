@@ -18,7 +18,7 @@ namespace TencentCloud\Autoscaling\V20180419\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * This describes the conditions of enhancement services for the instance and their settings, such as the Agent of Cloud Security or Cloud Monitor.
+ * This describes the conditions and configurations of the enhanced services of the instance, such as cloud security, cloud monitor, TencentCloud Automation Tools, and other instance agents.
  *
  * @method RunSecurityServiceEnabled getSecurityService() Obtain Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
  * @method void setSecurityService(RunSecurityServiceEnabled $SecurityService) Set Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setMonitorService(RunMonitorServiceEnabled $MonitorService) Set Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
  * @method array getAutomationService() Obtain Deprecated parameter.
  * @method void setAutomationService(array $AutomationService) Set Deprecated parameter.
- * @method RunAutomationServiceEnabled getAutomationToolsService() Obtain 
- * @method void setAutomationToolsService(RunAutomationServiceEnabled $AutomationToolsService) Set 
+ * @method RunAutomationServiceEnabled getAutomationToolsService() Obtain Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAutomationToolsService(RunAutomationServiceEnabled $AutomationToolsService) Set Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class EnhancedService extends AbstractModel
 {
@@ -47,7 +47,7 @@ class EnhancedService extends AbstractModel
     public $AutomationService;
 
     /**
-     * @var RunAutomationServiceEnabled 
+     * @var RunAutomationServiceEnabled Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $AutomationToolsService;
 
@@ -55,7 +55,7 @@ class EnhancedService extends AbstractModel
      * @param RunSecurityServiceEnabled $SecurityService Enables the Cloud Security service. If this parameter is not specified, the Cloud Security service will be enabled by default.
      * @param RunMonitorServiceEnabled $MonitorService Enables the Cloud Monitor service. If this parameter is not specified, the Cloud Monitor service will be enabled by default.
      * @param array $AutomationService Deprecated parameter.
-     * @param RunAutomationServiceEnabled $AutomationToolsService 
+     * @param RunAutomationServiceEnabled $AutomationToolsService Enable TAT service. If this parameter is not specified, the default logic is the same as that of the CVM instance. Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

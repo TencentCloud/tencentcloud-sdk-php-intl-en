@@ -94,6 +94,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field is default to empty
  * @method void setHpcClusterId(string $HpcClusterId) Set HPC ID<br>
 Note: This field is default to empty
+ * @method IPv6InternetAccessible getIPv6InternetAccessible() Obtain IPv6 public network bandwidth configuration.
+ * @method void setIPv6InternetAccessible(IPv6InternetAccessible $IPv6InternetAccessible) Set IPv6 public network bandwidth configuration.
  */
 class LaunchConfiguration extends AbstractModel
 {
@@ -251,6 +253,11 @@ Note: This field is default to empty
     public $HpcClusterId;
 
     /**
+     * @var IPv6InternetAccessible IPv6 public network bandwidth configuration.
+     */
+    public $IPv6InternetAccessible;
+
+    /**
      * @param integer $ProjectId Project ID of the instance.
      * @param string $LaunchConfigurationId Launch configuration ID
      * @param string $LaunchConfigurationName Launch configuration name.
@@ -288,6 +295,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 <br><li>AUTOMATIC: automatically chooses an available cloud disk type in the current availability zone
      * @param string $HpcClusterId HPC ID<br>
 Note: This field is default to empty
+     * @param IPv6InternetAccessible $IPv6InternetAccessible IPv6 public network bandwidth configuration.
      */
     function __construct()
     {
@@ -444,6 +452,11 @@ Note: This field is default to empty
 
         if (array_key_exists("HpcClusterId",$param) and $param["HpcClusterId"] !== null) {
             $this->HpcClusterId = $param["HpcClusterId"];
+        }
+
+        if (array_key_exists("IPv6InternetAccessible",$param) and $param["IPv6InternetAccessible"] !== null) {
+            $this->IPv6InternetAccessible = new IPv6InternetAccessible();
+            $this->IPv6InternetAccessible->deserialize($param["IPv6InternetAccessible"]);
         }
     }
 }

@@ -120,14 +120,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setStatusName(string $StatusName) Set Status description
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method array getSubjectAltName() Obtain Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setSubjectAltName(array $SubjectAltName) Set Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getIsVip() Obtain Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setIsVip(boolean $IsVip) Set Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method array getSubjectAltName() Obtain Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setSubjectAltName(array $SubjectAltName) Set Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsVip() Obtain Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsVip(boolean $IsVip) Set Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getIsWildcard() Obtain Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setIsWildcard(boolean $IsWildcard) Set Whether the certificate is a wildcard certificate
@@ -144,10 +144,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setSubmittedData(SubmittedData $SubmittedData) Set Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method boolean getRenewAble() Obtain Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setRenewAble(boolean $RenewAble) Set Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method boolean getRenewAble() Obtain Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRenewAble(boolean $RenewAble) Set Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getDeployable() Obtain Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setDeployable(boolean $Deployable) Set Whether the certificate can be deployed
@@ -156,6 +156,30 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set List of associated tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method RootCertificates getRootCert() Obtain Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRootCert(RootCertificates $RootCert) Set Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptCert() Obtain Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptCert(string $EncryptCert) Set Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptPrivateKey() Obtain Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptPrivateKey(string $EncryptPrivateKey) Set Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getCertFingerprint() Obtain SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCertFingerprint(string $CertFingerprint) Set SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptCertFingerprint() Obtain SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptCertFingerprint(string $EncryptCertFingerprint) Set SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptAlgorithm() Obtain Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
@@ -312,14 +336,14 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $StatusName;
 
     /**
-     * @var array Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var array Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SubjectAltName;
 
     /**
-     * @var boolean Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsVip;
 
@@ -348,8 +372,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SubmittedData;
 
     /**
-     * @var boolean Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var boolean Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $RenewAble;
 
@@ -364,6 +388,42 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
      */
     public $Tags;
+
+    /**
+     * @var RootCertificates Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RootCert;
+
+    /**
+     * @var string Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptCert;
+
+    /**
+     * @var string Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptPrivateKey;
+
+    /**
+     * @var string SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CertFingerprint;
+
+    /**
+     * @var string SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptCertFingerprint;
+
+    /**
+     * @var string Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptAlgorithm;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -421,10 +481,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $StatusName Status description
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param array $SubjectAltName Domain names associated with the certificate (including the primary domain name)
-Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $IsVip Whether the customer is a VIP customer
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param array $SubjectAltName Multiple domain names included in the certificate (excluding the primary domain name, which uses the `Domain` field)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsVip Whether the certificate is a paid one.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsWildcard Whether the certificate is a wildcard certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $IsDv Whether the certificate is a DV certificate
@@ -433,12 +493,24 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param SubmittedData $SubmittedData Submitted data
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param boolean $RenewAble Whether the certificate can be reissued
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param boolean $RenewAble Whether the certificate can be renewed.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $Deployable Whether the certificate can be deployed
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags List of associated tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param RootCertificates $RootCert Root certificate.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptCert Chinese SM encryption certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptPrivateKey Private key of Chinese SM encryption
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $CertFingerprint SHA1 fingerprint of the signature certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptCertFingerprint SHA1 fingerprint of the encryption certificate (for Chinese SM certificates only)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -596,6 +668,31 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("RootCert",$param) and $param["RootCert"] !== null) {
+            $this->RootCert = new RootCertificates();
+            $this->RootCert->deserialize($param["RootCert"]);
+        }
+
+        if (array_key_exists("EncryptCert",$param) and $param["EncryptCert"] !== null) {
+            $this->EncryptCert = $param["EncryptCert"];
+        }
+
+        if (array_key_exists("EncryptPrivateKey",$param) and $param["EncryptPrivateKey"] !== null) {
+            $this->EncryptPrivateKey = $param["EncryptPrivateKey"];
+        }
+
+        if (array_key_exists("CertFingerprint",$param) and $param["CertFingerprint"] !== null) {
+            $this->CertFingerprint = $param["CertFingerprint"];
+        }
+
+        if (array_key_exists("EncryptCertFingerprint",$param) and $param["EncryptCertFingerprint"] !== null) {
+            $this->EncryptCertFingerprint = $param["EncryptCertFingerprint"];
+        }
+
+        if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
+            $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

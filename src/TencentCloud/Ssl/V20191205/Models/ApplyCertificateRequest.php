@@ -44,6 +44,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setAlias(string $Alias) Set Alias
  * @method string getOldCertificateId() Obtain Original certificate ID, which is used to apply for a new certificate.
  * @method void setOldCertificateId(string $OldCertificateId) Set Original certificate ID, which is used to apply for a new certificate.
+ * @method string getPackageId() Obtain Benefit package ID, which is used to expand the free certificate package
+ * @method void setPackageId(string $PackageId) Set Benefit package ID, which is used to expand the free certificate package
+ * @method boolean getDeleteDnsAutoRecord() Obtain Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+ * @method void setDeleteDnsAutoRecord(boolean $DeleteDnsAutoRecord) Set Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
  */
 class ApplyCertificateRequest extends AbstractModel
 {
@@ -108,6 +112,16 @@ class ApplyCertificateRequest extends AbstractModel
     public $OldCertificateId;
 
     /**
+     * @var string Benefit package ID, which is used to expand the free certificate package
+     */
+    public $PackageId;
+
+    /**
+     * @var boolean Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
+     */
+    public $DeleteDnsAutoRecord;
+
+    /**
      * @param string $DvAuthMethod Validation type. `DNS_AUTO`: automatic DNS validation; `DNS`: manual DNS validation; `FILE`: file validation
      * @param string $DomainName Domain name
      * @param integer $ProjectId Project ID
@@ -120,6 +134,8 @@ class ApplyCertificateRequest extends AbstractModel
      * @param string $CsrKeyPassword CSR encryption password
      * @param string $Alias Alias
      * @param string $OldCertificateId Original certificate ID, which is used to apply for a new certificate.
+     * @param string $PackageId Benefit package ID, which is used to expand the free certificate package
+     * @param boolean $DeleteDnsAutoRecord Whether to delete the automatic domain name verification record after issuance, which is no by default. This parameter can be passed in only for domain names of the DNS_AUTO verification type.
      */
     function __construct()
     {
@@ -180,6 +196,14 @@ class ApplyCertificateRequest extends AbstractModel
 
         if (array_key_exists("OldCertificateId",$param) and $param["OldCertificateId"] !== null) {
             $this->OldCertificateId = $param["OldCertificateId"];
+        }
+
+        if (array_key_exists("PackageId",$param) and $param["PackageId"] !== null) {
+            $this->PackageId = $param["PackageId"];
+        }
+
+        if (array_key_exists("DeleteDnsAutoRecord",$param) and $param["DeleteDnsAutoRecord"] !== null) {
+            $this->DeleteDnsAutoRecord = $param["DeleteDnsAutoRecord"];
         }
     }
 }

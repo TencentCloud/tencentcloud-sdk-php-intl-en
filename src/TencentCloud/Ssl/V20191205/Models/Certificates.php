@@ -52,10 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAlias(string $Alias) Set Alias
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setStatus(integer $Status) Set Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getStatus() Obtain Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method CertificateExtra getCertificateExtra() Obtain Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setCertificateExtra(CertificateExtra $CertificateExtra) Set Extended information of the certificate
@@ -140,6 +140,38 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method boolean getIsIgnore() Obtain Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsIgnore(boolean $IsIgnore) Set Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method boolean getIsSM() Obtain Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsSM(boolean $IsSM) Set Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEncryptAlgorithm() Obtain Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEncryptAlgorithm(string $EncryptAlgorithm) Set Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCAEncryptAlgorithms() Obtain Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCAEncryptAlgorithms(array $CAEncryptAlgorithms) Set Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCAEndTimes() Obtain Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCAEndTimes(array $CAEndTimes) Set Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getCACommonNames() Obtain Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCACommonNames(array $CACommonNames) Set Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method PreAuditInfo getPreAuditInfo() Obtain Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setPreAuditInfo(PreAuditInfo $PreAuditInfo) Set Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoRenewFlag() Obtain Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+ * @method void setAutoRenewFlag(integer $AutoRenewFlag) Set Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
  */
 class Certificates extends AbstractModel
 {
@@ -192,8 +224,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Alias;
 
     /**
-     * @var integer Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var integer Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
@@ -324,6 +356,54 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Tags;
 
     /**
+     * @var boolean Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsIgnore;
+
+    /**
+     * @var boolean Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $IsSM;
+
+    /**
+     * @var string Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EncryptAlgorithm;
+
+    /**
+     * @var array Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CAEncryptAlgorithms;
+
+    /**
+     * @var array Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CAEndTimes;
+
+    /**
+     * @var array Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CACommonNames;
+
+    /**
+     * @var PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $PreAuditInfo;
+
+    /**
+     * @var integer Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
+     */
+    public $AutoRenewFlag;
+
+    /**
      * @param string $OwnerUin User UIN
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $ProjectId Project ID
@@ -340,8 +420,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $Alias Alias
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status Status value. `0`: reviewing; `1`: approved; `2`: unapproved; `3`: expired; `4`: DNS record added; `5`: OV/EV certificate, information to be submitted; `6`: canceling order; `7`: canceled; `8`: information submitted, pending confirmation letter upload
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $Status Status. `0`: Reviewing; `1`: Approved; `2`: Unapproved; `3`: Expired; `4`: DNS record added for domain names of the DNS_AUTO verification type; `5`: Enterprise-grade certificate, pending submission; `6`: Canceling order; `7`: Canceled; `8`: Information submitted, pending confirmation letter upload; `9`: Revoking certificate; `10`: Revoked; `11`: Reissuing; `12`: Pending revocation confirmation letter upload; `13`: Pending information submission for the free certificate; `14`: Refunded.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param CertificateExtra $CertificateExtra Extended information of the certificate
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $VulnerabilityStatus Vulnerability scanning status. `INACTIVE`: not activated; `ACTIVE`: activated
@@ -384,6 +464,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $Tags List of tags
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param boolean $IsIgnore Whether the expiration notification was ignored
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param boolean $IsSM Whether the certificate is a Chinese SM certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EncryptAlgorithm Certificate algorithm
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CAEncryptAlgorithms Encryption algorithm of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CAEndTimes Expiration time of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $CACommonNames Generic name of the uploaded CA certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param PreAuditInfo $PreAuditInfo Prereview information of the certificate
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoRenewFlag Whether auto-renewal is enabled.
+Note: This field may return null, indicating that no valid value can be obtained.
      */
     function __construct()
     {
@@ -523,6 +619,39 @@ Note: this field may return `null`, indicating that no valid values can be obtai
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("IsIgnore",$param) and $param["IsIgnore"] !== null) {
+            $this->IsIgnore = $param["IsIgnore"];
+        }
+
+        if (array_key_exists("IsSM",$param) and $param["IsSM"] !== null) {
+            $this->IsSM = $param["IsSM"];
+        }
+
+        if (array_key_exists("EncryptAlgorithm",$param) and $param["EncryptAlgorithm"] !== null) {
+            $this->EncryptAlgorithm = $param["EncryptAlgorithm"];
+        }
+
+        if (array_key_exists("CAEncryptAlgorithms",$param) and $param["CAEncryptAlgorithms"] !== null) {
+            $this->CAEncryptAlgorithms = $param["CAEncryptAlgorithms"];
+        }
+
+        if (array_key_exists("CAEndTimes",$param) and $param["CAEndTimes"] !== null) {
+            $this->CAEndTimes = $param["CAEndTimes"];
+        }
+
+        if (array_key_exists("CACommonNames",$param) and $param["CACommonNames"] !== null) {
+            $this->CACommonNames = $param["CACommonNames"];
+        }
+
+        if (array_key_exists("PreAuditInfo",$param) and $param["PreAuditInfo"] !== null) {
+            $this->PreAuditInfo = new PreAuditInfo();
+            $this->PreAuditInfo->deserialize($param["PreAuditInfo"]);
+        }
+
+        if (array_key_exists("AutoRenewFlag",$param) and $param["AutoRenewFlag"] !== null) {
+            $this->AutoRenewFlag = $param["AutoRenewFlag"];
         }
     }
 }
