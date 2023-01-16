@@ -26,10 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInternational(integer $International) Set Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
- * @method array getTemplateIdSet() Obtain Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
- * @method void setTemplateIdSet(array $TemplateIdSet) Set Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+ * @method array getTemplateIdSet() Obtain Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
+ * @method void setTemplateIdSet(array $TemplateIdSet) Set Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
  * @method integer getLimit() Obtain Upper limit. Maximum value: 100.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
  * @method void setLimit(integer $Limit) Set Upper limit. Maximum value: 100.
@@ -49,8 +49,8 @@ class DescribeSmsTemplateListRequest extends AbstractModel
     public $International;
 
     /**
-     * @var array Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     * @var array Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      */
     public $TemplateIdSet;
 
@@ -70,8 +70,8 @@ Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
      * @param integer $International Whether it is Global SMS:
 0: Mainland China SMS.
 1: Global SMS.
-     * @param array $TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default (only allowed for root accounts). You need to use the `Limit` and `Offset` fields to set the query range.
-<dx-alert infotype="notice" title="Note">The default array length can be up to 100</dx-alert>
+     * @param array $TemplateIdSet Array of template IDs. If the array is empty, the template list information will be queried by default. You need to use the `Limit` and `Offset` fields to set the query range.
+<dx-alert infotype="notice" title="Note">The max array length is 100 by default.</dx-alert>
      * @param integer $Limit Upper limit. Maximum value: 100.
 Note: it is 0 by default and is enabled when `TemplateIdSet` is empty.
      * @param integer $Offset Offset.
