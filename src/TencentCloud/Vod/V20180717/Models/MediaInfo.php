@@ -66,6 +66,10 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 Note: this field may return `null`, indicating that no valid value is obtained.
  * @method string getFileId() Obtain Unique ID of media file.
  * @method void setFileId(string $FileId) Set Unique ID of media file.
+ * @method FileReviewInfo getReviewInfo() Obtain Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReviewInfo(FileReviewInfo $ReviewInfo) Set Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class MediaInfo extends AbstractModel
 {
@@ -141,6 +145,12 @@ Note: this field may return `null`, indicating that no valid value is obtained.
     public $FileId;
 
     /**
+     * @var FileReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReviewInfo;
+
+    /**
      * @param MediaBasicInfo $BasicInfo Basic information, such as video name, category, playback address, and cover image.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param MediaMetaData $MetaData Metadata, such as size, duration, video stream information, and audio stream information.
@@ -164,6 +174,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param MediaSubtitleInfo $SubtitleInfo Subtitle information
 Note: this field may return `null`, indicating that no valid value is obtained.
      * @param string $FileId Unique ID of media file.
+     * @param FileReviewInfo $ReviewInfo Moderation details.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -235,6 +247,11 @@ Note: this field may return `null`, indicating that no valid value is obtained.
 
         if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
             $this->FileId = $param["FileId"];
+        }
+
+        if (array_key_exists("ReviewInfo",$param) and $param["ReviewInfo"] !== null) {
+            $this->ReviewInfo = new FileReviewInfo();
+            $this->ReviewInfo->deserialize($param["ReviewInfo"]);
         }
     }
 }

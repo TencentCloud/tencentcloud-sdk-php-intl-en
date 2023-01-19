@@ -22,10 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getStreamName() Obtain Stream name.
  * @method void setStreamName(string $StreamName) Set Stream name.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
- * @method string getExpireTime() Obtain Forbidding expiration time.
- * @method void setExpireTime(string $ExpireTime) Set Forbidding expiration time.
+ * @method string getCreateTime() Obtain The creation time.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCreateTime(string $CreateTime) Set The creation time.
+Note: Beijing time (UTC+8) is used.
+ * @method string getExpireTime() Obtain The end time.
+Note: Beijing time (UTC+8) is used.
+ * @method void setExpireTime(string $ExpireTime) Set The end time.
+Note: Beijing time (UTC+8) is used.
  * @method string getAppName() Obtain The push path.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAppName(string $AppName) Set The push path.
@@ -43,12 +47,14 @@ class ForbidStreamInfo extends AbstractModel
     public $StreamName;
 
     /**
-     * @var string Creation time.
+     * @var string The creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public $CreateTime;
 
     /**
-     * @var string Forbidding expiration time.
+     * @var string The end time.
+Note: Beijing time (UTC+8) is used.
      */
     public $ExpireTime;
 
@@ -66,8 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $StreamName Stream name.
-     * @param string $CreateTime Creation time.
-     * @param string $ExpireTime Forbidding expiration time.
+     * @param string $CreateTime The creation time.
+Note: Beijing time (UTC+8) is used.
+     * @param string $ExpireTime The end time.
+Note: Beijing time (UTC+8) is used.
      * @param string $AppName The push path.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DomainName The push domain name.

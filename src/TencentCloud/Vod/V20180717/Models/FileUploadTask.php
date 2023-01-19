@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set Unique file ID.
  * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of media file generated after upload is completed.
  * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of media file generated after upload is completed.
- * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video is uploaded, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set If a video processing flow is specified when a video is uploaded, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+ * @method string getReviewAudioVideoTaskId() Obtain The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
  * @method MediaMetaData getMetaData() Obtain Metadata, such as size, duration, video stream information, audio stream information, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMetaData(MediaMetaData $MetaData) Set Metadata, such as size, duration, video stream information, audio stream information, etc.
@@ -46,10 +46,14 @@ class FileUploadTask extends AbstractModel
     public $MediaBasicInfo;
 
     /**
-     * @var string If a video processing flow is specified when a video is uploaded, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var string The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public $ProcedureTaskId;
+
+    /**
+     * @var string The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public $ReviewAudioVideoTaskId;
 
     /**
      * @var MediaMetaData Metadata, such as size, duration, video stream information, audio stream information, etc.
@@ -60,8 +64,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
     /**
      * @param string $FileId Unique file ID.
      * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after upload is completed.
-     * @param string $ProcedureTaskId If a video processing flow is specified when a video is uploaded, this field will be the ID of the task flow.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified for [uploaded media](https://intl.cloud.tencent.com/document/product/266/33475?from_cn_redirect=1#.E4.BB.BB.E5.8A.A1.E5.8F.91.E8.B5.B7), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
      * @param MediaMetaData $MetaData Metadata, such as size, duration, video stream information, audio stream information, etc.
 Note: this field may return null, indicating that no valid values can be obtained.
      */
@@ -89,6 +93,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
             $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        }
+
+        if (array_key_exists("ReviewAudioVideoTaskId",$param) and $param["ReviewAudioVideoTaskId"] !== null) {
+            $this->ReviewAudioVideoTaskId = $param["ReviewAudioVideoTaskId"];
         }
 
         if (array_key_exists("MetaData",$param) and $param["MetaData"] !== null) {

@@ -34,10 +34,12 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
@@ -50,6 +52,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setMiniProgramPublishTask(WechatMiniProgramPublishTaskInput $MiniProgramPublishTask) Set Parameter of a release on WeChat Mini Program task.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getUpdateTime() Obtain Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
@@ -81,8 +87,9 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @var AiContentReviewTaskInput The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AiContentReviewTask;
 
@@ -105,6 +112,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MiniProgramPublishTask;
 
     /**
+     * @var ProcedureReviewAudioVideoTaskInput The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ReviewAudioVideoTask;
+
+    /**
      * @var string Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
     public $CreateTime;
@@ -122,14 +135,17 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
 Note: this field may return null, indicating that no valid values can be obtained.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Intelligent recognition task
-Note: This field may return `null`, indicating that no valid value can be found.
+     * @param AiContentReviewTaskInput $AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param WechatMiniProgramPublishTaskInput $MiniProgramPublishTask Parameter of a release on WeChat Mini Program task.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask The information of the moderation task.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $UpdateTime Last modified time of template in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      */
@@ -181,6 +197,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("MiniProgramPublishTask",$param) and $param["MiniProgramPublishTask"] !== null) {
             $this->MiniProgramPublishTask = new WechatMiniProgramPublishTaskInput();
             $this->MiniProgramPublishTask->deserialize($param["MiniProgramPublishTask"]);
+        }
+
+        if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
+            $this->ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput();
+            $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
         }
 
         if (array_key_exists("CreateTime",$param) and $param["CreateTime"] !== null) {

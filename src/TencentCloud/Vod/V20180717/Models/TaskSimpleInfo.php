@@ -27,27 +27,29 @@ use TencentCloud\Common\AbstractModel;
  * @method string getFileId() Obtain Video ID
  * @method void setFileId(string $FileId) Set Video ID
  * @method string getTaskType() Obtain The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
  * @method void setTaskType(string $TaskType) Set The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
  * @method string getCreateTime() Obtain Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method void setCreateTime(string $CreateTime) Set Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
  * @method string getBeginProcessTime() Obtain Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
@@ -78,16 +80,17 @@ class TaskSimpleInfo extends AbstractModel
 
     /**
      * @var string The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
      */
     public $TaskType;
 
@@ -121,16 +124,17 @@ Task types for v2017:
      * @param string $Status Task status. Valid values: `WAITING` (waiting), `PROCESSING` (processing), `FINISH` (completed)
      * @param string $FileId Video ID
      * @param string $TaskType The task type. Valid values:
-<li>Procedure: Video processing</li>
-<li>EditMedia: Video editing</li>
-<li> ReduceMediaBitrate: Bitrate reduction</li>
-<li>WechatDistribute: Publishing to WeChat</li>
+<li>`Procedure`: Video processing</li>
+<li>`EditMedia`: Video editing</li>
+<li>`ReduceMediaBitrate`: Bitrate reduction</li>
+<li>`WechatDistribute`: Publishing to Weixin</li>
+<li> `ReviewAudioVideo`: Moderation</li>
 Task types for v2017:
-<li>Transcode: Transcoding</li>
-<li>SnapshotByTimeOffset: Screencapturing</li>
-<li>Concat: Video splicing</li>
-<li>Clip: Video clipping</li>
-<li>ImageSprites: Image sprite generating</li>
+<li>`Transcode`: Transcoding</li>
+<li>`SnapshotByTimeOffset`: Screencapturing</li>
+<li>`Concat`: Video splicing</li>
+<li>`Clip`: Video clipping</li>
+<li>`ImageSprites`: Image sprite generating</li>
      * @param string $CreateTime Creation time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I).
      * @param string $BeginProcessTime Start time of task execution in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been started yet, this field will be empty.
      * @param string $FinishTime End time of task in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732?from_cn_redirect=1#I). If the task has not been completed yet, this field will be empty.

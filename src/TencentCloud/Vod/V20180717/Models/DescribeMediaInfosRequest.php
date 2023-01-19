@@ -22,30 +22,34 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getFileIds() Obtain List of media file IDs. N starts from 0 and can be up to 19.
  * @method void setFileIds(array $FileIds) Set List of media file IDs. N starts from 0 and can be up to 19.
- * @method array getFilters() Obtain Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (time point screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
- * @method void setFilters(array $Filters) Set Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (time point screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+ * @method array getFilters() Obtain The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
+<li>`basicInfo` (basic information)</li>
+<li>`metaData` (video metadata)</li>
+<li>`transcodeInfo` (transcoding information)</li>
+<li>`animatedGraphicsInfo` (animated image information)</li>
+<li>`imageSpriteInfo` (image sprite information)</li>
+<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
+<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
+<li>`keyFrameDescInfo` (timestamp information)</li>
+<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
+<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
+<li>`subtitleInfo` (subtitle information)</li>
+<li>`reviewInfo` (moderation information)</li>
+ * @method void setFilters(array $Filters) Set The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
+<li>`basicInfo` (basic information)</li>
+<li>`metaData` (video metadata)</li>
+<li>`transcodeInfo` (transcoding information)</li>
+<li>`animatedGraphicsInfo` (animated image information)</li>
+<li>`imageSpriteInfo` (image sprite information)</li>
+<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
+<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
+<li>`keyFrameDescInfo` (timestamp information)</li>
+<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
+<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
+<li>`subtitleInfo` (subtitle information)</li>
+<li>`reviewInfo` (moderation information)</li>
  */
 class DescribeMediaInfosRequest extends AbstractModel
 {
@@ -55,39 +59,43 @@ class DescribeMediaInfosRequest extends AbstractModel
     public $FileIds;
 
     /**
-     * @var array Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (time point screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-     */
-    public $Filters;
-
-    /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
      */
     public $SubAppId;
 
     /**
+     * @var array The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
+<li>`basicInfo` (basic information)</li>
+<li>`metaData` (video metadata)</li>
+<li>`transcodeInfo` (transcoding information)</li>
+<li>`animatedGraphicsInfo` (animated image information)</li>
+<li>`imageSpriteInfo` (image sprite information)</li>
+<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
+<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
+<li>`keyFrameDescInfo` (timestamp information)</li>
+<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
+<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
+<li>`subtitleInfo` (subtitle information)</li>
+<li>`reviewInfo` (moderation information)</li>
+     */
+    public $Filters;
+
+    /**
      * @param array $FileIds List of media file IDs. N starts from 0 and can be up to 19.
-     * @param array $Filters Specifies information entry that needs to be returned by all media files. Multiple entries can be specified simultaneously. N starts from 0. If this field is left empty, all information entries will be returned by default. Valid values:
-<li>basicInfo (basic video information).</li>
-<li>metaData (video metadata).</li>
-<li>transcodeInfo (result information of video transcoding).</li>
-<li>animatedGraphicsInfo (result information of animated image generating task).</li>
-<li>imageSpriteInfo (image sprite information).</li>
-<li>snapshotByTimeOffsetInfo (time point screenshot information).</li>
-<li>sampleSnapshotInfo (sampled screenshot information).</li>
-<li>keyFrameDescInfo (timestamp information).</li>
-<li>adaptiveDynamicStreamingInfo (information of adaptive bitrate streaming).</li>
-<li>miniProgramReviewInfo (WeChat Mini Program audit information).</li>
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
+     * @param array $Filters The types of information to return. You can specify multiple information types. `N` starts from 0. If you do not specify this parameter, all information will be returned. The supported information types are as follows:
+<li>`basicInfo` (basic information)</li>
+<li>`metaData` (video metadata)</li>
+<li>`transcodeInfo` (transcoding information)</li>
+<li>`animatedGraphicsInfo` (animated image information)</li>
+<li>`imageSpriteInfo` (image sprite information)</li>
+<li>`snapshotByTimeOffsetInfo` (time point screenshot information)</li>
+<li>`sampleSnapshotInfo` (sampled screenshot information)</li>
+<li>`keyFrameDescInfo` (timestamp information)</li>
+<li>`adaptiveDynamicStreamingInfo` (adaptive bitrate information)</li>
+<li>`miniProgramReviewInfo` (WeChat Mini Program moderation information)</li>
+<li>`subtitleInfo` (subtitle information)</li>
+<li>`reviewInfo` (moderation information)</li>
      */
     function __construct()
     {
@@ -106,12 +114,12 @@ class DescribeMediaInfosRequest extends AbstractModel
             $this->FileIds = $param["FileIds"];
         }
 
-        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
-            $this->Filters = $param["Filters"];
-        }
-
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("Filters",$param) and $param["Filters"] !== null) {
+            $this->Filters = $param["Filters"];
         }
     }
 }

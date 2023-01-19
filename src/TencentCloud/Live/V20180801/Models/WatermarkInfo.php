@@ -32,8 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setWatermarkName(string $WatermarkName) Set Watermark name.
  * @method integer getStatus() Obtain Current status. 0: not used. 1: in use.
  * @method void setStatus(integer $Status) Set Current status. 0: not used. 1: in use.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getCreateTime() Obtain The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCreateTime(string $CreateTime) Set The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
  * @method integer getWidth() Obtain Watermark width.
  * @method void setWidth(integer $Width) Set Watermark width.
  * @method integer getHeight() Obtain Watermark height.
@@ -72,7 +74,8 @@ class WatermarkInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Creation time.
+     * @var string The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
      */
     public $CreateTime;
 
@@ -93,7 +96,8 @@ class WatermarkInfo extends AbstractModel
      * @param integer $YPosition Display position: Y-axis offset.
      * @param string $WatermarkName Watermark name.
      * @param integer $Status Current status. 0: not used. 1: in use.
-     * @param string $CreateTime Creation time.
+     * @param string $CreateTime The time when the watermark was added.
+Note: Beijing time (UTC+8) is used.
      * @param integer $Width Watermark width.
      * @param integer $Height Watermark height.
      */

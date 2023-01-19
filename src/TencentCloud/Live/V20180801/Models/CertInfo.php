@@ -26,8 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertName(string $CertName) Set Certificate name.
  * @method string getDescription() Obtain Description.
  * @method void setDescription(string $Description) Set Description.
- * @method string getCreateTime() Obtain Creation time in UTC format.
- * @method void setCreateTime(string $CreateTime) Set Creation time in UTC format.
+ * @method string getCreateTime() Obtain The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCreateTime(string $CreateTime) Set The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
  * @method string getHttpsCrt() Obtain Certificate content.
  * @method void setHttpsCrt(string $HttpsCrt) Set Certificate content.
  * @method integer getCertType() Obtain Certificate type.
@@ -36,8 +38,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCertType(integer $CertType) Set Certificate type.
 0: user-added certificate
 1: Tencent Cloud-hosted certificate
- * @method string getCertExpireTime() Obtain Certificate expiration time in UTC format.
- * @method void setCertExpireTime(string $CertExpireTime) Set Certificate expiration time in UTC format.
+ * @method string getCertExpireTime() Obtain The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCertExpireTime(string $CertExpireTime) Set The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
  * @method array getDomainList() Obtain List of domain names that use this certificate.
  * @method void setDomainList(array $DomainList) Set List of domain names that use this certificate.
  */
@@ -59,7 +63,8 @@ class CertInfo extends AbstractModel
     public $Description;
 
     /**
-     * @var string Creation time in UTC format.
+     * @var string The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public $CreateTime;
 
@@ -76,7 +81,8 @@ class CertInfo extends AbstractModel
     public $CertType;
 
     /**
-     * @var string Certificate expiration time in UTC format.
+     * @var string The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
      */
     public $CertExpireTime;
 
@@ -89,12 +95,14 @@ class CertInfo extends AbstractModel
      * @param integer $CertId Certificate ID.
      * @param string $CertName Certificate name.
      * @param string $Description Description.
-     * @param string $CreateTime Creation time in UTC format.
+     * @param string $CreateTime The creation time in UTC format.
+Note: Beijing time (UTC+8) is used.
      * @param string $HttpsCrt Certificate content.
      * @param integer $CertType Certificate type.
 0: user-added certificate
 1: Tencent Cloud-hosted certificate
-     * @param string $CertExpireTime Certificate expiration time in UTC format.
+     * @param string $CertExpireTime The certificate expiration time in UTC format.
+Note: Beijing time (UTC+8) is used.
      * @param array $DomainList List of domain names that use this certificate.
      */
     function __construct()

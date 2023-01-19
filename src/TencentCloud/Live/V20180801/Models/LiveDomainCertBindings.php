@@ -36,15 +36,19 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Whether HTTPS is enabled.
 1: Enabled
 0: Disabled
- * @method string getCertExpireTime() Obtain The expiration time of the certificate.
- * @method void setCertExpireTime(string $CertExpireTime) Set The expiration time of the certificate.
+ * @method string getCertExpireTime() Obtain The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCertExpireTime(string $CertExpireTime) Set The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
  * @method integer getCertId() Obtain The certificate ID.
  * @method void setCertId(integer $CertId) Set The certificate ID.
  * @method string getCloudCertId() Obtain The SSL certificate ID assigned by Tencent Cloud.
  * @method void setCloudCertId(string $CloudCertId) Set The SSL certificate ID assigned by Tencent Cloud.
  * @method string getUpdateTime() Obtain The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setUpdateTime(string $UpdateTime) Set The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class LiveDomainCertBindings extends AbstractModel
@@ -74,7 +78,8 @@ class LiveDomainCertBindings extends AbstractModel
     public $Status;
 
     /**
-     * @var string The expiration time of the certificate.
+     * @var string The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
      */
     public $CertExpireTime;
 
@@ -90,6 +95,7 @@ class LiveDomainCertBindings extends AbstractModel
 
     /**
      * @var string The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $UpdateTime;
@@ -103,10 +109,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $Status Whether HTTPS is enabled.
 1: Enabled
 0: Disabled
-     * @param string $CertExpireTime The expiration time of the certificate.
+     * @param string $CertExpireTime The certificate expiration time.
+Note: Beijing time (UTC+8) is used.
      * @param integer $CertId The certificate ID.
      * @param string $CloudCertId The SSL certificate ID assigned by Tencent Cloud.
      * @param string $UpdateTime The last updated time.
+Note: Beijing time (UTC+8) is used.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()

@@ -22,18 +22,22 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Task flow name (up to 20 characters).
  * @method void setName(string $Name) Set Task flow name (up to 20 characters).
+ * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
  * @method string getComment() Obtain Template description. Length limit: 256 characters.
  * @method void setComment(string $Comment) Set Template description. Length limit: 256 characters.
  * @method MediaProcessTaskInput getMediaProcessTask() Obtain Parameter of video processing task.
  * @method void setMediaProcessTask(MediaProcessTaskInput $MediaProcessTask) Set Parameter of video processing task.
- * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain Intelligent recognition task
- * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set Intelligent recognition task
+ * @method AiContentReviewTaskInput getAiContentReviewTask() Obtain The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
+ * @method void setAiContentReviewTask(AiContentReviewTaskInput $AiContentReviewTask) Set The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
  * @method AiAnalysisTaskInput getAiAnalysisTask() Obtain Parameter of AI-based content analysis task.
  * @method void setAiAnalysisTask(AiAnalysisTaskInput $AiAnalysisTask) Set Parameter of AI-based content analysis task.
  * @method AiRecognitionTaskInput getAiRecognitionTask() Obtain Type parameter of AI-based content recognition task.
  * @method void setAiRecognitionTask(AiRecognitionTaskInput $AiRecognitionTask) Set Type parameter of AI-based content recognition task.
- * @method integer getSubAppId() Obtain [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
- * @method void setSubAppId(integer $SubAppId) Set [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+ * @method ProcedureReviewAudioVideoTaskInput getReviewAudioVideoTask() Obtain The information of the moderation task.
+ * @method void setReviewAudioVideoTask(ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask) Set The information of the moderation task.
  */
 class CreateProcedureTemplateRequest extends AbstractModel
 {
@@ -41,6 +45,11 @@ class CreateProcedureTemplateRequest extends AbstractModel
      * @var string Task flow name (up to 20 characters).
      */
     public $Name;
+
+    /**
+     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     */
+    public $SubAppId;
 
     /**
      * @var string Template description. Length limit: 256 characters.
@@ -53,7 +62,8 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $MediaProcessTask;
 
     /**
-     * @var AiContentReviewTaskInput Intelligent recognition task
+     * @var AiContentReviewTaskInput The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
      */
     public $AiContentReviewTask;
 
@@ -68,18 +78,20 @@ class CreateProcedureTemplateRequest extends AbstractModel
     public $AiRecognitionTask;
 
     /**
-     * @var integer [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @var ProcedureReviewAudioVideoTaskInput The information of the moderation task.
      */
-    public $SubAppId;
+    public $ReviewAudioVideoTask;
 
     /**
      * @param string $Name Task flow name (up to 20 characters).
+     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
      * @param string $Comment Template description. Length limit: 256 characters.
      * @param MediaProcessTaskInput $MediaProcessTask Parameter of video processing task.
-     * @param AiContentReviewTaskInput $AiContentReviewTask Intelligent recognition task
+     * @param AiContentReviewTaskInput $AiContentReviewTask The information of the intelligent moderation task\*.
+<font color=red>\*: This parameter is used by our old moderation templates and is not recommended. Please use `ReviewAudioVideoTask` instead.</font> 
      * @param AiAnalysisTaskInput $AiAnalysisTask Parameter of AI-based content analysis task.
      * @param AiRecognitionTaskInput $AiRecognitionTask Type parameter of AI-based content recognition task.
-     * @param integer $SubAppId [Subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID in VOD. If you need to access a resource in a subapplication, enter the subapplication ID in this field; otherwise, leave it empty.
+     * @param ProcedureReviewAudioVideoTaskInput $ReviewAudioVideoTask The information of the moderation task.
      */
     function __construct()
     {
@@ -96,6 +108,10 @@ class CreateProcedureTemplateRequest extends AbstractModel
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
+            $this->SubAppId = $param["SubAppId"];
         }
 
         if (array_key_exists("Comment",$param) and $param["Comment"] !== null) {
@@ -122,8 +138,9 @@ class CreateProcedureTemplateRequest extends AbstractModel
             $this->AiRecognitionTask->deserialize($param["AiRecognitionTask"]);
         }
 
-        if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
-            $this->SubAppId = $param["SubAppId"];
+        if (array_key_exists("ReviewAudioVideoTask",$param) and $param["ReviewAudioVideoTask"] !== null) {
+            $this->ReviewAudioVideoTask = new ProcedureReviewAudioVideoTaskInput();
+            $this->ReviewAudioVideoTask->deserialize($param["ReviewAudioVideoTask"]);
         }
     }
 }

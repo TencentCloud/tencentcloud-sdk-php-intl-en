@@ -28,17 +28,17 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileIds(array $FileIds) Set File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
- * @method array getNames() Obtain Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
+ * @method array getNames() Obtain The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+ * @method void setNames(array $Names) Set The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+ * @method array getNamePrefixes() Obtain The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
- * @method void setNames(array $Names) Set Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
- * @method array getNamePrefixes() Obtain Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
-<li>Array length limit: 10.</li>
- * @method void setNamePrefixes(array $NamePrefixes) Set Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+ * @method void setNamePrefixes(array $NamePrefixes) Set The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
  * @method array getDescriptions() Obtain File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
 <li>Length limit for a single description: 100 characters</li>
@@ -50,12 +50,12 @@ use TencentCloud\Common\AbstractModel;
 <li>Array length limit: 10.</li>
  * @method void setClassIds(array $ClassIds) Set Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
- * @method array getTags() Obtain The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
- * @method void setTags(array $Tags) Set The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+ * @method array getTags() Obtain The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
+ * @method void setTags(array $Tags) Set The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
  * @method array getCategories() Obtain File type. Any element in the set can be matched.
 <li>Video: video file</li>
 <li>Audio: audio file</li>
@@ -194,15 +194,15 @@ class SearchMediaRequest extends AbstractModel
     public $FileIds;
 
     /**
-     * @var array Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
+     * @var array The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
      */
     public $Names;
 
     /**
-     * @var array Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * @var array The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
      */
     public $NamePrefixes;
@@ -221,9 +221,9 @@ class SearchMediaRequest extends AbstractModel
     public $ClassIds;
 
     /**
-     * @var array The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+     * @var array The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
      */
     public $Tags;
 
@@ -373,20 +373,20 @@ End time in the creation time range.
      * @param array $FileIds File ID set. Any element in the set can be matched.
 <li>Array length limit: 10.</li>
 <li>ID length limit: 40 characters.</li>
-     * @param array $Names Filename set. Filenames of media files are fuzzily matched. The higher the match rate, the higher-ranked the result.
-<li>Filename length limit: 40 characters.</li>
-<li>Array length limit: 10.</li>
-     * @param array $NamePrefixes Filename prefix, which matches the filenames of media files.
-<li>Filename prefix length limit: 20 characters.</li>
+     * @param array $Names The file names to use for fuzzy search, which are sorted by relevance in descending order.
+<li>Name length limit: 100 characters.</li>
+<li>Array length limit: 10</li>
+     * @param array $NamePrefixes The file name prefixes to search.
+<li>Prefix length limit: 100 characters.</li>
 <li>Array length limit: 10.</li>
      * @param array $Descriptions File description set. Media file descriptions are fuzzily matched. The higher the match rate, the higher-ranked the result.
 <li>Length limit for a single description: 100 characters</li>
 <li>Array length limit: 10</li>
      * @param array $ClassIds Category ID set. The categories of the specified IDs and all subcategories in the set are matched.
 <li>Array length limit: 10.</li>
-     * @param array $Tags The tag set. A file is considered a match if it has any of the tags in the tag set.
-<li>Tag length limit: 16 characters.</li>
-<li>Array length limit: 10.</li>
+     * @param array $Tags The tags to search. A file is considered a match if it has any of the tags specified.
+<li>Tag length limit: 32 characters.</li>
+<li>Array length limit: 16.</li>
      * @param array $Categories File type. Any element in the set can be matched.
 <li>Video: video file</li>
 <li>Audio: audio file</li>

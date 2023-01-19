@@ -42,6 +42,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method string getCodecTag() Obtain The codec tag. This parameter is valid only if `Codec` is `hevc`.
  * @method void setCodecTag(string $CodecTag) Set The codec tag. This parameter is valid only if `Codec` is `hevc`.
+ * @method DynamicRangeInfo getDynamicRangeInfo() Obtain Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+ * @method void setDynamicRangeInfo(DynamicRangeInfo $DynamicRangeInfo) Set Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
  */
 class MediaVideoStreamItem extends AbstractModel
 {
@@ -81,6 +85,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $CodecTag;
 
     /**
+     * @var DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
+     */
+    public $DynamicRangeInfo;
+
+    /**
      * @param integer $Bitrate Bitrate of video stream in bps.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param integer $Height Height of video stream in px.
@@ -92,6 +102,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Fps Frame rate in Hz.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param string $CodecTag The codec tag. This parameter is valid only if `Codec` is `hevc`.
+     * @param DynamicRangeInfo $DynamicRangeInfo Dynamic range information.
+<li><font color=red>Note</font>: This parameter is valid for transcoding files generated after 2023-01-10T00:00:00Z.</li>
      */
     function __construct()
     {
@@ -128,6 +140,11 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("CodecTag",$param) and $param["CodecTag"] !== null) {
             $this->CodecTag = $param["CodecTag"];
+        }
+
+        if (array_key_exists("DynamicRangeInfo",$param) and $param["DynamicRangeInfo"] !== null) {
+            $this->DynamicRangeInfo = new DynamicRangeInfo();
+            $this->DynamicRangeInfo->deserialize($param["DynamicRangeInfo"]);
         }
     }
 }

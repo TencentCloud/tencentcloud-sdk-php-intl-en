@@ -18,26 +18,21 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The input of a moderation task.
+ * The moderation task details of a task flow template.
  *
- * @method string getFileId() Obtain The ID of the media file.
- * @method void setFileId(string $FileId) Set The ID of the media file.
  * @method integer getDefinition() Obtain The moderation template ID.
  * @method void setDefinition(integer $Definition) Set The moderation template ID.
  * @method array getReviewContents() Obtain The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
  * @method void setReviewContents(array $ReviewContents) Set The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
  */
-class ReviewAudioVideoTaskInput extends AbstractModel
+class ProcedureReviewAudioVideoTaskInput extends AbstractModel
 {
-    /**
-     * @var string The ID of the media file.
-     */
-    public $FileId;
-
     /**
      * @var integer The moderation template ID.
      */
@@ -47,15 +42,16 @@ class ReviewAudioVideoTaskInput extends AbstractModel
      * @var array The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
      */
     public $ReviewContents;
 
     /**
-     * @param string $FileId The ID of the media file.
      * @param integer $Definition The moderation template ID.
      * @param array $ReviewContents The type of moderated content. Valid values:
 <li>`Media`: The original audio/video.</li>
 <li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
      */
     function __construct()
     {
@@ -70,10 +66,6 @@ class ReviewAudioVideoTaskInput extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("FileId",$param) and $param["FileId"] !== null) {
-            $this->FileId = $param["FileId"];
-        }
-
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
         }

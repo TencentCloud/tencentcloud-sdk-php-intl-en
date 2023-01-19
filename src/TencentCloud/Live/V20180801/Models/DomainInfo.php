@@ -34,8 +34,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setStatus(integer $Status) Set Domain name status:
 0: deactivated.
 1: activated.
- * @method string getCreateTime() Obtain Creation time.
- * @method void setCreateTime(string $CreateTime) Set Creation time.
+ * @method string getCreateTime() Obtain The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCreateTime(string $CreateTime) Set The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
  * @method integer getBCName() Obtain Whether there is a CNAME record pointing to a fixed rule domain name:
 0: no.
 1: yes.
@@ -62,8 +64,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCurrentCName(string $CurrentCName) Set Information of currently used CNAME record.
  * @method integer getRentTag() Obtain Disused parameter, which can be ignored.
  * @method void setRentTag(integer $RentTag) Set Disused parameter, which can be ignored.
- * @method string getRentExpireTime() Obtain Disused parameter, which can be ignored.
- * @method void setRentExpireTime(string $RentExpireTime) Set Disused parameter, which can be ignored.
+ * @method string getRentExpireTime() Obtain A disused parameter.
+Note: Beijing time (UTC+8) is used.
+ * @method void setRentExpireTime(string $RentExpireTime) Set A disused parameter.
+Note: Beijing time (UTC+8) is used.
  * @method integer getIsMiniProgramLive() Obtain 0: LVB.
 1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.
@@ -93,7 +97,8 @@ class DomainInfo extends AbstractModel
     public $Status;
 
     /**
-     * @var string Creation time.
+     * @var string The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
      */
     public $CreateTime;
 
@@ -135,7 +140,8 @@ class DomainInfo extends AbstractModel
     public $RentTag;
 
     /**
-     * @var string Disused parameter, which can be ignored.
+     * @var string A disused parameter.
+Note: Beijing time (UTC+8) is used.
      */
     public $RentExpireTime;
 
@@ -154,7 +160,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
      * @param integer $Status Domain name status:
 0: deactivated.
 1: activated.
-     * @param string $CreateTime Creation time.
+     * @param string $CreateTime The time when the domain was added.
+Note: Beijing time (UTC+8) is used.
      * @param integer $BCName Whether there is a CNAME record pointing to a fixed rule domain name:
 0: no.
 1: yes.
@@ -168,7 +175,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 1: LCB.
      * @param string $CurrentCName Information of currently used CNAME record.
      * @param integer $RentTag Disused parameter, which can be ignored.
-     * @param string $RentExpireTime Disused parameter, which can be ignored.
+     * @param string $RentExpireTime A disused parameter.
+Note: Beijing time (UTC+8) is used.
      * @param integer $IsMiniProgramLive 0: LVB.
 1: LVB on Mini Program.
 Note: this field may return null, indicating that no valid values can be obtained.

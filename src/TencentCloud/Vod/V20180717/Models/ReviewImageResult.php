@@ -18,32 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * The output of a moderation task.
+ * Image moderation results.
  *
- * @method string getSuggestion() Obtain The handling suggestion. Valid values:
+ * @method string getSuggestion() Obtain The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method void setSuggestion(string $Suggestion) Set The handling suggestion. Valid values:
+ * @method void setSuggestion(string $Suggestion) Set The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
- * @method string getLabel() Obtain The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
- * @method void setLabel(string $Label) Set The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
- * @method string getForm() Obtain The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
- * @method void setForm(string $Form) Set The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+ * @method string getLabel() Obtain The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+ * @method void setLabel(string $Label) Set The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+ * @method string getForm() Obtain The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
+ * @method void setForm(string $Form) Set The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
  * @method array getSegmentSet() Obtain A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
  * @method void setSegmentSet(array $SegmentSet) Set A list of the suspicious segments detected.
@@ -52,15 +44,11 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentSetFileUrl(string $SegmentSetFileUrl) Set The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
  * @method string getSegmentSetFileUrlExpireTime() Obtain The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
  * @method void setSegmentSetFileUrlExpireTime(string $SegmentSetFileUrlExpireTime) Set The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
- * @method ReviewImageResult getCoverReviewResult() Obtain The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setCoverReviewResult(ReviewImageResult $CoverReviewResult) Set The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
  */
-class ReviewAudioVideoTaskOutput extends AbstractModel
+class ReviewImageResult extends AbstractModel
 {
     /**
-     * @var string The handling suggestion. Valid values:
+     * @var string The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
@@ -68,18 +56,14 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
     public $Suggestion;
 
     /**
-     * @var string The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
+     * @var string The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
      */
     public $Label;
 
     /**
-     * @var string The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * @var string The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
      */
     public $Form;
 
@@ -100,30 +84,18 @@ class ReviewAudioVideoTaskOutput extends AbstractModel
     public $SegmentSetFileUrlExpireTime;
 
     /**
-     * @var ReviewImageResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $CoverReviewResult;
-
-    /**
-     * @param string $Suggestion The handling suggestion. Valid values:
+     * @param string $Suggestion The suggestion. Valid values:
 <li>pass</li>
 <li>review</li>
 <li>block</li>
-     * @param string $Label The most likely label for the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Porn</li>
-<li>Terrorism</li>
-     * @param string $Form The most likely format of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
-<li>Image</li>
-<li>OCR</li>
-<li>ASR</li>
-<li>Voice</li>
+     * @param string $Label The most likely label for the suspicious content. This parameter is valid if `Suggestion` is `review` or `block`. Valid values: <li>`Porn`</li> <li>`Terror`</li>
+     * @param string $Form The most likely type of the suspicious content. This parameter is valid only if `Suggestion` is `review` or `block`.
+<li>`Image` (people or icons in images)</li>
+<li>`OCR` (text in images)</li>
      * @param array $SegmentSet A list of the suspicious segments detected.
 <font color=red>Note</font>: Only the first 10 results will be returned at most. You can get all the results from the file specified by `SegmentSetFileUrl`.
      * @param string $SegmentSetFileUrl The URL of the file that contains suspicious segments. The file is in JSON format and has the same data structure as `SegmentSet`. Instead of being saved permanently, the file is deleted upon the expiration time (`SegmentSetFileUrlExpireTime`).
      * @param string $SegmentSetFileUrlExpireTime The expiration time of the file that contains suspicious segments, in [ISO date format](https://intl.cloud.tencent.com/document/product/266/11732#iso-date-format).
-     * @param ReviewImageResult $CoverReviewResult The thumbnail moderation result.
-Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -153,7 +125,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
         if (array_key_exists("SegmentSet",$param) and $param["SegmentSet"] !== null) {
             $this->SegmentSet = [];
             foreach ($param["SegmentSet"] as $key => $value){
-                $obj = new ReviewAudioVideoSegmentItem();
+                $obj = new ReviewImageSegmentItem();
                 $obj->deserialize($value);
                 array_push($this->SegmentSet, $obj);
             }
@@ -165,11 +137,6 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("SegmentSetFileUrlExpireTime",$param) and $param["SegmentSetFileUrlExpireTime"] !== null) {
             $this->SegmentSetFileUrlExpireTime = $param["SegmentSetFileUrlExpireTime"];
-        }
-
-        if (array_key_exists("CoverReviewResult",$param) and $param["CoverReviewResult"] !== null) {
-            $this->CoverReviewResult = new ReviewImageResult();
-            $this->CoverReviewResult->deserialize($param["CoverReviewResult"]);
         }
     }
 }

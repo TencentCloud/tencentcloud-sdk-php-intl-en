@@ -24,10 +24,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFileId(string $FileId) Set The media file ID, which is assigned after upload and uniquely identifies a file in VOD. You can view the ID of a file in the [NewFileUpload](https://www.tencentcloud.com/document/product/266/33950) callback or in the [VOD console](https://console.tencentcloud.com/vod/media).
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://www.tencentcloud.com/document/product/266/33987) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://www.tencentcloud.com/document/product/266/33987) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method integer getDefinition() Obtain The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
- * @method void setDefinition(integer $Definition) Set The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+ * @method array getReviewContents() Obtain The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+ * @method void setReviewContents(array $ReviewContents) Set The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+ * @method integer getDefinition() Obtain The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
+ * @method void setDefinition(integer $Definition) Set The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
  * @method integer getTasksPriority() Obtain The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method void setTasksPriority(integer $TasksPriority) Set The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
  * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
@@ -50,8 +56,15 @@ class ReviewAudioVideoRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var integer The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     * @var array The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     */
+    public $ReviewContents;
+
+    /**
+     * @var integer The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
      */
     public $Definition;
 
@@ -78,8 +91,11 @@ class ReviewAudioVideoRequest extends AbstractModel
     /**
      * @param string $FileId The media file ID, which is assigned after upload and uniquely identifies a file in VOD. You can view the ID of a file in the [NewFileUpload](https://www.tencentcloud.com/document/product/266/33950) callback or in the [VOD console](https://console.tencentcloud.com/vod/media).
      * @param integer $SubAppId <b>The VOD [subapplication](https://www.tencentcloud.com/document/product/266/33987) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param integer $Definition The moderation template ID. Valid values:
-<li>`10` (default): The preset template, which can detect inappropriate information with labels including pornographic (`Porn`), terrorist (`Terror`), and politically sensitive (`Polity`).</li>
+     * @param array $ReviewContents The type of moderated content. Valid values:
+<li>`Media`: The original audio/video.</li>
+<li>`Cover`: Thumbnails.</li>
+If this parameter is not specified or an empty array is passed in, `Media` will be used.
+     * @param integer $Definition The moderation template ID. Valid values: <li>10 (default): The preset template, whose violation labels are `Porn` and `Terror`.</li>
      * @param integer $TasksPriority The priority of a task flow. The higher the value, the higher the priority. Value range: [-10, 10]. If this parameter is left empty, 0 will be used.
      * @param string $SessionContext The source context, which is used to pass through user request information. The `ReviewAudioVideoComplete` callback will return the value of this parameter. It can contain up to 1,000 characters.
      * @param string $SessionId The session ID, which is used to identify duplicate requests. If there was a request with the same session ID in the last three days, an error will be returned for the current request. The session ID can contain up to 50 characters. If you do not pass this parameter or pass in an empty string, duplicate sessions will not be identified.
@@ -104,6 +120,10 @@ class ReviewAudioVideoRequest extends AbstractModel
 
         if (array_key_exists("SubAppId",$param) and $param["SubAppId"] !== null) {
             $this->SubAppId = $param["SubAppId"];
+        }
+
+        if (array_key_exists("ReviewContents",$param) and $param["ReviewContents"] !== null) {
+            $this->ReviewContents = $param["ReviewContents"];
         }
 
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {

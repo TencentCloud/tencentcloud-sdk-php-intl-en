@@ -18,24 +18,24 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeProcedureTemplates request structure.
+ * DescribeReviewTemplates request structure.
  *
  * @method integer getSubAppId() Obtain <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
  * @method void setSubAppId(integer $SubAppId) Set <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
- * @method array getNames() Obtain Name filter of task flow template. Array length limit: 100.
- * @method void setNames(array $Names) Set Name filter of task flow template. Array length limit: 100.
- * @method string getType() Obtain Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
- * @method void setType(string $Type) Set Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
- * @method integer getOffset() Obtain Pagination offset. Default value: 0.
- * @method void setOffset(integer $Offset) Set Pagination offset. Default value: 0.
- * @method integer getLimit() Obtain Number of returned entries. Default value: 10. Maximum value: 100.
- * @method void setLimit(integer $Limit) Set Number of returned entries. Default value: 10. Maximum value: 100.
+ * @method array getDefinitions() Obtain The IDs of the moderation templates to query. Array length limit: 100.
+ * @method void setDefinitions(array $Definitions) Set The IDs of the moderation templates to query. Array length limit: 100.
+ * @method string getType() Obtain The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
+ * @method void setType(string $Type) Set The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
+ * @method integer getOffset() Obtain The pagination offset. Default value: 0.
+ * @method void setOffset(integer $Offset) Set The pagination offset. Default value: 0.
+ * @method integer getLimit() Obtain The number of records to return. Default value: 10. Maximum value: 100.
+ * @method void setLimit(integer $Limit) Set The number of records to return. Default value: 10. Maximum value: 100.
  */
-class DescribeProcedureTemplatesRequest extends AbstractModel
+class DescribeReviewTemplatesRequest extends AbstractModel
 {
     /**
      * @var integer <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
@@ -43,35 +43,35 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
     public $SubAppId;
 
     /**
-     * @var array Name filter of task flow template. Array length limit: 100.
+     * @var array The IDs of the moderation templates to query. Array length limit: 100.
      */
-    public $Names;
+    public $Definitions;
 
     /**
-     * @var string Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
+     * @var string The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
      */
     public $Type;
 
     /**
-     * @var integer Pagination offset. Default value: 0.
+     * @var integer The pagination offset. Default value: 0.
      */
     public $Offset;
 
     /**
-     * @var integer Number of returned entries. Default value: 10. Maximum value: 100.
+     * @var integer The number of records to return. Default value: 10. Maximum value: 100.
      */
     public $Limit;
 
     /**
      * @param integer $SubAppId <b>The VOD [subapplication](https://intl.cloud.tencent.com/document/product/266/14574?from_cn_redirect=1) ID. If you need to access a resource in a subapplication, set this parameter to the subapplication ID; otherwise, leave it empty.</b>
-     * @param array $Names Name filter of task flow template. Array length limit: 100.
-     * @param string $Type Filter of task flow template types. Valid values:
-<li>Preset: preset task flow template;</li>
-<li>Custom: custom task flow template.</li>
-     * @param integer $Offset Pagination offset. Default value: 0.
-     * @param integer $Limit Number of returned entries. Default value: 10. Maximum value: 100.
+     * @param array $Definitions The IDs of the moderation templates to query. Array length limit: 100.
+     * @param string $Type The template type. Valid values:
+<li>Preset</li>
+<li>Custom</li>
+     * @param integer $Offset The pagination offset. Default value: 0.
+     * @param integer $Limit The number of records to return. Default value: 10. Maximum value: 100.
      */
     function __construct()
     {
@@ -90,8 +90,8 @@ class DescribeProcedureTemplatesRequest extends AbstractModel
             $this->SubAppId = $param["SubAppId"];
         }
 
-        if (array_key_exists("Names",$param) and $param["Names"] !== null) {
-            $this->Names = $param["Names"];
+        if (array_key_exists("Definitions",$param) and $param["Definitions"] !== null) {
+            $this->Definitions = $param["Definitions"];
         }
 
         if (array_key_exists("Type",$param) and $param["Type"] !== null) {

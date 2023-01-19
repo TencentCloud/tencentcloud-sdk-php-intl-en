@@ -20,10 +20,14 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Rule information.
  *
- * @method string getCreateTime() Obtain Rule creation time.
- * @method void setCreateTime(string $CreateTime) Set Rule creation time.
- * @method string getUpdateTime() Obtain Rule update time.
- * @method void setUpdateTime(string $UpdateTime) Set Rule update time.
+ * @method string getCreateTime() Obtain The rule creation time.
+Note: Beijing time (UTC+8) is used.
+ * @method void setCreateTime(string $CreateTime) Set The rule creation time.
+Note: Beijing time (UTC+8) is used.
+ * @method string getUpdateTime() Obtain The rule update time.
+Note: Beijing time (UTC+8) is used.
+ * @method void setUpdateTime(string $UpdateTime) Set The rule update time.
+Note: Beijing time (UTC+8) is used.
  * @method integer getTemplateId() Obtain Template ID.
  * @method void setTemplateId(integer $TemplateId) Set Template ID.
  * @method string getDomainName() Obtain Push domain name.
@@ -36,12 +40,14 @@ use TencentCloud\Common\AbstractModel;
 class RuleInfo extends AbstractModel
 {
     /**
-     * @var string Rule creation time.
+     * @var string The rule creation time.
+Note: Beijing time (UTC+8) is used.
      */
     public $CreateTime;
 
     /**
-     * @var string Rule update time.
+     * @var string The rule update time.
+Note: Beijing time (UTC+8) is used.
      */
     public $UpdateTime;
 
@@ -66,8 +72,10 @@ class RuleInfo extends AbstractModel
     public $StreamName;
 
     /**
-     * @param string $CreateTime Rule creation time.
-     * @param string $UpdateTime Rule update time.
+     * @param string $CreateTime The rule creation time.
+Note: Beijing time (UTC+8) is used.
+     * @param string $UpdateTime The rule update time.
+Note: Beijing time (UTC+8) is used.
      * @param integer $TemplateId Template ID.
      * @param string $DomainName Push domain name.
      * @param string $AppName Push path.

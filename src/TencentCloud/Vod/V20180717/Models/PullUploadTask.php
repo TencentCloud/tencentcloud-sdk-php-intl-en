@@ -18,10 +18,10 @@ namespace TencentCloud\Vod\V20180717\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Video pull for upload task information
+ * The information of a pull and upload task.
  *
- * @method string getTaskId() Obtain Pull for upload task ID.
- * @method void setTaskId(string $TaskId) Set Pull for upload task ID.
+ * @method string getTaskId() Obtain The task ID.
+ * @method void setTaskId(string $TaskId) Set The task ID.
  * @method string getStatus() Obtain Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
@@ -38,29 +38,31 @@ use TencentCloud\Common\AbstractModel;
 <li>70000: internal service error. Please try again.</li>
  * @method string getMessage() Obtain Error message.
  * @method void setMessage(string $Message) Set Error message.
- * @method string getFileId() Obtain ID of video generated after pull for upload is completed.
- * @method void setFileId(string $FileId) Set ID of video generated after pull for upload is completed.
- * @method MediaBasicInfo getMediaBasicInfo() Obtain Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
- * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getFileId() Obtain The ID of the uploaded file.
+ * @method void setFileId(string $FileId) Set The ID of the uploaded file.
+ * @method MediaBasicInfo getMediaBasicInfo() Obtain The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setMediaBasicInfo(MediaBasicInfo $MediaBasicInfo) Set The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method MediaMetaData getMetaData() Obtain The metadata of the output video.
  * @method void setMetaData(MediaMetaData $MetaData) Set The metadata of the output video.
- * @method string getFileUrl() Obtain Playback address generated after pull for upload is completed.
- * @method void setFileUrl(string $FileUrl) Set Playback address generated after pull for upload is completed.
- * @method string getProcedureTaskId() Obtain If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
- * @method void setProcedureTaskId(string $ProcedureTaskId) Set If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
- * @method string getSessionContext() Obtain The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
- * @method void setSessionContext(string $SessionContext) Set The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+ * @method string getFileUrl() Obtain The playback address of the uploaded file.
+ * @method void setFileUrl(string $FileUrl) Set The playback address of the uploaded file.
+ * @method string getProcedureTaskId() Obtain The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+ * @method void setProcedureTaskId(string $ProcedureTaskId) Set The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+ * @method string getReviewAudioVideoTaskId() Obtain The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+ * @method void setReviewAudioVideoTaskId(string $ReviewAudioVideoTaskId) Set The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+ * @method string getSessionContext() Obtain The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
+ * @method void setSessionContext(string $SessionContext) Set The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
  * @method string getSessionId() Obtain The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
  * @method void setSessionId(string $SessionId) Set The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
- * @method integer getProgress() Obtain The progress of a pull and upload task. Value range: 0-100.
- * @method void setProgress(integer $Progress) Set The progress of a pull and upload task. Value range: 0-100.
+ * @method integer getProgress() Obtain The progress of the pull and upload task. Value range: 1-100.
+ * @method void setProgress(integer $Progress) Set The progress of the pull and upload task. Value range: 1-100.
  */
 class PullUploadTask extends AbstractModel
 {
     /**
-     * @var string Pull for upload task ID.
+     * @var string The task ID.
      */
     public $TaskId;
 
@@ -85,13 +87,13 @@ class PullUploadTask extends AbstractModel
     public $Message;
 
     /**
-     * @var string ID of video generated after pull for upload is completed.
+     * @var string The ID of the uploaded file.
      */
     public $FileId;
 
     /**
-     * @var MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @var MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $MediaBasicInfo;
 
@@ -101,17 +103,22 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $MetaData;
 
     /**
-     * @var string Playback address generated after pull for upload is completed.
+     * @var string The playback address of the uploaded file.
      */
     public $FileUrl;
 
     /**
-     * @var string If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
+     * @var string The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
      */
     public $ProcedureTaskId;
 
     /**
-     * @var string The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @var string The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     */
+    public $ReviewAudioVideoTaskId;
+
+    /**
+     * @var string The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
      */
     public $SessionContext;
 
@@ -121,12 +128,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $SessionId;
 
     /**
-     * @var integer The progress of a pull and upload task. Value range: 0-100.
+     * @var integer The progress of the pull and upload task. Value range: 1-100.
      */
     public $Progress;
 
     /**
-     * @param string $TaskId Pull for upload task ID.
+     * @param string $TaskId The task ID.
      * @param string $Status Task flow status. Valid values:
 <li>PROCESSING: processing;</li>
 <li>FINISH: completed.</li>
@@ -135,15 +142,16 @@ Note: this field may return null, indicating that no valid values can be obtaine
 <li>60000: invalid source file (e.g., video data is corrupted). Please check whether the source file is normal;</li>
 <li>70000: internal service error. Please try again.</li>
      * @param string $Message Error message.
-     * @param string $FileId ID of video generated after pull for upload is completed.
-     * @param MediaBasicInfo $MediaBasicInfo Basic information of media file generated after pull for upload is completed.
-Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $FileId The ID of the uploaded file.
+     * @param MediaBasicInfo $MediaBasicInfo The basic information of the uploaded file.
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param MediaMetaData $MetaData The metadata of the output video.
-     * @param string $FileUrl Playback address generated after pull for upload is completed.
-     * @param string $ProcedureTaskId If a video processing flow is specified when a video is pulled for upload, this parameter will be the ID of the task flow.
-     * @param string $SessionContext The source context which is used to pass through the user request information. The task flow status change callback will return the value of this field. It can contain up to 1,000 characters.
+     * @param string $FileUrl The playback address of the uploaded file.
+     * @param string $ProcedureTaskId The task ID for the task type `Procedure`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes one or more of `MediaProcessTask`, `AiAnalysisTask`, and `AiRecognitionTask`, the task specified by this parameter will be executed.
+     * @param string $ReviewAudioVideoTaskId The task ID for the task type `ReviewAudioVideo`. If a task flow is specified by [PullUpload](https://intl.cloud.tencent.com/document/api/266/35575?from_cn_redirect=1), and the task flow includes `ReviewAudioVideoTask`, the task specified by this parameter will be executed.
+     * @param string $SessionContext The source context, which is used to pass through user request information. The [PullComplete](https://intl.cloud.tencent.com/document/product/266/7831?from_cn_redirect=1) callback will return the value of this parameter. It can contain up to 1,000 characters.
      * @param string $SessionId The ID used for deduplication. If there was a request with the same ID in the last seven days, the current request will return an error. The ID can contain up to 50 characters. If this parameter is left empty or a blank string is entered, no deduplication will be performed.
-     * @param integer $Progress The progress of a pull and upload task. Value range: 0-100.
+     * @param integer $Progress The progress of the pull and upload task. Value range: 1-100.
      */
     function __construct()
     {
@@ -194,6 +202,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("ProcedureTaskId",$param) and $param["ProcedureTaskId"] !== null) {
             $this->ProcedureTaskId = $param["ProcedureTaskId"];
+        }
+
+        if (array_key_exists("ReviewAudioVideoTaskId",$param) and $param["ReviewAudioVideoTaskId"] !== null) {
+            $this->ReviewAudioVideoTaskId = $param["ReviewAudioVideoTaskId"];
         }
 
         if (array_key_exists("SessionContext",$param) and $param["SessionContext"] !== null) {
