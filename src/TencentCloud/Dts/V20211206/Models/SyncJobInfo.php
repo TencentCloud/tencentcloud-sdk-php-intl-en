@@ -76,9 +76,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setSrcAccessType(string $SrcAccessType) Set Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method Endpoint getSrcInfo() Obtain Source database information
+ * @method Endpoint getSrcInfo() Obtain Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information
+ * @method void setSrcInfo(Endpoint $SrcInfo) Set Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDstRegion() Obtain Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -92,9 +92,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDstAccessType(string $DstAccessType) Set Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method Endpoint getDstInfo() Obtain Target database information
+ * @method Endpoint getDstInfo() Obtain Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setDstInfo(Endpoint $DstInfo) Set Target database information
+ * @method void setDstInfo(Endpoint $DstInfo) Set Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getCreateTime() Obtain Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -135,6 +135,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
  * @method string getOfflineTime() Obtain Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setOfflineTime(string $OfflineTime) Set Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoRetryTimeRangeMinutes() Obtain Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SyncJobInfo extends AbstractModel
@@ -224,7 +228,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $SrcAccessType;
 
     /**
-     * @var Endpoint Source database information
+     * @var Endpoint Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $SrcInfo;
@@ -248,7 +252,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $DstAccessType;
 
     /**
-     * @var Endpoint Target database information
+     * @var Endpoint Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $DstInfo;
@@ -314,6 +318,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $OfflineTime;
 
     /**
+     * @var integer Settings of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId Sync task ID, such as `sync-btso140`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobName Sync task name
@@ -342,7 +352,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $SrcAccessType Source database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Endpoint $SrcInfo Source database information
+     * @param Endpoint $SrcInfo Source database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DstRegion Target database region, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -350,7 +360,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DstAccessType Target database access type. Valid values: `cdb` (database); `cvm` (self-build on CVM); `vpc` (VPC); `extranet` (public network); `vpncloud` (VPN access); `dcg` (Direct Connect); `ccn` (CCN); `intranet` (intranet).
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param Endpoint $DstInfo Target database information
+     * @param Endpoint $DstInfo Target database information. This parameter is used by single-node databases.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $CreateTime Creation time in the format of `yyyy-mm-dd hh:mm:ss`
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -371,6 +381,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param integer $AutoRenew Auto-renewal flag, which takes effect if `PayMode` is `PrePay`. Valid values: `1` (auto-renewal enabled); `0` (auto-renewal disabled).
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $OfflineTime Deletion time in the format of `yyyy-mm-dd hh:mm:ss`
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoRetryTimeRangeMinutes Settings of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -510,6 +522,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("OfflineTime",$param) and $param["OfflineTime"] !== null) {
             $this->OfflineTime = $param["OfflineTime"];
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

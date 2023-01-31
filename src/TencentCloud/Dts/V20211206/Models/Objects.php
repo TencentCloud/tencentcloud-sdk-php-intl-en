@@ -32,6 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAdvancedObjects(array $AdvancedObjects) Set Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method OnlineDDL getOnlineDDL() Obtain 
+ * @method void setOnlineDDL(OnlineDDL $OnlineDDL) Set 
  */
 class Objects extends AbstractModel
 {
@@ -54,12 +56,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $AdvancedObjects;
 
     /**
+     * @var OnlineDDL 
+     */
+    public $OnlineDDL;
+
+    /**
      * @param string $Mode Migration object type, such as `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Databases Sync object, which is required if `Mode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $AdvancedObjects Advanced object type, such as function and procedure. If you need to sync advanced objects, the initialization type must include structure initialization; that is, `Options.InitType` must be `Structure` or `Full`.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param OnlineDDL $OnlineDDL 
      */
     function __construct()
     {
@@ -89,6 +97,11 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("AdvancedObjects",$param) and $param["AdvancedObjects"] !== null) {
             $this->AdvancedObjects = $param["AdvancedObjects"];
+        }
+
+        if (array_key_exists("OnlineDDL",$param) and $param["OnlineDDL"] !== null) {
+            $this->OnlineDDL = new OnlineDDL();
+            $this->OnlineDDL->deserialize($param["OnlineDDL"]);
         }
     }
 }

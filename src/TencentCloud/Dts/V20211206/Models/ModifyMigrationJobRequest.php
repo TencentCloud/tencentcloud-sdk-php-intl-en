@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setExpectRunTime(string $ExpectRunTime) Set Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
  * @method array getTags() Obtain Tag information
  * @method void setTags(array $Tags) Set Tag information
+ * @method integer getAutoRetryTimeRangeMinutes() Obtain Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
  */
 class ModifyMigrationJobRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyMigrationJobRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var integer Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId Task ID
      * @param string $RunMode Running mode. Valid values: `immediate`, `timed`.
      * @param MigrateOption $MigrateOption Migration task configuration options, which describe how the task performs migration.
@@ -88,6 +95,7 @@ class ModifyMigrationJobRequest extends AbstractModel
      * @param string $JobName Migration task name, which can contain up to 128 characters.
      * @param string $ExpectRunTime Expected start time in the format of "2006-01-02 15:04:05", which is required if `RunMode` is `timed`.
      * @param array $Tags Tag information
+     * @param integer $AutoRetryTimeRangeMinutes Automatic retry time, which can be set to 5-720 minutes. 0 indicates that retry is disabled.
      */
     function __construct()
     {
@@ -140,6 +148,10 @@ class ModifyMigrationJobRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

@@ -20,9 +20,9 @@ use TencentCloud\Common\AbstractModel;
 /**
  * The set of table objects, which is required if `TableMode` is `partial`.
  *
- * @method string getTableName() Obtain Name of the table to be migrated
+ * @method string getTableName() Obtain Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setTableName(string $TableName) Set Name of the table to be migrated
+ * @method void setTableName(string $TableName) Set Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getNewTableName() Obtain Name of the table after migration, which is required if `TableEditMode` is `rename`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -40,7 +40,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 class TableItem extends AbstractModel
 {
     /**
-     * @var string Name of the table to be migrated
+     * @var string Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $TableName;
@@ -64,7 +64,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TableEditMode;
 
     /**
-     * @param string $TableName Name of the table to be migrated
+     * @param string $TableName Name of the migrated table, which is case-sensitive
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NewTableName Name of the table after migration, which is required if `TableEditMode` is `rename`.
 Note: This field may return null, indicating that no valid values can be obtained.

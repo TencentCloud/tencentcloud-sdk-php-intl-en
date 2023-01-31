@@ -24,6 +24,10 @@ use TencentCloud\Common\AbstractModel;
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRegion(string $Region) Set Region name, such as `ap-guangzhou`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRole() Obtain Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRole(string $Role) Set Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getDbKernel() Obtain Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setDbKernel(string $DbKernel) Set Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
@@ -84,17 +88,21 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setEngineVersion(string $EngineVersion) Set Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getAccountMode() Obtain The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setAccountMode(string $AccountMode) Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAccount() Obtain Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccount(string $Account) Set Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getAccountMode() Obtain The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAccountMode(string $AccountMode) Set The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getAccountRole() Obtain The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setAccountRole(string $AccountRole) Set The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getRoleExternalId() Obtain External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRoleExternalId(string $RoleExternalId) Set External role ID
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getTmpSecretId() Obtain ID of the temporary key, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -108,9 +116,9 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTmpToken(string $TmpToken) Set Temporary token, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getRoleExternalId() Obtain External role ID
+ * @method string getEncryptConn() Obtain Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method void setRoleExternalId(string $RoleExternalId) Set External role ID
+ * @method void setEncryptConn(string $EncryptConn) Set Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Endpoint extends AbstractModel
@@ -120,6 +128,12 @@ class Endpoint extends AbstractModel
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Region;
+
+    /**
+     * @var string Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Role;
 
     /**
      * @var string Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
@@ -212,22 +226,28 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $EngineVersion;
 
     /**
-     * @var string The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
-     */
-    public $AccountMode;
-
-    /**
      * @var string Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Account;
 
     /**
+     * @var string The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AccountMode;
+
+    /**
      * @var string The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $AccountRole;
+
+    /**
+     * @var string External role ID
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RoleExternalId;
 
     /**
      * @var string ID of the temporary key, which is required if the operation is performed across accounts.
@@ -248,13 +268,15 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $TmpToken;
 
     /**
-     * @var string External role ID
+     * @var string Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
-    public $RoleExternalId;
+    public $EncryptConn;
 
     /**
      * @param string $Region Region name, such as `ap-guangzhou`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $Role Node type of TDSQL for MySQL. Enumerated values: `proxy`, `set`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $DbKernel Database kernel type, which is used to distinguish between different kernels in TDSQL. Valid values: `percona`, `mariadb`, `mysql`.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -286,11 +308,13 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $EngineVersion Database version in the format of `5.6` or `5.7`, which takes effect only if the instance is an RDS instance. Default value: `5.6`.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
-Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Account Instance account, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $AccountMode The account to which the resource belongs. Valid values: empty or `self` (the current account); `other` (another account).
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $AccountRole The role used for cross-account sync, which can contain [a-zA-Z0-9\-\_]+ and is required if the operation is performed across accounts.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $RoleExternalId External role ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TmpSecretId ID of the temporary key, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
@@ -298,7 +322,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $TmpToken Temporary token, which is required if the operation is performed across accounts.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $RoleExternalId External role ID
+     * @param string $EncryptConn Whether to enable encrypted transfer (`UnEncrypted`: No; `Encrypted`: Yes). Default value: `UnEncrypted`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -316,6 +340,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("Region",$param) and $param["Region"] !== null) {
             $this->Region = $param["Region"];
+        }
+
+        if (array_key_exists("Role",$param) and $param["Role"] !== null) {
+            $this->Role = $param["Role"];
         }
 
         if (array_key_exists("DbKernel",$param) and $param["DbKernel"] !== null) {
@@ -378,16 +406,20 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->EngineVersion = $param["EngineVersion"];
         }
 
-        if (array_key_exists("AccountMode",$param) and $param["AccountMode"] !== null) {
-            $this->AccountMode = $param["AccountMode"];
-        }
-
         if (array_key_exists("Account",$param) and $param["Account"] !== null) {
             $this->Account = $param["Account"];
         }
 
+        if (array_key_exists("AccountMode",$param) and $param["AccountMode"] !== null) {
+            $this->AccountMode = $param["AccountMode"];
+        }
+
         if (array_key_exists("AccountRole",$param) and $param["AccountRole"] !== null) {
             $this->AccountRole = $param["AccountRole"];
+        }
+
+        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
+            $this->RoleExternalId = $param["RoleExternalId"];
         }
 
         if (array_key_exists("TmpSecretId",$param) and $param["TmpSecretId"] !== null) {
@@ -402,8 +434,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
             $this->TmpToken = $param["TmpToken"];
         }
 
-        if (array_key_exists("RoleExternalId",$param) and $param["RoleExternalId"] !== null) {
-            $this->RoleExternalId = $param["RoleExternalId"];
+        if (array_key_exists("EncryptConn",$param) and $param["EncryptConn"] !== null) {
+            $this->EncryptConn = $param["EncryptConn"];
         }
     }
 }

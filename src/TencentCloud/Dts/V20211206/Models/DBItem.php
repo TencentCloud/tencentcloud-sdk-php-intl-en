@@ -18,7 +18,7 @@ namespace TencentCloud\Dts\V20211206\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Migration object information
+ * Migration object information, which is case-sensitive when objects such as databases, tables, and views are configured.
  *
  * @method string getDbName() Obtain Name of the database to be migrated or synced, which is required if `ObjectMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.

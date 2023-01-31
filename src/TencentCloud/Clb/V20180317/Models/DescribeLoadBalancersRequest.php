@@ -34,10 +34,10 @@ OPEN: public network; INTERNAL: private network.
  * @method void setDomain(string $Domain) Set Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
  * @method array getLoadBalancerVips() Obtain VIP address of a CLB instance (there can be multiple addresses)
  * @method void setLoadBalancerVips(array $LoadBalancerVips) Set VIP address of a CLB instance (there can be multiple addresses)
- * @method array getBackendPublicIps() Obtain Public IP of the real server bound to a CLB.
- * @method void setBackendPublicIps(array $BackendPublicIps) Set Public IP of the real server bound to a CLB.
- * @method array getBackendPrivateIps() Obtain Private IP of the real server bound to a CLB.
- * @method void setBackendPrivateIps(array $BackendPrivateIps) Set Private IP of the real server bound to a CLB.
+ * @method array getBackendPublicIps() Obtain Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+ * @method void setBackendPublicIps(array $BackendPublicIps) Set Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+ * @method array getBackendPrivateIps() Obtain Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
+ * @method void setBackendPrivateIps(array $BackendPrivateIps) Set Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
  * @method integer getOffset() Obtain Data offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Data offset. Default value: 0.
  * @method integer getLimit() Obtain Number of returned CLB instances. Default value: 20. Maximum value: 100.
@@ -99,12 +99,12 @@ OPEN: public network; INTERNAL: private network.
     public $LoadBalancerVips;
 
     /**
-     * @var array Public IP of the real server bound to a CLB.
+     * @var array Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
      */
     public $BackendPublicIps;
 
     /**
-     * @var array Private IP of the real server bound to a CLB.
+     * @var array Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
      */
     public $BackendPrivateIps;
 
@@ -173,8 +173,8 @@ OPEN: public network; INTERNAL: private network.
      * @param string $LoadBalancerName CLB instance name.
      * @param string $Domain Domain name assigned to a CLB instance by Tencent Cloud. This parameter is meaningful only for the public network classic CLB.
      * @param array $LoadBalancerVips VIP address of a CLB instance (there can be multiple addresses)
-     * @param array $BackendPublicIps Public IP of the real server bound to a CLB.
-     * @param array $BackendPrivateIps Private IP of the real server bound to a CLB.
+     * @param array $BackendPublicIps Public IPs of the backend services bound with the load balancer. Only the public IPs of CVMs are supported now.
+     * @param array $BackendPrivateIps Private IPs of the backend services bound with the load balancer. Only the private IPs of CVMs are supported now.
      * @param integer $Offset Data offset. Default value: 0.
      * @param integer $Limit Number of returned CLB instances. Default value: 20. Maximum value: 100.
      * @param string $OrderBy Sort by parameter. Value range: LoadBalancerName, CreateTime, Domain, LoadBalancerType.

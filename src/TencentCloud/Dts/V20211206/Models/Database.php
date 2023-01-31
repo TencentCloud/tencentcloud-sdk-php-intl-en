@@ -72,6 +72,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setProcedures(array $Procedures) Set This parameter is required if `ProcedureMode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getTriggerMode() Obtain Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTriggerMode(string $TriggerMode) Set Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getTriggers() Obtain This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setTriggers(array $Triggers) Set This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getEventMode() Obtain Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEventMode(string $EventMode) Set Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method array getEvents() Obtain This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEvents(array $Events) Set This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class Database extends AbstractModel
 {
@@ -154,6 +170,30 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Procedures;
 
     /**
+     * @var string Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $TriggerMode;
+
+    /**
+     * @var array This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Triggers;
+
+    /**
+     * @var string Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EventMode;
+
+    /**
+     * @var array This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Events;
+
+    /**
      * @param string $DbName Name of the database to be migrated or synced, which is required if `ObjectMode` is `Partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $NewDbName Name of the database after migration or sync, which is the same as the source database name by default.
@@ -179,6 +219,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ProcedureMode Sync mode. Valid values: `Partial`, `All`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Procedures This parameter is required if `ProcedureMode` is `Partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $TriggerMode Trigger migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Triggers This parameter is used to specify the names of the triggers to be migrated when the value of `TriggerMode` is `partial`.
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $EventMode Event migration mode (`all`: All objects; `partial`: Some objects)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param array $Events This parameter is used to specify the names of the events to be migrated when the value of `EventMode` is `partial`.
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -254,6 +302,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Procedures",$param) and $param["Procedures"] !== null) {
             $this->Procedures = $param["Procedures"];
+        }
+
+        if (array_key_exists("TriggerMode",$param) and $param["TriggerMode"] !== null) {
+            $this->TriggerMode = $param["TriggerMode"];
+        }
+
+        if (array_key_exists("Triggers",$param) and $param["Triggers"] !== null) {
+            $this->Triggers = $param["Triggers"];
+        }
+
+        if (array_key_exists("EventMode",$param) and $param["EventMode"] !== null) {
+            $this->EventMode = $param["EventMode"];
+        }
+
+        if (array_key_exists("Events",$param) and $param["Events"] !== null) {
+            $this->Events = $param["Events"];
         }
     }
 }

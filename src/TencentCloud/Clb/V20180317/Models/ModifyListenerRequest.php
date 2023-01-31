@@ -30,8 +30,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
  * @method HealthCheck getHealthCheck() Obtain Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
- * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
- * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+ * @method CertificateInput getCertificate() Obtain Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method string getScheduler() Obtain Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Forwarding method of a listener. Value range: WRR, LEAST_CONN.
@@ -46,6 +46,12 @@ They represent weighted round robin and least connections, respectively. Default
  * @method void setDeregisterTargetRst(boolean $DeregisterTargetRst) Set Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
  * @method string getSessionType() Obtain Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
  * @method void setSessionType(string $SessionType) Set Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+ * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method integer getMaxConn() Obtain 
+ * @method void setMaxConn(integer $MaxConn) Set 
+ * @method integer getMaxCps() Obtain 
+ * @method void setMaxCps(integer $MaxCps) Set 
  */
 class ModifyListenerRequest extends AbstractModel
 {
@@ -75,7 +81,7 @@ class ModifyListenerRequest extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var CertificateInput Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+     * @var CertificateInput Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public $Certificate;
 
@@ -111,12 +117,27 @@ They represent weighted round robin and least connections, respectively. Default
     public $SessionType;
 
     /**
+     * @var MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public $MultiCertInfo;
+
+    /**
+     * @var integer 
+     */
+    public $MaxConn;
+
+    /**
+     * @var integer 
+     */
+    public $MaxCps;
+
+    /**
      * @param string $LoadBalancerId CLB instance ID
      * @param string $ListenerId CLB listener ID
      * @param string $ListenerName New listener name
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. The default value is 0, indicating that session persistence is not enabled. This parameter is applicable only to TCP/UDP listeners.
      * @param HealthCheck $HealthCheck Health check parameter, which is applicable only to TCP, UDP, and TCP_SSL listeners.
-     * @param CertificateInput $Certificate Certificate information. This parameter is applicable only to HTTPS and TCP_SSL listeners.
+     * @param CertificateInput $Certificate Certificate information. This parameter is only applicable to HTTPS/TCP_SSL listeners. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param string $Scheduler Forwarding method of a listener. Value range: WRR, LEAST_CONN.
 They represent weighted round robin and least connections, respectively. Default value: WRR.
      * @param integer $SniSwitch Whether to enable the SNI feature. This parameter is applicable only to HTTPS listeners. Note: The SNI feature can be enabled but cannot be disabled once enabled.
@@ -124,6 +145,9 @@ They represent weighted round robin and least connections, respectively. Default
      * @param integer $KeepaliveEnable Whether to enable a persistent connection. This parameter is applicable only to HTTP and HTTPS listeners.
      * @param boolean $DeregisterTargetRst Whether to send the TCP RST packet to the client when unbinding a real server. This parameter is applicable to TCP listeners only.
      * @param string $SessionType Session persistence type. `NORMAL`: default session persistence type (L4/L7 session persistence); `QUIC_CID`: session persistence by QUIC connection ID. The `QUIC_CID` value can only be configured in UDP listeners.
+     * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. This parameter is only applicable to HTTPS listeners with the SNI feature not enabled. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     * @param integer $MaxConn 
+     * @param integer $MaxCps 
      */
     function __construct()
     {
@@ -186,6 +210,19 @@ They represent weighted round robin and least connections, respectively. Default
 
         if (array_key_exists("SessionType",$param) and $param["SessionType"] !== null) {
             $this->SessionType = $param["SessionType"];
+        }
+
+        if (array_key_exists("MultiCertInfo",$param) and $param["MultiCertInfo"] !== null) {
+            $this->MultiCertInfo = new MultiCertInfo();
+            $this->MultiCertInfo->deserialize($param["MultiCertInfo"]);
+        }
+
+        if (array_key_exists("MaxConn",$param) and $param["MaxConn"] !== null) {
+            $this->MaxConn = $param["MaxConn"];
+        }
+
+        if (array_key_exists("MaxCps",$param) and $param["MaxCps"] !== null) {
+            $this->MaxCps = $param["MaxCps"];
         }
     }
 }

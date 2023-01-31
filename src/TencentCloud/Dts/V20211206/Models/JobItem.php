@@ -88,6 +88,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setTags(array $Tags) Set Tag information
 Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getAutoRetryTimeRangeMinutes() Obtain Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAutoRetryTimeRangeMinutes(integer $AutoRetryTimeRangeMinutes) Set Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class JobItem extends AbstractModel
 {
@@ -194,6 +198,12 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Tags;
 
     /**
+     * @var integer Information of automatic retry time
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $AutoRetryTimeRangeMinutes;
+
+    /**
      * @param string $JobId Data migration task ID
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $JobName Data migration task name
@@ -227,6 +237,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param TradeInfo $TradeInfo Billing status information
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param array $Tags Tag information
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $AutoRetryTimeRangeMinutes Information of automatic retry time
 Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
@@ -319,6 +331,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("AutoRetryTimeRangeMinutes",$param) and $param["AutoRetryTimeRangeMinutes"] !== null) {
+            $this->AutoRetryTimeRangeMinutes = $param["AutoRetryTimeRangeMinutes"];
         }
     }
 }

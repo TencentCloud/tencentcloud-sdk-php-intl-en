@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSessionExpireTime(integer $SessionExpireTime) Set Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
  * @method HealthCheck getHealthCheck() Obtain Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
  * @method void setHealthCheck(HealthCheck $HealthCheck) Set Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
- * @method CertificateInput getCertificate() Obtain Certificate information
- * @method void setCertificate(CertificateInput $Certificate) Set Certificate information
+ * @method CertificateInput getCertificate() Obtain Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method void setCertificate(CertificateInput $Certificate) Set Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  * @method string getScheduler() Obtain Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
  * @method void setScheduler(string $Scheduler) Set Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
@@ -50,6 +50,8 @@ They represent weighted round robin, least connections, and IP hash, respectivel
  * @method void setQuic(boolean $Quic) Set Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
  * @method array getDomains() Obtain The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
  * @method void setDomains(array $Domains) Set The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+ * @method MultiCertInfo getMultiCertInfo() Obtain Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+ * @method void setMultiCertInfo(MultiCertInfo $MultiCertInfo) Set Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
  */
 class RuleInput extends AbstractModel
 {
@@ -74,7 +76,7 @@ class RuleInput extends AbstractModel
     public $HealthCheck;
 
     /**
-     * @var CertificateInput Certificate information
+     * @var CertificateInput Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     public $Certificate;
 
@@ -125,11 +127,16 @@ They represent weighted round robin, least connections, and IP hash, respectivel
     public $Domains;
 
     /**
+     * @var MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
+     */
+    public $MultiCertInfo;
+
+    /**
      * @param string $Url Forwarding rule path. Length: 1-200.
      * @param string $Domain The domain name associated with the forwarding rule. It can contain 1-80 characters. Only one domain name can be entered. If you need to enter multiple domain names, use `Domains`.
      * @param integer $SessionExpireTime Session persistence time in seconds. Value range: 30-3,600. Setting it to 0 indicates that session persistence is disabled.
      * @param HealthCheck $HealthCheck Health check information. For more information, please see [Health Check](https://intl.cloud.tencent.com/document/product/214/6097?from_cn_redirect=1)
-     * @param CertificateInput $Certificate Certificate information
+     * @param CertificateInput $Certificate Certificate information. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      * @param string $Scheduler Request forwarding method of the rule. Value range: WRR, LEAST_CONN, IP_HASH
 They represent weighted round robin, least connections, and IP hash, respectively. Default value: WRR.
      * @param string $ForwardType Forwarding protocol between the CLB instance and real server. Currently, HTTP/HTTPS/TRPC are supported.
@@ -140,6 +147,7 @@ They represent weighted round robin, least connections, and IP hash, respectivel
      * @param string $TrpcFunc TRPC calling service API, which is required when `ForwardType` is `TRPC`.
      * @param boolean $Quic Whether to enable QUIC. Note: QUIC can be enabled only for HTTPS domain names
      * @param array $Domains The domain name associated with the forwarding rule. Each contain 1-80 characters. If you only need to enter one domain name, use `Domain` instead.
+     * @param MultiCertInfo $MultiCertInfo Certificate information. You can specify multiple server-side certificates with different algorithm types. `Certificate` and `MultiCertInfo` cannot be specified at the same time. 
      */
     function __construct()
     {
@@ -210,6 +218,11 @@ They represent weighted round robin, least connections, and IP hash, respectivel
 
         if (array_key_exists("Domains",$param) and $param["Domains"] !== null) {
             $this->Domains = $param["Domains"];
+        }
+
+        if (array_key_exists("MultiCertInfo",$param) and $param["MultiCertInfo"] !== null) {
+            $this->MultiCertInfo = new MultiCertInfo();
+            $this->MultiCertInfo->deserialize($param["MultiCertInfo"]);
         }
     }
 }
