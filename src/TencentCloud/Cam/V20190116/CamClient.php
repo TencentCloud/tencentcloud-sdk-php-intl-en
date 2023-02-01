@@ -23,7 +23,7 @@ use TencentCloud\Common\Credential;
 use TencentCloud\Cam\V20190116\Models as Models;
 
 /**
- * @method Models\AddUserResponse AddUser(Models\AddUserRequest $req) This API is used to add sub-users.
+ * @method Models\AddUserResponse AddUser(Models\AddUserRequest $req) This API is used to create a sub-user.
  * @method Models\AddUserToGroupResponse AddUserToGroup(Models\AddUserToGroupRequest $req) This API is used to add users to a user group.
  * @method Models\AttachGroupPolicyResponse AttachGroupPolicy(Models\AttachGroupPolicyRequest $req) This API (AttachGroupPolicy) is used to associate a policy with a user group.
  * @method Models\AttachRolePolicyResponse AttachRolePolicy(Models\AttachRolePolicyRequest $req) This API (AttachRolePolicy) is used to associate a policy with a role.

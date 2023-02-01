@@ -32,6 +32,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setClusterId(string $ClusterId) Set Cluster ID
  * @method string getRemark() Obtain Remarks (up to 128 characters)
  * @method void setRemark(string $Remark) Set Remarks (up to 128 characters)
+ * @method string getGroupType() Obtain Group type (`TCP`, `HTTP`)
+ * @method void setGroupType(string $GroupType) Set Group type (`TCP`, `HTTP`)
+ * @method integer getRetryMaxTimes() Obtain The maximum number of retries for a group
+ * @method void setRetryMaxTimes(integer $RetryMaxTimes) Set The maximum number of retries for a group
  */
 class CreateRocketMQGroupRequest extends AbstractModel
 {
@@ -66,12 +70,24 @@ class CreateRocketMQGroupRequest extends AbstractModel
     public $Remark;
 
     /**
+     * @var string Group type (`TCP`, `HTTP`)
+     */
+    public $GroupType;
+
+    /**
+     * @var integer The maximum number of retries for a group
+     */
+    public $RetryMaxTimes;
+
+    /**
      * @param string $GroupId Group name (8–64 characters)
      * @param array $Namespaces Namespace. Currently, only one namespace is supported
      * @param boolean $ReadEnable Whether to enable consumption
      * @param boolean $BroadcastEnable Whether to enable broadcast consumption
      * @param string $ClusterId Cluster ID
      * @param string $Remark Remarks (up to 128 characters)
+     * @param string $GroupType Group type (`TCP`, `HTTP`)
+     * @param integer $RetryMaxTimes The maximum number of retries for a group
      */
     function __construct()
     {
@@ -108,6 +124,14 @@ class CreateRocketMQGroupRequest extends AbstractModel
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {
             $this->Remark = $param["Remark"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
+            $this->RetryMaxTimes = $param["RetryMaxTimes"];
         }
     }
 }

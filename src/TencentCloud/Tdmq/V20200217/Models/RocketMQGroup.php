@@ -52,6 +52,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method boolean getBroadcastEnabled() Obtain Whether to enable broadcast consumption.
  * @method void setBroadcastEnabled(boolean $BroadcastEnabled) Set Whether to enable broadcast consumption.
+ * @method string getGroupType() Obtain Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGroupType(string $GroupType) Set Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getRetryMaxTimes() Obtain The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setRetryMaxTimes(integer $RetryMaxTimes) Set The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQGroup extends AbstractModel
 {
@@ -124,6 +132,18 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $BroadcastEnabled;
 
     /**
+     * @var string Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GroupType;
+
+    /**
+     * @var integer The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $RetryMaxTimes;
+
+    /**
      * @param string $Name Consumer group name.
      * @param integer $ConsumerNum The number of online consumers.
      * @param integer $TPS Consumption TPS.
@@ -140,6 +160,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param string $ConsumerType Consumer type. Enumerated values: `ACTIVELY` or `PASSIVELY`.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $BroadcastEnabled Whether to enable broadcast consumption.
+     * @param string $GroupType Group type
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $RetryMaxTimes The number of retries
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -204,6 +228,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("BroadcastEnabled",$param) and $param["BroadcastEnabled"] !== null) {
             $this->BroadcastEnabled = $param["BroadcastEnabled"];
+        }
+
+        if (array_key_exists("GroupType",$param) and $param["GroupType"] !== null) {
+            $this->GroupType = $param["GroupType"];
+        }
+
+        if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
+            $this->RetryMaxTimes = $param["RetryMaxTimes"];
         }
     }
 }

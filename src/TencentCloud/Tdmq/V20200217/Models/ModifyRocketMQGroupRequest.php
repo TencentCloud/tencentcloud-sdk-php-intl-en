@@ -32,6 +32,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setReadEnable(boolean $ReadEnable) Set Whether to enable consumption
  * @method boolean getBroadcastEnable() Obtain Whether to enable broadcast consumption
  * @method void setBroadcastEnable(boolean $BroadcastEnable) Set Whether to enable broadcast consumption
+ * @method integer getRetryMaxTimes() Obtain The maximum number of retries
+ * @method void setRetryMaxTimes(integer $RetryMaxTimes) Set The maximum number of retries
  */
 class ModifyRocketMQGroupRequest extends AbstractModel
 {
@@ -66,12 +68,18 @@ class ModifyRocketMQGroupRequest extends AbstractModel
     public $BroadcastEnable;
 
     /**
+     * @var integer The maximum number of retries
+     */
+    public $RetryMaxTimes;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $NamespaceId Namespace
      * @param string $GroupId Consumer group name
      * @param string $Remark Remarks (up to 128 characters)
      * @param boolean $ReadEnable Whether to enable consumption
      * @param boolean $BroadcastEnable Whether to enable broadcast consumption
+     * @param integer $RetryMaxTimes The maximum number of retries
      */
     function __construct()
     {
@@ -108,6 +116,10 @@ class ModifyRocketMQGroupRequest extends AbstractModel
 
         if (array_key_exists("BroadcastEnable",$param) and $param["BroadcastEnable"] !== null) {
             $this->BroadcastEnable = $param["BroadcastEnable"];
+        }
+
+        if (array_key_exists("RetryMaxTimes",$param) and $param["RetryMaxTimes"] !== null) {
+            $this->RetryMaxTimes = $param["RetryMaxTimes"];
         }
     }
 }

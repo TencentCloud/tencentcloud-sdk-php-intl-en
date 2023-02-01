@@ -52,14 +52,22 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRocketMQFlag(boolean $RocketMQFlag) Set TDMQ for RocketMQ cluster type flag
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method integer getStatus() Obtain 
- * @method void setStatus(integer $Status) Set 
- * @method integer getIsolateTime() Obtain 
- * @method void setIsolateTime(integer $IsolateTime) Set 
- * @method string getHttpPublicEndpoint() Obtain 
- * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) Set 
- * @method string getHttpVpcEndpoint() Obtain 
- * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) Set 
+ * @method integer getStatus() Obtain Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setStatus(integer $Status) Set Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getIsolateTime() Obtain Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setIsolateTime(integer $IsolateTime) Set Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpPublicEndpoint() Obtain HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpPublicEndpoint(string $HttpPublicEndpoint) Set HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method string getHttpVpcEndpoint() Obtain HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpVpcEndpoint(string $HttpVpcEndpoint) Set HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class RocketMQClusterInfo extends AbstractModel
 {
@@ -124,22 +132,26 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $RocketMQFlag;
 
     /**
-     * @var integer 
+     * @var integer Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Status;
 
     /**
-     * @var integer 
+     * @var integer Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $IsolateTime;
 
     /**
-     * @var string 
+     * @var string HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpPublicEndpoint;
 
     /**
-     * @var string 
+     * @var string HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $HttpVpcEndpoint;
 
@@ -160,10 +172,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param boolean $RocketMQFlag TDMQ for RocketMQ cluster type flag
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param integer $Status 
-     * @param integer $IsolateTime 
-     * @param string $HttpPublicEndpoint 
-     * @param string $HttpVpcEndpoint 
+     * @param integer $Status Billing status (`1`: Normal; `2`: Service suspended; `3`: Terminated)
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $IsolateTime Service suspension time in milliseconds
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpPublicEndpoint HTTP-based public network access address
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param string $HttpVpcEndpoint HTTP-based VPC access address
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {

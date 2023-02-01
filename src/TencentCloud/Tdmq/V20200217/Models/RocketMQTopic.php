@@ -22,6 +22,10 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getName() Obtain Topic name.
  * @method void setName(string $Name) Set Topic name.
+ * @method string getType() Obtain Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+ * @method void setType(string $Type) Set Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+ * @method integer getGroupNum() Obtain The number of subscription groups
+ * @method void setGroupNum(integer $GroupNum) Set The number of subscription groups
  * @method string getRemark() Obtain Description.
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setRemark(string $Remark) Set Description.
@@ -39,6 +43,16 @@ class RocketMQTopic extends AbstractModel
      * @var string Topic name.
      */
     public $Name;
+
+    /**
+     * @var string Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+     */
+    public $Type;
+
+    /**
+     * @var integer The number of subscription groups
+     */
+    public $GroupNum;
 
     /**
      * @var string Description.
@@ -63,6 +77,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $Name Topic name.
+     * @param string $Type Topic type. Enumerated values: `Normal`, `GlobalOrder`, `PartitionedOrder`, `Transaction`, `Retry`, and `DeadLetter`.
+     * @param integer $GroupNum The number of subscription groups
      * @param string $Remark Description.
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $PartitionNum The number of read/write partitions.
@@ -84,6 +100,14 @@ Note: This field may return null, indicating that no valid values can be obtaine
         }
         if (array_key_exists("Name",$param) and $param["Name"] !== null) {
             $this->Name = $param["Name"];
+        }
+
+        if (array_key_exists("Type",$param) and $param["Type"] !== null) {
+            $this->Type = $param["Type"];
+        }
+
+        if (array_key_exists("GroupNum",$param) and $param["GroupNum"] !== null) {
+            $this->GroupNum = $param["GroupNum"];
         }
 
         if (array_key_exists("Remark",$param) and $param["Remark"] !== null) {

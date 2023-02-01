@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
 Note: this field may return `null`, indicating that no valid value can be obtained.
  * @method void setLastUsedDate(string $LastUsedDate) Set The date when the key ID was last used (the value is obtained one day later).
 Note: this field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getLastSecretUsedDate() Obtain The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLastSecretUsedDate(integer $LastSecretUsedDate) Set The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class SecretIdLastUsed extends AbstractModel
 {
@@ -41,9 +45,17 @@ Note: this field may return `null`, indicating that no valid value can be obtain
     public $LastUsedDate;
 
     /**
+     * @var integer The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $LastSecretUsedDate;
+
+    /**
      * @param string $SecretId Key ID.
      * @param string $LastUsedDate The date when the key ID was last used (the value is obtained one day later).
 Note: this field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $LastSecretUsedDate The most recent date the key was accessed
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -64,6 +76,10 @@ Note: this field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("LastUsedDate",$param) and $param["LastUsedDate"] !== null) {
             $this->LastUsedDate = $param["LastUsedDate"];
+        }
+
+        if (array_key_exists("LastSecretUsedDate",$param) and $param["LastSecretUsedDate"] !== null) {
+            $this->LastSecretUsedDate = $param["LastSecretUsedDate"];
         }
     }
 }

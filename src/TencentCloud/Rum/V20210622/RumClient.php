@@ -80,6 +80,9 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\DescribePvListResponse DescribePvList(Models\DescribePvListRequest $req) This API is used to get the list of PVs under a project.
  * @method Models\DescribeReleaseFileSignResponse DescribeReleaseFileSign(Models\DescribeReleaseFileSignRequest $req) This API is used to get the temporary key for uploaded file storage.
  * @method Models\DescribeReleaseFilesResponse DescribeReleaseFiles(Models\DescribeReleaseFilesRequest $req) This API is used to get the list of sourcemap files of a project.
+ * @method Models\DescribeRumGroupLogResponse DescribeRumGroupLog(Models\DescribeRumGroupLogRequest $req) This API is used to get the log aggregation information under a project.
+ * @method Models\DescribeRumLogListResponse DescribeRumLogList(Models\DescribeRumLogListRequest $req) This API is used to get the list of logs in a project (created by an instance).
+ * @method Models\DescribeRumStatsLogListResponse DescribeRumStatsLogList(Models\DescribeRumStatsLogListRequest $req) This API is used to get the list of logs in a project every minute.
  * @method Models\DescribeScoresResponse DescribeScores(Models\DescribeScoresRequest $req) This API is used to get the list of homepage scores.
  * @method Models\DescribeTawAreasResponse DescribeTawAreas(Models\DescribeTawAreasRequest $req) This API is used to query region information.
  * @method Models\DescribeUvListResponse DescribeUvList(Models\DescribeUvListRequest $req) This API is used to get the list of UVs under a project.
@@ -89,6 +92,7 @@ Default API request rate limit: 20 requests/sec.
  * @method Models\ModifyProjectLimitResponse ModifyProjectLimit(Models\ModifyProjectLimitRequest $req) This API is used to add or modify data reporting limit.
  * @method Models\ResumeInstanceResponse ResumeInstance(Models\ResumeInstanceRequest $req) This API is used to resume an instance.
  * @method Models\StopInstanceResponse StopInstance(Models\StopInstanceRequest $req) This API is used to stop an instance.
+ * @method Models\StopProjectResponse StopProject(Models\StopProjectRequest $req) This API is used to stop a project from reporting data.
  */
 
 class RumClient extends AbstractClient

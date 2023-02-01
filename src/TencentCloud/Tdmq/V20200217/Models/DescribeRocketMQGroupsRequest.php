@@ -38,6 +38,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSortOrder(string $SortOrder) Set Sort in ascending or descending order. Valid values: `asc`, `desc`.
  * @method string getFilterOneGroup() Obtain Subscription group name. After it is specified, the information of only this subscription group will be returned.
  * @method void setFilterOneGroup(string $FilterOneGroup) Set Subscription group name. After it is specified, the information of only this subscription group will be returned.
+ * @method array getTypes() Obtain Group type
+ * @method void setTypes(array $Types) Set Group type
  */
 class DescribeRocketMQGroupsRequest extends AbstractModel
 {
@@ -87,6 +89,11 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
     public $FilterOneGroup;
 
     /**
+     * @var array Group type
+     */
+    public $Types;
+
+    /**
      * @param string $ClusterId Cluster ID.
      * @param string $NamespaceId Namespace.
      * @param integer $Offset Offset.
@@ -96,6 +103,7 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
      * @param string $SortedBy Sort by specified field. Valid values: `tps`, `accumulative`.
      * @param string $SortOrder Sort in ascending or descending order. Valid values: `asc`, `desc`.
      * @param string $FilterOneGroup Subscription group name. After it is specified, the information of only this subscription group will be returned.
+     * @param array $Types Group type
      */
     function __construct()
     {
@@ -144,6 +152,10 @@ class DescribeRocketMQGroupsRequest extends AbstractModel
 
         if (array_key_exists("FilterOneGroup",$param) and $param["FilterOneGroup"] !== null) {
             $this->FilterOneGroup = $param["FilterOneGroup"];
+        }
+
+        if (array_key_exists("Types",$param) and $param["Types"] !== null) {
+            $this->Types = $param["Types"];
         }
     }
 }

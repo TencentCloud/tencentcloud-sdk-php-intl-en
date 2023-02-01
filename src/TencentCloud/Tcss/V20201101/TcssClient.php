@@ -44,6 +44,8 @@ use TencentCloud\Tcss\V20201101\Models as Models;
  * @method Models\CheckNetworkFirewallPolicyYamlResponse CheckNetworkFirewallPolicyYaml(Models\CheckNetworkFirewallPolicyYamlRequest $req) This API is used to create a task to check a YAML network policy in the container network.
  * @method Models\CheckRepeatAssetImageRegistryResponse CheckRepeatAssetImageRegistry(Models\CheckRepeatAssetImageRegistryRequest $req) This API is used to check whether an image repository name is duplicated.
  * @method Models\ConfirmNetworkFirewallPolicyResponse ConfirmNetworkFirewallPolicy(Models\ConfirmNetworkFirewallPolicyRequest $req) This API is used to create a task to confirm a network policy in the container network.
+ * @method Models\CreateAbnormalProcessRulesExportJobResponse CreateAbnormalProcessRulesExportJob(Models\CreateAbnormalProcessRulesExportJobRequest $req) This API is used to export abnormal process rules.
+ * @method Models\CreateAccessControlsRuleExportJobResponse CreateAccessControlsRuleExportJob(Models\CreateAccessControlsRuleExportJobRequest $req) This API is used to export file tampering detection rules.
  * @method Models\CreateAssetImageRegistryScanTaskResponse CreateAssetImageRegistryScanTask(Models\CreateAssetImageRegistryScanTaskRequest $req) This API is used to create an image scan task for an image repository.
  * @method Models\CreateAssetImageRegistryScanTaskOneKeyResponse CreateAssetImageRegistryScanTaskOneKey(Models\CreateAssetImageRegistryScanTaskOneKeyRequest $req) This API is used to create a quick image scan task for an image repository.
  * @method Models\CreateAssetImageScanSettingResponse CreateAssetImageScanSetting(Models\CreateAssetImageScanSettingRequest $req) This API is used to set an image scan.
