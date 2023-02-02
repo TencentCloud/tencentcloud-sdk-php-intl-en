@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UninstallGrafanaPlugins request structure.
  *
- * @method array getPluginIds() Obtain Array of plugin IDs
- * @method void setPluginIds(array $PluginIds) Set Array of plugin IDs
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method array getPluginIds() Obtain Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+ * @method void setPluginIds(array $PluginIds) Set Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefg”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefg”.
  */
 class UninstallGrafanaPluginsRequest extends AbstractModel
 {
     /**
-     * @var array Array of plugin IDs
+     * @var array Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
      */
     public $PluginIds;
 
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefg”.
      */
     public $InstanceId;
 
     /**
-     * @param array $PluginIds Array of plugin IDs
-     * @param string $InstanceId Instance ID
+     * @param array $PluginIds Array of plugin IDs, such as "PluginIds": [ "grafana-clock-panel" ]. The plugin ID can be obtained through the `DescribePluginOverviews` API.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefg”.
      */
     function __construct()
     {

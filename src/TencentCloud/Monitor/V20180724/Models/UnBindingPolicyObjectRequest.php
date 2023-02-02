@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
  * @method string getPolicyId() Obtain Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
  * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+ * @method string getEbSubject() Obtain The alert configured for an event
+ * @method void setEbSubject(string $EbSubject) Set The alert configured for an event
+ * @method integer getEbEventFlag() Obtain Whether the event alert has been configured
+ * @method void setEbEventFlag(integer $EbEventFlag) Set Whether the event alert has been configured
  */
 class UnBindingPolicyObjectRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class UnBindingPolicyObjectRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string The alert configured for an event
+     */
+    public $EbSubject;
+
+    /**
+     * @var integer Whether the event alert has been configured
+     */
+    public $EbEventFlag;
+
+    /**
      * @param string $Module The value is fixed to monitor.
      * @param integer $GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      * @param array $UniqueId List of unique IDs of the object instances to be deleted. `UniqueId` can be obtained from the output parameter `List` of the [DescribeBindingPolicyObjectList](https://intl.cloud.tencent.com/document/api/248/40570?from_cn_redirect=1) API
      * @param integer $InstanceGroupId Instance group ID. The `UniqueId` parameter is invalid if object instances are deleted by instance group.
      * @param string $PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+     * @param string $EbSubject The alert configured for an event
+     * @param integer $EbEventFlag Whether the event alert has been configured
      */
     function __construct()
     {
@@ -96,6 +112,14 @@ class UnBindingPolicyObjectRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
         }
     }
 }

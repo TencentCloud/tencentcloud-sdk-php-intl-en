@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableGrafanaSSO request structure.
  *
- * @method boolean getEnableSSO() Obtain Whether to enable SSO
- * @method void setEnableSSO(boolean $EnableSSO) Set Whether to enable SSO
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method boolean getEnableSSO() Obtain Whether to enable SSO (`true`: Yes; `false`: No)
+ * @method void setEnableSSO(boolean $EnableSSO) Set Whether to enable SSO (`true`: Yes; `false`: No)
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
  */
 class EnableGrafanaSSORequest extends AbstractModel
 {
     /**
-     * @var boolean Whether to enable SSO
+     * @var boolean Whether to enable SSO (`true`: Yes; `false`: No)
      */
     public $EnableSSO;
 
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @param boolean $EnableSSO Whether to enable SSO
-     * @param string $InstanceId Instance ID
+     * @param boolean $EnableSSO Whether to enable SSO (`true`: Yes; `false`: No)
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     function __construct()
     {

@@ -24,10 +24,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setOffset(integer $Offset) Set Offset for query
  * @method integer getLimit() Obtain Number of items to be queried
  * @method void setLimit(integer $Limit) Set Number of items to be queried
- * @method array getInstanceIds() Obtain Array of instance IDs
- * @method void setInstanceIds(array $InstanceIds) Set Array of instance IDs
- * @method string getInstanceName() Obtain Instance name, which supports fuzzy search by prefix.
- * @method void setInstanceName(string $InstanceName) Set Instance name, which supports fuzzy search by prefix.
+ * @method array getInstanceIds() Obtain Array of TCMG instance IDs
+ * @method void setInstanceIds(array $InstanceIds) Set Array of TCMG instance IDs
+ * @method string getInstanceName() Obtain TCMG instance name, which can be fuzzily matched by prefix.
+ * @method void setInstanceName(string $InstanceName) Set TCMG instance name, which can be fuzzily matched by prefix.
  * @method array getInstanceStatus() Obtain Query status
  * @method void setInstanceStatus(array $InstanceStatus) Set Query status
  * @method array getTagFilters() Obtain Array of tag filters
@@ -46,12 +46,12 @@ class DescribeGrafanaInstancesRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var array Array of instance IDs
+     * @var array Array of TCMG instance IDs
      */
     public $InstanceIds;
 
     /**
-     * @var string Instance name, which supports fuzzy search by prefix.
+     * @var string TCMG instance name, which can be fuzzily matched by prefix.
      */
     public $InstanceName;
 
@@ -68,8 +68,8 @@ class DescribeGrafanaInstancesRequest extends AbstractModel
     /**
      * @param integer $Offset Offset for query
      * @param integer $Limit Number of items to be queried
-     * @param array $InstanceIds Array of instance IDs
-     * @param string $InstanceName Instance name, which supports fuzzy search by prefix.
+     * @param array $InstanceIds Array of TCMG instance IDs
+     * @param string $InstanceName TCMG instance name, which can be fuzzily matched by prefix.
      * @param array $InstanceStatus Query status
      * @param array $TagFilters Array of tag filters
      */

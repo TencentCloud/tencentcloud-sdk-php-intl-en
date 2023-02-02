@@ -30,6 +30,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceGroupId(integer $InstanceGroupId) Set Instance group ID.
  * @method array getDimensions() Obtain Dimensions of an object to be bound.
  * @method void setDimensions(array $Dimensions) Set Dimensions of an object to be bound.
+ * @method string getEbSubject() Obtain The alert configured for an event
+ * @method void setEbSubject(string $EbSubject) Set The alert configured for an event
+ * @method integer getEbEventFlag() Obtain Whether the event alert has been configured
+ * @method void setEbEventFlag(integer $EbEventFlag) Set Whether the event alert has been configured
  */
 class BindingPolicyObjectRequest extends AbstractModel
 {
@@ -59,11 +63,23 @@ class BindingPolicyObjectRequest extends AbstractModel
     public $Dimensions;
 
     /**
+     * @var string The alert configured for an event
+     */
+    public $EbSubject;
+
+    /**
+     * @var integer Whether the event alert has been configured
+     */
+    public $EbEventFlag;
+
+    /**
      * @param string $Module Required. The value is fixed to monitor.
      * @param integer $GroupId Policy group ID, such as `4739573`. This parameter will be disused soon. Another parameter `PolicyId` is recommended.
      * @param string $PolicyId Alarm policy ID, such as `policy-gh892hg0`. At least one of the two parameters, `PolicyId` and `GroupId`, must be specified; otherwise, an error will be reported. `PolicyId` is preferred over `GroupId` when both of them are specified.
      * @param integer $InstanceGroupId Instance group ID.
      * @param array $Dimensions Dimensions of an object to be bound.
+     * @param string $EbSubject The alert configured for an event
+     * @param integer $EbEventFlag Whether the event alert has been configured
      */
     function __construct()
     {
@@ -101,6 +117,14 @@ class BindingPolicyObjectRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Dimensions, $obj);
             }
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
         }
     }
 }

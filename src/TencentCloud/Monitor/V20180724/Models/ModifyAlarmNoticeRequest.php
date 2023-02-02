@@ -36,6 +36,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setURLNotices(array $URLNotices) Set Callback notifications (up to 3)
  * @method array getCLSNotices() Obtain The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
  * @method void setCLSNotices(array $CLSNotices) Set The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+ * @method array getPolicyIds() Obtain List of IDs of the alerting rules bound to an alarm notification template
+ * @method void setPolicyIds(array $PolicyIds) Set List of IDs of the alerting rules bound to an alarm notification template
  */
 class ModifyAlarmNoticeRequest extends AbstractModel
 {
@@ -80,6 +82,11 @@ class ModifyAlarmNoticeRequest extends AbstractModel
     public $CLSNotices;
 
     /**
+     * @var array List of IDs of the alerting rules bound to an alarm notification template
+     */
+    public $PolicyIds;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param string $Name Alarm notification rule name, which can contain up to 60 characters
      * @param string $NoticeType Notification type. Valid values: ALARM (for unresolved alarms), OK (for resolved alarms), ALL (for all alarms)
@@ -88,6 +95,7 @@ class ModifyAlarmNoticeRequest extends AbstractModel
      * @param array $UserNotices User notifications (up to 5)
      * @param array $URLNotices Callback notifications (up to 3)
      * @param array $CLSNotices The operation of pushing alarm notifications to CLS. Up to one CLS log topic can be configured.
+     * @param array $PolicyIds List of IDs of the alerting rules bound to an alarm notification template
      */
     function __construct()
     {
@@ -147,6 +155,10 @@ class ModifyAlarmNoticeRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->CLSNotices, $obj);
             }
+        }
+
+        if (array_key_exists("PolicyIds",$param) and $param["PolicyIds"] !== null) {
+            $this->PolicyIds = $param["PolicyIds"];
         }
     }
 }

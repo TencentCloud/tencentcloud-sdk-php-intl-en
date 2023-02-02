@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreatePrometheusScrapeJob request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getAgentId() Obtain Agent ID
- * @method void setAgentId(string $AgentId) Set Agent ID
- * @method string getConfig() Obtain Task content
- * @method void setConfig(string $Config) Set Task content
+ * @method string getInstanceId() Obtain TMP instance ID, such as “prom-abcd1234”.
+ * @method void setInstanceId(string $InstanceId) Set TMP instance ID, such as “prom-abcd1234”.
+ * @method string getAgentId() Obtain Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+ * @method void setAgentId(string $AgentId) Set Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+ * @method string getConfig() Obtain Scrape task ID in the format of “job_name:xx”
+ * @method void setConfig(string $Config) Set Scrape task ID in the format of “job_name:xx”
  */
 class CreatePrometheusScrapeJobRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TMP instance ID, such as “prom-abcd1234”.
      */
     public $InstanceId;
 
     /**
-     * @var string Agent ID
+     * @var string Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
      */
     public $AgentId;
 
     /**
-     * @var string Task content
+     * @var string Scrape task ID in the format of “job_name:xx”
      */
     public $Config;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $AgentId Agent ID
-     * @param string $Config Task content
+     * @param string $InstanceId TMP instance ID, such as “prom-abcd1234”.
+     * @param string $AgentId Agent ID, such as “agent-abcd1234”. It can be obtained on the **Agent Management** page in the console.
+     * @param string $Config Scrape task ID in the format of “job_name:xx”
      */
     function __construct()
     {

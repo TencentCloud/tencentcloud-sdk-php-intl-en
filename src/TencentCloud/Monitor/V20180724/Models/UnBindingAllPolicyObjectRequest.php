@@ -26,6 +26,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupId(integer $GroupId) Set Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
  * @method string getPolicyId() Obtain Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
  * @method void setPolicyId(string $PolicyId) Set Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+ * @method string getEbSubject() Obtain The alert configured for an event
+ * @method void setEbSubject(string $EbSubject) Set The alert configured for an event
+ * @method integer getEbEventFlag() Obtain Whether the event alert has been configured
+ * @method void setEbEventFlag(integer $EbEventFlag) Set Whether the event alert has been configured
  */
 class UnBindingAllPolicyObjectRequest extends AbstractModel
 {
@@ -45,9 +49,21 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
     public $PolicyId;
 
     /**
+     * @var string The alert configured for an event
+     */
+    public $EbSubject;
+
+    /**
+     * @var integer Whether the event alert has been configured
+     */
+    public $EbEventFlag;
+
+    /**
      * @param string $Module The value is fixed to monitor.
      * @param integer $GroupId Policy group ID. If `PolicyId` is used, this parameter will be ignored, and any value, e.g., `0`, can be passed in.
      * @param string $PolicyId Alarm policy ID. If this parameter is used, `GroupId` will be ignored.
+     * @param string $EbSubject The alert configured for an event
+     * @param integer $EbEventFlag Whether the event alert has been configured
      */
     function __construct()
     {
@@ -72,6 +88,14 @@ class UnBindingAllPolicyObjectRequest extends AbstractModel
 
         if (array_key_exists("PolicyId",$param) and $param["PolicyId"] !== null) {
             $this->PolicyId = $param["PolicyId"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
+        }
+
+        if (array_key_exists("EbEventFlag",$param) and $param["EbEventFlag"] !== null) {
+            $this->EbEventFlag = $param["EbEventFlag"];
         }
     }
 }

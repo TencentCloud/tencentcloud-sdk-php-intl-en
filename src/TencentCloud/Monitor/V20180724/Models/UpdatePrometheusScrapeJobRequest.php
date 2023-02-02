@@ -20,42 +20,42 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePrometheusScrapeJob request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getAgentId() Obtain Agent ID
- * @method void setAgentId(string $AgentId) Set Agent ID
- * @method string getJobId() Obtain Scrape task ID
- * @method void setJobId(string $JobId) Set Scrape task ID
- * @method string getConfig() Obtain Scrape task configuration
- * @method void setConfig(string $Config) Set Scrape task configuration
+ * @method string getInstanceId() Obtain TMP instance ID, such as “prom-abcd1234”.
+ * @method void setInstanceId(string $InstanceId) Set TMP instance ID, such as “prom-abcd1234”.
+ * @method string getAgentId() Obtain Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
+ * @method void setAgentId(string $AgentId) Set Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
+ * @method string getJobId() Obtain Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
+ * @method void setJobId(string $JobId) Set Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
+ * @method string getConfig() Obtain Scrape task ID in the format of “job_name:xx”
+ * @method void setConfig(string $Config) Set Scrape task ID in the format of “job_name:xx”
  */
 class UpdatePrometheusScrapeJobRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TMP instance ID, such as “prom-abcd1234”.
      */
     public $InstanceId;
 
     /**
-     * @var string Agent ID
+     * @var string Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
      */
     public $AgentId;
 
     /**
-     * @var string Scrape task ID
+     * @var string Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
      */
     public $JobId;
 
     /**
-     * @var string Scrape task configuration
+     * @var string Scrape task ID in the format of “job_name:xx”
      */
     public $Config;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $AgentId Agent ID
-     * @param string $JobId Scrape task ID
-     * @param string $Config Scrape task configuration
+     * @param string $InstanceId TMP instance ID, such as “prom-abcd1234”.
+     * @param string $AgentId Agent ID such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console
+     * @param string $JobId Scrape task ID such as “job-abcd1234”. You can go to the **Agent Management** page and obtain the ID in the pop-up **Create Scrape Task** window.
+     * @param string $Config Scrape task ID in the format of “job_name:xx”
      */
     function __construct()
     {

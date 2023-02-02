@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * ModifyGrafanaInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getInstanceName() Obtain Instance name
- * @method void setInstanceName(string $InstanceName) Set Instance name
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method string getInstanceName() Obtain TCMG instance name, such as “test”.
+ * @method void setInstanceName(string $InstanceName) Set TCMG instance name, such as “test”.
  */
 class ModifyGrafanaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var string Instance name
+     * @var string TCMG instance name, such as “test”.
      */
     public $InstanceName;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $InstanceName Instance name
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param string $InstanceName TCMG instance name, such as “test”.
      */
     function __construct()
     {

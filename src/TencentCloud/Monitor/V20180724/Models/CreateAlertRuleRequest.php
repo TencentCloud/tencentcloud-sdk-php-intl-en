@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateAlertRule request structure.
  *
- * @method string getInstanceId() Obtain Prometheus instance ID
- * @method void setInstanceId(string $InstanceId) Set Prometheus instance ID
+ * @method string getInstanceId() Obtain TMP instance ID, such as “prom-abcd1234”.
+ * @method void setInstanceId(string $InstanceId) Set TMP instance ID, such as “prom-abcd1234”.
  * @method string getRuleName() Obtain Rule name
  * @method void setRuleName(string $RuleName) Set Rule name
- * @method string getExpr() Obtain Rule expression
- * @method void setExpr(string $Expr) Set Rule expression
+ * @method string getExpr() Obtain Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
+ * @method void setExpr(string $Expr) Set Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
  * @method array getReceivers() Obtain List of alert notification template IDs
  * @method void setReceivers(array $Receivers) Set List of alert notification template IDs
  * @method integer getRuleState() Obtain Rule status code. Valid values:
@@ -50,7 +50,7 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
 class CreateAlertRuleRequest extends AbstractModel
 {
     /**
-     * @var string Prometheus instance ID
+     * @var string TMP instance ID, such as “prom-abcd1234”.
      */
     public $InstanceId;
 
@@ -60,7 +60,7 @@ class CreateAlertRuleRequest extends AbstractModel
     public $RuleName;
 
     /**
-     * @var string Rule expression
+     * @var string Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
      */
     public $Expr;
 
@@ -99,9 +99,9 @@ Alert object and alert message are special fields of Prometheus Rule Annotations
     public $Type;
 
     /**
-     * @param string $InstanceId Prometheus instance ID
+     * @param string $InstanceId TMP instance ID, such as “prom-abcd1234”.
      * @param string $RuleName Rule name
-     * @param string $Expr Rule expression
+     * @param string $Expr Alerting rule expression. For more information, see <a href="https://www.tencentcloud.com/document/product/1116/43192?lang=en&pg=">Alerting Rule Description</a>
      * @param array $Receivers List of alert notification template IDs
      * @param integer $RuleState Rule status code. Valid values:
 <li>2=RuleEnabled</li>

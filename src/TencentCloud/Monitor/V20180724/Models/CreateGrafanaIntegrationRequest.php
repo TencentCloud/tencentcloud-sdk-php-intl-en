@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaIntegration request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getKind() Obtain Type
- * @method void setKind(string $Kind) Set Type
- * @method string getContent() Obtain Configuration
- * @method void setContent(string $Content) Set Configuration
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method string getKind() Obtain Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method void setKind(string $Kind) Set Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method string getContent() Obtain Integration configuration
+ * @method void setContent(string $Content) Set Integration configuration
  */
 class CreateGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var string Type
+     * @var string Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public $Kind;
 
     /**
-     * @var string Configuration
+     * @var string Integration configuration
      */
     public $Content;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $Kind Type
-     * @param string $Content Configuration
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param string $Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+     * @param string $Content Integration configuration
      */
     function __construct()
     {

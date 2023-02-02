@@ -20,12 +20,12 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaNotificationChannel request structure.
  *
- * @method string getChannelId() Obtain Channel ID
- * @method void setChannelId(string $ChannelId) Set Channel ID
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getChannelName() Obtain Channel name
- * @method void setChannelName(string $ChannelName) Set Channel name
+ * @method string getChannelId() Obtain Channel ID, such as “nchannel-abcd1234”.
+ * @method void setChannelId(string $ChannelId) Set Channel ID, such as “nchannel-abcd1234”.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
+ * @method string getChannelName() Obtain Alert channel name, such as “test”.
+ * @method void setChannelName(string $ChannelName) Set Alert channel name, such as “test”.
  * @method array getReceivers() Obtain Array of notification channel IDs
  * @method void setReceivers(array $Receivers) Set Array of notification channel IDs
  * @method array getExtraOrgIds() Obtain This parameter has been deprecated. Please use `OrganizationIds` instead.
@@ -36,17 +36,17 @@ use TencentCloud\Common\AbstractModel;
 class UpdateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string Channel ID
+     * @var string Channel ID, such as “nchannel-abcd1234”.
      */
     public $ChannelId;
 
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
     /**
-     * @var string Channel name
+     * @var string Alert channel name, such as “test”.
      */
     public $ChannelName;
 
@@ -66,9 +66,9 @@ class UpdateGrafanaNotificationChannelRequest extends AbstractModel
     public $OrganizationIds;
 
     /**
-     * @param string $ChannelId Channel ID
-     * @param string $InstanceId Instance ID.
-     * @param string $ChannelName Channel name
+     * @param string $ChannelId Channel ID, such as “nchannel-abcd1234”.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * @param string $ChannelName Alert channel name, such as “test”.
      * @param array $Receivers Array of notification channel IDs
      * @param array $ExtraOrgIds This parameter has been deprecated. Please use `OrganizationIds` instead.
      * @param array $OrganizationIds Array of valid organization IDs

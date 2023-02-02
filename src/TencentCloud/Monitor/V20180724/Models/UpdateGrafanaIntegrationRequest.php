@@ -20,29 +20,29 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaIntegration request structure.
  *
- * @method string getIntegrationId() Obtain Integration ID
- * @method void setIntegrationId(string $IntegrationId) Set Integration ID
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getKind() Obtain Integration type
- * @method void setKind(string $Kind) Set Integration type
+ * @method string getIntegrationId() Obtain Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method void setIntegrationId(string $IntegrationId) Set Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
+ * @method string getKind() Obtain Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method void setKind(string $Kind) Set Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
  * @method string getContent() Obtain Integration content
  * @method void setContent(string $Content) Set Integration content
  */
 class UpdateGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string Integration ID
+     * @var string Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public $IntegrationId;
 
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
     /**
-     * @var string Integration type
+     * @var string Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public $Kind;
 
@@ -52,9 +52,9 @@ class UpdateGrafanaIntegrationRequest extends AbstractModel
     public $Content;
 
     /**
-     * @param string $IntegrationId Integration ID
-     * @param string $InstanceId Instance ID
-     * @param string $Kind Integration type
+     * @param string $IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * @param string $Kind Integration type, such as “tencent-cloud-prometheus”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      * @param string $Content Integration content
      */
     function __construct()

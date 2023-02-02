@@ -36,6 +36,14 @@ use TencentCloud\Common\AbstractModel;
  * @method void setGroupBy(array $GroupBy) Set Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
  * @method LogAlarmReq getLogAlarmReqInfo() Obtain Log alarm creation request parameters
  * @method void setLogAlarmReqInfo(LogAlarmReq $LogAlarmReqInfo) Set Log alarm creation request parameters
+ * @method array getNoticeIds() Obtain Template ID, which is dedicated to TMP.
+ * @method void setNoticeIds(array $NoticeIds) Set Template ID, which is dedicated to TMP.
+ * @method integer getEnable() Obtain Status (`0`: Disabled; `1`: Enabled)
+ * @method void setEnable(integer $Enable) Set Status (`0`: Disabled; `1`: Enabled)
+ * @method string getPolicyName() Obtain Name of the policy dedicated to TMP
+ * @method void setPolicyName(string $PolicyName) Set Name of the policy dedicated to TMP
+ * @method string getEbSubject() Obtain The alert configured for an event
+ * @method void setEbSubject(string $EbSubject) Set The alert configured for an event
  */
 class ModifyAlarmPolicyConditionRequest extends AbstractModel
 {
@@ -80,6 +88,26 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
     public $LogAlarmReqInfo;
 
     /**
+     * @var array Template ID, which is dedicated to TMP.
+     */
+    public $NoticeIds;
+
+    /**
+     * @var integer Status (`0`: Disabled; `1`: Enabled)
+     */
+    public $Enable;
+
+    /**
+     * @var string Name of the policy dedicated to TMP
+     */
+    public $PolicyName;
+
+    /**
+     * @var string The alert configured for an event
+     */
+    public $EbSubject;
+
+    /**
      * @param string $Module Module name, which is fixed at "monitor"
      * @param string $PolicyId Alarm policy ID
      * @param integer $ConditionTemplateId ID of trigger condition template. This parameter can be left empty.
@@ -88,6 +116,10 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
      * @param AlarmPolicyFilter $Filter Global filter.
      * @param array $GroupBy Aggregation dimension list, which is used to specify which dimension keys data is grouped by.
      * @param LogAlarmReq $LogAlarmReqInfo Log alarm creation request parameters
+     * @param array $NoticeIds Template ID, which is dedicated to TMP.
+     * @param integer $Enable Status (`0`: Disabled; `1`: Enabled)
+     * @param string $PolicyName Name of the policy dedicated to TMP
+     * @param string $EbSubject The alert configured for an event
      */
     function __construct()
     {
@@ -136,6 +168,22 @@ class ModifyAlarmPolicyConditionRequest extends AbstractModel
         if (array_key_exists("LogAlarmReqInfo",$param) and $param["LogAlarmReqInfo"] !== null) {
             $this->LogAlarmReqInfo = new LogAlarmReq();
             $this->LogAlarmReqInfo->deserialize($param["LogAlarmReqInfo"]);
+        }
+
+        if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
+            $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("Enable",$param) and $param["Enable"] !== null) {
+            $this->Enable = $param["Enable"];
+        }
+
+        if (array_key_exists("PolicyName",$param) and $param["PolicyName"] !== null) {
+            $this->PolicyName = $param["PolicyName"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
         }
     }
 }

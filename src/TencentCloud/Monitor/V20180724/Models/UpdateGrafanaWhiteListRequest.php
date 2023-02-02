@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateGrafanaWhiteList request structure.
  *
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
- * @method array getWhitelist() Obtain Allowlist in array
- * @method void setWhitelist(array $Whitelist) Set Allowlist in array
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method array getWhitelist() Obtain Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
+ * @method void setWhitelist(array $Whitelist) Set Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
  */
 class UpdateGrafanaWhiteListRequest extends AbstractModel
 {
     /**
-     * @var string Instance name
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var array Allowlist in array
+     * @var array Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
      */
     public $Whitelist;
 
     /**
-     * @param string $InstanceId Instance name
-     * @param array $Whitelist Allowlist in array
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param array $Whitelist Array of public IPs (such as “127.0.0.1”) in the allowlist, which can be viewed through the `DescribeGrafanaWhiteList` API.
      */
     function __construct()
     {

@@ -20,15 +20,15 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdateDNSConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
  * @method array getNameServers() Obtain Array of DNS servers
  * @method void setNameServers(array $NameServers) Set Array of DNS servers
  */
 class UpdateDNSConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
@@ -38,7 +38,7 @@ class UpdateDNSConfigRequest extends AbstractModel
     public $NameServers;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
      * @param array $NameServers Array of DNS servers
      */
     function __construct()

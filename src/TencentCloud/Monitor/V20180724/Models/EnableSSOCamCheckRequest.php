@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableSSOCamCheck request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method boolean getEnableSSOCamCheck() Obtain Whether to enable CAM authentication
- * @method void setEnableSSOCamCheck(boolean $EnableSSOCamCheck) Set Whether to enable CAM authentication
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method boolean getEnableSSOCamCheck() Obtain Whether to enable CAM authentication (`true`: Yes; `false`: No)
+ * @method void setEnableSSOCamCheck(boolean $EnableSSOCamCheck) Set Whether to enable CAM authentication (`true`: Yes; `false`: No)
  */
 class EnableSSOCamCheckRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var boolean Whether to enable CAM authentication
+     * @var boolean Whether to enable CAM authentication (`true`: Yes; `false`: No)
      */
     public $EnableSSOCamCheck;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param boolean $EnableSSOCamCheck Whether to enable CAM authentication
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param boolean $EnableSSOCamCheck Whether to enable CAM authentication (`true`: Yes; `false`: No)
      */
     function __construct()
     {

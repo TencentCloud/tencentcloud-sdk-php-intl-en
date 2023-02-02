@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaNotificationChannel request structure.
  *
- * @method array getChannelIDs() Obtain Array of channel IDs
- * @method void setChannelIDs(array $ChannelIDs) Set Array of channel IDs
- * @method string getInstanceId() Obtain Instance name
- * @method void setInstanceId(string $InstanceId) Set Instance name
+ * @method array getChannelIDs() Obtain Array of channel IDs, such as “nchannel-abcd1234”.
+ * @method void setChannelIDs(array $ChannelIDs) Set Array of channel IDs, such as “nchannel-abcd1234”.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
  */
 class DeleteGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var array Array of channel IDs
+     * @var array Array of channel IDs, such as “nchannel-abcd1234”.
      */
     public $ChannelIDs;
 
     /**
-     * @var string Instance name
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @param array $ChannelIDs Array of channel IDs
-     * @param string $InstanceId Instance name
+     * @param array $ChannelIDs Array of channel IDs, such as “nchannel-abcd1234”.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     function __construct()
     {

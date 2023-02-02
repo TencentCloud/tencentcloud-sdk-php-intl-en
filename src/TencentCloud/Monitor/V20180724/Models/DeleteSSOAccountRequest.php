@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteSSOAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getUserId() Obtain User account ID
- * @method void setUserId(string $UserId) Set User account ID
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method string getUserId() Obtain User account ID, such as “10000000”.
+ * @method void setUserId(string $UserId) Set User account ID, such as “10000000”.
  */
 class DeleteSSOAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var string User account ID
+     * @var string User account ID, such as “10000000”.
      */
     public $UserId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $UserId User account ID
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param string $UserId User account ID, such as “10000000”.
      */
     function __construct()
     {

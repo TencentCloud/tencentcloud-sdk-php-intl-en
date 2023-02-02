@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeInstalledPlugins request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getPluginId() Obtain Filter by plugin ID
- * @method void setPluginId(string $PluginId) Set Filter by plugin ID
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-kleu3gt0”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-kleu3gt0”.
+ * @method string getPluginId() Obtain Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
+ * @method void setPluginId(string $PluginId) Set Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
  */
 class DescribeInstalledPluginsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public $InstanceId;
 
     /**
-     * @var string Filter by plugin ID
+     * @var string Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
      */
     public $PluginId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $PluginId Filter by plugin ID
+     * @param string $InstanceId TCMG instance ID, such as “grafana-kleu3gt0”.
+     * @param string $PluginId Filter by plugin ID such as “grafana-piechart-panel”. You can view the IDs of installed plugins through the `DescribeInstalledPlugins` API.
      */
     function __construct()
     {

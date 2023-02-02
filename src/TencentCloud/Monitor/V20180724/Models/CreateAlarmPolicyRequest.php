@@ -56,6 +56,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setHierarchicalNotices(array $HierarchicalNotices) Set Notification rules for different alarm levels
  * @method integer getMigrateFlag() Obtain A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
  * @method void setMigrateFlag(integer $MigrateFlag) Set A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+ * @method string getEbSubject() Obtain The alert configured for an event
+ * @method void setEbSubject(string $EbSubject) Set The alert configured for an event
  */
 class CreateAlarmPolicyRequest extends AbstractModel
 {
@@ -150,6 +152,11 @@ class CreateAlarmPolicyRequest extends AbstractModel
     public $MigrateFlag;
 
     /**
+     * @var string The alert configured for an event
+     */
+    public $EbSubject;
+
+    /**
      * @param string $Module Value fixed at "monitor"
      * @param string $PolicyName Policy name, which can contain up to 20 characters
      * @param string $MonitorType Monitor type. Valid values: MT_QCE (Tencent Cloud service monitoring)
@@ -168,6 +175,7 @@ class CreateAlarmPolicyRequest extends AbstractModel
      * @param LogAlarmReq $LogAlarmReqInfo Log alarm information
      * @param array $HierarchicalNotices Notification rules for different alarm levels
      * @param integer $MigrateFlag A dedicated field for migration policies. 0: Implement authentication logic; 1: Skip authentication logic.
+     * @param string $EbSubject The alert configured for an event
      */
     function __construct()
     {
@@ -271,6 +279,10 @@ class CreateAlarmPolicyRequest extends AbstractModel
 
         if (array_key_exists("MigrateFlag",$param) and $param["MigrateFlag"] !== null) {
             $this->MigrateFlag = $param["MigrateFlag"];
+        }
+
+        if (array_key_exists("EbSubject",$param) and $param["EbSubject"] !== null) {
+            $this->EbSubject = $param["EbSubject"];
         }
     }
 }

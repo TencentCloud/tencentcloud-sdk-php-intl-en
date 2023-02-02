@@ -46,6 +46,8 @@ major: in-place upgrade of major version
  * @method void setSkipPreCheck(boolean $SkipPreCheck) Set Whether to skip the pre-upgrade check of the node
  * @method float getMaxNotReadyPercent() Obtain The maximum tolerable proportion of unavailable pods
  * @method void setMaxNotReadyPercent(float $MaxNotReadyPercent) Set The maximum tolerable proportion of unavailable pods
+ * @method boolean getUpgradeRunTime() Obtain Whether to upgrade node runtime. Values: `true`, `false` (default).
+ * @method void setUpgradeRunTime(boolean $UpgradeRunTime) Set Whether to upgrade node runtime. Values: `true`, `false` (default).
  */
 class UpgradeClusterInstancesRequest extends AbstractModel
 {
@@ -91,6 +93,11 @@ major: in-place upgrade of major version
     public $MaxNotReadyPercent;
 
     /**
+     * @var boolean Whether to upgrade node runtime. Values: `true`, `false` (default).
+     */
+    public $UpgradeRunTime;
+
+    /**
      * @param string $ClusterId Cluster ID
      * @param string $Operation create: starting an upgrade task
 pause: pausing the task
@@ -104,6 +111,7 @@ major: in-place upgrade of major version
      * @param UpgradeNodeResetParam $ResetParam This parameter is used when the node joins the cluster again. Refer to the API of creating one or more cluster nodes.
      * @param boolean $SkipPreCheck Whether to skip the pre-upgrade check of the node
      * @param float $MaxNotReadyPercent The maximum tolerable proportion of unavailable pods
+     * @param boolean $UpgradeRunTime Whether to upgrade node runtime. Values: `true`, `false` (default).
      */
     function __construct()
     {
@@ -145,6 +153,10 @@ major: in-place upgrade of major version
 
         if (array_key_exists("MaxNotReadyPercent",$param) and $param["MaxNotReadyPercent"] !== null) {
             $this->MaxNotReadyPercent = $param["MaxNotReadyPercent"];
+        }
+
+        if (array_key_exists("UpgradeRunTime",$param) and $param["UpgradeRunTime"] !== null) {
+            $this->UpgradeRunTime = $param["UpgradeRunTime"];
         }
     }
 }

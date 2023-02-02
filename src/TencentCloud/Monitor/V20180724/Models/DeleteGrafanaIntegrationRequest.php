@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DeleteGrafanaIntegration request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getIntegrationId() Obtain Integration ID
- * @method void setIntegrationId(string $IntegrationId) Set Integration ID
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
+ * @method string getIntegrationId() Obtain Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
+ * @method void setIntegrationId(string $IntegrationId) Set Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
  */
 class DeleteGrafanaIntegrationRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
     /**
-     * @var string Integration ID
+     * @var string Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     public $IntegrationId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $IntegrationId Integration ID
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * @param string $IntegrationId Integration ID, such as “integration-abcd1234”. You can view it by going to the instance details page and clicking **Tencent Cloud Service Integration** > **Integration List**.
      */
     function __construct()
     {

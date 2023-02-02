@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * CreateGrafanaNotificationChannel request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getChannelName() Obtain Channel name
- * @method void setChannelName(string $ChannelName) Set Channel name
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method string getChannelName() Obtain Alert channel name, such as “test”.
+ * @method void setChannelName(string $ChannelName) Set Alert channel name, such as “test”.
  * @method integer getOrgId() Obtain Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
  * @method void setOrgId(integer $OrgId) Set Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
  * @method array getReceivers() Obtain Array of notification channel IDs
@@ -36,12 +36,12 @@ use TencentCloud\Common\AbstractModel;
 class CreateGrafanaNotificationChannelRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var string Channel name
+     * @var string Alert channel name, such as “test”.
      */
     public $ChannelName;
 
@@ -66,8 +66,8 @@ class CreateGrafanaNotificationChannelRequest extends AbstractModel
     public $OrganizationIds;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $ChannelName Channel name
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param string $ChannelName Alert channel name, such as “test”.
      * @param integer $OrgId Default value: `1`. This parameter has been deprecated. Please use `OrganizationIds` instead.
      * @param array $Receivers Array of notification channel IDs
      * @param array $ExtraOrgIds Array of extra organization IDs. This parameter has been deprecated. Please use `OrganizationIds` instead.

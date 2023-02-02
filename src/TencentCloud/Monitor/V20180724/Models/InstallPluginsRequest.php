@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method array getPlugins() Obtain Plugin information
  * @method void setPlugins(array $Plugins) Set Plugin information
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
  */
 class InstallPluginsRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class InstallPluginsRequest extends AbstractModel
     public $Plugins;
 
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
      * @param array $Plugins Plugin information
-     * @param string $InstanceId Instance ID
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     function __construct()
     {

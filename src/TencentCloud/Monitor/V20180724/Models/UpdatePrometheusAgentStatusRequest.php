@@ -20,10 +20,10 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpdatePrometheusAgentStatus request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method array getAgentIds() Obtain List of agent IDs
- * @method void setAgentIds(array $AgentIds) Set List of agent IDs
+ * @method string getInstanceId() Obtain TMP instance ID, such as “prom-abcd1234”.
+ * @method void setInstanceId(string $InstanceId) Set TMP instance ID, such as “prom-abcd1234”.
+ * @method array getAgentIds() Obtain List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
+ * @method void setAgentIds(array $AgentIds) Set List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
  * @method integer getStatus() Obtain Status to update
 <li> 1 = enabled </li>
 <li> 2 = disabled </li>
@@ -34,12 +34,12 @@ use TencentCloud\Common\AbstractModel;
 class UpdatePrometheusAgentStatusRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TMP instance ID, such as “prom-abcd1234”.
      */
     public $InstanceId;
 
     /**
-     * @var array List of agent IDs
+     * @var array List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
      */
     public $AgentIds;
 
@@ -51,8 +51,8 @@ class UpdatePrometheusAgentStatusRequest extends AbstractModel
     public $Status;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param array $AgentIds List of agent IDs
+     * @param string $InstanceId TMP instance ID, such as “prom-abcd1234”.
+     * @param array $AgentIds List of agent IDs such as “agent-abcd1234”, which can be obtained on the **Agent Management** page in the console.
      * @param integer $Status Status to update
 <li> 1 = enabled </li>
 <li> 2 = disabled </li>

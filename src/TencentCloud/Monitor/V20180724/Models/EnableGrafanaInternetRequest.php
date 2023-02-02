@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * EnableGrafanaInternet request structure.
  *
- * @method string getInstanceID() Obtain Instance ID
- * @method void setInstanceID(string $InstanceID) Set Instance ID
- * @method boolean getEnableInternet() Obtain Enable or disable
- * @method void setEnableInternet(boolean $EnableInternet) Set Enable or disable
+ * @method string getInstanceID() Obtain TCMG instance ID, such as “grafana-kleu3gt0”.
+ * @method void setInstanceID(string $InstanceID) Set TCMG instance ID, such as “grafana-kleu3gt0”.
+ * @method boolean getEnableInternet() Obtain Whether to enable public network access (`true`: Yes; `false`: No)
+ * @method void setEnableInternet(boolean $EnableInternet) Set Whether to enable public network access (`true`: Yes; `false`: No)
  */
 class EnableGrafanaInternetRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-kleu3gt0”.
      */
     public $InstanceID;
 
     /**
-     * @var boolean Enable or disable
+     * @var boolean Whether to enable public network access (`true`: Yes; `false`: No)
      */
     public $EnableInternet;
 
     /**
-     * @param string $InstanceID Instance ID
-     * @param boolean $EnableInternet Enable or disable
+     * @param string $InstanceID TCMG instance ID, such as “grafana-kleu3gt0”.
+     * @param boolean $EnableInternet Whether to enable public network access (`true`: Yes; `false`: No)
      */
     function __construct()
     {

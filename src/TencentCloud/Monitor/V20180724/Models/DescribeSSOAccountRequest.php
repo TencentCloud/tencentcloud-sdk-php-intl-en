@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeSSOAccount request structure.
  *
- * @method string getInstanceId() Obtain Instance ID
- * @method void setInstanceId(string $InstanceId) Set Instance ID
- * @method string getUserId() Obtain Filter by account UIN
- * @method void setUserId(string $UserId) Set Filter by account UIN
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method string getUserId() Obtain Filter by account ID such as “10000”
+ * @method void setUserId(string $UserId) Set Filter by account ID such as “10000”
  */
 class DescribeSSOAccountRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @var string Filter by account UIN
+     * @var string Filter by account ID such as “10000”
      */
     public $UserId;
 
     /**
-     * @param string $InstanceId Instance ID
-     * @param string $UserId Filter by account UIN
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
+     * @param string $UserId Filter by account ID such as “10000”
      */
     function __construct()
     {

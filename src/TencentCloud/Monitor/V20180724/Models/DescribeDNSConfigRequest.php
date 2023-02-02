@@ -20,18 +20,18 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeDNSConfig request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-abcdefgh”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-abcdefgh”.
  */
 class DescribeDNSConfigRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-abcdefgh”.
      */
     public $InstanceId;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-abcdefgh”.
      */
     function __construct()
     {

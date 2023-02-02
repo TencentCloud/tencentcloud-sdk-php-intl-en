@@ -20,23 +20,23 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribeGrafanaNotificationChannels request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
  * @method integer getOffset() Obtain Offset
  * @method void setOffset(integer $Offset) Set Offset
  * @method integer getLimit() Obtain Number of items to be queried
  * @method void setLimit(integer $Limit) Set Number of items to be queried
- * @method string getChannelName() Obtain Channel name
- * @method void setChannelName(string $ChannelName) Set Channel name
- * @method array getChannelIDs() Obtain Channel ID
- * @method void setChannelIDs(array $ChannelIDs) Set Channel ID
- * @method integer getChannelState() Obtain Status
- * @method void setChannelState(integer $ChannelState) Set Status
+ * @method string getChannelName() Obtain Alert channel name, such as “test”.
+ * @method void setChannelName(string $ChannelName) Set Alert channel name, such as “test”.
+ * @method array getChannelIDs() Obtain Alert channel ID, such as “nchannel-abcd1234”.
+ * @method void setChannelIDs(array $ChannelIDs) Set Alert channel ID, such as “nchannel-abcd1234”.
+ * @method integer getChannelState() Obtain Alert channel status
+ * @method void setChannelState(integer $ChannelState) Set Alert channel status
  */
 class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
@@ -51,27 +51,27 @@ class DescribeGrafanaNotificationChannelsRequest extends AbstractModel
     public $Limit;
 
     /**
-     * @var string Channel name
+     * @var string Alert channel name, such as “test”.
      */
     public $ChannelName;
 
     /**
-     * @var array Channel ID
+     * @var array Alert channel ID, such as “nchannel-abcd1234”.
      */
     public $ChannelIDs;
 
     /**
-     * @var integer Status
+     * @var integer Alert channel status
      */
     public $ChannelState;
 
     /**
-     * @param string $InstanceId Instance ID.
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
      * @param integer $Offset Offset
      * @param integer $Limit Number of items to be queried
-     * @param string $ChannelName Channel name
-     * @param array $ChannelIDs Channel ID
-     * @param integer $ChannelState Status
+     * @param string $ChannelName Alert channel name, such as “test”.
+     * @param array $ChannelIDs Alert channel ID, such as “nchannel-abcd1234”.
+     * @param integer $ChannelState Alert channel status
      */
     function __construct()
     {

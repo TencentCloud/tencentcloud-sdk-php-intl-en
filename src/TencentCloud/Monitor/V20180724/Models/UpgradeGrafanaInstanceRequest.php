@@ -20,26 +20,26 @@ use TencentCloud\Common\AbstractModel;
 /**
  * UpgradeGrafanaInstance request structure.
  *
- * @method string getInstanceId() Obtain Instance ID.
- * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getAlias() Obtain Version alias
- * @method void setAlias(string $Alias) Set Version alias
+ * @method string getInstanceId() Obtain TCMG instance ID, such as “grafana-12345678”.
+ * @method void setInstanceId(string $InstanceId) Set TCMG instance ID, such as “grafana-12345678”.
+ * @method string getAlias() Obtain Version alias, such as v7.4.2.
+ * @method void setAlias(string $Alias) Set Version alias, such as v7.4.2.
  */
 class UpgradeGrafanaInstanceRequest extends AbstractModel
 {
     /**
-     * @var string Instance ID.
+     * @var string TCMG instance ID, such as “grafana-12345678”.
      */
     public $InstanceId;
 
     /**
-     * @var string Version alias
+     * @var string Version alias, such as v7.4.2.
      */
     public $Alias;
 
     /**
-     * @param string $InstanceId Instance ID.
-     * @param string $Alias Version alias
+     * @param string $InstanceId TCMG instance ID, such as “grafana-12345678”.
+     * @param string $Alias Version alias, such as v7.4.2.
      */
     function __construct()
     {

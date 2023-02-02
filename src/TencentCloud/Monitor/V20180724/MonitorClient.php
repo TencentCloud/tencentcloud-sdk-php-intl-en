@@ -88,6 +88,7 @@ Note: **If you use a sub-account, you can only query the alarm records of author
  * @method Models\DescribePolicyGroupListResponse DescribePolicyGroupList(Models\DescribePolicyGroupListRequest $req) This API is used to get the list of basic policy alarm groups.
  * @method Models\DescribeProductEventListResponse DescribeProductEventList(Models\DescribeProductEventListRequest $req) This API is used to get the list of product events by page.
  * @method Models\DescribePrometheusAgentsResponse DescribePrometheusAgents(Models\DescribePrometheusAgentsRequest $req) This API is used to list Prometheus CVM agents.
+ * @method Models\DescribePrometheusInstanceUsageResponse DescribePrometheusInstanceUsage(Models\DescribePrometheusInstanceUsageRequest $req)  This API is used to query the usage of a pay-as-you-go Tencent Managed Service for Prometheus (TMP) instance.
  * @method Models\DescribePrometheusInstancesResponse DescribePrometheusInstances(Models\DescribePrometheusInstancesRequest $req) This API is used to query the details of one or multiple instances.
 <ul>
 <li>You can query the details of an instance by its ID, name, or status.</li>

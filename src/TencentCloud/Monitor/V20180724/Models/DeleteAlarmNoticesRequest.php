@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setModule(string $Module) Set Module name. Enter "monitor" here
  * @method array getNoticeIds() Obtain Alarm notification template ID list
  * @method void setNoticeIds(array $NoticeIds) Set Alarm notification template ID list
+ * @method array getNoticeBindPolicys() Obtain Binding between a notification template and a policy
+ * @method void setNoticeBindPolicys(array $NoticeBindPolicys) Set Binding between a notification template and a policy
  */
 class DeleteAlarmNoticesRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class DeleteAlarmNoticesRequest extends AbstractModel
     public $NoticeIds;
 
     /**
+     * @var array Binding between a notification template and a policy
+     */
+    public $NoticeBindPolicys;
+
+    /**
      * @param string $Module Module name. Enter "monitor" here
      * @param array $NoticeIds Alarm notification template ID list
+     * @param array $NoticeBindPolicys Binding between a notification template and a policy
      */
     function __construct()
     {
@@ -60,6 +68,15 @@ class DeleteAlarmNoticesRequest extends AbstractModel
 
         if (array_key_exists("NoticeIds",$param) and $param["NoticeIds"] !== null) {
             $this->NoticeIds = $param["NoticeIds"];
+        }
+
+        if (array_key_exists("NoticeBindPolicys",$param) and $param["NoticeBindPolicys"] !== null) {
+            $this->NoticeBindPolicys = [];
+            foreach ($param["NoticeBindPolicys"] as $key => $value){
+                $obj = new NoticeBindPolicys();
+                $obj->deserialize($value);
+                array_push($this->NoticeBindPolicys, $obj);
+            }
         }
     }
 }
