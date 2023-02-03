@@ -51,9 +51,9 @@ For example, if the input image in `Image` or `Url` contains multiple faces and 
  * @method integer getMinFaceSize() Obtain Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
  * @method void setMinFaceSize(integer $MinFaceSize) Set Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
  * @method integer getMaxPersonNumPerGroup() Obtain Detected faces, which is corresponding to the maximum number of returned most matching persons. Default value: 5. Maximum value: 10.  
-For example, if `MaxFaceNum` is 3 and `MaxPersonNum` is 5, up to 15 (3 * 5) persons will be returned.
+For example, if `MaxFaceNum` is 3, `MaxPersonNumPerGroup` is 5, and the `GroupIds` length is 3, up to 45 (3 * 5 * 3) persons will be returned.
  * @method void setMaxPersonNumPerGroup(integer $MaxPersonNumPerGroup) Set Detected faces, which is corresponding to the maximum number of returned most matching persons. Default value: 5. Maximum value: 10.  
-For example, if `MaxFaceNum` is 3 and `MaxPersonNum` is 5, up to 15 (3 * 5) persons will be returned.
+For example, if `MaxFaceNum` is 3, `MaxPersonNumPerGroup` is 5, and the `GroupIds` length is 3, up to 45 (3 * 5 * 3) persons will be returned.
  * @method integer getNeedPersonInfo() Obtain Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
  * @method void setNeedPersonInfo(integer $NeedPersonInfo) Set Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
  * @method integer getQualityControl() Obtain Image quality control. 
@@ -120,7 +120,7 @@ For example, if the input image in `Image` or `Url` contains multiple faces and 
 
     /**
      * @var integer Detected faces, which is corresponding to the maximum number of returned most matching persons. Default value: 5. Maximum value: 10.  
-For example, if `MaxFaceNum` is 3 and `MaxPersonNum` is 5, up to 15 (3 * 5) persons will be returned.
+For example, if `MaxFaceNum` is 3, `MaxPersonNumPerGroup` is 5, and the `GroupIds` length is 3, up to 45 (3 * 5 * 3) persons will be returned.
      */
     public $MaxPersonNumPerGroup;
 
@@ -170,7 +170,7 @@ PNG, JPG, JPEG, and BMP images are supported, while GIF images are not.
 For example, if the input image in `Image` or `Url` contains multiple faces and `MaxFaceNum` is 5, top 5 faces with the largest size in the image will be recognized.
      * @param integer $MinFaceSize Minimum height and width of face in px. Default value: 34. A value below 34 will affect the search accuracy. We recommend setting this parameter to 80.
      * @param integer $MaxPersonNumPerGroup Detected faces, which is corresponding to the maximum number of returned most matching persons. Default value: 5. Maximum value: 10.  
-For example, if `MaxFaceNum` is 3 and `MaxPersonNum` is 5, up to 15 (3 * 5) persons will be returned.
+For example, if `MaxFaceNum` is 3, `MaxPersonNumPerGroup` is 5, and the `GroupIds` length is 3, up to 45 (3 * 5 * 3) persons will be returned.
      * @param integer $NeedPersonInfo Whether to return person details. 0: no; 1: yes. Default value: 0. Other values will be considered as 0 by default.
      * @param integer $QualityControl Image quality control. 
 0: no control. 

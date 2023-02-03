@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getPersonId() Obtain Person ID
  * @method void setPersonId(string $PersonId) Set Person ID
- * @method string getFaceId() Obtain Face ID
- * @method void setFaceId(string $FaceId) Set Face ID
+ * @method string getFaceId() Obtain Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
+ * @method void setFaceId(string $FaceId) Set Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
  * @method float getScore() Obtain Match score of candidate. 
 
 In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;
@@ -59,7 +59,7 @@ class Candidate extends AbstractModel
     public $PersonId;
 
     /**
-     * @var string Face ID
+     * @var string Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
      */
     public $FaceId;
 
@@ -94,7 +94,7 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
     /**
      * @param string $PersonId Person ID
-     * @param string $FaceId Face ID
+     * @param string $FaceId Face ID, which is valid only when returned by the `SearchFaces` or `SearchFacesReturnsByGroup` API. User search APIs use facial feature fusion to search for users, for which this field is meaningless.
      * @param float $Score Match score of candidate. 
 
 In a face base library containing 10,000 faces, the 1%, 0.1%, and 0.01% FARs correspond to scores of 70, 80, and 90, respectively;

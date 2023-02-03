@@ -18,31 +18,24 @@ namespace TencentCloud\Iai\V20200303\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * VerifyPerson response structure.
+ * DetectLiveFaceAccurate response structure.
  *
- * @method float getScore() Obtain Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
- * @method void setScore(float $Score) Set Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
- * @method boolean getIsMatch() Obtain Whether the person in the image matches the `PersonId`.
- * @method void setIsMatch(boolean $IsMatch) Set Whether the person in the image matches the `PersonId`.
- * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
- * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+ * @method float getScore() Obtain Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+ * @method void setScore(float $Score) Set Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+ * @method string getFaceModelVersion() Obtain Algorithm model version used for face recognition.
+ * @method void setFaceModelVersion(string $FaceModelVersion) Set Algorithm model version used for face recognition.
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class VerifyPersonResponse extends AbstractModel
+class DetectLiveFaceAccurateResponse extends AbstractModel
 {
     /**
-     * @var float Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
+     * @var float Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
      */
     public $Score;
 
     /**
-     * @var boolean Whether the person in the image matches the `PersonId`.
-     */
-    public $IsMatch;
-
-    /**
-     * @var string Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+     * @var string Algorithm model version used for face recognition.
      */
     public $FaceModelVersion;
 
@@ -52,9 +45,8 @@ class VerifyPersonResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param float $Score Similarity between given face image and `PersonId`. If there are multiple faces under the `PersonId`, their information will be fused for verification.
-     * @param boolean $IsMatch Whether the person in the image matches the `PersonId`.
-     * @param string $FaceModelVersion Algorithm model version used for face recognition in the group where the `Person` is, which is set when the group is created.
+     * @param float $Score Liveness score. Value range: [0, 100]. You can set several thresholds such as 5, 10, 40, 70 and 90 to determine whether the image is photographed. We recommend you use the threshold of 40.
+     * @param string $FaceModelVersion Algorithm model version used for face recognition.
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -72,10 +64,6 @@ class VerifyPersonResponse extends AbstractModel
         }
         if (array_key_exists("Score",$param) and $param["Score"] !== null) {
             $this->Score = $param["Score"];
-        }
-
-        if (array_key_exists("IsMatch",$param) and $param["IsMatch"] !== null) {
-            $this->IsMatch = $param["IsMatch"];
         }
 
         if (array_key_exists("FaceModelVersion",$param) and $param["FaceModelVersion"] !== null) {
