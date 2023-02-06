@@ -84,6 +84,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqSubnetIds(array $UniqSubnetIds) Set VPC character subnetId
  * @method array getTags() Obtain Tag key value
  * @method void setTags(array $Tags) Set Tag key value
+ * @method array getProxyVips() Obtain Database proxy IP
+ * @method void setProxyVips(array $ProxyVips) Set Database proxy IP
+ * @method array getProxyIds() Obtain Database proxy ID
+ * @method void setProxyIds(array $ProxyIds) Set Database proxy ID
  */
 class DescribeDBInstancesRequest extends AbstractModel
 {
@@ -248,6 +252,16 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Tags;
 
     /**
+     * @var array Database proxy IP
+     */
+    public $ProxyVips;
+
+    /**
+     * @var array Database proxy ID
+     */
+    public $ProxyIds;
+
+    /**
      * @param integer $ProjectId Project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
@@ -280,6 +294,8 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param array $UniqueVpcIds VPC character vpcId
      * @param array $UniqSubnetIds VPC character subnetId
      * @param array $Tags Tag key value
+     * @param array $ProxyVips Database proxy IP
+     * @param array $ProxyIds Database proxy ID
      */
     function __construct()
     {
@@ -425,6 +441,14 @@ class DescribeDBInstancesRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->Tags, $obj);
             }
+        }
+
+        if (array_key_exists("ProxyVips",$param) and $param["ProxyVips"] !== null) {
+            $this->ProxyVips = $param["ProxyVips"];
+        }
+
+        if (array_key_exists("ProxyIds",$param) and $param["ProxyIds"] !== null) {
+            $this->ProxyIds = $param["ProxyIds"];
         }
     }
 }

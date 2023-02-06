@@ -34,6 +34,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSaturday(string $Saturday) Set Time window on Saturday in the format of 02:00-06:00
  * @method string getSunday() Obtain Time window on Sunday in the format of 02:00-06:00
  * @method void setSunday(string $Sunday) Set Time window on Sunday in the format of 02:00-06:00
+ * @method string getBackupPeriodStrategy() Obtain Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+ * @method void setBackupPeriodStrategy(string $BackupPeriodStrategy) Set Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+ * @method array getDays() Obtain If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+ * @method void setDays(array $Days) Set If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+ * @method string getBackupPeriodTime() Obtain Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+ * @method void setBackupPeriodTime(string $BackupPeriodTime) Set Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
  */
 class CommonTimeWindow extends AbstractModel
 {
@@ -73,6 +79,21 @@ class CommonTimeWindow extends AbstractModel
     public $Sunday;
 
     /**
+     * @var string Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+     */
+    public $BackupPeriodStrategy;
+
+    /**
+     * @var array If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+     */
+    public $Days;
+
+    /**
+     * @var string Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
+     */
+    public $BackupPeriodTime;
+
+    /**
      * @param string $Monday Time window on Monday in the format of 02:00-06:00
      * @param string $Tuesday Time window on Tuesday in the format of 02:00-06:00
      * @param string $Wednesday Time window on Wednesday in the format of 02:00-06:00
@@ -80,6 +101,9 @@ class CommonTimeWindow extends AbstractModel
      * @param string $Friday Time window on Friday in the format of 02:00-06:00
      * @param string $Saturday Time window on Saturday in the format of 02:00-06:00
      * @param string $Sunday Time window on Sunday in the format of 02:00-06:00
+     * @param string $BackupPeriodStrategy Non-archive backup retention policy. Valid values: `weekly` (back up by week), monthly (back up by month), default value: `weekly`.
+     * @param array $Days If `BackupPeriodStrategy` is `monthly`, you need to pass in the specific backup dates. The time interval between any two adjacent dates cannot exceed 2 days, for example, [1,4,7,9,11,14,17,19,22,25,28,30,31].
+     * @param string $BackupPeriodTime Backup time by month in the format of 02:00–06:00, which is required when `BackupPeriodStrategy` is `monthly`.
      */
     function __construct()
     {
@@ -120,6 +144,18 @@ class CommonTimeWindow extends AbstractModel
 
         if (array_key_exists("Sunday",$param) and $param["Sunday"] !== null) {
             $this->Sunday = $param["Sunday"];
+        }
+
+        if (array_key_exists("BackupPeriodStrategy",$param) and $param["BackupPeriodStrategy"] !== null) {
+            $this->BackupPeriodStrategy = $param["BackupPeriodStrategy"];
+        }
+
+        if (array_key_exists("Days",$param) and $param["Days"] !== null) {
+            $this->Days = $param["Days"];
+        }
+
+        if (array_key_exists("BackupPeriodTime",$param) and $param["BackupPeriodTime"] !== null) {
+            $this->BackupPeriodTime = $param["BackupPeriodTime"];
         }
     }
 }

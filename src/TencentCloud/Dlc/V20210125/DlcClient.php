@@ -35,6 +35,7 @@ use TencentCloud\Dlc\V20210125\Models as Models;
  * @method Models\DescribeTaskResultResponse DescribeTaskResult(Models\DescribeTaskResultRequest $req) This API is used to query the result of a task.
  * @method Models\DescribeTasksResponse DescribeTasks(Models\DescribeTasksRequest $req) This API is used to query the list of tasks.
  * @method Models\ModifySparkAppResponse ModifySparkApp(Models\ModifySparkAppRequest $req) This API is used to update a Spark application.
+ * @method Models\SuspendResumeDataEngineResponse SuspendResumeDataEngine(Models\SuspendResumeDataEngineRequest $req) This API is used to suspend or resume a data engine.
  */
 
 class DlcClient extends AbstractClient

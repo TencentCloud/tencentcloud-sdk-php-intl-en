@@ -14,23 +14,23 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-namespace TencentCloud\Tcr\V20190924\Models;
+namespace TencentCloud\Ckafka\V20190819\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * CreateSecurityPolicies response structure.
+ * DescribeTopicProduceConnection response structure.
  *
- * @method string getRegistryId() Obtain Instance ID
- * @method void setRegistryId(string $RegistryId) Set Instance ID
+ * @method array getResult() Obtain Result set of returned connection information
+ * @method void setResult(array $Result) Set Result set of returned connection information
  * @method string getRequestId() Obtain The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  * @method void setRequestId(string $RequestId) Set The unique request ID, which is returned for each request. RequestId is required for locating a problem.
  */
-class CreateSecurityPoliciesResponse extends AbstractModel
+class DescribeTopicProduceConnectionResponse extends AbstractModel
 {
     /**
-     * @var string Instance ID
+     * @var array Result set of returned connection information
      */
-    public $RegistryId;
+    public $Result;
 
     /**
      * @var string The unique request ID, which is returned for each request. RequestId is required for locating a problem.
@@ -38,7 +38,7 @@ class CreateSecurityPoliciesResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param string $RegistryId Instance ID
+     * @param array $Result Result set of returned connection information
      * @param string $RequestId The unique request ID, which is returned for each request. RequestId is required for locating a problem.
      */
     function __construct()
@@ -54,8 +54,13 @@ class CreateSecurityPoliciesResponse extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("RegistryId",$param) and $param["RegistryId"] !== null) {
-            $this->RegistryId = $param["RegistryId"];
+        if (array_key_exists("Result",$param) and $param["Result"] !== null) {
+            $this->Result = [];
+            foreach ($param["Result"] as $key => $value){
+                $obj = new DescribeConnectInfoResultDTO();
+                $obj->deserialize($value);
+                array_push($this->Result, $obj);
+            }
         }
 
         if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {

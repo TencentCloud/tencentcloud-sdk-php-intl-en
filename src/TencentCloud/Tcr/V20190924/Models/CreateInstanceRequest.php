@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTagSpecification(TagSpecification $TagSpecification) Set Cloud tag description
  * @method integer getRegistryChargeType() Obtain Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
  * @method void setRegistryChargeType(integer $RegistryChargeType) Set Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
+ * @method RegistryChargePrepaid getRegistryChargePrepaid() Obtain Auto-renewal setting and purchase period
+ * @method void setRegistryChargePrepaid(RegistryChargePrepaid $RegistryChargePrepaid) Set Auto-renewal setting and purchase period
  * @method boolean getSyncTag() Obtain Whether to sync TCR cloud tags to the COS bucket
  * @method void setSyncTag(boolean $SyncTag) Set Whether to sync TCR cloud tags to the COS bucket
  */
@@ -54,6 +56,11 @@ class CreateInstanceRequest extends AbstractModel
     public $RegistryChargeType;
 
     /**
+     * @var RegistryChargePrepaid Auto-renewal setting and purchase period
+     */
+    public $RegistryChargePrepaid;
+
+    /**
      * @var boolean Whether to sync TCR cloud tags to the COS bucket
      */
     public $SyncTag;
@@ -63,6 +70,7 @@ class CreateInstanceRequest extends AbstractModel
      * @param string $RegistryType Enterprise Edition instance type. Valid values: basic: Basic; standard: Standard; premium: Premium.
      * @param TagSpecification $TagSpecification Cloud tag description
      * @param integer $RegistryChargeType Instance billing mode. Valid values: 0: Pay-as-you-go billing; 1: Prepaid. Default value: 0.
+     * @param RegistryChargePrepaid $RegistryChargePrepaid Auto-renewal setting and purchase period
      * @param boolean $SyncTag Whether to sync TCR cloud tags to the COS bucket
      */
     function __construct()
@@ -93,6 +101,11 @@ class CreateInstanceRequest extends AbstractModel
 
         if (array_key_exists("RegistryChargeType",$param) and $param["RegistryChargeType"] !== null) {
             $this->RegistryChargeType = $param["RegistryChargeType"];
+        }
+
+        if (array_key_exists("RegistryChargePrepaid",$param) and $param["RegistryChargePrepaid"] !== null) {
+            $this->RegistryChargePrepaid = new RegistryChargePrepaid();
+            $this->RegistryChargePrepaid->deserialize($param["RegistryChargePrepaid"]);
         }
 
         if (array_key_exists("SyncTag",$param) and $param["SyncTag"] !== null) {

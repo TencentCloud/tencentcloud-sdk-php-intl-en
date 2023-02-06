@@ -18,36 +18,36 @@ namespace TencentCloud\Dbbrain\V20210527\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 
+ * Access source details of the real-time session
  *
- * @method string getIp() Obtain 
- * @method void setIp(string $Ip) Set 
- * @method string getActiveConn() Obtain 
- * @method void setActiveConn(string $ActiveConn) Set 
- * @method integer getAllConn() Obtain 
- * @method void setAllConn(integer $AllConn) Set 
+ * @method string getIp() Obtain Access source
+ * @method void setIp(string $Ip) Set Access source
+ * @method string getActiveConn() Obtain The number of active connections from the current access source
+ * @method void setActiveConn(string $ActiveConn) Set The number of active connections from the current access source
+ * @method integer getAllConn() Obtain The total number of connections from the current access source
+ * @method void setAllConn(integer $AllConn) Set The total number of connections from the current access source
  */
 class SessionItem extends AbstractModel
 {
     /**
-     * @var string 
+     * @var string Access source
      */
     public $Ip;
 
     /**
-     * @var string 
+     * @var string The number of active connections from the current access source
      */
     public $ActiveConn;
 
     /**
-     * @var integer 
+     * @var integer The total number of connections from the current access source
      */
     public $AllConn;
 
     /**
-     * @param string $Ip 
-     * @param string $ActiveConn 
-     * @param integer $AllConn 
+     * @param string $Ip Access source
+     * @param string $ActiveConn The number of active connections from the current access source
+     * @param integer $AllConn The total number of connections from the current access source
      */
     function __construct()
     {

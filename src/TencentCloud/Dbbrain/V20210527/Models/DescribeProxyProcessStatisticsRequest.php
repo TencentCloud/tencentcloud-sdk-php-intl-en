@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain Instance ID.
  * @method void setInstanceId(string $InstanceId) Set Instance ID.
- * @method string getInstanceProxyId() Obtain `ProxyID` under the current instance.
- * @method void setInstanceProxyId(string $InstanceProxyId) Set `ProxyID` under the current instance.
+ * @method string getInstanceProxyId() Obtain The proxy ID you want to query under the instance
+ * @method void setInstanceProxyId(string $InstanceProxyId) Set The proxy ID you want to query under the instance
  * @method integer getLimit() Obtain Number of returned results.
  * @method void setLimit(integer $Limit) Set Number of returned results.
  * @method string getProduct() Obtain Service type. Valid value: `redis` (TencentDB for Redis).
@@ -43,7 +43,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string `ProxyID` under the current instance.
+     * @var string The proxy ID you want to query under the instance
      */
     public $InstanceProxyId;
 
@@ -74,7 +74,7 @@ class DescribeProxyProcessStatisticsRequest extends AbstractModel
 
     /**
      * @param string $InstanceId Instance ID.
-     * @param string $InstanceProxyId `ProxyID` under the current instance.
+     * @param string $InstanceProxyId The proxy ID you want to query under the instance
      * @param integer $Limit Number of returned results.
      * @param string $Product Service type. Valid value: `redis` (TencentDB for Redis).
      * @param integer $Offset Offset. Default value: `0`.

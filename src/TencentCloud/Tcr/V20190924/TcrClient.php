@@ -34,7 +34,6 @@ use TencentCloud\Tcr\V20190924\Models as Models;
  * @method Models\CreateNamespaceResponse CreateNamespace(Models\CreateNamespaceRequest $req) This API is used to create a namespace in an Enterprise Edition instance.
  * @method Models\CreateReplicationInstanceResponse CreateReplicationInstance(Models\CreateReplicationInstanceRequest $req) This API is used to create a replication instance.
  * @method Models\CreateRepositoryResponse CreateRepository(Models\CreateRepositoryRequest $req) This API is used to create an image repository in an Enterprise Edition instance.
- * @method Models\CreateSecurityPoliciesResponse CreateSecurityPolicies(Models\CreateSecurityPoliciesRequest $req) This API is used to create public network access allowlist policies for an instance.
  * @method Models\CreateSecurityPolicyResponse CreateSecurityPolicy(Models\CreateSecurityPolicyRequest $req) This API is used to create a public network access allowlist policy for an instance.
  * @method Models\CreateSignatureResponse CreateSignature(Models\CreateSignatureRequest $req) This API is used to create a signature for an image tag.
  * @method Models\CreateSignaturePolicyResponse CreateSignaturePolicy(Models\CreateSignaturePolicyRequest $req) This API is used to create an image signature policy.

@@ -20,34 +20,34 @@ use TencentCloud\Common\AbstractModel;
 /**
  * Real-time session statistics.
  *
- * @method array getItems() Obtain 
- * @method void setItems(array $Items) Set 
- * @method integer getAllConnSum() Obtain 
- * @method void setAllConnSum(integer $AllConnSum) Set 
- * @method integer getActiveConnSum() Obtain 
- * @method void setActiveConnSum(integer $ActiveConnSum) Set 
+ * @method array getItems() Obtain Array of session details
+ * @method void setItems(array $Items) Set Array of session details
+ * @method integer getAllConnSum() Obtain The total number of connections
+ * @method void setAllConnSum(integer $AllConnSum) Set The total number of connections
+ * @method integer getActiveConnSum() Obtain The total number of active connections
+ * @method void setActiveConnSum(integer $ActiveConnSum) Set The total number of active connections
  */
 class ProcessStatistic extends AbstractModel
 {
     /**
-     * @var array 
+     * @var array Array of session details
      */
     public $Items;
 
     /**
-     * @var integer 
+     * @var integer The total number of connections
      */
     public $AllConnSum;
 
     /**
-     * @var integer 
+     * @var integer The total number of active connections
      */
     public $ActiveConnSum;
 
     /**
-     * @param array $Items 
-     * @param integer $AllConnSum 
-     * @param integer $ActiveConnSum 
+     * @param array $Items Array of session details
+     * @param integer $AllConnSum The total number of connections
+     * @param integer $ActiveConnSum The total number of active connections
      */
     function __construct()
     {
