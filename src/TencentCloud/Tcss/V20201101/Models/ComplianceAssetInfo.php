@@ -72,8 +72,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
+ * @method string getInstanceId() Obtain Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ComplianceAssetInfo extends AbstractModel
 {
@@ -148,7 +150,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $CheckResult;
 
     /**
-     * @var string 
+     * @var string Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
@@ -179,7 +182,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 `RESULT_FAILED`: Failed.
 `RESULT_PASSED`: Passed.
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId 
+     * @param string $InstanceId Node instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

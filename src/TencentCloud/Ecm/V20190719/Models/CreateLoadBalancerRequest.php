@@ -40,6 +40,10 @@ Note: if the name of the new CLB instance already exists, a default name will be
  * @method void setTags(array $Tags) Set Tags.
  * @method array getSecurityGroups() Obtain Security groups.
  * @method void setSecurityGroups(array $SecurityGroups) Set Security groups.
+ * @method string getAddressIPVersion() Obtain IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+ * @method void setAddressIPVersion(string $AddressIPVersion) Set IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+ * @method string getSubnetId() Obtain Subnet ID. This parameter is required for IPv6 CLB instances.
+ * @method void setSubnetId(string $SubnetId) Set Subnet ID. This parameter is required for IPv6 CLB instances.
  */
 class CreateLoadBalancerRequest extends AbstractModel
 {
@@ -90,6 +94,16 @@ Note: if the name of the new CLB instance already exists, a default name will be
     public $SecurityGroups;
 
     /**
+     * @var string IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     */
+    public $AddressIPVersion;
+
+    /**
+     * @var string Subnet ID. This parameter is required for IPv6 CLB instances.
+     */
+    public $SubnetId;
+
+    /**
      * @param string $EcmRegion ECM region, such as `ap-xian-ecm`.
      * @param string $LoadBalancerType Network type of the CLB instance. Currently, you can pass in only `OPEN`, which indicates public network.
      * @param string $VipIsp CMCC: China Mobile; CTCC: China Telecom; CUCC: China Unicom.
@@ -100,6 +114,8 @@ Note: if the name of the new CLB instance already exists, a default name will be
      * @param LoadBalancerInternetAccessible $InternetAccessible CLB information such as bandwidth limit.
      * @param array $Tags Tags.
      * @param array $SecurityGroups Security groups.
+     * @param string $AddressIPVersion IP version. Valid values: `IPV4` (default), `IPv6FullChain` (IPv6 version). This parameter is only for public network CLB instances.
+     * @param string $SubnetId Subnet ID. This parameter is required for IPv6 CLB instances.
      */
     function __construct()
     {
@@ -154,6 +170,14 @@ Note: if the name of the new CLB instance already exists, a default name will be
 
         if (array_key_exists("SecurityGroups",$param) and $param["SecurityGroups"] !== null) {
             $this->SecurityGroups = $param["SecurityGroups"];
+        }
+
+        if (array_key_exists("AddressIPVersion",$param) and $param["AddressIPVersion"] !== null) {
+            $this->AddressIPVersion = $param["AddressIPVersion"];
+        }
+
+        if (array_key_exists("SubnetId",$param) and $param["SubnetId"] !== null) {
+            $this->SubnetId = $param["SubnetId"];
         }
     }
 }

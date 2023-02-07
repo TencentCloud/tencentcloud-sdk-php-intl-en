@@ -74,8 +74,10 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method void setVerifyInfo(string $VerifyInfo) Set Verification information of the check item
 Note: This field may return null, indicating that no valid values can be obtained.
- * @method string getInstanceId() Obtain 
- * @method void setInstanceId(string $InstanceId) Set 
+ * @method string getInstanceId() Obtain Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setInstanceId(string $InstanceId) Set Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class ComplianceAffectedAsset extends AbstractModel
 {
@@ -147,7 +149,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $VerifyInfo;
 
     /**
-     * @var string 
+     * @var string Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $InstanceId;
 
@@ -179,7 +182,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $VerifyInfo Verification information of the check item
 Note: This field may return null, indicating that no valid values can be obtained.
-     * @param string $InstanceId 
+     * @param string $InstanceId Instance ID
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

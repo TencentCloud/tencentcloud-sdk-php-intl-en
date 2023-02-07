@@ -28,6 +28,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceCount(integer $InstanceCount) Set Number of instances
  * @method array getDataDisk() Obtain Data disk information
  * @method void setDataDisk(array $DataDisk) Set Data disk information
+ * @method integer getInstanceChargeType() Obtain Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+ * @method void setInstanceChargeType(integer $InstanceChargeType) Set Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
  */
 class DescribePriceRunInstanceRequest extends AbstractModel
 {
@@ -52,10 +62,24 @@ class DescribePriceRunInstanceRequest extends AbstractModel
     public $DataDisk;
 
     /**
+     * @var integer Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
+     */
+    public $InstanceChargeType;
+
+    /**
      * @param string $InstanceType Instance model information
      * @param SystemDisk $SystemDisk System disk information
      * @param integer $InstanceCount Number of instances
      * @param array $DataDisk Data disk information
+     * @param integer $InstanceChargeType Instance billing type. Valid values:
+`0`: Bill by daily resource usage peak (CPU, memory, and disk). It applies only to non-GNR models;
+`1`: Bill by usage hours of an instance. It applies only to GNR models. It’s available to beta users now. To enable it, submit a ticket;
+`2`: Bill by usage month of an instance. It applies only to GNR models.
+If this field is left empty, `0` is selected by default for non-GNR models, and `2` is selected by default for GNR models.
      */
     function __construct()
     {
@@ -90,6 +114,10 @@ class DescribePriceRunInstanceRequest extends AbstractModel
                 $obj->deserialize($value);
                 array_push($this->DataDisk, $obj);
             }
+        }
+
+        if (array_key_exists("InstanceChargeType",$param) and $param["InstanceChargeType"] !== null) {
+            $this->InstanceChargeType = $param["InstanceChargeType"];
         }
     }
 }

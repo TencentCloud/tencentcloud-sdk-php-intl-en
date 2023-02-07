@@ -26,6 +26,16 @@ use TencentCloud\Common\AbstractModel;
  * @method void setCommonDiscount(integer $CommonDiscount) Set Public discount.
  * @method integer getFinalDiscount() Obtain Final discount.
  * @method void setFinalDiscount(integer $FinalDiscount) Set Final discount.
+ * @method float getActivityDiscount() Obtain Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setActivityDiscount(float $ActivityDiscount) Set Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method string getDiscountType() Obtain Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiscountType(string $DiscountType) Set Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class PolicyDetail extends AbstractModel
 {
@@ -45,9 +55,27 @@ class PolicyDetail extends AbstractModel
     public $FinalDiscount;
 
     /**
+     * @var float Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $ActivityDiscount;
+
+    /**
+     * @var string Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $DiscountType;
+
+    /**
      * @param integer $UserDiscount User discount.
      * @param integer $CommonDiscount Public discount.
      * @param integer $FinalDiscount Final discount.
+     * @param float $ActivityDiscount Activity discount. The value `null` indicates no discount.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     * @param string $DiscountType Discount type.
+Valid values: `user` (user discount), `common` (discount displayed on the official website), `activity` (activity discount), `null` (no discount).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -72,6 +100,14 @@ class PolicyDetail extends AbstractModel
 
         if (array_key_exists("FinalDiscount",$param) and $param["FinalDiscount"] !== null) {
             $this->FinalDiscount = $param["FinalDiscount"];
+        }
+
+        if (array_key_exists("ActivityDiscount",$param) and $param["ActivityDiscount"] !== null) {
+            $this->ActivityDiscount = $param["ActivityDiscount"];
+        }
+
+        if (array_key_exists("DiscountType",$param) and $param["DiscountType"] !== null) {
+            $this->DiscountType = $param["DiscountType"];
         }
     }
 }

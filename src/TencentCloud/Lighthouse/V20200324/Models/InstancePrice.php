@@ -28,6 +28,10 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDiscount(integer $Discount) Set Discount.
  * @method float getDiscountPrice() Obtain Discounted price.
  * @method void setDiscountPrice(float $DiscountPrice) Set Discounted price.
+ * @method string getCurrency() Obtain Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setCurrency(string $Currency) Set Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class InstancePrice extends AbstractModel
 {
@@ -52,10 +56,18 @@ class InstancePrice extends AbstractModel
     public $DiscountPrice;
 
     /**
+     * @var string Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $Currency;
+
+    /**
      * @param float $OriginalBundlePrice Original package unit price.
      * @param float $OriginalPrice Original price.
      * @param integer $Discount Discount.
      * @param float $DiscountPrice Discounted price.
+     * @param string $Currency Currency unit. Valid values: `CNY` and `USD`.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -84,6 +96,10 @@ class InstancePrice extends AbstractModel
 
         if (array_key_exists("DiscountPrice",$param) and $param["DiscountPrice"] !== null) {
             $this->DiscountPrice = $param["DiscountPrice"];
+        }
+
+        if (array_key_exists("Currency",$param) and $param["Currency"] !== null) {
+            $this->Currency = $param["Currency"];
         }
     }
 }

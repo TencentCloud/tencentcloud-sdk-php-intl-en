@@ -28,8 +28,10 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setInstancePrice(InstancePrice $InstancePrice) Set Price query information.
 Note: This field may return `null`, indicating that no valid value was found.
- * @method array getDiscountDetail() Obtain 
- * @method void setDiscountDetail(array $DiscountDetail) Set 
+ * @method array getDiscountDetail() Obtain Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setDiscountDetail(array $DiscountDetail) Set Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class InstancePriceDetail extends AbstractModel
 {
@@ -46,7 +48,8 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $InstancePrice;
 
     /**
-     * @var array 
+     * @var array Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     public $DiscountDetail;
 
@@ -55,7 +58,8 @@ Note: This field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
      * @param InstancePrice $InstancePrice Price query information.
 Note: This field may return `null`, indicating that no valid value was found.
-     * @param array $DiscountDetail 
+     * @param array $DiscountDetail Tiered-pricing details. The information of each tier includes the billable period, discount percentage, total price, discounted price, and discount details (`UserDiscount`, `CommonDiscount` and `FinalDiscount`).
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {

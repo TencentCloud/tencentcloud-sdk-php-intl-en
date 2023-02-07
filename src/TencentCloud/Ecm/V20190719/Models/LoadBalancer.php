@@ -82,6 +82,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setLoadBalancerPassToTarget(boolean $LoadBalancerPassToTarget) Set Whether the real server opens the traffic from ELB to the internet.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getAddressIPv6() Obtain IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setAddressIPv6(string $AddressIPv6) Set IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class LoadBalancer extends AbstractModel
 {
@@ -177,6 +181,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $LoadBalancerPassToTarget;
 
     /**
+     * @var string IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $AddressIPv6;
+
+    /**
      * @param string $Region Region.
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param Position $Position Location information.
@@ -208,6 +218,8 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param boolean $LoadBalancerPassToTarget Whether the real server opens the traffic from ELB to the internet.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $AddressIPv6 IPv6 address of a CLB instance
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -287,6 +299,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("LoadBalancerPassToTarget",$param) and $param["LoadBalancerPassToTarget"] !== null) {
             $this->LoadBalancerPassToTarget = $param["LoadBalancerPassToTarget"];
+        }
+
+        if (array_key_exists("AddressIPv6",$param) and $param["AddressIPv6"] !== null) {
+            $this->AddressIPv6 = $param["AddressIPv6"];
         }
     }
 }

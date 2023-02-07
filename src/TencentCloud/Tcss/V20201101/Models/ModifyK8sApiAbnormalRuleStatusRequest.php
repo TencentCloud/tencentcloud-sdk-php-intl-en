@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getRuleID() Obtain Rule ID
  * @method void setRuleID(string $RuleID) Set Rule ID
- * @method boolean getStatus() Obtain Status (true: Enable; false: Disable)
- * @method void setStatus(boolean $Status) Set Status (true: Enable; false: Disable)
+ * @method boolean getStatus() Obtain Status of the rule. Values: `true` (Enabled), `false` (Disabled)
+ * @method void setStatus(boolean $Status) Set Status of the rule. Values: `true` (Enabled), `false` (Disabled)
  */
 class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel
 {
@@ -33,13 +33,13 @@ class ModifyK8sApiAbnormalRuleStatusRequest extends AbstractModel
     public $RuleID;
 
     /**
-     * @var boolean Status (true: Enable; false: Disable)
+     * @var boolean Status of the rule. Values: `true` (Enabled), `false` (Disabled)
      */
     public $Status;
 
     /**
      * @param string $RuleID Rule ID
-     * @param boolean $Status Status (true: Enable; false: Disable)
+     * @param boolean $Status Status of the rule. Values: `true` (Enabled), `false` (Disabled)
      */
     function __construct()
     {
