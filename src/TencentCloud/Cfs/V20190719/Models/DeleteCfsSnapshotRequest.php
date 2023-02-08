@@ -22,6 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getSnapshotId() Obtain File system snapshot ID
  * @method void setSnapshotId(string $SnapshotId) Set File system snapshot ID
+ * @method array getSnapshotIds() Obtain The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+ * @method void setSnapshotIds(array $SnapshotIds) Set The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
  */
 class DeleteCfsSnapshotRequest extends AbstractModel
 {
@@ -31,7 +33,13 @@ class DeleteCfsSnapshotRequest extends AbstractModel
     public $SnapshotId;
 
     /**
+     * @var array The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
+     */
+    public $SnapshotIds;
+
+    /**
      * @param string $SnapshotId File system snapshot ID
+     * @param array $SnapshotIds The list of the IDs of the file system snapshots to be deleted. At least one of `SnapshotId` and `SnapshotIds` must be specified.
      */
     function __construct()
     {
@@ -48,6 +56,10 @@ class DeleteCfsSnapshotRequest extends AbstractModel
         }
         if (array_key_exists("SnapshotId",$param) and $param["SnapshotId"] !== null) {
             $this->SnapshotId = $param["SnapshotId"];
+        }
+
+        if (array_key_exists("SnapshotIds",$param) and $param["SnapshotIds"] !== null) {
+            $this->SnapshotIds = $param["SnapshotIds"];
         }
     }
 }

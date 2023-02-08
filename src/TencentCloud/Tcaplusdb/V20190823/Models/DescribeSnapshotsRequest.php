@@ -28,6 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setTableName(string $TableName) Set Table name
  * @method string getSnapshotName() Obtain Snapshot name
  * @method void setSnapshotName(string $SnapshotName) Set Snapshot name
+ * @method array getSelectedTables() Obtain The list of snapshots pulled in batches
+ * @method void setSelectedTables(array $SelectedTables) Set The list of snapshots pulled in batches
  */
 class DescribeSnapshotsRequest extends AbstractModel
 {
@@ -52,10 +54,16 @@ class DescribeSnapshotsRequest extends AbstractModel
     public $SnapshotName;
 
     /**
+     * @var array The list of snapshots pulled in batches
+     */
+    public $SelectedTables;
+
+    /**
      * @param string $ClusterId The ID of the cluster where the table resides
      * @param string $TableGroupId The ID of the table group where the table resides
      * @param string $TableName Table name
      * @param string $SnapshotName Snapshot name
+     * @param array $SelectedTables The list of snapshots pulled in batches
      */
     function __construct()
     {
@@ -84,6 +92,15 @@ class DescribeSnapshotsRequest extends AbstractModel
 
         if (array_key_exists("SnapshotName",$param) and $param["SnapshotName"] !== null) {
             $this->SnapshotName = $param["SnapshotName"];
+        }
+
+        if (array_key_exists("SelectedTables",$param) and $param["SelectedTables"] !== null) {
+            $this->SelectedTables = [];
+            foreach ($param["SelectedTables"] as $key => $value){
+                $obj = new SelectedTableInfoNew();
+                $obj->deserialize($value);
+                array_push($this->SelectedTables, $obj);
+            }
         }
     }
 }
