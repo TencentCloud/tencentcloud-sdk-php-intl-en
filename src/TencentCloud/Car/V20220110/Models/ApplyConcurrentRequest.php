@@ -22,12 +22,14 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() Obtain The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
  * @method void setUserId(string $UserId) Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method string getUserIp() Obtain The user’s IP address.
- * @method void setUserIp(string $UserIp) Set The user’s IP address.
+ * @method string getUserIp() Obtain Public IP of user’s application client, which is used for nearby scheduling.
+ * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
  * @method string getProjectId() Obtain The project ID.
  * @method void setProjectId(string $ProjectId) Set The project ID.
  * @method string getApplicationVersionId() Obtain The application version ID.
  * @method void setApplicationVersionId(string $ApplicationVersionId) Set The application version ID.
+ * @method string getApplicationId() Obtain Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+ * @method void setApplicationId(string $ApplicationId) Set Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
  */
 class ApplyConcurrentRequest extends AbstractModel
 {
@@ -37,7 +39,7 @@ class ApplyConcurrentRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string The user’s IP address.
+     * @var string Public IP of user’s application client, which is used for nearby scheduling.
      */
     public $UserIp;
 
@@ -52,10 +54,16 @@ class ApplyConcurrentRequest extends AbstractModel
     public $ApplicationVersionId;
 
     /**
+     * @var string Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
+     */
+    public $ApplicationId;
+
+    /**
      * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param string $UserIp The user’s IP address.
+     * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
      * @param string $ProjectId The project ID.
      * @param string $ApplicationVersionId The application version ID.
+     * @param string $ApplicationId Application ID, which is used only by the multi-application project to specify applications. For a single-application project, this parameter is ignored, and the application bound to the project will be used.
      */
     function __construct()
     {
@@ -84,6 +92,10 @@ class ApplyConcurrentRequest extends AbstractModel
 
         if (array_key_exists("ApplicationVersionId",$param) and $param["ApplicationVersionId"] !== null) {
             $this->ApplicationVersionId = $param["ApplicationVersionId"];
+        }
+
+        if (array_key_exists("ApplicationId",$param) and $param["ApplicationId"] !== null) {
+            $this->ApplicationId = $param["ApplicationId"];
         }
     }
 }

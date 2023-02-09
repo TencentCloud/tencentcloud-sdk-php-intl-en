@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getUserId() Obtain The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
  * @method void setUserId(string $UserId) Set The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
- * @method string getUserIp() Obtain The user’s IP address.
- * @method void setUserIp(string $UserIp) Set The user’s IP address.
+ * @method string getUserIp() Obtain Public IP of user’s application client, which is used for nearby scheduling.
+ * @method void setUserIp(string $UserIp) Set Public IP of user’s application client, which is used for nearby scheduling.
  * @method string getClientSession() Obtain The client-side session data, which is obtained from the SDK.
  * @method void setClientSession(string $ClientSession) Set The client-side session data, which is obtained from the SDK.
  * @method string getRunMode() Obtain The on-cloud running mode.
@@ -41,7 +41,7 @@ class CreateSessionRequest extends AbstractModel
     public $UserId;
 
     /**
-     * @var string The user’s IP address.
+     * @var string Public IP of user’s application client, which is used for nearby scheduling.
      */
     public $UserIp;
 
@@ -59,7 +59,7 @@ Empty string (default): Keep the application running on the cloud only when ther
 
     /**
      * @param string $UserId The user’s unique ID. Tencent Cloud does not parse the ID. You need to manage your own user IDs. Based on your needs, you can either define unique IDs for users or use timestamps to generate random IDs. Make sure the same ID is used when a user reconnects to your application.
-     * @param string $UserIp The user’s IP address.
+     * @param string $UserIp Public IP of user’s application client, which is used for nearby scheduling.
      * @param string $ClientSession The client-side session data, which is obtained from the SDK.
      * @param string $RunMode The on-cloud running mode.
 `RunWithoutClient`: Keep the application running on the cloud even when there are no client connections.
