@@ -46,6 +46,10 @@ For more information about this parameter, please see:
 https://tools.ietf.org/html/rfc3826
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method string getKeyUri() Obtain The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+ * @method void setKeyUri(string $KeyUri) Set The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
  */
 class DrmKey extends AbstractModel
 {
@@ -79,6 +83,12 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $Iv;
 
     /**
+     * @var string The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
+     */
+    public $KeyUri;
+
+    /**
      * @param string $Key DRM key, which is a 32-bit hexadecimal string.
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
      * @param string $Track Required for Widevine encryption. Valid values: SD, HD, UHD1, UHD2, AUDIO, ALL.
@@ -92,6 +102,8 @@ For more information about this parameter, please see:
 https://tools.ietf.org/html/rfc3826
 Note: uppercase letters in the string will be automatically converted to lowercase ones.
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param string $KeyUri The URI of the license server when AES-128 is used. This parameter may be empty.
+Note: This field may return `null`, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 
         if (array_key_exists("Iv",$param) and $param["Iv"] !== null) {
             $this->Iv = $param["Iv"];
+        }
+
+        if (array_key_exists("KeyUri",$param) and $param["KeyUri"] !== null) {
+            $this->KeyUri = $param["KeyUri"];
         }
     }
 }

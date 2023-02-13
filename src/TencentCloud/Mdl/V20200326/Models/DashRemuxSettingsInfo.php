@@ -26,6 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setSegmentNumber(integer $SegmentNumber) Set Number of segments. Value range: [1,30]. Default value: 5.
  * @method string getPeriodTriggers() Obtain Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
  * @method void setPeriodTriggers(string $PeriodTriggers) Set Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+ * @method string getH265PackageType() Obtain The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+ * @method void setH265PackageType(string $H265PackageType) Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
  */
 class DashRemuxSettingsInfo extends AbstractModel
 {
@@ -45,9 +47,15 @@ class DashRemuxSettingsInfo extends AbstractModel
     public $PeriodTriggers;
 
     /**
+     * @var string The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public $H265PackageType;
+
+    /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      * @param integer $SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
      * @param string $PeriodTriggers Whether to enable multi-period. Valid values: CLOSE/OPEN. Default value: CLOSE.
+     * @param string $H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
      */
     function __construct()
     {
@@ -72,6 +80,10 @@ class DashRemuxSettingsInfo extends AbstractModel
 
         if (array_key_exists("PeriodTriggers",$param) and $param["PeriodTriggers"] !== null) {
             $this->PeriodTriggers = $param["PeriodTriggers"];
+        }
+
+        if (array_key_exists("H265PackageType",$param) and $param["H265PackageType"] !== null) {
+            $this->H265PackageType = $param["H265PackageType"];
         }
     }
 }

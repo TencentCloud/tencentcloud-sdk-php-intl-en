@@ -52,6 +52,7 @@ use TencentCloud\Mdl\V20200326\Models as Models;
  * @method Models\ModifyStreamLiveInputResponse ModifyStreamLiveInput(Models\ModifyStreamLiveInputRequest $req) This API is used to modify a StreamLive input.
  * @method Models\ModifyStreamLiveInputSecurityGroupResponse ModifyStreamLiveInputSecurityGroup(Models\ModifyStreamLiveInputSecurityGroupRequest $req) This API is used to modify an input security group.
  * @method Models\ModifyStreamLiveWatermarkResponse ModifyStreamLiveWatermark(Models\ModifyStreamLiveWatermarkRequest $req) This API is used to modify a watermark.
+ * @method Models\QueryInputStreamStateResponse QueryInputStreamState(Models\QueryInputStreamStateRequest $req) This API is used to query the stream status of a StreamLive input.
  * @method Models\StartStreamLiveChannelResponse StartStreamLiveChannel(Models\StartStreamLiveChannelRequest $req) This API is used to start a StreamLive channel.
  * @method Models\StopStreamLiveChannelResponse StopStreamLiveChannel(Models\StopStreamLiveChannelRequest $req) This API is used to stop a StreamLive channel.
  */

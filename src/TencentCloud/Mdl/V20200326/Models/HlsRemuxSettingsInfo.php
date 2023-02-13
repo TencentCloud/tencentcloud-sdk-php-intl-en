@@ -30,6 +30,12 @@ use TencentCloud\Common\AbstractModel;
  * @method void setPdtDuration(integer $PdtDuration) Set PDT duration in seconds. Value range: (0,3000]. Default value: 600.
  * @method string getScheme() Obtain Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
  * @method void setScheme(string $Scheme) Set Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+ * @method string getSegmentType() Obtain The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+ * @method void setSegmentType(string $SegmentType) Set The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+ * @method string getH265PackageType() Obtain The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+ * @method void setH265PackageType(string $H265PackageType) Set The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
  */
 class HlsRemuxSettingsInfo extends AbstractModel
 {
@@ -59,11 +65,25 @@ class HlsRemuxSettingsInfo extends AbstractModel
     public $Scheme;
 
     /**
+     * @var string The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+     */
+    public $SegmentType;
+
+    /**
+     * @var string The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
+     */
+    public $H265PackageType;
+
+    /**
      * @param integer $SegmentDuration Segment duration in ms. Value range: [1000,30000]. Default value: 4000. The value can only be a multiple of 1,000.
      * @param integer $SegmentNumber Number of segments. Value range: [1,30]. Default value: 5.
      * @param string $PdtInsertion Whether to enable PDT insertion. Valid values: CLOSE/OPEN. Default value: CLOSE.
      * @param integer $PdtDuration PDT duration in seconds. Value range: (0,3000]. Default value: 600.
      * @param string $Scheme Audio/Video packaging scheme. Valid values: `SEPARATE`, `MERGE`
+     * @param string $SegmentType The segment type. Valid values: `ts` (default), `fmp4`.
+Currently, fMP4 segments do not support DRM or time shifting.
+     * @param string $H265PackageType The HLS package type when the H.265 codec is used. Valid values: `hvc1`, `hev1` (default).
      */
     function __construct()
     {
@@ -96,6 +116,14 @@ class HlsRemuxSettingsInfo extends AbstractModel
 
         if (array_key_exists("Scheme",$param) and $param["Scheme"] !== null) {
             $this->Scheme = $param["Scheme"];
+        }
+
+        if (array_key_exists("SegmentType",$param) and $param["SegmentType"] !== null) {
+            $this->SegmentType = $param["SegmentType"];
+        }
+
+        if (array_key_exists("H265PackageType",$param) and $param["H265PackageType"] !== null) {
+            $this->H265PackageType = $param["H265PackageType"];
         }
     }
 }

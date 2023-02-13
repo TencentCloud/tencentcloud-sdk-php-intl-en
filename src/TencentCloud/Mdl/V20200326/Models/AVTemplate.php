@@ -50,6 +50,22 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
  * @method void setRateControlMode(string $RateControlMode) Set Bitrate control mode. Valid values: `CBR`, `ABR` (default)
  * @method string getWatermarkId() Obtain Watermark ID
  * @method void setWatermarkId(string $WatermarkId) Set Watermark ID
+ * @method integer getSmartSubtitles() Obtain Whether to convert audio to text. `0` (default): No; `1`: Yes.
+ * @method void setSmartSubtitles(integer $SmartSubtitles) Set Whether to convert audio to text. `0` (default): No; `1`: Yes.
+ * @method string getSubtitleConfiguration() Obtain The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+ * @method void setSubtitleConfiguration(string $SubtitleConfiguration) Set The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
  */
 class AVTemplate extends AbstractModel
 {
@@ -125,6 +141,22 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
     public $WatermarkId;
 
     /**
+     * @var integer Whether to convert audio to text. `0` (default): No; `1`: Yes.
+     */
+    public $SmartSubtitles;
+
+    /**
+     * @var string The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
+     */
+    public $SubtitleConfiguration;
+
+    /**
      * @param string $Name Name of an audio/video transcoding template, which can contain 1-20 case-sensitive letters and digits
      * @param integer $NeedVideo Whether video is needed. `0`: not needed; `1`: needed
      * @param string $Vcodec Video codec. Valid values: `H264`, `H265`. If this parameter is left empty, the original video codec will be used.
@@ -140,6 +172,14 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
      * @param integer $VideoBitrate Video bitrate. Value range: [50000, 40000000]. The value must be an integer multiple of 1000. If this parameter is left empty, the original bitrate will be used.
      * @param string $RateControlMode Bitrate control mode. Valid values: `CBR`, `ABR` (default)
      * @param string $WatermarkId Watermark ID
+     * @param integer $SmartSubtitles Whether to convert audio to text. `0` (default): No; `1`: Yes.
+     * @param string $SubtitleConfiguration The subtitle settings. Currently, the following subtitles are supported:
+`eng2eng`: English speech to English text.
+`eng2chs`: English speech to Chinese text. 
+`eng2chseng`: English speech to English and Chinese text. 
+`chs2chs`: Chinese speech to Chinese text.   
+`chs2eng`: Chinese speech to English text. 
+`chs2chseng`: Chinese speech to Chinese and English text.
      */
     function __construct()
     {
@@ -208,6 +248,14 @@ Valid values: `6000`, `7000`, `8000`, `10000`, `12000`, `14000`, `16000`, `20000
 
         if (array_key_exists("WatermarkId",$param) and $param["WatermarkId"] !== null) {
             $this->WatermarkId = $param["WatermarkId"];
+        }
+
+        if (array_key_exists("SmartSubtitles",$param) and $param["SmartSubtitles"] !== null) {
+            $this->SmartSubtitles = $param["SmartSubtitles"];
+        }
+
+        if (array_key_exists("SubtitleConfiguration",$param) and $param["SubtitleConfiguration"] !== null) {
+            $this->SubtitleConfiguration = $param["SubtitleConfiguration"];
         }
     }
 }

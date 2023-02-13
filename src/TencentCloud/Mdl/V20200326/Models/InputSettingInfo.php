@@ -18,7 +18,9 @@ namespace TencentCloud\Mdl\V20200326\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * Input settings information.
+ * The input settings.
+The format of an RTMP_PUSH address is ${InputAddress}/${AppName}/${StreamName}.
+The format of an SRT_PUSH address is ${InputAddress}?streamid=${StreamName},h=${InputDomain}.
  *
  * @method string getAppName() Obtain Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
@@ -47,6 +49,18 @@ Note: This field may return `null`, indicating that no valid value was found.
  * @method void setDelayTime(integer $DelayTime) Set Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
 Value range: 0 (default) or 10000-600000
 The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getInputDomain() Obtain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setInputDomain(string $InputDomain) Set The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getUserName() Obtain The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setUserName(string $UserName) Set The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method string getPassword() Obtain The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setPassword(string $Password) Set The password, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
  */
 class InputSettingInfo extends AbstractModel
@@ -90,6 +104,24 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $DelayTime;
 
     /**
+     * @var string The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $InputDomain;
+
+    /**
+     * @var string The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $UserName;
+
+    /**
+     * @var string The password, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $Password;
+
+    /**
      * @param string $AppName Application name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
 Note: This field may return `null`, indicating that no valid value was found.
      * @param string $StreamName Stream name, which is valid if `Type` is `RTMP_PUSH` and can contain 1-32 letters and digits
@@ -103,6 +135,12 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @param integer $DelayTime Delayed time (ms) for playback, which is valid if `Type` is `RTMP_PUSH`
 Value range: 0 (default) or 10000-600000
 The value must be a multiple of 1,000.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $InputDomain The domain of an SRT_PUSH address. If this is a request parameter, you don’t need to specify it.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $UserName The username, which is used for authentication.
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param string $Password The password, which is used for authentication.
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -140,6 +178,18 @@ Note: This field may return `null`, indicating that no valid value was found.
 
         if (array_key_exists("DelayTime",$param) and $param["DelayTime"] !== null) {
             $this->DelayTime = $param["DelayTime"];
+        }
+
+        if (array_key_exists("InputDomain",$param) and $param["InputDomain"] !== null) {
+            $this->InputDomain = $param["InputDomain"];
+        }
+
+        if (array_key_exists("UserName",$param) and $param["UserName"] !== null) {
+            $this->UserName = $param["UserName"];
+        }
+
+        if (array_key_exists("Password",$param) and $param["Password"] !== null) {
+            $this->Password = $param["Password"];
         }
     }
 }

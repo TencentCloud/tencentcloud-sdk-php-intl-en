@@ -46,6 +46,10 @@ Note: this field may return `null`, indicating that no valid value was found.
 Note: This field may return `null`, indicating that no valid value was found.
  * @method void setPlanSettings(PlanSettings $PlanSettings) Set Event settings
 Note: This field may return `null`, indicating that no valid value was found.
+ * @method EventNotifySetting getEventNotifySettings() Obtain The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+ * @method void setEventNotifySettings(EventNotifySetting $EventNotifySettings) Set The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
  */
 class StreamLiveChannelInfo extends AbstractModel
 {
@@ -99,6 +103,12 @@ Note: This field may return `null`, indicating that no valid value was found.
     public $PlanSettings;
 
     /**
+     * @var EventNotifySetting The callback settings.
+Note: This field may return `null`, indicating that no valid value was found.
+     */
+    public $EventNotifySettings;
+
+    /**
      * @param string $Id Channel ID
      * @param string $State Channel status
      * @param array $AttachedInputs Information of attached inputs
@@ -111,6 +121,8 @@ Note: this field may return `null`, indicating that no valid value was found.
      * @param array $AVTemplates Audio/Video transcoding templates
 Note: this field may return `null`, indicating that no valid value was found.
      * @param PlanSettings $PlanSettings Event settings
+Note: This field may return `null`, indicating that no valid value was found.
+     * @param EventNotifySetting $EventNotifySettings The callback settings.
 Note: This field may return `null`, indicating that no valid value was found.
      */
     function __construct()
@@ -186,6 +198,11 @@ Note: This field may return `null`, indicating that no valid value was found.
         if (array_key_exists("PlanSettings",$param) and $param["PlanSettings"] !== null) {
             $this->PlanSettings = new PlanSettings();
             $this->PlanSettings->deserialize($param["PlanSettings"]);
+        }
+
+        if (array_key_exists("EventNotifySettings",$param) and $param["EventNotifySettings"] !== null) {
+            $this->EventNotifySettings = new EventNotifySetting();
+            $this->EventNotifySettings->deserialize($param["EventNotifySettings"]);
         }
     }
 }
