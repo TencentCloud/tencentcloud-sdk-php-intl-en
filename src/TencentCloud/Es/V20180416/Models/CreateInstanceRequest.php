@@ -102,6 +102,8 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
  * @method void setEnableHybridStorage(boolean $EnableHybridStorage) Set Whether to enable the storage-computing separation feature.
  * @method integer getDiskEnhance() Obtain Whether to enable enhanced SSD
  * @method void setDiskEnhance(integer $DiskEnhance) Set Whether to enable enhanced SSD
+ * @method boolean getEnableDiagnose() Obtain Whether to enable smart inspection.
+ * @method void setEnableDiagnose(boolean $EnableDiagnose) Set Whether to enable smart inspection.
  */
 class CreateInstanceRequest extends AbstractModel
 {
@@ -279,6 +281,11 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
     public $DiskEnhance;
 
     /**
+     * @var boolean Whether to enable smart inspection.
+     */
+    public $EnableDiagnose;
+
+    /**
      * @param string $Zone Availability Zone
      * @param string $EsVersion Instance version. Valid values: `5.6.4`, `6.4.3`, `6.8.2`, `7.5.1`, `7.10.1`
      * @param string $VpcId VPC ID
@@ -320,6 +327,7 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
      * @param OperationDuration $OperationDuration The maintenance time slot
      * @param boolean $EnableHybridStorage Whether to enable the storage-computing separation feature.
      * @param integer $DiskEnhance Whether to enable enhanced SSD
+     * @param boolean $EnableDiagnose Whether to enable smart inspection.
      */
     function __construct()
     {
@@ -481,6 +489,10 @@ Dedicated primary node disk size in GB, which is optional. If passed in, it can 
 
         if (array_key_exists("DiskEnhance",$param) and $param["DiskEnhance"] !== null) {
             $this->DiskEnhance = $param["DiskEnhance"];
+        }
+
+        if (array_key_exists("EnableDiagnose",$param) and $param["EnableDiagnose"] !== null) {
+            $this->EnableDiagnose = $param["EnableDiagnose"];
         }
     }
 }
