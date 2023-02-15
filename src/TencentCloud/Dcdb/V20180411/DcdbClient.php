@@ -84,6 +84,7 @@ Note: accounts with the same username but different hosts are different accounts
 Note: accounts with the same username but different hosts are different accounts.
  * @method Models\SwitchDBInstanceHAResponse SwitchDBInstanceHA(Models\SwitchDBInstanceHARequest $req) This API is used to start a source-replica switch of instances.
  * @method Models\TerminateDedicatedDBInstanceResponse TerminateDedicatedDBInstance(Models\TerminateDedicatedDBInstanceRequest $req) This API is used to terminate the isolated dedicated TDSQL instance.
+ * @method Models\UpgradeHourDCDBInstanceResponse UpgradeHourDCDBInstance(Models\UpgradeHourDCDBInstanceRequest $req) This API is used to upgrade a pay-as-you-go TDSQL for MySQL instance.
  */
 
 class DcdbClient extends AbstractClient
