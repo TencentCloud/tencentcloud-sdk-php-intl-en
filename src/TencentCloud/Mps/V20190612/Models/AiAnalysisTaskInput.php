@@ -22,6 +22,12 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method integer getDefinition() Obtain Video content analysis template ID.
  * @method void setDefinition(integer $Definition) Set Video content analysis template ID.
+ * @method string getExtendedParameter() Obtain An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setExtendedParameter(string $ExtendedParameter) Set An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class AiAnalysisTaskInput extends AbstractModel
 {
@@ -31,7 +37,17 @@ class AiAnalysisTaskInput extends AbstractModel
     public $Definition;
 
     /**
+     * @var string An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $ExtendedParameter;
+
+    /**
      * @param integer $Definition Video content analysis template ID.
+     * @param string $ExtendedParameter An extended parameter, whose value is a stringfied JSON.
+Note: This parameter is for customers with special requirements. It needs to be customized offline.
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -48,6 +64,10 @@ class AiAnalysisTaskInput extends AbstractModel
         }
         if (array_key_exists("Definition",$param) and $param["Definition"] !== null) {
             $this->Definition = $param["Definition"];
+        }
+
+        if (array_key_exists("ExtendedParameter",$param) and $param["ExtendedParameter"] !== null) {
+            $this->ExtendedParameter = $param["ExtendedParameter"];
         }
     }
 }

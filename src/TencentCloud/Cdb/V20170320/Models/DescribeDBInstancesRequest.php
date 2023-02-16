@@ -26,8 +26,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceTypes(array $InstanceTypes) Set Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
  * @method array getVips() Obtain Private IP address of the instance.
  * @method void setVips(array $Vips) Set Private IP address of the instance.
- * @method array getStatus() Obtain Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
- * @method void setStatus(array $Status) Set Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
+ * @method array getStatus() Obtain Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
+ * @method void setStatus(array $Status) Set Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
  * @method integer getOffset() Obtain Offset. Default value: 0.
  * @method void setOffset(integer $Offset) Set Offset. Default value: 0.
  * @method integer getLimit() Obtain Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
@@ -107,7 +107,7 @@ class DescribeDBInstancesRequest extends AbstractModel
     public $Vips;
 
     /**
-     * @var array Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
+     * @var array Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
      */
     public $Status;
 
@@ -265,7 +265,7 @@ class DescribeDBInstancesRequest extends AbstractModel
      * @param integer $ProjectId Project ID.
      * @param array $InstanceTypes Instance type. Value range: 1 (primary), 2 (disaster recovery), 3 (read-only).
      * @param array $Vips Private IP address of the instance.
-     * @param array $Status Instance status. Value range: <br>0 - creating <br>1 - running <br>4 - isolating <br>5 - isolated (the instance can be restored and started in the recycle bin)
+     * @param array $Status Instance status. Valid values: <br>`0` (creating) <br>`1` (running) <br>`4` (isolating) <br>`5` (isolated; the instance can be restored and started in the recycle bin)
      * @param integer $Offset Offset. Default value: 0.
      * @param integer $Limit Number of results to be returned for a single request. Default value: 20. Maximum value: 2,000.
      * @param string $SecurityGroupId Security group ID. When it is used as a filter, the `WithSecurityGroup` parameter should be set to 1.

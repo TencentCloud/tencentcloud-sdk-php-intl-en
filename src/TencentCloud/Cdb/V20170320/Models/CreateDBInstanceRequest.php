@@ -34,8 +34,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setUniqVpcId(string $UniqVpcId) Set VPC ID. If this parameter is not passed in, the basic network will be selected by default. You can use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
  * @method string getUniqSubnetId() Obtain VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. You can use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
  * @method void setUniqSubnetId(string $UniqSubnetId) Set VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. You can use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
- * @method integer getProjectId() Obtain Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
- * @method void setProjectId(integer $ProjectId) Set Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+ * @method integer getProjectId() Obtain Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
+ * @method void setProjectId(integer $ProjectId) Set Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
  * @method integer getPort() Obtain Custom port. Value range: 1024-65535.
  * @method void setPort(integer $Port) Set Custom port. Value range: 1024-65535.
  * @method string getInstanceRole() Obtain Instance typeA. Valid values: `master` (source instance), `dr` (disaster recovery instance), `ro` (read-only instance).
@@ -135,7 +135,7 @@ class CreateDBInstanceRequest extends AbstractModel
     public $UniqSubnetId;
 
     /**
-     * @var integer Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+     * @var integer Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
      */
     public $ProjectId;
 
@@ -297,7 +297,7 @@ class CreateDBInstanceRequest extends AbstractModel
      * @param string $Zone AZ information. The system will automatically select an AZ by default. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the supported AZs.
      * @param string $UniqVpcId VPC ID. If this parameter is not passed in, the basic network will be selected by default. You can use the [DescribeVpcs](https://intl.cloud.tencent.com/document/api/215/15778?from_cn_redirect=1) API to query the VPCs.
      * @param string $UniqSubnetId VPC subnet ID. If `UniqVpcId` is set, then `UniqSubnetId` will be required. You can use the [DescribeSubnets](https://intl.cloud.tencent.com/document/api/215/15784?from_cn_redirect=1) API to query the subnet lists.
-     * @param integer $ProjectId Project ID. If this is left empty, the default project will be used. If read-only instances or disaster recovery instances are purchased, the project ID will be the same as the source instance ID by default.
+     * @param integer $ProjectId Project ID. If this parameter is left empty, the default project will be used. When you purchase read-only instances and disaster recovery instances, the project ID is the same as that of the source instance by default.
      * @param integer $Port Custom port. Value range: 1024-65535.
      * @param string $InstanceRole Instance typeA. Valid values: `master` (source instance), `dr` (disaster recovery instance), `ro` (read-only instance).
      * @param string $MasterInstanceId Instance ID. It is required when purchasing a read-only instance, which is the same as the source instance ID. You can use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance ID.

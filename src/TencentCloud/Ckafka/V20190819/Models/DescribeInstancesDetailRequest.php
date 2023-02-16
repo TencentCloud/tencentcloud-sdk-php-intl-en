@@ -22,8 +22,8 @@ use TencentCloud\Common\AbstractModel;
  *
  * @method string getInstanceId() Obtain (Filter) filter by instance ID
  * @method void setInstanceId(string $InstanceId) Set (Filter) filter by instance ID
- * @method string getSearchWord() Obtain (Filter) filter by instance name. Fuzzy search is supported
- * @method void setSearchWord(string $SearchWord) Set (Filter) filter by instance name. Fuzzy search is supported
+ * @method string getSearchWord() Obtain Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
+ * @method void setSearchWord(string $SearchWord) Set Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
  * @method array getStatus() Obtain (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
  * @method void setStatus(array $Status) Set (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
  * @method integer getOffset() Obtain Offset. If this parameter is left empty, `0` will be used by default.
@@ -47,7 +47,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
     public $InstanceId;
 
     /**
-     * @var string (Filter) filter by instance name. Fuzzy search is supported
+     * @var string Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
      */
     public $SearchWord;
 
@@ -88,7 +88,7 @@ class DescribeInstancesDetailRequest extends AbstractModel
 
     /**
      * @param string $InstanceId (Filter) filter by instance ID
-     * @param string $SearchWord (Filter) filter by instance name. Fuzzy search is supported
+     * @param string $SearchWord Filter by instance name, instance ID, AZ, VPC ID, or subnet ID. Fuzzy query is supported.
      * @param array $Status (Filter) instance status. 0: creating, 1: running, 2: deleting. If this parameter is left empty, all instances will be returned by default
      * @param integer $Offset Offset. If this parameter is left empty, `0` will be used by default.
      * @param integer $Limit Number of returned results. If this parameter is left empty, `10` will be used by default. The maximum value is `20`.

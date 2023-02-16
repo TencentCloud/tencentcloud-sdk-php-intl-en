@@ -45,15 +45,15 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
 4. Source instances, read-only instances, and disaster recovery instances can be created.
 5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance (excluding basic instances) will be initialized.
 6. If `Port`, `ParamTemplateId`, or `AlarmPolicyList` is specified in the input parameters, you need to update your SDK to the latest version.
- * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) This API is used to create pay-as-you-go TencentDB instances (which can be source instances, disaster recovery instances, or read-only replicas) by passing in information such as instance specifications, MySQL version number, and instance quantity.
+ * @method Models\CreateDBInstanceHourResponse CreateDBInstanceHour(Models\CreateDBInstanceHourRequest $req) This API is used to create a pay-as-you-go TencentDB instance (which can be a source, disaster recovery, or read-only instance) by passing in information such as instance specifications, MySQL version number, and quantity.
 
-This is an asynchronous API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query instance details. If the output parameter `Status` is `1` and the output parameter `TaskStatus` is `0`, the instances have been successfully delivered.
+This is an async API. You can also use the [DescribeDBInstances](https://intl.cloud.tencent.com/document/api/236/15872?from_cn_redirect=1) API to query the instance details. If the `Status` value of an instance is `1` and `TaskStatus` is `0`, the instance has been successfully delivered.
 
-1. Use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances;
-2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months;
-3. MySQL v5.5, v5.6, v5.7, and v8.0 are supported;
-4. Source instances, disaster recovery instances, and read-only replicas can be created;
-5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance (excluding basic instances) will be initialized.
+1. You can use the [DescribeDBZoneConfig](https://intl.cloud.tencent.com/document/api/236/17229?from_cn_redirect=1) API to query the purchasable instance specifications, and then use the [DescribeDBPrice](https://intl.cloud.tencent.com/document/api/236/18566?from_cn_redirect=1) API to query the prices of the purchasable instances.
+2. You can create up to 100 instances at a time, with an instance validity period of up to 36 months.
+3. MySQL 5.5, 5.6, 5.7, and 8.0 are supported.
+4. Source instances, disaster recovery instances, and read-only instances can be created.
+5. If `Port`, `ParamList`, or `Password` is specified in the input parameters, the instance will be initialized.
  * @method Models\CreateParamTemplateResponse CreateParamTemplate(Models\CreateParamTemplateRequest $req) This API is used to create a parameter template. The common request parameter `Region` can only be set to `ap-guangzhou`.
  * @method Models\CreateRoInstanceIpResponse CreateRoInstanceIp(Models\CreateRoInstanceIpRequest $req) This API is used to create a VIP exclusive to a TencentDB read-only instance.
  * @method Models\DeleteAccountsResponse DeleteAccounts(Models\DeleteAccountsRequest $req) This API (DeleteAccounts) is used to delete TencentDB accounts.
@@ -75,6 +75,7 @@ This is an asynchronous API. You can also use the [DescribeDBInstances](https://
  * @method Models\DescribeCDBProxyResponse DescribeCDBProxy(Models\DescribeCDBProxyRequest $req) This API is used to query database proxy. It will be deprecated and replaced by the `QueryCDBProxy` API.
  * @method Models\DescribeCdbZoneConfigResponse DescribeCdbZoneConfig(Models\DescribeCdbZoneConfigRequest $req) This API is used to query the purchasable specifications of TencentDB instances in a region.
  * @method Models\DescribeCloneListResponse DescribeCloneList(Models\DescribeCloneListRequest $req) This API is used to query the clone task list of an instance.
+ * @method Models\DescribeDBFeaturesResponse DescribeDBFeatures(Models\DescribeDBFeaturesRequest $req) This API is used to query database version attributes, including supported features such as database encryption and audit.
  * @method Models\DescribeDBImportRecordsResponse DescribeDBImportRecords(Models\DescribeDBImportRecordsRequest $req) This API (DescribeDBImportRecords) is used to query the records of import tasks in a TencentDB instance.
  * @method Models\DescribeDBInstanceCharsetResponse DescribeDBInstanceCharset(Models\DescribeDBInstanceCharsetRequest $req) This API (DescribeDBInstanceCharset) is used to query the character set and its name of a TencentDB instance.
  * @method Models\DescribeDBInstanceConfigResponse DescribeDBInstanceConfig(Models\DescribeDBInstanceConfigRequest $req) This API (DescribeDBInstanceConfig) is used to query the configuration information of a TencentDB instance, such as its synchronization mode and deployment mode.
@@ -173,7 +174,9 @@ Note:
  * @method Models\SwitchDBInstanceMasterSlaveResponse SwitchDBInstanceMasterSlave(Models\SwitchDBInstanceMasterSlaveRequest $req) This API is used for source-to-replica switch.
  * @method Models\SwitchDrInstanceToMasterResponse SwitchDrInstanceToMaster(Models\SwitchDrInstanceToMasterRequest $req) This API is used to promote a disaster recovery instance to source instance. The request parameter `Region` must be the region of the disaster recovery instance.
  * @method Models\SwitchForUpgradeResponse SwitchForUpgrade(Models\SwitchForUpgradeRequest $req) This API (SwitchForUpgrade) is used to switch to a new instance. You can initiate this process when the primary instance being upgraded is pending switch.
- * @method Models\UpgradeCDBProxyResponse UpgradeCDBProxy(Models\UpgradeCDBProxyRequest $req) This API is used to upgrade the configuration of database proxy.
+ * @method Models\UpgradeCDBProxyResponse UpgradeCDBProxy(Models\UpgradeCDBProxyRequest $req) 接口已经废弃，请使用AdjustCdbProxy进行数据库代理的配置
+
+This API is used to upgrade the configuration of database proxy.
  * @method Models\UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersion(Models\UpgradeCDBProxyVersionRequest $req) This API is used to upgrade the version of database proxy.
  * @method Models\UpgradeDBInstanceResponse UpgradeDBInstance(Models\UpgradeDBInstanceRequest $req) This API is used to upgrade or downgrade a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.
  * @method Models\UpgradeDBInstanceEngineVersionResponse UpgradeDBInstanceEngineVersion(Models\UpgradeDBInstanceEngineVersionRequest $req) This API (UpgradeDBInstanceEngineVersion) is used to upgrade the version of a TencentDB instance, which can be a primary instance, disaster recovery instance, or read-only instance.

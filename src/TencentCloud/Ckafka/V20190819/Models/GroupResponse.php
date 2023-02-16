@@ -28,6 +28,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
 Note: this field may return null, indicating that no valid values can be obtained.
  * @method void setGroupList(array $GroupList) Set GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
+ * @method integer getGroupCountQuota() Obtain Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setGroupCountQuota(integer $GroupCountQuota) Set Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class GroupResponse extends AbstractModel
 {
@@ -44,10 +48,18 @@ Note: this field may return null, indicating that no valid values can be obtaine
     public $GroupList;
 
     /**
+     * @var integer Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $GroupCountQuota;
+
+    /**
      * @param integer $TotalCount Count
 Note: this field may return null, indicating that no valid values can be obtained.
      * @param array $GroupList GroupList
 Note: this field may return null, indicating that no valid values can be obtained.
+     * @param integer $GroupCountQuota Consumer group quota
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -73,6 +85,10 @@ Note: this field may return null, indicating that no valid values can be obtaine
                 $obj->deserialize($value);
                 array_push($this->GroupList, $obj);
             }
+        }
+
+        if (array_key_exists("GroupCountQuota",$param) and $param["GroupCountQuota"] !== null) {
+            $this->GroupCountQuota = $param["GroupCountQuota"];
         }
     }
 }

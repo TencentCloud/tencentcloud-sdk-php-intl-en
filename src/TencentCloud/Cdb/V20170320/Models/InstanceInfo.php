@@ -32,8 +32,8 @@ Note: This field may return null, indicating that no valid values can be obtaine
 Note: This field may return null, indicating that no valid values can be obtained.
  * @method integer getMemory() Obtain Memory capacity in MB
  * @method void setMemory(integer $Memory) Set Memory capacity in MB
- * @method integer getStatus() Obtain Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
- * @method void setStatus(integer $Status) Set Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+ * @method integer getStatus() Obtain Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
+ * @method void setStatus(integer $Status) Set Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
  * @method integer getVpcId() Obtain VPC ID, such as 51102
  * @method void setVpcId(integer $VpcId) Set VPC ID, such as 51102
  * @method SlaveInfo getSlaveInfo() Obtain Information of a secondary server
@@ -162,7 +162,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
     public $Memory;
 
     /**
-     * @var integer Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+     * @var integer Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
      */
     public $Status;
 
@@ -378,7 +378,7 @@ Note: This field may return null, indicating that no valid values can be obtaine
      * @param RoVipInfo $RoVipInfo VIP information of a read-only instance. This field is exclusive to read-only instances where read-only access is enabled separately
 Note: This field may return null, indicating that no valid values can be obtained.
      * @param integer $Memory Memory capacity in MB
-     * @param integer $Status Instance status. Value range: 0 (creating), 1 (running), 4 (isolating), 5 (isolated)
+     * @param integer $Status Instance status. Valid values: `0` (creating), `1` (running), `4` (isolating), `5` (isolated).
      * @param integer $VpcId VPC ID, such as 51102
      * @param SlaveInfo $SlaveInfo Information of a secondary server
 Note: This field may return null, indicating that no valid values can be obtained.
