@@ -18,31 +18,29 @@ namespace TencentCloud\Antiddos\V20200309\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * DescribeBizTrend request structure.
+ * DescribeBizHttpStatus request structure.
  *
- * @method string getStatistics() Obtain Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
- * @method void setStatistics(string $Statistics) Set Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+ * @method string getStatistics() Obtain Statistical mode. Value: `sum`.
+ * @method void setStatistics(string $Statistics) Set Statistical mode. Value: `sum`.
  * @method string getBusiness() Obtain Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
  * @method void setBusiness(string $Business) Set Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
- * @method integer getPeriod() Obtain Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
- * @method void setPeriod(integer $Period) Set Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
- * @method string getStartTime() Obtain Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
- * @method void setStartTime(string $StartTime) Set Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
- * @method string getEndTime() Obtain End of the time range for the query, such as `2020-09-22 00:00:00`.
- * @method void setEndTime(string $EndTime) Set End of the time range for the query, such as `2020-09-22 00:00:00`.
- * @method string getId() Obtain Instance ID
- * @method void setId(string $Id) Set Instance ID
- * @method string getMetricName() Obtain Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
- * @method void setMetricName(string $MetricName) Set Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
- * @method string getDomain() Obtain You can query data by specifying a domain name when the metric is `qps`.
- * @method void setDomain(string $Domain) Set You can query data by specifying a domain name when the metric is `qps`.
+ * @method integer getPeriod() Obtain Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+ * @method void setPeriod(integer $Period) Set Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+ * @method string getStartTime() Obtain Statistics start time, such as `2020-02-01 12:04:12`
+ * @method void setStartTime(string $StartTime) Set Statistics start time, such as `2020-02-01 12:04:12`
+ * @method string getEndTime() Obtain Statistics end time, such as `2020-02-03 18:03:23`
+ * @method void setEndTime(string $EndTime) Set Statistics end time, such as `2020-02-03 18:03:23`
+ * @method string getId() Obtain The resource ID.
+ * @method void setId(string $Id) Set The resource ID.
+ * @method string getDomain() Obtain Specific domain name query
+ * @method void setDomain(string $Domain) Set Specific domain name query
  * @method array getProtoInfo() Obtain Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
  * @method void setProtoInfo(array $ProtoInfo) Set Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
  */
-class DescribeBizTrendRequest extends AbstractModel
+class DescribeBizHttpStatusRequest extends AbstractModel
 {
     /**
-     * @var string Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+     * @var string Statistical mode. Value: `sum`.
      */
     public $Statistics;
 
@@ -52,32 +50,27 @@ class DescribeBizTrendRequest extends AbstractModel
     public $Business;
 
     /**
-     * @var integer Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
+     * @var integer Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
      */
     public $Period;
 
     /**
-     * @var string Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
+     * @var string Statistics start time, such as `2020-02-01 12:04:12`
      */
     public $StartTime;
 
     /**
-     * @var string End of the time range for the query, such as `2020-09-22 00:00:00`.
+     * @var string Statistics end time, such as `2020-02-03 18:03:23`
      */
     public $EndTime;
 
     /**
-     * @var string Instance ID
+     * @var string The resource ID.
      */
     public $Id;
 
     /**
-     * @var string Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-     */
-    public $MetricName;
-
-    /**
-     * @var string You can query data by specifying a domain name when the metric is `qps`.
+     * @var string Specific domain name query
      */
     public $Domain;
 
@@ -87,14 +80,13 @@ class DescribeBizTrendRequest extends AbstractModel
     public $ProtoInfo;
 
     /**
-     * @param string $Statistics Statistical method. Valid values: `max`, `min`, `avg`, `sum`. It can only be `max` if the statistical dimension is traffic rate or packet rate.
+     * @param string $Statistics Statistical mode. Value: `sum`.
      * @param string $Business Anti-DDoS service type (`bgpip`: Anti-DDoS Advanced)
-     * @param integer $Period Sampling interval in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, `86400`
-     * @param string $StartTime Beginning of the time range for the query, such as `2020-09-22 00:00:00`.
-     * @param string $EndTime End of the time range for the query, such as `2020-09-22 00:00:00`.
-     * @param string $Id Instance ID
-     * @param string $MetricName Metric. Valid values: `connum`, `new_conn`, `inactive_conn`, `intraffic`, `outtraffic`, `inpkg`, `outpkg`, `qps`
-     * @param string $Domain You can query data by specifying a domain name when the metric is `qps`.
+     * @param integer $Period Statistical period in seconds. Valid values: `60`, `300`, `1800`, `3600`, `21600`, and `86400`.
+     * @param string $StartTime Statistics start time, such as `2020-02-01 12:04:12`
+     * @param string $EndTime Statistics end time, such as `2020-02-03 18:03:23`
+     * @param string $Id The resource ID.
+     * @param string $Domain Specific domain name query
      * @param array $ProtoInfo Protocol and port list, which is valid when the metric is `connum`, `new_conn` or `inactive_conn`. Valid protocols: `TCP`, `UDP`, `HTTP`, `HTTPS`
      */
     function __construct()
@@ -132,10 +124,6 @@ class DescribeBizTrendRequest extends AbstractModel
 
         if (array_key_exists("Id",$param) and $param["Id"] !== null) {
             $this->Id = $param["Id"];
-        }
-
-        if (array_key_exists("MetricName",$param) and $param["MetricName"] !== null) {
-            $this->MetricName = $param["MetricName"];
         }
 
         if (array_key_exists("Domain",$param) and $param["Domain"] !== null) {

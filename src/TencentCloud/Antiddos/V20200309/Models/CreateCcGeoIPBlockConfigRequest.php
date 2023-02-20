@@ -28,8 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setDomain(string $Domain) Set Domain name
  * @method string getProtocol() Obtain Protocol type
  * @method void setProtocol(string $Protocol) Set Protocol type
- * @method CcGeoIPBlockConfig getCcGeoIPBlockConfig() Obtain Region blocking configuration. The configuration ID should be cleared when you set this parameter.
- * @method void setCcGeoIPBlockConfig(CcGeoIPBlockConfig $CcGeoIPBlockConfig) Set Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+ * @method CcGeoIPBlockConfig getCcGeoIPBlockConfig() Obtain CC regional blocking configuration
+ * @method void setCcGeoIPBlockConfig(CcGeoIPBlockConfig $CcGeoIPBlockConfig) Set CC regional blocking configuration
  */
 class CreateCcGeoIPBlockConfigRequest extends AbstractModel
 {
@@ -54,7 +54,7 @@ class CreateCcGeoIPBlockConfigRequest extends AbstractModel
     public $Protocol;
 
     /**
-     * @var CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+     * @var CcGeoIPBlockConfig CC regional blocking configuration
      */
     public $CcGeoIPBlockConfig;
 
@@ -63,7 +63,7 @@ class CreateCcGeoIPBlockConfigRequest extends AbstractModel
      * @param string $IP IP address
      * @param string $Domain Domain name
      * @param string $Protocol Protocol type
-     * @param CcGeoIPBlockConfig $CcGeoIPBlockConfig Region blocking configuration. The configuration ID should be cleared when you set this parameter.
+     * @param CcGeoIPBlockConfig $CcGeoIPBlockConfig CC regional blocking configuration
      */
     function __construct()
     {

@@ -40,14 +40,20 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterBoundStatus(string $FilterBoundStatus) Set Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
  * @method array getFilterInstanceIdList() Obtain Array of instance IDs
  * @method void setFilterInstanceIdList(array $FilterInstanceIdList) Set Array of instance IDs
- * @method integer getFilterEnterpriseFlag() Obtain Filters by Enterprise edition
- * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) Set Filters by Enterprise edition
+ * @method integer getFilterEnterpriseFlag() Obtain Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
+ * @method void setFilterEnterpriseFlag(integer $FilterEnterpriseFlag) Set Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
  * @method integer getFilterLightFlag() Obtain Whether it’s a Lighthouse edition
  * @method void setFilterLightFlag(integer $FilterLightFlag) Set Whether it’s a Lighthouse edition
  * @method integer getFilterChannelFlag() Obtain Whether it’s a Channel edition
  * @method void setFilterChannelFlag(integer $FilterChannelFlag) Set Whether it’s a Channel edition
  * @method TagFilter getFilterTag() Obtain Filters by tag
  * @method void setFilterTag(TagFilter $FilterTag) Set Filters by tag
+ * @method integer getFilterTrialFlag() Obtain Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+ * @method void setFilterTrialFlag(integer $FilterTrialFlag) Set Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+ * @method integer getFilterConvoy() Obtain Filters out Convoy instances
+ * @method void setFilterConvoy(integer $FilterConvoy) Set Filters out Convoy instances
+ * @method boolean getExcludeAdvancedInfo() Obtain Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+ * @method void setExcludeAdvancedInfo(boolean $ExcludeAdvancedInfo) Set Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
  */
 class DescribeListBGPInstancesRequest extends AbstractModel
 {
@@ -102,7 +108,7 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterInstanceIdList;
 
     /**
-     * @var integer Filters by Enterprise edition
+     * @var integer Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
      */
     public $FilterEnterpriseFlag;
 
@@ -122,6 +128,21 @@ class DescribeListBGPInstancesRequest extends AbstractModel
     public $FilterTag;
 
     /**
+     * @var integer Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+     */
+    public $FilterTrialFlag;
+
+    /**
+     * @var integer Filters out Convoy instances
+     */
+    public $FilterConvoy;
+
+    /**
+     * @var boolean Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
+     */
+    public $ExcludeAdvancedInfo;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
      * @param string $FilterIp Filters by IP.
@@ -132,10 +153,13 @@ class DescribeListBGPInstancesRequest extends AbstractModel
      * @param string $FilterStatus Filters by instance status. `idle`: Running; `attacking`: Being attacked; `blocking`: Being blocked.
      * @param string $FilterBoundStatus Filters by binding status. `bounding`: The instance is bound; `failed`: The binding failed.
      * @param array $FilterInstanceIdList Array of instance IDs
-     * @param integer $FilterEnterpriseFlag Filters by Enterprise edition
+     * @param integer $FilterEnterpriseFlag Enterprise edition. Values: `1` (the Convoy package included), `2` (the Convoy package not included)
      * @param integer $FilterLightFlag Whether it’s a Lighthouse edition
      * @param integer $FilterChannelFlag Whether it’s a Channel edition
      * @param TagFilter $FilterTag Filters by tag
+     * @param integer $FilterTrialFlag Filters out trial instances. Values: `1` (emergency protection instances), `2` (PLG instances)
+     * @param integer $FilterConvoy Filters out Convoy instances
+     * @param boolean $ExcludeAdvancedInfo Whether to exclude the advanced information (such as `InstanceList[0].Usage`). Values: `true` (exclude), `false` (do not exclude). The default value is `false`.
      */
     function __construct()
     {
@@ -205,6 +229,18 @@ class DescribeListBGPInstancesRequest extends AbstractModel
         if (array_key_exists("FilterTag",$param) and $param["FilterTag"] !== null) {
             $this->FilterTag = new TagFilter();
             $this->FilterTag->deserialize($param["FilterTag"]);
+        }
+
+        if (array_key_exists("FilterTrialFlag",$param) and $param["FilterTrialFlag"] !== null) {
+            $this->FilterTrialFlag = $param["FilterTrialFlag"];
+        }
+
+        if (array_key_exists("FilterConvoy",$param) and $param["FilterConvoy"] !== null) {
+            $this->FilterConvoy = $param["FilterConvoy"];
+        }
+
+        if (array_key_exists("ExcludeAdvancedInfo",$param) and $param["ExcludeAdvancedInfo"] !== null) {
+            $this->ExcludeAdvancedInfo = $param["ExcludeAdvancedInfo"];
         }
     }
 }

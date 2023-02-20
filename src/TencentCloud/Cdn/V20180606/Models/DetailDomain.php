@@ -310,6 +310,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setQnPrivateAccess(QnPrivateAccess $QnPrivateAccess) Set Access authentication for QiNiu Cloud Kodo origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method HttpsBilling getHttpsBilling() Obtain HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHttpsBilling(HttpsBilling $HttpsBilling) Set HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class DetailDomain extends AbstractModel
 {
@@ -715,6 +719,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $QnPrivateAccess;
 
     /**
+     * @var HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $HttpsBilling;
+
+    /**
      * @param string $ResourceId Domain name ID
      * @param integer $AppId Tencent Cloud account ID
      * @param string $Domain Accelerated domain name.
@@ -860,6 +870,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param QnPrivateAccess $QnPrivateAccess Access authentication for QiNiu Cloud Kodo origin
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param HttpsBilling $HttpsBilling HTTPS service
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -1185,6 +1197,11 @@ Note: This field may return `null`, indicating that no valid value can be obtain
         if (array_key_exists("QnPrivateAccess",$param) and $param["QnPrivateAccess"] !== null) {
             $this->QnPrivateAccess = new QnPrivateAccess();
             $this->QnPrivateAccess->deserialize($param["QnPrivateAccess"]);
+        }
+
+        if (array_key_exists("HttpsBilling",$param) and $param["HttpsBilling"] !== null) {
+            $this->HttpsBilling = new HttpsBilling();
+            $this->HttpsBilling->deserialize($param["HttpsBilling"]);
         }
     }
 }

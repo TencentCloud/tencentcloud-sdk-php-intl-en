@@ -76,6 +76,12 @@ Note: This field may return `null`, indicating that no valid value can be obtain
  * @method void setIpCountNewFlag(integer $IpCountNewFlag) Set New edition of Anti-DDoS Pro
  * @method integer getVitalityVersion() Obtain The version of attack defense package
  * @method void setVitalityVersion(integer $VitalityVersion) Set The version of attack defense package
+ * @method integer getLine() Obtain Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setLine(integer $Line) Set Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method integer getElasticServiceBandwidth() Obtain Whether to enable elastic bandwidth
+ * @method void setElasticServiceBandwidth(integer $ElasticServiceBandwidth) Set Whether to enable elastic bandwidth
  */
 class BGPInstance extends AbstractModel
 {
@@ -172,6 +178,17 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $VitalityVersion;
 
     /**
+     * @var integer Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Line;
+
+    /**
+     * @var integer Whether to enable elastic bandwidth
+     */
+    public $ElasticServiceBandwidth;
+
+    /**
      * @param InstanceRelation $InstanceDetail Details of the Anti-DDoS Pro instance
      * @param BGPInstanceSpecification $SpecificationLimit Specifications of the Anti-DDoS Pro instance
      * @param BGPInstanceUsages $Usage Usage statistics of the Anti-DDoS Pro instance
@@ -200,6 +217,9 @@ Note: This field may return `null`, indicating that no valid value can be obtain
      * @param array $TagInfoList Tags associated with the resource
      * @param integer $IpCountNewFlag New edition of Anti-DDoS Pro
      * @param integer $VitalityVersion The version of attack defense package
+     * @param integer $Line Network line
+Note: This field may return null, indicating that no valid values can be obtained.
+     * @param integer $ElasticServiceBandwidth Whether to enable elastic bandwidth
      */
     function __construct()
     {
@@ -291,6 +311,14 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("VitalityVersion",$param) and $param["VitalityVersion"] !== null) {
             $this->VitalityVersion = $param["VitalityVersion"];
+        }
+
+        if (array_key_exists("Line",$param) and $param["Line"] !== null) {
+            $this->Line = $param["Line"];
+        }
+
+        if (array_key_exists("ElasticServiceBandwidth",$param) and $param["ElasticServiceBandwidth"] !== null) {
+            $this->ElasticServiceBandwidth = $param["ElasticServiceBandwidth"];
         }
     }
 }

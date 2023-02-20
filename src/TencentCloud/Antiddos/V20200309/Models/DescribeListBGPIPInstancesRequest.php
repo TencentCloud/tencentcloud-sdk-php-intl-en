@@ -52,8 +52,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterEipEipAddressStatus(array $FilterEipEipAddressStatus) Set Anti-DDoS Advanced instance binding status filter. Valid values: `BINDING`, `BIND`, `UNBINDING`, `UNBIND`. This filter is only valid when `FilterEipType = 1`.
  * @method integer getFilterDamDDoSStatus() Obtain Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
  * @method void setFilterDamDDoSStatus(integer $FilterDamDDoSStatus) Set Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
- * @method string getFilterStatus() Obtain Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
- * @method void setFilterStatus(string $FilterStatus) Set Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+ * @method string getFilterStatus() Obtain Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
+ * @method void setFilterStatus(string $FilterStatus) Set Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
  * @method string getFilterCname() Obtain Filters by the instance CNAME
  * @method void setFilterCname(string $FilterCname) Set Filters by the instance CNAME
  * @method array getFilterInstanceIdList() Obtain Filters by the instance ID
@@ -62,6 +62,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setFilterTag(TagFilter $FilterTag) Set Searches by tag
  * @method array getFilterPackType() Obtain Filters by package type.
  * @method void setFilterPackType(array $FilterPackType) Set Filters by package type.
+ * @method integer getFilterConvoy() Obtain Filters out Convoy instances
+ * @method void setFilterConvoy(integer $FilterConvoy) Set Filters out Convoy instances
  */
 class DescribeListBGPIPInstancesRequest extends AbstractModel
 {
@@ -122,7 +124,7 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterDamDDoSStatus;
 
     /**
-     * @var string Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @var string Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
      */
     public $FilterStatus;
 
@@ -147,6 +149,11 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
     public $FilterPackType;
 
     /**
+     * @var integer Filters out Convoy instances
+     */
+    public $FilterConvoy;
+
+    /**
      * @param integer $Offset Starting offset of the page. Value: (number of pages – 1) * items per page.
      * @param integer $Limit Number of items per page. The default value is 20 when `Limit = 0`. The maximum value is 100.
      * @param string $FilterIp IP filter
@@ -163,11 +170,12 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
      * @param integer $FilterEipType Whether to obtain only Anti-DDoS EIP instances. `1`: Yes; `0`: No.
      * @param array $FilterEipEipAddressStatus Anti-DDoS Advanced instance binding status filter. Valid values: `BINDING`, `BIND`, `UNBINDING`, `UNBIND`. This filter is only valid when `FilterEipType = 1`.
      * @param integer $FilterDamDDoSStatus Whether to obtain only Anti-DDoS instances with Sec-MCA enabled. Valid values: `1` (only obtain Anti-DDoS instances with Sec-MCA enabled) and `0` (obtain other Anti-DDoS instances).
-     * @param string $FilterStatus Filters by status of bound resources. `idle`: normal; `attacking`: being attacked; `blocking`: blocked
+     * @param string $FilterStatus Filters by the status of bound resources. Values: `idle` (normal), `attacking` (being attacked), `blocking` (being blocked), `trial` (in trial)
      * @param string $FilterCname Filters by the instance CNAME
      * @param array $FilterInstanceIdList Filters by the instance ID
      * @param TagFilter $FilterTag Searches by tag
      * @param array $FilterPackType Filters by package type.
+     * @param integer $FilterConvoy Filters out Convoy instances
      */
     function __construct()
     {
@@ -241,6 +249,10 @@ class DescribeListBGPIPInstancesRequest extends AbstractModel
 
         if (array_key_exists("FilterPackType",$param) and $param["FilterPackType"] !== null) {
             $this->FilterPackType = $param["FilterPackType"];
+        }
+
+        if (array_key_exists("FilterConvoy",$param) and $param["FilterConvoy"] !== null) {
+            $this->FilterConvoy = $param["FilterConvoy"];
         }
     }
 }

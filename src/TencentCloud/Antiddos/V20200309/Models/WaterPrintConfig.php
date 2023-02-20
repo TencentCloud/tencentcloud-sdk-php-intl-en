@@ -42,6 +42,10 @@ use TencentCloud\Common\AbstractModel;
 `checkall`: normal mode
 `shortfpcheckall`: compact mode
 ]
+ * @method integer getCloudSdkProxy() Obtain Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setCloudSdkProxy(integer $CloudSdkProxy) Set Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class WaterPrintConfig extends AbstractModel
 {
@@ -77,6 +81,12 @@ class WaterPrintConfig extends AbstractModel
     public $Verify;
 
     /**
+     * @var integer Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $CloudSdkProxy;
+
+    /**
      * @param integer $Offset Watermark offset. Value range: [0, 100).
      * @param integer $OpenStatus Start status. Valid values:
 `0`: manual start
@@ -88,6 +98,8 @@ class WaterPrintConfig extends AbstractModel
 `checkall`: normal mode
 `shortfpcheckall`: compact mode
 ]
+     * @param integer $CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -130,6 +142,10 @@ class WaterPrintConfig extends AbstractModel
 
         if (array_key_exists("Verify",$param) and $param["Verify"] !== null) {
             $this->Verify = $param["Verify"];
+        }
+
+        if (array_key_exists("CloudSdkProxy",$param) and $param["CloudSdkProxy"] !== null) {
+            $this->CloudSdkProxy = $param["CloudSdkProxy"];
         }
     }
 }

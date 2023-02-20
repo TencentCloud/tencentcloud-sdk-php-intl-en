@@ -74,6 +74,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
  * @method void setRewriteHttps(integer $RewriteHttps) Set Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
  * @method integer getErrCode() Obtain Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
  * @method void setErrCode(integer $ErrCode) Set Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
+ * @method integer getVersion() Obtain Version
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setVersion(integer $Version) Set Version
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class NewL7RuleEntry extends AbstractModel
 {
@@ -209,6 +213,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $ErrCode;
 
     /**
+     * @var integer Version
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Version;
+
+    /**
      * @param string $Protocol Forwarding protocol. Valid values: `http` and `https`.
      * @param string $Domain Forwarding domain name.
      * @param integer $LbType Load balancing method. Valid value: `1` (weighed polling).
@@ -236,6 +246,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $RewriteHttps Specifies whether to forcibly redirect HTTP to HTTPS. `1`: Enable. `0`: Disable.
      * @param integer $ErrCode Returns an error code when the rule configuration fails (only valid when `Status=2`). `1001`: The certificate does not exist. `1002`: Failed to obtain the certificate. `1003`: Failed to upload the certificate. `1004`: The certificate has expired.
+     * @param integer $Version Version
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -357,6 +369,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("ErrCode",$param) and $param["ErrCode"] !== null) {
             $this->ErrCode = $param["ErrCode"];
+        }
+
+        if (array_key_exists("Version",$param) and $param["Version"] !== null) {
+            $this->Version = $param["Version"];
         }
     }
 }

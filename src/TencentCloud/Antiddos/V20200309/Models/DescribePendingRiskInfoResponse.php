@@ -20,8 +20,8 @@ use TencentCloud\Common\AbstractModel;
 /**
  * DescribePendingRiskInfo response structure.
  *
- * @method boolean getIsPaidUsr() Obtain Whether the user is a paid user
- * @method void setIsPaidUsr(boolean $IsPaidUsr) Set Whether the user is a paid user
+ * @method boolean getIsPaidUsr() Obtain Whether the user is a paid user. Values: `true`, `false`.
+ * @method void setIsPaidUsr(boolean $IsPaidUsr) Set Whether the user is a paid user. Values: `true`, `false`.
  * @method integer getAttackingCount() Obtain Number of resources being attacked
  * @method void setAttackingCount(integer $AttackingCount) Set Number of resources being attacked
  * @method integer getBlockingCount() Obtain Number of resource blocked
@@ -36,7 +36,7 @@ use TencentCloud\Common\AbstractModel;
 class DescribePendingRiskInfoResponse extends AbstractModel
 {
     /**
-     * @var boolean Whether the user is a paid user
+     * @var boolean Whether the user is a paid user. Values: `true`, `false`.
      */
     public $IsPaidUsr;
 
@@ -66,7 +66,7 @@ class DescribePendingRiskInfoResponse extends AbstractModel
     public $RequestId;
 
     /**
-     * @param boolean $IsPaidUsr Whether the user is a paid user
+     * @param boolean $IsPaidUsr Whether the user is a paid user. Values: `true`, `false`.
      * @param integer $AttackingCount Number of resources being attacked
      * @param integer $BlockingCount Number of resource blocked
      * @param integer $ExpiredCount Number of expired resources

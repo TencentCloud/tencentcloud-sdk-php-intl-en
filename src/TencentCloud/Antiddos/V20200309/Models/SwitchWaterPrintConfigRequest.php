@@ -24,6 +24,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setInstanceId(string $InstanceId) Set Anti-DDoS instance ID
  * @method integer getOpenStatus() Obtain Watermark status. `1`: enabled; `0`: disabled.
  * @method void setOpenStatus(integer $OpenStatus) Set Watermark status. `1`: enabled; `0`: disabled.
+ * @method integer getCloudSdkProxy() Obtain Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+ * @method void setCloudSdkProxy(integer $CloudSdkProxy) Set Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
  */
 class SwitchWaterPrintConfigRequest extends AbstractModel
 {
@@ -38,8 +40,14 @@ class SwitchWaterPrintConfigRequest extends AbstractModel
     public $OpenStatus;
 
     /**
+     * @var integer Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
+     */
+    public $CloudSdkProxy;
+
+    /**
      * @param string $InstanceId Anti-DDoS instance ID
      * @param integer $OpenStatus Watermark status. `1`: enabled; `0`: disabled.
+     * @param integer $CloudSdkProxy Whether to enable proxy. Values: `1` (Enable proxy and ignore IP+port verification), `0` (Do not enable proxy and IP+port verification is required)
      */
     function __construct()
     {
@@ -60,6 +68,10 @@ class SwitchWaterPrintConfigRequest extends AbstractModel
 
         if (array_key_exists("OpenStatus",$param) and $param["OpenStatus"] !== null) {
             $this->OpenStatus = $param["OpenStatus"];
+        }
+
+        if (array_key_exists("CloudSdkProxy",$param) and $param["CloudSdkProxy"] !== null) {
+            $this->CloudSdkProxy = $param["CloudSdkProxy"];
         }
     }
 }

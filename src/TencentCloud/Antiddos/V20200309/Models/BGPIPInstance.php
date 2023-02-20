@@ -116,6 +116,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setInstanceVersion(integer $InstanceVersion) Set Edition of the instance
 Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getConvoyId() Obtain Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setConvoyId(string $ConvoyId) Set Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getElasticBandwidth() Obtain Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method void setElasticBandwidth(integer $ElasticBandwidth) Set Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method integer getEOFlag() Obtain Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setEOFlag(integer $EOFlag) Set Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class BGPIPInstance extends AbstractModel
 {
@@ -260,6 +272,24 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $InstanceVersion;
 
     /**
+     * @var string Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ConvoyId;
+
+    /**
+     * @var integer Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     */
+    public $ElasticBandwidth;
+
+    /**
+     * @var integer Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $EOFlag;
+
+    /**
      * @param InstanceRelation $InstanceDetail Anti-DDoS instance details
      * @param BGPIPInstanceSpecification $SpecificationLimit Anti-DDoS instance specifications
      * @param BGPIPInstanceUsages $Usage Anti-DDoS instance usage statistics
@@ -308,6 +338,12 @@ When an all-out package is not used by the instance, this field is `null`.
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param integer $InstanceVersion Edition of the instance
 Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $ConvoyId Convoy instance ID
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $ElasticBandwidth Pay-as-you-go bandwidth
+Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param integer $EOFlag Whether it’s the IP broadcasted by EdgeOne. Values: `1` (yes), `0` (no)
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -426,6 +462,18 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 
         if (array_key_exists("InstanceVersion",$param) and $param["InstanceVersion"] !== null) {
             $this->InstanceVersion = $param["InstanceVersion"];
+        }
+
+        if (array_key_exists("ConvoyId",$param) and $param["ConvoyId"] !== null) {
+            $this->ConvoyId = $param["ConvoyId"];
+        }
+
+        if (array_key_exists("ElasticBandwidth",$param) and $param["ElasticBandwidth"] !== null) {
+            $this->ElasticBandwidth = $param["ElasticBandwidth"];
+        }
+
+        if (array_key_exists("EOFlag",$param) and $param["EOFlag"] !== null) {
+            $this->EOFlag = $param["EOFlag"];
         }
     }
 }

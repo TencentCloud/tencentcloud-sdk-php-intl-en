@@ -28,10 +28,10 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setReorder(string $Reorder) Set Whether to sort again
 Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method string getAction() Obtain Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
- * @method void setAction(string $Action) Set Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+ * @method string getAction() Obtain Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setAction(string $Action) Set Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
  * @method string getValue() Obtain Array of included/excluded query strings (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
  * @method void setValue(string $Value) Set Array of included/excluded query strings (separated by ';')
@@ -52,8 +52,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
     public $Reorder;
 
     /**
-     * @var string Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @var string Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     public $Action;
 
@@ -68,8 +68,8 @@ Note: This field may return `null`, indicating that no valid value can be obtain
 Note: This field may return `null`, indicating that no valid value can be obtained.
      * @param string $Reorder Whether to sort again
 Note: This field may return `null`, indicating that no valid value can be obtained.
-     * @param string $Action Include/exclude query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeAll`
-Note: This field may return `null`, indicating that no valid value can be obtained.
+     * @param string $Action Includes/excludes query parameters. Valid values: `includeAll`, `excludeAll`, `includeCustom`, `excludeCustom`
+Note: This field may return null, indicating that no valid values can be obtained.
      * @param string $Value Array of included/excluded query strings (separated by ';')
 Note: This field may return `null`, indicating that no valid value can be obtained.
      */
