@@ -38,6 +38,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
  * @method void setTimestamp(integer $Timestamp) Set Message timestamp
 Note: this field may return `null`, indicating that no valid values can be obtained.
+ * @method string getHeaders() Obtain Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+ * @method void setHeaders(string $Headers) Set Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
  */
 class ConsumerRecord extends AbstractModel
 {
@@ -75,6 +79,12 @@ Note: this field may return `null`, indicating that no valid values can be obtai
     public $Timestamp;
 
     /**
+     * @var string Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
+     */
+    public $Headers;
+
+    /**
      * @param string $Topic Topic name
      * @param integer $Partition Partition ID
      * @param integer $Offset Offset
@@ -84,6 +94,8 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 Note: this field may return `null`, indicating that no valid values can be obtained.
      * @param integer $Timestamp Message timestamp
 Note: this field may return `null`, indicating that no valid values can be obtained.
+     * @param string $Headers Message headers
+Note: This field may return null, indicating that no valid values can be obtained.
      */
     function __construct()
     {
@@ -120,6 +132,10 @@ Note: this field may return `null`, indicating that no valid values can be obtai
 
         if (array_key_exists("Timestamp",$param) and $param["Timestamp"] !== null) {
             $this->Timestamp = $param["Timestamp"];
+        }
+
+        if (array_key_exists("Headers",$param) and $param["Headers"] !== null) {
+            $this->Headers = $param["Headers"];
         }
     }
 }
